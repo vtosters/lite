@@ -11,24 +11,10 @@ import ru.vtosters.lite.utils.AndroidUtils;
 
 public abstract class BaseTranslator {
 
-    private final LruCache<String, String> cache = new LruCache<>(200);
-
     private static final int YANDEX = 0;
     private static final int GOOGLE = 1;
     private static final int DEEPL = 2;
-
-    @NonNull
-    public abstract String translate(String text, String tl);
-
-    @NonNull
-    public final String getTranslation(String text) {
-        var val = cache.get(text);
-        if (val != null)
-            return val;
-        var translation = translate(text, getToLanguage());
-        cache.put(text, translation);
-        return translation;
-    }
+    private final LruCache<String, String> cache = new LruCache<>(200);
 
     public static String getToLanguage() {
         var lang = preferences.getString("lang_target", "system");
@@ -50,5 +36,18 @@ public abstract class BaseTranslator {
                 return DeepLTranslator.getInstance();
         }
         return null;
+    }
+
+    @NonNull
+    public abstract String translate(String text, String tl);
+
+    @NonNull
+    public final String getTranslation(String text) {
+        var val = cache.get(text);
+        if (val != null)
+            return val;
+        var translation = translate(text, getToLanguage());
+        cache.put(text, translation);
+        return translation;
     }
 }

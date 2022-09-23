@@ -37,8 +37,10 @@ public class CrashReporter {
         Thread.setDefaultUncaughtExceptionHandler((thread, th) -> CrashReporter.start(defaultUncaughtExceptionHandler, thread, th, activity));
     }
 
+    @SuppressLint("UnspecifiedImmutableFlag")
     static void start(Thread.UncaughtExceptionHandler uncaughtExceptionHandler, Thread thread, Throwable th, Activity activity) {
-        logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect(getGlobalContext()).toDeviceName() + ", commit: " + getBuildNumber();
+        logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect().toDeviceName();
+
         if (Build.VERSION.SDK_INT >= 26) {
             var notificationChannel = new NotificationChannel("crashes", "crash", NotificationManager.IMPORTANCE_DEFAULT);
             notificationChannel.enableVibration(true);
@@ -58,6 +60,7 @@ public class CrashReporter {
         var saveLogIntent = new Intent(getGlobalContext(), LogWriterService.class);
         saveLogIntent.putExtra("log", logString);
         saveLogIntent.putExtra("notificationId", 1);
+
         @SuppressLint("UnspecifiedImmutableFlag")
         var psaveLogIntent = PendingIntent.getService(getGlobalContext(), 0, saveLogIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 
@@ -74,9 +77,8 @@ public class CrashReporter {
             builder.setChannelId("crashes");
         }
 
-
         ((NotificationManager) getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE)).notify(-2147483548, builder.build());
-        Log.e("VTosters Lite", "crashed: " + th.getLocalizedMessage());
+        Log.e("VLite", "crashed: " + th.getLocalizedMessage());
         uncaughtExceptionHandler.uncaughtException(thread, th);
     }
 

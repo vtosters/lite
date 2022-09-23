@@ -1,4 +1,5 @@
 package ru.vtosters.lite.hooks;
+
 import static ru.vtosters.lite.utils.AndroidUtils.MD5;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
@@ -8,7 +9,7 @@ import android.os.Build;
 import android.provider.Settings;
 import android.util.Log;
 
-public class DeviceInfoHook{
+public class DeviceInfoHook {
     public static String getDeviceInfo(String input) {
         Log.d("DeviceInfoHook", "getDeviceInfo: " + input);
         if (getBoolValue("hideDeviceInfo", true)) return "";

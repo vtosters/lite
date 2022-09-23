@@ -218,6 +218,10 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
         return true;
     }
 
+    public interface IViewHolderBinder {
+        void bind(CategorizedViewHolder holder, int pos);
+    }
+
     public static class CategorizedViewHolder extends RecyclerView.ViewHolder {
 
         private final LinearLayout mMovingItemContainer;
@@ -261,9 +265,5 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
             mCategoryTitleContainer.setVisibility(View.VISIBLE);
             mMovingItemContainer.setVisibility(View.INVISIBLE);
         }
-    }
-
-    public interface IViewHolderBinder {
-        void bind(CategorizedViewHolder holder, int pos);
     }
 }

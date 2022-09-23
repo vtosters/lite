@@ -11,7 +11,7 @@ import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.music.Callback;
 
 public class MusicCallbackBuilder {
-    private static NotificationManagerCompat notificationManager = NotificationChannels.getNotificationManager();
+    private static final NotificationManagerCompat notificationManager = NotificationChannels.getNotificationManager();
 
     public static Callback buildOneTrackCallback(int notificationId, NotificationCompat.Builder notification) {
         return new Callback() {

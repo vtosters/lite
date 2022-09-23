@@ -25,12 +25,12 @@ import java.util.Scanner;
 
 import ru.vtosters.lite.hooks.AdBlockHook;
 
-public class NewsFeedFiltersUtils{
+public class NewsFeedFiltersUtils {
     public static List<String> mFilters;
     public static List<String> mFiltersNames;
     public static List<String> mFiltersLinks;
 
-    public static void setupFilters(){
+    public static void setupFilters() {
         mFilters = new ArrayList<>();
         mFiltersNames = new ArrayList<>();
         mFiltersLinks = new ArrayList<>();
@@ -57,7 +57,7 @@ public class NewsFeedFiltersUtils{
         }
     }
 
-    public static void getFilter(String boolname, String filename, List<String> list){
+    public static void getFilter(String boolname, String filename, List<String> list) {
         var ctx = getGlobalContext();
 
         if (getBoolValue(boolname, false)) {
@@ -66,7 +66,7 @@ public class NewsFeedFiltersUtils{
                 if (ctx != null) {
                     scanner = new Scanner(ctx.getAssets().open(filename));
 
-                    while(scanner.hasNextLine()) {
+                    while (scanner.hasNextLine()) {
                         var line = scanner.nextLine();
                         if (!line.isEmpty())
                             list.add(line.toLowerCase());
@@ -78,7 +78,7 @@ public class NewsFeedFiltersUtils{
         }
     } // Get needed filter list from assets
 
-    public static boolean injectFiltersReposts(JSONObject obj) throws JSONException{
+    public static boolean injectFiltersReposts(JSONObject obj) throws JSONException {
         if (getBoolValue("cringerepost", false) && obj.has("copy_history")) {
             var copyHistoryNode = obj.optJSONArray("copy_history");
             if (copyHistoryNode != null && copyHistoryNode.length() != 0) {
@@ -111,7 +111,7 @@ public class NewsFeedFiltersUtils{
         return false;
     }
 
-    public static boolean checkCopyright(JSONObject json) throws JSONException{
+    public static boolean checkCopyright(JSONObject json) throws JSONException {
         if (json.has("copyright")) {
             if (copyright_post()) return true;
 
@@ -146,23 +146,23 @@ public class NewsFeedFiltersUtils{
         return false;
     }
 
-    public static boolean isRecomsGroup(String src){
+    public static boolean isRecomsGroup(String src) {
         return authorsrecomm() && src.equals("recommended_groups");
     }
 
-    public static boolean isMusicBlock(String src){
+    public static boolean isMusicBlock(String src) {
         return authorsrecomm() && (src.equals("recommended_audios") || src.equals("recommended_artists") || src.equals("recommended_playlists"));
     }
 
-    public static boolean isNewsBlock(String src){
+    public static boolean isNewsBlock(String src) {
         return ads() && src.equals("tags_suggestions");
     }
 
-    public static String getAllFilters(){
+    public static String getAllFilters() {
         return getPrefsValue("spamfilters");
     }
 
-    public static boolean isBadNews(String text){
+    public static boolean isBadNews(String text) {
         var textInLowerCase = text.toLowerCase();
 
         if (mFilters != null) {
@@ -179,7 +179,7 @@ public class NewsFeedFiltersUtils{
         return false;
     }
 
-    public static boolean checkCaption(JSONObject postJson){
+    public static boolean checkCaption(JSONObject postJson) {
         if (postJson.has("caption")) {
             if (captions()) return true;
             var caption = postJson.optJSONObject("caption");
@@ -203,29 +203,29 @@ public class NewsFeedFiltersUtils{
         return false;
     }
 
-    public static boolean isAds(String optString){
+    public static boolean isAds(String optString) {
         return ads() && (optString.equals("ads_easy_promote") ||
                 optString.equals("promo_button") ||
                 optString.equals("app_widget") ||
                 optString.equals("ads"));
     }
 
-    public static boolean isAuthorRecommendations(String optString){
+    public static boolean isAuthorRecommendations(String optString) {
         return authorsrecomm() && optString.equals("authors_rec");
     }
 
-    public static boolean isPostRecommendations(String optString){
+    public static boolean isPostRecommendations(String optString) {
         return postsrecomm() && (optString.equals("live_recommended") ||
                 optString.equals("inline_user_rec"));
     }
 
-    public static boolean isFriendsRecommendations(String optString){
+    public static boolean isFriendsRecommendations(String optString) {
         return friendsrecomm() && (optString.equals("user_rec") ||
                 optString.equals("friends_recommendations") ||
                 optString.equals("friends_recomm"));
     }
 
-    public static boolean isGroupAds(JSONObject obj){
+    public static boolean isGroupAds(JSONObject obj) {
         return adsgroup() && obj.optInt("marked_as_ads", 0) == 1;
     }
 }

@@ -1,6 +1,5 @@
 package ru.vtosters.lite.downloaders;
 
-import static ru.vtosters.lite.music.cache.FileCacheImplementation.getTrackFolder;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
@@ -11,8 +10,6 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 
 import java.io.File;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
@@ -32,7 +29,6 @@ import ru.vtosters.lite.utils.IOUtils;
  */
 
 public class AudioDownloader {
-    private static final Executor executor = Executors.newFixedThreadPool(4);
 
     public static void downloadPlaylist(Playlist playlist) {
         var tracks = PlaylistConverter.getPlaylist(playlist);

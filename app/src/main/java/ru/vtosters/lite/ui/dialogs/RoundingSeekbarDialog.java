@@ -1,4 +1,5 @@
 package ru.vtosters.lite.ui.dialogs;
+
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
@@ -13,7 +14,7 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
 
-public class RoundingSeekbarDialog{
+public class RoundingSeekbarDialog {
     public static void dialog(Context context) {
         LinearLayout mContainer = new LinearLayout(context);
         SeekBar seek = new SeekBar(context);

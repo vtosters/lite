@@ -2,7 +2,6 @@ package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.ui.components.DockBarEditorManager.getInstance;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
@@ -28,7 +27,6 @@ import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
 import com.vtosters.lite.fragments.s2.GroupsFragment1;
 import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideoCatalogFragment;
-import com.vtosters.lite.fragments.y2.VideosFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
 

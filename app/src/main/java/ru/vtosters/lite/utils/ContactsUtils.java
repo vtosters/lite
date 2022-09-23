@@ -32,8 +32,8 @@ import java.io.IOException;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 
-public class ContactsUtils{
-    public static void setContactsSync(boolean enabled){
+public class ContactsUtils {
+    public static void setContactsSync(boolean enabled) {
         makeRequest("https://" + getApi() + "/method/account.setInfo?" + "name=im_user_name_type&value=" + (enabled ? "contact" : "vk") + "&https=1&v=5.153&access_token=" + getUserToken(),
                 response -> {
                     try {
@@ -46,23 +46,23 @@ public class ContactsUtils{
                 });
     }
 
-    public static void uploadContacts(Activity ctx){
+    public static void uploadContacts(Activity ctx) {
         try {
             if (ContextCompat.checkSelfPermission(ctx, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
                 sendToast(getString("contact_permission_toast"));
-                requestPermissions(LifecycleUtils.getCurrentActivity(), new String[] {Manifest.permission.READ_CONTACTS}, 11111);
+                requestPermissions(LifecycleUtils.getCurrentActivity(), new String[]{Manifest.permission.READ_CONTACTS}, 11111);
                 sendToast(getString("contact_permission_toast"));
-                requestPermissions(ctx, new String[] {Manifest.permission.READ_CONTACTS}, 11111);
+                requestPermissions(ctx, new String[]{Manifest.permission.READ_CONTACTS}, 11111);
             } else {
                 var account = VKAuthUtils.a.a(VKAccountManager.d().Z());
                 ContactsSyncAdapterService.c(ctx, account, new Bundle(), new SyncResult());
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             Log.d("ContactsUtils", e.getMessage());
         }
     }
 
-    public static void getContactsStatus(Context ctx){
+    public static void getContactsStatus(Context ctx) {
         final ProgressDialog progressDialog = new ProgressDialog(ctx);
         progressDialog.setMessage(getString("contact_info_loading"));
         progressDialog.show();

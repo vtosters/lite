@@ -1,4 +1,5 @@
 package ru.vtosters.lite.proxy.https;
+
 import static ru.vtosters.lite.proxy.GithubList.getProxy;
 import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
 import static ru.vtosters.lite.proxy.ProxyUtils.hasProxy;
@@ -13,10 +14,10 @@ import java.util.ArrayList;
 import ru.vtosters.lite.proxy.RandomProxy;
 import ru.vtosters.lite.utils.AndroidUtils;
 
-public class Roosterkid{
+public class Roosterkid {
     private static final String TAG = "Roosterkid_Https";
 
-    public static void loadProxy() throws IOException{
+    public static void loadProxy() throws IOException {
         ArrayList<String> proxyList = getProxy("https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt", TAG);
 
         if (proxyList == null) {
@@ -37,7 +38,7 @@ public class Roosterkid{
             AndroidUtils.sendToast(getString("proxy_setup_success") + " " + proxy);
             RandomProxy.showProxyResult = false;
         }
-        
+
         edit().putString("random_type", "https").putString("random_host", proxy).commit();
 
         System.setProperty("https.proxyHost", proxy.split(":")[0]);

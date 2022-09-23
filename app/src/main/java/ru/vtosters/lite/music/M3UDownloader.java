@@ -96,7 +96,8 @@ public class M3UDownloader implements ITrackDownloader {
                     IOUtils.writeToFile(tsDump, content);
                     callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
                     callback.onSizeReceived((long) content.length * tses.size(), parser.getHeapSize());
-                } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidAlgorithmParameterException | InvalidKeyException e) {
+                } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException |
+                         InvalidAlgorithmParameterException | InvalidKeyException e) {
                     callback.onFailure();
                     throw new RuntimeException(e);
                 }

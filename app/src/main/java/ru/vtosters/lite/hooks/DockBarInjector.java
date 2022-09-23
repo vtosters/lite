@@ -82,7 +82,8 @@ public class DockBarInjector {
                 } while (acquire.invoke(synchronizedPool) != null);
             }
 
-        } catch (NoSuchFieldException | IllegalAccessException | ClassNotFoundException | NoSuchMethodException | InvocationTargetException e) {
+        } catch (NoSuchFieldException | IllegalAccessException | ClassNotFoundException |
+                 NoSuchMethodException | InvocationTargetException e) {
             e.printStackTrace();
         }
 

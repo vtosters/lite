@@ -160,7 +160,8 @@ public class JsonInjectors {
         var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
 
         if (isVerified(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium";
-        if (isPrometheus(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium Gold Prime Pro Plus";
+        if (isPrometheus(peerid))
+            text = AndroidUtils.getString("i_bought") + " VTosters Premium Gold Prime Pro Plus";
         if (isDeveloper(peerid)) text = AndroidUtils.getString("i_created_poop");
 
         if (!isVerified(peerid) || text.equals("") || peerid == AccountManagerUtils.getUserId() || peerid == 0) {
@@ -282,7 +283,7 @@ public class JsonInjectors {
         if (profiles == null || profiles.length() == 0) return profiles;
         StringBuilder sb = new StringBuilder();
         var curVkId = AccountManagerUtils.getUserId();
-        for (int i=0; i < profiles.length(); i++) {
+        for (int i = 0; i < profiles.length(); i++) {
             JSONObject profile = profiles.getJSONObject(i);
             int id = profile.optInt("id", -1);
             JSONObject onlinfo = profile.optJSONObject("online_info");
@@ -300,7 +301,7 @@ public class JsonInjectors {
         }
 
         JSONObject bypassedObj = getBypassedOnlineInfo(ids);
-        for (int i=0; i < profiles.length(); i++) {
+        for (int i = 0; i < profiles.length(); i++) {
             JSONObject profile = profiles.getJSONObject(i);
             int id = profile.optInt("id");
             JSONObject bypassed = bypassedObj.optJSONObject(Integer.toString(id));

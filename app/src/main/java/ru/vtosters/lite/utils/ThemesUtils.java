@@ -7,7 +7,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getCenterScreenCoords;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.LifecycleUtils.*;
+import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.dockbar_accent;
 import static ru.vtosters.lite.utils.Preferences.milkshake;

@@ -1,4 +1,5 @@
 package ru.vtosters.lite.ui.vkui;
+
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
@@ -10,8 +11,8 @@ import android.widget.LinearLayout;
 
 import java.util.List;
 
-public class VBListBuilder{
-    public static ViewGroup buildListOf(Context ctx, List<VBListItem> items){
+public class VBListBuilder {
+    public static ViewGroup buildListOf(Context ctx, List<VBListItem> items) {
         LinearLayout mainView = new LinearLayout(ctx);
         mainView.setOrientation(LinearLayout.VERTICAL);
         mainView.setPadding(dp2px(8f), 0, dp2px(8f), 0);
@@ -36,12 +37,12 @@ public class VBListBuilder{
         return mainView;
     }
 
-    public static class VBListItem{
+    public static class VBListItem {
         public String id;
         public String title;
         public boolean checked;
 
-        public VBListItem(String id, String title, boolean checked){
+        public VBListItem(String id, String title, boolean checked) {
             this.id = id;
             this.title = title;
             this.checked = checked;

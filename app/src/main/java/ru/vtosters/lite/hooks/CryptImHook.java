@@ -1,4 +1,5 @@
 package ru.vtosters.lite.hooks;
+
 import static ru.vtosters.lite.dnr.DNRInjector.forceInvalidateDialogActions;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
@@ -26,8 +27,8 @@ import java.util.Objects;
 import ru.vtosters.lite.encryption.EncryptProvider;
 import ru.vtosters.lite.encryption.base.IMProcessor;
 
-public class CryptImHook{
-    public static boolean isPrivateProcessor(int peerID){
+public class CryptImHook {
+    public static boolean isPrivateProcessor(int peerID) {
         for (IMProcessor processor : EncryptProvider.processors) {
             if (processor.isUsedToEncrypt(peerID)) {
                 return !processor.isPublic();
@@ -37,7 +38,7 @@ public class CryptImHook{
         return false;
     }
 
-    public static void hook(int peerId, Dialog d){
+    public static void hook(int peerId, Dialog d) {
         List<IMProcessor> processors = EncryptProvider.processors;
 
         IMProcessor enabled = null;
@@ -86,7 +87,7 @@ public class CryptImHook{
                 }).create().show();
     }
 
-    public static void hookPref(int peerId){
+    public static void hookPref(int peerId) {
         IMProcessor enabled = null;
         String key = null;
 

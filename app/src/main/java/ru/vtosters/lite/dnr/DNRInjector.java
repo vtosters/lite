@@ -57,7 +57,7 @@ public class DNRInjector {
         if (dialog != null) {
             try {
                 peerId = dialog.getId();
-            } catch (Exception e){
+            } catch (Exception e) {
                 Log.d("DialoggetId", "null");
             }
         }
@@ -139,7 +139,7 @@ public class DNRInjector {
         if (dialog != null) {
             try {
                 peerId = dialog.getId();
-            } catch (Exception e){
+            } catch (Exception e) {
                 Log.d("DialoggetId", "null");
             }
         }
@@ -178,7 +178,7 @@ public class DNRInjector {
         if (dialog != null) {
             try {
                 peerId = dialog.getId();
-            } catch (Exception e){
+            } catch (Exception e) {
                 Log.d("DialoggetId", "null");
             }
         }
@@ -240,7 +240,7 @@ public class DNRInjector {
         if (dialog != null) {
             try {
                 peerId = dialog.getId();
-            } catch (Exception e){
+            } catch (Exception e) {
                 Log.d("DialoggetId", "null");
             }
         }
@@ -312,7 +312,7 @@ public class DNRInjector {
             return true;
         }
 
-        if (msg instanceof MsgFromUser){
+        if (msg instanceof MsgFromUser) {
             var text = ((MsgFromUser) msg).f();
             var fullMsg = ((MsgFromUser) msg).j2(); // text + reply
             var reply = fullMsg.substring(text.length() + 1);

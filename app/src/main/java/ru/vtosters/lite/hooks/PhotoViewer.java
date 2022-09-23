@@ -135,7 +135,7 @@ public class PhotoViewer {
         if (attachment.J != null) {
             imageSizes = attachment.J.t1();
         }
-        return getUrlFromImageSizeList(imageSizes != null ? imageSizes : null);
+        return getUrlFromImageSizeList(imageSizes);
     }
 
     private static String getUrlFromPhotoAttachment(PhotoAttachment attachment) {

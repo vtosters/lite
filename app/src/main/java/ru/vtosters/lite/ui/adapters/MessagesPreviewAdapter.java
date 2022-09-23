@@ -25,6 +25,12 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
 
     private final String[] mMessages = AndroidUtils.getArray("wallpaper_change_dialog");
 
+    private static int getColorFromAttribute(Context context, int attrId) {
+        TypedValue typedValue = new TypedValue();
+        context.getTheme().resolveAttribute(attrId, typedValue, true);
+        return typedValue.data;
+    }
+
     @Override
     public int getItemViewType(int i) {
         return i % 2 == 0 ? ANONYMOUS : ME;
@@ -68,12 +74,6 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
     @Override
     public int getItemCount() {
         return mMessages.length;
-    }
-
-    private static int getColorFromAttribute(Context context, int attrId) {
-        TypedValue typedValue = new TypedValue();
-        context.getTheme().resolveAttribute(attrId, typedValue, true);
-        return typedValue.data;
     }
 
     protected static class MessagePreviewViewHolder extends RecyclerView.ViewHolder {

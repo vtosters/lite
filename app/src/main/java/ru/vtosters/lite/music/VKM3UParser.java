@@ -18,6 +18,10 @@ public class VKM3UParser {
         init();
     }
 
+    public static boolean isM3U8(String str) {
+        return str.endsWith(".ts") || str.endsWith(".tp") || str.endsWith(".mpeg-ts") || str.endsWith(".m2ts");
+    }
+
     private void init() {
         int i = 0;
         Scanner scanner = new Scanner(mData);
@@ -49,10 +53,6 @@ public class VKM3UParser {
 
     private String getDirectiveValue(String directive) {
         return directive.substring(directive.indexOf(":") + 1);
-    }
-
-    public static boolean isM3U8(String str) {
-        return str.endsWith(".ts") || str.endsWith(".tp") || str.endsWith(".mpeg-ts") || str.endsWith(".m2ts");
     }
 
     public int getHeapSize() {

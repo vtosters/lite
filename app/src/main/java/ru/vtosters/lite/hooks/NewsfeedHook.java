@@ -47,7 +47,7 @@ public class NewsfeedHook {
         return list;
     }
 
-    public static String[] feedParams(){
+    public static String[] feedParams() {
         HashSet<String> params = new HashSet<>();
         params.add("post");
         params.add("photo");

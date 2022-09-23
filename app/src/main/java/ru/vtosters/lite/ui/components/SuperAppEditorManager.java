@@ -14,19 +14,18 @@ import ru.vtosters.lite.utils.AndroidUtils;
 
 public class SuperAppEditorManager {
 
+    private static SuperAppEditorManager sInstance;
     private final List<SuperAppItem> mSelectedItems = new ArrayList<>();
     private final List<SuperAppItem> mDisabledItems = new ArrayList<>();
 
-    private static SuperAppEditorManager sInstance;
+    public SuperAppEditorManager() {
+        init();
+    }
 
     public static SuperAppEditorManager getInstance() {
         return sInstance == null
                 ? (sInstance = new SuperAppEditorManager())
                 : sInstance;
-    }
-
-    public SuperAppEditorManager() {
-        init();
     }
 
     private void init() {

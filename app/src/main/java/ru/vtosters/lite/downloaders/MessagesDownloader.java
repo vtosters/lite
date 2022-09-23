@@ -1,4 +1,5 @@
 package ru.vtosters.lite.downloaders;
+
 import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
@@ -30,18 +31,16 @@ import java.util.List;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
-public class MessagesDownloader{
+public class MessagesDownloader {
+    private static final String VK_DOMAIN = "vk.com";
     private static SimpleDateFormat sdformat;
-
     private static SparseArray<MiniUser> usersArray;
 
-    private static final String VK_DOMAIN = "vk.com";
-
-    public static String formatTime(long now){
+    public static String formatTime(long now) {
         return sdformat.format(new Date(now));
     }
 
-    public static String join(CharSequence delimiter, Iterable<? extends CharSequence> elements){
+    public static String join(CharSequence delimiter, Iterable<? extends CharSequence> elements) {
         Objects.requireNonNull(delimiter);
         Objects.requireNonNull(elements);
 
@@ -54,7 +53,48 @@ public class MessagesDownloader{
         return builder.toString();
     }
 
-    public void downloadDialog(int peer_id, DialogDownloaderFormatProvider format, File out) throws Exception{
+    private static String getPollHtml(JSONObject poll) throws JSONException {
+        StringBuilder pollHtml = new StringBuilder(
+                "<div class=\"vtex-milk-msg poll\">" +
+                        "<p style=\"text-align:center;\">" + poll.optString("question") + "</p>"
+        );
+
+        var answers = poll.optJSONArray("answers");
+
+        for (int i = 0; i < answers.length(); i++) {
+            var jsonObject = answers.optJSONObject(i);
+            if (jsonObject != null)
+                pollHtml.append("<hr><p>").append(jsonObject.optString("text")).append(" · ").append(jsonObject.optString("votes")).append(" (").append(jsonObject.optString("rate")).append("%)</p>");
+        }
+
+        pollHtml.append("<hr><p style=\"text-align:center;\">").append(getString("chat_export_poll_voted")).append(" ").append(poll.optString("votes")).append(" ").append(getString("chat_export_users_name")).append("</p>");
+
+        return pollHtml.append("</div>").toString();
+    }
+
+    private static String getVideoHtml(JSONObject files) throws JSONException {
+        if (files == null) return getString("chat_export_video_nolinks");
+
+        Iterator<?> keys = files.keys();
+        StringBuilder videoHtml = new StringBuilder();
+
+        int qualityIndex = 0;
+        String[] quality = {"144", "240", "360", "480", "720", "1080", "1440", "2160"};
+
+        while (keys.hasNext()) {
+            String key = (String) keys.next();
+            if (key.equals("mp4_" + quality[qualityIndex])) {
+                videoHtml.append("<a class=\"msg-attach-link\" href=\"").append(files.get(key)).append("\">").append(quality[qualityIndex]).append("p</a>").append(" ");
+
+                if (qualityIndex == quality.length - 1) break;
+                ++qualityIndex;
+            }
+        }
+
+        return videoHtml.toString();
+    }
+
+    public void downloadDialog(int peer_id, DialogDownloaderFormatProvider format, File out) throws Exception {
         sdformat = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss", getResources().getConfiguration().locale);
 
         FileOutputStream fos = new FileOutputStream(out);
@@ -77,7 +117,7 @@ public class MessagesDownloader{
         }));
     }
 
-    public void fetchDialogInfo(int peer_id, int offset, FetchListener fl){
+    public void fetchDialogInfo(int peer_id, int offset, FetchListener fl) {
         makeRequest("https://" + getApi() + "/method/messages.getHistory?extended=1&v=5.140&offset=" + offset + "&count=200&peer_id=" + peer_id + "&access_token=" + getUserToken(),
                 response -> {
                     try {
@@ -99,7 +139,7 @@ public class MessagesDownloader{
                 });
     }
 
-    private List<MiniMsg> parseMessages(JSONArray jsonArray) throws JSONException{
+    private List<MiniMsg> parseMessages(JSONArray jsonArray) throws JSONException {
         ArrayList<MiniMsg> thing = new ArrayList<>();
 
         for (int i = 0; i < jsonArray.length(); i++) {
@@ -110,7 +150,7 @@ public class MessagesDownloader{
         return thing;
     }
 
-    private void parseUsers(SparseArray<MiniUser> array, @Nullable JSONArray jsonArray, boolean groups) throws JSONException{
+    private void parseUsers(SparseArray<MiniUser> array, @Nullable JSONArray jsonArray, boolean groups) throws JSONException {
         if (jsonArray == null) return;
 
         for (int i = 0; i < jsonArray.length(); i++) {
@@ -119,11 +159,11 @@ public class MessagesDownloader{
         }
     }
 
-    interface FetchListener{
+    interface FetchListener {
         void onReceive(SparseArray<MiniUser> users, List<MiniMsg> messages);
     }
 
-    static class MiniUser{
+    static class MiniUser {
         public String firstName;
         public String lastName;
         public boolean isGroup;
@@ -139,7 +179,7 @@ public class MessagesDownloader{
         }
     }
 
-    static class MiniMsg{
+    static class MiniMsg {
         long date;
         int fromId;
         int id; // message id
@@ -150,7 +190,7 @@ public class MessagesDownloader{
         JSONObject chat_action;
         JSONObject geo;
 
-        public MiniMsg(JSONObject obj) throws JSONException{
+        public MiniMsg(JSONObject obj) throws JSONException {
             date = obj.getLong("date") * 1000;
             fromId = obj.getInt("from_id");
             id = obj.getInt("id");
@@ -173,7 +213,7 @@ public class MessagesDownloader{
     }
 
     // This class defines everything which is needed to create an output file
-    abstract static class DialogDownloaderFormatProvider{
+    abstract static class DialogDownloaderFormatProvider {
         // Internal, for JSON/HTML
         abstract String provideDocumentStart(String dialogName, String date);
 
@@ -184,9 +224,9 @@ public class MessagesDownloader{
         abstract String provideMessage(MiniMsg message, MiniUser user) throws JSONException;
     }
 
-    public static class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatProvider{
+    public static class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatProvider {
         @Override
-        String provideDocumentStart(String dialogName, String date){
+        String provideDocumentStart(String dialogName, String date) {
             String style = ".vtex-milk-msg {\n" +
                     "    border-radius: 8px;\n" +
                     "    padding: 24px;\n" +
@@ -282,17 +322,17 @@ public class MessagesDownloader{
         }
 
         @Override
-        String provideDocumentEnd(){
+        String provideDocumentEnd() {
             return "</div></body></html>";
         }
 
         @Override
-        String provideHeader(String dialogName, String date){
+        String provideHeader(String dialogName, String date) {
             return "<div class=\"vtex-milk-header\"><h4 class=\"vtex-milk-header-txt\">VTLite</h4><h5 class=\"vtex-milk-header-sub\">" + getString("chat_export_header") + " (" + date + ")</h5></div><div class=\"vtex-milk-msgcont\">";
         }
 
         @Override
-        String provideMessage(MiniMsg message, MiniUser user) throws JSONException{
+        String provideMessage(MiniMsg message, MiniUser user) throws JSONException {
             String isOut = (user.id == getUserId()) ? " vtex-milk-msg-out" : "";
 
             String geoPosition = "";
@@ -315,13 +355,13 @@ public class MessagesDownloader{
             String userLink = (user.isGroup ? "club" : "id") + user.id;
 
             return "<div class=\"vtex-milk-msg" + isOut + "\" id=\"" + message.id + "\">" +
-                        "<p class=\"msg-from\">" + getString("from_lower") + " <a href=\"https://" + VK_DOMAIN + "/" + userLink + "\">" + user.firstName + " " + user.lastName + "</a> <span class=\"msg-from-date\">" + formatTime(message.date) + "</span></p>" + // TODO photo100
-                        "<p class=\"msg-body\">" + mentionsReplace(message.text) + "</p>" +
-                        geoPosition +
-                        chatAction +
-                        attaches +
-                        reply +
-                        fwdMessages +
+                    "<p class=\"msg-from\">" + getString("from_lower") + " <a href=\"https://" + VK_DOMAIN + "/" + userLink + "\">" + user.firstName + " " + user.lastName + "</a> <span class=\"msg-from-date\">" + formatTime(message.date) + "</span></p>" + // TODO photo100
+                    "<p class=\"msg-body\">" + mentionsReplace(message.text) + "</p>" +
+                    geoPosition +
+                    chatAction +
+                    attaches +
+                    reply +
+                    fwdMessages +
                     "</div>";
         }
 
@@ -342,10 +382,10 @@ public class MessagesDownloader{
             }
 
             return "<a href=\"#" + messageId + "\" class=\"msg-attach-link\">" +
-                        "<div class=\"msg-reply\">" +
-                            "<p class=\"reply-header\">" + getString("vkim_msg_fwd_single") + "</p>" +
-                            "<p class=\"reply-content\">" + user.firstName + " " + user.lastName + ": " + text + "</p>" +
-                        "</div>" +
+                    "<div class=\"msg-reply\">" +
+                    "<p class=\"reply-header\">" + getString("vkim_msg_fwd_single") + "</p>" +
+                    "<p class=\"reply-content\">" + user.firstName + " " + user.lastName + ": " + text + "</p>" +
+                    "</div>" +
                     "</a>";
         }
 
@@ -424,7 +464,7 @@ public class MessagesDownloader{
 
             StringBuilder htmlAction = new StringBuilder("<p class=\"chat-action\">");
 
-            switch(type) {
+            switch (type) {
                 case "chat_photo_update":
                     htmlAction.append(getString("chat_export_avatar_update"));
                     break;
@@ -479,7 +519,7 @@ public class MessagesDownloader{
             return htmlAction.append("</p>").toString();
         }
 
-        private String getHtmlForAttach(List<JSONObject> attaches) throws JSONException{
+        private String getHtmlForAttach(List<JSONObject> attaches) throws JSONException {
             StringBuilder rs = new StringBuilder();
 
             for (JSONObject attach : attaches) {
@@ -488,7 +528,7 @@ public class MessagesDownloader{
 
                 if (item == null) continue;
 
-                switch(type) { // market_album is not supported
+                switch (type) { // market_album is not supported
                     case "photo":
                         var sizes = item.getJSONArray("sizes");
                         rs.append("<a href=\"").append(sizes.getJSONObject(sizes.length() - 1).getString("url")).append("\" class=\"msg-attach-link\">").append(getString("chat_export_type_photo")).append("</a>");
@@ -561,46 +601,5 @@ public class MessagesDownloader{
 
             return rs.toString();
         }
-    }
-
-    private static String getPollHtml(JSONObject poll) throws JSONException {
-        StringBuilder pollHtml = new StringBuilder(
-            "<div class=\"vtex-milk-msg poll\">" +
-                    "<p style=\"text-align:center;\">" + poll.optString("question") + "</p>"
-        );
-
-        var answers = poll.optJSONArray("answers");
-
-        for (int i = 0; i < answers.length(); i++) {
-            var jsonObject = answers.optJSONObject(i);
-            if (jsonObject != null)
-                pollHtml.append("<hr><p>").append(jsonObject.optString("text")).append(" · ").append(jsonObject.optString("votes")).append(" (").append(jsonObject.optString("rate")).append("%)</p>");
-        }
-
-        pollHtml.append("<hr><p style=\"text-align:center;\">").append(getString("chat_export_poll_voted")).append(" ").append(poll.optString("votes")).append(" ").append(getString("chat_export_users_name")).append("</p>");
-
-        return pollHtml.append("</div>").toString();
-    }
-
-    private static String getVideoHtml(JSONObject files) throws JSONException {
-        if (files == null) return getString("chat_export_video_nolinks");
-
-        Iterator< ? > keys = files.keys();
-        StringBuilder videoHtml = new StringBuilder();
-
-        int qualityIndex = 0;
-        String[] quality = {"144", "240", "360", "480", "720", "1080", "1440", "2160"};
-
-        while (keys.hasNext()) {
-            String key = (String) keys.next();
-            if (key.equals("mp4_" + quality[qualityIndex])) {
-                videoHtml.append("<a class=\"msg-attach-link\" href=\"").append(files.get(key)).append("\">").append(quality[qualityIndex]).append("p</a>").append(" ");
-
-                if (qualityIndex == quality.length - 1) break;
-                ++qualityIndex;
-            }
-        }
-
-        return videoHtml.toString();
     }
 }

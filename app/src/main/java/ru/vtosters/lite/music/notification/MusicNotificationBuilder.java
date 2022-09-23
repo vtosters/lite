@@ -15,7 +15,7 @@ import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class MusicNotificationBuilder {
-    private static NotificationManagerCompat notificationManager = NotificationChannels.getNotificationManager();
+    private static final NotificationManagerCompat notificationManager = NotificationChannels.getNotificationManager();
 
     public static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id) {
         var notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), NotificationChannels.MUSIC_DOWNLOAD_CHANNEL_ID)

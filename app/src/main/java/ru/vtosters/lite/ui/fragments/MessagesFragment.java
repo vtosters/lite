@@ -71,7 +71,7 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("wallpapers").setIcon(recolorDrawable(getGlobalContext().getDrawable(getIdentifier("ic_media_outline_28", "drawable"))));
         findPreference("vkme").setIcon(getIdentifier("ic_vkme_28", "drawable"));
 
-        if (isTablet()){
+        if (isTablet()) {
             findPreference("alteremoji").setVisible(false);
             findPreference("vkmesett").setVisible(false);
         }

@@ -1,4 +1,5 @@
 package ru.vtosters.lite.proxy.socks;
+
 import static ru.vtosters.lite.proxy.GithubList.getProxy;
 import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
 import static ru.vtosters.lite.proxy.ProxyUtils.hasProxy;
@@ -13,10 +14,10 @@ import java.util.ArrayList;
 import ru.vtosters.lite.proxy.RandomProxy;
 import ru.vtosters.lite.utils.AndroidUtils;
 
-public class Roosterkid{
+public class Roosterkid {
     private static final String TAG = "Roosterkid_Socks";
 
-    public static void loadProxy() throws IOException{
+    public static void loadProxy() throws IOException {
         ArrayList<String> proxyList = getProxy("https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS5_RAW.txt", TAG);
 
         if (proxyList == null) {
@@ -37,7 +38,7 @@ public class Roosterkid{
             AndroidUtils.sendToast(getString("proxy_setup_success") + " " + proxy);
             RandomProxy.showProxyResult = false;
         }
-        
+
         edit().putString("random_type", "socks").putString("random_host", proxy).commit();
 
         System.setProperty("socksProxyHost", proxy.split(":")[0]);

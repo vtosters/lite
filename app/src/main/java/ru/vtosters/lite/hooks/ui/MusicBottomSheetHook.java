@@ -1,8 +1,8 @@
 package ru.vtosters.lite.hooks.ui;
 
-import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.*;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.asId;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.getInstance;
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isIntegrationEnabled;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalled;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.lambdaplay;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isCached;
@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -40,14 +39,14 @@ public class MusicBottomSheetHook {
         }
 
         if (isIntegrationEnabled()) {
-            if (isVkxCached(trackid)){
+            if (isVkxCached(trackid)) {
                 actions.add(getRemoveCacheTrackVkxAction());
             } else {
                 actions.add(addToCacheTrackVkxAction());
             }
         }
 
-        if (isNetworkConnected()){
+        if (isNetworkConnected()) {
             actions.add(downloadAsMp3Action());
         }
 
@@ -60,7 +59,7 @@ public class MusicBottomSheetHook {
 
         var trackid = asId(musicTrack);
 
-        if (isCached(trackid)){
+        if (isCached(trackid)) {
             actions.add(new MusicAction(
                     AndroidUtils.getIdentifier("music_action_toggle_download", "id"),
                     milkshake() ? R.drawable.ic_delete_outline_28 : R.drawable.ic_delete_24,
@@ -88,8 +87,8 @@ public class MusicBottomSheetHook {
 
         if (isVkxInstalled()) actions.add(getPlayInVKXAction());
 
-        if (isIntegrationEnabled()){
-            if (isVkxCached(playlist.a, playlist.b)){
+        if (isIntegrationEnabled()) {
+            if (isVkxCached(playlist.a, playlist.b)) {
                 actions.add(getRemoveCacheTrackVkxAction());
             } else {
                 actions.add(addToCacheTrackVkxAction());
@@ -152,7 +151,7 @@ public class MusicBottomSheetHook {
 
         if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
             executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
-            return true; 
+            return true;
         }
 
         if (actionId == AndroidUtils.getIdentifier("remove_from_cache_vkx", "id")) {

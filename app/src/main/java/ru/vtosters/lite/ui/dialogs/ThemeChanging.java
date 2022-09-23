@@ -1,4 +1,5 @@
 package ru.vtosters.lite.ui.dialogs;
+
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
@@ -10,8 +11,8 @@ import com.vk.core.ui.themes.VKThemeHelper;
 
 import ru.vtosters.lite.hooks.VKUIHook;
 
-public class ThemeChanging{
-    public static void changeTheme(Activity activity, float[] f){
+public class ThemeChanging {
+    public static void changeTheme(Activity activity, float[] f) {
         if (getBoolValue("systemtheme", true)) {
             new VkAlertDialog.Builder(activity)
                     .setTitle(getString("warning"))

@@ -1,4 +1,5 @@
 package ru.vtosters.lite.proxy.socks;
+
 import static ru.vtosters.lite.proxy.GithubList.getProxy;
 import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
 import static ru.vtosters.lite.proxy.ProxyUtils.hasProxy;
@@ -13,10 +14,10 @@ import java.util.ArrayList;
 import ru.vtosters.lite.proxy.RandomProxy;
 import ru.vtosters.lite.utils.AndroidUtils;
 
-public class TheSpeedX{
+public class TheSpeedX {
     private static final String TAG = "TheSpeedX_Socks";
 
-    public static void loadProxy() throws IOException{
+    public static void loadProxy() throws IOException {
         ArrayList<String> proxyList = getProxy("https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt", TAG);
 
         if (proxyList == null) {
@@ -37,7 +38,7 @@ public class TheSpeedX{
             AndroidUtils.sendToast(getString("proxy_setup_success") + " " + proxy);
             RandomProxy.showProxyResult = false;
         }
-        
+
         edit().putString("random_type", "socks").putString("random_host", proxy).commit();
 
         System.setProperty("socksProxyHost", proxy.split(":")[0]);

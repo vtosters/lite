@@ -57,7 +57,7 @@ public class IOUtils {
     }
 
     public static String readAllLines(InputStream is) throws IOException {
-        return new String(readAllBytes(is), "utf-8");
+        return new String(readAllBytes(is), StandardCharsets.UTF_8);
     }
 
     public static byte[] readAllBytes(File file) throws IOException {

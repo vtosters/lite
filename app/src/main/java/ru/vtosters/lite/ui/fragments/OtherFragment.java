@@ -11,7 +11,6 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.ContactsUtils.setContactsSync;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
@@ -278,10 +277,42 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         builder.create().show();
     }
 
+    private void delprefs(Context context) {
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
+        builder.setTitle(AndroidUtils.getString("warning"));
+        builder.setMessage(AndroidUtils.getString("settings_reset_confirm"));
+        builder.setCancelable(false);
+        builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
+            deletePrefs();
+            restartApplication();
+        });
+        builder.setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss());
+        builder.show();
+    }
+
     public static class d implements Preference.OnPreferenceClickListener {
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference) {
             restartApplication();
+            return true;
+        }
+    }
+
+    public static class b implements Preference.OnPreferenceClickListener {
+        @Override // android.support.v7.preference.Preference.c
+        public boolean onPreferenceClick(Preference preference) {
+            System.exit(0);
+            return true;
+        }
+    }
+
+    public static class saveprefs implements Preference.OnPreferenceClickListener {
+        saveprefs() {
+        }
+
+        @Override // android.support.v7.preference.Preference.c
+        public boolean onPreferenceClick(Preference preference) {
+            backupSettings();
             return true;
         }
     }
@@ -296,27 +327,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             }
             return true;
         }
-    }
-
-    public static class b implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            System.exit(0);
-            return true;
-        }
-    }
-
-    private void delprefs(Context context) {
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
-        builder.setTitle(AndroidUtils.getString("warning"));
-        builder.setMessage(AndroidUtils.getString("settings_reset_confirm"));
-        builder.setCancelable(false);
-        builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
-            deletePrefs();
-            restartApplication();
-        });
-        builder.setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss());
-        builder.show();
     }
 
     class c implements Preference.OnPreferenceClickListener {
@@ -345,17 +355,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 ToastUtils.a(AndroidUtils.getString("fcmtokenget"));
                 ToastUtils.a(AndroidUtils.getString("fcmtokenfixed"));
             }, 1000);
-            return true;
-        }
-    }
-
-    public static class saveprefs implements Preference.OnPreferenceClickListener {
-        saveprefs() {
-        }
-
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            backupSettings();
             return true;
         }
     }

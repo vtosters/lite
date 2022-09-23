@@ -203,15 +203,16 @@ public class RenameTool {
                 sendToast(AndroidUtils.getString("rename_error"));
             }
         });
-        if (isChangedName(id)) builder.setNeutralButton(AndroidUtils.getString("rename_reset"), (dialog, which) -> {
-            getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME, COLUMN_VKID, id));
-            if (id == AccountManagerUtils.getUserId()) {
-                ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
-            }
-            updateRequested = true;
-            ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
-            sendToast(AndroidUtils.getString("rename_remove_from_bd_success"));
-        });
+        if (isChangedName(id))
+            builder.setNeutralButton(AndroidUtils.getString("rename_reset"), (dialog, which) -> {
+                getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME, COLUMN_VKID, id));
+                if (id == AccountManagerUtils.getUserId()) {
+                    ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
+                }
+                updateRequested = true;
+                ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
+                sendToast(AndroidUtils.getString("rename_remove_from_bd_success"));
+            });
 
         var alert = builder.create();
 
@@ -263,11 +264,12 @@ public class RenameTool {
                 e.printStackTrace();
             }
         });
-        if (isChangedNameGroup(id)) builder.setNeutralButton(AndroidUtils.getString("rename_reset"), (dialog, which) -> {
-            getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME_GROUP, COLUMN_VKID, id));
-            updateRequested = true;
-            sendToast(AndroidUtils.getString("rename_remove_group_from_bd_success"));
-        });
+        if (isChangedNameGroup(id))
+            builder.setNeutralButton(AndroidUtils.getString("rename_reset"), (dialog, which) -> {
+                getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME_GROUP, COLUMN_VKID, id));
+                updateRequested = true;
+                sendToast(AndroidUtils.getString("rename_remove_group_from_bd_success"));
+            });
 
         var alert = builder.create();
 

@@ -19,6 +19,7 @@ import ru.vtosters.lite.utils.IOUtils;
 
 public class FFMpeg {
     private static final int BUFFER_SIZE = 2048;
+
     /**
      * @param in    Merged .ts file via {@link ru.vtosters.lite.music.converter.ts.TSMerger}
      * @param out   Output .mp3 file

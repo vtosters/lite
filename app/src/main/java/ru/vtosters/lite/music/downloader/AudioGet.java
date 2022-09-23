@@ -1,4 +1,5 @@
 package ru.vtosters.lite.music.downloader;
+
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
@@ -25,13 +26,13 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.vtosters.lite.utils.AndroidUtils;
 
-public class AudioGet{
-    public static List<MusicTrack> getAudios(){
+public class AudioGet {
+    public static List<MusicTrack> getAudios() {
         var tracks = requestAudios(0);
         return tracks != null ? tracks.stream().filter(track -> !track.D.isEmpty()).collect(Collectors.toList()) : null;
     }
 
-    private static List<MusicTrack> requestAudios(int offset){
+    private static List<MusicTrack> requestAudios(int offset) {
         var audioCount = 1000;
         var requestUrl = "https://" + getApi() + "/method/audio.get" +
                 "?v=5.119" +

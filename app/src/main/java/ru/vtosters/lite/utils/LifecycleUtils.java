@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.vk.navigation.Navigator;
-import com.vtosters.lite.VKActivity;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,5 @@
 package ru.vtosters.lite.hooks;
+
 import static ru.vtosters.lite.utils.Preferences.dev;
 
 import android.util.Log;
@@ -7,9 +8,9 @@ import com.vk.api.internal.MethodCall;
 
 import java.util.LinkedHashMap;
 
-public class RequestDumper{
+public class RequestDumper {
     public static void addParams(MethodCall.a paramslist, String method, LinkedHashMap<String, String> params, String apiver) {
-        if (method.contains("execute.getGiftByStickerId") ) {
+        if (method.contains("execute.getGiftByStickerId")) {
             apiver = "5.186";
         }
 

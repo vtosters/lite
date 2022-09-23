@@ -10,7 +10,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
@@ -51,10 +50,27 @@ import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
+
+    public static void download(Context ctx) {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
+        alertDialog.setTitle(AndroidUtils.getString("video_dl_enter_link"));
+
+        final EditText input = new EditText(ctx);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+        input.setLayoutParams(lp);
+        input.setTextColor(getTextAttr());
+        input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        alertDialog.setView(input);
+        alertDialog.setPositiveButton(AndroidUtils.getString("download"), (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
+        var alert = alertDialog.create();
+        alert.show();
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+    }
 
     @Override
     public void onCreate(Bundle bundle) {
@@ -97,7 +113,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("cached_tracks").setSummary(String.format(AndroidUtils.getString("cached_tracks_counter"), CacheDatabaseDelegate.getTrackCount()));
         findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
-            if (CacheDatabaseDelegate.getTrackCount() == 0){
+            if (CacheDatabaseDelegate.getTrackCount() == 0) {
                 sendToast(AndroidUtils.getString("no_cache_error"));
             } else {
                 delcache(requireContext());
@@ -110,7 +126,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        if (!isVkxInstalled()){
+        if (!isVkxInstalled()) {
             findPreference("vkx_sett").setVisible(false);
         }
 
@@ -222,7 +238,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         var alert = alertDialog.create();
         alert.show();
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getAccentColor());;
+        alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getAccentColor());
     }
 
     public void deleteVideoHistory() {
@@ -236,7 +252,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                 try {
                     var response = new JSONObject(new OkHttpClient().a(request).execute().a().g());
 
-                    if (response.optInt("response") == 1){
+                    if (response.optInt("response") == 1) {
                         requireActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("video_history_cleaned")));
                     } else {
                         requireActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("delete_video_history_error")));
@@ -254,7 +270,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         thread.start();
     }
 
-    private void deleteVideoHistoryDialog(Context context){
+    private void deleteVideoHistoryDialog(Context context) {
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
         builder.setTitle(AndroidUtils.getString("warning"));
         builder.setMessage(AndroidUtils.getString("delete_video_history_confirm"));
@@ -266,22 +282,13 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         builder.show();
     }
 
-    public static void download(Context ctx) {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
-        alertDialog.setTitle(AndroidUtils.getString("video_dl_enter_link"));
-
-        final EditText input = new EditText(ctx);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT);
-        input.setLayoutParams(lp);
-        input.setTextColor(getTextAttr());
-        input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
-        alertDialog.setView(input);
-        alertDialog.setPositiveButton(AndroidUtils.getString("download"), (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
-        var alert = alertDialog.create();
-        alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+    private static class restart implements Preference.OnPreferenceChangeListener {
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object o) {
+            edit().putString("dateformat", o.toString()).commit();
+            restartApplicationWithTimer();
+            return false;
+        }
     }
 
     private class download implements Preference.OnPreferenceClickListener {
@@ -289,15 +296,6 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         public boolean onPreferenceClick(Preference preference) {
             download(getActivity());
             return true;
-        }
-    }
-
-    private static class restart implements Preference.OnPreferenceChangeListener {
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object o) {
-            edit().putString("dateformat", o.toString()).commit();
-            restartApplicationWithTimer();
-            return false;
         }
     }
 }

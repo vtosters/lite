@@ -2,7 +2,6 @@ package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.utils.Preferences.preferences;
-import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -107,8 +106,6 @@ public class AndroidUtils {
         configuration.setLayoutDirection(locale);
         resources.updateConfiguration(configuration, resources.getDisplayMetrics());
 
-        edit().putBoolean("isdark", isDarkTheme()).commit();
-
         return context;
     } // Language changer and BaseContext injector
 
@@ -136,9 +133,9 @@ public class AndroidUtils {
             messageDigest.update(s.getBytes());
             byte[] digest = messageDigest.digest();
             for (byte b : digest) {
-                String hexString = Integer.toHexString(b & 255);
+                StringBuilder hexString = new StringBuilder(Integer.toHexString(b & 255));
                 while (hexString.length() < 2) {
-                    hexString = "0" + hexString;
+                    hexString.insert(0, "0");
                 }
                 sb.append(hexString);
             }

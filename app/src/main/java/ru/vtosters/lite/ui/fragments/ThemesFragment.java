@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 
@@ -14,8 +13,6 @@ import androidx.preference.Preference;
 
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
-import ru.vtosters.lite.utils.LifecycleUtils;
 
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
@@ -37,19 +34,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("dockbar_accent").setOnPreferenceClickListener(new restart());
         findPreference("dockcounter").setOnPreferenceClickListener(new restart());
 
-        if (isTablet()){
+        if (isTablet()) {
             findPreference("dockbarsett").setVisible(false);
-        }
-    }
-
-    public class openicons implements Preference.OnPreferenceClickListener {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            Context context = requireContext();
-            Intent a2 = new Navigator(IconsFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return true;
         }
     }
 
@@ -76,6 +62,17 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
             edit().putString("darktheme", o.toString()).commit();
             restartApplicationWithTimer();
             return false;
+        }
+    }
+
+    public class openicons implements Preference.OnPreferenceClickListener {
+        @Override
+        public boolean onPreferenceClick(Preference preference) {
+            Context context = requireContext();
+            Intent a2 = new Navigator(IconsFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return true;
         }
     }
 }

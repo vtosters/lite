@@ -52,18 +52,20 @@ public class EncryptProvider {
     public static int getPeerId(Msg msg) {
         return msg.v1();
     }
-    
+
     // For message editing
     public static String decryptMessage(MsgFromUser msg, boolean showEmoji) {
         var decryptedMessage = decryptMessage(getBody(msg), getPeerId(msg));
-        if (!showEmoji && !decryptedMessage.equals(injectOwnTextAll(getBody(msg)))) decryptedMessage = decryptedMessage.replaceAll("^\uD83D\uDD12 ", "");
+        if (!showEmoji && !decryptedMessage.equals(injectOwnTextAll(getBody(msg))))
+            decryptedMessage = decryptedMessage.replaceAll("^\uD83D\uDD12 ", "");
         return decryptedMessage;
     }
 
     public static String decryptMessage(String msg, MsgListComponent list) {
         var peerid = list.G().getId();
         var decryptedMessage = decryptMessage(msg, peerid);
-        if (!decryptedMessage.equals(injectOwnTextAll(msg))) decryptedMessage = decryptedMessage.replaceAll("^\uD83D\uDD12 ", "");
+        if (!decryptedMessage.equals(injectOwnTextAll(msg)))
+            decryptedMessage = decryptedMessage.replaceAll("^\uD83D\uDD12 ", "");
         return decryptedMessage;
     }
 
@@ -91,7 +93,8 @@ public class EncryptProvider {
     // For MentionsFormatter that requires CharSequence
     public static CharSequence decryptMessage(String msgBody, int peer, boolean showEmoji) {
         var decryptedMessage = decryptMessage(msgBody, peer);
-        if (!showEmoji && !decryptedMessage.equals(injectOwnTextAll(msgBody))) decryptedMessage = decryptedMessage.replaceAll("^\uD83D\uDD12 ", "");
+        if (!showEmoji && !decryptedMessage.equals(injectOwnTextAll(msgBody)))
+            decryptedMessage = decryptedMessage.replaceAll("^\uD83D\uDD12 ", "");
         return decryptedMessage;
     }
 

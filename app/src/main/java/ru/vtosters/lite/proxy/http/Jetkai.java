@@ -1,4 +1,5 @@
 package ru.vtosters.lite.proxy.http;
+
 import static ru.vtosters.lite.proxy.GithubList.getProxy;
 import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
 import static ru.vtosters.lite.proxy.ProxyUtils.hasProxy;
@@ -13,10 +14,10 @@ import java.util.ArrayList;
 import ru.vtosters.lite.proxy.RandomProxy;
 import ru.vtosters.lite.utils.AndroidUtils;
 
-public class Jetkai{
+public class Jetkai {
     private static final String TAG = "Jetkai_Http";
 
-    public static void loadProxy() throws IOException{
+    public static void loadProxy() throws IOException {
         ArrayList<String> proxyList = getProxy("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-http.txt", TAG);
 
         if (proxyList == null) {
@@ -38,7 +39,7 @@ public class Jetkai{
             RandomProxy.showProxyResult = false;
             RandomProxy.showProxyResult = false;
         }
-        
+
         edit().putString("random_type", "http").putString("random_host", proxy).commit();
 
         System.setProperty("http.proxyHost", proxy.split(":")[0]);

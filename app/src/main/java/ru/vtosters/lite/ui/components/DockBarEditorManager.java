@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui.components;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
@@ -33,7 +32,6 @@ import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
 import com.vtosters.lite.fragments.s2.GroupsFragment1;
 import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideoCatalogFragment;
-import com.vtosters.lite.fragments.y2.VideosFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
 
@@ -49,20 +47,18 @@ import ru.vtosters.lite.utils.AndroidUtils;
 public class DockBarEditorManager {
     public static final int MIN_SELECTED_TABS = 3;
     public static final int MAX_SELECTED_TABS = 9;
-
+    private static DockBarEditorManager sInstance;
     private final List<DockBarTab> mSelectedTabs = new ArrayList<>();
     private final List<DockBarTab> mDisabledTabs = new ArrayList<>();
 
-    private static DockBarEditorManager sInstance;
+    public DockBarEditorManager() {
+        init();
+    }
 
     public static DockBarEditorManager getInstance() {
         return sInstance == null
                 ? (sInstance = new DockBarEditorManager())
                 : sInstance;
-    }
-
-    public DockBarEditorManager() {
-        init();
     }
 
     private void init() {

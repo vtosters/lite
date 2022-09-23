@@ -46,7 +46,7 @@ public class TracklistHelper {
             try {
                 addCachedThumbnails(json, folder);
             } catch (JSONException | MalformedURLException e) {
-                Log.d("TracklistHelper", e+"");
+                Log.d("TracklistHelper", e.getMessage());
             }
             arr.put(json);
         }

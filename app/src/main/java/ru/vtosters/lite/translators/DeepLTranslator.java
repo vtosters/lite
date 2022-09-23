@@ -54,6 +54,11 @@ public class DeepLTranslator extends BaseTranslator {
         return instance;
     }
 
+    private static Long getTimestamp(int iNumber) {
+        var now = System.currentTimeMillis();
+        return Long.valueOf((((long) iNumber) + now) - (now % ((long) iNumber)));
+    }
+
     @NonNull
     @Override
     public String translate(String text, String tl) {
@@ -125,10 +130,5 @@ public class DeepLTranslator extends BaseTranslator {
             Log.d("DeepL", e + "");
         }
         return text;
-    }
-
-    private static Long getTimestamp(int iNumber) {
-        var now = System.currentTimeMillis();
-        return Long.valueOf((((long) iNumber) + now) - (now % ((long) iNumber)));
     }
 }

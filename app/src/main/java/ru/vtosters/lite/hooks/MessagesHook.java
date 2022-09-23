@@ -23,7 +23,7 @@ public class MessagesHook {
     public static String injectOwnText(String oldText) {
         if (!autotranslate() || TextUtils.isEmpty(oldText))
             return oldText;
-        var instance = BaseTranslator.getInstance();        
+        var instance = BaseTranslator.getInstance();
 
         return replaceMentions(oldText, instance);
     }
@@ -46,7 +46,8 @@ public class MessagesHook {
             var mentions = new ArrayList<String>();
             while (matcher.find()) {
                 mentions.add(matcher.group());
-                matcher.appendReplacement(textBuff, "vtl_mention" + mentionsCount + ""); ++mentionsCount;
+                matcher.appendReplacement(textBuff, "vtl_mention" + mentionsCount + "");
+                ++mentionsCount;
             }
             matcher.appendTail(textBuff);
 
@@ -61,7 +62,7 @@ public class MessagesHook {
             matcherMentions.appendTail(retTextBuff);
 
             return retTextBuff.toString();
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return instance.getTranslation(oldText);
         }
@@ -75,7 +76,7 @@ public class MessagesHook {
     }
 
     public static Context fixCTX(Context ctx) {
-        if (ctx == null){
+        if (ctx == null) {
             return LifecycleUtils.getCurrentActivity();
         } else {
             return ctx;

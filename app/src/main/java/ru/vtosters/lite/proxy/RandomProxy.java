@@ -1,4 +1,5 @@
 package ru.vtosters.lite.proxy;
+
 import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
 import static ru.vtosters.lite.proxy.ProxyUtils.resetProxy;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
@@ -11,19 +12,19 @@ import ru.vtosters.lite.proxy.socks.Jetkai;
 import ru.vtosters.lite.proxy.socks.Roosterkid;
 import ru.vtosters.lite.proxy.socks.TheSpeedX;
 
-public class RandomProxy{
+public class RandomProxy {
     public static String type = preferences.getString("random_type", "none");
     public static String host = preferences.getString("random_host", "");
     public static boolean showProxyResult = false;
 
-    public static void loadProxy() throws IOException{
+    public static void loadProxy() throws IOException {
         if (host.isEmpty()) {
             getProxy();
             loadProxy();
             return;
         }
 
-        switch(type) {
+        switch (type) {
             case "socks":
                 System.setProperty("socksProxyHost", host.split(":")[0]);
                 System.setProperty("socksProxyPort", host.split(":")[1]);
@@ -39,7 +40,7 @@ public class RandomProxy{
         }
     }
 
-    public static void setupNewProxy() throws IOException{
+    public static void setupNewProxy() throws IOException {
         edit().putString("random_type", "none").putString("random_host", "").commit();
 
         resetProxy();
@@ -50,10 +51,10 @@ public class RandomProxy{
         edit().putString("proxy", "randomproxy").commit();
     }
 
-    public static void getProxy() throws IOException{
+    public static void getProxy() throws IOException {
         var random = new java.util.Random();
         var randomInt = random.nextInt(7);
-        switch(randomInt) {
+        switch (randomInt) {
             case 0:
                 Hookzof.loadProxy();
                 break;

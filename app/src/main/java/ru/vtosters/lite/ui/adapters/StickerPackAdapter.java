@@ -24,7 +24,6 @@ import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 
 import java.io.File;
-import java.util.Collections;
 
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.components.IItemMovingListener;

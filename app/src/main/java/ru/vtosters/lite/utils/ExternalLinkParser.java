@@ -4,6 +4,7 @@ import static android.text.TextUtils.isEmpty;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -63,9 +64,7 @@ public class ExternalLinkParser {
             } else {
                 String[] titles = qualities.keySet().toArray(new String[0]);
                 new AlertDialog.Builder(context)
-                        .setItems(titles, ((dialog, which) -> {
-                            startExternalVideo(qualities.get(titles[which]), context);
-                        }))
+                        .setItems(titles, ((dialog, which) -> startExternalVideo(qualities.get(titles[which]), context)))
                         .show();
             }
         }
@@ -144,6 +143,7 @@ public class ExternalLinkParser {
         return false;
     }
 
+    @SuppressLint("QueryPermissionsNeeded")
     private static String getMXPlayerPackageName() {
         for (ApplicationInfo info : getGlobalContext().getPackageManager().getInstalledApplications(0)) {
             String packName = info.packageName;

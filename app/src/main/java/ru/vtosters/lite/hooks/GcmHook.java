@@ -29,7 +29,6 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class GcmHook {
     private static final String agent = String.format("Android-GCM/1.5 (%s %s)", Build.MODEL, Build.MODEL);
-    public static ArrayList<String> langs = new ArrayList<>();
     private static KeyPair pair;
     private static int rid = 0;
 
@@ -38,12 +37,12 @@ public class GcmHook {
     }
 
     public static String requestTokenV2(String orig) {
-        if (musicFixNew()) return "null";
+        if (musicFixNew()) return "null"; //not public
         return orig;
     }
 
     public static String requestToken(String orig) {
-        if (musicFixNew()) return "{null}";
+        if (musicFixNew()) return "{null}"; //not public
         if (orig.equals("")) return requestToken();
         return orig;
     }

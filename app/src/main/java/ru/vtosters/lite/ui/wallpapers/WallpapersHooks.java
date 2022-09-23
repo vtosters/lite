@@ -18,18 +18,17 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 import vigo.sdk.Log;
 
-public class WallpapersHooks{
+public class WallpapersHooks {
     private static final boolean compress = getBoolValue("compresswp", true);
     private static File mWallpaperFile;
     private static Drawable mWallpaper;
     private static boolean mUpdateWallpaperRequested = true;
     private static boolean mUpdateWallpaperFileRequested = true;
 
-    public static File getWallpaperFile(){
+    public static File getWallpaperFile() {
         if (mWallpaperFile == null) {
             mWallpaperFile = new File(getGlobalContext().getFilesDir(), "wallpaper.webp");
         }
@@ -37,7 +36,7 @@ public class WallpapersHooks{
         return mWallpaperFile;
     }
 
-    public static Drawable getFilteredFile(){
+    public static Drawable getFilteredFile() {
         File file = null;
         File wp = mWallpaperFile;
         String temp = getGlobalContext().getFilesDir() + File.separator + "filteredwp.webp";
@@ -66,11 +65,15 @@ public class WallpapersHooks{
         try {
             return Drawable.createFromPath(temp);
         } catch (Exception e) {
-            return Drawable.createFromPath(file.getAbsolutePath());
+            if (file != null) {
+                return Drawable.createFromPath(file.getAbsolutePath());
+            } else {
+                return null;
+            }
         }
     }
 
-    private static Boolean eligibleWallpaperFile(File file){
+    private static Boolean eligibleWallpaperFile(File file) {
         if (file.length() >= 6291456) {
             sendToast(getString("wallpaper_size_limit"));
             removeWallpaper();
@@ -80,7 +83,7 @@ public class WallpapersHooks{
         }
     }
 
-    public static void setBg(View view){
+    public static void setBg(View view) {
         if (getWallpaper() != null) {
             ((ImageView) view).setImageDrawable(getFilteredFile()); // set picture to background
             return;
@@ -89,7 +92,7 @@ public class WallpapersHooks{
         view.setBackgroundColor(ThemesUtils.getColorFromAttr(im_bg_chat)); // set default bg color
     }
 
-    public static String getWallpaperUrl(){
+    public static String getWallpaperUrl() {
         var file = getWallpaperFile();
 
         if (file.exists() && eligibleWallpaperFile(file)) {
@@ -99,7 +102,7 @@ public class WallpapersHooks{
         return "default";
     }
 
-    public static Drawable getWallpaper(){
+    public static Drawable getWallpaper() {
         if (mWallpaper == null || mUpdateWallpaperRequested) {
             String url = getWallpaperUrl();
 
@@ -123,14 +126,14 @@ public class WallpapersHooks{
         return mWallpaper;
     }
 
-    public static void requestUpdateWallpaper(){
+    public static void requestUpdateWallpaper() {
         mUpdateWallpaperRequested = true;
         mUpdateWallpaperFileRequested = true;
     }
 
-    public static String getRadiusSummary(){
+    public static String getRadiusSummary() {
         String radius = getPreferences().getString("msg_blur_radius", "disabled");
-        switch(radius) {
+        switch (radius) {
             case "low":
                 return getString("wallpapers_low");
             case "med":
@@ -142,9 +145,9 @@ public class WallpapersHooks{
         }
     }
 
-    public static String getDimmingSummary(){
+    public static String getDimmingSummary() {
         String radius = getPreferences().getString("msg_dim", "disabled");
-        switch(radius) {
+        switch (radius) {
             case "dim_black":
                 return getString("wallpapers_dim_black");
             case "dim_white":
@@ -154,9 +157,9 @@ public class WallpapersHooks{
         }
     }
 
-    public static String getMosaicSummary(){
+    public static String getMosaicSummary() {
         String radius = getPreferences().getString("msg_mosaic", "disabled");
-        switch(radius) {
+        switch (radius) {
             case "low":
                 return getString("wallpapers_low");
             case "med":
@@ -169,7 +172,7 @@ public class WallpapersHooks{
     }
 
 
-    public static void removeWallpaper(){
+    public static void removeWallpaper() {
         try {
             new File(getGlobalContext().getFilesDir(), "wallpaper.webp").delete();
             new File(getGlobalContext().getFilesDir(), "filteredwp.webp").delete();

@@ -2,21 +2,16 @@ package ru.vtosters.lite.music.downloader;
 
 import android.util.Log;
 
-import androidx.core.app.NotificationManagerCompat;
-
 import com.vk.dto.music.MusicTrack;
 
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.music.Callback;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 
 public class PlaylistDownloader {
-    private static NotificationManagerCompat notificationManager = NotificationChannels.getNotificationManager();
-
     public static void downloadPlaylist(List<MusicTrack> playlist, String playlistName, String path, Callback callback) {
         File outDir = new File(path);
         if (!outDir.exists())
@@ -30,7 +25,8 @@ public class PlaylistDownloader {
         for (MusicTrack musicTrack : playlist) {
             TrackDownloader.downloadTrack(musicTrack, path, new Callback() {
                 @Override
-                public void onProgress(int progress) {}
+                public void onProgress(int progress) {
+                }
 
                 @Override
                 public void onSuccess() {
@@ -44,7 +40,8 @@ public class PlaylistDownloader {
                 }
 
                 @Override
-                public void onSizeReceived(long size, long header) {}
+                public void onSizeReceived(long size, long header) {
+                }
             });
         }
     }
@@ -55,7 +52,8 @@ public class PlaylistDownloader {
         for (MusicTrack musicTrack : playlist) {
             TrackDownloader.cacheTrack(musicTrack, new Callback() {
                 @Override
-                public void onProgress(int progress) {}
+                public void onProgress(int progress) {
+                }
 
                 @Override
                 public void onSuccess() {
@@ -70,7 +68,8 @@ public class PlaylistDownloader {
                 }
 
                 @Override
-                public void onSizeReceived(long size, long header) {}
+                public void onSizeReceived(long size, long header) {
+                }
             });
         }
     }

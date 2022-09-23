@@ -1,8 +1,10 @@
 package ru.vtosters.lite.music.cache;
 
 import static ru.vtosters.lite.music.cache.FileCacheImplementation.getCacheDir;
-import static ru.vtosters.lite.utils.AndroidUtils.*;
-import static ru.vtosters.lite.utils.IOUtils.*;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+import static ru.vtosters.lite.utils.IOUtils.deleteRecursive;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -230,31 +232,31 @@ public class CacheDatabaseDelegate {
     }
 
     public static boolean isCached(String trackId) {
-            var formula = String.format(
-                    "SELECT COUNT(%s) FROM %s WHERE %s = '%s'",
-                    COLUMN_ID,
-                    TABLE_NAME,
-                    COLUMN_TRACK_ID,
-                    trackId
-            );
-            try {
-                Cursor size = getHelper().getReadableDatabase().rawQuery(formula, null);
-                if (size != null) {
-                    size.moveToFirst();
-                    int count = size.getInt(0);
-                    size.close();
-                    return count != 0;
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
+        var formula = String.format(
+                "SELECT COUNT(%s) FROM %s WHERE %s = '%s'",
+                COLUMN_ID,
+                TABLE_NAME,
+                COLUMN_TRACK_ID,
+                trackId
+        );
+        try {
+            Cursor size = getHelper().getReadableDatabase().rawQuery(formula, null);
+            if (size != null) {
+                size.moveToFirst();
+                int count = size.getInt(0);
+                size.close();
+                return count != 0;
             }
-            return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public static boolean isVkxCached(int playlist_id, int owner_id) {
-        return LibVKXClient.getInstance().runOnServiceSync(new LibVKXClientImpl.LibVKXActionGeneric<>(){
+        return LibVKXClient.getInstance().runOnServiceSync(new LibVKXClientImpl.LibVKXActionGeneric<>() {
             @Override
-            public Boolean run(ILibVkxService service){
+            public Boolean run(ILibVkxService service) {
                 try {
                     return service.isPlaylistCached(playlist_id, owner_id);
                 } catch (RemoteException e) {
@@ -263,16 +265,16 @@ public class CacheDatabaseDelegate {
             }
 
             @Override
-            public Boolean defaultValue(){
+            public Boolean defaultValue() {
                 return false;
             }
         });
     }
 
     public static boolean isVkxCached(String trackId) {
-        return LibVKXClient.getInstance().runOnServiceSync(new LibVKXClientImpl.LibVKXActionGeneric<>(){
+        return LibVKXClient.getInstance().runOnServiceSync(new LibVKXClientImpl.LibVKXActionGeneric<>() {
             @Override
-            public Boolean run(ILibVkxService service){
+            public Boolean run(ILibVkxService service) {
                 try {
                     var splits = trackId.split("_");
                     var id = Integer.parseInt(splits[1]);
@@ -284,7 +286,7 @@ public class CacheDatabaseDelegate {
             }
 
             @Override
-            public Boolean defaultValue(){
+            public Boolean defaultValue() {
                 return false;
             }
         });

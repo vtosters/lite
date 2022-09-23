@@ -1,4 +1,5 @@
 package ru.vtosters.lite.hooks;
+
 import static ru.vtosters.lite.utils.Preferences.preferences;
 
 import android.graphics.Bitmap;
@@ -12,7 +13,7 @@ import com.facebook.drawee.generic.RoundingParams;
 
 import ru.vtosters.lite.utils.AndroidUtils;
 
-public class PicRoundingHook{
+public class PicRoundingHook {
     private static final int pref = preferences.getInt("pic_rounding", 0);
 
     public static RoundingParams inject() {
@@ -39,7 +40,7 @@ public class PicRoundingHook{
         }
     }
 
-    public static void inject(float orig, Canvas canvas, Paint paint){
+    public static void inject(float orig, Canvas canvas, Paint paint) {
         if (pref > 0) {
             canvas.drawRoundRect(new RectF(0, 0, canvas.getWidth(), canvas.getHeight()), AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref), paint);
         } else {
@@ -47,7 +48,7 @@ public class PicRoundingHook{
         }
     }
 
-    public static void inject(Canvas canvas, Paint paint, float orig){
+    public static void inject(Canvas canvas, Paint paint, float orig) {
         if (pref > 0) {
             canvas.drawRoundRect(new RectF(0, 0, canvas.getWidth(), canvas.getHeight()), AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref), paint);
         } else {
@@ -55,7 +56,7 @@ public class PicRoundingHook{
         }
     }
 
-    public static void inject(Canvas canvas, float orig, float orig2, float orig3, Paint paint){
+    public static void inject(Canvas canvas, float orig, float orig2, float orig3, Paint paint) {
         if (pref > 0) {
             canvas.drawRoundRect(new RectF(0, 0, canvas.getWidth(), canvas.getHeight()), AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref), paint);
         } else {
@@ -76,7 +77,7 @@ public class PicRoundingHook{
         }
     }
 
-    private static RoundingParams customParams(){
+    private static RoundingParams customParams() {
         return RoundingParams.b(AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref));
     }
 }

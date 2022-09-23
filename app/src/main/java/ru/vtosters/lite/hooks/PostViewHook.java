@@ -14,7 +14,8 @@ import ru.vtosters.lite.utils.Preferences;
 public class PostViewHook {
 
     /**
-     * For displaying child elements with custom direction in rtl container we should remove their, set layout direction and add again */
+     * For displaying child elements with custom direction in rtl container we should remove their, set layout direction and add again
+     */
     private static void saveChildDirectionForRlt(ViewGroup container) {
         var children = new View[container.getChildCount()];
         for (int i = 0; i < container.getChildCount(); i++) {

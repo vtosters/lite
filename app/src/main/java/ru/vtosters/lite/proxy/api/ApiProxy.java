@@ -1,12 +1,13 @@
 package ru.vtosters.lite.proxy.api;
+
 import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
 import static ru.vtosters.lite.proxy.ProxyUtils.isVikaProxyEnabled;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 
 import android.util.Log;
 
-public class ApiProxy{
-    public static String linkReplacer(String link){
+public class ApiProxy {
+    public static String linkReplacer(String link) {
         var vkapi = "api.vk.com";
         var oauth = "oauth.vk.com";
         var vkstatic = "static.vk.com";
@@ -59,7 +60,7 @@ public class ApiProxy{
         return str;
     }
 
-    public static String getAwayPhpCom(){
+    public static String getAwayPhpCom() {
         var proxyapi = getPrefsValue("proxyapi");
 
         if (isVikaProxyEnabled()) {

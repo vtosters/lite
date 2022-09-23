@@ -41,7 +41,7 @@ public class TracklistInjector {
                         try {
                             Log.d("TracklistInjector", "Using vkx cache catalog");
                             observableEmitter.b(parser.c(new JSONObject(service.getCacheCatalog())));
-                        } catch (Exception e){
+                        } catch (Exception e) {
                             e.printStackTrace();
                             List<MusicTrack> tracks = new ArrayList<>();
                             List<String> cache = service.getCache();
@@ -59,7 +59,7 @@ public class TracklistInjector {
                     }
                 });
             } else {
-                if (!hasTracks()){
+                if (!hasTracks()) {
                     observableEmitter.b(parser.c(getEmptyCatalog()));
                 } else {
                     observableEmitter.b(parser.c(createVirtualCatalog(TracklistHelper.getTracks())));
@@ -68,7 +68,7 @@ public class TracklistInjector {
         });
     }
 
-    private static JSONObject getEmptyCatalog() throws JSONException{
+    private static JSONObject getEmptyCatalog() throws JSONException {
         return new JSONObject("{\"catalog\":{\"default_section\":\"cache\",\"sections\":[{\"id\":\"cache\",\"title\":\"" + getString("cached_content_title") + "\",\"blocks\":[{\"data_type\":\"placeholder\",\"id\":\"0\",\"layout\":{\"name\":\"placeholder_big\"},\"placeholder_ids\":[\"_synth_trackEmpty\"]}]}]},\"audios\":[],\"playlists\":[],\"placeholders\":[{\"id\":\"_synth_trackEmpty\",\"title\":\"" + getString("cached_content_empty") + "\",\"text\":\"" + getString("cached_content_empty_desc") + "\",\"buttons\":[]}]}");
     }
 

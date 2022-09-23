@@ -70,7 +70,7 @@ public class FoafBase {
 
     public static JSONObject getBypassedOnlineInfo(int id) throws JSONException {
         var request = new okhttp3.Request.a()
-                .b(API_VKNEXT + Integer.toString(id))
+                .b(API_VKNEXT + id)
                 .a();
 
         String response = null;
@@ -151,7 +151,7 @@ public class FoafBase {
         }
     }
 
-    private static long daysPassedFromFoafDate(String str) { 
+    private static long daysPassedFromFoafDate(String str) {
         try {
             @SuppressLint("SimpleDateFormat")
             Date parse = new SimpleDateFormat("yyyy-MM-dd").parse(str.split(" ")[1]);

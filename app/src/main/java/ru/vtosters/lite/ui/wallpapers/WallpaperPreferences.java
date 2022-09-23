@@ -18,31 +18,31 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import ru.vtosters.lite.ui.adapters.MessagesPreviewAdapter;
 
-public class WallpaperPreferences extends Preference{
+public class WallpaperPreferences extends Preference {
 
     RecyclerView mRecyclerView;
     ImageView mChatBackground;
     private MessagesPreviewAdapter mAdapter;
 
-    public WallpaperPreferences(Context context){
+    public WallpaperPreferences(Context context) {
         this(context, null, -1, -1);
     }
 
-    public WallpaperPreferences(Context context, AttributeSet attributeSet){
+    public WallpaperPreferences(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, -1, -1);
     }
 
-    public WallpaperPreferences(Context context, AttributeSet attributeSet, int defStyleAttr){
+    public WallpaperPreferences(Context context, AttributeSet attributeSet, int defStyleAttr) {
         this(context, attributeSet, defStyleAttr, -1);
     }
 
-    public WallpaperPreferences(Context context, AttributeSet attributeSet, int defStyleAttr, int i1){
+    public WallpaperPreferences(Context context, AttributeSet attributeSet, int defStyleAttr, int i1) {
         super(context, attributeSet, defStyleAttr, i1);
         setLayoutResource(getIdentifier("wppreview", "layout"));
     }
 
     @Override
-    public void onBindViewHolder(PreferenceViewHolder preferenceViewHolder){
+    public void onBindViewHolder(PreferenceViewHolder preferenceViewHolder) {
         super.onBindViewHolder(preferenceViewHolder);
 
         mRecyclerView = (RecyclerView) preferenceViewHolder.findViewById(getIdentifier("install_btn_container", "id"));
@@ -56,7 +56,7 @@ public class WallpaperPreferences extends Preference{
         requestBg();
     }
 
-    private void requestBg(){
+    private void requestBg() {
         final Drawable drawable = getFilteredFile();
 
         if (drawable != null && getWallpaperFile() != null)
@@ -66,7 +66,7 @@ public class WallpaperPreferences extends Preference{
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    void redraw(){
+    void redraw() {
         mAdapter.notifyDataSetChanged();
         requestBg();
     }

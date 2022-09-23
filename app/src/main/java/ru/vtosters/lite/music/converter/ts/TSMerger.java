@@ -14,6 +14,7 @@ import ru.vtosters.lite.utils.IOUtils;
 public class TSMerger {
     /**
      * Merge multiple .ts files into one .ts file
+     *
      * @param in Directory with .ts files
      * @return True if success, else false
      */
