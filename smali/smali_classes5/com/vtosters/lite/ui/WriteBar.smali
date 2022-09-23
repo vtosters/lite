@@ -3489,6 +3489,10 @@
         .end annotation
     .end param
 
+    invoke-static {p3}, Lru/vtosters/lite/hooks/WritebarHook;->getIconsColors(I)I
+
+    move-result p3
+
     .line 264
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
