@@ -60,6 +60,7 @@ public class AudioDownloader {
 
     public static void cacheTrack(MusicTrack track) {
         var trackId = track.y1();
+
         if (CacheDatabaseDelegate.isCached(trackId)) {
             CacheDatabaseDelegate.removeTrackFromCache(LibVKXClient.asId(track));
             return;

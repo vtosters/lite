@@ -28,7 +28,7 @@ public class PlaylistInjector {
     public final static String CHANNEL_NAME = "VTCH";
 
     public static void injectDownloadPlaylist(Playlist playlist) {
-        AudioDownloader.downloadPlaylist(playlist);
+        AudioDownloader.cachePlaylist(playlist);
     }
 
     public static boolean eligibleForOfflineCaching() {
