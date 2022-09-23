@@ -103,7 +103,6 @@
 
     <style name="Vk.Theme.VkApp" parent="@style/Vk.Theme">
         <item name="android:windowLayoutInDisplayCutoutMode">default</item>
-        <item name="im_ic_add_circle">@drawable/ic_add_circle_outline_28</item>
         <item name="im_avatars_combine">true</item>
         <item name="im_bg_chat">?background_content</item>
         <item name="im_bg_install_vkme_btn_bg">@drawable/bg_install_vkme_vkapp</item>
@@ -183,7 +182,6 @@
 
     <style name="Vk.Theme.VkMe" parent="@style/Vk.Theme">
         <item name="android:windowLayoutInDisplayCutoutMode">default</item>
-        <item name="im_ic_add_circle">@drawable/ic_add_circle_outline_28</item>
         <item name="im_avatars_combine">false</item>
         <item name="im_bg_sticky_date">@drawable/bg_sticky_date</item>
         <item name="im_button_all_caps">false</item>
