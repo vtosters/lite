@@ -86,10 +86,9 @@ public class WallpapersHooks {
     public static void setBg(View view) {
         if (getWallpaper() != null) {
             ((ImageView) view).setImageDrawable(getFilteredFile()); // set picture to background
-            return;
+        } else {
+            view.setBackgroundColor(ThemesUtils.getColorFromAttr(im_bg_chat)); // set default bg color
         }
-
-        view.setBackgroundColor(ThemesUtils.getColorFromAttr(im_bg_chat)); // set default bg color
     }
 
     public static String getWallpaperUrl() {
