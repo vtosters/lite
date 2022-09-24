@@ -108,23 +108,20 @@ public class NewsfeedHook {
     }
 
     public static void adsParams(HashSet<String> hashSet) {
-        if (ads()) {
+        if (getBoolValue("donotgetads", false)) {
             hashSet.add("ads_disabled");
-            if (getBoolValue("donotgetads", false)) {
-                return;
+        } else {
+            hashSet.add("ads_app");
+            hashSet.add("ads_site");
+            hashSet.add("ads_post");
+            if (!adsslider()) {
+                hashSet.add("ads_app_slider");
             }
-        }
-
-        hashSet.add("ads_app");
-        hashSet.add("ads_site");
-        hashSet.add("ads_post");
-        if (!adsslider()) {
-            hashSet.add("ads_app_slider");
-        }
-        hashSet.add("ads_site_slider");
-        hashSet.add("ads_app_video");
-        hashSet.add("ads_post_pretty_cards");
-        hashSet.add("ads_post_snippet_video");
+            hashSet.add("ads_site_slider");
+            hashSet.add("ads_app_video");
+            hashSet.add("ads_post_pretty_cards");
+            hashSet.add("ads_post_snippet_video");
+        } // ads will be filtered from another hook after this
     }
 
     public static boolean isPowerSaveMode() {
