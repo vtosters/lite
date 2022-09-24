@@ -22,6 +22,7 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class FeedFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -93,7 +94,7 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void remdialog(String key, Context context) {
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle());
         builder.setTitle(AndroidUtils.getString("warning"));
         builder.setMessage(AndroidUtils.getString("delete_elements_confirm"));
         builder.setCancelable(false);

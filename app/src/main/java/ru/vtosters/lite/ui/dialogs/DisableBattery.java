@@ -15,13 +15,14 @@ import android.os.PowerManager;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 
 import ru.vtosters.lite.deviceinfo.OEMDetector;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class DisableBattery {
     public static void alert(Activity activity) {
         if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && getBoolValue("showDoze", true)) {
             final Context context = getGlobalContext();
             if (!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())) {
-                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
+                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity, ThemesUtils.getAlertStyle());
                 builder.setTitle(getString("batteryissuetitle"));
                 builder.setMessage(getString("batteryissuesumm"));
                 builder.setCancelable(false);

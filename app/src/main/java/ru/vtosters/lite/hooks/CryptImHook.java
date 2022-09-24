@@ -5,7 +5,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
-import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 
 import android.app.Activity;
@@ -16,8 +15,6 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import androidx.appcompat.app.AlertDialog;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.im.engine.models.dialogs.Dialog;
 
@@ -26,6 +23,7 @@ import java.util.Objects;
 
 import ru.vtosters.lite.encryption.EncryptProvider;
 import ru.vtosters.lite.encryption.base.IMProcessor;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class CryptImHook {
     public static boolean isPrivateProcessor(int peerID) {
@@ -66,7 +64,7 @@ public class CryptImHook {
             return;
         }
 
-        new VkAlertDialog.Builder(ctx)
+        new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle())
                 .setTitle(getString("encryption_sett"))
                 .setSingleChoiceItems(titles, enabledPosition, (dialog, which) -> {
                     if (which == 0) {
@@ -131,13 +129,15 @@ public class CryptImHook {
         editText.setText(key == null ? "" : key);
 
         IMProcessor finalEnabled = enabled;
-        new AlertDialog.Builder(ctx, getAlertStyle())
+        var alert = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle())
                 .setTitle(getString("encryption_enter_key"))
                 .setMessage(String.format(getString("encryption_current_algorithm_title"), enabled.getUIName()))
-                .setView(linearLayout)
                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                     Editable edit = editText.getText();
                     finalEnabled.setEncryptionKeyFor(peerId, edit == null ? null : edit.toString());
-                }).setNegativeButton(android.R.string.cancel, null).create().show();
+                }).setNegativeButton(android.R.string.cancel, null)
+                .create();
+        alert.setView(linearLayout);
+        alert.show();
     }
 }

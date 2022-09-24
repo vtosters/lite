@@ -15,13 +15,10 @@ import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.preferences;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -30,13 +27,14 @@ import android.util.TypedValue;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.core.content.res.ResourcesCompat;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class IconsFragment extends MaterialPreferenceToolbarFragment {
     @SuppressLint("SetTextI18n")
@@ -73,9 +71,8 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         rgVK.setChecked(defname.contains("standard"));
         rgDefault.setChecked(defname.contains("vt") || defname.isEmpty());
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
+        var builder = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
         builder.setTitle(AndroidUtils.getString("app_name_select_title"));
-        builder.setView(rg);
         builder.setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> {
             if (rgDefault.isChecked()) {
                 edit().putString("appname", "vt").commit();
@@ -99,11 +96,8 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         }));
 
         var alert = builder.create();
-
+        alert.setView(rg);
         alert.show();
-
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getAccentColor());
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")

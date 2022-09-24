@@ -17,6 +17,7 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessageSettings {
     public static Boolean isSilentEnabled = false;
@@ -104,7 +105,7 @@ public class MessageSettings {
         mContainer.addView(rg, LayoutUtils.createLinear(-1, -2));
         mContainer.addView(silentSwitch, LayoutUtils.createLinear(-1, -2));
 
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle());
         builder.setTitle(AndroidUtils.getString("message_send_settings_title"));
         builder.setMessage(AndroidUtils.getString("silent_messages_time_select"));
         builder.setCancelable(true);

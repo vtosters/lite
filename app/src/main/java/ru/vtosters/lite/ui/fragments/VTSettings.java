@@ -70,6 +70,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.SSFSUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment {
     public static String getValAsString(String stringid, Boolean value) {
@@ -178,7 +179,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             final var isDarkTheme = !switchPreference.isChecked();
 
             if (Preferences.systemtheme()) {
-                new VkAlertDialog.Builder(requireActivity())
+                new VkAlertDialog.Builder(requireActivity(), ThemesUtils.getAlertStyle())
                         .setTitle(AndroidUtils.getString("warning"))
                         .setMessage(AndroidUtils.getString("system_theme_warning"))
                         .setCancelable(false)

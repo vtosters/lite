@@ -26,6 +26,7 @@ import java.util.Arrays;
 
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -51,7 +52,7 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
 //                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_deepl_logo_icon", "drawable"), "DeepL")
             );
 
-            var alert = new VkAlertDialog.Builder(getActivity())
+            var alert = new VkAlertDialog.Builder(getActivity(), ThemesUtils.getAlertStyle())
                     .create();
 
             var listView = (ListView) LayoutInflater.from(getContext()).inflate(com.vtosters.lite.R.layout.abc_select_dialog_material, null, false);

@@ -6,13 +6,13 @@ import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Build;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.dto.common.VideoFile;
 
 import java.util.Arrays;
@@ -63,7 +63,7 @@ public class ExternalLinkParser {
                 startExternalVideo((String) qualities.values().toArray()[0], context);
             } else {
                 String[] titles = qualities.keySet().toArray(new String[0]);
-                new AlertDialog.Builder(context)
+                new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle())
                         .setItems(titles, ((dialog, which) -> startExternalVideo(qualities.get(titles[which]), context)))
                         .show();
             }

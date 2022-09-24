@@ -7,9 +7,7 @@ import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
@@ -24,10 +22,13 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
 
 import java.util.Objects;
+
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class PreferencesUtil {
 
@@ -178,9 +179,8 @@ public class PreferencesUtil {
             margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
             editText.setLayoutParams(margin);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getContext());
+            var builder = new VkAlertDialog.Builder(fragment.getContext(), ThemesUtils.getAlertStyle());
             builder.setTitle(title);
-            builder.setView(linearLayout);
             builder.setPositiveButton("OK", (dialog, which) -> {
                 boolean change = editTextPrefChangeListener.onChanged(preference, editText.getText().toString());
                 if (!change)
@@ -193,8 +193,8 @@ public class PreferencesUtil {
             });
 
             var alert = builder.create();
+            alert.setView(linearLayout);
             alert.show();
-            alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
             return false;
         }); // preference.setOnPreferenceClickListener(listener)
 

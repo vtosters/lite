@@ -10,11 +10,9 @@ import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.ColorStateList;
@@ -38,6 +36,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 
 import java.io.File;
@@ -47,6 +46,7 @@ import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
 import ru.vtosters.lite.ui.components.StickerTouchHelperCallback;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class StickersFragment extends BaseToolbarFragment {
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
@@ -182,10 +182,9 @@ public class StickersFragment extends BaseToolbarFragment {
                 margin.setMargins(dp2px(24f), 0, dp2px(24f), 0);
                 editText.setLayoutParams(margin);
 
-                var dlg = new AlertDialog.Builder(getContext());
+                var dlg = new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle());
                 dlg.setTitle(AndroidUtils.getString("stickershelp1"));
                 dlg.setMessage(AndroidUtils.getString("stickershelp2"));
-                dlg.setView(linearLayout);
                 dlg.setPositiveButton(android.R.string.ok, (dialog, which) -> {
                     String pack = editText.getText().toString();
                     if (!pack.startsWith("https://")) {
@@ -201,11 +200,11 @@ public class StickersFragment extends BaseToolbarFragment {
                 });
 
                 var alert = dlg.create();
-
+                alert.setView(linearLayout);
                 alert.show();
 
-                alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-                alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getAccentColor());
+                
+                
             };
             if (TGPref.getTGBotKey() == null) enterBotKey(() -> checkApiKey(callback));
             else checkApiKey(callback);
@@ -246,16 +245,15 @@ public class StickersFragment extends BaseToolbarFragment {
         margin.setMargins(dp2px(24f), 0, dp2px(24f), 0);
         editText.setLayoutParams(margin);
 
-        AlertDialog alert = new AlertDialog.Builder(getContext())
+        var alert = new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle())
                 .setTitle(AndroidUtils.getString("stickersapi8"))
                 .setMessage(AndroidUtils.getString("stickersapi9") +
                         AndroidUtils.getString("stickersapi10")).setPositiveButton(android.R.string.ok, null)
                 .create();
 
-        var dlg = new AlertDialog.Builder(getContext());
+        var dlg = new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle());
         dlg.setTitle(AndroidUtils.getString("stickersapi5"));
         dlg.setMessage(AndroidUtils.getString("stickersapi6"));
-        dlg.setView(linearLayout);
         dlg.setPositiveButton(android.R.string.ok, (dialog, which) -> {
             setTGBotKey(editText.getText().toString());
             if (r != null) r.run();
@@ -265,12 +263,8 @@ public class StickersFragment extends BaseToolbarFragment {
         });
         dlg.setNeutralButton(AndroidUtils.getString("stickersapi7"), (dialog, which) -> alert.show());
         var alerts = dlg.create();
-
+        alerts.setView(linearLayout);
         alerts.show();
-
-        alerts.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alerts.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getAccentColor());
-        alerts.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getAccentColor());
     }
 
     private void checkApiKey(Runnable callback) {
@@ -300,7 +294,7 @@ public class StickersFragment extends BaseToolbarFragment {
             @Override
             public void onNetError() {
                 progressDialog.dismiss();
-                new AlertDialog.Builder(context)
+                new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle())
                         .setMessage(AndroidUtils.getString("stickersapi3"))
                         .setNegativeButton(android.R.string.cancel, null)
                         .setPositiveButton(AndroidUtils.getString("stickersapi4"), (arg0, arg1) -> checkApiKey(callback))

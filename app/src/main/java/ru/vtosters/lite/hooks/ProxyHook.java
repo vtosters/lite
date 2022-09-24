@@ -6,27 +6,25 @@ import static ru.vtosters.lite.proxy.ProxyUtils.isZaboronaEnabled;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.ContextThemeWrapper;
 
 import com.vk.auth.ui.VkAuthTextView;
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.ui.fragments.ProxySettingsFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ProxyHook {
     public static void hookAuth(View v) {
@@ -73,10 +71,9 @@ public class ProxyHook {
         rgRandomProxy.setChecked(isRandomProxyEnabled());
         rgVika.setChecked(isVikaProxyEnabled());
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
+        var builder = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
         builder.setTitle(AndroidUtils.getString("vtlproxy"));
         builder.setMessage(AndroidUtils.getString("proxy_warning"));
-        builder.setView(rg);
         builder.setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> { // Применить
             if (rgZaborona.isChecked()) {
                 edit().putString("proxy", "zaborona").commit();
@@ -100,10 +97,7 @@ public class ProxyHook {
         }));
 
         var alert = builder.create();
-
+        alert.setView(rg);
         alert.show();
-
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getAccentColor());
     }
 }

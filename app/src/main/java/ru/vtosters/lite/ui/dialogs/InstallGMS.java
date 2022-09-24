@@ -14,11 +14,12 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.ui.fragments.InstallGMSFragment;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class InstallGMS {
     public static void alert(final Activity activity) {
         if (!isGmsInstalled()) {
-            VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
+            VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity, ThemesUtils.getAlertStyle());
             builder.setTitle(getString("warning"));
             builder.setMessage(getString("gmsissuesumm"));
             builder.setCancelable(false);

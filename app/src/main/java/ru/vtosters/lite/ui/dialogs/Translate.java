@@ -11,6 +11,7 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 
 import ru.vtosters.lite.translators.BaseTranslator;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class Translate {
     public static void showTranslatedText(Context context, String text) {
@@ -27,7 +28,7 @@ public class Translate {
     }
 
     private static void showDialog(Context context, String text) {
-        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(context);
+        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle());
         alertDialog.setTitle(AndroidUtils.getString("translator_title"));
         alertDialog.setMessage(text);
         alertDialog.setPositiveButton(AndroidUtils.getString("close"), (dialog, which) -> {

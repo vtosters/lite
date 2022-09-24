@@ -7376,6 +7376,15 @@
         <item name="textColorAlertDialogListItem">?text_primary</item>
     </style>
 
+    <style name="VkAlertDialogThemeDark" parent="@style/Theme.AppCompat.Dialog.Alert">
+        <item name="android:textColorSecondary">?selection_off_icon</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/NeutralButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="colorAccent">?accent</item>
+        <item name="textColorAlertDialogListItem">?text_primary</item>
+    </style>
+
     <style name="VkAuth" />
 
     <style name="VkAuth.BottomSheetAnimationStyle" parent="@style/Widget.Design.BottomSheet.Modal">

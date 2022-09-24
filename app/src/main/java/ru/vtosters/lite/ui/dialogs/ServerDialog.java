@@ -23,6 +23,7 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ServerDialog {
     private static final OkHttpClient client = new OkHttpClient();
@@ -95,7 +96,7 @@ public class ServerDialog {
 
         if (activity != null) {
             activity.runOnUiThread(() -> {
-                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
+                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity, ThemesUtils.getAlertStyle());
                 builder.setTitle(title);
                 builder.setMessage(message);
                 builder.setCancelable(cancelable);

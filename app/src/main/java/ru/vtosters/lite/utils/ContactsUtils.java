@@ -83,7 +83,7 @@ public class ContactsUtils {
 
                 boolean enabledsync = resp.equals("contact");
 
-                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx);
+                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
                 builder.setTitle(getString("contact_sync_title"));
                 builder.setMessage(getString("contact_sync_state") + ": " + getString(enabledsync ? "contact_sync_enabled" : "contact_sync_disabled"));
                 builder.setCancelable(true);

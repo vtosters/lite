@@ -18,6 +18,7 @@ import java.io.File;
 import b.h.g.m.FileUtils;
 import ru.vtosters.lite.ui.activities.APKInstallActivity;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class OTADownloader {
 
@@ -72,7 +73,7 @@ public class OTADownloader {
             manager.enqueue(request);
         } catch (Exception e) {
             e.printStackTrace();
-            VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(context);
+            VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle());
             alertDialog.setTitle(AndroidUtils.getString("update_error"));
             alertDialog.setMessage(AndroidUtils.getString("update_error_text"));
             alertDialog.setPositiveButton(AndroidUtils.getString("no"), (dialog, which) -> {

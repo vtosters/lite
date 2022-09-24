@@ -13,10 +13,11 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.ui.fragments.VKUIwrapper;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VKIDProtection {
     public static void alert(final Activity activity) {
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity, ThemesUtils.getAlertStyle());
         builder.setTitle(getString("warning"));
         builder.setMessage(getString("vkidsumm"));
         builder.setCancelable(false);

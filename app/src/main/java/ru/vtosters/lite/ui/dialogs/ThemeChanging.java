@@ -10,11 +10,12 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.ui.themes.VKThemeHelper;
 
 import ru.vtosters.lite.hooks.VKUIHook;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ThemeChanging {
     public static void changeTheme(Activity activity, float[] f) {
         if (getBoolValue("systemtheme", true)) {
-            new VkAlertDialog.Builder(activity)
+            new VkAlertDialog.Builder(activity, ThemesUtils.getAlertStyle())
                     .setTitle(getString("warning"))
                     .setMessage(getString("system_theme_warning"))
                     .setCancelable(false)

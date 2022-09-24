@@ -12,13 +12,14 @@ import android.os.Build;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 
 import ru.vtosters.lite.deviceinfo.OEMDetector;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class Start {
     public static void alert(final Activity activity) {
         if (Build.VERSION.SDK_INT >= 23) {
             activity.requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
         }
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity, ThemesUtils.getAlertStyle());
         builder.setTitle(getString("warning"));
         builder.setMessage(getWelcome());
         builder.setCancelable(false);

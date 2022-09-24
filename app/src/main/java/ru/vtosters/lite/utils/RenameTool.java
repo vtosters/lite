@@ -5,7 +5,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
@@ -21,9 +20,9 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.core.util.Pair;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.dto.user.UserProfile;
 import com.vk.im.engine.models.users.User;
 import com.vtosters.lite.api.ExtendedCommunityProfile;
@@ -177,32 +176,31 @@ public class RenameTool {
 
         int id = AccountManagerUtils.getUserID(profile);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
-        builder.setTitle(AndroidUtils.getString("rename_title"));
-        builder.setMessage(AndroidUtils.getString("rename_message"));
-        builder.setView(linearLayout);
-        builder.setPositiveButton("OK", (dialog, which) -> {
-            String firstName = fn.getText().toString();
-            String lastName = ln.getText().toString();
-            SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
-            try {
-                if (isChangedName(id)) {
-                    writableDatabase.execSQL(String.format("UPDATE %s SET %s='%s', %s='%s' WHERE %s='%s'", TABLE_NAME, COLUMN_FIRSTNAME, URLEncoder.encode(firstName, "UTF-8"), COLUMN_LASTNAME, URLEncoder.encode(lastName, "UTF-8"), COLUMN_VKID, id));
-                } else {
-                    writableDatabase.execSQL(String.format("INSERT INTO %s (%s, %s, %s) VALUES (%s, '%s', '%s')", TABLE_NAME, COLUMN_VKID, COLUMN_FIRSTNAME, COLUMN_LASTNAME, id, URLEncoder.encode(firstName, "UTF-8"), URLEncoder.encode(lastName, "UTF-8")));
-                }
-                updateRequested = true;
-                if (id == AccountManagerUtils.getUserId()) {
-                    ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
-                }
-                ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
+        var builder = new VkAlertDialog.Builder(ctx)
+                .setTitle(AndroidUtils.getString("rename_title"))
+                .setMessage(AndroidUtils.getString("rename_message"))
+                .setPositiveButton("OK", (dialog, which) -> {
+                        String firstName = fn.getText().toString();
+                        String lastName = ln.getText().toString();
+                        SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
+                        try {
+                            if (isChangedName(id)) {
+                                writableDatabase.execSQL(String.format("UPDATE %s SET %s='%s', %s='%s' WHERE %s='%s'", TABLE_NAME, COLUMN_FIRSTNAME, URLEncoder.encode(firstName, "UTF-8"), COLUMN_LASTNAME, URLEncoder.encode(lastName, "UTF-8"), COLUMN_VKID, id));
+                            } else {
+                                writableDatabase.execSQL(String.format("INSERT INTO %s (%s, %s, %s) VALUES (%s, '%s', '%s')", TABLE_NAME, COLUMN_VKID, COLUMN_FIRSTNAME, COLUMN_LASTNAME, id, URLEncoder.encode(firstName, "UTF-8"), URLEncoder.encode(lastName, "UTF-8")));
+                            }
+                            updateRequested = true;
+                            if (id == AccountManagerUtils.getUserId()) {
+                                ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
+                            }
+                            ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
 
-                sendToast(AndroidUtils.getString("rename_success"));
-            } catch (Exception e) {
-                e.printStackTrace();
-                sendToast(AndroidUtils.getString("rename_error"));
-            }
-        });
+                            sendToast(AndroidUtils.getString("rename_success"));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            sendToast(AndroidUtils.getString("rename_error"));
+                        }
+                });
         if (isChangedName(id))
             builder.setNeutralButton(AndroidUtils.getString("rename_reset"), (dialog, which) -> {
                 getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME, COLUMN_VKID, id));
@@ -215,11 +213,8 @@ public class RenameTool {
             });
 
         var alert = builder.create();
-
+        alert.setView(linearLayout);
         alert.show();
-
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
     }
 
     public static void createDialogGroup(ExtendedCommunityProfile eup, final Context ctx) {
@@ -245,10 +240,9 @@ public class RenameTool {
 
         final int id = fid;
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
+        var builder = new VkAlertDialog.Builder(ctx);
         builder.setTitle(AndroidUtils.getString("rename_title"));
         builder.setMessage(AndroidUtils.getString("rename_message"));
-        builder.setView(linearLayout);
         builder.setPositiveButton("OK", (dialog, which) -> {
             String firstName = fn.getText().toString();
             SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
@@ -272,11 +266,11 @@ public class RenameTool {
             });
 
         var alert = builder.create();
-
+        alert.setView(linearLayout);
         alert.show();
 
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
+        
+        
     }
 
     public static boolean isChangedName(int uid) {

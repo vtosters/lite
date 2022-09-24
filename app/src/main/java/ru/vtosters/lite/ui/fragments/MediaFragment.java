@@ -11,23 +11,22 @@ import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
@@ -50,26 +49,28 @@ import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
 
     public static void download(Context ctx) {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
+        var alertDialog = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
         alertDialog.setTitle(AndroidUtils.getString("video_dl_enter_link"));
 
         final EditText input = new EditText(ctx);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT);
-        input.setLayoutParams(lp);
+        var lp = new FrameLayout.LayoutParams(-1, -2);
+        lp.leftMargin = AndroidUtils.dp2px(16);
+        lp.rightMargin = AndroidUtils.dp2px(16);
+        lp.gravity = Gravity.CENTER;
         input.setTextColor(getTextAttr());
         input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
-        alertDialog.setView(input);
+        var container = new FrameLayout(ctx);
+        container.addView(input, lp);
         alertDialog.setPositiveButton(AndroidUtils.getString("download"), (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
         var alert = alertDialog.create();
+        alert.setView(container);
         alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
     }
 
     @Override
@@ -137,7 +138,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("microsoft", "drawable"), "Bing")
             );
 
-            var alert = new VkAlertDialog.Builder(getActivity())
+            var alert = new VkAlertDialog.Builder(getActivity(), ThemesUtils.getAlertStyle())
                     .create();
 
             var listView = (ListView) LayoutInflater.from(getContext()).inflate(com.vtosters.lite.R.layout.abc_select_dialog_material, null, false);
@@ -178,10 +179,9 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ln.setLayoutParams(margin);
 
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
+        var alertDialog = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
         alertDialog.setTitle(AndroidUtils.getString("lastfm_enter_credentials"));
 
-        alertDialog.setView(linearLayout);
         alertDialog.setPositiveButton(AndroidUtils.getString("lastfm_enter"), (dialog, which) -> {
             String login = fn.getText().toString();
             String pass = ln.getText().toString();
@@ -189,12 +189,12 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             Scrobbler.auth(login, pass);
         });
         var alert = alertDialog.create();
+        alert.setView(linearLayout);
         alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
     }
 
     private void logout(Context ctx) {
-        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
+        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
         alertDialog.setTitle(AndroidUtils.getString("lastfm_logout_title"));
         alertDialog.setMessage(AndroidUtils.getString("lastfm_logout_confirm"));
         alertDialog.setPositiveButton(AndroidUtils.getString("vkim_yes"), (dialog, which) -> {
@@ -205,8 +205,8 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
         var alert = alertDialog.create();
         alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
+        
+        
     }
 
     private void delcache(Context ctx) {
@@ -221,8 +221,8 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
         var alert = alertDialog.create();
         alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
+        
+        
     }
 
     private void dlaudio(Context ctx) {
@@ -237,8 +237,8 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
         var alert = alertDialog.create();
         alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getAccentColor());
+        
+        
     }
 
     public void deleteVideoHistory() {

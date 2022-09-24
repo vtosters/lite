@@ -326,8 +326,7 @@ public class ThemesUtils {
     } // Android Support color injector + accent color checker
 
     public static int getAlertStyle() {
-        if (isDarkTheme()) return R.style.Theme_MaterialComponents_Dialog_Alert;
-        return R.style.Theme_MaterialComponents_Light_Dialog_Alert;
+        return getIdentifier(isDarkTheme() ? "VkAlertDialogThemeDark" : "VkAlertDialogTheme", "style");
     }
 
     public static String getBackgroundStickers() {

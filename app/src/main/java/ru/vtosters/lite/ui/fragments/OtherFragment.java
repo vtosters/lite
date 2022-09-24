@@ -56,6 +56,7 @@ import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ContactsUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
@@ -193,7 +194,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         four.setChecked(val == 4);
         five.setChecked(val == 5);
 
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(getContext());
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle());
         builder.setTitle(AndroidUtils.getString("cache_clean_title"));
         builder.setMessage(AndroidUtils.getString("cache_select_size"));
         builder.setCancelable(true);
@@ -229,7 +230,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void cacheCleanDialog() {
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(getContext());
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle());
         builder.setTitle(AndroidUtils.getString("select_which_clean"));
         builder.setItems(AndroidUtils.getArray("cache_cleaner"), (dialog, which) -> {
             switch (which) {
@@ -278,7 +279,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void delprefs(Context context) {
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle());
         builder.setTitle(AndroidUtils.getString("warning"));
         builder.setMessage(AndroidUtils.getString("settings_reset_confirm"));
         builder.setCancelable(false);
@@ -364,7 +365,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         public boolean onPreferenceClick(Preference preference) {
             var arr = BackupManager.getBackupsNames();
             var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr);
-            new VkAlertDialog.Builder(getContext())
+            new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle())
                     .setTitle(AndroidUtils.getString("select_backup"))
                     .setAdapter(adapter, (dialog, which) -> {
                         try {
