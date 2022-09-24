@@ -133,11 +133,6 @@
             android:title="@string/newsfeedlistmanager_reset_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
-            android:key="donotgetads"
-            android:summary="@string/donotgetads_summ"
-            android:title="@string/donotgetads_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
             android:key="force_disable_psm"
             android:summary="@string/force_disable_psm_summ"
             android:title="@string/force_disable_psm_title" />

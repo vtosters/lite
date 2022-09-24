@@ -6389,9 +6389,6 @@ May look like a fake leaving the online"</string>
     <string name="contact_sync_enabled">Enabled</string>
     <string name="contact_sync_disabled">Disabled</string>
 
-    <string name="donotgetads_title">Don\'t try to get ads</string>
-    <string name="donotgetads_summ">Don\'t request ads and recommendations\n\nMay cause problems</string>
-
     <string name="force_disable_psm_title">Don\'t send battery information</string>
     <string name="force_disable_psm_summ">Enabling this feature will hide information about the state of your device in battery saving mode and VK will send you media content without strong compression and blur</string>
 

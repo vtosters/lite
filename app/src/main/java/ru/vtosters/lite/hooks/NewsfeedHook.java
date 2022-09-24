@@ -53,7 +53,7 @@ public class NewsfeedHook {
         params.add("photo");
         params.add("photo_tag");
 
-        if (!friendsrecomm() && !getBoolValue("donotgetads", false)) {
+        if (!friendsrecomm()) {
             params.add("friends_recomm");
         }
 
@@ -62,7 +62,7 @@ public class NewsfeedHook {
             params.add("promo_button");
         }
 
-        if (!authorsrecomm() && !getBoolValue("donotgetads", false)) {
+        if (!authorsrecomm()) {
             params.add("authors_rec");
         }
 
@@ -108,20 +108,17 @@ public class NewsfeedHook {
     }
 
     public static void adsParams(HashSet<String> hashSet) {
-        if (getBoolValue("donotgetads", false)) {
+        if (ads())
             hashSet.add("ads_disabled");
-        } else {
-            hashSet.add("ads_app");
-            hashSet.add("ads_site");
-            hashSet.add("ads_post");
-            if (!adsslider()) {
-                hashSet.add("ads_app_slider");
-            }
-            hashSet.add("ads_site_slider");
-            hashSet.add("ads_app_video");
-            hashSet.add("ads_post_pretty_cards");
-            hashSet.add("ads_post_snippet_video");
-        } // ads will be filtered from another hook after this
+        hashSet.add("ads_app");
+        hashSet.add("ads_site");
+        hashSet.add("ads_post");
+        if (!adsslider())
+            hashSet.add("ads_app_slider");
+        hashSet.add("ads_site_slider");
+        hashSet.add("ads_app_video");
+        hashSet.add("ads_post_pretty_cards");
+        hashSet.add("ads_post_snippet_video");
     }
 
     public static boolean isPowerSaveMode() {

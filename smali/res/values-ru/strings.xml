@@ -6251,9 +6251,6 @@
     <string name="contact_sync_enabled">Включена</string>
     <string name="contact_sync_disabled">Отключена</string>
 
-    <string name="donotgetads_title">Не пытаться получать рекламу</string>
-    <string name="donotgetads_summ">Не запрашивать рекламу и рекомендации\n\nМогут быть проблемы</string>
-
     <string name="force_disable_psm_title">Не отправлять информацию о батарее</string>
     <string name="force_disable_psm_summ">Включение этой функции скроет информацию о состоянии вашего устройства в режиме экономии батареи и ВКонтакте будет отправлять вам медиаконтент без сильного сжатия и блюра</string>
 
