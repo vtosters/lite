@@ -179,6 +179,7 @@ public class PreferencesUtil {
 
             new VkAlertDialog.Builder(fragment.getContext())
                     .setTitle(title)
+                    .setView(linearLayout)
                     .setPositiveButton("OK", (dialog, which) -> {
                         boolean change = editTextPrefChangeListener.onChanged(preference, editText.getText().toString());
                         if (!change)
