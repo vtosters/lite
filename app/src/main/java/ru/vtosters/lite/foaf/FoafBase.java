@@ -33,7 +33,6 @@ import java.util.regex.Pattern;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import ru.vtosters.lite.net.Request;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
@@ -144,8 +143,15 @@ public class FoafBase {
             matcher2.find();
             String normalHumanDate = getNormalHumanDate(Objects.requireNonNull(matcher.group(1)));
             getNormalHumanDate(Objects.requireNonNull(matcher2.group(1)));
-            VkAlertDialog.Builder a2 = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle()).setTitle(getIdentifier("addinf", "string"));
-            a2.setMessage(getString("foafid") + " " + i + getString("foafregdate") + " " + normalHumanDate + getString("foafdate") + " " + daysPassedFromFoafDate(normalHumanDate)).setPositiveButton(17039370, null).create().show();
+
+            new VkAlertDialog.Builder(context)
+                    .setTitle(getIdentifier("addinf", "string"))
+                    .setMessage(getString("foafid") +
+                            " " + i + getString("foafregdate")
+                            + " " + normalHumanDate + getString("foafdate")
+                            + " " + daysPassedFromFoafDate(normalHumanDate))
+                    .setPositiveButton(android.R.string.ok, null)
+                    .show();
         } catch (Exception e) {
             e.printStackTrace();
             makeText(getGlobalContext(), getString("foaferr"), LENGTH_SHORT).show();

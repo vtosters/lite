@@ -194,101 +194,86 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         four.setChecked(val == 4);
         five.setChecked(val == 5);
 
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle());
-        builder.setTitle(AndroidUtils.getString("cache_clean_title"));
-        builder.setMessage(AndroidUtils.getString("cache_select_size"));
-        builder.setCancelable(true);
-        builder.setNegativeButton(AndroidUtils.getString("cancel"), null);
-        builder.setView(rg);
-        builder.setPositiveButton(AndroidUtils.getString("save"), (dialog, which) -> {
-            var pref = getDefaultPrefs().edit();
-            var checked = rg.getCheckedRadioButtonId();
-
-            if (checked == zero.getId()) {
-                pref.putInt("autoclearcache_size", 0);
-                pref.putString("autoclearcache", "Default");
-            } else if (checked == one.getId()) {
-                pref.putInt("autoclearcache_size", 1);
-                pref.putString("autoclearcache", "100mb");
-            } else if (checked == two.getId()) {
-                pref.putInt("autoclearcache_size", 2);
-                pref.putString("autoclearcache", "500mb");
-            } else if (checked == three.getId()) {
-                pref.putInt("autoclearcache_size", 3);
-                pref.putString("autoclearcache", "1gb");
-            } else if (checked == four.getId()) {
-                pref.putInt("autoclearcache_size", 4);
-                pref.putString("autoclearcache", "2gb");
-            } else if (checked == five.getId()) {
-                pref.putInt("autoclearcache_size", 5);
-                pref.putString("autoclearcache", "5gb");
-            }
-
-            pref.apply();
-        });
-        builder.show();
+        new VkAlertDialog.Builder(getContext())
+                .setTitle(AndroidUtils.getString("cache_clean_title"))
+                .setMessage(AndroidUtils.getString("cache_select_size"))
+                .setCancelable(true)
+                .setNegativeButton(AndroidUtils.getString("cancel"), null)
+                .setView(rg)
+                .setPositiveButton(AndroidUtils.getString("save"), (dialog, which) -> {
+                    var sizes = new String[] { "Default", "100mb", "500mb", "1gb", "2gb", "5gb" };
+                    var id = rg.getCheckedRadioButtonId();
+                    getDefaultPrefs().edit()
+                            .putInt("autoclearcache_size", id)
+                            .putString("autoclearcache", sizes[id])
+                            .apply();
+                })
+                .show();
     }
 
     private void cacheCleanDialog() {
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle());
-        builder.setTitle(AndroidUtils.getString("select_which_clean"));
-        builder.setItems(AndroidUtils.getArray("cache_cleaner"), (dialog, which) -> {
-            switch (which) {
-                case 0: {
-                    SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-                    prefs2.edit().clear().commit();
-                    new WebView(getActivity()).clearCache(true);
-                    VKImageLoader.e();
-                    ImEngineProvider.b().a();
-                    ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
-                    ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-                    FileUtils.l();
-                    Stickers.l.c();
-                    ImEngineExt.a(ImEngine1.a());
-                    AutoPlayCacheHolder.d.a();
-                    MediaStorage.a();
-                    break;
-                }
-                case 1: {
-                    SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-                    prefs2.edit().clear().commit();
-                    Stickers.l.c();
-                    break;
-                }
-                case 2:
-                    VKImageLoader.e();
-                    ImEngineExt.a(ImEngine1.a());
-                    break;
-                case 3:
-                    AutoPlayCacheHolder.d.a();
-                    MediaStorage.a();
-                    break;
-                case 4:
-                    ImEngineProvider.b().a();
-                    ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
-                    ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-                    break;
-                case 5:
-                    new WebView(getActivity()).clearCache(true);
-                    break;
-            }
+        new VkAlertDialog.Builder(getContext())
+                .setTitle(AndroidUtils.getString("select_which_clean"))
+                .setItems(AndroidUtils.getArray("cache_cleaner"), (dialog, which) -> {
+                    switch (which) {
+                        case 0: {
+                            SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
+                            prefs2.edit().clear().commit();
+                            clearWebViewCache();
+                            VKImageLoader.e();
+                            ImEngineProvider.b().a();
+                            ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
+                            ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
+                            FileUtils.l();
+                            Stickers.l.c();
+                            ImEngineExt.a(ImEngine1.a());
+                            AutoPlayCacheHolder.d.a();
+                            MediaStorage.a();
+                            break;
+                        }
+                        case 1: {
+                            SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
+                            prefs2.edit().clear().commit();
+                            Stickers.l.c();
+                            break;
+                        }
+                        case 2:
+                            VKImageLoader.e();
+                            ImEngineExt.a(ImEngine1.a());
+                            break;
+                        case 3:
+                            AutoPlayCacheHolder.d.a();
+                            MediaStorage.a();
+                            break;
+                        case 4:
+                            ImEngineProvider.b().a();
+                            ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
+                            ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
+                            break;
+                        case 5:
+                            clearWebViewCache();
+                            break;
+                    }
+                    Toast.makeText(getContext(), AndroidUtils.getString("cache_cleaned"), LENGTH_SHORT).show();
+                })
+                .show();
+    }
 
-            Toast.makeText(getContext(), AndroidUtils.getString("cache_cleaned"), LENGTH_SHORT).show();
-        });
-        builder.create().show();
+    private void clearWebViewCache() {
+        new WebView(requireContext()).clearCache(true);
     }
 
     private void delprefs(Context context) {
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle());
-        builder.setTitle(AndroidUtils.getString("warning"));
-        builder.setMessage(AndroidUtils.getString("settings_reset_confirm"));
-        builder.setCancelable(false);
-        builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
-            deletePrefs();
-            restartApplication();
-        });
-        builder.setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss());
-        builder.show();
+        new VkAlertDialog.Builder(context)
+               .setTitle(AndroidUtils.getString("warning"))
+                .setMessage(AndroidUtils.getString("settings_reset_confirm"))
+                .setCancelable(false)
+                .setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
+                    deletePrefs();
+                    restartApplication();
+                })
+                .setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss())
+                .show();
     }
 
     public static class d implements Preference.OnPreferenceClickListener {
@@ -365,7 +350,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         public boolean onPreferenceClick(Preference preference) {
             var arr = BackupManager.getBackupsNames();
             var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr);
-            new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle())
+            new VkAlertDialog.Builder(getContext())
                     .setTitle(AndroidUtils.getString("select_backup"))
                     .setAdapter(adapter, (dialog, which) -> {
                         try {
@@ -375,7 +360,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                             e.printStackTrace();
                             Toast.makeText(getContext(), AndroidUtils.getString("backup_error"), LENGTH_LONG).show();
                         }
-                    }).create().show();
+                    })
+                    .show();
             return true;
         }
     }

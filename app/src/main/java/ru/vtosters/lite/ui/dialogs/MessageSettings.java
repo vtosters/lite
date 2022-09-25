@@ -14,10 +14,10 @@ import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.appcompat.widget.SwitchCompat;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.R;
 
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessageSettings {
     public static Boolean isSilentEnabled = false;
@@ -31,12 +31,12 @@ public class MessageSettings {
         rg.setOrientation(LinearLayout.VERTICAL);
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
-        RadioButton zero = new RadioButton(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton one = new RadioButton(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton two = new RadioButton(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton three = new RadioButton(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton four = new RadioButton(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton five = new RadioButton(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton zero = new RadioButton(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton one = new RadioButton(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton two = new RadioButton(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton three = new RadioButton(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton four = new RadioButton(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton five = new RadioButton(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_RadioButton));
 
         rg.addView(zero);
         rg.addView(one);
@@ -88,7 +88,7 @@ public class MessageSettings {
         }
 
         @SuppressLint("UseSwitchCompatOrMaterialCode")
-        var silentSwitch = new SwitchCompat(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_Switch));
+        var silentSwitch = new SwitchCompat(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_Switch));
         silentSwitch.setText(AndroidUtils.getString("silent_messages"));
         silentSwitch.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         silentSwitch.setTextColor(getTextAttr());
@@ -105,30 +105,29 @@ public class MessageSettings {
         mContainer.addView(rg, LayoutUtils.createLinear(-1, -2));
         mContainer.addView(silentSwitch, LayoutUtils.createLinear(-1, -2));
 
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle());
-        builder.setTitle(AndroidUtils.getString("message_send_settings_title"));
-        builder.setMessage(AndroidUtils.getString("silent_messages_time_select"));
-        builder.setCancelable(true);
-        builder.setNegativeButton(AndroidUtils.getString("cancel"), null);
-        builder.setView(mContainer);
-        builder.setPositiveButton(AndroidUtils.getString("vtl_confirm"), (dialog, which) -> { // Применить
-            var checked = rg.getCheckedRadioButtonId();
+        new VkAlertDialog.Builder(context)
+                .setTitle(AndroidUtils.getString("message_send_settings_title"))
+                .setMessage(AndroidUtils.getString("silent_messages_time_select"))
+                .setCancelable(true)
+                .setView(mContainer)
+                .setNegativeButton(AndroidUtils.getString("cancel"), null)
+                .setPositiveButton(AndroidUtils.getString("vtl_confirm"), (dialog, which) -> { // Применить
+                    var checked = rg.getCheckedRadioButtonId();
 
-            if (checked == zero.getId()) {
-                bombCount = "0";
-            } else if (checked == one.getId()) {
-                bombCount = "15s";
-            } else if (checked == two.getId()) {
-                bombCount = "1m";
-            } else if (checked == three.getId()) {
-                bombCount = "5m";
-            } else if (checked == four.getId()) {
-                bombCount = "1h";
-            } else if (checked == five.getId()) {
-                bombCount = "24h";
-            }
-        });
-
-        builder.show();
+                    if (checked == zero.getId()) {
+                        bombCount = "0";
+                    } else if (checked == one.getId()) {
+                        bombCount = "15s";
+                    } else if (checked == two.getId()) {
+                        bombCount = "1m";
+                    } else if (checked == three.getId()) {
+                        bombCount = "5m";
+                    } else if (checked == four.getId()) {
+                        bombCount = "1h";
+                    } else if (checked == five.getId()) {
+                        bombCount = "24h";
+                    }
+                })
+                .show();
     }
 }

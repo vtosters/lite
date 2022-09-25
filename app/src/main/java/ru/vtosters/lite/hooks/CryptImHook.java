@@ -23,7 +23,6 @@ import java.util.Objects;
 
 import ru.vtosters.lite.encryption.EncryptProvider;
 import ru.vtosters.lite.encryption.base.IMProcessor;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class CryptImHook {
     public static boolean isPrivateProcessor(int peerID) {
@@ -64,7 +63,7 @@ public class CryptImHook {
             return;
         }
 
-        new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle())
+        new VkAlertDialog.Builder(ctx)
                 .setTitle(getString("encryption_sett"))
                 .setSingleChoiceItems(titles, enabledPosition, (dialog, which) -> {
                     if (which == 0) {
@@ -82,7 +81,8 @@ public class CryptImHook {
 
                     dialog.dismiss();
                     forceInvalidateDialogActions(d);
-                }).create().show();
+                })
+                .show();
     }
 
     public static void hookPref(int peerId) {
@@ -129,15 +129,14 @@ public class CryptImHook {
         editText.setText(key == null ? "" : key);
 
         IMProcessor finalEnabled = enabled;
-        var alert = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle())
+        new VkAlertDialog.Builder(ctx)
                 .setTitle(getString("encryption_enter_key"))
                 .setMessage(String.format(getString("encryption_current_algorithm_title"), enabled.getUIName()))
+                .setView(linearLayout)
                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                     Editable edit = editText.getText();
                     finalEnabled.setEncryptionKeyFor(peerId, edit == null ? null : edit.toString());
                 }).setNegativeButton(android.R.string.cancel, null)
-                .create();
-        alert.setView(linearLayout);
-        alert.show();
+                .show();
     }
 }

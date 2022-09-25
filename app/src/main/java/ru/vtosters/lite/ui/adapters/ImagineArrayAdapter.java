@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.adapters;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -15,28 +16,27 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.TextViewCompat;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.ImagineArrayAdapterItem> {
 
-    private final OnClickListener mListener;
     private List<ImagineArrayAdapterItem> mItems = new ArrayList<>();
     private int mSelectedIndex = -1;
 
-    public ImagineArrayAdapter(@NonNull Context context, OnClickListener listener) {
+    public ImagineArrayAdapter(@NonNull Context context) {
         super(context, 0);
-        this.mListener = listener;
     }
 
-    public ImagineArrayAdapter(@NonNull Context context, List<ImagineArrayAdapterItem> items, OnClickListener listener) {
+    public ImagineArrayAdapter(@NonNull Context context, List<ImagineArrayAdapterItem> items) {
         super(context, 0, items);
         mItems = items;
-        this.mListener = listener;
     }
 
     public void setSelected(int i) {
@@ -89,33 +89,26 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
         container.setGravity(Gravity.CENTER_VERTICAL);
         container.setPadding(0, AndroidUtils.dp2px(5.0f), 0, AndroidUtils.dp2px(5.0f));
         container.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
-        container.setOnClickListener(v -> {
-            if (position != mSelectedIndex) {
-                mListener.onClick(position);
-            }
-        });
 
         // if make radiobutton without layout inflation it can't be unclickable
         var checkedTextView = (CheckedTextView) LayoutInflater.from(getContext())
                 .inflate(AndroidUtils.getIdentifier("select_dialog_singlechoice_material", "layout"), parent, false);
+        // for amoled
+        var tintList = new ColorStateList(
+                new int[][] { new int[] { android.R.attr.state_checked }, new int[] { -android.R.attr.state_checked }},
+                new int[] { ThemesUtils.getAccentColor(), ThemesUtils.getSTextAttr() });
+        TextViewCompat.setCompoundDrawableTintList(checkedTextView, tintList);
         checkedTextView.setChecked(position == mSelectedIndex);
         container.addView(checkedTextView, LayoutUtils.createLinear(AndroidUtils.dp2px(50.0f), -2));
 
         var item = mItems.get(position);
 
-        var imageView = new ImageView(getContext());
-        imageView.setImageDrawable(item.getIcon());
-        imageView.setPadding(
-                AndroidUtils.dp2px(13.0f),
-                0,
-                0,
-                0
-        );
-        var imageViewParams = LayoutUtils.createLinear(
-                AndroidUtils.dp2px(50.0f),
-                AndroidUtils.dp2px(50.0f)
-        );
-        container.addView(imageView, imageViewParams);
+        var icon = new ImageView(getContext());
+        icon.setImageDrawable(item.getIcon());
+        icon.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        var iconParams = LayoutUtils.createLinear(AndroidUtils.dp2px(35.0f), AndroidUtils.dp2px(35.0f));
+        iconParams.leftMargin = AndroidUtils.dp2px(10);
+        container.addView(icon, iconParams);
 
         var textView = new CheckedTextView(getContext());
         textView.setText(item.getText());
@@ -131,10 +124,6 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
         container.addView(textView, textViewParams);
 
         return container;
-    }
-
-    public interface OnClickListener {
-        void onClick(int i);
     }
 
     public static class ImagineArrayAdapterItem {

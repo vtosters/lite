@@ -13,7 +13,6 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class RoundingSeekbarDialog {
     public static void dialog(Context context) {
@@ -26,17 +25,16 @@ public class RoundingSeekbarDialog {
 
         mContainer.addView(seek, LayoutUtils.createLinear(-1, -2));
 
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle());
-        builder.setTitle(AndroidUtils.getString("pic_rounding_title"));
-        builder.setMessage(AndroidUtils.getString("pic_rounding_info"));
-        builder.setCancelable(true);
-        builder.setNegativeButton(AndroidUtils.getString("cancel"), null);
-        builder.setView(mContainer);
-        builder.setPositiveButton(AndroidUtils.getString("vtl_confirm"), (dialog, which) -> {
-            edit().putInt("pic_rounding", seek.getProgress()).commit();
-            restartApplicationWithTimer();
-        });
-
-        builder.show();
+        new VkAlertDialog.Builder(context)
+                .setTitle(AndroidUtils.getString("pic_rounding_title"))
+                .setMessage(AndroidUtils.getString("pic_rounding_info"))
+                .setCancelable(true)
+                .setNegativeButton(AndroidUtils.getString("cancel"), null)
+                .setView(mContainer)
+                .setPositiveButton(AndroidUtils.getString("vtl_confirm"), (dialog, which) -> {
+                    edit().putInt("pic_rounding", seek.getProgress()).commit();
+                    restartApplicationWithTimer();
+                })
+                .show();
     }
 }

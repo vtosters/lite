@@ -12,27 +12,28 @@ import android.os.Build;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 
 import ru.vtosters.lite.deviceinfo.OEMDetector;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class Start {
     public static void alert(final Activity activity) {
         if (Build.VERSION.SDK_INT >= 23) {
             activity.requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
         }
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity, ThemesUtils.getAlertStyle());
-        builder.setTitle(getString("warning"));
-        builder.setMessage(getWelcome());
-        builder.setCancelable(false);
-        // android.content.DialogInterface.OnClickListener
-        builder.setPositiveButton(getString("startbtn2"), (dialogInterface, i) -> edit().putBoolean("showAlert", false).apply());
-        // android.content.DialogInterface.OnClickListener
-        builder.setNeutralButton(getString("startbtn1"), (dialogInterface, i) -> {
-            edit().putBoolean("showAlert", false).apply();
-            activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
-        });
-        if (getBoolValue("showAlert", true)) {
-            builder.show();
-        }
+        if (getBoolValue("showAlert", true))
+            new VkAlertDialog.Builder(activity)
+                    .setTitle(getString("warning"))
+                    .setMessage(getWelcome())
+                    .setCancelable(false)
+                    .setPositiveButton(getString("startbtn2"),
+                            (dialogInterface, i) -> edit().putBoolean("showAlert", false).apply()
+                    )
+                    .setNeutralButton(getString("startbtn1"),
+                        (dialogInterface, i) -> {
+                            edit().putBoolean("showAlert", false).apply();
+                            activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
+                        }
+                    )
+                    .show();
+
     }
 
     private static String getWelcome() {

@@ -34,7 +34,6 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class IconsFragment extends MaterialPreferenceToolbarFragment {
     @SuppressLint("SetTextI18n")
@@ -71,33 +70,30 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         rgVK.setChecked(defname.contains("standard"));
         rgDefault.setChecked(defname.contains("vt") || defname.isEmpty());
 
-        var builder = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
-        builder.setTitle(AndroidUtils.getString("app_name_select_title"));
-        builder.setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> {
-            if (rgDefault.isChecked()) {
-                edit().putString("appname", "vt").commit();
-                edit().putString("selectedicon", appicon).commit();
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(AndroidUtils.getString("app_name_select_title"))
+                .setView(rg)
+                .setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> {
+                    if (rgDefault.isChecked()) {
+                        edit().putString("appname", "vt").commit();
+                        edit().putString("selectedicon", appicon).commit();
 
-                switchComponent(appicon, "vt", deficon, defname);
-            } else if (rgVK.isChecked()) {
-                edit().putString("appname", "standard").commit();
-                edit().putString("selectedicon", appicon).commit();
+                        switchComponent(appicon, "vt", deficon, defname);
+                    } else if (rgVK.isChecked()) {
+                        edit().putString("appname", "standard").commit();
+                        edit().putString("selectedicon", appicon).commit();
 
-                switchComponent(appicon, "standard", deficon, defname);
-            } else if (rgVKontakte.isChecked()) {
-                edit().putString("appname", "vkontakte").commit();
-                edit().putString("selectedicon", appicon).commit();
+                        switchComponent(appicon, "standard", deficon, defname);
+                    } else if (rgVKontakte.isChecked()) {
+                        edit().putString("appname", "vkontakte").commit();
+                        edit().putString("selectedicon", appicon).commit();
 
-                switchComponent(appicon, "vkontakte", deficon, defname);
-            }
-        }));
-        builder.setNegativeButton(AndroidUtils.getString("cancel"), ((dialog, which) -> {
-            dialog.dismiss();
-        }));
-
-        var alert = builder.create();
-        alert.setView(rg);
-        alert.show();
+                        switchComponent(appicon, "vkontakte", deficon, defname);
+                    }
+                }))
+                .setNegativeButton(AndroidUtils.getString("cancel"),
+                        ((dialog, which) -> dialog.dismiss()))
+                .show();
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")

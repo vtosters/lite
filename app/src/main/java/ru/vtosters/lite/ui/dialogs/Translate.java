@@ -2,6 +2,8 @@ package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
@@ -11,7 +13,6 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 
 import ru.vtosters.lite.translators.BaseTranslator;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class Translate {
     public static void showTranslatedText(Context context, String text) {
@@ -28,19 +29,17 @@ public class Translate {
     }
 
     private static void showDialog(Context context, String text) {
-        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle());
-        alertDialog.setTitle(AndroidUtils.getString("translator_title"));
-        alertDialog.setMessage(text);
-        alertDialog.setPositiveButton(AndroidUtils.getString("close"), (dialog, which) -> {
-            dialog.cancel();
-        });
-        alertDialog.setNeutralButton(AndroidUtils.getString("copy"), (dialog, which) -> {
-            android.content.ClipboardManager clipboard = (android.content.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-            android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", text);
-            clipboard.setPrimaryClip(clip);
-            sendToast(AndroidUtils.getString("copied_to_clipboard"));
-        });
-        var alert = alertDialog.create();
-        alert.show();
+        new VkAlertDialog.Builder(context)
+                .setTitle(AndroidUtils.getString("translator_title"))
+                .setMessage(text)
+                .setPositiveButton(AndroidUtils.getString("close"),
+                        (dialog, which) -> dialog.cancel())
+                .setNeutralButton(AndroidUtils.getString("copy"), (dialog, which) -> {
+                    var clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+                    var clip = ClipData.newPlainText("Copied Text", text);
+                    clipboard.setPrimaryClip(clip);
+                    sendToast(AndroidUtils.getString("copied_to_clipboard"));
+                })
+                .show();
     }
 }

@@ -13,26 +13,26 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.ui.fragments.VKUIwrapper;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VKIDProtection {
     public static void alert(final Activity activity) {
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity, ThemesUtils.getAlertStyle());
-        builder.setTitle(getString("warning"));
-        builder.setMessage(getString("vkidsumm"));
-        builder.setCancelable(false);
-        // android.content.DialogInterface.OnClickListener
-        builder.setPositiveButton(getString("startbtn2"), (dialogInterface, i) -> edit().putBoolean("showAlertVkId", false).apply());
-        // android.content.DialogInterface.OnClickListener
-        builder.setNeutralButton(getString("vkiddisable"), (dialogInterface, i) -> {
-            edit().putBoolean("showAlertVkId", false).apply();
-            VKUIwrapper.setLink((isAnyProxyEnabled() ? "https://id.vk.com/account" : "https://" + getApi() + "/_/id.vk.com/account"));
-            Intent a2 = new Navigator(VKUIwrapper.class).b(activity);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            activity.startActivity(a2);
-        });
-        if (getBoolValue("showAlertVkId", true)) {
-            builder.show();
-        }
+        if (!getBoolValue("showAlertVkId", true)) return;
+        new VkAlertDialog.Builder(activity)
+                .setTitle(getString("warning"))
+                .setMessage(getString("vkidsumm"))
+                .setCancelable(false)
+                .setPositiveButton(getString("startbtn2"),
+                        (dialogInterface, i) -> edit().putBoolean("showAlertVkId", false).apply())
+                .setNeutralButton(getString("vkiddisable"), (dialogInterface, i) -> {
+                    edit().putBoolean("showAlertVkId", false).apply();
+                    VKUIwrapper.setLink(
+                            isAnyProxyEnabled()
+                                    ? "https://id.vk.com/account"
+                                    : "https://" + getApi() + "/_/id.vk.com/account");
+                    var intent = new Navigator(VKUIwrapper.class).b(activity)
+                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    activity.startActivity(intent);
+                })
+                .show();
     }
 }

@@ -63,7 +63,7 @@ public class ExternalLinkParser {
                 startExternalVideo((String) qualities.values().toArray()[0], context);
             } else {
                 String[] titles = qualities.keySet().toArray(new String[0]);
-                new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle())
+                new VkAlertDialog.Builder(context)
                         .setItems(titles, ((dialog, which) -> startExternalVideo(qualities.get(titles[which]), context)))
                         .show();
             }

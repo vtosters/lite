@@ -13,8 +13,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.widget.ListView;
 
 import androidx.preference.Preference;
 
@@ -26,7 +24,6 @@ import java.util.Arrays;
 
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -52,18 +49,15 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
 //                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_deepl_logo_icon", "drawable"), "DeepL")
             );
 
-            var alert = new VkAlertDialog.Builder(getActivity(), ThemesUtils.getAlertStyle())
-                    .create();
-
-            var listView = (ListView) LayoutInflater.from(getContext()).inflate(com.vtosters.lite.R.layout.abc_select_dialog_material, null, false);
-            var adapter = new ImagineArrayAdapter(requireContext(), items, i -> {
-                getPreferences().edit().putInt("translator", i).apply();
-                alert.dismiss();
-            });
+            var adapter = new ImagineArrayAdapter(requireContext(), items);
             adapter.setSelected(getPreferences().getInt("translator", 0));
-            listView.setAdapter(adapter);
-            alert.setView(listView);
-            alert.show();
+
+            new VkAlertDialog.Builder(getActivity())
+                    .setAdapter(adapter, (dialog, which) -> {
+                        getPreferences().edit().putInt("translator", which).apply();
+                        dialog.cancel();
+                    })
+                    .show();
 
             return true;
         });

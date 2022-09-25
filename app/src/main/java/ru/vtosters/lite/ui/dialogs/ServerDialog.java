@@ -6,7 +6,6 @@ import static ru.vtosters.lite.utils.NetworkUtils.isNetworkIsSlow;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
@@ -23,12 +22,11 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class ServerDialog {
     private static final OkHttpClient client = new OkHttpClient();
     public static Boolean showAlert;
-    public static Activity activity;
     private static String title;
     private static String message;
     private static String positiveButton;
@@ -94,20 +92,22 @@ public class ServerDialog {
 
         showAlert = true;
 
-        if (activity != null) {
+        var activity = LifecycleUtils.getCurrentActivity();
+        if (activity != null && getBoolValue(key, true) && showForNotVerified() && showAlert) {
             activity.runOnUiThread(() -> {
-                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity, ThemesUtils.getAlertStyle());
-                builder.setTitle(title);
-                builder.setMessage(message);
-                builder.setCancelable(cancelable);
-                builder.setPositiveButton(positiveButton, (dialogInterface, i) -> edit().putBoolean(key, false).apply());
-                builder.setNeutralButton(neutralButton, (dialogInterface, i) -> {
-                    edit().putBoolean(key, false).apply();
-                    activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse(link)));
-                });
-                if (getBoolValue(key, true) && showForNotVerified() && showAlert) {
-                    builder.show();
-                }
+                new VkAlertDialog.Builder(activity)
+                        .setTitle(title)
+                        .setMessage(message)
+                        .setCancelable(cancelable)
+                        .setPositiveButton(positiveButton,
+                                (dialogInterface, i) -> edit().putBoolean(key, false).apply())
+                        .setNeutralButton(neutralButton, (dialogInterface, i) -> {
+                            edit().putBoolean(key, false).apply();
+                            var intent = new Intent(Intent.ACTION_VIEW)
+                                    .setData(Uri.parse(link));
+                            activity.startActivity(intent);
+                        })
+                        .show();
             });
         }
     }

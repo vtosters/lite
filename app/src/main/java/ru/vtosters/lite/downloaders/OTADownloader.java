@@ -18,7 +18,6 @@ import java.io.File;
 import b.h.g.m.FileUtils;
 import ru.vtosters.lite.ui.activities.APKInstallActivity;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class OTADownloader {
 
@@ -73,17 +72,21 @@ public class OTADownloader {
             manager.enqueue(request);
         } catch (Exception e) {
             e.printStackTrace();
-            VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle());
-            alertDialog.setTitle(AndroidUtils.getString("update_error"));
-            alertDialog.setMessage(AndroidUtils.getString("update_error_text"));
-            alertDialog.setPositiveButton(AndroidUtils.getString("no"), (dialog, which) -> {
-                dialog.cancel();
-            });
-            alertDialog.setNeutralButton(AndroidUtils.getString("yes"), (dialog, which) -> {
-                context.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/releases/latest/download/VTLite.apk")));
-            });
-            var alert = alertDialog.create();
-            alert.show();
+
+            new VkAlertDialog.Builder(context)
+                    .setTitle(AndroidUtils.getString("update_error"))
+                    .setMessage(AndroidUtils.getString("update_error_text"))
+                    .setPositiveButton(AndroidUtils.getString("no"),
+                            (dialog, which) -> dialog.cancel()
+                    )
+                    .setNeutralButton(AndroidUtils.getString("yes"),
+                            (dialog, which) -> {
+                                var intent = new Intent(Intent.ACTION_VIEW)
+                                        .setData(Uri.parse("https://github.com/vtosters/lite/releases/latest/download/VTLite.apk"));
+                                context.startActivity(intent);
+                            }
+                    )
+                    .show();
         }
     }
 }

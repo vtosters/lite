@@ -11,33 +11,30 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.PowerManager;
+import android.provider.Settings;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
 
 import ru.vtosters.lite.deviceinfo.OEMDetector;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class DisableBattery {
     public static void alert(Activity activity) {
         if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && getBoolValue("showDoze", true)) {
             final Context context = getGlobalContext();
             if (!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())) {
-                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity, ThemesUtils.getAlertStyle());
-                builder.setTitle(getString("batteryissuetitle"));
-                builder.setMessage(getString("batteryissuesumm"));
-                builder.setCancelable(false);
-                // android.content.DialogInterface.OnClickListener
-                builder.setPositiveButton(getString("batteryissuebtn1"), (dialogInterface, i) -> {
-                    Intent intent = new Intent("android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS");
-                    StringBuilder sb = new StringBuilder();
-                    sb.append("package:");
-                    sb.append(context.getPackageName());
-                    intent.setData(Uri.parse(sb.toString()));
-                    context.startActivity(intent);
-                });
-                // android.content.DialogInterface.OnClickListener
-                builder.setNeutralButton(getString("batteryissuebtn2"), (dialogInterface, i) -> edit().putBoolean("showDoze", false).apply());
-                builder.show();
+                new VkAlertDialog.Builder(activity)
+                        .setTitle(getString("batteryissuetitle"))
+                        .setMessage(getString("batteryissuesumm"))
+                        .setCancelable(false)
+                        .setPositiveButton(getString("batteryissuebtn1"), (dialogInterface, i) -> {
+                            var intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+                                    .setData(Uri.parse("package:" + context.getPackageName()));
+                            context.startActivity(intent);
+                })
+                .setNeutralButton(getString("batteryissuebtn2"),
+                        (dialogInterface, i) -> edit().putBoolean("showDoze", false).apply()
+                )
+                .show();
             }
         }
     }

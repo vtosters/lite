@@ -20,12 +20,10 @@ import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 
 import androidx.preference.Preference;
 
@@ -49,28 +47,29 @@ import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
 
     public static void download(Context ctx) {
-        var alertDialog = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
-        alertDialog.setTitle(AndroidUtils.getString("video_dl_enter_link"));
-
         final EditText input = new EditText(ctx);
+        input.setTextColor(getTextAttr());
+        input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+
         var lp = new FrameLayout.LayoutParams(-1, -2);
         lp.leftMargin = AndroidUtils.dp2px(16);
         lp.rightMargin = AndroidUtils.dp2px(16);
         lp.gravity = Gravity.CENTER;
-        input.setTextColor(getTextAttr());
-        input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         var container = new FrameLayout(ctx);
+
         container.addView(input, lp);
-        alertDialog.setPositiveButton(AndroidUtils.getString("download"), (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
-        var alert = alertDialog.create();
-        alert.setView(container);
-        alert.show();
+
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(AndroidUtils.getString("video_dl_enter_link"))
+                .setPositiveButton(AndroidUtils.getString("download"),
+                        (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx))
+                .setView(container)
+                .show();
     }
 
     @Override
@@ -138,19 +137,15 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("microsoft", "drawable"), "Bing")
             );
 
-            var alert = new VkAlertDialog.Builder(getActivity(), ThemesUtils.getAlertStyle())
-                    .create();
-
-            var listView = (ListView) LayoutInflater.from(getContext()).inflate(com.vtosters.lite.R.layout.abc_select_dialog_material, null, false);
-            var adapter = new ImagineArrayAdapter(getContext(), items, i -> {
-                getPreferences().edit().putInt("search_engine", i).apply();
-                alert.dismiss();
-            });
+            var adapter = new ImagineArrayAdapter(getContext(), items);
             adapter.setSelected(getPreferences().getInt("search_engine", 0));
-            listView.setAdapter(adapter);
-            alert.setView(listView);
-            alert.show();
 
+            new VkAlertDialog.Builder(getActivity())
+                    .setAdapter(adapter, (dialog, which) -> {
+                        getPreferences().edit().putInt("search_engine", which).apply();
+                        dialog.cancel();
+                    })
+                    .show();
             return true;
         });
     }
@@ -179,66 +174,52 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ln.setLayoutParams(margin);
 
-        var alertDialog = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
-        alertDialog.setTitle(AndroidUtils.getString("lastfm_enter_credentials"));
-
-        alertDialog.setPositiveButton(AndroidUtils.getString("lastfm_enter"), (dialog, which) -> {
-            String login = fn.getText().toString();
-            String pass = ln.getText().toString();
-
-            Scrobbler.auth(login, pass);
-        });
-        var alert = alertDialog.create();
-        alert.setView(linearLayout);
-        alert.show();
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(AndroidUtils.getString("lastfm_enter_credentials"))
+                .setPositiveButton(AndroidUtils.getString("lastfm_enter"),
+                    (dialog, which) -> {
+                        String login = fn.getText().toString();
+                        String pass = ln.getText().toString();
+                        Scrobbler.auth(login, pass);
+                    }
+                )
+                .setView(linearLayout)
+                .show();
     }
 
     private void logout(Context ctx) {
-        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
-        alertDialog.setTitle(AndroidUtils.getString("lastfm_logout_title"));
-        alertDialog.setMessage(AndroidUtils.getString("lastfm_logout_confirm"));
-        alertDialog.setPositiveButton(AndroidUtils.getString("vkim_yes"), (dialog, which) -> {
-            Scrobbler.logout();
-        });
-        alertDialog.setNeutralButton(AndroidUtils.getString("vkim_no"), (dialog, which) -> {
-            dialog.cancel();
-        });
-        var alert = alertDialog.create();
-        alert.show();
-        
-        
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(AndroidUtils.getString("lastfm_logout_title"))
+                .setMessage(AndroidUtils.getString("lastfm_logout_confirm"))
+                .setPositiveButton(AndroidUtils.getString("vkim_yes"),
+                    (dialog, which) -> Scrobbler.logout())
+                .setNeutralButton(AndroidUtils.getString("vkim_no"),
+                        (dialog, which) -> dialog.cancel())
+                .show();
     }
 
     private void delcache(Context ctx) {
-        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
-        alertDialog.setTitle(AndroidUtils.getString("warning"));
-        alertDialog.setMessage(AndroidUtils.getString("cached_tracks_remove_confirm"));
-        alertDialog.setPositiveButton(AndroidUtils.getString("yes"), (dialog, which) -> {
-            executor.submit(CacheDatabaseDelegate::clear);
-        });
-        alertDialog.setNeutralButton(AndroidUtils.getString("no"), (dialog, which) -> {
-            dialog.cancel();
-        });
-        var alert = alertDialog.create();
-        alert.show();
-        
-        
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(AndroidUtils.getString("warning"))
+                .setMessage(AndroidUtils.getString("cached_tracks_remove_confirm"))
+                .setPositiveButton(AndroidUtils.getString("yes"),
+                        (dialog, which) -> executor.submit(CacheDatabaseDelegate::clear))
+                .setNeutralButton(AndroidUtils.getString("no"),
+                        (dialog, which) -> dialog.cancel())
+                .show();
     }
 
     private void dlaudio(Context ctx) {
-        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
-        alertDialog.setTitle(AndroidUtils.getString("download_method"));
-        alertDialog.setMessage(AndroidUtils.getString("download_method_desc"));
-        alertDialog.setPositiveButton(AndroidUtils.getString("download_method_cache"), (dialog, which) -> {
-            executor.submit(AudioDownloader::cacheAllAudios);
-        });
-        alertDialog.setNegativeButton(AndroidUtils.getString("download_method_mp3"), (dialog, which) -> {
-            executor.submit(AudioDownloader::downloadAllAudios);
-        });
-        var alert = alertDialog.create();
-        alert.show();
-        
-        
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(AndroidUtils.getString("download_method"))
+                .setMessage(AndroidUtils.getString("download_method_desc"))
+                .setPositiveButton(AndroidUtils.getString("download_method_cache"), (dialog, which) -> {
+                    executor.submit(AudioDownloader::cacheAllAudios);
+                })
+                .setNegativeButton(AndroidUtils.getString("download_method_mp3"), (dialog, which) -> {
+                    executor.submit(AudioDownloader::downloadAllAudios);
+                })
+                .show();
     }
 
     public void deleteVideoHistory() {
@@ -271,15 +252,15 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void deleteVideoHistoryDialog(Context context) {
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
-        builder.setTitle(AndroidUtils.getString("warning"));
-        builder.setMessage(AndroidUtils.getString("delete_video_history_confirm"));
-        builder.setCancelable(false);
-        builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
-            deleteVideoHistory();
-        });
-        builder.setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss());
-        builder.show();
+        new VkAlertDialog.Builder(context)
+                .setTitle(AndroidUtils.getString("warning"))
+                .setMessage(AndroidUtils.getString("delete_video_history_confirm"))
+                .setCancelable(false)
+                .setPositiveButton(AndroidUtils.getString("yes"),
+                        (dialogInterface, i) -> deleteVideoHistory())
+                .setNegativeButton(AndroidUtils.getString("cancel"),
+                        (dialogInterface, i) -> dialogInterface.dismiss())
+                .show();
     }
 
     private static class restart implements Preference.OnPreferenceChangeListener {

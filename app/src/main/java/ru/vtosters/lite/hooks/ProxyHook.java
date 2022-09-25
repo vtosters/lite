@@ -71,33 +71,31 @@ public class ProxyHook {
         rgRandomProxy.setChecked(isRandomProxyEnabled());
         rgVika.setChecked(isVikaProxyEnabled());
 
-        var builder = new VkAlertDialog.Builder(ctx, ThemesUtils.getAlertStyle());
-        builder.setTitle(AndroidUtils.getString("vtlproxy"));
-        builder.setMessage(AndroidUtils.getString("proxy_warning"));
-        builder.setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> { // Применить
-            if (rgZaborona.isChecked()) {
-                edit().putString("proxy", "zaborona").commit();
-                restartApplication();
-            } else if (rgRandomProxy.isChecked()) {
-                edit().putString("proxy", "randomproxy").commit();
-                restartApplication();
-            } else if (rgVika.isChecked()) {
-                edit().putString("proxy", "vika").commit();
-                restartApplication();
-            } else {
-                edit().putString("proxy", "noproxy").commit();
-                restartApplication();
-            }
-        }));
-
-        builder.setNeutralButton(AndroidUtils.getString("proxy_settings"), ((dialog, which) -> {
-            Intent a2 = new Navigator(ProxySettingsFragment.class).b(ctx);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            ctx.startActivity(a2);
-        }));
-
-        var alert = builder.create();
-        alert.setView(rg);
-        alert.show();
+       new VkAlertDialog.Builder(ctx)
+               .setTitle(AndroidUtils.getString("vtlproxy"))
+               .setMessage(AndroidUtils.getString("proxy_warning"))
+               .setView(rg)
+               .setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> { // Применить
+                    if (rgZaborona.isChecked()) {
+                        edit().putString("proxy", "zaborona").commit();
+                        restartApplication();
+                    } else if (rgRandomProxy.isChecked()) {
+                        edit().putString("proxy", "randomproxy").commit();
+                        restartApplication();
+                    } else if (rgVika.isChecked()) {
+                        edit().putString("proxy", "vika").commit();
+                        restartApplication();
+                    } else {
+                        edit().putString("proxy", "noproxy").commit();
+                        restartApplication();
+                    }
+               }))
+               .setNeutralButton(AndroidUtils.getString("proxy_settings"), ((dialog, which) -> {
+                    var intent = new Navigator(ProxySettingsFragment.class)
+                            .b(ctx)
+                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    ctx.startActivity(intent);
+               }))
+               .show();
     }
 }

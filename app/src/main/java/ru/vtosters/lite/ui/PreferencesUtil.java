@@ -28,8 +28,6 @@ import com.vtosters.lite.ui.MaterialSwitchPreference;
 
 import java.util.Objects;
 
-import ru.vtosters.lite.utils.ThemesUtils;
-
 public class PreferencesUtil {
 
     public static void addListPreference(MaterialPreferenceToolbarFragment fragment, String key, String def, CharSequence title, CharSequence[] entries, CharSequence[] entriesValue) {
@@ -179,22 +177,19 @@ public class PreferencesUtil {
             margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
             editText.setLayoutParams(margin);
 
-            var builder = new VkAlertDialog.Builder(fragment.getContext(), ThemesUtils.getAlertStyle());
-            builder.setTitle(title);
-            builder.setPositiveButton("OK", (dialog, which) -> {
-                boolean change = editTextPrefChangeListener.onChanged(preference, editText.getText().toString());
-                if (!change)
-                    return;
+            new VkAlertDialog.Builder(fragment.getContext())
+                    .setTitle(title)
+                    .setPositiveButton("OK", (dialog, which) -> {
+                        boolean change = editTextPrefChangeListener.onChanged(preference, editText.getText().toString());
+                        if (!change)
+                            return;
 
-                PreferenceManager.getDefaultSharedPreferences(getGlobalContext())
-                        .edit()
-                        .putString(key, editText.getText().toString())
-                        .apply();
-            });
-
-            var alert = builder.create();
-            alert.setView(linearLayout);
-            alert.show();
+                        PreferenceManager.getDefaultSharedPreferences(getGlobalContext())
+                                .edit()
+                                .putString(key, editText.getText().toString())
+                                .apply();
+                    })
+                    .show();
             return false;
         }); // preference.setOnPreferenceClickListener(listener)
 

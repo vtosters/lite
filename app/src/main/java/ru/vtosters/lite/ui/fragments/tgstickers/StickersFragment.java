@@ -182,29 +182,23 @@ public class StickersFragment extends BaseToolbarFragment {
                 margin.setMargins(dp2px(24f), 0, dp2px(24f), 0);
                 editText.setLayoutParams(margin);
 
-                var dlg = new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle());
-                dlg.setTitle(AndroidUtils.getString("stickershelp1"));
-                dlg.setMessage(AndroidUtils.getString("stickershelp2"));
-                dlg.setPositiveButton(android.R.string.ok, (dialog, which) -> {
-                    String pack = editText.getText().toString();
-                    if (!pack.startsWith("https://")) {
-                        pack = "https://" + pack;
-                    } else if (!pack.contains("addstickers")) {
-                        sendToast("Invalid pack name");
-                    }
-                    pack = parsePack(pack);
-                    mService.requestPackDownload(pack, new File(getContext().getFilesDir(), new File("VT-Stickers", pack).getAbsolutePath()));
-                });
-                dlg.setNeutralButton(android.R.string.cancel, (dialog, which) -> {
-                    dialog.dismiss();
-                });
-
-                var alert = dlg.create();
-                alert.setView(linearLayout);
-                alert.show();
-
-                
-                
+                new VkAlertDialog.Builder(getContext())
+                        .setTitle(AndroidUtils.getString("stickershelp1"))
+                        .setMessage(AndroidUtils.getString("stickershelp2"))
+                        .setPositiveButton(android.R.string.ok, (dialog, which) -> {
+                            String pack = editText.getText().toString();
+                            if (!pack.startsWith("https://")) {
+                                pack = "https://" + pack;
+                            } else if (!pack.contains("addstickers")) {
+                                sendToast("Invalid pack name");
+                            }
+                            pack = parsePack(pack);
+                            mService.requestPackDownload(pack, new File(getContext().getFilesDir(), new File("VT-Stickers", pack).getAbsolutePath()));
+                        })
+                        .setNeutralButton(android.R.string.cancel,
+                                (dialog, which) -> dialog.dismiss()
+                        )
+                        .show();
             };
             if (TGPref.getTGBotKey() == null) enterBotKey(() -> checkApiKey(callback));
             else checkApiKey(callback);
@@ -245,26 +239,25 @@ public class StickersFragment extends BaseToolbarFragment {
         margin.setMargins(dp2px(24f), 0, dp2px(24f), 0);
         editText.setLayoutParams(margin);
 
-        var alert = new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle())
-                .setTitle(AndroidUtils.getString("stickersapi8"))
-                .setMessage(AndroidUtils.getString("stickersapi9") +
-                        AndroidUtils.getString("stickersapi10")).setPositiveButton(android.R.string.ok, null)
-                .create();
-
-        var dlg = new VkAlertDialog.Builder(getContext(), ThemesUtils.getAlertStyle());
-        dlg.setTitle(AndroidUtils.getString("stickersapi5"));
-        dlg.setMessage(AndroidUtils.getString("stickersapi6"));
-        dlg.setPositiveButton(android.R.string.ok, (dialog, which) -> {
-            setTGBotKey(editText.getText().toString());
-            if (r != null) r.run();
-        });
-        dlg.setNegativeButton(android.R.string.cancel, (dialog, which) -> {
-            dialog.dismiss();
-        });
-        dlg.setNeutralButton(AndroidUtils.getString("stickersapi7"), (dialog, which) -> alert.show());
-        var alerts = dlg.create();
-        alerts.setView(linearLayout);
-        alerts.show();
+        new VkAlertDialog.Builder(getContext())
+                .setTitle(AndroidUtils.getString("stickersapi5"))
+                .setMessage(AndroidUtils.getString("stickersapi6"))
+                .setPositiveButton(android.R.string.ok, (dialog, which) -> {
+                    setTGBotKey(editText.getText().toString());
+                    if (r != null) r.run();
+                })
+                .setNegativeButton(android.R.string.cancel,
+                        (dialog, which) -> dialog.dismiss()
+                )
+                .setNeutralButton(AndroidUtils.getString("stickersapi7"),
+                        (dialog, which) -> new VkAlertDialog.Builder(getContext())
+                                .setTitle(AndroidUtils.getString("stickersapi8"))
+                                .setMessage(AndroidUtils.getString("stickersapi9") +
+                                        AndroidUtils.getString("stickersapi10"))
+                                .setPositiveButton(android.R.string.ok, null)
+                                .show()
+                )
+                .show();
     }
 
     private void checkApiKey(Runnable callback) {
@@ -294,11 +287,10 @@ public class StickersFragment extends BaseToolbarFragment {
             @Override
             public void onNetError() {
                 progressDialog.dismiss();
-                new VkAlertDialog.Builder(context, ThemesUtils.getAlertStyle())
+                new VkAlertDialog.Builder(context)
                         .setMessage(AndroidUtils.getString("stickersapi3"))
                         .setNegativeButton(android.R.string.cancel, null)
                         .setPositiveButton(AndroidUtils.getString("stickersapi4"), (arg0, arg1) -> checkApiKey(callback))
-                        .create()
                         .show();
             }
         });

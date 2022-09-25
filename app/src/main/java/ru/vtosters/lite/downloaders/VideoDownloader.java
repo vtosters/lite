@@ -112,17 +112,17 @@ public class VideoDownloader {
             return;
         }
 
-        var builder = new VkAlertDialog.Builder(context);
-        builder.setItems(max, ((dialog, which) -> {
-            var url = urls.get(which);
-            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-            request.setTitle(videoFile.toString());
-            request.allowScanningByMediaScanner();
-            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
-            ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
-        }));
-        builder.show();
+        new VkAlertDialog.Builder(context)
+            .setItems(max, ((dialog, which) -> {
+                var url = urls.get(which);
+                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setTitle(videoFile.toString());
+                request.allowScanningByMediaScanner();
+                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
+                ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+            }))
+            .show();
     }
 
     public static void parseVideoLink(String url, Context ctx) {
