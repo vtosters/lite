@@ -46,7 +46,6 @@ import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
 import ru.vtosters.lite.ui.components.StickerTouchHelperCallback;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class StickersFragment extends BaseToolbarFragment {
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
@@ -185,6 +184,7 @@ public class StickersFragment extends BaseToolbarFragment {
                 new VkAlertDialog.Builder(getContext())
                         .setTitle(AndroidUtils.getString("stickershelp1"))
                         .setMessage(AndroidUtils.getString("stickershelp2"))
+                        .setView(linearLayout)
                         .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                             String pack = editText.getText().toString();
                             if (!pack.startsWith("https://")) {
@@ -242,6 +242,7 @@ public class StickersFragment extends BaseToolbarFragment {
         new VkAlertDialog.Builder(getContext())
                 .setTitle(AndroidUtils.getString("stickersapi5"))
                 .setMessage(AndroidUtils.getString("stickersapi6"))
+                .setView(linearLayout)
                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                     setTGBotKey(editText.getText().toString());
                     if (r != null) r.run();
