@@ -5500,6 +5500,7 @@ with video"</string>
     <string name="vtfaqsumm">All your questions are answered here</string>
     <string name="vtsite">Our site</string>
     <string name="installgms">Install Google Play Services</string>
+    <string name="gmsname">Google Play Services</string>
     <string name="vtldads">Disable ads</string>
     <string name="vtldgads">Disable groups ads</string>
     <string name="vtldgadssummary">Posts with ads mark</string>
@@ -6075,6 +6076,8 @@ May look like a fake leaving the online"</string>
     <string name="vtlothersumm">Show verifications</string>
     <string name="vtlmultiaccsumm">Available accounts</string>
     <string name="vtlhidesumm">Hide settings summaries</string>
+    <string name="vtllogout">Logout or change account</string>
+    <string name="vtlvksettings">VK Settings</string>
 
     <string name="vtlssfssumm">Have access</string>
     <string name="checkupdates">Auto updates</string>

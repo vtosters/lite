@@ -156,7 +156,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         int vtosterXml = getIdentifier("empty", "xml");
         this.addPreferencesFromResource(vtosterXml);
 
-        addPreferenceDrawable(this, "", getUsername(), hasVerification() ? AndroidUtils.getString("thanksfordonate") : AndroidUtils.getString("getdonate"), getDrawableFromUrl(getUserPhoto(), "ic_user_circle_outline_28", true, true), preference -> {
+        addPreferenceDrawable(this, "", getUsername(), AndroidUtils.getString("vtllogout"), getDrawableFromUrl(getUserPhoto(), "ic_user_circle_outline_28", true, true), preference -> {
             try {
                 VKAuth.a("logout", false);
             } catch (Exception ignored) {
@@ -168,6 +168,15 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             requireContext().startActivity(intent);
 
+            return false;
+        });
+
+        addPreference(this, "", AndroidUtils.getString("vtssfs"), ssfs, "ic_link_circle_outline_28", preference -> {
+            Context context = requireContext();
+            VKUIwrapper.setLink(SSFSUtils.getSSFSLink());
+            Intent a2 = new Navigator(VKUIwrapper.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
             return false;
         });
 
@@ -209,6 +218,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         }
 
         if (!isGmsInstalled()) {
+            addPreferenceCategory(this, AndroidUtils.getString("gmsname"));
+
             addPreference(this, "", AndroidUtils.getString("installgms"), "", "ic_about_outline_28", preference -> {
                 Context context = requireContext();
                 Intent a2 = new Navigator(InstallGMSFragment.class).b(context);
@@ -274,16 +285,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             });
         }
 
-        addPreference(this, "", AndroidUtils.getString("vtssfs"), ssfs, "ic_link_circle_outline_28", preference -> {
-            Context context = requireContext();
-            VKUIwrapper.setLink(SSFSUtils.getSSFSLink());
-            Intent a2 = new Navigator(VKUIwrapper.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreferenceCategory(this, AndroidUtils.getString("notification_settings"));
+        addPreferenceCategory(this, AndroidUtils.getString("vtlvksettings"));
 
         addPreference(this, "", AndroidUtils.getString("sett_general"), "", "ic_settings_outline_28", preference -> {
             Context context = requireContext();
@@ -329,7 +331,9 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         addPreferenceCategory(this, AndroidUtils.getString("vtsettmod"));
 
-        if (!vkme()) {
+        if (vkme()) {
+            addPreference(this, "", AndroidUtils.getString("warning"), AndroidUtils.getString("vkme_mode_info"), "ic_about_outline_28", preference -> false);
+        } else {
             addPreference(this, "", AndroidUtils.getString("vtlfeed"), feedsumm, "ic_newsfeed_outline_28", preference -> {
                 Context context = requireContext();
                 Intent a2 = new Navigator(FeedFragment.class).b(context);
@@ -337,7 +341,49 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 context.startActivity(a2);
                 return false;
             });
+        }
 
+        addPreference(this, "", AndroidUtils.getString("vtlmedia"), mediasumm, "ic_media_outline_28", preference -> {
+            Context context = requireContext();
+            Intent a2 = new Navigator(MediaFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return false;
+        });
+
+        addPreference(this, "", AndroidUtils.getString("vtlmessages"), msgsumm, "ic_message_outline_28", preference -> {
+            Context context = requireContext();
+            Intent a2 = new Navigator(MessagesFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return false;
+        });
+
+        addPreference(this, "", AndroidUtils.getString("vtltgs"), tgssumm, "ic_telegram_outline_28", preference -> {
+            Context context = requireContext();
+            Intent a2 = new Navigator(StickersFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return false;
+        });
+
+        addPreference(this, "", AndroidUtils.getString("vtlthemes"), themessumm, "ic_write_outline_28", preference -> {
+            Context context = requireContext();
+            Intent a2 = new Navigator(ThemesFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return false;
+        });
+
+        addPreference(this, "", AndroidUtils.getString("vtlinterface"), interfacesumm, "ic_interface_outline_28", preference -> {
+            Context context = requireContext();
+            Intent a2 = new Navigator(InterfaceFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return false;
+        });
+
+        if(!vkme()){
             if (!isTablet()) {
                 addPreference(this, "", AndroidUtils.getString("dockbar_editor"), docksumm, "ic_list_outline_28", preference -> {
                     Context context = requireContext();
@@ -357,53 +403,11 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                     });
                 }
             }
-        } else {
-            addPreference(this, "", AndroidUtils.getString("warning"), AndroidUtils.getString("vkme_mode_info"), "ic_about_outline_28", preference -> false);
         }
-
-        addPreference(this, "", AndroidUtils.getString("vtlmedia"), mediasumm, "ic_media_outline_28", preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(MediaFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", AndroidUtils.getString("vtlmessages"), msgsumm, "ic_message_outline_28", preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(MessagesFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
+        
         addPreference(this, "", AndroidUtils.getString("vtlactivity"), activitysumm, "ic_write_outline_28_new_accent", preference -> {
             Context context = requireContext();
             Intent a2 = new Navigator(ActivityFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", AndroidUtils.getString("vtlthemes"), themessumm, "ic_write_outline_28", preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(ThemesFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", AndroidUtils.getString("vtltgs"), tgssumm, "ic_telegram_outline_28", preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(StickersFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", AndroidUtils.getString("vtlinterface"), interfacesumm, "ic_interface_outline_28", preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(InterfaceFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
