@@ -5366,6 +5366,7 @@
     <string name="vtfaqsumm">Ответы на все ваши вопросы здесь</string>
     <string name="vtsite">Наш сайт</string>
     <string name="installgms">Установите Сервисы Google Play</string>
+    <string name="gmsname">Сервисы Google Play</string>
     <string name="vtldads">Отключить рекламу</string>
     <string name="vtldgads">Отключить рекламу групп</string>
     <string name="vtldgadssummary">Посты с пометкой рекламы</string>
@@ -5918,7 +5919,7 @@
     <string name="vkmesumm">Замена докбара и некоторых элементов на что-то похожее как в VK Мессенджере</string>
 
     <string name="vtsettaccount">Аккаунт</string>
-    <string name="vtsettdarktheme">Темная тема</string>
+    <string name="vtsettdarktheme">Тёмная тема</string>
     <string name="vtsettaboutmod">О модификации</string>
     <string name="vtsettmod">Настройки мода</string>
 
@@ -5940,6 +5941,8 @@
     <string name="vtlothersumm">Отображение верификаций</string>
     <string name="vtlmultiaccsumm">Доступно аккаунтов</string>
     <string name="vtlhidesumm">Скрыть подписи в настройках</string>
+    <string name="vtllogout">Выйти или сменить аккаунт</string>
+    <string name="vtlvksettings">Настройки ВКонтакте</string>
 
     <string name="vtlssfssumm">Есть доступ</string>
     <string name="checkupdates">Авто обновления</string>
