@@ -2,17 +2,15 @@ package ru.vtosters.lite.deviceinfo;
 
 import android.os.Build;
 import android.text.TextUtils;
-import android.util.Log;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import ru.vtosters.lite.utils.ReflectionUtils;
 
 public class OEMDetector {
     private static Field semPlatformIntField;
+    private static Method getPropMtd;
 
     private static Boolean isOneUi;
     private static int oneUiMajorVersion;
@@ -21,7 +19,8 @@ public class OEMDetector {
     static {
         try {
             semPlatformIntField = ReflectionUtils.getDeclaredField(Build.VERSION.class, "SEM_PLATFORM_INT");
-        } catch (NoSuchFieldException e) {
+            getPropMtd = ReflectionUtils.getDeclaredMethod(ReflectionUtils.getClass("android.os.SystemProperties"), "get", String.class);
+        } catch (Throwable e) {
             e.printStackTrace();
         }
     }
@@ -97,27 +96,12 @@ public class OEMDetector {
         return getSystemProperty("ro.build.version.incremental");
     }
 
-    private static String getSystemProperty(String str) {
-        BufferedReader bufferedReader;
+    private static String getSystemProperty(String prop) {
         try {
-            bufferedReader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec("getprop " + str).getInputStream()), 1024);
-            try {
-                try {
-                    bufferedReader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                var rl = bufferedReader.readLine();
-
-                Log.d("OEMDetector", str + " " + rl);
-
-                return rl;
-            } catch (IOException ignored) {
-            }
-        } catch (Throwable ignored) {
+            return (String) getPropMtd.invoke(null, prop);
+        } catch (Throwable e) {
+            e.printStackTrace();
+            return null;
         }
-        return null;
     }
-
 }
