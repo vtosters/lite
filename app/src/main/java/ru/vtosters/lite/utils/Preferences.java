@@ -4,6 +4,7 @@ import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.proxy.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
@@ -61,7 +62,7 @@ public class Preferences {
     }
 
     public static boolean systemtheme() {
-        return Build.VERSION.SDK_INT >= 28 && (AndroidUtils.getPrefsValue("currsystemtheme").equals("system") || AndroidUtils.getPrefsValue("currsystemtheme").isEmpty());
+        return Build.VERSION.SDK_INT >= 28 && getPreferences().getString("currsystemtheme", "system").equals("system");
     }
 
     public static boolean authorsrecomm() {
