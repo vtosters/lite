@@ -2,8 +2,7 @@ package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.ThemesUtils.*;
+import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 
 import android.app.Activity;
 
@@ -12,7 +11,6 @@ import com.vk.core.ui.themes.VKThemeHelper;
 
 import ru.vtosters.lite.hooks.VKUIHook;
 import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ThemeChanging {
     public static void changeTheme(Activity activity, float[] f) {
@@ -30,7 +28,6 @@ public class ThemeChanging {
                     .show();
         } else {
             VKThemeHelper.b(activity, f);
-            edit().putString("currsystemtheme", !isDarkTheme() ? "dark" : "light").commit();
             VKUIHook.clearWebCache();
         }
     }
