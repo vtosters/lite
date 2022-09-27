@@ -22,7 +22,6 @@ import static ru.vtosters.lite.utils.Preferences.autotranslate;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Preferences.disableSettingsSumms;
 import static ru.vtosters.lite.utils.Preferences.hasSpecialVerif;
-import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.navbar;
@@ -47,7 +46,6 @@ import android.os.Bundle;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
-import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
@@ -69,7 +67,6 @@ import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.CacheUtils;
-import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.SSFSUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -185,29 +182,24 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         addPreferenceCategory(this, AndroidUtils.getString("vtsettdarktheme"));
 
         if (Build.VERSION.SDK_INT >= 28) {
-            addListPreferenceIcon(this, "currsystemtheme", "system", AndroidUtils.getString("appearance_theme_use_system"), "ic_palette_outline_28", "", new CharSequence[]{
-                    "Системная тема", "Тёмная тема", "Светлая тема"
-            }, new String[]{
-                    "system", "dark", "light"
-            }, (preference, o) -> {
-                String value = (String) o;
-
-                switch (value) {
-                    case "dark":
-                        // Night mode is active, we're using dark theme
-                        ThemesUtils.applyTheme(ThemesUtils.getDarkTheme());
-                        break;
-                    case "light":
-                        // Night mode is not active, we're using light theme
-                        ThemesUtils.applyTheme(ThemesUtils.getLightTheme());
-                        break;
-                }
-
-                edit().putString("currsystemtheme", value).commit();
-
-                SystemThemeChangerHook.onThemeChanged(getResources().getConfiguration());
-                return true;
-            });
+            addListPreferenceIcon(
+                    this,
+                    "currsystemtheme",
+                    "system",
+                    AndroidUtils.getString("appearance_theme_use_system"),
+                    "ic_palette_outline_28", "",
+                    new String[] { "Системная тема", "Тёмная тема", "Светлая тема" },
+                    new String[] { "system", "dark", "light" },
+                    (preference, o) -> {
+                        String value = (String) o;
+                        if (!value.equals("system")) {
+                            var theme = value.equals("dark") ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme();
+                            ThemesUtils.applyTheme(theme);
+                        }
+                        edit().putString("currsystemtheme", value).commit();
+                        SystemThemeChangerHook.onThemeChanged(getResources().getConfiguration());
+                        return true;
+                    });
         } else {
             addMaterialSwitchPreference(this, "", AndroidUtils.getString("vtsettdarktheme"), "", "ic_palette_outline_28", isDarkTheme(), (preference, o) -> {
                 final var switchPreference = (MaterialSwitchPreference) preference;
