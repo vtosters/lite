@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.dialogs;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.ThemesUtils.*;
 
 import android.app.Activity;
 
@@ -10,16 +11,18 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.ui.themes.VKThemeHelper;
 
 import ru.vtosters.lite.hooks.VKUIHook;
+import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ThemeChanging {
     public static void changeTheme(Activity activity, float[] f) {
-        if (getBoolValue("systemtheme", true)) {
+        if (Preferences.systemtheme()) {
             new VkAlertDialog.Builder(activity)
                     .setTitle(getString("warning"))
                     .setMessage(getString("system_theme_warning"))
                     .setCancelable(false)
                     .setPositiveButton(getString("proxy_disable"), (dialogInterface, i) -> { // Отключить
-                        edit().putBoolean("systemtheme", false).commit();
+                        edit().putString("currsystemtheme", !isDarkTheme() ? "dark" : "light").commit();
                         VKThemeHelper.b(activity, f);
                         VKUIHook.clearWebCache();
                     })
@@ -27,6 +30,7 @@ public class ThemeChanging {
                     .show();
         } else {
             VKThemeHelper.b(activity, f);
+            edit().putString("currsystemtheme", !isDarkTheme() ? "dark" : "light").commit();
             VKUIHook.clearWebCache();
         }
     }

@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.ui.PreferencesUtil.addListPreferenceIcon;
 import static ru.vtosters.lite.ui.PreferencesUtil.addMaterialSwitchPreference;
 import static ru.vtosters.lite.ui.PreferencesUtil.addPreference;
 import static ru.vtosters.lite.ui.PreferencesUtil.addPreferenceCategory;
@@ -70,6 +71,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.SSFSUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment {
     public static String getValAsString(String stringid, Boolean value) {
@@ -173,37 +175,35 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         addPreferenceCategory(this, AndroidUtils.getString("vtsettdarktheme"));
 
-        addMaterialSwitchPreference(this, "", AndroidUtils.getString("vtsettdarktheme"), "", "ic_palette_outline_28", isDarkTheme(), (preference, o) -> {
-            final var switchPreference = (MaterialSwitchPreference) preference;
-            final var isDarkTheme = !switchPreference.isChecked();
-
-            if (Preferences.systemtheme()) {
-                new VkAlertDialog.Builder(requireActivity())
-                        .setTitle(AndroidUtils.getString("warning"))
-                        .setMessage(AndroidUtils.getString("system_theme_warning"))
-                        .setCancelable(false)
-                        .setPositiveButton(AndroidUtils.getString("proxy_disable"), (dialogInterface, i) -> { // Отключить
-                            switchPreference.setChecked(isDarkTheme);
-                            ((MaterialSwitchPreference) findPreference("systemtheme")).setChecked(false);
-                            requireActivity().runOnUiThread(() -> {
-                                switchTheme(isDarkTheme);
-                            });
-                        })
-                        .setNeutralButton(AndroidUtils.getString("cancel"), null)
-                        .show();
-                return false;
-            }
-            switchTheme(isDarkTheme);
-            return true;
-        });
-
         if (Build.VERSION.SDK_INT >= 28) {
-            addMaterialSwitchPreference(this, "systemtheme", AndroidUtils.getString("appearance_theme_use_system"), "", "ic_recent_outline_28", true, (preference, o) -> {
-                boolean value = (boolean) o;
+            addListPreferenceIcon(this, "currsystemtheme", "system", AndroidUtils.getString("appearance_theme_use_system"), "ic_palette_outline_28", "", new CharSequence[]{
+                    "Системная тема", "Тёмная тема", "Светлая тема"
+            }, new String[]{
+                    "system", "dark", "light"
+            }, (preference, o) -> {
+                String value = (String) o;
 
-                edit().putBoolean("systemtheme", value).commit();
+                switch (value) {
+                    case "dark":
+                        // Night mode is active, we're using dark theme
+                        ThemesUtils.applyTheme(ThemesUtils.getDarkTheme());
+                        break;
+                    case "light":
+                        // Night mode is not active, we're using light theme
+                        ThemesUtils.applyTheme(ThemesUtils.getLightTheme());
+                        break;
+                }
+
+                edit().putString("currsystemtheme", value).commit();
 
                 SystemThemeChangerHook.onThemeChanged(getResources().getConfiguration());
+                return true;
+            });
+        } else {
+            addMaterialSwitchPreference(this, "", AndroidUtils.getString("vtsettdarktheme"), "", "ic_palette_outline_28", isDarkTheme(), (preference, o) -> {
+                final var switchPreference = (MaterialSwitchPreference) preference;
+                final var isDarkTheme = !switchPreference.isChecked();
+                switchTheme(isDarkTheme);
                 return true;
             });
         }

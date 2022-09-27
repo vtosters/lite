@@ -50,6 +50,7 @@ public class PreferencesUtil {
         preference.setDialogTitle(title); // setDialogTitle
         preference.setKey(key); // setKey
         preference.setDefaultValue(def); // setDefaultValue
+        preference.setValue(def);
         preference.setOnPreferenceChangeListener(listener);
 
         if (icon != null)

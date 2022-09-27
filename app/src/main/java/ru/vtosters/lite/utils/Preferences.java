@@ -61,7 +61,7 @@ public class Preferences {
     }
 
     public static boolean systemtheme() {
-        return Build.VERSION.SDK_INT >= 28 && getBoolValue("systemtheme", true);
+        return Build.VERSION.SDK_INT >= 28 && AndroidUtils.getPrefsValue("currsystemtheme").equals("system");
     }
 
     public static boolean authorsrecomm() {
