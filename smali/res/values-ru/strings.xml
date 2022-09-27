@@ -5730,7 +5730,7 @@
     <string name="appearance_theme_dialog_title">Выберите тему</string>
     <string name="appearance_theme_dark_theme">Тёмная тема приложения</string>
     <string name="appearance_theme_light_theme">Светлая тема приложения</string>
-    <string name="appearance_theme_use_system">Использовать системную тему</string>
+    <string name="appearance_theme_use_system">Тема приложения</string>
     <string name="appearance_theme_use_system_summary">Применение системной темы при запуске приложения</string>
 
     <string name="appearance_other_color_navbar_summary">Если системно имеется</string>

@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static com.vtosters.lite.NotificationUtils.Type.Default;
 import static ru.vtosters.lite.ui.PreferencesUtil.addListPreferenceIcon;
 import static ru.vtosters.lite.ui.PreferencesUtil.addMaterialSwitchPreference;
 import static ru.vtosters.lite.ui.PreferencesUtil.addPreference;
@@ -113,6 +114,30 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         return AndroidUtils.getString("vtlproxysumm") + ": " + type;
     }
 
+    public static String getThemesumm() {
+        var type = getPrefsValue("currsystemtheme");
+
+        if (disableSettingsSumms()) return null;
+
+        String str = null;
+
+        switch (type) {
+            case "system":
+                str = "Системная";
+                break;
+            case "dark":
+                str = "Темная";
+                break;
+            case "light":
+                str = "Светлая";
+                break;
+        }
+
+        if (str == null) return null;
+
+        return "Текущая тема" + ": " + str;
+    }
+
     public static SharedPreferences getCurrentAccount() {
         return AndroidUtils.getGlobalContext().getSharedPreferences("pref_account_manager", Context.MODE_PRIVATE);
     }
@@ -179,7 +204,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreferenceCategory(this, AndroidUtils.getString("vtsettdarktheme"));
+        addPreferenceCategory(this, AndroidUtils.getString("appearance_theme_use_system"));
 
         if (Build.VERSION.SDK_INT >= 28) {
             addListPreferenceIcon(
@@ -187,7 +212,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                     "currsystemtheme",
                     "system",
                     AndroidUtils.getString("appearance_theme_use_system"),
-                    "ic_palette_outline_28", "",
+                    "ic_palette_outline_28", getThemesumm(),
                     new String[] { "Системная тема", "Тёмная тема", "Светлая тема" },
                     new String[] { "system", "dark", "light" },
                     (preference, o) -> {

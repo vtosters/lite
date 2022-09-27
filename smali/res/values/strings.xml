@@ -5863,7 +5863,7 @@ May look like a fake leaving the online"</string>
     <string name="appearance_theme_dialog_title">Choose a theme</string>
     <string name="appearance_theme_dark_theme">Dark app theme</string>
     <string name="appearance_theme_light_theme">Light app theme</string>
-    <string name="appearance_theme_use_system">Use system theme</string>
+    <string name="appearance_theme_use_system">App theme</string>
     <string name="appearance_theme_use_system_summary">Apply system theme on app start</string>
 
     <string name="appearance_other_color_navbar_summary">If systemically available</string>

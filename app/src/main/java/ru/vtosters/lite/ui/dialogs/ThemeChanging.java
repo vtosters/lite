@@ -28,6 +28,7 @@ public class ThemeChanging {
                     .show();
         } else {
             VKThemeHelper.b(activity, f);
+            edit().putString("currsystemtheme", isDarkTheme() ? "dark" : "light").commit();
             VKUIHook.clearWebCache();
         }
     }
