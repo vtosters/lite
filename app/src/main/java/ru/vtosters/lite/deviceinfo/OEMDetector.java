@@ -2,6 +2,7 @@ package ru.vtosters.lite.deviceinfo;
 
 import android.os.Build;
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -56,8 +57,12 @@ public class OEMDetector {
         return isMIUI() || isEMUI() || isFlyme() || isZenUI() || isSamsung() || isVivo();
     }
 
-    private static boolean isMIUI() {
-        return !TextUtils.isEmpty(getMiuiUiVersionName());
+    static boolean isMIUI() {
+        return !TextUtils.isEmpty(getMiuiUiVersionName()) || !TextUtils.isEmpty(getMiuiUiVersionIncrementalCode());
+    }
+
+    static boolean isMIUIAlter() {
+        return !TextUtils.isEmpty(getMiuiUiVersionIncrementalCode());
     }
 
     private static boolean isEMUI() {
@@ -72,7 +77,7 @@ public class OEMDetector {
         return !TextUtils.isEmpty(getSystemProperty("ro.vivo.os.version")) || !TextUtils.isEmpty(getSystemProperty("ro.vivo.rom")) || !TextUtils.isEmpty(getSystemProperty("ro.vivo.rom.version")) || !TextUtils.isEmpty(getSystemProperty("ro.vivo.build.version.sdk"));
     }
 
-    private static boolean isSamsung() {
+    static boolean isSamsung() {
         return !TextUtils.isEmpty(getSystemProperty("ro.config.knox"));
     }
 
@@ -88,6 +93,10 @@ public class OEMDetector {
         return getSystemProperty("ro.miui.ui.version.code");
     }
 
+    public static String getMiuiUiVersionIncrementalCode() {
+        return getSystemProperty("ro.build.version.incremental");
+    }
+
     private static String getSystemProperty(String str) {
         BufferedReader bufferedReader;
         try {
@@ -98,13 +107,17 @@ public class OEMDetector {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                return bufferedReader.readLine();
+
+                var rl = bufferedReader.readLine();
+
+                Log.d("OEMDetector", str + " " + rl);
+
+                return rl;
             } catch (IOException ignored) {
             }
         } catch (Throwable ignored) {
         }
         return null;
     }
-
 
 }

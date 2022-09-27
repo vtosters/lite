@@ -26,6 +26,7 @@ import android.view.Window;
 import android.webkit.WebView;
 import android.widget.ImageButton;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.ColorUtils;
 
@@ -56,6 +57,14 @@ public class ThemesUtils {
             }
         }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
+
+    public static void setSystemModeTheme(int theme) {
+        AppCompatDelegate.setDefaultNightMode(theme);
+    }
+
+    public static int getSystemModeTheme() {
+        return AppCompatDelegate.getDefaultNightMode();
+    }
 
     public static void setTheme(VKTheme theme, Activity activity) {
         if (activity == null) {
