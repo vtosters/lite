@@ -48,6 +48,14 @@ public class Device {
     }
 
     public String toDeviceName() {
-        return "Device information: " + "commit='" + getBuildNumber() + "', sdkVersion=" + this.sdkVersion + ", productName='" + this.productName + "', deviceName='" + this.deviceName + "', boardName='" + this.boardName + "', manufacturerName='" + this.manufacturerName + "', brandName='" + this.brandName + "', modelName='" + this.modelName + "'";
+        return "Device information: "
+                + "commit='" + getBuildNumber()
+                + "', sdkVersion=" + this.sdkVersion
+                + ", productName='" + this.productName
+                + "', deviceName='" + this.deviceName
+                + "', boardName='" + this.boardName
+                + "', manufacturerName='" + this.manufacturerName
+                + "', brandName='" + this.brandName
+                + "', modelName='" + this.modelName + "'";
     }
 }
