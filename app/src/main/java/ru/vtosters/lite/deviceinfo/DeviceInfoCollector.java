@@ -1,5 +1,6 @@
 package ru.vtosters.lite.deviceinfo;
 
+import static ru.vtosters.lite.deviceinfo.OEMDetector.getEmuiVersionCode;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.getMiuiUiVersionCode;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.getMiuiUiVersionIncrementalCode;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.getMiuiUiVersionName;
@@ -23,6 +24,7 @@ public class DeviceInfoCollector {
                 .withOneUiMinorVersionName(String.valueOf(getOneUiMinorVersion()))
                 .withMiuiUiVersionName(getMiuiUiVersionName())
                 .withMiuiIncrementalCodeName(getMiuiUiVersionIncrementalCode())
+                .withEmuiVersionName(getEmuiVersionCode())
                 .withMiuiUiVersionCodeName(getMiuiUiVersionCode());
     }
 }

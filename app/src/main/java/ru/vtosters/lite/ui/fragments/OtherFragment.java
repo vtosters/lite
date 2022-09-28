@@ -43,6 +43,7 @@ import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.media.player.cache.AutoPlayCacheHolder;
 import com.vk.mediastore.MediaStorage;
+import com.vk.navigation.Navigator;
 import com.vk.pushes.PushSubscriber;
 import com.vk.stickers.Stickers;
 import com.vtosters.lite.auth.VKAccountManager;
@@ -56,7 +57,6 @@ import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ContactsUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
@@ -91,6 +91,15 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             cacheCleanDialog();
             return true;
         });
+
+        findPreference("deviceinfo").setOnPreferenceClickListener(preference -> {
+            Context context = requireContext();
+            Intent a2 = new Navigator(SystemInfo.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return true;
+        });
+
         findPreference("autoclearcache").setOnPreferenceClickListener(preference -> {
             cacheAutoCleanDialog();
             return true;

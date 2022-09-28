@@ -28,6 +28,9 @@
             android:key="tokencopy"
             android:title="@string/copytokenbtn" />
         <Preference
+            android:key="deviceinfo"
+            android:title="Device info" />
+        <Preference
             android:key="vk_admin_token"
             android:title="@string/vk_admin_token_title" />
     </PreferenceCategory>

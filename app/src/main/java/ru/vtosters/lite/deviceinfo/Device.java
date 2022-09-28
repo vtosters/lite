@@ -1,5 +1,6 @@
 package ru.vtosters.lite.deviceinfo;
 
+import static ru.vtosters.lite.deviceinfo.OEMDetector.isEMUI;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isMIUI;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isMIUIAlter;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isSamsung;
@@ -17,6 +18,7 @@ public class Device {
     private String MiuiIncrementalCode;
     private String OneUiMinorVersion;
     private String OneUiMajorVersion;
+    private String EmuiVersion;
     private int sdkVersion;
 
     public Device withSdkVersion(int i) {
@@ -79,6 +81,11 @@ public class Device {
         return this;
     }
 
+    public Device withEmuiVersionName(String str) {
+        this.EmuiVersion = str;
+        return this;
+    }
+
     public String toDeviceName() {
         return "Device information: "
                 + "commit='" + getBuildNumber()
@@ -91,6 +98,7 @@ public class Device {
                 + (isMIUI() ? "', MiuiUiVersionCode='" + this.MiuiUiVersionCode + "', MiuiUiVersionName='" + this.MiuiUiVersionName : "")
                 + (isSamsung() ? "', OneUiMajorVersion='" + this.OneUiMajorVersion + "', OneUiMinorVersion='" + this.OneUiMinorVersion : "")
                 + (isMIUIAlter() ? "', MiuiUiVersionIncrementalCode='" + this.MiuiIncrementalCode : "")
+                + (isEMUI() ? "', MiuiUiVersionIncrementalCode='" + this.EmuiVersion : "")
                 + "', modelName='" + this.modelName + "'";
     }
 }
