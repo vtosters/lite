@@ -2,7 +2,7 @@ package ru.vtosters.lite.deviceinfo;
 
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isEMUI;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isMIUI;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.isMIUIAlter;
+import static ru.vtosters.lite.deviceinfo.OEMDetector.hasMiuiIncrCode;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isSamsung;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 
@@ -97,8 +97,8 @@ public class Device {
                 + "', brandName='" + this.brandName
                 + (isMIUI() ? "', MiuiUiVersionCode='" + this.MiuiUiVersionCode + "', MiuiUiVersionName='" + this.MiuiUiVersionName : "")
                 + (isSamsung() ? "', OneUiMajorVersion='" + this.OneUiMajorVersion + "', OneUiMinorVersion='" + this.OneUiMinorVersion : "")
-                + (isMIUIAlter() ? "', MiuiUiVersionIncrementalCode='" + this.MiuiIncrementalCode : "")
-                + (isEMUI() ? "', MiuiUiVersionIncrementalCode='" + this.EmuiVersion : "")
+                + (hasMiuiIncrCode() ? "', MiuiUiVersionIncrementalCode='" + this.MiuiIncrementalCode : "")
+                + (isEMUI() ? "', EmuiVersion='" + this.EmuiVersion : "")
                 + "', modelName='" + this.modelName + "'";
     }
 }

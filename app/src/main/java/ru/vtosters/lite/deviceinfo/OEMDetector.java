@@ -12,7 +12,6 @@ import android.text.TextUtils;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ReflectionUtils;
 
 public class OEMDetector {
@@ -83,7 +82,7 @@ public class OEMDetector {
                 || isIntentResolved(ctx, new Intent().setComponent(new ComponentName("com.miui.securitycenter", "com.miui.powercenter.PowerSettings")));
     }
 
-    public static boolean isMIUIAlter() {
+    public static boolean hasMiuiIncrCode() {
         return !TextUtils.isEmpty(getMiuiUiVersionIncrementalCode()) && isMIUI();
     }
 

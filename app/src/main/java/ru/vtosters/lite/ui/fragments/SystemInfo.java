@@ -10,7 +10,7 @@ import static ru.vtosters.lite.deviceinfo.OEMDetector.getOneUiMinorVersion;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isEMUI;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isFlyme;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isMIUI;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.isMIUIAlter;
+import static ru.vtosters.lite.deviceinfo.OEMDetector.hasMiuiIncrCode;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isOneUi;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isSamsung;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isVivo;
@@ -64,7 +64,7 @@ public class SystemInfo extends MaterialPreferenceToolbarFragment {
         var isVivo = isVivo();
         var isZenUI = isZenUI();
         var isEMUI = isEMUI();
-        var isMIUIAlter = isMIUIAlter();
+        var hasMiuiIncrCode = hasMiuiIncrCode();
 
         var isValidSignature = isValidSignature();
         var isTablet = isTablet();
@@ -158,7 +158,7 @@ public class SystemInfo extends MaterialPreferenceToolbarFragment {
                 return false;
             });
 
-            if (isMIUIAlter) {
+            if (hasMiuiIncrCode) {
                 addPreference(this, "", "miuiIncrementalCodeName", miuiIncrementalCodeName, null, preference -> {
                     ((ClipboardManager) requireActivity().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", miuiIncrementalCodeName));
                     sendToast(AndroidUtils.getString("copied_to_clipboard"));
@@ -181,9 +181,9 @@ public class SystemInfo extends MaterialPreferenceToolbarFragment {
 
         addPreference(this, "", "isMiui", "Value: " + isMiui, null, null);
 
-        addPreference(this, "", "isEMUI", "Value: " + isEMUI, null, null);
-
         addPreference(this, "", "isMIUIDetectionV2", "Value: " + isMIUIDetectionV2, null, null);
+
+        addPreference(this, "", "isEMUI", "Value: " + isEMUI, null, null);
 
         addPreference(this, "", "isFlyme", "Value: " + isFlyme, null, null);
 
