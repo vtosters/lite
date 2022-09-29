@@ -86,7 +86,7 @@
     :pswitch_1
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/NewsfeedPresenter$g;->a:Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
 
-    const/4 p2, 0x1
+    const/4 p2, 0x0
 
     invoke-virtual {p1, p2}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->b(Z)V
 
