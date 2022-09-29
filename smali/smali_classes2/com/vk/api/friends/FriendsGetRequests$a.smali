@@ -94,15 +94,24 @@
     if-eqz v0, :cond_0
 
     .line 5
-    iget-object v0, p0, Lcom/vk/api/friends/FriendsGetRequests$a;->d:Lcom/vk/api/friends/FriendsGetRequests$b;
-
-    iget-object v2, p0, Lcom/vk/api/friends/FriendsGetRequests$a;->e:Landroid/util/SparseArray;
-
     const-string v3, "from"
 
     invoke-virtual {p1, v3}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v3
+
+    if-nez v3, :cond_1
+
+    const-string v0, ""
+
+    iput-object v0, v1, Lcom/vk/dto/user/RequestUserProfile;->h0:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/vk/api/friends/FriendsGetRequests$a;->d:Lcom/vk/api/friends/FriendsGetRequests$b;
+
+    iget-object v2, p0, Lcom/vk/api/friends/FriendsGetRequests$a;->e:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
