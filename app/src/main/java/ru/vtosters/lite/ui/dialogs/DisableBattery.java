@@ -28,6 +28,7 @@ public class DisableBattery {
                         .setCancelable(false)
                         .setPositiveButton(getString("batteryissuebtn1"), (dialogInterface, i) -> {
                             var intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+                                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                     .setData(Uri.parse("package:" + context.getPackageName()));
                             context.startActivity(intent);
                 })
