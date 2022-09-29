@@ -100,7 +100,7 @@
 
     const-string v3, "from"
 
-    invoke-virtual {p1, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    invoke-virtual {p1, v3}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v3
 
