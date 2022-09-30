@@ -3,6 +3,9 @@ package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogHeader;
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogSeparator;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.proxy.ProxyUtils.getStatic;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
@@ -33,9 +36,12 @@ import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Random;
 
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
@@ -374,6 +380,8 @@ public class JsonInjectors {
         }
 
         if (oldItems != null && oldItems.optJSONObject(0).optString("url").contains("general")) {
+            json.optJSONArray("playlists").put(getPlaylist());
+
             if (podcastcatalog()) {
                 var podcasts = fetchCatalogPodcast();
                 if (podcasts != null) {
@@ -440,6 +448,26 @@ public class JsonInjectors {
                 if (url.contains(value) && !value.isEmpty()) {
                     catalog.put("default_section", id);
                     if (dev()) Log.d("VKMusic", "Added " + title + " as default music section");
+                }
+            }
+
+            if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()){ // inj in playlist list
+                var blocks = oldItems.optJSONObject(0).optJSONArray("blocks");
+                var newBlocks = new JSONArray();
+
+                if (blocks != null){
+                    newBlocks
+                            .put(getCatalogHeader())
+                            .put(getCatalogPlaylist())
+                            .put(getCatalogSeparator());
+
+                    Log.d("VKMusic", "added cache catalog playlist");
+
+                    for (int i = 0; i < blocks.length(); i++) {
+                        newBlocks.put(blocks.optJSONObject(i));
+                    }
+
+                    oldItems.optJSONObject(0).put("blocks", newBlocks);
                 }
             }
         }

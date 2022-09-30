@@ -32,14 +32,10 @@ public class PlaylistInjector {
     }
 
     public static boolean eligibleForOfflineCaching() {
-        Log.d("PlaylistInjector", "eligibleForOfflineCaching");
-
-        return !NetworkUtils.isNetworkConnected() && CacheDatabaseDelegate.hasTracks();
+        return CacheDatabaseDelegate.hasTracks();
     }
 
     public static Observable<AudioGetPlaylist.c> injectGetPlaylist(AudioGetPlaylist audioGetPlaylist) {
-        Log.d("PlaylistInjector", "injectGetPlaylist");
-
         try {
             if (!eligibleForOfflineCaching())
                 return null;

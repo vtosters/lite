@@ -1,5 +1,7 @@
 package ru.vtosters.lite.music.cache.helpers;
 
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserPhoto;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import com.vk.dto.music.Playlist;
@@ -19,15 +21,7 @@ public class PlaylistHelper {
 
     public static Playlist createCachedPlaylistMetadata() {
         try {
-            var obj = new JSONObject()
-                    .put("id", -1)
-                    .put("owner_id", AccountManagerUtils.getUserId())
-                    .put("type", 0)
-                    .put("album_type", "playlist")
-                    .put("title", getString("cached_tracks_title"))
-                    .put("description", getString("cached_tracks_desc"))
-                    .put("count", 0);
-            return new Playlist(obj);
+            return new Playlist(getPlaylist());
         } catch (JSONException e) {
             e.printStackTrace();
             return null;
@@ -89,5 +83,67 @@ public class PlaylistHelper {
             ));
         }
         return list;
+    }
+
+    public static JSONObject getPlaylist() throws JSONException {
+        var link = getUserPhoto();
+
+        return new JSONObject()
+                .put("id", -1)
+                .put("owner_id", getUserId())
+                .put("type", 0)
+                .put("album_type", "playlist")
+                .put("title", getString("cached_tracks_title"))
+                .put("description", getString("cached_tracks_desc"))
+                .put("access_key", "cache")
+                .put("genres", new JSONArray())
+                .put("is_following", false)
+                .put("followers", 0)
+                .put("plays", 0)
+                .put("create_time", 0)
+                .put("update_time", 0)
+                .put("subtitle", "")
+                .put("photo", new JSONObject()
+                        .put("photo_34", link)
+                        .put("photo_68", link)
+                        .put("photo_135", link)
+                        .put("photo_270", link)
+                        .put("photo_300", link)
+                        .put("photo_600", link)
+                        .put("photo_1200", link)
+                        .put("width", 600)
+                        .put("height", 600))
+                .put("meta", new JSONObject()
+                        .put("view", "compact"))
+                .put("count", 0);
+    }
+
+    public static JSONObject getCatalogPlaylist() throws JSONException {
+        return new JSONObject()
+                .put("id", "cache")
+                .put("data_type", "music_playlists")
+                .put("layout", new JSONObject()
+                        .put("name", "large_slider")
+                        .put("is_editable", 0)
+                        .put("owner_id", getUserId()))
+                .put("playlists_ids", new JSONArray()
+                        .put(getUserId() + "_-1"));
+    }
+
+    public static JSONObject getCatalogHeader() throws JSONException {
+        return new JSONObject()
+                .put("id", "cache")
+                .put("data_type", "none")
+                .put("layout", new JSONObject()
+                        .put("name", "header")
+                        .put("title", getString("cached_tracks_title")));
+    }
+
+    public static JSONObject getCatalogSeparator() throws JSONException {
+        return new JSONObject()
+                .put("id", "cache")
+                .put("data_type", "none")
+                .put("layout", new JSONObject()
+                        .put("name", "separator"));
     }
 }
