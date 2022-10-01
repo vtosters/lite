@@ -9,6 +9,7 @@ import java.io.File;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import ru.vtosters.lite.music.Callback;
 import ru.vtosters.lite.music.M3UDownloader;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.FileCacheImplementation;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
 
@@ -18,6 +19,11 @@ public class TrackDownloader {
     }
 
     public static void cacheTrack(MusicTrack track, Callback callback) {
+        if (CacheDatabaseDelegate.isCached(track.y1())) {
+            callback.onSuccess();
+            return;
+        }
+
         var path = FileCacheImplementation.getTrackFolder(LibVKXClient.asId(track)).getAbsolutePath();
         download(track, path, callback, M3UDownloader.getInstance(), true);
     }
