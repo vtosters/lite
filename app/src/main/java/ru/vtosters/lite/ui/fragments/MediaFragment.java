@@ -38,6 +38,7 @@ import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -177,11 +178,11 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         new VkAlertDialog.Builder(ctx)
                 .setTitle(AndroidUtils.getString("lastfm_enter_credentials"))
                 .setPositiveButton(AndroidUtils.getString("lastfm_enter"),
-                    (dialog, which) -> {
-                        String login = fn.getText().toString();
-                        String pass = ln.getText().toString();
-                        Scrobbler.auth(login, pass);
-                    }
+                        (dialog, which) -> {
+                            String login = fn.getText().toString();
+                            String pass = ln.getText().toString();
+                            Scrobbler.auth(login, pass);
+                        }
                 )
                 .setView(linearLayout)
                 .show();
@@ -192,7 +193,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                 .setTitle(AndroidUtils.getString("lastfm_logout_title"))
                 .setMessage(AndroidUtils.getString("lastfm_logout_confirm"))
                 .setPositiveButton(AndroidUtils.getString("vkim_yes"),
-                    (dialog, which) -> Scrobbler.logout())
+                        (dialog, which) -> Scrobbler.logout())
                 .setNeutralButton(AndroidUtils.getString("vkim_no"),
                         (dialog, which) -> dialog.cancel())
                 .show();
@@ -210,6 +211,11 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void dlaudio(Context ctx) {
+        if (LibVKXClient.isIntegrationEnabled()) {
+            sendToast("Включена интеграция VKX. Глобальное кеширование доступно внутри VKX");
+            return;
+        }
+
         new VkAlertDialog.Builder(ctx)
                 .setTitle(AndroidUtils.getString("download_method"))
                 .setMessage(AndroidUtils.getString("download_method_desc"))

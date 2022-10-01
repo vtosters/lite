@@ -1,6 +1,7 @@
 package ru.vtosters.lite.music;
 
 import static java.lang.String.valueOf;
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.getInstance;
 import static ru.vtosters.lite.utils.AndroidUtils.MD5;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
@@ -8,6 +9,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.autocache;
 
+import android.os.RemoteException;
 import android.util.Log;
 
 import com.vk.dto.music.MusicTrack;
@@ -20,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.net.NetCall;
 import ru.vtosters.lite.net.NetCallback;
@@ -88,7 +91,19 @@ public class Scrobbler {
             return;
         }
 
-        if (autocache()) AudioDownloader.cacheTrack(musictrack);
+        if (autocache()) {
+            if (LibVKXClient.isIntegrationEnabled()){
+                getInstance().runOnService(service -> {
+                    try {
+                        service.addTrackToCache(musictrack.d, musictrack.e, (musictrack.J != null) ? musictrack.J : "");
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                });
+            } else {
+                AudioDownloader.cacheTrack(musictrack);
+            }
+        }
 
         scrobbleTrack(duration, artist, title, uid);
     }
