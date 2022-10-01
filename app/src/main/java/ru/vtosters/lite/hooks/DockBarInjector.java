@@ -209,6 +209,7 @@ public class DockBarInjector {
                 val = MenuCountersState.n();
                 break;
             case tab_feedback:
+            case tab_news:
                 if (milkshake())
                     val = MenuCountersState.k();
                 break;
