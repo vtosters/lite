@@ -57,7 +57,6 @@ public class SystemInfo extends MaterialPreferenceToolbarFragment {
         var commit = getBuildNumber();
 
         var isMiui = isMIUI();
-        var isMIUIDetectionV2 = detectMiuiV2();
         var isFlyme = isFlyme();
         var isSamsung = isSamsung();
         var isOneUi = isOneUi();
@@ -180,8 +179,6 @@ public class SystemInfo extends MaterialPreferenceToolbarFragment {
         addPreference(this, "", "isOneUi", "Value: " + isOneUi, null, null);
 
         addPreference(this, "", "isMiui", "Value: " + isMiui, null, null);
-
-        addPreference(this, "", "isMIUIDetectionV2", "Value: " + isMIUIDetectionV2, null, null);
 
         addPreference(this, "", "isEMUI", "Value: " + isEMUI, null, null);
 
