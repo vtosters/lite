@@ -2761,7 +2761,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_custom
+    if-eqz v0, :cond_custom
 
     return v0
 

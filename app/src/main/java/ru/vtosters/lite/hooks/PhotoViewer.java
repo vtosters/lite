@@ -47,16 +47,52 @@ public class PhotoViewer {
 
     public static boolean interceptClick(AttachmentWithMedia attachment, MenuItem item, View view) {
         if (item.getItemId() == AndroidUtils.getIdentifier("search_photo", "id")) {
-            searchPhoto(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+            if (attachment instanceof PhotoAttachment) {
+                searchPhoto(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+            } else if (attachment instanceof DocumentAttachment) {
+                var documentAttachment = (DocumentAttachment) attachment;
+                if (documentAttachment.J != null)
+                    try {
+                        searchPhoto(getUrlFromDocumentAttachment(documentAttachment));
+                    } catch (Exception e) {
+                        ToastUtils.a(getString("photo_get_error"));
+                    }
+                else
+                    ToastUtils.a(getString("photo_get_error"));
+            }
             return true;
         } else if (item.getItemId() == AndroidUtils.getIdentifier("copy_photo_url", "id")) {
-            copyPhotoUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+            if (attachment instanceof PhotoAttachment) {
+                copyPhotoUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+            } else if (attachment instanceof DocumentAttachment) {
+                var documentAttachment = (DocumentAttachment) attachment;
+                if (documentAttachment.J != null)
+                    try {
+                        copyPhotoUrl(getUrlFromDocumentAttachment(documentAttachment));
+                    } catch (Exception e) {
+                        ToastUtils.a(getString("photo_get_error"));
+                    }
+                else
+                    ToastUtils.a(getString("photo_get_error"));
+            }
             return true;
         } else if (item.getItemId() == AndroidUtils.getIdentifier("open_original_photo", "id")) {
-            openUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+            if (attachment instanceof PhotoAttachment) {
+                openUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+            } else if (attachment instanceof DocumentAttachment) {
+                var documentAttachment = (DocumentAttachment) attachment;
+                if (documentAttachment.J != null)
+                    try {
+                        openUrl(getUrlFromDocumentAttachment(documentAttachment));
+                    } catch (Exception e) {
+                        ToastUtils.a(getString("photo_get_error"));
+                    }
+                else
+                    ToastUtils.a(getString("photo_get_error"));
+            }
             return true;
         }
-        return true;
+        return false;
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
