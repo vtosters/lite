@@ -86,7 +86,6 @@ public class PlaylistHelper {
     }
 
     public static JSONObject getPlaylist() throws JSONException {
-        var link = getUserPhoto();
 
         return new JSONObject()
                 .put("id", -1)
@@ -104,13 +103,13 @@ public class PlaylistHelper {
                 .put("update_time", 0)
                 .put("subtitle", "")
                 .put("photo", new JSONObject()
-                        .put("photo_34", link)
-                        .put("photo_68", link)
-                        .put("photo_135", link)
-                        .put("photo_270", link)
-                        .put("photo_300", link)
-                        .put("photo_600", link)
-                        .put("photo_1200", link)
+                        .put("photo_34", "https://raw.githubusercontent.com/psamur/VTLImages/main/VTLCache34.jpg")
+                        .put("photo_68", "https://raw.githubusercontent.com/psamur/VTLImages/main/VTLCache68.jpg")
+                        .put("photo_135", "https://raw.githubusercontent.com/psamur/VTLImages/main/VTLCache135.jpg")
+                        .put("photo_270", "https://raw.githubusercontent.com/psamur/VTLImages/main/VTLCache270.jpg")
+                        .put("photo_300", "https://raw.githubusercontent.com/psamur/VTLImages/main/VTLCache300.jpg")
+                        .put("photo_600", "https://raw.githubusercontent.com/psamur/VTLImages/main/VTLCache600.jpg")
+                        .put("photo_1200", "https://raw.githubusercontent.com/psamur/VTLImages/main/VTLCache1200.jpg")
                         .put("width", 600)
                         .put("height", 600))
                 .put("meta", new JSONObject()
