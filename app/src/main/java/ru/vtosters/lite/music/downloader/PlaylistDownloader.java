@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import ru.vtosters.lite.music.Callback;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 
 public class PlaylistDownloader {
     public static void downloadPlaylist(List<MusicTrack> playlist, String playlistName, String path, Callback callback) {
@@ -59,7 +58,6 @@ public class PlaylistDownloader {
                 public void onSuccess() {
                     var currentProgress = downloadedTracks.incrementAndGet();
                     callback.onProgress(currentProgress);
-                    CacheDatabaseDelegate.insertTrack(musicTrack);
                 }
 
                 @Override

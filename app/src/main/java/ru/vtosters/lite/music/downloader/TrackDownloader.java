@@ -26,6 +26,7 @@ public class TrackDownloader {
 
         var path = FileCacheImplementation.getTrackFolder(LibVKXClient.asId(track)).getAbsolutePath();
         download(track, path, callback, M3UDownloader.getInstance(), true);
+        CacheDatabaseDelegate.insertTrack(track);
     }
 
     private static void download(MusicTrack track, String path, Callback callback, ITrackDownloader downloader, boolean cache) {
