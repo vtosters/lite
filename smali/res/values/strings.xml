@@ -6396,18 +6396,18 @@ May look like a fake leaving the online"</string>
     <string name="force_disable_psm_summ">Enabling this feature will hide information about the state of your device in battery saving mode and VK will send you media content without strong compression and blur</string>
 
     <string name="track_bd_insert_err">Error writing track to database!</string>
-    <string name="cached_tracks_deleted">Cached songs deleted</string>
+    <string name="cached_tracks_deleted">Cached tracks deleted</string>
     <string name="cached_track">Cached track</string>
-    <string name="cached_tracks_title">Cached songs</string>
+    <string name="cached_tracks_title">Cached tracks</string>
     <string name="saved_tracks_title">Saved tracks</string>
-    <string name="cached_tracks_desc">This is a list of all cached tracks. This playlist DOES NOT EXIST on your profile.\n\nIf there is no Internet connection, this playlist will turn into a regular track list.</string>
+    <string name="cached_tracks_desc">This playlist does not displayed on your profile and not synchronized with VK servers.\n\nSome features may not work properly. If there is no Internet connection, this playlist will turn into a regular track list.</string>
     <string name="cached_album_warning">This is a cached album!</string>
     <string name="cached_playlist_loading">Playlist loading</string>
 
     <string name="cached_content_title">Cached content</string>
     <string name="cached_content_empty">Looks like it\'s empty</string>
     <string name="cached_content_empty_desc">You have no cached content</string>
-    <string name="cached_tracks_remove_confirm">Are you sure you want to delete all cached songs?</string>
+    <string name="cached_tracks_remove_confirm">Are you sure you want to delete all cached tracks?</string>
 
     <string name="vkx_integration_title">Enable VK X integration!</string>
     <string name="vkx_integration_desc">Get access to the track storage and the ability to include/cache tracks from VTLite to VK X.\n\nFor details, go to Settings > Media Content > VK X</string>
@@ -6422,7 +6422,7 @@ May look like a fake leaving the online"</string>
 
     <string name="cached_tracks_counter">Total %1$d song(s) cached</string>
 
-    <string name="autocache_title">Autocache songs</string>
+    <string name="autocache_title">Autocache tracks</string>
     <string name="autocache_summ">Automatically cache all songs you have played</string>
 
     <string name="playlist_download_notf">Downloaded %1$d of %2$d tracks</string>

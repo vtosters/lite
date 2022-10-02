@@ -6257,19 +6257,19 @@
     <string name="force_disable_psm_title">Не отправлять информацию о батарее</string>
     <string name="force_disable_psm_summ">Включение этой функции скроет информацию о состоянии вашего устройства в режиме экономии батареи и ВКонтакте будет отправлять вам медиаконтент без сильного сжатия и блюра</string>
 
-    <string name="track_bd_insert_err">Ошибка при записи трека в БД!</string>
-    <string name="cached_tracks_deleted">Кешированные песни удалены</string>
+    <string name="track_bd_insert_err">Ошибка при записи трека в базу данных!</string>
+    <string name="cached_tracks_deleted">Кешированные треки удалены</string>
     <string name="cached_track">Закешированный трек</string>
-    <string name="cached_tracks_title">Кешированные песни</string>
+    <string name="cached_tracks_title">Кешированные треки</string>
     <string name="saved_tracks_title">Сохраненные треки</string>
-    <string name="cached_tracks_desc">Это - список всех кешированных треков. Данный плейлист НЕ СУЩЕСТВУЕТ в вашем профиле.\n\nПри отсутствии соединения с Интернетом данный плейлист превратится в обычный список треков.</string>
+    <string name="cached_tracks_desc">Этот плейлист не отображается у вас в профиле и не синхронизируется с серверами ВКонтакте.\n\nНекоторые функции могут работать некорректно. При отсутствии соединения с Интернетом данный плейлист превратится в обычный список треков.</string>
     <string name="cached_album_warning">Это кешированный альбом!</string>
     <string name="cached_playlist_loading">Загрузка плейлиста</string>
 
     <string name="cached_content_title">Кешированный контент</string>
     <string name="cached_content_empty">Похоже, тут пусто</string>
     <string name="cached_content_empty_desc">У вас отсутствует кешированный контент</string>
-    <string name="cached_tracks_remove_confirm">Вы действительно хотите удалить все кешированные песни?</string>
+    <string name="cached_tracks_remove_confirm">Вы действительно хотите удалить все кешированные треки?</string>
 
     <string name="vkx_integration_title">Включите интеграцию VK X!</string>
     <string name="vkx_integration_desc">Получите доступ к хранилищу треков и возможности включать/кешировать треки из VTLite в VK X.\n\nПодробнее - в Настройки > Медиа контент > VK X</string>
@@ -6284,14 +6284,14 @@
 
     <string name="cached_tracks_counter">Всего закешировано %1$d песен</string>
 
-    <string name="autocache_title">Автокеширование песен</string>
+    <string name="autocache_title">Автокеширование треков</string>
     <string name="autocache_summ">Автоматически кешировать все воспроизведенные вами песни</string>
 
     <string name="playlist_download_notf">Загружено песен: %1$d из %2$d</string>
 
     <string name="all_audio">Все аудио</string>
     <string name="notf_audio_dl_user">Скачивание всех аудио пользователя</string>
-    <string name="no_cache_error">У вас отсутствуют кешированные песни</string>
+    <string name="no_cache_error">У вас отсутствуют кешированные треки</string>
 
     <string name="download_method">Способ скачивания</string>
     <string name="download_method_desc">Выберите способ скачивания всех своих аудио (без плейлистов)</string>
