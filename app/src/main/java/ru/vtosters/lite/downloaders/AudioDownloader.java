@@ -66,7 +66,6 @@ public class AudioDownloader {
         if (!trackFile.exists())
             trackFile.getParentFile().mkdirs();
         downloadM3U8(track, true);
-        MusicNotificationBuilder.notifySavingToCache(track);
     }
 
     public static void cachePlaylist(Playlist playlist) {
