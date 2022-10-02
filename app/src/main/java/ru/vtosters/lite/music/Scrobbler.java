@@ -2,6 +2,7 @@ package ru.vtosters.lite.music;
 
 import static java.lang.String.valueOf;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.getInstance;
+import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.*;
 import static ru.vtosters.lite.utils.AndroidUtils.MD5;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
@@ -26,6 +27,7 @@ import java.util.TreeMap;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import ru.vtosters.lite.downloaders.AudioDownloader;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.net.NetCall;
 import ru.vtosters.lite.net.NetCallback;
 import ru.vtosters.lite.net.NetClient;
@@ -102,7 +104,7 @@ public class Scrobbler {
             return;
         }
 
-        if (autocache()) {
+        if (autocache() && !isCached(musictrack.y1())) {
             if (LibVKXClient.isIntegrationEnabled()){
                 getInstance().runOnService(service -> {
                     try {
