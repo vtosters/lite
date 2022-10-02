@@ -18,7 +18,7 @@ public class FileCacheImplementation {
     }
 
     public static File getCacheDir() {
-        return AndroidUtils.getGlobalContext().getDir("vt_tracks", Context.MODE_PRIVATE);
+        return AndroidUtils.getGlobalContext().getExternalFilesDir("vt_tracks");
     }
 
     public static File getTrackFolder(String trackId) {
