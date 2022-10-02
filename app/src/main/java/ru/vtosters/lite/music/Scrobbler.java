@@ -91,10 +91,14 @@ public class Scrobbler {
         var artist = musictrack.C;
         var title = musictrack.f;
         var duration = musictrack.h;
+        var track_id = musictrack.d;
+        var owner_id = musictrack.e;
+        var access_key = musictrack.J;
+        var albumid = musictrack.I;
         String album;
 
-        if (musictrack.I != null) {
-            album = musictrack.I.getTitle();
+        if (albumid != null) {
+            album = albumid.getTitle();
         } else {
             album = null;
         }
@@ -104,11 +108,11 @@ public class Scrobbler {
             return;
         }
 
-        if (autocache() && !isCached(musictrack.y1())) {
+        if (autocache() && !isCached(uid)) {
             if (LibVKXClient.isIntegrationEnabled()){
                 getInstance().runOnService(service -> {
                     try {
-                        service.addTrackToCache(musictrack.d, musictrack.e, (musictrack.J != null) ? musictrack.J : "");
+                        service.addTrackToCache(track_id, owner_id, (access_key != null) ? access_key : "");
                     } catch (RemoteException e) {
                         e.printStackTrace();
                     }
