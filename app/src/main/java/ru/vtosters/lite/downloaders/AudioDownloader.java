@@ -1,6 +1,5 @@
 package ru.vtosters.lite.downloaders;
 
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.os.Environment;
@@ -20,6 +19,7 @@ import ru.vtosters.lite.music.downloader.AudioGet;
 import ru.vtosters.lite.music.downloader.PlaylistDownloader;
 import ru.vtosters.lite.music.downloader.TrackDownloader;
 import ru.vtosters.lite.music.notification.MusicNotificationBuilder;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.IOUtils;
 
 /**
@@ -67,7 +67,6 @@ public class AudioDownloader {
             trackFile.getParentFile().mkdirs();
         downloadM3U8(track, true);
         MusicNotificationBuilder.notifySavingToCache(track);
-        CacheDatabaseDelegate.insertTrack(track);
     }
 
     public static void cachePlaylist(Playlist playlist) {
@@ -85,7 +84,7 @@ public class AudioDownloader {
     public static void cacheAllAudios() {
         var tracks = AudioGet.getAudios();
 
-        var notificationId = getUserId();
+        var notificationId = AccountManagerUtils.getUserId();
         var notification = MusicNotificationBuilder.buildAllAudiosDownloadNotification(notificationId);
 
         PlaylistDownloader.cachePlaylist(
@@ -97,10 +96,10 @@ public class AudioDownloader {
     public static void downloadAllAudios() {
         var tracks = AudioGet.getAudios();
 
-        var notificationId = getUserId();
+        var notificationId = AccountManagerUtils.getUserId();
         var notification = MusicNotificationBuilder.buildAllAudiosDownloadNotification(notificationId);
 
-        var playlistName = "Audios of " + getUserId();
+        var playlistName = "Audios of " + AccountManagerUtils.getUserId();
 
         var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
         var downloadPath = musicPath + File.separator + playlistName;

@@ -12,6 +12,8 @@ import static ru.vtosters.lite.utils.Preferences.autocache;
 import android.os.RemoteException;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
+
 import com.vk.dto.music.MusicTrack;
 
 import org.json.JSONException;
@@ -38,7 +40,7 @@ public class Scrobbler {
     private static final NetClient client = new NetClient.Builder().build();
     private static final ArrayList<String> scrobbled = new ArrayList<>();
 
-    public static void scrobbleTrack(long duration, String artist, String title, String uid) {
+    public static void scrobbleTrack(long duration, String artist, String title, String uid, @Nullable String album) {
         var string = getDefaultPrefs().getString("sessionKey", null);
         var timestamp = System.currentTimeMillis() / 1000;
 
@@ -60,6 +62,8 @@ public class Scrobbler {
         treeMap.put("sk", string);
         treeMap.put("artist[0]", artist);
         treeMap.put("track[0]", title);
+        if (album != null && !album.isEmpty())
+            treeMap.put("album[0]", album);
         treeMap.put("timestamp[0]", valueOf(timestamp));
         treeMap.put("api_key", key);
         treeMap.put("duration[0]", valueOf(duration));
@@ -85,6 +89,7 @@ public class Scrobbler {
         var artist = musictrack.C;
         var title = musictrack.f;
         var duration = musictrack.h;
+        var album = musictrack.I.getTitle();
 
         if (uid.isEmpty() || artist == null || artist.isEmpty() || title == null || title.isEmpty() || duration == 0) {
             Log.d("Scrobbler", "grabTrackInfo: " + "Empty track, info: " + artist + " - " + title + " - " + duration + " - " + uid);
@@ -105,7 +110,7 @@ public class Scrobbler {
             }
         }
 
-        scrobbleTrack(duration, artist, title, uid);
+        scrobbleTrack(duration, artist, title, uid, album);
     }
 
     private static String signMD5(Map<String, String> map) {
