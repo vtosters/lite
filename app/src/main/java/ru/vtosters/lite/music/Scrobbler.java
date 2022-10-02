@@ -89,7 +89,13 @@ public class Scrobbler {
         var artist = musictrack.C;
         var title = musictrack.f;
         var duration = musictrack.h;
-        var album = musictrack.I.getTitle();
+        String album;
+
+        if (musictrack.I != null) {
+            album = musictrack.I.getTitle();
+        } else {
+            album = null;
+        }
 
         if (uid.isEmpty() || artist == null || artist.isEmpty() || title == null || title.isEmpty() || duration == 0) {
             Log.d("Scrobbler", "grabTrackInfo: " + "Empty track, info: " + artist + " - " + title + " - " + duration + " - " + uid);
