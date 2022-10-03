@@ -1,4 +1,4 @@
-<p align="center">
+8<p align="center">
     <a href="https://vtosters.app/">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vtosters/lite/main/.github/images/VT_Fill_Logo_Dark.svg">
@@ -58,6 +58,7 @@
 * Кеширование и скачивание треков
 * Обои в сообщениях
 * Редактор докбара
+* Скрытие активности в сообщениях и офлайн-режим 
 * Возможность загружать свои стикеры из Telegram
 * Отключение редиректа через away.php
 * Поддержка сторонних прокси
