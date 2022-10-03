@@ -8,9 +8,11 @@ import android.os.Build;
 import android.os.PowerManager;
 import android.provider.Settings;
 
+import ru.vtosters.lite.deviceinfo.OEMDetector;
+
 public class DisableBattery {
     public static void alert(Activity activity) {
-        if (/*OEMDetector.isOEM() &&*/ Build.VERSION.SDK_INT >= 23) {
+        if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23) {
             Intent intent = new Intent();
             String packageName = activity.getPackageName();
             PowerManager pm = (PowerManager) activity.getSystemService(Context.POWER_SERVICE);
