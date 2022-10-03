@@ -1,4 +1,4 @@
-8<p align="center">
+<p align="center">
     <a href="https://vtosters.app/">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vtosters/lite/main/.github/images/VT_Fill_Logo_Dark.svg">
