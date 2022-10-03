@@ -4,6 +4,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +14,8 @@ import androidx.preference.Preference;
 
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+
+import ru.vtosters.lite.utils.Preferences;
 
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
@@ -33,6 +36,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("dockbar_tab_titles").setOnPreferenceClickListener(new restart());
         findPreference("dockbar_accent").setOnPreferenceClickListener(new restart());
         findPreference("dockcounter").setOnPreferenceClickListener(new restart());
+        findPreference("newsfeed_notif").setOnPreferenceClickListener(new restart());
+        findPreference("newsfeed_notif").setVisible(milkshake());
 
         if (isTablet()) {
             findPreference("dockbarsett").setVisible(false);

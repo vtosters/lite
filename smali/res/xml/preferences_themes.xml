@@ -39,6 +39,11 @@
             android:key="dockcounter"
             android:summary="@string/docknumberssum"
             android:title="@string/docknumbers" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="newsfeed_notif"
+            android:summary="Показывать счетчик уведомлений в докбаре на иконке новостей"
+            android:title="Уведомления в новостях" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <Preference
