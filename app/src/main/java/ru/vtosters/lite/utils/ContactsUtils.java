@@ -14,6 +14,7 @@ import android.content.Context;
 import android.content.SyncResult;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 
 import androidx.core.content.ContextCompat;
@@ -66,6 +67,9 @@ public class ContactsUtils {
         final ProgressDialog progressDialog = new ProgressDialog(ctx);
         progressDialog.setMessage(getString("contact_info_loading"));
         progressDialog.show();
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
         var request = new okhttp3.Request.a()
                 .b("https://" + getApi() + "/method/execute?https=1&v=5.153&code=return%20API.account.getInfo().settings%5B44%5D.value%3B&access_token=" + getUserToken())
