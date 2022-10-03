@@ -92,7 +92,7 @@ public class PhotoViewer {
             }
             return true;
         }
-        return false;
+        return true;
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
