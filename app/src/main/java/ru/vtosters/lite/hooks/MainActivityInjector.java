@@ -20,9 +20,6 @@ import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.dialogs.Start;
 import ru.vtosters.lite.utils.DeletedMessagesHandler;
 
-/**
- * @
- */
 public class MainActivityInjector {
     public static void inject(Activity activity) {
         setNeededTheme(activity);

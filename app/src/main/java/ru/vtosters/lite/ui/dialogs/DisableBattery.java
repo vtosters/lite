@@ -1,10 +1,5 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -13,13 +8,9 @@ import android.os.Build;
 import android.os.PowerManager;
 import android.provider.Settings;
 
-import com.vk.core.dialogs.alert.VkAlertDialog;
-
-import ru.vtosters.lite.deviceinfo.OEMDetector;
-
 public class DisableBattery {
     public static void alert(Activity activity) {
-        if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23) {
+        if (/*OEMDetector.isOEM() &&*/ Build.VERSION.SDK_INT >= 23) {
             Intent intent = new Intent();
             String packageName = activity.getPackageName();
             PowerManager pm = (PowerManager) activity.getSystemService(Context.POWER_SERVICE);
