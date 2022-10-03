@@ -184,7 +184,7 @@
 
     move-result v4
 
-    xor-int/lit8 v4, v4, 0x1
+    xor-int/lit8 v4, v4, 0x0
 
     iget-object v5, p0, Lcom/vk/articles/ArticleFragment;->J:Lcom/vk/articles/preload/QueryParameters;
 

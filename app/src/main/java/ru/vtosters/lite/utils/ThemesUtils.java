@@ -21,6 +21,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
@@ -55,6 +56,8 @@ public class ThemesUtils {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        } else {
+            Log.d("ThemesUtils", "Null activity lol");
         }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
