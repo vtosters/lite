@@ -115,13 +115,12 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
     }
 
     public static String getThemesumm() {
-        var type = getPrefsValue("currsystemtheme");
-
         if (disableSettingsSumms()) return null;
 
-        String str = null;
+        String str;
 
-        switch (type) {
+        switch (getPrefsValue("currsystemtheme")) {
+            default:
             case "system":
                 str = "Системная";
                 break;
@@ -132,8 +131,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 str = "Светлая";
                 break;
         }
-
-        if (str == null) return null;
 
         return "Текущая тема" + ": " + str;
     }
