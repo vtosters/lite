@@ -75,4 +75,9 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
             return true;
         }
     }
+
+    @Override
+    public int T4() {
+        return getIdentifier("vtlthemes", "string");
+    }
 }

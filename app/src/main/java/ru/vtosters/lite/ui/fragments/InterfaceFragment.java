@@ -60,4 +60,9 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
             return InterfaceFragment.this.restart(preference);
         }
     }
+
+    @Override
+    public int T4() {
+        return getIdentifier("vtlinterface", "string");
+    }
 }

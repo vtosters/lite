@@ -22,4 +22,9 @@ public class ActivityFragment extends MaterialPreferenceToolbarFragment {
         findPreference("setoffline").setEnabled(offline());
         return super.onPreferenceTreeClick(preference);
     }
+
+    @Override
+    public int T4() {
+        return getIdentifier("vtlactivity", "string");
+    }
 }

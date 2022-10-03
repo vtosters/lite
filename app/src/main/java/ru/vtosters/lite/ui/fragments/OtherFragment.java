@@ -60,7 +60,6 @@ import ru.vtosters.lite.utils.ContactsUtils;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
-
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -373,5 +372,10 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                     .show();
             return true;
         }
+    }
+
+    @Override
+    public int T4() {
+        return getIdentifier("vtlother", "string");
     }
 }

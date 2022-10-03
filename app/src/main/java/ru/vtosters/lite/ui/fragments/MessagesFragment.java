@@ -105,8 +105,12 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
             Intent a2 = new Navigator(WallpaperMenuFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
-//            sendToast("Обои временно недоступны. Следите за новостями на @vtosters в Telegram");
             return true;
         }
+    }
+
+    @Override
+    public int T4() {
+        return getIdentifier("vtlmessages", "string");
     }
 }

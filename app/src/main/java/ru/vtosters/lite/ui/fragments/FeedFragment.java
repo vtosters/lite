@@ -143,4 +143,9 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
             return true;
         }
     }
+
+    @Override
+    public int T4() {
+        return getIdentifier("vtlfeed", "string");
+    }
 }

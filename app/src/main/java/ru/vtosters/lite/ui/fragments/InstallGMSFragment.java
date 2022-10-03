@@ -12,4 +12,9 @@ public class InstallGMSFragment extends MaterialPreferenceToolbarFragment {
         super.onCreate(bundle);
         addPreferencesFromResource(getIdentifier("preferences_gms", "xml"));
     }
+
+    @Override
+    public int T4() {
+        return getIdentifier("installgms", "string");
+    }
 }
