@@ -739,7 +739,7 @@
     .line 2
     sget-object v1, Landroidx/recyclerview/R$styleable;->RecyclerView:[I
 
-    invoke-static {p0, p1, v1, p2, p3}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-static {p0, p1, v1, p2, p3}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p0
 

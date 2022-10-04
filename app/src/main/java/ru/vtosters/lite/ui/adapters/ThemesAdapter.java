@@ -16,6 +16,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vk.core.drawable.BorderDrawable;
+import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.Screen;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
@@ -24,10 +25,10 @@ import org.json.JSONException;
 
 import java.io.IOException;
 
-import ru.vtosters.lite.res.managers.ThemesManager;
+import ru.vtosters.lite.themes.managers.ThemesManager;
 import ru.vtosters.lite.ui.dialogs.EditTextDialog;
 import ru.vtosters.lite.ui.dialogs.ThemesEditorBottomSheetDialog;
-import ru.vtosters.lite.res.models.ThemeModel;
+import ru.vtosters.lite.themes.models.ThemeModel;
 import ru.vtosters.lite.ui.views.NoTouchRadioButton;
 import ru.vtosters.lite.ui.vkui.VKUIActionPopup;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -150,13 +151,16 @@ public class ThemesAdapter extends RecyclerView.Adapter<ThemesAdapter.ThemeViewH
 
     private int getAccentColorFromCustomTheme(ThemeModel theme) {
         if (!"default".equals(theme.id)) {
-            if (theme.hasColor("accent"))
-                return theme.getColor(R.attr.accent);
-            else if (theme.hasColor("colorAccent"))
-                return theme.getColor(R.attr.colorAccent);
-            else if (theme.hasColor("vk_accent"))
-                return theme.getColor(R.attr.vk_accent);
+            int color = theme.getColor(R.attr.accent);
+            if (color != -1)
+                return color;
+            color = theme.getColor(R.attr.colorAccent);
+            if (color != -1)
+                return color;
+            color = theme.getColor(R.attr.vk_accent);
+            if (color != -1)
+                return color;
         }
-        return ThemesUtils.getColorFromAttr(R.attr.accent);
+        return VKThemeHelper.d((R.attr.accent));
     }
 }

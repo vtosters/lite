@@ -376,7 +376,7 @@
     .locals 1
 
     .line 21
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
@@ -894,7 +894,7 @@
     .line 5
     sget-object v1, Lcom/vk/lists/f0;->AbstractPaginatedView:[I
 
-    invoke-static {p1, p2, v1}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v1}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -919,7 +919,7 @@
     .line 8
     iget p2, p0, Lcom/vk/lists/AbstractPaginatedView;->F:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -938,7 +938,7 @@
     if-eqz p2, :cond_1
 
     .line 10
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
@@ -1284,7 +1284,7 @@
     .line 2
     iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

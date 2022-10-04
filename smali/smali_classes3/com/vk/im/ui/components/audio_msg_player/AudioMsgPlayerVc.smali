@@ -329,7 +329,7 @@
 
     sget p4, Lcom/vk/im/ui/c;->accent:I
 
-    invoke-static {p3, p4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p3, p4}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p3
 

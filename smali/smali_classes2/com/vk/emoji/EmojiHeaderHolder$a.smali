@@ -38,7 +38,7 @@
     .line 1
     iget-object p2, p0, Lcom/vk/emoji/EmojiHeaderHolder$a;->a:Landroid/content/Context;
 
-     invoke-static {p2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

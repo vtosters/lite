@@ -223,14 +223,14 @@
     const p1, 0x7f040253
 
     .line 15
-    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
     const v0, 0x7f040397
 
     .line 16
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

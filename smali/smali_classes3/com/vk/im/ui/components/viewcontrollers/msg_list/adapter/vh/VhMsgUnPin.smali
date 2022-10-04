@@ -395,7 +395,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->im_service_message_text:I
 
-    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 

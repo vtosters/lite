@@ -164,7 +164,7 @@
 
     const p3, 0x7f040302
 
-    invoke-static {p3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p3
 
@@ -283,7 +283,7 @@
     const v3, 0x7f040022
 
     :goto_0
-    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -309,7 +309,7 @@
     const v3, 0x7f040022
 
     :goto_1
-    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 

@@ -200,7 +200,7 @@
     .line 13
     sget v1, Lcom/vk/stickers/f;->loader_track_value_fill:I
 
-    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -245,7 +245,7 @@
 
     sget p2, Lcom/vk/stickers/f;->background_content:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p2
 

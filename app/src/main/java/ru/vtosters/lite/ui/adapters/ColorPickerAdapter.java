@@ -16,7 +16,7 @@ import com.vk.stories.view.StoryCircleImageView;
 
 import java.util.List;
 
-import ru.vtosters.lite.res.models.ColorModel;
+import ru.vtosters.lite.themes.models.ColorModel;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -65,17 +65,17 @@ public class ColorPickerAdapter extends RecyclerView.Adapter<ColorPickerAdapter.
             mColorValue = view.findViewById(AndroidUtils.getIdentifier("color_value", "id"));
         }
 
-        public void bind(ColorModel color) {
-            mContainer.setOnClickListener(v -> mSelectListener.onColorSelected(ColorPickerAdapter.this, color));
+        public void bind(ColorModel item) {
+            mContainer.setOnClickListener(v -> mSelectListener.onColorSelected(ColorPickerAdapter.this, item));
             mColorPreviewBorder.setBackground(new BorderDrawable(ThemesUtils.isDarkTheme() ? Color.WHITE : Color.BLACK, Screen.c(24.0f), Screen.c(1.0f)));
-            mColorPreview.setPlaceholderColor(color.value);
-            mColorName.setText(color.name);
-            mColorValue.setText("#" + Integer.toHexString(color.value).toUpperCase());
+            mColorPreview.setPlaceholderColor(item.color);
+            mColorName.setText(item.resName);
+            mColorValue.setText("#" + Integer.toHexString(item.color).toUpperCase());
         }
     }
 
     public interface OnColorSelectListener {
 
-        void onColorSelected(ColorPickerAdapter adapter, ColorModel color);
+        void onColorSelected(ColorPickerAdapter adapter, ColorModel colorModel);
     }
 }

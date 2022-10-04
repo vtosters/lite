@@ -353,7 +353,7 @@
 
     .line 8
     :cond_0
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/ImageButton;->getResources()Landroid/content/res/Resources;
 
@@ -1528,7 +1528,7 @@
     .end param
 
     .line 1
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/ImageButton;->getResources()Landroid/content/res/Resources;
 
@@ -1566,7 +1566,7 @@
     .end param
 
     .line 1
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/ImageButton;->getResources()Landroid/content/res/Resources;
 
@@ -1604,7 +1604,7 @@
     .end param
 
     .line 1
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/ImageButton;->getResources()Landroid/content/res/Resources;
 

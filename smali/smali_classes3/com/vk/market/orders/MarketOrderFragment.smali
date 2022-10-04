@@ -69,7 +69,7 @@
     const v0, 0x7f040095
 
     .line 6
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

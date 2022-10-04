@@ -1,5 +1,6 @@
-package ru.vtosters.lite.res;
+package ru.vtosters.lite.themes;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -13,6 +14,7 @@ import com.vtosters.lite.R;
 
 import java.lang.reflect.Field;
 
+import ru.vtosters.lite.themes.managers.ThemesManager;
 import ru.vtosters.lite.utils.ReflectionUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -34,6 +36,7 @@ public class VTLResources  {
         otherAttrs.put(R.attr.vkim_colorPrimary, R.attr.accent);
         otherAttrs.put(R.attr.statusBarColorBack, R.attr.statusBarColorBack);
         otherAttrs.put(R.attr.statusBarColorFront, R.attr.statusBarColorFront);
+        // android attributes
         otherAttrs.put(android.R.attr.backgroundTint, R.attr.accent);
         otherAttrs.put(android.R.attr.tint, R.attr.accent);
         otherAttrs.put(android.R.attr.color, R.attr.accent);
@@ -43,26 +46,28 @@ public class VTLResources  {
     }
 
     private static void prepareTypedArray(TypedArray target, int[] attrs) {
-        if (attrs == null) return;
+        if (!ThemesUtils.isCustomThemeApplied() || attrs == null) return;
+        var theme = ThemesManager.getInstance().getCurrentTheme();
         var data = getData(target);
         for (int i = 0; i < attrs.length; i++) {
-            var attr = attrs[i];
-            var replacement = otherAttrs.get(attr, -1);
-            if (replacement == -1) continue;
+            //var attr = attrs[i];
             var index = STYLE_NUM_ENTRIES * i;
             var type = data[index];
-            if (type == TypedValue.TYPE_ATTRIBUTE)
-                replacement = data[index + 0x1];
-            else if (type == TypedValue.TYPE_INT_COLOR_ARGB8 || type == TypedValue.TYPE_INT_COLOR_RGB8)
-                replacement = forcedAttrs.get(data[index + 0x1], 0);
+            var replacement = data[index + 0x1];
+            if (type == TypedValue.TYPE_ATTRIBUTE) {
+                replacement = theme.getColor(data[index + 0x1]);
+                if (replacement == -1) continue;
+            } else if (type == TypedValue.TYPE_INT_COLOR_ARGB8 || type == TypedValue.TYPE_INT_COLOR_RGB8) {
+                replacement = forcedAttrs.get(data[index + 0x1], -1);
+                if (replacement == -1) continue;
+            }
             else
                 continue;
             try {
                 data[index] = TypedValue.TYPE_INT_COLOR_RGB8; // type
-                data[index + 0x1] = ThemesUtils.getColorFromAttr(attr); // data
+                data[index + 0x1] = replacement; // data
                 data[index + 0x2] = 0x0; // asset cookie
                 data[index + 0x3] = 0x0; // resource id
-
             } catch (Throwable ignored) {
             }
         }
@@ -108,14 +113,17 @@ public class VTLResources  {
         return res.getColor(colorId);
     }
 
+    @SuppressLint("NewApi")
     public static int getColor(Resources res, int colorId, Resources.Theme theme) {
         return res.getColor(colorId, theme);
     }
 
+    @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList getColorStateList(Resources res, int colorId) {
         return res.getColorStateList(colorId);
     }
 
+    @SuppressLint("NewApi")
     public static ColorStateList getColorStateList(Resources res, int colorId, Resources.Theme theme) {
         return res.getColorStateList(colorId, theme);
     }

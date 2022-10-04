@@ -126,7 +126,7 @@
     .line 1
     sget-object v0, Lcom/vk/im/ui/o;->DividerSettingsView:[I
 
-    invoke-static {p1, p2, v0, p3, p4}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v0, p3, p4}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -310,7 +310,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->separator_alpha:I
 
-    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 

@@ -403,7 +403,7 @@
 
     if-eqz v0, :cond_11
 
-     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 

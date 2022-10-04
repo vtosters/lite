@@ -645,7 +645,7 @@
     :cond_0
     sget v0, Lcom/fourmob/datetimepicker/a;->numbers_text_color:I
 
-    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/themes/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 

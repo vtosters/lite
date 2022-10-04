@@ -41,7 +41,7 @@
     const v0, 0x7f040099
 
     .line 1
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -130,7 +130,7 @@
 
     invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

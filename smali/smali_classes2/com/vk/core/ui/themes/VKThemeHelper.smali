@@ -1112,7 +1112,7 @@
 
     sget v0, Lb/h/z/b;->background_page:I
 
-    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -1128,7 +1128,7 @@
 
     sget v0, Lb/h/z/b;->background_page:I
 
-    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -2032,7 +2032,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v0, p0}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p0
 

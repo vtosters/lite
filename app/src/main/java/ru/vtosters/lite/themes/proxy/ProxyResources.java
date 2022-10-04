@@ -1,8 +1,9 @@
-package ru.vtosters.lite.res.proxy;
+package ru.vtosters.lite.themes.proxy;
 
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,6 +11,7 @@ import androidx.annotation.Nullable;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 
+import ru.vtosters.lite.themes.managers.ThemesManager;
 import ru.vtosters.lite.utils.ReflectionUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -25,6 +27,11 @@ public class ProxyResources extends Resources {
 
     @Override
     public int getColor(int id, @Nullable Resources.Theme theme) throws Resources.NotFoundException {
+        if (ThemesUtils.isCustomThemeApplied()) {
+            var color = ThemesManager.getInstance().getCurrentTheme().getColor(id);
+            if (color != -1)
+                return color;
+        }
         return mOriginalResource.getColor(id, theme);
     }
 
@@ -67,6 +74,7 @@ public class ProxyResources extends Resources {
                 field = resourceFieldsMap.get(clz);
             }
             if (field == null) return;
+            Log.d("ProxyResources", String.format("Found class: %s (%s)", clz.getName(), field));
             field.setAccessible(true);
             ReflectionUtils.unfinalField(field);
             var original = (Resources) field.get(target);

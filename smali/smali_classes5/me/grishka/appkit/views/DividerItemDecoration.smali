@@ -94,7 +94,7 @@
     .line 17
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -130,7 +130,7 @@
     .line 21
     new-instance p1, Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-static {p3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -293,7 +293,7 @@
     if-eqz v1, :cond_0
 
     .line 2
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -793,7 +793,7 @@
     .line 2
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -810,7 +810,7 @@
     .line 4
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

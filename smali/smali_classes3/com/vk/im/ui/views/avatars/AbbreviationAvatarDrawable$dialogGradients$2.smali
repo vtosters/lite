@@ -80,7 +80,7 @@
 
     sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_1:I
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -88,7 +88,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_1:I
 
-    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -105,7 +105,7 @@
 
     sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_2:I
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -113,7 +113,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_2:I
 
-    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -130,7 +130,7 @@
 
     sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_3:I
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -138,7 +138,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_3:I
 
-    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -155,7 +155,7 @@
 
     sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_4:I
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -163,7 +163,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_4:I
 
-    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -180,7 +180,7 @@
 
     sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_5:I
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -188,7 +188,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_5:I
 
-    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -205,7 +205,7 @@
 
     sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_6:I
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -213,7 +213,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_6:I
 
-    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 

@@ -479,7 +479,7 @@
     .line 2
     sget p1, Lcom/vk/catalog2/core/l;->icon_outline_secondary:I
 
-    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -536,7 +536,7 @@
     :cond_3
     sget p1, Lcom/vk/catalog2/core/l;->accent:I
 
-    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -694,7 +694,7 @@
     .line 15
     new-instance v1, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
-     invoke-static {p3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p3}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p3}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
@@ -800,7 +800,7 @@
 
     if-eqz v9, :cond_3
 
-     invoke-static {v9}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v9}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v9}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
@@ -854,7 +854,7 @@
 
     if-eqz v11, :cond_2
 
-     invoke-static {v11}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v11}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v11}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
@@ -986,7 +986,7 @@
 
     if-eqz v9, :cond_c
 
-     invoke-static {v9}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v9}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v9}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
@@ -1040,7 +1040,7 @@
 
     if-eqz v11, :cond_b
 
-     invoke-static {v11}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v11}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v11}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 

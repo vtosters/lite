@@ -405,7 +405,7 @@
     iput-object v2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->B:Lcom/vk/core/fragments/FragmentNavigationController;
 
     .line 11
-     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -2185,7 +2185,7 @@
 
     const p1, 0x7f040525
 
-    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -2322,7 +2322,7 @@
 
     move-result-object v2
 
-     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -2368,7 +2368,7 @@
 
     move-result-object v2
 
-     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -5304,7 +5304,7 @@
 
     move-result-object v5
 
-     invoke-static {v5}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v5}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v5}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 

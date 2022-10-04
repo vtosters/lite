@@ -251,7 +251,7 @@
 
     if-eqz v2, :cond_f
 
-     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 

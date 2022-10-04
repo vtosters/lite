@@ -41,7 +41,7 @@
     .line 4
     new-instance v0, Landroidx/appcompat/widget/TintTypedArray;
 
-    invoke-static {p0, p1, p2}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;I[I)Landroid/content/res/TypedArray;
+    invoke-static {p0, p1, p2}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;I[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -56,7 +56,7 @@
     .line 1
     new-instance v0, Landroidx/appcompat/widget/TintTypedArray;
 
-    invoke-static {p0, p1, p2}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p0, p1, p2}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -72,7 +72,7 @@
     new-instance v0, Landroidx/appcompat/widget/TintTypedArray;
 
     .line 3
-    invoke-static {p0, p1, p2, p3, p4}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-static {p0, p1, p2, p3, p4}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -500,7 +500,7 @@
     .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/TintTypedArray;->mWrapped:Landroid/content/res/TypedArray;
 
-     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->getResources()Landroid/content/res/Resources;
 

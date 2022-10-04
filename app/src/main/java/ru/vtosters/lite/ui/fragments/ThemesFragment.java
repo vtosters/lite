@@ -14,7 +14,7 @@ import androidx.preference.Preference;
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-import ru.vtosters.lite.res.managers.ThemesManager;
+import ru.vtosters.lite.themes.managers.ThemesManager;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {

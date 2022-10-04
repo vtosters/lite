@@ -380,7 +380,7 @@
     const v8, 0x7f0403e4
 
     .line 69
-    invoke-static {v8}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v8}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v8
 

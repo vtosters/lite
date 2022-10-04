@@ -214,7 +214,7 @@
     iput v1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->d:I
 
     .line 15
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -245,7 +245,7 @@
     .line 18
     sget-object v1, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->m0:[I
 
-    invoke-static {p1, p2, v1}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v1}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -262,7 +262,7 @@
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 21
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -3214,7 +3214,7 @@
     .end param
 
     .line 1
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -3238,7 +3238,7 @@
     .line 4
     aget v3, p1, v2
 
-    invoke-static {v0, v3}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
+    invoke-static {v0, v3}, Lru/vtosters/lite/themes/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v3
 
@@ -3309,7 +3309,7 @@
 
     int-to-float p1, p1
 
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -3337,7 +3337,7 @@
 
     int-to-float p1, p1
 
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -3419,7 +3419,7 @@
     .end param
 
     .line 1
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -3427,7 +3427,7 @@
 
 
 
-    invoke-static {v0, p1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
+    invoke-static {v0, p1}, Lru/vtosters/lite/themes/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p1
 
@@ -3547,7 +3547,7 @@
 
     .line 1
     :cond_0
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -3647,7 +3647,7 @@
     const v1, 0x7f040022
 
     .line 1
-    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -3660,7 +3660,7 @@
     const v0, 0x7f0403e4
 
     .line 2
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

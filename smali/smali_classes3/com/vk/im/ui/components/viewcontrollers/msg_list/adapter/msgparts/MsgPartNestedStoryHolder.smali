@@ -142,7 +142,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->text_secondary:I
 
-    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 

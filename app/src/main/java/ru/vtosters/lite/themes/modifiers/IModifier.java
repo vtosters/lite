@@ -1,8 +1,8 @@
-package ru.vtosters.lite.res.modifiers;
+package ru.vtosters.lite.themes.modifiers;
 
 public interface IModifier<T> {
 
-    boolean isModified(T target);
+    boolean isModifiable(T target);
 
     void modify(T target, int attr, int color);
 }

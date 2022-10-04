@@ -48,14 +48,14 @@
     const p2, 0x7f040022
 
     .line 2
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p2
 
     const p3, 0x7f04059a
 
     .line 3
-    invoke-static {p3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p3
 

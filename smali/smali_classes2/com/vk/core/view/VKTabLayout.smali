@@ -260,7 +260,7 @@
     .line 15
     iget p1, p0, Lcom/vk/core/view/VKTabLayout;->w0:I
 
-    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -753,7 +753,7 @@
     if-eqz v1, :cond_0
 
     .line 2
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -771,7 +771,7 @@
     if-eqz v0, :cond_2
 
     .line 5
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -781,7 +781,7 @@
     if-eqz v1, :cond_1
 
     .line 7
-    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -829,7 +829,7 @@
     if-eqz v0, :cond_4
 
     .line 15
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

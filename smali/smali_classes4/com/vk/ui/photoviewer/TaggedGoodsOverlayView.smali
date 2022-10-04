@@ -102,7 +102,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;->g:Lcom/vk/core/tips/TipAnchorView;
 
-     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 

@@ -263,7 +263,7 @@
     .line 6
     sget v0, Lb/h/t/b;->header_tint_alternate:I
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -272,7 +272,7 @@
     .line 7
     sget v0, Lb/h/t/b;->accent:I
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

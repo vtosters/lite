@@ -112,7 +112,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->im_service_message_text_alternate:I
 
-    invoke-static {v2, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -147,7 +147,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->im_service_message_text:I
 
-    invoke-static {v2, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 

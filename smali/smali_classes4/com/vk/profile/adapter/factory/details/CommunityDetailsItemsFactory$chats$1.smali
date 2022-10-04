@@ -232,7 +232,7 @@
 
     const v10, 0x7f040595
 
-    invoke-static {v10}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v10}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v10
 

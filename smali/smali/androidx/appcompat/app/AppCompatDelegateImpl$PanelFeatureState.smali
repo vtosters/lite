@@ -343,7 +343,7 @@
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     .line 2
-     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -420,7 +420,7 @@
     .line 14
     sget-object p1, Landroidx/appcompat/R$styleable;->AppCompatTheme:[I
 
-    invoke-static {v0, p1}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
+    invoke-static {v0, p1}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 

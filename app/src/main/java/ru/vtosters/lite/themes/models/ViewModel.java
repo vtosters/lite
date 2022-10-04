@@ -1,4 +1,4 @@
-package ru.vtosters.lite.res.models;
+package ru.vtosters.lite.themes.models;
 
 import android.util.Pair;
 

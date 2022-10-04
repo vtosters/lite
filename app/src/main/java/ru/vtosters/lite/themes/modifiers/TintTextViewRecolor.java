@@ -1,4 +1,4 @@
-package ru.vtosters.lite.res.modifiers;
+package ru.vtosters.lite.themes.modifiers;
 
 import android.view.View;
 
@@ -10,7 +10,7 @@ public class TintTextViewRecolor implements IModifier<View> {
     public static final int drawableTint = R.attr.drawableTint;
 
     @Override
-    public boolean isModified(View target) {
+    public boolean isModifiable(View target) {
         return target instanceof TintTextView;
     }
 

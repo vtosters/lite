@@ -33,7 +33,7 @@
     sget p0, Lb/h/z/b;->statusbar_alternate_legacy_background:I
 
     :goto_0
-    invoke-static {p0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p0
 

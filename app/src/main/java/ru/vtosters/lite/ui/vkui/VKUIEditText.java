@@ -11,7 +11,7 @@ import com.vk.core.drawable.VkUiDrawableHelper;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 
-import ru.vtosters.lite.res.VTLColors;
+import ru.vtosters.lite.themes.VTLColors;
 
 public class VKUIEditText extends EditText {
 

@@ -197,7 +197,7 @@
     const p3, 0x7f040022
 
     .line 15
-    invoke-static {p3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p3
 
@@ -252,7 +252,7 @@
     .line 22
     sget-object v0, Lcom/vtosters/lite/a0;->TargetImageView:[I
 
-    invoke-static {p1, p2, v0}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v0}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 

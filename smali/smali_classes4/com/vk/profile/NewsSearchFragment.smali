@@ -592,7 +592,7 @@
     const v3, 0x7f040166
 
     .line 35
-    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v3
 

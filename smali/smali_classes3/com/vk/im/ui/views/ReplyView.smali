@@ -435,7 +435,7 @@
     sget-object v0, Lcom/vk/im/ui/o;->ReplyView:[I
 
     .line 7
-    invoke-static {p1, p2, v0, p3, p4}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v0, p3, p4}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -1558,7 +1558,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->im_reply_separator:I
 
-    invoke-static {v0, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v0, v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -1579,7 +1579,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->im_text_name:I
 
-    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -1598,7 +1598,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->text_primary:I
 
-    invoke-static {v2, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 

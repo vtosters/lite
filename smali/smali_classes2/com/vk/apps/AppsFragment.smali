@@ -593,7 +593,7 @@
     check-cast p1, Landroid/view/ViewGroup;
 
     .line 17
-    invoke-static {v7}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v7}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

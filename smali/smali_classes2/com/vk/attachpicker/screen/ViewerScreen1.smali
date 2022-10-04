@@ -180,7 +180,7 @@
 
     const v3, 0x7f040168
 
-    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v4
 
@@ -191,7 +191,7 @@
     .line 17
     new-instance v2, Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -1213,7 +1213,7 @@
 
     move-result-object p1
 
-     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -2283,7 +2283,7 @@
 
     move-result-object v1
 
-     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -2324,7 +2324,7 @@
 
     move-result-object v0
 
-     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 

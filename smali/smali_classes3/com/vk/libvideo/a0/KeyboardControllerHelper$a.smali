@@ -82,7 +82,7 @@
     .line 5
     iget-object v2, p0, Lcom/vk/libvideo/a0/KeyboardControllerHelper$a;->a:Landroid/app/Activity;
 
-     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 

@@ -1,4 +1,4 @@
-package ru.vtosters.lite.res.modifiers;
+package ru.vtosters.lite.themes.modifiers;
 
 import android.content.res.ColorStateList;
 import android.view.View;
@@ -12,7 +12,7 @@ public class SwitchCompatRecolor implements IModifier<View> {
     public static final int trackTint = R.attr.trackTint;
 
     @Override
-    public boolean isModified(View target) {
+    public boolean isModifiable(View target) {
         return target instanceof SwitchCompat;
     }
 

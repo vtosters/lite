@@ -118,7 +118,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/auth/terms/TermsController;->b:Landroid/widget/TextView;
 
-     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 

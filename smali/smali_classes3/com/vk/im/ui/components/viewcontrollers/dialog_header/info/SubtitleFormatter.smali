@@ -178,7 +178,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/SubtitleFormatter;->c:Landroid/content/Context;
 
-     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -326,7 +326,7 @@
     :cond_2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/SubtitleFormatter;->c:Landroid/content/Context;
 
-     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

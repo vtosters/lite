@@ -1243,7 +1243,7 @@
     move-result v4
 
     .line 22
-    invoke-static {p2, v4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p2, v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v5
 

@@ -204,7 +204,7 @@
 
     const v2, 0x7f04044d
 
-    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -968,7 +968,7 @@
     :goto_1
     iget-object v5, p0, Lcom/vtosters/lite/ui/holder/video/VideoSimpleHolder;->L:Landroid/widget/TextView;
 
-     invoke-static {v5}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v5}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v5}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 

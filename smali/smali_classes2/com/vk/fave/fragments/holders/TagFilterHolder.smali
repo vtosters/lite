@@ -195,7 +195,7 @@
     const v2, 0x7f040022
 
     .line 4
-    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -205,7 +205,7 @@
     const v2, 0x7f04059a
 
     .line 5
-    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v2
 

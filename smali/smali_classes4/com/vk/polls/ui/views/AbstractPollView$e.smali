@@ -39,7 +39,7 @@
     .line 4
     sget v0, Lb/h/t/b;->text_secondary:I
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -180,7 +180,7 @@
     .line 2
     sget v0, Lb/h/t/b;->accent:I
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -204,7 +204,7 @@
     .line 2
     sget v0, Lb/h/t/b;->icon_tertiary:I
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -228,7 +228,7 @@
     .line 2
     sget v0, Lb/h/t/b;->text_muted:I
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -252,7 +252,7 @@
     .line 1
     sget v0, Lb/h/t/b;->button_primary_foreground:I
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

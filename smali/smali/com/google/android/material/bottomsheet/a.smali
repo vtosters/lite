@@ -245,7 +245,7 @@
     aput v3, v2, v4
 
     .line 17
-    invoke-static {v0, v2}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
+    invoke-static {v0, v2}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 

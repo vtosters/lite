@@ -2779,7 +2779,7 @@
     invoke-virtual {v1, p2}, Landroid/view/View;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 5
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getResources()Landroid/content/res/Resources;
 
@@ -2826,7 +2826,7 @@
     .line 10
     sget v2, Lcom/fourmob/datetimepicker/a;->blue:I
 
-    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/themes/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v2
 
@@ -2835,7 +2835,7 @@
     .line 11
     sget v2, Lcom/fourmob/datetimepicker/a;->numbers_text_color:I
 
-    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/themes/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v2
 

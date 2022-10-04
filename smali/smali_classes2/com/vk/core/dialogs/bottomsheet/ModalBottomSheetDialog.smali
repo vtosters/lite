@@ -585,7 +585,7 @@
     .line 28
     iget v12, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->N:I
 
-    invoke-static {v12}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v12}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v12
 
@@ -3155,7 +3155,7 @@
 
     aput v3, v2, v4
 
-    invoke-static {v0, v2}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
+    invoke-static {v0, v2}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 

@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.res.VTLColors.getTextPrimaryColor;
+import static ru.vtosters.lite.themes.VTLColors.getTextPrimaryColor;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 

@@ -93,7 +93,7 @@
 
     const v5, 0x1030044
 
-    invoke-static {v1, v2, v3, v4, v5}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-static {v1, v2, v3, v4, v5}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v1
 

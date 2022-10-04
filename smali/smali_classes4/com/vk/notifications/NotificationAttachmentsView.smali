@@ -107,7 +107,7 @@
 
     const p5, 0x7f04044d
 
-    invoke-static {p5}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p5}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p5
 

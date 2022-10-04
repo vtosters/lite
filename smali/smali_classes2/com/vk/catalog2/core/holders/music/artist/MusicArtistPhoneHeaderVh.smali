@@ -185,7 +185,7 @@
 
     sget v3, Lcom/vk/catalog2/core/l;->header_text:I
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -456,7 +456,7 @@
 
     sget v2, Lcom/vk/catalog2/core/l;->header_text:I
 
-    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 

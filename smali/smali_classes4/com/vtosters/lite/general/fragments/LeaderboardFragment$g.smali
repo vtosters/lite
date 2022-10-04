@@ -223,7 +223,7 @@
     if-eqz v3, :cond_2
 
     .line 10
-    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -233,7 +233,7 @@
     const v3, 0x7f04059a
 
     .line 11
-    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -253,7 +253,7 @@
     if-eqz v3, :cond_3
 
     .line 14
-    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -263,7 +263,7 @@
     const v3, 0x7f04059b
 
     .line 15
-    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v3
 

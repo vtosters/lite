@@ -34,7 +34,7 @@
     .line 3
     iget p1, p0, Lcom/vk/core/ui/themes/DynamicColorHolder;->c:I
 
-    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -67,7 +67,7 @@
     .line 5
     iget v0, p0, Lcom/vk/core/ui/themes/DynamicColorHolder;->c:I
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -93,7 +93,7 @@
     .line 2
     iget p1, p0, Lcom/vk/core/ui/themes/DynamicColorHolder;->c:I
 
-    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 

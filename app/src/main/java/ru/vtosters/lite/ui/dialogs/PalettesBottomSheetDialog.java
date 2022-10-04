@@ -8,7 +8,7 @@ import android.content.Context;
 import com.vk.core.util.ToastUtils;
 
 import ru.vtosters.lite.ui.adapters.ColorPickerAdapter;
-import ru.vtosters.lite.res.models.PaletteModel;
+import ru.vtosters.lite.themes.models.PaletteModel;
 
 public class PalettesBottomSheetDialog {
 
@@ -18,7 +18,7 @@ public class PalettesBottomSheetDialog {
         var instance = new VTColorPickerBottomSheetDialog(activity);
         var colorPickerAdapter = new ColorPickerAdapter(palette.colors, (adapter, color) -> {
             var manager = (ClipboardManager) activity.getSystemService(Context.CLIPBOARD_SERVICE);
-            manager.setPrimaryClip(ClipData.newPlainText("color", Integer.toHexString(color.value).toUpperCase()));
+            manager.setPrimaryClip(ClipData.newPlainText("color", Integer.toHexString(color.color).toUpperCase()));
             ToastUtils.a("Скопировано в буфер обмена");
             instance.dismiss();
         });

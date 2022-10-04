@@ -184,7 +184,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->accent:I
 
-    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -244,7 +244,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->text_subhead:I
 
-    invoke-static {v0, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v0, v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -273,7 +273,7 @@
 
     sget v0, Lcom/vk/im/ui/c;->destructive:I
 
-    invoke-static {p2, v0}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p2, v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p2
 

@@ -225,7 +225,7 @@
 
     const v0, 0x7f040022
 
-    invoke-static {p8, v0}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p8, v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p8
 
@@ -238,7 +238,7 @@
 
     const v0, 0x7f060021
 
-    invoke-static {p8, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
+    invoke-static {p8, v0}, Lru/vtosters/lite/themes/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p8
 

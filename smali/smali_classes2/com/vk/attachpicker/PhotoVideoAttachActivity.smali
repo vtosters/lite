@@ -222,7 +222,7 @@
     invoke-direct {v1, p0}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 5
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
 
@@ -839,7 +839,7 @@
     const v4, 0x7f040220
 
     .line 35
-    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v4
 

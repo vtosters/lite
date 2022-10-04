@@ -624,7 +624,7 @@
     .line 38
     iget v1, p0, Lcom/vk/profile/ui/components/HeaderActionButtons;->h:I
 
-    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 

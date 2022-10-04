@@ -1,4 +1,4 @@
-package ru.vtosters.lite.res.managers;
+package ru.vtosters.lite.themes.managers;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -23,72 +23,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 import ru.vtosters.lite.ui.dialogs.ThemesEditorBottomSheetDialog;
-import ru.vtosters.lite.res.models.ColorModel;
-import ru.vtosters.lite.res.models.ThemeModel;
+import ru.vtosters.lite.themes.models.ThemeModel;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ThemesManager {
-
-    public static final List<ColorModel> DEFAULT_COLORS = Arrays.asList(
-            ColorModel.valuesOf("windowBackground", "ff000000"),
-            ColorModel.valuesOf("accent", "ff8eff71"),
-            ColorModel.valuesOf("background_content", "ff000000"),
-            ColorModel.valuesOf("background_keyboard", "ff000000"),
-            ColorModel.valuesOf("background_light", "ff000000"),
-            ColorModel.valuesOf("background_page", "ff000000"),
-            ColorModel.valuesOf("background_suggestions", "ff000000"),
-            ColorModel.valuesOf("boxBackgroundColor", "ff000000"),
-            ColorModel.valuesOf("colorAccent", "ff8eff71"),
-            ColorModel.valuesOf("colorPrimaryDark", "ff000000"),
-            ColorModel.valuesOf("content_tint_background", "ff000000"),
-            ColorModel.valuesOf("control_background", "ff000000"),
-            ColorModel.valuesOf("counter_primary_background", "ff8eff71"),
-            ColorModel.valuesOf("header_alternate_background", "ff000000"),
-            ColorModel.valuesOf("header_background", "ff000000"),
-            ColorModel.valuesOf("header_tab_active_indicator", "ff8eff71"),
-            ColorModel.valuesOf("header_tint", "ff8eff71"),
-            ColorModel.valuesOf("im_attach_tint", "ff8eff71"),
-            ColorModel.valuesOf("im_bg_chat", "ff000000"),
-            ColorModel.valuesOf("im_bubble_incoming", "ff000000"),
-            ColorModel.valuesOf("im_bubble_outgoing", "ff121212"),
-            ColorModel.valuesOf("im_bubble_wallpaper_incoming", "ff000000"),
-            ColorModel.valuesOf("im_bubble_wallpaper_outgoing", "ff121212"),
-            ColorModel.valuesOf("im_dropdown_icon_color", "ff8eff71"),
-            ColorModel.valuesOf("im_history_banner_bg_color", "ff000000"),
-            ColorModel.valuesOf("im_text_name", "ff8eff71"),
-            ColorModel.valuesOf("im_toolbar_voice_msg_background", "ff000000"),
-            ColorModel.valuesOf("input_background", "ff000000"),
-            ColorModel.valuesOf("input_border", "ff000000"),
-            ColorModel.valuesOf("landing_background", "ff000000"),
-            ColorModel.valuesOf("link_alternate", "ff8eff71"),
-            ColorModel.valuesOf("loader_background", "ff000000"),
-            ColorModel.valuesOf("modal_card_background", "ff000000"),
-            ColorModel.valuesOf("overlay_status_background", "ff000000"),
-            ColorModel.valuesOf("overlay_status_foreground", "ff000000"),
-            ColorModel.valuesOf("posting_input_background", "ff000000"),
-            ColorModel.valuesOf("search_bar_background", "ff000000"),
-            ColorModel.valuesOf("statusBarColorBack", "ff000000"),
-            ColorModel.valuesOf("statusBarColorFront", "ff000000"),
-            ColorModel.valuesOf("statusbar_alternate_legacy_background", "ff000000"),
-            ColorModel.valuesOf("tabbar_background", "ff000000"),
-            ColorModel.valuesOf("tabbar_tablet_background", "ff000000"),
-            ColorModel.valuesOf("text_link", "ff8eff71"),
-            ColorModel.valuesOf("toolbar_attach_background_from", "ff000000"),
-            ColorModel.valuesOf("toolbar_attach_background_to", "ff000000"),
-            ColorModel.valuesOf("vk_background_content", "ff000000"),
-            ColorModel.valuesOf("vk_header_background", "ff000000"),
-            ColorModel.valuesOf("vk_landing_background", "ff000000"),
-            ColorModel.valuesOf("vkim_bgFillDrawable", "ff000000"),
-            ColorModel.valuesOf("vkim_colorPrimary", "ff8eff71")
-    );
 
     private static File themesDir;
     private static ThemesManager instance;
@@ -148,7 +93,6 @@ public class ThemesManager {
         try {
             var theme = read(file);
             save(theme);
-            file.delete();
             return theme;
         } catch (Exception e) {
             e.printStackTrace();
@@ -271,7 +215,7 @@ public class ThemesManager {
                 .setName(name)
                 .setAuthor(userProfile.c + " " + userProfile.e)
                 .setDarkMode(true)
-                .setColors(DEFAULT_COLORS)
+//                .setColors(DEFAULT_COLORS)
                 .setId(id);
         themes.add(theme);
         ThemesEditorBottomSheetDialog.create(activity, theme, false);

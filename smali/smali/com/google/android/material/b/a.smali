@@ -909,7 +909,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/Button;->getResources()Landroid/content/res/Resources;
 
@@ -1252,7 +1252,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/Button;->getResources()Landroid/content/res/Resources;
 

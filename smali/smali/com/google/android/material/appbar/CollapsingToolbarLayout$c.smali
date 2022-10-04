@@ -59,7 +59,7 @@
     .line 4
     sget-object v2, Lcom/google/android/material/R$styleable;->CollapsingToolbarLayout_Layout:[I
 
-    invoke-static {p1, p2, v2}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v2}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 

@@ -17,7 +17,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -136,7 +136,7 @@
     .line 30
     iget-object p3, p0, Lcom/vk/im/engine/utils/DialogThemeParser;->a:Landroid/content/res/Resources;
 
-    invoke-static {p3, p2}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
+    invoke-static {p3, p2}, Lru/vtosters/lite/themes/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p2
 

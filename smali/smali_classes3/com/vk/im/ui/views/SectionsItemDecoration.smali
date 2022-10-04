@@ -116,7 +116,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->text_subhead:I
 
-    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -161,7 +161,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->separator_alpha:I
 
-    invoke-static {p3, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p3, v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p3
 
@@ -180,7 +180,7 @@
 
     sget p3, Lcom/vk/im/ui/c;->background_content:I
 
-    invoke-static {p2, p3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p2, p3}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p2
 
@@ -823,7 +823,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->text_subhead:I
 
-    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -836,7 +836,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->background_content:I
 
-    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -849,7 +849,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->separator_alpha:I
 
-    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 

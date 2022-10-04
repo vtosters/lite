@@ -1,5 +1,5 @@
 .class public Lcom/vk/core/ui/VKLayoutInflater;
-.super Lru/vtosters/lite/res/proxy/ProxyLayoutInflater;
+.super Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;
 .source "VKLayoutInflater.kt"
 
 
@@ -99,7 +99,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lru/vtosters/lite/res/proxy/ProxyLayoutInflater;-><init>(Landroid/view/LayoutInflater;Landroid/content/Context;)V
+    invoke-direct {p0, p1, p2}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;-><init>(Landroid/view/LayoutInflater;Landroid/content/Context;)V
 
     .line 2
     new-instance p1, Lcom/vk/core/ui/VKLayoutInflater$privateFactory$2;
@@ -234,7 +234,7 @@
     if-ne p3, v3, :cond_1
 
     .line 6
-    invoke-virtual {p0, p1, p2, p4}, Lru/vtosters/lite/res/proxy/ProxyLayoutInflater;->onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
+    invoke-virtual {p0, p1, p2, p4}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;->onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object p1
 
@@ -242,7 +242,7 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p0, p4, p2, v1}, Lru/vtosters/lite/res/proxy/ProxyLayoutInflater;->createView(Landroid/util/AttributeSet;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;
+    invoke-virtual {p0, p4, p2, v1}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;->createView(Landroid/util/AttributeSet;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;
 
     move-result-object p1
     :try_end_0
@@ -309,7 +309,7 @@
 
     .line 2
     :try_start_0
-    invoke-virtual {p0, p2, p1, v3}, Lru/vtosters/lite/res/proxy/ProxyLayoutInflater;->createView(Landroid/util/AttributeSet;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;
+    invoke-virtual {p0, p2, p1, v3}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;->createView(Landroid/util/AttributeSet;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;
 
     move-result-object v3
     :try_end_0
@@ -327,7 +327,7 @@
 
     .line 3
     :cond_1
-    invoke-super {p0, p1, p2}, Lru/vtosters/lite/res/proxy/ProxyLayoutInflater;->onCreateView(Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
+    invoke-super {p0, p1, p2}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;->onCreateView(Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object p1
 
@@ -341,7 +341,7 @@
 .method public inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
     .registers 4
 
-    invoke-super {p0, p1, p2}, Lru/vtosters/lite/res/proxy/ProxyLayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-super {p0, p1, p2}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
@@ -351,7 +351,7 @@
 .method public inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
     .registers 4
 
-    invoke-super {p0, p1, p2, p3}, Lru/vtosters/lite/res/proxy/ProxyLayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
@@ -361,7 +361,7 @@
 .method public inflate(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;)Landroid/view/View;
     .registers 4
 
-    invoke-super {p0, p1, p2}, Lru/vtosters/lite/res/proxy/ProxyLayoutInflater;->inflate(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-super {p0, p1, p2}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;->inflate(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
@@ -371,7 +371,7 @@
 .method public inflate(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;Z)Landroid/view/View;
     .registers 4
 
-    invoke-super {p0, p1, p2, p3}, Lru/vtosters/lite/res/proxy/ProxyLayoutInflater;->inflate(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;->inflate(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 

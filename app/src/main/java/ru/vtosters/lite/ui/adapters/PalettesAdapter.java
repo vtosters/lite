@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.vtosters.lite.R;
 
-import ru.vtosters.lite.res.managers.PalettesManager;
+import ru.vtosters.lite.themes.managers.PalettesManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
-import ru.vtosters.lite.res.models.PaletteModel;
+import ru.vtosters.lite.themes.models.PaletteModel;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class PalettesAdapter extends RecyclerView.Adapter<PalettesAdapter.PaletteViewHolder> {

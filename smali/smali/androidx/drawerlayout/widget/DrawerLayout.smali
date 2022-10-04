@@ -321,7 +321,7 @@
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
 
     .line 17
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -471,7 +471,7 @@
     .line 37
     sget-object p3, Landroidx/drawerlayout/widget/DrawerLayout;->THEME_ATTRS:[I
 
-    invoke-static {p1, p3}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p3}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 

@@ -1250,7 +1250,7 @@
     iput-object v4, p0, Lcom/fourmob/datetimepicker/date/CalendarDatePickerDialog;->M:Lcom/fourmob/datetimepicker/date/YearPickerView;
 
     .line 19
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getResources()Landroid/content/res/Resources;
 

@@ -51,7 +51,7 @@
     .line 5
     iget-object v1, p0, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$b;->a:Landroid/content/Context;
 
-     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

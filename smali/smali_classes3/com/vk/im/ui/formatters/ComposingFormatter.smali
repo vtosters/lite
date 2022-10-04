@@ -459,7 +459,7 @@
     .line 22
     sget p1, Lcom/vk/im/ui/c;->text_name:I
 
-    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -566,7 +566,7 @@
     .line 29
     iget-object v0, p0, Lcom/vk/im/ui/formatters/ComposingFormatter;->g:Landroid/content/Context;
 
-     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

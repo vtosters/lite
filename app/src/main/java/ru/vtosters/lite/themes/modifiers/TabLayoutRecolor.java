@@ -1,4 +1,4 @@
-package ru.vtosters.lite.res.modifiers;
+package ru.vtosters.lite.themes.modifiers;
 
 import android.view.View;
 
@@ -10,7 +10,7 @@ public class TabLayoutRecolor implements IModifier<View> {
     public static final int tabIndicatorColor = R.attr.tabIndicatorColor;
 
     @Override
-    public boolean isModified(View target) {
+    public boolean isModifiable(View target) {
         return target instanceof TabLayout;
     }
 

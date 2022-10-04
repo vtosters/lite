@@ -72,7 +72,7 @@
     const p2, 0x7f040022
 
     .line 3
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -147,7 +147,7 @@
     iput p2, p0, Lcom/vk/profile/ui/community/CommunityBorderedImageView;->l0:I
 
     .line 3
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
@@ -259,7 +259,7 @@
     if-eqz p1, :cond_0
 
     .line 5
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
@@ -298,7 +298,7 @@
 
     .line 9
     :cond_0
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 

@@ -1479,7 +1479,7 @@
     .line 7
     sget p1, Lcom/vk/stickers/f;->background_content:I
 
-    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 

@@ -187,7 +187,7 @@
     .line 1
     sget p2, Lb/h/z/b;->field_background:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -201,7 +201,7 @@
     .line 2
     sget p2, Lb/h/z/b;->field_background:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p3
 
@@ -215,7 +215,7 @@
     .line 3
     sget p2, Lb/h/z/b;->accent:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p4
 
@@ -229,7 +229,7 @@
     .line 4
     sget p2, Lb/h/z/b;->field_border:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p5
 
@@ -271,7 +271,7 @@
     .line 12
     sget v2, Lb/h/z/b;->separator_alpha:I
 
-    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -312,7 +312,7 @@
     .line 13
     sget v5, Lb/h/z/b;->image_border:I
 
-    invoke-static {v5}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v5}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v5
 
@@ -392,7 +392,7 @@
     .line 1
     sget p2, Lb/h/z/b;->field_error_background:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -406,7 +406,7 @@
     .line 2
     sget p2, Lb/h/z/b;->field_error_background:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p3
 
@@ -420,7 +420,7 @@
     .line 3
     sget p2, Lb/h/z/b;->destructive:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p4
 
@@ -434,7 +434,7 @@
     .line 4
     sget p2, Lb/h/z/b;->field_border:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p5
 
@@ -462,7 +462,7 @@
     .line 1
     sget p2, Lb/h/z/b;->field_background:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -476,7 +476,7 @@
     .line 2
     sget p2, Lb/h/z/b;->field_background:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p3
 
@@ -490,7 +490,7 @@
     .line 3
     sget p2, Lb/h/z/b;->accent:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p4
 
@@ -504,7 +504,7 @@
     .line 4
     sget p2, Lb/h/z/b;->field_border:I
 
-    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p5
 
@@ -573,7 +573,7 @@
     .line 15
     new-instance p1, Lcom/facebook/drawee/drawable/RoundedBitmapDrawable;
 
-     invoke-static {p7}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p7}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

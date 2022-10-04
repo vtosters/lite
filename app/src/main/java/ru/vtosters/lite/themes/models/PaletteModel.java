@@ -1,4 +1,4 @@
-package ru.vtosters.lite.res.models;
+package ru.vtosters.lite.themes.models;
 
 import android.graphics.Color;
 
@@ -45,29 +45,23 @@ public class PaletteModel {
         return this;
     }
 
-    public PaletteModel setColor(String name, String color) {
-        this.colors.add(ColorModel.valuesOf(name, Color.parseColor("#" + color)));
-        return this;
-    }
-
     public PaletteModel setColor(String name, int color) {
-        this.colors.add(ColorModel.valuesOf(name, color));
+        this.colors.add(new ColorModel(name, 0, color));
         return this;
     }
 
-    public static PaletteModel valuesOf(String id, String name, String author, List<ColorModel> colors) {
-        return new PaletteModel()
-                .setId(id)
-                .setName(name)
-                .setAuthor(author)
-                .setColors(colors);
+    public int getColor(String name) {
+        for (var item : colors)
+            if (name.equals(item.resName))
+                return item.color;
+        return -1;
     }
 
     public static PaletteModel fromJson(JSONObject json) throws JSONException {
         var palette = new PaletteModel()
-                .setId(json.getString("palette_id"))
-                .setName(json.getString("name"))
-                .setAuthor(json.getString("author"));
+                .setId(json.optString("palette_id"))
+                .setName(json.optString("name"))
+                .setAuthor(json.optString("author"));
         var paletteNode = json.getJSONArray("palette");
         for (int i = 0; i < paletteNode.length(); i++) {
             var colorNode = paletteNode.getJSONObject(i);
@@ -77,36 +71,24 @@ public class PaletteModel {
                 for (int j = 0; j < colorsNode.length(); j++) {
                     var subColorNode = colorsNode.getJSONObject(j);
                     var index = subColorNode.getString("index");
-                    palette.setColor(name + " " + index, subColorNode.getString("color"));
+                    var subColor = subColorNode.getString("color");
+                    if (!subColor.startsWith("#")) subColor = "#" + subColor;
+                    palette.setColor(name + " " + index, Color.parseColor(subColor));
                 }
             } else {
-                palette.setColor(name, colorNode.getString("color"));
+                var color = colorNode.getString("color");
+                if (!color.startsWith("#")) color = "#" + color;
+                palette.setColor(name, Color.parseColor(color));
             }
         }
         return palette;
     }
 
-    public boolean hasColor(String name) {
-        for (ColorModel item : colors)
-            if (name.equals(item.name))
-                return true;
-        return false;
-    }
-
-    public int getColor(String name) {
-        for (ColorModel item : colors)
-            if (name.equals(item.name))
-                return item.value;
-        throw new NullPointerException("Color with name " + name + " not found");
-    }
-
-    @Override
-    public String toString() {
-        return "Palette{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", author='" + author + '\'' +
-                ", colors=" + colors +
-                '}';
+    public static PaletteModel valuesOf(String id, String name, String author, List<ColorModel> colors) {
+        return new PaletteModel()
+                .setId(id)
+                .setName(name)
+                .setAuthor(author)
+                .setColors(colors);
     }
 }

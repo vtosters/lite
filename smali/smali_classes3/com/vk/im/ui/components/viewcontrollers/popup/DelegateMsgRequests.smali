@@ -274,7 +274,7 @@
 
     sget v10, Lcom/vk/im/ui/c;->destructive:I
 
-    invoke-static {v9, v10}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v9, v10}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v9
 
@@ -301,7 +301,7 @@
 
     sget v12, Lcom/vk/im/ui/c;->destructive:I
 
-    invoke-static {v11, v12}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v11, v12}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v11
 

@@ -48,7 +48,7 @@
     .line 3
     iget-object p2, p0, Lcom/vk/profile/adapter/items/DetailsGiftsItem$c$a;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-     invoke-static {p2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 

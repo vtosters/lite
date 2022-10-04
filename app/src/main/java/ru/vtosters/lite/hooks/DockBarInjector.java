@@ -68,6 +68,7 @@ public class DockBarInjector {
 
     @SuppressLint("RestrictedApi")
     public static void inject(BottomNavigationView navigationView) {
+        navigationView.setBackgroundColor(ThemesUtils.getBackgroundContent());
         Menu menu = navigationView.getMenu();
         menu.clear();
         try {

@@ -8,7 +8,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getCenterScreenCoords;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.dockbar_accent;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.navbar;
@@ -42,6 +41,8 @@ import com.vtosters.lite.data.ThemeTracker;
 
 import java.util.Arrays;
 import java.util.List;
+
+import ru.vtosters.lite.themes.managers.ThemesManager;
 
 public class ThemesUtils {
     public static List<String> accentColors = Arrays.asList(
@@ -160,6 +161,11 @@ public class ThemesUtils {
     } // Return needed theme for theme changer
 
     public static int getColorFromAttr(int attr) {
+        if (isCustomThemeApplied()) {
+            var color = ThemesManager.getInstance().getCurrentTheme().getColor(attr);
+            if (color != -1)
+                return color;
+        }
         return VKThemeHelper.d(attr);
     } // Get needed attr color
 
@@ -310,6 +316,7 @@ public class ThemesUtils {
         return accentColors.contains(hex2(target).toLowerCase());
     }
 
+    @SuppressLint("NewApi")
     public static int getColor(Context context, int i) {
         if (isColorRefAccented(i)) {
             return getAccentColor();

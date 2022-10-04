@@ -14,16 +14,14 @@ import com.vk.core.util.ToastUtils;
 import org.json.JSONException;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-import ru.vtosters.lite.res.VTLColors;
-import ru.vtosters.lite.res.managers.PalettesManager;
-import ru.vtosters.lite.res.managers.ThemesManager;
+import ru.vtosters.lite.themes.VTLColors;
+import ru.vtosters.lite.themes.managers.PalettesManager;
+import ru.vtosters.lite.themes.managers.ThemesManager;
+import ru.vtosters.lite.themes.models.ColorModel;
 import ru.vtosters.lite.ui.adapters.ColorPickerAdapter;
-import ru.vtosters.lite.res.models.ColorModel;
-import ru.vtosters.lite.res.models.PaletteModel;
-import ru.vtosters.lite.res.models.ThemeModel;
+import ru.vtosters.lite.themes.models.PaletteModel;
+import ru.vtosters.lite.themes.models.ThemeModel;
 import ru.vtosters.lite.ui.views.flask.builder.ColorPickerDialogBuilder;
 import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
 import ru.vtosters.lite.utils.LayoutUtils;
@@ -40,12 +38,8 @@ public class ThemesEditorBottomSheetDialog  {
     };
 
     public static void create(Activity activity, ThemeModel theme, boolean currentTheme) {
-        var newTheme = ThemeModel.fromTheme(theme);
-        List<ColorModel> newList = new ArrayList<>();
-        for (ColorModel item : theme.colors)
-            newList.add(ColorModel.valuesOf(item.name, item.value));
-        newTheme.colors = newList;
-        var colorPickerAdapter = new ColorPickerAdapter(newList, (adapter, color) -> {
+        var newTheme = theme.clone();
+        var colorPickerAdapter = new ColorPickerAdapter(newTheme.colors, (adapter, color) -> {
             new VkAlertDialog.Builder(activity)
                     .setItems(COLOR_PICKERS, (dialog, which) -> {
                         if (which == 0) {
@@ -149,11 +143,11 @@ public class ThemesEditorBottomSheetDialog  {
             ColorPickerAdapter adapter,
             ColorModel dest) {
         var colorPickerView = new ColorPickerView(activity);
-        colorPickerView.setColor(dest.value);
+        colorPickerView.setColor(dest.color);
         var alertDialog = new VkAlertDialog.Builder(activity)
                 .setTitle("Выберите цвет")
                 .setPositiveButton("Выбрать", (dialog, which) -> {
-                    dest.setValue(colorPickerView.getColor());
+                    dest.color = colorPickerView.getColor();
                     adapter.notifyDataSetChanged();
                     dialog.dismiss();
                 })
@@ -171,7 +165,7 @@ public class ThemesEditorBottomSheetDialog  {
                 .setTitle("Выберите цвет")
                 .showBorder(true)
                 .setOnColorSelectedListener((dialog, selectedColor) -> {
-                    dest.setValue(selectedColor);
+                    dest.color = selectedColor;
                     adapter.notifyDataSetChanged();
                     dialog.cancel();
                 })
@@ -206,7 +200,7 @@ public class ThemesEditorBottomSheetDialog  {
     ) {
         var instance = new VTColorPickerBottomSheetDialog(activity);
         var colorPickerAdapter = new ColorPickerAdapter(palette.colors, (adapter, color) -> {
-            dest.setValue(color.value);
+            dest.color = color.color;
             ToastUtils.a("Цвет был изменён");
             themeEditAdapter.notifyDataSetChanged();
             instance.dismiss();

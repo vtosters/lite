@@ -82,7 +82,7 @@
     .line 1
     sget v0, Lcom/vk/im/ui/c;->text_name:I
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

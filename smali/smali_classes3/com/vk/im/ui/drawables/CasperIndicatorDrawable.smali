@@ -62,7 +62,7 @@
     .line 3
     sget v3, Lcom/vk/im/ui/c;->background_content:I
 
-    invoke-static {p1, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p1, v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -83,7 +83,7 @@
     .line 6
     sget v3, Lcom/vk/im/ui/c;->accent:I
 
-    invoke-static {p1, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p1, v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 

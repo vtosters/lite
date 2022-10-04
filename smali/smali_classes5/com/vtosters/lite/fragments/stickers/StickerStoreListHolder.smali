@@ -74,7 +74,7 @@
     const p4, 0x7f040022
 
     .line 5
-    invoke-static {p4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {p4}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p4
 

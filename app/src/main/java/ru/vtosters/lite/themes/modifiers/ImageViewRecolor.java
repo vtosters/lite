@@ -1,4 +1,4 @@
-package ru.vtosters.lite.res.modifiers;
+package ru.vtosters.lite.themes.modifiers;
 
 import android.content.res.ColorStateList;
 import android.view.View;
@@ -10,7 +10,7 @@ public class ImageViewRecolor implements IModifier<View> {
     public static final int androidTint = android.R.attr.tint;
 
     @Override
-    public boolean isModified(View target) {
+    public boolean isModifiable(View target) {
         return target instanceof ImageView;
     }
 

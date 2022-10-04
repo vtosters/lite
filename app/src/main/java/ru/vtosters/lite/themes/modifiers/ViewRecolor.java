@@ -1,4 +1,4 @@
-package ru.vtosters.lite.res.modifiers;
+package ru.vtosters.lite.themes.modifiers;
 
 import android.content.res.ColorStateList;
 import android.view.View;
@@ -9,7 +9,7 @@ public class ViewRecolor implements IModifier<View> {
     public static final int background = android.R.attr.background;
 
     @Override
-    public boolean isModified(View target) {
+    public boolean isModifiable(View target) {
         return true;
     }
 

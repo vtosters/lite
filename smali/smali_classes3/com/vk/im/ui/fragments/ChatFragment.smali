@@ -905,7 +905,7 @@
 
     sget v5, Lcom/vk/im/ui/c;->im_bg_chat:I
 
-    invoke-static {v2, v5}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v2, v5}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 

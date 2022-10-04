@@ -1,8 +1,9 @@
-package ru.vtosters.lite.res.proxy;
+package ru.vtosters.lite.themes.proxy;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.Pair;
 import android.util.SparseArray;
@@ -21,9 +22,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.vtosters.lite.res.Recolor;
-import ru.vtosters.lite.res.models.ViewModel;
+import ru.vtosters.lite.themes.Recolor;
+import ru.vtosters.lite.themes.models.ViewModel;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ProxyLayoutInflater extends LayoutInflater {
 
@@ -41,9 +43,10 @@ public class ProxyLayoutInflater extends LayoutInflater {
 
     @Override
     public View inflate(int resource, @Nullable ViewGroup root, boolean attachToRoot) {
-        parseLayout(resource);
+        var isCustomTheme = ThemesUtils.isCustomThemeApplied();
+        if (isCustomTheme) parseLayout(resource);
         var target = super.inflate(resource, root, attachToRoot);
-        Recolor.recolorViewOrViewGroup(target, layouts.get(resource));
+        if (isCustomTheme) Recolor.recolorViewOrViewGroup(target, layouts.get(resource));
         return target;
     }
 

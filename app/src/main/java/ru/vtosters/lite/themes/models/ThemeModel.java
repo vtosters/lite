@@ -1,17 +1,19 @@
-package ru.vtosters.lite.res.models;
+package ru.vtosters.lite.themes.models;
 
+import android.content.res.Resources;
 import android.graphics.Color;
-
-import com.vk.core.ui.themes.VKThemeHelper;
+import android.util.Pair;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
-import ru.vtosters.lite.res.managers.PalettesManager;
+import ru.vtosters.lite.themes.managers.PalettesManager;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class ThemeModel {
@@ -20,19 +22,16 @@ public class ThemeModel {
     public String name;
     public boolean isDarkMode;
     public String id;
-    public List<String> paletteIds = new ArrayList<>();
     public List<ColorModel> colors = new ArrayList<>();
 
     public ThemeModel() {
     }
 
-    public ThemeModel(String author, String name, boolean darkMode, String id, List<String> palettes, List<ColorModel> colors) {
+    public ThemeModel(String author, String name, boolean darkMode, String id, List<ColorModel> colors) {
         this.author = author;
         this.name = name;
         this.isDarkMode = darkMode;
         this.id = id;
-        if (palettes != null && palettes.size() > 0)
-            this.paletteIds = palettes;
         this.colors = colors;
     }
 
@@ -56,88 +55,31 @@ public class ThemeModel {
         return this;
     }
 
-    public ThemeModel setPaletteIds(List<String> paletteIds) {
-        this.paletteIds = paletteIds;
-        return this;
-    }
-
-    public ThemeModel setPalette(String palette) {
-        this.paletteIds.add(palette);
-        return this;
-    }
-
     public ThemeModel setColors(List<ColorModel> colors) {
         this.colors = colors;
         return this;
     }
 
-    public ThemeModel setColor(String colorName, int color) {
-        this.colors.add(ColorModel.valuesOf(colorName, color));
+    public ThemeModel setColor(int attrId, int color) {
+        this.colors.add(new ColorModel(attrId, color));
         return this;
     }
 
-    public ThemeModel setColor(String colorName, String color) {
-        this.colors.add(ColorModel.valuesOf(colorName, Color.parseColor(color.startsWith("#") ? color : "#" + color)));
-        return this;
-    }
-
-    public boolean hasColor(String colorName) {
+    public int getColor(int attrId) {
         for (var item : colors)
-            if (colorName.equals(item.name))
-                return true;
-        return false;
+            if (attrId == item.id)
+                return item.color;
+        return -1;
     }
 
-    public Integer getColor(String name) {
-        for (var item : colors)
-            if (name.equals(item.name))
-                return item.value;
-        return null;
-    }
-
-    public int getColor(int attr) {
-        var context = AndroidUtils.getGlobalContext();
-        var attrString = context.getResources().getResourceEntryName(attr);
-        var color = getColor(attrString);
-
-        if (color == null) {
-            color = VKThemeHelper.d(attr);
-        }
-
-        return color;
-    }
-
-    public boolean hasPalettes() {
-        return paletteIds.size() > 0;
-    }
-
-    public PaletteModel getUsedPalette(String id) {
-        if (paletteIds.contains(id))
-            return PalettesManager.getInstance().getPalette(id);
-        throw new IllegalArgumentException("Palette with id " + id + " not found");
-    }
-
-    public static ThemeModel fromTheme(ThemeModel theme) {
-        return valuesOf(
-                theme.author,
-                theme.name,
-                theme.isDarkMode,
-                theme.id,
-                theme.paletteIds,
-                theme.colors
-        );
-    }
-
-    public static ThemeModel valuesOf(String author, String name, boolean darkMode, String id, List<String> palettes, List<ColorModel> colors) {
+    public static ThemeModel valuesOf(String author, String name, boolean darkMode, String id, List<ColorModel> colors) {
         var theme = new ThemeModel()
                 .setAuthor(author)
                 .setName(name)
                 .setDarkMode(darkMode)
                 .setId(id)
                 .setColors(colors);
-        return palettes != null
-                ? theme.setPaletteIds(palettes)
-                : theme;
+        return theme;
     }
 
     public static ThemeModel fromJson(String json) throws JSONException {
@@ -158,7 +100,13 @@ public class ThemeModel {
         for (int i = 0; i < colorsJson.length(); i++) {
             var name = names.optString(i);
             var value = colorsJson.optString(name);
-            int color;
+            int attrId;
+            try {
+                attrId = AndroidUtils.getIdentifier(name, "attr");
+            } catch (Resources.NotFoundException e) {
+                attrId = AndroidUtils.getIdentifier(name, "color");
+            }
+            final int color;
             if (value.contains(".")) {
                 var paletteId = value.substring(0, value.indexOf("."));
                 var palette = PalettesManager.getInstance().getPalette(paletteId);
@@ -167,14 +115,13 @@ public class ThemeModel {
             } else {
                 color = Color.parseColor(value.startsWith("#") ? value : "#" + value);
             }
-            colors.add(ColorModel.valuesOf(name, color));
+            colors.add(new ColorModel(name, attrId, color));
         }
         return valuesOf(
                 json.optString("author"),
                 json.optString("name"),
                 json.optBoolean("dark"),
                 json.optString("id"),
-                palettes,
                 colors
         );
     }
@@ -182,7 +129,7 @@ public class ThemeModel {
     public JSONObject toJson() throws JSONException {
         var colorsJson = new JSONObject();
         for (var item : colors)
-            colorsJson.put(item.name, Integer.toHexString(item.value).toUpperCase());
+            colorsJson.put(item.resName, Integer.toHexString(item.color).toUpperCase());
         return new JSONObject()
                 .put("author", this.author)
                 .put("name", this.name)
@@ -191,15 +138,15 @@ public class ThemeModel {
                 .put("colors", colorsJson);
     }
 
-    @Override
-    public String toString() {
-        return "Theme{" +
-                "author='" + author + '\'' +
-                ", name='" + name + '\'' +
-                ", isDarkMode=" + isDarkMode +
-                ", id='" + id + '\'' +
-                ", paletteIds=" + paletteIds +
-                ", colors=" + colors +
-                '}';
+    public ThemeModel clone() {
+        return new ThemeModel(
+                author,
+                name,
+                isDarkMode,
+                id,
+                colors.stream()
+                        .map(colorModel -> new ColorModel(colorModel.resName, colorModel.id, colorModel.color))
+                        .collect(Collectors.toList())
+        );
     }
 }

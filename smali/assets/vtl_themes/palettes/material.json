@@ -1,7 +1,7 @@
 {
     "palette_id": "material",
     "name": "Material Palette",
-    "auhtor": "Vologhat",
+    "author": "Vologhat",
     "palette": [
       {
         "name": "Red",
@@ -1115,4 +1115,4 @@
         ]
       }
     ]
-  }
+}

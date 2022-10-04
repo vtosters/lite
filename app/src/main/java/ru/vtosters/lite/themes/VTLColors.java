@@ -1,4 +1,4 @@
-package ru.vtosters.lite.res;
+package ru.vtosters.lite.themes;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
 import static ru.vtosters.lite.utils.Preferences.dockbar_accent;
@@ -11,8 +11,8 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.ContextExtKt;
 import com.vtosters.lite.R;
 
-import ru.vtosters.lite.res.managers.ThemesManager;
-import ru.vtosters.lite.res.models.ThemeModel;
+import ru.vtosters.lite.themes.managers.ThemesManager;
+import ru.vtosters.lite.themes.models.ThemeModel;
 
 public class VTLColors {
     private static final ThemesManager themesManager = ThemesManager.getInstance();

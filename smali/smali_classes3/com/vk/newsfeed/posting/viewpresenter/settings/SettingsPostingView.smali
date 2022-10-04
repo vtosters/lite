@@ -519,14 +519,14 @@
     const v0, 0x7f040254
 
     .line 3
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
     invoke-virtual {p1, v1}, Lcom/vk/core/view/TintTextView;->setDrawableLeftTint(I)V
 
     .line 4
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

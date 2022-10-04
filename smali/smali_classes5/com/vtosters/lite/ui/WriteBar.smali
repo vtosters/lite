@@ -694,7 +694,7 @@
     .locals 4
 
     .line 2
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
@@ -2298,13 +2298,13 @@
     new-array v4, v7, [I
 
     .line 235
-    invoke-static {v8}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v8}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v6
 
     aput v6, v4, v3
 
-    invoke-static {v5}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v5}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -2324,13 +2324,13 @@
     new-array v4, v7, [I
 
     .line 236
-    invoke-static {v5}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v5}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v5
 
     aput v5, v4, v3
 
-    invoke-static {v8}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v8}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -2361,7 +2361,7 @@
     if-eqz v0, :cond_9
 
     .line 240
-    invoke-static {v5}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v5}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -2375,7 +2375,7 @@
 
     .line 241
     :cond_9
-    invoke-static {v8}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v8}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -5464,7 +5464,7 @@
 
     const v1, 0x7f040253
 
-    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -5480,7 +5480,7 @@
     :cond_1
     iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->K:Landroid/widget/ImageView;
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -6331,7 +6331,7 @@
     :cond_0
     iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->K:Landroid/widget/ImageView;
 
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

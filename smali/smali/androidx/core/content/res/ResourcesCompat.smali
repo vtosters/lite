@@ -56,7 +56,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0, p1, p2}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)I
+    invoke-static {p0, p1, p2}, Lru/vtosters/lite/themes/VTLResources;->getColor(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)I
 
     move-result p0
 
@@ -64,7 +64,7 @@
 
     .line 3
     :cond_0
-    invoke-static {p0, p1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
+    invoke-static {p0, p1}, Lru/vtosters/lite/themes/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p0
 
@@ -102,7 +102,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0, p1, p2}, Lru/vtosters/lite/res/VTLResources;->getColorStateList(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+    invoke-static {p0, p1, p2}, Lru/vtosters/lite/themes/VTLResources;->getColorStateList(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
@@ -110,7 +110,7 @@
 
     .line 3
     :cond_0
-    invoke-static {p0, p1}, Lru/vtosters/lite/res/VTLResources;->getColorStateList(Landroid/content/res/Resources;I)Landroid/content/res/ColorStateList;
+    invoke-static {p0, p1}, Lru/vtosters/lite/themes/VTLResources;->getColorStateList(Landroid/content/res/Resources;I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
@@ -495,7 +495,7 @@
     .end param
 
     .line 1
-     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

@@ -94,7 +94,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->im_bubble_sending_status_tint_color:I
 
-    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -105,7 +105,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->im_bubble_sending_error_tint_color:I
 
-    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 

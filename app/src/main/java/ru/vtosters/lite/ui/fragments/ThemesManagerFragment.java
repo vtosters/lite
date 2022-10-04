@@ -2,7 +2,7 @@ package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.res.VTLColors.getAccentColor;
+import static ru.vtosters.lite.themes.VTLColors.getAccentColor;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -30,7 +30,7 @@ import org.json.JSONException;
 
 import java.io.IOException;
 
-import ru.vtosters.lite.res.managers.ThemesManager;
+import ru.vtosters.lite.themes.managers.ThemesManager;
 import ru.vtosters.lite.ui.adapters.ThemesAdapter;
 import ru.vtosters.lite.ui.dialogs.EditTextDialog;
 import ru.vtosters.lite.utils.LayoutUtils;

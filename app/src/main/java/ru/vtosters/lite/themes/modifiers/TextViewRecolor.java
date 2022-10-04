@@ -1,11 +1,8 @@
-package ru.vtosters.lite.res.modifiers;
+package ru.vtosters.lite.themes.modifiers;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.TextView;
-
-import androidx.core.widget.TextViewCompat;
 
 import com.vk.core.drawable.RecoloredDrawable;
 
@@ -16,7 +13,7 @@ public class TextViewRecolor implements IModifier<View> {
     public static final int textColorHint = android.R.attr.textColorHint;
 
     @Override
-    public boolean isModified(View target) {
+    public boolean isModifiable(View target) {
         return target instanceof TextView;
     }
 

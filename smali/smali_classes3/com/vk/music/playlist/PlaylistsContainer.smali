@@ -187,7 +187,7 @@
 
     const p2, 0x7f040231
 
-    invoke-static {p3, p2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {p3, p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p2
 

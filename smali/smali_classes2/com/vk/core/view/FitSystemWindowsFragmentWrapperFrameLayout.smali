@@ -163,7 +163,7 @@
     .line 4
     sget-object v0, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;->E:[I
 
-    invoke-static {p0, v0}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
+    invoke-static {p0, v0}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
@@ -204,7 +204,7 @@
     .line 1
     sget-object v0, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;->E:[I
 
-    invoke-static {p0, v0}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
+    invoke-static {p0, v0}, Lru/vtosters/lite/themes/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 

@@ -242,7 +242,7 @@
     const v0, 0x7f040450
 
     .line 11
-    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -337,7 +337,7 @@
     const v4, 0x7f0401f1
 
     .line 18
-    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v4}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v4
 
@@ -380,7 +380,7 @@
 
     const v5, 0x7f040099
 
-    invoke-static {v5}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v5}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v5
 

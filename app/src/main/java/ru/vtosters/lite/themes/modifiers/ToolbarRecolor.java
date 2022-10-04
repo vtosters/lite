@@ -1,4 +1,4 @@
-package ru.vtosters.lite.res.modifiers;
+package ru.vtosters.lite.themes.modifiers;
 
 import android.view.View;
 
@@ -9,9 +9,11 @@ public class ToolbarRecolor implements IModifier<View> {
 
     public static final int subtitleTextColor = R.attr.subtitleTextColor;
     public static final int titleTextColor = R.attr.titleTextColor;
+    public static final int textColorPrimary = android.R.attr.textColorPrimary;
+    public static final int background = android.R.attr.background;
 
     @Override
-    public boolean isModified(View target) {
+    public boolean isModifiable(View target) {
         return target instanceof Toolbar;
     }
 

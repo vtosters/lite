@@ -67,7 +67,7 @@
     .line 7
     sget v2, Lcom/vk/im/ui/c;->im_dialogs_divider:I
 
-    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -409,7 +409,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->im_dialogs_divider:I
 
-    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 

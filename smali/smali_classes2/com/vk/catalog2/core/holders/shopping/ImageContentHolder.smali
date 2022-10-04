@@ -136,7 +136,7 @@
     .line 7
     iget-object p2, p0, Lcom/vk/catalog2/core/holders/shopping/ImageContentHolder;->a:Landroid/widget/TextView;
 
-     invoke-static {p2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p2}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 

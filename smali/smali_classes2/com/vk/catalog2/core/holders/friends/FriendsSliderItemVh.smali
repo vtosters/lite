@@ -113,7 +113,7 @@
     .line 11
     new-instance v1, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
-     invoke-static {p3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+     invoke-static {p3}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
 
     invoke-virtual {p3}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
