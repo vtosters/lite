@@ -17,6 +17,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.os.StrictMode;
 import android.preference.PreferenceManager;
 
 import com.vtosters.lite.data.Users;
@@ -31,6 +32,9 @@ public class Preferences {
     public static String VERSIONNAME = "Beta";
 
     public static void init(Application application) throws Exception {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         GmsUtils.fixGapps();
         setProxy();
         LifecycleUtils.registerActivities(application);

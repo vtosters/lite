@@ -17,15 +17,22 @@ public class GithubList {
                 .b(url)
                 .a();
 
-        var response = mClient.a(link).execute().a().g();
+        try {
+            var response = mClient.a(link).execute().a().g();
 
-        if (!response.contains(":")) {
-            Log.d(proxyname, "No proxy found");
+            if (!response.contains(":")) {
+                Log.d(proxyname, "No proxy found");
+                return null;
+            }
+
+            Log.d(proxyname, response);
+
+            return new ArrayList<>(Arrays.asList(response.split("\n")));
+        } catch (Exception e){
+            Log.d(proxyname, "Failed to fetch data, link: " + link);
+
             return null;
         }
 
-        Log.d(proxyname, response);
-
-        return new ArrayList<>(Arrays.asList(response.split("\n")));
     }
 }
