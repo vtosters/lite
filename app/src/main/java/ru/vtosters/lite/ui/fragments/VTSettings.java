@@ -203,7 +203,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         addPreferenceCategory(this, AndroidUtils.getString("appearance_theme_use_system"));
 
-        if (Build.VERSION.SDK_INT >= 28) {
+        if (Build.VERSION.SDK_INT >= 28 && milkshake()) {
             addListPreferenceIcon(
                     this,
                     "currsystemtheme",
