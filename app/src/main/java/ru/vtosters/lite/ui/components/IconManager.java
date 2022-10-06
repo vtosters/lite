@@ -27,11 +27,11 @@ public class IconManager {
 
     // available labels list
     public static List<String> sLabels = Arrays.asList(
-            "standard", "vt"
+            "standard", "vt", "vkontakte"
     );
 
     public static List<String> sLabelsNames = Arrays.asList(
-            "VK", "VTLite"
+            "VK", "VTLite", "VKontakte"
     );
 
     // available icons list for verified users
@@ -41,15 +41,6 @@ public class IconManager {
 
     public static List<String> sIconsPlusNames = Arrays.asList(
             "VK", "VTLite", "Navy", "Tiger", "Spring", "Sea", "Sakura", "Party", "Paint", "Flamingo", "Old Logo", "Navy alter", "Tiger alter", "Spring alter", "Sea alter", "Sakura alter", "Party alter", "Paint alter", "Flamingo alter"
-    );
-
-    // available labels list for verified users
-    public static List<String> sLabelsPlus = Arrays.asList(
-            "standard", "vt", "vkontakte"
-    );
-
-    public static List<String> sLabelsPlusNames = Arrays.asList(
-            "VK", "VTLite", "VKontakte"
     );
 
     public static List<String> icons() {
@@ -73,16 +64,8 @@ public class IconManager {
 
         Log.d("IconManager", "iconSwitcher: icon = " + icon + ", appname = " + appName);
 
-        List<String> iconsList;
-        List<String> labelsList;
-
-        if (hasVerification() && isValidSignature()) {
-            iconsList = sIconsPlus;
-            labelsList = sLabelsPlus;
-        } else {
-            iconsList = sIcons;
-            labelsList = sLabels;
-        }
+        List<String> iconsList = (hasVerification() && isValidSignature()) ? sIconsPlus : sIcons;
+        List<String> labelsList = sLabels;
 
         if (oldIcon != null && oldAppName != null) {
             oldIconIndex = iconsList.indexOf(oldIcon);
