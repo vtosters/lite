@@ -344,43 +344,47 @@
 .end method
 
 .method private final a()Ljava/lang/CharSequence;
-    .locals 2
+    .locals 1
 
-    .line 37
-    iget-object v0, p0, Lcom/vk/photoviewer/ContextMenuDelegate;->d:Landroid/content/Context;
-
-    invoke-direct {p0, v0}, Lcom/vk/photoviewer/ContextMenuDelegate;->a(Landroid/content/Context;)Landroid/content/ClipboardManager;
-
-    move-result-object v0
-
-    .line 38
-    invoke-virtual {v0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
     const-string v0, ""
 
-    :goto_0
     return-object v0
+
+    # .line 37
+    # iget-object v0, p0, Lcom/vk/photoviewer/ContextMenuDelegate;->d:Landroid/content/Context;
+
+    # invoke-direct {p0, v0}, Lcom/vk/photoviewer/ContextMenuDelegate;->a(Landroid/content/Context;)Landroid/content/ClipboardManager;
+
+    # move-result-object v0
+
+    # .line 38
+    # invoke-virtual {v0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
+
+    # move-result-object v0
+
+    # if-eqz v0, :cond_0
+
+    # const/4 v1, 0x0
+
+    # invoke-virtual {v0, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+
+    # move-result-object v0
+
+    # if-eqz v0, :cond_0
+
+    # invoke-virtual {v0}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
+
+    # move-result-object v0
+
+    # if-eqz v0, :cond_0
+
+    # goto :goto_0
+
+    # :cond_0
+    # const-string v0, ""
+
+    # :goto_0
+    # return-object v0
 .end method
 
 .method private final a(Landroid/widget/TextView;)Ljava/util/List;

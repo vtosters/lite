@@ -201,17 +201,19 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
+    # invoke-virtual {v0}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
 
-    move-result-object v0
+    # move-result-object v0
 
-    if-eqz v0, :cond_3
+    # if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    # invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    # move-result-object v2
 
-    if-eqz v2, :cond_3
+    const-string v2, ""
+
+    # if-eqz v2, :cond_3
 
     const/4 v5, 0x0
 

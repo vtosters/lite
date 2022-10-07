@@ -280,13 +280,14 @@
 
     invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
+    # invoke-virtual {p1}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
 
-    move-result-object p1
+    # move-result-object p1
+
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz p1, :cond_2
+    # if-eqz p1, :cond_2
 
     const/4 v0, 0x1
 
