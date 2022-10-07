@@ -1,6 +1,7 @@
 package ru.vtosters.lite.themes.modifiers;
 
 import android.content.res.ColorStateList;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -20,6 +21,7 @@ public class ImageViewRecolor implements IModifier<View> {
         switch (attr) {
             case tint:
             case androidTint:
+                Log.d("ImageViewRecolor", "setColor");
                 iv.setImageTintList(ColorStateList.valueOf(color));
                 break;
         }

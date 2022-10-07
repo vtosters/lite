@@ -36,8 +36,6 @@ public class Recolor {
         recolors.add(new TintTextViewRecolor());
         recolors.add(new ToolbarRecolor());
         recolors.add(new ViewRecolor());
-
-       // attrs.add(new AccentAttrs());
     }
 
     public static void recolorViewOrViewGroup(View target, SparseArray<ViewModel> satts) {

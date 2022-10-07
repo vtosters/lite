@@ -51,23 +51,23 @@ public class VTLResources  {
         var data = getData(target);
         for (int i = 0; i < attrs.length; i++) {
             //var attr = attrs[i];
-            var index = STYLE_NUM_ENTRIES * i;
-            var type = data[index];
-            var replacement = data[index + 0x1];
+            var off = STYLE_NUM_ENTRIES * i;
+            var type = data[off];
+            var replacement = -1;
             if (type == TypedValue.TYPE_ATTRIBUTE) {
-                replacement = theme.getColor(data[index + 0x1]);
-                if (replacement == -1) continue;
+                replacement = theme.getColor(data[off + 0x1]);
             } else if (type == TypedValue.TYPE_INT_COLOR_ARGB8 || type == TypedValue.TYPE_INT_COLOR_RGB8) {
-                replacement = forcedAttrs.get(data[index + 0x1], -1);
-                if (replacement == -1) continue;
+                replacement = forcedAttrs.get(data[off + 0x1], -1);
+                if (replacement == -1
+                        && ThemesUtils.accentColors.contains(Integer.toHexString(data[off + 0x1]).toLowerCase()))
+                    replacement = ThemesUtils.getAccentColor();
             }
-            else
-                continue;
+            if (replacement == -1) continue;
             try {
-                data[index] = TypedValue.TYPE_INT_COLOR_RGB8; // type
-                data[index + 0x1] = replacement; // data
-                data[index + 0x2] = 0x0; // asset cookie
-                data[index + 0x3] = 0x0; // resource id
+                data[off] = TypedValue.TYPE_INT_COLOR_RGB8; // type
+                data[off + 0x1] = replacement; // data
+                data[off + 0x2] = 0x0; // asset cookie
+                data[off + 0x3] = 0x0; // resource id
             } catch (Throwable ignored) {
             }
         }
