@@ -38,9 +38,11 @@ public class GoogleTranslator extends BaseTranslator {
     private static GoogleTranslator instance;
 
     public static GoogleTranslator getInstance() {
-        if (instance == null)
-            instance = new GoogleTranslator();
-        return instance;
+        // Race safe when the new object does not contain the state of the previous one
+        GoogleTranslator translator = instance;
+        if (translator == null)
+            return instance = new GoogleTranslator();
+        return translator;
     }
 
     @NonNull

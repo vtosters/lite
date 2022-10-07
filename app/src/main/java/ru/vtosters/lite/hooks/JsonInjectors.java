@@ -336,36 +336,34 @@ public class JsonInjectors {
     public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
         var selectedItems = getDefaultPrefs().getString("news_feed_selected_items", "");
         var filtersSet = getDefaultPrefs().getStringSet("news_feed_items_set", null);
-        var mutableFiltersSet = Collections.synchronizedSet(new LinkedHashSet<String>());
+        var mutableFiltersSet = new LinkedHashSet<String>();
         if (filtersSet != null)
             mutableFiltersSet.addAll(filtersSet);
 
-        synchronized (mutableFiltersSet) {
-            for (int i = 0; i < items.length(); i++) {
-                var item = items.optJSONObject(i);
-                if (item == null) continue;
+        for (int i = 0; i < items.length(); i++) {
+            var item = items.optJSONObject(i);
+            if (item == null) continue;
 
-                var id = item.optString("id");
-                var title = item.optString("title");
+            var id = item.optString("id");
+            var title = item.optString("title");
 
-                if (TextUtils.isEmpty(id) || TextUtils.isEmpty(title)
-                        // this items not working
-                        || id.equals("kpop") || id.equals("foryou")
-                        || id.equals("qazaqstan") || id.equals("podcasts"))
-                    continue;
+            if (TextUtils.isEmpty(id) || TextUtils.isEmpty(title)
+                    // this items not working
+                    || id.equals("kpop") || id.equals("foryou")
+                    || id.equals("qazaqstan") || id.equals("podcasts"))
+                continue;
 
-                mutableFiltersSet.add(id + "|" + title);
+            mutableFiltersSet.add(id + "|" + title);
 
-                var hide = selectedItems.contains(id);
+            var hide = selectedItems.contains(id);
 
-                Log.d("NewsfeedList", "Added list " + id + " to feed");
-                item.put("is_hidden", hide)
-                        .put("is_unavailable", hide);
-                if (dev()) Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
-            }
-            getDefaultPrefs().edit().putStringSet("news_feed_items_set", mutableFiltersSet)
-                    .apply();
+            Log.d("NewsfeedList", "Added list " + id + " to feed");
+            item.put("is_hidden", hide)
+                    .put("is_unavailable", hide);
+            if (dev()) Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
         }
+        getDefaultPrefs().edit().putStringSet("news_feed_items_set", mutableFiltersSet)
+                .apply();
 
         return items;
     }

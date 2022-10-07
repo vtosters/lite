@@ -22,9 +22,11 @@ public class YandexTranslator extends BaseTranslator {
     private static YandexTranslator instance;
 
     public static YandexTranslator getInstance() {
-        if (instance == null)
-            instance = new YandexTranslator();
-        return instance;
+        // Race safe when the new object does not contain the state of the previous one
+        YandexTranslator translator = instance;
+        if (translator == null)
+            return instance = new YandexTranslator();
+        return translator;
     }
 
     @NonNull

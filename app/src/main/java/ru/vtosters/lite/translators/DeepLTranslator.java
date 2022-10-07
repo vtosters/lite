@@ -10,7 +10,6 @@ import org.json.JSONObject;
 import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.concurrent.atomic.AtomicLong;
 import java.util.regex.Pattern;
 
 import okhttp3.MediaType;
@@ -49,14 +48,17 @@ public class DeepLTranslator extends BaseTranslator {
     private static DeepLTranslator instance;
 
     public static DeepLTranslator getInstance() {
-        if (instance == null)
-            instance = new DeepLTranslator();
-        return instance;
+        // Race safe when the new object does not contain the state of the previous one
+        DeepLTranslator translator = instance;
+        if (translator == null) {
+            return instance = new DeepLTranslator();
+        }
+        return translator;
     }
 
     private static Long getTimestamp(int iNumber) {
         var now = System.currentTimeMillis();
-        return Long.valueOf((((long) iNumber) + now) - (now % ((long) iNumber)));
+        return (((long) iNumber) + now) - (now % ((long) iNumber));
     }
 
     @NonNull
@@ -73,16 +75,16 @@ public class DeepLTranslator extends BaseTranslator {
                 i++;
             }
 
-            var id = new AtomicLong(ThreadLocalRandom.current().nextLong(Long.parseLong("10000000000")));
+            var id = ThreadLocalRandom.current().nextLong(1, 10000000000L);
 
             var requestBody = String.format(REQUEST_BODY_FORMAT,
-                    id.incrementAndGet(),
+                    id,
                     text,
                     tl,
                     getTimestamp(i)
             );
 
-            requestBody = (id.get() + 3) % 13 == 0 || (id.get() + 5) % 29 == 0
+            requestBody = (id + 3) % 13 == 0 || (id + 5) % 29 == 0
                     ? requestBody.replace("hod\":\"", "hod\" : \"")
                     : requestBody.replace("hod\":\"", "hod\": \"");
 
