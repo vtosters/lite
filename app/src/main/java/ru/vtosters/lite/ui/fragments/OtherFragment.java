@@ -210,7 +210,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 .setView(rg)
                 .setPositiveButton(requireContext().getString(R.string.save), (dialog, which) -> {
                     var sizes = new String[] { "Default", "100mb", "500mb", "1gb", "2gb", "5gb" };
-                    var id = rg.getCheckedRadioButtonId();
+                    var id = rg.indexOfChild(rg.findViewById(rg.getCheckedRadioButtonId()));
                     getDefaultPrefs().edit()
                             .putInt("autoclearcache_size", id)
                             .putString("autoclearcache", sizes[id])
