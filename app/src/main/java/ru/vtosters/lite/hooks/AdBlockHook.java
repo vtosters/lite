@@ -339,7 +339,10 @@ public class AdBlockHook {
             return true;
         }
 
-        var whitelist = AndroidUtils.getDefaultPrefs().getStringSet("whitelisted_filters_groups", Collections.synchronizedSet(new LinkedHashSet<>()));
+        var whitelist = AndroidUtils.getDefaultPrefs().getStringSet(
+                "whitelisted_filters_groups",
+                Collections.emptySet()
+        );
 
         return whitelist.contains(id);
     }
@@ -351,7 +354,10 @@ public class AdBlockHook {
             id = String.valueOf(list.optInt("source_id"));
         }
 
-        var whitelist = AndroidUtils.getDefaultPrefs().getStringSet("whitelisted_ad_groups", Collections.synchronizedSet(new LinkedHashSet<>()));
+        var whitelist = AndroidUtils.getDefaultPrefs().getStringSet(
+                "whitelisted_ad_groups",
+                Collections.emptySet()
+        );
 
         return whitelist.contains(id);
     }

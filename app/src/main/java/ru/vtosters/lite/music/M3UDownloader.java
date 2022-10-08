@@ -60,7 +60,7 @@ public class M3UDownloader implements ITrackDownloader {
         VKM3UParser parser = new VKM3UParser(payload);
         List<TransportStream> tses = parser.getTransportStreams();
         AtomicInteger progress = new AtomicInteger(0);
-        List<CompletableFuture<Void>> futures = new ArrayList<>();
+        List<CompletableFuture<Void>> futures = new ArrayList<>(tses.size());
 
         var tsesDir = new File(outDir, String.valueOf(track.d));
         tsesDir.mkdirs();

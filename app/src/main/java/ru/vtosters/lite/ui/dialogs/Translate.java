@@ -11,21 +11,30 @@ import android.util.Log;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
 import ru.vtosters.lite.translators.BaseTranslator;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class Translate {
+    private static final Executor ASYNC_EXECUTOR
+            = Executors.newSingleThreadExecutor();
+    private static final Executor MAIN_EXECUTOR
+            = new DelegateExecutor();
+
     public static void showTranslatedText(Context context, String text) {
-        new Thread(() -> {
+        BaseTranslator translator = BaseTranslator.getInstance();
+        if (translator == null) return;
+        ASYNC_EXECUTOR.execute(() -> {
             try {
-                var translation = BaseTranslator.getInstance().getTranslation(text);
-                new Handler(Looper.getMainLooper()).post(() -> {
-                    showDialog(context, translation);
-                });
+                var translation = translator.getTranslation(text);
+                MAIN_EXECUTOR.execute(() -> showDialog(context, translation));
             } catch (Exception e) {
                 Log.e("Translate", e + "");
             }
-        }).start();
+        });
     }
 
     private static void showDialog(Context context, String text) {
@@ -41,5 +50,14 @@ public class Translate {
                     sendToast(AndroidUtils.getString("copied_to_clipboard"));
                 })
                 .show();
+    }
+
+    private static class DelegateExecutor implements Executor {
+        private final Handler handler = new Handler(Looper.getMainLooper());
+
+        @Override
+        public void execute(Runnable command) {
+            handler.post(command);
+        }
     }
 }

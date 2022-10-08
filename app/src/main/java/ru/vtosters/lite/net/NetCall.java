@@ -15,24 +15,32 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public final class NetCall {
     private final NetRequest req;
     private final NetClient cl;
+    private final Executor executor;
 
-    protected NetCall(NetClient cl, NetRequest req) {
+    protected NetCall(NetClient cl, NetRequest req, Executor executor) {
         this.req = req;
         this.cl = cl;
+        this.executor = executor;
     }
 
     private static String constructArgs(Map<String, String> args) throws UnsupportedEncodingException {
         args = new TreeMap<>(args);
-        String str = "";
+        StringBuilder str = new StringBuilder();
         for (Map.Entry<String, String> en : args.entrySet()) {
-            if (!str.isEmpty()) str += "&";
-            str += URLEncoder.encode(en.getKey(), "UTF-8") + "=" + URLEncoder.encode(en.getValue(), "UTF-8");
+            if (str.length() > 0)
+                str.append("&");
+            str.append(URLEncoder.encode(en.getKey(), "UTF-8"))
+                    .append("=")
+                    .append(URLEncoder.encode(en.getValue(), "UTF-8"));
         }
-        return str;
+        return str.toString();
     }
 
     public NetRequest request() {
@@ -77,22 +85,13 @@ public final class NetCall {
     }
 
     public void enqueue(NetCallback cb) {
-        new Thread() {
-            @Override
-            public void run() {
-                try {
-                    NetResponse resp = execute();
-                    cb.onResponse(NetCall.this, resp);
-                } catch (IOException e) {
-                    cb.onFailure(NetCall.this, e);
-                }
-                try {
-                    interrupt();
-                    join();
-                } catch (Exception e) {
-                    Log.e("NetCall", "Failed to interrupt and join thread", e);
-                }
+        executor.execute(() -> {
+            try {
+                NetResponse resp = execute();
+                cb.onResponse(NetCall.this, resp);
+            } catch (IOException e) {
+                cb.onFailure(NetCall.this, e);
             }
-        }.start();
+        });
     }
 }

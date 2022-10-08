@@ -70,19 +70,25 @@ public class NewsfeedHook {
     }
 
     public static boolean isWhitelistedFilter(ExtendedCommunityProfile eup) {
-        return getDefaultPrefs().getStringSet("whitelisted_filters_groups", Collections.synchronizedSet(new LinkedHashSet<>())).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
+        return getDefaultPrefs().getStringSet(
+                "whitelisted_filters_groups", Collections.emptySet()
+        ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
     }
 
     public static boolean isWhitelistedAd(ExtendedCommunityProfile eup) {
-        return getDefaultPrefs().getStringSet("whitelisted_ad_groups", Collections.synchronizedSet(new LinkedHashSet<>())).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
+        return getDefaultPrefs().getStringSet(
+                "whitelisted_ad_groups",
+                Collections.emptySet()
+        ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
     }
 
     public static void setWhitelistedFilter(ExtendedCommunityProfile eup, boolean needWhitelist) {
-        var mutableAdsSet = Collections.synchronizedSet(new LinkedHashSet<String>());
         var id = String.valueOf(AccountManagerUtils.getUserID(eup));
 
-        mutableAdsSet.addAll(getDefaultPrefs().getStringSet("whitelisted_filters_groups", mutableAdsSet));
-
+        var mutableAdsSet = new LinkedHashSet<>(getDefaultPrefs().getStringSet(
+                "whitelisted_filters_groups",
+                Collections.emptySet())
+        );
         if (needWhitelist) {
             mutableAdsSet.add(id);
         } else {
@@ -93,10 +99,11 @@ public class NewsfeedHook {
     }
 
     public static void setWhitelistedAd(ExtendedCommunityProfile eup, boolean needWhitelist) {
-        var mutableAdsSet = Collections.synchronizedSet(new LinkedHashSet<String>());
         var id = String.valueOf(AccountManagerUtils.getUserID(eup));
 
-        mutableAdsSet.addAll(getDefaultPrefs().getStringSet("whitelisted_ad_groups", mutableAdsSet));
+        var mutableAdsSet = new LinkedHashSet<>(getDefaultPrefs().getStringSet(
+                "whitelisted_ad_groups",
+                Collections.emptySet()));
 
         if (needWhitelist) {
             mutableAdsSet.add(id);
