@@ -12,7 +12,6 @@
         android:layout_marginBottom="8.0dip"
         android:contentDescription="@string/photo"
         app:actualImageScaleType="centerCrop"
-        app:overlayImage="@drawable/scrim_bottom_16percent"
         app:placeholderImage="?placeholder_icon_background"
         app:roundedCornerRadius="4.0dip" />
 </FrameLayout>

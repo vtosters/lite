@@ -9,7 +9,6 @@
         android:layout_width="120.0dip"
         android:layout_height="80.0dip"
         app:actualImageScaleType="centerCrop"
-        app:overlayImage="@drawable/scrim_bottom_16percent"
         app:roundedCornerRadius="4.0dip" />
 
     <com.vk.libvideo.ui.VideoRestrictionView
