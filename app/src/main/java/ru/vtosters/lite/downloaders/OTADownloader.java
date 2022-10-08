@@ -65,7 +65,7 @@ public class OTADownloader {
             var request = new DownloadManager.Request(uri);
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setTitle("VTLite.apk");
-            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "VTLite.apk");
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "VTLite_" + System.currentTimeMillis() / 1000 + ".apk");
 
             var manager = (DownloadManager) AndroidUtils.getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE);
             manager.enqueue(request);
