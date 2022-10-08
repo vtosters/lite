@@ -1,11 +1,5 @@
 package ru.vtosters.lite.dnr;
 
-import static com.vk.im.engine.h.im_ic_done;
-import static com.vk.im.engine.h.im_ic_edit_msg;
-import static com.vk.im.engine.h.im_ic_more_vertical;
-import static com.vk.im.engine.h.im_ic_pinned_msg_hide;
-import static com.vk.im.engine.h.im_ic_pinned_msg_show;
-import static com.vk.im.ui.c.im_ic_keyboard;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNR;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
 import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
@@ -13,8 +7,6 @@ import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
 import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
@@ -34,6 +26,7 @@ import com.vk.im.ui.components.common.DialogAction;
 import com.vk.im.ui.components.common.MsgAction;
 import com.vk.im.ui.components.viewcontrollers.popup.DelegateMsg;
 import com.vk.im.ui.views.dialog_actions.DialogActionsListView;
+import com.vtosters.lite.R;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,6 +42,7 @@ import ru.vtosters.lite.encryption.EncryptProvider;
 import ru.vtosters.lite.encryption.base.IMProcessor;
 import ru.vtosters.lite.hooks.CryptImHook;
 import ru.vtosters.lite.ui.dialogs.Translate;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
@@ -91,15 +85,15 @@ public class DNRInjector {
     }
 
     public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap) {
-        hashMap.put(DialogAction.DOWNLOAD, getIdentifier("download_dl", "string"));
+        hashMap.put(DialogAction.DOWNLOAD, R.string.download_dl);
 
-        hashMap.put(DialogAction.DNR_ON, getIdentifier("DNR_ON", "string"));
-        hashMap.put(DialogAction.DNR_OFF, getIdentifier("DNR_OFF", "string"));
-        hashMap.put(DialogAction.DNT_ON, getIdentifier("DNT_ON", "string"));
-        hashMap.put(DialogAction.DNT_OFF, getIdentifier("DNT_OFF", "string"));
+        hashMap.put(DialogAction.DNR_ON, R.string.DNR_ON);
+        hashMap.put(DialogAction.DNR_OFF, R.string.DNR_OFF);
+        hashMap.put(DialogAction.DNT_ON, R.string.DNT_ON);
+        hashMap.put(DialogAction.DNT_OFF, R.string.DNT_OFF);
 
-        hashMap.put(DialogAction.ENCRYPT, getIdentifier("encryption", "string"));
-        hashMap.put(DialogAction.ENCRYPT_SETT, getIdentifier("encryption_sett", "string"));
+        hashMap.put(DialogAction.ENCRYPT, R.string.encryption);
+        hashMap.put(DialogAction.ENCRYPT_SETT, R.string.encryption_sett);
 
 //        hashMap.put(DialogAction.pinmsg, getIdentifier("pinmsg", "string"));
 //        hashMap.put(DialogAction.unpinmsg, getIdentifier("unpinmsg", "string"));
@@ -109,20 +103,20 @@ public class DNRInjector {
     @SuppressLint("ResourceType")
     public static List<Object> injectToList(List<Object> actions) {
         var list = new ArrayList<>(actions);
-        list.add(new DialogActionsListView.b.a(DialogAction.DOWNLOAD, 1, getIdentifier("im_ic_msgdl", "attr"), getIdentifier("download_dl", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.DOWNLOAD, 1, R.attr.im_ic_msgdl, R.string.download_dl)); // DialogAction, Int, Icon, String
 
-        list.add(new DialogActionsListView.b.a(DialogAction.DNR_ON, 2, im_ic_pinned_msg_hide, getIdentifier("DNR_ON", "string"))); // DialogAction, Int, Icon, String
-        list.add(new DialogActionsListView.b.a(DialogAction.DNR_OFF, 2, im_ic_pinned_msg_show, getIdentifier("DNR_OFF", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.DNR_ON, 2, R.attr.im_ic_pinned_msg_hide, R.string.DNR_ON)); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.DNR_OFF, 2, R.attr.im_ic_pinned_msg_show, R.string.DNR_OFF)); // DialogAction, Int, Icon, String
 
-        list.add(new DialogActionsListView.b.a(DialogAction.DNT_ON, 2, im_ic_edit_msg, getIdentifier("DNT_ON", "string"))); // DialogAction, Int, Icon, String
-        list.add(new DialogActionsListView.b.a(DialogAction.DNT_OFF, 2, im_ic_edit_msg, getIdentifier("DNT_OFF", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.DNT_ON, 2, R.attr.im_ic_edit_msg, R.string.DNT_ON)); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.DNT_OFF, 2, R.attr.im_ic_edit_msg, R.string.DNT_OFF)); // DialogAction, Int, Icon, String
 
         if (!isTablet()) {
-            list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT, 3, im_ic_keyboard, getIdentifier("encryption", "string"))); // DialogAction, Int, Icon, String
-            list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT_SETT, 3, im_ic_more_vertical, getIdentifier("encryption_sett", "string"))); // DialogAction, Int, Icon, String
+            list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT, 3, R.attr.im_ic_keyboard, R.string.encryption)); // DialogAction, Int, Icon, String
+            list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT_SETT, 3, R.attr.im_ic_more_vertical, R.string.encryption_sett)); // DialogAction, Int, Icon, String
         }
 
-        list.add(new DialogActionsListView.b.a(DialogAction.MARK_AS_READ, 4, im_ic_done, getIdentifier("vkim_dialogs_list_option_mark_as_read", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.MARK_AS_READ, 4, R.attr.im_ic_done, R.string.vkim_dialogs_list_option_mark_as_read)); // DialogAction, Int, Icon, String
 
         return list;
     }
@@ -197,7 +191,7 @@ public class DNRInjector {
             try {
                 new MessagesDownloader().downloadDialog(peerId, new MessagesDownloader.HtmlDialogDownloaderFormatProvider(), out);
             } catch (Exception e) {
-                sendToast(getString("download_dl_error"));
+                sendToast(AndroidUtils.getString(R.string.download_dl_error));
                 e.printStackTrace();
             }
             return true;
@@ -299,8 +293,8 @@ public class DNRInjector {
     }
 
     public static LinkedHashMap<MsgAction, DelegateMsg.a.a> injectToHashMapMsg(LinkedHashMap<MsgAction, DelegateMsg.a.a> hashMap) {
-        hashMap.put(MsgAction.valueOf("TRANSLATE"), new DelegateMsg.a.a(getIdentifier("translator", "string")));
-        hashMap.put(MsgAction.valueOf("READTO"), new DelegateMsg.a.a(getIdentifier("readto", "string")));
+        hashMap.put(MsgAction.valueOf("TRANSLATE"), new DelegateMsg.a.a(R.string.translator));
+        hashMap.put(MsgAction.valueOf("READTO"), new DelegateMsg.a.a(R.string.readto));
         return hashMap;
     }
 
@@ -331,13 +325,13 @@ public class DNRInjector {
 
             if (action == MsgAction.valueOf("TRANSLATE")) {
                 if (isTextExist && isReplyExist) {
-                    Translate.showTranslatedText(context, text + "\n\n" + getString("translator_reply") + "\n" + reply);
+                    Translate.showTranslatedText(context, text + "\n\n" + context.getString(R.string.translator_reply) + "\n" + reply);
                 } else if (isReplyExist) {
-                    Translate.showTranslatedText(context, getString("translator_reply") + "\n" + reply);
+                    Translate.showTranslatedText(context, context.getString(R.string.translator_reply) + "\n" + reply);
                 } else if (isTextExist) {
                     Translate.showTranslatedText(context, text);
                 } else {
-                    sendToast(getString("translator_no_text"));
+                    sendToast(context.getString(R.string.translator_no_text));
                 }
             }
         }
@@ -366,7 +360,7 @@ public class DNRInjector {
 
         thread.start();
 
-        sendToast(getString("pin_dialog") + " " + getString(needToBePinned ? "dialog_pinned" : "dialog_unpinned"));
+        sendToast(AndroidUtils.getString(R.string.pin_dialog) + " " + AndroidUtils.getString(needToBePinned ? R.string.dialog_pinned : R.string.dialog_unpinned));
     }
 
     public static void setDnr(Dialog dialog, boolean value) {

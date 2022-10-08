@@ -4,7 +4,6 @@ import static androidx.core.app.ActivityCompat.requestPermissions;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.Manifest;
@@ -23,6 +22,7 @@ import com.vk.auth.VKAuthUtils;
 import com.vk.contacts.ContactsSyncAdapterService;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
+import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 
 import org.json.JSONException;
@@ -42,7 +42,7 @@ public class ContactsUtils {
                         Log.d("ContactsUtils", "Result: " + mainJson + ", enabled sync: " + enabled);
                     } catch (JSONException e) {
                         Log.d("ContactsUtils", e.getMessage());
-                        sendToast(getString("contact_sync_error"));
+                        sendToast(AndroidUtils.getString(R.string.contact_sync_error));
                     }
                 });
     }
@@ -50,9 +50,9 @@ public class ContactsUtils {
     public static void uploadContacts(Activity ctx) {
         try {
             if (ContextCompat.checkSelfPermission(ctx, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-                sendToast(getString("contact_permission_toast"));
+                sendToast(ctx.getString(R.string.contact_permission_toast));
                 requestPermissions(LifecycleUtils.getCurrentActivity(), new String[]{Manifest.permission.READ_CONTACTS}, 11111);
-                sendToast(getString("contact_permission_toast"));
+                sendToast(ctx.getString(R.string.contact_permission_toast));
                 requestPermissions(ctx, new String[]{Manifest.permission.READ_CONTACTS}, 11111);
             } else {
                 var account = VKAuthUtils.a.a(VKAccountManager.d().Z());
@@ -65,7 +65,7 @@ public class ContactsUtils {
 
     public static void getContactsStatus(Context ctx) {
         final ProgressDialog progressDialog = new ProgressDialog(ctx);
-        progressDialog.setMessage(getString("contact_info_loading"));
+        progressDialog.setMessage(ctx.getString(R.string.contact_info_loading));
         progressDialog.show();
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -88,10 +88,10 @@ public class ContactsUtils {
                 boolean enabledsync = resp.equals("contact");
 
                 new VkAlertDialog.Builder(ctx)
-                        .setTitle(getString("contact_sync_title"))
-                        .setMessage(getString("contact_sync_state") + ": " + getString(enabledsync ? "contact_sync_enabled" : "contact_sync_disabled"))
+                        .setTitle(R.string.contact_sync_title)
+                        .setMessage(ctx.getString(R.string.contact_sync_state) + ": " + ctx.getString(enabledsync ? R.string.contact_sync_enabled : R.string.contact_sync_disabled))
                         .setCancelable(true)
-                        .setPositiveButton(getString(!enabledsync ? "enable" : "proxy_disable"),
+                        .setPositiveButton(!enabledsync ? R.string.enable : R.string.proxy_disable,
                                 (dialog, which) -> setContactsSync(!enabledsync)
                         )
 //                        .setNegativeButton("Импортировать контакты",

@@ -11,6 +11,8 @@ import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 import android.content.Context;
 import android.view.View;
 
+import com.vtosters.lite.R;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -22,10 +24,10 @@ public class About {
     public static void injectToToolBar(View view) {
         view.setOnLongClickListener(v -> {
             if (devmenu()) {
-                sendToast(AndroidUtils.getString("debug_menu_already_activated"));
+                sendToast(AndroidUtils.getString(R.string.debug_menu_already_activated));
             } else {
                 edit().putBoolean("devmenu", true).apply();
-                sendToast(AndroidUtils.getString("debug_menu_activated"));
+                sendToast(AndroidUtils.getString(R.string.debug_menu_activated));
             }
             return true;
         });

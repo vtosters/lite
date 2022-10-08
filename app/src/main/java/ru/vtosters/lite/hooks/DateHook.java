@@ -1,15 +1,17 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.getStringDate;
 
 import android.annotation.SuppressLint;
 
+import com.vtosters.lite.R;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class DateHook {
     public static boolean fulltime() {
@@ -19,11 +21,11 @@ public class DateHook {
     public static String getDateFormat() {
         switch (getPrefsValue("dateformat")) {
             case "noyear":
-                return getString("fulltime2");
+                return AndroidUtils.getString(R.string.fulltime2);
             case "full":
-                return getString("fulltime");
+                return AndroidUtils.getString(R.string.fulltime);
             default:
-                return getString("fulltime3");
+                return AndroidUtils.getString(R.string.fulltime3);
         }
     }
 
@@ -38,7 +40,7 @@ public class DateHook {
         if (!fulltime()) return null;
 
         try {
-            return getStringDate(isFemale ? getIdentifier("last_seen_profile_f", "string") : getIdentifier("last_seen_profile_m", "string"), date.format(new Date(time)));
+            return getStringDate(isFemale ? R.string.last_seen_profile_f : R.string.last_seen_profile_m, date.format(new Date(time)));
         } catch (Throwable th) {
             th.printStackTrace();
             return null;

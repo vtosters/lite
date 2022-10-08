@@ -7,6 +7,7 @@ import com.arthenica.ffmpegkit.ReturnCode;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.Artist;
 import com.vk.dto.music.MusicTrack;
+import com.vtosters.lite.R;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -99,7 +100,7 @@ public class FFMpeg {
     private static void checkFFMpegLibs() {
         var lib = new File(AndroidUtils.getGlobalContext().getFilesDir(), "libffmpegkit_abidetect.so");
         if (!lib.exists()) {
-            ToastUtils.a(AndroidUtils.getString("ffmpegkit_copy"));
+            ToastUtils.a(R.string.ffmpegkit_copy);
             copyAssets();
         }
     }

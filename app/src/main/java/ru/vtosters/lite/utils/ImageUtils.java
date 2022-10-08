@@ -32,15 +32,15 @@ public class ImageUtils {
 
     public static Bitmap bmp = null;
 
-    public static Drawable getDrawableFromUrl(String url, String def, Boolean rounded, Boolean scaled) {
+    public static Drawable getDrawableFromUrl(String url, int defDrawableRes, Boolean rounded, Boolean scaled) {
         if (!NetworkUtils.isNetworkConnected()) {
-            if (def == null) return null;
-            return getDrawable(AndroidUtils.getGlobalContext(), AndroidUtils.getIdentifier(def, "drawable"));
+            if (defDrawableRes == 0) return null;
+            return getDrawable(AndroidUtils.getGlobalContext(), defDrawableRes);
         }
 
         if (NetworkUtils.isNetworkIsSlow()) {
-            if (def == null) return null;
-            return getDrawable(AndroidUtils.getGlobalContext(), AndroidUtils.getIdentifier(def, "drawable"));
+            if (defDrawableRes == 0) return null;
+            return getDrawable(AndroidUtils.getGlobalContext(), defDrawableRes);
         }
 
         try {
@@ -63,8 +63,8 @@ public class ImageUtils {
             });
 
             if (bmp == null) {
-                if (def == null) return null;
-                return getDrawable(AndroidUtils.getGlobalContext(), AndroidUtils.getIdentifier(def, "drawable"));
+                if (defDrawableRes == 0) return null;
+                return getDrawable(AndroidUtils.getGlobalContext(), defDrawableRes);
             }
 
             bmp = rounded ? getBitmapClippedCircle(bmp) : bmp; // rounding
@@ -73,9 +73,9 @@ public class ImageUtils {
 
             return new BitmapDrawable(AndroidUtils.getResources(), bmp); // return our drawable
         } catch (Exception e) {
-            if (def == null) return null; // default pic can be null
+            if (defDrawableRes == 0) return null; // default pic can be null
 
-            return getDrawable(AndroidUtils.getGlobalContext(), AndroidUtils.getIdentifier(def, "drawable")); // get default drawable via res
+            return getDrawable(AndroidUtils.getGlobalContext(), defDrawableRes); // get default drawable via res
         }
     }
 

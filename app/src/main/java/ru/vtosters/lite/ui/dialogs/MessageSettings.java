@@ -16,7 +16,6 @@ import androidx.appcompat.widget.SwitchCompat;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
 
 public class MessageSettings {
@@ -52,12 +51,12 @@ public class MessageSettings {
         four.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         five.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
 
-        zero.setText(AndroidUtils.getString("proxy_disable")); // Отключить
-        one.setText(AndroidUtils.getString("message_self_destruct_15sec"));
-        two.setText(AndroidUtils.getString("message_self_destruct_1min"));
-        three.setText(AndroidUtils.getString("message_self_destruct_5min"));
-        four.setText(AndroidUtils.getString("message_self_destruct_1hour"));
-        five.setText(AndroidUtils.getString("message_self_destruct_24hours"));
+        zero.setText(context.getString(R.string.proxy_disable)); // Отключить
+        one.setText(context.getString(R.string.message_self_destruct_15sec));
+        two.setText(context.getString(R.string.message_self_destruct_1min));
+        three.setText(context.getString(R.string.message_self_destruct_5min));
+        four.setText(context.getString(R.string.message_self_destruct_1hour));
+        five.setText(context.getString(R.string.message_self_destruct_24hours));
 
         zero.setTextColor(getTextAttr());
         one.setTextColor(getTextAttr());
@@ -89,7 +88,7 @@ public class MessageSettings {
 
         @SuppressLint("UseSwitchCompatOrMaterialCode")
         var silentSwitch = new SwitchCompat(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_Switch));
-        silentSwitch.setText(AndroidUtils.getString("silent_messages"));
+        silentSwitch.setText(context.getString(R.string.silent_messages));
         silentSwitch.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         silentSwitch.setTextColor(getTextAttr());
         silentSwitch.setChecked(isSilentEnabled);
@@ -106,12 +105,12 @@ public class MessageSettings {
         mContainer.addView(silentSwitch, LayoutUtils.createLinear(-1, -2));
 
         new VkAlertDialog.Builder(context)
-                .setTitle(AndroidUtils.getString("message_send_settings_title"))
-                .setMessage(AndroidUtils.getString("silent_messages_time_select"))
+                .setTitle(context.getString(R.string.message_send_settings_title))
+                .setMessage(context.getString(R.string.silent_messages_time_select))
                 .setCancelable(true)
                 .setView(mContainer)
-                .setNegativeButton(AndroidUtils.getString("cancel"), null)
-                .setPositiveButton(AndroidUtils.getString("vtl_confirm"), (dialog, which) -> { // Применить
+                .setNegativeButton(context.getString(R.string.cancel), null)
+                .setPositiveButton(context.getString(R.string.vtl_confirm), (dialog, which) -> { // Применить
                     var checked = rg.getCheckedRadioButtonId();
 
                     if (checked == zero.getId()) {

@@ -1,10 +1,9 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.Preferences.milkshake;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,9 +12,8 @@ import android.os.Bundle;
 import androidx.preference.Preference;
 
 import com.vk.navigation.Navigator;
+import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
-import ru.vtosters.lite.utils.Preferences;
 
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
@@ -23,7 +21,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(getIdentifier("preferences_themes", "xml"));
+        addPreferencesFromResource(R.xml.preferences_themes);
         prefs();
     }
 
@@ -83,6 +81,6 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public int T4() {
-        return getIdentifier("vtlthemes", "string");
+        return R.string.vtlthemes;
     }
 }

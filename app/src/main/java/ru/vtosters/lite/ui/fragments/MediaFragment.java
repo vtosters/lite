@@ -6,7 +6,6 @@ import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
@@ -29,6 +28,7 @@ import androidx.preference.Preference;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
+import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import org.json.JSONObject;
@@ -66,8 +66,8 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         container.addView(input, lp);
 
         new VkAlertDialog.Builder(ctx)
-                .setTitle(AndroidUtils.getString("video_dl_enter_link"))
-                .setPositiveButton(AndroidUtils.getString("download"),
+                .setTitle(R.string.video_dl_enter_link)
+                .setPositiveButton(R.string.download,
                         (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx))
                 .setView(container)
                 .show();
@@ -76,7 +76,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(getIdentifier("preferences_media", "xml"));
+        addPreferencesFromResource(R.xml.preferences_media);
         prefs();
     }
 
@@ -107,15 +107,15 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
 
         if (isLoggedIn()) {
-            findPreference("lastfm_auth").setSummary(AndroidUtils.getString("lastfm_authorized_as") + " " + LastFMScrobbler.getUserName());
+            findPreference("lastfm_auth").setSummary(requireContext().getString(R.string.lastfm_authorized_as) + " " + LastFMScrobbler.getUserName());
         } else {
             findPreference("lastfm_enabled").setEnabled(false);
         }
 
-        findPreference("cached_tracks").setSummary(String.format(AndroidUtils.getString("cached_tracks_counter"), CacheDatabaseDelegate.getTrackCount()));
+        findPreference("cached_tracks").setSummary(String.format(requireContext().getString(R.string.cached_tracks_counter), CacheDatabaseDelegate.getTrackCount()));
         findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
             if (CacheDatabaseDelegate.getTrackCount() == 0) {
-                sendToast(AndroidUtils.getString("no_cache_error"));
+                sendToast(requireContext().getString(R.string.no_cache_error));
             } else {
                 delcache(requireContext());
             }
@@ -133,9 +133,9 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
             var items = Arrays.asList(
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("yandex", "drawable"), "Yandex"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("google", "drawable"), "Google"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("microsoft", "drawable"), "Bing")
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.yandex, "Yandex"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.google, "Google"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.microsoft, "Bing")
             );
 
             var adapter = new ImagineArrayAdapter(getContext(), items);
@@ -156,7 +156,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
         final EditText fn = new EditText(ctx);
-        fn.setHint(AndroidUtils.getString("lastfm_login"));
+        fn.setHint(R.string.lastfm_login);
         fn.setTextColor(getTextAttr());
         fn.setHintTextColor(getSTextAttr());
         fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
@@ -167,7 +167,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         fn.setLayoutParams(margin);
 
         final EditText ln = new EditText(ctx);
-        ln.setHint(AndroidUtils.getString("lastfm_password"));
+        ln.setHint(R.string.lastfm_password);
         ln.setTextColor(getTextAttr());
         ln.setHintTextColor(getSTextAttr());
         ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
@@ -176,8 +176,8 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         ln.setLayoutParams(margin);
 
         new VkAlertDialog.Builder(ctx)
-                .setTitle(AndroidUtils.getString("lastfm_enter_credentials"))
-                .setPositiveButton(AndroidUtils.getString("lastfm_enter"),
+                .setTitle(R.string.lastfm_enter_credentials)
+                .setPositiveButton(R.string.lastfm_enter,
                         (dialog, which) -> {
                             String login = fn.getText().toString();
                             String pass = ln.getText().toString();
@@ -190,22 +190,22 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     private void logout(Context ctx) {
         new VkAlertDialog.Builder(ctx)
-                .setTitle(AndroidUtils.getString("lastfm_logout_title"))
-                .setMessage(AndroidUtils.getString("lastfm_logout_confirm"))
-                .setPositiveButton(AndroidUtils.getString("vkim_yes"),
+                .setTitle(R.string.lastfm_logout_title)
+                .setMessage(R.string.lastfm_logout_confirm)
+                .setPositiveButton(R.string.vkim_yes,
                         (dialog, which) -> LastFMScrobbler.logout())
-                .setNeutralButton(AndroidUtils.getString("vkim_no"),
+                .setNeutralButton(R.string.vkim_no,
                         (dialog, which) -> dialog.cancel())
                 .show();
     }
 
     private void delcache(Context ctx) {
         new VkAlertDialog.Builder(ctx)
-                .setTitle(AndroidUtils.getString("warning"))
-                .setMessage(AndroidUtils.getString("cached_tracks_remove_confirm"))
-                .setPositiveButton(AndroidUtils.getString("yes"),
+                .setTitle(R.string.warning)
+                .setMessage(R.string.cached_tracks_remove_confirm)
+                .setPositiveButton(R.string.yes,
                         (dialog, which) -> executor.submit(CacheDatabaseDelegate::clear))
-                .setNeutralButton(AndroidUtils.getString("no"),
+                .setNeutralButton(R.string.no,
                         (dialog, which) -> dialog.cancel())
                 .show();
     }
@@ -217,12 +217,12 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         }
 
         new VkAlertDialog.Builder(ctx)
-                .setTitle(AndroidUtils.getString("download_method"))
-                .setMessage(AndroidUtils.getString("download_method_desc"))
-                .setPositiveButton(AndroidUtils.getString("download_method_cache"), (dialog, which) -> {
+                .setTitle(R.string.download_method)
+                .setMessage(R.string.download_method_desc)
+                .setPositiveButton(R.string.download_method_cache, (dialog, which) -> {
                     executor.submit(AudioDownloader::cacheAllAudios);
                 })
-                .setNegativeButton(AndroidUtils.getString("download_method_mp3"), (dialog, which) -> {
+                .setNegativeButton(R.string.download_method_mp3, (dialog, which) -> {
                     executor.submit(AudioDownloader::downloadAllAudios);
                 })
                 .show();
@@ -240,9 +240,9 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                     var response = new JSONObject(new OkHttpClient().a(request).execute().a().g());
 
                     if (response.optInt("response") == 1) {
-                        requireActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("video_history_cleaned")));
+                        requireActivity().runOnUiThread(() -> sendToast(requireContext().getString(R.string.video_history_cleaned)));
                     } else {
-                        requireActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("delete_video_history_error")));
+                        requireActivity().runOnUiThread(() -> sendToast(requireContext().getString(R.string.delete_video_history_error)));
                     }
 
                     Log.d("VideoHistory", response.toString());
@@ -259,12 +259,12 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     private void deleteVideoHistoryDialog(Context context) {
         new VkAlertDialog.Builder(context)
-                .setTitle(AndroidUtils.getString("warning"))
-                .setMessage(AndroidUtils.getString("delete_video_history_confirm"))
+                .setTitle(R.string.warning)
+                .setMessage(R.string.delete_video_history_confirm)
                 .setCancelable(false)
-                .setPositiveButton(AndroidUtils.getString("yes"),
+                .setPositiveButton(R.string.yes,
                         (dialogInterface, i) -> deleteVideoHistory())
-                .setNegativeButton(AndroidUtils.getString("cancel"),
+                .setNegativeButton(R.string.cancel,
                         (dialogInterface, i) -> dialogInterface.dismiss())
                 .show();
     }
@@ -288,6 +288,6 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public int T4() {
-        return getIdentifier("vtlmedia", "string");
+        return R.string.vtlmedia;
     }
 }

@@ -7,6 +7,8 @@ import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.app.Activity;
 
+import com.vtosters.lite.R;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -21,7 +23,7 @@ public class NewsfeedListManager {
         var list = new ArrayList<VBListItem>(filtersSet.size());
 
         if (filtersSet.isEmpty()) {
-            sendToast(AndroidUtils.getString("newsfeed_list_update_feed"));
+            sendToast(activity.getString(R.string.newsfeed_list_update_feed));
             return;
         }
 
@@ -33,10 +35,10 @@ public class NewsfeedListManager {
         }
 
         VBottomSheetBuilder.show(activity, new VBottomSheetBuilder.VBSContent(
-                AndroidUtils.getString("newsfeed_list_choose_to_hide"),
+                activity.getString(R.string.newsfeed_list_choose_to_hide),
                 buildListOf(activity, list),
                 new VBottomSheetBuilder.VBSContent.VBSButton(
-                        AndroidUtils.getString("save"),
+                        activity.getString(R.string.save),
                         () -> {
                             var newSelectedItems = "";
                             for (VBListItem item : list)
@@ -45,15 +47,17 @@ public class NewsfeedListManager {
                             getDefaultPrefs().edit()
                                     .putString("news_feed_selected_items", newSelectedItems)
                                     .apply();
-                            sendToast(AndroidUtils.getString("newsfeed_list_update_feed_to_work"));
+                            sendToast(activity.getString(R.string.newsfeed_list_update_feed_to_work));
                         }
                 )
         ));
     }
 
     public static void resetHideItems() {
-        getDefaultPrefs().edit().remove("news_feed_selected_items").remove("news_feed_items_set")
+        getDefaultPrefs().edit()
+                .remove("news_feed_selected_items")
+                .remove("news_feed_items_set")
                 .apply();
-        sendToast(AndroidUtils.getString("newsfeed_list_hidden_reseted"));
+        sendToast(AndroidUtils.getString(R.string.newsfeed_list_hidden_reseted));
     }
 }

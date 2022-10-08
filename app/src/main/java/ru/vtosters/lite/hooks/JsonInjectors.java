@@ -3,9 +3,10 @@ package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
-import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogHeader;
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogPlaylist;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogSeparator;
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getPlaylist;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.proxy.ProxyUtils.getStatic;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
@@ -24,6 +25,7 @@ import android.util.Log;
 import com.vk.core.network.Network;
 import com.vk.core.util.DeviceIdProvider;
 import com.vk.core.util.LangUtils;
+import com.vtosters.lite.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,7 +33,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Random;
@@ -41,7 +42,6 @@ import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
-import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
@@ -71,7 +71,7 @@ public class JsonInjectors {
     }
 
     public static JSONObject donateRecomm() throws JSONException {
-        var title = AndroidUtils.getString("donate_to_vtl");
+        var title = AndroidUtils.getString(R.string.donate_to_vtl);
         var link = "https://vk.com/vtosters_official";
         var text_color = "2D81E0";
 
@@ -112,7 +112,7 @@ public class JsonInjectors {
     }
 
     public static JSONObject vktesters(int id) throws JSONException {
-        var title = AndroidUtils.getString("tester_profile");
+        var title = AndroidUtils.getString(R.string.tester_profile);
         var text_color = "2D81E0";
         var link = "https://" + getStatic() + "/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
 
@@ -156,7 +156,7 @@ public class JsonInjectors {
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
-        var text = AndroidUtils.getString("no_data_error");
+        var text = AndroidUtils.getString(R.string.no_data_error);
         var link = "https://vtosters.app"; // can be null
         var linktitle = "Test button"; // can be null
 
@@ -165,10 +165,10 @@ public class JsonInjectors {
 
         var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
 
-        if (isVerified(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium";
+        if (isVerified(peerid)) text = AndroidUtils.getString(R.string.i_bought) + " VTosters Premium";
         if (isPrometheus(peerid))
-            text = AndroidUtils.getString("i_bought") + " VTosters Premium Gold Prime Pro Plus";
-        if (isDeveloper(peerid)) text = AndroidUtils.getString("i_created_poop");
+            text = AndroidUtils.getString(R.string.i_bought) + " VTosters Premium Gold Prime Pro Plus";
+        if (isDeveloper(peerid)) text = AndroidUtils.getString(R.string.i_created_poop);
 
         if (!isVerified(peerid) || text.equals("") || peerid == AccountManagerUtils.getUserId() || peerid == 0) {
             if (getBoolValue("convBarRecomm", false)) {

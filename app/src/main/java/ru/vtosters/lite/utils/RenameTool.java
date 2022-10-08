@@ -23,6 +23,7 @@ import androidx.core.util.Pair;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.dto.user.UserProfile;
 import com.vk.im.engine.models.users.User;
+import com.vtosters.lite.R;
 import com.vtosters.lite.api.ExtendedCommunityProfile;
 import com.vtosters.lite.api.ExtendedUserProfile;
 
@@ -149,7 +150,7 @@ public class RenameTool {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
         final EditText fn = new EditText(ctx);
-        fn.setHint(AndroidUtils.getString("vk_auth_sign_up_first_name"));
+        fn.setHint(R.string.vk_auth_sign_up_first_name);
         fn.setTextColor(getTextAttr());
         fn.setHintTextColor(getSTextAttr());
         fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
@@ -160,7 +161,7 @@ public class RenameTool {
         fn.setLayoutParams(margin);
 
         final EditText ln = new EditText(ctx);
-        ln.setHint(AndroidUtils.getString("vk_auth_sign_up_last_name"));
+        ln.setHint(R.string.vk_auth_sign_up_last_name);
         ln.setTextColor(getTextAttr());
         ln.setHintTextColor(getSTextAttr());
         ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
@@ -175,8 +176,8 @@ public class RenameTool {
         int id = AccountManagerUtils.getUserID(profile);
 
         var builder = new VkAlertDialog.Builder(ctx)
-                .setTitle(AndroidUtils.getString("rename_title"))
-                .setMessage(AndroidUtils.getString("rename_message"))
+                .setTitle(R.string.rename_title)
+                .setMessage(R.string.rename_message)
                 .setView(linearLayout)
                 .setPositiveButton("OK", (dialog, which) -> {
                    String firstName = fn.getText().toString();
@@ -203,14 +204,14 @@ public class RenameTool {
                        }
                        ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
 
-                       sendToast(AndroidUtils.getString("rename_success"));
+                       sendToast(ctx.getString(R.string.rename_success));
                    } catch (Exception e) {
                        e.printStackTrace();
-                       sendToast(AndroidUtils.getString("rename_error"));
+                       sendToast(ctx.getString(R.string.rename_error));
                    }
                 });
         if (isChangedName(id))
-            builder.setNeutralButton(AndroidUtils.getString("rename_reset"), (dialog, which) -> {
+            builder.setNeutralButton(R.string.rename_reset, (dialog, which) -> {
                 getHelper().getWritableDatabase().execSQL(
                         String.format(
                         "DELETE FROM %s WHERE %s='%s'",
@@ -221,7 +222,7 @@ public class RenameTool {
                 }
                 updateRequested = true;
                 ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
-                sendToast(AndroidUtils.getString("rename_remove_from_bd_success"));
+                sendToast(ctx.getString(R.string.rename_remove_from_bd_success));
             });
         builder.show();
     }
@@ -231,7 +232,7 @@ public class RenameTool {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
         final EditText fn = new EditText(ctx);
-        fn.setHint(AndroidUtils.getString("vk_auth_sign_up_first_name"));
+        fn.setHint(R.string.vk_auth_sign_up_first_name);
         fn.setHintTextColor(getSTextAttr());
         fn.setTextColor(getTextAttr());
         fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
@@ -250,8 +251,8 @@ public class RenameTool {
         final int id = fid;
 
         var builder = new VkAlertDialog.Builder(ctx)
-                .setTitle(AndroidUtils.getString("rename_title"))
-                .setMessage(AndroidUtils.getString("rename_message"))
+                .setTitle(R.string.rename_title)
+                .setMessage(R.string.rename_message)
                 .setView(linearLayout)
                 .setPositiveButton("OK", (dialog, which) -> {
                     String firstName = fn.getText().toString();
@@ -273,16 +274,16 @@ public class RenameTool {
                                     id, URLEncoder.encode(firstName, "UTF-8")));
                         }
                         updateRequested = true;
-                        sendToast(AndroidUtils.getString("rename_group_success"));
+                        sendToast(AndroidUtils.getString(R.string.rename_group_success));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 });
         if (isChangedNameGroup(id))
-            builder.setNeutralButton(AndroidUtils.getString("rename_reset"), (dialog, which) -> {
+            builder.setNeutralButton(R.string.rename_reset, (dialog, which) -> {
                 getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME_GROUP, COLUMN_VKID, id));
                 updateRequested = true;
-                sendToast(AndroidUtils.getString("rename_remove_group_from_bd_success"));
+                sendToast(ctx.getString(R.string.rename_remove_group_from_bd_success));
             });
         builder.show();
     }

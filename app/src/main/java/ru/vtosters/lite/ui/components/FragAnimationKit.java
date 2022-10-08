@@ -1,24 +1,25 @@
 package ru.vtosters.lite.ui.components;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 
 import android.content.res.Resources;
 
 import androidx.fragment.app.FragmentTransaction;
 
+import com.vtosters.lite.R;
+
 public class FragAnimationKit {
 
     // Q
-    private static final int actOpenEnter = getIdentifier("q_enter", "anim");
-    private static final int actOpenExit = getIdentifier("q_exit", "anim");
-    private static final int actCloseEnter = getIdentifier("q_pop_enter", "anim");
-    private static final int actCloseExit = getIdentifier("q_pop_exit", "anim");
+    private static final int actOpenEnter = R.anim.q_enter;
+    private static final int actOpenExit = R.anim.q_exit;
+    private static final int actCloseEnter = R.anim.q_pop_enter;
+    private static final int actCloseExit = R.anim.q_pop_exit;
     // Slide
-    private static final int SactOpenEnter = getIdentifier("legacy_enter", "anim");
-    private static final int SactOpenExit = getIdentifier("legacy_exit", "anim");
-    private static final int SactCloseEnter = getIdentifier("legacy_pop_enter", "anim");
-    private static final int SactCloseExit = getIdentifier("legacy_pop_exit", "anim");
+    private static final int SactOpenEnter = R.anim.legacy_enter;
+    private static final int SactOpenExit = R.anim.legacy_exit;
+    private static final int SactCloseEnter = R.anim.legacy_pop_enter;
+    private static final int SactCloseExit = R.anim.legacy_pop_exit;
     // System
     private static final Resources resources = Resources.getSystem();
     private static final int SSactOpenEnter = resources.getIdentifier("activity_open_enter", "anim", "android");

@@ -1,8 +1,6 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.annotation.SuppressLint;
 import android.content.ClipData;
@@ -46,7 +44,7 @@ public class PhotoViewer {
     static OkHttpClient client = new OkHttpClient();
 
     public static boolean interceptClick(AttachmentWithMedia attachment, MenuItem item, View view) {
-        if (item.getItemId() == AndroidUtils.getIdentifier("search_photo", "id")) {
+        if (item.getItemId() == R.id.search_photo) {
             if (attachment instanceof PhotoAttachment) {
                 searchPhoto(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
             } else if (attachment instanceof DocumentAttachment) {
@@ -55,13 +53,13 @@ public class PhotoViewer {
                     try {
                         searchPhoto(getUrlFromDocumentAttachment(documentAttachment));
                     } catch (Exception e) {
-                        ToastUtils.a(getString("photo_get_error"));
+                        ToastUtils.a(R.string.photo_get_error);
                     }
                 else
-                    ToastUtils.a(getString("photo_get_error"));
+                    ToastUtils.a(R.string.photo_get_error);
             }
             return true;
-        } else if (item.getItemId() == AndroidUtils.getIdentifier("copy_photo_url", "id")) {
+        } else if (item.getItemId() == R.id.copy_photo_url) {
             if (attachment instanceof PhotoAttachment) {
                 copyPhotoUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
             } else if (attachment instanceof DocumentAttachment) {
@@ -70,13 +68,13 @@ public class PhotoViewer {
                     try {
                         copyPhotoUrl(getUrlFromDocumentAttachment(documentAttachment));
                     } catch (Exception e) {
-                        ToastUtils.a(getString("photo_get_error"));
+                        ToastUtils.a(R.string.photo_get_error);
                     }
                 else
-                    ToastUtils.a(getString("photo_get_error"));
+                    ToastUtils.a(R.string.photo_get_error);
             }
             return true;
-        } else if (item.getItemId() == AndroidUtils.getIdentifier("open_original_photo", "id")) {
+        } else if (item.getItemId() == R.id.open_original_photo) {
             if (attachment instanceof PhotoAttachment) {
                 openUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
             } else if (attachment instanceof DocumentAttachment) {
@@ -85,10 +83,10 @@ public class PhotoViewer {
                     try {
                         openUrl(getUrlFromDocumentAttachment(documentAttachment));
                     } catch (Exception e) {
-                        ToastUtils.a(getString("photo_get_error"));
+                        ToastUtils.a(R.string.photo_get_error);
                     }
                 else
-                    ToastUtils.a(getString("photo_get_error"));
+                    ToastUtils.a(R.string.photo_get_error);
             }
             return true;
         }
@@ -97,7 +95,7 @@ public class PhotoViewer {
 
     @SuppressLint("UseCompatLoadingForDrawables")
     public static void addMenuItems(AttachmentWithMedia attachment, ActionsPopup.b actionPopup, int i, boolean z) {
-        actionPopup.a(getIdentifier("search_photo_content", "string"),
+        actionPopup.a(R.string.search_photo_content,
                 ThemesUtils.isDarkTheme()
                         ? AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28)
                         : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28), ThemesUtils.getAccentColor()),
@@ -111,15 +109,15 @@ public class PhotoViewer {
                             try {
                                 searchPhoto(getUrlFromDocumentAttachment(documentAttachment));
                             } catch (Exception e) {
-                                ToastUtils.a(getString("photo_get_error"));
+                                ToastUtils.a(R.string.photo_get_error);
                             }
                         else
-                            ToastUtils.a(getString("photo_get_error"));
+                            ToastUtils.a(R.string.photo_get_error);
                     }
                     return null;
                 }
         );
-        actionPopup.a(getIdentifier("copy_photo_url_content", "string"),
+        actionPopup.a(R.string.copy_photo_url_content,
                 !ThemesUtils.isDarkTheme()
                         ? new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28), ThemesUtils.getAccentColor())
                         : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28), Color.WHITE),
@@ -133,15 +131,15 @@ public class PhotoViewer {
                             try {
                                 copyPhotoUrl(getUrlFromDocumentAttachment(documentAttachment));
                             } catch (Exception e) {
-                                ToastUtils.a(getString("photo_get_error"));
+                                ToastUtils.a(R.string.photo_get_error);
                             }
                         else
-                            ToastUtils.a(getString("photo_get_error"));
+                            ToastUtils.a(R.string.photo_get_error);
                     }
                     return null;
                 }
         );
-        actionPopup.a(getIdentifier("open_original_photo_content", "string"),
+        actionPopup.a(R.string.open_original_photo_content,
                 ThemesUtils.isDarkTheme()
                         ? AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_link_outline_28)
                         : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_link_outline_28),
@@ -156,10 +154,10 @@ public class PhotoViewer {
                             try {
                                 openUrl(getUrlFromDocumentAttachment(documentAttachment));
                             } catch (Exception e) {
-                                ToastUtils.a(getString("photo_get_error"));
+                                ToastUtils.a(R.string.photo_get_error);
                             }
                         else
-                            ToastUtils.a(getString("photo_get_error"));
+                            ToastUtils.a(R.string.photo_get_error);
                     }
                     return null;
                 }
@@ -248,7 +246,7 @@ public class PhotoViewer {
         if (url == null || url.isEmpty()) return;
         ClipboardManager manager = (ClipboardManager) AndroidUtils.getGlobalContext().getSystemService(Context.CLIPBOARD_SERVICE);
         manager.setPrimaryClip(ClipData.newPlainText("vk_photo_url", url));
-        Toast.makeText(AndroidUtils.getGlobalContext(), AndroidUtils.getIdentifier("copied_to_clipboard", "string"), Toast.LENGTH_SHORT).show();
+        Toast.makeText(AndroidUtils.getGlobalContext(), R.string.copied_to_clipboard, Toast.LENGTH_SHORT).show();
     }
 
     private static void openUrl(String url) {

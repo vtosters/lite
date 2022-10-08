@@ -10,8 +10,8 @@ import android.os.Looper;
 import android.util.Log;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.R;
 
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -39,15 +39,15 @@ public class Translate {
 
     private static void showDialog(Context context, String text) {
         new VkAlertDialog.Builder(context)
-                .setTitle(AndroidUtils.getString("translator_title"))
+                .setTitle(R.string.translator_title)
                 .setMessage(text)
-                .setPositiveButton(AndroidUtils.getString("close"),
+                .setPositiveButton(R.string.close,
                         (dialog, which) -> dialog.cancel())
-                .setNeutralButton(AndroidUtils.getString("copy"), (dialog, which) -> {
+                .setNeutralButton(R.string.copy, (dialog, which) -> {
                     var clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
                     var clip = ClipData.newPlainText("Copied Text", text);
                     clipboard.setPrimaryClip(clip);
-                    sendToast(AndroidUtils.getString("copied_to_clipboard"));
+                    sendToast(AndroidUtils.getString(R.string.copied_to_clipboard));
                 })
                 .show();
     }

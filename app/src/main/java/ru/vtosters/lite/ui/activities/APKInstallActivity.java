@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import ru.vtosters.lite.utils.AndroidUtils;
+import com.vtosters.lite.R;
 
 public class APKInstallActivity extends AppCompatActivity {
     public static final int REQUEST_INSTALL_PERMISSION = 1;
@@ -67,7 +67,7 @@ public class APKInstallActivity extends AppCompatActivity {
 
             startActivity(intent);
         } catch (Exception e) {
-            Toast.makeText(this, AndroidUtils.getString("apk_install_error") + " " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.apk_install_error) + " " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         }
 
         finish();

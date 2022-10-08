@@ -1,7 +1,5 @@
 package ru.vtosters.lite.downloaders;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
-
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
@@ -12,6 +10,7 @@ import android.net.Uri;
 import android.os.Environment;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.R;
 
 import java.io.File;
 
@@ -50,7 +49,7 @@ public class OTADownloader {
                     File apk = maxIndex == -1 ? new File(downloadDir, "VTLite.apk") : new File(downloadDir, "VTLite-" + maxIndex + ".apk");
                     APKInstallActivity.installOta(context, FileUtils.uriFromFile(apk));
                 } else if (status == DownloadManager.STATUS_FAILED) {
-                    AndroidUtils.sendToast(getString("downloaderr"));
+                    AndroidUtils.sendToast(context.getString(R.string.downloaderr));
                 }
             }
         }
@@ -74,12 +73,12 @@ public class OTADownloader {
             e.printStackTrace();
 
             new VkAlertDialog.Builder(context)
-                    .setTitle(AndroidUtils.getString("update_error"))
-                    .setMessage(AndroidUtils.getString("update_error_text"))
-                    .setPositiveButton(AndroidUtils.getString("no"),
+                    .setTitle(R.string.update_error)
+                    .setMessage(R.string.update_error_text)
+                    .setPositiveButton(R.string.no,
                             (dialog, which) -> dialog.cancel()
                     )
-                    .setNeutralButton(AndroidUtils.getString("yes"),
+                    .setNeutralButton(R.string.yes,
                             (dialog, which) -> {
                                 var intent = new Intent(Intent.ACTION_VIEW)
                                         .setData(Uri.parse("https://github.com/vtosters/lite/releases/latest/download/VTLite.apk"));

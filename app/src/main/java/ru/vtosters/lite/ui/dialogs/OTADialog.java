@@ -1,8 +1,8 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
-
 import android.app.Activity;
+
+import com.vtosters.lite.R;
 
 import ru.vtosters.lite.downloaders.OTADownloader;
 import ru.vtosters.lite.ui.vkui.ModalBottomSheetWrapper;
@@ -29,9 +29,9 @@ public class OTADialog implements OTAUtils.OTAListener {
         mActivity.runOnUiThread(() -> {
             // Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
             new ModalBottomSheetWrapper(mActivity)
-                    .setTitle(getString("newversion") + " " + mHelper.getNewVersionName())
+                    .setTitle(mActivity.getString(R.string.newversion) + " " + mHelper.getNewVersionName())
                     .setUpdateInfoView(mHelper.getUpdateDescription())
-                    .setPositiveButton(getString("updateanddownload"), () -> {
+                    .setPositiveButton(mActivity.getString(R.string.updateanddownload), () -> {
                         OTADownloader.downloadBuild(mHelper.getDownloadUrl());
                     })
                     .show();

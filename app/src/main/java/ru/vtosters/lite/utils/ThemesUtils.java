@@ -100,35 +100,35 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        return getColorFromAttr(getAttrId("accent"));
+        return getColorFromAttr(R.attr.accent);
     } // Color accent
 
     public static int getTextAttr() {
-        return getColorFromAttr(getAttrId("text_primary"));
+        return getColorFromAttr(R.attr.text_primary);
     } // Text Primary color
 
     public static int getSTextAttr() {
-        return getColorFromAttr(getAttrId("text_secondary"));
+        return getColorFromAttr(R.attr.text_secondary);
     } // Text Secondary color
 
     public static int getTabbarBackground() {
-        return getColorFromAttr(getAttrId("tabbar_background"));
+        return getColorFromAttr(R.attr.tabbar_background);
     } // Tabbar/Navbar background
 
     public static int getBackgroundContent() {
-        return getColorFromAttr(getAttrId("background_content"));
+        return getColorFromAttr(R.attr.background_content);
     } // Background color in app
 
     public static int getBackgroundPage() {
-        return getColorFromAttr(getAttrId("background_page"));
+        return getColorFromAttr(R.attr.background_page);
     } // Background color in app
 
     public static int getHeaderBackground() {
-        return getColorFromAttr(getAttrId("header_background"));
+        return getColorFromAttr(R.attr.header_background);
     } // Toolbar/Header background
 
     public static int getHeaderText() {
-        return getColorFromAttr(getAttrId("header_text"));
+        return getColorFromAttr(R.attr.header_text);
     } // Header/Toolbar color text
 
     public static int getAmoledTheme() {
@@ -167,7 +167,7 @@ public class ThemesUtils {
 
     public static int getDarkThemeRes() {
         if (getPrefsValue("darktheme").equals("amoled")) {
-            return isMilkshake() ? getIdentifier("VkMilkAmoledStyle", "style") : getIdentifier("VkAmoledStyle", "style");
+            return isMilkshake() ? R.style.VkMilkAmoledStyle : R.style.VkAmoledStyle;
         }
         return isMilkshake() ? R.style.VkMilkDarkStyle : R.style.VkDarkStyle;
     } // Return needed res theme

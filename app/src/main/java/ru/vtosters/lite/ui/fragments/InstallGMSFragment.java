@@ -1,20 +1,19 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-
 import android.os.Bundle;
 
+import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 public class InstallGMSFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(getIdentifier("preferences_gms", "xml"));
+        addPreferencesFromResource(R.xml.preferences_gms);
     }
 
     @Override
     public int T4() {
-        return getIdentifier("installgms", "string");
+        return R.string.installgms;
     }
 }

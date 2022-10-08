@@ -1,6 +1,5 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
@@ -10,16 +9,16 @@ import android.os.Bundle;
 
 import androidx.preference.Preference;
 
+import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.ui.dialogs.RoundingSeekbarDialog;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(getIdentifier("preferences_interface", "xml"));
+        addPreferencesFromResource(R.xml.preferences_interface);
         prefs();
     }
 
@@ -43,9 +42,9 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
         }
 
         if (getPreferences().getInt("pic_rounding", 0) == 0) {
-            findPreference("customrounding").setSummary(AndroidUtils.getString("disabled"));
+            findPreference("customrounding").setSummary(requireContext().getString(R.string.disabled));
         } else {
-            findPreference("customrounding").setSummary(String.format(AndroidUtils.getString("rounding_size"), getPreferences().getInt("pic_rounding", 0)));
+            findPreference("customrounding").setSummary(String.format(requireContext().getString(R.string.rounding_size), getPreferences().getInt("pic_rounding", 0)));
         }
     }
 
@@ -63,6 +62,6 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public int T4() {
-        return getIdentifier("vtlinterface", "string");
+        return R.string.vtlinterface;
     }
 }

@@ -21,7 +21,6 @@ import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
-import ru.vtosters.lite.utils.NetworkUtils;
 
 public class PlaylistInjector {
 

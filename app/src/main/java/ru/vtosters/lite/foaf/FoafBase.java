@@ -5,8 +5,6 @@ import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -15,6 +13,7 @@ import android.util.Log;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
+import com.vtosters.lite.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -126,7 +125,7 @@ public class FoafBase {
 
     public static void loadAndShow(Context context, int i) {
         ProgressDialog progressDialog = new ProgressDialog(context);
-        progressDialog.setMessage(getString("com_facebook_loading"));
+        progressDialog.setMessage(context.getString(R.string.com_facebook_loading));
         progressDialog.setCancelable(false);
         progressDialog.show();
 
@@ -145,16 +144,16 @@ public class FoafBase {
             getNormalHumanDate(Objects.requireNonNull(matcher2.group(1)));
 
             new VkAlertDialog.Builder(context)
-                    .setTitle(getIdentifier("addinf", "string"))
-                    .setMessage(getString("foafid") +
-                            " " + i + getString("foafregdate")
-                            + " " + normalHumanDate + getString("foafdate")
+                    .setTitle(R.string.addinf)
+                    .setMessage(context.getString(R.string.foafid) +
+                            " " + i + context.getString(R.string.foafregdate)
+                            + " " + normalHumanDate + context.getString(R.string.foafdate)
                             + " " + daysPassedFromFoafDate(normalHumanDate))
                     .setPositiveButton(android.R.string.ok, null)
                     .show();
         } catch (Exception e) {
             e.printStackTrace();
-            makeText(getGlobalContext(), getString("foaferr"), LENGTH_SHORT).show();
+            makeText(getGlobalContext(), context.getString(R.string.foaferr), LENGTH_SHORT).show();
         }
     }
 

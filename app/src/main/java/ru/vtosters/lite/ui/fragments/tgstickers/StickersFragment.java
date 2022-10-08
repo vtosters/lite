@@ -4,7 +4,6 @@ import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.tgs.TGPref.setTGBotKey;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
@@ -38,6 +37,7 @@ import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
+import com.vtosters.lite.R;
 
 import java.io.File;
 
@@ -45,7 +45,6 @@ import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
 import ru.vtosters.lite.ui.components.StickerTouchHelperCallback;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public class StickersFragment extends BaseToolbarFragment {
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
@@ -84,7 +83,7 @@ public class StickersFragment extends BaseToolbarFragment {
     protected void onCreateMenu(Menu menu) {
         var item = menu.add(0, 0, 0, "");
         item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        item.setIcon(getIdentifier("ic_settings_24", "drawable"));
+        item.setIcon(R.drawable.ic_settings_24);
 
         super.onCreateMenu(menu);
     }
@@ -115,7 +114,7 @@ public class StickersFragment extends BaseToolbarFragment {
 
     @Override
     public View onCreateContent(@NonNull LayoutInflater inflater, @Nullable Bundle bundle) {
-        setTitle(getIdentifier("vtltgs", "string"));
+        setTitle(R.string.vtltgs);
 
         FrameLayout layout = new FrameLayout(getContext());
 
@@ -131,7 +130,7 @@ public class StickersFragment extends BaseToolbarFragment {
         layout.addView(mRecycler, new ViewGroup.LayoutParams(-1, -1));
 
         FloatingActionButton mAddStickerPack = new FloatingActionButton(getContext());
-        mAddStickerPack.setImageResource(getIdentifier("ic_add_24", "drawable"));
+        mAddStickerPack.setImageResource(R.drawable.ic_add_24);
         mAddStickerPack.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         mAddStickerPack.setOnClickListener(v2 -> fabClick());
 
@@ -158,14 +157,14 @@ public class StickersFragment extends BaseToolbarFragment {
     private void fabClick() {
         int method = TGPref.getTGConnectMethod();
         if (method == -1) {
-            openMenu(AndroidUtils.getString("stickersconnection"));
+            openMenu(requireContext().getString(R.string.stickersconnection));
             return;
         }
 
         initGrabber();
         if (method == TYPE_SOCKS) {
             if (TGPref.getTGProxyIP() == null) {
-                openMenu(AndroidUtils.getString("stickersproxy1"));
+                openMenu(requireContext().getString(R.string.stickersproxy1));
             }
         } else if (method == TYPE_DIRECT) {
             final Runnable callback = () -> {
@@ -182,8 +181,8 @@ public class StickersFragment extends BaseToolbarFragment {
                 editText.setLayoutParams(margin);
 
                 new VkAlertDialog.Builder(getContext())
-                        .setTitle(AndroidUtils.getString("stickershelp1"))
-                        .setMessage(AndroidUtils.getString("stickershelp2"))
+                        .setTitle(requireContext().getString(R.string.stickershelp1))
+                        .setMessage(requireContext().getString(R.string.stickershelp2))
                         .setView(linearLayout)
                         .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                             String pack = editText.getText().toString();
@@ -240,8 +239,8 @@ public class StickersFragment extends BaseToolbarFragment {
         editText.setLayoutParams(margin);
 
         new VkAlertDialog.Builder(getContext())
-                .setTitle(AndroidUtils.getString("stickersapi5"))
-                .setMessage(AndroidUtils.getString("stickersapi6"))
+                .setTitle(requireContext().getString(R.string.stickersapi5))
+                .setMessage(requireContext().getString(R.string.stickersapi6))
                 .setView(linearLayout)
                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                     setTGBotKey(editText.getText().toString());
@@ -250,11 +249,11 @@ public class StickersFragment extends BaseToolbarFragment {
                 .setNegativeButton(android.R.string.cancel,
                         (dialog, which) -> dialog.dismiss()
                 )
-                .setNeutralButton(AndroidUtils.getString("stickersapi7"),
+                .setNeutralButton(requireContext().getString(R.string.stickersapi7),
                         (dialog, which) -> new VkAlertDialog.Builder(getContext())
-                                .setTitle(AndroidUtils.getString("stickersapi8"))
-                                .setMessage(AndroidUtils.getString("stickersapi9") +
-                                        AndroidUtils.getString("stickersapi10"))
+                                .setTitle(requireContext().getString(R.string.stickersapi8))
+                                .setMessage(requireContext().getString(R.string.stickersapi9) +
+                                        requireContext().getString(R.string.stickersapi10))
                                 .setPositiveButton(android.R.string.ok, null)
                                 .show()
                 )
@@ -268,7 +267,7 @@ public class StickersFragment extends BaseToolbarFragment {
 
         final ProgressDialog progressDialog = new ProgressDialog(context);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.setMessage(AndroidUtils.getString("stickersapi1"));
+        progressDialog.setMessage(requireContext().getString(R.string.stickersapi1));
         progressDialog.show();
 
         mGrabber.checkKey(new TelegramStickersGrabber.KeyCheckListener() {
@@ -276,7 +275,7 @@ public class StickersFragment extends BaseToolbarFragment {
             public void onKeyChecked(boolean ok) {
                 progressDialog.dismiss();
                 if (!ok) {
-                    makeText(context, AndroidUtils.getString("stickersapi2"), LENGTH_SHORT).show();
+                    makeText(context, requireContext().getString(R.string.stickersapi2), LENGTH_SHORT).show();
                     setTGBotKey(null);
                     return;
                 }
@@ -289,9 +288,9 @@ public class StickersFragment extends BaseToolbarFragment {
             public void onNetError() {
                 progressDialog.dismiss();
                 new VkAlertDialog.Builder(context)
-                        .setMessage(AndroidUtils.getString("stickersapi3"))
+                        .setMessage(requireContext().getString(R.string.stickersapi3))
                         .setNegativeButton(android.R.string.cancel, null)
-                        .setPositiveButton(AndroidUtils.getString("stickersapi4"), (arg0, arg1) -> checkApiKey(callback))
+                        .setPositiveButton(requireContext().getString(R.string.stickersapi4), (arg0, arg1) -> checkApiKey(callback))
                         .show();
             }
         });

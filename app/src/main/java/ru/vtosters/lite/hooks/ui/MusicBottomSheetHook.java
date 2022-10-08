@@ -24,7 +24,6 @@ import java.util.concurrent.Executors;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import ru.vtosters.lite.downloaders.AudioDownloader;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public class MusicBottomSheetHook {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
@@ -61,18 +60,18 @@ public class MusicBottomSheetHook {
 
         if (isCached(trackid)) {
             actions.add(new MusicAction(
-                    AndroidUtils.getIdentifier("music_action_toggle_download", "id"),
+                    R.id.music_action_toggle_download,
                     milkshake() ? R.drawable.ic_delete_outline_28 : R.drawable.ic_delete_24,
-                    AndroidUtils.getIdentifier("remove_from_cache", "string"),
+                    R.string.remove_from_cache,
                     musicTrack.F1() ? R.color.music_action_button_gray_50_alpha : R.color.caption_gray,
                     R.string.music_talkback_empty,
                     false
             ));
         } else {
             actions.add(new MusicAction(
-                    AndroidUtils.getIdentifier("music_action_toggle_download", "id"),
+                    R.id.music_action_toggle_download,
                     milkshake() ? R.drawable.ic_download_outline_28 : R.drawable.ic_download_24,
-                    AndroidUtils.getIdentifier("add_to_cache", "string"),
+                    R.string.add_to_cache,
                     musicTrack.F1() ? R.color.music_action_button_gray_50_alpha : R.color.caption_gray,
                     R.string.music_talkback_empty,
                     false
@@ -103,10 +102,10 @@ public class MusicBottomSheetHook {
     }
 
     public static boolean injectOnClick(int actionId, MusicTrack track, MusicPlaybackLaunchContext context, Playlist playlist) { // musictrack inj
-        if (actionId == AndroidUtils.getIdentifier("play_in_vkx", "id"))
+        if (actionId == R.id.play_in_vkx)
             return tryPlayInVKX(track, context, playlist);
 
-        if (actionId == AndroidUtils.getIdentifier("remove_from_cache_vkx", "id")) {
+        if (actionId == R.id.remove_from_cache_vkx) {
             getInstance().runOnService(service -> {
                 try {
                     service.deleteTrackFromCache(track.d, track.e);
@@ -115,7 +114,7 @@ public class MusicBottomSheetHook {
                 }
             });
             return true;
-        } else if (actionId == AndroidUtils.getIdentifier("add_to_cache_vkx", "id")) {
+        } else if (actionId == R.id.add_to_cache_vkx) {
             getInstance().runOnService(service -> {
                 try {
                     service.addTrackToCache(track.d, track.e, (track.J != null) ? track.J : "");
@@ -126,7 +125,7 @@ public class MusicBottomSheetHook {
             return true;
         }
 
-        if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
+        if (actionId == R.id.download_mp3) {
             if (isIntegrationEnabled()) {
                 getInstance().runOnService(service -> {
                     try {
@@ -146,15 +145,15 @@ public class MusicBottomSheetHook {
     }
 
     public static boolean injectOnClick(int actionId, Playlist playlist) { // playlist inj
-        if (actionId == AndroidUtils.getIdentifier("play_in_vkx", "id"))
+        if (actionId == R.id.play_in_vkx)
             return tryPlayInVKX(null, null, playlist);
 
-        if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
+        if (actionId == R.id.add_to_cache) {
             executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
             return true;
         }
 
-        if (actionId == AndroidUtils.getIdentifier("remove_from_cache_vkx", "id")) {
+        if (actionId == R.id.remove_from_cache_vkx) {
             getInstance().runOnService(service -> {
                 try {
                     service.deletePlaylistFromCache(playlist.a, playlist.b);
@@ -163,7 +162,7 @@ public class MusicBottomSheetHook {
                 }
             });
             return true;
-        } else if (actionId == AndroidUtils.getIdentifier("add_to_cache_vkx", "id")) {
+        } else if (actionId == R.id.add_to_cache_vkx) {
             getInstance().runOnService(service -> {
                 try {
                     service.addPlaylistToCache(playlist.a, playlist.b, (playlist.Q != null) ? playlist.Q : "");
@@ -174,7 +173,7 @@ public class MusicBottomSheetHook {
             return true;
         }
 
-        if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
+        if (actionId == R.id.download_mp3) {
             if (isIntegrationEnabled()) {
                 getInstance().runOnService(service -> {
                     try {
@@ -207,9 +206,9 @@ public class MusicBottomSheetHook {
 
     private static MusicAction getPlayInVKXAction() {
         return new MusicAction(
-                AndroidUtils.getIdentifier("play_in_vkx", "id"),
+                R.id.play_in_vkx,
                 milkshake() ? R.drawable.ic_music_outline_24 : R.drawable.ic_music_24,
-                AndroidUtils.getIdentifier("play_in_vkx", "string"),
+                R.string.play_in_vkx,
                 R.color.caption_gray,
                 R.string.music_talkback_empty,
                 false
@@ -218,9 +217,9 @@ public class MusicBottomSheetHook {
 
     private static MusicAction getRemoveCacheTrackAction() {
         return new MusicAction(
-                AndroidUtils.getIdentifier("remove_from_cache", "id"),
+                R.id.remove_from_cache,
                 milkshake() ? R.drawable.ic_delete_outline_28 : R.drawable.ic_delete_24,
-                AndroidUtils.getIdentifier("remove_from_cache", "string"),
+                R.string.remove_from_cache,
                 R.color.caption_gray,
                 R.string.music_talkback_empty,
                 false
@@ -229,9 +228,9 @@ public class MusicBottomSheetHook {
 
     private static MusicAction addToCacheTrackAction() {
         return new MusicAction(
-                AndroidUtils.getIdentifier("add_to_cache", "id"),
+                R.id.add_to_cache,
                 milkshake() ? R.drawable.ic_add_outline_28 : R.drawable.ic_add_24,
-                AndroidUtils.getIdentifier("add_to_cache", "string"),
+                R.string.add_to_cache,
                 R.color.caption_gray,
                 R.string.music_talkback_empty,
                 false
@@ -240,9 +239,9 @@ public class MusicBottomSheetHook {
 
     private static MusicAction getRemoveCacheTrackVkxAction() {
         return new MusicAction(
-                AndroidUtils.getIdentifier("remove_from_cache_vkx", "id"),
+                R.id.remove_from_cache_vkx,
                 milkshake() ? R.drawable.ic_delete_outline_28 : R.drawable.ic_delete_24,
-                AndroidUtils.getIdentifier("remove_from_cache_vkx", "string"),
+                R.string.remove_from_cache_vkx,
                 R.color.caption_gray,
                 R.string.music_talkback_empty,
                 false
@@ -251,9 +250,9 @@ public class MusicBottomSheetHook {
 
     private static MusicAction addToCacheTrackVkxAction() {
         return new MusicAction(
-                AndroidUtils.getIdentifier("add_to_cache_vkx", "id"),
+                R.id.add_to_cache_vkx,
                 milkshake() ? R.drawable.ic_add_outline_28 : R.drawable.ic_add_24,
-                AndroidUtils.getIdentifier("add_to_cache_vkx", "string"),
+                R.string.add_to_cache_vkx,
                 R.color.caption_gray,
                 R.string.music_talkback_empty,
                 false
@@ -262,9 +261,9 @@ public class MusicBottomSheetHook {
 
     private static MusicAction downloadAsMp3Action() {
         return new MusicAction(
-                AndroidUtils.getIdentifier("download_mp3", "id"),
+                R.id.download_mp3,
                 milkshake() ? R.drawable.ic_download_outline_28 : R.drawable.ic_download_24,
-                AndroidUtils.getIdentifier("download_mp3", "string"),
+                R.string.download_mp3,
                 R.color.caption_gray,
                 R.string.music_talkback_empty,
                 false

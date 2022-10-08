@@ -23,7 +23,7 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
     private static final int ME = 0x0;
     private static final int ANONYMOUS = -0x1;
 
-    private final String[] mMessages = AndroidUtils.getArray("wallpaper_change_dialog");
+    private final String[] mMessages = AndroidUtils.getArray(R.array.wallpaper_change_dialog);
 
     private static int getColorFromAttribute(Context context, int attrId) {
         TypedValue typedValue = new TypedValue();

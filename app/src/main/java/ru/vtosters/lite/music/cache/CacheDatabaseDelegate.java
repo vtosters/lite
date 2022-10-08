@@ -2,7 +2,6 @@ package ru.vtosters.lite.music.cache;
 
 import static ru.vtosters.lite.music.cache.FileCacheImplementation.getCacheDir;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.IOUtils.deleteRecursive;
 
@@ -19,6 +18,7 @@ import androidx.annotation.Nullable;
 
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
+import com.vtosters.lite.R;
 
 import org.json.JSONObject;
 
@@ -30,6 +30,7 @@ import java.util.List;
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class CacheDatabaseDelegate {
     private static final int DB_VERSION = 0x1;
@@ -85,7 +86,7 @@ public class CacheDatabaseDelegate {
             getHelper().getReadableDatabase().execSQL(formula);
         } catch (Exception e) {
             e.printStackTrace();
-            ToastUtils.a(getString("track_bd_insert_err") + " [" + e.getMessage() + "]", true);
+            ToastUtils.a(AndroidUtils.getString(R.string.track_bd_insert_err) + " [" + e.getMessage() + "]", true);
         }
     }
 
@@ -96,7 +97,7 @@ public class CacheDatabaseDelegate {
     public static void clear() {
         getHelper().getReadableDatabase().execSQL(String.format("DELETE FROM %s", TABLE_NAME));
         deleteRecursive(getCacheDir());
-        sendToast(getString("cached_tracks_deleted"));
+        sendToast(AndroidUtils.getString(R.string.cached_tracks_deleted));
     }
 
     @NonNull

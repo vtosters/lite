@@ -5,6 +5,8 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
 
+import com.vtosters.lite.R;
+
 public class GmsUtils {
 
     public static boolean isGmsInstalled() {
@@ -21,7 +23,7 @@ public class GmsUtils {
             NotificationManager notificationManager = (NotificationManager) AndroidUtils.getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
             if (notificationManager.getNotificationChannel("audio_playback_channel") == null) {
-                notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", AndroidUtils.getResources().getString(AndroidUtils.getIdentifier("audio_message_play_error", "string")), NotificationManager.IMPORTANCE_LOW));
+                notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", AndroidUtils.getResources().getString(R.string.audio_message_play_error), NotificationManager.IMPORTANCE_LOW));
             }
         }
     } // Music channels fix

@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.adapters;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
@@ -22,12 +21,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
+import com.vtosters.lite.R;
 
 import java.io.File;
 
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.components.IItemMovingListener;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.StickerPackViewHolder> implements IItemMovingListener {
     private static final TelegramStickersService sService = TelegramStickersService.getInstance(getGlobalContext());
@@ -36,13 +35,12 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
     @NonNull
     @Override
     public StickerPackViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        int resID = getIdentifier("tgs_entry", "layout");
-        var view = LayoutInflater.from(parent.getContext()).inflate(resID, parent, false);
+        var view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tgs_entry, parent, false);
         var holder = new StickerPackViewHolder(view);
 
-        holder.mStickerPreview.setImageResource(getIdentifier("icon_vk_104", "drawable"));
-        holder.mUpdateButton.setImageDrawable(recolorDrawable(getResources().getDrawable(getIdentifier("ic_camera_switch_48", "drawable"))));
-        holder.mDeleteButton.setImageDrawable(recolorDrawable(getResources().getDrawable(getIdentifier("vkim_ic_msg_delete", "drawable"))));
+        holder.mStickerPreview.setImageResource(R.drawable.icon_vk_104);
+        holder.mUpdateButton.setImageDrawable(recolorDrawable(getResources().getDrawable(R.drawable.ic_camera_switch_48)));
+        holder.mDeleteButton.setImageDrawable(recolorDrawable(getResources().getDrawable(R.drawable.vkim_ic_msg_delete)));
 
         return holder;
     }
@@ -132,7 +130,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             mName.setText(pack.title);
             mSwitch.setChecked(pack.enabled);
             mSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> sService.setPackEnabled(pack, isChecked, false));
-            mStickersCount.setText(pack.stickersCount + " " + AndroidUtils.getString("stickerscount"));
+            mStickersCount.setText(pack.stickersCount + " " + mStickersCount.getContext().getString(R.string.stickerscount));
 
             // Color костыль
             int color = getTextAttr();

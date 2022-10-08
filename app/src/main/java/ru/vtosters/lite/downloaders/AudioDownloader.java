@@ -7,6 +7,7 @@ import android.os.Environment;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
+import com.vtosters.lite.R;
 
 import java.io.File;
 
@@ -113,7 +114,7 @@ public class AudioDownloader {
 
     private static void downloadM3U8(MusicTrack track, boolean cache) {
         if (track.D == null) {
-            ToastUtils.a(getString("link_audio_error"));
+            ToastUtils.a(getString(R.string.link_audio_error));
             return;
         }
 

@@ -1,9 +1,6 @@
 package ru.vtosters.lite.ui.components;
 
-import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -16,6 +13,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
+
+import com.vtosters.lite.R;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -65,13 +64,13 @@ public class CrashReporter {
         var psaveLogIntent = PendingIntent.getService(getGlobalContext(), 0, saveLogIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 
         var builder = new Notification.Builder(getGlobalContext());
-        builder.setSmallIcon(getIdentifier("ic_bug_24", "drawable"));
-        builder.setContentTitle(getString("vtl_crashed"));
+        builder.setSmallIcon(R.drawable.ic_bug_24);
+        builder.setContentTitle(activity.getString(R.string.vtl_crashed));
         builder.setContentText(logString);
         builder.setStyle(new Notification.BigTextStyle().bigText(logString));
         builder.setAutoCancel(true);
-        builder.addAction(new Notification.Action(0, getString("vtl_crash_upload"), PendingIntent.getActivity(getGlobalContext(), (int) (Math.random() * 100.0d), foxbinIntent, PendingIntent.FLAG_CANCEL_CURRENT)));
-        builder.addAction(new Notification.Action(0, getString("vtl_crash_save"), psaveLogIntent));
+        builder.addAction(new Notification.Action(0, activity.getString(R.string.vtl_crash_upload), PendingIntent.getActivity(getGlobalContext(), (int) (Math.random() * 100.0d), foxbinIntent, PendingIntent.FLAG_CANCEL_CURRENT)));
+        builder.addAction(new Notification.Action(0, activity.getString(R.string.vtl_crash_save), psaveLogIntent));
 
         if (Build.VERSION.SDK_INT >= 26) {
             builder.setChannelId("crashes");

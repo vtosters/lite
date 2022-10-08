@@ -5,10 +5,11 @@ import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.proxy.ProxyUtils.getOauth;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.util.Log;
+
+import com.vtosters.lite.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,7 +35,7 @@ public class VKMeHandler {
                             setToken(mainJson.getString("access_token"));
                         } else if (mainJson.has("error_description")) {
                             Log.d("VKMeHandler", mainJson.getString("error_description"));
-                            sendToast(getString("auth_error_vtl") + ": " + mainJson.getString("error_description"));
+                            sendToast(AndroidUtils.getString(R.string.auth_error_vtl) + ": " + mainJson.getString("error_description"));
                         }
 
                     } catch (JSONException e) {

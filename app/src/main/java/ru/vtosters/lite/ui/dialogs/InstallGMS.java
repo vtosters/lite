@@ -1,8 +1,6 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.GmsUtils.isGmsInstalled;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
@@ -11,6 +9,7 @@ import android.content.Intent;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
+import com.vtosters.lite.R;
 
 import ru.vtosters.lite.ui.fragments.InstallGMSFragment;
 
@@ -18,19 +17,18 @@ public class InstallGMS {
     public static void alert(final Activity activity) {
         if (!isGmsInstalled() && getBoolValue("showAlertGms", true)) {
             new VkAlertDialog.Builder(activity)
-                    .setTitle(getString("warning"))
-                    .setMessage(getString("gmsissuesumm"))
+                    .setTitle(activity.getString(R.string.warning))
+                    .setMessage(activity.getString(R.string.gmsissuesumm))
                     .setCancelable(false)
-                    .setPositiveButton(getString("gmsissuebtn1"), (
+                    .setPositiveButton(activity.getString(R.string.gmsissuebtn1), (
                             dialogInterface, i) -> edit().putBoolean("showAlertGms", false).apply()
                     )
-                    .setNeutralButton(getString("gmsissuebtn2"), (dialogInterface, i) -> {
+                    .setNeutralButton(activity.getString(R.string.gmsissuebtn2), (dialogInterface, i) -> {
                         edit().putBoolean("showAlertGms", false).apply();
-                        var context = getGlobalContext();
                         var intent = new Navigator(InstallGMSFragment.class)
-                                .b(context)
+                                .b(activity)
                                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        context.startActivity(intent);
+                        activity.startActivity(intent);
                     })
                     .show();
         }

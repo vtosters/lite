@@ -10,7 +10,6 @@ import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
@@ -46,6 +45,7 @@ import com.vk.mediastore.MediaStorage;
 import com.vk.navigation.Navigator;
 import com.vk.pushes.PushSubscriber;
 import com.vk.stickers.Stickers;
+import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
@@ -63,7 +63,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(getIdentifier("preferences_other", "xml"));
+        addPreferencesFromResource(R.xml.preferences_other);
         prefs();
     }
 
@@ -76,7 +76,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 String token = data.getStringExtra("token");
                 AndroidUtils.getPreferences().edit().putString("vk_admin_token", token).apply();
                 Log.d("VkAdminToken", token);
-                Toast.makeText(getContext(), AndroidUtils.getString("token_saved"), LENGTH_SHORT).show();
+                Toast.makeText(getContext(), requireContext().getString(R.string.token_saved), LENGTH_SHORT).show();
             }
         }
     }
@@ -112,22 +112,22 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         var pref = getDefaultPrefs().getString("autoclearcache", "Default");
         switch (pref) {
             case "Default":
-                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_disabled"));
+                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_disabled));
                 break;
             case "100mb":
-                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_100mb"));
+                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_100mb));
                 break;
             case "500mb":
-                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_500mb"));
+                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_500mb));
                 break;
             case "1gb":
-                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_1gb"));
+                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_1gb));
                 break;
             case "2gb":
-                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_2gb"));
+                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_2gb));
                 break;
             case "5gb":
-                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_5gb"));
+                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_5gb));
                 break;
         }
 
@@ -160,12 +160,12 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
-        RadioButton zero = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton one = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton two = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton three = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton four = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton five = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton zero = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton one = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton two = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton three = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton four = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton five = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
 
         rg.addView(zero);
         rg.addView(one);
@@ -181,7 +181,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         four.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         five.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
 
-        zero.setText(AndroidUtils.getString("autoclearcachedisabled"));
+        zero.setText(requireContext().getString(R.string.autoclearcachedisabled));
         one.setText("100 MB");
         two.setText("500 MB");
         three.setText("1 GB");
@@ -203,12 +203,12 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         five.setChecked(val == 5);
 
         new VkAlertDialog.Builder(getContext())
-                .setTitle(AndroidUtils.getString("cache_clean_title"))
-                .setMessage(AndroidUtils.getString("cache_select_size"))
+                .setTitle(requireContext().getString(R.string.cache_clean_title))
+                .setMessage(requireContext().getString(R.string.cache_select_size))
                 .setCancelable(true)
-                .setNegativeButton(AndroidUtils.getString("cancel"), null)
+                .setNegativeButton(requireContext().getString(R.string.cancel), null)
                 .setView(rg)
-                .setPositiveButton(AndroidUtils.getString("save"), (dialog, which) -> {
+                .setPositiveButton(requireContext().getString(R.string.save), (dialog, which) -> {
                     var sizes = new String[] { "Default", "100mb", "500mb", "1gb", "2gb", "5gb" };
                     var id = rg.getCheckedRadioButtonId();
                     getDefaultPrefs().edit()
@@ -221,8 +221,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
     private void cacheCleanDialog() {
         new VkAlertDialog.Builder(getContext())
-                .setTitle(AndroidUtils.getString("select_which_clean"))
-                .setItems(AndroidUtils.getArray("cache_cleaner"), (dialog, which) -> {
+                .setTitle(requireContext().getString(R.string.select_which_clean))
+                .setItems(AndroidUtils.getArray(R.array.cache_cleaner), (dialog, which) -> {
                     switch (which) {
                         case 0: {
                             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
@@ -262,7 +262,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                             clearWebViewCache();
                             break;
                     }
-                    Toast.makeText(getContext(), AndroidUtils.getString("cache_cleaned"), LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), requireContext().getString(R.string.cache_cleaned), LENGTH_SHORT).show();
                 })
                 .show();
     }
@@ -273,14 +273,14 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
     private void delprefs(Context context) {
         new VkAlertDialog.Builder(context)
-               .setTitle(AndroidUtils.getString("warning"))
-                .setMessage(AndroidUtils.getString("settings_reset_confirm"))
+               .setTitle(requireContext().getString(R.string.warning))
+                .setMessage(requireContext().getString(R.string.settings_reset_confirm))
                 .setCancelable(false)
-                .setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
+                .setPositiveButton(requireContext().getString(R.string.yes), (dialogInterface, i) -> {
                     deletePrefs();
                     restartApplication();
                 })
-                .setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss())
+                .setNegativeButton(requireContext().getString(R.string.cancel), (dialogInterface, i) -> dialogInterface.dismiss())
                 .show();
     }
 
@@ -317,7 +317,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             try {
                 backupOnlines();
             } catch (IOException e) {
-                Toast.makeText(getContext(), AndroidUtils.getString("no_data_to_backup"), LENGTH_SHORT).show();
+                Toast.makeText(getContext(), requireContext().getString(R.string.no_data_to_backup), LENGTH_SHORT).show();
             }
             return true;
         }
@@ -326,8 +326,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     class c implements Preference.OnPreferenceClickListener {
         public void copy(Context context, String str) {
             ((ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", str));
-            makeText(context, AndroidUtils.getString("copybtn"), LENGTH_SHORT).show();
-            ToastUtils.a(AndroidUtils.getString("tokenwarning"));
+            makeText(context, requireContext().getString(R.string.copybtn), LENGTH_SHORT).show();
+            ToastUtils.a(requireContext().getString(R.string.tokenwarning));
         }
 
         @Override // android.support.v7.preference.Preference.c
@@ -342,12 +342,12 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         public boolean onPreferenceClick(Preference preference) {
             VKAccount b = VKAccountManager.d();
             PushSubscriber.e.a();
-            ToastUtils.a(AndroidUtils.getString("fcmtokenrem"));
+            ToastUtils.a(requireContext().getString(R.string.fcmtokenrem));
             AndroidUtils.getGlobalContext().getSharedPreferences("gcm", 0).edit().clear().apply();
             OtherFragment.this.getListView().postDelayed(() -> {
                 PushSubscriber.e.a(true);
-                ToastUtils.a(AndroidUtils.getString("fcmtokenget"));
-                ToastUtils.a(AndroidUtils.getString("fcmtokenfixed"));
+                ToastUtils.a(requireContext().getString(R.string.fcmtokenget));
+                ToastUtils.a(requireContext().getString(R.string.fcmtokenfixed));
             }, 1000);
             return true;
         }
@@ -359,14 +359,14 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             var arr = BackupManager.getBackupsNames();
             var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr);
             new VkAlertDialog.Builder(getContext())
-                    .setTitle(AndroidUtils.getString("select_backup"))
+                    .setTitle(requireContext().getString(R.string.select_backup))
                     .setAdapter(adapter, (dialog, which) -> {
                         try {
                             restoreBackup(arr[which]);
-                            Toast.makeText(getContext(), AndroidUtils.getString("backup_success"), LENGTH_LONG).show();
+                            Toast.makeText(getContext(), requireContext().getString(R.string.backup_success), LENGTH_LONG).show();
                         } catch (IOException e) {
                             e.printStackTrace();
-                            Toast.makeText(getContext(), AndroidUtils.getString("backup_error"), LENGTH_LONG).show();
+                            Toast.makeText(getContext(), requireContext().getString(R.string.backup_error), LENGTH_LONG).show();
                         }
                     })
                     .show();
@@ -376,6 +376,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public int T4() {
-        return getIdentifier("vtlother", "string");
+        return R.string.vtlother;
     }
 }

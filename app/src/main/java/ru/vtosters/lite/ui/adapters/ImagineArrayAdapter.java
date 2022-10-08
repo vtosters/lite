@@ -18,6 +18,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.TextViewCompat;
 
+import com.vtosters.lite.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -92,7 +94,7 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
 
         // if make radiobutton without layout inflation it can't be unclickable
         var checkedTextView = (CheckedTextView) LayoutInflater.from(getContext())
-                .inflate(AndroidUtils.getIdentifier("select_dialog_singlechoice_material", "layout"), parent, false);
+                .inflate(R.layout.select_dialog_singlechoice_material, parent, false);
         // for amoled
         var tintList = new ColorStateList(
                 new int[][] { new int[] { android.R.attr.state_checked }, new int[] { -android.R.attr.state_checked }},

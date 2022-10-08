@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui.wallpapers;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getFilteredFile;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,6 +14,8 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.vtosters.lite.R;
 
 import ru.vtosters.lite.ui.adapters.MessagesPreviewAdapter;
 
@@ -38,21 +39,21 @@ public class WallpaperPreferences extends Preference {
 
     public WallpaperPreferences(Context context, AttributeSet attributeSet, int defStyleAttr, int i1) {
         super(context, attributeSet, defStyleAttr, i1);
-        setLayoutResource(getIdentifier("wppreview", "layout"));
+        setLayoutResource(R.layout.wppreview);
     }
 
     @Override
     public void onBindViewHolder(PreferenceViewHolder preferenceViewHolder) {
         super.onBindViewHolder(preferenceViewHolder);
 
-        mRecyclerView = (RecyclerView) preferenceViewHolder.findViewById(getIdentifier("install_btn_container", "id"));
+        mRecyclerView = (RecyclerView) preferenceViewHolder.findViewById(R.id.install_btn_container);
         mRecyclerView.setPadding(0, dp2px(8), 0, 0);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setAdapter((mAdapter = new MessagesPreviewAdapter()));
         mRecyclerView.setClickable(false);
         mRecyclerView.setFocusable(false);
 
-        mChatBackground = (ImageView) preferenceViewHolder.findViewById(getIdentifier("author", "id"));
+        mChatBackground = (ImageView) preferenceViewHolder.findViewById(R.id.author);
         requestBg();
     }
 

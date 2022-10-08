@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
@@ -18,16 +17,16 @@ import androidx.preference.Preference;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 import com.vk.newsfeed.NewsfeedSettingsFragment;
+import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public class FeedFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(getIdentifier("preferences_feed", "xml"));
+        addPreferencesFromResource(R.xml.preferences_feed);
         prefs();
     }
 
@@ -73,7 +72,7 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
         });
         var str = getDefaultPrefs().getString("news_feed_selected_items", "");
         findPreference("newsfeedlistmanager").setSummary(
-                String.format(AndroidUtils.getString("feed_hidden"), (!TextUtils.isEmpty(str) ? str.split(",").length : 0))
+                String.format(requireContext().getString(R.string.feed_hidden), (!TextUtils.isEmpty(str) ? str.split(",").length : 0))
         );
         findPreference("newsfeedlistmanager_reset").setOnPreferenceClickListener(preference -> {
             NewsfeedListManager.resetHideItems();
@@ -86,23 +85,23 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
         var count = text.split(", ").length;
 
         if (count < 1 || text.isEmpty()) {
-            return AndroidUtils.getString("feed_no_elements");
+            return requireContext().getString(R.string.feed_no_elements);
         } else {
-            return String.format(AndroidUtils.getString("feed_elements_count"), count);
+            return String.format(requireContext().getString(R.string.feed_elements_count), count);
         }
     }
 
     private void remdialog(String key, Context context) {
         new VkAlertDialog.Builder(context)
-                .setTitle(AndroidUtils.getString("warning"))
-                .setMessage(AndroidUtils.getString("delete_elements_confirm"))
+                .setTitle(requireContext().getString(R.string.warning))
+                .setMessage(requireContext().getString(R.string.delete_elements_confirm))
                 .setCancelable(false)
-                .setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
+                .setPositiveButton(requireContext().getString(R.string.yes), (dialogInterface, i) -> {
                     edit().remove(key).apply();
-                    sendToast(AndroidUtils.getString("elements_deleted_success"));
+                    sendToast(requireContext().getString(R.string.elements_deleted_success));
                     setupFilters();
                 })
-                .setNegativeButton(AndroidUtils.getString("cancel"),
+                .setNegativeButton(requireContext().getString(R.string.cancel),
                         (dialogInterface, i) -> dialogInterface.dismiss())
                 .show();
     }
@@ -119,9 +118,9 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
         var count = str.toString().split(", ").length;
 
         if (count < 1 || (str.length() == 0)) {
-            return AndroidUtils.getString("feed_no_elements");
+            return requireContext().getString(R.string.feed_no_elements);
         } else {
-            return String.format(AndroidUtils.getString("feed_elements_count"), count);
+            return String.format(requireContext().getString(R.string.feed_elements_count), count);
         }
     }
 
@@ -146,6 +145,6 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public int T4() {
-        return getIdentifier("vtlfeed", "string");
+        return R.string.vtlfeed;
     }
 }

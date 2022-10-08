@@ -4,7 +4,6 @@ import static com.vk.im.engine.h.im_bg_chat;
 import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getFilteredDrawable;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
@@ -14,10 +13,13 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.vtosters.lite.R;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 import vigo.sdk.Log;
 
@@ -74,8 +76,8 @@ public class WallpapersHooks {
     }
 
     private static Boolean eligibleWallpaperFile(File file) {
-        if (file.length() >= 6291456) {
-            sendToast(getString("wallpaper_size_limit"));
+        if (file.length() >= 0x600000) {
+            sendToast(AndroidUtils.getString(R.string.wallpaper_size_limit));
             removeWallpaper();
             return false;
         } else {
@@ -134,13 +136,13 @@ public class WallpapersHooks {
         String radius = getPreferences().getString("msg_blur_radius", "disabled");
         switch (radius) {
             case "low":
-                return getString("wallpapers_low");
+                return AndroidUtils.getString(R.string.wallpapers_low);
             case "med":
-                return getString("wallpapers_med");
+                return AndroidUtils.getString(R.string.wallpapers_med);
             case "high":
-                return getString("wallpapers_high");
+                return AndroidUtils.getString(R.string.wallpapers_high);
             default:
-                return getString("wallpapers_disabled");
+                return AndroidUtils.getString(R.string.wallpapers_disabled);
         }
     }
 
@@ -148,11 +150,11 @@ public class WallpapersHooks {
         String radius = getPreferences().getString("msg_dim", "disabled");
         switch (radius) {
             case "dim_black":
-                return getString("wallpapers_dim_black");
+                return AndroidUtils.getString(R.string.wallpapers_dim_black);
             case "dim_white":
-                return getString("wallpapers_dim_white");
+                return AndroidUtils.getString(R.string.wallpapers_dim_white);
             default:
-                return getString("wallpapers_disabled");
+                return AndroidUtils.getString(R.string.wallpapers_disabled);
         }
     }
 
@@ -160,13 +162,13 @@ public class WallpapersHooks {
         String radius = getPreferences().getString("msg_mosaic", "disabled");
         switch (radius) {
             case "low":
-                return getString("wallpapers_low");
+                return AndroidUtils.getString(R.string.wallpapers_low);
             case "med":
-                return getString("wallpapers_med");
+                return AndroidUtils.getString(R.string.wallpapers_med);
             case "high":
-                return getString("wallpapers_high");
+                return AndroidUtils.getString(R.string.wallpapers_high);
             default:
-                return getString("wallpapers_disabled");
+                return AndroidUtils.getString(R.string.wallpapers_disabled);
         }
     }
 

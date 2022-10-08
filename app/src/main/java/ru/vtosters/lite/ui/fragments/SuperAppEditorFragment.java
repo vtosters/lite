@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 
 import android.os.Build;
@@ -21,10 +20,11 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.vtosters.lite.R;
+
 import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 import ru.vtosters.lite.ui.components.ItemMovingCallback;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -33,7 +33,7 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
     @CallSuper
     @Override
     public View onCreateContent(@NonNull LayoutInflater inflater, @Nullable Bundle bundle) {
-        setTitle(getIdentifier("superapp_editor", "string"));
+        setTitle(R.string.superapp_editor);
 
         FrameLayout content = new FrameLayout(getContext());
 
@@ -42,7 +42,7 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
         content.addView(container, new FrameLayout.LayoutParams(-1, -1));
 
         TextView message = new TextView(getContext());
-        message.setText(AndroidUtils.getString("superapp_editor_message"));
+        message.setText(R.string.superapp_editor_message);
         message.setTextSize(16.0f);
         message.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         message.setTextColor(ThemesUtils.getTextAttr());
@@ -64,7 +64,7 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
         container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
 
         TextView save = new TextView(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.VKUIButton_Primary));
-        save.setText(AndroidUtils.getString("save"));
+        save.setText(R.string.save);
         save.setOnClickListener(v -> {
             SuperAppEditorManager.getInstance().save();
             restartApplication();
@@ -78,7 +78,7 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
         buttonsContainer.addView(divider, new LinearLayout.LayoutParams(dp2px(10), 0));
 
         TextView reset = new TextView(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.VKUIButton_Primary));
-        reset.setText(AndroidUtils.getString("reset"));
+        reset.setText(R.string.reset);
         reset.setOnClickListener(v -> {
             SuperAppEditorManager.getInstance().reset();
             restartApplication();

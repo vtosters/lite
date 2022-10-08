@@ -1,13 +1,13 @@
 package ru.vtosters.lite.music.cache.injectors;
 
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.hasTracks;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.util.Log;
 
 import com.vk.catalog2.core.CatalogParser;
 import com.vk.catalog2.core.api.dto.CatalogResponse;
 import com.vk.dto.music.MusicTrack;
+import com.vtosters.lite.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,6 +23,7 @@ import io.reactivex.ObservableOnSubscribe;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 
 public class TracklistInjector {
@@ -69,7 +70,7 @@ public class TracklistInjector {
     }
 
     private static JSONObject getEmptyCatalog() throws JSONException {
-        return new JSONObject("{\"catalog\":{\"default_section\":\"cache\",\"sections\":[{\"id\":\"cache\",\"title\":\"" + getString("cached_content_title") + "\",\"blocks\":[{\"data_type\":\"placeholder\",\"id\":\"0\",\"layout\":{\"name\":\"placeholder_big\"},\"placeholder_ids\":[\"_synth_trackEmpty\"]}]}]},\"audios\":[],\"playlists\":[],\"placeholders\":[{\"id\":\"_synth_trackEmpty\",\"title\":\"" + getString("cached_content_empty") + "\",\"text\":\"" + getString("cached_content_empty_desc") + "\",\"buttons\":[]}]}");
+        return new JSONObject("{\"catalog\":{\"default_section\":\"cache\",\"sections\":[{\"id\":\"cache\",\"title\":\"" + AndroidUtils.getString(R.string.cached_content_title) + "\",\"blocks\":[{\"data_type\":\"placeholder\",\"id\":\"0\",\"layout\":{\"name\":\"placeholder_big\"},\"placeholder_ids\":[\"_synth_trackEmpty\"]}]}]},\"audios\":[],\"playlists\":[],\"placeholders\":[{\"id\":\"_synth_trackEmpty\",\"title\":\"" + AndroidUtils.getString(R.string.cached_content_empty) + "\",\"text\":\"" + AndroidUtils.getString(R.string.cached_content_empty_desc) + "\",\"buttons\":[]}]}");
     }
 
     public static void injectIntoExistingCatalog(JSONObject catalogNode) {
@@ -160,8 +161,8 @@ public class TracklistInjector {
         var catalogBanner = new JSONObject()
                 .put("id", 1234)
                 .put("image_mode", "cover")
-                .put("title", getString("vkx_integration_title"))
-                .put("text", getString("vkx_integration_desc"))
+                .put("title", AndroidUtils.getString(R.string.vkx_integration_title))
+                .put("text", AndroidUtils.getString(R.string.vkx_integration_desc))
                 .put("click_action", new JSONObject().put("action", clickAction));
         var catalogBanners = new JSONArray()
                 .put(catalogBanner);
@@ -200,7 +201,7 @@ public class TracklistInjector {
 
         var section = new JSONObject()
                 .put("id", randomId)
-                .put("title", getString("saved_tracks_title"))
+                .put("title", AndroidUtils.getString(R.string.saved_tracks_title))
                 .put("url", "synth:cache")
                 .put("blocks", blocks);
 

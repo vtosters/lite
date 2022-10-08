@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
@@ -18,6 +17,7 @@ import androidx.preference.Preference;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
+import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import java.util.Arrays;
@@ -29,7 +29,7 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(getIdentifier("preferences_messages", "xml"));
+        addPreferencesFromResource(R.xml.preferences_messages);
         prefs();
     }
 
@@ -44,8 +44,8 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("lang_service").setOnPreferenceClickListener(preference -> {
             var items = Arrays.asList(
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_yandex_translate_icon", "drawable"), "Yandex Translate"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_google_translate_logo", "drawable"), "Google Translate")
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.ic_yandex_translate_icon, "Yandex Translate"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.ic_google_translate_logo, "Google Translate")
 //                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_deepl_logo_icon", "drawable"), "DeepL")
             );
 
@@ -63,8 +63,8 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         });
 
         findPreference("vkme_notifs").setEnabled(vkme());
-        findPreference("wallpapers").setIcon(recolorDrawable(getGlobalContext().getDrawable(getIdentifier("ic_media_outline_28", "drawable"))));
-        findPreference("vkme").setIcon(getIdentifier("ic_vkme_28", "drawable"));
+        findPreference("wallpapers").setIcon(recolorDrawable(getGlobalContext().getDrawable(R.drawable.ic_media_outline_28)));
+        findPreference("vkme").setIcon(R.drawable.ic_vkme_28);
 
         if (isTablet()) {
             findPreference("alteremoji").setVisible(false);
@@ -111,6 +111,6 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public int T4() {
-        return getIdentifier("vtlmessages", "string");
+        return R.string.vtlmessages;
     }
 }

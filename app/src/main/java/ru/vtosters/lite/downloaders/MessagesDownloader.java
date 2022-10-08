@@ -8,12 +8,13 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getArray;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.util.SparseArray;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+
+import com.vtosters.lite.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,6 +31,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.regex.Pattern;
+
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class MessagesDownloader {
     private static final String VK_DOMAIN = "vk.com";
@@ -67,13 +70,19 @@ public class MessagesDownloader {
                 pollHtml.append("<hr><p>").append(jsonObject.optString("text")).append(" · ").append(jsonObject.optString("votes")).append(" (").append(jsonObject.optString("rate")).append("%)</p>");
         }
 
-        pollHtml.append("<hr><p style=\"text-align:center;\">").append(getString("chat_export_poll_voted")).append(" ").append(poll.optString("votes")).append(" ").append(getString("chat_export_users_name")).append("</p>");
+        pollHtml.append("<hr><p style=\"text-align:center;\">")
+                .append(AndroidUtils.getString(R.string.chat_export_poll_voted))
+                .append(" ")
+                .append(poll.optString("votes"))
+                .append(" ")
+                .append(AndroidUtils.getString(R.string.chat_export_users_name))
+                .append("</p>");
 
         return pollHtml.append("</div>").toString();
     }
 
     private static String getVideoHtml(JSONObject files) throws JSONException {
-        if (files == null) return getString("chat_export_video_nolinks");
+        if (files == null) return AndroidUtils.getString(R.string.chat_export_video_nolinks);
 
         Iterator<?> keys = files.keys();
         StringBuilder videoHtml = new StringBuilder();
@@ -110,7 +119,7 @@ public class MessagesDownloader {
                 }
                 fos.write(format.provideDocumentEnd().getBytes(StandardCharsets.UTF_8));
                 fos.close();
-                Toast.makeText(getGlobalContext(), getString("saved_as") + " " + out.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getGlobalContext(), AndroidUtils.getString(R.string.saved_as) + " " + out.getAbsolutePath(), Toast.LENGTH_SHORT).show();
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             }
@@ -318,7 +327,11 @@ public class MessagesDownloader {
                     "\n" +
                     "";
 
-            return "<html><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><title>" + getString("chat_export_title") + "</title><style>" + style + "</style></head><body>";
+            return "<html><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><title>" 
+                    + AndroidUtils.getString(R.string.chat_export_title) 
+                    + "</title><style>" 
+                    + style 
+                    + "</style></head><body>";
         }
 
         @Override
@@ -328,7 +341,7 @@ public class MessagesDownloader {
 
         @Override
         String provideHeader(String dialogName, String date) {
-            return "<div class=\"vtex-milk-header\"><h4 class=\"vtex-milk-header-txt\">VTLite</h4><h5 class=\"vtex-milk-header-sub\">" + getString("chat_export_header") + " (" + date + ")</h5></div><div class=\"vtex-milk-msgcont\">";
+            return "<div class=\"vtex-milk-header\"><h4 class=\"vtex-milk-header-txt\">VTLite</h4><h5 class=\"vtex-milk-header-sub\">" + AndroidUtils.getString(R.string.chat_export_header) + " (" + date + ")</h5></div><div class=\"vtex-milk-msgcont\">";
         }
 
         @Override
@@ -349,13 +362,13 @@ public class MessagesDownloader {
             }
 
             String chatAction = (message.chat_action != null) ? getHtmlForChatAction(message.chat_action) : "";
-            String attaches = (message.attachments.size() > 0) ? "<p class=\"msg-attaches\">" + getString("attachments") + ": " + getHtmlForAttach(message.attachments) + "</p>" : "";
+            String attaches = (message.attachments.size() > 0) ? "<p class=\"msg-attaches\">" + AndroidUtils.getString(R.string.attachments) + ": " + getHtmlForAttach(message.attachments) + "</p>" : "";
             String reply = (message.reply_message != null) ? provideReply(message.reply_message) : "";
             String fwdMessages = (message.fwd_messages.size() > 0) ? provideForwardMessages(message.fwd_messages) : "";
             String userLink = (user.isGroup ? "club" : "id") + user.id;
 
             return "<div class=\"vtex-milk-msg" + isOut + "\" id=\"" + message.id + "\">" +
-                    "<p class=\"msg-from\">" + getString("from_lower") + " <a href=\"https://" + VK_DOMAIN + "/" + userLink + "\">" + user.firstName + " " + user.lastName + "</a> <span class=\"msg-from-date\">" + formatTime(message.date) + "</span></p>" + // TODO photo100
+                    "<p class=\"msg-from\">" + AndroidUtils.getString(R.string.from_lower) + " <a href=\"https://" + VK_DOMAIN + "/" + userLink + "\">" + user.firstName + " " + user.lastName + "</a> <span class=\"msg-from-date\">" + formatTime(message.date) + "</span></p>" + // TODO photo100
                     "<p class=\"msg-body\">" + mentionsReplace(message.text) + "</p>" +
                     geoPosition +
                     chatAction +
@@ -378,12 +391,12 @@ public class MessagesDownloader {
                 if (fwdMessages != null) {
                     var length = fwdMessages.length();
                     if (length > 0) text = length + " " + pluralMsg(length);
-                } else text = getString("attachment"); // Вложение
+                } else text = AndroidUtils.getString(R.string.attachment); // Вложение
             }
 
             return "<a href=\"#" + messageId + "\" class=\"msg-attach-link\">" +
                     "<div class=\"msg-reply\">" +
-                    "<p class=\"reply-header\">" + getString("vkim_msg_fwd_single") + "</p>" +
+                    "<p class=\"reply-header\">" + AndroidUtils.getString(R.string.vkim_msg_fwd_single) + "</p>" +
                     "<p class=\"reply-content\">" + user.firstName + " " + user.lastName + ": " + text + "</p>" +
                     "</div>" +
                     "</a>";
@@ -424,7 +437,7 @@ public class MessagesDownloader {
 
                 JSONObject reply_message = fwd_message.optJSONObject("reply_message");
 
-                var attachesHtml = (attaches.size() > 0) ? getString("attachments") + ": " + getHtmlForAttach(attaches) : "";
+                var attachesHtml = (attaches.size() > 0) ? AndroidUtils.getString(R.string.attachments) + ": " + getHtmlForAttach(attaches) : "";
                 var replyHtml = (reply_message != null) ? provideReply(reply_message) : "";
                 var fwdsHtml = (fwdsMsg.size() > 0) ? provideForwardMessages(fwdsMsg) : ""; // recursion XD :>
 
@@ -447,7 +460,7 @@ public class MessagesDownloader {
         }
 
         private String pluralMsg(int count) {
-            String[] plurals = getArray("msg_plurals");
+            String[] plurals = getArray(R.array.msg_plurals);
 
             var hundredModulo = count % 100;
             var tenModulo = count % 10;
@@ -466,22 +479,22 @@ public class MessagesDownloader {
 
             switch (type) {
                 case "chat_photo_update":
-                    htmlAction.append(getString("chat_export_avatar_update"));
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_avatar_update));
                     break;
                 case "chat_photo_remove":
-                    htmlAction.append(getString("chat_export_avatar_remove"));
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_avatar_remove));
                     break;
                 case "chat_create":
                     var name = action.optString("text");
-                    htmlAction.append(getString("chat_export_chat_created")).append((!name.isEmpty()) ? " \"" + name + "\"" : "");
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_chat_created)).append((!name.isEmpty()) ? " \"" + name + "\"" : "");
                     break;
                 case "chat_title_update":
                     var newName = action.optString("text");
-                    htmlAction.append(getString("chat_export_name_changed")).append((!newName.isEmpty()) ? (" " + getString("chat_export_to") + " \"" + newName + "\"") : "");
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_name_changed)).append((!newName.isEmpty()) ? (" " + AndroidUtils.getString(R.string.chat_export_to) + " \"" + newName + "\"") : "");
                     break;
                 case "chat_invite_user":
                     var newUserId = action.optInt("member_id");
-                    htmlAction.append(getString("chat_export_user_added") + " ").append((newUserId > 0) ? getString("chat_export_type_user") : getString("chat_export_type_group"));
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_user_added) + " ").append((newUserId > 0) ? AndroidUtils.getString(R.string.chat_export_type_user) : AndroidUtils.getString(R.string.chat_export_type_group));
                     if (newUserId != 0) {
                         var userLink = ((newUserId < 0) ? "club" : "id") + Math.abs(newUserId);
                         htmlAction.append(" <a href=\"https://" + VK_DOMAIN + "/").append(userLink).append("\" class=\"msg-attach-link\">@").append(userLink).append("</a>");
@@ -489,7 +502,7 @@ public class MessagesDownloader {
                     break;
                 case "chat_kick_user":
                     var removedUserId = action.optInt("member_id");
-                    htmlAction.append(getString("chat_export_user_kicked") + " ").append((removedUserId > 0) ? getString("chat_export_type_user") : getString("chat_export_type_group"));
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_user_kicked) + " ").append((removedUserId > 0) ? AndroidUtils.getString(R.string.chat_export_type_user) : AndroidUtils.getString(R.string.chat_export_type_group));
                     if (removedUserId != 0) {
                         var userLink = ((removedUserId < 0) ? "club" : "id") + Math.abs(removedUserId);
                         htmlAction.append(" <a href=\"https://" + VK_DOMAIN + "/").append(userLink).append("\" class=\"msg-attach-link\">@").append(userLink).append("</a>");
@@ -497,22 +510,22 @@ public class MessagesDownloader {
                     break;
                 case "chat_pin_message":
                     var message = action.optString("message");
-                    htmlAction.append(getString("chat_export_msg_pinned")).append((!message.isEmpty()) ? (" \"" + message + "\"") : "");
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_msg_pinned)).append((!message.isEmpty()) ? (" \"" + message + "\"") : "");
                     break;
                 case "chat_unpin_message":
-                    htmlAction.append(getString("chat_export_msg_unpinned"));
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_msg_unpinned));
                     break;
                 case "chat_invite_user_by_link":
-                    htmlAction.append(getString("chat_export_join_by_link"));
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_join_by_link));
                     break;
                 case "chat_screenshot":
-                    htmlAction.append(getString("chat_export_chat_screenshot"));
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_chat_screenshot));
                     break;
                 case "custom":
                     htmlAction.append(action.optString("message"));
                     break;
                 default:
-                    htmlAction.append(getString("vkim_msg_unsupported") + " (").append(type).append(")");
+                    htmlAction.append(AndroidUtils.getString(R.string.vkim_msg_unsupported) + " (").append(type).append(")");
                     break;
             }
 
@@ -531,40 +544,40 @@ public class MessagesDownloader {
                 switch (type) { // market_album is not supported
                     case "photo":
                         var sizes = item.getJSONArray("sizes");
-                        rs.append("<a href=\"").append(sizes.getJSONObject(sizes.length() - 1).getString("url")).append("\" class=\"msg-attach-link\">").append(getString("chat_export_type_photo")).append("</a>");
+                        rs.append("<a href=\"").append(sizes.getJSONObject(sizes.length() - 1).getString("url")).append("\" class=\"msg-attach-link\">").append(AndroidUtils.getString(R.string.chat_export_type_photo)).append("</a>");
                         break;
                     case "doc":
-                        rs.append("<a href=\"").append(item.getString("url")).append("\" class=\"msg-attach-link\">").append(getString("chat_export_type_doc")).append("</a>");
+                        rs.append("<a href=\"").append(item.getString("url")).append("\" class=\"msg-attach-link\">").append(AndroidUtils.getString(R.string.chat_export_type_doc)).append("</a>");
                         break;
                     case "link":
-                        rs.append("<a href=\"").append(item.getString("url")).append("\" class=\"msg-attach-link\">").append(getString("chat_export_type_link")).append("</a>");
+                        rs.append("<a href=\"").append(item.getString("url")).append("\" class=\"msg-attach-link\">").append(AndroidUtils.getString(R.string.chat_export_type_link)).append("</a>");
                         break;
                     case "wall":
-                        rs.append("<a href=\"https://" + VK_DOMAIN + "/wall").append(item.optString("to_id", item.optString("owner_id"))).append("_").append(item.getString("id")).append("\" class=\"msg-attach-link\">").append(getString("chat_export_type_wallpost")).append("</a>");
+                        rs.append("<a href=\"https://" + VK_DOMAIN + "/wall").append(item.optString("to_id", item.optString("owner_id"))).append("_").append(item.getString("id")).append("\" class=\"msg-attach-link\">").append(AndroidUtils.getString(R.string.chat_export_type_wallpost)).append("</a>");
                         break;
                     case "sticker":
                         rs.append("<img style=\"width:128px;height:128px;\" src=\"").append(item.getJSONArray("images").getJSONObject(1).getString("url")).append("\"/>");
                         break;
                     case "audio_message":
-                        rs.append("<a href=\"").append(item.optString("link_mp3")).append("\" class=\"msg-attach-link\">").append(getString("chat_export_type_audiomsg")).append("</a>");
+                        rs.append("<a href=\"").append(item.optString("link_mp3")).append("\" class=\"msg-attach-link\">").append(AndroidUtils.getString(R.string.chat_export_type_audiomsg)).append("</a>");
                         break;
                     case "audio":
-                        rs.append(getString("chat_export_type_audio")).append(" (").append(item.optString("artist")).append(" — ").append(item.optString("title")).append(")");
+                        rs.append(AndroidUtils.getString(R.string.chat_export_type_audio)).append(" (").append(item.optString("artist")).append(" — ").append(item.optString("title")).append(")");
                         break;
                     case "video":
-                        rs.append(getString("chat_export_type_video")).append(" (").append(getVideoHtml(item.optJSONObject("files"))).append(")");
+                        rs.append(AndroidUtils.getString(R.string.chat_export_type_video)).append(" (").append(getVideoHtml(item.optJSONObject("files"))).append(")");
                         break;
                     case "wall_reply":
                         var link = "https://" + VK_DOMAIN + "/wall" + item.optString("owner_id") + "_" + item.optString("post_id") + "?reply=" + item.optString("id");
-                        rs.append("<a class=\"msg-attach-link\" href=\"").append(link).append("\">").append(getString("chat_export_type_wallreply")).append("</a>");
+                        rs.append("<a class=\"msg-attach-link\" href=\"").append(link).append("\">").append(AndroidUtils.getString(R.string.chat_export_type_wallreply)).append("</a>");
                         break;
                     case "story":
                         var story_link = "https://" + VK_DOMAIN + "/story" + item.optString("owner_id") + "_" + item.optString("id");
-                        rs.append("<a class=\"msg-attach-link\" href=\"").append(story_link).append("\">").append(getString("chat_export_type_story")).append("</a>");
+                        rs.append("<a class=\"msg-attach-link\" href=\"").append(story_link).append("\">").append(AndroidUtils.getString(R.string.chat_export_type_story)).append("</a>");
                         break;
                     case "podcast":
                         var podcast_link = "https://" + VK_DOMAIN + "/podcast" + item.optString("owner_id") + "_" + item.optString("id");
-                        rs.append("<a class=\"msg-attach-link\" href=\"").append(podcast_link).append("\">").append(getString("chat_export_type_podcast")).append("</a>");
+                        rs.append("<a class=\"msg-attach-link\" href=\"").append(podcast_link).append("\">").append(AndroidUtils.getString(R.string.chat_export_type_podcast)).append("</a>");
                         break;
                     case "gift":
                         rs.append("<img src=\"").append(item.optString("thumb_96")).append("\"/>");
@@ -574,25 +587,25 @@ public class MessagesDownloader {
 
                         if (app != null) {
                             var miniapp_link = "https://" + VK_DOMAIN + "/app" + app.optString("id");
-                            rs.append("<a class=\"msg-attach-link\" href=\"").append(miniapp_link).append("\">").append(getString("chat_export_type_miniapp")).append("</a>");
+                            rs.append("<a class=\"msg-attach-link\" href=\"").append(miniapp_link).append("\">").append(AndroidUtils.getString(R.string.chat_export_type_miniapp)).append("</a>");
                             break;
                         }
 
-                        rs.append(getString("chat_export_error"));
+                        rs.append(AndroidUtils.getString(R.string.chat_export_error));
                         break;
                     case "audio_playlist":
                         var playlist_link = "https://" + VK_DOMAIN + "/music/album/" + item.optString("owner_id") + "_" + item.optString("id") + "_" + item.optString("access_key");
-                        rs.append("<a class=\"msg-attach-link\" href=\"").append(playlist_link).append("\">").append(getString("chat_export_type_playlist")).append(" (").append(item.optString("title")).append(")</a>");
+                        rs.append("<a class=\"msg-attach-link\" href=\"").append(playlist_link).append("\">").append(AndroidUtils.getString(R.string.chat_export_type_playlist)).append(" (").append(item.optString("title")).append(")</a>");
                         break;
                     case "poll":
-                        rs.append(getString(item.optBoolean("anonymous") ? "chat_export_poll_anon" : "chat_export_poll_publ")).append(" ").append(getString("chat_export_type_poll")).append(" ").append(getPollHtml(item));
+                        rs.append(AndroidUtils.getString(item.optBoolean("anonymous") ? R.string.chat_export_poll_anon : R.string.chat_export_poll_publ)).append(" ").append(AndroidUtils.getString(R.string.chat_export_type_poll)).append(" ").append(getPollHtml(item));
                         break;
                     case "market":
                         var market_item_link = "https://" + VK_DOMAIN + "/market" + item.optString("owner_id") + "_" + item.optString("id");
-                        rs.append("<a class=\"msg-attach-link\" href=\"").append(market_item_link).append("\">").append(getString("chat_export_type_market")).append("</a>");
+                        rs.append("<a class=\"msg-attach-link\" href=\"").append(market_item_link).append("\">").append(AndroidUtils.getString(R.string.chat_export_type_market)).append("</a>");
                         break;
                     default:
-                        rs.append(getString("vkim_msg_unsupported")).append(" (").append(type).append(")");
+                        rs.append(AndroidUtils.getString(R.string.vkim_msg_unsupported)).append(" (").append(type).append(")");
                         break;
                 }
 

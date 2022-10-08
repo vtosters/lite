@@ -7,6 +7,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import com.vk.dto.music.MusicTrack;
+import com.vtosters.lite.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -112,7 +113,7 @@ public class LastFMScrobbler {
 
     public static void authenticate(String username, String password) {
         if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
-            AndroidUtils.sendToast(AndroidUtils.getString("lastfm_credentials_empty"));
+            AndroidUtils.sendToast(AndroidUtils.getString(R.string.lastfm_credentials_empty));
             return;
         }
 
@@ -126,7 +127,7 @@ public class LastFMScrobbler {
             @Override
             public void a(Call call, IOException e) {
                 Log.d("Scrobbler", "Auth failed", e);
-                AndroidUtils.sendToast(AndroidUtils.getString("auth_error_vtl"));
+                AndroidUtils.sendToast(AndroidUtils.getString(R.string.auth_error_vtl));
             }
 
             @Override
@@ -194,7 +195,7 @@ public class LastFMScrobbler {
                 .putBoolean("lastfm_enabled", false)
                 .apply();
         SCROBBLED_UUIDS.clear();
-        AndroidUtils.sendToast(AndroidUtils.getString("lastfm_logout_success"));
+        AndroidUtils.sendToast(AndroidUtils.getString(R.string.lastfm_logout_success));
     }
 
     public static boolean needScrobbling(String uid) {

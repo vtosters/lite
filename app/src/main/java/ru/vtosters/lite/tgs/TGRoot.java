@@ -1,7 +1,6 @@
 package ru.vtosters.lite.tgs;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,6 +11,7 @@ import com.vk.dto.common.Attachment;
 import com.vk.dto.stickers.StickerItem;
 import com.vk.dto.stickers.StickerStockItem;
 import com.vk.im.engine.models.attaches.Attach;
+import com.vtosters.lite.R;
 import com.vtosters.lite.attachments.PendingGraffitiAttachment;
 import com.vtosters.lite.im.AppAttachToImAttachConverter;
 import com.vtosters.lite.upload.Upload;
@@ -23,6 +23,8 @@ import org.json.JSONObject;
 import java.util.List;
 import java.util.Stack;
 
+import ru.vtosters.lite.utils.AndroidUtils;
+
 public class TGRoot {
     public static final int N = 76820000;
     public static final int X = 976820000;
@@ -32,11 +34,11 @@ public class TGRoot {
     public static String getSummary() {
         switch (TGPref.getTGConnectMethod()) {
             case 0:
-                return getString("ctypedirect");
+                return AndroidUtils.getString(R.string.ctypedirect);
             case 2:
-                return getString("ctypesocks");
+                return AndroidUtils.getString(R.string.ctypesocks);
             default:
-                return getString("ctypedisabled");
+                return AndroidUtils.getString(R.string.ctypedisabled);
         }
     }
 

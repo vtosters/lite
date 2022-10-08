@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui.vkui;
 
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
@@ -12,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.vk.core.dialogs.bottomsheet.ModalBottomSheet;
+import com.vtosters.lite.R;
 
 public class ModalBottomSheetWrapper {
     public final ModalBottomSheet.a builder;
@@ -34,7 +34,7 @@ public class ModalBottomSheetWrapper {
         container.setOrientation(LinearLayout.VERTICAL);
 
         changelogView.setPadding(0, dp2px(8), 0, 0);
-        changelogView.setText(getString("changelog") + ": \n" + changelog);
+        changelogView.setText(context.getString(R.string.changelog) + ": \n" + changelog);
         changelogView.setTextColor(getTextAttr());
         container.addView(changelogView, new LinearLayout.LayoutParams(-1, -2));
 

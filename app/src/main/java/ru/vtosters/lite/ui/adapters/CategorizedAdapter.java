@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui.adapters;
 
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.content.res.ColorStateList;
 import android.graphics.Typeface;
@@ -16,6 +15,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.vtosters.lite.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -261,7 +262,7 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
         }
 
         public void bindCategory(boolean fist) {
-            mCategoryTitle.setText(getString(fist ? "selected_items" : "unselected_items"));
+            mCategoryTitle.setText(fist ? R.string.selected_items : R.string.unselected_items);
             mCategoryTitleContainer.setVisibility(View.VISIBLE);
             mMovingItemContainer.setVisibility(View.INVISIBLE);
         }

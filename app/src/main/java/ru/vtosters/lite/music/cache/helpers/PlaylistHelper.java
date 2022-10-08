@@ -1,10 +1,9 @@
 package ru.vtosters.lite.music.cache.helpers;
 
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserPhoto;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import com.vk.dto.music.Playlist;
+import com.vtosters.lite.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,7 +14,7 @@ import java.util.List;
 
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.FileCacheImplementation;
-import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class PlaylistHelper {
 
@@ -55,7 +54,7 @@ public class PlaylistHelper {
                     .put("type", 1)
                     .put("album_type", "main_only")
                     .put("title", title)
-                    .put("description", albumId + "/ " + getString("cached_album_warning"))
+                    .put("description", albumId + "/ " + AndroidUtils.getString(R.string.cached_album_warning))
                     .put("main_artists", new JSONArray()
                             .put(new JSONObject().put("name", artist)
                                     .put("id", "-1")
@@ -92,8 +91,8 @@ public class PlaylistHelper {
                 .put("owner_id", getUserId())
                 .put("type", 0)
                 .put("album_type", "playlist")
-                .put("title", getString("cached_tracks_title"))
-                .put("description", getString("cached_tracks_desc"))
+                .put("title", AndroidUtils.getString(R.string.cached_tracks_title))
+                .put("description", AndroidUtils.getString(R.string.cached_tracks_desc))
                 .put("access_key", "cache")
                 .put("genres", new JSONArray())
                 .put("is_following", false)
@@ -135,7 +134,7 @@ public class PlaylistHelper {
                 .put("data_type", "none")
                 .put("layout", new JSONObject()
                         .put("name", "header")
-                        .put("title", getString("cached_tracks_title")));
+                        .put("title", AndroidUtils.getString(R.string.cached_tracks_title)));
     }
 
     public static JSONObject getCatalogSeparator() throws JSONException {

@@ -68,9 +68,13 @@ public class AndroidUtils {
         return 0;
     } // Get res id
 
-    public static String[] getArray(String resourcename) {
-        return getResources().getStringArray(getIdentifier(resourcename, "array"));
+    public static String[] getArray(int arrayId) {
+        return getResources().getStringArray(arrayId);
     } // Get array from arrays.xml
+
+    public static String getString(int id) {
+        return getGlobalContext().getString(id);
+    }
 
     public static String getString(String resourcename) {
         return getGlobalContext().getString(getIdentifier(resourcename, "string"));

@@ -14,6 +14,7 @@ import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.media.player.cache.AutoPlayCacheHolder;
 import com.vk.stickers.Stickers;
+import com.vtosters.lite.R;
 
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
@@ -48,7 +49,7 @@ public class CacheUtils {
         size = IOUtils.getDirSize(getGlobalContext().getCacheDir());
 
         if (size >= getSizeForDelete()) {
-            if (dev()) sendToast(AndroidUtils.getString("cache_cleaned"));
+            if (dev()) sendToast(AndroidUtils.getString(R.string.cache_cleaned));
             VKImageLoader.e();
             ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
             ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);

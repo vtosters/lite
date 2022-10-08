@@ -21,15 +21,14 @@ import androidx.appcompat.view.ContextThemeWrapper;
 import com.vk.auth.ui.VkAuthTextView;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
+import com.vtosters.lite.R;
 
 import ru.vtosters.lite.ui.fragments.ProxySettingsFragment;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ProxyHook {
     public static void hookAuth(View v) {
         VkAuthTextView button = (VkAuthTextView) v;
-        button.setText(AndroidUtils.getString("proxy_setup"));
+        button.setText(R.string.proxy_setup);
         button.setOnClickListener(v1 -> callProxyDialog(v1.getContext()));
     }
 
@@ -54,16 +53,16 @@ public class ProxyHook {
 
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
-        rgDefault.setText(AndroidUtils.getString("proxy_disable"));
+        rgDefault.setText(ctx.getString(R.string.proxy_disable));
         rgDefault.setTextColor(getTextAttr());
 
-        rgZaborona.setText(AndroidUtils.getString("proxy_enable") + " (Zaborona)");
+        rgZaborona.setText(ctx.getString(R.string.proxy_enable) + " (Zaborona)");
         rgZaborona.setTextColor(getTextAttr());
 
-        rgRandomProxy.setText(AndroidUtils.getString("proxy_enable") + " (Random Socks Proxy)");
+        rgRandomProxy.setText(ctx.getString(R.string.proxy_enable) + " (Random Socks Proxy)");
         rgRandomProxy.setTextColor(getTextAttr());
 
-        rgVika.setText(AndroidUtils.getString("proxy_enable") + " (Vika Mobile)");
+        rgVika.setText(ctx.getString(R.string.proxy_enable) + " (Vika Mobile)");
         rgVika.setTextColor(getTextAttr());
 
         rgZaborona.setChecked(isZaboronaEnabled());
@@ -72,10 +71,10 @@ public class ProxyHook {
         rgVika.setChecked(isVikaProxyEnabled());
 
        new VkAlertDialog.Builder(ctx)
-               .setTitle(AndroidUtils.getString("vtlproxy"))
-               .setMessage(AndroidUtils.getString("proxy_warning"))
+               .setTitle(ctx.getString(R.string.vtlproxy))
+               .setMessage(ctx.getString(R.string.proxy_warning))
                .setView(rg)
-               .setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> { // Применить
+               .setPositiveButton(ctx.getString(R.string.vtl_confirm), ((dialog, which) -> { // Применить
                     if (rgZaborona.isChecked()) {
                         edit().putString("proxy", "zaborona").commit();
                         restartApplication();
@@ -90,7 +89,7 @@ public class ProxyHook {
                         restartApplication();
                     }
                }))
-               .setNeutralButton(AndroidUtils.getString("proxy_settings"), ((dialog, which) -> {
+               .setNeutralButton(ctx.getString(R.string.proxy_settings), ((dialog, which) -> {
                     var intent = new Navigator(ProxySettingsFragment.class)
                             .b(ctx)
                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

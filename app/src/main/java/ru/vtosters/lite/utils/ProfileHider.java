@@ -3,11 +3,11 @@ package ru.vtosters.lite.utils;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserID;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 
 import android.util.Log;
 
 import com.vk.profile.presenter.UserPresenter;
+import com.vtosters.lite.R;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.fragments.messages.chat.vc.MsgSendVc;
 
@@ -27,30 +27,11 @@ public class ProfileHider {
 
     public static void injectMap(HashMap<Integer, UserPresenter.a.a> hashMap) {
         if (VTVerifications.isServiceAccount(getUserId())) {
-            hashMap.put(100, makeSecond(
-                    "service_account_admin_100_info",
-                    "service_account_admin_100",
-                    "ic_custom_avatar_id100")
-            );
-            hashMap.put(101, makeSecond(
-                    "service_account_admin_101_info",
-                    "service_account_admin_101",
-                    "ic_custom_avatar_id101")
-            );
-            hashMap.put(333, makeSecond(
-                    "service_account_mobile_info",
-                    "service_account_admin_333",
-                    "ic_custom_avatar_id333")
+            hashMap.put(100, new UserPresenter.a.a(R.string.service_account_admin_100_info, R.color.service_account_admin_100, R.drawable.ic_custom_avatar_id100));
+            hashMap.put(101, new UserPresenter.a.a(R.string.service_account_admin_101_info, R.color.service_account_admin_101, R.drawable.ic_custom_avatar_id101));
+            hashMap.put(333, new UserPresenter.a.a(R.string.service_account_mobile_info, R.color.service_account_admin_333, R.drawable.ic_custom_avatar_id333)
             );
         }
-    }
-
-    private static UserPresenter.a.a makeSecond(String stringRes, String colorRes, String drawableRes) {
-        return new UserPresenter.a.a(
-                getIdentifier(stringRes, "string"),
-                getIdentifier(colorRes, "color"),
-                getIdentifier(drawableRes, "drawable")
-        );
     }
 
     public static void fetchInfo(ExtendedUserProfile extendedUserProfile) {

@@ -14,6 +14,8 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import com.vtosters.lite.R;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -46,12 +48,12 @@ public class LogWriterService extends Service {
             writeLog(intent, file);
         } catch (Exception e) {
             e.printStackTrace();
-            makeText(getGlobalContext(), AndroidUtils.getString("logfile_error"), LENGTH_SHORT).show();
+            makeText(getGlobalContext(), AndroidUtils.getString(R.string.logfile_error), LENGTH_SHORT).show();
         }
         var notificationId = intent.getIntExtra("notificationId", 1);
         var manager = (NotificationManager) getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE);
         manager.cancel(notificationId);
-        makeText(getGlobalContext(), AndroidUtils.getString("logfile_saved"), LENGTH_SHORT).show();
+        makeText(getGlobalContext(), AndroidUtils.getString(R.string.logfile_saved), LENGTH_SHORT).show();
 
         stopSelf();
         return START_NOT_STICKY;

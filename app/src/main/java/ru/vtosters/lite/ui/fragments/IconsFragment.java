@@ -31,9 +31,8 @@ import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public class IconsFragment extends MaterialPreferenceToolbarFragment {
     @SuppressLint("SetTextI18n")
@@ -63,7 +62,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         rgVK.setText("VK");
         rgVK.setTextColor(getTextAttr());
 
-        rgVKontakte.setText(AndroidUtils.getString("app_name_alter"));
+        rgVKontakte.setText(ctx.getString(R.string.app_name_alter));
         rgVKontakte.setTextColor(getTextAttr());
 
         rgVKontakte.setChecked(defname.contains("vkontakte"));
@@ -71,9 +70,9 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         rgDefault.setChecked(defname.contains("vt") || defname.isEmpty());
 
         new VkAlertDialog.Builder(ctx)
-                .setTitle(AndroidUtils.getString("app_name_select_title"))
+                .setTitle(R.string.app_name_select_title)
                 .setView(rg)
-                .setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> {
+                .setPositiveButton(R.string.vtl_confirm, ((dialog, which) -> {
                     if (rgDefault.isChecked()) {
                         edit().putString("appname", "vt").commit();
                         edit().putString("selectedicon", appicon).commit();
@@ -91,7 +90,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
                         switchComponent(appicon, "vkontakte", deficon, defname);
                     }
                 }))
-                .setNegativeButton(AndroidUtils.getString("cancel"),
+                .setNegativeButton(R.string.cancel,
                         ((dialog, which) -> dialog.dismiss()))
                 .show();
     }
@@ -101,17 +100,16 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
-        int vtosterXml = getIdentifier("empty", "xml");
-        this.addPreferencesFromResource(vtosterXml);
+        this.addPreferencesFromResource(R.xml.empty);
 
         if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
-            addPreference(this, "", AndroidUtils.getString("icons_warning"), AndroidUtils.getString("icons_warning_info"), "ic_about_outline_28", preference -> {
+            addPreference(this, "", requireContext().getString(R.string.icons_warning), requireContext().getString(R.string.icons_warning_info), R.drawable.ic_about_outline_28, preference -> {
                 getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app/donate/")));
                 return false;
             });
         }
 
-        addPreferenceCategory(this, AndroidUtils.getString("icons_title"));
+        addPreferenceCategory(this, requireContext().getString(R.string.icons_title));
 
         for (var i = 0; i < icons().size(); i++) {
             if (icons().get(i) == null || iconsValues().get(i) == null) return;
@@ -119,20 +117,20 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
             String iconname = icons().get(i);
             String icon = iconsValues().get(i);
 
-            String icondrawable;
+            int iconRes;
 
             if (icon.equals("vt")) {
-                icondrawable = "vt_launcher_round";
+                iconRes = R.mipmap.vt_launcher_round;
             } else if (icon.contains("standard")) {
-                icondrawable = "ic_launcher_round";
+                iconRes = R.mipmap.ic_launcher_round;
             } else {
-                icondrawable = "ic_launcher_" + icon;
+                iconRes = getIdentifier("ic_launcher_" + icon, "mipmap");
             }
 
-            Drawable drawable = ResourcesCompat.getDrawable(getResources(), getIdentifier(icondrawable, "mipmap"), null);
+            Drawable drawable = ResourcesCompat.getDrawable(getResources(), iconRes, null);
 
             if (drawable == null) {
-                drawable = ResourcesCompat.getDrawable(getResources(), getIdentifier("ic_bug_outline_28", "drawable"), null);
+                drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.ic_bug_outline_28, null);
             }
 
             addPreferenceDrawable(this, icon, iconname, "", drawable, preference -> {
@@ -142,7 +140,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         }
 
         if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
-            addPreferenceCategory(this, AndroidUtils.getString("unavailable_icons"));
+            addPreferenceCategory(this, requireContext().getString(R.string.unavailable_icons));
 
             for (var i = 2; i < sIconsPlusNames.size(); i++) {
                 if (sIconsPlusNames.get(i) == null || sIconsPlus.get(i) == null) return;
@@ -150,24 +148,24 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
                 String iconname = sIconsPlusNames.get(i);
                 String icon = sIconsPlus.get(i);
 
-                String icondrawable;
+                int iconRes;
 
                 if (icon.equals("vt")) {
-                    icondrawable = "vt_launcher_round";
+                    iconRes = R.mipmap.vt_launcher_round;
                 } else if (icon.contains("standard")) {
-                    icondrawable = "ic_launcher_round";
+                    iconRes = R.mipmap.ic_launcher_round;
                 } else {
-                    icondrawable = "ic_launcher_" + icon;
+                    iconRes = getIdentifier("ic_launcher_" + icon, "mipmap");
                 }
 
-                Drawable drawable = ResourcesCompat.getDrawable(getResources(), getIdentifier(icondrawable, "mipmap"), null);
+                Drawable drawable = ResourcesCompat.getDrawable(getResources(), iconRes, null);
 
                 if (drawable == null) {
-                    drawable = ResourcesCompat.getDrawable(getResources(), getIdentifier("ic_bug_outline_28", "drawable"), null);
+                    drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.ic_bug_outline_28, null);
                 }
 
                 addPreferenceDrawable(this, icon, iconname, "", drawable, preference -> {
-                    sendToast(AndroidUtils.getString("unavailable_icon_warning"));
+                    sendToast(requireContext().getString(R.string.unavailable_icon_warning));
                     return false;
                 });
             }
