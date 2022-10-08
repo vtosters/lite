@@ -32,6 +32,7 @@ import java.util.regex.Pattern;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import ru.vtosters.lite.net.Request;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
@@ -40,7 +41,7 @@ public class FoafBase {
     private static final String API_VKNEXT = "https://api.vtosters.app/v1/getBypassedOnlineInfo?json=1&ids=";
     private static final OkHttpClient client = new OkHttpClient();
 
-    public static long getLastSeen(long origtime, int id) throws ParseException, IOException {
+    public static long getLastSeen(long origtime, int id) throws ParseException {
         var request = new okhttp3.Request.a()
                 .b(getLink(id))
                 .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
@@ -87,14 +88,13 @@ public class FoafBase {
         }
     }
 
-    public static JSONObject getBypassedOnlineInfo(String ids) throws JSONException {
-
+    public static JSONObject getBypassedOnlineInfo(String ids) {
 
         var request = new okhttp3.Request.a()
                 .b(API_VKNEXT + ids)
                 .a();
 
-        String response = null;
+        String response;
 
         var dummy = new JSONObject();
 
@@ -153,7 +153,7 @@ public class FoafBase {
                     .show();
         } catch (Exception e) {
             e.printStackTrace();
-            makeText(getGlobalContext(), context.getString(R.string.foaferr), LENGTH_SHORT).show();
+            LifecycleUtils.getCurrentActivity().runOnUiThread(() -> makeText(getGlobalContext(), context.getString(R.string.foaferr), LENGTH_SHORT).show());
         }
     }
 
