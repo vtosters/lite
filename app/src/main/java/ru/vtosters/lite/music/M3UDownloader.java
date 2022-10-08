@@ -10,59 +10,55 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.crypto.NoSuchPaddingException;
 
 import java8.util.concurrent.CompletableFuture;
-import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 import ru.vtosters.lite.music.converter.ts.FFMpeg;
 import ru.vtosters.lite.music.converter.ts.TSMerger;
 import ru.vtosters.lite.music.downloader.ThumbnailDownloader;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 
 public class M3UDownloader implements ITrackDownloader {
     private static final OkHttpClient client = new OkHttpClient();
+    private ExecutorService executorService = Executors.newSingleThreadExecutor();
 
     public static M3UDownloader getInstance() {
         return Holder.INSTANCE;
     }
 
     public void downloadTrack(MusicTrack track, File outDir, Callback callback, boolean cache) {
-        var request = new Request.a()
-                .b(track.D)
-                .a();
-        client.a(request).a(new okhttp3.Callback() {
-            @Override
-            public void a(Call call, IOException e) {
-                callback.onFailure();
-            }
-
-            @Override
-            public void a(Call call, Response response) throws IOException {
-                parse(response.a().g(), outDir, callback, track, cache);
-            }
-        });
+        var request = new Request.a().b(track.D).a();
+        try {
+            var response = client.a(request).execute().a().g();
+            parse(response, outDir, callback, track, cache);
+        } catch (IOException e) {
+            e.printStackTrace();
+            callback.onFailure();
+        }
     }
 
     private void parse(String payload, File outDir, Callback callback, MusicTrack track, boolean cache) {
-        if (cache)
-            try {
-                ThumbnailDownloader.downloadThumbnails(track);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        if (cache) try {
+            ThumbnailDownloader.downloadThumbnails(track);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         VKM3UParser parser = new VKM3UParser(payload);
         List<TransportStream> tses = parser.getTransportStreams();
         AtomicInteger progress = new AtomicInteger(0);
         List<CompletableFuture<Void>> futures = new ArrayList<>(tses.size());
 
-        var tsesDir = new File(outDir, String.valueOf(track.d));
+        var filesDir = AndroidUtils.getGlobalContext().getFilesDir();
+        var tsesDir = new File(filesDir, String.valueOf(track.d));
         tsesDir.mkdirs();
         var resultTs = new File(tsesDir, "result.ts");
 
@@ -96,8 +92,7 @@ public class M3UDownloader implements ITrackDownloader {
                     IOUtils.writeToFile(tsDump, content);
                     callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
                     callback.onSizeReceived((long) content.length * tses.size(), parser.getHeapSize());
-                } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException |
-                         InvalidAlgorithmParameterException | InvalidKeyException e) {
+                } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidAlgorithmParameterException | InvalidKeyException e) {
                     callback.onFailure();
                     throw new RuntimeException(e);
                 }
@@ -105,19 +100,14 @@ public class M3UDownloader implements ITrackDownloader {
         }
         var future = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
         future.exceptionally(throwable -> {
-                    callback.onFailure();
-                    return null;
-                })
-                .thenApply(v -> TSMerger.merge(tsesDir, resultTs))
-                .thenApply(mergeResult -> mergeResult && FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track))
-                .thenApply(convertResult -> {
-                    if (convertResult)
-                        callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
-                    else callback.onFailure();
-                    return convertResult;
-                })
-                .thenRun(() -> IOUtils.deleteRecursive(tsesDir))
-                .thenRun(callback::onSuccess);
+            callback.onFailure();
+            return null;
+        }).thenApply(v -> TSMerger.merge(tsesDir, resultTs)).thenApply(mergeResult -> mergeResult && FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track)).thenApply(convertResult -> {
+            if (convertResult)
+                callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
+            else callback.onFailure();
+            return convertResult;
+        }).thenRun(() -> IOUtils.deleteRecursive(tsesDir)).thenRun(callback::onSuccess);
     }
 
     // Initialization-on-demand
