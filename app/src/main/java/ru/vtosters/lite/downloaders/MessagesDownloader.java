@@ -1,5 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
@@ -33,6 +35,7 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class MessagesDownloader {
     private static final String VK_DOMAIN = "vk.com";
@@ -119,7 +122,7 @@ public class MessagesDownloader {
                 }
                 fos.write(format.provideDocumentEnd().getBytes(StandardCharsets.UTF_8));
                 fos.close();
-                Toast.makeText(getGlobalContext(), AndroidUtils.getString(R.string.saved_as) + " " + out.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+                LifecycleUtils.getCurrentActivity().runOnUiThread(() -> makeText(getGlobalContext(), AndroidUtils.getString(R.string.saved_as) + " " + out.getAbsolutePath(), LENGTH_SHORT).show());
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             }
