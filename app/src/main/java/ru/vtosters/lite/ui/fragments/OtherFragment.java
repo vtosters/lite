@@ -155,52 +155,25 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
     @SuppressLint({"CommitPrefEdits", "SetTextI18n"})
     private void cacheAutoCleanDialog() {
+        String[] cacheText = {null, "100 MB", "500 MB", "1 GB", "2 GB", "5 GB"};
+
         var val = getDefaultPrefs().getInt("autoclearcache_size", 0);
         RadioGroup rg = new RadioGroup(getContext());
 
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
-        RadioButton zero = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton one = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton two = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton three = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton four = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton five = new RadioButton(new ContextThemeWrapper(getContext(), R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        for (int item = 0; item <= 5; item++) {
+            RadioButton rb = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
+            rg.addView(rb);
+            rg.setId(item);
+            rb.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
 
-        rg.addView(zero);
-        rg.addView(one);
-        rg.addView(two);
-        rg.addView(three);
-        rg.addView(four);
-        rg.addView(five);
+            var text = cacheText[item];
+            rb.setText(text != null ? text : AndroidUtils.getString("autoclearcachedisabled"));
 
-        zero.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
-        one.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
-        two.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
-        three.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
-        four.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
-        five.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
-
-        zero.setText(requireContext().getString(R.string.autoclearcachedisabled));
-        one.setText("100 MB");
-        two.setText("500 MB");
-        three.setText("1 GB");
-        four.setText("2 GB");
-        five.setText("5 GB");
-
-        zero.setTextColor(getTextAttr());
-        one.setTextColor(getTextAttr());
-        two.setTextColor(getTextAttr());
-        three.setTextColor(getTextAttr());
-        four.setTextColor(getTextAttr());
-        five.setTextColor(getTextAttr());
-
-        zero.setChecked(val == 0);
-        one.setChecked(val == 1);
-        two.setChecked(val == 2);
-        three.setChecked(val == 3);
-        four.setChecked(val == 4);
-        five.setChecked(val == 5);
+            rb.setTextColor(getTextAttr());
+            rb.setChecked(val == item);
+        }
 
         new VkAlertDialog.Builder(getContext())
                 .setTitle(requireContext().getString(R.string.cache_clean_title))
@@ -210,7 +183,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 .setView(rg)
                 .setPositiveButton(requireContext().getString(R.string.save), (dialog, which) -> {
                     var sizes = new String[] { "Default", "100mb", "500mb", "1gb", "2gb", "5gb" };
-                    var id = rg.indexOfChild(rg.findViewById(rg.getCheckedRadioButtonId()));
+                    var id = rg.getCheckedRadioButtonId();
                     getDefaultPrefs().edit()
                             .putInt("autoclearcache_size", id)
                             .putString("autoclearcache", sizes[id])
