@@ -23,6 +23,7 @@ import ru.vtosters.lite.music.converter.ts.FFMpeg;
 import ru.vtosters.lite.music.converter.ts.TSMerger;
 import ru.vtosters.lite.music.downloader.ThumbnailDownloader;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 
 public class M3UDownloader implements ITrackDownloader {
@@ -62,7 +63,8 @@ public class M3UDownloader implements ITrackDownloader {
         AtomicInteger progress = new AtomicInteger(0);
         List<CompletableFuture<Void>> futures = new ArrayList<>(tses.size());
 
-        var tsesDir = new File(outDir, String.valueOf(track.d));
+        var filesDir = AndroidUtils.getGlobalContext().getFilesDir();
+        var tsesDir = new File(filesDir, String.valueOf(track.d));
         tsesDir.mkdirs();
         var resultTs = new File(tsesDir, "result.ts");
 
