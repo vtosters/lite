@@ -1,32 +1,31 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.hooks.DateHook.getLocale;
-import static ru.vtosters.lite.utils.Preferences.preferences;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
 import com.vk.core.util.Screen;
+import com.vk.core.util.ToastUtils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
 import java.util.Objects;
 
+import ru.vtosters.lite.hooks.DateHook;
+
 public class AndroidUtils {
 
     public static SharedPreferences getDefaultPrefs() {
-        if (preferences == null)
-            preferences = PreferenceManager.getDefaultSharedPreferences(getGlobalContext());
-        return preferences;
+        if (Preferences.preferences == null)
+            Preferences.preferences = PreferenceManager.getDefaultSharedPreferences(getGlobalContext());
+        return Preferences.preferences;
     }
 
     public static SharedPreferences getPreferences() {
@@ -90,7 +89,7 @@ public class AndroidUtils {
     }
 
     public static Context setDefaultLocale(Context context) {
-        Locale locale = new Locale(getLocale());
+        Locale locale = new Locale(DateHook.getLocale());
         Locale.setDefault(locale);
 
         var resources = context.getResources();
@@ -123,26 +122,25 @@ public class AndroidUtils {
     }
 
     public static void sendToast(String text) {
-        Toast.makeText(getGlobalContext(), text, Toast.LENGTH_SHORT).show();
+        ToastUtils.a(text);
     }
 
     public static String MD5(String s) {
         try {
-            var messageDigest = MessageDigest.getInstance("MD5");
+            var md = MessageDigest.getInstance("MD5");
+            md.update(s.getBytes());
+            var md5 = md.digest();
             var sb = new StringBuilder();
-            messageDigest.update(s.getBytes());
-            byte[] digest = messageDigest.digest();
-            for (byte b : digest) {
-                StringBuilder hexString = new StringBuilder(Integer.toHexString(b & 255));
-                while (hexString.length() < 2) {
-                    hexString.insert(0, "0");
-                }
-                sb.append(hexString);
+            for (var b : md5) {
+                var hex = Integer.toHexString(b & 0xFF);
+                if (hex.length() == 1)
+                    sb.append(0);
+                sb.append(hex);
             }
             return sb.toString();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
-            return null;
         }
+        return null;
     }
 }

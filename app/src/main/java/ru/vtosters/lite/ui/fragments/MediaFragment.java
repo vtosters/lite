@@ -1,7 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalled;
-import static ru.vtosters.lite.music.Scrobbler.isLoggedIn;
+import static ru.vtosters.lite.music.LastFMScrobbler.isLoggedIn;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
@@ -44,7 +44,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.downloaders.VideoDownloader;
-import ru.vtosters.lite.music.Scrobbler;
+import ru.vtosters.lite.music.LastFMScrobbler;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -107,7 +107,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
 
         if (isLoggedIn()) {
-            findPreference("lastfm_auth").setSummary(AndroidUtils.getString("lastfm_authorized_as") + " " + Scrobbler.getUserName());
+            findPreference("lastfm_auth").setSummary(AndroidUtils.getString("lastfm_authorized_as") + " " + LastFMScrobbler.getUserName());
         } else {
             findPreference("lastfm_enabled").setEnabled(false);
         }
@@ -181,7 +181,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                         (dialog, which) -> {
                             String login = fn.getText().toString();
                             String pass = ln.getText().toString();
-                            Scrobbler.auth(login, pass);
+                            LastFMScrobbler.authenticate(login, pass);
                         }
                 )
                 .setView(linearLayout)
@@ -193,7 +193,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                 .setTitle(AndroidUtils.getString("lastfm_logout_title"))
                 .setMessage(AndroidUtils.getString("lastfm_logout_confirm"))
                 .setPositiveButton(AndroidUtils.getString("vkim_yes"),
-                        (dialog, which) -> Scrobbler.logout())
+                        (dialog, which) -> LastFMScrobbler.logout())
                 .setNeutralButton(AndroidUtils.getString("vkim_no"),
                         (dialog, which) -> dialog.cancel())
                 .show();
