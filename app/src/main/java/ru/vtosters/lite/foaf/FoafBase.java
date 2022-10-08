@@ -35,9 +35,8 @@ import ru.vtosters.lite.net.Request;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class FoafBase {
-    private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
-    private static final Pattern FOAF_REGEX_LAST_SEEN = Pattern.compile("<ya:lastLoggedIn dc:date=\"(.*)(((\\+|-)\\d\\d):(\\d\\d))\"\\/>");
-    private static final Pattern FOAF_REGEX_LOGIN = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
+    private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"");
+    private static final Pattern FOAF_REGEX_LAST_SEEN = Pattern.compile("<ya:lastLoggedIn dc:date=\"(.*)(((\\+|-)\\d\\d):(\\d\\d))\"");
     private static final String API_VKNEXT = "https://api.vtosters.app/v1/getBypassedOnlineInfo?json=1&ids=";
     private static final OkHttpClient client = new OkHttpClient();
 
@@ -137,20 +136,17 @@ public class FoafBase {
         try {
             progressDialog.cancel();
             Matcher matcher = FOAF_REGEX.matcher(str);
-            Matcher matcher2 = FOAF_REGEX_LOGIN.matcher(str);
             matcher.find();
-            matcher2.find();
             String normalHumanDate = getNormalHumanDate(Objects.requireNonNull(matcher.group(1)));
-            getNormalHumanDate(Objects.requireNonNull(matcher2.group(1)));
 
-            new VkAlertDialog.Builder(context)
+            LifecycleUtils.getCurrentActivity().runOnUiThread(() -> new VkAlertDialog.Builder(context)
                     .setTitle(R.string.addinf)
                     .setMessage(context.getString(R.string.foafid) +
                             " " + i + context.getString(R.string.foafregdate)
                             + " " + normalHumanDate + context.getString(R.string.foafdate)
                             + " " + daysPassedFromFoafDate(normalHumanDate))
                     .setPositiveButton(android.R.string.ok, null)
-                    .show();
+                    .show());
         } catch (Exception e) {
             e.printStackTrace();
             LifecycleUtils.getCurrentActivity().runOnUiThread(() -> makeText(getGlobalContext(), context.getString(R.string.foaferr), LENGTH_SHORT).show());
