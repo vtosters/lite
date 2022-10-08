@@ -13,6 +13,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import io.reactivex.Observable;
@@ -23,11 +25,12 @@ import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 
 public class PlaylistInjector {
+    private static final ExecutorService executor = Executors.newCachedThreadPool();
 
     public final static String CHANNEL_NAME = "VTCH";
 
     public static void injectDownloadPlaylist(Playlist playlist) {
-        AudioDownloader.cachePlaylist(playlist);
+        executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
     }
 
     public static boolean eligibleForOfflineCaching() {
