@@ -1,6 +1,7 @@
 package ru.vtosters.lite.net;
 
 import android.util.Base64;
+import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -14,30 +15,24 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.TreeMap;
-import java.util.concurrent.Executor;
 
 public final class NetCall {
     private final NetRequest req;
     private final NetClient cl;
-    private final Executor executor;
 
-    protected NetCall(NetClient cl, NetRequest req, Executor executor) {
+    protected NetCall(NetClient cl, NetRequest req) {
         this.req = req;
         this.cl = cl;
-        this.executor = executor;
     }
 
     private static String constructArgs(Map<String, String> args) throws UnsupportedEncodingException {
         args = new TreeMap<>(args);
-        StringBuilder str = new StringBuilder();
+        String str = "";
         for (Map.Entry<String, String> en : args.entrySet()) {
-            if (str.length() > 0)
-                str.append("&");
-            str.append(URLEncoder.encode(en.getKey(), "UTF-8"))
-                    .append("=")
-                    .append(URLEncoder.encode(en.getValue(), "UTF-8"));
+            if (!str.isEmpty()) str += "&";
+            str += URLEncoder.encode(en.getKey(), "UTF-8") + "=" + URLEncoder.encode(en.getValue(), "UTF-8");
         }
-        return str.toString();
+        return str;
     }
 
     public NetRequest request() {
@@ -82,13 +77,22 @@ public final class NetCall {
     }
 
     public void enqueue(NetCallback cb) {
-        executor.execute(() -> {
-            try {
-                NetResponse resp = execute();
-                cb.onResponse(NetCall.this, resp);
-            } catch (IOException e) {
-                cb.onFailure(NetCall.this, e);
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    NetResponse resp = execute();
+                    cb.onResponse(NetCall.this, resp);
+                } catch (IOException e) {
+                    cb.onFailure(NetCall.this, e);
+                }
+                try {
+                    interrupt();
+                    join();
+                } catch (Exception e) {
+                    Log.e("NetCall", "Failed to interrupt and join thread", e);
+                }
             }
-        });
+        }.start();
     }
 }

@@ -2,16 +2,12 @@ package ru.vtosters.lite.net;
 
 import java.net.PasswordAuthentication;
 import java.net.Proxy;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class NetClient {
     private final long timeout;
     private final Proxy proxy;
     private final PasswordAuthentication authenticator;
-    private final Executor executor
-            = Executors.newSingleThreadExecutor();
 
     protected NetClient(Builder b) {
         timeout = b.timeout;
@@ -28,7 +24,7 @@ public class NetClient {
     }
 
     public NetCall newCall(NetRequest req) {
-        return new NetCall(this, req, executor);
+        return new NetCall(this, req);
     }
 
     public PasswordAuthentication getAuthenticator() {
