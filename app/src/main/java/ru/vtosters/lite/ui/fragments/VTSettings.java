@@ -18,6 +18,7 @@ import static ru.vtosters.lite.utils.GmsUtils.isGmsInstalled;
 import static ru.vtosters.lite.utils.ImageUtils.getDrawableFromUrl;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.autotranslate;
+import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Preferences.disableSettingsSumms;
 import static ru.vtosters.lite.utils.Preferences.hasSpecialVerif;
@@ -259,6 +260,14 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 edit().putBoolean("ssl", value).commit();
                 return true;
             });
+
+            if (dev()) {
+                addMaterialSwitchPreference(this, "autoupdates", requireContext().getString(R.string.checkupdates), "", R.drawable.ic_camera_switch_outline_24, true, (preference, o) -> {
+                    boolean value = (boolean) o;
+                    edit().putBoolean("autoupdates", value).commit();
+                    return true;
+                });
+            }
         }
 
         addPreferenceCategory(this, requireContext().getString(R.string.vtsettaccount));

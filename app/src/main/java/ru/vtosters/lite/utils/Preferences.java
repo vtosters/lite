@@ -330,7 +330,7 @@ public class Preferences {
     }
 
     public static boolean checkupdates() {
-        return !getBoolValue("isRoamingState", false) && isValidSignature();
+        return !getBoolValue("isRoamingState", false) && isValidSignature() && (!dev() || getBoolValue("autoupdates", true));
     }
 
     public static boolean isValidSignature() {
