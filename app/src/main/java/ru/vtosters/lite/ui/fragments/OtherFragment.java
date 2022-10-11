@@ -11,6 +11,7 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
@@ -346,6 +347,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                     .setAdapter(adapter, (dialog, which) -> {
                         try {
                             restoreBackup(arr[which]);
+                            restartApplicationWithTimer();
                             Toast.makeText(getContext(), requireContext().getString(R.string.backup_success), LENGTH_LONG).show();
                         } catch (IOException e) {
                             e.printStackTrace();
