@@ -356,6 +356,10 @@
 
     iput-object p3, p0, Lcom/vk/core/view/search/ModernSearchView;->c:Landroid/widget/ImageView;
 
+    const/4 v4, 0x4
+
+    invoke-virtual {p3, v4}, Landroid/widget/ImageView;->setVisibility(I)V
+
     .line 13
     sget v2, Lb/h/z/g;->iv_icon_params:I
 
