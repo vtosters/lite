@@ -23,10 +23,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.view.ContextThemeWrapper;
@@ -330,7 +333,14 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference) {
             var arr = BackupManager.getBackupsNames();
-            var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr);
+            var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr) {
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent) {
+                    TextView textView = (TextView) super.getView(position, convertView, parent);
+                    textView.setTextColor(getTextAttr());
+                    return textView;
+                }
+            };
             new VkAlertDialog.Builder(getContext())
                     .setTitle(requireContext().getString(R.string.select_backup))
                     .setAdapter(adapter, (dialog, which) -> {
