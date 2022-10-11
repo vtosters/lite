@@ -137,25 +137,14 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         return "Текущая тема" + ": " + str;
     }
 
-    public static SharedPreferences getCurrentAccount() {
-        return AndroidUtils.getGlobalContext().getSharedPreferences("pref_account_manager", Context.MODE_PRIVATE);
-    }
-
     public static String getSuperappsumm() {
         if (disableSettingsSumms()) return null;
 
         return AndroidUtils.getString(R.string.elements_hidden_count) + ": " + SuperAppEditorManager.getInstance().getDisabledTabs().size();
     }
 
-    public static String getCachesumm() {
-        if (disableSettingsSumms()) return null;
-
-        return AndroidUtils.getString(R.string.autoclearcachesumm) + " " + humanReadableByteCountBin(CacheUtils.getInstance().size);
-    }
-
     private void switchTheme(boolean isDarkTheme) {
         setTheme(isDarkTheme ? getDarkTheme() : getLightTheme(), requireActivity());
-        edit().putBoolean("isdark", isDarkTheme).commit();
     }
 
     @Override

@@ -29,11 +29,6 @@ public class MainActivityInjector {
         Start.alert(activity);
         InstallGMS.alert(activity);
         DisableBattery.alert(activity);
-        PreferenceManager.getDefaultSharedPreferences(activity)
-                .edit()
-                .putBoolean("isdark", isDarkTheme())
-                .commit();
-
 
         VkExecutors.x.q().a(() -> {
             getInstance().autoCleaningCache();

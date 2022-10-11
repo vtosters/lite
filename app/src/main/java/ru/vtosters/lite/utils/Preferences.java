@@ -42,8 +42,6 @@ public class Preferences {
     } // VK Init
 
     public static void forceOffline() {
-        edit().putBoolean("isdark", isDarkTheme()).commit();
-
         setupFilters();
 
         if (setoffline() && offline()) {
