@@ -14,8 +14,12 @@ public class AccountManagerUtils {
     } // Current UserId
 
     public static boolean isVKTester() {
-        return VKAccountManager.d().i();
+        return VKAccountManager.d().k0().equals("tester");
     } // is vk tester
+
+    public static boolean isVKWorker() {
+        return VKAccountManager.d().k0().equals("worker");
+    }
 
     public static String getUserSecret() {
         return VKAccountManager.d().l0();

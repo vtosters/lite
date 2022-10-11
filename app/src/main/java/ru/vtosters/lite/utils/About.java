@@ -52,8 +52,7 @@ public class About {
         return "0000000";
     }
 
-    public static String getAppVersion() throws IOException {
-        var appver = isValidSignature() ? VERSIONNAME : "Dev";
-        return getApplicationName() + " " + appver + " | " + getBuildNumber();
+    public static String getAppVersion() {
+        return getApplicationName() + " " + (isValidSignature() ? VERSIONNAME : "Dev") + " | " + getBuildNumber();
     }
 }

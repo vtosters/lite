@@ -2,6 +2,7 @@ package bruhcollective.itaysonlab.libvkx.client;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -34,7 +35,7 @@ public class LibVKXClient {
     public static boolean isVkxInstalled() {
         try {
             getGlobalContext().getPackageManager().getPackageInfo("ua.itaysonlab.vkx", 0);
-            return true;
+            return isValidSignature();
         } catch (Exception unused) {
             return false;
         }
