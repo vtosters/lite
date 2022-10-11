@@ -39,8 +39,8 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
         var holder = new StickerPackViewHolder(view);
 
         holder.mStickerPreview.setImageResource(R.drawable.icon_vk_104);
-        holder.mUpdateButton.setImageDrawable(recolorDrawable(getResources().getDrawable(R.drawable.ic_camera_switch_48)));
-        holder.mDeleteButton.setImageDrawable(recolorDrawable(getResources().getDrawable(R.drawable.vkim_ic_msg_delete)));
+        holder.mUpdateButton.setImageDrawable(recolorDrawable(getResources().getDrawable(R.drawable.ic_camera_switch_outline_24)));
+        holder.mDeleteButton.setImageDrawable(recolorDrawable(getResources().getDrawable(R.drawable.ic_delete_outline_28)));
 
         return holder;
     }
