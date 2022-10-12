@@ -199,7 +199,7 @@ public class LastFMScrobbler {
     }
 
     public static boolean needScrobbling(String uid) {
-        return isLoggedIn() && isScrobblingEnabled() && !SCROBBLED_UUIDS.contains(uid);
+        return isLoggedIn() && isScrobblingEnabled() && (SCROBBLED_UUIDS.isEmpty() || !SCROBBLED_UUIDS.get(SCROBBLED_UUIDS.size() - 1).contains(uid));
     }
 
     public static boolean isLoggedIn() {
