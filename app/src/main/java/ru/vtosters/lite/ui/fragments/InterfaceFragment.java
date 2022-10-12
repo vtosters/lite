@@ -26,6 +26,7 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
         findPreference("stories").setOnPreferenceClickListener(new restart());
         findPreference("swipe").setOnPreferenceClickListener(new restart());
         findPreference("is_likes_on_right").setOnPreferenceClickListener(new restart());
+        findPreference("superapp").setOnPreferenceClickListener(new restart());
 
         if (isTablet()) {
             findPreference("menusett").setVisible(false);
