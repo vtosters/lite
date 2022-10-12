@@ -14,7 +14,6 @@ import android.util.Log;
 
 import com.facebook.common.i.MediaUtils;
 import com.facebook.x.g.EncodedImage;
-import com.vk.core.concurrent.VkExecutors;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.log.L;
 import com.vk.metrics.eventtracking.VkTracker;
@@ -29,6 +28,7 @@ import java.util.HashSet;
 
 import b.h.g.m.CameraUtils;
 import b.h.g.m.FileUtils;
+import ru.vtosters.lite.concurrent.VTExecutors;
 
 public class DownloadUtils {
     public static final HashSet<Long> a = new HashSet<>();
@@ -81,7 +81,7 @@ public class DownloadUtils {
                         file.createNewFile();
                     }
                     if (file.exists()) {
-                        VkExecutors.x.e().execute(() -> {
+                        VTExecutors.getIoExecutor().execute(() -> {
                             try {
                                 FileUtils.b.a(h, new FileOutputStream(file), h.available(), null);
                                 ToastUtils.a(context.getString(R.string.file_saved, file.getAbsoluteFile()));

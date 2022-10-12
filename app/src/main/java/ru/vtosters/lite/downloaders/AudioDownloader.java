@@ -10,6 +10,8 @@ import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
 
 import java.io.File;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
@@ -30,6 +32,7 @@ import ru.vtosters.lite.utils.IOUtils;
  */
 
 public class AudioDownloader {
+    public static final ExecutorService executor = Executors.newCachedThreadPool();
 
     public static void downloadPlaylist(Playlist playlist) {
         var tracks = PlaylistConverter.getPlaylist(playlist);
@@ -66,7 +69,7 @@ public class AudioDownloader {
         var trackFile = FileCacheImplementation.getTrackFile(trackId);
         if (!trackFile.exists())
             trackFile.getParentFile().mkdirs();
-        downloadM3U8(track, true);
+        executor.submit(() -> downloadM3U8(track, true));
     }
 
     public static void cachePlaylist(Playlist playlist) {

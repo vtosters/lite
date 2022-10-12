@@ -11,9 +11,8 @@ import android.app.Activity;
 import android.os.Build;
 import android.preference.PreferenceManager;
 
-import com.vk.core.concurrent.VkExecutors;
-
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
+import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -25,12 +24,12 @@ public class MainActivityInjector {
         setNeededTheme(activity);
         sendRequest();
         if (checkupdates()) OTADialog.checkUpdates(activity);
-        VkExecutors.x.f().a(DeletedMessagesHandler::reloadMessagesList); // ioScheduler
+        VTExecutors.getIoScheduler().a(DeletedMessagesHandler::reloadMessagesList); // ioScheduler
         Start.alert(activity);
         InstallGMS.alert(activity);
         DisableBattery.alert(activity);
 
-        VkExecutors.x.q().a(() -> {
+        VTExecutors.getSlowTasksScheduler().a(() -> {
             getInstance().autoCleaningCache();
         }); // slowTasksScheduler
 
