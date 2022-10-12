@@ -2,6 +2,7 @@ package ru.vtosters.lite.utils;
 
 import static android.text.TextUtils.isEmpty;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
 
 import android.annotation.SuppressLint;
@@ -59,7 +60,7 @@ public class ExternalLinkParser {
         if (!isEnabled || file.isEmpty()) return false;
 
         if (checkVkVideo(file)) {
-            if (qualities.size() == 1) {
+            if (qualities.size() == 1 || getBoolValue("maxquality", false)) {
                 startExternalVideo((String) qualities.values().toArray()[0], context);
             } else {
                 String[] titles = qualities.keySet().toArray(new String[0]);

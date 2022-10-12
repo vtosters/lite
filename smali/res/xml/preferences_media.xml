@@ -78,6 +78,11 @@
             android:title="@string/interfacevideoext" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
+            android:key="maxquality"
+            android:summary="Открывать видео в максимальном качестве через внешний видеоплеер"
+            android:title="Максимальное качество" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
             android:key="__dbg_disable_video_feed"
             android:summary="@string/interfacevideorecsum"
             android:title="@string/interfacevideorec" />
