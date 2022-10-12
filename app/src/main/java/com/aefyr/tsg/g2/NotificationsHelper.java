@@ -81,9 +81,9 @@ public class NotificationsHelper {
 
         String text;
         if (success)
-            text = wasUpdate ? pack.title + AndroidUtils.getString(R.string.telegram_stickers_updated) : pack.title + AndroidUtils.getString(R.string.telegram_stickers_downloaded);
+            text = pack.title + " " + AndroidUtils.getString(wasUpdate ? R.string.telegram_stickers_updated : R.string.telegram_stickers_downloaded);
         else
-            text = wasUpdate ? pack.title + AndroidUtils.getString(R.string.telegram_stickers_error_update) : pack.title + AndroidUtils.getString(R.string.telegram_stickers_error_download);
+            text = pack.title + " " + AndroidUtils.getString(wasUpdate ? R.string.telegram_stickers_error_update : R.string.telegram_stickers_error_download);
 
         if (e instanceof TelegramStickersGrabber.TSGException) {
             text = pack.title + ": " + e.getMessage();

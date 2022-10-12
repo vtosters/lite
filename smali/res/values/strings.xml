@@ -6113,8 +6113,8 @@ May look like a fake leaving the online"</string>
     <string name="telegram_stickers_downloading">: downloading</string>
     <string name="telegram_stickers_updating">: update</string>
     <string name="telegram_stickers_gettinginfo">Getting info</string>
-    <string name="telegram_stickers_updated"> updated successfully</string>
-    <string name="telegram_stickers_downloaded"> downloaded successfully</string>
+    <string name="telegram_stickers_updated">updated successfully</string>
+    <string name="telegram_stickers_downloaded">downloaded successfully</string>
     <string name="telegram_stickers_error_update">: update failed</string>
     <string name="telegram_stickers_error_download">: download failed</string>
 

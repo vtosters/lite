@@ -5975,8 +5975,8 @@
     <string name="telegram_stickers_downloading">: загрузка</string>
     <string name="telegram_stickers_updating">: обновление</string>
     <string name="telegram_stickers_gettinginfo">Получение информации</string>
-    <string name="telegram_stickers_updated"> успешно обновлен</string>
-    <string name="telegram_stickers_downloaded"> успешно загружен</string>
+    <string name="telegram_stickers_updated">успешно обновлен</string>
+    <string name="telegram_stickers_downloaded">успешно загружен</string>
     <string name="telegram_stickers_error_update">: ошибка при обновлении</string>
     <string name="telegram_stickers_error_download">: ошибка при загрузке</string>
 
