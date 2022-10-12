@@ -6309,4 +6309,6 @@
     <string name="writebar_ios_title">Панель ввода с iOS</string>
     <string name="newsfeed_notif_title">Уведомления в новостях</string>
     <string name="newsfeed_notif_summ">Показывать счетчик уведомлений в докбаре на иконке новостей</string>
+
+    <string name="invalid_pack_link">Неверная ссылка на набор</string>
 </resources>

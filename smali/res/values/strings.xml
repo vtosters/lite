@@ -6447,4 +6447,6 @@ May look like a fake leaving the online"</string>
     <string name="writebar_ios_title">iOS writebar</string>
     <string name="newsfeed_notif_title">Newsfeed notifications</string>
     <string name="newsfeed_notif_summ">Show notification counter in dockbar on news icon</string>
+
+    <string name="invalid_pack_link">Invalid pack link</string>
 </resources>

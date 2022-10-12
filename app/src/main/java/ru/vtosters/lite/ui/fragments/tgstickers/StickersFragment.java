@@ -45,6 +45,7 @@ import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
 import ru.vtosters.lite.ui.components.StickerTouchHelperCallback;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class StickersFragment extends BaseToolbarFragment {
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
@@ -189,7 +190,7 @@ public class StickersFragment extends BaseToolbarFragment {
                             if (!pack.startsWith("https://")) {
                                 pack = "https://" + pack;
                             } else if (!pack.contains("addstickers")) {
-                                sendToast("Invalid pack name");
+                                sendToast(AndroidUtils.getString("invalid_pack_link"));
                             }
                             pack = parsePack(pack);
                             mService.requestPackDownload(pack, new File(getContext().getFilesDir(), new File("VT-Stickers", pack).getAbsolutePath()));
