@@ -4,12 +4,17 @@ import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
@@ -27,6 +32,7 @@ import java.util.List;
 import java.util.Objects;
 
 import ru.vtosters.lite.utils.ExternalLinkParser;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class VideoDownloader {
     private static final int DOWNLOAD_ID = 0;
@@ -97,29 +103,28 @@ public class VideoDownloader {
             max[i] = list.get(i);
         }
 
-        if (context == null) {
-            var url = urls.get(urls.size() - 1);
+        if (context == null) context = LifecycleUtils.getCurrentActivity();
 
-            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-            request.setTitle(videoFile.toString());
-            request.allowScanningByMediaScanner();
-            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
-            ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
-            return;
-        }
+        var adapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, max) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                TextView textView = (TextView) super.getView(position, convertView, parent);
+                textView.setTextColor(getTextAttr());
+                return textView;
+            }
+        };
 
         new VkAlertDialog.Builder(context)
-            .setItems(max, ((dialog, which) -> {
-                var url = urls.get(which);
-                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                request.setTitle(videoFile.toString());
-                request.allowScanningByMediaScanner();
-                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
-                ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
-            }))
-            .show();
+                .setAdapter(adapter, (dialog, which) -> {
+                    var url = urls.get(which);
+                    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+                    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                    request.setTitle(videoFile.toString());
+                    request.allowScanningByMediaScanner();
+                    request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
+                    ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+                })
+                .show();
     }
 
     public static void parseVideoLink(String url, Context ctx) {
