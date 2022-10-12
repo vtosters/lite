@@ -5562,7 +5562,7 @@ Does not affect vk.cc links"</string>
     <string name="vtlrecommend">Recommendations</string>
     <string name="vtlrecommendfriend">Disable friends recommendations</string>
     <string name="vtlrecommendauthor">Disable authors recommendations</string>
-    <string name="vtlrecommendfriendpost">Disable recommended friends posts</string>
+    <string name="vtlrecommendfriendpost">в</string>
     <string name="BGStickers">Sticker outlines</string>
     <string name="vtlrecommendmarksummary">Posts like You may be interested</string>
     <string name="vtlfeedwork">Other</string>
@@ -5590,7 +5590,7 @@ Does not affect vk.cc links"</string>
     <string name="act_bot">For Bots/Groups</string>
     <string name="act_cnv">For Conversations</string>
     <string name="act_pm">For Private messages</string>
-    <string name="alteremoji">Alternative type of emoji menu</string>
+    <string name="alteremoji">Alternative emoji menu</string>
     <string name="alteremojisum">Alternative selection of emojis and stickers in the miniature menu</string>
     <string name="altnewsfeed">Alternative design of newsfeed</string>
     <string name="altnewsfeedsum">Design with dynamic tabs in the feed</string>
@@ -5703,7 +5703,7 @@ Expand text..."</string>
     <string name="interfacestartfrsum">Select start fragment</string>
     <string name="interfacevideo">Video</string>
     <string name="interfacevideoext_short">External player</string>
-    <string name="interfacevideoext">Use external video player</string>
+    <string name="interfacevideoext">External video player</string>
     <string name="interfacevideoextsum">Use an external video player to play videos</string>
     <string name="interfacevideorec">Disable recommended videos</string>
     <string name="interfacevideorecsum">Disable video recommendations at the bottom of the video player with video recommendations</string>
@@ -5843,7 +5843,7 @@ May look like a fake leaving the online"</string>
     <string name="feed_ads_regular_summary">Regular ads in feed between posts</string>
     <string name="feed_ads_carousel_summary">Ads with list (of goods)</string>
     <string name="feed_ads_stories_summary">Ads in stories</string>
-    <string name="feed_ads_sources">Disable all posts with source</string>
+    <string name="feed_ads_sources">Disable posts with source</string>
     <string name="feed_ads_sources_summary">More often posts ad posts with advertiser source tag</string>
 
     <string name="feed_recommendations_friends_summary">Recommend potential friends</string>
@@ -5888,7 +5888,7 @@ May look like a fake leaving the online"</string>
     <string name="messages_interface_calls_summary">Call icon in messages</string>
     <string name="messages_interface_tails_summary">May not work correctly with attachments</string>
     <string name="messages_other_choose_count">Choose count</string>
-    <string name="messages_other_download_first">Amount of messages downloaded at once</string>
+    <string name="messages_other_download_first">Amount of downloaded messages</string>
 
     <string name="vkx_title" translatable="false">VK X</string>
     <string name="vkx_why">Why?</string>
@@ -5921,7 +5921,7 @@ May look like a fake leaving the online"</string>
 
     <string name="warning">Warning!</string>
     <string name="debug_warning_summary">These options are for testing this app only. If you are a regular user, please, don\'t use them</string>
-    <string name="debug_show_settings_item">Show debug category in settings</string>
+    <string name="debug_show_settings_item">Show debug menu</string>
 
     <string name="debug_experimental">Experimental</string>
     <string name="debug_experimental_usevkui">Profile editing?</string>
@@ -6392,7 +6392,7 @@ May look like a fake leaving the online"</string>
     <string name="contact_sync_enabled">Enabled</string>
     <string name="contact_sync_disabled">Disabled</string>
 
-    <string name="force_disable_psm_title">Don\'t send battery information</string>
+    <string name="force_disable_psm_title">Hide battery information</string>
     <string name="force_disable_psm_summ">Enabling this feature will hide information about the state of your device in battery saving mode and VK will send you media content without strong compression and blur</string>
 
     <string name="track_bd_insert_err">Error writing track to database!</string>

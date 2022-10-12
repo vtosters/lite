@@ -5428,7 +5428,7 @@
     <string name="vtlrecommend">Рекомендации</string>
     <string name="vtlrecommendfriend">Отключить рекомендации друзей</string>
     <string name="vtlrecommendauthor">Отключить рекомендации авторов</string>
-    <string name="vtlrecommendfriendpost">Отключить рекомендации постов друзей</string>
+    <string name="vtlrecommendfriendpost">Отключить рекомендации постов</string>
     <string name="BGStickers">Обводка стикеров</string>
     <string name="vtlrecommendmarksummary">Посты по типу Вам может быть интересно и тд</string>
     <string name="vtlfeedwork">Прочее</string>
@@ -5456,7 +5456,7 @@
     <string name="act_bot">Для ботов/групп</string>
     <string name="act_cnv">Для бесед</string>
     <string name="act_pm">Для личных сообщений</string>
-    <string name="alteremoji">Альтернативный дизайн меню с эмодзи</string>
+    <string name="alteremoji">Альтернативное меню с эмодзи</string>
     <string name="alteremojisum">Альтернативный вид выбора эмодзи и стикеров в миниатюрном меню</string>
     <string name="altnewsfeed">Альтернативный дизайн ленты</string>
     <string name="altnewsfeedsum">Дизайн с динамическими вкладками в ленте</string>
@@ -5479,7 +5479,7 @@
     <string name="dnw">Неписалка</string>
     <string name="docknumbers">Счётчики в докбаре</string>
     <string name="docknumberssum">Отключение не работает в интерфейсе для планшетов</string>
-    <string name="dockbar_tab_titles">Показ заголовков вкладок в докбаре</string>
+    <string name="dockbar_tab_titles">Показ заголовков в докбаре</string>
     <string name="superapp_editor_message">Для отключения/включения неподвижного элемента проведите по нему вправо или влево</string>
     <string name="fcmtokenfixed">Уведомления были восстановлены!</string>
     <string name="fcmtokenget">FCM токен получен</string>
@@ -5569,7 +5569,7 @@
     <string name="interfacestartfrsum">Выберите стартовый фрагмент</string>
     <string name="interfacevideo">Видео</string>
     <string name="interfacevideoext_short">Внешний плеер</string>
-    <string name="interfacevideoext">Использовать внешний видеоплеер</string>
+    <string name="interfacevideoext">Внешний видеоплеер</string>
     <string name="interfacevideoextsum">Использовать внешний видеоплеер для воспроизведения видео</string>
     <string name="interfacevideorec">Отключение рекомендаций видео</string>
     <string name="interfacevideorecsum">Отключение рекомендаций видео внизу видеоплеера с рекомендациями видео</string>
@@ -5655,7 +5655,7 @@
     <string name="musicFixNew_title">Фикс музыки v2</string>
     <string name="new_music_downloading_way_title">Новый способ скачивания музыки</string>
     <string name="dialogrecomm">Отключить рекомендации</string>
-    <string name="showvtfire">Показывать специальные верификации</string>
+    <string name="showvtfire">Показывать файрочки</string>
     <string name="showvtverify">Показывать верификации</string>
     <string name="sprefsctype">Тип подключения</string>
     <string name="sprefsdelkey">Удалить ключ бота Telegram</string>
@@ -5710,7 +5710,7 @@
     <string name="feed_ads_regular_summary">Обычные рекламные вставки в ленте между постами</string>
     <string name="feed_ads_carousel_summary">Реклама со списком (товаров)</string>
     <string name="feed_ads_stories_summary">Реклама при переходе между историями</string>
-    <string name="feed_ads_sources">Отключить все посты с источником</string>
+    <string name="feed_ads_sources">Отключить посты с источником</string>
     <string name="feed_ads_sources_summary">В большинстве случаев - рекламные посты с пометкой источника рекламодателя</string>
 
     <string name="feed_recommendations_friends_summary">Рекомендации возможных друзей</string>
@@ -5755,7 +5755,7 @@
     <string name="messages_interface_calls_summary">Иконка звонков в сообщениях</string>
     <string name="messages_interface_tails_summary">Может некорректно работать с вложениями</string>
     <string name="messages_other_choose_count">Выберите количество</string>
-    <string name="messages_other_download_first">Количество сообщений, загружаемых сразу</string>
+    <string name="messages_other_download_first">Количество загружаемых сообщений</string>
 
     <string name="vkx_why">Зачем?</string>
     <string name="vkx_why_summary">Интеграция позволит использовать возможности VK X прямиком в VTosters Lite\n\nКроме воспроизведения, в клиенте будет работать и кеш из плеера</string>
@@ -5789,7 +5789,7 @@
     
     <string name="warning">Внимание!</string>
     <string name="debug_warning_summary">Данное меню предназначено только для тестирования работоспособности приложения. Если вы являетесь рядовым юзером, то вам не следует ничего не трогать в данных настройках (пожалуйста)</string>
-    <string name="debug_show_settings_item">Показывать пункт дебага в настройках</string>
+    <string name="debug_show_settings_item">Показывать дебаг меню</string>
 
     <string name="debug_experimental">Experimental</string>
     <string name="debug_experimental_usevkui">Редактирование страницы?</string>
@@ -6254,7 +6254,7 @@
     <string name="contact_sync_enabled">Включена</string>
     <string name="contact_sync_disabled">Отключена</string>
 
-    <string name="force_disable_psm_title">Не отправлять информацию о батарее</string>
+    <string name="force_disable_psm_title">Скрыть информацию о батарее</string>
     <string name="force_disable_psm_summ">Включение этой функции скроет информацию о состоянии вашего устройства в режиме экономии батареи и ВКонтакте будет отправлять вам медиаконтент без сильного сжатия и блюра</string>
 
     <string name="track_bd_insert_err">Ошибка при записи трека в базу данных!</string>
