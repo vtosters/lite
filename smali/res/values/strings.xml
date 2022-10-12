@@ -5562,7 +5562,7 @@ Does not affect vk.cc links"</string>
     <string name="vtlrecommend">Recommendations</string>
     <string name="vtlrecommendfriend">Disable friends recommendations</string>
     <string name="vtlrecommendauthor">Disable authors recommendations</string>
-    <string name="vtlrecommendfriendpost">в</string>
+    <string name="vtlrecommendfriendpost">Disable recommended posts</string>
     <string name="BGStickers">Sticker outlines</string>
     <string name="vtlrecommendmarksummary">Posts like You may be interested</string>
     <string name="vtlfeedwork">Other</string>
