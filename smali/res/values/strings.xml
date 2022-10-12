@@ -6439,4 +6439,12 @@ May look like a fake leaving the online"</string>
     <string name="audio_download_title">Download all your audio</string>
 
     <string name="app_activities_error">An application error has occurred. Restart the application</string>
+
+    <string name="vkx_integration_enabled_info">VK X integration is enabled. Global caching is available inside VK X</string>
+
+    <string name="current_theme">Current theme</string>
+
+    <string name="writebar_ios_title">iOS writebar</string>
+    <string name="newsfeed_notif_title">Newsfeed notifications</string>
+    <string name="newsfeed_notif_summ">Show notification counter in dockbar on news icon</string>
 </resources>

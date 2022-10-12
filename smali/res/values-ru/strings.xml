@@ -6301,4 +6301,12 @@
     <string name="audio_download_title">Скачивание всех своих аудио</string>
 
     <string name="app_activities_error">Ошибка в работе приложения. Перезапустите приложение</string>
+
+    <string name="vkx_integration_enabled_info">Включена интеграция VK X. Глобальное кеширование доступно внутри VK X</string>
+
+    <string name="current_theme">Текущая тема</string>
+
+    <string name="writebar_ios_title">Панель ввода с iOS</string>
+    <string name="newsfeed_notif_title">Уведомления в новостях</string>
+    <string name="newsfeed_notif_summ">Показывать счетчик уведомлений в докбаре на иконке новостей</string>
 </resources>

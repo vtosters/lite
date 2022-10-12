@@ -120,21 +120,22 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         if (disableSettingsSumms()) return null;
 
         String str;
+        String[] themeTypeName = AndroidUtils.getArray("theme_type_name");
 
         switch (getPrefsValue("currsystemtheme")) {
             default:
             case "system":
-                str = "Системная";
+                str = themeTypeName[0];
                 break;
             case "dark":
-                str = "Темная";
+                str = themeTypeName[1];
                 break;
             case "light":
-                str = "Светлая";
+                str = themeTypeName[2];
                 break;
         }
 
-        return "Текущая тема" + ": " + str;
+        return AndroidUtils.getString("current_theme") + ": " + str;
     }
 
     public static String getSuperappsumm() {
@@ -200,7 +201,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                     "system",
                     requireContext().getString(R.string.appearance_theme_use_system),
                     R.drawable.ic_palette_outline_28, getThemesumm(),
-                    new String[] { "Системная тема", "Тёмная тема", "Светлая тема" },
+                    AndroidUtils.getArray("theme_type_name_checkbox"),
                     new String[] { "system", "dark", "light" },
                     (preference, o) -> {
                         String value = (String) o;

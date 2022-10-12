@@ -17,7 +17,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="wbios"
-            android:title="Панель ввода с iOS" />
+            android:title="@string/writebar_ios_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vk_messenger" android:key="vkmesett">
         <com.vtosters.lite.ui.MaterialSwitchPreference

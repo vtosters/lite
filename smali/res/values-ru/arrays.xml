@@ -679,4 +679,14 @@
         <item>сообщения</item>
         <item>сообщений</item>
     </string-array>
+    <string-array name="theme_type_name">
+        <item>Системная</item>
+        <item>Темная</item>
+        <item>Светлая</item>
+    </string-array>
+    <string-array name="theme_type_name_checkbox">
+        <item>Системная тема</item>
+        <item>Темная тема</item>
+        <item>Светлая тема</item>
+    </string-array>
 </resources>

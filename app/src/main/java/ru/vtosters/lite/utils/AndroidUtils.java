@@ -72,6 +72,10 @@ public class AndroidUtils {
         return getResources().getStringArray(arrayId);
     } // Get array from arrays.xml
 
+    public static String[] getArray(String resourcename) {
+        return getResources().getStringArray(getIdentifier(resourcename, "array"));
+    }
+
     public static String getString(int id) {
         return getGlobalContext().getString(id);
     }

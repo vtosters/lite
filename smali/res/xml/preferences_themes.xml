@@ -42,8 +42,8 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="newsfeed_notif"
-            android:summary="Показывать счетчик уведомлений в докбаре на иконке новостей"
-            android:title="Уведомления в новостях" />
+            android:summary="@string/newsfeed_notif_summ"
+            android:title="@string/newsfeed_notif_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <Preference

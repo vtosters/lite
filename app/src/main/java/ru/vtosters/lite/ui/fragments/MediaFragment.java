@@ -212,7 +212,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     private void dlaudio(Context ctx) {
         if (LibVKXClient.isIntegrationEnabled()) {
-            sendToast("Включена интеграция VKX. Глобальное кеширование доступно внутри VKX");
+            sendToast(AndroidUtils.getString("vkx_integration_enabled_info"));
             return;
         }
 
