@@ -7,6 +7,7 @@ import com.vk.dto.music.MusicTrack;
 import java.io.File;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.music.Callback;
 import ru.vtosters.lite.music.M3UDownloader;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
@@ -36,6 +37,9 @@ public class TrackDownloader {
                 Log.v("TrackDownloader", "Directory created");
             else
                 Log.e("TrackDownloader", "Directory creation failed");
-        downloader.downloadTrack(track, outDir, callback, cache);
+
+        VTExecutors.getMusicDownloadExecutor().execute(
+                () -> downloader.downloadTrack(track, outDir, callback, cache)
+        );
     }
 }

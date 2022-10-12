@@ -3,10 +3,14 @@ package ru.vtosters.lite.concurrent;
 import com.vk.core.concurrent.VkExecutors;
 
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import io.reactivex.Scheduler;
 
 public class VTExecutors {
+    public static ExecutorService getMusicDownloadExecutor() {
+        return VTMusicDownloadExecutor.getInstance();
+    }
 
     public static ExecutorService getIoExecutor() {
         return VkExecutors.x.e();
@@ -18,5 +22,17 @@ public class VTExecutors {
 
     public static Scheduler getSlowTasksScheduler() {
         return VkExecutors.x.q();
+    }
+
+    static class VTMusicDownloadExecutor {
+        private VTMusicDownloadExecutor() {}
+
+        private static class LazyHolder {
+            public static final ExecutorService INSTANCE = Executors.newSingleThreadExecutor();
+        }
+
+        public static ExecutorService getInstance() {
+            return LazyHolder.INSTANCE;
+        }
     }
 }

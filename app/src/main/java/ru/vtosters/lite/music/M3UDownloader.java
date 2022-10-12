@@ -10,8 +10,6 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.crypto.NoSuchPaddingException;
@@ -28,7 +26,6 @@ import ru.vtosters.lite.utils.IOUtils;
 
 public class M3UDownloader implements ITrackDownloader {
     private static final OkHttpClient client = new OkHttpClient();
-    private ExecutorService executorService = Executors.newSingleThreadExecutor();
 
     public static M3UDownloader getInstance() {
         return Holder.INSTANCE;

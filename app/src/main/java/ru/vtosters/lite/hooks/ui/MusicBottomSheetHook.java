@@ -19,15 +19,11 @@ import com.vk.music.common.MusicPlaybackLaunchContext;
 import com.vtosters.lite.R;
 
 import java.util.ArrayList;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 
 public class MusicBottomSheetHook {
-    private static final ExecutorService executor = Executors.newCachedThreadPool();
-
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
         if (musicTrack.F1()) return actions;
 
@@ -149,7 +145,7 @@ public class MusicBottomSheetHook {
             return tryPlayInVKX(null, null, playlist);
 
         if (actionId == R.id.add_to_cache) {
-            executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
+            AudioDownloader.cachePlaylist(playlist);
             return true;
         }
 
@@ -183,7 +179,7 @@ public class MusicBottomSheetHook {
                     }
                 });
             } else {
-                executor.submit(() -> AudioDownloader.downloadPlaylist(playlist));
+                AudioDownloader.downloadPlaylist(playlist);
             }
             return true;
         }
