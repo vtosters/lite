@@ -96,6 +96,7 @@ public class M3UDownloader implements ITrackDownloader {
             }));
         }
         var future = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
+        future.join();
         future.exceptionally(throwable -> {
             callback.onFailure();
             return null;
