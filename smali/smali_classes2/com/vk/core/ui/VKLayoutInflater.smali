@@ -242,7 +242,7 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p0, p4, p2, v1}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;->createView(Landroid/util/AttributeSet;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;
+    invoke-virtual {p0, p2, v1, p4}, Landroid/view/LayoutInflater;->createView(Ljava/lang/String;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object p1
     :try_end_0
@@ -309,7 +309,7 @@
 
     .line 2
     :try_start_0
-    invoke-virtual {p0, p2, p1, v3}, Lru/vtosters/lite/themes/proxy/ProxyLayoutInflater;->createView(Landroid/util/AttributeSet;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;
+    invoke-virtual {p0, p1, v3, p2}, Landroid/view/LayoutInflater;->createView(Ljava/lang/String;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object v3
     :try_end_0

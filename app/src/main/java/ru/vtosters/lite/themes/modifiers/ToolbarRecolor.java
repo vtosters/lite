@@ -10,6 +10,7 @@ public class ToolbarRecolor implements IModifier<View> {
     public static final int subtitleTextColor = R.attr.subtitleTextColor;
     public static final int titleTextColor = R.attr.titleTextColor;
     public static final int textColorPrimary = android.R.attr.textColorPrimary;
+    public static final int background = android.R.attr.background;
 
     @Override
     public boolean isModifiable(View target) {
@@ -26,6 +27,8 @@ public class ToolbarRecolor implements IModifier<View> {
             case titleTextColor:
                 t.setTitleTextColor(color);
                 break;
+            case background:
+                t.setBackgroundColor(color);
         }
     }
 }

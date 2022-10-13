@@ -1043,7 +1043,7 @@
     .line 15
     sget v5, Lb/h/z/b;->text_primary:I
 
-    invoke-static {v5}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v5}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v5
 
@@ -1638,7 +1638,7 @@
     .line 47
     sget v3, Lb/h/z/b;->activity_indicator_tint:I
 
-    invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v3}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -1674,7 +1674,7 @@
     .line 43
     sget v1, Lb/h/z/b;->accent:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -1687,7 +1687,7 @@
     .line 44
     sget v0, Lb/h/z/b;->modal_card_background:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 

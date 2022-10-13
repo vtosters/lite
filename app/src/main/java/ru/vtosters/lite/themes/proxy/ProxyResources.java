@@ -3,13 +3,17 @@ package ru.vtosters.lite.themes.proxy;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.util.Log;
-import android.util.Xml;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.annotation.XmlRes;
+
+import com.vtosters.lite.R;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -41,18 +45,22 @@ public class ProxyResources extends Resources {
         return mOriginalResource.getColor(id, theme);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @NonNull
     @Override
-    public ColorStateList getColorStateList(int id, @Nullable Resources.Theme theme) throws Resources.NotFoundException {
-        Log.d("getColorStateList", getResourceEntryName(id));
-        return ColorStateList.valueOf(Color.RED);//mOriginalResource.getColorStateList(id, theme);
+    public ColorStateList getColorStateList(@XmlRes int id, @Nullable Resources.Theme theme)
+            throws Resources.NotFoundException {
+        var target = mOriginalResource.getColorStateList(id, theme);
+        if (ThemesUtils.isCustomThemeApplied() && ThemesUtils.isAccentedColor(target)) {
+            return ColorStateList.valueOf(ThemesUtils.getAccentColor());
+        }
+        return target;
     }
 
     @Nullable
     @Override
     public Drawable getDrawableForDensity(int id, int density, @Nullable Resources.Theme theme) {
         if (ThemesUtils.isCustomThemeApplied()) {
-
         }
         return mOriginalResource.getDrawableForDensity(id, density, theme);
     }
@@ -84,7 +92,6 @@ public class ProxyResources extends Resources {
                 field = resourceFieldsMap.get(clz);
             }
             if (field == null) return;
-            Log.d("ProxyResources", String.format("Found class: %s (%s)", clz.getName(), field));
             field.setAccessible(true);
             ReflectionUtils.unfinalField(field);
             var original = (Resources) field.get(target);

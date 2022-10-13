@@ -7,6 +7,8 @@
 .method public static final a(Landroidx/appcompat/widget/Toolbar;)V
     .locals 4
 
+    invoke-static {p0}, Lru/vtosters/lite/themes/Recolor;->recolorToolbar(Landroidx/appcompat/widget/Toolbar;)V
+
     .line 1
     sget v0, Lb/h/z/b;->toolbar_title_textColor:I
 

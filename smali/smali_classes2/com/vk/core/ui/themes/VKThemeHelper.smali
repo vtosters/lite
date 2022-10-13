@@ -394,7 +394,7 @@
 
     move-result-object p0
 
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -738,7 +738,7 @@
 
     move-result-object p0
 
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -813,7 +813,7 @@
     .end param
 
     .line 11
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -856,7 +856,7 @@
     .line 23
     new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -1016,7 +1016,7 @@
     .line 71
     sget p0, Lb/h/z/b;->background_page:I
 
-    invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p0
 
@@ -1089,7 +1089,7 @@
     .line 62
     sget p1, Lb/h/z/b;->background_page:I
 
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -1164,7 +1164,7 @@
     .line 83
     sget v1, Lb/h/z/b;->selection_off_icon:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -1181,7 +1181,7 @@
     .line 84
     sget v1, Lb/h/z/b;->accent:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -1196,7 +1196,7 @@
     .line 85
     sget v1, Lb/h/z/b;->selection_off_icon:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -1207,7 +1207,7 @@
     .line 86
     sget v1, Lb/h/z/b;->accent:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -1254,7 +1254,7 @@
     .line 20
     new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -1282,7 +1282,7 @@
     .end param
 
     .line 25
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -1310,7 +1310,7 @@
     .line 17
     new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -1435,7 +1435,7 @@
     .end param
 
     .line 13
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -1461,7 +1461,7 @@
     .end param
 
     .line 15
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -1621,7 +1621,7 @@
     .end param
 
     .line 15
-    invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result p0
 
@@ -2032,7 +2032,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lru/vtosters/lite/themes/VTLColors;->getColor(Landroid/content/Context;I)I
+    invoke-static {v0, p0}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result p0
 
@@ -2191,7 +2191,7 @@
     .line 5
     sget v0, Lb/h/z/b;->header_background:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -2380,7 +2380,7 @@
     .line 1
     sget v0, Lb/h/z/b;->background_page:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -2570,7 +2570,7 @@
     .line 4
     sget v2, Lb/h/z/b;->accent:I
 
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -2589,7 +2589,7 @@
     .line 1
     sget v1, Lb/h/z/b;->loader_track_fill:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -2606,7 +2606,7 @@
     .line 2
     sget v1, Lb/h/z/b;->accent:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -2623,7 +2623,7 @@
     .line 3
     sget v1, Lb/h/z/b;->loader_track_fill:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -2634,7 +2634,7 @@
     .line 4
     sget v1, Lb/h/z/b;->accent:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/themes/VTLColors;->getColor(I)I
 
     move-result v1
 

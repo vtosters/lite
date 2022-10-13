@@ -1,15 +1,12 @@
 package ru.vtosters.lite.utils;
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.Bundle;
 import android.os.Handler;
 
 import com.vk.navigation.Navigator;
-import com.vtosters.lite.VKActivity;
 
 import java.util.ArrayList;
 import java.util.List;

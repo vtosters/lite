@@ -110,21 +110,31 @@ public class VTLResources  {
     }
 
     public static int getColor(Resources res, int colorId) {
-        return res.getColor(colorId);
+        return VTLColors.getColor(colorId);//res.getColor(colorId);
     }
 
     @SuppressLint("NewApi")
     public static int getColor(Resources res, int colorId, Resources.Theme theme) {
-        return res.getColor(colorId, theme);
+        return VTLColors.getColor(colorId);
     }
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList getColorStateList(Resources res, int colorId) {
+        if (ThemesUtils.isCustomThemeApplied()) {
+            int color = VTLColors.getColor(colorId);
+            if (color != -1)
+                return ColorStateList.valueOf(color);
+        }
         return res.getColorStateList(colorId);
     }
 
     @SuppressLint("NewApi")
     public static ColorStateList getColorStateList(Resources res, int colorId, Resources.Theme theme) {
+        if (ThemesUtils.isCustomThemeApplied()) {
+            int color = VTLColors.getColor(colorId);
+            if (color != -1)
+                return ColorStateList.valueOf(color);
+        }
         return res.getColorStateList(colorId, theme);
     }
     //endregion

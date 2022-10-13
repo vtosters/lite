@@ -5,6 +5,7 @@ import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.Pair;
 import android.util.SparseArray;
 import android.util.Xml;
@@ -43,16 +44,11 @@ public class ProxyLayoutInflater extends LayoutInflater {
 
     @Override
     public View inflate(int resource, @Nullable ViewGroup root, boolean attachToRoot) {
-        var isCustomTheme = ThemesUtils.isCustomThemeApplied();
-        if (isCustomTheme) parseLayout(resource);
         var target = super.inflate(resource, root, attachToRoot);
-        if (isCustomTheme) Recolor.recolorViewOrViewGroup(target, layouts.get(resource));
-        return target;
-    }
-
-    public View createView(AttributeSet attrs, String name, String prefix)
-            throws ClassNotFoundException {
-        var target = super.createView(name, prefix, attrs);
+//        if (ThemesUtils.isCustomThemeApplied()) {
+//            parseLayout(resource);
+//            Recolor.recolorViewOrViewGroup(target, layouts.get(resource));
+//        }
         return target;
     }
 

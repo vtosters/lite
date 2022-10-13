@@ -368,6 +368,8 @@
 
     check-cast p2, Landroidx/appcompat/widget/Toolbar;
 
+    invoke-static {p2}, Lru/vtosters/lite/themes/Recolor;->recolorToolbar(Landroidx/appcompat/widget/Toolbar;)V
+
     const v1, 0x7f120fae
 
     .line 3
