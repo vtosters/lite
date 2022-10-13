@@ -9,6 +9,7 @@ import static ru.vtosters.lite.utils.Preferences.adsstories;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 
 import android.util.Log;
@@ -224,6 +225,12 @@ public class AdBlockHook {
                     continue;
                 }
 
+                if (hasMiniAppAds(list) && !isWhitelistedFilters(list)) {
+                    if (dev())
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: MiniApp filters");
+                    continue;
+                }
+
                 if (NewsFeedFiltersUtils.injectFiltersReposts(list) && !isWhitelistedFilters(list)) {
                     if (dev())
                         Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: repost ad");
@@ -359,5 +366,18 @@ public class AdBlockHook {
         );
 
         return whitelist.contains(id);
+    }
+
+    public static Boolean hasMiniAppAds(JSONObject list) {
+        var attachments = list.optJSONArray("attachments");
+
+        if (attachments != null && getBoolValue("blockminiapps", false)) {
+            for (int j = 0; j < attachments.length(); j++) {
+                var type = attachments.optJSONObject(j).optString("type");
+                if (type.contains("mini_app")) return true;
+            }
+        }
+
+        return false;
     }
 }
