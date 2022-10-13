@@ -10,6 +10,7 @@ import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
@@ -323,8 +324,17 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             AndroidUtils.getGlobalContext().getSharedPreferences("gcm", 0).edit().clear().apply();
             OtherFragment.this.getListView().postDelayed(() -> {
                 PushSubscriber.e.a(true);
-                ToastUtils.a(requireContext().getString(R.string.fcmtokenget));
-                ToastUtils.a(requireContext().getString(R.string.fcmtokenfixed));
+
+                Context ctx;
+
+                try {
+                    ctx = requireContext();
+                } catch (Exception unused) {
+                    ctx = getGlobalContext();
+                }
+
+                ToastUtils.a(ctx.getString(R.string.fcmtokenget));
+                ToastUtils.a(ctx.getString(R.string.fcmtokenfixed));
             }, 1000);
             return true;
         }
