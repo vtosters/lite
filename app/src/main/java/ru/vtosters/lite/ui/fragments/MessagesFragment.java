@@ -11,12 +11,14 @@ import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
+import com.vk.stickers.Stickers;
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
@@ -39,6 +41,7 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("vkme_notifs").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("systememoji").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("wallpapers").setOnPreferenceClickListener(new MessagesFragment.openwp());
+        findPreference("promotedstickers").setOnPreferenceChangeListener(new clearStickersCache());
 
         findPreference("autotranslate").setEnabled(!autoalltranslate());
 
@@ -76,6 +79,7 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     public boolean onPreferenceTreeClick(Preference preference) {
         findPreference("autotranslate").setEnabled(!autoalltranslate());
         findPreference("vkme_notifs").setEnabled(vkme());
+        findPreference("promotedstickers").setOnPreferenceChangeListener(new clearStickersCache());
         return super.onPreferenceTreeClick(preference);
     }
 
@@ -95,6 +99,16 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         @Override
         public boolean onPreferenceClick(Preference preference) {
             return MessagesFragment.this.restart();
+        }
+    }
+
+    public class clearStickersCache implements Preference.OnPreferenceChangeListener {
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object o) {
+            SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
+            prefs2.edit().clear().commit();
+            Stickers.l.c();
+            return true;
         }
     }
 

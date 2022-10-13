@@ -63,6 +63,10 @@
             android:key="systememoji"
             android:summary="@string/systememojisum"
             android:title="@string/systememoji" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="promotedstickers"
+            android:title="Не получать промо стикеры" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference

@@ -40,7 +40,9 @@
 
     const-string v0, "filters"
 
-    const-string v1, "purchased,active,promoted"
+    invoke-static {}, Lru/vtosters/lite/hooks/PromoStickersHook;->hook()Ljava/lang/String;
+
+    move-result-object v1
 
     .line 4
     invoke-virtual {p0, v0, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;

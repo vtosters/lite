@@ -4855,6 +4855,8 @@
 
     move-result v1
 
+    const v1, 0x0
+
     invoke-virtual {v0, v1}, Lcom/vk/auth/api/VKAccount;->h(I)V
 
     return-void
