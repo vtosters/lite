@@ -5760,8 +5760,8 @@ You need to restart the application to apply proxy settings"</string>
     <string name="customrounding_title">Image rounding size</string>
     <string name="postsredesign_title">Video post redesign</string>
     <string name="postsredesign_summ">The text for the video will be displayed below the video</string>
-    <string name="miniapps_title">Miniapps section</string>
-    <string name="miniapps_summ">Show Miniapps/Games in menu</string>
+    <string name="miniapps_title">MiniApps section</string>
+    <string name="miniapps_summ">Show MiniApps/Games in menu</string>
     <string name="show_vkpay_title">VK Pay section</string>
     <string name="show_vkpay_summ">Show VK Pay in the menu</string>
     <string name="show_superapps_title">Superapps</string>
@@ -6449,4 +6449,10 @@ May look like a fake leaving the online"</string>
     <string name="newsfeed_notif_summ">Show notification counter in dockbar on news icon</string>
 
     <string name="invalid_pack_link">Invalid pack link</string>
+
+    <string name="blockminiapps_title">MiniApp posts</string>
+    <string name="blockminiapps_summ">Block posts with MiniApps</string>
+    <string name="maxquality_title">Maximum quality</string>
+    <string name="maxquality_summ">Open video in maximum quality through an external video player</string>
+    <string name="promotedstickers_title">Don\'t receive promoted stickers</string>
 </resources>

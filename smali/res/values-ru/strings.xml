@@ -6311,4 +6311,10 @@
     <string name="newsfeed_notif_summ">Показывать счетчик уведомлений в докбаре на иконке новостей</string>
 
     <string name="invalid_pack_link">Неверная ссылка на набор</string>
+
+    <string name="blockminiapps_title">Посты с MiniApp</string>
+    <string name="blockminiapps_summ">Блокировать посты с мини-приложениями</string>
+    <string name="maxquality_title">Максимальное качество</string>
+    <string name="maxquality_summ">Открывать видео в максимальном качестве через внешний видеоплеер</string>
+    <string name="promotedstickers_title">Не получать промостикеры</string>
 </resources>

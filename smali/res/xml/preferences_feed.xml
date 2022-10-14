@@ -80,8 +80,8 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="blockminiapps"
-            android:summary="Блокировать посты если в них есть мини приложение"
-            android:title="Посты с MiniApp" />
+            android:summary="@string/blockminiapps_summ"
+            android:title="@string/blockminiapps_title" />
         <Preference
             android:key="whitelisted_filters_groups"
             android:title="@string/whitelisted_filters_groups_title" />
