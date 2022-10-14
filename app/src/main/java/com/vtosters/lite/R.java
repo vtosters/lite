@@ -1,6 +1,7 @@
 package com.vtosters.lite;
 
-public class R {
+public final class R {
+
     public static final class anim {
         public static final int abc_fade_in = 0x7f010000; // 2130771968
         public static final int abc_fade_out = 0x7f010001; // 2130771969
@@ -220,6 +221,8 @@ public class R {
         public static final int targetlang_value = 0x7f030074; // 2130903156
         public static final int undel_value = 0x7f030075; // 2130903157
         public static final int wallpaper_change_dialog = 0x7f030076; // 2130903158
+        public static final int theme_type_name = 0x7f030077; // 2130903159
+        public static final int theme_type_name_checkbox = 0x7f030078; // 2130903160
     }
 
     public static final class attr {
@@ -19514,6 +19517,17 @@ public class R {
         public static final int whitelisted_filters_groups_title = 0x7f121838; // 2131892280
         public static final int why_news_not_updated_summ = 0x7f121839; // 2131892281
         public static final int why_news_not_updated_title = 0x7f12183a; // 2131892282
+        public static final int blockminiapps_summ = 0x7f12183b; // 2131892283
+        public static final int blockminiapps_title = 0x7f12183c; // 2131892284
+        public static final int current_theme = 0x7f12183d; // 2131892285
+        public static final int invalid_pack_link = 0x7f12183e; // 2131892286
+        public static final int maxquality_summ = 0x7f12183f; // 2131892287
+        public static final int maxquality_title = 0x7f121840; // 2131892288
+        public static final int newsfeed_notif_summ = 0x7f121841; // 2131892289
+        public static final int newsfeed_notif_title = 0x7f121842; // 2131892290
+        public static final int promotedstickers_title = 0x7f121843; // 2131892291
+        public static final int vkx_integration_enabled_info = 0x7f121844; // 2131892292
+        public static final int writebar_ios_title = 0x7f121845; // 2131892293
     }
 
     public static final class style {
