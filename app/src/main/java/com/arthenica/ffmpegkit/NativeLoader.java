@@ -8,29 +8,24 @@ import com.arthenica.smartexception.java.Exceptions;
 import java.util.Collections;
 import java.util.List;
 
-import ru.vtosters.lite.utils.AndroidUtils;
-
 public class NativeLoader {
     static final String[] FFMPEG_LIBRARIES = {"avutil", "swresample", "avcodec", "avformat", "avfilter", "avdevice"};
 
     private static void loadLibrary(String libraryName) {
-        String path = AndroidUtils.getGlobalContext().getFilesDir() + "/lib" + libraryName + ".so";
-        System.load(path);
+        System.loadLibrary(libraryName);
     }
 
     private static List<String> loadExternalLibraries() {
-        // return Packages.getExternalLibraries();
+        //return Packages.getExternalLibraries();
         return Collections.emptyList();
     }
 
     private static String loadNativeAbi() {
-        // return AbiDetect.getNativeAbi();
-        return Abi.ABI_ARMV7A_NEON.getName();
+        return AbiDetect.getNativeAbi();
     }
 
     static String loadAbi() {
-        // return AbiDetect.getAbi();
-        return Abi.ABI_ARMV7A_NEON.getName();
+        return AbiDetect.getAbi();
     }
 
     static String loadPackageName() {

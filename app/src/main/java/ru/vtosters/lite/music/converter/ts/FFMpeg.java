@@ -28,8 +28,6 @@ public class FFMpeg {
      * @return True if success, else false
      */
     public static boolean convert(File in, String out, MusicTrack track) {
-        checkFFMpegLibs();
-
 
         // convert .ts file to .mp3 file via ffmpeg
         var sb = new StringBuilder();
