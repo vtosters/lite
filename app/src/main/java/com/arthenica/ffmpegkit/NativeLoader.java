@@ -11,7 +11,7 @@ import java.util.List;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class NativeLoader {
-    static final String[] FFMPEG_LIBRARIES = {"avutil", "swscale", "swresample", "avcodec", "avformat", "avfilter", "avdevice"};
+    static final String[] FFMPEG_LIBRARIES = {"avutil", "swresample", "avcodec", "avformat", "avfilter", "avdevice"};
 
     private static void loadLibrary(String libraryName) {
         String path = AndroidUtils.getGlobalContext().getFilesDir() + "/lib" + libraryName + ".so";

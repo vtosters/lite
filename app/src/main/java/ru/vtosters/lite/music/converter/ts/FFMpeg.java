@@ -35,8 +35,8 @@ public class FFMpeg {
         var sb = new StringBuilder();
         sb.append("-y -i \"").append(in.getAbsolutePath()).append("\"");
         sb.append(" -map 0 -dn ");
-        sb.append(" -loglevel error");
-        sb.append(" -hide_banner");
+        //sb.append(" -loglevel error");
+        //sb.append(" -hide_banner");
         sb.append(" -write_id3v2 1");
 
         String title = null;
