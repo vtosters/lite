@@ -32,11 +32,14 @@ public class TelegramStickersPack extends CustomStickersPack {
     public int stickersCount = -1;
     public String version;
     public int index = -1;
+    public Integer hash;
 
     public HashMap<String, List<Integer>> emojis = new HashMap<>();
 
     public TelegramStickersPack(String id) {
-        this.id = id.toLowerCase();
+        final var idLowerCase = id.toLowerCase();
+        this.id = idLowerCase;
+        this.hash = idLowerCase.hashCode();
         title = id;
     }
 
@@ -106,7 +109,7 @@ public class TelegramStickersPack extends CustomStickersPack {
 
     @Override
     public int hashCode() {
-        return id.toLowerCase().hashCode();
+        return hash;
     }
 
     @Override

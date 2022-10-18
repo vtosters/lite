@@ -235,7 +235,7 @@ public class TelegramStickersService {
                 runOnUiThread(() -> {
                     newPack.state = TelegramStickersPack.DOWNLOADED;
                     notifyPackChanged(newPack, packs.indexOf(newPack));
-                    currentlyDownloading.remove(newPack.id.toLowerCase());
+                    currentlyDownloading.remove(newPack.id);
                     syncPack(newPack);
 
                     if (isUpdate) {
