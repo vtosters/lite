@@ -67,6 +67,7 @@ public class APKInstallActivity extends AppCompatActivity {
 
             startActivity(intent);
         } catch (Exception e) {
+            e.printStackTrace();
             Toast.makeText(this, getString(R.string.apk_install_error) + " " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         }
 

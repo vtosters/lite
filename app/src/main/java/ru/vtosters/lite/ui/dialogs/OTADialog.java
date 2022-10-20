@@ -32,7 +32,7 @@ public class OTADialog implements OTAUtils.OTAListener {
                     .setTitle(mActivity.getString(R.string.newversion) + " " + mHelper.getNewVersionName())
                     .setUpdateInfoView(mHelper.getUpdateDescription())
                     .setPositiveButton(mActivity.getString(R.string.updateanddownload), () -> {
-                        OTADownloader.downloadBuild(mHelper.getDownloadUrl());
+                        OTADownloader.downloadBuild(mHelper.getDownloadUrl(), mHelper.getCommitSHA());
                     })
                     .show();
         });

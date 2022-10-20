@@ -21,6 +21,7 @@ public class OTAUtils {
     private final OTAListener mListener;
     private JSONObject mReleaseJson;
     private JSONObject mCommitJson;
+    private String mCommitSHA = "";
 
     public OTAUtils(OTAListener listener) {
         this.mListener = listener;
@@ -69,9 +70,11 @@ public class OTAUtils {
             public void a(Call call, Response response) throws IOException {
                 try {
                     mCommitJson = new JSONObject(response.a().g());
+                    mCommitSHA = mCommitJson.getJSONObject("object").getString("sha");
                     if (isNewVersion())
                         mListener.onUpdateApplied();
-                    else mListener.onUpdateCanceled();
+                    else
+                        mListener.onUpdateCanceled();
                 } catch (NullPointerException | JSONException e) {
                     e.printStackTrace();
                     mListener.onUpdateCanceled();
@@ -80,10 +83,13 @@ public class OTAUtils {
         });
     }
 
+    public String getCommitSHA() {
+        return mCommitSHA;
+    }
+
     public boolean isNewVersion() {
         try {
-            String commitSHA = mCommitJson.getJSONObject("object").getString("sha");
-            return !commitSHA.startsWith(About.getBuildNumber());
+            return !mCommitSHA.startsWith(About.getBuildNumber());
         } catch (Exception e) {
             return false;
         }
