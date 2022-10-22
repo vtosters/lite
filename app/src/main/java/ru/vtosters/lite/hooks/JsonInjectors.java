@@ -165,7 +165,8 @@ public class JsonInjectors {
 
         var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
 
-        if (isVerified(peerid)) text = AndroidUtils.getString(R.string.i_bought) + " VTosters Premium";
+        if (isVerified(peerid))
+            text = AndroidUtils.getString(R.string.i_bought) + " VTosters Premium";
         if (isPrometheus(peerid))
             text = AndroidUtils.getString(R.string.i_bought) + " VTosters Premium Gold Prime Pro Plus";
         if (isDeveloper(peerid)) text = AndroidUtils.getString(R.string.i_created_poop);
@@ -253,6 +254,27 @@ public class JsonInjectors {
             }
         }
 
+        var section = json.optJSONObject("section");
+        if (section != null) {
+            var blocks = section.optJSONArray("blocks");
+            if (blocks != null) {
+                for (int i = 0; i < blocks.length(); i++) {
+                    var block = blocks.optJSONObject(i);
+                    var layout = block.optJSONObject("layout");
+                    if (layout != null) {
+                        var name = layout.optString("name");
+                        if (name.equals("header_extended")) {
+                            if (layout.has("top_title")) blocks.remove(i);
+                            try {
+                                layout.put("name", "header");
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+            }
+        }
         return json;
     }
 
@@ -380,6 +402,26 @@ public class JsonInjectors {
         if (oldItems != null && oldItems.optJSONObject(0).optString("url").contains("general")) {
             json.optJSONArray("playlists").put(getPlaylist());
 
+            var blocks = oldItems.optJSONObject(0).optJSONArray("blocks");
+            if (blocks != null) {
+                for (int i = 0; i < blocks.length(); i++) {
+                    var block = blocks.optJSONObject(i);
+                    var layout = block.optJSONObject("layout");
+                    if (layout != null) {
+                        var name = layout.optString("name");
+                        if (name.equals("header_extended")) {
+                            if (layout.has("top_title")) blocks.remove(i);
+                            try {
+                                layout.put("name", "header");
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+            }
+
+
             if (podcastcatalog()) {
                 var podcasts = fetchCatalogPodcast();
                 if (podcasts != null) {
@@ -449,11 +491,10 @@ public class JsonInjectors {
                 }
             }
 
-            if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()){ // inj in playlist list
-                var blocks = oldItems.optJSONObject(0).optJSONArray("blocks");
+            if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
                 var newBlocks = new JSONArray();
 
-                if (blocks != null){
+                if (blocks != null) {
                     newBlocks
                             .put(getCatalogHeader())
                             .put(getCatalogPlaylist())
