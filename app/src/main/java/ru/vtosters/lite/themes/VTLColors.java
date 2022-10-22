@@ -6,6 +6,7 @@ import static ru.vtosters.lite.utils.ThemesUtils.isCustomThemeApplied;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.ContextExtKt;
@@ -13,6 +14,8 @@ import com.vtosters.lite.R;
 
 import ru.vtosters.lite.themes.managers.ThemesManager;
 import ru.vtosters.lite.themes.models.ThemeModel;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VTLColors {
     private static final ThemesManager themesManager = ThemesManager.getInstance();
@@ -72,12 +75,20 @@ public class VTLColors {
 
     public static int getColor(int attr) {
         if (isCustomThemeApplied()) {
-            return currentTheme.getColor(attr);
+            int color = currentTheme.getColor(attr);
+            if (color != -1)
+                return color;
         }
         return VKThemeHelper.d(attr);
     }
 
     public static int getColor(Context context, int colorId) {
+        Log.d("VTLColors", String.format("getColor(Landroid/content/Context;I): %s", AndroidUtils.getResources().getResourceEntryName(colorId)));
+        if (ThemesUtils.isCustomThemeApplied()) {
+            int color = currentTheme.getColor(colorId);
+            if (color != -1)
+                return color;
+        }
         return ContextExtKt.h(context, colorId);
     }
     //endregion

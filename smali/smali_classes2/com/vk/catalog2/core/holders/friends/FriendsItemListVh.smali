@@ -984,6 +984,8 @@
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->f:Landroid/widget/ImageView;
 
+    invoke-static/range {p2 .. p2}, Lru/vtosters/lite/themes/Recolor;->recolorIconToAccent(Landroid/widget/ImageView;)V
+
     .line 11
     sget p2, Lcom/vk/catalog2/core/q;->close_button:I
 

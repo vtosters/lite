@@ -1,9 +1,12 @@
 package ru.vtosters.lite.themes;
 
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -28,7 +31,6 @@ public class Recolor {
     private static final List<IModifier> recolors = new ArrayList<>();
 
     static {
-        com.vtosters.lite.R.id
         recolors.add(new FloatingActionButtonRecolor());
         recolors.add(new ImageViewRecolor());
         recolors.add(new ProgressBarRecolor());
@@ -52,8 +54,6 @@ public class Recolor {
     }
 
     private static void recolorView(View target, ViewModel viewModel) {
-        if (target instanceof Toolbar && target.getId() == com.vtosters.lite.R.id.toolbar)
-            ((Toolbar) target).setBackgroundColor(Color.RED);
         for (var recolor : recolors) {
             if (!recolor.isModifiable(target)) continue;
             for (var attr : viewModel.attrs) {
@@ -72,5 +72,14 @@ public class Recolor {
     public static void recolorToolbar(Toolbar toolbar) {
         if (ThemesUtils.isCustomThemeApplied())
             toolbar.setBackgroundColor(ThemesUtils.getHeaderBackground());
+    }
+
+    public static void recolorIconToAccent(ImageView iv) {
+        if (ThemesUtils.isCustomThemeApplied())
+            iv.setImageTintList(ColorStateList.valueOf(VTLColors.getAccentColor()));
+    }
+
+    public static void recolorTextToAccent(TextView iv) {
+        iv.setTextColor(VTLColors.getAccentColor());
     }
 }
