@@ -6346,14 +6346,9 @@
 
     move-object v4, v0
 
-    .line 15
-    invoke-virtual {v5}, Lcom/vk/im/engine/models/messages/Msg;->v1()I
-
-    move-result v7
-
     const/4 v8, 0x0
 
-    invoke-static {v2, v7, v8}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Ljava/lang/CharSequence;IZ)Ljava/lang/CharSequence;
+    invoke-static {v2, v5, v8}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Ljava/lang/CharSequence;Lcom/vk/im/engine/models/messages/MsgFromUser;Z)Ljava/lang/CharSequence;
 
     move-result-object v2
 
