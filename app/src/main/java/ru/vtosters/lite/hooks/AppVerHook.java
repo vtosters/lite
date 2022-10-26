@@ -1,13 +1,15 @@
 package ru.vtosters.lite.hooks;
 
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+
 import b.h.g.g.BuildInfo;
 
 public class AppVerHook {
-    public static String appBuild() {
-        return String.valueOf(BuildInfo.i.e());
+    public static int appBuild() {
+        return getBoolValue("useOldAppVer", false) ? 6561 : BuildInfo.i.e();
     }
 
     public static String appVer() {
-        return BuildInfo.i.d(); // 7.26
+        return getBoolValue("useOldAppVer", false) ? "6.18.1" : BuildInfo.i.d();
     }
 }

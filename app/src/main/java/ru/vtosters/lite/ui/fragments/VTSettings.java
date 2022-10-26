@@ -251,7 +251,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 return true;
             });
 
-            if (dev()) {
+            if (dev() && isValidSignature()) {
                 addMaterialSwitchPreference(this, "autoupdates", requireContext().getString(R.string.checkupdates), "", R.drawable.ic_camera_switch_outline_24, true, (preference, o) -> {
                     boolean value = (boolean) o;
                     edit().putBoolean("autoupdates", value).commit();
