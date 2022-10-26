@@ -119,19 +119,13 @@
 
     if-nez v0, :cond_0
 
-    .line 2
-    sget-object v0, Lb/h/g/g/BuildInfo;->i:Lb/h/g/g/BuildInfo;
-
-    invoke-virtual {v0}, Lb/h/g/g/BuildInfo;->d()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/hooks/AppVerHook;->appBuild()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3
-    sget-object v1, Lb/h/g/g/BuildInfo;->i:Lb/h/g/g/BuildInfo;
+    invoke-static {}, Lru/vtosters/lite/hooks/AppVerHook;->appVer()Ljava/lang/String;
 
-    invoke-virtual {v1}, Lb/h/g/g/BuildInfo;->e()I
-
-    move-result v1
+    move-result-object v1
 
     .line 4
     sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
@@ -152,11 +146,6 @@
     aput-object v0, v4, v5
 
     const/4 v0, 0x1
-
-    .line 6
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
 
     aput-object v1, v4, v0
 
