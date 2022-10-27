@@ -1,6 +1,8 @@
 package ru.vtosters.lite.music.cache.injectors;
 
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.hasTracks;
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getPlaylist;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 
 import android.util.Log;
 
@@ -20,9 +22,8 @@ import java.util.UUID;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
-import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
-import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 
@@ -76,76 +77,40 @@ public class TracklistInjector {
     public static void injectIntoExistingCatalog(JSONObject catalogNode) {
         Log.d("TracklistInjector", "injectIntoExistingCatalog");
 
-        if (!hasTracks()) return;
         try {
-            var sectionsNode = catalogNode.getJSONObject("catalog")
-                    .getJSONArray("sections");
+            var catalog = catalogNode.getJSONObject("catalog");
+            var sectionsNode = catalog.getJSONArray("sections");
             var firstSection = sectionsNode.getJSONObject(0);
-            if (!firstSection.getString("url").equals("https://vk.com/audios" + AccountManagerUtils.getUserId() + "?section=all"))
-                return;
 
-            var foundPlaylistBlock = false;
-            var suitableIndex = 0;
+            if (!firstSection.getString("url").equals("https://vk.com/audios" + getUserId() + "?section=all"))
+                return;
 
             var blocks = firstSection.getJSONArray("blocks");
-            for (int i = 0; i < blocks.length(); i++) {
-                var block = blocks.getJSONObject(i);
-                var dataType = block.getString("data_type");
-                if ("music_audios".equals(dataType)) {
-                    suitableIndex = i - 1;
-                    continue;
+
+            if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
+                catalogNode.optJSONArray("playlists").put(getPlaylist());
+
+                for (int i = 0; i < blocks.length(); i++) {
+                    var j = blocks.optJSONObject(i);
+                    var type = j.optString("data_type");
+
+                    if (type.equals("music_playlists") && j.has("playlists_ids")) {
+                        var newarr = new JSONArray();
+                        var playlists_ids = j.optJSONArray("playlists_ids");
+
+                        newarr.put(getUserId() + "_-1");
+
+                        for (int n = 0; n < playlists_ids.length(); n++) {
+                            newarr.put(playlists_ids.optString(n));
+                        }
+
+                        j.put("playlists_ids", newarr);
+                        break;
+                    }
                 }
-
-                if (!"music_playlists".equals(dataType))
-                    continue;
-
-                var playlistIds = block.getJSONArray("playlists_ids");
-                var newPlaylistIds = new JSONArray()
-                        .put(AccountManagerUtils.getUserId() + "_-1");
-
-                for (int j = 0; j < playlistIds.length(); j++)
-                    newPlaylistIds.put(playlistIds.get(j));
-
-                block.put("playlists_ids", newPlaylistIds);
-
-                // need test
-                blocks.remove(i);
-                blocks.put(i, block);
-
-                foundPlaylistBlock = true;
             }
-
-            if (foundPlaylistBlock) {
-                var playlists = catalogNode.getJSONArray("playlists")
-                        .put(0, PlaylistHelper.createCachedPlaylistMetadata().J());
-                catalogNode.put("playlists", playlists);
-                return;
-            }
-
-            var ids = new JSONArray()
-                    .put(0, AccountManagerUtils.getUserId() + "_-1");
-
-            var playlistsBlock = new JSONObject()
-                    .put("id", getRandomId())
-                    .put("data_type", "music_playlists")
-                    .put("url", "synth:cache:playlists")
-                    .put("playlists_ids", ids);
-
-            var layout = new JSONObject()
-                    .put("name", "large_slider")
-                    .put("owner_id", AccountManagerUtils.getUserId());
-
-            playlistsBlock.put("layout", layout);
-
-            blocks.put(suitableIndex, playlistsBlock);
-
-            firstSection.put("blocks", blocks);
-
-            var playlists = new JSONArray()
-                    .put(0, PlaylistHelper.createCachedPlaylistMetadata().J());
-            catalogNode.put("playlists", playlists);
-        } catch (JSONException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            Log.d("TracklistInjector", e.toString());
         }
     }
 
@@ -175,7 +140,7 @@ public class TracklistInjector {
 
         var layout = new JSONObject()
                 .put("name", "list")
-                .put("owner_id", AccountManagerUtils.getUserId());
+                .put("owner_id", getUserId());
 
         audiosBlock.put("layout", layout);
 
