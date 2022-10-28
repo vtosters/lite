@@ -1,6 +1,9 @@
 package ru.vtosters.lite.music.cache.injectors;
 
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.hasTracks;
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogHeader;
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogPlaylist;
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogSeparator;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getPlaylist;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 
@@ -88,24 +91,51 @@ public class TracklistInjector {
             var blocks = firstSection.getJSONArray("blocks");
 
             if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
-                catalogNode.optJSONArray("playlists").put(getPlaylist());
+                var noPlaylists = blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type").equals("create_playlist");
 
-                for (int i = 0; i < blocks.length(); i++) {
-                    var j = blocks.optJSONObject(i);
-                    var type = j.optString("data_type");
+                if (noPlaylists) {
+                    catalogNode.put("playlists", new JSONArray().put(getPlaylist()));
+                    Log.d("catalogInjector", "added new pl");
 
-                    if (type.equals("music_playlists") && j.has("playlists_ids")) {
-                        var newarr = new JSONArray();
-                        var playlists_ids = j.optJSONArray("playlists_ids");
+                    var newBlocks = new JSONArray();
 
-                        newarr.put(getUserId() + "_-1");
+                    newBlocks
+                            .put(getCatalogHeader())
+                            .put(getCatalogPlaylist())
+                            .put(getCatalogSeparator());
 
-                        for (int n = 0; n < playlists_ids.length(); n++) {
-                            newarr.put(playlists_ids.optString(n));
+                    Log.d("catalogInjector", "added cache catalog playlist");
+
+                    for (int i = 0; i < blocks.length(); i++) {
+                        newBlocks.put(blocks.optJSONObject(i));
+                    }
+
+                    firstSection.put("blocks", newBlocks);
+                } else {
+                    try {
+                        catalogNode.optJSONArray("playlists").put(getPlaylist());
+                        Log.d("catalogInjector", "added to exist pl");
+
+                        for (int i = 0; i < blocks.length(); i++) {
+                            var j = blocks.optJSONObject(i);
+                            var type = j.optString("data_type");
+
+                            if (type.equals("music_playlists") && j.has("playlists_ids")) {
+                                var newarr = new JSONArray();
+                                var playlists_ids = j.optJSONArray("playlists_ids");
+
+                                newarr.put(getUserId() + "_-1");
+
+                                for (int n = 0; n < playlists_ids.length(); n++) {
+                                    newarr.put(playlists_ids.optString(n));
+                                }
+
+                                j.put("playlists_ids", newarr);
+                                break;
+                            }
                         }
-
-                        j.put("playlists_ids", newarr);
-                        break;
+                    } catch (Exception e) {
+                        Log.d("catalogInjector", e.toString());
                     }
                 }
             }

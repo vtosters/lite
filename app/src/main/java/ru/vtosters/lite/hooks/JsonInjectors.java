@@ -288,15 +288,24 @@ public class JsonInjectors {
             var isUsersCatalog = section.optString("url").contains("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
 
             if (isUsersCatalog && CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) {
-                try {
-                    json.optJSONArray("playlists").put(getPlaylist());
-                } catch (Exception e) {
-                    Log.d("catalogInjector", e.toString());
+                var blocks = section.getJSONArray("blocks");
+                var noPlaylists = blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type").equals("create_playlist");
+
+                Log.d("catalogInjector", "type: " + blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type"));
+
+                if (noPlaylists) {
+                    json.put("playlists", new JSONArray().put(getPlaylist()));
+                    Log.d("catalogInjector", "added new pl");
+                } else {
+                    try {
+                        json.optJSONArray("playlists").put(getPlaylist());
+                        Log.d("catalogInjector", "added to exist pl");
+                    } catch (Exception e) {
+                        Log.d("catalogInjector", e.toString());
+                    }
                 }
 
-                var blocks = section.getJSONArray("blocks");
-
-                if (!useOldAppVer) {
+                if (!useOldAppVer || noPlaylists) {
                     var newBlocks = new JSONArray();
 
                     newBlocks
@@ -556,9 +565,23 @@ public class JsonInjectors {
             }
 
             if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
-                json.optJSONArray("playlists").put(getPlaylist());
+                var noPlaylists = blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type").equals("create_playlist");
 
-                if (!getBoolValue("useOldAppVer", false)) {
+                Log.d("catalogInjector", "type: " + blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type"));
+
+                if (noPlaylists) {
+                    json.put("playlists", new JSONArray().put(getPlaylist()));
+                    Log.d("catalogInjector", "added new pl");
+                } else {
+                    try {
+                        json.optJSONArray("playlists").put(getPlaylist());
+                        Log.d("catalogInjector", "added to exist pl");
+                    } catch (Exception e) {
+                        Log.d("catalogInjector", e.toString());
+                    }
+                }
+
+                if (!getBoolValue("useOldAppVer", false) || noPlaylists) {
                     var newBlocks = new JSONArray();
 
                     newBlocks
