@@ -133,6 +133,10 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         }
 
         findPreference("musicdefcatalog").setVisible(!getBoolValue("useOldAppVer", false));
+        findPreference("musicdefcatalog").setOnPreferenceClickListener(preference -> {
+            restartApplicationWithTimer();
+            return true;
+        });
 
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
             var items = Arrays.asList(
