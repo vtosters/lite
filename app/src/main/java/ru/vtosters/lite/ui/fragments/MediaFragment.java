@@ -9,6 +9,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
@@ -130,6 +131,8 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         if (!isVkxInstalled()) {
             findPreference("vkx_sett").setVisible(false);
         }
+
+        findPreference("musicdefcatalog").setVisible(!getBoolValue("useOldAppVer", false));
 
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
             var items = Arrays.asList(

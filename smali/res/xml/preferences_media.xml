@@ -59,6 +59,11 @@
             android:key="autocache"
             android:summary="@string/autocache_summ"
             android:title="@string/autocache_title" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="useOldAppVer"
+            android:summary="Работает КАК ЕСТЬ. Могут быть ошибки"
+            android:title="Использовать старый дизайн" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/musicdefcatalog_dialogTitle"
