@@ -133,7 +133,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         }
 
         findPreference("musicdefcatalog").setVisible(!getBoolValue("useOldAppVer", false));
-        findPreference("musicdefcatalog").setOnPreferenceClickListener(preference -> {
+        findPreference("useOldAppVer").setOnPreferenceClickListener(preference -> {
             restartApplicationWithTimer();
             return true;
         });
