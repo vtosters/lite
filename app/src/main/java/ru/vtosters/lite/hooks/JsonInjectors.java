@@ -291,7 +291,7 @@ public class JsonInjectors {
                 var blocks = section.getJSONArray("blocks");
                 var noPlaylists = !json.has("playlists");
 
-                Log.d("catalogInjector", "type: " + blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type"));
+                // Log.d("catalogInjector", "type: " + blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type"));
 
                 if (noPlaylists) {
                     json.put("playlists", new JSONArray().put(getPlaylist()));
