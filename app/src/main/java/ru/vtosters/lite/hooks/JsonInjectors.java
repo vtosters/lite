@@ -289,7 +289,7 @@ public class JsonInjectors {
 
             if (isUsersCatalog && CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) {
                 var blocks = section.getJSONArray("blocks");
-                var noPlaylists = blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type").equals("create_playlist");
+                var noPlaylists = !json.has("playlists");
 
                 Log.d("catalogInjector", "type: " + blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type"));
 
@@ -565,9 +565,7 @@ public class JsonInjectors {
             }
 
             if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
-                var noPlaylists = blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type").equals("create_playlist");
-
-                Log.d("catalogInjector", "type: " + blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type"));
+                var noPlaylists = !json.has("playlists");
 
                 if (noPlaylists) {
                     json.put("playlists", new JSONArray().put(getPlaylist()));
@@ -581,7 +579,7 @@ public class JsonInjectors {
                     }
                 }
 
-                if (!getBoolValue("useOldAppVer", false) || noPlaylists) {
+                if (blocks != null && (!getBoolValue("useOldAppVer", false) || noPlaylists)) {
                     var newBlocks = new JSONArray();
 
                     newBlocks
