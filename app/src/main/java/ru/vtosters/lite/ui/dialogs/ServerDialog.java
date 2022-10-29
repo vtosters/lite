@@ -22,10 +22,11 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class ServerDialog {
-    private static final OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = VtOkHttpClient.getInstance();
     public static Boolean showAlert;
     private static String title;
     private static String message;

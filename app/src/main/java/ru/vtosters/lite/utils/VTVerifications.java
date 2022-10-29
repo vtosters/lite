@@ -23,13 +23,14 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 public class VTVerifications {
     public static final List<Integer> sVerifications = new ArrayList<>();
     public static final List<Integer> sPrometheuses = new ArrayList<>();
     public static final List<Integer> sDevelopers = new ArrayList<>();
     public static final List<Integer> sServiceAccounts = new ArrayList<>();
-    private static final OkHttpClient sClient = new OkHttpClient();
+    private static final OkHttpClient sClient = VtOkHttpClient.getInstance();
 
     public static void load(Context context) {
         var prefs = context.getSharedPreferences("vt_another_data", 0);

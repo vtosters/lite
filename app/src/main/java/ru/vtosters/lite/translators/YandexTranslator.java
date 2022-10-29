@@ -13,10 +13,11 @@ import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 public class YandexTranslator extends BaseTranslator {
 
-    private static final OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = VtOkHttpClient.getInstance();
     private static final String uuid = UUID.randomUUID().toString().replace("-", "");
 
     private static YandexTranslator instance;

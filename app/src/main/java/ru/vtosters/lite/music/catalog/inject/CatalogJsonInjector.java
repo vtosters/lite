@@ -26,12 +26,13 @@ import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class CatalogJsonInjector {
-    private static final OkHttpClient mClient = new OkHttpClient();
+    private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
 
     public static JSONObject music(JSONObject json) throws JSONException {
         var catalog = json.optJSONObject("catalog");

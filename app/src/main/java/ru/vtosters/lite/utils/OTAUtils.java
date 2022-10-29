@@ -12,12 +12,13 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 public class OTAUtils {
 
     private static final String LATEST_RELEASE_URL = "https://api.github.com/repositories/473685743/releases/latest";
     private static final String LATEST_RELEASE_COMMIT_URL = "https://api.github.com/repositories/473685743/git/ref/tags/%s";
-    private final OkHttpClient mClient = new OkHttpClient();
+    private final OkHttpClient mClient = VtOkHttpClient.getInstance();
     private final OTAListener mListener;
     private JSONObject mReleaseJson;
     private JSONObject mCommitJson;

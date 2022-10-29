@@ -29,11 +29,12 @@ import java.util.Objects;
 import java.util.Random;
 
 import okhttp3.OkHttpClient;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class JsonInjectors {
-    private static final OkHttpClient mClient = new OkHttpClient();
+    private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
 
     public static JSONObject profileButton(JSONObject orig) throws JSONException {
         var id = orig.getInt("id");

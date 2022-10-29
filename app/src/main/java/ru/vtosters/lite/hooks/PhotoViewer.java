@@ -37,11 +37,12 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class PhotoViewer {
-    static OkHttpClient client = new OkHttpClient();
+    static OkHttpClient client = VtOkHttpClient.getInstance();
 
     public static boolean interceptClick(AttachmentWithMedia attachment, MenuItem item, View view) {
         if (item.getItemId() == R.id.search_photo) {

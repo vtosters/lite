@@ -10,10 +10,11 @@ import java.net.URLEncoder;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 public class GoogleTranslator extends BaseTranslator {
 
-    private static final OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = VtOkHttpClient.getInstance();
     private static final String[] devices = new String[]{
             "Linux; U; Android 10; Pixel 4",
             "Linux; U; Android 10; Pixel 4 XL",

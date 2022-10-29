@@ -20,10 +20,11 @@ import java.util.HashMap;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 // Jesus cries
 public class ProfileHider {
-    private static final OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = VtOkHttpClient.getInstance();
 
     public static void injectMap(HashMap<Integer, UserPresenter.a.a> hashMap) {
         if (VTVerifications.isServiceAccount(getUserId())) {

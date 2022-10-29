@@ -16,10 +16,11 @@ import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 public class DeepLTranslator extends BaseTranslator {
 
-    private static final OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = VtOkHttpClient.getInstance();
     private static final Pattern pattern = Pattern.compile("[i]");
     private static final String REQUEST_BODY_FORMAT = "{\n" +
             "    \"method\": \"LMT_handle_texts\",\n" +

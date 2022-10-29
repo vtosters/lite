@@ -17,6 +17,7 @@ import javax.crypto.NoSuchPaddingException;
 import java8.util.concurrent.CompletableFuture;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.music.converter.ts.FFMpeg;
 import ru.vtosters.lite.music.converter.ts.TSMerger;
 import ru.vtosters.lite.music.downloader.ThumbnailDownloader;
@@ -25,7 +26,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 
 public class M3UDownloader implements ITrackDownloader {
-    private static final OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = VtOkHttpClient.getInstance();
 
     public static M3UDownloader getInstance() {
         return Holder.INSTANCE;

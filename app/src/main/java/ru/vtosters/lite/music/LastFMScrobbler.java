@@ -26,6 +26,7 @@ import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -35,7 +36,7 @@ public class LastFMScrobbler {
     private static final String KEY = "5965d63402414776c54c266db0211746";
     private static final String KEY_SECRET = "d982180eed13275bb948e41cf225f88f";
     private static final String URL = "https://ws.audioscrobbler.com/2.0/";
-    private static final OkHttpClient CLIENT = new OkHttpClient();
+    private static final OkHttpClient CLIENT = VtOkHttpClient.getInstance();
     private static final List<String> SCROBBLED_UUIDS = new ArrayList<>();
 
     public static void grabMusicTrack(MusicTrack musictrack) {

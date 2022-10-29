@@ -8,9 +8,10 @@ import java.util.Arrays;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 public class GithubList {
-    private static final OkHttpClient mClient = new OkHttpClient();
+    private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
 
     public static ArrayList<String> getProxy(String url, String proxyname) throws IOException {
         Request link = new Request.a()
