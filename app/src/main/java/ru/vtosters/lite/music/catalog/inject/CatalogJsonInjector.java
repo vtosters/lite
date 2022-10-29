@@ -43,10 +43,13 @@ public class CatalogJsonInjector {
             oldItems = catalog.optJSONArray("sections");
         }
 
-        if (oldItems != null && oldItems.optJSONObject(0).optString("url").contains("general")) {
+        var useOldAppVer = getBoolValue("useOldAppVer", false);
+        var isUsersCatalog = oldItems.optJSONObject(0).optString("url").equals("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
+
+        if (oldItems != null && isUsersCatalog) {
             var blocks = oldItems.optJSONObject(0).optJSONArray("blocks");
 
-            if (!getBoolValue("useOldAppVer", false)) {
+            if (!useOldAppVer) {
                 if (blocks != null) {
                     for (int i = 0; i < blocks.length(); i++) {
                         var block = blocks.optJSONObject(i);
@@ -62,21 +65,6 @@ public class CatalogJsonInjector {
                                 }
                             }
                         }
-                    }
-                }
-
-                if (podcastcatalog()) {
-                    var podcasts = fetchCatalogPodcast();
-                    if (podcasts != null) {
-                        var catalogarr = podcasts.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
-
-                        var title = catalogarr.optString("title");
-                        var id = catalogarr.optString("id");
-                        var url = catalogarr.optString("url");
-
-                        if (dev()) Log.d("VKMusic", "Added " + title + " in music sections");
-
-                        oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
                     }
                 }
 
@@ -150,7 +138,7 @@ public class CatalogJsonInjector {
                     }
                 }
 
-                if (blocks != null && (!getBoolValue("useOldAppVer", false) || noPlaylists)) {
+                if (blocks != null && (!useOldAppVer || noPlaylists)) {
                     var newBlocks = new JSONArray();
 
                     newBlocks
@@ -176,7 +164,7 @@ public class CatalogJsonInjector {
         try {
             var section = json.optJSONObject("section");
             var useOldAppVer = getBoolValue("useOldAppVer", false);
-            var isUsersCatalog = section.optString("url").contains("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
+            var isUsersCatalog = section.optString("url").equals("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
 
             if (isUsersCatalog && CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) {
                 var blocks = section.getJSONArray("blocks");
@@ -282,7 +270,7 @@ public class CatalogJsonInjector {
         if (section.isEmpty()) return null;
 
         var request = new Request.a()
-                .b("https://" + getApi() + "/method/catalog.getAudio"
+                .b("https://" + getApi() + "/method/" + "catalog.getAudio"
                         + "?v=5.119"
                         + "&https=1"
                         + "&need_blocks=1"
@@ -292,28 +280,6 @@ public class CatalogJsonInjector {
                         + DeviceIdProvider.d(AndroidUtils.getGlobalContext())
                         + "&url="
                         + section
-                        + "&access_token="
-                        + AccountManagerUtils.getUserToken())
-                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
-        try {
-            return new JSONObject(mClient.a(request).execute().a().g()).getJSONObject("response");
-        } catch (JSONException | IOException e) {
-            Log.d("VTLMusic", "Error: " + e.getMessage());
-        }
-
-        return null;
-    }
-
-    private static JSONObject fetchCatalogPodcast() {
-        var request = new Request.a()
-                .b("https://" + getApi() + "/method/catalog.getPodcasts"
-                        + "?v=5.119"
-                        + "&https=1"
-                        + "&need_blocks=1"
-                        + "&lang="
-                        + getLocale()
-                        + "&device_id="
-                        + DeviceIdProvider.d(AndroidUtils.getGlobalContext())
                         + "&access_token="
                         + AccountManagerUtils.getUserToken())
                 .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
