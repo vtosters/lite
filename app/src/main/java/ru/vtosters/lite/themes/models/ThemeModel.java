@@ -87,7 +87,7 @@ public class ThemeModel {
     }
 
     public static ThemeModel fromJson(JSONObject json) {
-        List<String> palettes = null;
+        List<String> palettes;
         if (json.has("palettes")) {
             palettes = new ArrayList<>();
             var arr = json.optString("palettes")
