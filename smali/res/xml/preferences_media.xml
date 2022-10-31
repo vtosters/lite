@@ -24,6 +24,31 @@
             android:summary="@string/pollresults_summ"
             android:title="@string/pollresults_title" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtl_music_settings">
+        <Preference
+            android:key="cached_tracks"
+            android:title="@string/cached_tracks_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="autocache"
+            android:summary="@string/autocache_summ"
+            android:title="@string/autocache_title" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="useOldAppVer"
+            android:summary="@string/useOldAppVer_summ"
+            android:title="@string/useOldAppVer_title" />
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="@string/musicdefcatalog_dialogTitle"
+            android:entries="@array/musicdefcatalog_value"
+            android:entryValues="@array/musicdefcatalog"
+            android:key="musicdefcatalog"
+            android:title="@string/musicdefcatalog_title" />
+        <Preference
+            android:key="audio_download"
+            android:title="@string/audio_download_title"/>
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
@@ -46,31 +71,6 @@
             android:key="lastfm_enabled"
             android:summary="@string/lastfm_enabled_summ"
             android:title="@string/lastfm_enabled_title" />
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtl_music_settings">
-        <Preference
-            android:key="cached_tracks"
-            android:title="@string/cached_tracks_title"/>
-        <Preference
-            android:key="audio_download"
-            android:title="@string/audio_download_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="autocache"
-            android:summary="@string/autocache_summ"
-            android:title="@string/autocache_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="useOldAppVer"
-            android:summary="Работает КАК ЕСТЬ. Могут быть ошибки"
-            android:title="Использовать старый дизайн" />
-        <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="default"
-            android:dialogTitle="@string/musicdefcatalog_dialogTitle"
-            android:entries="@array/musicdefcatalog_value"
-            android:entryValues="@array/musicdefcatalog"
-            android:key="musicdefcatalog"
-            android:title="@string/musicdefcatalog_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_video_settings">
         <Preference

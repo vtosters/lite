@@ -6455,4 +6455,6 @@ May look like a fake leaving the online"</string>
     <string name="maxquality_title">Maximum quality</string>
     <string name="maxquality_summ">Open video in maximum quality through an external video player</string>
     <string name="promotedstickers_title">Don\'t receive promoted stickers</string>
+    <string name="useOldAppVer_title">Use old music catalog</string>
+    <string name="useOldAppVer_summ">Works \"as is\". There may be errors</string>
 </resources>

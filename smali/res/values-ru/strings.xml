@@ -6317,4 +6317,6 @@
     <string name="maxquality_title">Максимальное качество</string>
     <string name="maxquality_summ">Открывать видео в максимальном качестве через внешний видеоплеер</string>
     <string name="promotedstickers_title">Не получать промостикеры</string>
+    <string name="useOldAppVer_title">Использовать старый дизайн</string>
+    <string name="useOldAppVer_summ">Работает \"как есть\". Могут быть ошибки</string>
 </resources>
