@@ -1,4 +1,4 @@
-package ru.vtosters.lite.hooks.ui;
+package ru.vtosters.lite.music.hook;
 
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.asId;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.getInstance;

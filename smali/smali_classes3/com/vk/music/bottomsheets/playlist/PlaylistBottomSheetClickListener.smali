@@ -139,7 +139,7 @@
 
     move-result p1
 
-    invoke-static {p1, p2}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->injectOnClick(ILcom/vk/dto/music/Playlist;)Z
+    invoke-static {p1, p2}, Lru/vtosters/lite/music/hook/MusicBottomSheetHook;->injectOnClick(ILcom/vk/dto/music/Playlist;)Z
 
     move-result v3
 
