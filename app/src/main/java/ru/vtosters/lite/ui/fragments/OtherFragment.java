@@ -65,6 +65,7 @@ import ru.vtosters.lite.utils.ContactsUtils;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
+
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -187,7 +188,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 .setNegativeButton(requireContext().getString(R.string.cancel), null)
                 .setView(rg)
                 .setPositiveButton(requireContext().getString(R.string.save), (dialog, which) -> {
-                    var sizes = new String[] { "Default", "100mb", "500mb", "1gb", "2gb", "5gb" };
+                    var sizes = new String[]{"Default", "100mb", "500mb", "1gb", "2gb", "5gb"};
                     var id = rg.getCheckedRadioButtonId();
                     getDefaultPrefs().edit()
                             .putInt("autoclearcache_size", id)
@@ -251,7 +252,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
     private void delprefs(Context context) {
         new VkAlertDialog.Builder(context)
-               .setTitle(requireContext().getString(R.string.warning))
+                .setTitle(requireContext().getString(R.string.warning))
                 .setMessage(requireContext().getString(R.string.settings_reset_confirm))
                 .setCancelable(false)
                 .setPositiveButton(requireContext().getString(R.string.yes), (dialogInterface, i) -> {
@@ -260,6 +261,11 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 })
                 .setNegativeButton(requireContext().getString(R.string.cancel), (dialogInterface, i) -> dialogInterface.dismiss())
                 .show();
+    }
+
+    @Override
+    public int T4() {
+        return R.string.vtlother;
     }
 
     public static class d implements Preference.OnPreferenceClickListener {
@@ -367,10 +373,5 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                     .show();
             return true;
         }
-    }
-
-    @Override
-    public int T4() {
-        return R.string.vtlother;
     }
 }

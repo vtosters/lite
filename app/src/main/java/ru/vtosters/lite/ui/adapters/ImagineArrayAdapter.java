@@ -97,8 +97,8 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
                 .inflate(R.layout.select_dialog_singlechoice_material, parent, false);
         // for amoled
         var tintList = new ColorStateList(
-                new int[][] { new int[] { android.R.attr.state_checked }, new int[] { -android.R.attr.state_checked }},
-                new int[] { ThemesUtils.getAccentColor(), ThemesUtils.getSTextAttr() });
+                new int[][]{new int[]{android.R.attr.state_checked}, new int[]{-android.R.attr.state_checked}},
+                new int[]{ThemesUtils.getAccentColor(), ThemesUtils.getSTextAttr()});
         TextViewCompat.setCompoundDrawableTintList(checkedTextView, tintList);
         checkedTextView.setChecked(position == mSelectedIndex);
         container.addView(checkedTextView, LayoutUtils.createLinear(AndroidUtils.dp2px(50.0f), -2));

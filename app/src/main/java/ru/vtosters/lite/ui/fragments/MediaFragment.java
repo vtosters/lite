@@ -276,6 +276,11 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                 .show();
     }
 
+    @Override
+    public int T4() {
+        return R.string.vtlmedia;
+    }
+
     private static class restart implements Preference.OnPreferenceChangeListener {
         @Override
         public boolean onPreferenceChange(Preference preference, Object o) {
@@ -291,10 +296,5 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             download(getActivity());
             return true;
         }
-    }
-
-    @Override
-    public int T4() {
-        return R.string.vtlmedia;
     }
 }

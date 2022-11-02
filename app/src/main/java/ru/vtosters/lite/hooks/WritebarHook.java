@@ -8,7 +8,7 @@ import ru.vtosters.lite.utils.ThemesUtils;
 
 public class WritebarHook {
     public static int getWriteBar() {
-        return wbios() ? R.layout.write_bar_i :  R.layout.write_bar;
+        return wbios() ? R.layout.write_bar_i : R.layout.write_bar;
     }
 
     public static int getIconsColors(int def) {

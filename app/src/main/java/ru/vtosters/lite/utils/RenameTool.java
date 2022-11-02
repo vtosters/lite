@@ -180,41 +180,41 @@ public class RenameTool {
                 .setMessage(R.string.rename_message)
                 .setView(linearLayout)
                 .setPositiveButton("OK", (dialog, which) -> {
-                   String firstName = fn.getText().toString();
-                   String lastName = ln.getText().toString();
-                   SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
-                   try {
-                       if (isChangedName(id)) {
-                           writableDatabase.execSQL(
-                                   String.format("UPDATE %s SET %s='%s', %s='%s' WHERE %s='%s'",
-                                   TABLE_NAME,
-                                   COLUMN_FIRSTNAME, URLEncoder.encode(firstName, "UTF-8"),
-                                   COLUMN_LASTNAME, URLEncoder.encode(lastName, "UTF-8"),
-                                   COLUMN_VKID, id));
-                       } else {
-                           writableDatabase.execSQL(
-                                   String.format("INSERT INTO %s (%s, %s, %s) VALUES (%s, '%s', '%s')",
-                                   TABLE_NAME,
-                                   COLUMN_VKID, COLUMN_FIRSTNAME, COLUMN_LASTNAME,
-                                   id, URLEncoder.encode(firstName, "UTF-8"), URLEncoder.encode(lastName, "UTF-8")));
-                       }
-                       updateRequested = true;
-                       if (id == AccountManagerUtils.getUserId()) {
-                           ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
-                       }
-                       ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
+                    String firstName = fn.getText().toString();
+                    String lastName = ln.getText().toString();
+                    SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
+                    try {
+                        if (isChangedName(id)) {
+                            writableDatabase.execSQL(
+                                    String.format("UPDATE %s SET %s='%s', %s='%s' WHERE %s='%s'",
+                                            TABLE_NAME,
+                                            COLUMN_FIRSTNAME, URLEncoder.encode(firstName, "UTF-8"),
+                                            COLUMN_LASTNAME, URLEncoder.encode(lastName, "UTF-8"),
+                                            COLUMN_VKID, id));
+                        } else {
+                            writableDatabase.execSQL(
+                                    String.format("INSERT INTO %s (%s, %s, %s) VALUES (%s, '%s', '%s')",
+                                            TABLE_NAME,
+                                            COLUMN_VKID, COLUMN_FIRSTNAME, COLUMN_LASTNAME,
+                                            id, URLEncoder.encode(firstName, "UTF-8"), URLEncoder.encode(lastName, "UTF-8")));
+                        }
+                        updateRequested = true;
+                        if (id == AccountManagerUtils.getUserId()) {
+                            ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
+                        }
+                        ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
 
-                       sendToast(ctx.getString(R.string.rename_success));
-                   } catch (Exception e) {
-                       e.printStackTrace();
-                       sendToast(ctx.getString(R.string.rename_error));
-                   }
+                        sendToast(ctx.getString(R.string.rename_success));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        sendToast(ctx.getString(R.string.rename_error));
+                    }
                 });
         if (isChangedName(id))
             builder.setNeutralButton(R.string.rename_reset, (dialog, which) -> {
                 getHelper().getWritableDatabase().execSQL(
                         String.format(
-                        "DELETE FROM %s WHERE %s='%s'",
+                                "DELETE FROM %s WHERE %s='%s'",
                                 TABLE_NAME,
                                 COLUMN_VKID, id));
                 if (id == AccountManagerUtils.getUserId()) {
@@ -261,17 +261,17 @@ public class RenameTool {
                         if (isChangedNameGroup(id)) {
                             writableDatabase.execSQL(
                                     String.format(
-                                    "UPDATE %s SET %s='%s' WHERE %s='%s'",
-                                    TABLE_NAME_GROUP,
-                                    COLUMN_NAME, URLEncoder.encode(firstName, "UTF-8"),
-                                    COLUMN_VKID, id));
+                                            "UPDATE %s SET %s='%s' WHERE %s='%s'",
+                                            TABLE_NAME_GROUP,
+                                            COLUMN_NAME, URLEncoder.encode(firstName, "UTF-8"),
+                                            COLUMN_VKID, id));
                         } else {
                             writableDatabase.execSQL(
                                     String.format(
-                                    "INSERT INTO %s (%s, %s) VALUES (%s, '%s')",
-                                    TABLE_NAME_GROUP,
-                                    COLUMN_VKID, COLUMN_NAME,
-                                    id, URLEncoder.encode(firstName, "UTF-8")));
+                                            "INSERT INTO %s (%s, %s) VALUES (%s, '%s')",
+                                            TABLE_NAME_GROUP,
+                                            COLUMN_VKID, COLUMN_NAME,
+                                            id, URLEncoder.encode(firstName, "UTF-8")));
                         }
                         updateRequested = true;
                         sendToast(AndroidUtils.getString(R.string.rename_group_success));

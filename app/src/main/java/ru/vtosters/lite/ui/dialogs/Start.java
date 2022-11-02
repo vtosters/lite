@@ -28,10 +28,10 @@ public class Start {
                             (dialogInterface, i) -> edit().putBoolean("showAlert", false).apply()
                     )
                     .setNeutralButton(R.string.startbtn1,
-                        (dialogInterface, i) -> {
-                            edit().putBoolean("showAlert", false).apply();
-                            activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
-                        }
+                            (dialogInterface, i) -> {
+                                edit().putBoolean("showAlert", false).apply();
+                                activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
+                            }
                     )
                     .show();
 

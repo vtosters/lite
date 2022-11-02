@@ -129,7 +129,7 @@ public class SystemInfo extends MaterialPreferenceToolbarFragment {
 
         addPreferenceCategory(this, "OEM Information");
 
-        if (isOneUi){
+        if (isOneUi) {
             addPreference(this, "", "OneUiMajorVersion", oneUiMajorVersion, 0, preference -> {
                 ((ClipboardManager) requireActivity().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", oneUiMajorVersion));
                 sendToast(requireContext().getString(R.string.copied_to_clipboard));
@@ -161,7 +161,7 @@ public class SystemInfo extends MaterialPreferenceToolbarFragment {
                     return false;
                 });
             }
-        } else if (isEMUI){
+        } else if (isEMUI) {
             addPreference(this, "", "emuiVersionCode", emuiVersionCode, 0, preference -> {
                 ((ClipboardManager) requireActivity().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", emuiVersionCode));
                 sendToast(requireContext().getString(R.string.copied_to_clipboard));

@@ -25,14 +25,15 @@ public class VTExecutors {
     }
 
     static class VTMusicDownloadExecutor {
-        private VTMusicDownloadExecutor() {}
-
-        private static class LazyHolder {
-            public static final ExecutorService INSTANCE = Executors.newSingleThreadExecutor();
+        private VTMusicDownloadExecutor() {
         }
 
         public static ExecutorService getInstance() {
             return LazyHolder.INSTANCE;
+        }
+
+        private static class LazyHolder {
+            public static final ExecutorService INSTANCE = Executors.newSingleThreadExecutor();
         }
     }
 }

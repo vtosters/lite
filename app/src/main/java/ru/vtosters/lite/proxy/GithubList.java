@@ -29,7 +29,7 @@ public class GithubList {
             Log.d(proxyname, response);
 
             return new ArrayList<>(Arrays.asList(response.split("\n")));
-        } catch (Exception e){
+        } catch (Exception e) {
             Log.d(proxyname, "Failed to fetch data, link: " + link);
 
             return null;

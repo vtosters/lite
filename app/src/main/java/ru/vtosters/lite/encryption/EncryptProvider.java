@@ -93,7 +93,7 @@ public class EncryptProvider {
     public static CharSequence decryptMessage(CharSequence msgBody, MsgFromUser msgFromUser, boolean showEmoji) {
         try {
             return decryptMessage((String) msgBody, msgFromUser.v1(), showEmoji);
-        } catch (Exception e){
+        } catch (Exception e) {
             return decryptMessage((String) msgBody, 0, showEmoji);
         }
     }

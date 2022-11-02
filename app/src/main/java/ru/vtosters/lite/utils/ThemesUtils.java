@@ -61,12 +61,12 @@ public class ThemesUtils {
         }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
-    public static void setSystemModeTheme(int theme) {
-        AppCompatDelegate.setDefaultNightMode(theme);
-    }
-
     public static int getSystemModeTheme() {
         return AppCompatDelegate.getDefaultNightMode();
+    }
+
+    public static void setSystemModeTheme(int theme) {
+        AppCompatDelegate.setDefaultNightMode(theme);
     }
 
     public static void setTheme(VKTheme theme, Activity activity) {

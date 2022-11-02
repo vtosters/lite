@@ -42,6 +42,11 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
+    @Override
+    public int T4() {
+        return R.string.vtlthemes;
+    }
+
     public static class restart implements Preference.OnPreferenceClickListener {
         @Override
         public boolean onPreferenceClick(Preference preference) {
@@ -77,10 +82,5 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
             context.startActivity(a2);
             return true;
         }
-    }
-
-    @Override
-    public int T4() {
-        return R.string.vtlthemes;
     }
 }

@@ -329,10 +329,10 @@ public class MessagesDownloader {
                     "\n" +
                     "";
 
-            return "<html><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><title>" 
-                    + AndroidUtils.getString(R.string.chat_export_title) 
-                    + "</title><style>" 
-                    + style 
+            return "<html><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><title>"
+                    + AndroidUtils.getString(R.string.chat_export_title)
+                    + "</title><style>"
+                    + style
                     + "</style></head><body>";
         }
 

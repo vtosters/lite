@@ -25,9 +25,8 @@ import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 
 public class PlaylistInjector {
-    private static final ExecutorService executor = Executors.newCachedThreadPool();
-
     public final static String CHANNEL_NAME = "VTCH";
+    private static final ExecutorService executor = Executors.newCachedThreadPool();
 
     public static void injectDownloadPlaylist(Playlist playlist) {
         executor.submit(() -> AudioDownloader.cachePlaylist(playlist));

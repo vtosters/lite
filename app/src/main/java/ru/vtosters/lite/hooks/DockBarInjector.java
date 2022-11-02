@@ -83,7 +83,7 @@ public class DockBarInjector {
             }
 
         } catch (NoSuchFieldException | IllegalAccessException | ClassNotFoundException |
-                 NoSuchMethodException | InvocationTargetException e) {
+                NoSuchMethodException | InvocationTargetException e) {
             e.printStackTrace();
         }
 

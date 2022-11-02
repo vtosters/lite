@@ -70,8 +70,8 @@ public class OEMDetector {
         }
     }
 
-    public static boolean isIntentResolved(Context ctx, Intent intent ){
-        return (intent!=null && ctx.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null);
+    public static boolean isIntentResolved(Context ctx, Intent intent) {
+        return (intent != null && ctx.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null);
     }
 
     public static boolean detectMiuiV2() {

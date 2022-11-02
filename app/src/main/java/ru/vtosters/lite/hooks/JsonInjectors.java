@@ -232,7 +232,6 @@ public class JsonInjectors {
     }
 
 
-
     public static JSONObject setOnlineInfo(JSONObject json) throws JSONException {
         var id = json.optInt("id");
         if (id == AccountManagerUtils.getUserId()) {

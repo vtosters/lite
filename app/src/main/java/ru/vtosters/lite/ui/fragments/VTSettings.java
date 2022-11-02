@@ -199,7 +199,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                     requireContext().getString(R.string.appearance_theme_use_system),
                     R.drawable.ic_palette_outline_28, getThemesumm(),
                     AndroidUtils.getArray("theme_type_name_checkbox"),
-                    new String[] { "system", "dark", "light" },
+                    new String[]{"system", "dark", "light"},
                     (preference, o) -> {
                         String value = (String) o;
                         if (!value.equals("system")) {
@@ -393,7 +393,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        if(!vkme()){
+        if (!vkme()) {
             if (!isTablet()) {
                 addPreference(this, "", requireContext().getString(R.string.dockbar_editor), docksumm, R.drawable.ic_list_outline_28, preference -> {
                     Context context = requireContext();
@@ -414,7 +414,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 }
             }
         }
-        
+
         addPreference(this, "", requireContext().getString(R.string.vtlactivity), activitysumm, R.drawable.ic_write_outline_28_new_accent, preference -> {
             Context context = requireContext();
             Intent a2 = new Navigator(ActivityFragment.class).b(context);

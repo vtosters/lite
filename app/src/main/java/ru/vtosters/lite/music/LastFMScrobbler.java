@@ -56,7 +56,7 @@ public class LastFMScrobbler {
         }
 
         if (Preferences.autocache() && !CacheDatabaseDelegate.isCached(uid)) {
-            if (LibVKXClient.isIntegrationEnabled()){
+            if (LibVKXClient.isIntegrationEnabled()) {
                 LibVKXClient.getInstance().runOnService(service -> {
                     try {
                         service.addTrackToCache(track_id, owner_id, access_key);
@@ -101,7 +101,7 @@ public class LastFMScrobbler {
         fetch(params, new Callback() {
             @Override
             public void a(Call call, IOException e) {
-                Log.d("Scrobbler", e+"");
+                Log.d("Scrobbler", e + "");
             }
 
             @Override

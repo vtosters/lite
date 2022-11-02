@@ -54,7 +54,7 @@ public class ProfileHider {
                     z2.set(extendedUserProfile, response);
                 }
             } catch (IOException | JSONException | NoSuchFieldException |
-                     IllegalAccessException e) {
+                    IllegalAccessException e) {
                 e.printStackTrace();
             } catch (NullPointerException e) {
                 Log.e("ProfileHide", "null \"profiles\" node\n" + e);

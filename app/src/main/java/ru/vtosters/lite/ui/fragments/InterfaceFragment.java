@@ -54,15 +54,15 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
         return true;
     }
 
+    @Override
+    public int T4() {
+        return R.string.vtlinterface;
+    }
+
     public class restart implements Preference.OnPreferenceClickListener {
         @Override
         public boolean onPreferenceClick(Preference preference) {
             return InterfaceFragment.this.restart(preference);
         }
-    }
-
-    @Override
-    public int T4() {
-        return R.string.vtlinterface;
     }
 }

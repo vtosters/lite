@@ -88,6 +88,11 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         return true;
     }
 
+    @Override
+    public int T4() {
+        return R.string.vtlmessages;
+    }
+
     public class restart implements Preference.OnPreferenceClickListener {
         @Override
         public boolean onPreferenceClick(Preference preference) {
@@ -121,10 +126,5 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
             context.startActivity(a2);
             return true;
         }
-    }
-
-    @Override
-    public int T4() {
-        return R.string.vtlmessages;
     }
 }

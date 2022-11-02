@@ -70,11 +70,11 @@ public class ProxyHook {
         rgRandomProxy.setChecked(isRandomProxyEnabled());
         rgVika.setChecked(isVikaProxyEnabled());
 
-       new VkAlertDialog.Builder(ctx)
-               .setTitle(ctx.getString(R.string.vtlproxy))
-               .setMessage(ctx.getString(R.string.proxy_warning))
-               .setView(rg)
-               .setPositiveButton(ctx.getString(R.string.vtl_confirm), ((dialog, which) -> { // Применить
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(ctx.getString(R.string.vtlproxy))
+                .setMessage(ctx.getString(R.string.proxy_warning))
+                .setView(rg)
+                .setPositiveButton(ctx.getString(R.string.vtl_confirm), ((dialog, which) -> { // Применить
                     if (rgZaborona.isChecked()) {
                         edit().putString("proxy", "zaborona").commit();
                         restartApplication();
@@ -88,13 +88,13 @@ public class ProxyHook {
                         edit().putString("proxy", "noproxy").commit();
                         restartApplication();
                     }
-               }))
-               .setNeutralButton(ctx.getString(R.string.proxy_settings), ((dialog, which) -> {
+                }))
+                .setNeutralButton(ctx.getString(R.string.proxy_settings), ((dialog, which) -> {
                     var intent = new Navigator(ProxySettingsFragment.class)
                             .b(ctx)
                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     ctx.startActivity(intent);
-               }))
-               .show();
+                }))
+                .show();
     }
 }

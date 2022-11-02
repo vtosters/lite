@@ -132,6 +132,11 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
         return super.onPreferenceTreeClick(preference);
     }
 
+    @Override
+    public int T4() {
+        return R.string.vtlfeed;
+    }
+
     public class openofficialsett implements Preference.OnPreferenceClickListener {
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference) {
@@ -141,10 +146,5 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
             context.startActivity(a2);
             return true;
         }
-    }
-
-    @Override
-    public int T4() {
-        return R.string.vtlfeed;
     }
 }
