@@ -13,7 +13,6 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.isVKTester;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
-import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
 import static ru.vtosters.lite.utils.GmsUtils.isGmsInstalled;
 import static ru.vtosters.lite.utils.ImageUtils.getDrawableFromUrl;
 import static ru.vtosters.lite.utils.Preferences.ads;
@@ -38,7 +37,6 @@ import static ru.vtosters.lite.utils.VTVerifications.vtverif;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -69,7 +67,6 @@ import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.SSFSUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 

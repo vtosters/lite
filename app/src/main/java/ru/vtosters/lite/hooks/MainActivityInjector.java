@@ -4,15 +4,13 @@ import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
-import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.ThemesUtils.setNeededTheme;
 
 import android.app.Activity;
 import android.os.Build;
-import android.preference.PreferenceManager;
 
-import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.concurrent.VTExecutors;
+import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;

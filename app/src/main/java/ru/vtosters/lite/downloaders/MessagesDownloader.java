@@ -12,7 +12,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
 
 import android.util.SparseArray;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
