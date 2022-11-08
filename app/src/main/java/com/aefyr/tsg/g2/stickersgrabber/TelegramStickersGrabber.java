@@ -184,7 +184,7 @@ public class TelegramStickersGrabber {
             }
 
             @Override
-            public void onResponse(NetCall call, NetResponse response) throws IOException {
+            public void onResponse(NetCall call, NetResponse response) {
                 if (!response.isSuccessful()) {
                     if (response.getData() != null)
                         listener.onPackDownloadError(new TSGException(response.getDataString() + "\nURL: " + call.request().url()));
@@ -211,20 +211,23 @@ public class TelegramStickersGrabber {
                         return;
                     }
 
-                    if (jPackInfo.optBoolean("is_animated")) {
-                        listener.onPackDownloadError(new TSGException("Animated stickerpacks are not supported!"));
-                        return;
-                    }
-
                     ArrayList<Sticker> stickers = new ArrayList<>(jStickers.length());
 
                     Log.d(TAG, String.format("Parsing stickers in pack %s", packName));
 
                     for (int i = 0; i < jStickers.length(); i++) {
                         JSONObject jSticker = jStickers.getJSONObject(i);
-                        stickers.add(new Sticker(jSticker.getString("file_id"), jSticker.getString("emoji")));
+                        if (jSticker.optBoolean("is_animated") || jSticker.optBoolean("is_video")) {
+                            if (jSticker.has("thumb")) {
+                                stickers.add(new Sticker(jSticker.getJSONObject("thumb").getString("file_id"), jSticker.getString("emoji")));
+                            } else {
+                                listener.onPackDownloadError(new TSGException("Animated and video stickerpacks without thumbs are not supported!"));
+                                return;
+                            }
+                        } else {
+                            stickers.add(new Sticker(jSticker.getString("file_id"), jSticker.getString("emoji")));
+                        }
                     }
-
 
                     set = new StickerSet(jPackInfo.getString("name"), jPackInfo.getString("title"), packVersion, stickers);
                 } catch (Exception e) {
