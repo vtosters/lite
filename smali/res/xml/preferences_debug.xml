@@ -48,15 +48,6 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vk_fix_music_other">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="gcmfix"
-            android:summary="@string/vk_fix_music_summary"
-            android:title="@string/vk_fix_music" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="musicFixNew"
-            android:title="@string/musicFixNew_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="new_music_downloading_way"
             android:title="@string/new_music_downloading_way_title" />

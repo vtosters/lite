@@ -134,10 +134,6 @@ public class Preferences {
         return getBoolValue("awayphp", true);
     }
 
-    public static boolean musicFixNew() {
-        return getBoolValue("musicFixNew", true);
-    }
-
     public static boolean foaf() {
         return getBoolValue("foaf", false);
     }
@@ -213,10 +209,6 @@ public class Preferences {
 
     public static boolean returnnorifs() {
         return getBoolValue("returnnorifs", false);
-    }
-
-    public static boolean gcmfix() {
-        return getBoolValue("gcmfix", true) && isValidSignature();
     }
 
     public static boolean hasMusicSubscription() {

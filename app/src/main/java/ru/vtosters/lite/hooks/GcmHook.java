@@ -1,6 +1,6 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.Preferences.musicFixNew;
+import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 
 import android.os.Build;
 import android.util.Base64;
@@ -27,9 +27,13 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.net.ssl.HttpsURLConnection;
 
+
 public class GcmHook {
+
     private static final String agent = String.format("Android-GCM/1.5 (%s %s)", Build.MODEL, Build.MODEL);
+
     private static KeyPair pair;
+
     private static int rid = 0;
 
     static {
@@ -37,14 +41,11 @@ public class GcmHook {
     }
 
     public static String requestTokenV2(String orig) {
-        if (musicFixNew()) return "null"; //not public
-        return orig;
+        return isValidSignature() ? "eyJhbGciOiAibm9uZSJ9eyJub25jZSI6ICJudWxsIn0=" : "e251bGx9";
     }
 
     public static String requestToken(String orig) {
-        if (musicFixNew()) return "{null}"; //not public
-        if (orig.equals("")) return requestToken();
-        return orig;
+        return requestToken();
     }
 
     public static String requestToken() {
@@ -60,6 +61,7 @@ public class GcmHook {
             } catch (NoSuchAlgorithmException e) {
                 xappide = "";
             }
+
             AtomicBoolean wait = new AtomicBoolean(false);
             StringBuilder sb = new StringBuilder();
             List<String> params = new ArrayList<>();
@@ -71,17 +73,20 @@ public class GcmHook {
             while (!wait.get()) {
                 Thread.sleep(100);
             }
+
             String token = sb.toString();
+
             if (token.equals("REGISTRATION_ERROR")) {
                 return requestToken();
             }
+
             rid = 0;
             String pub22 = genNewKey();
             String sig2 = getSig(pub22);
             params.clear();
             fillParams(params, sig2, pub22, xappide, Long.parseLong(aid.split(" ")[1].split(":")[0]), true);
             doRequest("https://android.clients.google.com/c2dm/register3", "POST", params, aid, GcmHook::lambda$requestToken$1);
-            return token;
+            return isValidSignature() ? token : null;
         } catch (FileNotFoundException e2) {
             return requestToken();
         } catch (Exception e3) {
@@ -100,12 +105,14 @@ public class GcmHook {
     private static void fillParams(List<String> params, String sig, String pub2, String xappid, long androidId, boolean del) {
         rid++;
         params.add("X-subtype=841415684880");
+
         if (del) {
             params.add("X-delete=1");
             params.add("X-X-delete=1");
         } else {
             params.add("X-X-subscription=841415684880");
         }
+
         params.add("X-X-subtype=841415684880");
         params.add("X-app_ver=" + "7.26");
         params.add("X-kid=|ID|" + rid + "|");
@@ -115,19 +122,20 @@ public class GcmHook {
         params.add("X-gmsv=11949480");
         params.add("X-pub2=" + pub2);
         params.add("X-X-kid=|ID|" + rid + "|");
-        StringBuilder sb = new StringBuilder();
-        sb.append("X-appid=");
-        sb.append(xappid);
-        params.add(sb.toString());
+        params.add("X-appid=" + xappid);
+
         if (del) {
             params.add("X-scope=GCM");
         } else {
             params.add("X-scope=*");
         }
+
         params.add("X-subscription=841415684880");
+
         if (!del) {
             params.add("X-gmp_app_id=1:841415684880:android:632f429381141121");
         }
+
         params.add("X-app_ver_name=" + "7.26");
         params.add("app=com.vkontakte.android");
         params.add("sender=841415684880");
@@ -139,9 +147,11 @@ public class GcmHook {
 
     private static String join(String chr, Iterable<String> arr) {
         String str = "";
+
         for (String s : arr) {
             str = str.isEmpty() ? s : str + chr + s;
         }
+
         return str;
     }
 
@@ -168,8 +178,12 @@ public class GcmHook {
     }
 
     private static String getRandomAid() {
-        var arr1 = new String[]{"3974055026275073921", "4418584909973341826", "4585634953328772978"};
-        var arr2 = new String[]{"1932960345884890854", "6594645578425092292", "1792344590975444730"};
+        var arr1 = new String[]{
+                "3974055026275073921", "4418584909973341826", "4585634953328772978"
+        };
+        var arr2 = new String[]{
+                "1932960345884890854", "6594645578425092292", "1792344590975444730"
+        };
         int r = new Random().nextInt(2);
         return "AidLogin " + arr1[r] + ":" + arr2[r];
     }
@@ -182,6 +196,7 @@ public class GcmHook {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
+
         return Base64.encodeToString(pair.getPublic().getEncoded(), 0);
     }
 
@@ -190,7 +205,9 @@ public class GcmHook {
             PrivateKey key = pair.getPrivate();
             Signature sign = Signature.getInstance(key instanceof RSAPrivateKey ? "SHA256withRSA" : "SHA256withECDSA");
             sign.initSign(key);
-            sign.update(join("\n", new String[]{"com.vkontakte.android", pub2}).getBytes(StandardCharsets.UTF_8));
+            sign.update(join("\n", new String[]{
+                    "com.vkontakte.android", pub2
+            }).getBytes(StandardCharsets.UTF_8));
             return Base64.encodeToString(sign.sign(), 0);
         } catch (Exception e) {
             e.printStackTrace();
