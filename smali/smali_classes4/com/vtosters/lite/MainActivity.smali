@@ -21,9 +21,6 @@
     .end annotation
 .end field
 
-.field private L:Lcom/vk/updates/InAppUpdatesManager;
-
-
 # direct methods
 .method public constructor <init>()V
     .locals 2
@@ -40,13 +37,6 @@
 
     .line 3
     iput-wide v0, p0, Lcom/vtosters/lite/MainActivity;->J:J
-
-    .line 4
-    new-instance v0, Lcom/vk/updates/InAppUpdatesManager;
-
-    invoke-direct {v0, p0}, Lcom/vk/updates/InAppUpdatesManager;-><init>(Landroid/app/Activity;)V
-
-    iput-object v0, p0, Lcom/vtosters/lite/MainActivity;->L:Lcom/vk/updates/InAppUpdatesManager;
 
     return-void
 .end method
@@ -307,9 +297,6 @@
     .line 6
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/vtosters/lite/MainActivity;->L:Lcom/vk/updates/InAppUpdatesManager;
-
-    invoke-virtual {v0, p1, p2}, Lcom/vk/updates/InAppUpdatesManager;->a(II)V
 
     .line 7
     invoke-static {}, Lcom/vk/stories/StoriesController;->o()Z
@@ -580,11 +567,6 @@
     .line 1
     invoke-super {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->onDestroy()V
 
-    .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/MainActivity;->L:Lcom/vk/updates/InAppUpdatesManager;
-
-    invoke-virtual {v0}, Lcom/vk/updates/InAppUpdatesManager;->d()V
-
     return-void
 .end method
 
@@ -687,11 +669,6 @@
     :cond_1
     invoke-static {p0}, Lcom/vtosters/lite/NetworkStateReceiver;->a(Landroid/content/Context;)V
 
-    .line 9
-    iget-object v0, p0, Lcom/vtosters/lite/MainActivity;->L:Lcom/vk/updates/InAppUpdatesManager;
-
-    invoke-virtual {v0}, Lcom/vk/updates/InAppUpdatesManager;->a()V
-
     .line 10
     .line 11
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -720,11 +697,6 @@
     .line 1
     invoke-super {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->onStart()V
 
-    .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/MainActivity;->L:Lcom/vk/updates/InAppUpdatesManager;
-
-    invoke-virtual {v0}, Lcom/vk/updates/InAppUpdatesManager;->c()V
-
     .line 3
     sget-object v0, Lcom/vk/newsfeed/SpecialEventController;->e:Lcom/vk/newsfeed/SpecialEventController;
 
@@ -738,11 +710,6 @@
 
     .line 1
     invoke-super {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->onStop()V
-
-    .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/MainActivity;->L:Lcom/vk/updates/InAppUpdatesManager;
-
-    invoke-virtual {v0}, Lcom/vk/updates/InAppUpdatesManager;->b()V
 
     return-void
 .end method
