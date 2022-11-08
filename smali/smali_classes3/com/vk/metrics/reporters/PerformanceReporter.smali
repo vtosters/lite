@@ -2,11 +2,6 @@
 .super Ljava/lang/Object;
 .source "PerformanceReporter.kt"
 
-# interfaces
-.implements Lcom/vk/metrics/performance/anr/ANR$c;
-.implements Lcom/vk/metrics/performance/memory/LargeTransactionChecker$d;
-
-
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
@@ -35,10 +30,6 @@
 .field private static final e:Lb/h/q/c/c/PerformanceStorage;
 
 .field private static final f:Lb/h/q/c/b/PerformanceProfiler;
-
-.field private static g:Lcom/vk/metrics/performance/anr/ANR;
-
-.field private static h:Lcom/vk/metrics/performance/memory/LargeTransactionChecker;
 
 .field private static i:Lcom/vk/metrics/performance/scroll/ScreenScrollPerformanceChecker;
 
@@ -95,13 +86,6 @@
 
     sput-object v1, Lcom/vk/metrics/reporters/PerformanceReporter;->f:Lb/h/q/c/b/PerformanceProfiler;
 
-    .line 7
-    new-instance v1, Lcom/vk/metrics/performance/anr/ANR;
-
-    invoke-direct {v1, v0}, Lcom/vk/metrics/performance/anr/ANR;-><init>(Lcom/vk/metrics/performance/anr/ANR$c;)V
-
-    sput-object v1, Lcom/vk/metrics/reporters/PerformanceReporter;->g:Lcom/vk/metrics/performance/anr/ANR;
-
     return-void
 .end method
 
@@ -117,78 +101,8 @@
 .method private final a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;)Ljava/lang/Integer;
     .locals 6
 
-    .line 24
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->e:Lb/h/q/c/c/PerformanceStorage;
-
-    invoke-virtual {v0, p1}, Lb/h/q/c/c/PerformanceStorage;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;)Lkotlin/Pair;
-
-    move-result-object v0
-
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_1
-
-    .line 25
-    invoke-virtual {v0}, Lkotlin/Pair;->c()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    .line 26
-    sget-wide v4, Lcom/vk/metrics/reporters/PerformanceReporter;->a:J
-
-    cmp-long v0, v2, v4
-
-    if-gez v0, :cond_0
-
-    return-object v1
-
-    .line 27
-    :cond_0
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->e:Lb/h/q/c/c/PerformanceStorage;
-
-    invoke-virtual {v0, p1}, Lb/h/q/c/c/PerformanceStorage;->b(Lcom/vk/metrics/performance/scroll/ScrollScreenType;)Lkotlin/Pair;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    .line 28
-    invoke-virtual {p1}, Lkotlin/Pair;->c()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    const/high16 p1, 0x42c80000    # 100.0f
-
-    long-to-float v0, v0
-
-    mul-float v0, v0, p1
-
-    long-to-float p1, v2
-
-    div-float/2addr v0, p1
-
-    float-to-int p1, v0
-
-    .line 29
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
     return-object v1
 .end method
 
@@ -213,76 +127,12 @@
 .method private final f()V
     .locals 2
 
-    .line 1
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->g:Lcom/vk/metrics/performance/anr/ANR;
-
-    invoke-virtual {v0}, Lcom/vk/metrics/performance/anr/ANR;->b()V
-
-    .line 2
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->b:Ljava/util/ArrayList;
-
-    .line 3
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lb/h/q/c/c/PerformanceChecker;
-
-    .line 4
-    invoke-virtual {v1}, Lb/h/q/c/c/PerformanceChecker;->b()V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
 .method private final g()V
     .locals 2
 
-    .line 1
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->g:Lcom/vk/metrics/performance/anr/ANR;
-
-    invoke-virtual {v0}, Lcom/vk/metrics/performance/anr/ANR;->c()V
-
-    .line 2
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->b:Ljava/util/ArrayList;
-
-    .line 3
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lb/h/q/c/c/PerformanceChecker;
-
-    .line 4
-    invoke-virtual {v1}, Lb/h/q/c/c/PerformanceChecker;->d()V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
@@ -300,74 +150,6 @@
 .method public a(JLjava/lang/Throwable;)V
     .locals 3
 
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    .line 16
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "ERROR: <<<==== ANR ====>>> on main thread with "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, " ms"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    invoke-static {v0}, Lcom/vk/log/L;->b([Ljava/lang/Object;)V
-
-    const-wide/16 v0, 0x190
-
-    cmp-long v2, p1, v0
-
-    if-nez v2, :cond_0
-
-    .line 17
-    sget-object p1, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    invoke-virtual {p1, p3}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    const-wide/16 v0, 0x1388
-
-    cmp-long v2, p1, v0
-
-    if-nez v2, :cond_1
-
-    .line 18
-    sget-object p1, Lcom/vk/metrics/reporters/PerformanceReporter;->e:Lb/h/q/c/c/PerformanceStorage;
-
-    invoke-virtual {p1}, Lb/h/q/c/c/PerformanceStorage;->o()V
-
-    .line 19
-    sget-object p1, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    invoke-virtual {p1, p3}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Ljava/lang/Throwable;)V
-
-    .line 20
-    sget-object p1, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    const-string p2, "PERF.APP.ANR"
-
-    invoke-virtual {p1, p2}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Ljava/lang/String;)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
@@ -379,96 +161,9 @@
         }
     .end annotation
 
-    .line 3
-    sget-object v0, Lb/h/q/MetricPrefs;->b:Lb/h/q/MetricPrefs;
-
-    const-string v1, "config_app_performance_enable"
-
-    invoke-virtual {v0, v1}, Lb/h/q/MetricPrefs;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "1"
-
-    .line 4
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 5
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->h:Lcom/vk/metrics/performance/memory/LargeTransactionChecker;
-
-    if-nez v0, :cond_0
-
-    .line 6
-    new-instance v0, Lcom/vk/metrics/performance/memory/LargeTransactionChecker;
-
-    invoke-direct {v0, p0, p1}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker;-><init>(Lcom/vk/metrics/performance/memory/LargeTransactionChecker$d;Landroid/content/Context;)V
-
-    sput-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->h:Lcom/vk/metrics/performance/memory/LargeTransactionChecker;
-
-    .line 7
-    :cond_0
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    and-int/lit8 v0, v0, 0x2
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
     const/4 v0, 0x0
 
-    :goto_0
     sput-boolean v0, Lcom/vk/metrics/reporters/PerformanceReporter;->d:Z
-
-    .line 8
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 9
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->b:Ljava/util/ArrayList;
-
-    sget-object v1, Lcom/vk/metrics/reporters/PerformanceReporter;->g:Lcom/vk/metrics/performance/anr/ANR;
-
-    invoke-virtual {v1}, Lcom/vk/metrics/performance/anr/ANR;->a()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    .line 10
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->b:Ljava/util/ArrayList;
-
-    new-instance v1, Lcom/vk/metrics/performance/memory/MemoryChecker;
-
-    invoke-direct {v1, p1}, Lcom/vk/metrics/performance/memory/MemoryChecker;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 11
-    :cond_2
-    sget-object p1, Lb/h/n/AppLifecycleDispatcher;->h:Lb/h/n/AppLifecycleDispatcher;
-
-    new-instance v0, Lcom/vk/metrics/reporters/PerformanceReporter$b;
-
-    invoke-direct {v0}, Lcom/vk/metrics/reporters/PerformanceReporter$b;-><init>()V
-
-    invoke-virtual {p1, v0}, Lb/h/n/AppLifecycleDispatcher;->a(Lb/h/n/AppLifecycleDispatcher$a;)V
 
     return-void
 .end method
@@ -513,31 +208,6 @@
 
 .method public a(Ljava/lang/Throwable;)V
     .locals 3
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    const-string v2, "ERROR: <<<==== LARGE TRANSACTION ====>>>"
-
-    aput-object v2, v0, v1
-
-    .line 21
-    invoke-static {v0}, Lcom/vk/log/L;->b([Ljava/lang/Object;)V
-
-    .line 22
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    invoke-virtual {v0, p1}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Ljava/lang/Throwable;)V
-
-    .line 23
-    sget-object p1, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    const-string v0, "PERF.APP.LARGE.TRANSACTION"
-
-    invoke-virtual {p1, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Ljava/lang/String;)V
 
     return-void
 .end method
