@@ -120,8 +120,7 @@ public class NewsfeedHook {
         hashSet.add("ads_app");
         hashSet.add("ads_site");
         hashSet.add("ads_post");
-        if (!adsslider())
-            hashSet.add("ads_app_slider");
+        hashSet.add("ads_app_slider");
         hashSet.add("ads_site_slider");
         hashSet.add("ads_app_video");
         hashSet.add("ads_post_pretty_cards");

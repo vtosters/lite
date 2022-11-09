@@ -13,11 +13,6 @@
             android:title="@string/vtldgads" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
-            android:key="__dbg_no_slider_ads"
-            android:summary="@string/feed_ads_carousel_summary"
-            android:title="@string/vtldca" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
             android:key="adsstories"
             android:summary="@string/feed_ads_stories_summary"
             android:title="@string/vtldas" />

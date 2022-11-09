@@ -26,7 +26,7 @@
             android:defaultValue="false"
             android:key="podcastcatalog"
             android:title="@string/podcastcatalog_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
+        <!-- <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="vksans"
             android:title="@string/debug_experimental_vk_sans_font" />
@@ -40,11 +40,15 @@
             android:entries="@array/language"
             android:entryValues="@array/lang_value"
             android:key="lang_value"
-            android:title="@string/debug_experimental_language" />
+            android:title="@string/debug_experimental_language" /> -->
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="useNewSettings"
             android:title="@string/useNewSettings_title" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="promotedstickers"
+            android:title="@string/promotedstickers_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vk_fix_music_other">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -73,10 +77,6 @@
             android:key="hasMusicSubscription"
             android:summary="@string/debug_developer_has_music_subscription_summary"
             android:title="@string/debug_developer_has_music_subscription" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="oldabout"
-            android:title="@string/debug_developer_old_about" />
         <EditTextPreference
             android:defaultValue="https://vtsf.vknext.net"
             android:key="ssfscustom"
