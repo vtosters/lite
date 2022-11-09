@@ -5516,7 +5516,7 @@ Filters are not case-sensitive!"</string>
     <string name="vtllinkfilter">Source link filter</string>
     <string name="vtlsourcenamefilter">Source name filter</string>
     <string name="vtlsfilter">Standard adblock filter</string>
-    <string name="vtlsfiltersummary">Blocks posts with common tags, such as #ad, #pr and so on</string>
+    <string name="vtlsfiltersummary">Blocks posts with common tags, such as #ad, #pr and so on \n\nRecommended</string>
     <string name="vtlusevkui">Use VKUI</string>
     <string name="vtlawayphp">Disable away.php redirect</string>
     <string name="vtlinterfacemsg">Interface</string>
@@ -5525,7 +5525,7 @@ Filters are not case-sensitive!"</string>
     <string name="vtlvoicesummary">The icon for recording voice messages in the message input field</string>
     <string name="vtlnavbar">Color navigation bar</string>
     <string name="cringecopyright_title">Posts with possible advertising</string>
-    <string name="cringecopyright_summ">Block posts with a source where there is a link to VK / Telegram (group, page or posts) or to other possible resources</string>
+    <string name="cringecopyright_summ">Block posts with a source where there is a link to VK / Telegram (group, page or posts) or to other possible advert resources \n\nRecommended</string>
     <string name="cringerepost_title">Reposts with links</string>
     <string name="cringerepost_summ">Block posts with repost inside which there is a link to VK / Telegram</string>    
     <string name="why_news_not_updated_title">Why is the news not updated?</string>
@@ -6326,7 +6326,7 @@ May look like a fake leaving the online"</string>
     <string name="added_to_whitelist_success">Group added to whitelist</string>
 
     <string name="whitelisted_ad_groups_title">Ads whitelist</string>
-    <string name="whitelisted_filters_groups_title">Filters whitelist</string>
+    <string name="whitelisted_filters_groups_title">Filters whitelist and copyrights</string>
 
     <string name="download_dl">Download dialog</string>
     <string name="download_dl_error">An error occurred while trying to download the dialog</string>

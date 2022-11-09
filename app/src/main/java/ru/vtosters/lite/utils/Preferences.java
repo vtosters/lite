@@ -102,10 +102,6 @@ public class Preferences {
         return getBoolValue("vkme", false);
     }
 
-    public static boolean adsslider() {
-        return getBoolValue("__dbg_no_slider_ads", true);
-    }
-
     public static boolean autocache() {
         return getBoolValue("autocache", false);
     }
@@ -229,10 +225,6 @@ public class Preferences {
 
     public static boolean offline() {
         return getBoolValue("offline", false);
-    }
-
-    public static boolean oldabout() {
-        return getBoolValue("oldabout", false);
     }
 
     public static boolean postsrecomm() {

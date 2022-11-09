@@ -1162,16 +1162,7 @@
     :try_start_0
     iput-object p1, p0, Lcom/vk/core/network/proxy/NetworkProxy;->c:Lcom/vk/core/network/proxy/NetworkProxy$c;
 
-    .line 7
-    sget-object p1, Lb/h/q/d/FirebaseHelper;->c:Lb/h/q/d/FirebaseHelper;
-
-    invoke-virtual {p1}, Lb/h/q/d/FirebaseHelper;->a()Lb/h/q/d/Firebase;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lb/h/q/d/Firebase;->b()Z
-
-    move-result p1
+    const p1, 0x0
 
     if-eqz p1, :cond_1
 

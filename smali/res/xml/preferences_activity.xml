@@ -9,7 +9,7 @@
             android:key="undeletemsg_prefix_value"
             android:title="@string/activity_undel_tag" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="undeletemsg"
             android:summary="@string/activity_undel_attachments"
             android:title="@string/activity_undel_enable" />

@@ -67,13 +67,6 @@
     .line 3
     sput-boolean v0, Lcom/vtosters/lite/bridges/VkVideoBridge;->d:Z
 
-    .line 4
-    sget-object v0, Lcom/vk/media/player/VideoHelper;->c:Lcom/vk/media/player/VideoHelper;
-
-    sget-object v1, Lcom/vtosters/lite/media/VideoAnalytics;->b:Lcom/vtosters/lite/media/VideoAnalytics;
-
-    invoke-virtual {v0, v1}, Lcom/vk/media/player/VideoHelper;->a(Lcom/vk/media/player/PlayerAnalytics$a;)V
-
     return-void
 .end method
 

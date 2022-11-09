@@ -124,14 +124,6 @@
         </Preference>
         <Preference
             android:persistent="false"
-            android:summary="@string/proxydonate"
-            android:title="xtrafrancyz">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://xtrafrancyz.net/donate-vk" />
-        </Preference>
-        <Preference
-            android:persistent="false"
             android:summary="Vika Donate"
             android:title="Vika Mobile proxy">
             <intent
@@ -147,7 +139,7 @@
             android:title="@string/proxyownersxtrsources">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://github.com/xtrafrancyz/vk-proxy" />
+                android:data="https://github.com/vtosters/vk-proxy" />
         </Preference>
     </PreferenceCategory>
 </PreferenceScreen>

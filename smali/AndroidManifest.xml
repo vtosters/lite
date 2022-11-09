@@ -1764,30 +1764,12 @@
             android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
             android:exported="true"
             android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-        <provider
-            android:name="com.google.firebase.perf.provider.FirebasePerfProvider"
-            android:authorities="com.vtosters.lite.firebaseperfprovider"
-            android:exported="false"
-            android:initOrder="101" />
-
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
             android:directBootAware="true"
             android:exported="false">
             <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
         <service
@@ -2044,30 +2026,6 @@
             android:exported="false"
             android:initOrder="100" />
 
-        <receiver
-            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-            android:enabled="true"
-            android:exported="false" />
-        <receiver
-            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
-            android:enabled="true"
-            android:exported="true"
-            android:permission="android.permission.INSTALL_PACKAGES">
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementService"
-            android:enabled="true"
-            android:exported="false" />
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-
         <provider
             android:name="com.facebook.internal.FacebookInitProvider"
             android:authorities="com.vtosters.lite.FacebookInitProvider"
@@ -2088,21 +2046,7 @@
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
-
-        <activity
-            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
-            android:enabled="false"
-            android:exported="false"
-            android:launchMode="singleInstance"
-            android:process=":playcore_missing_splits_activity"
-            android:stateNotNeeded="true" />
-        <activity
-            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-            android:enabled="false"
-            android:exported="false"
-            android:process=":playcore_dialog_wrapper_activity"
-            android:stateNotNeeded="true"
-            android:theme="@style/Theme.PlayCore.Transparent" />
+        
         <activity
             android:name="vigo.sdk.FeedbackActivity"
             android:screenOrientation="portrait"

@@ -560,38 +560,6 @@
 .method private final d()V
     .locals 3
 
-    .line 1
-    invoke-direct {p0}, Lb/h/b/LocationInfo;->b()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    sget-object v1, Lcom/vk/metrics/eventtracking/Event;->b:Lcom/vk/metrics/eventtracking/Event$b;
-
-    invoke-virtual {v1}, Lcom/vk/metrics/eventtracking/Event$b;->a()Lcom/vk/metrics/eventtracking/Event$a;
-
-    move-result-object v1
-
-    const-string v2, "ERROR.LOCATION.REQUEST_TIMEOUT"
-
-    .line 3
-    invoke-virtual {v1, v2}, Lcom/vk/metrics/eventtracking/Event$a;->a(Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event$a;
-
-    .line 4
-    invoke-virtual {v1}, Lcom/vk/metrics/eventtracking/Event$a;->a()Lcom/vk/metrics/eventtracking/Event;
-
-    move-result-object v1
-
-    .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lcom/vk/metrics/eventtracking/Event;)V
-
     return-void
 .end method
 
