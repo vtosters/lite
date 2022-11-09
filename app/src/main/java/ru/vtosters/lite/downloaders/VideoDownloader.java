@@ -103,9 +103,9 @@ public class VideoDownloader {
             max[i] = list.get(i);
         }
 
-        if (context == null) context = LifecycleUtils.getCurrentActivity();
+        final Context finalContext = context != null ? context : LifecycleUtils.getCurrentActivity();
 
-        var adapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, max) {
+        var adapter = new ArrayAdapter(finalContext, android.R.layout.simple_list_item_1, max) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 TextView textView = (TextView) super.getView(position, convertView, parent);
@@ -114,15 +114,18 @@ public class VideoDownloader {
             }
         };
 
-        new VkAlertDialog.Builder(context)
+        new VkAlertDialog.Builder(finalContext)
                 .setAdapter(adapter, (dialog, which) -> {
-                    var url = urls.get(which);
-                    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-                    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                    request.setTitle(videoFile.toString());
-                    request.allowScanningByMediaScanner();
-                    request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
-                    ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+                    try {
+                        var url = urls.get(which);
+                        var request = new DownloadManager.Request(Uri.parse(url))
+                                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                                .setTitle(videoFile.toString())
+                                .setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
+                        request.allowScanningByMediaScanner();
+                        ((DownloadManager) finalContext.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+                    } catch (Throwable ignored) {
+                    }
                 })
                 .show();
     }
