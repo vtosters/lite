@@ -41,7 +41,6 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("vkme_notifs").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("systememoji").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("wallpapers").setOnPreferenceClickListener(new MessagesFragment.openwp());
-        findPreference("promotedstickers").setOnPreferenceChangeListener(new clearStickersCache());
 
         findPreference("autotranslate").setEnabled(!autoalltranslate());
 
@@ -79,7 +78,6 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     public boolean onPreferenceTreeClick(Preference preference) {
         findPreference("autotranslate").setEnabled(!autoalltranslate());
         findPreference("vkme_notifs").setEnabled(vkme());
-        findPreference("promotedstickers").setOnPreferenceChangeListener(new clearStickersCache());
         return super.onPreferenceTreeClick(preference);
     }
 
@@ -104,16 +102,6 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         @Override
         public boolean onPreferenceClick(Preference preference) {
             return MessagesFragment.this.restart();
-        }
-    }
-
-    public class clearStickersCache implements Preference.OnPreferenceChangeListener {
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object o) {
-            SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-            prefs2.edit().clear().commit();
-            Stickers.l.c();
-            return true;
         }
     }
 

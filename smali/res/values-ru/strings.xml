@@ -5382,7 +5382,7 @@
     <string name="vtllinkfilter">Фильтр ссылок в источнике</string>
     <string name="vtlsourcenamefilter">Фильтр по названию источника</string>
     <string name="vtlsfilter">Стандартный фильтр рекламы</string>
-    <string name="vtlsfiltersummary">Фильтр для блокировки постов с пометкой #реклама и тд</string>
+    <string name="vtlsfiltersummary">Фильтр для блокировки постов с пометкой #реклама и тд \n\nРекомендуется к включению</string>
     <string name="vtlusevkui">Использовать VKUI</string>
     <string name="vtlawayphp">Отключить редирект на away.php</string>
     <string name="vtlinterfacemsg">Интерфейс</string>
@@ -5391,7 +5391,7 @@
     <string name="vtlvoicesummary">Иконка записи голосовых сообщений в поле ввода сообщения</string>
     <string name="vtlnavbar">Покрасить панель навигации</string>
     <string name="cringecopyright_title">Посты с возможной рекламой</string>
-    <string name="cringecopyright_summ">Блокировать посты с источником где есть ссылка на VK / Telegram (группу, страницу или посты) или на другие возможные ресурсы</string>
+    <string name="cringecopyright_summ">Блокировать посты с источником где есть ссылка на VK / Telegram (группу, страницу или посты) или на другие возможные рекламные ресурсы \n\nРекомендуется к включению</string>
     <string name="cringerepost_title">Репосты с ссылками</string>
     <string name="cringerepost_summ">Блокировать посты с репостом внутри которых есть ссылка на VK / Telegram</string>
     <string name="why_news_not_updated_title">Почему не обновляются новости?</string>
@@ -6188,7 +6188,7 @@
     <string name="added_to_whitelist_success">Группа добавлена в вайтлист</string>
 
     <string name="whitelisted_ad_groups_title">Вайтлист рекламы</string>
-    <string name="whitelisted_filters_groups_title">Вайтлист фильтров</string>
+    <string name="whitelisted_filters_groups_title">Вайтлист фильтров и источников</string>
 
     <string name="download_dl">Скачать диалог</string>
     <string name="download_dl_error">Произошла ошибка при попытке скачать диалог</string>

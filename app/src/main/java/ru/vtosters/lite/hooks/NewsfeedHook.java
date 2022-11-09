@@ -5,7 +5,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.ads;
-import static ru.vtosters.lite.utils.Preferences.adsslider;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
@@ -115,13 +114,16 @@ public class NewsfeedHook {
     }
 
     public static void adsParams(HashSet<String> hashSet) {
-        if (ads())
+        if (ads()) {
             hashSet.add("ads_disabled");
+        } else {
+            hashSet.add("ads_app_slider");
+            hashSet.add("ads_site_slider");
+        }
+
         hashSet.add("ads_app");
         hashSet.add("ads_site");
         hashSet.add("ads_post");
-        hashSet.add("ads_app_slider");
-        hashSet.add("ads_site_slider");
         hashSet.add("ads_app_video");
         hashSet.add("ads_post_pretty_cards");
         hashSet.add("ads_post_snippet_video");
