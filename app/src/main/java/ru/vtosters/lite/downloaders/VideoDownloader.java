@@ -11,6 +11,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -21,6 +22,7 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.dialogs.bottomsheet.MenuBottomSheetAction;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.VideoFile;
+import com.vk.dto.stories.model.StoryEntry;
 import com.vtosters.lite.R;
 
 import org.json.JSONArray;
@@ -132,7 +134,26 @@ public class VideoDownloader {
 
     public static void parseVideoLink(String url, Context ctx) {
         if (url.contains("vk.com/story")) {
-            ToastUtils.a(ctx.getString(R.string.video_dl_stories_not_supported));
+            String storyId = url.substring(url.startsWith("https") ? 20 : 19) + "_story";
+
+            ProgressDialog progressDialog = new ProgressDialog(ctx);
+            progressDialog.setMessage(ctx.getString(R.string.video_dl_progress));
+            progressDialog.show();
+
+            makeRequest("https://" + getApi() + "/method/stories.getById?stories=" + storyId + "&v=5.99&access_token=" + getUserToken(),
+                    response -> {
+                        progressDialog.cancel();
+
+                        try {
+                            JSONObject mainJson = new JSONObject(response);
+                            JSONObject responseJson = mainJson.getJSONObject("response").optJSONArray("items").optJSONObject(0);
+                            StoryEntry story = new StoryEntry(responseJson);
+                            StoryDownloader.downloadStory(story);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(ctx, ctx.getString(R.string.video_dl_error), Toast.LENGTH_SHORT).show();
+                        }
+                    });
             return;
         }
 
