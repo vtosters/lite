@@ -11,7 +11,7 @@ public class VKLayoutInflater extends LayoutInflater {
             "android.widget.", "android.webkit.", "android.app."
     };
 
-    protected VKLayoutInflater(LayoutInflater original, Context context) {
+    public VKLayoutInflater(LayoutInflater original, Context context) {
         super(original, context);
     }
 
