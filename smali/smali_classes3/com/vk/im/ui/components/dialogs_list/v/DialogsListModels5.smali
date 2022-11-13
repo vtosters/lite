@@ -78,6 +78,10 @@
 
     iput p4, p0, Lcom/vk/im/ui/components/dialogs_list/v/DialogsListModels5;->d:I
 
+    invoke-static {p5}, Lru/vtosters/lite/hooks/BusinessNotifHook;->hook(Z)Z
+
+    move-result p5
+
     iput-boolean p5, p0, Lcom/vk/im/ui/components/dialogs_list/v/DialogsListModels5;->e:Z
 
     iput p6, p0, Lcom/vk/im/ui/components/dialogs_list/v/DialogsListModels5;->f:I

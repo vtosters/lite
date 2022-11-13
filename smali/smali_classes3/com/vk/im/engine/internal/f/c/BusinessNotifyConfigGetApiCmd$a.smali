@@ -80,6 +80,10 @@
 
     move-result p1
 
+    invoke-static {p1}, Lru/vtosters/lite/hooks/BusinessNotifHook;->hook(Z)Z
+
+    move-result p1
+
     goto :goto_0
 
     :cond_0

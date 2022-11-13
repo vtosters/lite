@@ -140,6 +140,10 @@
 
     move-result p1
 
+    invoke-static {p1}, Lru/vtosters/lite/hooks/BusinessNotifHook;->hook(Z)Z
+
+    move-result p1
+
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
