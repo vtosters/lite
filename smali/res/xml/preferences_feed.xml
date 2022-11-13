@@ -76,11 +76,6 @@
             android:key="cringerepost"
             android:summary="@string/cringerepost_summ"
             android:title="@string/cringerepost_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="blockminiapps"
-            android:summary="@string/blockminiapps_summ"
-            android:title="@string/blockminiapps_title" />
         <Preference
             android:key="whitelisted_filters_groups"
             android:title="@string/whitelisted_filters_groups_title" />
@@ -114,6 +109,11 @@
             android:enabled="false"
             android:summary="@string/why_news_not_updated_summ"
             android:title="@string/why_news_not_updated_title" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="blockminiapps"
+            android:summary="@string/blockminiapps_summ"
+            android:title="@string/blockminiapps_title" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/feed_other_update_dialog_title"
