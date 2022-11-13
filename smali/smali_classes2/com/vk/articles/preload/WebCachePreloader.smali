@@ -887,12 +887,14 @@
 .end method
 
 .method public final a(Ljava/lang/String;Lcom/vk/articles/preload/QueryParameters;)V
-    .locals 1
+    .locals 2
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
 
     .line 4
-    invoke-virtual {p0, p1, v0, v0, p2}, Lcom/vk/articles/preload/WebCachePreloader;->a(Ljava/lang/String;ZZLcom/vk/articles/preload/QueryParameters;)Ljava/lang/String;
+    invoke-virtual {p0, p1, v1, v0, p2}, Lcom/vk/articles/preload/WebCachePreloader;->a(Ljava/lang/String;ZZLcom/vk/articles/preload/QueryParameters;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1026,7 +1028,7 @@
 
     if-eqz p1, :cond_6
 
-    xor-int/lit8 v1, p4, 0x0
+    xor-int/lit8 v1, p4, 0x1
 
     const/4 v2, 0x1
 
