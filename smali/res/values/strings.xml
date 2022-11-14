@@ -5663,7 +5663,7 @@ Expand text..."</string>
     <string name="musicdefcatalog_dialogTitle">Select default section</string>
     <string name="musicdefcatalog_title">Default music section</string>
     <string name="vtl_video_settings">Video</string>
-    <string name="vtl_download_video_title">Download video</string>
+    <string name="vtl_download_video_title">Download video or story</string>
     <string name="videonewcatalog_title">New video catalog</string>
     <string name="videonewcatalog_summ">New video catalog with dynamic content</string>
     <string name="clearvideohistory_title">Clear video history</string>

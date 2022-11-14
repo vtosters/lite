@@ -5529,7 +5529,7 @@
     <string name="musicdefcatalog_dialogTitle">Выберите раздел по умолчанию</string>
     <string name="musicdefcatalog_title">Раздел музыки по умолчанию</string>
     <string name="vtl_video_settings">Видео</string>
-    <string name="vtl_download_video_title">Скачать видео</string>
+    <string name="vtl_download_video_title">Скачать видео или историю</string>
     <string name="videonewcatalog_title">Новый раздел видео</string>
     <string name="videonewcatalog_summ">Новый каталог видео раздела с динамическим контентом</string>
     <string name="clearvideohistory_title">Очистить историю видео</string>

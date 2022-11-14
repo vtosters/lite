@@ -133,6 +133,11 @@ public class VideoDownloader {
     }
 
     public static void parseVideoLink(String url, Context ctx) {
+        if (url.startsWith("http://")) {
+            url.replace("http://", "https://");
+        } else if (url.startsWith("vk.com"))
+            url = "https://" + url;
+
         if (url.contains("vk.com/story")) {
             String storyId = url.substring(url.startsWith("https") ? 20 : 19) + "_story";
 
