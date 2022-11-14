@@ -887,7 +887,7 @@
 .end method
 
 .method public final a(Ljava/lang/String;Lcom/vk/articles/preload/QueryParameters;)V
-    .locals 2
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -1028,7 +1028,7 @@
 
     if-eqz p1, :cond_6
 
-    xor-int/lit8 v1, p4, 0x1
+    xor-int/lit8 v1, p4, 0x0
 
     const/4 v2, 0x1
 
