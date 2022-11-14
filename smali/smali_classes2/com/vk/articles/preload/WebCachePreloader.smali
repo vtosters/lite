@@ -891,10 +891,8 @@
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
     .line 4
-    invoke-virtual {p0, p1, v1, v0, p2}, Lcom/vk/articles/preload/WebCachePreloader;->a(Ljava/lang/String;ZZLcom/vk/articles/preload/QueryParameters;)Ljava/lang/String;
+    invoke-virtual {p0, p1, v0, v0, p2}, Lcom/vk/articles/preload/WebCachePreloader;->a(Ljava/lang/String;ZZLcom/vk/articles/preload/QueryParameters;)Ljava/lang/String;
 
     move-result-object p1
 
