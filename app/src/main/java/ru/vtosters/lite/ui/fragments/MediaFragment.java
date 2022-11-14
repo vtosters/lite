@@ -10,6 +10,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
@@ -91,6 +92,12 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         prefs();
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        findPreference("maxquality").setEnabled(isEnableExternalOpening());
+        return super.onPreferenceTreeClick(preference);
+    }
+
     private void prefs() {
         findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
         findPreference("clearvideohistory").setOnPreferenceClickListener(preference -> {
@@ -156,6 +163,8 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                     .show();
             return true;
         });
+
+        findPreference("maxquality").setEnabled(isEnableExternalOpening());
     }
 
     private void lastfmAuth(Context ctx) {
