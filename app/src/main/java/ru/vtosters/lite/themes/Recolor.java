@@ -1,7 +1,6 @@
 package ru.vtosters.lite.themes;
 
 import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;

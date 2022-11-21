@@ -1,10 +1,5 @@
 package ru.vtosters.lite.themes;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.Preferences.dockbar_accent;
-import static ru.vtosters.lite.utils.ThemesUtils.isCustomThemeApplied;
-import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
-
 import android.content.Context;
 import android.util.Log;
 
@@ -15,6 +10,7 @@ import com.vtosters.lite.R;
 import ru.vtosters.lite.themes.managers.ThemesManager;
 import ru.vtosters.lite.themes.models.ThemeModel;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VTLColors {
@@ -38,17 +34,17 @@ public class VTLColors {
     }
 
     public static int getTabbarActiveColor() {
-        if (isCustomThemeApplied())
+        if (ThemesUtils.isCustomThemeApplied())
             return getColor(R.attr.tabbar_active_icon);
-        return dockbar_accent()
+        return Preferences.dockbar_accent()
                 ? getAccentColor()
-                : getResources().getColor(isDarkTheme() ? R.color.white : R.color.gray_700);
+                : AndroidUtils.getResources().getColor(ThemesUtils.isDarkTheme() ? R.color.white : R.color.gray_700);
     }
 
     public static int getTabbarInactiveColor() {
-        if (isCustomThemeApplied())
+        if (ThemesUtils.isCustomThemeApplied())
             return getColor(R.attr.tabbar_inactive_icon);
-        return getResources().getColor(isDarkTheme() ? R.color.gray_500 : R.color.vk_steel_gray_300);
+        return AndroidUtils.getResources().getColor(ThemesUtils.isDarkTheme() ? R.color.gray_500 : R.color.vk_steel_gray_300);
     }
 
     public static int getBackgroundContent() {
@@ -74,7 +70,7 @@ public class VTLColors {
     }
 
     public static int getColor(int attr) {
-        if (isCustomThemeApplied()) {
+        if (ThemesUtils.isCustomThemeApplied()) {
             int color = currentTheme.getColor(attr);
             if (color != -1)
                 return color;
