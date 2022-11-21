@@ -16,15 +16,9 @@ import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.StrictMode;
-import android.util.Log;
 
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 public class ImageUtils {
@@ -51,17 +45,7 @@ public class ImageUtils {
             var request = new Request.a()
                     .b(url)
                     .a();
-            client.a(request).a(new Callback() {
-                @Override
-                public void a(Call call, IOException e) {
-                    Log.e("Error", e.getMessage());
-                }
-
-                @Override
-                public void a(Call call, Response response) {
-                    bmp = BitmapFactory.decodeStream(response.a().a());
-                }
-            });
+            bmp = BitmapFactory.decodeStream(client.a(request).execute().a().a());
 
             if (bmp == null) {
                 if (defDrawableRes == 0) return null;
