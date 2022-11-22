@@ -7,6 +7,10 @@
 .method public static final a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
+    invoke-static {p2}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorHexColor(I)I
+
+    move-result p2
+    
     .line 2
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 

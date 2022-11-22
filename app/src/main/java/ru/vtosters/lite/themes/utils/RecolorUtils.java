@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 
+import android.util.Log;
 import com.vk.core.drawable.RecoloredDrawable;
 
 import ru.vtosters.lite.themes.ColorReferences;
@@ -26,6 +27,11 @@ public class RecolorUtils {
         @SuppressLint("UseCompatLoadingForDrawables") Drawable res = AndroidUtils.getResources().getDrawable(drawable);
         return new RecoloredDrawable(res, ThemesUtils.getAccentColor());
     } // Get res drawable via id and coloring to accent
+
+    public static int recolorHexColor(int i){
+        Log.d("RecolorUtils", ThemesUtils.hex(i));
+        return ColorReferences.isAccentedColor(i) ? ThemesUtils.getAccentColor() : i;
+    }
 
     public static ColorStateList recolorCSL(ColorStateList colorStateList) {
         if (colorStateList == null) return null;
