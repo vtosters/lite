@@ -86,6 +86,8 @@
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
+    invoke-static {p1}, Lru/vtosters/lite/themes/Recolor;->recolorIconToAccent(Landroid/widget/ImageView;)V
+
     iput-object p1, p0, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem$a;->e:Lcom/vk/imageloader/view/VKImageView;
 
     .line 5

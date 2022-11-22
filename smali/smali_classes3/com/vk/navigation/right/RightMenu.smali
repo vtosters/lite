@@ -154,7 +154,9 @@
 
     move-result-object v2
 
-    check-cast v2, Landroid/widget/TextView;
+    check-cast v2, Lcom/vk/core/view/TintTextView;
+
+    invoke-static {v2}, Lru/vtosters/lite/themes/Recolor;->recolorTintTextViewToAccent(Lcom/vk/core/view/TintTextView;)V
 
     .line 6
     new-instance v3, Lcom/vk/navigation/right/RightMenu$initView$1;
@@ -171,6 +173,8 @@
     move-result-object v2
 
     check-cast v2, Landroid/widget/ImageView;
+
+    invoke-static {v2}, Lru/vtosters/lite/themes/Recolor;->recolorIconToAccent(Landroid/widget/ImageView;)V
 
     .line 8
     new-instance v3, Lcom/vk/navigation/right/RightMenu$initView$2;

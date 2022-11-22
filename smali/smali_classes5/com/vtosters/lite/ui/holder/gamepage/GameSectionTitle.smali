@@ -71,6 +71,10 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/ui/holder/gamepage/GameSectionTitle;->d:Landroid/view/View;
 
+    check-cast p1, Landroid/widget/TextView;
+
+    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/themes/Recolor;->recolorTextToAccent(Landroid/widget/TextView;)V
+
     return-void
 .end method
 

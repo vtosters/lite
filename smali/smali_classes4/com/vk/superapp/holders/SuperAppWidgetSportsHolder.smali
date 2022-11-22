@@ -404,6 +404,8 @@
 
     check-cast v0, Landroid/widget/TextView;
 
+    invoke-static {v0}, Lru/vtosters/lite/themes/Recolor;->recolorTextToAccent(Landroid/widget/TextView;)V
+
     .line 39
     new-instance v1, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$e;
 

@@ -70,6 +70,10 @@
 
     move-result-object v0
 
+    check-cast v0, Landroid/widget/TextView;
+
+    invoke-static {v0}, Lru/vtosters/lite/themes/Recolor;->recolorTextToAccent(Landroid/widget/TextView;)V
+
     new-instance v1, Lcom/vk/music/attach/a/PlaylistsController$c$a;
 
     invoke-direct {v1, p0}, Lcom/vk/music/attach/a/PlaylistsController$c$a;-><init>(Lcom/vk/music/attach/a/PlaylistsController$c;)V

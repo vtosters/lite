@@ -323,6 +323,8 @@
 
     check-cast p3, Landroid/widget/TextView;
 
+    invoke-static/range {p3 .. p3}, Lru/vtosters/lite/themes/Recolor;->recolorTextToAccent(Landroid/widget/TextView;)V
+
     .line 27
     invoke-virtual {p3}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 

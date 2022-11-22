@@ -67,7 +67,11 @@
 
     move-result-object p1
 
-    check-cast p1, Landroid/widget/TextView;
+    check-cast p1, Lcom/vk/core/view/TintTextView;
+
+    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/themes/Recolor;->recolorTextToAccent(Landroid/widget/TextView;)V
+
+    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/themes/Recolor;->recolorTintTextViewToAccent(Lcom/vk/core/view/TintTextView;)V
 
     iput-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->c:Landroid/widget/TextView;
 

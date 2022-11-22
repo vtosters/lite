@@ -58,6 +58,8 @@
 
     check-cast p1, Landroid/widget/TextView;
 
+    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/themes/Recolor;->recolorTextToAccent(Landroid/widget/TextView;)V
+
     iput-object p1, p0, Lcom/vk/identity/adapters/IdentityContextAdapter$AddIdentityHolder;->b:Landroid/widget/TextView;
 
     const p1, 0x7f080329

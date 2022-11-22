@@ -67,6 +67,8 @@
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
+
+
     iput-object p1, p0, Lcom/vk/apps/AppsFragment$CarouselViewHolder$CarouselAppHolder;->c:Lcom/vk/imageloader/view/VKImageView;
 
     .line 3

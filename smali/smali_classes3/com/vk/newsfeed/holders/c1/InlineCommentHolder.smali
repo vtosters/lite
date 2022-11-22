@@ -170,6 +170,8 @@
 
     check-cast p1, Landroid/widget/TextView;
 
+    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/themes/Recolor;->recolorTextToAccent(Landroid/widget/TextView;)V
+
     iput-object p1, p0, Lcom/vk/newsfeed/holders/c1/InlineCommentHolder;->K:Landroid/widget/TextView;
 
     .line 8
