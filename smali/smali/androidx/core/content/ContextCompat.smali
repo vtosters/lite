@@ -245,6 +245,13 @@
     .annotation build Landroidx/annotation/ColorInt;
     .end annotation
 
+    # ru.vtosters.lite.themes.ThemesHacks.getHackedColor(Landroid/content/Context;I)I
+    invoke-static {p0, p1}, Lru/vtosters/lite/themes/ThemesHacks;->getHackedColor(Landroid/content/Context;I)I
+
+    move-result v0
+
+    return v0
+
     .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 

@@ -40,14 +40,9 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 
-import java.util.Arrays;
-import java.util.List;
+import ru.vtosters.lite.themes.ColorReferences;
 
 public class ThemesUtils {
-    public static List<String> accentColors = Arrays.asList(
-            "5692d7", "528bcc", "7aa0cc", "518bcc", "6296d0", "2f68aa", "638ebf", "5181b8", "71aaeb", "4774a8", "5baaf4", "4186c8", "add3ff", "4774a8", "718198", "5a9eff", "99a2ad", "74a2d6", "e9eef3", "dfe3e7", "eff1f3", "5c9ce6", "4986cc", "4680c2"
-    );
-
     public static void applyTheme(VKTheme theme) {
         var currentActivity = LifecycleUtils.getCurrentActivity();
         if (currentActivity != null) {
@@ -100,7 +95,7 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        return getColorFromAttr(R.attr.accent);
+        return getColor2(R.color.red);
     } // Color accent
 
     public static int getTextAttr() {
@@ -267,8 +262,8 @@ public class ThemesUtils {
             int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
             int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);
 
-            boolean isUnselAccent = isAccentedColor(unsel);
-            boolean isSelAccent = isAccentedColor(sel);
+            boolean isUnselAccent = ColorReferences.isAccentedColor(unsel);
+            boolean isSelAccent = ColorReferences.isAccentedColor(sel);
 
             if (isUnselAccent || isSelAccent) {
 
@@ -311,13 +306,6 @@ public class ThemesUtils {
         return ColorUtils.setAlphaComponent(src, 169);
     }
 
-    public static boolean isAccentedColor(ColorStateList target) {
-        return target != null && isAccentedColor(target.getDefaultColor());
-    }
-
-    public static boolean isAccentedColor(int target) {
-        return accentColors.contains(hex(target).toLowerCase());
-    }
 
     public static int getColor(Context context, int i) {
         if (isColorRefAccented(i) && isAndroidMonet()) {
@@ -383,6 +371,11 @@ public class ThemesUtils {
     public static String hex(int i) {
         return String.format("#%06X", i & 16777215);
     } // Get color as hex string
+
+    // hex, but without # at the beginning
+    public static String hexx(int i) {
+        return String.format("%06X", i & 16777215);
+    }
 
     public static int getNavigationHeight(int Default) {
         int VKME = R.dimen.design_bottom_sheet_peek_height_min;
