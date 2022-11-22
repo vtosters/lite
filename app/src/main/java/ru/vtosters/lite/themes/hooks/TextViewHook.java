@@ -3,7 +3,6 @@ package ru.vtosters.lite.themes.hooks;
 import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
 import android.os.Build;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -28,7 +27,6 @@ public class TextViewHook implements BaseHook {
         if (view instanceof TextView) {
             var textView = (TextView) view;
 
-            Log.d(TAG, "inject: " + textView.getText() + " " + textView.getCurrentTextColor());
             if (ColorReferences.isAccentedColor(textView.getCurrentTextColor())) {
                 textView.setTextColor(ThemesUtils.getAccentColor());
             }
