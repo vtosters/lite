@@ -25,6 +25,11 @@ public class ThemesCore {
     private static int wallDarkColor;
     private static int wallLightColor;
 
+    static {
+        setExceptions();
+        setThemedColors(ThemesUtils.getAccentColor());
+    }
+
     public static void setExceptions() {
         ACCENT_THEME_ONLY_LIGHT.clear();
         ACCENT_THEME_ONLY_NOMILK_LIGHT.clear();
