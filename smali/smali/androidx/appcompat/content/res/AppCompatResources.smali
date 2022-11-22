@@ -268,6 +268,10 @@
 
     move-result-object p0
 
+    invoke-static {p0}, Lru/vtosters/lite/themes/utils/RecolorUtils;->themeCSL(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
     return-object p0
 
     .line 3
