@@ -257,6 +257,12 @@
     .end param
 
     .line 1
+    invoke-static {p0, p1}, Lru/vtosters/lite/themes/utils/RecolorUtils;->themeCSL(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    return-object p0
+
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
@@ -267,12 +273,6 @@
     invoke-virtual {p0, p1}, Landroid/content/Context;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
-
-    invoke-static {p0}, Lru/vtosters/lite/themes/utils/RecolorUtils;->themeCSL(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
-
-    move-result-object p0
-
-    return-object p0
 
     .line 3
     :cond_0
