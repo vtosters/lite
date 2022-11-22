@@ -131,9 +131,7 @@
     invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
     .line 10
-    sget v1, Lb/h/z/c;->blue_300:I
-
-    invoke-static {p1, v1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v1
 

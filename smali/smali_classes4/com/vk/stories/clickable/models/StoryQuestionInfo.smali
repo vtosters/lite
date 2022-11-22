@@ -56,10 +56,7 @@
 
     sput-object v0, Lcom/vk/stories/clickable/models/StoryQuestionInfo;->g:Lcom/vk/stories/clickable/models/StoryQuestionInfo$b;
 
-    const v0, 0x7f060023
-
-    .line 2
-    invoke-static {v0}, Lcom/vk/core/util/ResUtils;->b(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

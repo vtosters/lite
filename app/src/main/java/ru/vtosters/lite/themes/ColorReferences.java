@@ -11,7 +11,8 @@ public class ColorReferences {
             Color.parseColor("#3f8ae0"), // azure_300 (light accent)
             Color.parseColor("#4986cc"), // azure_a400
             Color.parseColor("#528bcc"), // another light accent
-            Color.parseColor("#71AAEB") // vk_sky_300 (dark accent)
+            Color.parseColor("#71aaeb"), // vk_sky_300 (dark accent)
+            Color.parseColor("#5181b8") // header_blue
     );
 
     public static boolean isAccentedColor(ColorStateList target) {
@@ -29,6 +30,7 @@ public class ColorReferences {
                 target == com.vtosters.lite.R.color.light_blue_old || // light_blue
                 target == com.vtosters.lite.R.color.blue_200 || // blue_200
                 target == com.vtosters.lite.R.color.vk_blue_400 || // blue_200
+                target == com.vtosters.lite.R.color.header_blue ||
                 target == com.vtosters.lite.R.color.blue_200_muted; // blue_200_muted
     }
 

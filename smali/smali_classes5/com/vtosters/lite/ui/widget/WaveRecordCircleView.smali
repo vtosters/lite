@@ -80,9 +80,7 @@
 
     move-result-object p3
 
-    const v0, 0x7f0600f7
-
-    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result p3
 

@@ -3492,10 +3492,7 @@
     .line 18
     invoke-direct {p0, v2, v1, v3}, Lcom/vk/articles/ArticleFragment;->a(Ljava/lang/String;II)V
 
-    const v1, 0x7f060018
-
-    .line 19
-    invoke-static {p1, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v2
 

@@ -67,10 +67,7 @@
 
     invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
-    const p1, 0x7f060018
-
-    .line 4
-    invoke-static {p1}, Lcom/vk/core/util/ResUtils;->b(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result p1
 

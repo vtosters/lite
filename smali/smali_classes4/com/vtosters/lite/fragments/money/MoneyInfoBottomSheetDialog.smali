@@ -2088,10 +2088,7 @@
     return p1
 
     :cond_1
-    const v0, 0x7f0600f7
-
-    .line 24
-    invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result p1
 

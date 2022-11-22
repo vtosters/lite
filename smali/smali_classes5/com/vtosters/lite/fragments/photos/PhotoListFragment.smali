@@ -2159,9 +2159,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0600f7
-
-    invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result p2
 

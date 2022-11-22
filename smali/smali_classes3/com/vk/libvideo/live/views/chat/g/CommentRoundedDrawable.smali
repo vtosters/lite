@@ -21,9 +21,7 @@
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     .line 2
-    sget v0, Lcom/vk/libvideo/c;->accent_blue:I
-
-    invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 
