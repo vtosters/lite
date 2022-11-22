@@ -52,8 +52,7 @@ public class VTLResources  {
         for (int i = 0; i < attrs.length; i++) {
             //var attr = attrs[i];
             var off = STYLE_NUM_ENTRIES * i;
-            var type = data[off];
-            var replacement = -1;
+            var type = data[off];var replacement = -1;
             if (type == TypedValue.TYPE_ATTRIBUTE) {
                 replacement = theme.getColor(data[off + 0x1]);
             } else if (type == TypedValue.TYPE_INT_COLOR_ARGB8 || type == TypedValue.TYPE_INT_COLOR_RGB8) {
