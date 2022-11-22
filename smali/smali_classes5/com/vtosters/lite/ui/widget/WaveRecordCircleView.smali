@@ -80,7 +80,9 @@
 
     move-result-object p3
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    const v0, 0x7f0600f7
+
+    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->getColor2(I)I
 
     move-result p3
 

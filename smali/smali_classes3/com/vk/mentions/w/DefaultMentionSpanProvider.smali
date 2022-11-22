@@ -27,7 +27,7 @@
     .line 2
     sget v0, Lcom/vk/mentions/p;->light_blue:I
 
-    invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->getColor2(I)I
 
     move-result p1
 
