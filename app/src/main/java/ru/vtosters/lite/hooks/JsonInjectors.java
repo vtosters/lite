@@ -24,6 +24,7 @@ import static ru.vtosters.lite.utils.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.utils.VTVerifications.isVerified;
 
+import android.graphics.Color;
 import android.util.Log;
 
 import com.vk.core.network.Network;
@@ -72,7 +73,7 @@ public class JsonInjectors {
             var item = newItem.getJSONObject(i);
             if (item.has("text_color")) {
                 var textColor = item.getString("text_color");
-                if (accentColors.contains(textColor.toLowerCase())) {
+                if (accentColors.contains(Color.parseColor(textColor.startsWith("#") ? textColor : "#" + textColor))) {
                     item.put("text_color", hex2(getAccentColor()));
                 }
             }

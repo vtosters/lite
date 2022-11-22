@@ -369,7 +369,7 @@ public class ThemesUtils {
     }
 
     public static boolean isAccentedColor(int target) {
-        return accentColors.contains(hex2(target).toLowerCase());
+        return accentColors.contains(target);
     }
 
     @SuppressLint("NewApi")
