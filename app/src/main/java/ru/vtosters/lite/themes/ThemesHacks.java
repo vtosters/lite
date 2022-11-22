@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 
 import com.vtosters.lite.R;
 
+import ru.vtosters.lite.themes.utils.RecolorUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -37,7 +38,7 @@ public class ThemesHacks {
         if (i != R.layout.themed_feed_tab_2) {
             return;
         }
-        textView.setTextColor(ThemesUtils.recolorCSL(textView.getTextColors()));
+        textView.setTextColor(RecolorUtils.recolorCSL(textView.getTextColors()));
         ((InsetDrawable) ((DrawableContainer.DrawableContainerState) textView.getBackground().getConstantState()).getChildren()[0]).getDrawable().setTint(ThemesUtils.lighten(ThemesUtils.getAccentColor(), 0.15f));
     }
 
@@ -50,7 +51,7 @@ public class ThemesHacks {
     }
 
     public static int getHackedColor(@NonNull Context context, @ColorRes int color) {
-        if (ThemesCore.isCachedAccents() && ColorReferences.isColorRefAccented(color)) {
+        if (ThemesCore.isCachedAccents() && ColorReferences.isAccentedColor(context.getColor(color))) {
             Log.d("ThemesHacks", "getHackedColor: got accent color: " + AndroidUtils.getResources().getResourceName(color));
             return ThemesUtils.getAccentColor();
         }

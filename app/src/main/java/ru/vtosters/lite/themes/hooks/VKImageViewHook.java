@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.vk.imageloader.view.VKImageView;
 
+import ru.vtosters.lite.themes.utils.RecolorUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VKImageViewHook implements BaseHook {
@@ -20,7 +21,7 @@ public class VKImageViewHook implements BaseHook {
         if (view instanceof VKImageView) {
             var imageView = (VKImageView) view;
             if (imageView.getImageTintList() != null) {
-                imageView.setImageTintList(ThemesUtils.recolorCSL(imageView.getImageTintList()));
+                imageView.setImageTintList(RecolorUtils.recolorCSL(imageView.getImageTintList()));
                 imageView.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
             }
         }

@@ -6,13 +6,12 @@ import android.graphics.Color;
 import java.util.Arrays;
 import java.util.List;
 
-import ru.vtosters.lite.utils.ThemesUtils;
-
 public class ColorReferences {
-    public static List<String> accentColors = Arrays.asList(
-            "5692d7", "528bcc", "7aa0cc", "518bcc", "6296d0", "2f68aa", "638ebf", "5181b8", "71aaeb",
-            "4774a8", "5baaf4", "4186c8", "add3ff", "4774a8", "718198", "5a9eff", "99a2ad", "74a2d6",
-            "e9eef3", "dfe3e7", "eff1f3", "5c9ce6", "4986cc", "4680c2", "3f8ae0"
+    public static List<Integer> accentColors = Arrays.asList(
+            Color.parseColor("#3f8ae0"), // azure_300 (light accent)
+            Color.parseColor("#4986cc"), // azure_a400
+            Color.parseColor("#528bcc"), // another light accent
+            Color.parseColor("#71AAEB") // vk_sky_300 (dark accent)
     );
 
     public static boolean isAccentedColor(ColorStateList target) {
@@ -20,7 +19,7 @@ public class ColorReferences {
     }
 
     public static boolean isAccentedColor(int target) {
-        return accentColors.contains(ThemesUtils.hexx(target).toLowerCase());
+        return accentColors.contains(target);
     }
 
     public static boolean isColorRefAccented(int target) {

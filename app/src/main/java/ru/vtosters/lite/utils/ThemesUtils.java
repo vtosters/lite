@@ -14,7 +14,6 @@ import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -39,8 +38,6 @@ import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
-
-import ru.vtosters.lite.themes.ColorReferences;
 
 public class ThemesUtils {
     public static void applyTheme(VKTheme theme) {
@@ -219,66 +216,6 @@ public class ThemesUtils {
         return new RecoloredDrawable(drawable, accent);
     } // Recolor vk icon to accent color
 
-
-    public static Drawable recolorDrawableToolbar(Drawable drawable) {
-        if (drawable == null) return null;
-
-        if (!isAndroidMonet()) return drawable;
-
-        return new RecoloredDrawable(drawable, getHeaderText());
-    } // Recolor toolbar drawable to accent color
-
-    @SuppressLint("UseCompatLoadingForDrawables")
-    public static Drawable recolorDrawableInt(int drawable) {
-        if (!isAndroidMonet()) return getResources().getDrawable(drawable);
-
-        @SuppressLint("UseCompatLoadingForDrawables") Drawable res = getResources().getDrawable(drawable);
-        return new RecoloredDrawable(res, getAccentColor());
-    } // Get res drawable via id and coloring to accent
-
-    public static ColorStateList recolorCSL(ColorStateList colorStateList) {
-        if (colorStateList == null) return null;
-
-        if (!isAndroidMonet()) return colorStateList;
-
-        return ColorStateList.valueOf(getAccentColor());
-    } // Recolor ColorStateList to accent color
-
-    @SuppressLint("UseCompatLoadingForColorStateLists")
-    public static ColorStateList themeCSL(Context context, int color) {
-        if (isColorRefAccented(color) && isAndroidMonet()) {
-            return ColorStateList.valueOf(getAccentColor());
-        }
-
-        ColorStateList csl;
-
-        if (Build.VERSION.SDK_INT >= 23) {
-            csl = context.getColorStateList(color);
-        } else {
-            csl = context.getResources().getColorStateList(color);
-        }
-
-        try {
-            int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
-            int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);
-
-            boolean isUnselAccent = ColorReferences.isAccentedColor(unsel);
-            boolean isSelAccent = ColorReferences.isAccentedColor(sel);
-
-            if (isUnselAccent || isSelAccent) {
-
-                return new ColorStateList(new int[][]{
-                        new int[]{android.R.attr.state_selected}, new int[]{-android.R.attr.state_selected}
-                }, new int[]{isSelAccent ? getAccentColor() : sel, isUnselAccent ? getAccentColor() : unsel});
-            }
-
-            return csl;
-        } catch (Exception e) {
-
-            e.printStackTrace();
-            return null;
-        }
-    } // Recolor ColorStateList
 
     public static int darken(int color, float by) {
         float[] hsl = new float[3];
