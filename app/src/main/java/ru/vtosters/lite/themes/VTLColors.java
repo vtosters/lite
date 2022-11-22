@@ -79,7 +79,10 @@ public class VTLColors {
     }
 
     public static int getColor(Context context, int colorId) {
-        Log.d("VTLColors", String.format("getColor(Landroid/content/Context;I): %s", AndroidUtils.getResources().getResourceEntryName(colorId)));
+        try {
+            Log.d("VTLColors", "getColor(Landroid/content/Context;I): " + AndroidUtils.getResources().getResourceEntryName(colorId));
+        } catch (Throwable ignored) {
+        }
         if (ThemesUtils.isCustomThemeApplied()) {
             int color = currentTheme.getColor(colorId);
             if (color != -1)
