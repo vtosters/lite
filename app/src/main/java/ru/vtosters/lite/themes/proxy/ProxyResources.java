@@ -2,22 +2,14 @@ package ru.vtosters.lite.themes.proxy;
 
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
-import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.XmlRes;
 
-import com.vtosters.lite.R;
-
-import org.xmlpull.v1.XmlPullParserException;
-
-import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 
@@ -60,8 +52,6 @@ public class ProxyResources extends Resources {
     @Nullable
     @Override
     public Drawable getDrawableForDensity(int id, int density, @Nullable Resources.Theme theme) {
-        if (ThemesUtils.isCustomThemeApplied()) {
-        }
         return mOriginalResource.getDrawableForDensity(id, density, theme);
     }
 
