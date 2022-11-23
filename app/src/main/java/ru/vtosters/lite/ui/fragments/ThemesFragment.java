@@ -8,9 +8,9 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.ToastUtils;
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
@@ -112,7 +112,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
             margin.setMargins(AndroidUtils.dp2px(24f), 0, AndroidUtils.dp2px(24f), 0);
             editText.setLayoutParams(margin);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+            VkAlertDialog.Builder builder = new VkAlertDialog.Builder(requireContext());
             builder.setTitle("Акценты");
             builder.setMessage("Это изменит цвет иконки таббара, ссылки и.т.д.\nДанная функция еще в разработке, поэтому возможны недокрасы!\n\nЦвет указывается в формате #RRGGBB (#9600FF).\n\nЧтобы вернуть стандартный акцент ВК, оставьте это поле пустым.");
             builder.setView(linearLayout);
