@@ -142,6 +142,11 @@ public class ThemesCore {
         } else return themedColors.get(attrID) != 0;
     }
 
+    public static void clear() {
+        cachedAccents = false;
+        themedColors.clear();
+    }
+
     public static boolean isCachedAccents() {
         return cachedAccents;
     }

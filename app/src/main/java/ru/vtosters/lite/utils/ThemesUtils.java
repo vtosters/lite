@@ -39,6 +39,8 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 
+import ru.vtosters.lite.themes.ColorReferences;
+
 public class ThemesUtils {
     public static void applyTheme(VKTheme theme) {
         var currentActivity = LifecycleUtils.getCurrentActivity();
@@ -92,7 +94,7 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        return getColor2(R.color.red);
+        return AndroidUtils.getPreferences().getInt("accent_color", ColorReferences.stockAccent);
     } // Color accent
 
     public static int getTextAttr() {
