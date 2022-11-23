@@ -104,7 +104,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
             editText.setHint("Акцент");
             editText.setText(ThemesUtils.hex(AndroidUtils.getPreferences().getInt("accent_color", ColorReferences.stockAccent)));
             editText.setHintTextColor(PreferencesUtil.getSTextColor(requireActivity()));
-            editText.setBackgroundTintList(ColorStateList.valueOf(PreferencesUtil.getTextColor(requireActivity())));
+            editText.setBackgroundTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
 
             linearLayout.addView(editText);
             editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
