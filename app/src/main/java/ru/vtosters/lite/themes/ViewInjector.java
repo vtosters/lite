@@ -13,7 +13,6 @@ import ru.vtosters.lite.themes.hooks.TabLayoutHook;
 import ru.vtosters.lite.themes.hooks.TextViewHook;
 import ru.vtosters.lite.themes.hooks.ToolbarHook;
 import ru.vtosters.lite.themes.hooks.VKImageViewHook;
-import ru.vtosters.lite.themes.hooks.WaveformViewHook;
 
 public class ViewInjector {
     public static ArrayList<BaseHook> hooks = new ArrayList<>();
@@ -25,7 +24,6 @@ public class ViewInjector {
         hooks.add(new TextViewHook());
         hooks.add(new ToolbarHook());
         hooks.add(new VKImageViewHook());
-        hooks.add(new WaveformViewHook());
         hooks.add(new ProgressWheelHook());
     }
 
