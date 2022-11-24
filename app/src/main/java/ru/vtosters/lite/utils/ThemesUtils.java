@@ -1,19 +1,5 @@
 package ru.vtosters.lite.utils;
 
-import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-import static ru.vtosters.lite.hooks.VKUIHook.isLoaded;
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
-import static ru.vtosters.lite.utils.AndroidUtils.getCenterScreenCoords;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
-import static ru.vtosters.lite.utils.Preferences.color_grishka;
-import static ru.vtosters.lite.utils.Preferences.dockbar_accent;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
-import static ru.vtosters.lite.utils.Preferences.navbar;
-import static ru.vtosters.lite.utils.Preferences.vkme;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -25,11 +11,9 @@ import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
 import android.widget.ImageButton;
-
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.ColorUtils;
-
 import com.vk.articles.preload.WebCachePreloader;
 import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.preference.Preference;
@@ -38,8 +22,14 @@ import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
-
 import ru.vtosters.lite.themes.ColorReferences;
+
+import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+import static ru.vtosters.lite.hooks.VKUIHook.isLoaded;
+import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
+import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 public class ThemesUtils {
     public static void applyTheme(VKTheme theme) {
@@ -197,6 +187,10 @@ public class ThemesUtils {
         }
         return false;
     } // Accent colors
+
+    public static int replaceColor(int i){
+        return ColorReferences.isAccentedColor(i) ? getAccentColor() : i;
+    }
 
     public static void themeMonetToolbar(ImageButton imageButton, Toolbar toolbar) {
         imageButton.setImageTintList(ColorStateList.valueOf(getHeaderText()));

@@ -56,6 +56,7 @@ public class ThemesCore {
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_tint_alternate, false);
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.toolbarIconsColor, false);
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_tab_active_indicator, false);
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_alternate_tab_active_indicator, false);
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.im_dropdown_arrow_tint, false);
 
         ACCENT_THEME_ONLY_NOMILK.put(com.vtosters.lite.R.attr.im_dropdown_icon_color, false);
@@ -85,6 +86,7 @@ public class ThemesCore {
         themedColors.put(com.vtosters.lite.R.attr.button_outline_border, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.button_muted_foreground, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.header_tab_active_indicator, accentColor);
+        themedColors.put(com.vtosters.lite.R.attr.header_alternate_tab_active_indicator, accentColor);
 
         themedColors.put(com.vtosters.lite.R.attr.im_dropdown_icon_color, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.im_dropdown_arrow_tint, accentColor);
@@ -99,11 +101,16 @@ public class ThemesCore {
         themedColors.put(com.vtosters.lite.R.attr.newsfeed_action_color, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.counter_primary_background, accentColor);
 
+        themedColors.put(com.vtosters.lite.R.attr.dynamic_blue, accentColor);
+
         themedColors.put(com.vtosters.lite.R.attr.action_sheet_action_foreground, accentColor);
 
         // messages
         wallDarkColor = ThemesUtils.darken(accentColor, 0.25f);
         wallLightColor = ThemesUtils.lighten(accentColor, 0.25f);
+
+        themedColors.put(com.vtosters.lite.R.attr.im_reply_separator, accentColor);
+        themedColors.put(com.vtosters.lite.R.attr.im_text_name, accentColor);
 
         //themedColors.put(com.vtosters.lite.R.attr.im_ic_send_msg, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.im_bubble_wallpaper_outgoing, accentColor);
