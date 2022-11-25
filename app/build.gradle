@@ -1,6 +1,8 @@
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
 import java.util.zip.ZipInputStream
+import org.apache.tools.ant.taskdefs.condition.Os
+
 
 plugins {
     id 'com.android.application'
@@ -8,8 +10,7 @@ plugins {
 }
 
 versionFile {
-    File moduleDir = projectDir
-    file = new File(moduleDir.getAbsolutePath() + "/src/main/assets/version.properties")
+    file = projectDir.toPath().resolve("src/main/assets/version.properties").toFile()
 }
 
 task exportDex {
@@ -94,3 +95,39 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+
+task cleanVersionFile {
+    projectDir.toPath().resolve("src/main/assets/version.properties").toFile().delete()
+}
+
+task buildVTL(type: Exec) {
+    dependsOn 'assembleRelease'
+    dependsOn 'exportDex'
+    workingDir(projectDir.toPath().resolve("../scripts").normalize().toString())
+    if (Os.isFamily("unix") || Os.isFamily("mac")) {
+        commandLine './build.sh'
+    } else {
+        throw RuntimeException("Not supported")
+        // FIXME not tested
+        commandLine 'cmd', '/C', 'start', 'build.bat'
+    }
+}
+
+task buildAndInstallVTL(type: Exec) {
+    dependsOn('buildVTL')
+    workingDir(projectDir.toPath().resolve("../smali").normalize().toString())
+    ignoreExitValue true
+    if (Os.isFamily("unix") || Os.isFamily("mac")) {
+        commandLine 'bash', '-c', 'adb install VTLite.apk'
+    } else {
+        throw RuntimeException("Not supported")
+        // FIXME not tested
+        commandLine 'adb', 'install', 'VTLite.apk'
+    }
+}
+
+exportDex.dependsOn('assembleRelease')
+clean.dependsOn('cleanVersionFile')
+versionFile.dependsOn('cleanVersionFile')
+preBuild.dependsOn('versionFile')

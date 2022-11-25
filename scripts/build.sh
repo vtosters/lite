@@ -5,31 +5,7 @@ NC='\033[0m'
 BOLD='\033[1m'
 UNDERLINE='\033[4m'
 
-parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-
-cd "$parent_path"
-
-echo -e "${BOLD}${UNDERLINE}Сборка dex..${NC}\n"
 cd ../
-rm ../smali/assets/version.properties
-rm ../lite/app/src/main/assets/version.properties
-./gradlew versionFile
-./gradlew assembleRelease
-if [ $? -eq 0 ]; then
-	echo -e "${GREEN}Успех!${NC}\n"
-else
-	echo -e "${RED}Провал.${NC}\n"
-	exit 1
-fi
-
-echo -e "${BOLD}${UNDERLINE}Экспорт dex..${NC}"
-./gradlew exportDex
-if [ $? -eq 0 ]; then
-	echo -e "${GREEN}Успех!${NC}\n"
-else
-	echo -e "${RED}Провал.${NC}\n"
-	exit 1
-fi
 
 echo -e "${BOLD}${UNDERLINE}Перенос dex6 в папку с исходным кодом..${NC}"
 mv app/classes6.dex smali/
@@ -80,14 +56,3 @@ echo -e "${BOLD}VTosters Lite успешно собран! APK находитс�
 cd ../smali
 rm classes6.dex
 rm classes7.dex
-
-echo -n "Желаете установить VTosters через adb? (y/n) "
-read -n 1 prompt
-if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
-then
-  echo -e "\n"
-  adb install VTLite.apk
-else
-  exit 0
-fi
-
