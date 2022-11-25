@@ -106,10 +106,9 @@ task buildVTL(type: Exec) {
     dependsOn 'exportDex'
     workingDir(projectDir.parentFile)
     if (Os.isFamily("unix") || Os.isFamily("mac")) {
-        commandLine './build.sh'
+        commandLine 'bash', '-c','./scripts/build.sh'
     } else {
-        // ugly workaround for https://github.com/gradle/gradle/issues/18716
-        commandLine 'cmd','/C','start','""','cmd','/K','".\\scripts\\build.bat && exit"'
+        commandLine 'cmd','/C', '.\\scripts\\build.bat'
     }
 }
 

@@ -19,7 +19,7 @@ if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
     echo %ESC%[31mFailed%ESC%[0m
-    call :pauseThenExit
+    exit /B 1
 )
 
 echo.
@@ -52,7 +52,7 @@ if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
     echo %ESC%[31mFailed%ESC%[0m
-    call :pauseThenExit
+    exit /B 1
 )
 del classes6.dex
 del classes8.dex
@@ -66,7 +66,7 @@ if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
     echo %ESC%[31mFailed%ESC%[0m
-    call :pauseThenExit
+    exit /B 1
 )
 
 :setESC
@@ -75,7 +75,3 @@ for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1)
   exit /B 0
 )
 exit
-
-:pauseThenExit
-pause
-Exit /B 1
