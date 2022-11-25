@@ -122,12 +122,10 @@
 
 <a href="https://developer.android.com/studio"><img src="https://i.imgur.com/cPvvFDP.png" align="center" width="20" height="23"/> **Android Studio**</a>
 
-### Linux/macOS
-Для сборки используется файл `./build.sh`
+### Linux/macOS/Windows
 
-<img src="https://i.imgur.com/8BMX8lG.png" width="550" height="368"/>
+Для сборки необходимо вызвать одну из следующих gradle tasks:
 
-### Windows
-Для сборки используется файл  `build.bat`
-
-<img src="https://i.imgur.com/iZSUKJ6.png" width="550" height="368"/>
++ `./gradlew buildVTL` - соберет и подпишет APK
++ `./gradlew buildAndInstallVTL` - соберет, подпишет и попытается установить через ADB
++ [FOR DEVS] `./gradlew prepareDexForMerge` - соберет все необходимое для сборки в `smali/` 
