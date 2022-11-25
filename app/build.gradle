@@ -1,3 +1,4 @@
+import java.nio.file.Files
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
 import java.util.zip.ZipInputStream
@@ -9,8 +10,15 @@ plugins {
     id 'net.nemerosa.versioning' version '2.15.1'
 }
 
+def smaliFolder = projectDir.toPath().resolve("../smali").normalize()
+def scriptsFolder = projectDir.toPath().resolve("../scripts").normalize()
+
 versionFile {
     file = projectDir.toPath().resolve("src/main/assets/version.properties").toFile()
+}
+
+task cleanVersionFile {
+    projectDir.toPath().resolve("src/main/assets/version.properties").toFile().delete()
 }
 
 task exportDex {
@@ -96,25 +104,35 @@ dependencies {
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-
-task cleanVersionFile {
-    projectDir.toPath().resolve("src/main/assets/version.properties").toFile().delete()
+task prepareDexForMerge(type: Copy) {
+    dependsOn('exportDex')
+    into smaliFolder.toString()
+    from(projectDir) {
+        include 'classes*.dex'
+    }
+    from(projectDir) {
+        include 'version.properties'
+        into("assets")
+    }
+    doLast {
+        Files.newDirectoryStream(projectDir.toPath(), "classes*.dex").forEach { it.toFile().delete() }
+        new File(projectDir, "version.properties").delete()
+    }
 }
 
 task buildVTL(type: Exec) {
-    dependsOn 'assembleRelease'
-    dependsOn 'exportDex'
+    dependsOn('prepareDexForMerge')
     workingDir(projectDir.parentFile)
     if (Os.isFamily("unix") || Os.isFamily("mac")) {
-        commandLine 'bash', '-c','./scripts/build.sh'
+        commandLine 'bash', '-c', './scripts/build.sh'
     } else {
-        commandLine 'cmd','/C', '.\\scripts\\build.bat'
+        commandLine 'cmd', '/C', '.\\scripts\\build.bat'
     }
 }
 
 task buildAndInstallVTL(type: Exec) {
     dependsOn('buildVTL')
-    workingDir(projectDir.toPath().resolve("../scripts").normalize().toString())
+    workingDir(scriptsFolder.toString())
     ignoreExitValue true
     if (Os.isFamily("unix") || Os.isFamily("mac")) {
         commandLine 'bash', '-c', 'adb install VTLite.apk'

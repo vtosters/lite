@@ -12,38 +12,6 @@ call :setESC
 
 cls
 echo.
-echo %ESC%[1;4mMove dex6 to source dir...%ESC%[0m
-echo.
-move app\classes6.dex smali\
-if "%ERRORLEVEL%" == "0" (
-    echo %ESC%[92mSuccessful%ESC%[0m
-) else (
-    echo %ESC%[31mFailed%ESC%[0m
-    exit /B 1
-)
-
-echo.
-echo %ESC%[1;4mMove dex7 to source dir...%ESC%[0m
-echo.
-move app\classes7.dex smali\
-if "%ERRORLEVEL%" == "0" (
-    echo %ESC%[92mSuccessful%ESC%[0m
-) else (
-    echo %ESC%[31mFailed%ESC%[0m
-)
-
-
-echo.
-echo %ESC%[1;4mMove version.properties to source dir...%ESC%[0m
-echo.
-move app\version.properties smali\assets\
-if "%ERRORLEVEL%" == "0" (
-    echo %ESC%[92mSuccessful%ESC%[0m
-) else (
-    echo %ESC%[31mFailed%ESC%[0m
-)
-
-echo.
 echo %ESC%[1;4mBuild apk...%ESC%[0m
 echo.
 cd smali\
@@ -55,7 +23,7 @@ if "%ERRORLEVEL%" == "0" (
     exit /B 1
 )
 del classes6.dex
-del classes8.dex
+del classes7.dex
 del assets\version.properties
 
 echo.
