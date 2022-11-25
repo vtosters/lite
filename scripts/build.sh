@@ -5,6 +5,10 @@ NC='\033[0m'
 BOLD='\033[1m'
 UNDERLINE='\033[4m'
 
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+
+cd "$parent_path"
+
 echo -e "${BOLD}${UNDERLINE}Сборка dex..${NC}\n"
 cd ../
 rm ../smali/assets/version.properties
