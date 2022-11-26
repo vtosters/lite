@@ -39,8 +39,9 @@ jobs:
           
       - name: Build VTLite
         run: |
-          bash scripts/buildworkflow.sh
-            
+          gradle prepareDexForMerge
+          java -jar scripts/apktool.jar b smali -o smali/VTLite.apk --use-aapt2 -p scripts/framework/      
+
       - name: Sign and verify the apk
         run: |
           java -jar scripts/apksigner.jar sign --ks scripts/debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android smali/VTLite.apk

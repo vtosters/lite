@@ -1,15 +1,24 @@
+import java.nio.file.Files
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
 import java.util.zip.ZipInputStream
+import org.apache.tools.ant.taskdefs.condition.Os
+
 
 plugins {
     id 'com.android.application'
     id 'net.nemerosa.versioning' version '2.15.1'
 }
 
+def smaliFolder = projectDir.toPath().resolve("../smali").normalize()
+def scriptsFolder = projectDir.toPath().resolve("../scripts").normalize()
+
 versionFile {
-    File moduleDir = projectDir
-    file = new File(moduleDir.getAbsolutePath() + "/src/main/assets/version.properties")
+    file = projectDir.toPath().resolve("src/main/assets/version.properties").toFile()
+}
+
+task cleanVersionFile {
+    projectDir.toPath().resolve("src/main/assets/version.properties").toFile().delete()
 }
 
 task exportDex {
@@ -94,3 +103,45 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+task prepareDexForMerge(type: Copy) {
+    dependsOn('exportDex')
+    into smaliFolder.toString()
+    from(projectDir) {
+        include 'classes*.dex'
+    }
+    from(projectDir) {
+        include 'version.properties'
+        into("assets")
+    }
+    doLast {
+        Files.newDirectoryStream(projectDir.toPath(), "classes*.dex").forEach { it.toFile().delete() }
+        new File(projectDir, "version.properties").delete()
+    }
+}
+
+task buildVTL(type: Exec) {
+    dependsOn('prepareDexForMerge')
+    workingDir(projectDir.parentFile)
+    if (Os.isFamily("unix") || Os.isFamily("mac")) {
+        commandLine 'bash', '-c', './scripts/build.sh'
+    } else {
+        commandLine 'cmd', '/C', '.\\scripts\\build.bat'
+    }
+}
+
+task buildAndInstallVTL(type: Exec) {
+    dependsOn('buildVTL')
+    workingDir(scriptsFolder.toString())
+    ignoreExitValue true
+    if (Os.isFamily("unix") || Os.isFamily("mac")) {
+        commandLine 'bash', '-c', 'adb install VTLite.apk'
+    } else {
+        commandLine 'adb', 'install', 'VTLite.apk'
+    }
+}
+
+exportDex.dependsOn('assembleRelease')
+clean.dependsOn('cleanVersionFile')
+versionFile.dependsOn('cleanVersionFile')
+preBuild.dependsOn('versionFile')
