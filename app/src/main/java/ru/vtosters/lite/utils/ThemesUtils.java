@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.Log;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.ColorUtils;
@@ -197,10 +200,22 @@ public class ThemesUtils {
         toolbar.setElevation(0.0f);
     }
 
+    public static void setImageViewColored(ImageView view){
+        view.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.MULTIPLY);
+    }
+
     public static Drawable recolorDrawable(Drawable drawable) {
         if (drawable == null) return null;
         return new RecoloredDrawable(drawable, getAccentColor());
     } // Recolor drawable to accent color
+
+    public static void recolorTextView(TextView tw) {
+        tw.getBackground().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_OVER);
+    }
+
+    public static void recolorBGView(View view) {
+        view.getBackground().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_OVER);
+    }
 
     public static Drawable recolorVKIconMenu(Drawable drawable) {
         int accent = getHeaderText();
