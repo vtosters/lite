@@ -1,5 +1,7 @@
 package ru.vtosters.lite.utils;
 
+import com.vk.core.network.Network;
+
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
@@ -19,6 +21,7 @@ public class SSFSUtils {
                 "&lang=" + getLocale() +
                 "&vt=1&vksans=" + isVKSansEnabled() +
                 "&vt_version=" + getBuildNumber() +
+                "&useragent=" + Base64Utils.encode(Network.l.c().a()) +
                 "&vt_debug=" + isDEVModEnabled();
     }
 
@@ -27,7 +30,7 @@ public class SSFSUtils {
 
         if (!string.isEmpty()) return string;
 
-        return "https://vtsf.vknext.net";
+        return "https://ssfs.vtosters.app";
     }
 
     public static String getDarkVKUI() {
