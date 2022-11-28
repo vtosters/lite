@@ -128,7 +128,9 @@
 .method private a()V
     .locals 2
 
-    const/4 v0, -0x1
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getBackgroundContent()I
+
+    move-result v0
 
     .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundColor(I)V
