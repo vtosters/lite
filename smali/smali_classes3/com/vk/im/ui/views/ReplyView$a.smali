@@ -56,6 +56,10 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/views/ReplyView$a;->a:Landroid/graphics/Paint;
 
+    invoke-static {p1}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorHexColor(I)I
+
+    move-result p1
+
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
