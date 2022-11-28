@@ -170,7 +170,9 @@
     .line 6
     iget-object v0, p0, Lcom/vk/stories/view/VolumeControlView;->c:Landroid/graphics/Paint;
 
-    const v1, -0xa96d29
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
