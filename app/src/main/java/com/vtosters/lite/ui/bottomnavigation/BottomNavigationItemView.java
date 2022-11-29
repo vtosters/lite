@@ -71,12 +71,11 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         this.mIcon.getLayoutParams().width = V.a(28.0F);
         this.mIcon.getLayoutParams().height = V.a(28.0F);
 
-        var colorStateList = getCSTDock();
         this.mSmallLabel = this.findViewById(R.id.smallLabel);
-        mSmallLabel.setTextColor(colorStateList);
+        mSmallLabel.setTextColor(getCSTDock());
 
         this.mLargeLabel = this.findViewById(R.id.largeLabel);
-        mLargeLabel.setTextColor(colorStateList);
+        mLargeLabel.setTextColor(getCSTDock());
 
         LayoutInflater.from(this.getContext()).inflate(R.layout.navigation_bottom_counter, this, true);
         this.mCounterContainer = this.findViewById(R.id.counter_container);
@@ -326,6 +325,8 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
     }
 
     public void setTextColor(ColorStateList colorStateList) {
+        this.mSmallLabel.setTextColor(colorStateList);
+        this.mLargeLabel.setTextColor(colorStateList);
     }
 
     @SuppressLint("RestrictedApi")
