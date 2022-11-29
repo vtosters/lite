@@ -391,7 +391,7 @@
     const/high16 p2, 0x41800000    # 16.0f
 
     .line 20
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 

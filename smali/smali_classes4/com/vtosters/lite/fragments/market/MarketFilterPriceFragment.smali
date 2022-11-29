@@ -259,7 +259,7 @@
     .line 6
     new-instance v4, Lcom/vk/core/ui/CardDrawable;
 
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -650,7 +650,7 @@
     .line 4
     new-instance v1, Lcom/vk/core/ui/CardDrawable;
 
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 

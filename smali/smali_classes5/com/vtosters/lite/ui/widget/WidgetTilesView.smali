@@ -66,7 +66,7 @@
     invoke-virtual {p0, p3, p3, p3, p2}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
     .line 5
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

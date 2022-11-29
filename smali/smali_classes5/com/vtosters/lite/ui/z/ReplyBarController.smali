@@ -172,7 +172,7 @@
 
     move-result-object v0
 
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -918,7 +918,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/ui/z/ReplyBarController;->a:Landroid/view/View;
 
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 

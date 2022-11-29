@@ -356,7 +356,7 @@
     iput-object v0, p0, Lcom/vtosters/lite/general/fragments/GameCardFragment$h;->g:Ljava/util/ArrayList;
 
     .line 29
-     invoke-static {p2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 

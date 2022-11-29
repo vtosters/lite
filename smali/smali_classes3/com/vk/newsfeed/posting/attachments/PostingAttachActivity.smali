@@ -578,7 +578,7 @@
     iput p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->a0:I
 
     .line 16
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->getResources()Landroid/content/res/Resources;
 

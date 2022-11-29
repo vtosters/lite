@@ -157,7 +157,7 @@
 
     iget-object v11, v0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;->$context:Landroid/content/Context;
 
-     invoke-static {v11}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

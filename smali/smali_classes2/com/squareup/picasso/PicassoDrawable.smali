@@ -41,7 +41,7 @@
     .locals 1
 
     .line 1
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -60,7 +60,7 @@
     iput-boolean p6, p0, Lcom/squareup/picasso/PicassoDrawable;->a:Z
 
     .line 4
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

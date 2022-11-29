@@ -200,7 +200,7 @@
 
     iget-object v4, p0, Lcom/vk/notifications/FriendRequestsHolder;->a:Landroid/content/Context;
 
-     invoke-static {v4}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

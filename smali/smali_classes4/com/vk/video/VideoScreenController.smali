@@ -78,7 +78,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/video/VideoScreenController;->J:Landroid/content/Context;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

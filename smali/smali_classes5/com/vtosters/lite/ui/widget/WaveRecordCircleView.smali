@@ -76,7 +76,7 @@
     .line 7
     iget-object p2, p0, Lcom/vtosters/lite/ui/widget/WaveRecordCircleView;->b:Landroid/graphics/Paint;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -95,7 +95,7 @@
     .line 8
     iget-object p2, p0, Lcom/vtosters/lite/ui/widget/WaveRecordCircleView;->a:Landroid/graphics/Paint;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -117,7 +117,7 @@
     invoke-virtual {p2, p3}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 10
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -138,7 +138,7 @@
     iput p2, p0, Lcom/vtosters/lite/ui/widget/WaveRecordCircleView;->d:F
 
     .line 11
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

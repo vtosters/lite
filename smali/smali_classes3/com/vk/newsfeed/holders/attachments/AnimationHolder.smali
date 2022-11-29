@@ -429,7 +429,7 @@
 
     iget-object v4, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->K:Lcom/vk/newsfeed/FrescoImageView;
 
-     invoke-static {v4}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 

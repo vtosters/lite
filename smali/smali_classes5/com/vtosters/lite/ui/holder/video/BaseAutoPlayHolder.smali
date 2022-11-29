@@ -401,7 +401,7 @@
     if-eqz v1, :cond_0
 
     .line 26
-     invoke-static/range {p2 .. p2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p2 .. p2}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -423,7 +423,7 @@
     const/4 v3, -0x1
 
     .line 28
-     invoke-static/range {p2 .. p2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p2 .. p2}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -1584,7 +1584,7 @@
     .line 35
     iget-object v1, p0, Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder;->O:Landroid/widget/TextView;
 
-     invoke-static {v1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 

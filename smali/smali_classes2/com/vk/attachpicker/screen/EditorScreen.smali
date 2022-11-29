@@ -1266,7 +1266,7 @@
     invoke-direct {p0, v1}, Lcom/vk/attachpicker/screen/EditorScreen;->k(Z)V
 
     .line 155
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -1495,7 +1495,7 @@
     invoke-direct {v0, v3}, Lcom/vk/attachpicker/screen/EditorScreen;->k(Z)V
 
     .line 127
-     invoke-static {v2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -2375,7 +2375,7 @@
 
     move-result-object v6
 
-     invoke-static {v6}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -3559,7 +3559,7 @@
 
     move-result-object v6
 
-     invoke-static {v6}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

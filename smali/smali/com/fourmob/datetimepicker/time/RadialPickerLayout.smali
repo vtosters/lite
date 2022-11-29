@@ -245,7 +245,7 @@
     .line 29
     iget-object p2, p0, Lcom/fourmob/datetimepicker/time/RadialPickerLayout;->M:Landroid/view/View;
 
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
@@ -1269,7 +1269,7 @@
 
     .line 15
     :cond_3
-     invoke-static/range {p1 .. p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

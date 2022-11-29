@@ -665,7 +665,7 @@
     :goto_2
     iget-object v0, p0, Lcom/vk/media/recorder/RecorderSurface18;->w:Landroid/content/Context;
 
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

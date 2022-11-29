@@ -296,7 +296,7 @@
     .line 4
     new-instance v3, Lcom/vk/core/ui/CardDrawable;
 
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -550,7 +550,7 @@
     invoke-direct {v6, v2, v1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
     .line 11
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -622,7 +622,7 @@
     iput-object v0, p0, Lcom/vtosters/lite/fragments/r2/BannedUserSettingsFragment;->T:Landroid/widget/ArrayAdapter;
 
     .line 17
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -1209,7 +1209,7 @@
     invoke-virtual {p2, p3}, Landroid/view/View;->setScrollBarStyle(I)V
 
     .line 3
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 

@@ -315,7 +315,7 @@
     .line 17
     sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -343,7 +343,7 @@
     :cond_6
     sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

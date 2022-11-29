@@ -137,7 +137,7 @@
     .line 10
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -582,7 +582,7 @@
     .line 6
     new-instance v3, Landroid/text/style/ForegroundColorSpan;
 
-     invoke-static {p3}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p3}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 

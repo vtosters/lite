@@ -76,7 +76,7 @@
     .line 4
     iget-object v2, p0, Lcom/vtosters/lite/fragments/ProfileFragment$f;->b:Lcom/vtosters/lite/fragments/ProfileFragment;
 
-     invoke-static {v2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v2}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -142,7 +142,7 @@
     .line 8
     iget-object v2, p0, Lcom/vtosters/lite/fragments/ProfileFragment$f;->b:Lcom/vtosters/lite/fragments/ProfileFragment;
 
-     invoke-static {v2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v2}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -189,7 +189,7 @@
     .line 12
     iget-object v0, p0, Lcom/vtosters/lite/fragments/ProfileFragment$f;->b:Lcom/vtosters/lite/fragments/ProfileFragment;
 
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -313,7 +313,7 @@
     iget-object v0, p0, Lcom/vtosters/lite/fragments/ProfileFragment$f;->b:Lcom/vtosters/lite/fragments/ProfileFragment;
 
     .line 23
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -416,7 +416,7 @@
     iget-object v0, p0, Lcom/vtosters/lite/fragments/ProfileFragment$f;->b:Lcom/vtosters/lite/fragments/ProfileFragment;
 
     .line 29
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 

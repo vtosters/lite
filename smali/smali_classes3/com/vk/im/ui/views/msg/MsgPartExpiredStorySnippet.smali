@@ -261,7 +261,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
     .line 29
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 

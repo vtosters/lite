@@ -2349,7 +2349,7 @@
     iget-object v1, p0, Lvigo/sdk/Vigo;->ctx:Landroid/content/Context;
 
     .line 10
-     invoke-static {v1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

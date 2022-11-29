@@ -116,7 +116,7 @@
     .line 6
     sget-object v6, Lcom/vk/common/widget/LocatorIndicatorDrawable;->g:Lcom/vk/common/widget/LocatorIndicatorDrawable$a;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -138,7 +138,7 @@
 
     int-to-float v7, v7
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -168,7 +168,7 @@
     :cond_0
     sget-object v6, Lcom/vk/common/widget/LocatorIndicatorDrawable;->g:Lcom/vk/common/widget/LocatorIndicatorDrawable$a;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -234,7 +234,7 @@
     iput v1, p0, Lcom/vk/common/widget/LocatorIndicatorDrawable;->c:I
 
     .line 15
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

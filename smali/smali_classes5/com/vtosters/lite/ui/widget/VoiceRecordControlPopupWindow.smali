@@ -118,7 +118,7 @@
     iput-object p3, p0, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->o:Landroid/view/View;
 
     .line 6
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -135,7 +135,7 @@
     iput p2, p0, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->h:I
 
     .line 7
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -152,7 +152,7 @@
     iput p2, p0, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->i:I
 
     .line 8
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -169,7 +169,7 @@
     iput p2, p0, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->a:I
 
     .line 9
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -186,7 +186,7 @@
     iput p2, p0, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->b:I
 
     .line 10
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -203,7 +203,7 @@
     iput p2, p0, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->c:I
 
     .line 11
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -220,7 +220,7 @@
     iput p2, p0, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->e:I
 
     .line 12
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

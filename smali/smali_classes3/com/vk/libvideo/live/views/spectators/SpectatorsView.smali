@@ -205,7 +205,7 @@
     .line 17
     iget-object p1, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsView;->C:Landroid/widget/FrameLayout;
 
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 

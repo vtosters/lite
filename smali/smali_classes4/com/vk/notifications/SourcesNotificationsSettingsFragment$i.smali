@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$i;->a:Lcom/vk/notifications/SourcesNotificationsSettingsFragment;
 
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -54,7 +54,7 @@
 
     iget-object v2, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$i;->a:Lcom/vk/notifications/SourcesNotificationsSettingsFragment;
 
-     invoke-static {v2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v2}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 

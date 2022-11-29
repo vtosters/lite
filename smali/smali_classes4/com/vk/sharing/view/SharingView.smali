@@ -376,7 +376,7 @@
     move-result p1
 
     .line 10
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroid/widget/ScrollView;->getResources()Landroid/content/res/Resources;
 

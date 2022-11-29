@@ -989,7 +989,7 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->getResources()Landroid/content/res/Resources;
 
@@ -1012,7 +1012,7 @@
     invoke-direct {p0, v0}, Lcom/vk/articles/ArticleWebView;->setWebViewTopPadding(I)V
 
     .line 3
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->getResources()Landroid/content/res/Resources;
 

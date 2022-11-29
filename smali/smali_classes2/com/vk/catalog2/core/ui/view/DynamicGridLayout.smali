@@ -229,7 +229,7 @@
     iput-object p1, p0, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout;->c:Ljava/util/List;
 
     .line 4
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 

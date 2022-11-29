@@ -96,7 +96,7 @@
     if-eqz v0, :cond_0
 
     .line 14
-     invoke-static {v6}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v6}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 

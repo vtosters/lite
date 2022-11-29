@@ -98,7 +98,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/vtosters/lite/ExTextView$b;->a:Lcom/vtosters/lite/ExTextView;
 
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 

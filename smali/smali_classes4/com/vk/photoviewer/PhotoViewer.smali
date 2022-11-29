@@ -744,7 +744,7 @@
 
     iget-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->c0:Landroid/content/Context;
 
-     invoke-static {p4}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

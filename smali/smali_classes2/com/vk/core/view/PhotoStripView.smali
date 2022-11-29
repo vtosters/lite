@@ -243,7 +243,7 @@
     iput-object v0, p0, Lcom/vk/core/view/PhotoStripView;->C:Landroid/graphics/Path;
 
     .line 3
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 

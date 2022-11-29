@@ -338,7 +338,7 @@
 
     iget-object p3, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->q:Landroid/content/Context;
 
-     invoke-static {p3}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -790,7 +790,7 @@
 
     iget-object v5, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->q:Landroid/content/Context;
 
-     invoke-static {v5}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

@@ -573,7 +573,7 @@
     .line 15
     new-instance p1, Lcom/facebook/drawee/drawable/RoundedBitmapDrawable;
 
-     invoke-static {p7}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

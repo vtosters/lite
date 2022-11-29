@@ -160,7 +160,7 @@
     iput-object v0, v8, Lcom/vk/notifications/NotificationView;->W:Lcom/vk/notifications/NotificationsContainer;
 
     .line 2
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -179,7 +179,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->F:I
 
     .line 3
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -198,7 +198,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->G:I
 
     .line 4
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -217,7 +217,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->H:I
 
     .line 5
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -236,7 +236,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->I:I
 
     .line 6
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -255,7 +255,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->J:I
 
     .line 7
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -274,7 +274,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->K:I
 
     .line 8
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -291,7 +291,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->L:I
 
     .line 9
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -310,7 +310,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->M:I
 
     .line 10
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -329,7 +329,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->N:I
 
     .line 11
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -348,7 +348,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->O:I
 
     .line 12
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -367,7 +367,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->P:I
 
     .line 13
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -386,7 +386,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->Q:I
 
     .line 14
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -405,7 +405,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->R:I
 
     .line 15
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -426,7 +426,7 @@
     .line 16
     new-instance v0, Lcom/vk/notifications/NotificationLayoutHelper;
 
-     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 

@@ -539,7 +539,7 @@
 
     if-eqz v2, :cond_6
 
-     invoke-static {v2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -627,7 +627,7 @@
     .line 27
     iget-object v2, v0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->l:Landroid/content/Context;
 
-     invoke-static {v2}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

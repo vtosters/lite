@@ -223,7 +223,7 @@
 
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -240,7 +240,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -293,7 +293,7 @@
 
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -312,7 +312,7 @@
     :cond_3
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -367,7 +367,7 @@
 
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -384,7 +384,7 @@
     :cond_6
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
-     invoke-static {p1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 

@@ -172,7 +172,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
-     invoke-static {v1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -248,7 +248,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -268,7 +268,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
-     invoke-static {v0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -291,7 +291,7 @@
     .line 5
     iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
-     invoke-static {v1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -850,7 +850,7 @@
 
     iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
-     invoke-static {v1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -929,7 +929,7 @@
 
     iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
-     invoke-static {v1}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1355,7 +1355,7 @@
 
     iget-object v12, v0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
-     invoke-static {v12}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v12}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1461,7 +1461,7 @@
 
     iget-object v11, v0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
-     invoke-static {v11}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

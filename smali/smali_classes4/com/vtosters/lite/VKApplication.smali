@@ -1515,7 +1515,7 @@
     .locals 2
 
     .line 2
-     invoke-static {p0}, Lru/vtosters/lite/themes/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
 
     invoke-virtual {p0}, Landroid/app/Application;->getResources()Landroid/content/res/Resources;
 
