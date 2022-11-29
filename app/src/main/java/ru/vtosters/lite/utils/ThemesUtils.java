@@ -90,6 +90,12 @@ public class ThemesUtils {
         return AndroidUtils.getPreferences().getInt("accent_color", ColorReferences.stockAccent);
     } // Color accent
 
+    public static void setCustomAccentColor(int newColor, boolean async) {
+        var editor = AndroidUtils.edit().putInt("accent_color", newColor);
+        if (async) editor.apply();
+        else editor.commit();
+    }
+
     public static int getTextAttr() {
         return getColorFromAttr(R.attr.text_primary);
     } // Text Primary color
