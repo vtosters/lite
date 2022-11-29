@@ -19,7 +19,6 @@ import com.vtosters.lite.ui.EditText;
 
 import java.util.Collections;
 
-import ru.vtosters.lite.themes.ColorReferences;
 import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -33,74 +32,77 @@ public class AccentsFragment extends MaterialPreferenceToolbarFragment {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(R.xml.empty);
-        PreferencesUtil.addPreference(this, "Выбор акцента через HEX", "", 0, new AccentHexDialog());
+
+        final var colorPickerPreference = new Preference(requireContext());
+        colorPickerPreference.setTitle("Выбор акцента через HEX");
+        colorPickerPreference.setIcon(R.drawable.bg_accent_circle);
+        colorPickerPreference.setOnPreferenceClickListener(preference -> {
+            showEditAccentColorDialog();
+            return false;
+        });
+        getPreferenceScreen().addPreference(colorPickerPreference);
     }
 
-    private class AccentHexDialog implements Preference.OnPreferenceClickListener {
+    void showEditAccentColorDialog() {
+        LinearLayout linearLayout = new LinearLayout(requireContext());
 
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            LinearLayout linearLayout = new LinearLayout(requireContext());
+        final EditText editText = new EditText(requireContext());
+        editText.setHint("Акцент");
+        editText.setText(ThemesUtils.hex(ThemesUtils.getAccentColor()));
+        editText.setHintTextColor(PreferencesUtil.getSTextColor(requireActivity()));
+        editText.setBackgroundTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
 
-            final EditText editText = new EditText(requireContext());
-            editText.setHint("Акцент");
-            editText.setText(ThemesUtils.hex(AndroidUtils.getPreferences().getInt("accent_color", ColorReferences.stockAccent)));
-            editText.setHintTextColor(PreferencesUtil.getSTextColor(requireActivity()));
-            editText.setBackgroundTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
+        linearLayout.addView(editText);
+        editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+        ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());
+        margin.setMargins(AndroidUtils.dp2px(24f), 0, AndroidUtils.dp2px(24f), 0);
+        editText.setLayoutParams(margin);
 
-            linearLayout.addView(editText);
-            editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
-            ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());
-            margin.setMargins(AndroidUtils.dp2px(24f), 0, AndroidUtils.dp2px(24f), 0);
-            editText.setLayoutParams(margin);
+        editText.addTextChangedListener(new TextWatcher() {
 
-            editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
-                }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
 
-                }
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!TextUtils.isEmpty(s)) {
+                    if (s.length() > MAX_COLOR_STR_LEN)
+                        // check if data is fully color string
+                        if (s.charAt(0) == '#' && s.charAt(1) == '#')
+                            s.replace(0, 1, "");
+                        else
+                            s.replace(MAX_COLOR_STR_LEN - 1, s.length() - 1, "");
+                    int i = s.charAt(0) == '#' ? 1 : 0;
+                    // If the first distinct character is found, then there is no need to return to the start of the array
+                    while (i >= 0 && i < s.length()) {
+                        if (HEX.indexOf(s.charAt(i)) == -1) {
+                            s.delete(i, i + 1);
+                        } else i++;
+                    }
+                } else s.append("#");
+            }
+        });
 
-                @Override
-                public void afterTextChanged(Editable s) {
-                    if (!TextUtils.isEmpty(s)) {
-                        if (s.length() > MAX_COLOR_STR_LEN)
-                            // check if data is fully color string
-                            if (s.charAt(0) == '#' && s.charAt(1) == '#')
-                                s.replace(0, 1, "");
-                            else
-                                s.replace(MAX_COLOR_STR_LEN - 1, s.length() - 1, "");
-                        int i = s.charAt(0) == '#' ? 1 : 0;
-                        // If the first distinct character is found, then there is no need to return to the start of the array
-                        while (i >= 0 && i < s.length()) {
-                            if (HEX.indexOf(s.charAt(i)) == -1) {
-                                s.delete(i, i + 1);
-                            } else i++;
-                        }
-                    } else s.append("#");
-                }
-            });
-
-            new VkAlertDialog.Builder(requireContext())
-                    .setTitle("Акценты")
-                    .setMessage("Это изменит цвет иконки таббара, ссылки и.т.д." +
-                            "\nДанная функция еще в разработке, поэтому возможны недокрасы!" +
-                            "\n\nЦвет указывается в формате #RRGGBB (#9600FF).")
-                    .setView(linearLayout)
-                    .setPositiveButton("OK",
-                            (dialog, which)
-                                    -> changeAccentColor(editText.getText()
-                                        .toString()
-                                        .toUpperCase()))
-                    .setNeutralButton("Сброс", ((dialog, which) -> resetAccentColor()))
-                    .show();
-            return false;
-        }
+        new VkAlertDialog.Builder(requireContext())
+                .setTitle("Акценты")
+                .setMessage("Это изменит цвет иконки таббара, ссылки и.т.д." +
+                        "\nДанная функция еще в разработке, поэтому возможны недокрасы!" +
+                        "\n\nЦвет указывается в формате #RRGGBB (#9600FF).")
+                .setView(linearLayout)
+                .setPositiveButton("OK",
+                        (dialog, which)
+                                -> changeAccentColor(editText.getText()
+                                .toString()
+                                .toUpperCase()))
+                .setNeutralButton("Сброс", (dialog, which) -> resetAccentColor())
+                .show();
     }
 
     void changeAccentColor(String colorStr) {
