@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
@@ -52,8 +53,8 @@ public class AccentsFragment extends MaterialPreferenceToolbarFragment {
             builder.setView(linearLayout);
             builder.setPositiveButton("OK", (dialog, which) -> {
                 String color = editText.getText().toString();
-                if (color.equals("")) {
-                    AndroidUtils.edit().putInt("theme_accent", ColorReferences.stockAccent).apply();
+                if (TextUtils.isEmpty(color)) {
+                    AndroidUtils.edit().putInt("accent_color", ColorReferences.stockAccent).commit();
                     ToastUtils.a("Функция отключена.");
                     ThemesCore.clear();
                     ThemesUtils.setTheme(ThemesUtils.getCurrentTheme(), requireActivity());
