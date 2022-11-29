@@ -58,5 +58,10 @@ public class ProxyResources extends Resources {
         return mOriginalResource.getDrawableForDensity(id, density, theme);
     }
 
-
+    @Override
+    public TypedArray obtainAttributes(AttributeSet set, int[] attrs) {
+        var ta = super.obtainAttributes(set, attrs);
+        VTLResources.prepareTypedArray(ta, attrs);
+        return ta;
+    }
 }
