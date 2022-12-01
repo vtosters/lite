@@ -2,6 +2,7 @@ package ru.vtosters.lite.themes;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,14 +26,7 @@ public class ColorReferences {
     }
 
     public static boolean isColorRefAccented(int target) {
-        return target == com.vtosters.lite.R.color.accent_blue || // accent_blue
-                target == com.vtosters.lite.R.color.blue_gray || // light_blue_gray
-                target == com.vtosters.lite.R.color.azure_300 ||
-                target == com.vtosters.lite.R.color.light_blue_old || // light_blue
-                target == com.vtosters.lite.R.color.blue_200 || // blue_200
-                target == com.vtosters.lite.R.color.vk_blue_400 || // blue_200
-                target == com.vtosters.lite.R.color.header_blue ||
-                target == com.vtosters.lite.R.color.blue_200_muted; // blue_200_muted
+        return ThemesUtils.isColorRefAccented(target);
     }
 
     public static boolean isCslNeedToBeThemed(ColorStateList csl) {

@@ -124,34 +124,8 @@ public class ThemesUtils {
         return getColorFromAttr(R.attr.header_text);
     } // Header/Toolbar color text
 
-    public static int getAmoledTheme() {
-        return getIdentifier("BaseAmoledStyle", "style");
-    } // Get Amoled theme id
-
-    public static int picFix() {
-        return getIdentifier("ActionBarThemeFix", "style");
-    } // Fix tabbar color in photo viewer
-
-    public static int getAmoledImTheme() {
-        return getIdentifier("VkIm.Theme.VkApp.Amoled", "style");
-    } // Get Amoled theme id for messages
-
-    public static int getAmoledMeTheme() {
-        return getIdentifier("VkIm.Theme.VkMe.Amoled", "style");
-    } // Get Amoled theme id for messages with rounded msg
-
     public static int getAttrId(String attr) {
         return getIdentifier(attr, "attr");
-    }
-
-    public static void setBarTheme(View getview) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getview.setSystemUiVisibility(getNeededColorNavbar() | getNeededColorStatusbar());
-        }
-    } // Set white/dark statusbar/navbar icons
-
-    public static int getNeededColorStatusbar() {
-        return !isDarkTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ? 8192 : 0;
     }
 
     public static int getNeededColorNavbar() {
@@ -191,19 +165,72 @@ public class ThemesUtils {
     }
 
     public static boolean isColorRefAccented(int color) {
-        for (int accent : new int[]{R.color.accent_blue, R.color.azure_A400, R.color.blue, R.color.blue_200, R.color.blue_200_muted, R.color.blue_300, R.color.blue_400, R.color.cool_blue, R.color.cornflower_blue, R.color.cornflower_blue_two, R.color.dot_unread, R.color.fave_promo_btn_pressed, R.color.header_blue, R.color.vkim_ripple_dark, R.color.colorAccent, R.color.light_blue, R.color.light_blue_gray, R.color.live_emoji_butt_hide, R.color.music_action_button_blue, R.color.name, R.color.picker_blue, R.color.picker_blue_pressed, R.color.picker_tab_bg_selected, R.color.picker_tab_text_selected, R.color.sharing_blue_btn_normal, R.color.sharing_blue_btn_pressed, R.color.sky_300, R.color.text_blue, R.color.tip_background, R.color.tw__blue_default, R.color.tw__blue_pressed, R.color.vkim_msg_sending_ic, R.color.vkim_playing_drawable_rect, R.color.white_blue32}) {
-            if (color == accent) return true;
-        }
-        return false;
+        return color == R.color.viewer_retry_button_text_color ||
+                color == R.color.azure_300 ||
+                color == R.color.light_blue_old ||
+                color == R.color.picker_camera_button ||
+                color == R.color.music_check_button_bg_pressed ||
+                color == R.color.notification_color ||
+                color == R.color.music_text_counter ||
+                color == R.color.music_follow_button_bg_pressed ||
+                color == R.color.music_blue_button_normal ||
+                color == R.color.music_check_button_bg_normal ||
+                color == R.color.vk_terms_link ||
+                color == R.color.vk_blue_200_muted ||
+                color == R.color.vk_blue_200 ||
+                color == R.color.accent_blue ||
+                color == R.color.azure_A400 ||
+                color == R.color.vk_azure_A400 ||
+                color == R.color.blue ||
+                color == R.color.blue_200 ||
+                color == R.color.blue_200_muted ||
+                color == R.color.vk_blue_300 ||
+                color == R.color.vk_blue_400 ||
+                color == R.color.blue_300 ||
+                color == R.color.blue_400 ||
+                color == R.color.cool_blue ||
+                color == R.color.cornflower_blue ||
+                color == R.color.cornflower_blue_two ||
+                color == R.color.dot_unread ||
+                color == R.color.fave_promo_btn_pressed ||
+                color == R.color.header_blue ||
+                color == R.color.colorAccent ||
+                color == R.color.blue_gray ||
+                color == R.color.light_blue ||
+                color == R.color.light_blue_gray ||
+                color == R.color.live_emoji_butt_hide ||
+                color == R.color.music_action_button_blue ||
+                color == R.color.name ||
+                color == R.color.picker_blue ||
+                color == R.color.picker_blue_pressed ||
+                color == R.color.picker_tab_bg_selected ||
+                color == R.color.picker_tab_text_selected ||
+                color == R.color.sharing_blue_btn_normal ||
+                color == R.color.sharing_blue_btn_pressed ||
+                color == R.color.vk_sky_300 ||
+                color == R.color.vk_blue_A400 ||
+                color == R.color.blue_A400 ||
+                color == R.color.sky_300 ||
+                color == R.color.muted_blue ||
+                color == R.color.muted_blue_old ||
+                color == R.color.text_blue ||
+                color == R.color.tip_background ||
+                color == R.color.tw__blue_default ||
+                color == R.color.tw__blue_pressed ||
+                color == R.color.vkim_msg_sending_ic ||
+                color == R.color.vkim_playing_drawable_rect ||
+                color == R.color.vk_white_blue32 ||
+                color == R.color.date_picker_selector ||
+                color == R.color.post_suggest_blue ||
+                color == R.color.list_dialog_blue ||
+                color == R.color.music_tab_bg_normal ||
+                color == R.color.toolbar_blue_background ||
+                color == R.color.toolbar_blue_statusBarColorBack ||
+                color == R.color.white_blue32;
     } // Accent colors
 
     public static int replaceColor(int i){
         return ColorReferences.isAccentedColor(i) ? getAccentColor() : i;
-    }
-
-    public static void themeMonetToolbar(ImageButton imageButton, Toolbar toolbar) {
-        imageButton.setImageTintList(ColorStateList.valueOf(getHeaderText()));
-        toolbar.setElevation(0.0f);
     }
 
     public static void setImageViewColored(ImageView view){
@@ -222,17 +249,6 @@ public class ThemesUtils {
     public static void recolorBGView(View view) {
         view.getBackground().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_OVER);
     }
-
-    public static Drawable recolorVKIconMenu(Drawable drawable) {
-        int accent = getHeaderText();
-
-        if (drawable == null) return null;
-
-        if (isAndroidMonet() || isDarkTheme()) accent = getAccentColor();
-
-        return new RecoloredDrawable(drawable, accent);
-    } // Recolor vk icon to accent color
-
 
     public static int darken(int color, float by) {
         float[] hsl = new float[3];
@@ -260,9 +276,8 @@ public class ThemesUtils {
         return ColorUtils.setAlphaComponent(src, 169);
     }
 
-
     public static int getColor(Context context, int i) {
-        if (isColorRefAccented(i) && isAndroidMonet()) {
+        if (isColorRefAccented(i)) {
             return getAccentColor();
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -272,8 +287,8 @@ public class ThemesUtils {
         }
     } // Android Support color injector + accent color checker
 
-    public static int getColor2(int i) {
-        if (isColorRefAccented(i) && isAndroidMonet()) {
+    public static int getColor(int i) {
+        if (isColorRefAccented(i)) {
             return getAccentColor();
         }
         return getResources().getColor(i);

@@ -410,7 +410,7 @@
 
     move-result-object p3
 
-    invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v2}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
 
     move-result p3
 

@@ -2820,9 +2820,7 @@
     iput-object v2, p0, Lcom/fourmob/datetimepicker/time/RadialTimePickerDialog;->V:Ljava/lang/String;
 
     .line 10
-    sget v2, Lcom/fourmob/datetimepicker/a;->blue:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v2
 
