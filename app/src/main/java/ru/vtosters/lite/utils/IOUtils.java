@@ -26,7 +26,10 @@ public class IOUtils {
 
     public static byte[] decodeStream(InputStream encIs, String keyURL) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
         CipherInputStream cip = new CipherInputStream(encIs, getCipher(keyURL));
-        return readAllBytes(cip);
+        var bytes = readAllBytes(cip);
+        cip.close();
+
+        return bytes;
     }
 
     public static Cipher getCipher(String key) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException {
@@ -46,15 +49,23 @@ public class IOUtils {
     }
 
     public static String readAllLines(File file) throws IOException {
-        return readAllLines(new FileInputStream(file));
+        var is = new FileInputStream(file);
+        var bytes = readAllBytes(is);
+        is.close();
+
+        return new String(bytes, StandardCharsets.UTF_8);
     }
 
     public static String readAllLines(InputStream is) throws IOException {
-        return new String(readAllBytes(is), "utf-8");
+        return new String(readAllBytes(is), StandardCharsets.UTF_8);
     }
 
     public static byte[] readAllBytes(File file) throws IOException {
-        return readAllBytes(new FileInputStream(file));
+        var is = new FileInputStream(file);
+        var bytes = readAllBytes(is);
+        is.close();
+
+        return bytes;
     }
 
     public static byte[] readAllBytes(InputStream is) throws IOException {
@@ -63,7 +74,11 @@ public class IOUtils {
         int len;
         while ((len = is.read(buffer)) > 0)
             bos.write(buffer, 0, len);
-        return bos.toByteArray();
+
+        var bytes = bos.toByteArray();
+        bos.close();
+
+        return bytes;
     }
 
     public static void writeToFile(File file, String content) throws IOException {
@@ -71,32 +86,9 @@ public class IOUtils {
     }
 
     public static void writeToFile(File file, byte[] content) throws IOException {
-        if (!file.exists())
-            file.createNewFile();
         FileOutputStream fos = new FileOutputStream(file);
         fos.write(content);
-    }
-
-    public static void copyFileToDirectory(File dest, File targetDir) throws IOException {
-        if (!targetDir.exists())
-            targetDir.mkdirs();
-        var path = dest.getAbsolutePath();
-        var target = new File(targetDir, path.substring(path.lastIndexOf("/")));
-        copyFile(dest, target);
-    }
-
-    public static void copyFile(File dest, File target) throws IOException {
-        var parent = target.getParentFile();
-        if (!parent.exists())
-            parent.getParentFile().mkdirs();
-        writeToFile(target, readAllBytes(dest));
-    }
-
-    public static void copyFile(InputStream is, File target) throws IOException {
-        var parent = target.getParentFile();
-        if (!parent.exists())
-            parent.getParentFile().mkdirs();
-        writeToFile(target, readAllBytes(is));
+        fos.close();
     }
 
     public static void deleteRecursive(File f) {
@@ -124,5 +116,9 @@ public class IOUtils {
             size += f.isDirectory() ? getDirSize(f) : f.length();
 
         return size;
+    }
+
+    public static String getValidFileName(String fileName) {
+        return fileName.replaceAll("[\\\\/:*?\"<>|]", "");
     }
 }
