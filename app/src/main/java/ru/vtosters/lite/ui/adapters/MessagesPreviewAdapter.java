@@ -1,6 +1,9 @@
 package ru.vtosters.lite.ui.adapters;
 
 import android.content.Context;
+import android.graphics.ColorFilter;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.PorterDuff;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,14 +15,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.vk.core.widget.BubbleFluidLayout;
 import com.vk.im.ui.components.viewcontrollers.msg_list.entry.MsgTextBuilder;
 import com.vk.im.ui.views.msg.MsgPartTextView;
+import com.vk.im.ui.views.msg.bubble.MsgBubbleDrawable;
+import com.vk.im.ui.views.msg.bubble.MsgBubblePart;
+import com.vk.im.ui.views.msg.bubble.MsgBubbleStyle;
 import com.vk.im.ui.views.msg.bubble.MsgBubbleView;
 import com.vtosters.lite.R;
+import com.vtosters.lite.m0.ToolbarHelper;
 
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreviewAdapter.MessagePreviewViewHolder> {
 
-    private static final String[] MESSAGES = AndroidUtils.getArray(R.array.wallpaper_change_dialog);
+    private final String[] mMessages;
+
+    public MessagesPreviewAdapter(String... messages) {
+        mMessages = messages;
+    }
 
     @Override
     public int getItemViewType(int i) {
@@ -49,6 +61,8 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
         messageBubbleView.setContentPaddingTop(AndroidUtils.dp2px(4));
         messageBubbleView.setContentPaddingRight(AndroidUtils.dp2px(4));
         messageBubbleView.setContentPaddingBottom(AndroidUtils.dp2px(0));
+        if (viewType == Gravity.END)
+            messageBubbleView.a(MsgBubbleStyle.b(false, false), MsgBubblePart.FULL, ThemesUtils.getAccentColor());
         bubbleFluidLayout.setLayoutDirection(viewType);
 
         final var msgTextView = inflater.inflate(R.layout.vkim_msg_part_text, viewGroup, false);
@@ -62,12 +76,12 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
 
     @Override
     public void onBindViewHolder(@NonNull MessagePreviewViewHolder viewHolder, int pos) {
-        viewHolder.bind(MESSAGES[pos]);
+        viewHolder.bind(mMessages[pos]);
     }
 
     @Override
     public int getItemCount() {
-        return MESSAGES.length;
+        return mMessages.length;
     }
 
     protected static class MessagePreviewViewHolder extends RecyclerView.ViewHolder {

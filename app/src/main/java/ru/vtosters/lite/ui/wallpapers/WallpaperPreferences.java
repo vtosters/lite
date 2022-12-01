@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.vtosters.lite.R;
 
 import ru.vtosters.lite.ui.adapters.MessagesPreviewAdapter;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class WallpaperPreferences extends Preference {
 
@@ -49,7 +50,7 @@ public class WallpaperPreferences extends Preference {
         mRecyclerView = (RecyclerView) preferenceViewHolder.findViewById(R.id.install_btn_container);
         mRecyclerView.setPadding(0, dp2px(8), 0, 0);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        mRecyclerView.setAdapter((mAdapter = new MessagesPreviewAdapter()));
+        mRecyclerView.setAdapter((mAdapter = new MessagesPreviewAdapter(AndroidUtils.getArray(R.array.wallpaper_change_dialog))));
         mRecyclerView.setClickable(false);
         mRecyclerView.setFocusable(false);
 
