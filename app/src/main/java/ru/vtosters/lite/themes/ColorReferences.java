@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ColorReferences {
-    public static final int stockAccent = Color.parseColor("#3f8ae0");
+    public static final int stockAccent = Color.parseColor(ThemesUtils.isDarkTheme() ? "#71aaeb" : "#528bcc");
     public static List<Integer> accentColors = Arrays.asList(
             Color.parseColor("#3f8ae0"), // azure_300 (light accent)
             Color.parseColor("#4986cc"), // azure_a400
