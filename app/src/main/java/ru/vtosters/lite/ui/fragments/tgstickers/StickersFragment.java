@@ -46,6 +46,7 @@ import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
 import ru.vtosters.lite.ui.components.StickerTouchHelperCallback;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class StickersFragment extends BaseToolbarFragment {
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
@@ -132,7 +133,7 @@ public class StickersFragment extends BaseToolbarFragment {
 
         FloatingActionButton mAddStickerPack = new FloatingActionButton(getContext());
         mAddStickerPack.setImageResource(R.drawable.ic_add_24);
-        mAddStickerPack.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        mAddStickerPack.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
         mAddStickerPack.setOnClickListener(v2 -> fabClick());
 
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(-2, -2);
@@ -173,7 +174,7 @@ public class StickersFragment extends BaseToolbarFragment {
 
                 final EditText editText = new EditText(getContext());
                 editText.setHintTextColor(getSTextAttr());
-                editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+                editText.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
 
                 linearLayout.addView(editText);
                 editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -231,7 +232,7 @@ public class StickersFragment extends BaseToolbarFragment {
 
         final EditText editText = new EditText(getContext());
         editText.setHintTextColor(getSTextAttr());
-        editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        editText.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
 
         linearLayout.addView(editText);
         editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;

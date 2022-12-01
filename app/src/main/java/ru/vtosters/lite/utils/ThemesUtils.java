@@ -48,6 +48,10 @@ public class ThemesUtils {
         }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
+    public static ColorStateList getAccenedColorStateList() {
+        return ColorStateList.valueOf(getAccentColor());
+    }
+
     public static int getSystemModeTheme() {
         return AppCompatDelegate.getDefaultNightMode();
     }

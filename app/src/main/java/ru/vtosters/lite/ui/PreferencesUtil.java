@@ -25,6 +25,7 @@ import androidx.preference.PreferenceCategory;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class PreferencesUtil {
 
@@ -231,7 +232,7 @@ public class PreferencesUtil {
             editText.setTextColor(getTextAttr());
             editText.setHintTextColor(getSTextAttr());
 
-            editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+            editText.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
 
             linearLayout.addView(editText);
             editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
