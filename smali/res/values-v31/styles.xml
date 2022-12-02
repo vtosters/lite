@@ -535,7 +535,7 @@
         <item name="attach_picker_tab_inactive_icon">@android:color/system_accent1_50</item>
         <item name="attach_picker_tab_inactive_text">@android:color/system_neutral2_200</item>
         <item name="background_content">@android:color/system_neutral1_900</item>
-        <item name="background_highlighted">@color/white_alpha8</item>
+        <item name="background_highlighted">@android:color/system_neutral1_900</item>
         <item name="background_keyboard">@android:color/system_neutral1_900</item>
         <item name="background_light">@android:color/system_neutral1_900</item>
         <item name="background_page">@android:color/system_neutral1_800</item>
@@ -795,7 +795,7 @@
         <item name="attach_picker_tab_inactive_icon">@android:color/system_accent1_50</item>
         <item name="attach_picker_tab_inactive_text">@android:color/system_neutral2_200</item>
         <item name="background_content">@android:color/system_neutral1_900</item>
-        <item name="background_highlighted">@color/white_alpha8</item>
+        <item name="background_highlighted">@android:color/system_neutral1_900</item>
         <item name="background_keyboard">@android:color/system_neutral1_900</item>
         <item name="background_light">@android:color/system_neutral1_900</item>
         <item name="background_page">@android:color/system_neutral1_800</item>
@@ -1055,7 +1055,7 @@
         <item name="attach_picker_tab_inactive_icon">@color/gray_100</item>
         <item name="attach_picker_tab_inactive_text">@color/gray_500</item>
         <item name="background_content">@color/black</item>
-        <item name="background_highlighted">@color/white_alpha8</item>
+        <item name="background_highlighted">@color/black</item>
         <item name="background_keyboard">@color/black</item>
         <item name="background_light">@color/black</item>
         <item name="background_page">@color/gray_1000</item>
@@ -1315,7 +1315,7 @@
         <item name="attach_picker_tab_inactive_icon">@color/gray_100</item>
         <item name="attach_picker_tab_inactive_text">@color/gray_500</item>
         <item name="background_content">@color/black</item>
-        <item name="background_highlighted">@color/white_alpha8</item>
+        <item name="background_highlighted">@color/black</item>
         <item name="background_keyboard">@color/black</item>
         <item name="background_light">@color/black</item>
         <item name="background_page">@color/gray_1000</item>
