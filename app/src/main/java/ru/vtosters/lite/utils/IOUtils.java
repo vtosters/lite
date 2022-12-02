@@ -63,6 +63,8 @@ public class IOUtils {
         int len;
         while ((len = is.read(buffer)) > 0)
             bos.write(buffer, 0, len);
+        is.close();
+        bos.close();
         return bos.toByteArray();
     }
 
@@ -73,8 +75,9 @@ public class IOUtils {
     public static void writeToFile(File file, byte[] content) throws IOException {
         if (!file.exists())
             file.createNewFile();
-        FileOutputStream fos = new FileOutputStream(file);
+        var fos = new FileOutputStream(file);
         fos.write(content);
+        fos.close();
     }
 
     public static void copyFileToDirectory(File dest, File targetDir) throws IOException {
@@ -106,8 +109,8 @@ public class IOUtils {
     public static void deleteRecursive(File f, boolean selfDeletion) {
         if (f.isDirectory()) {
             var fs = f.listFiles();
-            if (fs != null)
-                for (File child : fs)
+            if (fs != null && fs.length > 0)
+                for (var child : fs)
                     deleteRecursive(child, true);
         }
         if (selfDeletion)
@@ -115,7 +118,7 @@ public class IOUtils {
     }
 
     public static long getDirSize(File dir) {
-        var arr = dir.listFiles();
+        final var arr = dir.listFiles();
         if (arr == null || arr.length == 0)
             return 0;
 
