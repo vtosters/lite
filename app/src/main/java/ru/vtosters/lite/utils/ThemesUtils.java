@@ -91,8 +91,8 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        var accent = AndroidUtils.getPreferences().getInt("accent_color", ColorReferences.stockAccent);
-        return accent == 0 ? ColorReferences.stockAccent : accent;
+        var accent = AndroidUtils.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
+        return accent == 0 ? getColorFromAttr(R.attr.accent) : accent;
     } // Color accent
 
     public static void setCustomAccentColor(int newColor, boolean async) {
