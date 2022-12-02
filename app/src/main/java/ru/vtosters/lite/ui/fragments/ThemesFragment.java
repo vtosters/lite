@@ -123,7 +123,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
                             break;
                     }
                 })
-                .setNegativeButton(R.string.reset, (dialog, which) -> setAccentColor(ColorReferences.stockAccent))
+                .setNegativeButton(R.string.reset, (dialog, which) -> setAccentColor(ThemesUtils.getColorFromAttr(R.attr.accent)))
                 .setPositiveButton(R.string.cancel, null)
                 .show();
     }
