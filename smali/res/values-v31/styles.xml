@@ -524,7 +524,7 @@
 
     <style name="Vk.Theme.VkApp.client_dark_generated" parent="@style/Vk.Theme.VkApp">
         <item name="accent">@android:color/system_accent1_100</item>
-        <item name="accent_alpha10">#1971aaeb</item>
+        <item name="accent_alpha10">@android:color/system_accent1_100</item>
         <item name="action_sheet_action_foreground">@color/white</item>
         <item name="action_sheet_separator">@color/white_alpha12</item>
         <item name="activity_indicator_tint">@android:color/system_neutral2_200</item>

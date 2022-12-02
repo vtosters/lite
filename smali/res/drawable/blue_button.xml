@@ -4,7 +4,7 @@
         <ripple android:color="#32001833">
             <item>
                 <shape>
-                    <solid android:color="#ff5181b8" />
+                    <solid android:color="@color/header_blue" />
                     <corners android:radius="4.0dip" />
                 </shape>
             </item>
@@ -12,7 +12,7 @@
     </item>
     <item>
         <shape>
-            <solid android:color="#665181b8" />
+            <solid android:color="@color/header_blue" />
             <corners android:radius="4.0dip" />
         </shape>
     </item>
