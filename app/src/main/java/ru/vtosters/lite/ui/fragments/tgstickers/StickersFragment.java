@@ -84,8 +84,8 @@ public class StickersFragment extends BaseToolbarFragment {
     @Override
     protected void onCreateMenu(Menu menu) {
         var item = menu.add(0, 0, 0, "");
-        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        item.setIcon(R.drawable.ic_settings_24);
+        item.setIcon(R.drawable.ic_settings_24)
+            .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
         super.onCreateMenu(menu);
     }

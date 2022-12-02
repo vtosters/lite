@@ -4,6 +4,7 @@
         <Preference
             android:key="accent_color"
             android:summary="Цвет акцента в приложении"
+            android:icon="@drawable/bg_accent_circle"
             android:title="Цвет акцента" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlthemes">

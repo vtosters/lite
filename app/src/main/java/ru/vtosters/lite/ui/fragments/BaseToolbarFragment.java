@@ -25,7 +25,7 @@ public abstract class BaseToolbarFragment extends FragmentImpl {
     private Toolbar mToolbar;
     private FrameLayout mContentLayout;
 
-    @CallSuper
+
     protected void onCreateMenu(Menu menu) {
         if (menu.size() > 0)
             for (int i = 0; i < menu.size(); i++)
@@ -61,6 +61,10 @@ public abstract class BaseToolbarFragment extends FragmentImpl {
         mContentLayout.addView(onCreateContent(inflater, bundle), LayoutUtils.createFrame(-1, -1));
 
         return mRootView;
+    }
+
+    public Toolbar getToolbar() {
+        return mToolbar;
     }
 
     public abstract View onCreateContent(@NonNull LayoutInflater inflater, @Nullable Bundle bundle);
