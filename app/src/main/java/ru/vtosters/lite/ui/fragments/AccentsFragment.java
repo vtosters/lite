@@ -1,7 +1,9 @@
 package ru.vtosters.lite.ui.fragments;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -22,25 +24,32 @@ import java.util.Collections;
 import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class AccentsFragment extends MaterialPreferenceToolbarFragment {
     private static final int MAX_COLOR_STR_LEN = 7; // without transparency
     private static final String HEX = "0123456789abcdefABCDEF";
-
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(R.xml.empty);
 
-        final var colorPickerPreference = new Preference(requireContext());
-        colorPickerPreference.setTitle("Выбор акцента через HEX");
-        colorPickerPreference.setIcon(R.drawable.bg_accent_circle);
-        colorPickerPreference.setOnPreferenceClickListener(preference -> {
+        PreferencesUtil.addPreferenceCategory(this, "Выбор цвета");
+
+        PreferencesUtil.addPreferenceDrawable(this, "", "Выбор акцента через Hex", "Точная настройка цвета", ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.bg_accent_circle)), preference -> {
             showEditAccentColorDialog();
             return false;
         });
-        getPreferenceScreen().addPreference(colorPickerPreference);
+
+        PreferencesUtil.addPreferenceCategory(this, "Полезная информация");
+
+        PreferencesUtil.addPreference(this, "Внимание!", "Функция находится на стадии тестирования и могут наблюдаться ошибки", 0, null);
+
+        PreferencesUtil.addPreference(this, "Color-Hex", "Полезный ресурс со всевозможными hex-цветами", 0, preference -> {
+            requireContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://www.color-hex.com")));
+            return false;
+        });
     }
 
     void showEditAccentColorDialog() {
@@ -107,7 +116,8 @@ public class AccentsFragment extends MaterialPreferenceToolbarFragment {
 
     void changeAccentColor(String colorStr) {
         if (TextUtils.isEmpty(colorStr)) {
-            resetAccentColor();
+            ThemesUtils.setCustomAccentColor(0, false);
+            LifecycleUtils.restartApplicationWithTimer();
             return;
         }
         // fix color string length
@@ -123,10 +133,15 @@ public class AccentsFragment extends MaterialPreferenceToolbarFragment {
 
         ThemesUtils.setCustomAccentColor(color, false);
         ThemesCore.setThemedColors(color);
-        ThemesUtils.setTheme(ThemesUtils.getCurrentTheme(), requireActivity());
+        LifecycleUtils.restartApplicationWithTimer();
     }
 
     void resetAccentColor() {
-        changeAccentColor("#3f8ae0");
+        changeAccentColor("");
+    }
+
+    @Override
+    public int T4() {
+        return R.string.vtlthemes;
     }
 }
