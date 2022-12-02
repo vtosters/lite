@@ -21,8 +21,6 @@ public class ThemesCore {
     public static SparseBooleanArray ACCENT_THEME_ONLY_MILK_DARK = new SparseBooleanArray();
 
     private static boolean cachedAccents = false;
-
-    private static int wallDarkColor;
     private static int wallLightColor;
 
     static {
@@ -58,6 +56,10 @@ public class ThemesCore {
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_tab_active_indicator, false);
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_alternate_tab_active_indicator, false);
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.im_dropdown_arrow_tint, false);
+
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.im_bubble_wallpaper_outgoing, false);
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.im_bubble_outgoing, false);
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.im_bubble_outgoing_highlighted, false);
 
         ACCENT_THEME_ONLY_NOMILK.put(com.vtosters.lite.R.attr.im_dropdown_icon_color, false);
     }
@@ -106,25 +108,20 @@ public class ThemesCore {
         themedColors.put(com.vtosters.lite.R.attr.action_sheet_action_foreground, accentColor);
 
         // messages
-        wallDarkColor = ThemesUtils.darken(accentColor, 0.25f);
-        wallLightColor = ThemesUtils.lighten(accentColor, 0.25f);
-
         themedColors.put(com.vtosters.lite.R.attr.im_reply_separator, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.im_text_name, accentColor);
 
-        //themedColors.put(com.vtosters.lite.R.attr.im_ic_send_msg, accentColor);
+        wallLightColor = ThemesUtils.lighten(accentColor, 0.67f);
+
+        themedColors.put(com.vtosters.lite.R.attr.im_ic_send_msg, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.im_bubble_wallpaper_outgoing, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.im_bubble_outgoing, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.im_bubble_outgoing_highlighted, accentColor);
     }
 
     public static int getThemedAttr(Context context, @IdRes int attr) {
-        if (attr == com.vtosters.lite.R.attr.im_bubble_wallpaper_outgoing || attr == com.vtosters.lite.R.attr.im_bubble_outgoing) {
-            return (!ThemesUtils.isDarkTheme()) ? wallLightColor : wallDarkColor;
-        }
-
-        if (attr == com.vtosters.lite.R.attr.im_bubble_outgoing_highlighted) {
-            return (!ThemesUtils.isDarkTheme()) ? ThemesUtils.lighten(wallLightColor, 0.2f) : ThemesUtils.darken(wallDarkColor, 0.2f);
+        if (attr == com.vtosters.lite.R.attr.im_bubble_wallpaper_outgoing || attr == com.vtosters.lite.R.attr.im_bubble_outgoing || attr == com.vtosters.lite.R.attr.im_bubble_outgoing_highlighted) {
+            return wallLightColor;
         }
 
         return themedColors.get(attr);
