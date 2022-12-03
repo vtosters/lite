@@ -57,7 +57,7 @@ public class OTADownloader {
 
             var request = new DownloadManager.Request(uri);
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-            request.setTitle("Скачивание обновления");
+            request.setTitle(AndroidUtils.getString("downloading_update"));
             request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "VTLite-" + commitSHA + ".apk");
 
             var manager = (DownloadManager) AndroidUtils.getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE);

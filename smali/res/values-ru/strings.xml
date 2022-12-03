@@ -6319,4 +6319,10 @@
     <string name="promotedstickers_title">Не получать промостикеры</string>
     <string name="useOldAppVer_title">Использовать старый дизайн</string>
     <string name="useOldAppVer_summ">Работает \"как есть\". Могут быть ошибки</string>
+
+    <string name="downloading_update">Скачивание обновления</string>
+    <string name="sources">Источники</string>
+    <string name="businessDisabler_title">Отключить бизнес-уведомления</string>
+    <string name="accent_color_title">Цвет акцента</string>
+    <string name="accent_color_summ">Цвет акцента в приложении</string>
 </resources>

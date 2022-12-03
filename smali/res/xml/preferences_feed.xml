@@ -80,7 +80,7 @@
             android:key="whitelisted_filters_groups"
             android:title="@string/whitelisted_filters_groups_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Источники">
+    <PreferenceCategory android:title="@string/sources">
         <EditTextPreference
             android:defaultValue=""
             android:key="sourcenamefilter"

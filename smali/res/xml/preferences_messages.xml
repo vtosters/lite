@@ -68,7 +68,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="businessDisabler"
-            android:title="Отключить Бизнес-Уведомления" />
+            android:title="@string/businessDisabler_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="sendByEnter"
