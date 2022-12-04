@@ -84,9 +84,7 @@ public class TextViewHook implements BaseHook {
     }
 
     public static boolean isVkUiButton(View view) {
-        return !ThemesUtils.isDarkTheme() && (
-                view.getId() == R.id.empty_button
-        );
+        return !ThemesUtils.isDarkTheme() && (view.getId() == R.id.empty_button || view.getId() == R.id.button);
     }
 }
 

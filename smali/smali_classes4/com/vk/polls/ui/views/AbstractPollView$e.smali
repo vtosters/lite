@@ -160,6 +160,10 @@
 .method private final a(IF)Landroid/graphics/drawable/Drawable;
     .locals 1
 
+    invoke-static {p1}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorHexColor(I)I
+
+    move-result p1
+
     .line 11
     new-instance v0, Landroid/graphics/drawable/GradientDrawable;
 

@@ -1970,6 +1970,16 @@
     .line 36
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+
+    move-result p2
+
+    invoke-static {p2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
+
     goto :goto_2
 
     :cond_2
