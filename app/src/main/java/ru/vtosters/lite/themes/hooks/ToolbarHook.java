@@ -10,14 +10,15 @@ public class ToolbarHook implements BaseHook {
     public void inject(View view, int i, boolean z) {
 
         if (view instanceof Toolbar) {
+            var color = (ThemesUtils.isMilkshake() && !ThemesUtils.isDarkTheme()) ? ThemesUtils.getAccentColor() : ThemesUtils.getHeaderText();
             var menu = ((Toolbar) view).getMenu();
             for (int j = 0; j < menu.size(); ++j) {
                 var item = menu.getItem(j);
                 var icon = item.getIcon();
                 if (icon instanceof RecoloredDrawable)
-                    ((RecoloredDrawable) icon).a(ThemesUtils.getAccentColor());
+                    ((RecoloredDrawable) icon).a(color);
                 else
-                    icon = new RecoloredDrawable(icon, ThemesUtils.getAccentColor());
+                    icon = new RecoloredDrawable(icon, color);
                 item.setIcon(icon);
             }
         }
