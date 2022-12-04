@@ -1,14 +1,8 @@
 package ru.vtosters.lite.themes.hooks;
 
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
-
 import androidx.appcompat.widget.Toolbar;
-
 import com.vk.core.drawable.RecoloredDrawable;
-import com.vtosters.lite.R;
-
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ToolbarHook implements BaseHook {

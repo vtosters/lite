@@ -1261,7 +1261,7 @@
 .end method
 
 .method public static final a(Landroidx/appcompat/widget/Toolbar;Lkotlin/jvm/b/Functions2;)V
-    .locals 0
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1280,6 +1280,10 @@
     move-result-object p1
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setOnMenuItemClickListener(Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;)V
+
+    const v1, 0x0
+
+    invoke-static {p0, v1, v1}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
 
     return-void
 .end method
