@@ -6463,4 +6463,7 @@ May look like a fake leaving the online"</string>
     <string name="businessDisabler_title">Disable business notifications</string>
     <string name="accent_color_title">Accent color</string>
     <string name="accent_color_summ">Accent color in app</string>
+    <string name="change_accent_color">Change accent color</string>
+    <string name="select_palette">Select palette</string>
+    <string name="select_color">Select color</string>
 </resources>

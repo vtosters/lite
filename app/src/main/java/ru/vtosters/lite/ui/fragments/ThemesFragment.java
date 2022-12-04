@@ -107,12 +107,9 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     }
 
     void changeAccent() {
-        final var titles = new String[] {
-                "Advanced Color Picker by Martin Stone",
-                "From Palettes"
-        };
+        final var titles = AndroidUtils.getArray("accent_select_type");
         new VkAlertDialog.Builder(requireContext())
-                .setTitle("Change accent color")
+                .setTitle(AndroidUtils.getString("change_accent_color"))
                 .setItems(titles, (dialog, which) -> {
                     switch (which) {
                         case 0:
@@ -135,7 +132,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         final var colorPickerView = new ColorPickerView(requireContext());
         colorPickerView.setColor(ThemesUtils.getAccentColor());
         new VkAlertDialog.Builder(requireContext())
-                .setTitle("Select color")
+                .setTitle(AndroidUtils.getString("select_color"))
                 .setNegativeButton(R.string.cancel, null)
                 .setPositiveButton(R.string.select, (dialog, which) -> setAccentColor(colorPickerView.getColor()))
                 .setView(colorPickerView)
@@ -148,7 +145,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         for (int i = 0; i < titles.length; ++i)
             titles[i] = manager.getPalette(i).name;
         new VkAlertDialog.Builder(requireContext())
-                .setTitle("Select palette")
+                .setTitle(AndroidUtils.getString("select_palette"))
                 .setItems(titles, (dialog, which) ->
                         PalettesBottomSheetDialog.create(requireActivity(), manager.getPalette(which),
                                         (adapter, vtlcolor) -> setAccentColor(vtlcolor.color))
