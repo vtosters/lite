@@ -13,6 +13,8 @@ public class ColorReferences {
             Color.parseColor("#4986cc"), // azure_a400
             Color.parseColor("#528bcc"), // another light accent
             Color.parseColor("#71aaeb"), // vk_sky_300 (dark accent)
+            ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.button_muted_foreground_disabled),
+            ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.button_muted_foreground),
             Color.parseColor("#5181b8") // header_blue
     );
 

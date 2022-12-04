@@ -53,41 +53,33 @@ public class RecolorUtils {
             csl = context.getResources().getColorStateList(color);
         }
 
+        return themeCSL(csl);
+    } // Recolor ColorStateList
+
+    public static ColorStateList themeCSL(ColorStateList csl){
         try {
             int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
             int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);
+            int enabled = csl.getColorForState(new int[]{android.R.attr.state_enabled}, Color.BLACK);
+            int disabled = csl.getColorForState(new int[]{-android.R.attr.state_enabled}, Color.BLACK);
 
             boolean isUnselAccent = ColorReferences.isAccentedColor(unsel);
             boolean isSelAccent = ColorReferences.isAccentedColor(sel);
+            boolean isEnabledAccent = ColorReferences.isAccentedColor(enabled);
+            boolean isDisabledAccent = ColorReferences.isAccentedColor(disabled);
 
             if (isUnselAccent || isSelAccent) {
-
                 return new ColorStateList(new int[][]{
                         new int[]{android.R.attr.state_selected}, new int[]{-android.R.attr.state_selected}
                 }, new int[]{isSelAccent ? ThemesUtils.getAccentColor() : sel, isUnselAccent ? ThemesUtils.getAccentColor() : unsel});
             }
 
-            return csl;
-        } catch (Exception e) {
-
-            e.printStackTrace();
-            return null;
-        }
-    } // Recolor ColorStateList
-
-    public static ColorStateList themeCSL(ColorStateList csl){
-        try {
-            int unsel = csl.getColorForState(new int[] {-android.R.attr.state_selected}, Color.BLACK);
-            int sel = csl.getColorForState(new int[] {android.R.attr.state_selected}, Color.BLACK);
-
-            boolean isUnselAccent = ColorReferences.isAccentedColor(unsel);
-            boolean isSelAccent = ColorReferences.isAccentedColor(sel);
-
-            if (isUnselAccent || isSelAccent) {
-                return new ColorStateList(new int[][] {
-                        new int[] {android.R.attr.state_selected}, new int[] {-android.R.attr.state_selected}
-                }, new int[] {isSelAccent ? ThemesUtils.getAccentColor() : sel, isUnselAccent ? ThemesUtils.getAccentColor() : unsel});
+            if (isDisabledAccent || isEnabledAccent) {
+                return new ColorStateList(new int[][]{
+                        new int[]{android.R.attr.state_enabled}, new int[]{-android.R.attr.state_enabled}
+                }, new int[]{isEnabledAccent ? ThemesUtils.getAccentColor() : enabled, isDisabledAccent ? ThemesUtils.getAccentColor() : disabled});
             }
+
             return csl;
         } catch (Exception e) {
             e.printStackTrace();
