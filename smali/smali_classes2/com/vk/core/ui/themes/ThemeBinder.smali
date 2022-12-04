@@ -1678,9 +1678,7 @@
     new-array v0, v0, [I
 
     .line 43
-    sget v1, Lb/h/z/b;->accent:I
-
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v1
 

@@ -534,9 +534,7 @@
 
     .line 7
     :cond_3
-    sget p1, Lcom/vk/catalog2/core/l;->accent:I
-
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result p1
 

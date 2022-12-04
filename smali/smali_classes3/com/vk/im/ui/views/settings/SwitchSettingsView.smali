@@ -906,9 +906,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v2, Lcom/vk/im/ui/c;->accent:I
-
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v2
 

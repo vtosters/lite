@@ -177,10 +177,7 @@
 .method private final b()I
     .locals 1
 
-    .line 2
-    sget v0, Lb/h/t/b;->accent:I
-
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

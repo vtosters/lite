@@ -151,9 +151,7 @@
     new-array v1, v1, [I
 
     .line 2
-    sget v4, Lcom/vk/stickers/f;->accent:I
-
-    invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v4
 
@@ -223,9 +221,7 @@
     new-array v1, v1, [I
 
     .line 2
-    sget v4, Lcom/vk/stickers/f;->accent:I
-
-    invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v4
 

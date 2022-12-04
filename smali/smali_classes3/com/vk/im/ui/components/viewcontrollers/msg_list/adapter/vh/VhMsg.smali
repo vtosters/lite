@@ -3048,9 +3048,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->O:Landroid/graphics/drawable/Drawable;
 
-    sget v1, Lcom/vk/im/ui/c;->accent:I
-
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v1
 

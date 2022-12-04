@@ -107,9 +107,7 @@
     new-instance v28, Lcom/vk/im/engine/models/dialogs/BubbleColors;
 
     .line 19
-    sget v1, Lcom/vk/im/engine/h;->accent:I
-
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v2
 
@@ -286,9 +284,7 @@
     move-result v19
 
     .line 40
-    sget v1, Lcom/vk/im/engine/h;->accent:I
-
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v17
 
@@ -377,9 +373,7 @@
     invoke-direct {v7}, Landroid/util/SparseIntArray;-><init>()V
 
     .line 8
-    sget v8, Lcom/vk/im/engine/h;->accent:I
-
-    invoke-static {v6, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v9
 
