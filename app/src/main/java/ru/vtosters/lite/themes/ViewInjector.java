@@ -25,6 +25,7 @@ public class ViewInjector {
         hooks.add(new ToolbarHook());
         hooks.add(new VKImageViewHook());
         hooks.add(new ProgressWheelHook());
+        hooks.add(new ToolbarHook());
     }
 
     public static View inject(View view, int i, boolean z) {
