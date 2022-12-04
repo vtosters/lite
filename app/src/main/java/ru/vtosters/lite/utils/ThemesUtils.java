@@ -247,6 +247,11 @@ public class ThemesUtils {
         return new RecoloredDrawable(drawable, getAccentColor());
     } // Recolor drawable to accent color
 
+    public static Drawable recolorToolbarDrawable(Drawable drawable) {
+        if (drawable == null) return null;
+        return new RecoloredDrawable(drawable, (ThemesUtils.isMilkshake() && !ThemesUtils.isDarkTheme()) ? ThemesUtils.getAccentColor() : ThemesUtils.getHeaderText());
+    }
+
     public static void recolorTextView(TextView tw) {
         tw.getBackground().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_OVER);
     }
