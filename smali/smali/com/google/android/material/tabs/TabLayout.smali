@@ -294,6 +294,10 @@
 
     move-result v2
 
+    invoke-static {v2}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorHexColor(I)I
+
+    move-result v2
+
     .line 19
     invoke-virtual {p3, v2}, Lcom/google/android/material/tabs/TabLayout$f;->a(I)V
 
@@ -476,10 +480,18 @@
 
     move-result p3
 
+    invoke-static {p3}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorHexColor(I)I
+
+    move-result p3
+
     .line 49
     iget-object v2, p0, Lcom/google/android/material/tabs/TabLayout;->C:Landroid/content/res/ColorStateList;
 
     invoke-virtual {v2}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v2
+
+    invoke-static {v2}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorHexColor(I)I
 
     move-result v2
 
