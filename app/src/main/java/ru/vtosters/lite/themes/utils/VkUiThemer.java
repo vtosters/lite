@@ -72,6 +72,11 @@ public class VkUiThemer {
                     Log.d("TSCore", "[tsh:disabled] theming CSL");
                     spd.setTint(ThemesUtils.getAccentColor());
                 }
+
+                if (ColorReferences.isMutedAccentedColor(spd.getColor())) {
+                    Log.d("TSCore", "[tsh:disabled] theming CSL");
+                    spd.setTint(ThemesUtils.getMutedAccentColor());
+                }
             }
         } catch (Exception e) {
             // This must go wrong, so we ignore any exceptions that may occur

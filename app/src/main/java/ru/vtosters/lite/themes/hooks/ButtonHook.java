@@ -12,9 +12,14 @@ public class ButtonHook implements BaseHook {
     public void inject(View view, int i, boolean z) {
         if (view instanceof Button) {
             var button = (Button) view;
+            if (button.getBackgroundTintList() != null && ColorReferences.isMutedAccentedColor(button.getBackgroundTintList())) {
+                button.setBackgroundTintList(ColorStateList.valueOf(ThemesUtils.getMutedAccentColor()));
+            }
+
             if (button.getBackgroundTintList() != null && ColorReferences.isAccentedColor(button.getBackgroundTintList())) {
                 button.setBackgroundTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
             }
+
             if (TextViewHook.isPositiveButton(button) || TextViewHook.isVkUiButton(view)) {
                 button.setBackgroundTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
             }

@@ -96,7 +96,11 @@ public class ThemesUtils {
     } // Color accent
 
     public static int getMutedAccentColor() {
-        return ThemesUtils.halfAlpha(ThemesUtils.getAccentColor());
+        return getMutedAccentColor(getAccentColor());
+    }
+
+    public static int getMutedAccentColor(int color) {
+        return isDarkTheme() ? darken(color, 0.66f) : lighten(color, 0.66f);
     }
 
     public static void setCustomAccentColor(int newColor, boolean async) {
@@ -237,10 +241,6 @@ public class ThemesUtils {
                 color == R.color.toolbar_blue_statusBarColorBack ||
                 color == R.color.white_blue32;
     } // Accent colors
-
-    public static int replaceColor(int i){
-        return ColorReferences.isAccentedColor(i) ? getAccentColor() : i;
-    }
 
     public static void setImageViewColored(ImageView view){
         view.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.MULTIPLY);

@@ -52,9 +52,13 @@ public class ThemesHacks {
 
     public static int getHackedColor(@NonNull Context context, @ColorRes int color) {
         if (ThemesCore.isCachedAccents() && ColorReferences.isAccentedColor(context.getColor(color))) {
-            Log.d("ThemesHacks", "getHackedColor: got accent color: " + AndroidUtils.getResources().getResourceName(color));
             return ThemesUtils.getAccentColor();
         }
+
+        if (ThemesCore.isCachedAccents() && ColorReferences.isMutedAccentedColor(context.getColor(color))) {
+            return ThemesUtils.getMutedAccentColor();
+        }
+
         if (Build.VERSION.SDK_INT > 23) {
             return context.getColor(color);
         } else return context.getResources().getColor(color);

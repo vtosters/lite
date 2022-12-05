@@ -25,7 +25,8 @@ public class ColorReferences {
             Color.parseColor("#1a003973"),
             Color.parseColor("#a800244d"),
             Color.parseColor("#14001c3d"),
-            Color.parseColor("#3d001c3d")
+            Color.parseColor("#3d001c3d"),
+            Color.parseColor("#664986cc")
     );
 
     public static boolean isAccentedColor(ColorStateList target) {

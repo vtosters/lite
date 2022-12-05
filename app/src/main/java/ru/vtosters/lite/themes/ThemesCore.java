@@ -65,6 +65,8 @@ public class ThemesCore {
     }
 
     public static void setThemedColors(int accentColor) {
+        int mutedAccentColor = ThemesUtils.getMutedAccentColor(accentColor);
+
         cachedAccents = true;
         themedColors.clear();
 
@@ -89,6 +91,12 @@ public class ThemesCore {
         themedColors.put(com.vtosters.lite.R.attr.button_muted_foreground, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.header_tab_active_indicator, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.header_alternate_tab_active_indicator, accentColor);
+
+        themedColors.put(com.vtosters.lite.R.attr.button_primary_background_disabled, mutedAccentColor);
+        themedColors.put(com.vtosters.lite.R.attr.button_secondary_foreground_disabled, mutedAccentColor);
+        themedColors.put(com.vtosters.lite.R.attr.button_tertiary_foreground_disabled, mutedAccentColor);
+        themedColors.put(com.vtosters.lite.R.attr.button_outline_border_disabled, mutedAccentColor);
+        themedColors.put(com.vtosters.lite.R.attr.button_muted_foreground_disabled, mutedAccentColor);
 
         themedColors.put(com.vtosters.lite.R.attr.im_dropdown_icon_color, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.im_dropdown_arrow_tint, accentColor);

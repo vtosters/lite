@@ -29,8 +29,9 @@ public class RecolorUtils {
     } // Get res drawable via id and coloring to accent
 
     public static int recolorHexColor(int i){
-        Log.d("RecolorUtils", ThemesUtils.hex(i));
-        return ColorReferences.isAccentedColor(i) ? ThemesUtils.getAccentColor() : i;
+        var accented = ColorReferences.isAccentedColor(i);
+        var mutedaccented = ColorReferences.isMutedAccentedColor(i);
+        return (accented || mutedaccented) ? (accented ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : i;
     }
 
     public static ColorStateList recolorCSL(ColorStateList colorStateList) {
@@ -68,16 +69,21 @@ public class RecolorUtils {
             boolean isEnabledAccent = ColorReferences.isAccentedColor(enabled);
             boolean isDisabledAccent = ColorReferences.isAccentedColor(disabled);
 
-            if (isUnselAccent || isSelAccent) {
+            boolean isUnselMutedAccent = ColorReferences.isMutedAccentedColor(unsel);
+            boolean isSelMutedAccent = ColorReferences.isMutedAccentedColor(sel);
+            boolean isEnabledMutedAccent = ColorReferences.isMutedAccentedColor(enabled);
+            boolean isDisabledMutedAccent = ColorReferences.isMutedAccentedColor(disabled);
+
+            if (isUnselAccent || isSelAccent || isUnselMutedAccent || isSelMutedAccent) {
                 return new ColorStateList(new int[][]{
                         new int[]{android.R.attr.state_selected}, new int[]{-android.R.attr.state_selected}
-                }, new int[]{isSelAccent ? ThemesUtils.getAccentColor() : sel, isUnselAccent ? ThemesUtils.getAccentColor() : unsel});
+                }, new int[]{(isSelAccent || isSelMutedAccent) ? (isSelAccent ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : sel, (isUnselAccent || isUnselMutedAccent) ? (isUnselAccent ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : unsel});
             }
 
-            if (isDisabledAccent || isEnabledAccent) {
+            if (isDisabledAccent || isEnabledAccent || isEnabledMutedAccent || isDisabledMutedAccent) {
                 return new ColorStateList(new int[][]{
                         new int[]{android.R.attr.state_enabled}, new int[]{-android.R.attr.state_enabled}
-                }, new int[]{isEnabledAccent ? ThemesUtils.getAccentColor() : enabled, isDisabledAccent ? ThemesUtils.getAccentColor() : disabled});
+                }, new int[]{(isEnabledAccent || isEnabledMutedAccent) ? (isEnabledAccent ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : enabled, (isDisabledAccent || isDisabledMutedAccent) ? (isDisabledAccent ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : disabled});
             }
 
             return csl;

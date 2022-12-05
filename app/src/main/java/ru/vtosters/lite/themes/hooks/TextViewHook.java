@@ -32,14 +32,26 @@ public class TextViewHook implements BaseHook {
                 textView.setTextColor(ThemesUtils.getAccentColor());
             }
 
+            if (ColorReferences.isMutedAccentedColor(textView.getCurrentTextColor())) {
+                textView.setTextColor(ThemesUtils.getMutedAccentColor());
+            }
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && textView.getCompoundDrawableTintList() != null) {
                 if (ColorReferences.isAccentedColor(textView.getCompoundDrawableTintList())) {
                     textView.setCompoundDrawableTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
+                }
+
+                if (ColorReferences.isMutedAccentedColor(textView.getCompoundDrawableTintList())) {
+                    textView.setCompoundDrawableTintList(ColorStateList.valueOf(ThemesUtils.getMutedAccentColor()));
                 }
             }
 
             if (textView.getLinkTextColors() != null && ColorReferences.isAccentedColor(textView.getLinkTextColors())) {
                 textView.setLinkTextColor(ThemesUtils.getAccentColor());
+            }
+
+            if (textView.getLinkTextColors() != null && ColorReferences.isMutedAccentedColor(textView.getLinkTextColors())) {
+                textView.setLinkTextColor(ThemesUtils.getMutedAccentColor());
             }
 
             if (isPositiveButton(textView) || isVkUiButton(textView)) {
@@ -59,6 +71,11 @@ public class TextViewHook implements BaseHook {
                 if (eligibleForStartTinting((TintTextView) view)) {
                     ((TintTextView) view).setDrawableStartTint(ThemesUtils.getAccentColor());
                 }
+
+                if (eligibleForStartTintingMuted((TintTextView) view)) {
+                    ((TintTextView) view).setDrawableStartTint(ThemesUtils.getMutedAccentColor());
+                }
+
                 if (eligibleForTinting(view.getId())) {
                     ((TintTextView) view).setDrawableTint(ThemesUtils.getAccentColor());
                 }
@@ -77,6 +94,10 @@ public class TextViewHook implements BaseHook {
                 if (ColorReferences.isAccentedColor(check.getCheckMarkTintList())) {
                     check.setCheckMarkTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
                 }
+
+                if (ColorReferences.isMutedAccentedColor(check.getCheckMarkTintList())) {
+                    check.setCheckMarkTintList(ColorStateList.valueOf(ThemesUtils.getMutedAccentColor()));
+                }
             }
 
             VkUiThemer.autoThemeVkuiButtons(textView);
@@ -87,6 +108,10 @@ public class TextViewHook implements BaseHook {
 
     public static boolean eligibleForStartTinting(TintTextView view) {
         return ColorReferences.isAccentedColor(view.getTextColors()) || view.getTextColors().getDefaultColor() == ThemesUtils.getAccentColor();
+    }
+
+    public static boolean eligibleForStartTintingMuted(TintTextView view) {
+        return ColorReferences.isMutedAccentedColor(view.getTextColors()) || view.getTextColors().getDefaultColor() == ThemesUtils.getMutedAccentColor();
     }
 
     public static boolean eligibleForTinting(int id) {
