@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.wallpapers;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
-import static ru.vtosters.lite.utils.AndroidUtils.getResources;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -10,29 +9,21 @@ import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.graphics.Matrix;
 import android.graphics.Paint;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.util.Log;
 
 import com.vk.medianative.MediaNative;
 
 interface ImageEffect {
-    Drawable apply(Drawable input);
+    Bitmap apply(Bitmap input);
 }
 
 class BlurEffect implements ImageEffect {
 
     @Override
-    public Drawable apply(Drawable input) {
+    public Bitmap apply(Bitmap input) {
         try {
-            if (input == null) return null;
-            if (!(input instanceof BitmapDrawable)) return input; // we need only BitmapDrawable
-            Bitmap bm = ((BitmapDrawable) input).getBitmap();
-
-            Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
-
-            MediaNative.blurBitmap(instance, getRadius());
-            return new BitmapDrawable(getResources(), instance);
+            MediaNative.blurBitmap(input, getRadius());
+            return input;
         } catch (Exception e) {
             e.printStackTrace();
             return input;
@@ -55,19 +46,16 @@ class BlurEffect implements ImageEffect {
 class DimEffect implements ImageEffect {
 
     @Override
-    public Drawable apply(Drawable input) {
-        Bitmap bm = ((BitmapDrawable) input).getBitmap();
-
-        Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
+    public Bitmap apply(Bitmap input) {
 
         String radius = getPreferences().getString("msg_dim", "disabled");
         switch (radius) {
             case "dim_black":
-                darken(instance);
+                darken(input);
             case "dim_white":
-                lighten(instance);
+                lighten(input);
         }
-        return new BitmapDrawable(getResources(), instance);
+        return input;
     }
 
     private void darken(Bitmap bm) {
@@ -98,11 +86,8 @@ class DimEffect implements ImageEffect {
 class MosaicEffect implements ImageEffect {
 
     @Override
-    public Drawable apply(Drawable input) {
+    public Bitmap apply(Bitmap input) {
         int scale = 100;
-        Bitmap bm = ((BitmapDrawable) input).getBitmap();
-
-        Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
 
         String radius = getPreferences().getString("msg_mosaic", "disabled");
 
@@ -117,27 +102,20 @@ class MosaicEffect implements ImageEffect {
                 scale = 75;
         }
 
-        Bitmap temp = Bitmap.createScaledBitmap(instance, scale, scale, false);
-        Bitmap mosaicBitmap = Bitmap.createScaledBitmap(temp, instance.getWidth(), instance.getHeight(), false);
-
-        return new BitmapDrawable(getResources(), mosaicBitmap);
-
+        Bitmap temp = Bitmap.createScaledBitmap(input, scale, scale, false);
+        return Bitmap.createScaledBitmap(temp, input.getWidth(), input.getHeight(), false);
     }
 }
 
 class MonochromeEffect implements ImageEffect {
 
     @Override
-    public Drawable apply(Drawable input) {
-        Bitmap bm = ((BitmapDrawable) input).getBitmap();
-
-        Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
-
-        Bitmap bwBitmap = Bitmap.createBitmap(instance.getWidth(), instance.getHeight(), Bitmap.Config.RGB_565);
+    public Bitmap apply(Bitmap input) {
+        Bitmap bwBitmap = Bitmap.createBitmap(input.getWidth(), input.getHeight(), Bitmap.Config.RGB_565);
         float[] hsv = new float[3];
-        for (int col = 0; col < instance.getWidth(); col++) {
-            for (int row = 0; row < instance.getHeight(); row++) {
-                Color.colorToHSV(instance.getPixel(col, row), hsv);
+        for (int col = 0; col < input.getWidth(); col++) {
+            for (int row = 0; row < input.getHeight(); row++) {
+                Color.colorToHSV(input.getPixel(col, row), hsv);
                 if (hsv[2] > 0.5f) {
                     bwBitmap.setPixel(col, row, 0xffffffff);
                 } else {
@@ -145,7 +123,6 @@ class MonochromeEffect implements ImageEffect {
                 }
             }
         }
-
-        return new BitmapDrawable(getResources(), bwBitmap);
+        return bwBitmap;
     }
 }

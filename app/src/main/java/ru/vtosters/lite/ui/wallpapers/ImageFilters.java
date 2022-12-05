@@ -17,57 +17,51 @@ public class ImageFilters {
         if (orig == null) return null;
         if (!(orig instanceof BitmapDrawable)) return orig;
 
+        Bitmap bitmap = ((BitmapDrawable) orig).getBitmap();
+        bitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
+
         if (!getPreferences().getString("msg_blur_radius", "disabled").equals("disabled")) {
-            orig = new BlurEffect().apply(orig);
+            bitmap = new BlurEffect().apply(bitmap);
         }
 
         if (!getPreferences().getString("msg_dim", "off").equals("off")) {
-            orig = new DimEffect().apply(orig);
+            bitmap = new DimEffect().apply(bitmap);
         }
 
         if (!getPreferences().getString("msg_mosaic", "disabled").equals("disabled")) {
-            orig = new MosaicEffect().apply(orig);
+            bitmap = new MosaicEffect().apply(bitmap);
         }
 
         if (getPreferences().getBoolean("msg_monochrome", false)) {
-            orig = new MonochromeEffect().apply(orig);
+            bitmap = new MonochromeEffect().apply(bitmap);
         }
 
-        Bitmap bm;
-
-        if (orig != null) {
-            bm = ((BitmapDrawable) orig).getBitmap();
-        } else {
-            return null;
-        }
-
-        Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
 
         if (getPreferences().getBoolean("msg_invert", false)) {
-            instance = applyInvertEffect(instance);
+            bitmap = applyInvertEffect(bitmap);
         }
 
         if (getPreferences().getBoolean("msg_sepia", false)) {
-            instance = applySepiaEffect(instance);
+            bitmap = applySepiaEffect(bitmap);
         }
 
         if (getPreferences().getBoolean("msg_emboss", false)) {
-            instance = applyEmbossEffect(instance);
+            bitmap = applyEmbossEffect(bitmap);
         }
 
         if (getPreferences().getBoolean("msg_engrave", false)) {
-            instance = applyEngraveEffect(instance);
+            bitmap = applyEngraveEffect(bitmap);
         }
 
         if (getPreferences().getBoolean("msg_flea", false)) {
-            instance = applyFleaEffect(instance);
+            bitmap = applyFleaEffect(bitmap);
         }
 
         if (getPreferences().getBoolean("msg_snow", false)) {
-            instance = applySnowEffect(instance);
+            bitmap = applySnowEffect(bitmap);
         }
 
-        return new BitmapDrawable(getResources(), instance);
+        return new BitmapDrawable(getResources(), bitmap);
     }
 
 
