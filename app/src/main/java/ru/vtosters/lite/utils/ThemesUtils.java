@@ -26,6 +26,7 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.themes.ColorReferences;
+import ru.vtosters.lite.themes.ThemesHacks;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
 import static ru.vtosters.lite.hooks.VKUIHook.isLoaded;
@@ -290,22 +291,8 @@ public class ThemesUtils {
         return ColorUtils.setAlphaComponent(src, 169);
     }
 
-    public static int getColor(Context context, int i) {
-        if (isColorRefAccented(i)) {
-            return getAccentColor();
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            return context.getColor(i);
-        } else {
-            return context.getResources().getColor(i);
-        }
-    } // Android Support color injector + accent color checker
-
     public static int getColor(int i) {
-        if (isColorRefAccented(i)) {
-            return getAccentColor();
-        }
-        return getResources().getColor(i);
+        return ThemesHacks.getHackedColor(getGlobalContext(), i);
     } // Android Support color injector + accent color checker
 
     public static int getAlertStyle() {
