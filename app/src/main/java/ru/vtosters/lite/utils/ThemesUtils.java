@@ -95,6 +95,10 @@ public class ThemesUtils {
         return accent == 0 ? getColorFromAttr(R.attr.accent) : accent;
     } // Color accent
 
+    public static int getMutedAccentColor() {
+        return ThemesUtils.halfAlpha(ThemesUtils.getAccentColor());
+    }
+
     public static void setCustomAccentColor(int newColor, boolean async) {
         var editor = AndroidUtils.edit().putInt("accent_color", newColor);
         if (async) editor.apply();

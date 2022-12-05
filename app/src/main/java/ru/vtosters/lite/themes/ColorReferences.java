@@ -13,9 +13,19 @@ public class ColorReferences {
             Color.parseColor("#4986cc"), // azure_a400
             Color.parseColor("#528bcc"), // another light accent
             Color.parseColor("#71aaeb"), // vk_sky_300 (dark accent)
-            ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.button_muted_foreground_disabled),
-            ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.button_muted_foreground),
             Color.parseColor("#5181b8") // header_blue
+    );
+
+    public static List<Integer> mutedAccentColors = Arrays.asList(
+            Color.parseColor("#663f8ae0"),
+            Color.parseColor("#19528bcc"),
+            Color.parseColor("#66528bcc"),
+            Color.parseColor("#1971aaeb"),
+            Color.parseColor("#665181b8"),
+            Color.parseColor("#1a003973"),
+            Color.parseColor("#a800244d"),
+            Color.parseColor("#14001c3d"),
+            Color.parseColor("#3d001c3d")
     );
 
     public static boolean isAccentedColor(ColorStateList target) {
@@ -24,6 +34,14 @@ public class ColorReferences {
 
     public static boolean isAccentedColor(int target) {
         return accentColors.contains(target);
+    }
+
+    public static boolean isMutedAccentedColor(ColorStateList target) {
+        return target != null && isMutedAccentedColor(target.getDefaultColor());
+    }
+
+    public static boolean isMutedAccentedColor(int target) {
+        return mutedAccentColors.contains(target);
     }
 
     public static boolean isColorRefAccented(int target) {
