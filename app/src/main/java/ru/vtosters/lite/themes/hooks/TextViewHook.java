@@ -62,6 +62,10 @@ public class TextViewHook implements BaseHook {
                 if (eligibleForTinting(view.getId())) {
                     ((TintTextView) view).setDrawableTint(ThemesUtils.getAccentColor());
                 }
+
+                if (eligibleForTinting(view.getId())) {
+                    ((TintTextView) view).setDrawableStartTint(ThemesUtils.getAccentColor());
+                }
             }
 
             if (view instanceof LinkedTextView) {
@@ -86,7 +90,7 @@ public class TextViewHook implements BaseHook {
     }
 
     public static boolean eligibleForTinting(int id) {
-        return !ThemesUtils.isDarkTheme() && (id == R.id.attach_title);
+        return !ThemesUtils.isDarkTheme() && (id == R.id.attach_title || id == R.id.post_retweet_name);
     }
 
     public static boolean isPositiveButton(View view) {
