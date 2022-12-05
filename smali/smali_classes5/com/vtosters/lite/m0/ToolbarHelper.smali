@@ -20,10 +20,6 @@
     invoke-virtual {p1, p0}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    const v1, 0x0
-
-    invoke-static {p1, v1, v1}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
-
     return-void
 .end method
 
