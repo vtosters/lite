@@ -1188,9 +1188,9 @@
     aput v1, v0, v3
 
     .line 84
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    sget v1, Lb/h/z/b;->accent:I
 
-    move-result v1
+    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
     invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
@@ -1212,9 +1212,9 @@
     aput v1, v0, v2
 
     .line 86
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    sget v1, Lb/h/z/b;->accent:I
 
-    move-result v1
+    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
     const/4 v2, 0x3
 
@@ -2607,9 +2607,9 @@
     aput v1, v0, v2
 
     .line 2
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    sget v1, Lb/h/z/b;->accent:I
 
-    move-result v1
+    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
     const v2, 0x3df5c28f    # 0.12f
 
@@ -2633,9 +2633,9 @@
     aput v1, v0, v2
 
     .line 4
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    sget v1, Lb/h/z/b;->accent:I
 
-    move-result v1
+    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
     const v2, 0x3ef5c28f    # 0.48f
 

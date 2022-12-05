@@ -7,12 +7,6 @@
 .method public static final a(Lcom/vk/im/engine/models/dialogs/DialogTheme;)I
     .locals 2
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
-
-    move-result p0
-
-    return p0
-    
     .line 1
     invoke-static {}, Lcom/vk/core/ui/themes/VKThemeHelper;->l()Lcom/vk/core/ui/themes/VKTheme;
 
