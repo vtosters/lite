@@ -43,15 +43,15 @@ public class VkUiThemer {
                     GradientDrawable spd = (GradientDrawable) currentTarget;
                     if (spd.getShape() != GradientDrawable.RECTANGLE) continue;
 
-                    Log.d("TSCore", "[tsh] got a color!");
+//                    Log.d("TSCore", "[tsh] got a color!");
 
                     ColorStateList csl = spd.getColor();
-                    if (csl != null) {
-                        Log.d("TSCore", "[tsh] csl2 <def: " + csl.getDefaultColor() + " = " + ThemesUtils.hex(csl.getDefaultColor()) + "> | " + csl);
-                    }
+//                    if (csl != null) {
+//                        Log.d("TSCore", "[tsh] csl2 <def: " + csl.getDefaultColor() + " = " + ThemesUtils.hex(csl.getDefaultColor()) + "> | " + csl);
+//                    }
 
                     if (ColorReferences.isAccentedColor(spd.getColor())) {
-                        Log.d("TSCore", "[tsh] theming CSL");
+//                        Log.d("TSCore", "[tsh] theming CSL");
                         spd.setTint(ThemesUtils.getAccentColor());
                     }
                 }
@@ -61,20 +61,20 @@ public class VkUiThemer {
                 GradientDrawable spd = (GradientDrawable) draw2;
                 if (spd.getShape() != GradientDrawable.RECTANGLE) return;
 
-                Log.d("TSCore", "[tsh:disabled] got a color!");
+//                Log.d("TSCore", "[tsh:disabled] got a color!");
 
                 ColorStateList csl = spd.getColor();
-                if (csl != null) {
-                    Log.d("TSCore", "[tsh:disabled] csl2 <def: " + csl.getDefaultColor() + " = " + ThemesUtils.hex(csl.getDefaultColor()) + "> | " + csl);
-                }
+//                if (csl != null) {
+//                    Log.d("TSCore", "[tsh:disabled] csl2 <def: " + csl.getDefaultColor() + " = " + ThemesUtils.hex(csl.getDefaultColor()) + "> | " + csl);
+//                }
 
                 if (ColorReferences.isAccentedColor(spd.getColor())) {
-                    Log.d("TSCore", "[tsh:disabled] theming CSL");
+//                    Log.d("TSCore", "[tsh:disabled] theming CSL");
                     spd.setTint(ThemesUtils.getAccentColor());
                 }
 
                 if (ColorReferences.isMutedAccentedColor(spd.getColor())) {
-                    Log.d("TSCore", "[tsh:disabled] theming CSL");
+//                    Log.d("TSCore", "[tsh:disabled] theming CSL");
                     spd.setTint(ThemesUtils.getMutedAccentColor());
                 }
             }

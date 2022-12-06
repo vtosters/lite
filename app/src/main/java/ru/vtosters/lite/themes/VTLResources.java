@@ -39,7 +39,7 @@ public class VTLResources extends Resources {
     public VTLResources(Context context, Resources parent) {
         super(parent.getAssets(), parent.getDisplayMetrics(), parent.getConfiguration());
         this.context = context;
-        Log.d(TAG, "VTLResources: init");
+//        Log.d(TAG, "VTLResources: init");
     }
 
     @Override

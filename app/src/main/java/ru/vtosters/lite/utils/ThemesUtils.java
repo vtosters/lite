@@ -1,7 +1,6 @@
 package ru.vtosters.lite.utils;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -11,12 +10,13 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.graphics.ColorUtils;
+import androidx.core.graphics.drawable.DrawableCompat;
 import com.vk.articles.preload.WebCachePreloader;
 import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.preference.Preference;
@@ -25,14 +25,11 @@ import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
-import ru.vtosters.lite.themes.ColorReferences;
+import ru.vtosters.lite.hooks.VKUIHook;
 import ru.vtosters.lite.themes.ThemesHacks;
+import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
 
-import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-import static ru.vtosters.lite.hooks.VKUIHook.isLoaded;
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
 import static ru.vtosters.lite.utils.AndroidUtils.*;
-import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
 import static ru.vtosters.lite.utils.Preferences.*;
 
 public class ThemesUtils {
@@ -63,26 +60,26 @@ public class ThemesUtils {
 
     public static void setTheme(VKTheme theme, Activity activity) {
         if (activity == null) {
-            activity = getCurrentActivity();
+            activity = LifecycleUtils.getCurrentActivity();
 
             if (activity == null) return;
         }
         VKThemeHelper.theme(theme, activity, getCenterScreenCoords());
         ThemeTracker.a();
-        isLoaded = false;
+        VKUIHook.isLoaded = false;
         new WebView(activity).clearCache(true);
         WebCachePreloader.e();
     } // apply changed theme
 
     public static void setThemeFL(VKTheme theme, Activity activity, float[] fl) {
         if (activity == null) {
-            activity = getCurrentActivity();
+            activity = LifecycleUtils.getCurrentActivity();
 
             if (activity == null) return;
         }
         VKThemeHelper.theme(theme, activity, fl);
         ThemeTracker.a();
-        isLoaded = false;
+        VKUIHook.isLoaded = false;
         new WebView(activity).clearCache(true);
         WebCachePreloader.e();
     }
@@ -143,7 +140,7 @@ public class ThemesUtils {
     }
 
     public static int getNeededColorNavbar() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? isDarkTheme() ? SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? isDarkTheme() ? View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
     }
 
     public static int getDarkThemeRes() {
@@ -178,70 +175,32 @@ public class ThemesUtils {
         return MilkshakeHelper.e();
     }
 
-    public static boolean isColorRefAccented(int color) {
-        return color == R.color.viewer_retry_button_text_color ||
-                color == R.color.azure_300 ||
-                color == R.color.light_blue_old ||
-                color == R.color.picker_camera_button ||
-                color == R.color.music_check_button_bg_pressed ||
-                color == R.color.notification_color ||
-                color == R.color.music_text_counter ||
-                color == R.color.music_follow_button_bg_pressed ||
-                color == R.color.music_blue_button_normal ||
-                color == R.color.music_check_button_bg_normal ||
-                color == R.color.vk_terms_link ||
-                color == R.color.vk_blue_200_muted ||
-                color == R.color.vk_blue_200 ||
-                color == R.color.accent_blue ||
-                color == R.color.azure_A400 ||
-                color == R.color.vk_azure_A400 ||
-                color == R.color.blue ||
-                color == R.color.blue_200 ||
-                color == R.color.blue_200_muted ||
-                color == R.color.vk_blue_300 ||
-                color == R.color.vk_blue_400 ||
-                color == R.color.blue_300 ||
-                color == R.color.blue_400 ||
-                color == R.color.cool_blue ||
-                color == R.color.cornflower_blue ||
-                color == R.color.cornflower_blue_two ||
-                color == R.color.dot_unread ||
-                color == R.color.fave_promo_btn_pressed ||
-                color == R.color.header_blue ||
-                color == R.color.colorAccent ||
-                color == R.color.blue_gray ||
-                color == R.color.light_blue ||
-                color == R.color.light_blue_gray ||
-                color == R.color.live_emoji_butt_hide ||
-                color == R.color.music_action_button_blue ||
-                color == R.color.name ||
-                color == R.color.picker_blue ||
-                color == R.color.picker_blue_pressed ||
-                color == R.color.picker_tab_bg_selected ||
-                color == R.color.picker_tab_text_selected ||
-                color == R.color.sharing_blue_btn_normal ||
-                color == R.color.sharing_blue_btn_pressed ||
-                color == R.color.vk_sky_300 ||
-                color == R.color.vk_blue_A400 ||
-                color == R.color.blue_A400 ||
-                color == R.color.sky_300 ||
-                color == R.color.muted_blue ||
-                color == R.color.muted_blue_old ||
-                color == R.color.text_blue ||
-                color == R.color.tip_background ||
-                color == R.color.tw__blue_default ||
-                color == R.color.tw__blue_pressed ||
-                color == R.color.vkim_msg_sending_ic ||
-                color == R.color.vkim_playing_drawable_rect ||
-                color == R.color.vk_white_blue32 ||
-                color == R.color.date_picker_selector ||
-                color == R.color.post_suggest_blue ||
-                color == R.color.list_dialog_blue ||
-                color == R.color.music_tab_bg_normal ||
-                color == R.color.toolbar_blue_background ||
-                color == R.color.toolbar_blue_statusBarColorBack ||
-                color == R.color.white_blue32;
-    } // Accent colors
+    private static int[] p() {
+        int[] iArr = new int[4];
+        iArr[0] = getColor(isDarkTheme() ? R.color.gray_800 : R.color.white);
+        iArr[1] = getColor(isDarkTheme() ? R.color.switch_disabled_on_dark : R.color.switch_disabled_on_light);
+        iArr[2] = getColor(R.color.gray_20);
+        iArr[3] = getAccentColor();
+        return iArr;
+    }
+
+    private static int[][] f() {
+        return new int[][]{new int[]{-16842910, -16842912}, new int[]{-16842910, 16842912}, new int[]{-16842912}, new int[]{16842912}};
+    }
+
+    private static int[] q() {
+        return new int[]{VKThemeHelper.d(R.attr.loader_track_fill), getMutedAccentColor(), VKThemeHelper.d(R.attr.loader_track_fill), getMutedAccentColor()};
+    }
+
+    public static void setSwitch(SwitchCompat switchCompat) {
+        DrawableCompat.setTintList(DrawableCompat.wrap(switchCompat.getThumbDrawable()), new ColorStateList(f(), p()));
+        DrawableCompat.setTintList(DrawableCompat.wrap(switchCompat.getTrackDrawable()), new ColorStateList(f(), q()));
+    }
+
+    public static void setSwitch(Switch aSwitch) {
+        DrawableCompat.setTintList(DrawableCompat.wrap(aSwitch.getThumbDrawable()), new ColorStateList(f(), p()));
+        DrawableCompat.setTintList(DrawableCompat.wrap(aSwitch.getTrackDrawable()), new ColorStateList(f(), q()));
+    }
 
     public static void setImageViewColored(ImageView view){
         view.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.MULTIPLY);
@@ -300,7 +259,7 @@ public class ThemesUtils {
     }
 
     public static String getBackgroundStickers() {
-        if (getWallpaper() != null) {
+        if (WallpapersHooks.getWallpaper() != null) {
             return "images_with_background";
         }
         return "images";

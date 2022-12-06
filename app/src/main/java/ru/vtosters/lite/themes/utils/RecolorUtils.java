@@ -6,10 +6,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-
-import android.util.Log;
 import com.vk.core.drawable.RecoloredDrawable;
-
 import ru.vtosters.lite.themes.ColorReferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
@@ -44,6 +41,8 @@ public class RecolorUtils {
     public static ColorStateList themeCSL(Context context, int color) {
         if (ColorReferences.isColorRefAccented(color)) {
             return ColorStateList.valueOf(ThemesUtils.getAccentColor());
+        } else if (ColorReferences.isColorRefMutedAccented(color)) {
+            return ColorStateList.valueOf(ThemesUtils.getMutedAccentColor());
         }
 
         ColorStateList csl;

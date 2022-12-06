@@ -136,10 +136,10 @@ public class ThemesCore {
     }
 
     public static boolean hasThemedAttr(Context context, int attrID) {
-        try {
-            Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
-        } catch (Exception e) {
-        }
+//        try {
+//            Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
+//        } catch (Exception e) {
+//        }
 
         if (isCachedAccents()) {
             if (!ThemesUtils.isDarkTheme()) {

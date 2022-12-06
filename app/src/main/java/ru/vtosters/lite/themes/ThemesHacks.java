@@ -1,24 +1,14 @@
 package ru.vtosters.lite.themes;
 
 import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.DrawableContainer;
-import android.graphics.drawable.InsetDrawable;
-import android.graphics.drawable.LayerDrawable;
-import android.graphics.drawable.StateListDrawable;
+import android.graphics.drawable.*;
 import android.os.Build;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.annotation.ColorRes;
 import androidx.annotation.NonNull;
-
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.themes.utils.RecolorUtils;
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ThemesHacks {
