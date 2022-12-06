@@ -21,7 +21,7 @@ public class SSFSUtils {
                 "&lang=" + getLocale() +
                 "&vt=1&vksans=" + isVKSansEnabled() +
                 "&vt_version=" + getBuildNumber() +
-                "&useragent=" + Base64Utils.encode(Network.l.c().a()) +
+                "&useragent=" + Base64Utils.encodeValue(Base64Utils.encode(Network.l.c().a()) +
                 "&vt_debug=" + isDEVModEnabled();
     }
 
