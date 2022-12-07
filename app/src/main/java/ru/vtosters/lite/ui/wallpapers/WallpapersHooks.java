@@ -136,7 +136,7 @@ public class WallpapersHooks {
     }
 
     public static String getRadiusSummary() {
-        String radius = getPreferences().getString("msg_blur_radius", "disabled");
+        String radius = getPreferences().getString(ImageEffects.Blur.toString(), "disabled");
         switch (radius) {
             case "low":
                 return AndroidUtils.getString(R.string.wallpapers_low);
@@ -150,7 +150,7 @@ public class WallpapersHooks {
     }
 
     public static String getDimmingSummary() {
-        String radius = getPreferences().getString("msg_dim", "disabled");
+        String radius = getPreferences().getString(ImageEffects.Dim.toString(), "disabled");
         switch (radius) {
             case "dim_black":
                 return AndroidUtils.getString(R.string.wallpapers_dim_black);
@@ -162,7 +162,7 @@ public class WallpapersHooks {
     }
 
     public static String getMosaicSummary() {
-        String radius = getPreferences().getString("msg_mosaic", "disabled");
+        String radius = getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled");
         switch (radius) {
             case "low":
                 return AndroidUtils.getString(R.string.wallpapers_low);

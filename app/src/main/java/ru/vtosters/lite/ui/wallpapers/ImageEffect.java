@@ -12,9 +12,32 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+
 import com.vk.medianative.MediaNative;
 
 import java.util.Random;
+
+enum ImageEffects {
+    Blur,
+    Dim,
+    Mosaic,
+    Monochrome,
+    Invert,
+    Sepia,
+    Emboss,
+    Engrave,
+    Flea,
+    Snow;
+
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "msg_" + super.toString();
+    }
+}
+
 
 interface ImageEffect {
     Bitmap apply(Bitmap input);
@@ -34,7 +57,7 @@ class BlurEffect implements ImageEffect {
     }
 
     private int getRadius() {
-        String radius = getPreferences().getString("msg_blur_radius", "disabled");
+        String radius = getPreferences().getString(ImageEffects.Blur.toString(), "disabled");
         switch (radius) {
             case "low":
                 return 8;
@@ -50,38 +73,24 @@ class DimEffect implements ImageEffect {
 
     @Override
     public Bitmap apply(Bitmap input) {
-
-        String radius = getPreferences().getString("msg_dim", "disabled");
+        String radius = getPreferences().getString(ImageEffects.Dim.toString(), "disabled");
         switch (radius) {
             case "dim_black":
-                darken(input);
+                dimImage(input, new LightingColorFilter(0xFF7F7F7F, 0x00000000));  // darken
             case "dim_white":
-                lighten(input);
+                dimImage(input, new LightingColorFilter(0xFFFFFFFF, 0x00222222)); // lighten
         }
         return input;
     }
 
-    private void darken(Bitmap bm) {
+    private void dimImage(Bitmap bm, ColorFilter filter) {
         try {
             Canvas canvas = new Canvas(bm);
             Paint p = new Paint(Color.RED);
-            ColorFilter filter = new LightingColorFilter(0xFF7F7F7F, 0x00000000);    // darken
             p.setColorFilter(filter);
             canvas.drawBitmap(bm, new Matrix(), p);
         } catch (Exception e) {
             Log.d("WallpaperD", e.getMessage());
-        }
-    }
-
-    private void lighten(Bitmap bm) {
-        try {
-            Canvas canvas = new Canvas(bm);
-            Paint p = new Paint(Color.RED);
-            ColorFilter filter = new LightingColorFilter(0xFFFFFFFF, 0x00222222); // lighten
-            p.setColorFilter(filter);
-            canvas.drawBitmap(bm, new Matrix(), p);
-        } catch (Exception e) {
-            Log.d("WallpaperL", e.getMessage());
         }
     }
 }
@@ -92,7 +101,7 @@ class MosaicEffect implements ImageEffect {
     public Bitmap apply(Bitmap input) {
         int scale = 100;
 
-        String radius = getPreferences().getString("msg_mosaic", "disabled");
+        String radius = getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled");
 
         switch (radius) {
             case "high":

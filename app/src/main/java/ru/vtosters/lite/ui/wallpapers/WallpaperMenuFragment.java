@@ -29,11 +29,32 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
+
+    private abstract class EffectListener implements Preference.OnPreferenceChangeListener {
+
+        protected ImageEffect effect;
+
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object o) {
+            ImageFilters.effects.remove(effect);
+            updateEffect(preference, o);
+            if (effect != null) {
+                ImageFilters.effects.add(effect);
+            }
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
+        }
+
+        protected abstract void updateEffect(Preference preference, Object o);
+    }
 
     private WallpaperPreferences mWPPreviewPref;
 
@@ -117,7 +138,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
         PreferencesUtil.addListPreference(
                 this,
-                "msg_blur_radius",
+                ImageEffects.Blur.toString(),
                 "disabled",
                 requireContext().getString(R.string.filter_blur),
                 AndroidUtils.getArray(R.array.filter_types),
@@ -125,7 +146,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
         PreferencesUtil.addListPreference(
                 this,
-                "msg_dim",
+                ImageEffects.Dim.toString(),
                 "off",
                 requireContext().getString(R.string.filter_dim),
                 AndroidUtils.getArray(R.array.filter_dim_types),
@@ -134,7 +155,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
         PreferencesUtil.addListPreference(
                 this,
-                "msg_mosaic",
+                ImageEffects.Mosaic.toString(),
                 "disabled",
                 requireContext().getString(R.string.filter_mosaic),
                 AndroidUtils.getArray(R.array.filter_types),
@@ -143,14 +164,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
         if (true) {
             PreferencesUtil.addMaterialSwitchPreference(
                     this,
-                    "msg_monochrome",
+                    ImageEffects.Monochrome.toString(),
                     requireContext().getString(R.string.filter_monochrome),
                     "",
                     0,
                     false,
                     (preference, o) -> {
                         boolean value = (boolean) o;
-                        edit().putBoolean("msg_monochrome", value).commit();
                         if (value) {
                             ImageFilters.effects.add(new MonochromeEffect());
                         } else {
@@ -163,14 +183,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
             PreferencesUtil.addMaterialSwitchPreference(
                     this,
-                    "msg_invert",
+                    ImageEffects.Invert.toString(),
                     requireContext().getString(R.string.filter_invert_colors),
                     "",
                     0,
                     false,
                     (preference, o) -> {
                         boolean value = (boolean) o;
-                        edit().putBoolean("msg_invert", value).commit();
                         if (value) {
                             ImageFilters.effects.add(new InvertEffect());
                         } else {
@@ -183,14 +202,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
             PreferencesUtil.addMaterialSwitchPreference(
                     this,
-                    "msg_sepia",
+                    ImageEffects.Sepia.toString(),
                     requireContext().getString(R.string.filter_sepia),
                     "",
                     0,
                     false,
                     (preference, o) -> {
                         boolean value = (boolean) o;
-                        edit().putBoolean("msg_sepia", value).commit();
                         if (value) {
                             ImageFilters.effects.add(new SepiaEffect());
                         } else {
@@ -203,14 +221,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
             PreferencesUtil.addMaterialSwitchPreference(
                     this,
-                    "msg_emboss",
+                    ImageEffects.Emboss.toString(),
                     requireContext().getString(R.string.filter_emboss),
                     requireContext().getString(R.string.filter_maybe_lag),
                     0,
                     false,
                     (preference, o) -> {
                         boolean value = (boolean) o;
-                        edit().putBoolean("msg_emboss", value).commit();
                         if (value) {
                             ImageFilters.effects.add(new EmbossEffect());
                         } else {
@@ -223,14 +240,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
             PreferencesUtil.addMaterialSwitchPreference(
                     this,
-                    "msg_engrave",
+                    ImageEffects.Engrave.toString(),
                     requireContext().getString(R.string.filter_engrave),
                     requireContext().getString(R.string.filter_maybe_lag),
                     0,
                     false,
                     (preference, o) -> {
                         boolean value = (boolean) o;
-                        edit().putBoolean("msg_engrave", value).commit();
                         if (value) {
                             ImageFilters.effects.add(new EngraveEffect());
                         } else {
@@ -243,14 +259,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
             PreferencesUtil.addMaterialSwitchPreference(
                     this,
-                    "msg_flea",
+                    ImageEffects.Flea.toString(),
                     requireContext().getString(R.string.filter_flea),
                     "",
                     0,
                     false,
                     (preference, o) -> {
                         boolean value = (boolean) o;
-                        edit().putBoolean("msg_flea", value).commit();
                         if (value) {
                             ImageFilters.effects.add(new FleaEffect());
                         } else {
@@ -263,14 +278,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
             PreferencesUtil.addMaterialSwitchPreference(
                     this,
-                    "msg_snow",
+                    ImageEffects.Snow.toString(),
                     requireContext().getString(R.string.filter_flea),
                     "",
                     0,
                     false,
                     (preference, o) -> {
                         boolean value = (boolean) o;
-                        edit().putBoolean("msg_snow", value).commit();
                         if (value) {
                             ImageFilters.effects.add(new SnowEffect());
                         } else {
@@ -297,16 +311,16 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     return true;
                 });
 
-        ListPreference blur = (ListPreference) findPreference("msg_blur_radius");
-        ListPreference dim = (ListPreference) findPreference("msg_dim");
-        ListPreference mosaic = (ListPreference) findPreference("msg_mosaic");
+        ListPreference blur = (ListPreference) findPreference(ImageEffects.Blur.toString());
+        ListPreference dim = (ListPreference) findPreference(ImageEffects.Dim.toString());
+        ListPreference mosaic = (ListPreference) findPreference(ImageEffects.Mosaic.toString());
 
         blur.setSummary(getRadiusSummary());
         dim.setSummary(getDimmingSummary());
         mosaic.setSummary(getMosaicSummary());
 
         blur.setOnPreferenceChangeListener((preference, o) -> {
-            edit().putString("msg_blur_radius", (String) o).apply();
+            edit().putString(ImageEffects.Blur.toString(), (String) o).apply();
             var summary = getRadiusSummary();
             preference.setSummary(summary);
             if (!summary.equals(AndroidUtils.getString(R.string.wallpapers_disabled))) {
@@ -320,7 +334,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
         });
 
         dim.setOnPreferenceChangeListener((preference, o) -> {
-            edit().putString("msg_dim", (String) o).apply();
+            edit().putString(ImageEffects.Dim.toString(), (String) o).apply();
             var summary = getDimmingSummary();
             preference.setSummary(summary);
             if (!summary.equals(AndroidUtils.getString(R.string.wallpapers_disabled))) {
@@ -334,7 +348,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
         });
 
         mosaic.setOnPreferenceChangeListener((preference, o) -> {
-            edit().putString("msg_mosaic", (String) o).apply();
+            edit().putString(ImageEffects.Mosaic.toString(), (String) o).apply();
             var summary = getMosaicSummary();
             preference.setSummary(summary);
             if (!summary.equals(AndroidUtils.getString(R.string.wallpapers_disabled))) {
