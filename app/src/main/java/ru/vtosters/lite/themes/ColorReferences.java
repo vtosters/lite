@@ -31,6 +31,7 @@ public class ColorReferences {
             Color.parseColor("#67a5eb"),
             Color.parseColor("#45678f"),
             Color.parseColor("#6645678f"),
+            Color.parseColor("#0099cc"),
             Color.parseColor("#664986cc")
     );
 
@@ -114,6 +115,7 @@ public class ColorReferences {
             vk_blue_600,
             muted_blue_opacity40,
             muted_blue_old,
+            darker_blue,
             header_blue_opacity40
     );
 
