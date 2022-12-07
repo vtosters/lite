@@ -14,8 +14,9 @@ public class ColorReferences {
             Color.parseColor("#4986cc"), // azure_a400
             Color.parseColor("#528bcc"), // another light accent
             Color.parseColor("#71aaeb"), // vk_sky_300 (dark accent)
-            Color.parseColor("#5181b8") // header_blue
-    );
+            Color.parseColor("#5181b8"), // header_blue
+            Color.parseColor("#74a2d6")
+            );
 
     public static List<Integer> mutedAccentColors = Arrays.asList(
             Color.parseColor("#663f8ae0"),
@@ -27,7 +28,6 @@ public class ColorReferences {
             Color.parseColor("#a800244d"),
             Color.parseColor("#14001c3d"),
             Color.parseColor("#3d001c3d"),
-            Color.parseColor("#74a2d6"),
             Color.parseColor("#67a5eb"),
             Color.parseColor("#45678f"),
             Color.parseColor("#6645678f"),
