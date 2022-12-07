@@ -7,7 +7,6 @@ import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
-import android.util.Log;
 import android.widget.TextView;
 
 import ru.vtosters.lite.themes.ColorReferences;

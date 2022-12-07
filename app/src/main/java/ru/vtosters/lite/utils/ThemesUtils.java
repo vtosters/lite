@@ -94,11 +94,11 @@ public class ThemesUtils {
     } // Color accent
 
     public static int getMutedAccentColor() {
-        return getMutedAccentColor(getAccentColor());
+        return getMutedColor(getAccentColor());
     }
 
-    public static int getMutedAccentColor(int color) {
-        return halfAlpha(color);
+    public static int getMutedColor(int color) {
+        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), 0.4f);
     }
 
     public static void setCustomAccentColor(int newColor, boolean async) {

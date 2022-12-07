@@ -1,7 +1,6 @@
 package ru.vtosters.lite.themes;
 
 import android.content.Context;
-import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
 
@@ -66,7 +65,7 @@ public class ThemesCore {
     }
 
     public static void setThemedColors(int accentColor) {
-        int mutedAccentColor = ThemesUtils.getMutedAccentColor(accentColor);
+        int mutedAccentColor = ThemesUtils.getMutedColor(accentColor);
 
         cachedAccents = true;
         themedColors.clear();
