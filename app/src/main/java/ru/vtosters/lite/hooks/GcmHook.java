@@ -41,11 +41,11 @@ public class GcmHook {
     }
 
     public static String requestTokenV2(String orig) {
-        return isValidSignature() ? "eyJhbGciOiAibm9uZSJ9eyJub25jZSI6ICJudWxsIn0=" : "e251bGx9";
+        return isValidSignature() ? "eyJhbGciOiAibm9uZSJ9.eyJub25jZSI6ICJ0ZXN0PT0ifQ." : "e251bGx9";
     }
 
     public static String requestToken(String orig) {
-        return requestToken();
+        return "yssp9o9p9pamz5t-nvmq8spgwtin3e0==";
     }
 
     public static String requestToken() {
