@@ -98,7 +98,7 @@ public class ThemesUtils {
     }
 
     public static int getMutedColor(int color) {
-        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), 0.4f);
+        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), 0.5f);
     }
 
     public static void setCustomAccentColor(int newColor, boolean async) {
