@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.preference.ListPreference;
+import androidx.preference.Preference;
 
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
@@ -64,7 +65,8 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
         mWPPreviewPref.setIconSpaceReserved(false);
         getPreferenceScreen().addPreference(mWPPreviewPref);
 
-        PreferencesUtil.addPreference(this,
+        PreferencesUtil.addPreference(
+                this,
                 "wp_set",
                 requireContext().getString(R.string.wallpaper_select),
                 requireContext().getString(R.string.wallpaper_from_gallery),
@@ -138,8 +140,9 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 AndroidUtils.getArray(R.array.filter_types),
                 new String[]{"disabled", "low", "med", "high"});
 
-        if (hasVerification()) {
-            PreferencesUtil.addMaterialSwitchPreference(this,
+        if (true) {
+            PreferencesUtil.addMaterialSwitchPreference(
+                    this,
                     "msg_monochrome",
                     requireContext().getString(R.string.filter_monochrome),
                     "",
@@ -148,12 +151,18 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     (preference, o) -> {
                         boolean value = (boolean) o;
                         edit().putBoolean("msg_monochrome", value).commit();
+                        if (value) {
+                            ImageFilters.effects.add(new MonochromeEffect());
+                        } else {
+                            ImageFilters.effects.removeIf((it) -> it instanceof MonochromeEffect);
+                        }
                         requestUpdateWallpaper();
                         mWPPreviewPref.redraw();
                         return true;
                     });
 
-            PreferencesUtil.addMaterialSwitchPreference(this,
+            PreferencesUtil.addMaterialSwitchPreference(
+                    this,
                     "msg_invert",
                     requireContext().getString(R.string.filter_invert_colors),
                     "",
@@ -162,6 +171,11 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     (preference, o) -> {
                         boolean value = (boolean) o;
                         edit().putBoolean("msg_invert", value).commit();
+                        if (value) {
+                            ImageFilters.effects.add(new InvertEffect());
+                        } else {
+                            ImageFilters.effects.removeIf((it) -> it instanceof InvertEffect);
+                        }
                         requestUpdateWallpaper();
                         mWPPreviewPref.redraw();
                         return true;
@@ -177,12 +191,18 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     (preference, o) -> {
                         boolean value = (boolean) o;
                         edit().putBoolean("msg_sepia", value).commit();
+                        if (value) {
+                            ImageFilters.effects.add(new SepiaEffect());
+                        } else {
+                            ImageFilters.effects.removeIf((it) -> it instanceof SepiaEffect);
+                        }
                         requestUpdateWallpaper();
                         mWPPreviewPref.redraw();
                         return true;
                     });
 
-            PreferencesUtil.addMaterialSwitchPreference(this,
+            PreferencesUtil.addMaterialSwitchPreference(
+                    this,
                     "msg_emboss",
                     requireContext().getString(R.string.filter_emboss),
                     requireContext().getString(R.string.filter_maybe_lag),
@@ -191,12 +211,18 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     (preference, o) -> {
                         boolean value = (boolean) o;
                         edit().putBoolean("msg_emboss", value).commit();
+                        if (value) {
+                            ImageFilters.effects.add(new EmbossEffect());
+                        } else {
+                            ImageFilters.effects.removeIf((it) -> it instanceof EmbossEffect);
+                        }
                         requestUpdateWallpaper();
                         mWPPreviewPref.redraw();
                         return true;
                     });
 
-            PreferencesUtil.addMaterialSwitchPreference(this,
+            PreferencesUtil.addMaterialSwitchPreference(
+                    this,
                     "msg_engrave",
                     requireContext().getString(R.string.filter_engrave),
                     requireContext().getString(R.string.filter_maybe_lag),
@@ -205,12 +231,18 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     (preference, o) -> {
                         boolean value = (boolean) o;
                         edit().putBoolean("msg_engrave", value).commit();
+                        if (value) {
+                            ImageFilters.effects.add(new EngraveEffect());
+                        } else {
+                            ImageFilters.effects.removeIf((it) -> it instanceof EngraveEffect);
+                        }
                         requestUpdateWallpaper();
                         mWPPreviewPref.redraw();
                         return true;
                     });
 
-            PreferencesUtil.addMaterialSwitchPreference(this,
+            PreferencesUtil.addMaterialSwitchPreference(
+                    this,
                     "msg_flea",
                     requireContext().getString(R.string.filter_flea),
                     "",
@@ -219,12 +251,18 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     (preference, o) -> {
                         boolean value = (boolean) o;
                         edit().putBoolean("msg_flea", value).commit();
+                        if (value) {
+                            ImageFilters.effects.add(new FleaEffect());
+                        } else {
+                            ImageFilters.effects.removeIf((it) -> it instanceof FleaEffect);
+                        }
                         requestUpdateWallpaper();
                         mWPPreviewPref.redraw();
                         return true;
                     });
 
-            PreferencesUtil.addMaterialSwitchPreference(this,
+            PreferencesUtil.addMaterialSwitchPreference(
+                    this,
                     "msg_snow",
                     requireContext().getString(R.string.filter_flea),
                     "",
@@ -233,13 +271,19 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     (preference, o) -> {
                         boolean value = (boolean) o;
                         edit().putBoolean("msg_snow", value).commit();
+                        if (value) {
+                            ImageFilters.effects.add(new SnowEffect());
+                        } else {
+                            ImageFilters.effects.removeIf((it) -> it instanceof SnowEffect);
+                        }
                         requestUpdateWallpaper();
                         mWPPreviewPref.redraw();
                         return true;
                     });
         }
 
-        PreferencesUtil.addMaterialSwitchPreference(this,
+        PreferencesUtil.addMaterialSwitchPreference(
+                this,
                 "compresswp",
                 requireContext().getString(R.string.compress_wallpaper_title),
                 requireContext().getString(R.string.compress_wallpaper_summ),
@@ -263,7 +307,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
         blur.setOnPreferenceChangeListener((preference, o) -> {
             edit().putString("msg_blur_radius", (String) o).apply();
-            preference.setSummary(getRadiusSummary());
+            var summary = getRadiusSummary();
+            preference.setSummary(summary);
+            if (!summary.equals(AndroidUtils.getString(R.string.wallpapers_disabled))) {
+                ImageFilters.effects.add(new BlurEffect());
+            } else {
+                ImageFilters.effects.removeIf((it) -> it instanceof BlurEffect);
+            }
             requestUpdateWallpaper();
             mWPPreviewPref.redraw();
             return true;
@@ -271,7 +321,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
         dim.setOnPreferenceChangeListener((preference, o) -> {
             edit().putString("msg_dim", (String) o).apply();
-            preference.setSummary(getDimmingSummary());
+            var summary = getDimmingSummary();
+            preference.setSummary(summary);
+            if (!summary.equals(AndroidUtils.getString(R.string.wallpapers_disabled))) {
+                ImageFilters.effects.add(new DimEffect());
+            } else {
+                ImageFilters.effects.removeIf((it) -> it instanceof DimEffect);
+            }
             requestUpdateWallpaper();
             mWPPreviewPref.redraw();
             return true;
@@ -279,7 +335,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
         mosaic.setOnPreferenceChangeListener((preference, o) -> {
             edit().putString("msg_mosaic", (String) o).apply();
-            preference.setSummary(getMosaicSummary());
+            var summary = getMosaicSummary();
+            preference.setSummary(summary);
+            if (!summary.equals(AndroidUtils.getString(R.string.wallpapers_disabled))) {
+                ImageFilters.effects.add(new MosaicEffect());
+            } else {
+                ImageFilters.effects.removeIf((it) -> it instanceof MosaicEffect);
+            }
             requestUpdateWallpaper();
             mWPPreviewPref.redraw();
             return true;

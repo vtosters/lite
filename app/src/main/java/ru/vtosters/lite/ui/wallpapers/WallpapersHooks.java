@@ -49,7 +49,10 @@ public class WallpapersHooks {
                 file.createNewFile();
 
                 ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                ((BitmapDrawable) getFilteredDrawable(Drawable.createFromPath(wp.getAbsolutePath()))).getBitmap().compress(Bitmap.CompressFormat.WEBP, (compress ? 80 : 95), bos);
+                ((BitmapDrawable) getFilteredDrawable(
+                        Drawable.createFromPath(wp.getAbsolutePath())))
+                        .getBitmap()
+                        .compress(Bitmap.CompressFormat.WEBP, (compress ? 80 : 95), bos);
                 byte[] bitmapdata = bos.toByteArray();
 
                 FileOutputStream fos = new FileOutputStream(file);

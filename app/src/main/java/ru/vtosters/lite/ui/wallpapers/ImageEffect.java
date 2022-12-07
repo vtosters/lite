@@ -236,7 +236,7 @@ class EngraveEffect implements ImageEffect {
     }
 }
 
-class FleaEffect implements ImageEffect{
+class FleaEffect implements ImageEffect {
 
     @Override
     public Bitmap apply(Bitmap input) {
@@ -269,7 +269,7 @@ class FleaEffect implements ImageEffect{
     }
 }
 
-class SnowEffect implements ImageEffect{
+class SnowEffect implements ImageEffect {
 
     @Override
     public Bitmap apply(Bitmap input) {
