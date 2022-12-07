@@ -98,7 +98,7 @@ public class ThemesUtils {
     }
 
     public static int getMutedAccentColor(int color) {
-        return isDarkTheme() ? darken(color, 0.66f) : lighten(color, 0.66f);
+        return halfAlpha(color);
     }
 
     public static void setCustomAccentColor(int newColor, boolean async) {

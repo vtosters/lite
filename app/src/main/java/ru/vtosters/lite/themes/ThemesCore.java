@@ -51,6 +51,7 @@ public class ThemesCore {
         ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.header_background, false);
 
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_tint, false);
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.icon_name, false);
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_tint_alternate, false);
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.toolbarIconsColor, false);
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_tab_active_indicator, false);
@@ -73,6 +74,7 @@ public class ThemesCore {
         themedColors.put(com.vtosters.lite.R.attr.text_link, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.accent, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.newsfeed_dropdown_color, accentColor);
+        themedColors.put(com.vtosters.lite.R.attr.icon_name, accentColor);
 
         themedColors.put(com.vtosters.lite.R.attr.vk_accent, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.accentColor, accentColor);
