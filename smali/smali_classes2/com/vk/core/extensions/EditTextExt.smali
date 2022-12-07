@@ -95,6 +95,10 @@
     .line 11
     sget-object v6, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+
+    move-result p1
+
     invoke-virtual {v3, p1, v6}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     const/4 p1, 0x2
