@@ -22,6 +22,8 @@ import java.util.ArrayList;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import ru.vtosters.lite.downloaders.AudioDownloader;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class MusicBottomSheetHook {
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
@@ -36,8 +38,14 @@ public class MusicBottomSheetHook {
         if (isIntegrationEnabled()) {
             if (isVkxCached(trackid)) {
                 actions.add(getRemoveCacheTrackVkxAction());
-            } else {
+            } else if (isNetworkConnected()){
                 actions.add(addToCacheTrackVkxAction());
+            }
+        } else {
+            if (isCached(trackid)) {
+                actions.add(getRemoveCacheTrackAction());
+            } else if (isNetworkConnected()){
+                actions.add(addToCacheTrackAction());
             }
         }
 
@@ -85,10 +93,10 @@ public class MusicBottomSheetHook {
         if (isIntegrationEnabled()) {
             if (isVkxCached(playlist.a, playlist.b)) {
                 actions.add(getRemoveCacheTrackVkxAction());
-            } else {
+            } else if (isNetworkConnected()){
                 actions.add(addToCacheTrackVkxAction());
             }
-        } else {
+        } else if (isNetworkConnected()){
             actions.add(addToCacheTrackAction());
         }
 
@@ -118,6 +126,15 @@ public class MusicBottomSheetHook {
                     e.printStackTrace();
                 }
             });
+            return true;
+        }
+
+        if (actionId == R.id.remove_from_cache) {
+            CacheDatabaseDelegate.removeTrackFromCache(asId(track));
+            AndroidUtils.sendToast("Трек удален из кеша");
+            return true;
+        } else if (actionId == R.id.add_to_cache) {
+            AudioDownloader.cacheTrack(track);
             return true;
         }
 

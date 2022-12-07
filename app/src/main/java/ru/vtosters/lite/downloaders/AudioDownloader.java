@@ -23,6 +23,7 @@ import ru.vtosters.lite.music.downloader.PlaylistDownloader;
 import ru.vtosters.lite.music.downloader.TrackDownloader;
 import ru.vtosters.lite.music.notification.MusicNotificationBuilder;
 import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 
 /**
@@ -63,6 +64,7 @@ public class AudioDownloader {
 
         if (CacheDatabaseDelegate.isCached(trackId)) {
             CacheDatabaseDelegate.removeTrackFromCache(LibVKXClient.asId(track));
+            AndroidUtils.sendToast("Трек удален из кеша");
             return;
         }
 
