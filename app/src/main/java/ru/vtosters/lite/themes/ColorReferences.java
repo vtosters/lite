@@ -15,6 +15,10 @@ public class ColorReferences {
             Color.parseColor("#528bcc"), // another light accent
             Color.parseColor("#71aaeb"), // vk_sky_300 (dark accent)
             Color.parseColor("#5181b8"), // header_blue
+            Color.parseColor("#5a9eff"),
+            Color.parseColor("#5692d7"),
+            Color.parseColor("#5c9ce6"),
+            Color.parseColor("#518bcc"),
             Color.parseColor("#74a2d6")
             );
 
