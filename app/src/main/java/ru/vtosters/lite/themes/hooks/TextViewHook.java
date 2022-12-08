@@ -4,10 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
 import android.os.Build;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatCheckedTextView;
 
+import com.vk.core.extensions.EditTextExt;
 import com.vk.core.view.OverlayTextView;
 import com.vk.core.view.TintTextView;
 import com.vk.core.view.links.LinkedTextView;
@@ -98,6 +100,10 @@ public class TextViewHook implements BaseHook {
                 if (ColorReferences.isMutedAccentedColor(check.getCheckMarkTintList())) {
                     check.setCheckMarkTintList(ColorStateList.valueOf(ThemesUtils.getMutedAccentColor()));
                 }
+            }
+
+            if (view instanceof EditText) {
+                ThemesUtils.setCursorColor((EditText) view);
             }
 
             VkUiThemer.autoThemeVkuiButtons(textView);

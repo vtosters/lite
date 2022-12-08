@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -10,11 +11,13 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.graphics.drawable.DrawableCompat;
 import com.vk.articles.preload.WebCachePreloader;
@@ -28,6 +31,8 @@ import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.hooks.VKUIHook;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
+
+import java.lang.reflect.Field;
 
 import static ru.vtosters.lite.utils.AndroidUtils.*;
 import static ru.vtosters.lite.utils.Preferences.*;
@@ -95,6 +100,36 @@ public class ThemesUtils {
 
     public static int getMutedAccentColor() {
         return getMutedColor(getAccentColor());
+    }
+
+    @SuppressLint("DiscouragedPrivateApi")
+    public static void setCursorColor(EditText view) {
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                view.setTextCursorDrawable(recolorDrawable(view.getTextCursorDrawable()));
+            } else {
+                Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
+                field.setAccessible(true);
+                int drawableResId = field.getInt(view);
+
+                field = TextView.class.getDeclaredField("mEditor");
+                field.setAccessible(true);
+                Object editor = field.get(view);
+
+                Drawable drawable = ContextCompat.getDrawable(view.getContext(), drawableResId);
+                drawable.setColorFilter(getAccentColor(), PorterDuff.Mode.SRC_IN);
+                Drawable[] drawables = {drawable, drawable};
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                    field = editor.getClass().getDeclaredField("mCursorDrawable");
+                } else {
+                    field = editor.getClass().getDeclaredField("mDrawableForCursor");
+                }
+                field.setAccessible(true);
+                field.set(editor, drawables);
+            }
+        } catch (Exception ignored) {
+        }
     }
 
     public static int getMutedColor(int color) {
