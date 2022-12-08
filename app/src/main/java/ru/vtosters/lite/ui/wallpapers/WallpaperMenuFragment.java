@@ -1,8 +1,5 @@
 package ru.vtosters.lite.ui.wallpapers;
 
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getDimmingSummary;
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getMosaicSummary;
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getRadiusSummary;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.requestUpdateWallpaper;
@@ -18,8 +15,6 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.preference.ListPreference;
-import androidx.preference.Preference;
 
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
@@ -29,32 +24,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.function.Consumer;
-import java.util.function.Function;
+import java.util.Arrays;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
-
-    private abstract class EffectListener implements Preference.OnPreferenceChangeListener {
-
-        protected ImageEffect effect;
-
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object o) {
-            ImageFilters.effects.remove(effect);
-            updateEffect(preference, o);
-            if (effect != null) {
-                ImageFilters.effects.add(effect);
-            }
-            requestUpdateWallpaper();
-            mWPPreviewPref.redraw();
-            return true;
-        }
-
-        protected abstract void updateEffect(Preference preference, Object o);
-    }
 
     private WallpaperPreferences mWPPreviewPref;
 
@@ -136,165 +110,43 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     });
         }
 
-        PreferencesUtil.addListPreference(
-                this,
-                ImageEffects.Blur.toString(),
-                "disabled",
-                requireContext().getString(R.string.filter_blur),
-                AndroidUtils.getArray(R.array.filter_types),
-                new String[]{"disabled", "low", "med", "high"});
-
-        PreferencesUtil.addListPreference(
-                this,
-                ImageEffects.Dim.toString(),
-                "off",
-                requireContext().getString(R.string.filter_dim),
-                AndroidUtils.getArray(R.array.filter_dim_types),
-                new String[]{"off", "dim_black", "dim_white"});
-
-
-        PreferencesUtil.addListPreference(
-                this,
-                ImageEffects.Mosaic.toString(),
-                "disabled",
-                requireContext().getString(R.string.filter_mosaic),
-                AndroidUtils.getArray(R.array.filter_types),
-                new String[]{"disabled", "low", "med", "high"});
-
-        if (true) {
-            PreferencesUtil.addMaterialSwitchPreference(
-                    this,
-                    ImageEffects.Monochrome.toString(),
-                    requireContext().getString(R.string.filter_monochrome),
-                    "",
-                    0,
-                    false,
-                    (preference, o) -> {
-                        boolean value = (boolean) o;
-                        if (value) {
-                            ImageFilters.effects.add(new MonochromeEffect());
-                        } else {
-                            ImageFilters.effects.removeIf((it) -> it instanceof MonochromeEffect);
-                        }
-                        requestUpdateWallpaper();
-                        mWPPreviewPref.redraw();
-                        return true;
-                    });
-
-            PreferencesUtil.addMaterialSwitchPreference(
-                    this,
-                    ImageEffects.Invert.toString(),
-                    requireContext().getString(R.string.filter_invert_colors),
-                    "",
-                    0,
-                    false,
-                    (preference, o) -> {
-                        boolean value = (boolean) o;
-                        if (value) {
-                            ImageFilters.effects.add(new InvertEffect());
-                        } else {
-                            ImageFilters.effects.removeIf((it) -> it instanceof InvertEffect);
-                        }
-                        requestUpdateWallpaper();
-                        mWPPreviewPref.redraw();
-                        return true;
-                    });
-
-            PreferencesUtil.addMaterialSwitchPreference(
-                    this,
-                    ImageEffects.Sepia.toString(),
-                    requireContext().getString(R.string.filter_sepia),
-                    "",
-                    0,
-                    false,
-                    (preference, o) -> {
-                        boolean value = (boolean) o;
-                        if (value) {
-                            ImageFilters.effects.add(new SepiaEffect());
-                        } else {
-                            ImageFilters.effects.removeIf((it) -> it instanceof SepiaEffect);
-                        }
-                        requestUpdateWallpaper();
-                        mWPPreviewPref.redraw();
-                        return true;
-                    });
-
-            PreferencesUtil.addMaterialSwitchPreference(
-                    this,
-                    ImageEffects.Emboss.toString(),
-                    requireContext().getString(R.string.filter_emboss),
-                    requireContext().getString(R.string.filter_maybe_lag),
-                    0,
-                    false,
-                    (preference, o) -> {
-                        boolean value = (boolean) o;
-                        if (value) {
-                            ImageFilters.effects.add(new EmbossEffect());
-                        } else {
-                            ImageFilters.effects.removeIf((it) -> it instanceof EmbossEffect);
-                        }
-                        requestUpdateWallpaper();
-                        mWPPreviewPref.redraw();
-                        return true;
-                    });
-
-            PreferencesUtil.addMaterialSwitchPreference(
-                    this,
-                    ImageEffects.Engrave.toString(),
-                    requireContext().getString(R.string.filter_engrave),
-                    requireContext().getString(R.string.filter_maybe_lag),
-                    0,
-                    false,
-                    (preference, o) -> {
-                        boolean value = (boolean) o;
-                        if (value) {
-                            ImageFilters.effects.add(new EngraveEffect());
-                        } else {
-                            ImageFilters.effects.removeIf((it) -> it instanceof EngraveEffect);
-                        }
-                        requestUpdateWallpaper();
-                        mWPPreviewPref.redraw();
-                        return true;
-                    });
-
-            PreferencesUtil.addMaterialSwitchPreference(
-                    this,
-                    ImageEffects.Flea.toString(),
-                    requireContext().getString(R.string.filter_flea),
-                    "",
-                    0,
-                    false,
-                    (preference, o) -> {
-                        boolean value = (boolean) o;
-                        if (value) {
-                            ImageFilters.effects.add(new FleaEffect());
-                        } else {
-                            ImageFilters.effects.removeIf((it) -> it instanceof FleaEffect);
-                        }
-                        requestUpdateWallpaper();
-                        mWPPreviewPref.redraw();
-                        return true;
-                    });
-
-            PreferencesUtil.addMaterialSwitchPreference(
-                    this,
-                    ImageEffects.Snow.toString(),
-                    requireContext().getString(R.string.filter_flea),
-                    "",
-                    0,
-                    false,
-                    (preference, o) -> {
-                        boolean value = (boolean) o;
-                        if (value) {
-                            ImageFilters.effects.add(new SnowEffect());
-                        } else {
-                            ImageFilters.effects.removeIf((it) -> it instanceof SnowEffect);
-                        }
-                        requestUpdateWallpaper();
-                        mWPPreviewPref.redraw();
-                        return true;
-                    });
-        }
+        Arrays.stream(ImageEffects.values())
+                // Fixme: set hasVerification
+                .filter(imageEffects -> imageEffects.isFree() || hasVerification())
+                .forEach(it -> {
+                    if (it.isList()) {
+                        var pref = PreferencesUtil.addListPreference(
+                                this,
+                                it.toString(),
+                                "disabled",
+                                it.getTitle(),
+                                it.getEntries(),
+                                it.getEntryValues()
+                        );
+                        pref.setSummary(it.getSummary());
+                        pref.setOnPreferenceChangeListener((preference, o) -> {
+                            edit().putString(it.toString(), (String) o).apply();
+                            preference.setSummary(it.getSummary());
+                            requestUpdateWallpaper();
+                            mWPPreviewPref.redraw();
+                            return true;
+                        });
+                    } else if (it.isSwitch()) {
+                        PreferencesUtil.addMaterialSwitchPreference(
+                                this,
+                                it.toString(),
+                                it.getTitle(),
+                                it.getSummary(),
+                                0,
+                                false,
+                                (preference, o) -> {
+                                    edit().putBoolean(it.toString(), (Boolean) o).apply();
+                                    requestUpdateWallpaper();
+                                    mWPPreviewPref.redraw();
+                                    return true;
+                                });
+                    }
+                });
 
         PreferencesUtil.addMaterialSwitchPreference(
                 this,
@@ -310,56 +162,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     mWPPreviewPref.redraw();
                     return true;
                 });
-
-        ListPreference blur = (ListPreference) findPreference(ImageEffects.Blur.toString());
-        ListPreference dim = (ListPreference) findPreference(ImageEffects.Dim.toString());
-        ListPreference mosaic = (ListPreference) findPreference(ImageEffects.Mosaic.toString());
-
-        blur.setSummary(getRadiusSummary());
-        dim.setSummary(getDimmingSummary());
-        mosaic.setSummary(getMosaicSummary());
-
-        blur.setOnPreferenceChangeListener((preference, o) -> {
-            edit().putString(ImageEffects.Blur.toString(), (String) o).apply();
-            var summary = getRadiusSummary();
-            preference.setSummary(summary);
-            if (!summary.equals(AndroidUtils.getString(R.string.wallpapers_disabled))) {
-                ImageFilters.effects.add(new BlurEffect());
-            } else {
-                ImageFilters.effects.removeIf((it) -> it instanceof BlurEffect);
-            }
-            requestUpdateWallpaper();
-            mWPPreviewPref.redraw();
-            return true;
-        });
-
-        dim.setOnPreferenceChangeListener((preference, o) -> {
-            edit().putString(ImageEffects.Dim.toString(), (String) o).apply();
-            var summary = getDimmingSummary();
-            preference.setSummary(summary);
-            if (!summary.equals(AndroidUtils.getString(R.string.wallpapers_disabled))) {
-                ImageFilters.effects.add(new DimEffect());
-            } else {
-                ImageFilters.effects.removeIf((it) -> it instanceof DimEffect);
-            }
-            requestUpdateWallpaper();
-            mWPPreviewPref.redraw();
-            return true;
-        });
-
-        mosaic.setOnPreferenceChangeListener((preference, o) -> {
-            edit().putString(ImageEffects.Mosaic.toString(), (String) o).apply();
-            var summary = getMosaicSummary();
-            preference.setSummary(summary);
-            if (!summary.equals(AndroidUtils.getString(R.string.wallpapers_disabled))) {
-                ImageFilters.effects.add(new MosaicEffect());
-            } else {
-                ImageFilters.effects.removeIf((it) -> it instanceof MosaicEffect);
-            }
-            requestUpdateWallpaper();
-            mWPPreviewPref.redraw();
-            return true;
-        });
     }
 
     @Override

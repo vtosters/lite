@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.wallpapers;
 
 import static ru.vtosters.lite.ui.wallpapers.ImageFilters.COLOR_MAX;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
 import android.graphics.Bitmap;
@@ -13,23 +14,224 @@ import android.graphics.Paint;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.vtosters.lite.R;
 
 import com.vk.medianative.MediaNative;
 
 import java.util.Random;
 
-enum ImageEffects {
-    Blur,
-    Dim,
-    Mosaic,
-    Monochrome,
-    Invert,
-    Sepia,
-    Emboss,
-    Engrave,
-    Flea,
-    Snow;
+import ru.vtosters.lite.utils.AndroidUtils;
 
+enum ImageEffects {
+    Blur(true,
+            AndroidUtils.getArray(R.array.filter_types),
+            new String[]{"disabled", "low", "med", "high"},
+            getGlobalContext().getString(R.string.filter_blur)
+    ) {
+        @Override
+        public ImageEffect getEffect() {
+            int radius;
+            switch (getPreferences().getString(ImageEffects.Blur.toString(), "disabled")) {
+                case "low":
+                    radius = 8;
+                    break;
+                case "med":
+                    radius = 14;
+                    break;
+                case "high":
+                    radius = 20;
+                    break;
+                default:
+                    return null;
+            }
+            return new BlurEffect(radius);
+        }
+
+        @Override
+        public String getSummary() {
+            switch (getPreferences().getString(ImageEffects.Blur.toString(), "disabled")) {
+                case "low":
+                    return AndroidUtils.getString(R.string.wallpapers_low);
+                case "med":
+                    return AndroidUtils.getString(R.string.wallpapers_med);
+                case "high":
+                    return AndroidUtils.getString(R.string.wallpapers_high);
+                default:
+                    return AndroidUtils.getString(R.string.wallpapers_disabled);
+            }
+        }
+    },
+    Dim(true,
+            AndroidUtils.getArray(R.array.filter_dim_types),
+            new String[]{"off", "dim_black", "dim_white"},
+            getGlobalContext().getString(R.string.filter_dim)) {
+        @Override
+        public ImageEffect getEffect() {
+            switch (getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
+                case "dim_black":
+                    return new DimEffect(0xFF7F7F7F, 0x00000000);
+                case "dim_white":
+                    return new DimEffect(0xFFFFFFFF, 0x00222222);
+                default:
+                    return null;
+            }
+        }
+
+        @Override
+        public String getSummary() {
+            switch (getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
+                case "dim_black":
+                    return AndroidUtils.getString(R.string.wallpapers_dim_black);
+                case "dim_white":
+                    return AndroidUtils.getString(R.string.wallpapers_dim_white);
+                default:
+                    return AndroidUtils.getString(R.string.wallpapers_disabled);
+            }
+        }
+    },
+    Mosaic(true,
+            AndroidUtils.getArray(R.array.filter_types),
+            new String[]{"disabled", "low", "med", "high"},
+            getGlobalContext().getString(R.string.filter_mosaic)) {
+        @Override
+        public ImageEffect getEffect() {
+            switch (getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
+                case "high":
+                    return new MosaicEffect(25);
+                case "med":
+                    return new MosaicEffect(50);
+                case "low":
+                    return new MosaicEffect(75);
+                default:
+                    return null;
+            }
+        }
+
+        @Override
+        public String getSummary() {
+            switch (getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
+                case "low":
+                    return AndroidUtils.getString(R.string.wallpapers_low);
+                case "med":
+                    return AndroidUtils.getString(R.string.wallpapers_med);
+                case "high":
+                    return AndroidUtils.getString(R.string.wallpapers_high);
+                default:
+                    return AndroidUtils.getString(R.string.wallpapers_disabled);
+            }
+        }
+    },
+    Monochrome(false, null, null,
+            getGlobalContext().getString(R.string.filter_monochrome)) {
+        @Override
+        public ImageEffect getEffect() {
+            return isApplied() ? new MonochromeEffect() : null;
+        }
+    },
+    Invert(false, null, null,
+            getGlobalContext().getString(R.string.filter_invert_colors)) {
+        @Override
+        public ImageEffect getEffect() {
+            return isApplied() ? new InvertEffect() : null;
+        }
+    },
+    Sepia(false, null, null,
+            getGlobalContext().getString(R.string.filter_sepia)) {
+        @Override
+        public ImageEffect getEffect() {
+            return isApplied() ? new SepiaEffect() : null;
+        }
+    },
+    Emboss(false, null, null,
+            getGlobalContext().getString(R.string.filter_emboss)) {
+        @Override
+        public String getSummary() {
+            return getGlobalContext().getString(R.string.filter_maybe_lag);
+        }
+
+        @Override
+        public ImageEffect getEffect() {
+            return isApplied() ? new EmbossEffect() : null;
+        }
+    },
+    Engrave(false, null, null,
+            getGlobalContext().getString(R.string.filter_engrave)) {
+        @Override
+        public String getSummary() {
+            return getGlobalContext().getString(R.string.filter_maybe_lag);
+        }
+
+        @Override
+        public ImageEffect getEffect() {
+            return isApplied() ? new EngraveEffect() : null;
+        }
+    },
+    Flea(false, null, null,
+            getGlobalContext().getString(R.string.filter_flea)) {
+        @Override
+        public ImageEffect getEffect() {
+            return isApplied() ? new FleaEffect() : null;
+        }
+    },
+    Snow(false, null, null,
+            getGlobalContext().getString(R.string.filter_snow)) {
+        @Override
+        public ImageEffect getEffect() {
+            return isApplied() ? new SnowEffect() : null;
+        }
+    };
+
+    private final boolean free;
+    private final String title;
+    @Nullable
+    private final String[] entryValues;
+    @Nullable
+    private final String[] entries;
+
+    ImageEffects(boolean free, @Nullable String[] entries, @Nullable String[] entryValues, String title) {
+        this.free = free;
+        this.entries = entries;
+        this.entryValues = entryValues;
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Boolean isSwitch() {
+        return entryValues == null || entryValues.length == 0;
+    }
+
+    public Boolean isList() {
+        return entryValues != null && entryValues.length > 0;
+    }
+
+    public boolean isFree() {
+        return free;
+    }
+
+    @Nullable
+    public String[] getEntries() {
+        return entries;
+    }
+
+    @Nullable
+    public String[] getEntryValues() {
+        return entryValues;
+    }
+
+    public String getSummary() {
+        return "";
+    }
+
+    public abstract ImageEffect getEffect();
+
+    protected boolean isApplied() {
+        return getPreferences().getBoolean(this.toString(), false);
+    }
 
     @NonNull
     @Override
@@ -45,10 +247,16 @@ interface ImageEffect {
 
 class BlurEffect implements ImageEffect {
 
+    private final int radius;
+
+    public BlurEffect(int radius) {
+        this.radius = radius;
+    }
+
     @Override
     public Bitmap apply(Bitmap input) {
         try {
-            MediaNative.blurBitmap(input, getRadius());
+            MediaNative.blurBitmap(input, radius);
             return input;
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,30 +264,20 @@ class BlurEffect implements ImageEffect {
         }
     }
 
-    private int getRadius() {
-        String radius = getPreferences().getString(ImageEffects.Blur.toString(), "disabled");
-        switch (radius) {
-            case "low":
-                return 8;
-            case "med":
-                return 14;
-            default:
-                return 20;
-        }
-    }
 }
 
 class DimEffect implements ImageEffect {
+    private final int mul;
+    private final int add;
+
+    public DimEffect(int mul, int add) {
+        this.mul = mul;
+        this.add = add;
+    }
 
     @Override
     public Bitmap apply(Bitmap input) {
-        String radius = getPreferences().getString(ImageEffects.Dim.toString(), "disabled");
-        switch (radius) {
-            case "dim_black":
-                dimImage(input, new LightingColorFilter(0xFF7F7F7F, 0x00000000));  // darken
-            case "dim_white":
-                dimImage(input, new LightingColorFilter(0xFFFFFFFF, 0x00222222)); // lighten
-        }
+        dimImage(input, new LightingColorFilter(mul, add));
         return input;
     }
 
@@ -97,23 +295,14 @@ class DimEffect implements ImageEffect {
 
 class MosaicEffect implements ImageEffect {
 
+    private final int scale;
+
+    public MosaicEffect(int scale) {
+        this.scale = scale;
+    }
+
     @Override
     public Bitmap apply(Bitmap input) {
-        int scale = 100;
-
-        String radius = getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled");
-
-        switch (radius) {
-            case "high":
-                scale = 25;
-                break;
-            case "med":
-                scale = 50;
-                break;
-            case "low":
-                scale = 75;
-        }
-
         Bitmap temp = Bitmap.createScaledBitmap(input, scale, scale, false);
         return Bitmap.createScaledBitmap(temp, input.getWidth(), input.getHeight(), false);
     }

@@ -6,13 +6,8 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class ImageFilters {
     public static final int COLOR_MAX = 0xFF;
-    public static Set<ImageEffect> effects = new HashSet<>();
-
 
     public static Drawable getFilteredDrawable(Drawable orig) {
         if (orig == null) return null;
@@ -21,8 +16,11 @@ public class ImageFilters {
         Bitmap bitmap = ((BitmapDrawable) orig).getBitmap();
         bitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
 
-        for (var effect : effects) {
-            bitmap = effect.apply(bitmap);
+        for (var type : ImageEffects.values()) {
+            var effect = type.getEffect();
+            if (effect != null) {
+                bitmap = effect.apply(bitmap);
+            }
         }
 
         return new BitmapDrawable(getResources(), bitmap);

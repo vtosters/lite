@@ -28,7 +28,7 @@ import com.vtosters.lite.ui.MaterialSwitchPreference;
 
 public class PreferencesUtil {
 
-    public static void addListPreference(
+    public static ListPreference addListPreference(
             MaterialPreferenceToolbarFragment fragment,
             String key,
             String def,
@@ -44,6 +44,7 @@ public class PreferencesUtil {
         preference.setKey(key); // setKey
         preference.setDefaultValue(def); // setDefaultValue
         fragment.getPreferenceScreen().addPreference(preference); // fragment.getPreferenceScreen().addPreference(preference)
+        return preference;
     }
 
     public static void addListPreferenceIcon(
