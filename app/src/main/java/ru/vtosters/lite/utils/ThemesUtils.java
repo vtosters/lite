@@ -105,6 +105,8 @@ public class ThemesUtils {
     @SuppressLint("DiscouragedPrivateApi")
     public static void setCursorColor(EditText view) {
         try {
+            view.setHighlightColor(ThemesUtils.getMutedAccentColor());
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 view.getTextCursorDrawable().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
             } else {
@@ -138,6 +140,8 @@ public class ThemesUtils {
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 view.getTextSelectHandle().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+                view.getTextSelectHandleRight().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+                view.getTextSelectHandleLeft().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
             } else {
                 Field editorField = TextView.class.getDeclaredField("mEditor");
 
