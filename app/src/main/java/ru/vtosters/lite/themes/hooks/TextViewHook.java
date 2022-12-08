@@ -106,6 +106,7 @@ public class TextViewHook implements BaseHook {
                 ThemesUtils.setCursorColor((EditText) view);
             }
 
+            ThemesUtils.colorHandles(textView);
             VkUiThemer.autoThemeVkuiButtons(textView);
             ThemesHacks.fixProfileSelector(textView);
             ThemesHacks.fixThemedFeed(textView, i);

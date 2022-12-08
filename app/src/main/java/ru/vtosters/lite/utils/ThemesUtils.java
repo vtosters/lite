@@ -106,7 +106,7 @@ public class ThemesUtils {
     public static void setCursorColor(EditText view) {
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                view.setTextCursorDrawable(recolorDrawable(view.getTextCursorDrawable()));
+                view.getTextCursorDrawable().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
             } else {
                 Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
                 field.setAccessible(true);
@@ -116,17 +116,67 @@ public class ThemesUtils {
                 field.setAccessible(true);
                 Object editor = field.get(view);
 
-                Drawable drawable = ContextCompat.getDrawable(view.getContext(), drawableResId);
-                drawable.setColorFilter(getAccentColor(), PorterDuff.Mode.SRC_IN);
-                Drawable[] drawables = {drawable, drawable};
+                if (editor != null) {
+                    Drawable drawable = ContextCompat.getDrawable(view.getContext(), drawableResId);
+                    drawable.setColorFilter(getAccentColor(), PorterDuff.Mode.SRC_IN);
+                    Drawable[] drawables = {drawable, drawable};
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                    field = editor.getClass().getDeclaredField("mCursorDrawable");
-                } else {
-                    field = editor.getClass().getDeclaredField("mDrawableForCursor");
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                        field = editor.getClass().getDeclaredField("mCursorDrawable");
+                    } else {
+                        field = editor.getClass().getDeclaredField("mDrawableForCursor");
+                    }
+                    field.setAccessible(true);
+                    field.set(editor, drawables);
                 }
-                field.setAccessible(true);
-                field.set(editor, drawables);
+            }
+        } catch (Exception ignored) {
+        }
+    }
+    @SuppressLint("DiscouragedPrivateApi")
+    public static void colorHandles(TextView view) {
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                view.getTextSelectHandle().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+            } else {
+                Field editorField = TextView.class.getDeclaredField("mEditor");
+
+                if (!editorField.isAccessible()) editorField.setAccessible(true);
+
+                Object editor = editorField.get(view);
+
+                if (editor != null) {
+                    Class<?> editorClass;
+
+                    editorClass = editor.getClass();
+
+                    String[] handleNames = {"mSelectHandleLeft", "mSelectHandleRight", "mSelectHandleCenter"};
+                    String[] resNames = {"mTextSelectHandleLeftRes", "mTextSelectHandleRightRes", "mTextSelectHandleRes"};
+
+                    for (int i = 0; i < handleNames.length; i++) {
+                        Field handleField = editorClass.getDeclaredField(handleNames[i]);
+                        if (!handleField.isAccessible()) {
+                            handleField.setAccessible(true);
+                        }
+
+                        Drawable handleDrawable = (Drawable) handleField.get(editor);
+
+                        if (handleDrawable == null) {
+                            Field resField = TextView.class.getDeclaredField(resNames[i]);
+                            if (!resField.isAccessible()) {
+                                resField.setAccessible(true);
+                            }
+                            int resId = resField.getInt(view);
+                            handleDrawable = view.getResources().getDrawable(resId);
+                        }
+
+                        if (handleDrawable != null) {
+                            Drawable drawable = handleDrawable.mutate();
+                            drawable.setColorFilter(getAccentColor(), PorterDuff.Mode.SRC_IN);
+                            handleField.set(editor, drawable);
+                        }
+                    }
+                }
             }
         } catch (Exception ignored) {
         }
