@@ -16,6 +16,9 @@ public class ImageFilters {
         Bitmap bitmap = ((BitmapDrawable) orig).getBitmap();
         bitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
 
+        // FIXME: preserve order of filters
+        //  e.g. user turned invert first then mosaic then monochrome
+        //  invocation here happens regardless of that order
         for (var type : ImageEffects.values()) {
             var effect = type.getEffect();
             if (effect != null) {
