@@ -1,48 +1,11 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.ui.PreferencesUtil.addListPreferenceIcon;
-import static ru.vtosters.lite.ui.PreferencesUtil.addMaterialSwitchPreference;
-import static ru.vtosters.lite.ui.PreferencesUtil.addPreference;
-import static ru.vtosters.lite.ui.PreferencesUtil.addPreferenceCategory;
-import static ru.vtosters.lite.ui.PreferencesUtil.addPreferenceDrawable;
-import static ru.vtosters.lite.utils.About.getBuildNumber;
-import static ru.vtosters.lite.utils.About.getCommitLink;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserPhoto;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUsername;
-import static ru.vtosters.lite.utils.AccountManagerUtils.isVKTester;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
-import static ru.vtosters.lite.utils.GmsUtils.isGmsInstalled;
-import static ru.vtosters.lite.utils.ImageUtils.getDrawableFromUrl;
-import static ru.vtosters.lite.utils.Preferences.ads;
-import static ru.vtosters.lite.utils.Preferences.autotranslate;
-import static ru.vtosters.lite.utils.Preferences.dev;
-import static ru.vtosters.lite.utils.Preferences.devmenu;
-import static ru.vtosters.lite.utils.Preferences.disableSettingsSumms;
-import static ru.vtosters.lite.utils.Preferences.hasSpecialVerif;
-import static ru.vtosters.lite.utils.Preferences.isValidSignature;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
-import static ru.vtosters.lite.utils.Preferences.navbar;
-import static ru.vtosters.lite.utils.Preferences.offline;
-import static ru.vtosters.lite.utils.Preferences.shortinfo;
-import static ru.vtosters.lite.utils.Preferences.stories;
-import static ru.vtosters.lite.utils.Preferences.superapp;
-import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.ThemesUtils.getDarkTheme;
-import static ru.vtosters.lite.utils.ThemesUtils.getLightTheme;
-import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
-import static ru.vtosters.lite.utils.ThemesUtils.setTheme;
-import static ru.vtosters.lite.utils.VTVerifications.vtverif;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-
 import androidx.annotation.StringRes;
-
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
@@ -60,15 +23,27 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.general.fragments.SettingsAccountFragment;
 import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
-
+import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.SSFSUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
+
+import static ru.vtosters.lite.ui.PreferencesUtil.*;
+import static ru.vtosters.lite.utils.About.getBuildNumber;
+import static ru.vtosters.lite.utils.About.getCommitLink;
+import static ru.vtosters.lite.utils.AccountManagerUtils.*;
+import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.GmsUtils.isGmsInstalled;
+import static ru.vtosters.lite.utils.ImageUtils.getDrawableFromUrl;
+import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.ThemesUtils.*;
+import static ru.vtosters.lite.utils.VTVerifications.vtverif;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment {
     public static String getValAsString(@StringRes int strRes, Boolean value) {
@@ -165,19 +140,26 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         this.addPreferencesFromResource(R.xml.empty);
 
-        addPreferenceDrawable(this, "", getUsername(), requireContext().getString(R.string.vtllogout), getDrawableFromUrl(getUserPhoto(), R.drawable.ic_user_circle_outline_28, true, true), preference -> {
+        addPreferenceDrawable(this, "account_switcher", getUsername(), requireContext().getString(R.string.vtllogout), null, preference -> {
             try {
                 VKAuth.a("logout", false);
             } catch (Exception ignored) {
             }
 
-            var intent = new Intent(requireContext(), MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            var intent = new Intent(requireContext(), MainActivity.class)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             requireContext().startActivity(intent);
 
             return false;
+        });
+
+        VTExecutors.getIoScheduler().a(() -> {
+            var icon = getDrawableFromUrl(getUserPhoto(), R.drawable.ic_user_circle_outline_28, true, true);
+            LifecycleUtils.getCurrentActivity().runOnUiThread(() -> {
+                findPreference("account_switcher").setIcon(icon);
+            });
         });
 
         addPreference(this, "", requireContext().getString(R.string.vtssfs), ssfs, R.drawable.ic_link_circle_outline_28, preference -> {

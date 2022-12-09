@@ -1,67 +1,33 @@
 package ru.vtosters.lite.utils;
 
-import static android.graphics.Bitmap.createBitmap;
-import static android.graphics.Bitmap.createScaledBitmap;
-import static androidx.core.content.ContextCompat.getDrawable;
-import static ru.vtosters.lite.utils.Preferences.preferences;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Path;
-import android.graphics.PorterDuff;
-import android.graphics.RectF;
+import android.graphics.*;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.StrictMode;
+import androidx.core.content.ContextCompat;
 
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import java.net.URL;
 
 public class ImageUtils {
 
-    private static final OkHttpClient client = VtOkHttpClient.getInstance();
+    // must be called asynchronously
+    public static Drawable getDrawableFromUrl(String url, int placeholderRes, boolean rounded, boolean scaled) {
 
-    public static Bitmap bmp = null;
+        if (NetworkUtils.isNetworkConnected() && !NetworkUtils.isNetworkIsSlow()) {
+            try {
+                var bmp = BitmapFactory.decodeStream(new URL(url).openStream());
 
-    public static Drawable getDrawableFromUrl(String url, int defDrawableRes, Boolean rounded, Boolean scaled) {
-        if (!NetworkUtils.isNetworkConnected()) {
-            if (defDrawableRes == 0) return null;
-            return getDrawable(AndroidUtils.getGlobalContext(), defDrawableRes);
-        }
+                if (bmp != null) {
+                    if (rounded) bmp = getBitmapClippedCircle(bmp);
+                    if (scaled) bmp = Bitmap.createScaledBitmap(bmp, AndroidUtils.dp2px(256), AndroidUtils.dp2px(256), true);
 
-        if (NetworkUtils.isNetworkIsSlow()) {
-            if (defDrawableRes == 0) return null;
-            return getDrawable(AndroidUtils.getGlobalContext(), defDrawableRes);
-        }
-
-        try {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy); // fix get pic
-
-            var request = new Request.a()
-                    .b(url)
-                    .a();
-            bmp = BitmapFactory.decodeStream(client.a(request).execute().a().a());
-
-            if (bmp == null) {
-                if (defDrawableRes == 0) return null;
-                return getDrawable(AndroidUtils.getGlobalContext(), defDrawableRes);
+                    return new BitmapDrawable(AndroidUtils.getResources(), bmp);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-
-            bmp = rounded ? getBitmapClippedCircle(bmp) : bmp; // rounding
-
-            bmp = scaled ? createScaledBitmap(bmp, AndroidUtils.dp2px(256), AndroidUtils.dp2px(256), true) : bmp; // scaling
-
-            return new BitmapDrawable(AndroidUtils.getResources(), bmp); // return our drawable
-        } catch (Exception e) {
-            if (defDrawableRes == 0) return null; // default pic can be null
-
-            return getDrawable(AndroidUtils.getGlobalContext(), defDrawableRes); // get default drawable via res
         }
+        return placeholderRes > 0 ? ContextCompat.getDrawable(AndroidUtils.getGlobalContext(), placeholderRes) : null;
     }
 
     public static Bitmap scaleCenterCrop(Bitmap source, int newHeight, int newWidth) {
@@ -90,8 +56,8 @@ public class ImageUtils {
     public static Bitmap getBitmapClippedCircle(Bitmap bitmap) {
         final int width = bitmap.getWidth();
         final int height = bitmap.getHeight();
-        final Bitmap outputBitmap = createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        int pref = preferences.getInt("pic_rounding", 0);
+        final Bitmap outputBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        int pref = Preferences.preferences.getInt("pic_rounding", 0);
         final Canvas canvas = new Canvas(outputBitmap);
 
         final Path path = new Path();
@@ -112,7 +78,7 @@ public class ImageUtils {
     }
 
     public static Drawable setTint(Context ctx, Drawable d) {
-        d.setColorFilter(getAccentColor(), PorterDuff.Mode.SRC_ATOP);
+        d.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_ATOP);
         return d;
     }
 }
