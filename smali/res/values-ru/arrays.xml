@@ -689,4 +689,8 @@
         <item>Темная тема</item>
         <item>Светлая тема</item>
     </string-array>
+    <string-array name="accent_select_type">
+        <item>Выбрать вручную</item>
+        <item>Предустановленные цвета</item>
+    </string-array>
 </resources>

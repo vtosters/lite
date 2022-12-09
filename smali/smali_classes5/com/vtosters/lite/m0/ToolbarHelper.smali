@@ -5,7 +5,7 @@
 
 # direct methods
 .method public static a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
-    .locals 0
+    .locals 2
 
     .line 1
     invoke-static {p0, p1}, Lcom/vtosters/lite/m0/ToolbarHelper;->b(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)Z

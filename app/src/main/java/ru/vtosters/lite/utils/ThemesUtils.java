@@ -1,36 +1,25 @@
 package ru.vtosters.lite.utils;
 
-import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-import static ru.vtosters.lite.hooks.VKUIHook.isLoaded;
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
-import static ru.vtosters.lite.utils.AndroidUtils.getCenterScreenCoords;
-import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
-import static ru.vtosters.lite.utils.Preferences.color_grishka;
-import static ru.vtosters.lite.utils.Preferences.dockbar_accent;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
-import static ru.vtosters.lite.utils.Preferences.navbar;
-import static ru.vtosters.lite.utils.Preferences.vkme;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
-import android.widget.ImageButton;
-
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Switch;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
-
+import androidx.core.graphics.drawable.DrawableCompat;
 import com.vk.articles.preload.WebCachePreloader;
 import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.preference.Preference;
@@ -39,15 +28,16 @@ import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
+import ru.vtosters.lite.hooks.VKUIHook;
+import ru.vtosters.lite.themes.ThemesHacks;
+import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
 
-import java.util.Arrays;
-import java.util.List;
+import java.lang.reflect.Field;
+
+import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 public class ThemesUtils {
-    public static List<String> accentColors = Arrays.asList(
-            "5692d7", "528bcc", "7aa0cc", "518bcc", "6296d0", "2f68aa", "638ebf", "5181b8", "71aaeb", "4774a8", "5baaf4", "4186c8", "add3ff", "4774a8", "718198", "5a9eff", "99a2ad", "74a2d6", "e9eef3", "dfe3e7", "eff1f3", "5c9ce6", "4986cc", "4680c2"
-    );
-
     public static void applyTheme(VKTheme theme) {
         var currentActivity = LifecycleUtils.getCurrentActivity();
         if (currentActivity != null) {
@@ -61,6 +51,10 @@ public class ThemesUtils {
         }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
+    public static ColorStateList getAccenedColorStateList() {
+        return ColorStateList.valueOf(getAccentColor());
+    }
+
     public static int getSystemModeTheme() {
         return AppCompatDelegate.getDefaultNightMode();
     }
@@ -71,26 +65,26 @@ public class ThemesUtils {
 
     public static void setTheme(VKTheme theme, Activity activity) {
         if (activity == null) {
-            activity = getCurrentActivity();
+            activity = LifecycleUtils.getCurrentActivity();
 
             if (activity == null) return;
         }
         VKThemeHelper.theme(theme, activity, getCenterScreenCoords());
         ThemeTracker.a();
-        isLoaded = false;
+        VKUIHook.isLoaded = false;
         new WebView(activity).clearCache(true);
         WebCachePreloader.e();
     } // apply changed theme
 
     public static void setThemeFL(VKTheme theme, Activity activity, float[] fl) {
         if (activity == null) {
-            activity = getCurrentActivity();
+            activity = LifecycleUtils.getCurrentActivity();
 
             if (activity == null) return;
         }
         VKThemeHelper.theme(theme, activity, fl);
         ThemeTracker.a();
-        isLoaded = false;
+        VKUIHook.isLoaded = false;
         new WebView(activity).clearCache(true);
         WebCachePreloader.e();
     }
@@ -100,8 +94,107 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        return getColorFromAttr(R.attr.accent);
+        var accent = AndroidUtils.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
+        return accent == 0 ? getColorFromAttr(R.attr.accent) : accent;
     } // Color accent
+
+    public static int getMutedAccentColor() {
+        return getMutedColor(getAccentColor());
+    }
+
+    @SuppressLint("DiscouragedPrivateApi")
+    public static void setCursorColor(EditText view) {
+        try {
+            view.setHighlightColor(ThemesUtils.getMutedAccentColor());
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                view.getTextCursorDrawable().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+            } else {
+                Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
+                field.setAccessible(true);
+                int drawableResId = field.getInt(view);
+
+                field = TextView.class.getDeclaredField("mEditor");
+                field.setAccessible(true);
+                Object editor = field.get(view);
+
+                if (editor != null) {
+                    Drawable drawable = ContextCompat.getDrawable(view.getContext(), drawableResId);
+                    drawable.setColorFilter(getAccentColor(), PorterDuff.Mode.SRC_IN);
+                    Drawable[] drawables = {drawable, drawable};
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                        field = editor.getClass().getDeclaredField("mCursorDrawable");
+                    } else {
+                        field = editor.getClass().getDeclaredField("mDrawableForCursor");
+                    }
+                    field.setAccessible(true);
+                    field.set(editor, drawables);
+                }
+            }
+        } catch (Exception ignored) {
+        }
+    }
+    @SuppressLint("DiscouragedPrivateApi")
+    public static void colorHandles(TextView view) {
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                view.getTextSelectHandle().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+                view.getTextSelectHandleRight().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+                view.getTextSelectHandleLeft().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+            } else {
+                Field editorField = TextView.class.getDeclaredField("mEditor");
+
+                if (!editorField.isAccessible()) editorField.setAccessible(true);
+
+                Object editor = editorField.get(view);
+
+                if (editor != null) {
+                    Class<?> editorClass;
+
+                    editorClass = editor.getClass();
+
+                    String[] handleNames = {"mSelectHandleLeft", "mSelectHandleRight", "mSelectHandleCenter"};
+                    String[] resNames = {"mTextSelectHandleLeftRes", "mTextSelectHandleRightRes", "mTextSelectHandleRes"};
+
+                    for (int i = 0; i < handleNames.length; i++) {
+                        Field handleField = editorClass.getDeclaredField(handleNames[i]);
+                        if (!handleField.isAccessible()) {
+                            handleField.setAccessible(true);
+                        }
+
+                        Drawable handleDrawable = (Drawable) handleField.get(editor);
+
+                        if (handleDrawable == null) {
+                            Field resField = TextView.class.getDeclaredField(resNames[i]);
+                            if (!resField.isAccessible()) {
+                                resField.setAccessible(true);
+                            }
+                            int resId = resField.getInt(view);
+                            handleDrawable = view.getResources().getDrawable(resId);
+                        }
+
+                        if (handleDrawable != null) {
+                            Drawable drawable = handleDrawable.mutate();
+                            drawable.setColorFilter(getAccentColor(), PorterDuff.Mode.SRC_IN);
+                            handleField.set(editor, drawable);
+                        }
+                    }
+                }
+            }
+        } catch (Exception ignored) {
+        }
+    }
+
+    public static int getMutedColor(int color) {
+        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), 0.5f);
+    }
+
+    public static void setCustomAccentColor(int newColor, boolean async) {
+        var editor = AndroidUtils.edit().putInt("accent_color", newColor);
+        if (async) editor.apply();
+        else editor.commit();
+    }
 
     public static int getTextAttr() {
         return getColorFromAttr(R.attr.text_primary);
@@ -131,38 +224,12 @@ public class ThemesUtils {
         return getColorFromAttr(R.attr.header_text);
     } // Header/Toolbar color text
 
-    public static int getAmoledTheme() {
-        return getIdentifier("BaseAmoledStyle", "style");
-    } // Get Amoled theme id
-
-    public static int picFix() {
-        return getIdentifier("ActionBarThemeFix", "style");
-    } // Fix tabbar color in photo viewer
-
-    public static int getAmoledImTheme() {
-        return getIdentifier("VkIm.Theme.VkApp.Amoled", "style");
-    } // Get Amoled theme id for messages
-
-    public static int getAmoledMeTheme() {
-        return getIdentifier("VkIm.Theme.VkMe.Amoled", "style");
-    } // Get Amoled theme id for messages with rounded msg
-
     public static int getAttrId(String attr) {
         return getIdentifier(attr, "attr");
     }
 
-    public static void setBarTheme(View getview) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getview.setSystemUiVisibility(getNeededColorNavbar() | getNeededColorStatusbar());
-        }
-    } // Set white/dark statusbar/navbar icons
-
-    public static int getNeededColorStatusbar() {
-        return !isDarkTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ? 8192 : 0;
-    }
-
     public static int getNeededColorNavbar() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? isDarkTheme() ? SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? isDarkTheme() ? View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
     }
 
     public static int getDarkThemeRes() {
@@ -197,16 +264,35 @@ public class ThemesUtils {
         return MilkshakeHelper.e();
     }
 
-    public static boolean isColorRefAccented(int color) {
-        for (int accent : new int[]{R.color.accent_blue, R.color.azure_A400, R.color.blue, R.color.blue_200, R.color.blue_200_muted, R.color.blue_300, R.color.blue_400, R.color.cool_blue, R.color.cornflower_blue, R.color.cornflower_blue_two, R.color.dot_unread, R.color.fave_promo_btn_pressed, R.color.header_blue, R.color.vkim_ripple_dark, R.color.colorAccent, R.color.light_blue, R.color.light_blue_gray, R.color.live_emoji_butt_hide, R.color.music_action_button_blue, R.color.name, R.color.picker_blue, R.color.picker_blue_pressed, R.color.picker_tab_bg_selected, R.color.picker_tab_text_selected, R.color.sharing_blue_btn_normal, R.color.sharing_blue_btn_pressed, R.color.sky_300, R.color.text_blue, R.color.tip_background, R.color.tw__blue_default, R.color.tw__blue_pressed, R.color.vkim_msg_sending_ic, R.color.vkim_playing_drawable_rect, R.color.white_blue32}) {
-            if (color == accent) return true;
-        }
-        return false;
-    } // Accent colors
+    private static int[] p() {
+        int[] iArr = new int[4];
+        iArr[0] = getColor(isDarkTheme() ? R.color.gray_800 : R.color.white);
+        iArr[1] = getColor(isDarkTheme() ? R.color.switch_disabled_on_dark : R.color.switch_disabled_on_light);
+        iArr[2] = getColor(R.color.gray_20);
+        iArr[3] = getAccentColor();
+        return iArr;
+    }
 
-    public static void themeMonetToolbar(ImageButton imageButton, Toolbar toolbar) {
-        imageButton.setImageTintList(ColorStateList.valueOf(getHeaderText()));
-        toolbar.setElevation(0.0f);
+    private static int[][] f() {
+        return new int[][]{new int[]{-16842910, -16842912}, new int[]{-16842910, 16842912}, new int[]{-16842912}, new int[]{16842912}};
+    }
+
+    private static int[] q() {
+        return new int[]{VKThemeHelper.d(R.attr.loader_track_fill), getMutedAccentColor(), VKThemeHelper.d(R.attr.loader_track_fill), getMutedAccentColor()};
+    }
+
+    public static void setSwitch(SwitchCompat switchCompat) {
+        DrawableCompat.setTintList(DrawableCompat.wrap(switchCompat.getThumbDrawable()), new ColorStateList(f(), p()));
+        DrawableCompat.setTintList(DrawableCompat.wrap(switchCompat.getTrackDrawable()), new ColorStateList(f(), q()));
+    }
+
+    public static void setSwitch(Switch aSwitch) {
+        DrawableCompat.setTintList(DrawableCompat.wrap(aSwitch.getThumbDrawable()), new ColorStateList(f(), p()));
+        DrawableCompat.setTintList(DrawableCompat.wrap(aSwitch.getTrackDrawable()), new ColorStateList(f(), q()));
+    }
+
+    public static void setImageViewColored(ImageView view){
+        view.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.MULTIPLY);
     }
 
     public static Drawable recolorDrawable(Drawable drawable) {
@@ -214,76 +300,18 @@ public class ThemesUtils {
         return new RecoloredDrawable(drawable, getAccentColor());
     } // Recolor drawable to accent color
 
-    public static Drawable recolorVKIconMenu(Drawable drawable) {
-        int accent = getHeaderText();
-
+    public static Drawable recolorToolbarDrawable(Drawable drawable) {
         if (drawable == null) return null;
+        return new RecoloredDrawable(drawable, (ThemesUtils.isMilkshake() && !ThemesUtils.isDarkTheme()) ? ThemesUtils.getAccentColor() : ThemesUtils.getHeaderText());
+    }
 
-        if (isAndroidMonet() || isDarkTheme()) accent = getAccentColor();
+    public static void recolorTextView(TextView tw) {
+        tw.getBackground().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_OVER);
+    }
 
-        return new RecoloredDrawable(drawable, accent);
-    } // Recolor vk icon to accent color
-
-
-    public static Drawable recolorDrawableToolbar(Drawable drawable) {
-        if (drawable == null) return null;
-
-        if (!isAndroidMonet()) return drawable;
-
-        return new RecoloredDrawable(drawable, getHeaderText());
-    } // Recolor toolbar drawable to accent color
-
-    @SuppressLint("UseCompatLoadingForDrawables")
-    public static Drawable recolorDrawableInt(int drawable) {
-        if (!isAndroidMonet()) return getResources().getDrawable(drawable);
-
-        @SuppressLint("UseCompatLoadingForDrawables") Drawable res = getResources().getDrawable(drawable);
-        return new RecoloredDrawable(res, getAccentColor());
-    } // Get res drawable via id and coloring to accent
-
-    public static ColorStateList recolorCSL(ColorStateList colorStateList) {
-        if (colorStateList == null) return null;
-
-        if (!isAndroidMonet()) return colorStateList;
-
-        return ColorStateList.valueOf(getAccentColor());
-    } // Recolor ColorStateList to accent color
-
-    @SuppressLint("UseCompatLoadingForColorStateLists")
-    public static ColorStateList themeCSL(Context context, int color) {
-        if (isColorRefAccented(color) && isAndroidMonet()) {
-            return ColorStateList.valueOf(getAccentColor());
-        }
-
-        ColorStateList csl;
-
-        if (Build.VERSION.SDK_INT >= 23) {
-            csl = context.getColorStateList(color);
-        } else {
-            csl = context.getResources().getColorStateList(color);
-        }
-
-        try {
-            int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
-            int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);
-
-            boolean isUnselAccent = isAccentedColor(unsel);
-            boolean isSelAccent = isAccentedColor(sel);
-
-            if (isUnselAccent || isSelAccent) {
-
-                return new ColorStateList(new int[][]{
-                        new int[]{android.R.attr.state_selected}, new int[]{-android.R.attr.state_selected}
-                }, new int[]{isSelAccent ? getAccentColor() : sel, isUnselAccent ? getAccentColor() : unsel});
-            }
-
-            return csl;
-        } catch (Exception e) {
-
-            e.printStackTrace();
-            return null;
-        }
-    } // Recolor ColorStateList
+    public static void recolorBGView(View view) {
+        view.getBackground().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_OVER);
+    }
 
     public static int darken(int color, float by) {
         float[] hsl = new float[3];
@@ -311,30 +339,8 @@ public class ThemesUtils {
         return ColorUtils.setAlphaComponent(src, 169);
     }
 
-    public static boolean isAccentedColor(ColorStateList target) {
-        return target != null && isAccentedColor(target.getDefaultColor());
-    }
-
-    public static boolean isAccentedColor(int target) {
-        return accentColors.contains(hex(target).toLowerCase());
-    }
-
-    public static int getColor(Context context, int i) {
-        if (isColorRefAccented(i) && isAndroidMonet()) {
-            return getAccentColor();
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            return context.getColor(i);
-        } else {
-            return context.getResources().getColor(i);
-        }
-    } // Android Support color injector + accent color checker
-
-    public static int getColor2(int i) {
-        if (isColorRefAccented(i) && isAndroidMonet()) {
-            return getAccentColor();
-        }
-        return getResources().getColor(i);
+    public static int getColor(int i) {
+        return ThemesHacks.getHackedColor(getGlobalContext(), i);
     } // Android Support color injector + accent color checker
 
     public static int getAlertStyle() {
@@ -342,7 +348,7 @@ public class ThemesUtils {
     }
 
     public static String getBackgroundStickers() {
-        if (getWallpaper() != null) {
+        if (WallpapersHooks.getWallpaper() != null) {
             return "images_with_background";
         }
         return "images";
@@ -383,6 +389,11 @@ public class ThemesUtils {
     public static String hex(int i) {
         return String.format("#%06X", i & 16777215);
     } // Get color as hex string
+
+    // hex, but without # at the beginning
+    public static String hexx(int i) {
+        return String.format("%06X", i & 16777215);
+    }
 
     public static int getNavigationHeight(int Default) {
         int VKME = R.dimen.design_bottom_sheet_peek_height_min;

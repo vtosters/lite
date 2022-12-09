@@ -345,6 +345,10 @@
 .method public final setIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
     .line 2
     iget-object v0, p0, Lcom/vk/music/view/MusicActionButton;->c:Landroid/content/res/ColorStateList;
 

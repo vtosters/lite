@@ -377,9 +377,7 @@
 
     if-eqz v3, :cond_3
 
-    const v4, 0x7f0600f7
-
-    invoke-static {v2, v4}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v4
 

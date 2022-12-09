@@ -128,7 +128,9 @@
 .method private a()V
     .locals 2
 
-    const/4 v0, -0x1
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getBackgroundContent()I
+
+    move-result v0
 
     .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundColor(I)V
@@ -170,7 +172,9 @@
     .line 6
     iget-object v0, p0, Lcom/vk/stories/view/VolumeControlView;->c:Landroid/graphics/Paint;
 
-    const v1, -0xa96d29
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 

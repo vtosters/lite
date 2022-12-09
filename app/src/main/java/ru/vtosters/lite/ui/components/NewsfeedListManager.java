@@ -50,7 +50,7 @@ public class NewsfeedListManager {
                             sendToast(activity.getString(R.string.newsfeed_list_update_feed_to_work));
                         }
                 )
-        ));
+        ), "newsfeed_items_editor");
     }
 
     public static void resetHideItems() {

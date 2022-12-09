@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Акценты">
+        <Preference
+            android:key="accent_color"
+            android:summary="@string/accent_color_summ"
+            android:icon="@drawable/bg_accent_circle"
+            android:title="@string/accent_color_title" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlthemes">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
@@ -25,7 +32,9 @@
             android:key="lighttheme"
             android:title="@string/appearance_theme_light_theme" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtl_settings_dockbar_title" android:key="dockbarsett">
+    <PreferenceCategory
+        android:key="dockbarsett"
+        android:title="@string/vtl_settings_dockbar_title">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="dockbar_tab_titles"

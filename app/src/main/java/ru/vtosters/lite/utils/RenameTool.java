@@ -153,7 +153,7 @@ public class RenameTool {
         fn.setHint(R.string.vk_auth_sign_up_first_name);
         fn.setTextColor(getTextAttr());
         fn.setHintTextColor(getSTextAttr());
-        fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        fn.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
@@ -164,7 +164,7 @@ public class RenameTool {
         ln.setHint(R.string.vk_auth_sign_up_last_name);
         ln.setTextColor(getTextAttr());
         ln.setHintTextColor(getSTextAttr());
-        ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        ln.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
         linearLayout.addView(ln);
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ln.setLayoutParams(margin);
@@ -235,7 +235,7 @@ public class RenameTool {
         fn.setHint(R.string.vk_auth_sign_up_first_name);
         fn.setHintTextColor(getSTextAttr());
         fn.setTextColor(getTextAttr());
-        fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        fn.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());

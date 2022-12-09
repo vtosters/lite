@@ -258,7 +258,7 @@
                 android:paddingRight="@dimen/post_side_padding"
                 android:text="@string/group_remove_manager"
                 android:textAllCaps="true"
-                android:textColor="#ff5181b8"
+                android:textColor="@color/header_blue"
                 android:textSize="14.0dip"
                 app:overlay="@drawable/highlight_post" />
         </FrameLayout>

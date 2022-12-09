@@ -97,9 +97,8 @@ public class PhotoViewer {
     @SuppressLint("UseCompatLoadingForDrawables")
     public static void addMenuItems(AttachmentWithMedia attachment, ActionsPopup.b actionPopup, int i, boolean z) {
         actionPopup.a(R.string.search_photo_content,
-                ThemesUtils.isDarkTheme()
-                        ? AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28)
-                        : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28), ThemesUtils.getAccentColor()),
+                new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28),
+                        ThemesUtils.isDarkTheme() ? Color.WHITE : ThemesUtils.getAccentColor()),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
@@ -119,9 +118,8 @@ public class PhotoViewer {
                 }
         );
         actionPopup.a(R.string.copy_photo_url_content,
-                !ThemesUtils.isDarkTheme()
-                        ? new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28), ThemesUtils.getAccentColor())
-                        : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28), Color.WHITE),
+                new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28),
+                        ThemesUtils.isDarkTheme() ? Color.WHITE : ThemesUtils.getAccentColor()),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
@@ -141,10 +139,8 @@ public class PhotoViewer {
                 }
         );
         actionPopup.a(R.string.open_original_photo_content,
-                ThemesUtils.isDarkTheme()
-                        ? AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_link_outline_28)
-                        : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_link_outline_28),
-                        ThemesUtils.getAccentColor()),
+                new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_link_outline_28),
+                        ThemesUtils.isDarkTheme() ? Color.WHITE : ThemesUtils.getAccentColor()),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {

@@ -1873,6 +1873,10 @@
 
     if-eqz p1, :cond_2
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+    
     .line 7
     :goto_0
     invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback;->a(Landroid/graphics/drawable/Drawable;)V

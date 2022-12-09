@@ -217,9 +217,7 @@
     .line 15
     sget v5, Lb/h/z/m;->BottomConfirmButton_bcb_send_bg_color:I
 
-    sget v6, Lb/h/z/b;->accent:I
-
-    invoke-static {v1, v6}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v6
 
@@ -243,9 +241,7 @@
     .line 17
     sget v7, Lb/h/z/m;->BottomConfirmButton_bcb_cancel_bg_color:I
 
-    sget v8, Lb/h/z/b;->accent:I
-
-    invoke-static {v1, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v8
 

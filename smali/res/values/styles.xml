@@ -9209,8 +9209,6 @@
         <item name="vkapp_bottom_menu">@menu/bottom_navigation_milkshake</item>
     </style>
 
-
-
     <style name="VkMilkAmoledStyle" parent="@style/VkMilkAmoledTheme">
         <item name="android:textColorSecondary">@color/prefs_subtitle</item>
         <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
@@ -9367,7 +9365,6 @@
         <item name="tabBarTextSize">16.0sp</item>
         <item name="vkapp_bottom_menu">@menu/bottom_navigation_milkshake</item>
     </style>
-
 
     <style name="VkMilkLightStyle" parent="@style/VkMilkLightTheme">
         <item name="android:textColorSecondary">@color/prefs_subtitle</item>

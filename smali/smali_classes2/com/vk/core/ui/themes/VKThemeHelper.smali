@@ -1192,8 +1192,6 @@
 
     invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
-    move-result v1
-
     invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v1
@@ -1217,8 +1215,6 @@
     sget v1, Lb/h/z/b;->accent:I
 
     invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
-
-    move-result v1
 
     const/4 v2, 0x3
 
@@ -2577,9 +2573,7 @@
     const/4 v1, 0x3
 
     .line 4
-    sget v2, Lb/h/z/b;->accent:I
-
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v2
 
@@ -2617,8 +2611,6 @@
 
     invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
-    move-result v1
-
     const v2, 0x3df5c28f    # 0.12f
 
     invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
@@ -2644,8 +2636,6 @@
     sget v1, Lb/h/z/b;->accent:I
 
     invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
-
-    move-result v1
 
     const v2, 0x3ef5c28f    # 0.48f
 
@@ -2793,6 +2783,10 @@
 .method public final a(Landroid/widget/Switch;)V
     .locals 4
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->setSwitch(Landroid/widget/Switch;)V
+
+    return-void
+
     .line 90
     invoke-virtual {p1}, Landroid/widget/Switch;->getThumbDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -2844,6 +2838,10 @@
 
 .method public final a(Landroidx/appcompat/widget/SwitchCompat;)V
     .locals 4
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->setSwitch(Landroidx/appcompat/widget/SwitchCompat;)V
+
+    return-void
 
     .line 88
     invoke-virtual {p1}, Landroidx/appcompat/widget/SwitchCompat;->getThumbDrawable()Landroid/graphics/drawable/Drawable;

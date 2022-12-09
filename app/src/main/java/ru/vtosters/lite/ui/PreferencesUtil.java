@@ -1,30 +1,23 @@
 package ru.vtosters.lite.ui;
 
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.ImageUtils.setTint;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
 import android.util.TypedValue;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ImageUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class PreferencesUtil {
 
@@ -36,7 +29,7 @@ public class PreferencesUtil {
             CharSequence[] entries,
             CharSequence[] entriesValue
     ) {
-        ListPreference preference = new ListPreference(getGlobalContext());
+        ListPreference preference = new ListPreference(fragment.requireContext());
         preference.setEntries(entries);
         preference.setEntryValues(entriesValue);
         preference.setTitle(title); // setTitle
@@ -57,7 +50,7 @@ public class PreferencesUtil {
             CharSequence[] entriesValue,
             Preference.OnPreferenceChangeListener listener
     ) {
-        ListPreference preference = new ListPreference(getGlobalContext());
+        ListPreference preference = new ListPreference(fragment.requireContext());
         preference.setEntries(entries);
         preference.setEntryValues(entriesValue);
         preference.setSummary(summary); // setSummary
@@ -69,7 +62,7 @@ public class PreferencesUtil {
         preference.setOnPreferenceChangeListener(listener);
 
         if (iconRes != 0)
-            preference.setIcon(setTint(getGlobalContext(), getDrawable(getGlobalContext(), iconRes))); // preference.setIcon
+            preference.setIcon(ImageUtils.setTint(fragment.requireContext(), getDrawable(fragment.requireContext(), iconRes))); // preference.setIcon
         fragment.getPreferenceScreen().addPreference(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
@@ -80,7 +73,7 @@ public class PreferencesUtil {
             CharSequence summary,
             boolean defValue
     ) {
-        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(getGlobalContext());
+        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(materialPreferenceToolbarFragment.requireContext());
         materialSwitchPreference.setTitle(title); // setTitle
         materialSwitchPreference.setSummary(summary); // setSummary
         materialSwitchPreference.setKey(key); // setKey
@@ -98,7 +91,7 @@ public class PreferencesUtil {
 //            boolean defValue,
 //            Preference.OnPreferenceChangeListener listener
 //    ) {
-//        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(getGlobalContext());
+//        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(fragment.requireContext());
 //        materialSwitchPreference.setTitle(title); // setTitle
 //        materialSwitchPreference.setSummary(summary); // setSummary
 //        materialSwitchPreference.setKey(key); // setKey
@@ -106,7 +99,7 @@ public class PreferencesUtil {
 //        materialSwitchPreference.setOnPreferenceChangeListener(listener); // setOnPreferenceClickListener
 //
 //        if (iconRes != 0)
-//            materialSwitchPreference.setIcon(setTint(getGlobalContext(), Objects.requireNonNull(ContextCompat.getDrawable(getGlobalContext(), iconRes)))); // preference.setIcon
+//            materialSwitchPreference.setIcon(setTint(fragment.requireContext(), Objects.requireNonNull(ContextCompat.getDrawable(fragment.requireContext(), iconRes)))); // preference.setIcon
 //
 //        fragment.getPreferenceScreen().addPreference(materialSwitchPreference); // fragment.getPreferenceScreen().addPreference(preference)
 //    }
@@ -120,7 +113,7 @@ public class PreferencesUtil {
             boolean defValue,
             Preference.OnPreferenceChangeListener listener
     ) {
-        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(getGlobalContext());
+        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(fragment.requireContext());
         materialSwitchPreference.setTitle(title); // setTitle
         materialSwitchPreference.setSummary(summary); // setSummary
         materialSwitchPreference.setKey(key); // setKey
@@ -128,7 +121,7 @@ public class PreferencesUtil {
         fragment.getPreferenceScreen().addPreference(materialSwitchPreference); // materialPreferenceToolbarFragment.getPreferenceScreen().addPreference(preference)
 
         if (iconRes != 0)
-            materialSwitchPreference.setIcon(setTint(getGlobalContext(), getDrawable(getGlobalContext(), iconRes))); // preference.setIcon
+            materialSwitchPreference.setIcon(ImageUtils.setTint(fragment.requireContext(), getDrawable(fragment.requireContext(), iconRes))); // preference.setIcon
         materialSwitchPreference.setOnPreferenceChangeListener(listener); // setOnPreferenceClickListener(listener)
 
         fragment.getPreferenceScreen().addPreference(materialSwitchPreference); // fragment.getPreferenceScreen().addPreference(preference)
@@ -140,7 +133,7 @@ public class PreferencesUtil {
             CharSequence title,
             CharSequence summary
     ) {
-        Preference preference = new Preference(getGlobalContext());
+        Preference preference = new Preference(fragment.requireContext());
         preference.setSummary(summary); // setSummary
         preference.setTitle(title); // setTitle
         preference.setKey(key); // setKey
@@ -155,12 +148,12 @@ public class PreferencesUtil {
             int iconRes,
             Preference.OnPreferenceClickListener listener
     ) {
-        Preference preference = new Preference(getGlobalContext());
+        Preference preference = new Preference(fragment.requireContext());
         preference.setSummary(summary); // setSummary
         preference.setTitle(title); // setTitle
 
         if (iconRes != 0)
-            preference.setIcon(setTint(getGlobalContext(), getDrawable(getGlobalContext(), iconRes))); // preference.setIcon
+            preference.setIcon(ImageUtils.setTint(fragment.requireContext(), getDrawable(fragment.requireContext(), iconRes))); // preference.setIcon
         preference.setOnPreferenceClickListener(listener); // preference.setOnPreferenceClickListener(listener)
 
         fragment.getPreferenceScreen().addPreference(preference); // fragment.getPreferenceScreen().addPreference(preference)
@@ -173,13 +166,13 @@ public class PreferencesUtil {
             CharSequence summary,
             int iconRes,
             Preference.OnPreferenceClickListener listener) {
-        Preference preference = new Preference(getGlobalContext());
+        Preference preference = new Preference(fragment.requireContext());
         preference.setSummary(summary); // setSummary
         preference.setTitle(title); // setTitle
         preference.setKey(key); // setKey
 
         if (iconRes != 0)
-            preference.setIcon(setTint(getGlobalContext(), getDrawable(getGlobalContext(), iconRes))); // preference.setIcon
+            preference.setIcon(ImageUtils.setTint(fragment.requireContext(), getDrawable(fragment.requireContext(), iconRes))); // preference.setIcon
         preference.setOnPreferenceClickListener(listener); // preference.setOnPreferenceClickListener(listener)
 
         fragment.getPreferenceScreen().addPreference(preference); // fragment.getPreferenceScreen().addPreference(preference)
@@ -193,7 +186,7 @@ public class PreferencesUtil {
             @Nullable Drawable icon,
             Preference.OnPreferenceClickListener listener
     ) {
-        Preference preference = new Preference(getGlobalContext());
+        Preference preference = new Preference(fragment.requireContext());
         preference.setSummary(summary); // setSummary
         preference.setTitle(title); // setTitle
         preference.setKey(key); // setKey
@@ -206,37 +199,37 @@ public class PreferencesUtil {
     }
 
     public static void addPreferenceCategory(MaterialPreferenceToolbarFragment fragment, CharSequence title) {
-        PreferenceCategory preference = new PreferenceCategory(getGlobalContext(), null);
+        PreferenceCategory preference = new PreferenceCategory(fragment.requireContext(), null);
         preference.setTitle(title); // setTitle
         fragment.getPreferenceScreen().addPreference(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
     public static void addPreferenceCategory(MaterialPreferenceToolbarFragment fragment, CharSequence title, int collapsedSize) {
-        PreferenceCategory preference = new PreferenceCategory(getGlobalContext(), null);
+        PreferenceCategory preference = new PreferenceCategory(fragment.requireContext(), null);
         preference.setTitle(title); // setTitle
         fragment.getPreferenceScreen().addPreference(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
     public static void addEditTextPreference(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, EditTextPrefChangeListener editTextPrefChangeListener) {
-        Preference preference = new Preference(getGlobalContext());
+        Preference preference = new Preference(fragment.requireContext());
 
         preference.setTitle(title); // setTitle
         preference.setKey(key);  // setKey
         preference.setOnPreferenceClickListener(preference1 -> {
-            LinearLayout linearLayout = new LinearLayout(getGlobalContext());
+            LinearLayout linearLayout = new LinearLayout(fragment.requireContext());
 
-            final EditText editText = new EditText(getGlobalContext());
-            editText.setText(PreferenceManager.getDefaultSharedPreferences(getGlobalContext()).getString(key, ""));
+            final EditText editText = new EditText(fragment.requireContext());
+            editText.setText(PreferenceManager.getDefaultSharedPreferences(fragment.requireContext()).getString(key, ""));
             editText.setHint(title);
-            editText.setTextColor(getTextAttr());
-            editText.setHintTextColor(getSTextAttr());
+            editText.setTextColor(ThemesUtils.getTextAttr());
+            editText.setHintTextColor(ThemesUtils.getSTextAttr());
 
-            editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+            editText.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
 
             linearLayout.addView(editText);
             editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
             ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());
-            margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
+            margin.setMargins(AndroidUtils.dp2px(20f), 0, AndroidUtils.dp2px(20f), 0);
             editText.setLayoutParams(margin);
 
             new VkAlertDialog.Builder(fragment.getContext())
@@ -247,7 +240,7 @@ public class PreferencesUtil {
                         if (!change)
                             return;
 
-                        PreferenceManager.getDefaultSharedPreferences(getGlobalContext())
+                        PreferenceManager.getDefaultSharedPreferences(fragment.requireContext())
                                 .edit()
                                 .putString(key, editText.getText().toString())
                                 .apply();
@@ -261,13 +254,13 @@ public class PreferencesUtil {
 
     public static int getTextColor(Context ctx) {
         TypedValue typedValue = new TypedValue();
-        ctx.getTheme().resolveAttribute(getTextAttr(), typedValue, true);
+        ctx.getTheme().resolveAttribute(ThemesUtils.getTextAttr(), typedValue, true);
         return typedValue.data;
     }
 
     public static int getSTextColor(Context ctx) {
         TypedValue typedValue = new TypedValue();
-        ctx.getTheme().resolveAttribute(getSTextAttr(), typedValue, true);
+        ctx.getTheme().resolveAttribute(ThemesUtils.getSTextAttr(), typedValue, true);
         return typedValue.data;
     }
 

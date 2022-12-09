@@ -304,7 +304,7 @@
                 android:singleLine="true"
                 android:text="@string/story_retry"
                 android:textAllCaps="true"
-                android:textColor="#ff74a2d6"
+                android:textColor="@color/blue_200_muted"
                 android:textSize="14.0sp" />
         </LinearLayout>
 

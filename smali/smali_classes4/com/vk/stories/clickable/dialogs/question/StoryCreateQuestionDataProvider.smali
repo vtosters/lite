@@ -126,10 +126,7 @@
 
     aput-object v1, v0, v6
 
-    const v1, 0x7f060023
-
-    .line 7
-    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v1
 

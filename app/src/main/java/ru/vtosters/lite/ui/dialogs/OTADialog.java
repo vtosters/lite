@@ -26,22 +26,22 @@ public class OTADialog implements OTAUtils.OTAListener {
 
     @Override
     public void onUpdateApplied() {
-        mActivity.runOnUiThread(() -> {
-            // Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
-            new ModalBottomSheetWrapper(mActivity)
-                    .setTitle(mActivity.getString(R.string.newversion) + " " + mHelper.getNewVersionName())
-                    .setUpdateInfoView(mHelper.getUpdateDescription())
-                    .setPositiveButton(mActivity.getString(R.string.updateanddownload), () -> {
-                        OTADownloader.downloadBuild(mHelper.getDownloadUrl(), mHelper.getCommitSHA());
-                    })
-                    .show();
-        });
+//        mActivity.runOnUiThread(() -> {
+//            // Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
+//            new ModalBottomSheetWrapper(mActivity)
+//                    .setTitle(mActivity.getString(R.string.newversion) + " " + mHelper.getNewVersionName())
+//                    .setUpdateInfoView(mHelper.getUpdateDescription())
+//                    .setPositiveButton(mActivity.getString(R.string.updateanddownload), () -> {
+//                        OTADownloader.downloadBuild(mHelper.getDownloadUrl(), mHelper.getCommitSHA());
+//                    })
+//                    .show();
+//        });
     }
 
     @Override
     public void onUpdateCanceled() {
-        mActivity.runOnUiThread(() -> {
-            // Toast.makeText(mActivity, "Обновлений не найдено", Toast.LENGTH_SHORT).show();
-        });
+//        mActivity.runOnUiThread(() -> {
+//            // Toast.makeText(mActivity, "Обновлений не найдено", Toast.LENGTH_SHORT).show();
+//        });
     }
 }

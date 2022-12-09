@@ -113,9 +113,7 @@
     .line 6
     iget-object v1, p0, Lcom/vk/pushes/notifications/im/BusinessNotifyGroupNotification;->d:Landroid/content/Context;
 
-    const v2, 0x7f0600f7
-
-    invoke-static {v1, v2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v1
 

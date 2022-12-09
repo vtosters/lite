@@ -110,8 +110,6 @@ public class TogglesHook {
             case FEATURE_VK_APPS_SEARCH:
             case FEATURE_VOTES_BALANCE:
             case FEATURE_WEBVIEW_TOKEN_ACTIVE:
-            case FEATURE_WISHLIST_ENTRY_POINT:
-            case FEATURE_WISHLIST_MY_PROFILE:
             case FEATURE_MILKSHAKE_FORCE_DISABLED:
             case FEATURE_MILKSHAKE_ACTIVATION_DISABLED:
             case EXPERIMENT_NEWS_DISABLE_CACHE:

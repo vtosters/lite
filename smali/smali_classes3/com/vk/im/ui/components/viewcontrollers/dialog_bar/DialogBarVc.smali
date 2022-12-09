@@ -218,6 +218,10 @@
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->g:Landroid/view/View;
 
+    const/16 p2, 0x8
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->b:Landroid/view/View;
 

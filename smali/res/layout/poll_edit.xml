@@ -66,7 +66,7 @@
                     android:paddingRight="16.0dip"
                     android:paddingBottom="16.0dip"
                     android:text="@string/poll_options_header"
-                    android:textColor="#ff5181b8"
+                    android:textColor="@color/header_blue"
                     android:textSize="14.0dip"
                     app:typeface="Medium" />
 
@@ -80,7 +80,7 @@
                     android:paddingRight="16.0dip"
                     android:text="@string/poll_add_option"
                     android:textAllCaps="true"
-                    android:textColor="#ff5181b8"
+                    android:textColor="@color/header_blue"
                     android:textSize="14.0dip"
                     app:typeface="Medium" />
             </LinearLayout>
@@ -105,7 +105,7 @@
                     android:paddingRight="16.0dip"
                     android:paddingBottom="16.0dip"
                     android:text="@string/poll_settings"
-                    android:textColor="#ff5181b8"
+                    android:textColor="@color/header_blue"
                     android:textSize="14.0dip"
                     app:typeface="Medium" />
 

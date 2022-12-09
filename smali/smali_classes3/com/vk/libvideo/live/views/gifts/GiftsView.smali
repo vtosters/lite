@@ -991,9 +991,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/libvideo/c;->header_blue:I
-
-    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

@@ -204,9 +204,7 @@
     iput v0, p0, Lcom/fourmob/datetimepicker/time/AmPmCirclesView;->c:I
 
     .line 6
-    sget v0, Lcom/fourmob/datetimepicker/a;->blue:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

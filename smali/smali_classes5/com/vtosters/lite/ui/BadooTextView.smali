@@ -115,6 +115,10 @@
 
     sget-object v4, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
+    invoke-static {v1}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorHexColor(I)I
+
+    move-result v1
+
     invoke-virtual {v3, v1, v4}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     :cond_1

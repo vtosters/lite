@@ -81,9 +81,7 @@
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
 
     .line 6
-    sget v3, Lcom/vk/im/ui/c;->accent:I
-
-    invoke-static {p1, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v3
 

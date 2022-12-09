@@ -65,6 +65,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
+
     const/4 v1, 0x0
 
     const v2, 0x1020019

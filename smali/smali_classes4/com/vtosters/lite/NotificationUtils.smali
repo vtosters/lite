@@ -51,10 +51,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600f7
-
-    .line 4
-    invoke-static {p0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result p0
 

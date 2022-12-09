@@ -882,6 +882,10 @@
     .line 1
     iget-object v0, p0, Lcom/vk/auth/ui/VkAuthToolbar;->c:Landroidx/appcompat/widget/AppCompatImageButton;
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+    
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     if-eqz p1, :cond_0

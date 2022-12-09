@@ -270,9 +270,7 @@
     aput v0, p1, v4
 
     .line 7
-    sget v0, Lb/h/t/b;->accent:I
-
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

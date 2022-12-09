@@ -2084,6 +2084,10 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseIcon:Landroid/graphics/drawable/Drawable;
 
+    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 4
@@ -5303,6 +5307,10 @@
 
     if-eqz v0, :cond_2
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+    
     .line 9
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -5645,6 +5653,10 @@
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     if-eqz v0, :cond_2
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
 
     .line 9
     invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V

@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.vtosters.lite.R;
 
+import ru.vtosters.lite.themes.hooks.TextViewHook;
 import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.ItemMovingCallback;
@@ -54,6 +55,8 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
             restartApplication();
         });
 
+        new TextViewHook().inject(save, 0, false);
+
         LinearLayout.LayoutParams saveParams = new LinearLayout.LayoutParams(0, -2);
         saveParams.weight = 1.0f;
         buttonsContainer.addView(save, saveParams);
@@ -67,6 +70,8 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
             DockBarEditorManager.getInstance().reset();
             restartApplication();
         });
+
+        new TextViewHook().inject(reset, 0, false);
 
         LinearLayout.LayoutParams resetParams = new LinearLayout.LayoutParams(0, -2);
         resetParams.weight = 1.0f;

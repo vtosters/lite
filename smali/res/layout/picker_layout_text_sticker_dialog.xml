@@ -30,7 +30,7 @@
                 android:paddingEnd="32.0dip"
                 android:paddingBottom="100.0dip"
                 android:textColor="#ffffffff"
-                android:textColorHighlight="#665c9ce6"
+                android:textColorHighlight="@color/blue_200"
                 android:textCursorDrawable="@drawable/picker_cursor_sticker_text"
                 android:textSize="40.0sp" />
         </com.vk.stories.views.TextStickerFrameLayout>

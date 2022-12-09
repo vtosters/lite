@@ -226,7 +226,7 @@
 .end method
 
 .method protected b(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 1
+    .locals 3
 
     .line 2
     new-instance p2, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc;
@@ -240,6 +240,9 @@
     invoke-direct {p2, p1, p3, p4, v0}, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc;-><init>(Landroid/view/LayoutInflater;Landroidx/appcompat/widget/Toolbar;Lcom/vk/im/ui/components/dialogs_list/SelectionMode;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderComponent;->B:Lcom/vk/im/ui/components/dialogs_header/vc/DialogsHeaderVc;
+
+    const v0, 0x0
+    invoke-static {p3, v0, v0}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
 
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderComponent;->B:Lcom/vk/im/ui/components/dialogs_header/vc/DialogsHeaderVc;

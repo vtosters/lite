@@ -23,7 +23,7 @@
             <shape android:shape="line">
                 <stroke
                     android:width="2.0dip"
-                    android:color="#ff5181b8" />
+                    android:color="@color/header_blue" />
             </shape>
         </clip>
     </item>
