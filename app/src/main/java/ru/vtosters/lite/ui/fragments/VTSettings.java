@@ -30,7 +30,6 @@ import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.SSFSUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -140,24 +139,31 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         this.addPreferencesFromResource(R.xml.empty);
 
-        addPreferenceDrawable(this, "account_switcher", getUsername(), requireContext().getString(R.string.vtllogout), null, preference -> {
-            try {
-                VKAuth.a("logout", false);
-            } catch (Exception ignored) {
-            }
+        addPreferenceDrawable(
+                this,
+                "account_switcher",
+                getUsername(),
+                requireContext().getString(R.string.vtllogout),
+                requireContext().getDrawable(R.drawable.ic_user_circle_outline_28),
+                preference -> {
+                    try {
+                        VKAuth.a("logout", false);
+                    } catch (Exception ignored) {
+                    }
 
-            var intent = new Intent(requireContext(), MainActivity.class)
-                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            requireContext().startActivity(intent);
+                    var intent = new Intent(requireContext(), MainActivity.class)
+                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    requireContext().startActivity(intent);
 
-            return false;
+                    return false;
         });
 
         VTExecutors.getIoScheduler().a(() -> {
-            var icon = getDrawableFromUrl(getUserPhoto(), R.drawable.ic_user_circle_outline_28, true, true);
-            LifecycleUtils.getCurrentActivity().runOnUiThread(() -> {
+            var icon = getDrawableFromUrl(getUserPhoto(), 0, true, true);
+            if (icon == null) return;
+            requireActivity().runOnUiThread(() -> {
                 findPreference("account_switcher").setIcon(icon);
             });
         });
