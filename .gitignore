@@ -30,3 +30,4 @@ smali/build/resources.zip
 smali/assets/version.properties
 *.keystore
 gradle.properties
+scripts/build.sh
