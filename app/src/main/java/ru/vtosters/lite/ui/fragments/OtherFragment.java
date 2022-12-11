@@ -60,6 +60,7 @@ import java.io.IOException;
 import b.h.g.m.FileUtils;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ContactsUtils;
 
@@ -94,6 +95,11 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         findPreference("applicationrestart").setOnPreferenceClickListener(new d());
         findPreference("clearcache").setOnPreferenceClickListener(preference -> {
             cacheCleanDialog();
+            return true;
+        });
+        findPreference("copyownlink").setOnPreferenceClickListener(preference -> {
+            ((ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", "https://vk.com/id" + AccountManagerUtils.getUserId()));
+            ToastUtils.a(requireContext().getString(R.string.link_copied));
             return true;
         });
 
