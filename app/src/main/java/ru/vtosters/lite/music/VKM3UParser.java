@@ -45,7 +45,7 @@ public class VKM3UParser {
                 if (mTransportStreams.size() == i)
                     mTransportStreams.add(new TransportStream());
             } else if (isM3U8(line)) {
-                mTransportStreams.get(i).setName(line);
+                mTransportStreams.get(i).setName(line.substring(line.lastIndexOf("/") + 1));
                 ++i;
             }
         }
