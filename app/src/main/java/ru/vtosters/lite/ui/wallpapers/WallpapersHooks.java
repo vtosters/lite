@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui.wallpapers;
 import static com.vk.im.engine.h.im_bg_chat;
 import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getFilteredDrawable;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
@@ -90,7 +89,7 @@ public class WallpapersHooks {
 
     public static void setBg(View view) {
         if (getWallpaper() != null) {
-            ((ImageView) view).setImageDrawable(getFilteredFile()); // set picture to background
+            ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
         } else {
             view.setBackgroundColor(ThemesUtils.getColorFromAttr(im_bg_chat)); // set default bg color
         }
@@ -133,46 +132,6 @@ public class WallpapersHooks {
     public static void requestUpdateWallpaper() {
         mUpdateWallpaperRequested = true;
         mUpdateWallpaperFileRequested = true;
-    }
-
-    public static String getRadiusSummary() {
-        String radius = getPreferences().getString(ImageEffects.Blur.toString(), "disabled");
-        switch (radius) {
-            case "low":
-                return AndroidUtils.getString(R.string.wallpapers_low);
-            case "med":
-                return AndroidUtils.getString(R.string.wallpapers_med);
-            case "high":
-                return AndroidUtils.getString(R.string.wallpapers_high);
-            default:
-                return AndroidUtils.getString(R.string.wallpapers_disabled);
-        }
-    }
-
-    public static String getDimmingSummary() {
-        String radius = getPreferences().getString(ImageEffects.Dim.toString(), "disabled");
-        switch (radius) {
-            case "dim_black":
-                return AndroidUtils.getString(R.string.wallpapers_dim_black);
-            case "dim_white":
-                return AndroidUtils.getString(R.string.wallpapers_dim_white);
-            default:
-                return AndroidUtils.getString(R.string.wallpapers_disabled);
-        }
-    }
-
-    public static String getMosaicSummary() {
-        String radius = getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled");
-        switch (radius) {
-            case "low":
-                return AndroidUtils.getString(R.string.wallpapers_low);
-            case "med":
-                return AndroidUtils.getString(R.string.wallpapers_med);
-            case "high":
-                return AndroidUtils.getString(R.string.wallpapers_high);
-            default:
-                return AndroidUtils.getString(R.string.wallpapers_disabled);
-        }
     }
 
 
