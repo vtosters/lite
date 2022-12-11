@@ -107,13 +107,12 @@ public class ThemesUtils {
 
     @SuppressLint("DiscouragedPrivateApi")
     public static void setCursorColor(EditText view) {
-        if (OEMDetector.isMIUI()) return;
         try {
             view.setHighlightColor(ThemesUtils.getMutedAccentColor());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 view.getTextCursorDrawable().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
-            } else {
+            } else if (!OEMDetector.isMIUI()) {
                 Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
                 field.setAccessible(true);
                 int drawableResId = field.getInt(view);
@@ -141,13 +140,12 @@ public class ThemesUtils {
     }
     @SuppressLint("DiscouragedPrivateApi")
     public static void colorHandles(TextView view) {
-        if (OEMDetector.isMIUI()) return;
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 view.getTextSelectHandle().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
                 view.getTextSelectHandleRight().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
                 view.getTextSelectHandleLeft().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
-            } else {
+            } else if (!OEMDetector.isMIUI()) {
                 Field editorField = TextView.class.getDeclaredField("mEditor");
 
                 if (!editorField.isAccessible()) editorField.setAccessible(true);
