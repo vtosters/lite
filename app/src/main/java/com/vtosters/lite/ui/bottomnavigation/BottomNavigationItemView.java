@@ -279,12 +279,13 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
 
     @SuppressLint("RestrictedApi")
     public void setIcon(Drawable drawable) {
-        if (drawable != null) {
+        var csl = this.mColorStateList;
+        if (drawable != null && csl != null) {
             if (drawable.getConstantState() != null)
                 drawable = drawable.getConstantState().newDrawable();
 
             drawable = DrawableCompat.wrap(drawable).mutate();
-            DrawableCompat.setTintList(drawable, this.mColorStateList);
+            DrawableCompat.setTintList(drawable, csl);
         }
 
         this.mIcon.setImageDrawable(drawable);
