@@ -28,6 +28,9 @@ import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
+
+import ru.vtosters.lite.deviceinfo.Device;
+import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.hooks.VKUIHook;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
@@ -104,6 +107,7 @@ public class ThemesUtils {
 
     @SuppressLint("DiscouragedPrivateApi")
     public static void setCursorColor(EditText view) {
+        if (OEMDetector.isMIUI()) return;
         try {
             view.setHighlightColor(ThemesUtils.getMutedAccentColor());
 
@@ -137,6 +141,7 @@ public class ThemesUtils {
     }
     @SuppressLint("DiscouragedPrivateApi")
     public static void colorHandles(TextView view) {
+        if (OEMDetector.isMIUI()) return;
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 view.getTextSelectHandle().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
