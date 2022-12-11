@@ -111,7 +111,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
         }
 
         Arrays.stream(ImageEffects.values())
-                // Fixme: set hasVerification
                 .filter(imageEffects -> imageEffects.isFree() || hasVerification())
                 .forEach(it -> {
                     if (it.isList()) {
