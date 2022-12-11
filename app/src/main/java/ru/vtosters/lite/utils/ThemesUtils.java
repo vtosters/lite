@@ -264,33 +264,6 @@ public class ThemesUtils {
         return MilkshakeHelper.e();
     }
 
-    private static int[] p() {
-        int[] iArr = new int[4];
-        iArr[0] = getColor(isDarkTheme() ? R.color.gray_800 : R.color.white);
-        iArr[1] = getColor(isDarkTheme() ? R.color.switch_disabled_on_dark : R.color.switch_disabled_on_light);
-        iArr[2] = getColor(R.color.gray_20);
-        iArr[3] = getAccentColor();
-        return iArr;
-    }
-
-    private static int[][] f() {
-        return new int[][]{new int[]{-16842910, -16842912}, new int[]{-16842910, 16842912}, new int[]{-16842912}, new int[]{16842912}};
-    }
-
-    private static int[] q() {
-        return new int[]{VKThemeHelper.d(R.attr.loader_track_fill), getMutedAccentColor(), VKThemeHelper.d(R.attr.loader_track_fill), getMutedAccentColor()};
-    }
-
-    public static void setSwitch(SwitchCompat switchCompat) {
-        DrawableCompat.setTintList(DrawableCompat.wrap(switchCompat.getThumbDrawable()), new ColorStateList(f(), p()));
-        DrawableCompat.setTintList(DrawableCompat.wrap(switchCompat.getTrackDrawable()), new ColorStateList(f(), q()));
-    }
-
-    public static void setSwitch(Switch aSwitch) {
-        DrawableCompat.setTintList(DrawableCompat.wrap(aSwitch.getThumbDrawable()), new ColorStateList(f(), p()));
-        DrawableCompat.setTintList(DrawableCompat.wrap(aSwitch.getTrackDrawable()), new ColorStateList(f(), q()));
-    }
-
     public static void setImageViewColored(ImageView view){
         view.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.MULTIPLY);
     }
