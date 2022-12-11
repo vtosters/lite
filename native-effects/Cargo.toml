@@ -1,0 +1,15 @@
+[package]
+name = "native-effects"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = 3
+strip = true
+
+[lib]
+crate-type = ["dylib"]
+
+[dependencies]
+jni = "0.20.0"
+rand = "0.8.5"
