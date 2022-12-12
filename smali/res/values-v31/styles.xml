@@ -12,7 +12,7 @@
         <item name="attach_picker_tab_inactive_background">@android:color/system_neutral1_200</item>
         <item name="attach_picker_tab_inactive_icon">@android:color/system_neutral1_100</item>
         <item name="attach_picker_tab_inactive_text">@android:color/system_neutral1_400</item>
-        <item name="background_content">@android:color/system_neutral1_100</item>
+        <item name="background_content">@android:color/system_neutral1_50</item>
         <item name="background_highlighted">@color/black_alpha8</item>
         <item name="background_keyboard">@android:color/system_neutral1_100</item>
         <item name="background_light">@android:color/system_neutral1_50</item>
@@ -272,7 +272,7 @@
         <item name="attach_picker_tab_inactive_background">@android:color/system_neutral1_50</item>
         <item name="attach_picker_tab_inactive_icon">@android:color/system_neutral1_400</item>
         <item name="attach_picker_tab_inactive_text">@android:color/system_neutral1_400</item>
-        <item name="background_content">@android:color/system_neutral1_100</item>
+        <item name="background_content">@android:color/system_neutral1_50</item>
         <item name="background_highlighted">@color/black_alpha8</item>
         <item name="background_keyboard">@android:color/system_neutral1_100</item>
         <item name="background_light">@android:color/system_neutral1_50</item>
@@ -346,7 +346,7 @@
         <item name="header_alternate_tab_active_indicator">@android:color/system_accent1_400</item>
         <item name="header_alternate_tab_active_text">@color/black</item>
         <item name="header_alternate_tab_inactive_text">@android:color/system_neutral1_300</item>
-        <item name="header_background">@android:color/system_neutral1_100</item>
+        <item name="header_background">@android:color/system_neutral1_50</item>
         <item name="header_background_before_blur">@android:color/system_neutral1_100</item>
         <item name="header_background_before_blur_alternate">@android:color/system_neutral1_100</item>
         <item name="header_search_field_background">@android:color/system_neutral1_50</item>
