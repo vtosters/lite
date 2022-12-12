@@ -106,7 +106,7 @@ public class ThemesUtils {
 
     public static int getAccentColor() {
         var accent = AndroidUtils.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
-        return accent == 0 ? getColorFromAttr(R.attr.accent) : accent;
+        return (accent == 0 || isMonetTheme()) ? getColorFromAttr(R.attr.accent) : accent;
     } // Color accent
 
     public static int getMutedAccentColor() {
