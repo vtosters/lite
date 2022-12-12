@@ -95,6 +95,14 @@ public class ThemesUtils {
     public static boolean isDarkTheme() {
         return VKThemeHelper.r();
     }
+    
+    public static boolean isMonetTheme() {
+        return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
+    }
+    
+    public static boolean isAmoledTheme() {
+        return getBoolValue("amoledtheme", false);
+    }
 
     public static int getAccentColor() {
         var accent = AndroidUtils.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
@@ -236,10 +244,19 @@ public class ThemesUtils {
     }
 
     public static int getDarkThemeRes() {
-        if (getPrefsValue("darktheme").equals("amoled")) {
-            return isMilkshake() ? R.style.VkMilkAmoledStyle : R.style.VkAmoledStyle;
+        if (isMonetTheme()) {
+            if (isAmoledTheme()) {
+                return isMilkshake() ? getIdentifier("VkMilkAmoledMonetStyle", "style"): getIdentifier("VkAmoledMonetStyle", "style");
+            } else {
+                return isMilkshake() ? getIdentifier("VkMilkDarkMonetStyle", "style"): getIdentifier("VkDarkMonetStyle", "style");
+            }
+        } else {
+            if (isAmoledTheme()) {
+                return isMilkshake() ? R.style.VkMilkAmoledStyle : R.style.VkAmoledStyle;
+            } else {
+                return isMilkshake() ? R.style.VkMilkDarkStyle : R.style.VkDarkStyle;
+            }
         }
-        return isMilkshake() ? R.style.VkMilkDarkStyle : R.style.VkDarkStyle;
     } // Return needed res theme
 
     public static VKTheme getDarkTheme() {
@@ -253,10 +270,6 @@ public class ThemesUtils {
     public static int getColorFromAttr(int attr) {
         return VKThemeHelper.d(attr);
     } // Get needed attr color
-
-    public static boolean isAndroidMonet() {
-        return color_grishka() && Build.VERSION.SDK_INT >= 31;
-    }
 
     public static void colorWriteBar(View view) {
         if (!navbar()) return;

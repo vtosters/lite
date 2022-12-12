@@ -18,6 +18,8 @@ import android.webkit.WebView;
 import com.vk.articles.preload.WebCachePreloader;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
+import ru.vtosters.lite.themes.ThemesCore;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -77,22 +79,19 @@ public class VKUIHook {
     }
 
     public static void inject(WebView webView) {
-        String string = getPrefsValue("darktheme");
-
         if (getBoolValue("VKUI_INJ", true)) {
-
             if (!isLoaded) {
                 load();
             }
 
             StringBuilder sb = new StringBuilder();
 
-            if (true/*Themes.isAccentedCache()*/) {
+            if (ThemesCore.isCachedAccents()) {
                 sb.append("\n\n");
                 sb.append(loadedCSS);
             }
 
-            if (string.equals("amoled")) {
+            if (ThemesUtils.isAmoledTheme()) {
                 sb.append("\n\n");
                 sb.append(loadedCSSAmoled);
             }

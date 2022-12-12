@@ -1,19 +1,14 @@
 package ru.vtosters.lite.ui.fragments;
 
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-
 import androidx.preference.PreferenceCategory;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.fragments.FragmentImpl;
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
-import ru.vtosters.lite.themes.ColorReferences;
 import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.palettes.PalettesManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
@@ -37,62 +32,64 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         accentColorPreference.setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.bg_accent_circle)));
         accentColorPreference.setOnPreferenceClickListener(preference -> {
             changeAccent();
-            return false;
+            return true;
         });
 
         var navBarPreference = findPreference("navbar");
         navBarPreference.setOnPreferenceClickListener(preference -> {
             restart();
-            return false;
+            return true;
         });
 
         var milkshakePreference = findPreference("milkshake");
         milkshakePreference.setOnPreferenceClickListener(preference -> {
             restart();
-            return false;
+            return true;
         });
 
-        var darkThemePreference = findPreference("darktheme");
-        darkThemePreference.setOnPreferenceChangeListener((preference, o) -> {
-            restartDark(o.toString());
-            return false;
+        var amoledThemePreference = findPreference("amoledtheme");
+        amoledThemePreference.setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
         });
 
-        var lightThemePreference = findPreference("lighttheme");
-        lightThemePreference.setOnPreferenceChangeListener(((preference, o) -> {
-            restartLight(o.toString());
-            return false;
-        }));
+        var monetThemePreference = findPreference("monettheme");
+        monetThemePreference.setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
+        monetThemePreference.setVisible(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S);
 
         var iconManagerPreference = findPreference("iconmanager");
         iconManagerPreference.setOnPreferenceClickListener(preference -> {
             switchFragment(IconsFragment.class);
-            return false;
+            return true;
         });
 
         var dockbarTabTitlesPreference = findPreference("dockbar_tab_titles");
         dockbarTabTitlesPreference.setOnPreferenceClickListener(preference -> {
             restart();
-            return false;
+            return true;
         });
 
         var dockbarAccentPreference = findPreference("dockbar_accent");
         dockbarAccentPreference.setOnPreferenceClickListener(preference -> {
             restart();
-            return false;
+            return true;
         });
 
         var dockCounterPreference = findPreference("dockcounter");
         dockCounterPreference.setOnPreferenceClickListener(preference -> {
             restart();
-            return false;
+            return true;
         });
 
         var newsfeedNotificationsPreference = findPreference("newsfeed_notif");
         newsfeedNotificationsPreference.setOnPreferenceClickListener(preference -> {
             restart();
-            return false;
+            return true;
         });
+
         newsfeedNotificationsPreference.setVisible(Preferences.milkshake());
 
         if (AndroidUtils.isTablet()) {
@@ -157,20 +154,10 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     void setAccentColor(int color) {
         ThemesUtils.setCustomAccentColor(color, false);
         ThemesCore.setThemedColors(color);
-        LifecycleUtils.restartApplicationWithTimer();
+        restart();
     }
 
     void restart() {
-        LifecycleUtils.restartApplicationWithTimer();
-    }
-
-    void restartLight(String value) {
-        AndroidUtils.edit().putString("lighttheme", value).commit();
-        LifecycleUtils.restartApplicationWithTimer();
-    }
-
-    void restartDark(String value) {
-        AndroidUtils.edit().putString("darktheme", value).commit();
         LifecycleUtils.restartApplicationWithTimer();
     }
 

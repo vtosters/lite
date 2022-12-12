@@ -13,24 +13,14 @@
             android:key="milkshake"
             android:summary="@string/milkshake_summ"
             android:title="@string/milkshake_title" />
-        <Preference
-            android:enabled="false"
-            android:summary="@string/appearance_theme_info_summary"
-            android:title="@string/appearance_theme_info" />
-        <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="default"
-            android:dialogTitle="@string/appearance_theme_dialog_title"
-            android:entries="@array/darktheme_value"
-            android:entryValues="@array/darktheme"
-            android:key="darktheme"
-            android:title="@string/appearance_theme_dark_theme" />
-        <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="default"
-            android:dialogTitle="@string/appearance_theme_dialog_title"
-            android:entries="@array/lighttheme_value"
-            android:entryValues="@array/lighttheme"
-            android:key="lighttheme"
-            android:title="@string/appearance_theme_light_theme" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="amoledtheme"
+            android:title="Amoled Тема" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="monettheme"
+            android:title="Monet Тема" />
     </PreferenceCategory>
     <PreferenceCategory
         android:key="dockbarsett"

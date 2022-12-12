@@ -280,10 +280,6 @@ public class Preferences {
         return getBoolValue("systememoji", false);
     }
 
-    public static boolean vksans() {
-        return getBoolValue("vksans", false);
-    }
-
     public static boolean voice() {
         return getBoolValue("voice", true);
     }
@@ -291,10 +287,6 @@ public class Preferences {
     public static int getMsgCount(int orig) {
         String customvalue = getPrefsValue("msgcount");
         return customvalue.isEmpty() ? orig : Integer.parseInt(customvalue);
-    }
-
-    public static boolean color_grishka() {
-        return getBoolValue("color_grishka", true);
     }
 
     public static boolean vkme_notifs() {
