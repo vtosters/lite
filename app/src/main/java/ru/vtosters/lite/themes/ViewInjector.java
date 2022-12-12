@@ -2,9 +2,17 @@ package ru.vtosters.lite.themes;
 
 import android.view.View;
 import android.view.ViewGroup;
-import ru.vtosters.lite.themes.hooks.*;
 
 import java.util.ArrayList;
+
+import ru.vtosters.lite.themes.hooks.BaseHook;
+import ru.vtosters.lite.themes.hooks.ButtonHook;
+import ru.vtosters.lite.themes.hooks.ImageViewHook;
+import ru.vtosters.lite.themes.hooks.ProgressWheelHook;
+import ru.vtosters.lite.themes.hooks.TabLayoutHook;
+import ru.vtosters.lite.themes.hooks.TextViewHook;
+import ru.vtosters.lite.themes.hooks.ToolbarHook;
+import ru.vtosters.lite.themes.hooks.VKImageViewHook;
 
 public class ViewInjector {
     public static ArrayList<BaseHook> hooks = new ArrayList<>();
@@ -17,7 +25,6 @@ public class ViewInjector {
         hooks.add(new ToolbarHook());
         hooks.add(new VKImageViewHook());
         hooks.add(new ProgressWheelHook());
-        hooks.add(new CompoundButtonHook());
     }
 
     public static View inject(View view, int i, boolean z) {
