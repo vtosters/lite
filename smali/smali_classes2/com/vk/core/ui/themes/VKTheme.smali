@@ -60,7 +60,9 @@
     new-instance v10, Lcom/vk/core/ui/themes/VKTheme;
 
     .line 1
-    sget v8, Lb/h/g/e;->VkLightStyle:I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getLightThemeRes()I
+
+    move-result v8
 
     const-string v2, "VKAPP_LIGHT"
 
@@ -170,7 +172,9 @@
     new-instance v1, Lcom/vk/core/ui/themes/VKTheme;
 
     .line 5
-    sget v10, Lb/h/g/e;->VkMilkLightStyle:I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getLightThemeRes()I
+
+    move-result v10
 
     const-string v4, "VKAPP_MILK_LIGHT"
 

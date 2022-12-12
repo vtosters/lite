@@ -259,6 +259,14 @@ public class ThemesUtils {
         }
     } // Return needed res theme
 
+    public static int getLightThemeRes() {
+        if (isMonetTheme()) {
+            return isMilkshake() ? getIdentifier("VkMilkLightMonetStyle", "style"): getIdentifier("VkLightMonetStyle", "style");
+        } else {
+            return isMilkshake() ? R.style.VkMilkLightStyle : R.style.VkLightStyle;
+        }
+    } // Return needed res theme
+
     public static VKTheme getDarkTheme() {
         return isMilkshake() ? VKTheme.VKAPP_MILK_DARK : VKTheme.VKAPP_DARK;
     } // Return needed theme for theme changer
