@@ -124,7 +124,7 @@
         <item name="im_bubble_gift_background_highlighted">@android:color/system_accent3_300</item>
         <item name="im_bubble_gift_text">@android:color/system_accent3_500</item>
         <item name="im_bubble_gift_text_secondary">@android:color/system_accent3_400</item>
-        <item name="im_bubble_incoming">@android:color/system_neutral1_50</item>
+        <item name="im_bubble_incoming">@android:color/system_neutral1_100</item>
         <item name="im_bubble_incoming_alternate">@android:color/system_neutral1_100</item>
         <item name="im_bubble_incoming_alternate_highlighted">@android:color/system_neutral1_50</item>
         <item name="im_bubble_incoming_highlighted">@color/gray_A150</item>
@@ -384,7 +384,7 @@
         <item name="im_bubble_gift_background_highlighted">@android:color/system_accent3_300</item>
         <item name="im_bubble_gift_text">@android:color/system_accent3_500</item>
         <item name="im_bubble_gift_text_secondary">@android:color/system_accent3_400</item>
-        <item name="im_bubble_incoming">@android:color/system_neutral1_50</item>
+        <item name="im_bubble_incoming">@android:color/system_neutral1_100</item>
         <item name="im_bubble_incoming_alternate">@android:color/system_neutral1_100</item>
         <item name="im_bubble_incoming_alternate_highlighted">@android:color/system_neutral1_50</item>
         <item name="im_bubble_incoming_highlighted">@color/gray_A150</item>
