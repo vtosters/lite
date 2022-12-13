@@ -134,12 +134,6 @@
 .method public static a(F)I
     .locals 2
 
-    invoke-static {p0}, Lru/vtosters/lite/utils/ThemesUtils;->fixSeparator(F)I
-
-    move-result p0
-
-    return p0
-
     .line 2
     invoke-static {}, Lcom/vk/core/util/Screen;->a()F
 
