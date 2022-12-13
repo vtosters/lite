@@ -281,7 +281,7 @@ public class ThemesUtils {
     } // Get needed attr color
 
     public static void colorWriteBar(View view) {
-        if (!navbar()) return;
+        if (!navbar() || isMonetTheme()) return;
         view.setBackgroundColor(getTabbarBackground());
     }
 
