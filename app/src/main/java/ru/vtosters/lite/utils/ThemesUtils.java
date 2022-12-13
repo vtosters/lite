@@ -3,6 +3,7 @@ package ru.vtosters.lite.utils;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -316,6 +317,14 @@ public class ThemesUtils {
         hsl[2] -= by;
         hsl[2] = Math.max(0f, Math.min(hsl[2], 1f));
         return ColorUtils.HSLToColor(hsl);
+    }
+
+    public static int fixSeparator(float f) {
+        if (f == 8.0f && isMonetTheme()) {
+            return 0;
+        } else {
+            return (int) Math.floor(f * Resources.getSystem().getDisplayMetrics().density);
+        }
     }
 
     public static int lighten(int color, float factor) {
