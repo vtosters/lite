@@ -108,14 +108,16 @@ task prepareDexForMerge(type: Copy) {
     dependsOn('exportDex')
     into smaliFolder.toString()
     from(projectDir) {
-        include 'classes*.dex'
+        include 'classes6.dex'
+        include 'classes7.dex'
     }
     from(projectDir) {
         include 'version.properties'
         into("assets")
     }
     doLast {
-        Files.newDirectoryStream(projectDir.toPath(), "classes*.dex").forEach { it.toFile().delete() }
+        new File(projectDir, "classes6.dex").delete()
+        new File(projectDir, "classes7.dex").delete()
         new File(projectDir, "version.properties").delete()
     }
 }
