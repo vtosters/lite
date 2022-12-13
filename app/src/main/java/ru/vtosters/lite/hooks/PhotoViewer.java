@@ -98,7 +98,7 @@ public class PhotoViewer {
     public static void addMenuItems(AttachmentWithMedia attachment, ActionsPopup.b actionPopup, int i, boolean z) {
         actionPopup.a(R.string.search_photo_content,
                 new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28),
-                        ThemesUtils.isDarkTheme() ? Color.WHITE : ThemesUtils.getAccentColor()),
+                        ThemesUtils.getColorFromAttr(R.attr.header_tint)),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
@@ -119,7 +119,7 @@ public class PhotoViewer {
         );
         actionPopup.a(R.string.copy_photo_url_content,
                 new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28),
-                        ThemesUtils.isDarkTheme() ? Color.WHITE : ThemesUtils.getAccentColor()),
+                        ThemesUtils.getColorFromAttr(R.attr.header_tint)),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
@@ -140,7 +140,7 @@ public class PhotoViewer {
         );
         actionPopup.a(R.string.open_original_photo_content,
                 new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_link_outline_28),
-                        ThemesUtils.isDarkTheme() ? Color.WHITE : ThemesUtils.getAccentColor()),
+                        ThemesUtils.getColorFromAttr(R.attr.header_tint)),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
