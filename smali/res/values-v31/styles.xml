@@ -205,7 +205,7 @@
         <item name="placeholder_icon_tint">?accent</item>
         <item name="poll_option_background">@android:color/system_accent1_600</item>
         <item name="search_bar_background">@android:color/system_neutral1_50</item>
-        <item name="search_bar_field_background">@android:color/system_accent2_50</item>
+        <item name="search_bar_field_background">@android:color/system_accent2_10</item>
         <item name="search_bar_field_tint">@android:color/system_neutral1_900</item>
         <item name="search_bar_segmented_control_tint">@android:color/system_neutral1_400</item>
         <item name="segmented_control_bar_background">@color/clear</item>
@@ -358,7 +358,7 @@
         <item name="header_text">@color/black</item>
         <item name="header_text_alternate">@color/black</item>
         <item name="header_text_secondary">@android:color/system_neutral1_400</item>
-        <item name="header_tint">@android:color/system_accent1_400</item>
+        <item name="header_tint">?header_text</item>
         <item name="header_tint_alternate">@android:color/system_accent1_400</item>
         <item name="header_tint_disabled">#663f8ae0</item>
         <item name="icon_alpha_placeholder">@android:color/system_neutral1_100</item>
@@ -465,7 +465,7 @@
         <item name="placeholder_icon_tint">?accent</item>
         <item name="poll_option_background">@android:color/system_accent1_600</item>
         <item name="search_bar_background">@android:color/system_neutral1_100</item>
-        <item name="search_bar_field_background">@android:color/system_accent1_50</item>
+        <item name="search_bar_field_background">@android:color/system_accent2_10</item>
         <item name="search_bar_field_tint">@android:color/system_neutral1_900</item>
         <item name="search_bar_segmented_control_tint">@android:color/system_neutral1_400</item>
         <item name="segmented_control_bar_background">@color/clear</item>
@@ -1950,7 +1950,7 @@
         <item name="im_msg_part_corner_radius_small">2.0dip</item>
         <item name="im_msg_part_story_corner_radius">4.0dip</item>
         <item name="im_msg_part_story_padding">4.0dip</item>
-        <item name="im_msg_zhukov_divider_size">2.0dip</item>
+        <item name="im_msg_zhukov_divider_size">0.0dip</item>
         <item name="vkapp_bottom_menu">@menu/bottom_navigation_menu</item>
         <item name="vkim_msg_in_def_bottom">@drawable/vkim_msg_in_def_bottom</item>
         <item name="vkim_msg_in_def_full">@drawable/vkim_msg_in_def_full</item>

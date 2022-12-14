@@ -2,4 +2,4 @@
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
     android:gravity="center"
     android:src="?im_ic_back"
-    android:tint="?header_tint" />
+    android:tint="?header_text" />
