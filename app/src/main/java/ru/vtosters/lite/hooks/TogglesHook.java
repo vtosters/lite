@@ -48,7 +48,6 @@ public class TogglesHook {
             case FEATURE_NEWS_GAMES_IN_DISCOVER:
             case FEATURE_NEWS_HEADER_SCROLL:
             case FEATURE_NEW_FORMAT_SHOW_WPB:
-            case FEATURE_NOTIFICATION_ANIM:
             case FEATURE_PODCASTS_PAGE:
             case FEATURE_QR_CREATE_QR:
             case FEATURE_QR_DYNAMIC_FRAME:
