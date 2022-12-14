@@ -61,11 +61,6 @@ enum ImageEffects {
                     return AndroidUtils.getString(R.string.wallpapers_disabled);
             }
         }
-
-        @Override
-        public boolean isBitmap() {
-            return true;
-        }
     },
     Dim(true,
             AndroidUtils.getArray(R.array.filter_dim_types),
@@ -75,9 +70,9 @@ enum ImageEffects {
         public ImageEffect getEffect() {
             switch (getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
                 case "dim_black":
-                    return new DimEffect(0xFF7F7F7F, 0x00000000);
+                    return new DimEffect(-50);
                 case "dim_white":
-                    return new DimEffect(0xFFFFFFFF, 0x00222222);
+                    return new DimEffect(50);
                 default:
                     return null;
             }
@@ -94,11 +89,6 @@ enum ImageEffects {
                     return AndroidUtils.getString(R.string.wallpapers_disabled);
             }
         }
-
-        @Override
-        public boolean isBitmap() {
-            return true;
-        }
     },
     Mosaic(true,
             AndroidUtils.getArray(R.array.filter_types),
@@ -108,11 +98,11 @@ enum ImageEffects {
         public ImageEffect getEffect() {
             switch (getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
                 case "high":
-                    return new MosaicEffect(25);
-                case "med":
                     return new MosaicEffect(50);
+                case "med":
+                    return new MosaicEffect(25);
                 case "low":
-                    return new MosaicEffect(75);
+                    return new MosaicEffect(10);
                 default:
                     return null;
             }
@@ -130,11 +120,6 @@ enum ImageEffects {
                 default:
                     return AndroidUtils.getString(R.string.wallpapers_disabled);
             }
-        }
-
-        @Override
-        public boolean isBitmap() {
-            return true;
         }
     },
     Monochrome(false, null, null,
@@ -227,8 +212,6 @@ enum ImageEffects {
         return free;
     }
 
-    public boolean isBitmap() {return false;}
-
     @Nullable
     public String[] getEntries() {
         return entries;
@@ -287,32 +270,22 @@ class BlurEffect implements ImageEffect {
         }
     }
 
+    @Override
+    public void apply(ByteBuffer bitmapBuffer, int height, int width) {
+        NativeEffects.gaussian(bitmapBuffer, height, width, radius);
+    }
 }
 
 class DimEffect implements ImageEffect {
-    private final int mul;
-    private final int add;
+    private final int delta;
 
-    public DimEffect(int mul, int add) {
-        this.mul = mul;
-        this.add = add;
+    public DimEffect(int delta) {
+        this.delta = delta;
     }
 
     @Override
-    public Bitmap apply(Bitmap input) {
-        dimImage(input, new LightingColorFilter(mul, add));
-        return input;
-    }
-
-    private void dimImage(Bitmap bm, ColorFilter filter) {
-        try {
-            Canvas canvas = new Canvas(bm);
-            Paint p = new Paint(Color.RED);
-            p.setColorFilter(filter);
-            canvas.drawBitmap(bm, new Matrix(), p);
-        } catch (Exception e) {
-            Log.d("WallpaperD", e.getMessage());
-        }
+    public void apply(ByteBuffer bitmapBuffer, int height, int width) {
+        NativeEffects.dim(bitmapBuffer, height, width,delta);
     }
 }
 
@@ -325,9 +298,8 @@ class MosaicEffect implements ImageEffect {
     }
 
     @Override
-    public Bitmap apply(Bitmap input) {
-        Bitmap temp = Bitmap.createScaledBitmap(input, scale, scale, false);
-        return Bitmap.createScaledBitmap(temp, input.getWidth(), input.getHeight(), false);
+    public void apply(ByteBuffer bitmapBuffer, int height, int width) {
+        NativeEffects.mosaic(bitmapBuffer, height, width, scale);
     }
 }
 

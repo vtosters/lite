@@ -1,5 +1,7 @@
+use image::GenericImage;
 use jni::objects::JByteBuffer;
 use jni::objects::JClass;
+use jni::sys::jfloat;
 use jni::sys::jint;
 use jni::sys::jstring;
 use jni::JNIEnv;
@@ -243,6 +245,122 @@ pub extern "C" fn Java_ru_vtosters_lite_ui_wallpapers_NativeEffects_snow(
 
     let output = env
         .new_string("Applied Flea effect!")
+        .expect("Couldn't create java string!");
+    return **output;
+}
+
+#[no_mangle]
+pub extern "C" fn Java_ru_vtosters_lite_ui_wallpapers_NativeEffects_gaussian(
+    env: JNIEnv,
+    _: JClass,
+    bitmap_buffer: JByteBuffer,
+    height: jint,
+    width: jint,
+    radius: jfloat,
+) -> jstring {
+    let start = env
+        .get_direct_buffer_address(bitmap_buffer)
+        .expect("Unable to resolve DirectBuffer address");
+    let capacity = env
+        .get_direct_buffer_capacity(bitmap_buffer)
+        .expect("Unable to resolve DirectBuffer size");
+    let s = start as *mut u8;
+    let s = unsafe { std::slice::from_raw_parts_mut(s, capacity) };
+
+    let mut img = image::ImageBuffer::<image::Rgba<u8>, Vec<u8>>::from_raw(
+        width as u32,
+        height as u32,
+        s.to_vec(),
+    )
+    .unwrap();
+
+    let img = image::imageops::blur(&mut img, radius);
+
+    s.copy_from_slice(img.as_raw());
+
+    let output = env
+        .new_string("Applied Gaussian effect!")
+        .expect("Couldn't create java string!");
+    return **output;
+}
+
+#[no_mangle]
+pub extern "C" fn Java_ru_vtosters_lite_ui_wallpapers_NativeEffects_dim(
+    env: JNIEnv,
+    _: JClass,
+    bitmap_buffer: JByteBuffer,
+    height: jint,
+    width: jint,
+    delta: jint,
+) -> jstring {
+    let start = env
+        .get_direct_buffer_address(bitmap_buffer)
+        .expect("Unable to resolve DirectBuffer address");
+    let capacity = env
+        .get_direct_buffer_capacity(bitmap_buffer)
+        .expect("Unable to resolve DirectBuffer size");
+    let s = start as *mut u8;
+    let s = unsafe { std::slice::from_raw_parts_mut(s, capacity) };
+
+    let mut img = image::ImageBuffer::<image::Rgba<u8>, Vec<u8>>::from_raw(
+        width as u32,
+        height as u32,
+        s.to_vec(),
+    )
+    .unwrap();
+
+    let img = image::imageops::brighten(&img, delta);
+
+    s.copy_from_slice(img.as_raw());
+
+    let output = env
+        .new_string("Applied Dim effect!")
+        .expect("Couldn't create java string!");
+    return **output;
+}
+
+#[no_mangle]
+pub extern "C" fn Java_ru_vtosters_lite_ui_wallpapers_NativeEffects_mosaic(
+    env: JNIEnv,
+    _: JClass,
+    bitmap_buffer: JByteBuffer,
+    height: jint,
+    width: jint,
+    scale: jint,
+) -> jstring {
+    let start = env
+        .get_direct_buffer_address(bitmap_buffer)
+        .expect("Unable to resolve DirectBuffer address");
+    let capacity = env
+        .get_direct_buffer_capacity(bitmap_buffer)
+        .expect("Unable to resolve DirectBuffer size");
+    let s = start as *mut u8;
+    let s = unsafe { std::slice::from_raw_parts_mut(s, capacity) };
+
+    let mut img = image::ImageBuffer::<image::Rgba<u8>, Vec<u8>>::from_raw(
+        width as u32,
+        height as u32,
+        s.to_vec(),
+    )
+    .unwrap();
+
+    img = image::imageops::resize(
+        &img,
+        (width / scale) as u32,
+        (height / scale) as u32,
+        image::imageops::FilterType::Nearest,
+    );
+    img = image::imageops::resize(
+        &img,
+        width as u32,
+        height as u32,
+        image::imageops::FilterType::Nearest,
+    );
+
+    s.copy_from_slice(img.as_raw());
+
+    let output = env
+        .new_string("Applied Dim effect!")
         .expect("Couldn't create java string!");
     return **output;
 }

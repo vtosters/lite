@@ -21,4 +21,7 @@ public class NativeEffects {
     public static native String engrave(ByteBuffer input, int height, int width);
     public static native String flea(ByteBuffer input);
     public static native String snow(ByteBuffer input);
+    public static native String gaussian(ByteBuffer input, int height, int width, float radius);
+    public static native String dim(ByteBuffer input, int height, int width, int delta);
+    public static native String mosaic(ByteBuffer input, int height, int width, int scale);
 }
