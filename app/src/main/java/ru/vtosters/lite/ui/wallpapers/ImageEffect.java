@@ -4,13 +4,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.LightingColorFilter;
-import android.graphics.Matrix;
-import android.graphics.Paint;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,7 +23,7 @@ enum ImageEffects {
             getGlobalContext().getString(R.string.filter_blur)
     ) {
         @Override
-        public ImageEffect getEffect() {
+        public void applyEffect(ByteBuffer bitmap, int height, int width) {
             int radius;
             switch (getPreferences().getString(ImageEffects.Blur.toString(), "disabled")) {
                 case "low":
@@ -43,9 +36,9 @@ enum ImageEffects {
                     radius = 20;
                     break;
                 default:
-                    return null;
+                    return;
             }
-            return new BlurEffect(radius);
+            NativeEffects.gaussian(bitmap, height, width, radius);
         }
 
         @Override
@@ -67,15 +60,17 @@ enum ImageEffects {
             new String[]{"off", "dim_black", "dim_white"},
             getGlobalContext().getString(R.string.filter_dim)) {
         @Override
-        public ImageEffect getEffect() {
+        public void applyEffect(ByteBuffer bitmap, int height, int width) {
+            var delta = 0;
             switch (getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
                 case "dim_black":
-                    return new DimEffect(-50);
+                    delta = -50; break;
                 case "dim_white":
-                    return new DimEffect(50);
+                    delta = 50; break;
                 default:
-                    return null;
+                    return;
             }
+            NativeEffects.dim(bitmap, height, width, delta);
         }
 
         @Override
@@ -95,17 +90,19 @@ enum ImageEffects {
             new String[]{"disabled", "low", "med", "high"},
             getGlobalContext().getString(R.string.filter_mosaic)) {
         @Override
-        public ImageEffect getEffect() {
+        public void applyEffect(ByteBuffer bitmap, int height, int width) {
+            var scale = 0;
             switch (getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
                 case "high":
-                    return new MosaicEffect(50);
+                    scale = 50; break;
                 case "med":
-                    return new MosaicEffect(25);
+                    scale = 25; break;
                 case "low":
-                    return new MosaicEffect(10);
+                    scale = 10; break;
                 default:
-                    return null;
+                    return;
             }
+            NativeEffects.mosaic(bitmap, height, width, scale);
         }
 
         @Override
@@ -125,22 +122,28 @@ enum ImageEffects {
     Monochrome(false, null, null,
             getGlobalContext().getString(R.string.filter_monochrome)) {
         @Override
-        public ImageEffect getEffect() {
-            return isApplied() ? new MonochromeEffect() : null;
+        public void applyEffect(ByteBuffer bitmap, int height, int width) {
+            if (isApplied()) {
+                NativeEffects.monochrome(bitmap);
+            }
         }
     },
     Invert(false, null, null,
             getGlobalContext().getString(R.string.filter_invert_colors)) {
         @Override
-        public ImageEffect getEffect() {
-            return isApplied() ? new InvertEffect() : null;
+        public void applyEffect(ByteBuffer bitmap, int height, int width) {
+            if (isApplied()) {
+                NativeEffects.invert(bitmap);
+            }
         }
     },
     Sepia(false, null, null,
             getGlobalContext().getString(R.string.filter_sepia)) {
         @Override
-        public ImageEffect getEffect() {
-            return isApplied() ? new SepiaEffect() : null;
+        public void applyEffect(ByteBuffer bitmap, int height, int width) {
+            if (isApplied()) {
+                NativeEffects.sepia(bitmap);
+            }
         }
     },
     Emboss(false, null, null,
@@ -151,8 +154,10 @@ enum ImageEffects {
         }
 
         @Override
-        public ImageEffect getEffect() {
-            return isApplied() ? new EmbossEffect() : null;
+        public void applyEffect(ByteBuffer bitmap, int height, int width) {
+            if (isApplied()) {
+                NativeEffects.emboss(bitmap, height, width);
+            }
         }
     },
     Engrave(false, null, null,
@@ -163,22 +168,28 @@ enum ImageEffects {
         }
 
         @Override
-        public ImageEffect getEffect() {
-            return isApplied() ? new EngraveEffect() : null;
+        public void applyEffect(ByteBuffer bitmap, int height, int width) {
+            if (isApplied()) {
+                NativeEffects.engrave(bitmap, height, width);
+            }
         }
     },
     Flea(false, null, null,
             getGlobalContext().getString(R.string.filter_flea)) {
         @Override
-        public ImageEffect getEffect() {
-            return isApplied() ? new FleaEffect() : null;
+        public void applyEffect(ByteBuffer bitmap, int height, int width) {
+            if (isApplied()) {
+                NativeEffects.flea(bitmap);
+            }
         }
     },
     Snow(false, null, null,
             getGlobalContext().getString(R.string.filter_snow)) {
         @Override
-        public ImageEffect getEffect() {
-            return isApplied() ? new SnowEffect() : null;
+        public void applyEffect(ByteBuffer bitmap, int height, int width) {
+            if (isApplied()){
+                NativeEffects.snow(bitmap);
+            }
         }
     };
 
@@ -226,9 +237,8 @@ enum ImageEffects {
         return "";
     }
 
-    public abstract ImageEffect getEffect();
+    public abstract void applyEffect(ByteBuffer bitmap, int height, int width);
 
-    // FIXME: to be removed; Requires Blur, Dim and Mosaic to be rewritten to our custom native impl
     protected boolean isApplied() {
         return getPreferences().getBoolean(this.toString(), false);
     }
@@ -237,122 +247,5 @@ enum ImageEffects {
     @Override
     public String toString() {
         return "msg_" + super.toString();
-    }
-}
-
-// FIXME: get rid of that abstraction and from NativeEffects as well and link directly to enums?
-interface ImageEffect {
-    @Deprecated
-    default Bitmap apply(Bitmap input){
-        throw new RuntimeException("Not supported");
-    };
-    default void apply(ByteBuffer bitmapBuffer, int height, int width){
-        throw new RuntimeException("Not supported");
-    }
-}
-
-class BlurEffect implements ImageEffect {
-
-    private final int radius;
-
-    public BlurEffect(int radius) {
-        this.radius = radius;
-    }
-
-    @Override
-    public Bitmap apply(Bitmap input) {
-        try {
-            MediaNative.blurBitmap(input, radius);
-            return input;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return input;
-        }
-    }
-
-    @Override
-    public void apply(ByteBuffer bitmapBuffer, int height, int width) {
-        NativeEffects.gaussian(bitmapBuffer, height, width, radius);
-    }
-}
-
-class DimEffect implements ImageEffect {
-    private final int delta;
-
-    public DimEffect(int delta) {
-        this.delta = delta;
-    }
-
-    @Override
-    public void apply(ByteBuffer bitmapBuffer, int height, int width) {
-        NativeEffects.dim(bitmapBuffer, height, width,delta);
-    }
-}
-
-class MosaicEffect implements ImageEffect {
-
-    private final int scale;
-
-    public MosaicEffect(int scale) {
-        this.scale = scale;
-    }
-
-    @Override
-    public void apply(ByteBuffer bitmapBuffer, int height, int width) {
-        NativeEffects.mosaic(bitmapBuffer, height, width, scale);
-    }
-}
-
-class MonochromeEffect implements ImageEffect {
-
-    @Override
-    public void apply(ByteBuffer bitmapBuffer, int height, int width) {
-        NativeEffects.monochrome(bitmapBuffer);
-    }
-}
-
-class InvertEffect implements ImageEffect {
-
-    @Override
-    public void apply(ByteBuffer bitmapBuffer, int height, int width) {
-        NativeEffects.invert(bitmapBuffer);
-    }
-}
-
-class SepiaEffect implements ImageEffect {
-    @Override
-    public void apply(ByteBuffer bitmapBuffer, int height, int width) {
-        NativeEffects.sepia(bitmapBuffer);
-    }
-}
-
-class EmbossEffect implements ImageEffect {
-
-    @Override
-    public void apply(ByteBuffer bitmapBuffer,int height, int width) {
-        NativeEffects.emboss(bitmapBuffer, height, width);
-    }
-}
-
-class EngraveEffect implements ImageEffect {
-    @Override
-    public void apply(ByteBuffer bitmapBuffer,int height, int width) {
-        NativeEffects.engrave(bitmapBuffer, height, width);
-    }
-}
-
-class FleaEffect implements ImageEffect {
-
-    @Override
-    public void apply(ByteBuffer bitmapBuffer,int height, int width) {
-        NativeEffects.flea(bitmapBuffer);
-    }
-}
-
-class SnowEffect implements ImageEffect {
-
-    @Override
-    public void apply(ByteBuffer bitmapBuffer,int height, int width) {
-        NativeEffects.snow(bitmapBuffer);
     }
 }
