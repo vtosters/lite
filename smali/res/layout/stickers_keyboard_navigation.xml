@@ -72,11 +72,11 @@
             android:layout_width="48.0dip"
             android:layout_height="fill_parent"
             android:layout_gravity="right"
-            android:background="?placeholder_icon_background"
+            android:background="?background_content"
             android:contentDescription="@string/accessibility_backspace"
             android:importantForAccessibility="yes"
             android:scaleType="center"
             android:src="@drawable/ic_backspace_28"
-            android:tint="?placeholder_icon_foreground_primary" />
+            android:tint="?accent" />
     </FrameLayout>
 </FrameLayout>
