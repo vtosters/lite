@@ -14,13 +14,10 @@ import android.view.Window;
 import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
-import androidx.core.graphics.drawable.DrawableCompat;
 import com.vk.articles.preload.WebCachePreloader;
 import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.preference.Preference;
@@ -29,8 +26,6 @@ import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
-
-import ru.vtosters.lite.deviceinfo.Device;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.hooks.VKUIHook;
 import ru.vtosters.lite.themes.ThemesHacks;
@@ -281,7 +276,6 @@ public class ThemesUtils {
     } // Get needed attr color
 
     public static void colorWriteBar(View view) {
-        if (!navbar() || isMonetTheme()) return;
         view.setBackgroundColor(getTabbarBackground());
     }
 

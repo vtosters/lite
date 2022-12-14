@@ -1328,6 +1328,8 @@
 
     move-result-object v0
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->colorWriteBar(Landroid/view/View;)V
+
     check-cast v0, Landroid/view/ViewGroup;
 
     iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->j0:Landroid/view/ViewGroup;

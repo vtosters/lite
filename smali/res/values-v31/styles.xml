@@ -725,7 +725,7 @@
         <item name="placeholder_icon_tint">@android:color/system_neutral1_100</item>
         <item name="poll_option_background">@android:color/system_neutral1_100</item>
         <item name="search_bar_background">@android:color/system_neutral1_900</item>
-        <item name="search_bar_field_background">@android:color/system_neutral1_800</item>
+        <item name="search_bar_field_background">@android:color/system_neutral1_700</item>
         <item name="search_bar_field_tint">@android:color/system_neutral1_300</item>
         <item name="search_bar_segmented_control_tint">@android:color/system_neutral1_400</item>
         <item name="segmented_control_bar_background">@android:color/system_neutral1_900</item>
@@ -985,7 +985,7 @@
         <item name="placeholder_icon_tint">@android:color/system_neutral1_100</item>
         <item name="poll_option_background">@android:color/system_neutral1_100</item>
         <item name="search_bar_background">@android:color/system_neutral1_900</item>
-        <item name="search_bar_field_background">@android:color/system_neutral1_800</item>
+        <item name="search_bar_field_background">@android:color/system_neutral1_700</item>
         <item name="search_bar_field_tint">@android:color/system_neutral1_300</item>
         <item name="search_bar_segmented_control_tint">@android:color/system_neutral1_400</item>
         <item name="segmented_control_bar_background">@android:color/system_neutral1_900</item>

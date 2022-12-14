@@ -96,6 +96,7 @@
         android:id="@id/write_bar_edit_area_container"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="?tabbar_background"
         android:focusable="true"
         android:focusableInTouchMode="true">
 
