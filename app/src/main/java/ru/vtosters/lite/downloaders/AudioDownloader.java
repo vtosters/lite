@@ -64,7 +64,7 @@ public class AudioDownloader {
 
         if (CacheDatabaseDelegate.isCached(trackId)) {
             CacheDatabaseDelegate.removeTrackFromCache(LibVKXClient.asId(track));
-            AndroidUtils.sendToast("Трек удален из кеша");
+            AndroidUtils.sendToast(AndroidUtils.getString("audio_deleted_from_cache"));
             return;
         }
 

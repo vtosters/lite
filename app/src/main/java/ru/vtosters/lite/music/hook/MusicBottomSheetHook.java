@@ -131,7 +131,7 @@ public class MusicBottomSheetHook {
 
         if (actionId == R.id.remove_from_cache) {
             CacheDatabaseDelegate.removeTrackFromCache(asId(track));
-            AndroidUtils.sendToast("Трек удален из кеша");
+            AndroidUtils.sendToast(AndroidUtils.getString("audio_deleted_from_cache"));
             return true;
         } else if (actionId == R.id.add_to_cache) {
             AudioDownloader.cacheTrack(track);

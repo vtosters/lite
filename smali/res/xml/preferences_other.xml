@@ -65,8 +65,8 @@
         </Preference>
         <Preference
             android:key="copyownlink"
-            android:summary="Скопировать ссылку на свой профиль для дальнейшего получения донатных функций"
-            android:title="Ссылка на свой профиль" />
+            android:summary="@string/copyownlink_summ"
+            android:title="@string/copyownlink_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="VT_Verification"

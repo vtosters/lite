@@ -297,6 +297,7 @@
     <string name="audio_artist">Artist</string>
     <string name="audio_broadcast">Broadcast music</string>
     <string name="audio_deleted">Track deleted</string>
+    <string name="audio_deleted_from_cache">Track deleted from cache</string>
     <string name="audio_ipc_empty_track_list">An error has occurred. You are trying to play an empty playlist.</string>
     <string name="audio_ipc_error">An error has occurred</string>
     <string name="audio_ipc_error_network">An error has occurred. Check the connection and try again.</string>
@@ -6466,4 +6467,10 @@ May look like a fake leaving the online"</string>
     <string name="change_accent_color">Change accent color</string>
     <string name="select_palette">Select palette</string>
     <string name="select_color">Select color</string>
+
+    <string name="copyownlink_title">Link to your profile</string>
+    <string name="copyownlink_summ">Copy link to your profile for further donation features</string>
+    <string name="amoledtheme_title">AMOLED theme</string>
+    <string name="monettheme_title">Monet theme</string>
+    <string name="accents">Accents</string>
 </resources>

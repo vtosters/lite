@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Акценты"
+    <PreferenceCategory android:title="@string/accents"
                         android:key="accentprefs">
         <Preference
             android:key="accent_color"
@@ -17,11 +17,11 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="amoledtheme"
-            android:title="Amoled Тема" />
+            android:title="@string/amoledtheme_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="monettheme"
-            android:title="Monet Тема" />
+            android:title="@string/monettheme_title" />
     </PreferenceCategory>
     <PreferenceCategory
         android:key="dockbarsett"

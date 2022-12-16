@@ -282,6 +282,7 @@
     <string name="audio_artist">Музыкант</string>
     <string name="audio_broadcast">Трансляция аудиозаписей</string>
     <string name="audio_deleted">Аудиозапись удалена</string>
+    <string name="audio_deleted_from_cache">Трек удален из кеша</string>
     <string name="audio_ipc_empty_track_list">Произошла ошибка. Вы пытаетесь воспроизвести пустой плейлист.</string>
     <string name="audio_ipc_error">Произошла ошибка</string>
     <string name="audio_ipc_error_network">Произошла ошибка. Проверьте соединение и повторите попытку.</string>
@@ -6328,4 +6329,10 @@
     <string name="change_accent_color">Выберите цвет акцента</string>
     <string name="select_palette">Выберите палитру цветов</string>
     <string name="select_color">Выберите цвет</string>
+
+    <string name="copyownlink_title">Ссылка на свой профиль</string>
+    <string name="copyownlink_summ">Скопировать ссылку на свой профиль для дальнейшего получения донатных функций</string>
+    <string name="amoledtheme_title">AMOLED-тема</string>
+    <string name="monettheme_title">Monet-тема</string>
+    <string name="accents">Акценты</string>
 </resources>
