@@ -17,10 +17,12 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="amoledtheme"
+            android:summary="@string/amoledtheme_summ"
             android:title="@string/amoledtheme_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="monettheme"
+            android:summary="@string/monettheme_summ"
             android:title="@string/monettheme_title" />
     </PreferenceCategory>
     <PreferenceCategory

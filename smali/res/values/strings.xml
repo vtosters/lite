@@ -6471,6 +6471,8 @@ May look like a fake leaving the online"</string>
     <string name="copyownlink_title">Link to your profile</string>
     <string name="copyownlink_summ">Copy link to your profile for further donation features</string>
     <string name="amoledtheme_title">AMOLED theme</string>
+    <string name="amoledtheme_summ">Black app theme to save power on AMOLED displays</string>
     <string name="monettheme_title">Monet theme</string>
+    <string name="monettheme_summ">Dynamic app theme based on phone wallpaper</string>
     <string name="accents">Accents</string>
 </resources>

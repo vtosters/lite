@@ -6333,6 +6333,8 @@
     <string name="copyownlink_title">Ссылка на свой профиль</string>
     <string name="copyownlink_summ">Скопировать ссылку на свой профиль для дальнейшего получения донатных функций</string>
     <string name="amoledtheme_title">AMOLED-тема</string>
+    <string name="amoledtheme_summ">Покраска приложения в черный цвет для экономии заряда на AMOLED-дисплеях</string>
     <string name="monettheme_title">Monet-тема</string>
+    <string name="monettheme_summ">Динамическая покраска приложения на основе обоев телефона</string>
     <string name="accents">Акценты</string>
 </resources>
