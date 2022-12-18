@@ -8,6 +8,16 @@ import org.apache.tools.ant.taskdefs.condition.Os
 plugins {
     id 'com.android.application'
     id 'net.nemerosa.versioning' version '2.15.1'
+    id 'org.mozilla.rust-android-gradle.rust-android'
+}
+
+cargo {
+    profile = 'release'
+    module = '../native-effects'
+    libname = 'native-effects'
+    targets = ["arm", "arm64"]
+    prebuiltToolchains = true
+    pythonCommand = "python3"
 }
 
 def smaliFolder = projectDir.toPath().resolve("../smali").normalize()
@@ -95,6 +105,7 @@ android {
         targetCompatibility JavaVersion.VERSION_11
     }
     namespace 'ru.vtosters.lite'
+    ndkVersion '25.1.8937393'
 }
 
 dependencies {
@@ -106,13 +117,22 @@ dependencies {
 
 task prepareDexForMerge(type: Copy) {
     dependsOn('exportDex')
+    dependsOn('cargoBuild')
     into smaliFolder.toString()
     from(projectDir) {
         include 'classes*.dex'
     }
     from(projectDir) {
         include 'version.properties'
-        into("assets")
+        into 'assets'
+    }
+    from('../native-effects/target/aarch64-linux-android/release'){
+        include 'libnative_effects.so'
+        into 'lib/arm64-v8a'
+    }
+    from('../native-effects/target/armv7-linux-androideabi/release'){
+        include 'libnative_effects.so'
+        into 'lib/armeabi-v7a'
     }
     doLast {
         Files.newDirectoryStream(projectDir.toPath(), "classes*.dex").forEach { it.toFile().delete() }

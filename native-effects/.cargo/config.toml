@@ -1,8 +1,0 @@
-# Envs are not support by cargo, just specify absolute paths in your ~/.cargo/config.toml
-# https://github.com/rust-lang/cargo/issues/10789
-# [target.aarch64-linux-android]
-# ar = "$ANDROID_SDK/ndk/22.1.7171670/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar"
-# linker = "$ANDROID_SDK/ndk/22.1.7171670/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang"
-# [target.armv7-linux-androideabi]
-# ar = "$ANDROID_SDK/ndk/22.1.7171670/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar"
-# linker = "$ANDROID_SDK/ndk/22.1.7171670/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi30-clang"
