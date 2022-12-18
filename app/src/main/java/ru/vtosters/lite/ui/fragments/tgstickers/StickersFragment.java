@@ -1,51 +1,36 @@
 package ru.vtosters.lite.ui.fragments.tgstickers;
 
-import static android.widget.Toast.LENGTH_SHORT;
-import static android.widget.Toast.makeText;
-import static ru.vtosters.lite.tgs.TGPref.setTGBotKey;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
-
-import java.io.File;
-
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
 import ru.vtosters.lite.ui.components.StickerTouchHelperCallback;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
+
+import java.io.File;
 
 public class StickersFragment extends BaseToolbarFragment {
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
@@ -83,8 +68,8 @@ public class StickersFragment extends BaseToolbarFragment {
     @Override
     protected void onCreateMenu(Menu menu) {
         var item = menu.add(0, 0, 0, "");
-        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        item.setIcon(R.drawable.ic_settings_24);
+        item.setIcon(ThemesUtils.recolorDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_settings_24)))
+            .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
         super.onCreateMenu(menu);
     }
@@ -97,7 +82,7 @@ public class StickersFragment extends BaseToolbarFragment {
 
     private void openMenu(String toast) {
         if (toast != null) {
-            makeText(getContext(), toast, LENGTH_SHORT).show();
+            Toast.makeText(getContext(), toast, Toast.LENGTH_SHORT).show();
         }
         var intent = new Navigator(StickersPreferencesFragment.class, new Bundle()).b(getContext());
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -132,12 +117,12 @@ public class StickersFragment extends BaseToolbarFragment {
 
         FloatingActionButton mAddStickerPack = new FloatingActionButton(getContext());
         mAddStickerPack.setImageResource(R.drawable.ic_add_24);
-        mAddStickerPack.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        mAddStickerPack.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
         mAddStickerPack.setOnClickListener(v2 -> fabClick());
 
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(-2, -2);
         params.gravity = Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
-        params.setMargins(0, 0, 0, dp2px(12f));
+        params.setMargins(0, 0, 0, AndroidUtils.dp2px(12f));
         layout.addView(mAddStickerPack, params);
 
         return layout;
@@ -172,13 +157,13 @@ public class StickersFragment extends BaseToolbarFragment {
                 LinearLayout linearLayout = new LinearLayout(getContext());
 
                 final EditText editText = new EditText(getContext());
-                editText.setHintTextColor(getSTextAttr());
-                editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+                editText.setHintTextColor(ThemesUtils.getSTextAttr());
+                editText.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
 
                 linearLayout.addView(editText);
                 editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
                 ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());
-                margin.setMargins(dp2px(24f), 0, dp2px(24f), 0);
+                margin.setMargins(AndroidUtils.dp2px(24f), 0, AndroidUtils.dp2px(24f), 0);
                 editText.setLayoutParams(margin);
 
                 new VkAlertDialog.Builder(getContext())
@@ -190,7 +175,7 @@ public class StickersFragment extends BaseToolbarFragment {
                             if (!pack.startsWith("https://")) {
                                 pack = "https://" + pack;
                             } else if (!pack.contains("addstickers")) {
-                                sendToast(AndroidUtils.getString("invalid_pack_link"));
+                                AndroidUtils.sendToast(AndroidUtils.getString("invalid_pack_link"));
                             }
                             pack = parsePack(pack);
                             mService.requestPackDownload(pack, new File(getContext().getFilesDir(), new File("VT-Stickers", pack).getAbsolutePath()));
@@ -230,13 +215,13 @@ public class StickersFragment extends BaseToolbarFragment {
         LinearLayout linearLayout = new LinearLayout(getContext());
 
         final EditText editText = new EditText(getContext());
-        editText.setHintTextColor(getSTextAttr());
-        editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        editText.setHintTextColor(ThemesUtils.getSTextAttr());
+        editText.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
 
         linearLayout.addView(editText);
         editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());
-        margin.setMargins(dp2px(24f), 0, dp2px(24f), 0);
+        margin.setMargins(AndroidUtils.dp2px(24f), 0, AndroidUtils.dp2px(24f), 0);
         editText.setLayoutParams(margin);
 
         new VkAlertDialog.Builder(getContext())
@@ -244,7 +229,7 @@ public class StickersFragment extends BaseToolbarFragment {
                 .setMessage(requireContext().getString(R.string.stickersapi6))
                 .setView(linearLayout)
                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
-                    setTGBotKey(editText.getText().toString());
+                    TGPref.setTGBotKey(editText.getText().toString());
                     if (r != null) r.run();
                 })
                 .setNegativeButton(android.R.string.cancel,
@@ -276,8 +261,8 @@ public class StickersFragment extends BaseToolbarFragment {
             public void onKeyChecked(boolean ok) {
                 progressDialog.dismiss();
                 if (!ok) {
-                    makeText(context, requireContext().getString(R.string.stickersapi2), LENGTH_SHORT).show();
-                    setTGBotKey(null);
+                    Toast.makeText(context, requireContext().getString(R.string.stickersapi2), Toast.LENGTH_SHORT).show();
+                    TGPref.setTGBotKey(null);
                     return;
                 }
                 mService.setBotKey(TGPref.getTGBotKey());

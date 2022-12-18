@@ -327,9 +327,7 @@
     .line 30
     iget-object p3, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->a:Landroid/content/Context;
 
-    sget p4, Lcom/vk/im/ui/c;->accent:I
-
-    invoke-static {p3, p4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result p3
 

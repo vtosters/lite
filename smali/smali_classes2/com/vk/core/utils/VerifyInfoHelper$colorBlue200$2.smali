@@ -59,11 +59,7 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
-
-    sget v1, Lb/h/z/c;->blue_200:I
-
-    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

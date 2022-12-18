@@ -88,7 +88,13 @@ task exportDex {
 
 android {
     compileSdkVersion 32
-    buildToolsVersion '33.0.0'
+    buildToolsVersion '32.0.0'
+
+    sourceSets {
+        main {
+            java.srcDirs += 'build/generated/aidl_source_output_dir/release/out'
+        }
+    }
 
     defaultConfig {
         applicationId "ru.vtosters.lite.utils.lite"
@@ -120,7 +126,8 @@ task prepareDexForMerge(type: Copy) {
     dependsOn('cargoBuild')
     into smaliFolder.toString()
     from(projectDir) {
-        include 'classes*.dex'
+        include 'classes6.dex'
+        include 'classes7.dex'
     }
     from(projectDir) {
         include 'version.properties'
@@ -135,7 +142,8 @@ task prepareDexForMerge(type: Copy) {
         into 'lib/armeabi-v7a'
     }
     doLast {
-        Files.newDirectoryStream(projectDir.toPath(), "classes*.dex").forEach { it.toFile().delete() }
+        new File(projectDir, "classes6.dex").delete()
+        new File(projectDir, "classes7.dex").delete()
         new File(projectDir, "version.properties").delete()
     }
 }

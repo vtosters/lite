@@ -11,5 +11,5 @@
     android:paddingEnd="16.0dip"
     android:paddingBottom="7.0dip"
     android:singleLine="true"
-    android:textColor="#ff5181b8"
+    android:textColor="@color/header_blue"
     android:textSize="14.0sp" />

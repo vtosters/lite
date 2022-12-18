@@ -233,6 +233,12 @@
 
     if-eqz v0, :cond_0
 
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->isMonetTheme()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     sget v0, Lb/h/z/b;->toolbar_separator:I
 
     invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->f(I)Landroid/graphics/drawable/Drawable;
@@ -250,6 +256,12 @@
 
 .method private final a(Landroid/view/ViewGroup;)Lcom/google/android/material/appbar/AppBarLayout;
     .locals 4
+
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->isMonetTheme()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     .line 9
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
@@ -612,6 +624,12 @@
     iget-boolean v0, p0, Lcom/vk/core/view/AppBarShadowView;->c:Z
 
     if-eq v0, p1, :cond_0
+
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->isMonetTheme()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     .line 2
     iput-boolean p1, p0, Lcom/vk/core/view/AppBarShadowView;->c:Z

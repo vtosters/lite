@@ -1328,6 +1328,8 @@
 
     move-result-object v0
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->colorWriteBar(Landroid/view/View;)V
+
     check-cast v0, Landroid/view/ViewGroup;
 
     iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->j0:Landroid/view/ViewGroup;
@@ -5824,9 +5826,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060018
-
-    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

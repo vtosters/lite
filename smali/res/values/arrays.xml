@@ -889,4 +889,8 @@
         <item>Dark theme</item>
         <item>Light theme</item>
     </string-array>
+    <string-array name="accent_select_type">
+        <item>Color Picker</item>
+        <item>From Palettes</item>
+    </string-array>
 </resources>

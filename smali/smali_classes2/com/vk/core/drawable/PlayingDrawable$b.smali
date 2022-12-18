@@ -100,6 +100,10 @@
     .line 1
     iget p0, p0, Lcom/vk/core/drawable/PlayingDrawable$b;->g:I
 
+    invoke-static {p0}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorHexColor(I)I
+
+    move-result p0
+
     return p0
 .end method
 

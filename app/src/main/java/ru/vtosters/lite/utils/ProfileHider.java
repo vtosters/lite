@@ -1,28 +1,24 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserID;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
+import android.text.TextUtils;
 import android.util.Log;
-
 import com.vk.profile.presenter.UserPresenter;
 import com.vtosters.lite.R;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.fragments.messages.chat.vc.MsgSendVc;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.lang.reflect.Field;
-import java.util.HashMap;
-
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import org.json.JSONException;
+import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
-// Jesus cries
+import java.io.IOException;
+import java.util.HashMap;
+
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserID;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+
 public class ProfileHider {
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
 
@@ -48,13 +44,9 @@ public class ProfileHider {
                         .a()
                         .g());
                 String response = payload.optJSONObject(MsgSendVc.d0).optString("response");
-                if (!response.isEmpty()) {
-                    Field z2 = ExtendedUserProfile.class.getDeclaredField("z2");
-                    z2.setAccessible(true);
-                    z2.set(extendedUserProfile, response);
-                }
-            } catch (IOException | JSONException | NoSuchFieldException |
-                    IllegalAccessException e) {
+                if (!TextUtils.isEmpty(response))
+                    extendedUserProfile.z2 = response;
+            } catch (IOException | JSONException e) {
                 e.printStackTrace();
             } catch (NullPointerException e) {
                 Log.e("ProfileHide", "null \"profiles\" node\n" + e);
@@ -64,17 +56,8 @@ public class ProfileHider {
 
     public static String getInfo(ExtendedUserProfile extendedUserProfile) {
         int userID = getUserID(extendedUserProfile);
-        if (VTVerifications.isServiceAccount(userID)) {
-            try {
-                Field z2 = ExtendedUserProfile.class.getDeclaredField("z2");
-                z2.setAccessible(true);
-                String val = (String) z2.get(extendedUserProfile);
-                if (val != null && !val.isEmpty())
-                    return val;
-            } catch (NoSuchFieldException | IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        }
+        if (VTVerifications.isServiceAccount(userID) && !TextUtils.isEmpty(extendedUserProfile.z2))
+            return extendedUserProfile.z2;
         return getGlobalContext().getString(UserPresenter.q0.a(userID));
     }
 }

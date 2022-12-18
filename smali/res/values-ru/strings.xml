@@ -282,6 +282,7 @@
     <string name="audio_artist">Музыкант</string>
     <string name="audio_broadcast">Трансляция аудиозаписей</string>
     <string name="audio_deleted">Аудиозапись удалена</string>
+    <string name="audio_deleted_from_cache">Трек удален из кеша</string>
     <string name="audio_ipc_empty_track_list">Произошла ошибка. Вы пытаетесь воспроизвести пустой плейлист.</string>
     <string name="audio_ipc_error">Произошла ошибка</string>
     <string name="audio_ipc_error_network">Произошла ошибка. Проверьте соединение и повторите попытку.</string>
@@ -6319,4 +6320,21 @@
     <string name="promotedstickers_title">Не получать промостикеры</string>
     <string name="useOldAppVer_title">Использовать старый дизайн</string>
     <string name="useOldAppVer_summ">Работает \"как есть\". Могут быть ошибки</string>
+
+    <string name="downloading_update">Скачивание обновления</string>
+    <string name="sources">Источники</string>
+    <string name="businessDisabler_title">Отключить бизнес-уведомления</string>
+    <string name="accent_color_title">Цвет акцента</string>
+    <string name="accent_color_summ">Цвет акцента в приложении</string>
+    <string name="change_accent_color">Выберите цвет акцента</string>
+    <string name="select_palette">Выберите палитру цветов</string>
+    <string name="select_color">Выберите цвет</string>
+
+    <string name="copyownlink_title">Ссылка на свой профиль</string>
+    <string name="copyownlink_summ">Скопировать ссылку на свой профиль для дальнейшего получения донатных функций</string>
+    <string name="amoledtheme_title">AMOLED-тема</string>
+    <string name="amoledtheme_summ">Полностью чёрная тема для устройств с AMOLED-экранами</string>
+    <string name="monettheme_title">Monet-тема</string>
+    <string name="monettheme_summ">Динамическая покраска приложения на основе обоев телефона</string>
+    <string name="accents">Акценты</string>
 </resources>

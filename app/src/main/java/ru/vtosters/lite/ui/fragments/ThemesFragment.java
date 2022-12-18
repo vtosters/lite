@@ -1,20 +1,22 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
-
-import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
-
-import androidx.preference.Preference;
-
+import androidx.preference.PreferenceCategory;
+import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vk.core.fragments.FragmentImpl;
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
+import ru.vtosters.lite.themes.ThemesCore;
+import ru.vtosters.lite.themes.palettes.PalettesManager;
+import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
+import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
@@ -22,23 +24,79 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(R.xml.preferences_themes);
-        prefs();
+        initPreferences();
     }
 
-    private void prefs() {
-        findPreference("navbar").setOnPreferenceClickListener(new restart());
-        findPreference("milkshake").setOnPreferenceClickListener(new restart());
-        findPreference("darktheme").setOnPreferenceChangeListener(new restartdark());
-        findPreference("lighttheme").setOnPreferenceChangeListener(new restartlight());
-        findPreference("iconmanager").setOnPreferenceClickListener(new openicons());
-        findPreference("dockbar_tab_titles").setOnPreferenceClickListener(new restart());
-        findPreference("dockbar_accent").setOnPreferenceClickListener(new restart());
-        findPreference("dockcounter").setOnPreferenceClickListener(new restart());
-        findPreference("newsfeed_notif").setOnPreferenceClickListener(new restart());
-        findPreference("newsfeed_notif").setVisible(milkshake());
+    private void initPreferences() {
+        var accentColorPreference = findPreference("accent_color");
+        accentColorPreference.setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.bg_accent_circle)));
+        accentColorPreference.setOnPreferenceClickListener(preference -> {
+            changeAccent();
+            return true;
+        });
 
-        if (isTablet()) {
-            findPreference("dockbarsett").setVisible(false);
+        var navBarPreference = findPreference("navbar");
+        navBarPreference.setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
+
+        var milkshakePreference = findPreference("milkshake");
+        milkshakePreference.setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
+
+        var amoledThemePreference = findPreference("amoledtheme");
+        amoledThemePreference.setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
+
+        var monetThemePreference = findPreference("monettheme");
+        monetThemePreference.setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
+        monetThemePreference.setVisible(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S);
+
+        var iconManagerPreference = findPreference("iconmanager");
+        iconManagerPreference.setOnPreferenceClickListener(preference -> {
+            switchFragment(IconsFragment.class);
+            return true;
+        });
+
+        var dockbarTabTitlesPreference = findPreference("dockbar_tab_titles");
+        dockbarTabTitlesPreference.setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
+
+        var dockbarAccentPreference = findPreference("dockbar_accent");
+        dockbarAccentPreference.setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
+
+        var dockCounterPreference = findPreference("dockcounter");
+        dockCounterPreference.setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
+
+        var newsfeedNotificationsPreference = findPreference("newsfeed_notif");
+        newsfeedNotificationsPreference.setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
+
+        newsfeedNotificationsPreference.setVisible(Preferences.milkshake());
+
+        findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme());
+
+        if (AndroidUtils.isTablet()) {
+            PreferenceCategory dockbarSettingsPreferenceCategory = (PreferenceCategory) findPreference("dockbarsett");
+            dockbarSettingsPreferenceCategory.setVisible(false);
         }
     }
 
@@ -47,40 +105,68 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         return R.string.vtlthemes;
     }
 
-    public static class restart implements Preference.OnPreferenceClickListener {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            restartApplicationWithTimer();
-            return true;
-        }
+    void changeAccent() {
+        final var titles = AndroidUtils.getArray("accent_select_type");
+        new VkAlertDialog.Builder(requireContext())
+                .setTitle(AndroidUtils.getString("change_accent_color"))
+                .setItems(titles, (dialog, which) -> {
+                    switch (which) {
+                        case 0:
+                            showColorPicker();
+                            break;
+                        case 1:
+                            showPalettesDialog();
+                            break;
+                    }
+                })
+                .setNegativeButton(R.string.reset, (dialog, which) -> {
+                    ThemesUtils.setCustomAccentColor(0, false);
+                    LifecycleUtils.restartApplicationWithTimer();
+                })
+                .setPositiveButton(R.string.cancel, null)
+                .show();
     }
 
-    public static class restartlight implements Preference.OnPreferenceChangeListener {
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object o) {
-            edit().putString("lighttheme", o.toString()).commit();
-            restartApplicationWithTimer();
-            return false;
-        }
+    void showColorPicker() {
+        final var colorPickerView = new ColorPickerView(requireContext());
+        colorPickerView.setColor(ThemesUtils.getAccentColor());
+        new VkAlertDialog.Builder(requireContext())
+                .setTitle(AndroidUtils.getString("select_color"))
+                .setNegativeButton(R.string.cancel, null)
+                .setPositiveButton(R.string.select, (dialog, which) -> setAccentColor(colorPickerView.getColor()))
+                .setView(colorPickerView)
+                .show();
     }
 
-    public static class restartdark implements Preference.OnPreferenceChangeListener {
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object o) {
-            edit().putString("darktheme", o.toString()).commit();
-            restartApplicationWithTimer();
-            return false;
-        }
+    void showPalettesDialog() {
+        final var manager = PalettesManager.getInstance();
+        final var titles = new String[manager.getPalettesCount()];
+        for (int i = 0; i < titles.length; ++i)
+            titles[i] = manager.getPalette(i).name;
+        new VkAlertDialog.Builder(requireContext())
+                .setTitle(AndroidUtils.getString("select_palette"))
+                .setItems(titles, (dialog, which) ->
+                        PalettesBottomSheetDialog.create(requireActivity(), manager.getPalette(which),
+                                        (adapter, vtlcolor) -> setAccentColor(vtlcolor.color))
+                )
+                .setPositiveButton(R.string.cancel, null)
+                .show();
     }
 
-    public class openicons implements Preference.OnPreferenceClickListener {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            Context context = requireContext();
-            Intent a2 = new Navigator(IconsFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return true;
-        }
+    void setAccentColor(int color) {
+        ThemesUtils.setCustomAccentColor(color, false);
+        ThemesCore.setThemedColors(color);
+        restart();
+    }
+
+    void restart() {
+        LifecycleUtils.restartApplicationWithTimer();
+    }
+
+    private void switchFragment(Class<? extends FragmentImpl> fragmentClz) {
+        var intent = new Navigator(fragmentClz)
+                .b(requireContext())
+                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        requireContext().startActivity(intent);
     }
 }

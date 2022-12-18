@@ -85,9 +85,7 @@
     if-eqz p4, :cond_0
 
     .line 3
-    sget p3, Lb/h/z/b;->accent:I
-
-    invoke-static {p3}, Lcom/vk/core/ui/themes/VKThemeHelper;->g(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result p3
 

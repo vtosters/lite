@@ -8,5 +8,5 @@
     android:paddingLeft="28.0dip"
     android:paddingRight="16.0dip"
     android:text="@string/gifts_add_recipient"
-    android:textColor="#ff5181b8"
+    android:textColor="@color/header_blue"
     android:textSize="16.0dip" />

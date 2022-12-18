@@ -321,6 +321,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->recolorTextView(Landroid/widget/TextView;)V
+
     .line 6
     sget v1, Lcom/vk/im/ui/o;->ScrollToBottomView_vkim_stb_counter_fontFamily:I
 

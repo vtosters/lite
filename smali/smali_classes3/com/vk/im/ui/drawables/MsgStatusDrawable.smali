@@ -79,6 +79,10 @@
 
     move-result-object v0
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->recolorDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -89,6 +93,10 @@
     sget v0, Lcom/vk/im/ui/f;->vkim_msg_status_unread_dot:I
 
     invoke-static {p1, v0}, Lcom/vk/im/ui/drawables/MsgStatusDrawable;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->recolorDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 

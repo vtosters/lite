@@ -37,7 +37,8 @@ import java.util.List;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import ru.vtosters.lite.downloaders.MessagesDownloader;
+import ru.vtosters.lite.downloaders.messages.HtmlDialogDownloaderFormatProvider;
+import ru.vtosters.lite.downloaders.messages.MessagesDownloader;
 import ru.vtosters.lite.encryption.EncryptProvider;
 import ru.vtosters.lite.encryption.base.IMProcessor;
 import ru.vtosters.lite.hooks.CryptImHook;
@@ -189,7 +190,7 @@ public class DNRInjector {
         if (action == DialogAction.DOWNLOAD) {
             File out = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "dialog-" + peerId + ".html");
             try {
-                new MessagesDownloader().downloadDialog(peerId, new MessagesDownloader.HtmlDialogDownloaderFormatProvider(), out);
+                new MessagesDownloader().downloadDialog(peerId, new HtmlDialogDownloaderFormatProvider(), out);
             } catch (Exception e) {
                 sendToast(AndroidUtils.getString(R.string.download_dl_error));
                 e.printStackTrace();
@@ -250,7 +251,7 @@ public class DNRInjector {
         if (action == DialogAction.DOWNLOAD) {
             File out = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), peerId + "-dialog.html");
             try {
-                new MessagesDownloader().downloadDialog(peerId, new MessagesDownloader.HtmlDialogDownloaderFormatProvider(), out);
+                new MessagesDownloader().downloadDialog(peerId, new HtmlDialogDownloaderFormatProvider(), out);
             } catch (Exception e) {
                 e.printStackTrace();
             }

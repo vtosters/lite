@@ -479,9 +479,7 @@
     .line 18
     iget-object v0, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a:Landroid/content/Context;
 
-    sget v1, Lcom/vk/im/ui/c;->accent:I
-
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

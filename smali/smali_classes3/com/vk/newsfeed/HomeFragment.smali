@@ -1838,9 +1838,15 @@
     if-eqz v1, :cond_0
 
     .line 4
-    iget-object v2, p0, Lcom/vk/newsfeed/HomeFragment;->O:Lcom/vk/newsfeed/MilkshakeNewsHeaderDrawable;
+    # iget-object v2, p0, Lcom/vk/newsfeed/HomeFragment;->O:Lcom/vk/newsfeed/MilkshakeNewsHeaderDrawable;
 
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    const v2, 0x7f040224
+
+    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
     .line 5
     new-instance v2, Lcom/vk/newsfeed/HomeFragment$l;

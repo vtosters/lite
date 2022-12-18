@@ -63,6 +63,10 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://vtosters.app/donate" />
         </Preference>
+        <Preference
+            android:key="copyownlink"
+            android:summary="@string/copyownlink_summ"
+            android:title="@string/copyownlink_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="VT_Verification"

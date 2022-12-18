@@ -5,7 +5,7 @@
         android:right="10.0dip"
         android:top="8.0dip">
         <shape xmlns:android="http://schemas.android.com/apk/res/android">
-            <solid android:color="@color/accent_blue" />
+            <solid android:color="?accent" />
             <size
                 android:width="4.0dip"
                 android:height="32.0dip" />

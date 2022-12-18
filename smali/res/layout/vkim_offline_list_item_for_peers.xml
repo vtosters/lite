@@ -41,7 +41,7 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="end"
         android:text="@string/vkim_search_try_again"
-        android:textColor="#ff528bcc"
+        android:textColor="@color/accent_blue"
         android:textSize="14.0sp"
         android:textStyle="normal" />
 </FrameLayout>

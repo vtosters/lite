@@ -166,7 +166,7 @@
     goto :goto_0
 
     :cond_0
-    const/16 v3, 0xff
+    const/4 v3, 0x0
 
     :goto_0
     invoke-virtual {v2, v3}, Lcom/vk/core/drawable/RecoloredDrawable;->setAlpha(I)V

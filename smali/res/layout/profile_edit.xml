@@ -64,7 +64,7 @@
                             android:padding="8.0dip"
                             android:text="@string/add_photo"
                             android:textAllCaps="true"
-                            android:textColor="#ff5181b8"
+                            android:textColor="@color/header_blue"
                             android:textSize="12.0dip" />
                     </FrameLayout>
 

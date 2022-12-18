@@ -50,6 +50,7 @@ import ru.vtosters.lite.music.LastFMScrobbler;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
@@ -57,7 +58,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     public static void download(Context ctx) {
         final EditText input = new EditText(ctx);
         input.setTextColor(getTextAttr());
-        input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        input.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
 
         var lp = new FrameLayout.LayoutParams(-1, -2);
         lp.leftMargin = AndroidUtils.dp2px(16);
@@ -175,7 +176,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         fn.setHint(R.string.lastfm_login);
         fn.setTextColor(getTextAttr());
         fn.setHintTextColor(getSTextAttr());
-        fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        fn.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
@@ -186,7 +187,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         ln.setHint(R.string.lastfm_password);
         ln.setTextColor(getTextAttr());
         ln.setHintTextColor(getSTextAttr());
-        ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        ln.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
         linearLayout.addView(ln);
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ln.setLayoutParams(margin);

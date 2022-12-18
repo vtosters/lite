@@ -102,6 +102,7 @@ public class DockBarInjector {
                 item.setStaticMode(true);
                 item.setIconsMode(false);
                 item.setShiftingMode(false);
+                item.setTextColor(getCSTDock());
             }
         }
     }

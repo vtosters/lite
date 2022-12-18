@@ -48,7 +48,6 @@ public class TogglesHook {
             case FEATURE_NEWS_GAMES_IN_DISCOVER:
             case FEATURE_NEWS_HEADER_SCROLL:
             case FEATURE_NEW_FORMAT_SHOW_WPB:
-            case FEATURE_NOTIFICATION_ANIM:
             case FEATURE_PODCASTS_PAGE:
             case FEATURE_QR_CREATE_QR:
             case FEATURE_QR_DYNAMIC_FRAME:
@@ -110,8 +109,6 @@ public class TogglesHook {
             case FEATURE_VK_APPS_SEARCH:
             case FEATURE_VOTES_BALANCE:
             case FEATURE_WEBVIEW_TOKEN_ACTIVE:
-            case FEATURE_WISHLIST_ENTRY_POINT:
-            case FEATURE_WISHLIST_MY_PROFILE:
             case FEATURE_MILKSHAKE_FORCE_DISABLED:
             case FEATURE_MILKSHAKE_ACTIVATION_DISABLED:
             case EXPERIMENT_NEWS_DISABLE_CACHE:

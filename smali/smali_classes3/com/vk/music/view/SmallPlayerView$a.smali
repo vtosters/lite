@@ -245,9 +245,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/music/m/a;->accent:I
-
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

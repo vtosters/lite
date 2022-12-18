@@ -50,7 +50,7 @@
                     android:layout_gravity="center_vertical"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_search_params_24"
-                    android:tint="#ff528bcc" />
+                    android:tint="@color/accent_blue" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"

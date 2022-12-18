@@ -6867,6 +6867,10 @@
     <public type="font" name="vk_sans_text_light" id="0x7f09001a" />
     <public type="font" name="vk_sans_text_medium" id="0x7f09001b" />
     <public type="font" name="vk_sans_text_regular" id="0x7f09001c" />
+    <public name="color_preview" id="0x7f0a1021" type="id" />
+    <public name="color_name" id="0x7f0a1022" type="id" />
+    <public name="color_value" id="0x7f0a1023" type="id" />
+    <public name="color_preview_border" id="0x7f0a1024" type="id" />
     <public type="id" name="ALT" id="0x7f0a0000" />
     <public type="id" name="CIRCLE" id="0x7f0a0001" />
     <public type="id" name="CTRL" id="0x7f0a0002" />

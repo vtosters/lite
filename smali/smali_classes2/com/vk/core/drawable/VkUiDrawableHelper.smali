@@ -213,9 +213,7 @@
     if-eqz p2, :cond_2
 
     .line 3
-    sget p2, Lb/h/z/b;->accent:I
-
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result p4
 
@@ -488,9 +486,7 @@
     if-eqz p2, :cond_2
 
     .line 3
-    sget p2, Lb/h/z/b;->accent:I
-
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result p4
 

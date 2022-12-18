@@ -497,9 +497,7 @@
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const v3, 0x7f060023
-
-    invoke-static {p1, v3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v3
 

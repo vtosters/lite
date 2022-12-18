@@ -216,6 +216,10 @@
 
     move-result-object v4
 
+    invoke-static {v4}, Lru/vtosters/lite/utils/ThemesUtils;->recolorDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
     const/4 v5, 0x0
 
     .line 17

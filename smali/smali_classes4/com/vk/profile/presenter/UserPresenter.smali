@@ -954,67 +954,71 @@
 .method public final b(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 8
 
-    .line 18
-    new-instance v7, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
+    const-string p0, "Звонки не поддерживаются в данном клиенте"
 
-    const v0, 0x7f040022
+    invoke-static {p0}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->g(I)I
+    # .line 18
+    # new-instance v7, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
-    move-result v0
+    # const v0, 0x7f040022
 
-    const/4 v1, 0x1
+    # invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->g(I)I
 
-    invoke-direct {v7, p1, v1, v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZI)V
+    # move-result v0
 
-    const p1, 0x7f040254
+    # const/4 v1, 0x1
 
-    const v0, 0x7f0806af
+    # invoke-direct {v7, p1, v1, v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZI)V
 
-    .line 19
-    invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
+    # const p1, 0x7f040254
 
-    move-result-object v2
+    # const v0, 0x7f0806af
 
-    new-instance v4, Lcom/vk/profile/presenter/UserPresenter$openCalls$1;
+    # .line 19
+    # invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
-    invoke-direct {v4, p2}, Lcom/vk/profile/presenter/UserPresenter$openCalls$1;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    # move-result-object v2
 
-    const v1, 0x7f1212ee
+    # new-instance v4, Lcom/vk/profile/presenter/UserPresenter$openCalls$1;
 
-    const/4 v3, 0x0
+    # invoke-direct {v4, p2}, Lcom/vk/profile/presenter/UserPresenter$openCalls$1;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
-    const/4 v5, 0x4
+    # const v1, 0x7f1212ee
 
-    const/4 v6, 0x0
+    # const/4 v3, 0x0
 
-    move-object v0, v7
+    # const/4 v5, 0x4
 
-    .line 20
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
+    # const/4 v6, 0x0
 
-    const v0, 0x7f080855
+    # move-object v0, v7
 
-    .line 21
-    invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
+    # .line 20
+    # invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
-    move-result-object v2
+    # const v0, 0x7f080855
 
-    new-instance v4, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;
+    # .line 21
+    # invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
-    invoke-direct {v4, p2}, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    # move-result-object v2
 
-    const v1, 0x7f1212ef
+    # new-instance v4, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;
 
-    move-object v0, v7
+    # invoke-direct {v4, p2}, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
-    .line 22
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
+    # const v1, 0x7f1212ef
 
-    const/4 p1, 0x0
+    # move-object v0, v7
 
-    .line 23
-    invoke-virtual {v7, p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Z)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    # .line 22
+    # invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
+
+    # const/4 p1, 0x0
+
+    # .line 23
+    # invoke-virtual {v7, p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Z)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     return-void
 .end method
@@ -1124,9 +1128,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f060018
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v1
 

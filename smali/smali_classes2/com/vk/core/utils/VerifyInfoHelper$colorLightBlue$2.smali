@@ -63,7 +63,7 @@
 
     sget v1, Lb/h/z/c;->light_blue:I
 
-    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
 
     move-result v0
 

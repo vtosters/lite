@@ -2988,7 +2988,7 @@
 
     sget v0, Lcom/vk/im/ui/c;->im_ic_back:I
 
-    sget v2, Lcom/vk/im/ui/c;->header_tint:I
+    sget v2, Lcom/vk/im/ui/c;->header_text:I
 
     invoke-virtual {p1, v1, v0, v2}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroidx/appcompat/widget/Toolbar;II)V
 

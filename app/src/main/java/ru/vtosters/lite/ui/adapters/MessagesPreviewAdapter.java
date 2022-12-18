@@ -1,39 +1,41 @@
 package ru.vtosters.lite.ui.adapters;
 
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.content.Context;
-import android.util.TypedValue;
+import android.graphics.ColorFilter;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.PorterDuff;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vk.core.widget.BubbleFluidLayout;
+import com.vk.im.ui.components.viewcontrollers.msg_list.entry.MsgTextBuilder;
+import com.vk.im.ui.views.msg.MsgPartTextView;
+import com.vk.im.ui.views.msg.bubble.MsgBubbleDrawable;
+import com.vk.im.ui.views.msg.bubble.MsgBubblePart;
+import com.vk.im.ui.views.msg.bubble.MsgBubbleStyle;
 import com.vk.im.ui.views.msg.bubble.MsgBubbleView;
 import com.vtosters.lite.R;
+import com.vtosters.lite.m0.ToolbarHelper;
 
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreviewAdapter.MessagePreviewViewHolder> {
-    private static final int ME = 0x0;
-    private static final int ANONYMOUS = -0x1;
 
-    private final String[] mMessages = AndroidUtils.getArray(R.array.wallpaper_change_dialog);
+    private final String[] mMessages;
 
-    private static int getColorFromAttribute(Context context, int attrId) {
-        TypedValue typedValue = new TypedValue();
-        context.getTheme().resolveAttribute(attrId, typedValue, true);
-        return typedValue.data;
+    public MessagesPreviewAdapter(String... messages) {
+        mMessages = messages;
     }
 
     @Override
     public int getItemViewType(int i) {
-        return i % 2 == 0 ? ANONYMOUS : ME;
+        return i % 2 == 0 ? Gravity.START : Gravity.END;
     }
 
     @NonNull
@@ -41,7 +43,12 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
     public MessagePreviewViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         Context context = viewGroup.getContext();
 
-        var bubbleFluidLayout = (BubbleFluidLayout) LayoutInflater.from(context).inflate(R.layout.vkim_msg_list_item_msg_from_user, viewGroup, false);
+        final var inflater = LayoutInflater.from(context);
+
+        final var bubbleFluidLayout = (BubbleFluidLayout) inflater
+                .inflate(R.layout.vkim_msg_list_item_msg_from_user, viewGroup, false);
+        bubbleFluidLayout.setPadding(0, AndroidUtils.dp2px(4), 0, 0);
+        bubbleFluidLayout.setGravity(viewType);
 
         bubbleFluidLayout.findViewById(R.id.avatar).setVisibility(View.GONE);
         bubbleFluidLayout.findViewById(R.id.avatar_space).setVisibility(View.GONE);
@@ -49,19 +56,20 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
         bubbleFluidLayout.findViewById(R.id.status).setVisibility(View.GONE);
         bubbleFluidLayout.findViewById(R.id.status_space).setVisibility(View.GONE);
 
-        var messageBubbleView = (MsgBubbleView) bubbleFluidLayout.findViewById(R.id.bubble);
-        messageBubbleView.setContentPaddingLeft(AndroidUtils.dp2px(5));
-        messageBubbleView.setContentPaddingTop(AndroidUtils.dp2px(5));
-        messageBubbleView.setContentPaddingRight(AndroidUtils.dp2px(5));
-        messageBubbleView.setContentPaddingBottom(AndroidUtils.dp2px(5));
-        bubbleFluidLayout.setGravity(viewType == ME ? Gravity.RIGHT : Gravity.LEFT);
+        final var messageBubbleView = (MsgBubbleView) bubbleFluidLayout.findViewById(R.id.bubble);
+        messageBubbleView.setContentPaddingLeft(AndroidUtils.dp2px(10));
+        messageBubbleView.setContentPaddingTop(AndroidUtils.dp2px(4));
+        messageBubbleView.setContentPaddingRight(AndroidUtils.dp2px(4));
+        messageBubbleView.setContentPaddingBottom(AndroidUtils.dp2px(0));
+        if (viewType == Gravity.END)
+            messageBubbleView.a(MsgBubbleStyle.b(false, false), MsgBubblePart.FULL, ThemesUtils.getAccentColor());
+        bubbleFluidLayout.setLayoutDirection(viewType);
 
-        var message = new TextView(context);
-        message.setTag("message");
-        message.setGravity(Gravity.LEFT);
-        message.setTextColor(getTextAttr());
+        final var msgTextView = inflater.inflate(R.layout.vkim_msg_part_text, viewGroup, false);
+        msgTextView.setId(R.id.msg_text);
 
-        messageBubbleView.setContentView(message);
+        final var msgBubbleView = (MsgBubbleView) bubbleFluidLayout.findViewById(R.id.bubble);
+        msgBubbleView.setContentView(msgTextView);
 
         return new MessagePreviewViewHolder(bubbleFluidLayout);
     }
@@ -77,17 +85,17 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
     }
 
     protected static class MessagePreviewViewHolder extends RecyclerView.ViewHolder {
-
-        private final TextView mMessage;
+        private final MsgPartTextView mMsgTextView;
 
         public MessagePreviewViewHolder(@NonNull View view) {
             super(view);
 
-            mMessage = view.findViewWithTag("message");
+            mMsgTextView = view.findViewById(R.id.msg_text);
         }
 
         public void bind(String text) {
-            mMessage.setText(text);
+            mMsgTextView.setText(new MsgTextBuilder().a(text));
+            mMsgTextView.setTimeText("12:00");
         }
     }
 }
