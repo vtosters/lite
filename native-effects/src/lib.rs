@@ -244,7 +244,7 @@ pub extern "C" fn Java_ru_vtosters_lite_ui_wallpapers_NativeEffects_snow(
     }
 
     let output = env
-        .new_string("Applied Flea effect!")
+        .new_string("Applied Snow effect!")
         .expect("Couldn't create java string!");
     return **output;
 }
@@ -360,7 +360,7 @@ pub extern "C" fn Java_ru_vtosters_lite_ui_wallpapers_NativeEffects_mosaic(
     s.copy_from_slice(img.as_raw());
 
     let output = env
-        .new_string("Applied Dim effect!")
+        .new_string("Applied Mosaic effect!")
         .expect("Couldn't create java string!");
     return **output;
 }
