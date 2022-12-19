@@ -429,7 +429,7 @@
         <item name="landing_primary_button_foreground_disabled">#66ffffff</item>
         <item name="landing_secondary_button_background">?accent</item>
         <item name="landing_secondary_button_background_disabled">#0a003973</item>
-        <item name="landing_secondary_button_foreground">@android:color/system_accent1_400</item>
+        <item name="landing_secondary_button_foreground">@android:color/system_neutral1_100</item>
         <item name="landing_secondary_button_foreground_disabled">#663f8ae0</item>
         <item name="landing_snippet_border">@color/black_alpha15</item>
         <item name="landing_tertiary_button_background">@color/clear</item>
@@ -689,7 +689,7 @@
         <item name="landing_primary_button_foreground_disabled">#6619191a</item>
         <item name="landing_secondary_button_background">@android:color/system_neutral1_100</item>
         <item name="landing_secondary_button_background_disabled">#0fffffff</item>
-        <item name="landing_secondary_button_foreground">@android:color/system_neutral1_100</item>
+        <item name="landing_secondary_button_foreground">@android:color/system_neutral1_900</item>
         <item name="landing_secondary_button_foreground_disabled">#66ffffff</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_tertiary_button_background">@color/clear</item>
@@ -949,7 +949,7 @@
         <item name="landing_primary_button_foreground_disabled">#6619191a</item>
         <item name="landing_secondary_button_background">@android:color/system_neutral1_100</item>
         <item name="landing_secondary_button_background_disabled">#0fffffff</item>
-        <item name="landing_secondary_button_foreground">@android:color/system_neutral1_100</item>
+        <item name="landing_secondary_button_foreground">@android:color/system_neutral1_900</item>
         <item name="landing_secondary_button_foreground_disabled">#66ffffff</item>
         <item name="landing_snippet_border">@android:color/system_neutral1_100</item>
         <item name="landing_tertiary_button_background">@color/clear</item>
@@ -1209,7 +1209,7 @@
         <item name="landing_primary_button_foreground_disabled">#6619191a</item>
         <item name="landing_secondary_button_background">@android:color/system_neutral1_100</item>
         <item name="landing_secondary_button_background_disabled">#0fffffff</item>
-        <item name="landing_secondary_button_foreground">@android:color/system_neutral1_100</item>
+        <item name="landing_secondary_button_foreground">@color/black</item>
         <item name="landing_secondary_button_foreground_disabled">#66ffffff</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_tertiary_button_background">@color/clear</item>
@@ -1469,7 +1469,7 @@
         <item name="landing_primary_button_foreground_disabled">#6619191a</item>
         <item name="landing_secondary_button_background">@android:color/system_neutral1_100</item>
         <item name="landing_secondary_button_background_disabled">#0fffffff</item>
-        <item name="landing_secondary_button_foreground">@android:color/system_neutral1_100</item>
+        <item name="landing_secondary_button_foreground">@color/black</item>
         <item name="landing_secondary_button_foreground_disabled">#66ffffff</item>
         <item name="landing_snippet_border">@android:color/system_neutral1_100</item>
         <item name="landing_tertiary_button_background">@color/clear</item>
