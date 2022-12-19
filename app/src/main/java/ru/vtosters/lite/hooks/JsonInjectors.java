@@ -34,113 +34,125 @@ import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class JsonInjectors {
-    private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
+    public static JSONObject profileButton(JSONObject orig) {
+        try {
+            int id = orig.getInt("id");
 
-    public static JSONObject profileButton(JSONObject orig) throws JSONException {
-        var id = orig.getInt("id");
+            var newItem = new JSONArray();
 
-        var newItem = new JSONArray();
+            if (orig.has("buttons")) {
+                newItem = orig.getJSONArray("buttons");
+            }
 
-        if (orig.has("buttons")) {
-            newItem = orig.getJSONArray("buttons");
+            if (!haveDonateButton() && id == AccountManagerUtils.getUserId()) {
+                newItem.put(donateRecomm());
+            }
+
+            if (!orig.has("type") && AccountManagerUtils.isVKTester()) {
+                newItem.put(vktesters(id));
+            }
+
+            orig.put("buttons", newItem);
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
-
-        if (!haveDonateButton() && id == AccountManagerUtils.getUserId()) {
-            newItem.put(donateRecomm());
-        }
-
-        if (!orig.has("type") && AccountManagerUtils.isVKTester()) {
-            newItem.put(vktesters(id));
-        }
-
-        orig.put("buttons", newItem);
 
         return orig;
     }
 
-    public static JSONObject donateRecomm() throws JSONException {
-        var title = AndroidUtils.getString(R.string.donate_to_vtl);
-        var link = "https://vk.com/vtosters_official";
-        var text_color = "2D81E0";
+    public static JSONObject donateRecomm() {
+        try {
+            var title = AndroidUtils.getString(R.string.donate_to_vtl);
+            var link = "https://vk.com/vtosters_official";
+            var text_color = "2D81E0";
 
-        var json = new JSONObject();
-        var icons = new JSONArray();
+            var json = new JSONObject();
+            var icons = new JSONArray();
 
-        var action = new JSONObject();
-        action.put("target", "internal");
-        action.put("type", "open_url"); // may be open_url, open_internal_vkui, open_game, help_hint, show_full_post, open_vkapp, show_recommendations_for_post and groups_advertisement
-        action.put("url", link);
-        json.put("action", action);
+            var action = new JSONObject().put("target", "internal");
+            action.put("type", "open_url"); // may be open_url, open_internal_vkui, open_game, help_hint, show_full_post, open_vkapp, show_recommendations_for_post and groups_advertisement
+            action.put("url", link);
+            json.put("action", action);
 
-        json.put("title", title);
+            json.put("title", title);
 
-        var icon1 = new JSONObject();
-        icon1.put("url", "https://sun2-10.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png");
-        icon1.put("width", "20");
-        icon1.put("height", "20");
-        icons.put(icon1);
+            var icon1 = new JSONObject();
+            icon1.put("url", "https://sun2-10.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png");
+            icon1.put("width", "20");
+            icon1.put("height", "20");
+            icons.put(icon1);
 
-        var icon2 = new JSONObject();
-        icon2.put("url", "https://sun2-12.userapi.com/N8y9pU1meJq_eug-wB1u-HUuGyMqDfdq7A025w/A4Aio-xuLY8.png");
-        icon2.put("width", "40");
-        icon2.put("height", "40");
-        icons.put(icon2);
+            var icon2 = new JSONObject();
+            icon2.put("url", "https://sun2-12.userapi.com/N8y9pU1meJq_eug-wB1u-HUuGyMqDfdq7A025w/A4Aio-xuLY8.png");
+            icon2.put("width", "40");
+            icon2.put("height", "40");
+            icons.put(icon2);
 
-        var icon3 = new JSONObject();
-        icon3.put("url", "https://sun2-9.userapi.com/3Hx4hff63_2Lt6wjjthJMF_3QLUswNNlQKoAXQ/oyzEu1NL9T8.png");
-        icon3.put("width", "80");
-        icon3.put("height", "80");
-        icons.put(icon3);
+            var icon3 = new JSONObject();
+            icon3.put("url", "https://sun2-9.userapi.com/3Hx4hff63_2Lt6wjjthJMF_3QLUswNNlQKoAXQ/oyzEu1NL9T8.png");
+            icon3.put("width", "80");
+            icon3.put("height", "80");
+            icons.put(icon3);
 
-        json.put("icons", icons);
+            json.put("icons", icons);
 
-        json.put("text_color", text_color);
+            json.put("text_color", text_color);
 
-        return json;
+            return json;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
-    public static JSONObject vktesters(int id) throws JSONException {
-        var title = AndroidUtils.getString(R.string.tester_profile);
-        var text_color = "2D81E0";
-        var link = "https://" + getStatic() + "/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
+    public static JSONObject vktesters(int id) {
+        try {
+            var title = AndroidUtils.getString(R.string.tester_profile);
+            var text_color = "2D81E0";
+            var link = "https://" + getStatic() + "/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
 
-        var json = new JSONObject();
-        var icons = new JSONArray();
+            var json = new JSONObject();
+            var icons = new JSONArray();
 
-        var action = new JSONObject();
-        action.put("target", "internal");
-        action.put("type", "open_internal_vkui");
-        action.put("url", link);
-        json.put("action", action);
+            var action = new JSONObject();
+            action.put("target", "internal");
+            action.put("type", "open_internal_vkui");
+            action.put("url", link);
+            json.put("action", action);
 
-        json.put("title", title);
+            json.put("title", title);
 
-        var icon1 = new JSONObject();
-        icon1.put("url", "https://sun2-10.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png");
-        icon1.put("width", "20");
-        icon1.put("height", "20");
-        icons.put(icon1);
+            var icon1 = new JSONObject();
+            icon1.put("url", "https://sun2-10.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png");
+            icon1.put("width", "20");
+            icon1.put("height", "20");
+            icons.put(icon1);
 
-        var icon2 = new JSONObject();
-        icon2.put("url", "https://sun2-12.userapi.com/N8y9pU1meJq_eug-wB1u-HUuGyMqDfdq7A025w/A4Aio-xuLY8.png");
-        icon2.put("width", "40");
-        icon2.put("height", "40");
-        icons.put(icon2);
+            var icon2 = new JSONObject();
+            icon2.put("url", "https://sun2-12.userapi.com/N8y9pU1meJq_eug-wB1u-HUuGyMqDfdq7A025w/A4Aio-xuLY8.png");
+            icon2.put("width", "40");
+            icon2.put("height", "40");
+            icons.put(icon2);
 
-        var icon3 = new JSONObject();
-        icon3.put("url", "https://sun2-9.userapi.com/3Hx4hff63_2Lt6wjjthJMF_3QLUswNNlQKoAXQ/oyzEu1NL9T8.png");
-        icon3.put("width", "80");
-        icon3.put("height", "80");
-        icons.put(icon3);
+            var icon3 = new JSONObject();
+            icon3.put("url", "https://sun2-9.userapi.com/3Hx4hff63_2Lt6wjjthJMF_3QLUswNNlQKoAXQ/oyzEu1NL9T8.png");
+            icon3.put("width", "80");
+            icon3.put("height", "80");
+            icons.put(icon3);
 
-        json.put("icons", icons);
+            json.put("icons", icons);
 
-        json.put("text_color", text_color);
+            json.put("text_color", text_color);
+            return json;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        return json;
+        return null;
     }
 
-    public static JSONObject convBar(JSONObject orig) throws JSONException {
+    public static JSONObject convBar(JSONObject orig) {
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
@@ -169,25 +181,30 @@ public class JsonInjectors {
 
         if (!dev()) return orig.optJSONObject("conversation_bar"); // for devs only
 
-        var json = new JSONObject();
+        try {
+            var json = new JSONObject();
 
-        var buttonsJson = new JSONObject();
-        buttonsJson.put("layout", "tertiary");
-        buttonsJson.put("text", linktitle);
-        buttonsJson.put("type", "link");
-        buttonsJson.put("link", link);
+            var buttonsJson = new JSONObject();
+            buttonsJson.put("layout", "tertiary");
+            buttonsJson.put("text", linktitle);
+            buttonsJson.put("type", "link");
+            buttonsJson.put("link", link);
 
-        var buttonsjson = new JSONArray(); // max 3 buttons in array
-        if (hasButton) buttonsjson.put(buttonsJson);
+            var buttonsjson = new JSONArray(); // max 3 buttons in array
+            if (hasButton) buttonsjson.put(buttonsJson);
 
-        json.put("name", "group_admin_welcome");
-        json.put("text", text);
-        json.put("buttons", buttonsjson);
-        if (hasIcon && isPicture) {
-            json.put("icon", pic);
+            json.put("name", "group_admin_welcome");
+            json.put("text", text);
+            json.put("buttons", buttonsjson);
+            if (hasIcon && isPicture) {
+                json.put("icon", pic);
+            }
+            return json;
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
-        return json;
+        return null;
     }
 
     public static JSONObject menu(JSONObject orig) throws JSONException {
