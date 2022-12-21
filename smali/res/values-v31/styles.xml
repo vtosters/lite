@@ -719,7 +719,7 @@
         <item name="panel_tab_active_background">@android:color/system_neutral1_700</item>
         <item name="panel_tab_active_text">@android:color/system_neutral1_100</item>
         <item name="panel_tab_inactive_text">@android:color/system_neutral1_500</item>
-        <item name="placeholder_icon_background">@android:color/system_neutral1_100</item>
+        <item name="placeholder_icon_background">@android:color/system_neutral1_800</item>
         <item name="placeholder_icon_background_opaque">@android:color/system_neutral1_900</item>
         <item name="placeholder_icon_foreground_primary">@android:color/system_neutral1_400</item>
         <item name="placeholder_icon_foreground_secondary">@android:color/system_neutral1_600</item>
@@ -979,7 +979,7 @@
         <item name="panel_tab_active_background">@android:color/system_neutral1_700</item>
         <item name="panel_tab_active_text">@android:color/system_neutral1_100</item>
         <item name="panel_tab_inactive_text">@android:color/system_neutral1_500</item>
-        <item name="placeholder_icon_background">@android:color/system_neutral1_100</item>
+        <item name="placeholder_icon_background">@android:color/system_neutral1_800</item>
         <item name="placeholder_icon_background_opaque">@android:color/system_neutral1_900</item>
         <item name="placeholder_icon_foreground_primary">@android:color/system_neutral1_400</item>
         <item name="placeholder_icon_foreground_secondary">@android:color/system_neutral1_600</item>
