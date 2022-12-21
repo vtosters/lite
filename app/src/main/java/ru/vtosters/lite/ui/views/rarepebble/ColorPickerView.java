@@ -2,6 +2,7 @@ package ru.vtosters.lite.ui.views.rarepebble;
 
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -19,11 +20,12 @@ import ru.vtosters.lite.utils.LayoutUtils;
 
 public class ColorPickerView extends FrameLayout {
 
-    private AlphaView alphaView;
-    private EditText hexEdit;
-    private ObservableColor observableColor = new ObservableColor(0);
-    private SwatchView swatchView;
+    private final AlphaView alphaView;
+    private final EditText hexEdit;
+    private final ObservableColor observableColor = new ObservableColor(0);
+    private final SwatchView swatchView;
 
+    @SuppressLint("SetTextI18n")
     public ColorPickerView(Context context) {
         super(context);
 
@@ -55,7 +57,7 @@ public class ColorPickerView extends FrameLayout {
         container.addView(alphaView, alphaViewParams);
 
         hexEdit = new EditText(context);
-        hexEdit.setText("00000000");
+        hexEdit.setText("000000");
         hexEdit.setKeyListener(DigitsKeyListener.getInstance("0123456789ABCDEFabcdef"));
         hexEdit.setGravity(Gravity.CENTER_HORIZONTAL);
         hexEdit.setFilters(new InputFilter[]{ new InputFilter.LengthFilter(4) });
@@ -71,7 +73,7 @@ public class ColorPickerView extends FrameLayout {
         alphaView.observeColor(observableColor);
         HexEdit.setUpListeners(hexEdit, observableColor);
 
-        showAlpha(true);
+        showAlpha(false);
         showHex(true);
         showPreview(true);
 
