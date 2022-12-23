@@ -189,7 +189,7 @@
         <item name="media_overlay_button_background_disabled">#66ffffff</item>
         <item name="media_overlay_button_foreground">@android:color/system_neutral1_800</item>
         <item name="media_overlay_button_foreground_disabled">#662c2d2e</item>
-        <item name="modal_card_background">@android:color/system_neutral1_100</item>
+        <item name="modal_card_background">@android:color/system_neutral1_50</item>
         <item name="modal_card_border">?modal_card_background</item>
         <item name="modal_card_header_close">?modal_card_background</item>
         <item name="music_playback_icon">@color/black</item>
@@ -449,7 +449,7 @@
         <item name="media_overlay_button_background_disabled">#66ffffff</item>
         <item name="media_overlay_button_foreground">@android:color/system_neutral1_800</item>
         <item name="media_overlay_button_foreground_disabled">#662c2d2e</item>
-        <item name="modal_card_background">@android:color/system_neutral1_100</item>
+        <item name="modal_card_background">@android:color/system_neutral1_50</item>
         <item name="modal_card_border">?modal_card_background</item>
         <item name="modal_card_header_close">?modal_card_background</item>
         <item name="music_playback_icon">@color/black</item>
