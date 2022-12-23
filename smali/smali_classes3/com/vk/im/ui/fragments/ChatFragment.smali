@@ -772,180 +772,180 @@
 
     return-void
 
-    .line 1
-    sget-object v0, Lcom/vk/im/ui/ImUiPrefs;->g:Lcom/vk/im/ui/ImUiPrefs;
+    # .line 1
+    # sget-object v0, Lcom/vk/im/ui/ImUiPrefs;->g:Lcom/vk/im/ui/ImUiPrefs;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/ImUiPrefs;->c()Ljava/lang/String;
+    # invoke-virtual {v0}, Lcom/vk/im/ui/ImUiPrefs;->c()Ljava/lang/String;
 
-    move-result-object v0
+    # move-result-object v0
 
-    .line 2
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    # .line 2
+    # invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
-    move-result v1
+    # move-result v1
 
-    const/4 v2, 0x1
+    # const/4 v2, 0x1
 
-    const/4 v3, 0x0
+    # const/4 v3, 0x0
 
-    if-nez v1, :cond_0
+    # if-nez v1, :cond_0
 
-    const/4 v1, 0x1
+    # const/4 v1, 0x1
 
-    goto :goto_0
+    # goto :goto_0
 
-    :cond_0
-    const/4 v1, 0x0
+    # :cond_0
+    # const/4 v1, 0x0
 
-    :goto_0
-    const-string v4, "msgListComponent"
+    # :goto_0
+    # const-string v4, "msgListComponent"
 
-    const-string v5, "dialogBackgroundView"
+    # const-string v5, "dialogBackgroundView"
 
-    const/4 v6, 0x0
+    # const/4 v6, 0x0
 
-    if-nez v1, :cond_6
+    # if-nez v1, :cond_6
 
-    const-string v1, "default"
+    # const-string v1, "default"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    # invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    # move-result v1
 
-    if-nez v1, :cond_6
+    # if-nez v1, :cond_6
 
-    iget-object v1, p0, Lcom/vk/im/ui/fragments/ChatFragment;->E:Lcom/vk/im/engine/models/dialogs/DialogExt;
+    # iget-object v1, p0, Lcom/vk/im/ui/fragments/ChatFragment;->E:Lcom/vk/im/engine/models/dialogs/DialogExt;
 
-    if-eqz v1, :cond_5
+    # if-eqz v1, :cond_5
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->t1()Lcom/vk/im/engine/models/dialogs/Dialog;
+    # invoke-virtual {v1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->t1()Lcom/vk/im/engine/models/dialogs/Dialog;
 
-    move-result-object v1
+    # move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/dialogs/Dialog;->U1()Z
+    # invoke-virtual {v1}, Lcom/vk/im/engine/models/dialogs/Dialog;->U1()Z
 
-    move-result v1
+    # move-result v1
 
-    if-eqz v1, :cond_1
+    # if-eqz v1, :cond_1
 
-    goto :goto_1
+    # goto :goto_1
 
-    .line 3
-    :cond_1
-    iget-object v1, p0, Lcom/vk/im/ui/fragments/ChatFragment;->k0:Lcom/vk/im/ui/views/FrescoImageView;
+    # .line 3
+    # :cond_1
+    # iget-object v1, p0, Lcom/vk/im/ui/fragments/ChatFragment;->k0:Lcom/vk/im/ui/views/FrescoImageView;
 
-    if-eqz v1, :cond_4
+    # if-eqz v1, :cond_4
 
-    new-instance v3, Lcom/vk/im/engine/models/Image;
+    # new-instance v3, Lcom/vk/im/engine/models/Image;
 
-    invoke-direct {v3, v0}, Lcom/vk/im/engine/models/Image;-><init>(Ljava/lang/String;)V
+    # invoke-direct {v3, v0}, Lcom/vk/im/engine/models/Image;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v3}, Lcom/vk/im/ui/views/FrescoImageView;->setLocalImage(Lcom/vk/im/engine/models/Image;)V
+    # invoke-virtual {v1, v3}, Lcom/vk/im/ui/views/FrescoImageView;->setLocalImage(Lcom/vk/im/engine/models/Image;)V
 
-    .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->k0:Lcom/vk/im/ui/views/FrescoImageView;
+    # .line 4
+    # iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->k0:Lcom/vk/im/ui/views/FrescoImageView;
 
-    if-eqz v0, :cond_3
+    # if-eqz v0, :cond_3
 
-    invoke-virtual {v0, v6}, Lcom/vk/im/ui/views/FrescoImageView;->setBackgroundImage(Landroid/graphics/drawable/Drawable;)V
+    # invoke-virtual {v0, v6}, Lcom/vk/im/ui/views/FrescoImageView;->setBackgroundImage(Landroid/graphics/drawable/Drawable;)V
 
-    .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->d0:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
+    # .line 5
+    # iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->d0:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
-    if-eqz v0, :cond_2
+    # if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->b(Z)V
+    # invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->b(Z)V
 
-    goto :goto_2
+    # goto :goto_2
 
-    :cond_2
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    # :cond_2
+    # invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
-    throw v6
+    # throw v6
 
-    .line 6
-    :cond_3
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    # .line 6
+    # :cond_3
+    # invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
-    throw v6
+    # throw v6
 
-    .line 7
-    :cond_4
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    # .line 7
+    # :cond_4
+    # invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
-    throw v6
+    # throw v6
 
-    :cond_5
-    const-string v0, "dialogExt"
+    # :cond_5
+    # const-string v0, "dialogExt"
 
-    .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    # .line 8
+    # invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
-    throw v6
+    # throw v6
 
-    .line 9
-    :cond_6
-    :goto_1
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->k0:Lcom/vk/im/ui/views/FrescoImageView;
+    # .line 9
+    # :cond_6
+    # :goto_1
+    # iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->k0:Lcom/vk/im/ui/views/FrescoImageView;
 
-    if-eqz v0, :cond_a
+    # if-eqz v0, :cond_a
 
-    invoke-virtual {v0, v6}, Lcom/vk/im/ui/views/FrescoImageView;->setLocalImage(Lcom/vk/im/engine/models/Image;)V
+    # invoke-virtual {v0, v6}, Lcom/vk/im/ui/views/FrescoImageView;->setLocalImage(Lcom/vk/im/engine/models/Image;)V
 
-    .line 10
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->k0:Lcom/vk/im/ui/views/FrescoImageView;
+    # .line 10
+    # iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->k0:Lcom/vk/im/ui/views/FrescoImageView;
 
-    if-eqz v0, :cond_9
+    # if-eqz v0, :cond_9
 
-    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+    # new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
-    iget-object v2, p0, Lcom/vk/im/ui/fragments/ChatFragment;->L:Landroid/content/Context;
+    # iget-object v2, p0, Lcom/vk/im/ui/fragments/ChatFragment;->L:Landroid/content/Context;
 
-    if-eqz v2, :cond_8
+    # if-eqz v2, :cond_8
 
-    sget v5, Lcom/vk/im/ui/c;->im_bg_chat:I
+    # sget v5, Lcom/vk/im/ui/c;->im_bg_chat:I
 
-    invoke-static {v2, v5}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    # invoke-static {v2, v5}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
-    move-result v2
+    # move-result v2
 
-    invoke-direct {v1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    # invoke-direct {v1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/FrescoImageView;->setBackgroundImage(Landroid/graphics/drawable/Drawable;)V
+    # invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/FrescoImageView;->setBackgroundImage(Landroid/graphics/drawable/Drawable;)V
 
-    .line 11
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->d0:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
+    # .line 11
+    # iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->d0:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
-    if-eqz v0, :cond_7
+    # if-eqz v0, :cond_7
 
-    invoke-virtual {v0, v3}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->b(Z)V
+    # invoke-virtual {v0, v3}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->b(Z)V
 
-    :goto_2
-    return-void
+    # :goto_2
+    # return-void
 
-    :cond_7
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    # :cond_7
+    # invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
-    throw v6
+    # throw v6
 
-    :cond_8
-    const-string v0, "themedContext"
+    # :cond_8
+    # const-string v0, "themedContext"
 
-    .line 12
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    # .line 12
+    # invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
-    throw v6
+    # throw v6
 
-    :cond_9
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    # :cond_9
+    # invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
-    throw v6
+    # throw v6
 
-    .line 13
-    :cond_a
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    # .line 13
+    # :cond_a
+    # invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
-    throw v6
+    # throw v6
 .end method
 
 .method private final Y4()V
