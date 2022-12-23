@@ -51,8 +51,8 @@
         <item name="content_placeholder_text">@android:color/system_neutral1_400</item>
         <item name="content_tint_background">@color/gray_A40</item>
         <item name="content_tint_foreground">@android:color/system_neutral1_500</item>
-        <item name="control_background">@android:color/system_neutral1_50</item>
-        <item name="control_foreground">@android:color/system_accent1_400</item>
+        <item name="control_background">?button_primary_background</item>
+        <item name="control_foreground">?button_primary_foreground</item>
         <item name="control_tint">@android:color/system_neutral1_100</item>
         <item name="control_tint_muted">@android:color/system_neutral1_500</item>
         <item name="counter_primary_background">@android:color/system_accent1_300</item>
@@ -311,8 +311,8 @@
         <item name="content_placeholder_text">@android:color/system_neutral1_400</item>
         <item name="content_tint_background">@color/gray_A40</item>
         <item name="content_tint_foreground">@android:color/system_neutral1_500</item>
-        <item name="control_background">@android:color/system_neutral1_50</item>
-        <item name="control_foreground">@android:color/system_accent1_400</item>
+        <item name="control_background">?button_primary_background</item>
+        <item name="control_foreground">?button_primary_foreground</item>
         <item name="control_tint">@android:color/system_neutral1_100</item>
         <item name="control_tint_muted">@android:color/system_neutral1_500</item>
         <item name="counter_primary_background">@android:color/system_accent1_400</item>
