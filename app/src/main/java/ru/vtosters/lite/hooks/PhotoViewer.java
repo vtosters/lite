@@ -18,6 +18,8 @@ import androidx.annotation.Nullable;
 
 import com.vk.core.dialogs.actionspopup.ActionsPopup;
 import com.vk.core.drawable.RecoloredDrawable;
+import com.vk.core.ui.themes.VKThemeHelper;
+import com.vk.core.util.ContextExtKt;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.AttachmentWithMedia;
 import com.vk.dto.common.ImageSize;
@@ -97,8 +99,7 @@ public class PhotoViewer {
     @SuppressLint("UseCompatLoadingForDrawables")
     public static void addMenuItems(AttachmentWithMedia attachment, ActionsPopup.b actionPopup, int i, boolean z) {
         actionPopup.a(R.string.search_photo_content,
-                new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28),
-                        ThemesUtils.getColorFromAttr(R.attr.header_tint)),
+                ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_menu_search_outline_28, VKThemeHelper.g(R.attr.header_tint)),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
@@ -118,8 +119,7 @@ public class PhotoViewer {
                 }
         );
         actionPopup.a(R.string.copy_photo_url_content,
-                new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28),
-                        ThemesUtils.getColorFromAttr(R.attr.header_tint)),
+                ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_copy_outline_28, VKThemeHelper.g(R.attr.header_tint)),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
@@ -139,8 +139,7 @@ public class PhotoViewer {
                 }
         );
         actionPopup.a(R.string.open_original_photo_content,
-                new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_link_outline_28),
-                        ThemesUtils.getColorFromAttr(R.attr.header_tint)),
+                ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_link_outline_28, VKThemeHelper.g(R.attr.header_tint)),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
