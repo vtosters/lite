@@ -219,9 +219,9 @@
 
     invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
-    move-result v6
+    # move-result v6
 
-    invoke-virtual {v2, v5, v6}, Landroid/content/res/TypedArray;->getColor(II)I
+    # invoke-virtual {v2, v5, v6}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v5
 
