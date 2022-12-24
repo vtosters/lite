@@ -314,7 +314,7 @@ public class ThemesUtils {
     }
 
     public static int fixSeparator(float f) {
-        if (f == 8.0f && isMonetTheme()) {
+        if (isMonetTheme()) {
             return 0;
         } else {
             return (int) Math.floor(f * Resources.getSystem().getDisplayMetrics().density);
@@ -326,13 +326,6 @@ public class ThemesUtils {
         int green = (int) ((Color.green(color) * (1 - factor) / 255 + factor) * 255);
         int blue = (int) ((Color.blue(color) * (1 - factor) / 255 + factor) * 255);
         return Color.argb(Color.alpha(color), red, green, blue);
-    }
-
-    public static int fixTextColor(int resid) {
-        if (resid == R.color.music_action_button_gray || resid == R.color.cool_grey || resid == R.color.accent_blue) {
-            return isDarkTheme() ? R.color.white : R.color.cool_grey;
-        }
-        return resid;
     }
 
     public static int halfAlpha(int src) {
