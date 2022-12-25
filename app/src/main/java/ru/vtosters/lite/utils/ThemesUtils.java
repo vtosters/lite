@@ -93,7 +93,8 @@ public class ThemesUtils {
     }
     
     public static boolean isMonetTheme() {
-        return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
+        return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+                && isMilkshake(); // TODO make nonmilk monet theme better that sh*t
     }
     
     public static boolean isAmoledTheme() {
