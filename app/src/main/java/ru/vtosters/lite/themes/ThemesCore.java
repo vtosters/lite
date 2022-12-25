@@ -61,6 +61,9 @@ public class ThemesCore {
         ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.newsfeed_post_title_color, false);
         ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.counter_primary_background, false);
         ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.action_sheet_action_foreground, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.im_bubble_wallpaper_outgoing, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.im_bubble_outgoing, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.im_bubble_outgoing_highlighted, false);
     }
 
     public static void setThemedColors(int accentColor) {
