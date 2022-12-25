@@ -96,10 +96,10 @@
         <item name="header_tab_active_indicator">@android:color/system_neutral1_100</item>
         <item name="header_tab_active_text">@android:color/system_neutral1_100</item>
         <item name="header_tab_inactive_text">?accent</item>
-        <item name="header_text">@android:color/system_neutral1_100</item>
+        <item name="header_text">@android:color/system_neutral1_50</item>
         <item name="header_text_alternate">@color/black</item>
-        <item name="header_text_secondary">@android:color/system_neutral1_100</item>
-        <item name="header_tint">@android:color/system_neutral1_100</item>
+        <item name="header_text_secondary">@android:color/system_neutral1_50</item>
+        <item name="header_tint">@android:color/system_neutral1_50</item>
         <item name="header_tint_alternate">@android:color/system_accent1_300</item>
         <item name="header_tint_disabled">#66ffffff</item>
         <item name="icon_alpha_placeholder">@android:color/system_neutral1_100</item>
