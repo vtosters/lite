@@ -40,7 +40,15 @@ public class ThemesCore {
         ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.attach_picker_tab_active_text, false);
         ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.newsfeed_action_color, false);
 
-        ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.header_background, false);
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_background, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.header_background, false);
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_alternate_background, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.header_alternate_background, false);
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_background_before_blur, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.header_background_before_blur, false);
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_background_before_blur_alternate, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.header_background_before_blur_alternate, false);
+
         ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.header_tint, false);
         ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.header_tint_alternate, false);
         ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.toolbarIconsColor, false);
@@ -81,7 +89,12 @@ public class ThemesCore {
         themedColors.put(com.vtosters.lite.R.attr.accentColor, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.text_name, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.tabbar_active_icon, accentColor);
-        //themedColors.put(com.vtosters.lite.R.attr.header_background, accentColor);
+        
+//        themedColors.put(com.vtosters.lite.R.attr.header_background, accentColor);
+//        themedColors.put(com.vtosters.lite.R.attr.header_alternate_background, accentColor);
+//        themedColors.put(com.vtosters.lite.R.attr.header_background_before_blur, accentColor);
+//        themedColors.put(com.vtosters.lite.R.attr.header_background_before_blur_alternate, accentColor);
+
         themedColors.put(com.vtosters.lite.R.attr.header_tint, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.header_tint_alternate, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.activity_indicator_tint, accentColor);
