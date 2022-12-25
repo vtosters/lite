@@ -14,6 +14,7 @@ public class ThemesCore {
 
     public static SparseIntArray themedColors = new SparseIntArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_LIGHT = new SparseBooleanArray();
+    public static SparseBooleanArray ACCENT_THEME_ONLY_DARK = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_NOMILK_LIGHT = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_NOMILK = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_MILK_LIGHT = new SparseBooleanArray();
@@ -29,39 +30,37 @@ public class ThemesCore {
 
     public static void setExceptions() {
         ACCENT_THEME_ONLY_LIGHT.clear();
+        ACCENT_THEME_ONLY_DARK.clear();
         ACCENT_THEME_ONLY_NOMILK_LIGHT.clear();
         ACCENT_THEME_ONLY_NOMILK.clear();
         ACCENT_THEME_ONLY_MILK_LIGHT.clear();
         ACCENT_THEME_ONLY_MILK_DARK.clear();
 
-        ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.button_primary_background, false);
-        ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.button_secondary_foreground, false);
-        ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.button_tertiary_foreground, false);
-        ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.button_muted_foreground, false);
-        ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.button_outline_border, false);
-        ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.text_name, false);
-        ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.newsfeed_post_title_color, false);
         ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.attach_picker_tab_active_background, false);
         ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.attach_picker_tab_active_text, false);
         ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.newsfeed_action_color, false);
-        ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.counter_primary_background, false);
-        ACCENT_THEME_ONLY_LIGHT.put(com.vtosters.lite.R.attr.action_sheet_action_foreground, false);
 
         ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.header_background, false);
+        ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.header_tint, false);
+        ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.header_tint_alternate, false);
+        ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.toolbarIconsColor, false);
+        ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.header_tab_active_indicator, false);
+        ACCENT_THEME_ONLY_NOMILK_LIGHT.put(com.vtosters.lite.R.attr.header_alternate_tab_active_indicator, false);
 
-        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_tint, false);
-        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.icon_name, false);
-        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_tint_alternate, false);
-        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.toolbarIconsColor, false);
-        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_tab_active_indicator, false);
-        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.header_alternate_tab_active_indicator, false);
         ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.im_dropdown_arrow_tint, false);
 
-        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.im_bubble_wallpaper_outgoing, false);
-        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.im_bubble_outgoing, false);
-        ACCENT_THEME_ONLY_MILK_LIGHT.put(com.vtosters.lite.R.attr.im_bubble_outgoing_highlighted, false);
-
         ACCENT_THEME_ONLY_NOMILK.put(com.vtosters.lite.R.attr.im_dropdown_icon_color, false);
+
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.icon_name, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.text_name, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.button_primary_background, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.button_secondary_foreground, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.button_tertiary_foreground, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.button_muted_foreground, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.button_outline_border, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.newsfeed_post_title_color, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.counter_primary_background, false);
+        ACCENT_THEME_ONLY_DARK.put(com.vtosters.lite.R.attr.action_sheet_action_foreground, false);
     }
 
     public static void setThemedColors(int accentColor) {
@@ -144,7 +143,7 @@ public class ThemesCore {
 
         if (isCachedAccents()) {
             if (ThemesUtils.isDarkTheme()) {
-                return (themedColors.get(attrID) != 0 && (
+                return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_DARK.get(attrID, true) && (
                         ThemesUtils.isMilkshake() ?
                         ACCENT_THEME_ONLY_MILK_DARK.get(attrID, true) :
                         ACCENT_THEME_ONLY_NOMILK.get(attrID, true)));
