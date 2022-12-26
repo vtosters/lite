@@ -341,7 +341,7 @@ public class ThemesUtils {
     }
 
     public static String getBackgroundStickers() {
-        return WallpapersHooks.getWallpaper() != null ? "images_with_background" : "image";
+        return WallpapersHooks.hasWallpapers() ? "images_with_background" : "images";
     }
 
     public static VKTheme getCurrentTheme() {
