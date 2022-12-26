@@ -150,8 +150,11 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             var items = Arrays.asList(
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.yandex, "Yandex"),
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.google, "Google"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.microsoft, "Bing")
-            );
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.microsoft, "Bing"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "TraceMoe"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "Ascii2d"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "Saucenao")
+                    );
 
             var adapter = new ImagineArrayAdapter(getContext(), items);
             adapter.setSelected(getPreferences().getInt("search_engine", 0));

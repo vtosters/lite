@@ -7,7 +7,6 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.util.Log;
 import android.view.MenuItem;
@@ -17,7 +16,6 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.vk.core.dialogs.actionspopup.ActionsPopup;
-import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.ContextExtKt;
 import com.vk.core.util.ToastUtils;
@@ -41,7 +39,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class PhotoViewer {
     static OkHttpClient client = VtOkHttpClient.getInstance();
@@ -199,6 +196,15 @@ public class PhotoViewer {
             case 2:
                 searchWithBing(url);
                 break;
+            case 3:
+                searchWithTraceMoe(url);
+                break;
+            case 4:
+                searchWithAscii2d(url);
+                break;
+            case 5:
+                searchWithSaucenao(url);
+                break;
         }
     }
 
@@ -230,6 +236,18 @@ public class PhotoViewer {
 
     private static void searchWithGoogle(String url) {
         openUrl("https://www.google.com/searchbyimage?image_url=" + URLEncoder.encode(url) + "&client=app");
+    }
+
+    private static void searchWithTraceMoe(String url) {
+        openUrl("https://trace.moe/?url=" + URLEncoder.encode(url));
+    }
+
+    private static void searchWithAscii2d(String url) {
+        openUrl("https://ascii2d.net/search/url/" + URLEncoder.encode(url));
+    }
+
+    private static void searchWithSaucenao(String url) {
+        openUrl("https://saucenao.com/search.php?url=" + URLEncoder.encode(url));
     }
 
     private static void searchWithBing(String url) {
