@@ -154,7 +154,7 @@
         <item name="im_toolbar_voice_msg_background">@android:color/system_neutral1_300</item>
         <item name="image_border">@android:color/system_neutral1_50</item>
         <item name="input_background">@android:color/system_neutral1_50</item>
-        <item name="input_border">@android:color/system_neutral1_100</item>
+        <item name="input_border">?background_keyboard</item>
         <item name="landing_background">@android:color/system_neutral1_100</item>
         <item name="landing_field_background">@android:color/system_neutral1_50</item>
         <item name="landing_field_border">@color/clear</item>
@@ -414,7 +414,7 @@
         <item name="im_toolbar_voice_msg_background">@android:color/system_neutral1_300</item>
         <item name="image_border">@color/black_alpha8</item>
         <item name="input_background">@android:color/system_neutral1_50</item>
-        <item name="input_border">@android:color/system_neutral1_100</item>
+        <item name="input_border">?background_keyboard</item>
         <item name="landing_background">@android:color/system_neutral1_100</item>
         <item name="landing_field_background">@android:color/system_neutral1_50</item>
         <item name="landing_field_border">@color/clear</item>
@@ -476,7 +476,7 @@
         <item name="separator_alternate">#00000000</item>
         <item name="separator_common">#00000000</item>
         <item name="snippet_background">@android:color/system_neutral1_50</item>
-        <item name="snippet_border">@color/black_alpha15</item>
+        <item name="snippet_border">@android:color/system_neutral1_200</item>
         <item name="snippet_icon_tertiary">@android:color/system_neutral1_200</item>
         <item name="splashscreen_icon">@android:color/system_neutral1_100</item>
         <item name="statusbar_alternate_legacy_background">@color/black_alpha20</item>
@@ -549,7 +549,7 @@
         <item name="button_muted_background_disabled">#662c2d2e</item>
         <item name="button_muted_foreground">@android:color/system_neutral1_100</item>
         <item name="button_muted_foreground_disabled">#66e1e3e6</item>
-        <item name="button_outline_border">@android:color/system_neutral1_100</item>
+        <item name="button_outline_border">?background_keyboard</item>
         <item name="button_outline_border_disabled">#66e1e3e6</item>
         <item name="button_outline_foreground">@android:color/system_neutral1_100</item>
         <item name="button_outline_foreground_disabled">#66e1e3e6</item>
@@ -590,7 +590,7 @@
         <item name="dynamic_violet">@color/violet_light</item>
         <item name="feed_recommended_friend_promo_background">@android:color/system_neutral1_500</item>
         <item name="field_background">@android:color/system_neutral1_800</item>
-        <item name="field_border">@android:color/system_neutral1_100</item>
+        <item name="field_border">?background_keyboard</item>
         <item name="field_error_background">@color/red_dark</item>
         <item name="field_error_border">@color/red_light</item>
         <item name="field_text_placeholder">@android:color/system_neutral1_500</item>
@@ -672,12 +672,12 @@
         <item name="im_text_name">@android:color/system_accent1_300</item>
         <item name="im_toolbar_separator">@android:color/system_neutral1_300</item>
         <item name="im_toolbar_voice_msg_background">@android:color/system_neutral1_700</item>
-        <item name="image_border">@android:color/system_neutral1_100</item>
+        <item name="image_border">?background_keyboard</item>
         <item name="input_background">@android:color/system_neutral1_700</item>
         <item name="input_border">@android:color/system_neutral1_700</item>
         <item name="landing_background">@android:color/system_neutral1_900</item>
         <item name="landing_field_background">@android:color/system_neutral1_900</item>
-        <item name="landing_field_border">@android:color/system_neutral1_100</item>
+        <item name="landing_field_border">?background_keyboard</item>
         <item name="landing_field_placeholder">@android:color/system_neutral1_300</item>
         <item name="landing_login_button_background">@android:color/system_neutral1_100</item>
         <item name="landing_login_button_background_disabled">#66e1e3e6</item>
@@ -736,7 +736,7 @@
         <item name="separator_alternate">#00000000</item>
         <item name="separator_common">#00000000</item>
         <item name="snippet_background">@android:color/system_neutral1_900</item>
-        <item name="snippet_border">@android:color/system_neutral1_100</item>
+        <item name="snippet_border">?background_keyboard</item>
         <item name="snippet_icon_tertiary">@android:color/system_neutral1_600</item>
         <item name="splashscreen_icon">@android:color/system_neutral1_800</item>
         <item name="statusbar_alternate_legacy_background">@color/clear</item>
@@ -809,7 +809,7 @@
         <item name="button_muted_background_disabled">#662c2d2e</item>
         <item name="button_muted_foreground">@android:color/system_neutral1_100</item>
         <item name="button_muted_foreground_disabled">#66e1e3e6</item>
-        <item name="button_outline_border">@android:color/system_neutral1_100</item>
+        <item name="button_outline_border">?background_keyboard</item>
         <item name="button_outline_border_disabled">#66e1e3e6</item>
         <item name="button_outline_foreground">@android:color/system_neutral1_100</item>
         <item name="button_outline_foreground_disabled">#66e1e3e6</item>
@@ -850,7 +850,7 @@
         <item name="dynamic_violet">@color/violet_light</item>
         <item name="feed_recommended_friend_promo_background">@android:color/system_neutral1_500</item>
         <item name="field_background">@android:color/system_neutral1_800</item>
-        <item name="field_border">@android:color/system_neutral1_100</item>
+        <item name="field_border">?background_keyboard</item>
         <item name="field_error_background">@color/red_dark</item>
         <item name="field_error_border">@color/red_light</item>
         <item name="field_text_placeholder">@android:color/system_neutral1_500</item>
@@ -932,7 +932,7 @@
         <item name="im_text_name">@android:color/system_accent1_300</item>
         <item name="im_toolbar_separator">@android:color/system_neutral1_300</item>
         <item name="im_toolbar_voice_msg_background">@android:color/system_neutral1_700</item>
-        <item name="image_border">@android:color/system_neutral1_100</item>
+        <item name="image_border">?background_keyboard</item>
         <item name="input_background">@android:color/system_neutral1_800</item>
         <item name="input_border">@android:color/system_neutral1_800</item>
         <item name="landing_background">@android:color/system_neutral1_900</item>
@@ -951,7 +951,7 @@
         <item name="landing_secondary_button_background_disabled">#0fffffff</item>
         <item name="landing_secondary_button_foreground">@android:color/system_neutral1_900</item>
         <item name="landing_secondary_button_foreground_disabled">#66ffffff</item>
-        <item name="landing_snippet_border">@android:color/system_neutral1_100</item>
+        <item name="landing_snippet_border">?background_keyboard</item>
         <item name="landing_tertiary_button_background">@color/clear</item>
         <item name="landing_tertiary_button_background_disabled">#00000000</item>
         <item name="landing_tertiary_button_foreground">@android:color/system_neutral1_100</item>
@@ -996,7 +996,7 @@
         <item name="separator_alternate">#00000000</item>
         <item name="separator_common">#00000000</item>
         <item name="snippet_background">@android:color/system_neutral1_900</item>
-        <item name="snippet_border">@android:color/system_neutral1_100</item>
+        <item name="snippet_border">?background_keyboard</item>
         <item name="snippet_icon_tertiary">@android:color/system_neutral1_600</item>
         <item name="splashscreen_icon">@android:color/system_neutral1_800</item>
         <item name="statusbar_alternate_legacy_background">@color/clear</item>
@@ -1069,7 +1069,7 @@
         <item name="button_muted_background_disabled">#662c2d2e</item>
         <item name="button_muted_foreground">@android:color/system_neutral1_100</item>
         <item name="button_muted_foreground_disabled">#66e1e3e6</item>
-        <item name="button_outline_border">@android:color/system_neutral1_100</item>
+        <item name="button_outline_border">?background_keyboard</item>
         <item name="button_outline_border_disabled">#66e1e3e6</item>
         <item name="button_outline_foreground">@android:color/system_neutral1_100</item>
         <item name="button_outline_foreground_disabled">#66e1e3e6</item>
@@ -1110,7 +1110,7 @@
         <item name="dynamic_violet">@color/violet_light</item>
         <item name="feed_recommended_friend_promo_background">@android:color/system_neutral1_500</item>
         <item name="field_background">@color/black</item>
-        <item name="field_border">@android:color/system_neutral1_100</item>
+        <item name="field_border">?background_keyboard</item>
         <item name="field_error_background">@color/red_dark</item>
         <item name="field_error_border">@color/red_light</item>
         <item name="field_text_placeholder">@android:color/system_neutral1_500</item>
@@ -1192,12 +1192,12 @@
         <item name="im_text_name">@android:color/system_accent1_100</item>
         <item name="im_toolbar_separator">@android:color/system_neutral1_300</item>
         <item name="im_toolbar_voice_msg_background">@android:color/system_neutral1_700</item>
-        <item name="image_border">@android:color/system_neutral1_100</item>
+        <item name="image_border">?background_keyboard</item>
         <item name="input_background">@android:color/system_neutral1_700</item>
         <item name="input_border">@android:color/system_neutral1_700</item>
         <item name="landing_background">@color/black</item>
         <item name="landing_field_background">@color/black</item>
-        <item name="landing_field_border">@android:color/system_neutral1_100</item>
+        <item name="landing_field_border">?background_keyboard</item>
         <item name="landing_field_placeholder">@android:color/system_neutral1_300</item>
         <item name="landing_login_button_background">@android:color/system_neutral1_100</item>
         <item name="landing_login_button_background_disabled">#66e1e3e6</item>
@@ -1256,7 +1256,7 @@
         <item name="separator_alternate">@color/black</item>
         <item name="separator_common">@color/black</item>
         <item name="snippet_background">@color/black</item>
-        <item name="snippet_border">@android:color/system_neutral1_100</item>
+        <item name="snippet_border">?background_keyboard</item>
         <item name="snippet_icon_tertiary">@android:color/system_neutral1_600</item>
         <item name="splashscreen_icon">@color/black</item>
         <item name="statusbar_alternate_legacy_background">@color/clear</item>
@@ -1329,7 +1329,7 @@
         <item name="button_muted_background_disabled">#662c2d2e</item>
         <item name="button_muted_foreground">@android:color/system_neutral1_100</item>
         <item name="button_muted_foreground_disabled">#66e1e3e6</item>
-        <item name="button_outline_border">@android:color/system_neutral1_100</item>
+        <item name="button_outline_border">?background_keyboard</item>
         <item name="button_outline_border_disabled">#66e1e3e6</item>
         <item name="button_outline_foreground">@android:color/system_neutral1_100</item>
         <item name="button_outline_foreground_disabled">#66e1e3e6</item>
@@ -1370,7 +1370,7 @@
         <item name="dynamic_violet">@color/violet_light</item>
         <item name="feed_recommended_friend_promo_background">@android:color/system_neutral1_500</item>
         <item name="field_background">@color/black</item>
-        <item name="field_border">@android:color/system_neutral1_100</item>
+        <item name="field_border">?background_keyboard</item>
         <item name="field_error_background">@color/red_dark</item>
         <item name="field_error_border">@color/red_light</item>
         <item name="field_text_placeholder">@android:color/system_neutral1_500</item>
@@ -1452,7 +1452,7 @@
         <item name="im_text_name">@android:color/system_accent1_100</item>
         <item name="im_toolbar_separator">@android:color/system_neutral1_300</item>
         <item name="im_toolbar_voice_msg_background">@android:color/system_neutral1_700</item>
-        <item name="image_border">@android:color/system_neutral1_100</item>
+        <item name="image_border">?background_keyboard</item>
         <item name="input_background">@color/black</item>
         <item name="input_border">@color/black</item>
         <item name="landing_background">@color/black</item>
@@ -1471,7 +1471,7 @@
         <item name="landing_secondary_button_background_disabled">#0fffffff</item>
         <item name="landing_secondary_button_foreground">@color/black</item>
         <item name="landing_secondary_button_foreground_disabled">#66ffffff</item>
-        <item name="landing_snippet_border">@android:color/system_neutral1_100</item>
+        <item name="landing_snippet_border">?background_keyboard</item>
         <item name="landing_tertiary_button_background">@color/clear</item>
         <item name="landing_tertiary_button_background_disabled">#00000000</item>
         <item name="landing_tertiary_button_foreground">@android:color/system_neutral1_100</item>
@@ -1516,7 +1516,7 @@
         <item name="separator_alternate">@color/black</item>
         <item name="separator_common">@color/black</item>
         <item name="snippet_background">@color/black</item>
-        <item name="snippet_border">@android:color/system_neutral1_100</item>
+        <item name="snippet_border">?background_keyboard</item>
         <item name="snippet_icon_tertiary">@android:color/system_neutral1_600</item>
         <item name="splashscreen_icon">@color/black</item>
         <item name="statusbar_alternate_legacy_background">@color/clear</item>
