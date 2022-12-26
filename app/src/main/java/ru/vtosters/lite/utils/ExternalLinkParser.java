@@ -1,28 +1,24 @@
 package ru.vtosters.lite.utils;
 
-import static android.text.TextUtils.isEmpty;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Build;
-
+import android.text.TextUtils;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.dto.common.VideoFile;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
 
 public class ExternalLinkParser {
-    private static final String TAG = "ExternalLinkHandler";
 
     private static final List<String> filters = Arrays.asList(
             "youtube.com",
@@ -30,7 +26,6 @@ public class ExternalLinkParser {
             "youtu.be",
             "m.youtube.com"
     );
-    private static final Map<String, String> qualities = new HashMap<>();
 
     public static boolean parseVideoFile(VideoFile file) {
         return parseVideoFile(file, getGlobalContext(), isEnableExternalOpening());
@@ -44,12 +39,12 @@ public class ExternalLinkParser {
         return parseVideoFile(file, activity, isEnableExternalOpening());
     }
 
-    public static boolean parseVideoFile(VideoFile file, Context context, Boolean isEnabled) {
-        if (checkYoutubeLink(file)) {
+    public static boolean parseVideoFile(VideoFile videoFile, Context context, Boolean isEnabled) {
+        if (checkYoutubeLink(videoFile)) {
             try {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setData(Uri.parse(file.G));
+                Intent intent = new Intent(Intent.ACTION_VIEW)
+                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        .setData(Uri.parse(videoFile.G));
                 context.startActivity(intent);
                 return true;
             } catch (Exception e) {
@@ -57,23 +52,28 @@ public class ExternalLinkParser {
             }
         }
 
-        if (!isEnabled || file.isEmpty()) return false;
+        if (!isEnabled || videoFile.isEmpty()) return false;
 
-        if (checkVkVideo(file)) {
-            if (qualities.size() == 1 || getBoolValue("maxquality", false)) {
-                startExternalVideo((String) qualities.values().toArray()[0], context);
-            } else {
-                String[] titles = qualities.keySet().toArray(new String[0]);
+        List<String> urls = new ArrayList<>();
+        List<String> qualities = new ArrayList<>();
+
+        parseVKVideo(videoFile, qualities, urls);
+
+        if (urls.size() > 0)
+            if (getBoolValue("maxquality", false) || qualities.size() == 1)
+                startExternalVideo(context, urls.get(0));
+            else
                 new VkAlertDialog.Builder(context)
-                        .setItems(titles, ((dialog, which) -> startExternalVideo(qualities.get(titles[which]), context)))
-                        .show();
-            }
-        }
+                        .setItems(
+                                qualities.toArray(new String[0]),
+                                (dialog, which) -> startExternalVideo(context, urls.get(which))
+                        )
+                       .show();
         return true;
     }
 
     private static boolean checkYoutubeLink(VideoFile file) {
-        if (!isEmpty(file.G)) {
+        if (!TextUtils.isEmpty(file.G)) {
             for (String filter : filters) {
                 if (file.G.contains(filter))
                     return true;
@@ -91,52 +91,64 @@ public class ExternalLinkParser {
      * this.C = var66.optString("mp4_1440");
      * this.D = var66.optString("mp4_2160");
      */
-    public static boolean checkVkVideo(VideoFile videoFile) {
-        if (!isEmpty(videoFile.e)) {
-            qualities.put("240", videoFile.e);
+    public static boolean parseVKVideo(VideoFile videoFile, List<String> qualities, List<String> urls) {
+        if (!TextUtils.isEmpty(videoFile.D)) {
+           qualities.add("2160p");
+            urls.add(videoFile.D);
         }
-        if (!isEmpty(videoFile.f)) {
-            qualities.put("360", videoFile.f);
+
+        if (!TextUtils.isEmpty(videoFile.C)) {
+            qualities.add("1440p");
+            urls.add(videoFile.C);
         }
-        if (!isEmpty(videoFile.g)) {
-            qualities.put("480", videoFile.g);
+
+        if (!TextUtils.isEmpty(videoFile.B)) {
+            qualities.add("1080p");
+            urls.add(videoFile.B);
         }
-        if (!isEmpty(videoFile.h)) {
-            qualities.put("720", videoFile.h);
+
+        if (!TextUtils.isEmpty(videoFile.h)) {
+            qualities.add("720p");
+            urls.add(videoFile.h);
         }
-        if (!isEmpty(videoFile.B)) {
-            qualities.put("1080", videoFile.B);
+
+        if (!TextUtils.isEmpty(videoFile.g)) {
+            qualities.add("480p");
+            urls.add(videoFile.g);
         }
-        if (!isEmpty(videoFile.C)) {
-            qualities.put("1440", videoFile.C);
+
+        if (!TextUtils.isEmpty(videoFile.f)) {
+            qualities.add("360p");
+            urls.add(videoFile.f);
         }
-        if (!isEmpty(videoFile.D)) {
-            qualities.put("2160", videoFile.D);
+
+        if (!TextUtils.isEmpty(videoFile.e)) {
+            qualities.add("240p");
+            urls.add(videoFile.e);
         }
 
         return qualities.size() > 0;
     }
 
-    public static boolean startExternalVideo(String url, Context ctx) {
+    public static boolean startExternalVideo(Context context, String url) {
         try {
-            qualities.clear();
-
             Uri uri = Uri.parse(url);
             Intent intent = new Intent();
 
-            String packageName = getMXPlayerPackageName();
-            if (!isEmpty(packageName)) {
-                intent.setPackage(packageName);
-                intent.setDataAndType(uri, "application/mp4");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            String packageName = getMXPlayerPackageName(context);
+            if (!TextUtils.isEmpty(packageName)) {
+                intent.setPackage(packageName)
+                      .setDataAndType(uri, "application/mp4")
+                      .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             } else {
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setDataAndType(uri, "video/mp4");
+                intent.setAction(Intent.ACTION_VIEW)
+                      .setDataAndType(uri, "video/mp4");
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             }
-            ctx.startActivity(intent);
+
+            context.startActivity(intent);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -145,12 +157,11 @@ public class ExternalLinkParser {
     }
 
     @SuppressLint("QueryPermissionsNeeded")
-    private static String getMXPlayerPackageName() {
-        for (ApplicationInfo info : getGlobalContext().getPackageManager().getInstalledApplications(0)) {
-            String packName = info.packageName;
-            if (packName.equals("com.mxtech.videoplayer.ad") || packName.equals("com.mxtech.videoplayer.pro"))
-                return packName;
-        }
+    private static String getMXPlayerPackageName(Context context) {
+        for (var info : context.getPackageManager().getInstalledApplications(0))
+            if ("com.mxtech.videoplayer.ad".equals(info.packageName)
+                    || "com.mxtech.videoplayer.pro".equals(info.packageName))
+                return info.packageName;
         return null;
     }
 }
