@@ -1928,7 +1928,7 @@
         <item name="android:statusBarColor">@color/clear</item>
         <item name="appkitDefaultErrorText">@string/err_text</item>
         <item name="appkitRetryButtonText">@string/retry</item>
-        <item name="im_bg_chat">@color/messages_background_color</item>
+        <item name="im_bg_chat">?background_content</item>
         <item name="im_bg_modal_dialog">@drawable/list_dialog_bg</item>
         <item name="im_bg_sticky_date">@drawable/bg_sticky_date</item>
         <item name="im_btn_accept_background">@color/azure_300_alpha10</item>
@@ -2096,7 +2096,7 @@
         <item name="im_btn_accept_background_dark">@color/azure_300_alpha15</item>
         <item name="im_btn_accept_foreground">@color/azure_A400</item>
         <item name="im_btn_confirm_background">@color/blue_A400</item>
-        <item name="im_btn_confirm_background_dark">@color/blue_A500</item>
+        <item name="im_btn_confirm_background_dark">@android:color/system_accent1_400</item>
         <item name="im_btn_confirm_background_disabled">@color/blue_A800</item>
         <item name="im_btn_reject_background">@color/red_error_alpha10</item>
         <item name="im_btn_reject_background_dark">@color/red_error_alpha15</item>
