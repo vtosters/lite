@@ -380,6 +380,16 @@ public class ThemesUtils {
         }
     }
 
+    public static void setStatusBarColor(Window window) {
+        if (isDarkTheme()) {
+            View view = window.getDecorView();
+            view.setSystemUiVisibility(view.getSystemUiVisibility() & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        } else {
+            View view = window.getDecorView();
+            view.setSystemUiVisibility(view.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
+    }
+
     public static String hex(int i) {
         return String.format("#%06X", i & 16777215);
     } // Get color as hex string

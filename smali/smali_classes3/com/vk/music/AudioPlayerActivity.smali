@@ -166,6 +166,8 @@
 
     invoke-static {v0, v1}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->setStatusBarColor(Landroid/view/Window;)V
+
     .line 9
     :cond_2
     invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(Landroid/app/Activity;)V
