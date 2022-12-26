@@ -243,9 +243,9 @@ public class ThemesUtils {
     public static int getDarkThemeRes() {
         if (isMonetTheme()) {
             if (isAmoledTheme()) {
-                return isMilkshake() ? getIdentifier("VkMilkAmoledMonetStyle", "style"): getIdentifier("VkAmoledMonetStyle", "style");
+                return getIdentifier(isMilkshake() ? "VkMilkAmoledMonetStyle" : "VkAmoledMonetStyle", "style");
             } else {
-                return isMilkshake() ? getIdentifier("VkMilkDarkMonetStyle", "style"): getIdentifier("VkDarkMonetStyle", "style");
+                return getIdentifier(isMilkshake() ? "VkMilkDarkMonetStyle" : "VkDarkMonetStyle", "style");
             }
         } else {
             if (isAmoledTheme()) {
@@ -258,7 +258,7 @@ public class ThemesUtils {
 
     public static int getLightThemeRes() {
         if (isMonetTheme()) {
-            return isMilkshake() ? getIdentifier("VkMilkLightMonetStyle", "style"): getIdentifier("VkLightMonetStyle", "style");
+            return getIdentifier(isMilkshake() ? "VkMilkLightMonetStyle" : "VkLightMonetStyle", "style");
         } else {
             return isMilkshake() ? R.style.VkMilkLightStyle : R.style.VkLightStyle;
         }
@@ -342,10 +342,7 @@ public class ThemesUtils {
     }
 
     public static String getBackgroundStickers() {
-        if (WallpapersHooks.getWallpaper() != null) {
-            return "images_with_background";
-        }
-        return "images";
+        return WallpapersHooks.getWallpaper() != null ? "images_with_background" : "image";
     }
 
     public static VKTheme getCurrentTheme() {
