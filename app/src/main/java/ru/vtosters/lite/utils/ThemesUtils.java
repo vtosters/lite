@@ -377,12 +377,14 @@ public class ThemesUtils {
     }
 
     public static void setStatusBarColor(Window window) {
-        if (isDarkTheme()) {
-            View view = window.getDecorView();
-            view.setSystemUiVisibility(view.getSystemUiVisibility() & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        } else {
-            View view = window.getDecorView();
-            view.setSystemUiVisibility(view.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (isDarkTheme()) {
+                View view = window.getDecorView();
+                view.setSystemUiVisibility(view.getSystemUiVisibility() & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            } else {
+                View view = window.getDecorView();
+                view.setSystemUiVisibility(view.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            }
         }
     }
 
