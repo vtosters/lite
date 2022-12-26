@@ -229,8 +229,7 @@ public class PhotoViewer {
     }
 
     private static void searchWithGoogle(String url) {
-        openUrl("https://www.google.ru/searchbyimage?image_url=" +
-                URLEncoder.encode(url));
+        openUrl("https://www.google.ru/searchbyimage?image_url=" + URLEncoder.encode(url) + "&client=app");
     }
 
     private static void searchWithBing(String url) {
