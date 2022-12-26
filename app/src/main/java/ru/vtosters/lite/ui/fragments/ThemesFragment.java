@@ -92,9 +92,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
         newsfeedNotificationsPreference.setVisible(Preferences.milkshake());
 
-        findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme());
-
-        findPreference("monettheme").setVisible(ThemesUtils.isMilkshake()); // TODO make nonmilk monet theme better that sh*t
+        findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme() && ThemesUtils.isMilkshake());
 
         if (AndroidUtils.isTablet()) {
             PreferenceCategory dockbarSettingsPreferenceCategory = (PreferenceCategory) findPreference("dockbarsett");
