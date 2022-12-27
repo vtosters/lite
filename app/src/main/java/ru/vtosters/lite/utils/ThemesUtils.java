@@ -102,7 +102,7 @@ public class ThemesUtils {
 
     public static int getAccentColor() {
         var accent = AndroidUtils.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
-        return (accent == 0 || isMonetTheme() || !isMilkshake()) ? getColorFromAttr(R.attr.accent) : accent;
+        return (accent == 0 || !isMilkshake()) ? isMonetTheme() ? getColorFromAttr(R.attr.accent) : getStockAccent() : accent;
     } // Color accent
 
     public static int getMutedAccentColor() {
@@ -194,7 +194,7 @@ public class ThemesUtils {
     }
 
     public static int getMutedColor(int color) {
-        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), (isMilkshake() ? 0.5f : 0.3f));
+        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), (isMilkshake() ? 0.5f : 0.32f));
     }
 
     public static void setCustomAccentColor(int newColor, boolean async) {
@@ -237,6 +237,14 @@ public class ThemesUtils {
 
     public static int getNeededColorNavbar() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? isDarkTheme() ? View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
+    }
+
+    public static int getStockAccent() {
+        if (isMilkshake()) {
+            return isDarkTheme() ? Color.parseColor("#71aaeb") : Color.parseColor("#3f8ae0");
+        } else {
+            return isDarkTheme() ? Color.parseColor("#71aaeb") : Color.parseColor("#528bcc");
+        }
     }
 
     public static int getDarkThemeRes() {
