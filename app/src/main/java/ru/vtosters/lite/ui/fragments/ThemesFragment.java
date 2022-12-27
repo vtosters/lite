@@ -141,16 +141,18 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     void showPalettesDialog() {
         final var manager = PalettesManager.getInstance();
         final var titles = new String[manager.getPalettesCount()];
-        for (int i = 0; i < titles.length; ++i)
-            titles[i] = manager.getPalette(i).name;
-        new VkAlertDialog.Builder(requireContext())
-                .setTitle(AndroidUtils.getString("select_palette"))
-                .setItems(titles, (dialog, which) ->
-                        PalettesBottomSheetDialog.create(requireActivity(), manager.getPalette(which),
-                                        (adapter, vtlcolor) -> setAccentColor(vtlcolor.color))
-                )
-                .setPositiveButton(R.string.cancel, null)
-                .show();
+        if (titles.length > 0) {
+            for (int i = 0; i < titles.length; ++i)
+                titles[i] = manager.getPalette(i).name;
+            new VkAlertDialog.Builder(requireContext())
+                    .setTitle(AndroidUtils.getString("select_palette"))
+                    .setItems(titles, (dialog, which) ->
+                            PalettesBottomSheetDialog.create(requireActivity(), manager.getPalette(which),
+                                    (adapter, vtlcolor) -> setAccentColor(vtlcolor.color))
+                    )
+                    .setPositiveButton(R.string.cancel, null)
+                    .show();
+        }
     }
 
     void setAccentColor(int color) {
