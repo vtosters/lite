@@ -136,7 +136,7 @@ public class ThemesCore {
         themedColors.put(R.attr.im_reply_separator, accentColor);
         themedColors.put(R.attr.im_text_name, accentColor);
 
-        wallLightColor = ThemesUtils.lighten(accentColor, 0.67f);
+        wallLightColor = ThemesUtils.lighten(accentColor, 0.76f);
 
         themedColors.put(R.attr.im_ic_send_msg, accentColor);
         themedColors.put(R.attr.im_bubble_wallpaper_outgoing, accentColor);
