@@ -829,26 +829,13 @@
 
     move-result p2
 
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
     invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
 
     move-result v0
 
     invoke-virtual {p1, p2, v0}, Lcom/google/android/material/tabs/TabLayout;->a(II)V
 
-    .line 11
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
+    invoke-virtual {p1, v0}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
 
     .line 12
     :cond_0
