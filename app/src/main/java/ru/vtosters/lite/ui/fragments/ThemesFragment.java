@@ -1,8 +1,11 @@
 package ru.vtosters.lite.ui.fragments;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.WindowManager;
 import androidx.preference.PreferenceCategory;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.fragments.FragmentImpl;
@@ -130,12 +133,22 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     void showColorPicker() {
         final var colorPickerView = new ColorPickerView(requireContext());
         colorPickerView.setColor(ThemesUtils.getAccentColor());
-        new VkAlertDialog.Builder(requireContext())
-                .setTitle(AndroidUtils.getString("select_color"))
-                .setNegativeButton(R.string.cancel, null)
-                .setPositiveButton(R.string.select, (dialog, which) -> setAccentColor(colorPickerView.getColor()))
-                .setView(colorPickerView)
-                .show();
+
+        var alertDialog = new VkAlertDialog.Builder(requireContext()).create();
+        alertDialog.setTitle(AndroidUtils.getString("select_color"));
+        alertDialog.setButton(
+                DialogInterface.BUTTON_NEGATIVE,
+                requireContext().getString(R.string.cancel),
+                (DialogInterface.OnClickListener) null
+        );
+        alertDialog.setButton(
+                DialogInterface.BUTTON_POSITIVE,
+                requireContext().getString(R.string.select),
+                (dialog, which) -> setAccentColor(colorPickerView.getColor())
+        );
+        alertDialog.setView(colorPickerView);
+        alertDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
+        alertDialog.show();
     }
 
     void showPalettesDialog() {
