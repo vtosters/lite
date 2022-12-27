@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.vk.core.dialogs.actionspopup.ActionsPopup;
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.ContextExtKt;
 import com.vk.core.util.ToastUtils;
@@ -39,6 +40,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class PhotoViewer {
     static OkHttpClient client = VtOkHttpClient.getInstance();
@@ -46,12 +48,12 @@ public class PhotoViewer {
     public static boolean interceptClick(AttachmentWithMedia attachment, MenuItem item, View view) {
         if (item.getItemId() == R.id.search_photo) {
             if (attachment instanceof PhotoAttachment) {
-                searchPhoto(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+                searchDialog(LifecycleUtils.getCurrentActivity(), getUrlFromPhotoAttachment((PhotoAttachment) attachment));
             } else if (attachment instanceof DocumentAttachment) {
                 var documentAttachment = (DocumentAttachment) attachment;
                 if (documentAttachment.J != null)
                     try {
-                        searchPhoto(getUrlFromDocumentAttachment(documentAttachment));
+                        searchDialog(LifecycleUtils.getCurrentActivity(), getUrlFromDocumentAttachment(documentAttachment));
                     } catch (Exception e) {
                         ToastUtils.a(R.string.photo_get_error);
                     }
@@ -100,12 +102,12 @@ public class PhotoViewer {
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
-                        searchPhoto(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+                        searchDialog(LifecycleUtils.getCurrentActivity(), getUrlFromPhotoAttachment((PhotoAttachment) attachment));
                     } else if (attachment instanceof DocumentAttachment) {
                         var documentAttachment = (DocumentAttachment) attachment;
                         if (documentAttachment.J != null)
                             try {
-                                searchPhoto(getUrlFromDocumentAttachment(documentAttachment));
+                                searchDialog(LifecycleUtils.getCurrentActivity(), getUrlFromDocumentAttachment(documentAttachment));
                             } catch (Exception e) {
                                 ToastUtils.a(R.string.photo_get_error);
                             }
@@ -184,28 +186,52 @@ public class PhotoViewer {
         return max.url;
     }
 
-    private static void searchPhoto(String url) {
-        if (url == null || url.isEmpty()) return;
-        switch (getPreferences().getInt("search_engine", 0)) {
-            case 0:
+    private static void searchDialog(Context context, String url) {
+        if (selectedEngine() == 0) {
+            var items = new String[]{
+                    "Google", "Yandex", "Bing", "TraceMoe", "Ascii2d", "Saucenao"
+            };
+
+            new VkAlertDialog.Builder(context)
+                    .setItems(items, (dl, i) -> {
+                        searchPhoto(i + 1, url);
+                    })
+                    .show();
+        } else {
+            searchPhoto(selectedEngine(), url);
+        }
+    }
+
+    private static int selectedEngine() {
+        return getPreferences().getInt("search_engine", 0);
+    }
+
+    private static void searchPhoto(int i, String url) {
+        switch (i) {
+            case 1:
                 searchWithYandex(url);
                 break;
-            case 1:
+            case 2:
                 searchWithGoogle(url);
                 break;
-            case 2:
+            case 3:
                 searchWithBing(url);
                 break;
-            case 3:
+            case 4:
                 searchWithTraceMoe(url);
                 break;
-            case 4:
+            case 5:
                 searchWithAscii2d(url);
                 break;
-            case 5:
+            case 6:
                 searchWithSaucenao(url);
                 break;
         }
+    }
+
+    private static void searchPhoto(String url) {
+        if (url == null || url.isEmpty()) return;
+        searchPhoto(selectedEngine(), url);
     }
 
     private static void searchWithYandex(String url) {
