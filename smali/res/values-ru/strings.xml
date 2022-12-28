@@ -6335,6 +6335,9 @@
     <string name="amoledtheme_title">AMOLED-тема</string>
     <string name="amoledtheme_summ">Полностью чёрная тема для устройств с AMOLED-экранами</string>
     <string name="monettheme_title">Monet-тема</string>
-    <string name="monettheme_summ">Динамическая покраска приложения на основе обоев телефона</string>
+    <string name="monettheme_summ">Динамическая покраска интерфейса на основе обоев телефона</string>
     <string name="accents">Акценты</string>
+    <string name="cannot_write">Отсутствует разрешение на запись и чтение файлов</string>
+    <string name="open_bot">Открыть бота</string>
+    <string name="crash_service_name">Уведомления об ошибках</string>
 </resources>

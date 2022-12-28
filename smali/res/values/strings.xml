@@ -6475,4 +6475,7 @@ May look like a fake leaving the online"</string>
     <string name="monettheme_title">Monet theme</string>
     <string name="monettheme_summ">Dynamic app theme based on phone wallpaper</string>
     <string name="accents">Accents</string>
+    <string name="cannot_write">No permission to write or read files</string>
+    <string name="open_bot">Open a bot</string>
+    <string name="crash_service_name">Error notifications</string>
 </resources>

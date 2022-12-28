@@ -46,7 +46,7 @@ public class PalettesManager {
             PALETTES_DIR.mkdirs();
 
         if (Build.VERSION.SDK_INT >= 23 && !Environment.getExternalStorageDirectory().canWrite()) {
-            makeText(getGlobalContext(), "Не выдано разрешение на запись и чтение файлов", Toast.LENGTH_LONG).show();
+            makeText(getGlobalContext(), AndroidUtils.getString("cannot_write"), Toast.LENGTH_LONG).show();
             LifecycleUtils.getCurrentActivity().requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
             return;
         }
