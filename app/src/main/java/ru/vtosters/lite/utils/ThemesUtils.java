@@ -102,7 +102,7 @@ public class ThemesUtils {
 
     public static int getAccentColor() {
         var accent = AndroidUtils.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
-        return (accent == 0 || !isMilkshake()) ? isMonetTheme() ? getColorFromAttr(R.attr.accent) : getStockAccent() : accent;
+        return (accent == 0 || !isMilkshake()) || isMonetTheme() ? getColorFromAttr(R.attr.accent) : accent;
     } // Color accent
 
     public static int getMutedAccentColor() {
