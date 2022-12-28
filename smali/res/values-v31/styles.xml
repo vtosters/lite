@@ -140,9 +140,9 @@
         <item name="im_bubble_wallpaper_button_foreground">@color/black</item>
         <item name="im_bubble_wallpaper_button_foreground_disabled">#66000000</item>
         <item name="im_bubble_wallpaper_expiring_border">@color/mint_A1_alpha12</item>
-        <item name="im_bubble_wallpaper_incoming">@android:color/system_neutral1_10</item>
+        <item name="im_bubble_wallpaper_incoming">@android:color/system_neutral1_0</item>
         <item name="im_bubble_wallpaper_incoming_border">?accent</item>
-        <item name="im_bubble_wallpaper_incoming_highlighted">@android:color/system_neutral1_50</item>
+        <item name="im_bubble_wallpaper_incoming_highlighted">@android:color/system_neutral1_10</item>
         <item name="im_bubble_wallpaper_outgoing">@android:color/system_accent1_200</item>
         <item name="im_bubble_wallpaper_outgoing_border">?accent</item>
         <item name="im_bubble_wallpaper_outgoing_highlighted">@android:color/system_accent1_300</item>
