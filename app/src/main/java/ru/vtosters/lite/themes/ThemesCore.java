@@ -22,7 +22,8 @@ public class ThemesCore {
     public static SparseBooleanArray ACCENT_THEME_ONLY_MILK_DARK = new SparseBooleanArray();
 
     private static boolean cachedAccents = false;
-    private static int wallLightColor;
+    private static int outgoinging_msg;
+    private static int outgoinging_msg_highlight;
 
     static {
         setExceptions();
@@ -136,7 +137,8 @@ public class ThemesCore {
         themedColors.put(R.attr.im_reply_separator, accentColor);
         themedColors.put(R.attr.im_text_name, accentColor);
 
-        wallLightColor = ThemesUtils.lighten(accentColor, 0.76f);
+        outgoinging_msg = ThemesUtils.lighten(accentColor, 0.76f);
+        outgoinging_msg_highlight = ThemesUtils.lighten(accentColor, 0.5f);
 
         themedColors.put(R.attr.im_ic_send_msg, accentColor);
         themedColors.put(R.attr.im_bubble_wallpaper_outgoing, accentColor);
@@ -145,8 +147,10 @@ public class ThemesCore {
     }
 
     public static int getThemedAttr(Context context, @IdRes int attr) {
-        if (attr == R.attr.im_bubble_wallpaper_outgoing || attr == R.attr.im_bubble_outgoing || attr == R.attr.im_bubble_outgoing_highlighted) {
-            return wallLightColor;
+        if (attr == R.attr.im_bubble_wallpaper_outgoing || attr == R.attr.im_bubble_outgoing) {
+            return outgoinging_msg;
+        } else if (attr == R.attr.im_bubble_outgoing_highlighted) {
+            return outgoinging_msg_highlight;
         }
 
         return themedColors.get(attr);
