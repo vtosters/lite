@@ -189,7 +189,7 @@ public class PhotoViewer {
     private static void searchDialog(Context context, String url) {
         if (selectedEngine() == 0) {
             var items = new String[]{
-                    "Google", "Yandex", "Bing", "TraceMoe", "Ascii2d", "Saucenao"
+                    "Yandex", "Google", "Bing", "TraceMoe", "Ascii2d", "Saucenao"
             };
 
             new VkAlertDialog.Builder(context)
@@ -207,6 +207,11 @@ public class PhotoViewer {
     }
 
     private static void searchPhoto(int i, String url) {
+        if (url == null || url.isEmpty()) {
+            Log.d("PhotoViewer", "url is null or empty");
+            return;
+        }
+
         switch (i) {
             case 1:
                 searchWithYandex(url);
@@ -230,7 +235,6 @@ public class PhotoViewer {
     }
 
     private static void searchPhoto(String url) {
-        if (url == null || url.isEmpty()) return;
         searchPhoto(selectedEngine(), url);
     }
 
