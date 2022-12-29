@@ -64,8 +64,6 @@ public class UsersList {
         var idsDescription = json.getJSONArray("with_service_descriptions");
         var idsBanner = json.getJSONArray("with_chat_banners");
 
-        Log.d("ProfileHider", idsDescription.toString());
-
         processIds(idsBanner, bannersList);
         processIds(idsDescription, descriptionsList);
     }
