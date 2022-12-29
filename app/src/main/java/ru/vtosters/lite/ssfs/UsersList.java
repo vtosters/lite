@@ -9,6 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 
@@ -52,11 +53,11 @@ public class UsersList {
     }
 
     public static boolean hasDescription(int id) {
-        return descriptionsList.contains(id);
+        return descriptionsList.contains(id) && id != AccountManagerUtils.getUserId();
     }
 
     public static boolean hasBanner(int id) {
-        return bannersList.contains(id);
+        return bannersList.contains(id) && id != AccountManagerUtils.getUserId();
     }
 
     static void parseJson(JSONObject json) throws JSONException {

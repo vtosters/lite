@@ -8,13 +8,13 @@ import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import java.io.IOException;
 
 public class Handler {
-    public static String getBanner(int id) {
+    public static JSONObject getBanner(int id) {
         Request request = new Request.a()
                 .b("https://ssfs.vtosters.app/api/getChatBanner" + "?user_id=" + id)
                 .a();
 
         try {
-            return new JSONObject(VtOkHttpClient.getInstance().a(request).execute().a().g()).getJSONObject("response").getString("text");
+            return new JSONObject(VtOkHttpClient.getInstance().a(request).execute().a().g()).getJSONObject("response");
         } catch (JSONException | IOException e) {
             e.printStackTrace();
             return null;

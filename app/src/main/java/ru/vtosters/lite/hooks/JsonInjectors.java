@@ -152,61 +152,6 @@ public class JsonInjectors {
         return null;
     }
 
-    public static JSONObject convBar(JSONObject orig) {
-        var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
-
-        var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
-        var text = AndroidUtils.getString(R.string.no_data_error);
-        var link = "https://vtosters.app"; // can be null
-        var linktitle = "Test button"; // can be null
-
-        var hasIcon = !pic.isEmpty();
-        var hasButton = !link.isEmpty();
-
-        var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
-
-        if (isVerified(peerid))
-            text = AndroidUtils.getString(R.string.i_bought) + " VTosters Premium";
-        if (isPrometheus(peerid))
-            text = AndroidUtils.getString(R.string.i_bought) + " VTosters Premium Gold Prime Pro Plus";
-        if (isDeveloper(peerid)) text = AndroidUtils.getString(R.string.i_created_poop);
-
-        if (!isVerified(peerid) || text.equals("") || peerid == AccountManagerUtils.getUserId() || peerid == 0) {
-            if (getBoolValue("convBarRecomm", false)) {
-                return null;
-            } else {
-                return orig.optJSONObject("conversation_bar");
-            }
-        }
-
-        if (!dev()) return orig.optJSONObject("conversation_bar"); // for devs only
-
-        try {
-            var json = new JSONObject();
-
-            var buttonsJson = new JSONObject();
-            buttonsJson.put("layout", "tertiary");
-            buttonsJson.put("text", linktitle);
-            buttonsJson.put("type", "link");
-            buttonsJson.put("link", link);
-
-            var buttonsjson = new JSONArray(); // max 3 buttons in array
-            if (hasButton) buttonsjson.put(buttonsJson);
-
-            json.put("name", "group_admin_welcome");
-            json.put("text", text);
-            json.put("buttons", buttonsjson);
-            if (hasIcon && isPicture) {
-                json.put("icon", pic);
-            }
-            return json;
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
     public static JSONObject menu(JSONObject orig) throws JSONException {
         var Special = orig.optJSONArray("special");
         var Main = orig.getJSONArray("main");
