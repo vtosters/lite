@@ -143,8 +143,6 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/ProfileHider;->injectMap(Ljava/util/HashMap;)V
-
     sput-object v0, Lcom/vk/profile/presenter/UserPresenter;->p0:Ljava/util/HashMap;
 
     return-void

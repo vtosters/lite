@@ -152,7 +152,7 @@
 
     iput v4, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/ProfileHider;->fetchInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-static {v0, v1}, Lru/vtosters/lite/ssfs/ProfileHider;->fetchInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;Lorg/json/JSONObject;)V
 
     .line 3
     iget-object v2, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
