@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.*;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
 import java.net.URL;
@@ -77,7 +78,7 @@ public class ImageUtils {
         return outputBitmap;
     }
 
-    public static Drawable setTint(Context ctx, Drawable d) {
+    public static Drawable setTint(Context ctx, @NonNull Drawable d) {
         d.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_ATOP);
         return d;
     }
