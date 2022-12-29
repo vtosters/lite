@@ -5936,7 +5936,7 @@
     <string name="vtlmsgsumm">Режим VK Мессенджера</string>
     <string name="vtlactivitysumm">Офлайн режим</string>
     <string name="vtlthemessumm">Покраска навбара</string>
-    <string name="vtltgssumm">Установлено паков</string>
+    <string name="vtltgssumm">Используется паков</string>
     <string name="vtlinterfacesumm">Округление чисел</string>
     <string name="vtlproxysumm">Тип проксирования</string>
     <string name="vtlothersumm">Отображение верификаций</string>

@@ -1,18 +1,16 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.utils.AndroidUtils;
+
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class Start {
     public static void alert(final Activity activity) {
@@ -30,7 +28,7 @@ public class Start {
                     .setNeutralButton(R.string.startbtn1,
                             (dialogInterface, i) -> {
                                 edit().putBoolean("showAlert", false).apply();
-                                activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
+                                activity.startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://t.me/vtosters")));
                             }
                     )
                     .show();

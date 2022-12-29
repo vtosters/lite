@@ -1,16 +1,14 @@
 package com.aefyr.tsg.g2;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-
 import com.aefyr.tsg.g2.sql.TelegramStickersDbHelper;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersPackInfo;
+import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -19,7 +17,7 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
-import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 /**
  * Created by Aefyr on 19.05.2018.
@@ -227,6 +225,7 @@ public class TelegramStickersService {
         currentlyDownloading.add(id.toLowerCase());
         notificationsHelper.packStartedDownloading(newPack);
 
+
         grabber.enableProxy();
         grabber.grabPack(id, packFolder, pack.version, new TelegramStickersGrabber.PackDownloadListener() {
             @Override
@@ -383,7 +382,7 @@ public class TelegramStickersService {
         getPacksListReference().set(li1, p2);
     }
 
-    interface StickersEventsListener {
+    public interface StickersEventsListener {
         void onPackAdded(TelegramStickersPack pack, int atIndex);
 
         void onPackRemoved(TelegramStickersPack pack, int atIndex);

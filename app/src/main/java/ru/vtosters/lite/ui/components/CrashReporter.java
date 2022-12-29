@@ -52,7 +52,7 @@ public class CrashReporter {
         foxbinIntent.putExtra("android.intent.extra.TEXT", logString);
         foxbinIntent.setType("text/plain");
         if (!isFoxbinInstalled()) {
-            foxbinIntent = new Intent("android.intent.action.VIEW");
+            foxbinIntent = new Intent(Intent.ACTION_VIEW);
             foxbinIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.f0x1d.dogbin"));
             foxbinIntent.addFlags(Intent.FLAG_ACTIVITY_NO_USER_ACTION);
         }

@@ -6071,7 +6071,7 @@ May look like a fake leaving the online"</string>
     <string name="vtlmsgsumm">VK Messenger mode</string>
     <string name="vtlactivitysumm">Offline mode</string>
     <string name="vtlthemessumm">Navbar coloring</string>
-    <string name="vtltgssumm">Installed packs</string>
+    <string name="vtltgssumm">Activated packs</string>
     <string name="vtlinterfacesumm">Round numbers</string>
     <string name="vtlproxysumm">Proxy type</string>
     <string name="vtlothersumm">Show verifications</string>
