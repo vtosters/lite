@@ -1,11 +1,5 @@
 package ru.vtosters.lite.ui.adapters;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
-
 import android.annotation.SuppressLint;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -14,19 +8,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.tgs.TGPref;
+import ru.vtosters.lite.ui.components.IItemMovingListener;
 
 import java.io.File;
 
-import ru.vtosters.lite.tgs.TGPref;
-import ru.vtosters.lite.ui.components.IItemMovingListener;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getResources;
+import static ru.vtosters.lite.utils.ThemesUtils.*;
 
 public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.StickerPackViewHolder> implements IItemMovingListener {
     private static final TelegramStickersService sService = TelegramStickersService.getInstance(getGlobalContext());
@@ -129,7 +124,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             });
             mName.setText(pack.title);
             mSwitch.setChecked(pack.enabled);
-            mSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> sService.setPackEnabled(pack, isChecked, false));
+            mSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> sService.setPackEnabled(pack, isChecked, true));
             mStickersCount.setText(pack.stickersCount + " " + mStickersCount.getContext().getString(R.string.stickerscount));
 
             // Color костыль

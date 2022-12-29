@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.StringRes;
+import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
@@ -32,7 +33,7 @@ import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.*;
 
-public class VTSettings extends MaterialPreferenceToolbarFragment {
+public class VTSettings extends MaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
 
     public static String getValAsString(@StringRes int strRes, Boolean value) {
         if(Preferences.disableSettingsSumms()) return null;
@@ -109,8 +110,40 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
     }
 
     @Override
+    public void onPackAdded(TelegramStickersPack pack, int atIndex) {
+
+    }
+
+    @Override
+    public void onPackRemoved(TelegramStickersPack pack, int atIndex) {
+
+    }
+
+    @Override
+    public void onPackChanged(TelegramStickersPack pack, int atIndex) {
+
+    }
+
+    @Override
+    public void onPackDownloadError(TelegramStickersPack pack, Exception error) {
+
+    }
+
+    @Override
+    public void onActivePacksListChanged() {
+        findPreference("tgs_stickers").setSummary(getTGSsumm());
+    }
+
+    @Override
+    public void onInactivePacksListChanged() {
+
+    }
+
+    @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+
+        TelegramStickersService.getInstance(requireContext()).addStickersEventsListener(this);
 
         this.addPreferencesFromResource(R.xml.empty);
 
@@ -427,7 +460,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
-                "",
+                "tgs_stickers",
                 requireContext().getString(R.string.vtltgs),
                 getTGSsumm(),
                 R.drawable.ic_telegram_outline_28,
@@ -610,5 +643,11 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
     @Override
     public int T4() {
         return R.string.notification_settings;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        TelegramStickersService.getInstance(requireContext()).removeStickersEventsListener(this);
     }
 }
