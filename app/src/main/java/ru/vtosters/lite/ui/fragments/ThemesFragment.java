@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui.fragments;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.WindowManager;
@@ -97,7 +96,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme() && ThemesUtils.isMilkshake());
 
-        if (AndroidUtils.isTablet()) {
+        if(AndroidUtils.isTablet()) {
             PreferenceCategory dockbarSettingsPreferenceCategory = (PreferenceCategory) findPreference("dockbarsett");
             dockbarSettingsPreferenceCategory.setVisible(false);
         }
@@ -113,7 +112,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         new VkAlertDialog.Builder(requireContext())
                 .setTitle(AndroidUtils.getString("change_accent_color"))
                 .setItems(titles, (dialog, which) -> {
-                    switch (which) {
+                    switch(which) {
                         case 0:
                             showColorPicker();
                             break;
@@ -154,8 +153,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     void showPalettesDialog() {
         final var manager = PalettesManager.getInstance();
         final var titles = new String[manager.getPalettesCount()];
-        if (titles.length > 0) {
-            for (int i = 0; i < titles.length; ++i)
+        if(titles.length > 0) {
+            for(int i = 0; i < titles.length; ++i)
                 titles[i] = manager.getPalette(i).name;
             new VkAlertDialog.Builder(requireContext())
                     .setTitle(AndroidUtils.getString("select_palette"))
@@ -178,7 +177,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         LifecycleUtils.restartApplicationWithTimer();
     }
 
-    private void switchFragment(Class<? extends FragmentImpl> fragmentClz) {
+    private void switchFragment(Class< ? extends FragmentImpl > fragmentClz) {
         var intent = new Navigator(fragmentClz)
                 .b(requireContext())
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

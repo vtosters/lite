@@ -1,6 +1,5 @@
 package ru.vtosters.lite.ui.fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -9,6 +8,7 @@ import androidx.annotation.StringRes;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
+import com.vk.core.fragments.FragmentImpl;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
@@ -25,30 +25,19 @@ import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
+import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.SSFSUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
-
-import static ru.vtosters.lite.ui.PreferencesUtil.*;
-import static ru.vtosters.lite.utils.About.getBuildNumber;
-import static ru.vtosters.lite.utils.About.getCommitLink;
-import static ru.vtosters.lite.utils.AccountManagerUtils.*;
-import static ru.vtosters.lite.utils.AndroidUtils.*;
-import static ru.vtosters.lite.utils.GmsUtils.isGmsInstalled;
-import static ru.vtosters.lite.utils.ImageUtils.getDrawableFromUrl;
-import static ru.vtosters.lite.utils.Preferences.*;
-import static ru.vtosters.lite.utils.ThemesUtils.*;
-import static ru.vtosters.lite.utils.VTVerifications.vtverif;
+import ru.vtosters.lite.utils.*;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment {
-    public static String getValAsString(@StringRes int strRes, Boolean value) {
-        if (disableSettingsSumms()) return null;
 
-        if (value) {
+    public static String getValAsString(@StringRes int strRes, Boolean value) {
+        if(Preferences.disableSettingsSumms()) return null;
+
+        if(value) {
             return AndroidUtils.getString(strRes) + ": " + AndroidUtils.getString(R.string.vtlsettenabled);
         }
 
@@ -56,44 +45,44 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
     }
 
     public static String getSSFSsumm() {
-        if (disableSettingsSumms()) return null;
+        if(Preferences.disableSettingsSumms()) return null;
 
-        if (hasSpecialVerif())
+        if(Preferences.hasSpecialVerif())
             return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifyes);
 
         return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifno);
     }
 
     public static String getDocksumm() {
-        if (disableSettingsSumms()) return null;
+        if(Preferences.disableSettingsSumms()) return null;
 
         return AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size();
     }
 
     public static String getTGSsumm() {
-        if (disableSettingsSumms()) return null;
+        if(Preferences.disableSettingsSumms()) return null;
 
         return AndroidUtils.getString(R.string.vtltgssumm) + ": " + TelegramStickersService.getInstance(AndroidUtils.getGlobalContext()).getPacksListReference().size();
     }
 
     public static String getProxysumm() {
-        var type = getPrefsValue("proxy");
+        var type = AndroidUtils.getPrefsValue("proxy");
 
-        if (disableSettingsSumms()) return null;
+        if(Preferences.disableSettingsSumms()) return null;
 
-        if (type.equals("noproxy") || type.isEmpty())
+        if(type.equals("noproxy") || type.isEmpty())
             type = AndroidUtils.getString(R.string.vtlsettdisabled);
 
         return AndroidUtils.getString(R.string.vtlproxysumm) + ": " + type;
     }
 
     public static String getThemesumm() {
-        if (disableSettingsSumms()) return null;
+        if(Preferences.disableSettingsSumms()) return null;
 
         String str;
         String[] themeTypeName = AndroidUtils.getArray("theme_type_name");
 
-        switch (getPrefsValue("currsystemtheme")) {
+        switch(AndroidUtils.getPrefsValue("currsystemtheme")) {
             default:
             case "system":
                 str = themeTypeName[0];
@@ -110,45 +99,31 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
     }
 
     public static String getSuperappsumm() {
-        if (disableSettingsSumms()) return null;
+        if(Preferences.disableSettingsSumms()) return null;
 
         return AndroidUtils.getString(R.string.elements_hidden_count) + ": " + SuperAppEditorManager.getInstance().getDisabledTabs().size();
     }
 
     private void switchTheme(boolean isDarkTheme) {
-        setTheme(isDarkTheme ? getDarkTheme() : getLightTheme(), requireActivity());
+        ThemesUtils.setTheme(isDarkTheme ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme(), requireActivity());
     }
 
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
-        var feedsumm = getValAsString(R.string.vtlfeedsumm, ads());
-        var docksumm = getDocksumm();
-        var msgsumm = isTablet() ? getValAsString(R.string.autotranslate_title, autotranslate()) : getValAsString(R.string.vtlmsgsumm, vkme());
-        var activitysumm = getValAsString(R.string.vtlactivitysumm, offline());
-        var themessumm = getValAsString(R.string.vtlthemessumm, navbar());
-        var tgssumm = getTGSsumm();
-        var superapp = getSuperappsumm();
-        var mediasumm = getValAsString(R.string.vtlinterfacesumm, shortinfo());
-        var interfacesumm = getValAsString(R.string.showstories, stories());
-        var proxysumm = getProxysumm();
-        var othersumm = getValAsString(R.string.vtlothersumm, vtverif());
-        var ssfs = getSSFSsumm();
-        var about = "Commit: " + getBuildNumber();
-
         this.addPreferencesFromResource(R.xml.empty);
 
-        addPreferenceDrawable(
-                this,
+        var accountSwitcher = PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
                 "account_switcher",
-                getUsername(),
+                AccountManagerUtils.getUsername(),
                 requireContext().getString(R.string.vtllogout),
                 requireContext().getDrawable(R.drawable.ic_user_circle_outline_28),
                 preference -> {
                     try {
                         VKAuth.a("logout", false);
-                    } catch (Exception ignored) {
+                    } catch(Exception ignored) {
                     }
 
                     var intent = new Intent(requireContext(), MainActivity.class)
@@ -158,308 +133,473 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                     requireContext().startActivity(intent);
 
                     return false;
-        });
+                });
 
         VTExecutors.getIoScheduler().a(() -> {
-            var icon = getDrawableFromUrl(getUserPhoto(), 0, true, true);
-            if (icon == null) return;
+            var icon = ImageUtils.getDrawableFromUrl(AccountManagerUtils.getUserPhoto(), 0, true, true);
+            if(icon == null) return;
             requireActivity().runOnUiThread(() -> {
-                findPreference("account_switcher").setIcon(icon);
+                accountSwitcher.setIcon(icon);
             });
         });
 
-        addPreference(this, "", requireContext().getString(R.string.vtssfs), ssfs, R.drawable.ic_link_circle_outline_28, preference -> {
-            Context context = requireContext();
-            VKUIwrapper.setLink(SSFSUtils.getSSFSLink());
-            Intent a2 = new Navigator(VKUIwrapper.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtssfs),
+                getSSFSsumm(),
+                R.drawable.ic_link_circle_outline_28,
+                preference -> {
+                    VKUIwrapper.setLink(SSFSUtils.getSSFSLink());
+                    launchFragment(VKUIwrapper.class);
+                    return false;
+                }
+        );
 
-        addPreferenceCategory(this, requireContext().getString(R.string.appearance_theme_use_system));
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.appearance_theme_use_system);
 
-        if (Build.VERSION.SDK_INT >= 28 && milkshake()) {
-            addListPreferenceIcon(
-                    this,
+        if(Build.VERSION.SDK_INT >= 28 && Preferences.milkshake()) {
+            PreferenceFragmentUtils.addListPreference(
+                    getPreferenceScreen(),
                     "currsystemtheme",
                     "system",
                     requireContext().getString(R.string.appearance_theme_use_system),
-                    R.drawable.ic_palette_outline_28, getThemesumm(),
+                    R.drawable.ic_palette_outline_28,
+                    getThemesumm(),
                     AndroidUtils.getArray("theme_type_name_checkbox"),
-                    new String[]{"system", "dark", "light"},
+                    new String[] { "system", "dark", "light" },
                     (preference, o) -> {
                         String value = (String) o;
-                        if (!value.equals("system")) {
+                        if(!value.equals("system")) {
                             var theme = value.equals("dark") ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme();
                             ThemesUtils.applyTheme(theme);
                         }
-                        edit().putString("currsystemtheme", value).commit();
+                        AndroidUtils.edit().putString("currsystemtheme", value).commit();
                         SystemThemeChangerHook.onThemeChanged(getResources().getConfiguration());
                         return true;
                     });
         } else {
-            addMaterialSwitchPreference(this, "", requireContext().getString(R.string.vtsettdarktheme), "", R.drawable.ic_palette_outline_28, isDarkTheme(), (preference, o) -> {
-                final var switchPreference = (MaterialSwitchPreference) preference;
-                final var isDarkTheme = !switchPreference.isChecked();
-                switchTheme(isDarkTheme);
-                return true;
-            });
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.vtsettdarktheme),
+                    "",
+                    R.drawable.ic_palette_outline_28,
+                    ThemesUtils.isDarkTheme(),
+                    (preference, o) -> {
+                        final var switchPreference = (MaterialSwitchPreference) preference;
+                        final var isDarkTheme = !switchPreference.isChecked();
+                        switchTheme(isDarkTheme);
+                        return true;
+                    }
+            );
         }
 
-        if (!isGmsInstalled()) {
-            addPreferenceCategory(this, requireContext().getString(R.string.gmsname));
+        if(!GmsUtils.isGmsInstalled()) {
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.gmsname);
 
-            addPreference(this, "", requireContext().getString(R.string.installgms), "", R.drawable.ic_about_outline_28, preference -> {
-                Context context = requireContext();
-                Intent a2 = new Navigator(InstallGMSFragment.class).b(context);
-                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(a2);
-                return false;
-            });
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.installgms),
+                    "",
+                    R.drawable.ic_about_outline_28,
+                    preference -> {
+                        launchFragment(InstallGMSFragment.class);
+                        return false;
+                    }
+            );
         }
 
-        if (devmenu()) {
-            addPreferenceCategory(this, requireContext().getString(R.string.sett_debug));
+        if(Preferences.devmenu()) {
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.sett_debug);
 
-            addPreference(this, "", requireContext().getString(R.string.sett_debug), "", R.drawable.ic_bug_outline_28, preference -> {
-                Context context = requireContext();
-                Intent a2 = new Navigator(SettingsDebugFragment.class).b(context);
-                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(a2);
-                return false;
-            });
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.sett_debug),
+                    "",
+                    R.drawable.ic_bug_outline_28,
+                    preference -> {
+                        launchFragment(SettingsDebugFragment.class);
+                        return false;
+                    }
+            );
 
-            addMaterialSwitchPreference(this, "ssl", requireContext().getString(R.string.debug_developer_force_ssl), requireContext().getString(R.string.debug_developer_force_ssl_summary), R.drawable.ic_globe_outline_28, true, (preference, o) -> {
-                boolean value = (boolean) o;
-                edit().putBoolean("ssl", value).commit();
-                return true;
-            });
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "ssl",
+                    requireContext().getString(R.string.debug_developer_force_ssl),
+                    requireContext().getString(R.string.debug_developer_force_ssl_summary),
+                    R.drawable.ic_globe_outline_28,
+                    true,
+                    (preference, o) -> {
+                        AndroidUtils.edit().putBoolean("ssl", (boolean) o).commit();
+                        return true;
+                    }
+            );
 
-            if (dev() && isValidSignature()) {
-                addMaterialSwitchPreference(this, "autoupdates", requireContext().getString(R.string.checkupdates), "", R.drawable.ic_camera_switch_outline_24, true, (preference, o) -> {
-                    boolean value = (boolean) o;
-                    edit().putBoolean("autoupdates", value).commit();
-                    return true;
-                });
+            if(Preferences.dev() && Preferences.isValidSignature()) {
+                PreferenceFragmentUtils.addMaterialSwitchPreference(
+                        getPreferenceScreen(),
+                        "autoupdates",
+                        requireContext().getString(R.string.checkupdates),
+                        "",
+                        R.drawable.ic_camera_switch_outline_24,
+                        true,
+                        (preference, o) -> {
+                            boolean value = (boolean) o;
+                            AndroidUtils.edit().putBoolean("autoupdates", value).commit();
+                            return true;
+                        }
+                );
             }
         }
 
-        addPreferenceCategory(this, requireContext().getString(R.string.vtsettaccount));
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.vtsettaccount);
 
-        addPreference(this, "", requireContext().getString(R.string.vkconnect), "", R.drawable.ic_user_circle_outline_28, preference -> {
-            Context context = requireContext();
-            VKUIwrapper.officalLinks("account");
-            Intent a2 = new Navigator(VKUIwrapper.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", requireContext().getString(R.string.privacy_settings), "", R.drawable.ic_privacy_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(PrivacyFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", requireContext().getString(R.string.sett_account), "", R.drawable.ic_user_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(SettingsAccountFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        if (isVKTester()) {
-            addPreference(this, "", requireContext().getString(R.string.bugs), "", R.drawable.ic_bug_outline_28, preference -> {
-                Context context = requireContext();
-                VKUIwrapper.officalLinks("bugs");
-                Intent a2 = new Navigator(VKUIwrapper.class).b(context);
-                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(a2);
-                return false;
-            });
-        }
-
-        addPreferenceCategory(this, requireContext().getString(R.string.vtlvksettings));
-
-        addPreference(this, "", requireContext().getString(R.string.sett_general), "", R.drawable.ic_settings_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(SettingsGeneralFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", requireContext().getString(R.string.blacklist), "", R.drawable.ic_users_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(BlacklistFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", requireContext().getString(R.string.sett_notifications), "", R.drawable.ic_menu_notification_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(NotificationsSettingsFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        if (VKAccountManager.d().isMusicSubs()) {
-            addPreference(this, "", requireContext().getString(R.string.subscription_music), "", R.drawable.ic_music_outline_28, preference -> {
-                Context context = requireContext();
-                Intent a2 = new Navigator(MusicSubscriptionControlFragment.class).b(context);
-                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(a2);
-                return false;
-            });
-        }
-
-        addPreference(this, "", requireContext().getString(R.string.votes), "", R.drawable.ic_coins_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(BalanceFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreferenceCategory(this, requireContext().getString(R.string.vtsettmod));
-
-        if (vkme()) {
-            addPreference(this, "", requireContext().getString(R.string.warning), requireContext().getString(R.string.vkme_mode_info), R.drawable.ic_about_outline_28, preference -> false);
-        } else {
-            addPreference(this, "", requireContext().getString(R.string.vtlfeed), feedsumm, R.drawable.ic_newsfeed_outline_28, preference -> {
-                Context context = requireContext();
-                Intent a2 = new Navigator(FeedFragment.class).b(context);
-                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(a2);
-                return false;
-            });
-        }
-
-        addPreference(this, "", requireContext().getString(R.string.vtlmedia), mediasumm, R.drawable.ic_media_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(MediaFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", requireContext().getString(R.string.vtlmessages), msgsumm, R.drawable.ic_message_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(MessagesFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", requireContext().getString(R.string.vtltgs), tgssumm, R.drawable.ic_telegram_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(StickersFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", requireContext().getString(R.string.vtlthemes), themessumm, R.drawable.ic_write_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(ThemesFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        addPreference(this, "", requireContext().getString(R.string.vtlinterface), interfacesumm, R.drawable.ic_interface_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(InterfaceFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
-
-        if (!vkme()) {
-            if (!isTablet()) {
-                addPreference(this, "", requireContext().getString(R.string.dockbar_editor), docksumm, R.drawable.ic_list_outline_28, preference -> {
-                    Context context = requireContext();
-                    Intent intent = new Navigator(DockBarEditorFragment.class).b(context);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity(intent);
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vkconnect),
+                "",
+                R.drawable.ic_user_circle_outline_28,
+                preference -> {
+                    VKUIwrapper.officalLinks("account");
+                    launchFragment(VKUIwrapper.class);
                     return false;
-                });
+                }
+        );
 
-                if (milkshake() && superapp()) {
-                    addPreference(this, "", requireContext().getString(R.string.superapp_editor), superapp, R.drawable.ic_services_outline_28, (preference) -> {
-                        Context context = requireContext();
-                        Intent intent = new Navigator(SuperAppEditorFragment.class).b(context);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        context.startActivity(intent);
-                        return true;
-                    });
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.privacy_settings),
+                "",
+                R.drawable.ic_privacy_outline_28,
+                preference -> {
+                    launchFragment(PrivacyFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.sett_account),
+                "",
+                R.drawable.ic_user_outline_28,
+                preference -> {
+                    launchFragment(SettingsAccountFragment.class);
+                    return false;
+                }
+        );
+
+        if(AccountManagerUtils.isVKTester()) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.bugs),
+                    "",
+                    R.drawable.ic_bug_outline_28,
+                    preference -> {
+                        VKUIwrapper.officalLinks("bugs");
+                        launchFragment(VKUIwrapper.class);
+                        return false;
+                    }
+            );
+        }
+
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.vtlvksettings));
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.sett_general),
+                "",
+                R.drawable.ic_settings_outline_28,
+                preference -> {
+                    launchFragment(SettingsGeneralFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.blacklist),
+                "",
+                R.drawable.ic_users_outline_28,
+                preference -> {
+                    launchFragment(BlacklistFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.sett_notifications),
+                "",
+                R.drawable.ic_menu_notification_outline_28,
+                preference -> {
+                    launchFragment(NotificationsSettingsFragment.class);
+                    return false;
+                }
+        );
+
+        if(VKAccountManager.d().isMusicSubs()) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.subscription_music),
+                    "",
+                    R.drawable.ic_music_outline_28,
+                    preference -> {
+                        launchFragment(MusicSubscriptionControlFragment.class);
+                        return false;
+                    }
+            );
+        }
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.votes),
+                "",
+                R.drawable.ic_coins_outline_28,
+                preference -> {
+                    launchFragment(BalanceFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.vtsettmod));
+
+        if(Preferences.vkme()) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.warning),
+                    requireContext().getString(R.string.vkme_mode_info),
+                    R.drawable.ic_about_outline_28,
+                    preference -> false
+            );
+        } else {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.vtlfeed),
+                    getValAsString(R.string.vtlfeedsumm, Preferences.ads()),
+                    R.drawable.ic_newsfeed_outline_28,
+                    preference -> {
+                        launchFragment(FeedFragment.class);
+                        return false;
+                    }
+            );
+        }
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtlmedia),
+                getValAsString(R.string.vtlinterfacesumm, Preferences.shortinfo()),
+                R.drawable.ic_media_outline_28,
+                preference -> {
+                    launchFragment(MediaFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtlmessages),
+                AndroidUtils.isTablet()
+                        ? getValAsString(R.string.autotranslate_title, Preferences.autotranslate())
+                        : getValAsString(R.string.vtlmsgsumm, Preferences.vkme()),
+                R.drawable.ic_message_outline_28,
+                preference -> {
+                    launchFragment(MessagesFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtltgs),
+                getTGSsumm(),
+                R.drawable.ic_telegram_outline_28,
+                preference -> {
+                    launchFragment(StickersFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtlthemes),
+                getThemesumm(),
+                R.drawable.ic_write_outline_28,
+                preference -> {
+                    launchFragment(ThemesFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtlinterface),
+                getValAsString(R.string.showstories, Preferences.stories()),
+                R.drawable.ic_interface_outline_28,
+                preference -> {
+                    launchFragment(InterfaceFragment.class);
+                    return false;
+                }
+        );
+
+        if(!Preferences.vkme()) {
+            if(!AndroidUtils.isTablet()) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        requireContext().getString(R.string.dockbar_editor),
+                        getDocksumm(),
+                        R.drawable.ic_list_outline_28,
+                        preference -> {
+                            launchFragment(DockBarEditorFragment.class);
+                            return false;
+                        }
+                );
+
+                if(Preferences.milkshake() && Preferences.superapp()) {
+                    PreferenceFragmentUtils.addPreference(
+                            getPreferenceScreen(),
+                            "",
+                            requireContext().getString(R.string.superapp_editor),
+                            getSuperappsumm(),
+                            R.drawable.ic_services_outline_28,
+                            (preference) -> {
+                                launchFragment(SuperAppEditorFragment.class);
+                                return true;
+                            }
+                    );
                 }
             }
         }
 
-        addPreference(this, "", requireContext().getString(R.string.vtlactivity), activitysumm, R.drawable.ic_write_outline_28_new_accent, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(ActivityFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtlactivity),
+                getValAsString(R.string.vtlactivitysumm, Preferences.offline()),
+                R.drawable.ic_write_outline_28_new_accent,
+                preference -> {
+                    launchFragment(ActivityFragment.class);
+                    return false;
+                }
+        );
 
-        addPreference(this, "", requireContext().getString(R.string.vtlproxy), proxysumm, R.drawable.ic_globe_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(ProxySettingsFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtlproxy),
+                getProxysumm(),
+                R.drawable.ic_globe_outline_28,
+                preference -> {
+                    launchFragment(ProxySettingsFragment.class);
+                    return false;
+                }
+        );
 
-        addPreference(this, "", requireContext().getString(R.string.vtlother), othersumm, R.drawable.ic_more_horizontal_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(OtherFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtlother),
+                getValAsString(R.string.vtlothersumm, VTVerifications.vtverif()),
+                R.drawable.ic_more_horizontal_28,
+                preference -> {
+                    launchFragment(OtherFragment.class);
+                    return false;
+                }
+        );
 
-        addPreferenceCategory(this, requireContext().getString(R.string.vtsettaboutmod));
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.vtsettaboutmod));
 
-        addPreference(this, "", requireContext().getString(R.string.menu_about), about, R.drawable.ic_about_outline_28, preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(AboutAppFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.menu_about),
+                "Commit: " + About.getBuildNumber(),
+                R.drawable.ic_about_outline_28,
+                preference -> {
+                    launchFragment(AboutAppFragment.class);
+                    return false;
+                }
+        );
 
-        addPreference(this, "", requireContext().getString(R.string.opencommit), "", R.drawable.ic_link_outline_28, preference -> {
-            requireContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse(getCommitLink())));
-            return false;
-        });
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.opencommit),
+                "",
+                R.drawable.ic_link_outline_28,
+                preference -> {
+                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(About.getCommitLink())));
+                    return false;
+                }
+        );
+        
 
-        addPreference(this, "", requireContext().getString(R.string.vtfaq), requireContext().getString(R.string.vtfaqsumm), R.drawable.ic_help_outline_28, preference -> {
-            requireContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/s/vtosters_faq")));
-            return false;
-        });
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtfaq),
+                requireContext().getString(R.string.vtfaqsumm),
+                R.drawable.ic_help_outline_28,
+                preference -> {
+                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://t.me/s/vtosters_faq")));
+                    return false;
+                }
+        );
 
-        addPreference(this, "", requireContext().getString(R.string.reportbug), requireContext().getString(R.string.reportbugsumm), R.drawable.ic_bug_outline_28, preference -> {
-            requireContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/issues")));
-            return false;
-        });
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.reportbug),
+                requireContext().getString(R.string.reportbugsumm),
+                R.drawable.ic_bug_outline_28,
+                preference -> {
+                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/vtosters/lite/issues")));
+                    return false;
+                }
+        );
 
-        if (isValidSignature()) {
-            addPreferenceCategory(this, requireContext().getString(R.string.updates));
+        if(Preferences.isValidSignature()) {
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.updates));
 
-            addPreference(this, "", requireContext().getString(R.string.checkforupdates), "", R.drawable.ic_download_outline_28, preference -> {
-                OTADialog.checkUpdates(getActivity());
-                return false;
-            });
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.checkforupdates),
+                    "",
+                    R.drawable.ic_download_outline_28,
+                    preference -> {
+                        OTADialog.checkUpdates(getActivity());
+                        return false;
+                    }
+            );
         }
+    }
+
+    private void launchFragment(Class< ? extends FragmentImpl > fragmentClz) {
+        Intent intent = new Navigator(fragmentClz)
+                .b(requireContext())
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        requireContext().startActivity(intent);
     }
 
     @Override
