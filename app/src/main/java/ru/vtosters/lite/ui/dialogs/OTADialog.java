@@ -50,7 +50,7 @@ public class OTADialog  extends ModalBottomSheetWrapper<OTADialog> implements OT
 
         container.setOrientation(LinearLayout.VERTICAL);
 
-        changelogView.setText("Изменения: \n" + changelog);
+        changelogView.setText(AndroidUtils.getString("changelog") + ": \n" + changelog);
         changelogView.setTextColor(ThemesUtils.getTextAttr());
         container.addView(changelogView, new LinearLayout.LayoutParams(-1, -2));
 

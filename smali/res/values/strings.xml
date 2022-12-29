@@ -2957,7 +2957,7 @@ in group chats"</string>
     <string name="post_reposted_one_more">%1$s and %2$s more shared this</string>
     <string name="post_reposted_two">%1$s and %2$s shared this</string>
     <string name="post_reposted_two_more">%1$s, %2$s and %3$s more shared this</string>
-    <string name="post_show_full">Expand text...</string>
+    <string name="post_show_full">View all...</string>
     <string name="post_stat_menu_item">Post statistics</string>
     <string name="post_to_wall">Post to wall</string>
     <string name="post_unfix">Unpin</string>
@@ -5642,7 +5642,7 @@ Registration date:"</string>
     <string name="interfaceglobalpost">Shorten posts</string>
     <string name="interfaceglobalpostsum">"Shorten the text in posts
 
-Expand text..."</string>
+View all..."</string>
     <string name="pollresults_title">Poll results</string>
     <string name="pollresults_summ">Show results in polls without voting in them</string>
     <string name="vtl_downloads_title">Downloads</string>
@@ -6475,4 +6475,7 @@ May look like a fake leaving the online"</string>
     <string name="monettheme_title">Monet theme</string>
     <string name="monettheme_summ">Dynamic app theme based on phone wallpaper</string>
     <string name="accents">Accents</string>
+    <string name="cannot_write">No permission to write or read files</string>
+    <string name="open_bot">Open a bot</string>
+    <string name="crash_service_name">Error notifications</string>
 </resources>

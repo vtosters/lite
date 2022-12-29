@@ -241,7 +241,7 @@ public class StickersFragment extends BaseToolbarFragment {
                                 .setTitle(requireContext().getString(R.string.stickersapi8))
                                 .setMessage(requireContext().getString(R.string.stickersapi9) +
                                         requireContext().getString(R.string.stickersapi10))
-                                .setNeutralButton("Открыть бота", (dl, i) -> {
+                                .setNeutralButton(AndroidUtils.getString("open_bot"), (dl, i) -> {
                                     var intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/botfather"));
                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                     requireActivity().startActivity(intent);
