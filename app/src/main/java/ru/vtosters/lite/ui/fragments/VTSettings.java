@@ -26,6 +26,7 @@ import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
+import ru.vtosters.lite.ssfs.Utils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
@@ -183,7 +184,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getSSFSsumm(),
                 R.drawable.ic_link_circle_outline_28,
                 preference -> {
-                    VKUIwrapper.setLink(SSFSUtils.getSSFSLink());
+                    VKUIwrapper.setLink(Utils.getVKUILink());
                     launchFragment(VKUIwrapper.class);
                     return false;
                 }

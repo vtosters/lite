@@ -13,7 +13,7 @@ public class Handler {
 
     public static JSONObject getBanner(int id) {
         Request request = new Request.a()
-                .b("https://ssfs.vtosters.app/api/getChatBanner" + "?user_id=" + id)
+                .b(Utils.getDomain() + "/api/getChatBanner" + "?user_id=" + id)
                 .a();
 
         try {
@@ -26,7 +26,7 @@ public class Handler {
 
     public static String getDescription(int id) {
         Request request = new Request.a()
-                .b("https://ssfs.vtosters.app/api/getServiceDescription" + "?user_id=" + id)
+                .b(Utils.getDomain() + "/api/getServiceDescription" + "?user_id=" + id)
                 .a();
 
         try {

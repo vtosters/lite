@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ssfs;
 
+import android.util.Log;
 import com.vk.core.util.LangUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -13,6 +14,8 @@ import java.util.HashMap;
 import static ru.vtosters.lite.proxy.ProxyUtils.getStatic;
 
 public class ProfileButtons {
+    private static final String TAG = "ProfileButtons";
+
     public static JSONObject profileButton(JSONObject orig) {
         try {
             int id = orig.getInt("id");
@@ -55,7 +58,7 @@ public class ProfileButtons {
 
             orig.put("buttons", newItem);
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.d(TAG, e.getMessage());
         }
 
         return orig;
@@ -87,7 +90,7 @@ public class ProfileButtons {
 
             return json;
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.d(TAG, e.getMessage());
         }
 
         return null;

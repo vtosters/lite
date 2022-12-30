@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class UsersList {
@@ -32,7 +33,7 @@ public class UsersList {
         }
 
         Request request = new Request.a()
-                .b("https://ssfs.vtosters.app/api/getUsersWithServiceDescriptionsAndBanners")
+                .b(Utils.getDomain() + "/api/getUsersWithServiceDescriptionsAndBanners")
                 .a();
 
         VtOkHttpClient.getInstance().a(request).a(new Callback() {
@@ -63,6 +64,11 @@ public class UsersList {
     static void parseJson(JSONObject json) throws JSONException {
         var idsDescription = json.getJSONArray("with_service_descriptions");
         var idsBanner = json.getJSONArray("with_chat_banners");
+
+        if (dev()) {
+            Log.d(TAG, idsDescription.toString());
+            Log.d(TAG, idsBanner.toString());
+        }
 
         processIds(idsBanner, bannersList);
         processIds(idsDescription, descriptionsList);
