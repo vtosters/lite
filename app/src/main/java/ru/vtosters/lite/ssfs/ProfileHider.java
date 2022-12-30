@@ -10,6 +10,8 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserID;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class ProfileHider {
+    private static final String TAG = "ProfileHider";
+
     public static boolean isService(Integer id) {
         return UsersList.hasDescription(id) || id == 100 || id == 101 || id == 333;
     }
@@ -21,7 +23,7 @@ public class ProfileHider {
             try {
                 extendedUserProfile.z2 = Handler.getDescription(userID);
             } catch (NullPointerException e) {
-                Log.e("ProfileHide", "null \"profiles\" node\n" + e);
+                Log.e(TAG, "null \"profiles\" node\n" + e);
             }
         }
     }

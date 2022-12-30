@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ssfs;
 
+import android.util.Log;
 import okhttp3.Request;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -8,6 +9,8 @@ import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import java.io.IOException;
 
 public class Handler {
+    private static final String TAG = "SSFSHandler";
+
     public static JSONObject getBanner(int id) {
         Request request = new Request.a()
                 .b("https://ssfs.vtosters.app/api/getChatBanner" + "?user_id=" + id)
@@ -16,7 +19,7 @@ public class Handler {
         try {
             return new JSONObject(VtOkHttpClient.getInstance().a(request).execute().a().g()).getJSONObject("response");
         } catch (JSONException | IOException e) {
-            e.printStackTrace();
+            Log.d(TAG, e.getMessage());
             return null;
         }
     }
@@ -29,7 +32,7 @@ public class Handler {
         try {
             return new JSONObject(VtOkHttpClient.getInstance().a(request).execute().a().g()).getString("response");
         } catch (JSONException | IOException e) {
-            e.printStackTrace();
+            Log.d(TAG, e.getMessage());
             return null;
         }
     }
