@@ -116,7 +116,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             if (pack.state != TelegramStickersPack.DOWNLOADED) return;
 
             File f = new File(pack.folder, "001.png");
-            var uri =  Uri.parse("file://" + f.getAbsolutePath());
+            var uri = Uri.parse("file://" + f.getAbsolutePath());
             try {
                 if (f.exists()) {
                     mStickerPreview.setImageURI(uri);
@@ -149,34 +149,32 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
 
             if (pack.state == TelegramStickersPack.DOWNLOADED)
                 mContainer.setOnClickListener(v -> {
+                    try {
+                        ViewGroup root = (ViewGroup) ContextExtKt.c(v.getContext()).inflate(R.layout.sticker_details_bottom_container, null);
+                        StickerDetailsView stickersDetailsView = new StickerDetailsView(v.getContext());
 
-                try {
-                    ViewGroup root = (ViewGroup) ContextExtKt.c(v.getContext()).inflate(R.layout.sticker_details_bottom_container, null);
-                    StickerDetailsView stickersDetailsView = new StickerDetailsView(v.getContext());
+                        stickersDetailsView.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
+                        stickersDetailsView.a(TGRoot.toStickerPack(pack), new GiftData(new ArrayList<>(), false), root);
 
-                    stickersDetailsView.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
-                    stickersDetailsView.a(TGRoot.toStickerPack(pack), new GiftData(new ArrayList<>(), false), root);
+                        var recycler = (LongtapRecyclerView) stickersDetailsView.findViewById(R.id.recycler);
+                        ((StickerDetailsAdapter) recycler.getAdapter()).setTelegramPack(true);
 
-                    var recycler = (LongtapRecyclerView) stickersDetailsView.findViewById(R.id.recycler);
-                    ((StickerDetailsAdapter) recycler.getAdapter()).setTelegramPack(true);
+                        var builder = new ModalBottomSheet.a(v.getContext());
+                        builder.d(pack.title);
+                        builder.d(stickersDetailsView);
+                        builder.a(DrawableUtils.a(v.getContext(), R.drawable.share_outline_28, R.color.accent_blue));
+                        builder.c(R.attr.content_tint_background);
+                        builder.b(view -> {
+                            Sharing.a(view.getContext(), "https://t.me/addstickers/" + pack.id);
+                            return null;
+                        });
+                        builder.a(new ContentSnapStrategy1(false));
 
-                    var builder = new ModalBottomSheet.a(v.getContext());
-                    builder.d(pack.title);
-                    builder.d(stickersDetailsView);
-                    builder.a(DrawableUtils.a(v.getContext(), R.drawable.share_outline_28, R.color.accent_blue));
-                    builder.c(R.attr.content_tint_background);
-                    builder.b(view -> {
-                        Sharing.a(view.getContext(), "https://t.me/addstickers/" + pack.id);
-                        return null;
-                    });
-                    builder.a(new ContentSnapStrategy1(false));
-
-                    builder.a("stickers_preview");
-                } catch(JSONException e) {
-                    throw new RuntimeException(e);
-                }
-
-            });
+                        builder.a("stickers_preview");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                });
         }
     }
 }
