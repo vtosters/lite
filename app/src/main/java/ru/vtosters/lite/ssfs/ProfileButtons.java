@@ -28,9 +28,9 @@ public class ProfileButtons {
 
             if (!VTVerifications.haveDonateButton() && id == AccountManagerUtils.getUserId()) {
                 var map = new HashMap<>();
-                map.put("20", "https://sun2-10.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png");
-                map.put("40", "https://sun2-12.userapi.com/N8y9pU1meJq_eug-wB1u-HUuGyMqDfdq7A025w/A4Aio-xuLY8.png");
-                map.put("80", "https://sun2-9.userapi.com/3Hx4hff63_2Lt6wjjthJMF_3QLUswNNlQKoAXQ/oyzEu1NL9T8.png");
+                map.put("20", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/donate_icon/20.png");
+                map.put("40", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/donate_icon/40.png");
+                map.put("80", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/donate_icon/80.png");
 
                 newItem.put(generateJsonObject(
                         AndroidUtils.getString(com.vtosters.lite.R.string.donate_to_vtl),
@@ -43,9 +43,9 @@ public class ProfileButtons {
 
             if (!orig.has("type") && AccountManagerUtils.isVKTester()) {
                 var map = new HashMap<>();
-                map.put("20", "https://sun2-10.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png");
-                map.put("40", "https://sun2-12.userapi.com/N8y9pU1meJq_eug-wB1u-HUuGyMqDfdq7A025w/A4Aio-xuLY8.png");
-                map.put("80", "https://sun2-9.userapi.com/3Hx4hff63_2Lt6wjjthJMF_3QLUswNNlQKoAXQ/oyzEu1NL9T8.png");
+                map.put("20", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/bug_icon/20.png");
+                map.put("40", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/bug_icon/40.png");
+                map.put("80", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/bug_icon/80.png");
 
                 newItem.put(generateJsonObject(
                         AndroidUtils.getString(com.vtosters.lite.R.string.tester_profile),
