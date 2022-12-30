@@ -30,8 +30,13 @@ public class ProfileHider {
 
     public static String getInfo(ExtendedUserProfile extendedUserProfile) {
         int userID = getUserID(extendedUserProfile);
-        if (UsersList.hasDescription(userID) && !TextUtils.isEmpty(extendedUserProfile.z2))
-            return extendedUserProfile.z2;
+        if (UsersList.hasDescription(userID)) {
+            if (!TextUtils.isEmpty(extendedUserProfile.z2)) {
+                return extendedUserProfile.z2;
+            } else {
+                return Handler.getDescription(userID);
+            }
+        }
         return getGlobalContext().getString(UserPresenter.q0.a(userID));
     }
 }
