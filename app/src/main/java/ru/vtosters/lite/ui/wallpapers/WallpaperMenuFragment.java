@@ -1,12 +1,5 @@
 package ru.vtosters.lite.ui.wallpapers;
 
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.requestUpdateWallpaper;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.hasVerification;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,7 +11,6 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -117,8 +109,8 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 .filter(imageEffects -> imageEffects.isFree() || hasVerification())
                 .forEach(it -> {
                     if (it.isList()) {
-                        var pref = PreferencesUtil.addListPreference(
-                                this,
+                        var pref = PreferenceFragmentUtils.addListPreference(
+                                getPreferenceScreen(),
                                 it.toString(),
                                 "disabled",
                                 it.getTitle(),
@@ -134,8 +126,8 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                             return true;
                         });
                     } else if (it.isSwitch()) {
-                        PreferencesUtil.addMaterialSwitchPreference(
-                                this,
+                        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                                getPreferenceScreen(),
                                 it.toString(),
                                 it.getTitle(),
                                 it.getSummary(),
@@ -150,8 +142,8 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     }
                 });
 
-        PreferencesUtil.addMaterialSwitchPreference(
-                this,
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
                 "compresswp",
                 requireContext().getString(R.string.compress_wallpaper_title),
                 requireContext().getString(R.string.compress_wallpaper_summ),

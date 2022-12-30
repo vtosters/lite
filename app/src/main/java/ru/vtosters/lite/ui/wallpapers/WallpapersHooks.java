@@ -22,10 +22,11 @@ import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class WallpapersHooks {
+    // TODO: force compress by default not asking user about that?
     private static final Supplier<Boolean> compress = () -> getBoolValue("compresswp", true);
     private static final File originalWp = new File(getGlobalContext().getFilesDir(), "wallpaper.jpeg");
     private static final File compressedWp = new File(getGlobalContext().getFilesDir(), "compressedwp.jpeg");
-    // TODO: cache to file
+    // TODO: cache to file?
     private static Drawable mWallpaper;
     private static boolean mUpdateWallpaperRequested = true;
 
@@ -63,6 +64,7 @@ public class WallpapersHooks {
     }
 
     private static boolean prepareCompressed() {
+        // TODO remove this check? with "compress" enabled it should be fine
         if (!eligibleWallpaperFile(originalWp)) {
             return false;
         }
@@ -93,10 +95,13 @@ public class WallpapersHooks {
         }
     }
 
+    public static boolean hasWallpapers() {
+        return getWallpaper() != null;
+    }
+
     public static void requestUpdateWallpaper() {
         mUpdateWallpaperRequested = true;
     }
-
 
     public static void removeWallpaper() {
         try {
