@@ -1,4 +1,3 @@
-use image::GenericImage;
 use jni::objects::JByteBuffer;
 use jni::objects::JClass;
 use jni::sys::jfloat;
@@ -302,7 +301,7 @@ pub extern "C" fn Java_ru_vtosters_lite_ui_wallpapers_NativeEffects_dim(
     let s = start as *mut u8;
     let s = unsafe { std::slice::from_raw_parts_mut(s, capacity) };
 
-    let mut img = image::ImageBuffer::<image::Rgba<u8>, Vec<u8>>::from_raw(
+    let img = image::ImageBuffer::<image::Rgba<u8>, Vec<u8>>::from_raw(
         width as u32,
         height as u32,
         s.to_vec(),

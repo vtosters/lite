@@ -122,7 +122,8 @@ dependencies {
 
 task prepareDexForMerge(type: Copy) {
     dependsOn('exportDex')
-    dependsOn('cargoBuild')
+    // Remove comment for native lib build
+    // dependsOn('cargoBuild')
     into smaliFolder.toString()
     from(projectDir) {
         include 'classes6.dex'
