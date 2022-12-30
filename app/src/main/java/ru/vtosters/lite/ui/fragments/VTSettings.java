@@ -64,7 +64,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
     public static String getTGSsumm() {
         if(Preferences.disableSettingsSumms()) return null;
 
-        return AndroidUtils.getString(R.string.vtltgssumm) + ": " + TelegramStickersService.getInstance(AndroidUtils.getGlobalContext()).getPacksListReference().size();
+        return AndroidUtils.getString(R.string.vtltgssumm) + ": " + TelegramStickersService.getInstance(AndroidUtils.getGlobalContext()).getActivePacksListReference().size();
     }
 
     public static String getProxysumm() {
