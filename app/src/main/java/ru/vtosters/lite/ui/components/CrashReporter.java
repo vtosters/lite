@@ -21,6 +21,7 @@ import java.io.StringWriter;
 
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
 import ru.vtosters.lite.services.LogWriterService;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class CrashReporter {
     protected static String logString;
@@ -41,7 +42,7 @@ public class CrashReporter {
         logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect().toDeviceName();
 
         if (Build.VERSION.SDK_INT >= 26) {
-            var notificationChannel = new NotificationChannel("crashes", "crash", NotificationManager.IMPORTANCE_DEFAULT);
+            var notificationChannel = new NotificationChannel("crashes", AndroidUtils.getString("crash_service_name"), NotificationManager.IMPORTANCE_DEFAULT);
             notificationChannel.enableVibration(true);
             notificationChannel.enableLights(true);
             ((NotificationManager) getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE)).createNotificationChannel(notificationChannel);
@@ -51,7 +52,7 @@ public class CrashReporter {
         foxbinIntent.putExtra("android.intent.extra.TEXT", logString);
         foxbinIntent.setType("text/plain");
         if (!isFoxbinInstalled()) {
-            foxbinIntent = new Intent("android.intent.action.VIEW");
+            foxbinIntent = new Intent(Intent.ACTION_VIEW);
             foxbinIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.f0x1d.dogbin"));
             foxbinIntent.addFlags(Intent.FLAG_ACTIVITY_NO_USER_ACTION);
         }

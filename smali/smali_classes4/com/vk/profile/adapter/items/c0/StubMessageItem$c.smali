@@ -18,7 +18,7 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Z)V
     .locals 2
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/ProfileHider;->getInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
+    invoke-static {p2}, Lru/vtosters/lite/ssfs/ProfileHider;->getInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -29,10 +29,6 @@
     invoke-static {p1}, Lcom/vk/common/links/LinkParser;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
-
-    const-string p2, "LinkParser.parseWiki(Lin\u2026account_admin_100_info)))"
-
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x0
 

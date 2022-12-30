@@ -191,7 +191,7 @@ public class DownloadUtils {
                     if (!file.exists()) {
                         return false;
                     }
-                    Intent intent = new Intent("android.intent.action.VIEW");
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                     var mimeType = FileUtils.f(file);
                     var uri = FileUtils.uriFromFile(file);
@@ -222,7 +222,7 @@ public class DownloadUtils {
             var mimeType = FileUtils.f(file);
             var uri = FileUtils.uriFromFile(file);
 
-            Intent intent = new Intent("android.intent.action.VIEW");
+            Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setDataAndType(uri, mimeType);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             Log.d("DownloadUtils", "openFile: " + file.getAbsolutePath() + "| mimetype " + mimeType + "| uri " + uri);

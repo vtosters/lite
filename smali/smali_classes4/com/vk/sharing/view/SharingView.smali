@@ -1269,6 +1269,14 @@
 
     iput-object v0, p0, Lcom/vk/sharing/view/SharingView;->i0:Landroid/view/View;
 
+    sget v1, Lb/h/z/b;->button_primary_background:I
+
+    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->getColorFromAttr(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
     .line 4
     iget-object v0, p0, Lcom/vk/sharing/view/SharingView;->i0:Landroid/view/View;
 
@@ -1365,6 +1373,14 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/sharing/view/SharingView;->g0:Landroid/view/View;
+
+    sget v1, Lb/h/z/b;->button_primary_background:I
+
+    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->getColorFromAttr(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/sharing/view/SharingView;->g0:Landroid/view/View;

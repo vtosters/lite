@@ -102,7 +102,7 @@ public class ThemesUtils {
 
     public static int getAccentColor() {
         var accent = AndroidUtils.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
-        return (accent == 0 || isMonetTheme()) ? getColorFromAttr(R.attr.accent) : accent;
+        return (accent == 0 || !isMilkshake()) || isMonetTheme() ? getColorFromAttr(R.attr.accent) : accent;
     } // Color accent
 
     public static int getMutedAccentColor() {
@@ -194,7 +194,7 @@ public class ThemesUtils {
     }
 
     public static int getMutedColor(int color) {
-        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), 0.5f);
+        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), (isMilkshake() ? 0.5f : isDarkTheme() ? 0.32f : 0.2f));
     }
 
     public static void setCustomAccentColor(int newColor, boolean async) {
@@ -239,12 +239,20 @@ public class ThemesUtils {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? isDarkTheme() ? View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
     }
 
+    public static int getStockAccent() {
+        if (isMilkshake()) {
+            return isDarkTheme() ? Color.parseColor("#71aaeb") : Color.parseColor("#3f8ae0");
+        } else {
+            return isDarkTheme() ? Color.parseColor("#71aaeb") : Color.parseColor("#528bcc");
+        }
+    }
+
     public static int getDarkThemeRes() {
         if (isMonetTheme()) {
             if (isAmoledTheme()) {
-                return isMilkshake() ? getIdentifier("VkMilkAmoledMonetStyle", "style"): getIdentifier("VkAmoledMonetStyle", "style");
+                return getIdentifier(isMilkshake() ? "VkMilkAmoledMonetStyle" : "VkAmoledMonetStyle", "style");
             } else {
-                return isMilkshake() ? getIdentifier("VkMilkDarkMonetStyle", "style"): getIdentifier("VkDarkMonetStyle", "style");
+                return getIdentifier(isMilkshake() ? "VkMilkDarkMonetStyle" : "VkDarkMonetStyle", "style");
             }
         } else {
             if (isAmoledTheme()) {
@@ -257,7 +265,7 @@ public class ThemesUtils {
 
     public static int getLightThemeRes() {
         if (isMonetTheme()) {
-            return isMilkshake() ? getIdentifier("VkMilkLightMonetStyle", "style"): getIdentifier("VkLightMonetStyle", "style");
+            return getIdentifier(isMilkshake() ? "VkMilkLightMonetStyle" : "VkLightMonetStyle", "style");
         } else {
             return isMilkshake() ? R.style.VkMilkLightStyle : R.style.VkLightStyle;
         }
@@ -314,7 +322,7 @@ public class ThemesUtils {
     }
 
     public static int fixSeparator(float f) {
-        if (f == 8.0f && isMonetTheme()) {
+        if (isMonetTheme()) {
             return 0;
         } else {
             return (int) Math.floor(f * Resources.getSystem().getDisplayMetrics().density);
@@ -326,13 +334,6 @@ public class ThemesUtils {
         int green = (int) ((Color.green(color) * (1 - factor) / 255 + factor) * 255);
         int blue = (int) ((Color.blue(color) * (1 - factor) / 255 + factor) * 255);
         return Color.argb(Color.alpha(color), red, green, blue);
-    }
-
-    public static int fixTextColor(int resid) {
-        if (resid == R.color.music_action_button_gray || resid == R.color.cool_grey || resid == R.color.accent_blue) {
-            return isDarkTheme() ? R.color.white : R.color.cool_grey;
-        }
-        return resid;
     }
 
     public static int halfAlpha(int src) {
@@ -348,10 +349,7 @@ public class ThemesUtils {
     }
 
     public static String getBackgroundStickers() {
-        if (WallpapersHooks.getWallpaper() != null) {
-            return "images_with_background";
-        }
-        return "images";
+        return WallpapersHooks.hasWallpapers() ? "images_with_background" : "images";
     }
 
     public static VKTheme getCurrentTheme() {
@@ -383,6 +381,18 @@ public class ThemesUtils {
         if (navbar()) {
             window.setNavigationBarColor(getTabbarBackground());
             window.getDecorView().setSystemUiVisibility(getNeededColorNavbar());
+        }
+    }
+
+    public static void setStatusBarColor(Window window) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (isDarkTheme()) {
+                View view = window.getDecorView();
+                view.setSystemUiVisibility(view.getSystemUiVisibility() & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            } else {
+                View view = window.getDecorView();
+                view.setSystemUiVisibility(view.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            }
         }
     }
 

@@ -30,7 +30,7 @@ public class WallpapersHooks {
     private static boolean mUpdateWallpaperRequested = true;
 
     public static void setBg(View view) {
-        if (getWallpaper() != null) {
+        if (hasWallpapers()) {
             ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
         } else {
             view.setBackgroundColor(ThemesUtils.getColorFromAttr(im_bg_chat)); // set default bg color

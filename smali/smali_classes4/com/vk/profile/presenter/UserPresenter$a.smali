@@ -101,16 +101,11 @@
 .method public final b(I)Z
     .locals 1
 
-    .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/presenter/UserPresenter$a;->a()Ljava/util/HashMap;
-
-    move-result-object v0
-
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-static {p1}, Lru/vtosters/lite/ssfs/ProfileHider;->isService(Ljava/lang/Integer;)Z
 
     move-result p1
 

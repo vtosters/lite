@@ -1,11 +1,5 @@
 package ru.vtosters.lite.ui.adapters;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
-
 import android.annotation.SuppressLint;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -14,19 +8,32 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
+import com.vk.core.dialogs.bottomsheet.ContentSnapStrategy1;
+import com.vk.core.dialogs.bottomsheet.ModalBottomSheet;
+import com.vk.core.util.ContextExtKt;
+import com.vk.core.util.DrawableUtils;
+import com.vk.sharing.Sharing;
+import com.vk.stickers.LongtapRecyclerView;
+import com.vk.stickers.bridge.GiftData;
+import com.vk.stickers.details.StickerDetailsAdapter;
+import com.vk.stickers.details.StickerDetailsView;
 import com.vtosters.lite.R;
+import org.json.JSONException;
+import ru.vtosters.lite.tgs.TGPref;
+import ru.vtosters.lite.tgs.TGRoot;
+import ru.vtosters.lite.ui.components.IItemMovingListener;
 
 import java.io.File;
+import java.util.ArrayList;
 
-import ru.vtosters.lite.tgs.TGPref;
-import ru.vtosters.lite.ui.components.IItemMovingListener;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getResources;
+import static ru.vtosters.lite.utils.ThemesUtils.*;
 
 public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.StickerPackViewHolder> implements IItemMovingListener {
     private static final TelegramStickersService sService = TelegramStickersService.getInstance(getGlobalContext());
@@ -108,10 +115,11 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             final TelegramStickersPack pack = sService.getPacksListReference().get(position);
             if (pack.state != TelegramStickersPack.DOWNLOADED) return;
 
+            File f = new File(pack.folder, "001.png");
+            var uri = Uri.parse("file://" + f.getAbsolutePath());
             try {
-                File f = new File(pack.folder, "001.png");
                 if (f.exists()) {
-                    mStickerPreview.setImageURI(Uri.parse("file://" + f.getAbsolutePath()));
+                    mStickerPreview.setImageURI(uri);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -129,7 +137,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             });
             mName.setText(pack.title);
             mSwitch.setChecked(pack.enabled);
-            mSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> sService.setPackEnabled(pack, isChecked, false));
+            mSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> sService.setPackEnabled(pack, isChecked, true));
             mStickersCount.setText(pack.stickersCount + " " + mStickersCount.getContext().getString(R.string.stickerscount));
 
             // Color костыль
@@ -138,6 +146,35 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
 
             mName.setTextColor(color);
             mStickersCount.setTextColor(secondary);
+
+            if (pack.state == TelegramStickersPack.DOWNLOADED)
+                mContainer.setOnClickListener(v -> {
+                    try {
+                        ViewGroup root = (ViewGroup) ContextExtKt.c(v.getContext()).inflate(R.layout.sticker_details_bottom_container, null);
+                        StickerDetailsView stickersDetailsView = new StickerDetailsView(v.getContext());
+
+                        stickersDetailsView.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
+                        stickersDetailsView.a(TGRoot.toStickerPack(pack), new GiftData(new ArrayList<>(), false), root);
+
+                        var recycler = (LongtapRecyclerView) stickersDetailsView.findViewById(R.id.recycler);
+                        ((StickerDetailsAdapter) recycler.getAdapter()).setTelegramPack(true);
+
+                        var builder = new ModalBottomSheet.a(v.getContext());
+                        builder.d(pack.title);
+                        builder.d(stickersDetailsView);
+                        builder.a(DrawableUtils.a(v.getContext(), R.drawable.share_outline_28, R.color.accent_blue));
+                        builder.c(R.attr.content_tint_background);
+                        builder.b(view -> {
+                            Sharing.a(view.getContext(), "https://t.me/addstickers/" + pack.id);
+                            return null;
+                        });
+                        builder.a(new ContentSnapStrategy1(false));
+
+                        builder.a("stickers_preview");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                });
         }
     }
 }

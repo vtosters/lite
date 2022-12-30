@@ -1,10 +1,7 @@
 package ru.vtosters.lite.tgs;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.dto.common.Attachment;
@@ -15,15 +12,15 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.attachments.PendingGraffitiAttachment;
 import com.vtosters.lite.im.AppAttachToImAttachConverter;
 import com.vtosters.lite.upload.Upload;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.List;
 import java.util.Stack;
 
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class TGRoot {
     public static final int N = 76820000;
@@ -101,7 +98,7 @@ public class TGRoot {
         }
     }
 
-    private static StickerStockItem toStickerPack(TelegramStickersPack p) throws JSONException {
+    public static StickerStockItem toStickerPack(TelegramStickersPack p) throws JSONException {
         JSONArray arr = new JSONArray();
 
         for (int j = 0; j < p.stickersCount; j++)

@@ -45,7 +45,7 @@ public class CatalogJsonInjector {
         var useOldAppVer = getBoolValue("useOldAppVer", false);
         var isUsersCatalog = oldItems.optJSONObject(0).optString("url").equals("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
 
-        if (oldItems != null && isUsersCatalog) {
+        if (isUsersCatalog) {
             var blocks = oldItems.optJSONObject(0).optJSONArray("blocks");
 
             if (!useOldAppVer) {
@@ -83,19 +83,6 @@ public class CatalogJsonInjector {
                 var albums = fetchCatalogId("https://vk.com/audio?section=albums");
                 if (albums != null) {
                     var catalogarr = albums.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
-
-                    var title = catalogarr.optString("title");
-                    var id = catalogarr.optString("id");
-                    var url = catalogarr.optString("url");
-
-                    if (dev()) Log.d("VKMusic", "Added " + title + " in music sections");
-
-                    oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
-                }
-
-                var recent = fetchCatalogId("https://vk.com/audio?section=recent");
-                if (recent != null) {
-                    var catalogarr = recent.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
 
                     var title = catalogarr.optString("title");
                     var id = catalogarr.optString("id");

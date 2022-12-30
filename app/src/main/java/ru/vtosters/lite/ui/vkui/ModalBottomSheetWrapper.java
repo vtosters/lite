@@ -30,7 +30,7 @@ public class ModalBottomSheetWrapper<T> {
             String text,
             Runnable callback
     ) {
-        mBuilder.a(text, kostil -> callback.run());
+        mBuilder.a(text, listener -> callback.run());
         return (T) this;
     }
 

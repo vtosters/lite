@@ -41,16 +41,14 @@ public class ThemesHacks {
     }
 
     public static int getHackedColor(@NonNull Context context, @ColorRes int color) {
-        if (ThemesCore.isCachedAccents() && ColorReferences.isAccentedColor(context.getColor(color))) {
+        if (ThemesCore.isCachedAccents() && ColorReferences.isAccentedColor(context.getResources().getColor(color))) {
             return ThemesUtils.getAccentColor();
         }
 
-        if (ThemesCore.isCachedAccents() && ColorReferences.isMutedAccentedColor(context.getColor(color))) {
+        if (ThemesCore.isCachedAccents() && ColorReferences.isMutedAccentedColor(context.getResources().getColor(color))) {
             return ThemesUtils.getMutedAccentColor();
         }
 
-        if (Build.VERSION.SDK_INT > 23) {
-            return context.getColor(color);
-        } else return context.getResources().getColor(color);
+        return Build.VERSION.SDK_INT > 23 ? context.getColor(color) : context.getResources().getColor(color);
     }
 }

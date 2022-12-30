@@ -9,8 +9,14 @@ import android.widget.EditText;
 
 class HexEdit {
 
-    private static InputFilter[] withoutAlphaDigits = {new ColorPasteLengthFilter()};
-    private static InputFilter[] withAlphaDigits = {new InputFilter.LengthFilter(8)};
+    private static InputFilter[] withoutAlphaDigits = {
+            new ColorPasteLengthFilter(),
+            new HexFilter()
+    };
+    private static InputFilter[] withAlphaDigits = {
+            new InputFilter.LengthFilter(8),
+            new HexFilter()
+    };
 
     public static void setUpListeners(final EditText hexEdit, final ObservableColor observableColor) {
 
@@ -93,4 +99,19 @@ class HexEdit {
         }
     }
 
+    private static class HexFilter implements InputFilter {
+
+        @Override
+        public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+            var state = true;
+            for (int i = start; i < end; i++) {
+                char ch = source.charAt(i);
+                if (ch < '0' || ch> '9' && ch < 'A' || ch > 'F' && ch < 'a' || ch > 'f') {
+                    state = false;
+                    break;
+                }
+            }
+            return state ? source.subSequence(start, end) : "";
+        }
+    }
 }

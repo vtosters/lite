@@ -1,40 +1,35 @@
 package ru.vtosters.lite.downloaders;
 
-import static ru.vtosters.lite.net.Request.makeRequest;
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.dialogs.bottomsheet.MenuBottomSheetAction;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.VideoFile;
 import com.vk.dto.stories.model.StoryEntry;
 import com.vtosters.lite.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.utils.ExternalLinkParser;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-import ru.vtosters.lite.utils.ExternalLinkParser;
-import ru.vtosters.lite.utils.LifecycleUtils;
+import static ru.vtosters.lite.net.Request.makeRequest;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 public class VideoDownloader {
     private static final int DOWNLOAD_ID = 0;
@@ -62,58 +57,60 @@ public class VideoDownloader {
     }
 
     public static void downloadVideo(VideoFile videoFile, Context context) {
-        final List<String> list = new ArrayList<>();
+        final List<String> qualities = new ArrayList<>();
         final List<String> urls = new ArrayList<>();
 
-        if (!Objects.equals(videoFile.e, "")) {
-            list.add("240p");
-            urls.add(videoFile.e);
-        }
-        if (!Objects.equals(videoFile.f, "")) {
-            list.add("360p");
-            urls.add(videoFile.f);
-        }
-        if (!Objects.equals(videoFile.g, "")) {
-            list.add("480p");
-            urls.add(videoFile.g);
-        }
-        if (!Objects.equals(videoFile.h, "")) {
-            list.add("720p");
-            urls.add(videoFile.h);
-        }
-        if (!Objects.equals(videoFile.B, "")) {
-            list.add("1080p");
-            urls.add(videoFile.B);
-        }
-        if (!Objects.equals(videoFile.C, "")) {
-            list.add("1440p");
-            urls.add(videoFile.C);
-        }
-        if (!Objects.equals(videoFile.D, "")) {
-            list.add("2160p");
+        if (!TextUtils.isEmpty(videoFile.D)) {
+            qualities.add("2160p");
             urls.add(videoFile.D);
         }
 
-        if (list.isEmpty()) {
-            ToastUtils.a(context.getString(R.string.videodownloaderr));
+        if (!TextUtils.isEmpty(videoFile.C)) {
+            qualities.add("1440p");
+            urls.add(videoFile.C);
+        }
+
+        if (!TextUtils.isEmpty(videoFile.B)) {
+            qualities.add("1080p");
+            urls.add(videoFile.B);
+        }
+
+        if (!TextUtils.isEmpty(videoFile.h)) {
+            qualities.add("720p");
+            urls.add(videoFile.h);
+        }
+        
+        if (!TextUtils.isEmpty(videoFile.g)) {
+            qualities.add("480p");
+            urls.add(videoFile.g);
+        }
+        
+        if (!TextUtils.isEmpty(videoFile.f)) {
+            qualities.add("360p");
+            urls.add(videoFile.f);
+        }
+        if (!TextUtils.isEmpty(videoFile.e)) {
+            qualities.add("240p");
+            urls.add(videoFile.e);
+        }
+
+        Context finalContext = context != null ? context : LifecycleUtils.getCurrentActivity();
+
+        if (qualities.isEmpty()) {
+            ToastUtils.a(finalContext.getString(R.string.videodownloaderr));
             return;
         }
 
-        var max = new String[list.size()];
-
-        for (int i = 0; i < list.size(); i++) {
-            max[i] = list.get(i);
-        }
-
-        final Context finalContext = context != null ? context : LifecycleUtils.getCurrentActivity();
-
-        var adapter = new ArrayAdapter(finalContext, android.R.layout.simple_list_item_1, max) {
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                TextView textView = (TextView) super.getView(position, convertView, parent);
-                textView.setTextColor(getTextAttr());
-                return textView;
-            }
+        var adapter = new ArrayAdapter(
+                finalContext,
+                android.R.layout.simple_list_item_1,
+                qualities.toArray(new String[0])) {
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent) {
+                        TextView textView = (TextView) super.getView(position, convertView, parent);
+                        textView.setTextColor(getTextAttr());
+                        return textView;
+                }
         };
 
         new VkAlertDialog.Builder(finalContext)

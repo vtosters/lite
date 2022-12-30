@@ -1,21 +1,25 @@
 package ru.vtosters.lite.themes.palettes;
 
+import android.os.Build;
 import android.os.Environment;
-
+import android.util.Log;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.themes.items.VTLPalette;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.IOUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.vtosters.lite.themes.items.VTLPalette;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.IOUtils;
+import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class PalettesManager {
 
@@ -40,6 +44,13 @@ public class PalettesManager {
         mPalettes.clear();
         if (!PALETTES_DIR.exists())
             PALETTES_DIR.mkdirs();
+
+        if (Build.VERSION.SDK_INT >= 23 && !Environment.getExternalStorageDirectory().canWrite()) {
+            makeText(getGlobalContext(), AndroidUtils.getString("cannot_write"), Toast.LENGTH_LONG).show();
+            LifecycleUtils.getCurrentActivity().requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
+            return;
+        }
+
         final var palettes = PALETTES_DIR.listFiles((dir, name) -> name.endsWith(".json"));
         if (palettes == null || palettes.length == 0)
             copyPaletteFromAssets();
@@ -67,8 +78,12 @@ public class PalettesManager {
 
     private void parsePalettes() {
         var arr = PALETTES_DIR.listFiles((dir, name) -> name.endsWith(".json"));
-        if (arr == null || arr.length == 0)
-            throw new RuntimeException("Can't load palettes");
+
+        if (arr == null || arr.length == 0) {
+            Log.d("PalettesManager", "arr.length null");
+            return;
+        }
+
         for (var file : arr) {
             try {
                 var json = new JSONObject(IOUtils.readAllLines(file));

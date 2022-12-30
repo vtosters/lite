@@ -912,16 +912,18 @@
 
     if-eqz p2, :cond_2
 
-    const-wide v0, 0xff518bccL
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+
+    move-result p2
 
     goto :goto_1
 
     :cond_2
     const-wide v0, 0xff909499L
 
-    :goto_1
     long-to-int p2, v0
 
+    :goto_1
     .line 22
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
 

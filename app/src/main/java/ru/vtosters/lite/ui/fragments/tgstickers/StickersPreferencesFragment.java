@@ -1,15 +1,13 @@
 package ru.vtosters.lite.ui.fragments.tgstickers;
 
 import android.os.Bundle;
-
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.tgs.TGRoot;
-import ru.vtosters.lite.ui.PreferencesUtil;
+import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 
 public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragment {
 
@@ -20,17 +18,17 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
         int vtosterXml = R.xml.empty;
         addPreferencesFromResource(vtosterXml);
 
-        PreferencesUtil.addPreferenceCategory(this, requireContext().getString(R.string.sprefsstickers));
-        PreferencesUtil.addPreference(this, "", requireContext().getString(R.string.sprefsdelkey), "", 0, preference -> {
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.sprefsstickers));
+        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", R.string.sprefsdelkey, 0, 0, preference -> {
             TGPref.setTGBotKey(null);
             ToastUtils.a(requireContext().getString(R.string.sprefsdelkey2));
             return false;
         });
 
-        PreferencesUtil.addPreferenceCategory(this, requireContext().getString(R.string.sprefsnetwork));
-        PreferencesUtil.addListPreference(this, "VTGS:CM", "0", requireContext().getString(R.string.sprefsctype), new CharSequence[]{
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.sprefsnetwork));
+        PreferenceFragmentUtils.addListPreference(getPreferenceScreen(), "VTGS:CM", "0", requireContext().getString(R.string.sprefsctype), new CharSequence[] {
                 requireContext().getString(R.string.ctypedirect), requireContext().getString(R.string.ctypesocks)
-        }, new String[]{
+        }, new String[] {
                 "0", "2"
         });
 
@@ -40,40 +38,40 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
             String newData = (String) o;
             TGPref.setTGConnectMethod(Integer.parseInt(newData));
             TelegramStickersGrabber.updateURLs();
-            preference.setTitle(TGRoot.getSummary()); // setTitle
+            preference.setTitle(TGRoot.getSummary());
             return true;
         });
 
-        PreferencesUtil.addPreferenceCategory(this, requireContext().getString(R.string.ssocks));
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.ssocks);
 
-        PreferencesUtil.addEditTextPreference(this, "tg_proxy_host", requireContext().getString(R.string.ssockshost), (preference, o) -> {
-            TGPref.setTGProxyIP((String) o);
+        PreferenceFragmentUtils.addEditTextPreference(getPreferenceScreen(), "tg_proxy_host", R.string.ssockshost, (preference, o) -> {
+            TGPref.setTGProxyIP(o);
             return true;
         });
-        PreferencesUtil.addEditTextPreference(this, "tg_proxy_port", requireContext().getString(R.string.ssocksport), (preference, o) -> {
+        PreferenceFragmentUtils.addEditTextPreference(getPreferenceScreen(), "tg_proxy_port", R.string.ssocksport, (preference, o) -> {
             try {
-                TGPref.setTGProxyPort(Integer.parseInt((String) o));
+                TGPref.setTGProxyPort(Integer.parseInt(o));
                 return true;
-            } catch (Exception e) {
+            } catch(Exception e) {
                 ToastUtils.a(requireContext().getString(R.string.ssockswport));
                 return false;
             }
         });
-        PreferencesUtil.addMaterialSwitchPreference(this, "tg_proxy_auth", requireContext().getString(R.string.ssocksauth), "", 0, false, (preference, o) -> {
+        PreferenceFragmentUtils.addMaterialSwitchPreference(getPreferenceScreen(), "tg_proxy_auth", requireContext().getString(R.string.ssocksauth), "", 0, false, (preference, o) -> {
             boolean value = (boolean) o;
 
-            findPreference("tg_proxy_login").setEnabled(value); // findPreference("tg_proxy_login").setEnabled(value);
-            findPreference("tg_proxy_pass").setEnabled(value); // findPreference("tg_proxy_pass").setEnabled(booleanValue);
+            findPreference("tg_proxy_login").setEnabled(value);
+            findPreference("tg_proxy_pass").setEnabled(value);
 
             TGPref.setTGProxyPassEnabled(value);
             return true;
         });
-        PreferencesUtil.addEditTextPreference(this, "tg_proxy_login", requireContext().getString(R.string.ssockslogin), (preference, o) -> {
-            TGPref.setTGProxyUserPass((String) o, TGPref.getTGProxyPass());
+        PreferenceFragmentUtils.addEditTextPreference(getPreferenceScreen(), "tg_proxy_login", R.string.ssockslogin, (preference, o) -> {
+            TGPref.setTGProxyUserPass(o, TGPref.getTGProxyPass());
             return true;
         });
-        PreferencesUtil.addEditTextPreference(this, "tg_proxy_pass", requireContext().getString(R.string.ssockspass), (preference, o) -> {
-            TGPref.setTGProxyUserPass(TGPref.getTGProxyUser(), (String) o);
+        PreferenceFragmentUtils.addEditTextPreference(getPreferenceScreen(), "tg_proxy_pass", R.string.ssockspass, (preference, o) -> {
+            TGPref.setTGProxyUserPass(TGPref.getTGProxyUser(), o);
             return true;
         });
 

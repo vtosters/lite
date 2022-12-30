@@ -1415,6 +1415,10 @@
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    const-string v1, "com.vtosters.lite.action.RELOAD_TGS_LIST"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
     const-string v1, "com.vkontakte.android.STICKERS_RELOADED"
 
     .line 9

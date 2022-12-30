@@ -622,7 +622,7 @@
 
     move-result-object v4
 
-    invoke-static {v1}, Lru/vtosters/lite/hooks/JsonInjectors;->convBar(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static {v1}, Lru/vtosters/lite/ssfs/ImBanner;->convBar(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v6
 
