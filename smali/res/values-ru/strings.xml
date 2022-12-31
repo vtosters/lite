@@ -6194,6 +6194,8 @@
     <string name="download_dl">Скачать диалог</string>
     <string name="download_dl_error">Произошла ошибка при попытке скачать диалог</string>
 
+    <string name="dialogstats">Статистика диалога</string>
+
     <string name="saved_as">Сохранено как</string>
     <string name="settings_reset_confirm">Вы действительно хотите сбросить настройки?</string>
     <string name="system_theme_warning">У вас включена системная тема \nПри переключении темы системная тема будет отключена \n\nВы действительно хотите отключить её?</string>

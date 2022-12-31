@@ -61,6 +61,7 @@ public class DNRInjector {
             return;
         }
 
+        list.add(DialogAction.STAT);
         list.add(DialogAction.DOWNLOAD);
 
         list.add(DialogAction.pinmsg);
@@ -86,6 +87,7 @@ public class DNRInjector {
     }
 
     public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap) {
+        hashMap.put(DialogAction.STAT, AndroidUtils.getIdentifier("dialogstats", "string"));
         hashMap.put(DialogAction.DOWNLOAD, R.string.download_dl);
 
         hashMap.put(DialogAction.DNR_ON, R.string.DNR_ON);
@@ -104,6 +106,8 @@ public class DNRInjector {
     @SuppressLint("ResourceType")
     public static List<Object> injectToList(List<Object> actions) {
         var list = new ArrayList<>(actions);
+
+        list.add(new DialogActionsListView.b.a(DialogAction.STAT, 1, R.attr.im_ic_info, AndroidUtils.getIdentifier("dialogstats", "string"))); // DialogAction, Int, Icon, String
         list.add(new DialogActionsListView.b.a(DialogAction.DOWNLOAD, 1, R.attr.im_ic_msgdl, R.string.download_dl)); // DialogAction, Int, Icon, String
 
         list.add(new DialogActionsListView.b.a(DialogAction.DNR_ON, 2, R.attr.im_ic_pinned_msg_hide, R.string.DNR_ON)); // DialogAction, Int, Icon, String
@@ -142,6 +146,8 @@ public class DNRInjector {
         if (peerId == 0) {
             return actions;
         }
+
+        actions.add(DialogAction.STAT);
 
         actions.add(DialogAction.DOWNLOAD);
 
@@ -185,6 +191,11 @@ public class DNRInjector {
         if (action == DialogAction.MARK_AS_READ) {
             DNRModule.hookRead(dialog);
             forceInvalidateDialogActions(dialog);
+        }
+
+        if (action == DialogAction.STAT) {
+            DNRModule.hookDialogInfo(dialog);
+            return true;
         }
 
         if (action == DialogAction.DOWNLOAD) {
