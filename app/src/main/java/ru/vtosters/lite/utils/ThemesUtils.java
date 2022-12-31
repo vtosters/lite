@@ -6,6 +6,7 @@ import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.Log;
@@ -115,7 +116,7 @@ public class ThemesUtils {
             view.setHighlightColor(ThemesUtils.getMutedAccentColor());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                view.getTextCursorDrawable().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+                view.getTextCursorDrawable().setColorFilter(new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN));
             } else if (!OEMDetector.isMIUI()) {
                 Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
                 field.setAccessible(true);
@@ -146,9 +147,9 @@ public class ThemesUtils {
     public static void colorHandles(TextView view) {
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                view.getTextSelectHandle().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
-                view.getTextSelectHandleRight().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
-                view.getTextSelectHandleLeft().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+                view.getTextSelectHandle().setColorFilter(new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN));
+                view.getTextSelectHandleRight().setColorFilter(new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN));
+                view.getTextSelectHandleLeft().setColorFilter(new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN));
             } else if (!OEMDetector.isMIUI()) {
                 Field editorField = TextView.class.getDeclaredField("mEditor");
 
