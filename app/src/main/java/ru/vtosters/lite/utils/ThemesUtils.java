@@ -190,6 +190,7 @@ public class ThemesUtils {
                 }
             }
         } catch (Exception ignored) {
+            Log.e("ThemesUtils", "colorHandles: ", ignored);
         }
     }
 

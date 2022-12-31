@@ -38,8 +38,9 @@ public class About {
     }
 
     public static String getBuild(Context context, String name) {
-        try {
-            Scanner scanner = new Scanner(context.getAssets().open(name));
+        try (
+            Scanner scanner = new Scanner(context.getAssets().open(name))
+        ) {
             while (scanner.hasNextLine()) {
                 String line = scanner.findInLine("VERSION_BUILD=.+");
                 if (line != null)
