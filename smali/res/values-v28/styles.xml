@@ -161,6 +161,7 @@
         <item name="im_ic_write_msg">@drawable/ic_add_24</item>
         <item name="im_ic_msgreload">@drawable/ic_camera_switch_48</item>
         <item name="im_ic_msgdl">@drawable/ic_download_24</item>
+        <item name="im_ic_stats">@drawable/ic_statistics_outline_28</item>
         <item name="im_msg_avatar_margin_top">1.0dip</item>
         <item name="im_msg_box_margin_start_no_avatar">6.0dip</item>
         <item name="im_msg_box_margin_start_with_avatar">6.0dip</item>
@@ -236,6 +237,7 @@
         <item name="im_ic_write_msg">@drawable/ic_add_24</item>
         <item name="im_ic_msgreload">@drawable/ic_camera_switch_48</item>
         <item name="im_ic_msgdl">@drawable/ic_download_24</item>
+        <item name="im_ic_stats">@drawable/ic_statistics_outline_28</item>
         <item name="im_msg_avatar_margin_top">3.0dip</item>
         <item name="im_msg_box_margin_start_no_avatar">0.0dip</item>
         <item name="im_msg_box_margin_start_with_avatar">8.0dip</item>

@@ -107,7 +107,7 @@ public class DNRInjector {
     public static List<Object> injectToList(List<Object> actions) {
         var list = new ArrayList<>(actions);
 
-        list.add(new DialogActionsListView.b.a(DialogAction.STAT, 1, R.attr.im_ic_info, AndroidUtils.getIdentifier("dialogstats", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.STAT, 1, AndroidUtils.getIdentifier("im_ic_stats", "attr"), AndroidUtils.getIdentifier("dialogstats", "string"))); // DialogAction, Int, Icon, String
         list.add(new DialogActionsListView.b.a(DialogAction.DOWNLOAD, 1, R.attr.im_ic_msgdl, R.string.download_dl)); // DialogAction, Int, Icon, String
 
         list.add(new DialogActionsListView.b.a(DialogAction.DNR_ON, 2, R.attr.im_ic_pinned_msg_hide, R.string.DNR_ON)); // DialogAction, Int, Icon, String
