@@ -158,14 +158,16 @@ public class CategorizedAdapter< T > extends RecyclerView.Adapter< CategorizedAd
     @Override
     public void onItemDismiss(int index) {
         if(getItemViewType(index) == MOVING_ITEM) {
+            int to;
             if(getTabType(index) == SELECTED_STATE) {
                 mDisabledItems.add(0, mSelectedItems.remove(index - 1));
-                notifyItemMoved(index, mSelectedItems.size() + 1);
+                to = mSelectedItems.size() + 2;
             } else {
                 mSelectedItems.add(0, mDisabledItems.remove(index - mSelectedItems.size() - 2));
-                notifyItemRemoved(index);
-                notifyItemInserted(1); // first element is the title
+                to = 1;
             }
+            notifyItemRemoved(index);
+            notifyItemInserted(to);
         }
     }
 
