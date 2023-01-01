@@ -259,6 +259,10 @@ public class DNRInjector {
             DNRModule.hookRead(dialog);
         }
 
+        if (action == DialogAction.STAT) {
+            DNRModule.hookDialogInfo(dialog);
+            return true;
+        }
         if (action == DialogAction.DOWNLOAD) {
             File out = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), peerId + "-dialog.html");
             try {
