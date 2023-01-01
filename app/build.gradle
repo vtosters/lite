@@ -156,6 +156,14 @@ task buildAndLaunchVTL(type: Exec) {
         commandLine 'adb', 'shell', 'monkey', '-p', 'com.vtosters.lite', '-c', 'android.intent.category.LAUNCHER', '1'
 }
 
+task generateRjava(type: Exec) {
+    workingDir(projectDir.parentFile)
+    if (Os.isFamily("unix") || Os.isFamily("mac"))
+        commandLine "bash", "-c", "./scripts/rclass_regenerator.sh"
+    else
+        commandLine "cmd", "/C", ".\\scripts\\rclass_regenerator.sh"
+}
+
 exportDex.dependsOn('assembleRelease')
 clean.dependsOn('cleanVersionFile')
 versionFile.dependsOn('cleanVersionFile')

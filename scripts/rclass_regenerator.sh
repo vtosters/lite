@@ -6,7 +6,7 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 
 echo -e "${BOLD}${UNDERLINE}Decompile release APK...${NC}\n"
-java -jar ./apktool.jar d ./VTLite.apk -f -o ./tmp -s --use-aapt2 -p ./framework/
+java -jar ./scripts/apktool.jar d ./scripts/VTLite.apk -f -o ./scripts/tmp -s --use-aapt2 -p ./scripts/framework/
 if [ $? -eq 0 ]; then
 	echo -e "${GREEN}Успех!${NC}\n"
 else
@@ -15,7 +15,7 @@ else
 fi
 
 echo -e "${BOLD}${UNDERLINE}Regenerate R.java file...${NC}\n"
-java -jar ./rclass-generator.jar -f ./tmp/res/values/public.xml -o ../app/src/main/java/com/vtosters/lite/R.java -p com.vtosters.lite --comments
+java -jar ./scripts/rclass-generator.jar -f ./scripts/tmp/res/values/public.xml -o ./app/src/main/java/com/vtosters/lite/R.java -p com.vtosters.lite --comments
 if [ $? -eq 0 ]; then
 	echo -e "${GREEN}Успех!${NC}\n"
 else
@@ -24,7 +24,7 @@ else
 fi
 
 echo -e "${BOLD}${UNDERLINE}Clean temp dir...${NC}\n"
-rm -rf ./tmp
+rm -rf ./scripts/tmp
 if [ $? -eq 0 ]; then
 	echo -e "${GREEN}Успех!${NC}\n"
 else
