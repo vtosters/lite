@@ -1,18 +1,16 @@
 package ru.vtosters.lite.ui.components;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
-
 import android.os.Build;
-
 import com.vtosters.lite.R;
+import ru.vtosters.lite.ui.items.SuperAppItem;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import ru.vtosters.lite.ui.items.SuperAppItem;
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
 public class SuperAppEditorManager {
 
@@ -43,13 +41,9 @@ public class SuperAppEditorManager {
             mSelectedItems.add(getItemByTag(tag));
             allTags.remove(tag);
         }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            allTags.forEach(tag -> mDisabledItems.add(getItemByTag(tag)));
-        } else {
-            for (String tag : allTags) {
-                mDisabledItems.add(getItemByTag(tag));
-            }
-        }
+
+        for (String tag : allTags)
+            mDisabledItems.add(getItemByTag(tag));
     }
 
     public void save() {
