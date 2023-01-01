@@ -102,12 +102,12 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             super(view);
 
             mContainer = (LinearLayout) view;
-            mSwitch = view.findViewWithTag("choose_btn");
-            mStickerPreview = view.findViewWithTag("photo");
-            mUpdateButton = view.findViewWithTag("button_update");
-            mDeleteButton = view.findViewWithTag("action_delete");
-            mName = view.findViewWithTag("vkim_cancel");
-            mStickersCount = view.findViewWithTag("vkim_cancel_label_text");
+            mSwitch = view.findViewById(R.id.choose_btn);
+            mStickerPreview = view.findViewById(R.id.photo);
+            mUpdateButton = view.findViewById(R.id.button_update);
+            mDeleteButton = view.findViewById(R.id.action_delete);
+            mName = view.findViewById(R.id.vkim_cancel);
+            mStickersCount = view.findViewById(R.id.vkim_cancel_label_text);
         }
 
         @SuppressLint("SetTextI18n")

@@ -1,15 +1,5 @@
 package ru.vtosters.lite.ui.components;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
-import static ru.vtosters.lite.utils.Preferences.superapp;
-import static ru.vtosters.lite.utils.Preferences.useNewSettings;
-import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
-
-import android.os.Build;
-
 import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
@@ -34,22 +24,31 @@ import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideoCatalogFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
+import ru.vtosters.lite.ui.items.DockBarTab;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import ru.vtosters.lite.ui.items.DockBarTab;
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 public class DockBarEditorManager {
     public static final int MIN_SELECTED_TABS = 3;
     public static final int MAX_SELECTED_TABS = 9;
+
+    private static final List< String > ALL_TAGS = Arrays.asList(
+            "tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
+            "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos",
+            "tab_lives", "tab_games", "tab_liked", "tab_fave", "tab_documents",
+            "tab_payments", "tab_vk_apps", "tab_settings");
+
     private static DockBarEditorManager sInstance;
-    private final List<DockBarTab> mSelectedTabs = new ArrayList<>();
-    private final List<DockBarTab> mDisabledTabs = new ArrayList<>();
+    private final List< DockBarTab > mSelectedTabs = new ArrayList<>();
+    private final List< DockBarTab > mDisabledTabs = new ArrayList<>();
 
     public DockBarEditorManager() {
         init();
@@ -62,10 +61,10 @@ public class DockBarEditorManager {
     }
 
     private void init() {
-        if (vkme()) {
+        if(vkme()) {
             mSelectedTabs.add(getTabByTag("tab_settings"));
-            if (vkme_notifs()) {
-                if (milkshake()) {
+            if(vkme_notifs()) {
+                if(milkshake()) {
                     mSelectedTabs.add(getTabByTag("tab_feedback"));
                 } else {
                     mSelectedTabs.add(getTabByTag("tab_friends"));
@@ -78,44 +77,36 @@ public class DockBarEditorManager {
 
         checkOldConfig();
 
-        String[] selectedTabsTags = getPreferences().getString("dockbar_tabs", "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
+        var selectedTabsTags = getPreferences()
+                .getString("dockbar_tabs",
+                        "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
                 .split(",");
         parseSelectedTabs(selectedTabsTags);
     }
 
     private void checkOldConfig() {
         File config = new File(getGlobalContext().getFilesDir(), "dockbar.json");
-        if (config.exists()) config.deleteOnExit();
+        if(config.exists()) config.deleteOnExit();
     }
 
     private void parseSelectedTabs(String[] selectedTabsTags) {
-        List<String> allTags = new ArrayList<>(Arrays.asList("tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
-                "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos", "tab_lives", "tab_games", "tab_liked",
-                "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings"));
+        var allTags = new ArrayList<>(ALL_TAGS);
 
-        for (String tag : selectedTabsTags) {
+        for(String tag : selectedTabsTags) {
             mSelectedTabs.add(getTabByTag(tag));
             allTags.remove(tag);
         }
 
-        for (String tag : allTags) {
+        for(String tag : allTags) {
             mDisabledTabs.add(getTabByTag(tag));
         }
     }
 
     public void save() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream()
-                            .map(tab -> tab.tag)
-                            .collect(Collectors.joining(",")))
-                    .commit();
-        } else {
-            StringBuilder sb = new StringBuilder();
-            for (DockBarTab tab : mSelectedTabs) {
-                sb.append(tab.tag).append(",");
-            }
-            getPreferences().edit().putString("dockbar_tabs", sb.toString()).commit();
-        }
+        var sb = new StringBuilder();
+        for(DockBarTab tab : mSelectedTabs)
+            sb.append(tab.tag).append(",");
+        getPreferences().edit().putString("dockbar_tabs", sb.toString()).commit();
     }
 
     public void reset() {
@@ -125,16 +116,16 @@ public class DockBarEditorManager {
                 .commit();
     }
 
-    public List<DockBarTab> getSelectedTabs() {
+    public List< DockBarTab > getSelectedTabs() {
         return mSelectedTabs;
     }
 
-    public List<DockBarTab> getDisabledTabs() {
+    public List< DockBarTab > getDisabledTabs() {
         return mDisabledTabs;
     }
 
     private DockBarTab getTabByTag(String tag) {
-        switch (tag) {
+        switch(tag) {
             case "tab_news":
                 return DockBarTab.valuesOf(
                         "tab_news",
