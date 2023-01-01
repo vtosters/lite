@@ -81,6 +81,7 @@ public class CategorizedAdapter< T > extends RecyclerView.Adapter< CategorizedAd
         FrameLayout container = new FrameLayout(getGlobalContext());
         container.addView(newCategoryTitle(), LayoutUtils.createFrame(-1, -2));
         container.addView(newMovingItem(), LayoutUtils.createFrame(-1, -2));
+        container.setLayoutParams(LayoutUtils.createFrame(-1, -2));
         return new CategorizedViewHolder(container);
     }
 
