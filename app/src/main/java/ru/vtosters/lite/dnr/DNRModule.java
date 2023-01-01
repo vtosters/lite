@@ -79,15 +79,14 @@ public class DNRModule {
     }
 
     public static void hookDialogInfo(Dialog dialog) {
-        new WebViewFragment.g(
-                "https://vkscripts.ru/run/i/" +
+        AndroidUtils.openWebView("https://vkscripts.ru/run/i/" +
                 AccountManagerUtils.getUserToken() +
                 "?peer_id=" +
                 dialog.getId() +
                 "&lang=" +
                 LangUtils.a() +
                 "&color=" +
-                ThemesUtils.hexx(ThemesUtils.getAccentColor())).l().m().h().j().a(LifecycleUtils.getCurrentActivity());
+                ThemesUtils.hexx(ThemesUtils.getAccentColor()), LifecycleUtils.getCurrentActivity());
     }
 
     public static void hookDNR(int peerId) {
