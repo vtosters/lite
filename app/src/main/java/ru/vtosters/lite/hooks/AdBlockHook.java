@@ -231,10 +231,14 @@ public class AdBlockHook {
                     continue;
                 }
 
-                if (NewsFeedFiltersUtils.injectFiltersReposts(list) && !isWhitelistedFilters(list)) {
-                    if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: repost ad");
-                    continue;
+                try {
+                    if (NewsFeedFiltersUtils.injectFiltersReposts(list) && !isWhitelistedFilters(list)) {
+                        if (dev())
+                            Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: repost ad");
+                        continue;
+                    }
+                } catch (Exception ex) {
+                    Log.d("RepostInj", ex.getMessage());
                 }
 
                 newItems.put(list);

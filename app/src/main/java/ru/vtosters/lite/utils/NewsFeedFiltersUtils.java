@@ -135,7 +135,6 @@ public class NewsFeedFiltersUtils {
                 }
             }
 
-
             if (mFiltersLinks != null) {
                 for (String filter : mFiltersLinks) {
                     if (copyrightLink != null && copyrightLink.contains(filter)) return true;

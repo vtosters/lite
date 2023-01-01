@@ -36,6 +36,7 @@ public class Preferences {
 
         GmsUtils.fixGapps();
         setProxy();
+        setupFilters();
         VTVerifications.load(application);
         LifecycleUtils.registerActivities(application);
     } // VK Init
