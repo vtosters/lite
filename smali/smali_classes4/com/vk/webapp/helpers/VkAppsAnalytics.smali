@@ -291,6 +291,8 @@
 .method public final a(Ljava/lang/String;)V
     .locals 4
 
+    return-void
+
     .line 6
     iget-object v0, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->c:Ljava/util/List;
 
@@ -309,6 +311,8 @@
 
 .method public final a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
+
+    return-void
 
     .line 7
     iget-object v0, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->c:Ljava/util/List;
