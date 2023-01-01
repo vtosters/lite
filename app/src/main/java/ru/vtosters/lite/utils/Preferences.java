@@ -18,6 +18,7 @@ import android.os.Build;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
 
+import android.util.Log;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 
@@ -352,5 +353,15 @@ public class Preferences {
             return 100;
         }
         return origquality;
+    }
+
+    public static String photoQuality(String url) {
+        if (dev()) Log.d("PhotoQuality", url);
+
+        if (url.contains("quality=") && !url.contains("quality=100") && !getBoolValue("compressPhotos", true)) {
+            url = url.replaceAll("quality=\\d+", "quality=99");
+        }
+
+        return url;
     }
 }
