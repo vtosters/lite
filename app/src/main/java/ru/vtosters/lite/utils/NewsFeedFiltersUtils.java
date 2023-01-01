@@ -79,7 +79,7 @@ public class NewsFeedFiltersUtils {
     } // Get needed filter list from assets
 
     public static boolean injectFiltersReposts(JSONObject obj) throws JSONException {
-        if (getBoolValue("cringerepost", false) && obj.has("copy_history")) {
+        if (obj.has("copy_history")) {
             var copyHistoryNode = obj.optJSONArray("copy_history");
             if (copyHistoryNode != null && copyHistoryNode.length() != 0) {
                 for (int i = 0; i < copyHistoryNode.length(); i++) {
@@ -96,7 +96,7 @@ public class NewsFeedFiltersUtils {
                         return true;
                     }
 
-                    if (mFiltersLinks != null) {
+                    if (mFiltersLinks != null && getBoolValue("cringerepost", false)) {
                         for (String filter : mFiltersLinks) {
                             if (text.contains(filter)) {
                                 if (dev())
