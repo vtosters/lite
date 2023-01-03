@@ -360,7 +360,11 @@ public class Preferences {
         if (dev()) Log.d("PhotoQuality", url);
 
         if (url.contains("quality=") && !url.contains("quality=100") && !getBoolValue("compressPhotos", true)) {
-            url = url.replaceAll("quality=\\d+", "quality=99");
+            if (url.contains("quality=95")) {
+                url = url.replace("quality=95", "quality=99");
+            } else {
+                url = url.replace("quality=96", "quality=99");
+            }
         }
 
         return url;

@@ -63,14 +63,12 @@ public class NewsFeedFiltersUtils {
         if (getBoolValue(boolname, false)) {
             try {
                 Scanner scanner;
-                if (ctx != null) {
-                    scanner = new Scanner(ctx.getAssets().open(filename));
+                scanner = new Scanner(ctx.getAssets().open(filename));
 
-                    while (scanner.hasNextLine()) {
-                        var line = scanner.nextLine();
-                        if (!line.isEmpty())
-                            list.add(line.toLowerCase());
-                    }
+                while (scanner.hasNextLine()) {
+                    var line = scanner.nextLine();
+                    if (!line.isEmpty())
+                        list.add(line.toLowerCase());
                 }
             } catch (IOException e) {
                 Log.d("NewsFeedFiltersUtils", e.getMessage());
