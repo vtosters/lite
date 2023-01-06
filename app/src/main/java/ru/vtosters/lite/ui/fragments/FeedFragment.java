@@ -70,14 +70,18 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
             NewsfeedListManager.callEditorPopup(getActivity());
             return true;
         });
+
         var str = getDefaultPrefs().getString("news_feed_selected_items", "");
         findPreference("newsfeedlistmanager").setSummary(
                 String.format(requireContext().getString(R.string.feed_hidden), (!TextUtils.isEmpty(str) ? str.split(",").length : 0))
         );
+
         findPreference("newsfeedlistmanager_reset").setOnPreferenceClickListener(preference -> {
             NewsfeedListManager.resetHideItems();
             return true;
         });
+
+        findPreference("feedcache").setVisible(!getPrefsValue("newsupdate").equals("no_update"));
     }
 
     private String count(String text) {
