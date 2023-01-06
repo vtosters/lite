@@ -3,233 +3,233 @@
     <module name="">
         <language>
             <entry
-                key="af"
-                split="" />
+                    key="af"
+                    split=""/>
             <entry
-                key="am"
-                split="" />
+                    key="am"
+                    split=""/>
             <entry
-                key="ar"
-                split="" />
+                    key="ar"
+                    split=""/>
             <entry
-                key="as"
-                split="" />
+                    key="as"
+                    split=""/>
             <entry
-                key="az"
-                split="" />
+                    key="az"
+                    split=""/>
             <entry
-                key="be"
-                split="" />
+                    key="be"
+                    split=""/>
             <entry
-                key="bg"
-                split="" />
+                    key="bg"
+                    split=""/>
             <entry
-                key="bn"
-                split="" />
+                    key="bn"
+                    split=""/>
             <entry
-                key="bs"
-                split="" />
+                    key="bs"
+                    split=""/>
             <entry
-                key="ca"
-                split="" />
+                    key="ca"
+                    split=""/>
             <entry
-                key="cs"
-                split="" />
+                    key="cs"
+                    split=""/>
             <entry
-                key="da"
-                split="" />
+                    key="da"
+                    split=""/>
             <entry
-                key="de"
-                split="" />
+                    key="de"
+                    split=""/>
             <entry
-                key="el"
-                split="" />
+                    key="el"
+                    split=""/>
             <entry
-                key="en"
-                split="" />
+                    key="en"
+                    split=""/>
             <entry
-                key="es"
-                split="" />
+                    key="es"
+                    split=""/>
             <entry
-                key="et"
-                split="" />
+                    key="et"
+                    split=""/>
             <entry
-                key="eu"
-                split="" />
+                    key="eu"
+                    split=""/>
             <entry
-                key="fa"
-                split="" />
+                    key="fa"
+                    split=""/>
             <entry
-                key="fi"
-                split="" />
+                    key="fi"
+                    split=""/>
             <entry
-                key="fr"
-                split="" />
+                    key="fr"
+                    split=""/>
             <entry
-                key="gl"
-                split="" />
+                    key="gl"
+                    split=""/>
             <entry
-                key="gu"
-                split="" />
+                    key="gu"
+                    split=""/>
             <entry
-                key="hi"
-                split="" />
+                    key="hi"
+                    split=""/>
             <entry
-                key="hr"
-                split="" />
+                    key="hr"
+                    split=""/>
             <entry
-                key="hu"
-                split="" />
+                    key="hu"
+                    split=""/>
             <entry
-                key="hy"
-                split="" />
+                    key="hy"
+                    split=""/>
             <entry
-                key="in"
-                split="" />
+                    key="in"
+                    split=""/>
             <entry
-                key="is"
-                split="" />
+                    key="is"
+                    split=""/>
             <entry
-                key="it"
-                split="" />
+                    key="it"
+                    split=""/>
             <entry
-                key="iw"
-                split="" />
+                    key="iw"
+                    split=""/>
             <entry
-                key="ja"
-                split="" />
+                    key="ja"
+                    split=""/>
             <entry
-                key="ka"
-                split="" />
+                    key="ka"
+                    split=""/>
             <entry
-                key="kk"
-                split="" />
+                    key="kk"
+                    split=""/>
             <entry
-                key="km"
-                split="" />
+                    key="km"
+                    split=""/>
             <entry
-                key="kn"
-                split="" />
+                    key="kn"
+                    split=""/>
             <entry
-                key="ko"
-                split="" />
+                    key="ko"
+                    split=""/>
             <entry
-                key="ky"
-                split="" />
+                    key="ky"
+                    split=""/>
             <entry
-                key="kz"
-                split="" />
+                    key="kz"
+                    split=""/>
             <entry
-                key="lo"
-                split="" />
+                    key="lo"
+                    split=""/>
             <entry
-                key="lt"
-                split="" />
+                    key="lt"
+                    split=""/>
             <entry
-                key="lv"
-                split="" />
+                    key="lv"
+                    split=""/>
             <entry
-                key="mk"
-                split="" />
+                    key="mk"
+                    split=""/>
             <entry
-                key="ml"
-                split="" />
+                    key="ml"
+                    split=""/>
             <entry
-                key="mn"
-                split="" />
+                    key="mn"
+                    split=""/>
             <entry
-                key="mr"
-                split="" />
+                    key="mr"
+                    split=""/>
             <entry
-                key="ms"
-                split="" />
+                    key="ms"
+                    split=""/>
             <entry
-                key="my"
-                split="" />
+                    key="my"
+                    split=""/>
             <entry
-                key="nb"
-                split="" />
+                    key="nb"
+                    split=""/>
             <entry
-                key="ne"
-                split="" />
+                    key="ne"
+                    split=""/>
             <entry
-                key="nl"
-                split="" />
+                    key="nl"
+                    split=""/>
             <entry
-                key="no"
-                split="" />
+                    key="no"
+                    split=""/>
             <entry
-                key="or"
-                split="" />
+                    key="or"
+                    split=""/>
             <entry
-                key="pa"
-                split="" />
+                    key="pa"
+                    split=""/>
             <entry
-                key="pl"
-                split="" />
+                    key="pl"
+                    split=""/>
             <entry
-                key="pt"
-                split="" />
+                    key="pt"
+                    split=""/>
             <entry
-                key="ro"
-                split="" />
+                    key="ro"
+                    split=""/>
             <entry
-                key="ru"
-                split="" />
+                    key="ru"
+                    split=""/>
             <entry
-                key="si"
-                split="" />
+                    key="si"
+                    split=""/>
             <entry
-                key="sk"
-                split="" />
+                    key="sk"
+                    split=""/>
             <entry
-                key="sl"
-                split="" />
+                    key="sl"
+                    split=""/>
             <entry
-                key="sq"
-                split="" />
+                    key="sq"
+                    split=""/>
             <entry
-                key="sr"
-                split="" />
+                    key="sr"
+                    split=""/>
             <entry
-                key="sv"
-                split="" />
+                    key="sv"
+                    split=""/>
             <entry
-                key="sw"
-                split="" />
+                    key="sw"
+                    split=""/>
             <entry
-                key="ta"
-                split="" />
+                    key="ta"
+                    split=""/>
             <entry
-                key="te"
-                split="" />
+                    key="te"
+                    split=""/>
             <entry
-                key="th"
-                split="" />
+                    key="th"
+                    split=""/>
             <entry
-                key="tl"
-                split="" />
+                    key="tl"
+                    split=""/>
             <entry
-                key="tr"
-                split="" />
+                    key="tr"
+                    split=""/>
             <entry
-                key="uk"
-                split="" />
+                    key="uk"
+                    split=""/>
             <entry
-                key="ur"
-                split="" />
+                    key="ur"
+                    split=""/>
             <entry
-                key="uz"
-                split="" />
+                    key="uz"
+                    split=""/>
             <entry
-                key="vi"
-                split="" />
+                    key="vi"
+                    split=""/>
             <entry
-                key="zh"
-                split="" />
+                    key="zh"
+                    split=""/>
             <entry
-                key="zu"
-                split="" />
+                    key="zu"
+                    split=""/>
         </language>
     </module>
 </splits>
