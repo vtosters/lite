@@ -176,6 +176,10 @@
     .line 16
     invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/Preferences;->photoQuality(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
     .line 17
     iput-object p1, p0, Lcom/vk/dto/common/ImageSize;->a:Ljava/lang/String;
 
@@ -265,6 +269,10 @@
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lru/vtosters/lite/utils/Preferences;->photoQuality(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

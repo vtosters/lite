@@ -40,6 +40,14 @@
 
     move-result-object p1
 
+    const-string v0, "com.vtosters.lite.action.RELOAD_TGS_LIST"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p2

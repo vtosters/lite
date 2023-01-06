@@ -36,5 +36,6 @@ public enum DialogAction {
     unpinmsg,
     ENCRYPT_SETT,
     ENCRYPT,
-    DOWNLOAD
+    DOWNLOAD,
+    STAT
 }

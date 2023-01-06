@@ -1,9 +1,8 @@
-import java.nio.file.Files
+import org.apache.tools.ant.taskdefs.condition.Os
+
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
 import java.util.zip.ZipInputStream
-import org.apache.tools.ant.taskdefs.condition.Os
-
 
 plugins {
     id 'com.android.application'
@@ -147,6 +146,22 @@ task buildAndInstallVTL(type: Exec) {
     } else {
         commandLine 'adb', 'install', 'VTLite.apk'
     }
+}
+
+task buildAndLaunchVTL(type: Exec) {
+    dependsOn('buildAndInstallVTL')
+    if (Os.isFamily("unix") || Os.isFamily("mac"))
+        commandLine 'bash', '-c', 'adb shell monkey -p com.vtosters.lite -c android.intent.category.LAUNCHER 1'
+    else
+        commandLine 'adb', 'shell', 'monkey', '-p', 'com.vtosters.lite', '-c', 'android.intent.category.LAUNCHER', '1'
+}
+
+task generateRjava(type: Exec) {
+    workingDir(projectDir.parentFile)
+    if (Os.isFamily("unix") || Os.isFamily("mac"))
+        commandLine "bash", "-c", "./scripts/rclass_regenerator.sh"
+    else
+        commandLine "cmd", "/C", ".\\scripts\\rclass_regenerator.sh"
 }
 
 exportDex.dependsOn('assembleRelease')

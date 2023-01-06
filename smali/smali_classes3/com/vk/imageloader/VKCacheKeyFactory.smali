@@ -219,6 +219,10 @@
 
     move-result-object v0
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/Preferences;->photoQuality(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     .line 5
     iget-object v1, p0, Lcom/vk/imageloader/VKCacheKeyFactory;->b:Ljava/util/regex/Pattern;
 

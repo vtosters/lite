@@ -11,6 +11,7 @@ import android.os.Build;
 
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
+import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -21,6 +22,7 @@ public class MainActivityInjector {
     public static void inject(Activity activity) {
         setNeededTheme(activity);
         sendRequest();
+        UsersList.getUsersList();
         if (checkupdates()) OTADialog.checkUpdates(activity);
         VTExecutors.getIoScheduler().a(DeletedMessagesHandler::reloadMessagesList); // ioScheduler
         Start.alert(activity);

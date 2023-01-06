@@ -38,6 +38,8 @@
 .method public run()V
     .locals 4
 
+    return-void
+
     .line 1
     iget-object v0, p0, Lcom/vk/masks/MasksAnalytics$a;->a:Lcom/vk/masks/MasksAnalytics;
 

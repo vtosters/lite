@@ -16,8 +16,17 @@
 
 # direct methods
 .method public static synthetic a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;Ljava/lang/String;Lcom/vk/im/engine/models/dialogs/ConversationBar$ButtonType;ILjava/lang/Object;)V
-    .locals 0
+    .locals 1
 
+    invoke-static {}, Lru/vtosters/lite/ssfs/ImBanner;->showAlert()Z
+
+    move-result v0
+
+    if-nez v0, :cond_228
+
+    return-void
+
+    :cond_228
     if-nez p4, :cond_1
 
     and-int/lit8 p3, p3, 0x2

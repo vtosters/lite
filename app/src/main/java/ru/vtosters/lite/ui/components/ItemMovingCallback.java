@@ -8,9 +8,9 @@ import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 
 public class ItemMovingCallback extends ItemTouchHelper.Callback {
 
-    private final CategorizedAdapter mAdapter;
+    private final CategorizedAdapter<?> mAdapter;
 
-    public ItemMovingCallback(CategorizedAdapter adapter) {
+    public ItemMovingCallback(CategorizedAdapter<?> adapter) {
         this.mAdapter = adapter;
     }
 

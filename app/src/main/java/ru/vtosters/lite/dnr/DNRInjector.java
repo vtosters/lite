@@ -1,20 +1,9 @@
 package ru.vtosters.lite.dnr;
 
-import static ru.vtosters.lite.dnr.DNRModule.hookDNR;
-import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
-import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
-import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
-import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
-
 import com.vk.core.network.Network;
 import com.vk.im.engine.ImEngine1;
 import com.vk.im.engine.events.OnDialogUpdateEvent;
@@ -27,13 +16,6 @@ import com.vk.im.ui.components.common.MsgAction;
 import com.vk.im.ui.components.viewcontrollers.popup.DelegateMsg;
 import com.vk.im.ui.views.dialog_actions.DialogActionsListView;
 import com.vtosters.lite.R;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -45,10 +27,22 @@ import ru.vtosters.lite.hooks.CryptImHook;
 import ru.vtosters.lite.ui.dialogs.Translate;
 import ru.vtosters.lite.utils.AndroidUtils;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+
+import static ru.vtosters.lite.dnr.DNRModule.*;
+import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
         int peerId = 0;
-
         if (dialog != null) {
             try {
                 peerId = dialog.getId();
@@ -61,6 +55,7 @@ public class DNRInjector {
             return;
         }
 
+        list.add(DialogAction.STAT);
         list.add(DialogAction.DOWNLOAD);
 
         list.add(DialogAction.pinmsg);
@@ -86,6 +81,7 @@ public class DNRInjector {
     }
 
     public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap) {
+        hashMap.put(DialogAction.STAT, AndroidUtils.getIdentifier("dialogstats", "string"));
         hashMap.put(DialogAction.DOWNLOAD, R.string.download_dl);
 
         hashMap.put(DialogAction.DNR_ON, R.string.DNR_ON);
@@ -104,6 +100,8 @@ public class DNRInjector {
     @SuppressLint("ResourceType")
     public static List<Object> injectToList(List<Object> actions) {
         var list = new ArrayList<>(actions);
+
+        list.add(new DialogActionsListView.b.a(DialogAction.STAT, 1, R.attr.im_ic_stats, R.string.dialogstats)); // DialogAction, Int, Icon, String
         list.add(new DialogActionsListView.b.a(DialogAction.DOWNLOAD, 1, R.attr.im_ic_msgdl, R.string.download_dl)); // DialogAction, Int, Icon, String
 
         list.add(new DialogActionsListView.b.a(DialogAction.DNR_ON, 2, R.attr.im_ic_pinned_msg_hide, R.string.DNR_ON)); // DialogAction, Int, Icon, String
@@ -142,6 +140,8 @@ public class DNRInjector {
         if (peerId == 0) {
             return actions;
         }
+
+        actions.add(DialogAction.STAT);
 
         actions.add(DialogAction.DOWNLOAD);
 
@@ -185,6 +185,11 @@ public class DNRInjector {
         if (action == DialogAction.MARK_AS_READ) {
             DNRModule.hookRead(dialog);
             forceInvalidateDialogActions(dialog);
+        }
+
+        if (action == DialogAction.STAT) {
+            DNRModule.hookDialogInfo(dialog);
+            return true;
         }
 
         if (action == DialogAction.DOWNLOAD) {
@@ -248,6 +253,10 @@ public class DNRInjector {
             DNRModule.hookRead(dialog);
         }
 
+        if (action == DialogAction.STAT) {
+            DNRModule.hookDialogInfo(dialog);
+            return true;
+        }
         if (action == DialogAction.DOWNLOAD) {
             File out = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), peerId + "-dialog.html");
             try {

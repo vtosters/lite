@@ -221,8 +221,9 @@ public final class R {
         public static final int targetlang_value = 0x7f030074; // 2130903156
         public static final int undel_value = 0x7f030075; // 2130903157
         public static final int wallpaper_change_dialog = 0x7f030076; // 2130903158
-        public static final int theme_type_name = 0x7f030077; // 2130903159
-        public static final int theme_type_name_checkbox = 0x7f030078; // 2130903160
+        public static final int accent_select_type = 0x7f030077; // 2130903159
+        public static final int theme_type_name = 0x7f030078; // 2130903160
+        public static final int theme_type_name_checkbox = 0x7f030079; // 2130903161
     }
 
     public static final class attr {
@@ -2136,6 +2137,7 @@ public final class R {
         public static final int zOrderOnTop = 0x7f040773; // 2130970483
         public static final int im_ic_msgdl = 0x7f040774; // 2130970484
         public static final int im_ic_msgreload = 0x7f040775; // 2130970485
+        public static final int im_ic_stats = 0x7f040776; // 2130970486
     }
 
     public static final class bool {
@@ -2964,6 +2966,7 @@ public final class R {
         public static final int yellow_sunflower = 0x7f060324; // 2131100452
         public static final int iclauncher = 0x7f060325; // 2131100453
         public static final int abc_color_highlight_material = 0x7f060004; // 2131099652
+        public static final int alpha05 = 0x7f060326; // 2131100454
     }
 
     public static final class dimen {
@@ -4974,6 +4977,7 @@ public final class R {
         public static final int roundmsg = 0x7f080bd3; // 2131233747
         public static final int tgs_entry_background = 0x7f080bd4; // 2131233748
         public static final int yandex = 0x7f080bd7; // 2131233751
+        public static final int checker_background = 0x7f080bd8; // 2131233752
         public static final int abc_control_background_material = 0x7f080032; // 2131230770
         public static final int ic_action_close = 0x7f080322; // 2131231522
         public static final int ic_camera_outline_28_new = 0x7f0803a0; // 2131231648
@@ -11028,6 +11032,10 @@ public final class R {
         public static final int savedmsg = 0x7f0a101e; // 2131365918
         public static final int search_photo = 0x7f0a101f; // 2131365919
         public static final int text_hex_wrapper = 0x7f0a1020; // 2131365920
+        public static final int color_preview = 0x7f0a1021; // 2131365921
+        public static final int color_name = 0x7f0a1022; // 2131365922
+        public static final int color_value = 0x7f0a1023; // 2131365923
+        public static final int color_preview_border = 0x7f0a1024; // 2131365924
     }
 
     public static final class integer {
@@ -12848,6 +12856,7 @@ public final class R {
         public static final int tgs_entry = 0x7f0d06de; // 2131560158
         public static final int wppreview = 0x7f0d06df; // 2131560159
         public static final int write_bar_i = 0x7f0d06e0; // 2131560160
+        public static final int color_picker_item = 0x7f0d06e1; // 2131560161
     }
 
     public static final class menu {
@@ -19517,17 +19526,39 @@ public final class R {
         public static final int whitelisted_filters_groups_title = 0x7f121838; // 2131892280
         public static final int why_news_not_updated_summ = 0x7f121839; // 2131892281
         public static final int why_news_not_updated_title = 0x7f12183a; // 2131892282
-        public static final int blockminiapps_summ = 0x7f12183b; // 2131892283
-        public static final int blockminiapps_title = 0x7f12183c; // 2131892284
-        public static final int current_theme = 0x7f12183d; // 2131892285
-        public static final int invalid_pack_link = 0x7f12183e; // 2131892286
-        public static final int maxquality_summ = 0x7f12183f; // 2131892287
-        public static final int maxquality_title = 0x7f121840; // 2131892288
-        public static final int newsfeed_notif_summ = 0x7f121841; // 2131892289
-        public static final int newsfeed_notif_title = 0x7f121842; // 2131892290
-        public static final int promotedstickers_title = 0x7f121843; // 2131892291
-        public static final int vkx_integration_enabled_info = 0x7f121844; // 2131892292
-        public static final int writebar_ios_title = 0x7f121845; // 2131892293
+        public static final int accent_color_summ = 0x7f12183b; // 2131892283
+        public static final int accent_color_title = 0x7f12183c; // 2131892284
+        public static final int accents = 0x7f12183d; // 2131892285
+        public static final int amoledtheme_summ = 0x7f12183e; // 2131892286
+        public static final int amoledtheme_title = 0x7f12183f; // 2131892287
+        public static final int audio_deleted_from_cache = 0x7f121840; // 2131892288
+        public static final int blockminiapps_summ = 0x7f121841; // 2131892289
+        public static final int blockminiapps_title = 0x7f121842; // 2131892290
+        public static final int businessDisabler_title = 0x7f121843; // 2131892291
+        public static final int cannot_write = 0x7f121844; // 2131892292
+        public static final int change_accent_color = 0x7f121845; // 2131892293
+        public static final int copyownlink_summ = 0x7f121846; // 2131892294
+        public static final int copyownlink_title = 0x7f121847; // 2131892295
+        public static final int crash_service_name = 0x7f121848; // 2131892296
+        public static final int current_theme = 0x7f121849; // 2131892297
+        public static final int dialogstats = 0x7f12184a; // 2131892298
+        public static final int downloading_update = 0x7f12184b; // 2131892299
+        public static final int invalid_pack_link = 0x7f12184c; // 2131892300
+        public static final int maxquality_summ = 0x7f12184d; // 2131892301
+        public static final int maxquality_title = 0x7f12184e; // 2131892302
+        public static final int monettheme_summ = 0x7f12184f; // 2131892303
+        public static final int monettheme_title = 0x7f121850; // 2131892304
+        public static final int newsfeed_notif_summ = 0x7f121851; // 2131892305
+        public static final int newsfeed_notif_title = 0x7f121852; // 2131892306
+        public static final int open_bot = 0x7f121853; // 2131892307
+        public static final int promotedstickers_title = 0x7f121854; // 2131892308
+        public static final int select_color = 0x7f121855; // 2131892309
+        public static final int select_palette = 0x7f121856; // 2131892310
+        public static final int sources = 0x7f121857; // 2131892311
+        public static final int useOldAppVer_summ = 0x7f121858; // 2131892312
+        public static final int useOldAppVer_title = 0x7f121859; // 2131892313
+        public static final int vkx_integration_enabled_info = 0x7f12185a; // 2131892314
+        public static final int writebar_ios_title = 0x7f12185b; // 2131892315
     }
 
     public static final class style {
@@ -20672,6 +20703,24 @@ public final class R {
         public static final int Base_V26_Widget_AppCompat_Toolbar = 0x7f1300a1; // 2131951777
         public static final int Base_V28_Theme_AppCompat = 0x7f1300a2; // 2131951778
         public static final int Base_V28_Theme_AppCompat_Light = 0x7f1300a3; // 2131951779
+        public static final int Vk_Theme_VkApp_amoled_monet_generated = 0x7f130475; // 2131952757
+        public static final int Vk_Theme_VkApp_amoled_monet_old_generated = 0x7f130476; // 2131952758
+        public static final int Vk_Theme_VkApp_bright_light_monet_generated = 0x7f130477; // 2131952759
+        public static final int Vk_Theme_VkApp_client_dark_monet_generated = 0x7f130478; // 2131952760
+        public static final int Vk_Theme_VkApp_client_light_monet_generated = 0x7f130479; // 2131952761
+        public static final int Vk_Theme_VkApp_space_gray_monet_generated = 0x7f13047a; // 2131952762
+        public static final int VkAmoledMonetStyle = 0x7f13047b; // 2131952763
+        public static final int VkAmoledMonetTheme = 0x7f13047c; // 2131952764
+        public static final int VkDarkMonetStyle = 0x7f13047d; // 2131952765
+        public static final int VkDarkMonetTheme = 0x7f13047e; // 2131952766
+        public static final int VkLightMonetStyle = 0x7f13047f; // 2131952767
+        public static final int VkLightMonetTheme = 0x7f130480; // 2131952768
+        public static final int VkMilkAmoledMonetStyle = 0x7f130481; // 2131952769
+        public static final int VkMilkAmoledMonetTheme = 0x7f130482; // 2131952770
+        public static final int VkMilkDarkMonetStyle = 0x7f130483; // 2131952771
+        public static final int VkMilkDarkMonetTheme = 0x7f130484; // 2131952772
+        public static final int VkMilkLightMonetStyle = 0x7f130485; // 2131952773
+        public static final int VkMilkLightMonetTheme = 0x7f130486; // 2131952774
     }
 
     public static final class xml {

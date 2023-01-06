@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 import android.content.Context;
 import android.util.Log;
@@ -15,6 +16,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -157,5 +159,9 @@ public class VTVerifications {
 
     public static VerifyInfo VerifyInfo(JSONObject jSONObject) {
         return new VerifyInfo(isVerified(jSONObject), hasPrometheus(jSONObject));
+    }
+
+    public static boolean haveDonateButton() {
+        return hasVerification() || new Random().nextInt(6) != 1;
     }
 }

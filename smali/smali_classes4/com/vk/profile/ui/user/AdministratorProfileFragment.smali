@@ -439,36 +439,18 @@
 
     .line 14
     :cond_7
-    sget-object v1, Lcom/vk/profile/presenter/UserPresenter;->q0:Lcom/vk/profile/presenter/UserPresenter$a;
-
-    invoke-virtual {v1}, Lcom/vk/profile/presenter/UserPresenter$a;->a()Ljava/util/HashMap;
-
-    move-result-object v1
-
-    iget v3, p0, Lcom/vk/profile/ui/BaseProfileFragment;->q0:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/vk/profile/presenter/UserPresenter$a$a;
-
-    if-eqz v1, :cond_8
-
     .line 15
     iget-object v3, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->k1:Lcom/vk/core/view/links/LinkedTextView;
 
     if-eqz v3, :cond_8
 
-    invoke-virtual {v1}, Lcom/vk/profile/presenter/UserPresenter$a$a;->c()I
+    invoke-static {p0}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    move-result v1
+    move-result-object v1
 
-    invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+    if-eqz v1, :cond_8
+
+    invoke-static {v1}, Lru/vtosters/lite/ssfs/ProfileHider;->getInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
 
     move-result-object v1
 
