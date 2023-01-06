@@ -140,16 +140,18 @@ public class ThemesUtils {
                     field.set(editor, drawables);
                 }
             }
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            Log.e("ThemesUtils", "setCursorColor: ", e);
         }
     }
     @SuppressLint("DiscouragedPrivateApi")
     public static void colorHandles(TextView view) {
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                view.getTextSelectHandle().setColorFilter(new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN));
-                view.getTextSelectHandleRight().setColorFilter(new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN));
-                view.getTextSelectHandleLeft().setColorFilter(new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN));
+                PorterDuffColorFilter filter = new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+                view.getTextSelectHandle().setColorFilter(filter);
+                view.getTextSelectHandleRight().setColorFilter(filter);
+                view.getTextSelectHandleLeft().setColorFilter(filter);
             } else if (!OEMDetector.isMIUI()) {
                 Field editorField = TextView.class.getDeclaredField("mEditor");
 
@@ -190,8 +192,8 @@ public class ThemesUtils {
                     }
                 }
             }
-        } catch (Exception ignored) {
-            Log.e("ThemesUtils", "colorHandles: ", ignored);
+        } catch (Exception e) {
+            Log.e("ThemesUtils", "colorHandles: ", e);
         }
     }
 
