@@ -1,20 +1,14 @@
 package ru.vtosters.lite.ui.wallpapers;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
-
-import android.graphics.Bitmap;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.vtosters.lite.R;
-
-import com.vk.medianative.MediaNative;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.nio.ByteBuffer;
 
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
 enum ImageEffects {
     Blur(true,
@@ -57,7 +51,7 @@ enum ImageEffects {
     },
     Dim(true,
             AndroidUtils.getArray(R.array.filter_dim_types),
-            new String[]{"off", "dim_black", "dim_white"},
+            new String[]{"disabled", "dim_black", "dim_white"},
             getGlobalContext().getString(R.string.filter_dim)) {
         @Override
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
