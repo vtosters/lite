@@ -17,6 +17,40 @@
                 android:key="autoclearcache"
                 android:title="@string/autoclearcache"/>
     </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtverify">
+        <Preference
+                android:enabled="false"
+                android:summary="@string/vtverifyinfosum"
+                android:title="@string/vtverifyinfo"/>
+        <Preference
+                android:persistent="false"
+                android:summary="vtosters.app/donate"
+                android:title="@string/getvtverify">
+            <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://vtosters.app/donate"/>
+        </Preference>
+        <Preference
+                android:key="updateverifdata"
+                android:summary="Загрузить свежие данные о верификациях и серверных функций"
+                android:title="Обновить данные"/>
+        <Preference
+                android:key="copyownlink"
+                android:summary="@string/copyownlink_summ"
+                android:title="@string/copyownlink_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="VT_Verification"
+                android:title="@string/showvtverify"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="VT_Fire"
+                android:title="@string/showvtfire"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="dialogrecomm"
+                android:title="@string/dialogrecomm"/>
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtsystem">
         <Preference
                 android:key="applicationrestart"
@@ -49,35 +83,5 @@
         <Preference
                 android:key="restoreprefs"
                 android:title="@string/restoreprefs_title"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtverify">
-        <Preference
-                android:enabled="false"
-                android:summary="@string/vtverifyinfosum"
-                android:title="@string/vtverifyinfo"/>
-        <Preference
-                android:persistent="false"
-                android:summary="vtosters.app/donate"
-                android:title="@string/getvtverify">
-            <intent
-                    android:action="android.intent.action.VIEW"
-                    android:data="https://vtosters.app/donate"/>
-        </Preference>
-        <Preference
-                android:key="copyownlink"
-                android:summary="@string/copyownlink_summ"
-                android:title="@string/copyownlink_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="true"
-                android:key="VT_Verification"
-                android:title="@string/showvtverify"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="true"
-                android:key="VT_Fire"
-                android:title="@string/showvtfire"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="dialogrecomm"
-                android:title="@string/dialogrecomm"/>
     </PreferenceCategory>
 </PreferenceScreen>

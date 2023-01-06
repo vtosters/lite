@@ -8,9 +8,7 @@ import static ru.vtosters.lite.ui.components.BackupManager.backupSettings;
 import static ru.vtosters.lite.ui.components.BackupManager.deletePrefs;
 import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.*;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
@@ -58,11 +56,13 @@ import com.vtosters.lite.im.ImEngineProvider;
 import java.io.IOException;
 
 import b.h.g.m.FileUtils;
+import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ContactsUtils;
+import ru.vtosters.lite.utils.VTVerifications;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
@@ -113,6 +113,13 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("autoclearcache").setOnPreferenceClickListener(preference -> {
             cacheAutoCleanDialog();
+            return true;
+        });
+
+        findPreference("updateverifdata").setOnPreferenceClickListener(preference -> {
+            UsersList.getUsersList();
+            VTVerifications.load(requireContext());
+            sendToast("Данные обновлены");
             return true;
         });
 
