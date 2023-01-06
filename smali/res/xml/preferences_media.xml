@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="@string/interfaceglobal">
-        <com.vtosters.lite.ui.SummaryListPreference
-                android:defaultValue="default"
-                android:dialogTitle="@string/dateformat"
-                android:entries="@array/dateformat_value"
-                android:entryValues="@array/dateformat"
-                android:key="dateformat"
-                android:title="@string/interfaceglobaldates"/>
+    <PreferenceCategory android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
-                android:key="shortinfo"
-                android:summary="@string/interfaceglobalnumsum"
-                android:title="@string/interfaceglobalnum"/>
+                android:key="compressPhotos"
+                android:summary="@string/sett_compress_photo_summ"
+                android:title="@string/sett_compress_photos"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
-                android:key="shortpost"
-                android:summary="@string/interfaceglobalpostsum"
-                android:title="@string/interfaceglobalpost"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="pollresults"
-                android:summary="@string/pollresults_summ"
-                android:title="@string/pollresults_title"/>
+                android:key="compressVideos"
+                android:summary="@string/sett_compress_video_summ"
+                android:title="@string/sett_compress_videos"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_music_settings">
         <Preference
@@ -48,18 +36,6 @@
         <Preference
                 android:key="audio_download"
                 android:title="@string/audio_download_title"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/sett_media">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="true"
-                android:key="compressPhotos"
-                android:summary="@string/sett_compress_photo_summ"
-                android:title="@string/sett_compress_photos"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="true"
-                android:key="compressVideos"
-                android:summary="@string/sett_compress_video_summ"
-                android:title="@string/sett_compress_videos"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="Last.fm">
         <Preference

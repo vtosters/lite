@@ -39,8 +39,6 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     private void prefs() {
         findPreference("vkme").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("vkme_notifs").setOnPreferenceClickListener(new MessagesFragment.restart());
-        findPreference("systememoji").setOnPreferenceClickListener(new MessagesFragment.restart());
-        findPreference("wallpapers").setOnPreferenceClickListener(new MessagesFragment.openwp());
 
         findPreference("autotranslate").setEnabled(!autoalltranslate());
 
@@ -65,11 +63,9 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         });
 
         findPreference("vkme_notifs").setEnabled(vkme());
-        findPreference("wallpapers").setIcon(recolorDrawable(getGlobalContext().getDrawable(R.drawable.ic_media_outline_28)));
         findPreference("vkme").setIcon(R.drawable.ic_vkme_28);
 
         if (isTablet()) {
-            findPreference("alteremoji").setVisible(false);
             findPreference("vkmesett").setVisible(false);
         }
     }
@@ -102,17 +98,6 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         @Override
         public boolean onPreferenceClick(Preference preference) {
             return MessagesFragment.this.restart();
-        }
-    }
-
-    public class openwp implements Preference.OnPreferenceClickListener {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            Context context = requireContext();
-            Intent a2 = new Navigator(WallpaperMenuFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return true;
         }
     }
 }

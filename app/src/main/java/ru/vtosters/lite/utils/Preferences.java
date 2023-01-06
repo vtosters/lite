@@ -316,10 +316,6 @@ public class Preferences {
         return false;
     }
 
-    public static boolean disableSettingsSumms() {
-        return getBoolValue("disableSettingsSumms", false);
-    }
-
     public static boolean hasVerification() {
         return isVerified(AccountManagerUtils.getUserId());
     }

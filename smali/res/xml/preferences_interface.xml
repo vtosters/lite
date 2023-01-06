@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/interfaceglobal">
+        <com.vtosters.lite.ui.SummaryListPreference
+                android:defaultValue="default"
+                android:dialogTitle="@string/dateformat"
+                android:entries="@array/dateformat_value"
+                android:entryValues="@array/dateformat"
+                android:key="dateformat"
+                android:title="@string/interfaceglobaldates"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="shortinfo"
+                android:summary="@string/interfaceglobalnumsum"
+                android:title="@string/interfaceglobalnum"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="shortpost"
+                android:summary="@string/interfaceglobalpostsum"
+                android:title="@string/interfaceglobalpost"/>
+        <com.vtosters.lite.ui.SummaryListPreference
+                android:defaultValue="default"
+                android:dialogTitle="@string/interfacestartfrsum"
+                android:entries="@array/start"
+                android:entryValues="@array/start_values"
+                android:key="start_values"
+                android:title="@string/interfacestartfr"/>
+        <com.vtosters.lite.ui.SummaryListPreference
+                android:defaultValue="noanim"
+                android:dialogTitle="@string/selectfranimation"
+                android:entries="@array/animations2"
+                android:entryValues="@array/animations_values2"
+                android:key="anim_rtrn_type"
+                android:title="@string/franimation"/>
+        <Preference
+                android:key="customrounding"
+                android:title="@string/customrounding_title"/>
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacenewsfeed">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
@@ -19,25 +55,6 @@
                 android:defaultValue="false"
                 android:key="is_likes_on_right"
                 android:title="@string/right_likes"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/interfaceglobal">
-        <com.vtosters.lite.ui.SummaryListPreference
-                android:defaultValue="default"
-                android:dialogTitle="@string/interfacestartfrsum"
-                android:entries="@array/start"
-                android:entryValues="@array/start_values"
-                android:key="start_values"
-                android:title="@string/interfacestartfr"/>
-        <com.vtosters.lite.ui.SummaryListPreference
-                android:defaultValue="noanim"
-                android:dialogTitle="@string/selectfranimation"
-                android:entries="@array/animations2"
-                android:entryValues="@array/animations_values2"
-                android:key="anim_rtrn_type"
-                android:title="@string/franimation"/>
-        <Preference
-                android:key="customrounding"
-                android:title="@string/customrounding_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacevideo">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -71,12 +88,13 @@
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
+                android:key="pollresults"
+                android:summary="@string/pollresults_summ"
+                android:title="@string/pollresults_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
                 android:key="friendsblock"
                 android:summary="@string/friendsblock_summ"
                 android:title="@string/friendsblock_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="disableSettingsSumms"
-                android:title="@string/vtlhidesumm"/>
     </PreferenceCategory>
 </PreferenceScreen>

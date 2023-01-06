@@ -96,7 +96,6 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             deleteVideoHistoryDialog(requireContext());
             return true;
         });
-        findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
         findPreference("lastfm_auth").setOnPreferenceClickListener(preference -> {
             if (isLoggedIn()) {
                 logout(getContext());
@@ -148,7 +147,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "Saucenao")
                     );
 
-            var adapter = new ImagineArrayAdapter(getContext(), items);
+            var adapter = new ImagineArrayAdapter(requireContext(), items);
             adapter.setSelected(getPreferences().getInt("search_engine", 0));
 
             new VkAlertDialog.Builder(getActivity())
@@ -284,15 +283,6 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public int T4() {
         return R.string.vtlmedia;
-    }
-
-    private static class restart implements Preference.OnPreferenceChangeListener {
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object o) {
-            edit().putString("dateformat", o.toString()).commit();
-            restartApplicationWithTimer();
-            return false;
-        }
     }
 
     private class download implements Preference.OnPreferenceClickListener {
