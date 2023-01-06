@@ -64,6 +64,9 @@
                 android:title="@string/postsredesign_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/menu" android:key="menusett">
+        <Preference
+                android:key="superappeditor"
+                android:title="@string/superapp_editor"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="miniapps"

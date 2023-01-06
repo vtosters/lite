@@ -14,6 +14,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.palettes.PalettesManager;
+import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
 import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
@@ -39,6 +40,13 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         accentColorPreference.setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.bg_accent_circle)));
         accentColorPreference.setOnPreferenceClickListener(preference -> {
             changeAccent();
+            return true;
+        });
+
+        var dockbarEditor = findPreference("dockbareditor");
+        dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
+        dockbarEditor.setOnPreferenceClickListener(preference -> {
+            switchFragment(DockBarEditorFragment.class);
             return true;
         });
 
@@ -116,10 +124,15 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
+        if (Preferences.vkme()) {
+            findPreference("dockbareditor").setVisible(false);
+        }
+
         if(AndroidUtils.isTablet()) {
             PreferenceCategory dockbarSettingsPreferenceCategory = (PreferenceCategory) findPreference("dockbarsett");
             dockbarSettingsPreferenceCategory.setVisible(false);
             findPreference("alteremoji").setVisible(false);
+            findPreference("dockbareditor").setVisible(false);
         }
     }
 

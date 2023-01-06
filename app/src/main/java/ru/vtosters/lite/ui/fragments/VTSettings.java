@@ -51,10 +51,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
         return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifno);
     }
 
-    public static String getDocksumm() {
-        return AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size();
-    }
-
     public static String getTGSsumm() {
         return AndroidUtils.getString(R.string.vtltgssumm) + ": " + TelegramStickersService.getInstance(AndroidUtils.getGlobalContext()).getActivePacksListReference().size();
     }
@@ -86,10 +82,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
         }
 
         return AndroidUtils.getString("current_theme") + ": " + str;
-    }
-
-    public static String getSuperappsumm() {
-        return AndroidUtils.getString(R.string.elements_hidden_count) + ": " + SuperAppEditorManager.getInstance().getDisabledTabs().size();
     }
 
     private void switchTheme(boolean isDarkTheme) {
@@ -480,36 +472,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                     return false;
                 }
         );
-
-        if(!Preferences.vkme()) {
-            if(!AndroidUtils.isTablet()) {
-                PreferenceFragmentUtils.addPreference(
-                        getPreferenceScreen(),
-                        "",
-                        requireContext().getString(R.string.dockbar_editor),
-                        getDocksumm(),
-                        R.drawable.ic_list_outline_28,
-                        preference -> {
-                            launchFragment(DockBarEditorFragment.class);
-                            return false;
-                        }
-                );
-
-                if(Preferences.milkshake() && Preferences.superapp()) {
-                    PreferenceFragmentUtils.addPreference(
-                            getPreferenceScreen(),
-                            "",
-                            requireContext().getString(R.string.superapp_editor),
-                            getSuperappsumm(),
-                            R.drawable.ic_services_outline_28,
-                            (preference) -> {
-                                launchFragment(SuperAppEditorFragment.class);
-                                return true;
-                            }
-                    );
-                }
-            }
-        }
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
