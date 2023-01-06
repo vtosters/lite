@@ -406,6 +406,10 @@
         }
     .end annotation
 
+    const/4 v1, 0x0
+
+    return v1
+
     .line 53
     invoke-interface {p1}, Ljava/util/List;->size()I
 

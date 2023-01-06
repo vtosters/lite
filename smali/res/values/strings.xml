@@ -6332,6 +6332,8 @@ May look like a fake leaving the online"</string>
     <string name="download_dl">Download dialog</string>
     <string name="download_dl_error">An error occurred while trying to download the dialog</string>
 
+    <string name="dialogstats">Dialog stats</string>
+
     <string name="saved_as">Saved as</string>
     <string name="settings_reset_confirm">Are you sure you want to reset your settings?</string>
     <string name="system_theme_warning">You have the system theme enabled \nWhen you switch the theme, the system theme will be disabled \n\nAre you sure you want to disable it?</string>

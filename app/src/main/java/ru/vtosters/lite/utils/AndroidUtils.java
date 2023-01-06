@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -10,6 +11,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
+import com.vk.core.util.LangUtils;
 import com.vk.core.util.Screen;
 import com.vk.core.util.ToastUtils;
 
@@ -18,6 +20,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
 import java.util.Objects;
 
+import com.vtosters.lite.general.fragments.WebViewFragment;
 import ru.vtosters.lite.hooks.DateHook;
 
 public class AndroidUtils {
@@ -131,6 +134,10 @@ public class AndroidUtils {
 
     public static void sendToast(String text) {
         ToastUtils.a(text);
+    }
+
+    public static void openWebView(String url, Activity activity) {
+        new WebViewFragment.g(url).l().m().h().j().a(activity);
     }
 
     public static String MD5(String s) {

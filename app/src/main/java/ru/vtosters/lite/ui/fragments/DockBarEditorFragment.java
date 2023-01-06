@@ -25,6 +25,7 @@ import ru.vtosters.lite.themes.hooks.TextViewHook;
 import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.ItemMovingCallback;
+import ru.vtosters.lite.utils.LayoutUtils;
 
 public class DockBarEditorFragment extends BaseToolbarFragment {
 
@@ -33,38 +34,40 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
     public View onCreateContent(@NonNull LayoutInflater inflater, @Nullable Bundle bundle) {
         setTitle(R.string.dockbar_editor);
 
-        FrameLayout content = new FrameLayout(getContext());
+        var content = new FrameLayout(getContext());
 
-        LinearLayout container = new LinearLayout(getContext());
+        var container = new LinearLayout(getContext());
         container.setOrientation(LinearLayout.VERTICAL);
-        content.addView(container, new FrameLayout.LayoutParams(-1, -1));
+        content.addView(container, LayoutUtils.createFrame(-1, -1));
 
-        LinearLayout buttonsContainer = new LinearLayout(getContext());
+        var buttonsContainer = new LinearLayout(getContext());
         buttonsContainer.setPadding(
                 dp2px(13),
                 dp2px(10),
                 dp2px(13),
                 dp2px(10)
         );
-        container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
+        container.addView(buttonsContainer, LayoutUtils.createLinear(-1, -2));
 
-        TextView save = new TextView(new ContextThemeWrapper(getContext(), R.style.VKUIButton_Primary));
+        var manager = DockBarEditorManager.getInstance();
+
+        var save = new TextView(new ContextThemeWrapper(getContext(), R.style.VKUIButton_Primary));
         save.setText(requireContext().getString(R.string.save));
         save.setOnClickListener(v -> {
-            DockBarEditorManager.getInstance().save();
+            manager.save();
             restartApplication();
         });
 
         new TextViewHook().inject(save, 0, false);
 
-        LinearLayout.LayoutParams saveParams = new LinearLayout.LayoutParams(0, -2);
+        var saveParams = LayoutUtils.createLinear(0, -2);
         saveParams.weight = 1.0f;
         buttonsContainer.addView(save, saveParams);
 
-        View divider = new View(getContext());
-        buttonsContainer.addView(divider, new LinearLayout.LayoutParams(dp2px(10), 0));
+        var divider = new View(getContext());
+        buttonsContainer.addView(divider, LayoutUtils.createLinear(dp2px(10), 0));
 
-        TextView reset = new TextView(new ContextThemeWrapper(getContext(), R.style.VKUIButton_Primary));
+        var reset = new TextView(new ContextThemeWrapper(getContext(), R.style.VKUIButton_Primary));
         reset.setText(requireContext().getString(R.string.reset));
         reset.setOnClickListener(v -> {
             DockBarEditorManager.getInstance().reset();
@@ -73,12 +76,11 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
 
         new TextViewHook().inject(reset, 0, false);
 
-        LinearLayout.LayoutParams resetParams = new LinearLayout.LayoutParams(0, -2);
+        var resetParams = LayoutUtils.createLinear(0, -2);
         resetParams.weight = 1.0f;
         buttonsContainer.addView(reset, resetParams);
 
-        DockBarEditorManager manager = DockBarEditorManager.getInstance();
-        var adapter = new CategorizedAdapter(manager.getSelectedTabs(), manager.getDisabledTabs(), (holder, pos) -> {
+        var adapter = new CategorizedAdapter<>(manager.getSelectedTabs(), manager.getDisabledTabs(), (holder, pos) -> {
             var tab = pos <= manager.getSelectedTabs().size()
                     ? manager.getSelectedTabs().get(pos - 1)
                     : manager.getDisabledTabs().get(pos - manager.getSelectedTabs().size() - 2);
@@ -90,7 +92,7 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
-        var params = new LinearLayout.LayoutParams(-1, -1);
+        var params = LayoutUtils.createLinear(-1, -1);
         params.gravity = Gravity.CENTER;
         container.addView(recyclerView, params);
 

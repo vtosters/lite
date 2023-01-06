@@ -18,6 +18,7 @@ import android.os.Build;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
 
+import android.util.Log;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 
@@ -35,6 +36,7 @@ public class Preferences {
 
         GmsUtils.fixGapps();
         setProxy();
+        setupFilters();
         VTVerifications.load(application);
         LifecycleUtils.registerActivities(application);
     } // VK Init
@@ -352,5 +354,19 @@ public class Preferences {
             return 100;
         }
         return origquality;
+    }
+
+    public static String photoQuality(String url) {
+        if (dev()) Log.d("PhotoQuality", url);
+
+        if (url.contains("quality=") && !url.contains("quality=100") && !getBoolValue("compressPhotos", true)) {
+            if (url.contains("quality=95")) {
+                url = url.replace("quality=95", "quality=99");
+            } else {
+                url = url.replace("quality=96", "quality=99");
+            }
+        }
+
+        return url;
     }
 }

@@ -113,6 +113,8 @@
 .method public static final a(ILjava/lang/String;)V
     .locals 3
 
+    return-void
+
     .line 24
     new-instance v0, Lorg/json/JSONObject;
 
@@ -167,6 +169,8 @@
 
 .method public static final a(ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
+
+    return-void
 
     if-ltz p0, :cond_0
 

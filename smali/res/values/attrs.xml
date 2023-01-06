@@ -2510,4 +2510,5 @@
     <attr name="zOrderOnTop" format="boolean" />
     <attr name="im_ic_msgreload" format="reference" />
     <attr name="im_ic_msgdl" format="reference" />
+    <attr name="im_ic_stats" format="reference" />
 </resources>
