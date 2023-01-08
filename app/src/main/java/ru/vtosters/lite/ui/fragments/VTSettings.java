@@ -37,8 +37,6 @@ import ru.vtosters.lite.utils.*;
 public class VTSettings extends MaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
 
     public static String getValAsString(@StringRes int strRes, Boolean value) {
-        if(Preferences.disableSettingsSumms()) return null;
-
         if(value) {
             return AndroidUtils.getString(strRes) + ": " + AndroidUtils.getString(R.string.vtlsettenabled);
         }
@@ -47,30 +45,18 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
     }
 
     public static String getSSFSsumm() {
-        if(Preferences.disableSettingsSumms()) return null;
-
         if(Preferences.hasSpecialVerif())
             return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifyes);
 
         return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifno);
     }
 
-    public static String getDocksumm() {
-        if(Preferences.disableSettingsSumms()) return null;
-
-        return AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size();
-    }
-
     public static String getTGSsumm() {
-        if(Preferences.disableSettingsSumms()) return null;
-
         return AndroidUtils.getString(R.string.vtltgssumm) + ": " + TelegramStickersService.getInstance(AndroidUtils.getGlobalContext()).getActivePacksListReference().size();
     }
 
     public static String getProxysumm() {
         var type = AndroidUtils.getPrefsValue("proxy");
-
-        if(Preferences.disableSettingsSumms()) return null;
 
         if(type.equals("noproxy") || type.isEmpty())
             type = AndroidUtils.getString(R.string.vtlsettdisabled);
@@ -79,8 +65,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
     }
 
     public static String getThemesumm() {
-        if(Preferences.disableSettingsSumms()) return null;
-
         String str;
         String[] themeTypeName = AndroidUtils.getArray("theme_type_name");
 
@@ -98,12 +82,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
         }
 
         return AndroidUtils.getString("current_theme") + ": " + str;
-    }
-
-    public static String getSuperappsumm() {
-        if(Preferences.disableSettingsSumms()) return null;
-
-        return AndroidUtils.getString(R.string.elements_hidden_count) + ": " + SuperAppEditorManager.getInstance().getDisabledTabs().size();
     }
 
     private void switchTheme(boolean isDarkTheme) {
@@ -279,7 +257,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                         "autoupdates",
                         requireContext().getString(R.string.checkupdates),
                         "",
-                        R.drawable.ic_camera_switch_outline_24,
+                        R.drawable.ic_bug_outline_28,
                         true,
                         (preference, o) -> {
                             boolean value = (boolean) o;
@@ -494,36 +472,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                     return false;
                 }
         );
-
-        if(!Preferences.vkme()) {
-            if(!AndroidUtils.isTablet()) {
-                PreferenceFragmentUtils.addPreference(
-                        getPreferenceScreen(),
-                        "",
-                        requireContext().getString(R.string.dockbar_editor),
-                        getDocksumm(),
-                        R.drawable.ic_list_outline_28,
-                        preference -> {
-                            launchFragment(DockBarEditorFragment.class);
-                            return false;
-                        }
-                );
-
-                if(Preferences.milkshake() && Preferences.superapp()) {
-                    PreferenceFragmentUtils.addPreference(
-                            getPreferenceScreen(),
-                            "",
-                            requireContext().getString(R.string.superapp_editor),
-                            getSuperappsumm(),
-                            R.drawable.ic_services_outline_28,
-                            (preference) -> {
-                                launchFragment(SuperAppEditorFragment.class);
-                                return true;
-                            }
-                    );
-                }
-            }
-        }
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),

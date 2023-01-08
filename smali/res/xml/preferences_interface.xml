@@ -1,82 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="@string/interfacenewsfeed">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="stories"
-            android:summary="@string/showstoriessum"
-            android:title="@string/showstories" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="swipe"
-            android:title="@string/interfacenewsfeedswipe" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="whatsnew"
-            android:summary="@string/whatsnew_summ"
-            android:title="@string/whatsnew_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="is_likes_on_right"
-            android:title="@string/right_likes" />
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="default"
-            android:dialogTitle="@string/interfacestartfrsum"
-            android:entries="@array/start"
-            android:entryValues="@array/start_values"
-            android:key="start_values"
-            android:title="@string/interfacestartfr" />
+                android:defaultValue="default"
+                android:dialogTitle="@string/dateformat"
+                android:entries="@array/dateformat_value"
+                android:entryValues="@array/dateformat"
+                android:key="dateformat"
+                android:title="@string/interfaceglobaldates"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="shortinfo"
+                android:summary="@string/interfaceglobalnumsum"
+                android:title="@string/interfaceglobalnum"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="shortpost"
+                android:summary="@string/interfaceglobalpostsum"
+                android:title="@string/interfaceglobalpost"/>
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="noanim"
-            android:dialogTitle="@string/selectfranimation"
-            android:entries="@array/animations2"
-            android:entryValues="@array/animations_values2"
-            android:key="anim_rtrn_type"
-            android:title="@string/franimation" />
+                android:defaultValue="default"
+                android:dialogTitle="@string/interfacestartfrsum"
+                android:entries="@array/start"
+                android:entryValues="@array/start_values"
+                android:key="start_values"
+                android:title="@string/interfacestartfr"/>
+        <com.vtosters.lite.ui.SummaryListPreference
+                android:defaultValue="noanim"
+                android:dialogTitle="@string/selectfranimation"
+                android:entries="@array/animations2"
+                android:entryValues="@array/animations_values2"
+                android:key="anim_rtrn_type"
+                android:title="@string/franimation"/>
         <Preference
-            android:key="customrounding"
-            android:title="@string/customrounding_title" />
+                android:key="customrounding"
+                android:title="@string/customrounding_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/interfacenewsfeed">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="stories"
+                android:summary="@string/showstoriessum"
+                android:title="@string/showstories"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="swipe"
+                android:title="@string/interfacenewsfeedswipe"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="whatsnew"
+                android:summary="@string/whatsnew_summ"
+                android:title="@string/whatsnew_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="is_likes_on_right"
+                android:title="@string/right_likes"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacevideo">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="postsredesign"
-            android:summary="@string/postsredesign_summ"
-            android:title="@string/postsredesign_title" />
+                android:defaultValue="true"
+                android:key="postsredesign"
+                android:summary="@string/postsredesign_summ"
+                android:title="@string/postsredesign_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/menu" android:key="menusett">
+        <Preference
+                android:key="superappeditor"
+                android:title="@string/superapp_editor"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="miniapps"
-            android:summary="@string/miniapps_summ"
-            android:title="@string/miniapps_title" />
+                android:defaultValue="true"
+                android:key="miniapps"
+                android:summary="@string/miniapps_summ"
+                android:title="@string/miniapps_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="vkpay"
-            android:summary="@string/show_vkpay_summ"
-            android:title="@string/show_vkpay_title" />
+                android:defaultValue="true"
+                android:key="vkpay"
+                android:summary="@string/show_vkpay_summ"
+                android:title="@string/show_vkpay_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="superapp"
-            android:summary="@string/show_superapps_summ"
-            android:title="@string/show_superapps_title" />
+                android:defaultValue="true"
+                android:key="superapp"
+                android:summary="@string/show_superapps_summ"
+                android:title="@string/show_superapps_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="showmenu"
-            android:summary="@string/menucuttersum"
-            android:title="@string/menucutter" />
+                android:defaultValue="false"
+                android:key="showmenu"
+                android:summary="@string/menucuttersum"
+                android:title="@string/menucutter"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="friendsblock"
-            android:summary="@string/friendsblock_summ"
-            android:title="@string/friendsblock_title" />
+                android:defaultValue="false"
+                android:key="pollresults"
+                android:summary="@string/pollresults_summ"
+                android:title="@string/pollresults_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="disableSettingsSumms"
-            android:title="@string/vtlhidesumm" />
+                android:defaultValue="false"
+                android:key="friendsblock"
+                android:summary="@string/friendsblock_summ"
+                android:title="@string/friendsblock_title"/>
     </PreferenceCategory>
 </PreferenceScreen>

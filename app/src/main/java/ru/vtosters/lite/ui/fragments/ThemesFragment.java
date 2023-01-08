@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
@@ -13,12 +14,17 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.palettes.PalettesManager;
+import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
 import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
+import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
+
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
@@ -34,6 +40,13 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         accentColorPreference.setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.bg_accent_circle)));
         accentColorPreference.setOnPreferenceClickListener(preference -> {
             changeAccent();
+            return true;
+        });
+
+        var dockbarEditor = findPreference("dockbareditor");
+        dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
+        dockbarEditor.setOnPreferenceClickListener(preference -> {
+            switchFragment(DockBarEditorFragment.class);
             return true;
         });
 
@@ -96,9 +109,30 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme() && ThemesUtils.isMilkshake());
 
+        var wp = findPreference("wallpapers");
+        wp.setIcon(recolorDrawable(getGlobalContext().getDrawable(R.drawable.ic_media_outline_28)));
+        wp.setOnPreferenceClickListener(preference -> {
+            Context context = requireContext();
+            Intent a2 = new Navigator(WallpaperMenuFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return true;
+        });
+
+        findPreference("systememoji").setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
+
+        if (Preferences.vkme()) {
+            findPreference("dockbareditor").setVisible(false);
+        }
+
         if(AndroidUtils.isTablet()) {
             PreferenceCategory dockbarSettingsPreferenceCategory = (PreferenceCategory) findPreference("dockbarsett");
             dockbarSettingsPreferenceCategory.setVisible(false);
+            findPreference("alteremoji").setVisible(false);
+            findPreference("dockbareditor").setVisible(false);
         }
     }
 

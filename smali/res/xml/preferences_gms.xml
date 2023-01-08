@@ -2,42 +2,42 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/gms_about">
         <Preference
-            android:enabled="false"
-            android:summary="@string/gms_what_is_summ"
-            android:title="@string/gms_what_is_title" />
+                android:enabled="false"
+                android:summary="@string/gms_what_is_summ"
+                android:title="@string/gms_what_is_title"/>
         <Preference
-            android:enabled="false"
-            android:summary="@string/gms_why_need_summ"
-            android:title="@string/gms_why_need_title" />
+                android:enabled="false"
+                android:summary="@string/gms_why_need_summ"
+                android:title="@string/gms_why_need_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/gms_how_to_download">
         <Preference
-            android:enabled="false"
-            android:summary="@string/gms_what_to_do_then_summ"
-            android:title="@string/gms_what_to_do_then" />
+                android:enabled="false"
+                android:summary="@string/gms_what_to_do_then_summ"
+                android:title="@string/gms_what_to_do_then"/>
         <Preference
-            android:enabled="false"
-            android:summary="@string/gms_what_is_microg_summ"
-            android:title="@string/gms_what_is_microg" />
+                android:enabled="false"
+                android:summary="@string/gms_what_is_microg_summ"
+                android:title="@string/gms_what_is_microg"/>
         <Preference
-            android:persistent="false"
-            android:title="@string/gms_microg_site">
+                android:persistent="false"
+                android:title="@string/gms_microg_site">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://microg.org/" />
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://microg.org/"/>
         </Preference>
         <Preference
-            android:persistent="false"
-            android:title="@string/gms_download_microg">
+                android:persistent="false"
+                android:title="@string/gms_download_microg">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://microg.org/download.html" />
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://microg.org/download.html"/>
         </Preference>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/gms_what_to_do_next">
         <Preference
-            android:enabled="false"
-            android:summary="@string/gms_what_to_do_after_microg_summ"
-            android:title="@string/gms_what_to_do_after_microg_title" />
+                android:enabled="false"
+                android:summary="@string/gms_what_to_do_after_microg_summ"
+                android:title="@string/gms_what_to_do_after_microg_title"/>
     </PreferenceCategory>
 </PreferenceScreen>

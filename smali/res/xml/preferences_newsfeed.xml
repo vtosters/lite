@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <com.vtosters.lite.ui.SummaryListPreference
-        android:defaultValue="order"
-        android:dialogTitle="@string/newsfeed_settings_order"
-        android:entries="@array/newsfeed_settings_feed_type"
-        android:entryValues="@array/newsfeed_settings_feed_type_v"
-        android:key="newsfeed_order"
-        android:textColor="?text_secondary"
-        android:title="@string/newsfeed_settings_order" />
+            android:defaultValue="order"
+            android:dialogTitle="@string/newsfeed_settings_order"
+            android:entries="@array/newsfeed_settings_feed_type"
+            android:entryValues="@array/newsfeed_settings_feed_type_v"
+            android:key="newsfeed_order"
+            android:textColor="?text_secondary"
+            android:title="@string/newsfeed_settings_order"/>
     <Preference
-        android:key="new_posts"
-        android:summary="@string/newsfeed_settings_new_posts_hint"
-        android:title="@string/newsfeed_settings_new_posts" />
+            android:key="new_posts"
+            android:summary="@string/newsfeed_settings_new_posts_hint"
+            android:title="@string/newsfeed_settings_new_posts"/>
     <Preference
-        android:key="hide_from_news"
-        android:summary="@string/newsfeed_settings_hide_from_news_hint"
-        android:title="@string/newsfeed_settings_hide_from_news" />
+            android:key="hide_from_news"
+            android:summary="@string/newsfeed_settings_hide_from_news_hint"
+            android:title="@string/newsfeed_settings_hide_from_news"/>
     <Preference
-        android:key="hide_from_stories"
-        android:summary="@string/newsfeed_settings_hide_from_stories_hint"
-        android:title="@string/newsfeed_settings_hide_from_stories" />
+            android:key="hide_from_stories"
+            android:summary="@string/newsfeed_settings_hide_from_stories_hint"
+            android:title="@string/newsfeed_settings_hide_from_stories"/>
 </PreferenceScreen>

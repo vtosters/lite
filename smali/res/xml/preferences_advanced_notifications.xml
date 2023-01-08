@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.vtosters.lite.ui.RingtonePreference
-        android:defaultValue="content://settings/system/notification_sound"
-        android:key="notifyRingtone"
-        android:title="@string/sett_notify_sound"
-        app:ringtoneType="notification"
-        app:showDefault="true" />
+            android:defaultValue="content://settings/system/notification_sound"
+            android:key="notifyRingtone"
+            android:title="@string/sett_notify_sound"
+            app:ringtoneType="notification"
+            app:showDefault="true"/>
     <com.vtosters.lite.ui.MaterialSwitchPreference
-        android:defaultValue="true"
-        android:key="notifyVibrate"
-        android:title="@string/sett_notify_vibrate" />
+            android:defaultValue="true"
+            android:key="notifyVibrate"
+            android:title="@string/sett_notify_vibrate"/>
     <com.vtosters.lite.ui.MaterialSwitchPreference
-        android:defaultValue="true"
-        android:key="notifyLED"
-        android:title="@string/sett_notify_led" />
+            android:defaultValue="true"
+            android:key="notifyLED"
+            android:title="@string/sett_notify_led"/>
     <com.vtosters.lite.ui.ColorPreference
-        android:defaultValue="-1"
-        android:key="notifyLedColor"
-        android:title="@string/sett_led_color" />
+            android:defaultValue="-1"
+            android:key="notifyLedColor"
+            android:title="@string/sett_led_color"/>
     <com.vtosters.lite.ui.MaterialSwitchPreference
-        android:defaultValue="false"
-        android:key="notifyHeadsUp"
-        android:title="@string/sett_heads_up_notifications" />
+            android:defaultValue="false"
+            android:key="notifyHeadsUp"
+            android:title="@string/sett_heads_up_notifications"/>
     <com.vtosters.lite.ui.MaterialSwitchPreference
-        android:defaultValue="true"
-        android:key="notifyShortcutBadge"
-        android:title="@string/sett_shortcut_badger" />
-    <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+            android:defaultValue="true"
+            android:key="notifyShortcutBadge"
+            android:title="@string/sett_shortcut_badger"/>
+    <com.vtosters.lite.ui.MaterialSectionDividerPreference/>
 </PreferenceScreen>

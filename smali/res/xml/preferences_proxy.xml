@@ -2,144 +2,144 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/vtlproxy">
         <Preference
-            android:enabled="false"
-            android:summary="@string/proxyimpinfosum"
-            android:title="@string/warning" />
+                android:enabled="false"
+                android:summary="@string/proxyimpinfosum"
+                android:title="@string/warning"/>
         <Preference
-            android:enabled="false"
-            android:summary="@string/denial_of_responsibility_proxy_summ"
-            android:title="@string/denial_of_responsibility_proxy" />
+                android:enabled="false"
+                android:summary="@string/denial_of_responsibility_proxy_summ"
+                android:title="@string/denial_of_responsibility_proxy"/>
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="noproxy"
-            android:dialogTitle="@string/useproxysum"
-            android:entries="@array/proxy"
-            android:entryValues="@array/proxy_value"
-            android:key="proxy"
-            android:title="@string/useproxy" />
+                android:defaultValue="noproxy"
+                android:dialogTitle="@string/useproxysum"
+                android:entries="@array/proxy"
+                android:entryValues="@array/proxy_value"
+                android:key="proxy"
+                android:title="@string/useproxy"/>
         <Preference
-            android:key="random_proxy"
-            android:summary="@string/proxy_setup_summ"
-            android:title="@string/proxy_setup_title" />
+                android:key="random_proxy"
+                android:summary="@string/proxy_setup_summ"
+                android:title="@string/proxy_setup_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyadvsettings">
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyapi"
-            android:title="@string/proxyapi" />
+                android:defaultValue=""
+                android:key="proxyapi"
+                android:title="@string/proxyapi"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyoauth"
-            android:title="@string/proxyoauth" />
+                android:defaultValue=""
+                android:key="proxyoauth"
+                android:title="@string/proxyoauth"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxystatic"
-            android:title="@string/proxystatic" />
+                android:defaultValue=""
+                android:key="proxystatic"
+                android:title="@string/proxystatic"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyhttp">
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyHostHTTP"
-            android:title="@string/proxydomain" />
+                android:defaultValue=""
+                android:key="proxyHostHTTP"
+                android:title="@string/proxydomain"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyPortHTTP"
-            android:title="@string/proxyport" />
+                android:defaultValue=""
+                android:key="proxyPortHTTP"
+                android:title="@string/proxyport"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyUserHTTP"
-            android:summary="@string/proxy_if"
-            android:title="@string/proxy_login_title" />
+                android:defaultValue=""
+                android:key="proxyUserHTTP"
+                android:summary="@string/proxy_if"
+                android:title="@string/proxy_login_title"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyPassHTTP"
-            android:summary="@string/proxy_if"
-            android:title="@string/proxy_password_title" />
+                android:defaultValue=""
+                android:key="proxyPassHTTP"
+                android:summary="@string/proxy_if"
+                android:title="@string/proxy_password_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyhttps">
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyHostHTTPS"
-            android:title="@string/proxydomain" />
+                android:defaultValue=""
+                android:key="proxyHostHTTPS"
+                android:title="@string/proxydomain"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyPortHTTPS"
-            android:title="@string/proxyport" />
+                android:defaultValue=""
+                android:key="proxyPortHTTPS"
+                android:title="@string/proxyport"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyUserHTTPS"
-            android:summary="@string/proxy_if"
-            android:title="@string/proxy_login_title" />
+                android:defaultValue=""
+                android:key="proxyUserHTTPS"
+                android:summary="@string/proxy_if"
+                android:title="@string/proxy_login_title"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyPassHTTPS"
-            android:summary="@string/proxy_if"
-            android:title="@string/proxy_password_title" />
+                android:defaultValue=""
+                android:key="proxyPassHTTPS"
+                android:summary="@string/proxy_if"
+                android:title="@string/proxy_password_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxysocks">
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyHostSocks"
-            android:title="@string/proxydomain" />
+                android:defaultValue=""
+                android:key="proxyHostSocks"
+                android:title="@string/proxydomain"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyPortSocks"
-            android:title="@string/proxyport" />
+                android:defaultValue=""
+                android:key="proxyPortSocks"
+                android:title="@string/proxyport"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyowners">
         <Preference
-            android:persistent="false"
-            android:title="Hookzof Socks">
+                android:persistent="false"
+                android:title="Hookzof Socks">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://github.com/hookzof/socks5_list" />
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://github.com/hookzof/socks5_list"/>
         </Preference>
         <Preference
-            android:persistent="false"
-            android:title="Jetkai Socks/Https/Http">
+                android:persistent="false"
+                android:title="Jetkai Socks/Https/Http">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://github.com/jetkai/proxy-list" />
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://github.com/jetkai/proxy-list"/>
         </Preference>
         <Preference
-            android:persistent="false"
-            android:title="TheSpeedX Socks/Http">
+                android:persistent="false"
+                android:title="TheSpeedX Socks/Http">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://github.com/TheSpeedX/PROXY-List" />
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://github.com/TheSpeedX/PROXY-List"/>
         </Preference>
         <Preference
-            android:persistent="false"
-            android:title="Roosterkid Socks">
+                android:persistent="false"
+                android:title="Roosterkid Socks">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://github.com/roosterkid/openproxylist" />
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://github.com/roosterkid/openproxylist"/>
         </Preference>
         <Preference
-            android:persistent="false"
-            android:summary="@string/proxydonate"
-            android:title="zaborona">
+                android:persistent="false"
+                android:summary="@string/proxydonate"
+                android:title="zaborona">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://zaborona.help/donate.html" />
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://zaborona.help/donate.html"/>
         </Preference>
         <Preference
-            android:persistent="false"
-            android:summary="Vika Donate"
-            android:title="Vika Mobile proxy">
+                android:persistent="false"
+                android:summary="Vika Donate"
+                android:title="Vika Mobile proxy">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="http://vikamobile.ru/donate.php" />
+                    android:action="android.intent.action.VIEW"
+                    android:data="http://vikamobile.ru/donate.php"/>
         </Preference>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="altervika"
-            android:title="@string/altervika_title" />
+                android:defaultValue="false"
+                android:key="altervika"
+                android:title="@string/altervika_title"/>
         <Preference
-            android:persistent="false"
-            android:title="@string/proxyownersxtrsources">
+                android:persistent="false"
+                android:title="@string/proxyownersxtrsources">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://github.com/vtosters/vk-proxy" />
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://github.com/vtosters/vk-proxy"/>
         </Preference>
     </PreferenceCategory>
 </PreferenceScreen>

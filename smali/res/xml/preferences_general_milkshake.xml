@@ -1,102 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:custom="http://schemas.android.com/apk/res-auto">
+                  xmlns:custom="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory
-        android:key="app"
-        android:title="@string/sett_app">
+            android:key="app"
+            android:title="@string/sett_app">
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="firstname"
-            android:dialogTitle="@string/sett_flist_sort"
-            android:entries="@array/sett_friends_order"
-            android:entryValues="@array/sett_friends_order_v"
-            android:key="friendsOrderNew"
-            android:layout="@layout/preference_with_value"
-            android:textColor="?text_secondary"
-            android:title="@string/sett_flist_sort" />
+                android:defaultValue="firstname"
+                android:dialogTitle="@string/sett_flist_sort"
+                android:entries="@array/sett_friends_order"
+                android:entryValues="@array/sett_friends_order_v"
+                android:key="friendsOrderNew"
+                android:layout="@layout/preference_with_value"
+                android:textColor="?text_secondary"
+                android:title="@string/sett_flist_sort"/>
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="0"
-            android:dialogTitle="@string/sett_font_size"
-            android:entries="@array/sett_font_size_options"
-            android:entryValues="@array/sett_font_size_values"
-            android:key="fontSize"
-            android:layout="@layout/preference_with_value"
-            android:title="@string/sett_font_size" />
+                android:defaultValue="0"
+                android:dialogTitle="@string/sett_font_size"
+                android:entries="@array/sett_font_size_options"
+                android:entryValues="@array/sett_font_size_values"
+                android:key="fontSize"
+                android:layout="@layout/preference_with_value"
+                android:title="@string/sett_font_size"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="sendByEnter"
-            android:summary="@string/sett_send_by_enter_summary"
-            android:title="@string/sett_send_by_enter" />
+                android:defaultValue="false"
+                android:key="sendByEnter"
+                android:summary="@string/sett_send_by_enter_summary"
+                android:title="@string/sett_send_by_enter"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="useChromeCustomTabs"
-            android:summary="@string/sett_chrome_custom_tabs_summary"
-            android:title="@string/sett_chrome_custom_tabs" />
+                android:defaultValue="true"
+                android:key="useChromeCustomTabs"
+                android:summary="@string/sett_chrome_custom_tabs_summary"
+                android:title="@string/sett_chrome_custom_tabs"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="trackInstalledApps"
-            android:summary="@string/sett_mytracker_location_crap_summary"
-            android:title="@string/sett_mytracker_apps" />
+                android:defaultValue="true"
+                android:key="trackInstalledApps"
+                android:summary="@string/sett_mytracker_location_crap_summary"
+                android:title="@string/sett_mytracker_apps"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="isRoamingState"
-            android:summary="@string/sett_roaming_state_submit"
-            android:title="@string/sett_roaming_state" />
+                android:defaultValue="false"
+                android:key="isRoamingState"
+                android:summary="@string/sett_roaming_state_submit"
+                android:title="@string/sett_roaming_state"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="multimedia"
-        android:title="@string/sett_media">
+            android:key="multimedia"
+            android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="saveProcessedImage"
-            android:title="@string/sett_save_processed_image"
-            custom:singleLine="false" />
+                android:defaultValue="true"
+                android:key="saveProcessedImage"
+                android:title="@string/sett_save_processed_image"
+                custom:singleLine="false"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="showMusicSuggestNotification"
-            android:title="@string/sett_show_music_suggestion_notification"
-            custom:singleLine="false" />
+                android:defaultValue="true"
+                android:key="showMusicSuggestNotification"
+                android:title="@string/sett_show_music_suggestion_notification"
+                custom:singleLine="false"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="prefetchAudioMsg"
-            android:title="@string/vkim_settings_prefetch_audiomsg"
-            custom:singleLine="false" />
+                android:defaultValue="true"
+                android:key="prefetchAudioMsg"
+                android:title="@string/vkim_settings_prefetch_audiomsg"
+                custom:singleLine="false"/>
         <ListPreference
-            android:defaultValue="always"
-            android:entries="@array/sett_gif_autoplay_entries"
-            android:entryValues="@array/sett_gif_autoplay_entry_values"
-            android:key="gif_autoplay"
-            android:summary="%s"
-            android:title="@string/sett_gif_autoplay_title" />
+                android:defaultValue="always"
+                android:entries="@array/sett_gif_autoplay_entries"
+                android:entryValues="@array/sett_gif_autoplay_entry_values"
+                android:key="gif_autoplay"
+                android:summary="%s"
+                android:title="@string/sett_gif_autoplay_title"/>
         <ListPreference
-            android:defaultValue="always"
-            android:entries="@array/sett_gif_autoplay_entries"
-            android:entryValues="@array/sett_gif_autoplay_entry_values"
-            android:key="video_autoplay"
-            android:summary="%s"
-            android:title="@string/sett_video_autoplay_title" />
+                android:defaultValue="always"
+                android:entries="@array/sett_gif_autoplay_entries"
+                android:entryValues="@array/sett_gif_autoplay_entry_values"
+                android:key="video_autoplay"
+                android:summary="%s"
+                android:title="@string/sett_video_autoplay_title"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="cache"
-        android:title="@string/sett_cache">
+            android:key="cache"
+            android:title="@string/sett_cache">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="enableAudioCache"
-            android:title="@string/sett_enable_audio_cache" />
+                android:defaultValue="true"
+                android:key="enableAudioCache"
+                android:title="@string/sett_enable_audio_cache"/>
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue=""
-            android:dialogTitle="@string/sett_cache_location"
-            android:key="audioCacheLocation"
-            android:title="@string/sett_cache_location" />
+                android:defaultValue=""
+                android:dialogTitle="@string/sett_cache_location"
+                android:key="audioCacheLocation"
+                android:title="@string/sett_cache_location"/>
         <Preference
-            android:key="downloadAudio"
-            android:title="@string/cache_my_music" />
+                android:key="downloadAudio"
+                android:title="@string/cache_my_music"/>
         <Preference
-            android:key="clearAudioCache"
-            android:summary=""
-            android:title="@string/sett_clear_audio_cache" />
+                android:key="clearAudioCache"
+                android:summary=""
+                android:title="@string/sett_clear_audio_cache"/>
         <Preference
-            android:enabled="false"
-            android:summary="@string/where_is_cache_settings_summ"
-            android:title="@string/where_is_cache_settings" />
+                android:enabled="false"
+                android:summary="@string/where_is_cache_settings_summ"
+                android:title="@string/where_is_cache_settings"/>
     </PreferenceCategory>
 </PreferenceScreen>
