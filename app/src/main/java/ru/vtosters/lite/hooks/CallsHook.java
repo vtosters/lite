@@ -8,20 +8,27 @@ import com.vtosters.lite.api.ExtendedUserProfile;
 
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserID;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 public class CallsHook {
     public static void forwardToVkIm(View view, ExtendedUserProfile p) {
+        // FIXME: add com.vk.calls, right now it doesn't support intent
+        var callsAvailable = checkPackage("com.vk.im") || checkPackage("com.vkontakte.android");
+        if (!callsAvailable) {
+            sendToast("Установите VK мессенджер или официальный VK клиент");
+            return;
+        }
+        var link = "https://vk.com/call?id=" + getUserID(p);
+        var startCall = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+        view.getContext().startActivity(startCall);
+    }
+
+    private static Boolean checkPackage(String packageName) {
         try {
-            if (getGlobalContext().getPackageManager().getApplicationInfo("com.vk.im", 0).enabled) {
-                var link = "https://vk.com/call?id=" + getUserID(p);
-                var startCall = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
-                view.getContext().startActivity(startCall);
-            }
+            var pm = getGlobalContext().getPackageManager();
+            return pm.getApplicationInfo(packageName, 0).enabled;
         } catch (PackageManager.NameNotFoundException e) {
-            // FIXME: what if no google services?
-            //  Show just toast without redirecting? Show alert with Yes/No before redirect?
-            var installVkIm = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.vk.im"));
-            view.getContext().startActivity(installVkIm);
+            return false;
         }
     }
 }
