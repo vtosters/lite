@@ -11,7 +11,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 public class CallsHook {
-    public static void forwardToVkIm(View view, ExtendedUserProfile p) {
+    public static void forwardToVkOffApps(View view, ExtendedUserProfile p) {
         // FIXME: add com.vk.calls, right now it doesn't support intent
         var callsAvailable = checkPackage("com.vk.im") || checkPackage("com.vkontakte.android");
         if (!callsAvailable) {
