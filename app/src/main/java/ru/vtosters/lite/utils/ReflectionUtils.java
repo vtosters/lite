@@ -8,7 +8,7 @@ import java.lang.reflect.Modifier;
 public class ReflectionUtils {
 
     /**
-     * Gets a class with specific name.
+     * Gets a class with a specific name.
      * Supports smali type (Lpackage/Class;)
      */
     public static Class<?> getClass(String name)

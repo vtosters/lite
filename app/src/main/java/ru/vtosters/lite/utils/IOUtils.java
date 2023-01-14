@@ -97,7 +97,7 @@ public class IOUtils {
 
     public static void copyFile(InputStream is, File target) throws IOException {
         var parent = target.getParentFile();
-        if (!parent.exists())
+        if (!(parent != null ? parent.exists() : false))
             parent.getParentFile().mkdirs();
         writeToFile(target, readAllBytes(is));
     }
