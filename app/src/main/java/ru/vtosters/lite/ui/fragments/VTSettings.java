@@ -163,7 +163,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 R.drawable.ic_link_circle_outline_28,
                 preference -> {
                     VKUIwrapper.setLink(Utils.getVKUILink());
-                    launchFragment(VKUIwrapper.class);
+                    NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
                     return false;
                 }
         );
@@ -217,7 +217,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                     "",
                     R.drawable.ic_about_outline_28,
                     preference -> {
-                        launchFragment(InstallGMSFragment.class);
+                        NavigatorUtils.switchFragment(requireContext(), InstallGMSFragment.class);
                         return false;
                     }
             );
@@ -233,7 +233,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                     "",
                     R.drawable.ic_bug_outline_28,
                     preference -> {
-                        launchFragment(SettingsDebugFragment.class);
+                        NavigatorUtils.switchFragment(requireContext(), SettingsDebugFragment.class);
                         return false;
                     }
             );
@@ -278,7 +278,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 R.drawable.ic_user_circle_outline_28,
                 preference -> {
                     VKUIwrapper.officalLinks("account");
-                    launchFragment(VKUIwrapper.class);
+                    NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
                     return false;
                 }
         );
@@ -290,7 +290,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 "",
                 R.drawable.ic_privacy_outline_28,
                 preference -> {
-                    launchFragment(PrivacyFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), PrivacyFragment.class);
                     return false;
                 }
         );
@@ -302,7 +302,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 "",
                 R.drawable.ic_user_outline_28,
                 preference -> {
-                    launchFragment(SettingsAccountFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), SettingsAccountFragment.class);
                     return false;
                 }
         );
@@ -316,7 +316,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                     R.drawable.ic_bug_outline_28,
                     preference -> {
                         VKUIwrapper.officalLinks("bugs");
-                        launchFragment(VKUIwrapper.class);
+                        NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
                         return false;
                     }
             );
@@ -331,7 +331,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 "",
                 R.drawable.ic_settings_outline_28,
                 preference -> {
-                    launchFragment(SettingsGeneralFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), SettingsGeneralFragment.class);
                     return false;
                 }
         );
@@ -343,7 +343,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 "",
                 R.drawable.ic_users_outline_28,
                 preference -> {
-                    launchFragment(BlacklistFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), BlacklistFragment.class);
                     return false;
                 }
         );
@@ -355,7 +355,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 "",
                 R.drawable.ic_menu_notification_outline_28,
                 preference -> {
-                    launchFragment(NotificationsSettingsFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), NotificationsSettingsFragment.class);
                     return false;
                 }
         );
@@ -368,7 +368,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                     "",
                     R.drawable.ic_music_outline_28,
                     preference -> {
-                        launchFragment(MusicSubscriptionControlFragment.class);
+                        NavigatorUtils.switchFragment(requireContext(), MusicSubscriptionControlFragment.class);
                         return false;
                     }
             );
@@ -381,7 +381,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 "",
                 R.drawable.ic_coins_outline_28,
                 preference -> {
-                    launchFragment(BalanceFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), BalanceFragment.class);
                     return false;
                 }
         );
@@ -405,7 +405,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                     getValAsString(R.string.vtlfeedsumm, Preferences.ads()),
                     R.drawable.ic_newsfeed_outline_28,
                     preference -> {
-                        launchFragment(FeedFragment.class);
+                        NavigatorUtils.switchFragment(requireContext(), FeedFragment.class);
                         return false;
                     }
             );
@@ -418,7 +418,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getValAsString(R.string.vtlinterfacesumm, Preferences.shortinfo()),
                 R.drawable.ic_media_outline_28,
                 preference -> {
-                    launchFragment(MediaFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), MediaFragment.class);
                     return false;
                 }
         );
@@ -432,7 +432,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                         : getValAsString(R.string.vtlmsgsumm, Preferences.vkme()),
                 R.drawable.ic_message_outline_28,
                 preference -> {
-                    launchFragment(MessagesFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), MessagesFragment.class);
                     return false;
                 }
         );
@@ -444,7 +444,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getTGSsumm(),
                 R.drawable.ic_telegram_outline_28,
                 preference -> {
-                    launchFragment(StickersFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), StickersFragment.class);
                     return false;
                 }
         );
@@ -456,7 +456,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getThemesumm(),
                 R.drawable.ic_write_outline_28,
                 preference -> {
-                    launchFragment(ThemesFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), ThemesFragment.class);
                     return false;
                 }
         );
@@ -468,7 +468,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getValAsString(R.string.showstories, Preferences.stories()),
                 R.drawable.ic_interface_outline_28,
                 preference -> {
-                    launchFragment(InterfaceFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), InterfaceFragment.class);
                     return false;
                 }
         );
@@ -480,7 +480,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getValAsString(R.string.vtlactivitysumm, Preferences.offline()),
                 R.drawable.ic_write_outline_28_new_accent,
                 preference -> {
-                    launchFragment(ActivityFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), ActivityFragment.class);
                     return false;
                 }
         );
@@ -492,7 +492,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getProxysumm(),
                 R.drawable.ic_globe_outline_28,
                 preference -> {
-                    launchFragment(ProxySettingsFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), ProxySettingsFragment.class);
                     return false;
                 }
         );
@@ -504,7 +504,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getValAsString(R.string.vtlothersumm, VTVerifications.vtverif()),
                 R.drawable.ic_more_horizontal_28,
                 preference -> {
-                    launchFragment(OtherFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), OtherFragment.class);
                     return false;
                 }
         );
@@ -518,7 +518,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 "Commit: " + About.getBuildNumber(),
                 R.drawable.ic_about_outline_28,
                 preference -> {
-                    launchFragment(AboutAppFragment.class);
+                    NavigatorUtils.switchFragment(requireContext(), AboutAppFragment.class);
                     return false;
                 }
         );
@@ -575,13 +575,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                     }
             );
         }
-    }
-
-    private void launchFragment(Class< ? extends FragmentImpl > fragmentClz) {
-        Intent intent = new Navigator(fragmentClz)
-                .b(requireContext())
-                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        requireContext().startActivity(intent);
     }
 
     @Override

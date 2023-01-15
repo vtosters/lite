@@ -37,8 +37,16 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
 
     @SuppressLint("UseCompatLoadingForDrawables")
     private void prefs() {
-        findPreference("vkme").setOnPreferenceClickListener(new MessagesFragment.restart());
-        findPreference("vkme_notifs").setOnPreferenceClickListener(new MessagesFragment.restart());
+        findPreference("vkme").setOnPreferenceClickListener(preference -> {
+            restart();
+
+            return true;
+        });
+        findPreference("vkme_notifs").setOnPreferenceClickListener(preference -> {
+            restart();
+
+            return true;
+        });
 
         findPreference("autotranslate").setEnabled(!autoalltranslate());
 
@@ -85,19 +93,5 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public int T4() {
         return R.string.vtlmessages;
-    }
-
-    public class restart implements Preference.OnPreferenceClickListener {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            return MessagesFragment.this.restart();
-        }
-    }
-
-    public class clearCache implements Preference.OnPreferenceClickListener {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            return MessagesFragment.this.restart();
-        }
     }
 }

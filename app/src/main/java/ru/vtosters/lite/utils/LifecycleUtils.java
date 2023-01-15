@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.vk.core.fragments.FragmentImpl;
 import com.vk.navigation.Navigator;
 
 import java.util.ArrayList;
@@ -72,13 +73,10 @@ public class LifecycleUtils {
         handler.postDelayed(LifecycleUtils::restartApplication, 500);
     }
 
-    public static void restartApplicationInto(Class Class) {
+    public static void restartApplicationInto(Class< ? extends FragmentImpl> clz) {
         Context ctx = AndroidUtils.getGlobalContext();
 
-        Intent intent = new Navigator(Class).b(ctx);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
-        ctx.startActivity(mainIntent);
+        NavigatorUtils.switchFragment(AndroidUtils.getGlobalContext(), clz);
 
         Runtime.getRuntime().exit(0);
     }

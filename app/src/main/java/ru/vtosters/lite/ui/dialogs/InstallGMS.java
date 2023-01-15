@@ -12,6 +12,7 @@ import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
 
 import ru.vtosters.lite.ui.fragments.InstallGMSFragment;
+import ru.vtosters.lite.utils.NavigatorUtils;
 
 public class InstallGMS {
     public static void alert(final Activity activity) {
@@ -25,10 +26,7 @@ public class InstallGMS {
                     )
                     .setNeutralButton(activity.getString(R.string.gmsissuebtn2), (dialogInterface, i) -> {
                         edit().putBoolean("showAlertGms", false).apply();
-                        var intent = new Navigator(InstallGMSFragment.class)
-                                .b(activity)
-                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        activity.startActivity(intent);
+                        NavigatorUtils.switchFragment(activity, InstallGMSFragment.class);
                     })
                     .show();
         }

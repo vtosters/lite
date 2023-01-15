@@ -21,6 +21,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
+import ru.vtosters.lite.utils.NavigatorUtils;
 
 public class FeedFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -31,7 +32,11 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        findPreference("officialnewssett").setOnPreferenceClickListener(new openofficialsett());
+        findPreference("officialnewssett").setOnPreferenceClickListener(preference -> {
+            NavigatorUtils.switchFragment(requireContext(), SystemInfo.class);
+
+            return true;
+        });
         findPreference("cringecopyright").setEnabled(!copyright_post());
 
         findPreference("spamfilters").setSummary(count(getPrefsValue("spamfilters")));
@@ -139,16 +144,5 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public int T4() {
         return R.string.vtlfeed;
-    }
-
-    public class openofficialsett implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            Context context = requireContext();
-            Intent a2 = new Navigator(NewsfeedSettingsFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return true;
-        }
     }
 }

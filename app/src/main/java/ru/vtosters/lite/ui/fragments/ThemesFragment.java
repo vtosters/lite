@@ -18,10 +18,7 @@ import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
 import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.lite.utils.*;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
@@ -46,7 +43,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         var dockbarEditor = findPreference("dockbareditor");
         dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
         dockbarEditor.setOnPreferenceClickListener(preference -> {
-            switchFragment(DockBarEditorFragment.class);
+            NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
             return true;
         });
 
@@ -77,7 +74,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
         var iconManagerPreference = findPreference("iconmanager");
         iconManagerPreference.setOnPreferenceClickListener(preference -> {
-            switchFragment(IconsFragment.class);
+            NavigatorUtils.switchFragment(requireContext(), IconsFragment.class);
             return true;
         });
 
@@ -112,10 +109,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         var wp = findPreference("wallpapers");
         wp.setIcon(recolorDrawable(getGlobalContext().getDrawable(R.drawable.ic_media_outline_28)));
         wp.setOnPreferenceClickListener(preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(WallpaperMenuFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
+            NavigatorUtils.switchFragment(requireContext(), WallpaperMenuFragment.class);
+
             return true;
         });
 
@@ -209,12 +204,5 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
     void restart() {
         LifecycleUtils.restartApplicationWithTimer();
-    }
-
-    private void switchFragment(Class< ? extends FragmentImpl > fragmentClz) {
-        var intent = new Navigator(fragmentClz)
-                .b(requireContext())
-                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        requireContext().startActivity(intent);
     }
 }

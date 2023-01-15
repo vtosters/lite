@@ -1,24 +1,18 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.*;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.preference.Preference;
-
-import com.vk.core.fragments.FragmentImpl;
-import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.RoundingSeekbarDialog;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
+
+import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 
 public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -29,10 +23,26 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        findPreference("stories").setOnPreferenceClickListener(new restart());
-        findPreference("swipe").setOnPreferenceClickListener(new restart());
-        findPreference("is_likes_on_right").setOnPreferenceClickListener(new restart());
-        findPreference("superapp").setOnPreferenceClickListener(new restart());
+        findPreference("stories").setOnPreferenceClickListener(preference -> {
+            restartApplicationWithTimer();
+
+            return true;
+        });
+        findPreference("swipe").setOnPreferenceClickListener(preference -> {
+            restartApplicationWithTimer();
+
+            return true;
+        });
+        findPreference("is_likes_on_right").setOnPreferenceClickListener(preference -> {
+            restartApplicationWithTimer();
+
+            return true;
+        });
+        findPreference("superapp").setOnPreferenceClickListener(preference -> {
+            restartApplicationWithTimer();
+
+            return true;
+        });
 
         findPreference("dateformat").setOnPreferenceChangeListener((preference, o) -> {
             edit().putString("dateformat", o.toString()).commit();
@@ -44,7 +54,7 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
         superappeditor.setSummary(AndroidUtils.getString(R.string.elements_hidden_count) + ": " + SuperAppEditorManager.getInstance().getDisabledTabs().size());
         superappeditor.setVisible(!Preferences.vkme() && !isTablet() && Preferences.superapp());
         superappeditor.setOnPreferenceClickListener(preference -> {
-            switchFragment(SuperAppEditorFragment.class);
+            NavigatorUtils.switchFragment(requireContext(), SuperAppEditorFragment.class);
             return true;
         });
 
@@ -75,27 +85,8 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public boolean restart(Preference preference) {
-        restartApplicationWithTimer();
-        return true;
-    }
-
     @Override
     public int T4() {
         return R.string.vtlinterface;
-    }
-
-    private class restart implements Preference.OnPreferenceClickListener {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            return InterfaceFragment.this.restart(preference);
-        }
-    }
-
-    private void switchFragment(Class< ? extends FragmentImpl> fragmentClz) {
-        var intent = new Navigator(fragmentClz)
-                .b(requireContext())
-                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        requireContext().startActivity(intent);
     }
 }

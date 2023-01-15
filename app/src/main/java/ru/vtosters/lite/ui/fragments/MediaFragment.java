@@ -91,7 +91,11 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
+        findPreference("download_video").setOnPreferenceClickListener(preference -> {
+            download(requireContext());
+
+            return true;
+        });
         findPreference("clearvideohistory").setOnPreferenceClickListener(preference -> {
             deleteVideoHistoryDialog(requireContext());
             return true;
@@ -283,13 +287,5 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public int T4() {
         return R.string.vtlmedia;
-    }
-
-    private class download implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            download(getActivity());
-            return true;
-        }
     }
 }
