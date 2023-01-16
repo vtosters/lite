@@ -2,12 +2,19 @@ package ru.vtosters.lite.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.content.pm.verify.domain.DomainVerificationManager;
+import android.content.pm.verify.domain.DomainVerificationUserState;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.util.Log;
 
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
@@ -18,9 +25,12 @@ import com.vk.core.util.ToastUtils;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
 
+import com.vtosters.lite.fragments.SettingsListFragment;
 import com.vtosters.lite.general.fragments.WebViewFragment;
+import ru.vtosters.lite.R;
 import ru.vtosters.lite.hooks.DateHook;
 
 public class AndroidUtils {
@@ -138,6 +148,41 @@ public class AndroidUtils {
 
     public static void openWebView(String url, Activity activity) {
         new WebViewFragment.g(url).l().m().h().j().a(activity);
+    }
+
+    public static void checkLinksVerified(Activity activity) {
+        if (Build.VERSION.SDK_INT < 31) return;
+
+        DomainVerificationManager manager = activity.getSystemService(DomainVerificationManager.class);
+        DomainVerificationUserState userState;
+
+        try {
+            userState = manager.getDomainVerificationUserState(getPackageName());
+        } catch (PackageManager.NameNotFoundException ignore) {
+            return;
+        }
+
+        boolean hasUnverified = false;
+
+        Map<String, Integer> hostToStateMap = userState.getHostToStateMap();
+
+        if (hostToStateMap.containsKey("vk.com")) {
+            Integer stateValue = hostToStateMap.get("vk.com");
+            hasUnverified = stateValue != null && stateValue != DomainVerificationUserState.DOMAIN_STATE_VERIFIED && stateValue != DomainVerificationUserState.DOMAIN_STATE_SELECTED;
+        }
+
+        if (hasUnverified) {
+            // TODO Make cute dialog or snackbar for this
+            try {
+                Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:" + getPackageName()));
+                activity.startActivity(intent);
+            } catch (Throwable t1) {
+                try {
+                    Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()));
+                    activity.startActivity(intent);
+                } catch (Throwable ignored) {}
+            }
+        }
     }
 
     public static String MD5(String s) {

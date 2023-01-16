@@ -9,8 +9,6 @@ import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
-import com.vk.core.fragments.FragmentImpl;
-import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.MainActivity;
@@ -28,8 +26,6 @@ import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ssfs.Utils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
-import ru.vtosters.lite.ui.components.DockBarEditorManager;
-import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.*;
@@ -125,6 +121,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
         TelegramStickersService.getInstance(requireContext()).addStickersEventsListener(this);
 
         this.addPreferencesFromResource(R.xml.empty);
+
+//        AndroidUtils.checkLinksVerified(this.requireActivity());
 
         var accountSwitcher = PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
