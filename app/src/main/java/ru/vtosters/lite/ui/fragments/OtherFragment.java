@@ -28,6 +28,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
+import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
@@ -94,6 +95,13 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
             Toast.makeText(requireContext(), requireContext().getString(R.string.copybtn), LENGTH_SHORT).show();
             ToastUtils.a(requireContext().getString(R.string.tokenwarning));
+
+            return true;
+        });
+
+        findPreference("copydebuginfo").setOnPreferenceClickListener(preference -> {
+            copyText(new DeviceInfoCollector().collect().forLogging());
+            Toast.makeText(requireContext(), "Информация об устройстве скопирована", LENGTH_SHORT).show();
 
             return true;
         });

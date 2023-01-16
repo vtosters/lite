@@ -101,4 +101,20 @@ public class Device {
                 + (isEMUI() ? "', EmuiVersion='" + this.EmuiVersion : "")
                 + "', modelName='" + this.modelName + "'";
     }
+
+    public String forLogging() {
+        return "**Информация об устройстве:** " + "\n\n"
+                + "- Commit: " + getBuildNumber() + "\n"
+                + "- Android SDK: " + this.sdkVersion + "\n"
+                + "- Product: " + this.productName + "\n"
+                + "- Device: " + this.deviceName + "\n"
+                + "- Board: " + this.boardName + "\n"
+                + "- Manufacturer: " + this.manufacturerName + "\n"
+                + "- Brand: " + this.brandName + "\n"
+                + "- Model: " + this.modelName
+                + (isMIUI() ? "- Miui Version Code: " + this.MiuiUiVersionCode + "\n" + "- Miui Version Name: " + this.MiuiUiVersionName + "\n" : "")
+                + (isSamsung() ? "- OneUi Major Version: " + this.OneUiMajorVersion + "\n" + "- OneUi Minor Version: " + this.OneUiMinorVersion + "\n" : "")
+                + (hasMiuiIncrCode() ? "- Miui Version Incremental Code: " + this.MiuiIncrementalCode + "\n" : "")
+                + (isEMUI() ? "- Emui Version: " + this.EmuiVersion : "");
+    }
 }
