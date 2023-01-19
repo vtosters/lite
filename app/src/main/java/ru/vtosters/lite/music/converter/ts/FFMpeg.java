@@ -35,7 +35,6 @@ public class FFMpeg {
         sb.append(" -map 0 -dn ");
         //sb.append(" -loglevel error");
         //sb.append(" -hide_banner");
-        sb.append(" -write_id3v2 1");
 
         String title = null;
 
@@ -58,7 +57,6 @@ public class FFMpeg {
         if (track.I != null) {
             sb.append(" -metadata album=\"").append(track.I.getTitle()).append("\"");
         }
-        sb.append(" -write_xing 0");
 
         sb.append(" -c copy \"").append(out).append("\"");
 
