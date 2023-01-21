@@ -146,7 +146,8 @@ public class Preferences {
     }
 
     public static boolean calls() {
-        return getBoolValue("calls", false);
+//        return getBoolValue("calls", false);
+        return true;
     }
 
     public static boolean dev() {
