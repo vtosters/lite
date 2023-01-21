@@ -13,14 +13,13 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.util.Log;
-
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
-
-import com.vk.core.util.LangUtils;
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.Screen;
 import com.vk.core.util.ToastUtils;
+import com.vtosters.lite.general.fragments.WebViewFragment;
+import ru.vtosters.lite.hooks.DateHook;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -28,10 +27,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 
-import com.vtosters.lite.fragments.SettingsListFragment;
-import com.vtosters.lite.general.fragments.WebViewFragment;
-import ru.vtosters.lite.R;
-import ru.vtosters.lite.hooks.DateHook;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class AndroidUtils {
 
@@ -172,16 +168,31 @@ public class AndroidUtils {
         }
 
         if (hasUnverified) {
-            // TODO Make cute dialog or snackbar for this
-            try {
-                Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:" + getPackageName()));
-                activity.startActivity(intent);
-            } catch (Throwable t1) {
-                try {
-                    Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()));
-                    activity.startActivity(intent);
-                } catch (Throwable ignored) {}
+            if (getBoolValue("showUnverifDialog", true)) {
+                new VkAlertDialog.Builder(activity)
+                        .setTitle(com.vtosters.lite.R.string.warning)
+                        .setMessage("Для нормальной работы приложения необходимо разрешить приложению открытие ссылок по умолчанию")
+                        .setCancelable(false)
+                        .setPositiveButton(com.vtosters.lite.R.string.startbtn2,
+                                (dialogInterface, i) -> edit().putBoolean("showUnverifDialog", false).apply()
+                        )
+                        .setNeutralButton("Открыть настройки",
+                                (dialogInterface, i) -> {
+                                    try {
+                                        Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:" + getPackageName()));
+                                        activity.startActivity(intent);
+                                    } catch (Throwable t1) {
+                                        try {
+                                            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()));
+                                            activity.startActivity(intent);
+                                        } catch (Throwable ignored) {}
+                                    }
+                        }
+                        )
+                        .show();
             }
+        } else {
+            edit().putBoolean("showUnverifDialog", false).apply();
         }
     }
 

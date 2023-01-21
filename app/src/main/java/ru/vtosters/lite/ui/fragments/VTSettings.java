@@ -122,7 +122,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
 
         this.addPreferencesFromResource(R.xml.empty);
 
-//        AndroidUtils.checkLinksVerified(this.requireActivity());
+        AndroidUtils.checkLinksVerified(this.requireActivity());
 
         var accountSwitcher = PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
