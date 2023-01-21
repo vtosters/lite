@@ -191,8 +191,6 @@ public class AndroidUtils {
                         )
                         .show();
             }
-        } else {
-            edit().putBoolean("showUnverifDialog", false).apply();
         }
     }
 
