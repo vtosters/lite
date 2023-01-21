@@ -318,27 +318,14 @@ public class DNRInjector {
 
         if (msg instanceof MsgFromUser) {
             var text = ((MsgFromUser) msg).f();
-            var fullMsg = ((MsgFromUser) msg).j2(); // text + reply
-            var reply = fullMsg.substring(text.length() + 1);
-
             var isTextExist = !text.isEmpty() && !text.equals(" ");
-            var isReplyExist = !reply.isEmpty() && !reply.equals(" ");
-
-
-            if (isReplyExist) {
-                reply = decryptMessage(reply, peerId);
-            }
 
             if (isTextExist) {
                 text = decryptMessage(text, peerId);
             }
 
             if (action == MsgAction.valueOf("TRANSLATE")) {
-                if (isTextExist && isReplyExist) {
-                    Translate.showTranslatedText(context, text + "\n\n" + context.getString(R.string.translator_reply) + "\n" + reply);
-                } else if (isReplyExist) {
-                    Translate.showTranslatedText(context, context.getString(R.string.translator_reply) + "\n" + reply);
-                } else if (isTextExist) {
+                if (isTextExist) {
                     Translate.showTranslatedText(context, text);
                 } else {
                     sendToast(context.getString(R.string.translator_no_text));

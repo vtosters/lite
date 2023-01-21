@@ -1,31 +1,20 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import androidx.preference.Preference;
+import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.R;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
+
+import java.util.Arrays;
+
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
 import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
-
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-
-import androidx.preference.Preference;
-
-import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.navigation.Navigator;
-import com.vk.stickers.Stickers;
-import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
-import java.util.Arrays;
-
-import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
-import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
