@@ -142,7 +142,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
             var items = Arrays.asList(
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "По выбору"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(null, AndroidUtils.getString("by_choice")),
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.yandex, "Yandex"),
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.google, "Google"),
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.microsoft, "Bing"),

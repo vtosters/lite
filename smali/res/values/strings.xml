@@ -6480,4 +6480,9 @@ May look like a fake leaving the online"</string>
     <string name="cannot_write">No permission to write or read files</string>
     <string name="open_bot">Open a bot</string>
     <string name="crash_service_name">Error notifications</string>
+    <string name="custom_links_warning">Developers are not responsible for user links. Be careful!</string>
+    <string name="by_choice">By choice</string>
+    <string name="data_updated">Data updated</string>
+    <string name="updateverifdata_title">Update data</string>
+    <string name="updateverifdata_summ">Load the latest data about verifications and server functions</string>
 </resources>

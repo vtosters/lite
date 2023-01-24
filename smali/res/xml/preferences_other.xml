@@ -32,8 +32,8 @@
         </Preference>
         <Preference
                 android:key="updateverifdata"
-                android:summary="Загрузить свежие данные о верификациях и серверных функций"
-                android:title="Обновить данные"/>
+                android:summary="@string/updateverifdata_summ"
+                android:title="@string/updateverifdata_title"/>
         <Preference
                 android:key="copyownlink"
                 android:summary="@string/copyownlink_summ"

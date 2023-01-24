@@ -136,7 +136,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         findPreference("updateverifdata").setOnPreferenceClickListener(preference -> {
             UsersList.getUsersList();
             VTVerifications.load(requireContext());
-            sendToast("Данные обновлены");
+            sendToast(AndroidUtils.getString("data_updated"));
             return true;
         });
 
