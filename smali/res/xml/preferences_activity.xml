@@ -106,7 +106,7 @@
                 android:summary="@string/savemsgsett_summ"
                 android:title="@string/savemsgsett_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
+                android:defaultValue="true"
                 android:key="screenshotdetect"
                 android:summary="@string/screenshotdetect_summ"
                 android:title="@string/screenshotdetect_title"/>

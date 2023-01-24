@@ -22,15 +22,7 @@
                 android:key="calls"
                 android:summary="@string/messages_interface_calls_summary"
                 android:title="@string/vtlcalls"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="podcastcatalog"
-                android:title="@string/podcastcatalog_title"/>
-        <!-- <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="opusmodule"
-            android:title="@string/debug_experimental_opusmodule" />
-        <com.vtosters.lite.ui.SummaryListPreference
+        <!-- <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="system"
             android:dialogTitle="@string/debug_experimental_language_summary"
             android:entries="@array/language"

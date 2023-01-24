@@ -696,10 +696,6 @@
 
     .line 24
     :cond_0
-    invoke-static {p1}, Lru/vtosters/lite/utils/Preferences;->photoQuality(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
     invoke-direct {p0}, Lcom/vk/imageloader/view/VKImageView;->j()V
 
     .line 25
@@ -740,10 +736,6 @@
 
     .line 5
     :cond_0
-    invoke-static {p1}, Lru/vtosters/lite/utils/Preferences;->photoQuality(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
     invoke-direct {p0}, Lcom/vk/imageloader/view/VKImageView;->j()V
 
     .line 6

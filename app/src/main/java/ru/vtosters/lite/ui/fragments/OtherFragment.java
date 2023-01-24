@@ -80,13 +80,11 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 ToastUtils.a(requireContext().getString(R.string.fcmtokenget));
                 ToastUtils.a(requireContext().getString(R.string.fcmtokenfixed));
             }, 1000);
-
             return true;
         });
 
         findPreference("applicationstop").setOnPreferenceClickListener(preference -> {
             System.exit(0);
-
             return true;
         });
 
@@ -95,20 +93,17 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
             Toast.makeText(requireContext(), requireContext().getString(R.string.copybtn), LENGTH_SHORT).show();
             ToastUtils.a(requireContext().getString(R.string.tokenwarning));
-
             return true;
         });
 
         findPreference("copydebuginfo").setOnPreferenceClickListener(preference -> {
             copyText(new DeviceInfoCollector().collect().forLogging());
             Toast.makeText(requireContext(), "Информация об устройстве скопирована", LENGTH_SHORT).show();
-
             return true;
         });
 
         findPreference("applicationrestart").setOnPreferenceClickListener(preference -> {
             restartApplication();
-
             return true;
         });
 
@@ -133,15 +128,12 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("dialogrecomm").setVisible(!Preferences.hasVerification());
+
         findPreference("updateverifdata").setOnPreferenceClickListener(preference -> {
             UsersList.getUsersList();
             VTVerifications.load(requireContext());
             sendToast(AndroidUtils.getString("data_updated"));
-            return true;
-        });
-
-        findPreference("contacts_sync").setOnPreferenceClickListener(preference -> {
-            ContactsUtils.getContactsStatus(requireContext());
             return true;
         });
 

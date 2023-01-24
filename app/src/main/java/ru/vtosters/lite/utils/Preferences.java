@@ -60,10 +60,6 @@ public class Preferences {
         return getGlobalContext().getSharedPreferences(filename, Context.MODE_PRIVATE);
     }
 
-    public static boolean opusmodule() {
-        return getBoolValue("opusmodule", true);
-    }
-
     public static boolean systemtheme() {
         return Build.VERSION.SDK_INT >= 28 && milkshake() && (getPreferences().getString("currsystemtheme", "system").equals("system") || getPreferences().getString("currsystemtheme", "system").isEmpty());
     }
@@ -78,10 +74,6 @@ public class Preferences {
 
     public static boolean copyright_post() {
         return getBoolValue("copyright_post", false);
-    }
-
-    public static boolean default_ad_list() {
-        return getBoolValue("default_ad_list", false);
     }
 
     public static boolean shitposting() {
@@ -296,12 +288,8 @@ public class Preferences {
         return getBoolValue("vkme_notifs", false);
     }
 
-    public static boolean podcastcatalog() {
-        return getBoolValue("podcastcatalog", false);
-    }
-
     public static boolean screenshotdetect() {
-        return getBoolValue("screenshotdetect", false);
+        return getBoolValue("screenshotdetect", true);
     }
 
     public static boolean checkupdates() {
@@ -351,19 +339,5 @@ public class Preferences {
             return 100;
         }
         return origquality;
-    }
-
-    public static String photoQuality(String url) {
-//        if (dev()) Log.d("PhotoQuality", url);
-
-//        if (url.contains("quality=") && !url.contains("quality=100") && !getBoolValue("compressPhotos", true)) {
-//            if (url.contains("quality=95")) {
-//                url = url.replace("quality=95", "quality=99");
-//            } else {
-//                url = url.replace("quality=96", "quality=99");
-//            }
-//        }
-
-        return url;
     }
 }
