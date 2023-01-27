@@ -173,7 +173,7 @@ public class AndroidUtils {
                         .setTitle(com.vtosters.lite.R.string.warning)
                         .setMessage("Для нормальной работы приложения необходимо разрешить приложению открытие ссылок по умолчанию")
                         .setCancelable(false)
-                        .setPositiveButton(com.vtosters.lite.R.string.startbtn2,
+                        .setPositiveButton("Пропустить",
                                 (dialogInterface, i) -> edit().putBoolean("showUnverifDialog", false).apply()
                         )
                         .setNeutralButton("Открыть настройки",
