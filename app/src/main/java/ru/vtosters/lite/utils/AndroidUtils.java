@@ -60,7 +60,7 @@ public class AndroidUtils {
         } catch (Exception e) {
             Log.d("GlobalContext", "Error while fetching context via refl");
         }
-        return Objects.requireNonNull(LifecycleUtils.getCurrentActivity());
+        return LifecycleUtils.getCurrentActivity();
     } // Getting the global context through reflection to use context on application initialization
 
     public static Resources getResources() {

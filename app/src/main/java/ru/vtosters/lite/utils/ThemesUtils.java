@@ -39,15 +39,10 @@ import static ru.vtosters.lite.utils.Preferences.*;
 
 public class ThemesUtils {
     public static void applyTheme(VKTheme theme) {
-        var currentActivity = LifecycleUtils.getCurrentActivity();
-        if (currentActivity != null) {
-            try {
-                VKThemeHelper.theme(theme, currentActivity, getCenterScreenCoords());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            Log.d("ThemesUtils", "Null activity lol");
+        try {
+            VKThemeHelper.theme(theme, LifecycleUtils.getCurrentActivity(), getCenterScreenCoords());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
@@ -66,8 +61,6 @@ public class ThemesUtils {
     public static void setTheme(VKTheme theme, Activity activity) {
         if (activity == null) {
             activity = LifecycleUtils.getCurrentActivity();
-
-            if (activity == null) return;
         }
         VKThemeHelper.theme(theme, activity, getCenterScreenCoords());
         ThemeTracker.a();
@@ -79,8 +72,6 @@ public class ThemesUtils {
     public static void setThemeFL(VKTheme theme, Activity activity, float[] fl) {
         if (activity == null) {
             activity = LifecycleUtils.getCurrentActivity();
-
-            if (activity == null) return;
         }
         VKThemeHelper.theme(theme, activity, fl);
         ThemeTracker.a();

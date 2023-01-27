@@ -10,6 +10,7 @@ import android.os.Handler;
 
 import com.vk.core.fragments.FragmentImpl;
 import com.vk.navigation.Navigator;
+import com.vtosters.lite.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +55,7 @@ public class LifecycleUtils {
     }
 
     public static Activity getCurrentActivity() {
-        return activities.size() > 0 ? activities.get(activities.size() - 1) : null;
+        return activities.size() > 0 ? activities.get(activities.size() - 1) : new MainActivity();
     }
 
     public static void restartApplication() {
@@ -71,13 +72,5 @@ public class LifecycleUtils {
     public static void restartApplicationWithTimer() {
         Handler handler = new Handler();
         handler.postDelayed(LifecycleUtils::restartApplication, 500);
-    }
-
-    public static void restartApplicationInto(Class< ? extends FragmentImpl> clz) {
-        Context ctx = AndroidUtils.getGlobalContext();
-
-        NavigatorUtils.switchFragment(AndroidUtils.getGlobalContext(), clz);
-
-        Runtime.getRuntime().exit(0);
     }
 }

@@ -59,11 +59,6 @@ public class CryptImHook {
         IMProcessor finalEnabled = enabled;
         Activity ctx = getCurrentActivity();
 
-        if (ctx == null) {
-            sendToast(AndroidUtils.getString(R.string.app_activities_error));
-            return;
-        }
-
         new VkAlertDialog.Builder(ctx)
                 .setTitle(AndroidUtils.getString(R.string.encryption_sett))
                 .setSingleChoiceItems(titles, enabledPosition, (dialog, which) -> {
@@ -110,11 +105,6 @@ public class CryptImHook {
         }
 
         Context ctx = getCurrentActivity();
-
-        if (ctx == null) {
-            sendToast(ctx.getString(R.string.app_activities_error));
-            return;
-        }
 
         LinearLayout linearLayout = new LinearLayout(ctx);
 
