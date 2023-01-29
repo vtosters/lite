@@ -632,7 +632,6 @@
     <string-array name="musicdefcatalog_value">
         <item>По умолчанию</item>
         <item>Главная</item>
-        <item>Недавно прослушанные</item>
         <item>Моя музыка</item>
         <item>Плейлисты</item>
         <item>Альбомы</item>
