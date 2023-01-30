@@ -59,12 +59,5 @@
                 android:key="sendByEnter"
                 android:summary="@string/sett_send_by_enter_summary"
                 android:title="@string/sett_send_by_enter"/>
-        <com.vtosters.lite.ui.SummaryListPreference
-                android:defaultValue="30"
-                android:dialogTitle="@string/messages_other_choose_count"
-                android:entries="@array/msgcount_value"
-                android:entryValues="@array/msgcount"
-                android:key="msgcount"
-                android:title="@string/messages_other_download_first"/>
     </PreferenceCategory>
 </PreferenceScreen>

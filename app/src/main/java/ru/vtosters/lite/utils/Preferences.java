@@ -279,11 +279,6 @@ public class Preferences {
         return getBoolValue("voice", true);
     }
 
-    public static int getMsgCount(int orig) {
-        String customvalue = getPrefsValue("msgcount");
-        return customvalue.isEmpty() ? orig : Integer.parseInt(customvalue);
-    }
-
     public static boolean vkme_notifs() {
         return getBoolValue("vkme_notifs", false);
     }
