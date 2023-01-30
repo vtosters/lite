@@ -5,10 +5,14 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.view.View;
+import android.widget.Toast;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 public class CallsHook {
     public static void forwardToVkOffApps(View view, ExtendedUserProfile p) {
@@ -26,7 +30,14 @@ public class CallsHook {
         var callsAvailable = vkim || vk;
 
         if (!callsAvailable) {
-            AndroidUtils.sendToast("Установите VK мессенджер или официальный VK клиент");
+            Toast.makeText(LifecycleUtils.getCurrentActivity(), "Установите VK Мессенджер или официальный клиент ВКонтакте", LENGTH_SHORT).show();
+
+            try {
+                ctx.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.vkontakte.android")));
+            } catch (android.content.ActivityNotFoundException e) {
+                ctx.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.vkontakte.android")));
+            }
+
             return;
         }
 
