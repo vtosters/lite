@@ -98,7 +98,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("copydebuginfo").setOnPreferenceClickListener(preference -> {
             copyText(new DeviceInfoCollector().collect().forLogging());
-            Toast.makeText(requireContext(), "Информация об устройстве скопирована", LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), AndroidUtils.getString("device_info_copied"), LENGTH_SHORT).show();
             return true;
         });
 

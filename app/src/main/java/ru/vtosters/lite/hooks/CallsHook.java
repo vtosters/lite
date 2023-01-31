@@ -30,7 +30,7 @@ public class CallsHook {
         var callsAvailable = vkim || vk;
 
         if (!callsAvailable) {
-            Toast.makeText(LifecycleUtils.getCurrentActivity(), "Установите VK Мессенджер или официальный клиент ВКонтакте", LENGTH_SHORT).show();
+            Toast.makeText(LifecycleUtils.getCurrentActivity(), AndroidUtils.getString("calls_not_available"), LENGTH_SHORT).show();
 
             try {
                 ctx.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.vkontakte.android")));

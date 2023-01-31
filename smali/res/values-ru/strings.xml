@@ -6347,4 +6347,10 @@
     <string name="data_updated">Данные обновлены</string>
     <string name="updateverifdata_title">Обновить данные</string>
     <string name="updateverifdata_summ">Загрузить свежие данные о верификациях и серверных функциях</string>
+    <string name="device_info">Информация об устройстве</string>
+    <string name="calls_not_available">Установите VK Мессенджер или официальный клиент ВКонтакте</string>
+    <string name="copydebuginfo_title">Скопировать информацию об устройстве</string>
+    <string name="copydebuginfo_summ">Для отправки информации об ошибке на GitHub Issues</string>
+    <string name="device_info_copied">Информация об устройстве скопирована</string>
+    <string name="app_open_by_default_settings">Для нормальной работы приложения необходимо разрешить приложению открытие ссылок по умолчанию</string>
 </resources>

@@ -6485,4 +6485,10 @@ May look like a fake leaving the online"</string>
     <string name="data_updated">Data updated</string>
     <string name="updateverifdata_title">Update data</string>
     <string name="updateverifdata_summ">Load the latest data about verifications and server functions</string>
+    <string name="device_info">Device info</string>
+    <string name="calls_not_available">Install VK Messenger or official VK client</string>
+    <string name="copydebuginfo_title">Copy device info</string>
+    <string name="copydebuginfo_summ">To submit bug info to GitHub Issues</string>
+    <string name="device_info_copied">Device info copied</string>
+    <string name="app_open_by_default_settings">You need to allow the app to open links by default for the app to work properly</string>
 </resources>

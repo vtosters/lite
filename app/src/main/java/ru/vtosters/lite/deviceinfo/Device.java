@@ -1,5 +1,7 @@
 package ru.vtosters.lite.deviceinfo;
 
+import ru.vtosters.lite.utils.AndroidUtils;
+
 import static ru.vtosters.lite.deviceinfo.OEMDetector.hasMiuiIncrCode;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isEMUI;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isMIUI;
@@ -103,7 +105,7 @@ public class Device {
     }
 
     public String forLogging() {
-        return "**Информация об устройстве:** " + "\n\n"
+        return "**" + AndroidUtils.getString("device_info") + ":** " + "\n\n"
                 + "- Commit: " + getBuildNumber() + "\n"
                 + "- Android SDK: " + this.sdkVersion + "\n"
                 + "- Product: " + this.productName + "\n"

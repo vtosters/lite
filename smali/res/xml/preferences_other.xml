@@ -65,8 +65,8 @@
     <PreferenceCategory android:title="@string/vtsystem">
         <Preference
                 android:key="copydebuginfo"
-                android:summary="Для отправки информации об ошибке на Github Issues"
-                android:title="Скопировать информацию об устройстве"/>
+                android:summary="@string/copydebuginfo_summ"
+                android:title="@string/copydebuginfo_title"/>
         <Preference
                 android:key="applicationrestart"
                 android:title="@string/applicationrestart"/>

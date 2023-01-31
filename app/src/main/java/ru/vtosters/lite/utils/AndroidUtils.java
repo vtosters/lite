@@ -171,12 +171,12 @@ public class AndroidUtils {
             if (getBoolValue("showUnverifDialog", true)) {
                 new VkAlertDialog.Builder(activity)
                         .setTitle(com.vtosters.lite.R.string.warning)
-                        .setMessage("Для нормальной работы приложения необходимо разрешить приложению открытие ссылок по умолчанию")
+                        .setMessage(AndroidUtils.getString("app_open_by_default_settings"))
                         .setCancelable(false)
-                        .setPositiveButton("Пропустить",
+                        .setPositiveButton(com.vtosters.lite.R.string.social_graph_skip,
                                 (dialogInterface, i) -> edit().putBoolean("showUnverifDialog", false).apply()
                         )
-                        .setNeutralButton("Открыть настройки",
+                        .setNeutralButton(com.vtosters.lite.R.string.open_settings,
                                 (dialogInterface, i) -> {
                                     try {
                                         Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:" + getPackageName()));
