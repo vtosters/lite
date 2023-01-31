@@ -19,8 +19,7 @@ public class RandomProxy {
 
     public static void loadProxy() throws IOException {
         if (host.isEmpty()) {
-            getProxy();
-            loadProxy();
+            if (getProxy()) loadProxy();
             return;
         }
 
@@ -51,9 +50,9 @@ public class RandomProxy {
         edit().putString("proxy", "randomproxy").commit();
     }
 
-    public static void getProxy() throws IOException {
+    public static boolean getProxy() throws IOException {
         var random = new java.util.Random();
-        var randomInt = random.nextInt(7);
+        var randomInt = random.nextInt(8);
         switch (randomInt) {
             case 0:
                 Hookzof.loadProxy();
@@ -80,5 +79,7 @@ public class RandomProxy {
                 ru.vtosters.lite.proxy.https.Roosterkid.loadProxy();
                 break;
         }
+
+        return true;
     }
 }
