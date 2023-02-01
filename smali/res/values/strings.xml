@@ -6140,7 +6140,7 @@ May look like a fake leaving the online"</string>
     <string name="logfile_saved">The log file has been saved</string>
 
     <string name="menu_copy_id">Copy ID</string>
-    <string name="menu_addon_info">Addon info</string>
+    <string name="menu_addon_info">Additional info</string>
     <string name="menu_change_name">Change name</string>
     <string name="menu_copied">Copied!</string>
 
