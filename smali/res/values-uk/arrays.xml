@@ -547,7 +547,7 @@
         <item>У суботу</item>
         <item>У неділю</item>
     </string-array>
-        <string-array name="animations2">
+    <string-array name="animations2">
         <item>Без анімації</item>
         <item>Fade</item>
         <item>AndroidX</item>
