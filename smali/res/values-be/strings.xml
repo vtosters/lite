@@ -190,7 +190,7 @@
  <string name="ads_easy_promote_rejected">Рэклама адхіленая мадэратарам</string>
  <string name="ads_easy_promote_started">Рэклама актыўная</string>
  <string name="ads_easy_promote_stopped">Рэклама спынена</string>
- <string name="ads_easy_promote_verifying">Рэкламная аб'ява правяраецца</string>
+ <string name="ads_easy_promote_verifying">Рэкламная аб\'ява правяраецца</string>
  <string name="age">Узрост</string>
  <string name="age_from">ад %,d</string>
  <string name="age_to">да %,d</string>
@@ -389,7 +389,7 @@ QR-код"</string>
  <string name="cancel_request">Адмяніць</string>
  <string name="captcha_hint">Увядзіце код з карцінкі</string>
  <string name="caption">Подпіс</string>
- <string name="career">Кар'ера</string>
+ <string name="career">Кар\'ера</string>
  <string name="catalog_button_show_all">Паказаць усе</string>
  <string name="catalog_delete_friend">Выдаліць з сяброў</string>
  <string name="catalog_delete_subscription">Адпісацца</string>
@@ -458,7 +458,7 @@ QR-код"</string>
  <string name="collection_add_object">Дадаць</string>
  <string name="collection_add_object_already_added">Вы ўжо дадалі такую ​​спасылку</string>
  <string name="collection_add_poll">Дадаць апытанне</string>
- <string name="add_object">Дадаць аб'ект</string>
+ <string name="add_object">Дадаць аб\'ект</string>
  <string name="collection_add_post">Дадаць запіс</string>
  <string name="collection_add_select">Падзяліцца з гледачамі</string>
  <string name="collection_add_select_hint">Абярыце матэрыял, якім хочаце падзяліцца з гледачамі прама зараз</string>
@@ -586,7 +586,7 @@ QR-код"</string>
  <string name="community_members_is_hiden">Удзельнікі схаваны</string>
  <string name="community_members_is_hiden_description">Кіраўнікі суполкі скрылі спіс удзельнікаў</string>
  <string name="community_news_hidden">Навіны суполкі больш не будуць адлюстроўвацца ў Вашай стужцы</string>
- <string name="community_news_shown">Навіны суполкі з'явяцца ў Вашай стужцы</string>
+ <string name="community_news_shown">Навіны суполкі з\'явяцца ў Вашай стужцы</string>
  <string name="community_notifications_confirm_disable">Вы сапраўды хочаце адключыць апавяшчэнні суполкі «%s»?</string>
  <string name="community_online">Суполка анлайн</string>
  <string name="community_online_description">адкажуць прама зараз</string>
@@ -872,7 +872,7 @@ QR-код"</string>
  <string name="error_ssl_expired">Не ўдалося ўсталяваць SSL злучэнне. Сертыфікат скончыўся</string>
  <string name="error_ssl_id_mismatch">Не ўдалося ўсталяваць SSL злучэнне. Імя хаста не супадае</string>
  <string name="error_ssl_not_yet_valid">Не ўдалося ўсталяваць SSL злучэнне. Магчыма, усталявана няправільная дата</string>
- <string name="error_ssl_untrusted">Не ўдалося ўсталяваць SSL злучэнне. CA не з'яўляецца давераным</string>
+ <string name="error_ssl_untrusted">Не ўдалося ўсталяваць SSL злучэнне. CA не з\'яўляецца давераным</string>
  <string name="error_timeout">Час чакання сервера скончыўся</string>
  <string name="error_unknown">Невядомая памылка</string>
  <string name="error_upload_big_image">Загрузіце малюнак меншага памеру</string>
@@ -1105,7 +1105,7 @@ QR-код"</string>
  <string name="friends_hide">Схаваць</string>
  <string name="friends_mutual_formatted">%s агульных</string>
  <string name="friends_nearby_qr">Дадаць па QR-коду</string>
- <string name="friends_nearby_text">Калі карыстачы не з'явяцца аўтаматычна, прапануйце ім адкрыць Пошук сяброў у раздзеле Сябры.</string>
+ <string name="friends_nearby_text">Калі карыстачы не з\'явяцца аўтаматычна, прапануйце ім адкрыць Пошук сяброў у раздзеле Сябры.</string>
  <string name="friends_nearby_title">Паблізу</string>
  <string name="friends_of_user">Сябры %s</string>
  <string name="friends_online">У сетцы</string>
@@ -1146,7 +1146,7 @@ QR-код"</string>
  <string name="fsize_mb">МБ</string>
  <string name="gallery">Галерэя</string>
  <string name="game_add_to_menu">Дадаць у меню</string>
- <string name="game_add_to_menu_subtitle">Гульня з'явіцца пад спісам раздзелаў на экране меню і будзе заўсёды пад рукой</string>
+ <string name="game_add_to_menu_subtitle">Гульня з\'явіцца пад спісам раздзелаў на экране меню і будзе заўсёды пад рукой</string>
  <string name="game_add_to_menu_title">Дадаць гульню "%s" у меню?</string>
  <string name="game_added_to_menu">Гульня дададзена ў меню</string>
  <string name="game_install_notify">Націсніце, каб усталяваць</string>
@@ -1357,7 +1357,7 @@ QR-код"</string>
  <string name="group_start_date">Час пачатку</string>
  <string name="group_start_time">Час пачатку:</string>
  <string name="group_story">Гісторыя суполкі</string>
- <string name="group_story_desc">З'явіцца ў раздзеле навін і на старонцы суполкі на 24 гадзіны</string>
+ <string name="group_story_desc">З\'явіцца ў раздзеле навін і на старонцы суполкі на 24 гадзіны</string>
  <string name="group_subscribed">Вы падпісаліся</string>
  <string name="group_title">Назва суполкі</string>
  <string name="group_topic">Тэматыка суполкі</string>
@@ -1453,17 +1453,17 @@ QR-код"</string>
  <string name="jump_to_page">Перайсці на старонку</string>
  <string name="last_seen_ago">таму</string>
  <string name="last_seen_female">была ў сетцы</string>
- <string name="last_seen_female_etc">"'была ў сетцы' d MMMM yyyy 'у' H:mm"</string>
+ <string name="last_seen_female_etc">"\'была ў сетцы\' d MMMM yyyy \'у\' H:mm"</string>
  <string name="last_seen_female_seconds_ago">толькі што</string>
- <string name="last_seen_female_this_year">"'была ў сетцы' d MMMM 'у' H:mm"</string>
- <string name="last_seen_female_today">"'была ў сетцы сёння ў' H:mm"</string>
- <string name="last_seen_female_yesterday">"'была ў сетцы ўчора ў' H:mm"</string>
+ <string name="last_seen_female_this_year">"\'была ў сетцы\' d MMMM \'у\' H:mm"</string>
+ <string name="last_seen_female_today">"\'была ў сетцы сёння ў\' H:mm"</string>
+ <string name="last_seen_female_yesterday">"\'была ў сетцы ўчора ў\' H:mm"</string>
  <string name="last_seen_male">быў у сетцы</string>
- <string name="last_seen_male_etc">"'быў у сетцы' d MMMM yyyy 'у' H:mm"</string>
+ <string name="last_seen_male_etc">"\'быў у сетцы\' d MMMM yyyy \'у\' H:mm"</string>
  <string name="last_seen_male_seconds_ago">толькі што</string>
- <string name="last_seen_male_this_year">"'быў у сетцы' d MMMM 'у' H:mm"</string>
- <string name="last_seen_male_today">"'быў у сетцы сёння ў' H:mm"</string>
- <string name="last_seen_male_yesterday">"'быў у сетцы ўчора ў' H:mm"</string>
+ <string name="last_seen_male_this_year">"\'быў у сетцы\' d MMMM \'у\' H:mm"</string>
+ <string name="last_seen_male_today">"\'быў у сетцы сёння ў\' H:mm"</string>
+ <string name="last_seen_male_yesterday">"\'быў у сетцы ўчора ў\' H:mm"</string>
  <string name="last_seen_profile_f">была ў сетцы %s</string>
  <string name="last_seen_profile_m">быў у сетцы %s</string>
  <string name="latest_news">Актуальныя навіны</string>
@@ -1604,7 +1604,7 @@ QR-код"</string>
  <string name="live_da_payin_yandex">Яндэкс.Грошы</string>
  <string name="live_da_payment_error">Памылка пры аплаце</string>
  <string name="live_da_payment_method">Спосаб аплаты</string>
- <string name="live_da_payment_ok">Аплата прайшла паспяхова, Ваша паведамленне хутка з'явіцца на экране трансляцыі</string>
+ <string name="live_da_payment_ok">Аплата прайшла паспяхова, Ваша паведамленне хутка з\'явіцца на экране трансляцыі</string>
  <string name="live_da_phone_confirm">Пацвярджэнне</string>
  <string name="live_da_phone_enter_action">Закрыць</string>
  <string name="live_da_phone_enter_sms">Дзякуй, рахунак быў выстаўлены паспяхова! На ўказаны нумар тэлефона будзе выслана SMS з поўнай сумай плацяжу і інструкцыяй па яго пацвярджэнні.</string>
@@ -1695,7 +1695,7 @@ QR-код"</string>
  <string name="live_viewers_viewers_title">Гледачы</string>
  <string name="live_watch_next">Глядзіце далей</string>
  <string name="live_write_empty_comment_send">Немагчыма адправіць пусты каментар</string>
- <string name="live_write_super_message_tooltip">Вы ўключылі суперпаведамленні. Паведамленне з'явіцца ў цэнтры экрана, яго ўбачаць аўтар і ўсе ўдзельнікі трансляцыі</string>
+ <string name="live_write_super_message_tooltip">Вы ўключылі суперпаведамленні. Паведамленне з\'явіцца ў цэнтры экрана, яго ўбачаць аўтар і ўсе ўдзельнікі трансляцыі</string>
  <string name="live_yes">Так</string>
  <string name="live_your_balance">Ваш баланс:</string>
  <string name="lives_all_translations_filter">Папулярныя</string>
@@ -2065,7 +2065,7 @@ QR-код"</string>
 у высокай якасці"</string>
  <string name="music_promo_free_plan_point_2">Персанальныя рэкамендацыі</string>
  <string name="music_promo_free_plan_point_3">"Музыка сяброў, эксклюзіўныя
-прэм'еры і многае іншае"</string>
+прэм\'еры і многае іншае"</string>
  <string name="music_promo_library">Пашыраны каталог музыкі</string>
  <string name="music_promo_no_more_music_special_offer">Атрымаць спецпредложение</string>
  <string name="music_promo_no_more_music_subtitle">У музычнай індустрыі свае правілы - нам прыйшлося пайсці на кампраміс, каб захаваць магчымасць слухаць музыку бясплатна. Без падпіскі трэкі можна слухаць у адкрытым дадатку: не згортвайце яго і не блакуйце экран.</string>
@@ -2232,11 +2232,11 @@ QR-код"</string>
  <string name="my_qr_code">Мой QR-код</string>
  <string name="my_stickers">Мае стыкеры</string>
  <string name="my_stories">Мае гісторыі</string>
- <string name="my_stories_desc">З'явяцца ў раздзеле навін і на Вашай старонцы на 24 гадзіны</string>
+ <string name="my_stories_desc">З\'явяцца ў раздзеле навін і на Вашай старонцы на 24 гадзіны</string>
  <string name="my_story">Мая гісторыя</string>
  <string name="my_story_1">Мая</string>
  <string name="my_story_2">гісторыя</string>
- <string name="my_story_desc">З'явіцца ў раздзеле навін і на Вашай старонцы на 24 гадзіны</string>
+ <string name="my_story_desc">З\'явіцца ў раздзеле навін і на Вашай старонцы на 24 гадзіны</string>
  <string name="my_videos">Мае відэазапісы</string>
  <string name="n_hours_mins" formatted="false">%$1d гадзіну. %$2d мін.</string>
  <string name="n_mins_secs">%1$d мін. %2$02d сек.</string>
@@ -2717,7 +2717,7 @@ QR-код"</string>
 ці выдалены"</string>
  <string name="picker_graffiti">Графіці</string>
  <string name="picker_graffiti_delete_result">Адбылася памылка пры выдаленні графіці</string>
- <string name="picker_graffiti_history_desc">Тут будуць з'яўляцца намаляваныя графіці</string>
+ <string name="picker_graffiti_history_desc">Тут будуць з\'яўляцца намаляваныя графіці</string>
  <string name="picker_graffiti_save_result">Адбылася памылка пры захаванні графіці</string>
  <string name="picker_last_24_hours">Апошнія 24 гадзіны</string>
  <string name="picker_loading">Загрузка...</string>
@@ -3223,8 +3223,8 @@ QR-код"</string>
  <string name="repost_notification_post_m">%1$s падзяліўся Вашым запісам</string>
  <string name="repost_notification_video_f">%1$s падзялілася Вашым відэазапісам</string>
  <string name="repost_notification_video_m">%1$s падзяліўся Вашым відэазапісам</string>
- <string name="repost_ok_group">Запіс з'явіцца ў суполцы</string>
- <string name="repost_ok_wall">Запіс з'явіцца на вашай старонцы</string>
+ <string name="repost_ok_group">Запіс з\'явіцца ў суполцы</string>
+ <string name="repost_ok_wall">Запіс з\'явіцца на вашай старонцы</string>
  <string name="repost_own_wall">На маёй сцяне</string>
  <string name="reposters">Падзяліліся</string>
  <string name="reposts">Копіі</string>
@@ -3653,12 +3653,12 @@ QR-код"</string>
  <string name="stories_author_deleted_story">Гісторыя выдалена</string>
  <string name="stories_community_grouped_description">Тут сабраны гісторыі ўсіх суполак, на якія Вы падпісаны</string>
  <string name="stories_community_grouped_title">Гісторыі суполак</string>
- <string name="stories_community_parent_story_desc">З'явіцца пад гісторыяй суполкі як адказ на публікацыю</string>
+ <string name="stories_community_parent_story_desc">З\'явіцца пад гісторыяй суполкі як адказ на публікацыю</string>
  <string name="stories_community_parent_story_title">Адказ суполцы %s</string>
  <string name="stories_grouped_communities_block_title">Суполкі</string>
- <string name="stories_my_story_desc">З'явіцца ў раздзеле навін і на Вашай старонцы на 24 гадзіны</string>
+ <string name="stories_my_story_desc">З\'явіцца ў раздзеле навін і на Вашай старонцы на 24 гадзіны</string>
  <string name="stories_not_interested">Гэта не цікава</string>
- <string name="stories_promo_parent_story_desc">З'явіцца пад гісторыяй як адказ на публікацыю</string>
+ <string name="stories_promo_parent_story_desc">З\'явіцца пад гісторыяй як адказ на публікацыю</string>
  <string name="stories_promo_parent_story_title">Адказ на гісторыю</string>
  <string name="stories_replies">Адказы</string>
  <string name="stories_replies_comment">Паведамленне…</string>
@@ -3686,8 +3686,8 @@ QR-код"</string>
  <string name="stories_tooltip_reply_to_story">Адказаць на гісторыю</string>
  <string name="stories_tooltip_story_reply_with_same_mask">Адказаць на гісторыю з такой жа маскай</string>
  <string name="stories_tooltip_story_will_be_sent_with_message">Гісторыя будзе адпраўлена %s паведамленнем</string>
- <string name="stories_user_female_parent_story_desc">З'явіцца пад гісторыяй %s як адказ</string>
- <string name="stories_user_male_parent_story_desc">З'явіцца пад гісторыяй %s як адказ</string>
+ <string name="stories_user_female_parent_story_desc">З\'явіцца пад гісторыяй %s як адказ</string>
+ <string name="stories_user_male_parent_story_desc">З\'явіцца пад гісторыяй %s як адказ</string>
  <string name="stories_user_parent_story_title">Адказ %s</string>
  <string name="story">Гісторыя</string>
  <string name="story_accessibility_actions">Дзеянні</string>
@@ -4027,7 +4027,7 @@ QR-код"</string>
  <string name="talkback_ic_back">Назад</string>
  <string name="talkback_ic_cancel">Адмяніць</string>
  <string name="talkback_ic_mention">Увесці адрас старонкі</string>
- <string name="talkback_ic_qrscan">Сканаваць к'ю ар код</string>
+ <string name="talkback_ic_qrscan">Сканаваць к\'ю ар код</string>
  <string name="talkback_ic_search">Пошук</string>
  <string name="talkback_ic_search_params">Параметры</string>
  <string name="talkback_ic_voice">Галасавы ўвод</string>
@@ -4113,7 +4113,7 @@ QR-код"</string>
  <string name="user_blocked_m">%s дададзены ў чорны спіс</string>
  <string name="user_has_been_hidden_from_stories">Карыстальнік быў скрыты з гісторый</string>
  <string name="user_news_hidden">Навіны %s больш не будуць адлюстроўвацца ў Вашай стужцы</string>
- <string name="user_news_shown">Навіны %s з'явяцца ў Вашай стужцы</string>
+ <string name="user_news_shown">Навіны %s з\'явяцца ў Вашай стужцы</string>
  <string name="user_photos_title">Фатаграфіі з %s</string>
  <string name="user_photos_title_me">Фатаграфіі са мной</string>
  <string name="user_profile_photos">Фатаграфіі са старонкі %s</string>
@@ -4244,7 +4244,7 @@ QR-код"</string>
  <string name="video_upload_ok_multiple">Відэазапісы загружаны</string>
  <string name="video_upload_ok_multiple_long">Відэазапісы паспяхова загружаны</string>
  <string name="video_views_count_formatted">%s праглядаў</string>
- <string name="video_wrong_link">Відэасервіс не падтрымліваецца, альбо спасылка з'яўляецца няправільнай</string>
+ <string name="video_wrong_link">Відэасервіс не падтрымліваецца, альбо спасылка з\'яўляецца няправільнай</string>
  <string name="videos">Відэа</string>
  <string name="videos_by_community">Відэа суполкі</string>
  <string name="videos_by_user">Відэазапісы %s</string>
@@ -4540,10 +4540,10 @@ QR-код"</string>
  <string name="vkim_chat_settings_notifications_dnd_option_one_hour">1 гадзіна</string>
  <string name="vkim_chat_settings_notifications_dnd_option_one_week">7 дзён</string>
  <string name="vkim_chat_settings_notifications_dnd_title">Не турбаваць</string>
- <string name="vkim_chat_settings_notifications_dnd_until_etc">"'да' d MMMM 'у' HH:mm"</string>
+ <string name="vkim_chat_settings_notifications_dnd_until_etc">"\'да\' d MMMM \'у\' HH:mm"</string>
  <string name="vkim_chat_settings_notifications_dnd_until_forever">Назаўжды</string>
- <string name="vkim_chat_settings_notifications_dnd_until_today">"'сёння' HH:mm"</string>
- <string name="vkim_chat_settings_notifications_dnd_until_tomorrow">"'да заўтра' у HH:mm"</string>
+ <string name="vkim_chat_settings_notifications_dnd_until_today">"\'сёння\' HH:mm"</string>
+ <string name="vkim_chat_settings_notifications_dnd_until_tomorrow">"\'да заўтра\' у HH:mm"</string>
  <string name="vkim_chat_settings_notifications_header">Апавяшчэнні</string>
  <string name="vkim_chat_settings_notifications_sound_title">Гук</string>
  <string name="vkim_chat_settings_open_casper_chat">Перайсці ў фантом-чат</string>
@@ -4652,7 +4652,7 @@ QR-код"</string>
  <string name="vkim_dialogs_list_time_etc">d MMMM yyyy</string>
  <string name="vkim_dialogs_list_time_this_year">d MMMM</string>
  <string name="vkim_dialogs_list_time_today">H:mm</string>
- <string name="vkim_dialogs_list_time_yesterday">"'учора'"</string>
+ <string name="vkim_dialogs_list_time_yesterday">"\'учора\'"</string>
  <string name="vkim_disappear_msg_send">Знікаючае паведамленне</string>
  <string name="vkim_download_started">Загрузка…</string>
  <string name="vkim_draft">Чарнавік</string>
@@ -4854,10 +4854,10 @@ QR-код"</string>
  <string name="vkim_msg_list_empty">Паведамленняў пакуль няма</string>
  <string name="vkim_msg_list_empty_subtitle">Пачніце зносіны!</string>
  <string name="vkim_msg_list_event_button">Адкрыць</string>
- <string name="vkim_msg_list_fwd_time_etc">"d MMMM yyyy 'у' H:mm"</string>
- <string name="vkim_msg_list_fwd_time_this_year">"d MMMM 'у' H:mm"</string>
- <string name="vkim_msg_list_fwd_time_today">"'Сёння ў' H:mm"</string>
- <string name="vkim_msg_list_fwd_time_yesterday">"'Учора ў' H:mm"</string>
+ <string name="vkim_msg_list_fwd_time_etc">"d MMMM yyyy \'у\' H:mm"</string>
+ <string name="vkim_msg_list_fwd_time_this_year">"d MMMM \'у\' H:mm"</string>
+ <string name="vkim_msg_list_fwd_time_today">"\'Сёння ў\' H:mm"</string>
+ <string name="vkim_msg_list_fwd_time_yesterday">"\'Учора ў\' H:mm"</string>
  <string name="vkim_msg_list_gift_simple_title">Падарунак</string>
  <string name="vkim_msg_list_gift_stickers_button">Адкрыць</string>
  <string name="vkim_msg_list_gift_stickers_title">Набор стыкераў</string>
@@ -4874,8 +4874,8 @@ QR-код"</string>
  <string name="vkim_msg_list_poll_subtitle">Апытанне</string>
  <string name="vkim_msg_list_time_etc">d MMMM yyyy</string>
  <string name="vkim_msg_list_time_this_year">d MMMM</string>
- <string name="vkim_msg_list_time_today">"'Сёння', d MMMM"</string>
- <string name="vkim_msg_list_time_yesterday">"'Учора', d MMMM"</string>
+ <string name="vkim_msg_list_time_today">"\'Сёння\', d MMMM"</string>
+ <string name="vkim_msg_list_time_yesterday">"\'Учора\', d MMMM"</string>
  <string name="vkim_msg_list_unread">Непрачытаныя паведамленні</string>
  <string name="vkim_msg_list_unsupported_subtitle">Абнавіце дадатак</string>
  <string name="vkim_msg_list_unsupported_title">Не падтрымліваецца</string>
@@ -5025,7 +5025,7 @@ QR-код"</string>
  <string name="vkim_pinned_msg_time_etc">d MMMM yyyy</string>
  <string name="vkim_pinned_msg_time_this_year">d MMMM</string>
  <string name="vkim_pinned_msg_time_today">H:mm</string>
- <string name="vkim_pinned_msg_time_yesterday">"'учора ў' H:mm"</string>
+ <string name="vkim_pinned_msg_time_yesterday">"\'учора ў\' H:mm"</string>
  <string name="vkim_popup_account_logout_submit_desc">Пры выхадзе з уліковага запісу з прылады будуць выдаленыя ўсе злучаныя з ёй дадзеныя. Працягнуць?</string>
  <string name="vkim_popup_account_logout_submit_title">Выйсці</string>
  <string name="vkim_popup_account_logout_submit_yes">Выйсці</string>
@@ -5146,10 +5146,10 @@ QR-код"</string>
  <string name="vkim_settings_logout">Выйсці</string>
  <string name="vkim_settings_notifications">Апавяшчэнні</string>
  <string name="vkim_settings_online_privacy">Хто бачыць, што я анлайн</string>
- <string name="vkim_settings_online_privacy_description">Вы не зможаце бачыць статус «У сетцы» і час апошняга з'яўлення ў тых, ад каго Вы схавалі свой статус.</string>
- <string name="vkim_settings_online_privacy_exclude_hint">Вы можаце выбраць, ад каго будуць утоены статус «У сетцы» і час апошняга з'яўлення.</string>
- <string name="vkim_settings_online_privacy_exclude_users_hint">Ад гэтых карыстальнікаў схаваны статус «У сетцы» і час апошняга з'яўлення.</string>
- <string name="vkim_settings_online_privacy_include_hint">Абярыце, каму будуць бачныя статус «У сетцы» і час апошняга з'яўлення.</string>
+ <string name="vkim_settings_online_privacy_description">Вы не зможаце бачыць статус «У сетцы» і час апошняга з\'яўлення ў тых, ад каго Вы схавалі свой статус.</string>
+ <string name="vkim_settings_online_privacy_exclude_hint">Вы можаце выбраць, ад каго будуць утоены статус «У сетцы» і час апошняга з\'яўлення.</string>
+ <string name="vkim_settings_online_privacy_exclude_users_hint">Ад гэтых карыстальнікаў схаваны статус «У сетцы» і час апошняга з\'яўлення.</string>
+ <string name="vkim_settings_online_privacy_include_hint">Абярыце, каму будуць бачныя статус «У сетцы» і час апошняга з\'яўлення.</string>
  <string name="vkim_settings_prefetch_audiomsg">Папярэдне загружаць галасавыя паведамленні</string>
  <string name="vkim_settings_privacy">Прыватнасць</string>
  <string name="vkim_settings_send_geo">Дадзеныя аб месцазнаходжанні</string>
@@ -5345,7 +5345,7 @@ QR-код"</string>
  <string name="yesterday_at">учора ў</string>
  <string name="your_balance">Ваш баланс:</string>
  <string name="your_gender">Ваш пол:</string>
- <string name="collection_item_hint_text">Вы можаце дадаваць аб'екты, якімі вы зможаце падзяліцца падчас трансляцыі.</string>
+ <string name="collection_item_hint_text">Вы можаце дадаваць аб\'екты, якімі вы зможаце падзяліцца падчас трансляцыі.</string>
  <string name="item_no_place_in_result_text">Месца няма ў спісе</string>
  <string name="watch_post_text">Глядзець пост</string>
  <string name="for_loading_from_network">для загрузкі з сеткі</string>
@@ -5775,7 +5775,7 @@ QR-код"</string>
  <string name="checkforupdates">Праверыць абнаўлення</string>
  <string name="debug_no_toggles">Значэнні toggles не былі атрыманы з сервера</string>
  <string name="warning">Увага!</string>
- <string name="debug_warning_summary">Дадзенае меню прызначана толькі для тэсціравання працаздольнасці дадатку. Калі вы з'яўляецеся шараговым карыстачом, то вам не варта нічога не чапаць у дадзеных наладах (калі ласка)</string>
+ <string name="debug_warning_summary">Дадзенае меню прызначана толькі для тэсціравання працаздольнасці дадатку. Калі вы з\'яўляецеся шараговым карыстачом, то вам не варта нічога не чапаць у дадзеных наладах (калі ласка)</string>
  <string name="debug_show_settings_item">Паказваць дэбаг меню</string>
  <string name="debug_experimental">Experimental</string>
  <string name="debug_experimental_usevkui">Рэдагаванне старонкі?</string>
@@ -5981,7 +5981,7 @@ QR-код"</string>
  <string name="cache_2gb">Чысціць кэш пры не менш за 2 Гб</string>
  <string name="cache_5gb">Чысціць кэш пры не менш за 5 Гб</string>
  <string name="cache_clean_title">Ачыстка кэшу</string>
- <string name="cache_select_size">Абярыце аб'ём кэша для ачысткі</string>
+ <string name="cache_select_size">Абярыце аб\'ём кэша для ачысткі</string>
  <string name="select_which_clean">Выберыце, што вы хочаце ачысціць</string>
  <string name="cache_cleaned">Кеш ачышчаны</string>
  <string name="no_data_to_backup">Няма дадзеных для рэзервовага капіявання</string>
@@ -6030,7 +6030,7 @@ QR-код"</string>
  <string name="superapp_greeting">Прывітанне</string>
  <string name="superapp_miniapps_promo">MiniApps: прома</string>
  <string name="superapp_holiday">Дні нараджэння сяброў</string>
- <string name="superapp_weather">Надвор'е</string>
+ <string name="superapp_weather">Надвор\'е</string>
  <string name="superapp_sport">Спартыўныя падзеі</string>
  <string name="superapp_games">Гульні</string>
  <string name="superapp_informer">Інформер</string>
