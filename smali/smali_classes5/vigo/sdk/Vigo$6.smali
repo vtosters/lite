@@ -46,6 +46,8 @@
 .method public run()V
     .locals 12
 
+    return-void
+
     .line 1
     :try_start_0
     invoke-static {}, Ljava/net/NetworkInterface;->getNetworkInterfaces()Ljava/util/Enumeration;

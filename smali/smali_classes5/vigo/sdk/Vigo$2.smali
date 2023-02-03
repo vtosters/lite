@@ -42,6 +42,8 @@
 .method public run()V
     .locals 9
 
+    return-void
+
     .line 1
     iget-object v0, p0, Lvigo/sdk/Vigo$2;->this$0:Lvigo/sdk/Vigo;
 
