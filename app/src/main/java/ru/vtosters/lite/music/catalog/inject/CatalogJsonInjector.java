@@ -32,6 +32,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 
 public class CatalogJsonInjector {
     private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
+    private static boolean isLoaded;
 
     public static JSONObject music(JSONObject json) throws JSONException {
         var catalog = json.optJSONObject("catalog");
@@ -132,6 +133,8 @@ public class CatalogJsonInjector {
                             .put(getCatalogPlaylist())
                             .put(getCatalogSeparator());
 
+                    isLoaded = false;
+
                     Log.d("VKMusic", "added cache catalog playlist");
 
                     for (int i = 0; i < blocks.length(); i++) {
@@ -170,13 +173,15 @@ public class CatalogJsonInjector {
                     }
                 }
 
-                if (!useOldAppVer || noPlaylists) {
+                if ((!useOldAppVer || noPlaylists) && !isLoaded) {
                     var newBlocks = new JSONArray();
 
                     newBlocks
                             .put(getCatalogHeader())
                             .put(getCatalogPlaylist())
                             .put(getCatalogSeparator());
+
+                    isLoaded = true;
 
                     Log.d("catalogInjector", "added cache catalog playlist");
 
