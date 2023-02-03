@@ -5466,7 +5466,7 @@
     <string name="benchapisummary">Тестирование скорости отправки запросов. Бесполезная функция для всех, кроме разработчиков ВКонтакте</string>
     <string name="cachecleaned">Кеш очищен</string>
     <string name="clearcache">Очистить весь кеш</string>
-    <string name="clearcachesum">Чистка всего ккша приложения (кроме кеша ленты)</string>
+    <string name="clearcachesum">Чистка всего кеша приложения (кроме кеша ленты)</string>
     <string name="convUsersOnline">Фикс показа онлайна в беседах</string>
     <string name="convUsersOnlinesum">"Фикс показа онлайна других пользователей в беседах (нужно только если Вы скрыли свой онлайн)
 
