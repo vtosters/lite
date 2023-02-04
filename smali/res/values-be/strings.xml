@@ -1453,17 +1453,17 @@ QR-код"</string>
  <string name="jump_to_page">Перайсці на старонку</string>
  <string name="last_seen_ago">таму</string>
  <string name="last_seen_female">была ў сетцы</string>
- <string name="last_seen_female_etc">"\'была ў сетцы\' d MMMM yyyy \'у\' H:mm"</string>
+ <string name="last_seen_female_etc">"'была ў сетцы' d MMMM yyyy 'у' H:mm"</string>
  <string name="last_seen_female_seconds_ago">толькі што</string>
- <string name="last_seen_female_this_year">"\'была ў сетцы\' d MMMM \'у\' H:mm"</string>
- <string name="last_seen_female_today">"\'была ў сетцы сёння ў\' H:mm"</string>
- <string name="last_seen_female_yesterday">"\'была ў сетцы ўчора ў\' H:mm"</string>
+ <string name="last_seen_female_this_year">"'была ў сетцы' d MMMM 'у' H:mm"</string>
+ <string name="last_seen_female_today">"'была ў сетцы сёння ў' H:mm"</string>
+ <string name="last_seen_female_yesterday">"'была ў сетцы ўчора ў' H:mm"</string>
  <string name="last_seen_male">быў у сетцы</string>
- <string name="last_seen_male_etc">"\'быў у сетцы\' d MMMM yyyy \'у\' H:mm"</string>
+ <string name="last_seen_male_etc">"'быў у сетцы' d MMMM yyyy 'у' H:mm"</string>
  <string name="last_seen_male_seconds_ago">толькі што</string>
- <string name="last_seen_male_this_year">"\'быў у сетцы\' d MMMM \'у\' H:mm"</string>
- <string name="last_seen_male_today">"\'быў у сетцы сёння ў\' H:mm"</string>
- <string name="last_seen_male_yesterday">"\'быў у сетцы ўчора ў\' H:mm"</string>
+ <string name="last_seen_male_this_year">"'быў у сетцы' d MMMM 'у' H:mm"</string>
+ <string name="last_seen_male_today">"'быў у сетцы сёння ў' H:mm"</string>
+ <string name="last_seen_male_yesterday">"'быў у сетцы ўчора ў' H:mm"</string>
  <string name="last_seen_profile_f">была ў сетцы %s</string>
  <string name="last_seen_profile_m">быў у сетцы %s</string>
  <string name="latest_news">Актуальныя навіны</string>
@@ -2065,7 +2065,7 @@ QR-код"</string>
 у высокай якасці"</string>
  <string name="music_promo_free_plan_point_2">Персанальныя рэкамендацыі</string>
  <string name="music_promo_free_plan_point_3">"Музыка сяброў, эксклюзіўныя
-прэм\'еры і многае іншае"</string>
+прэм'еры і многае іншае"</string>
  <string name="music_promo_library">Пашыраны каталог музыкі</string>
  <string name="music_promo_no_more_music_special_offer">Атрымаць спецпредложение</string>
  <string name="music_promo_no_more_music_subtitle">У музычнай індустрыі свае правілы - нам прыйшлося пайсці на кампраміс, каб захаваць магчымасць слухаць музыку бясплатна. Без падпіскі трэкі можна слухаць у адкрытым дадатку: не згортвайце яго і не блакуйце экран.</string>
@@ -4540,10 +4540,10 @@ QR-код"</string>
  <string name="vkim_chat_settings_notifications_dnd_option_one_hour">1 гадзіна</string>
  <string name="vkim_chat_settings_notifications_dnd_option_one_week">7 дзён</string>
  <string name="vkim_chat_settings_notifications_dnd_title">Не турбаваць</string>
- <string name="vkim_chat_settings_notifications_dnd_until_etc">"\'да\' d MMMM \'у\' HH:mm"</string>
+ <string name="vkim_chat_settings_notifications_dnd_until_etc">"'да' d MMMM 'у' HH:mm"</string>
  <string name="vkim_chat_settings_notifications_dnd_until_forever">Назаўжды</string>
- <string name="vkim_chat_settings_notifications_dnd_until_today">"\'сёння\' HH:mm"</string>
- <string name="vkim_chat_settings_notifications_dnd_until_tomorrow">"\'да заўтра\' у HH:mm"</string>
+ <string name="vkim_chat_settings_notifications_dnd_until_today">"'сёння' HH:mm"</string>
+ <string name="vkim_chat_settings_notifications_dnd_until_tomorrow">"'да заўтра' у HH:mm"</string>
  <string name="vkim_chat_settings_notifications_header">Апавяшчэнні</string>
  <string name="vkim_chat_settings_notifications_sound_title">Гук</string>
  <string name="vkim_chat_settings_open_casper_chat">Перайсці ў фантом-чат</string>
@@ -4652,7 +4652,7 @@ QR-код"</string>
  <string name="vkim_dialogs_list_time_etc">d MMMM yyyy</string>
  <string name="vkim_dialogs_list_time_this_year">d MMMM</string>
  <string name="vkim_dialogs_list_time_today">H:mm</string>
- <string name="vkim_dialogs_list_time_yesterday">"\'учора\'"</string>
+ <string name="vkim_dialogs_list_time_yesterday">"'учора'"</string>
  <string name="vkim_disappear_msg_send">Знікаючае паведамленне</string>
  <string name="vkim_download_started">Загрузка…</string>
  <string name="vkim_draft">Чарнавік</string>
@@ -4854,10 +4854,10 @@ QR-код"</string>
  <string name="vkim_msg_list_empty">Паведамленняў пакуль няма</string>
  <string name="vkim_msg_list_empty_subtitle">Пачніце зносіны!</string>
  <string name="vkim_msg_list_event_button">Адкрыць</string>
- <string name="vkim_msg_list_fwd_time_etc">"d MMMM yyyy \'у\' H:mm"</string>
- <string name="vkim_msg_list_fwd_time_this_year">"d MMMM \'у\' H:mm"</string>
- <string name="vkim_msg_list_fwd_time_today">"\'Сёння ў\' H:mm"</string>
- <string name="vkim_msg_list_fwd_time_yesterday">"\'Учора ў\' H:mm"</string>
+ <string name="vkim_msg_list_fwd_time_etc">"d MMMM yyyy 'у' H:mm"</string>
+ <string name="vkim_msg_list_fwd_time_this_year">"d MMMM 'у' H:mm"</string>
+ <string name="vkim_msg_list_fwd_time_today">"'Сёння ў' H:mm"</string>
+ <string name="vkim_msg_list_fwd_time_yesterday">"'Учора ў' H:mm"</string>
  <string name="vkim_msg_list_gift_simple_title">Падарунак</string>
  <string name="vkim_msg_list_gift_stickers_button">Адкрыць</string>
  <string name="vkim_msg_list_gift_stickers_title">Набор стыкераў</string>
@@ -4874,8 +4874,8 @@ QR-код"</string>
  <string name="vkim_msg_list_poll_subtitle">Апытанне</string>
  <string name="vkim_msg_list_time_etc">d MMMM yyyy</string>
  <string name="vkim_msg_list_time_this_year">d MMMM</string>
- <string name="vkim_msg_list_time_today">"\'Сёння\', d MMMM"</string>
- <string name="vkim_msg_list_time_yesterday">"\'Учора\', d MMMM"</string>
+ <string name="vkim_msg_list_time_today">"'Сёння', d MMMM"</string>
+ <string name="vkim_msg_list_time_yesterday">"'Учора', d MMMM"</string>
  <string name="vkim_msg_list_unread">Непрачытаныя паведамленні</string>
  <string name="vkim_msg_list_unsupported_subtitle">Абнавіце дадатак</string>
  <string name="vkim_msg_list_unsupported_title">Не падтрымліваецца</string>
@@ -5025,7 +5025,7 @@ QR-код"</string>
  <string name="vkim_pinned_msg_time_etc">d MMMM yyyy</string>
  <string name="vkim_pinned_msg_time_this_year">d MMMM</string>
  <string name="vkim_pinned_msg_time_today">H:mm</string>
- <string name="vkim_pinned_msg_time_yesterday">"\'учора ў\' H:mm"</string>
+ <string name="vkim_pinned_msg_time_yesterday">"'учора ў' H:mm"</string>
  <string name="vkim_popup_account_logout_submit_desc">Пры выхадзе з уліковага запісу з прылады будуць выдаленыя ўсе злучаныя з ёй дадзеныя. Працягнуць?</string>
  <string name="vkim_popup_account_logout_submit_title">Выйсці</string>
  <string name="vkim_popup_account_logout_submit_yes">Выйсці</string>
