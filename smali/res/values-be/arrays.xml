@@ -598,7 +598,7 @@
     <item>Гульні</item>
     <item>Закладкі</item>
   </string-array>
-  <string-array name="проксі">
+  <string-array name="proxy">
     <item>Без проксі</item>
     <item>zaborona.help</item>
     <item>VikaMobile</item>
