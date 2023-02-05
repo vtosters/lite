@@ -63,17 +63,17 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
                         AndroidUtils.edit().putString("appname", "vt").commit();
                         AndroidUtils.edit().putString("selectedicon", appicon).commit();
 
-                        IconManager.switchComponent(appicon, "vt", deficon, defname);
+                        IconManager.switchComponent(appicon, "vt");
                     } else if (rgVK.isChecked()) {
                         AndroidUtils.edit().putString("appname", "standard").commit();
                         AndroidUtils.edit().putString("selectedicon", appicon).commit();
 
-                        IconManager.switchComponent(appicon, "standard", deficon, defname);
+                        IconManager.switchComponent(appicon, "standard");
                     } else if (rgVKontakte.isChecked()) {
                         AndroidUtils.edit().putString("appname", "vkontakte").commit();
                         AndroidUtils.edit().putString("selectedicon", appicon).commit();
 
-                        IconManager.switchComponent(appicon, "vkontakte", deficon, defname);
+                        IconManager.switchComponent(appicon, "vkontakte");
                     }
                 }))
                 .setNegativeButton(R.string.cancel,

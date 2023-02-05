@@ -46,26 +46,17 @@ public class IconManager {
         return Preferences.hasVerification() && Preferences.isValidSignature() ? sIconsPlus : sIcons; // delete later sdk check
     }
 
-    public static void switchComponent(String icon, String appName, String oldIcon, String oldAppName) {
+    public static void switchComponent(String icon, String appName) {
 
         // def value for standard icon
         var iconIndex = 1;
         // def value for standard label
         var labelIndex = 1;
 
-        var oldIconIndex = -1;
-
-        var oldLabelIndex = -1;
-
         Log.d("IconManager", "iconSwitcher: icon = " + icon + ", appname = " + appName);
 
         List<String> iconsList = (Preferences.hasVerification() && Preferences.isValidSignature()) ? sIconsPlus : sIcons;
         List<String> labelsList = sLabels;
-
-        if (oldIcon != null && oldAppName != null) {
-            oldIconIndex = iconsList.indexOf(oldIcon);
-            oldLabelIndex = labelsList.indexOf(oldAppName);
-        }
 
         // check if icon is exist
         if (iconsList.contains(icon))
@@ -81,14 +72,14 @@ public class IconManager {
 
         main: for (int i = 0; i < iconsList.size(); i++) {
             for (int o = 0; o < labelsList.size(); o++) {
-                if (isComponentEnabled("id" + i + "" + o)) {
-                    currentState = i + "" + o;
+                if (isComponentEnabled("id" + i + o)) {
+                    currentState = i + String.valueOf(o);
                     break main;
                 }
             }
         }
 
-        String newState = iconIndex + "" + labelIndex;
+        String newState = iconIndex + String.valueOf(labelIndex);
 
         // check if current component is equal to custom value or if custom value is not exist
         if (currentState.equals(newState))
