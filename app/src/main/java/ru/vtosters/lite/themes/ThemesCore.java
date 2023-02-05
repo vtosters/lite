@@ -17,7 +17,7 @@ public class ThemesCore {
     public static SparseBooleanArray ACCENT_THEME_ONLY_LIGHT = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_DARK = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_NOMILK_LIGHT = new SparseBooleanArray();
-    public static SparseBooleanArray ACCENT_THEME_ONLY_NOMILK = new SparseBooleanArray();
+    public static SparseBooleanArray ACCENT_THEME_ONLY_NOMILK_DARK = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_MILK_LIGHT = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_MILK_DARK = new SparseBooleanArray();
 
@@ -34,13 +34,16 @@ public class ThemesCore {
         ACCENT_THEME_ONLY_LIGHT.clear();
         ACCENT_THEME_ONLY_DARK.clear();
         ACCENT_THEME_ONLY_NOMILK_LIGHT.clear();
-        ACCENT_THEME_ONLY_NOMILK.clear();
+        ACCENT_THEME_ONLY_NOMILK_DARK.clear();
         ACCENT_THEME_ONLY_MILK_LIGHT.clear();
         ACCENT_THEME_ONLY_MILK_DARK.clear();
 
         ACCENT_THEME_ONLY_LIGHT.put(R.attr.attach_picker_tab_active_background, false);
         ACCENT_THEME_ONLY_LIGHT.put(R.attr.attach_picker_tab_active_text, false);
         ACCENT_THEME_ONLY_LIGHT.put(R.attr.newsfeed_action_color, false);
+
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(R.attr.newsfeed_post_title_color, false);
+        ACCENT_THEME_ONLY_DARK.put(R.attr.newsfeed_post_title_color, false);
 
         ACCENT_THEME_ONLY_MILK_LIGHT.put(R.attr.header_background, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.header_background, false);
@@ -59,7 +62,7 @@ public class ThemesCore {
 
         ACCENT_THEME_ONLY_MILK_LIGHT.put(R.attr.im_dropdown_arrow_tint, false);
 
-        ACCENT_THEME_ONLY_NOMILK.put(R.attr.im_dropdown_icon_color, false);
+        ACCENT_THEME_ONLY_NOMILK_DARK.put(R.attr.im_dropdown_icon_color, false);
 
         ACCENT_THEME_ONLY_DARK.put(R.attr.icon_name, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.text_name, false);
@@ -68,7 +71,6 @@ public class ThemesCore {
         ACCENT_THEME_ONLY_DARK.put(R.attr.button_tertiary_foreground, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.button_muted_foreground, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.button_outline_border, false);
-        ACCENT_THEME_ONLY_DARK.put(R.attr.newsfeed_post_title_color, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.counter_primary_background, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.action_sheet_action_foreground, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.im_bubble_wallpaper_outgoing, false);
@@ -167,7 +169,7 @@ public class ThemesCore {
                 return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_DARK.get(attrID, true) && (
                         ThemesUtils.isMilkshake() ?
                         ACCENT_THEME_ONLY_MILK_DARK.get(attrID, true) :
-                        ACCENT_THEME_ONLY_NOMILK.get(attrID, true)));
+                        ACCENT_THEME_ONLY_NOMILK_DARK.get(attrID, true)));
             } else {
                 return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_LIGHT.get(attrID, true) && (
                         ThemesUtils.isMilkshake() ?
