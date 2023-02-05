@@ -277,39 +277,7 @@ public class AdBlockHook {
             }
         }
 
-        if (!json.has("items")) return json;
-
-        var items = json.optJSONArray("items");
-        if (items != null) {
-            for (int i = 0; i < items.length(); i++) {
-                var item = items.optJSONObject(i);
-                if (item != null) {
-                    parseStoriesItem(item);
-                }
-            }
-        }
-
         return json;
-    }
-
-    private static void parseStoriesItem(JSONObject item) throws JSONException {
-        var stories = item.optJSONArray("stories");
-        var newStories = new JSONArray();
-
-        if (stories == null) return;
-
-        for (int j = 0; j < stories.length(); j++) {
-            var story = stories.optJSONObject(j);
-
-            if (!story.optBoolean("is_ads") && !story.optBoolean("is_promo")) {
-                newStories.put(story);
-            } else {
-                if (dev())
-                    Log.d("StoriesAds", "Fetched ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
-            }
-        }
-
-        item.put("stories", newStories);
     }
 
     public static Boolean isAds(JSONObject list, String type) throws JSONException {
