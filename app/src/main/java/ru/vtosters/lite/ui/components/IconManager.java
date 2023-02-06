@@ -68,16 +68,18 @@ public class IconManager {
             // get labels index
             labelIndex = labelsList.indexOf(appName);
 
-        String currentState = null;
+        String currentState = "11";
 
+        boolean isCurrentStateFound = false;
         for (int i = 0; i < iconsList.size(); i++) {
             for (int o = 0; o < labelsList.size(); o++) {
                 if (isComponentEnabled("id" + i + o)) {
                     currentState = i + String.valueOf(o);
+                    isCurrentStateFound = true;
                     break;
                 }
             }
-            if (currentState != null) break;
+            if (isCurrentStateFound) break;
         }
 
         String newState = iconIndex + String.valueOf(labelIndex);
