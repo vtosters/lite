@@ -65,7 +65,7 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
 
         if (ThemesUtils.isMilkshake() && Preferences.superapp()) {
             findPreference("miniapps").setVisible(false);
-            findPreference("vkpay").setVisible(false);
+
             findPreference("showmenu").setVisible(false);
         }
 
