@@ -128,7 +128,7 @@ public class ThemesCore {
 
         darken_color = ThemesUtils.darken(accentColor, 0.15f);
         themedColors.put(R.attr.newsfeed_post_title_color, darken_color);
-        themedColors.put(R.attr.text_link, darken_color);
+        themedColors.put(R.attr.text_link, accentColor);
 
         themedColors.put(R.attr.attach_picker_tab_active_background, accentColor);
         themedColors.put(R.attr.attach_picker_tab_active_text, accentColor);
@@ -157,7 +157,7 @@ public class ThemesCore {
         return switch (attr) {
             case R.attr.im_bubble_wallpaper_outgoing, R.attr.im_bubble_outgoing -> outgoinging_msg;
             case R.attr.im_bubble_outgoing_highlighted -> outgoinging_msg_highlight;
-            case R.attr.newsfeed_post_title_color, R.attr.text_link -> darken_color;
+            case R.attr.newsfeed_post_title_color -> darken_color;
             default -> themedColors.get(attr);
         };
     }
