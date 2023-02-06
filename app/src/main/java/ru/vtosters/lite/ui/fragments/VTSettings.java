@@ -413,7 +413,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.vtlmedia),
-                getValAsString(R.string.vtlinterfacesumm, Preferences.shortinfo()),
+                getValAsString(R.string.sett_compress_photos, Preferences.getBoolValue("compressPhotos", true)),
                 R.drawable.ic_media_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), MediaFragment.class);
@@ -451,7 +451,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.vtlthemes),
-                getThemesumm(),
+                getValAsString(R.string.milkshake_title, ThemesUtils.isMilkshake()),
                 R.drawable.ic_write_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), ThemesFragment.class);
