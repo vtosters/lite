@@ -99,19 +99,13 @@ public class MessagesHook {
     }
 
     private static int expireTime() {
-        switch (bombCount) {
-            case "15s":
-                return 15;
-            case "1m":
-                return 60;
-            case "5m":
-                return 300;
-            case "1h":
-                return 3600;
-            case "24h":
-                return 86400;
-            default:
-                return 0;
-        }
+        return switch (bombCount) {
+            case "15s" -> 15;
+            case "1m" -> 60;
+            case "5m" -> 300;
+            case "1h" -> 3600;
+            case "24h" -> 86400;
+            default -> 0;
+        };
     }
 }

@@ -313,20 +313,14 @@ public class Preferences {
     }
 
     public static long getSizeForDelete() {
-        switch (getPrefsValue("clearcache")) {
-            case "100mb":
-                return 104857600L;
-            case "500mb":
-                return 524288000L;
-            case "1gb":
-                return 1073741824L;
-            case "2gb":
-                return 2147483648L;
-            case "5gb":
-                return 5368709120L;
-            default:
-                return MAX_VALUE;
-        }
+        return switch (getPrefsValue("clearcache")) {
+            case "100mb" -> 104857600L;
+            case "500mb" -> 524288000L;
+            case "1gb" -> 1073741824L;
+            case "2gb" -> 2147483648L;
+            case "5gb" -> 5368709120L;
+            default -> MAX_VALUE;
+        };
     }
 
     public static int compress(int origquality) {

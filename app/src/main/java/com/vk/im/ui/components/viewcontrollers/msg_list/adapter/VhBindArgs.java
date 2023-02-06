@@ -458,15 +458,10 @@ public class VhBindArgs {
 
     public boolean s() {
         if(this.C != null)
-            switch (this.C)
-            {
-                case LOCAL_ID:
-                    return this.D == this.b.c.getLocalId();
-                case VK_ID:
-                    return this.D == this.b.c.C1();
-                default:
-                    return false;
-            }
+            return switch (this.C) {
+                case LOCAL_ID -> this.D == this.b.c.getLocalId();
+                case VK_ID -> this.D == this.b.c.C1();
+            };
         return false;
     }
 

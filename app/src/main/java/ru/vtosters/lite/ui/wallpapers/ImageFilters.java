@@ -85,14 +85,11 @@ public class ImageFilters {
 
     private static int getRadius() {
         String radius = getPreferences().getString("msg_blur_radius", "disabled");
-        switch (radius) {
-            case "low":
-                return 8;
-            case "med":
-                return 14;
-            default:
-                return 20;
-        }
+        return switch (radius) {
+            case "low" -> 8;
+            case "med" -> 14;
+            default -> 20;
+        };
     }
 
     public static Drawable getBlurredWallpaper(Drawable orig, int radius) {
@@ -125,14 +122,9 @@ public class ImageFilters {
         String radius = getPreferences().getString("msg_mosaic", "disabled");
 
         switch (radius) {
-            case "high":
-                scale = 25;
-                break;
-            case "med":
-                scale = 50;
-                break;
-            case "low":
-                scale = 75;
+            case "high" -> scale = 25;
+            case "med" -> scale = 50;
+            case "low" -> scale = 75;
         }
 
         Bitmap temp = Bitmap.createScaledBitmap(instance, scale, scale, false);

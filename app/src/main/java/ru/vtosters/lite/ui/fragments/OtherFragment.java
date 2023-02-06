@@ -139,24 +139,15 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
         var pref = getDefaultPrefs().getString("autoclearcache", "Default");
         switch (pref) {
-            case "Default":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_disabled));
-                break;
-            case "100mb":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_100mb));
-                break;
-            case "500mb":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_500mb));
-                break;
-            case "1gb":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_1gb));
-                break;
-            case "2gb":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_2gb));
-                break;
-            case "5gb":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_5gb));
-                break;
+            case "Default" ->
+                    findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_disabled));
+            case "100mb" ->
+                    findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_100mb));
+            case "500mb" ->
+                    findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_500mb));
+            case "1gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_1gb));
+            case "2gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_2gb));
+            case "5gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_5gb));
         }
 
         findPreference("deleteprefs").setOnPreferenceClickListener(preference -> {
@@ -261,7 +252,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 .setTitle(requireContext().getString(R.string.select_which_clean))
                 .setItems(AndroidUtils.getArray(R.array.cache_cleaner), (dialog, which) -> {
                     switch (which) {
-                        case 0: {
+                        case 0 -> {
                             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
                             prefs2.edit().clear().commit();
                             clearWebViewCache();
@@ -274,30 +265,26 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                             ImEngineExt.a(ImEngine1.a());
                             AutoPlayCacheHolder.d.a();
                             MediaStorage.a();
-                            break;
                         }
-                        case 1: {
+                        case 1 -> {
                             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
                             prefs2.edit().clear().commit();
                             Stickers.l.c();
-                            break;
                         }
-                        case 2:
+                        case 2 -> {
                             VKImageLoader.e();
                             ImEngineExt.a(ImEngine1.a());
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             AutoPlayCacheHolder.d.a();
                             MediaStorage.a();
-                            break;
-                        case 4:
+                        }
+                        case 4 -> {
                             ImEngineProvider.b().a();
                             ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
                             ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-                            break;
-                        case 5:
-                            clearWebViewCache();
-                            break;
+                        }
+                        case 5 -> clearWebViewCache();
                     }
                     Toast.makeText(getContext(), requireContext().getString(R.string.cache_cleaned), LENGTH_SHORT).show();
                 })

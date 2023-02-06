@@ -35,47 +35,28 @@ public class StartFragmentHook {
         if (vkme()) {
             return DialogsFragment.class;
         }
-        switch (getPrefsValue("start_values")) {
-            case "newsfeed":
-                return milkshake() ? HomeFragment.class : NewsfeedFragment.class;
-            case "messenger":
-                return DialogsFragment.class;
-            case "groups":
-                return milkshake() ? CommunitiesCatalogFragment.class : GroupsFragment1.class;
-            case "music":
-                return MusicCatalogFragment1.class;
-            case "friends":
-                return FriendsFragment.class;
-            case "photos":
-                return PhotosFragment.class;
-            case "videos":
-                return VideoCatalogFragment.class;
-            case "settings":
-                return useNewSettings();
-            case "apps":
-                return AppsFragment.class;
-            case "discover":
-                return DiscoverFragment.class;
-            case "notifications":
-                return NotificationsContainerFragment.class;
-            case "money":
-                return MoneyTransfersFragment.class;
-            case "games":
-                return GamesFragment.class;
-            case "liked":
-                return FaveTabFragment.class;
-            case "menu":
-                return milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : MenuFragment.class;
-            case "profile":
-                return ProfileFragment.class;
-            case "lives":
-                return LivesTabsFragment.class;
-            case "docs":
-                return DocumentsViewFragment.class;
-            case "brtd":
-                return BirthdaysFragment.class;
-            default:
-                return getInstance().getSelectedTabs().get(0).fragmentClass;
-        }
+        return switch (getPrefsValue("start_values")) {
+            case "newsfeed" -> milkshake() ? HomeFragment.class : NewsfeedFragment.class;
+            case "messenger" -> DialogsFragment.class;
+            case "groups" -> milkshake() ? CommunitiesCatalogFragment.class : GroupsFragment1.class;
+            case "music" -> MusicCatalogFragment1.class;
+            case "friends" -> FriendsFragment.class;
+            case "photos" -> PhotosFragment.class;
+            case "videos" -> VideoCatalogFragment.class;
+            case "settings" -> useNewSettings();
+            case "apps" -> AppsFragment.class;
+            case "discover" -> DiscoverFragment.class;
+            case "notifications" -> NotificationsContainerFragment.class;
+            case "money" -> MoneyTransfersFragment.class;
+            case "games" -> GamesFragment.class;
+            case "liked" -> FaveTabFragment.class;
+            case "menu" ->
+                    milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : MenuFragment.class;
+            case "profile" -> ProfileFragment.class;
+            case "lives" -> LivesTabsFragment.class;
+            case "docs" -> DocumentsViewFragment.class;
+            case "brtd" -> BirthdaysFragment.class;
+            default -> getInstance().getSelectedTabs().get(0).fragmentClass;
+        };
     }
 }

@@ -191,36 +191,24 @@ public class DockBarInjector {
 
         int val = 0;
         switch (tabId) {
-            case tab_messages:
-                val = MenuCountersState.j();
-                break;
-            case menu_groups:
-                val = MenuCountersState.h();
-                break;
-            case menu_fave:
-                val = MenuCountersState.c();
-                break;
-            case menu_games:
-                val = MenuCountersState.a();
-                break;
-            case menu_photos:
-                val = MenuCountersState.l();
-                break;
-            case menu_videos:
-                val = MenuCountersState.n();
-                break;
-            case tab_feedback:
+            case tab_messages -> val = MenuCountersState.j();
+            case menu_groups -> val = MenuCountersState.h();
+            case menu_fave -> val = MenuCountersState.c();
+            case menu_games -> val = MenuCountersState.a();
+            case menu_photos -> val = MenuCountersState.l();
+            case menu_videos -> val = MenuCountersState.n();
+            case tab_feedback -> {
                 if (milkshake())
                     val = MenuCountersState.k();
-                break;
-            case tab_news:
+            }
+            case tab_news -> {
                 if (milkshake() && getBoolValue("newsfeed_notif", true))
                     val = MenuCountersState.k();
-                break;
-            case menu_friends:
+            }
+            case menu_friends -> {
                 if (!milkshake())
                     val = MenuCountersState.k();
-                break;
+            }
         }
 //
 //        val = MenuCountersState.g(); // friends ?????? menu_friends

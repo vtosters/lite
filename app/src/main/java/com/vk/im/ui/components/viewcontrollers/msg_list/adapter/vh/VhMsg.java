@@ -701,18 +701,11 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
                     var9 = Screen.a(-4);
                 } else {
                     Style var11 = this.a(args.b);
-                    switch (this.a(args.b))
-                    {
-                        case IMAGE:
-                            var10 = Screen.a(12);
-                            break;
-                        case SNIPPET:
-                            var10 = Screen.a(9);
-                            break;
-                        default:
-                            var10 = Screen.a(6);
-                            break;
-                    }
+                    var10 = switch (this.a(args.b)) {
+                        case IMAGE -> Screen.a(12);
+                        case SNIPPET -> Screen.a(9);
+                        default -> Screen.a(6);
+                    };
                 }
 
                 ViewExtKt.a(this.P, var9, 0, 0, var10);

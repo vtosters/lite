@@ -138,42 +138,31 @@ public class WallpapersHooks {
 
     public static String getRadiusSummary() {
         String radius = getPreferences().getString("msg_blur_radius", "disabled");
-        switch (radius) {
-            case "low":
-                return AndroidUtils.getString(R.string.wallpapers_low);
-            case "med":
-                return AndroidUtils.getString(R.string.wallpapers_med);
-            case "high":
-                return AndroidUtils.getString(R.string.wallpapers_high);
-            default:
-                return AndroidUtils.getString(R.string.wallpapers_disabled);
-        }
+        return switch (radius) {
+            case "low" -> AndroidUtils.getString(R.string.wallpapers_low);
+            case "med" -> AndroidUtils.getString(R.string.wallpapers_med);
+            case "high" -> AndroidUtils.getString(R.string.wallpapers_high);
+            default -> AndroidUtils.getString(R.string.wallpapers_disabled);
+        };
     }
 
     public static String getDimmingSummary() {
         String radius = getPreferences().getString("msg_dim", "disabled");
-        switch (radius) {
-            case "dim_black":
-                return AndroidUtils.getString(R.string.wallpapers_dim_black);
-            case "dim_white":
-                return AndroidUtils.getString(R.string.wallpapers_dim_white);
-            default:
-                return AndroidUtils.getString(R.string.wallpapers_disabled);
-        }
+        return switch (radius) {
+            case "dim_black" -> AndroidUtils.getString(R.string.wallpapers_dim_black);
+            case "dim_white" -> AndroidUtils.getString(R.string.wallpapers_dim_white);
+            default -> AndroidUtils.getString(R.string.wallpapers_disabled);
+        };
     }
 
     public static String getMosaicSummary() {
         String radius = getPreferences().getString("msg_mosaic", "disabled");
-        switch (radius) {
-            case "low":
-                return AndroidUtils.getString(R.string.wallpapers_low);
-            case "med":
-                return AndroidUtils.getString(R.string.wallpapers_med);
-            case "high":
-                return AndroidUtils.getString(R.string.wallpapers_high);
-            default:
-                return AndroidUtils.getString(R.string.wallpapers_disabled);
-        }
+        return switch (radius) {
+            case "low" -> AndroidUtils.getString(R.string.wallpapers_low);
+            case "med" -> AndroidUtils.getString(R.string.wallpapers_med);
+            case "high" -> AndroidUtils.getString(R.string.wallpapers_high);
+            default -> AndroidUtils.getString(R.string.wallpapers_disabled);
+        };
     }
 
 

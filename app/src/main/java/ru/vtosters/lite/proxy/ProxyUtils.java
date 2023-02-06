@@ -134,24 +134,12 @@ public class ProxyUtils {
 
     public static void setProxy() throws IOException {
         switch (getPrefsValue("proxy")) {
-            case "zaborona":
-                Zaborona.loadProxy();
-                break;
-            case "randomproxy":
-                RandomProxy.loadProxy();
-                break;
-            case "socks":
-                CustomSocks.loadProxy();
-                break;
-            case "http":
-                CustomHttp.loadProxy();
-                break;
-            case "https":
-                CustomHttps.loadProxy();
-                break;
-            default:
-                resetProxy();
-                break;
+            case "zaborona" -> Zaborona.loadProxy();
+            case "randomproxy" -> RandomProxy.loadProxy();
+            case "socks" -> CustomSocks.loadProxy();
+            case "http" -> CustomHttp.loadProxy();
+            case "https" -> CustomHttps.loadProxy();
+            default -> resetProxy();
         }
     }
 

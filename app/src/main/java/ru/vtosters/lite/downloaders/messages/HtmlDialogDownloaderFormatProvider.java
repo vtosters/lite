@@ -180,32 +180,28 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
         StringBuilder htmlAction = new StringBuilder("<p class=\"chat-action\">");
 
         switch (type) {
-            case "chat_photo_update":
-                htmlAction.append(AndroidUtils.getString(R.string.chat_export_avatar_update));
-                break;
-            case "chat_photo_remove":
-                htmlAction.append(AndroidUtils.getString(R.string.chat_export_avatar_remove));
-                break;
-            case "chat_create":
+            case "chat_photo_update" -> htmlAction.append(AndroidUtils.getString(R.string.chat_export_avatar_update));
+            case "chat_photo_remove" -> htmlAction.append(AndroidUtils.getString(R.string.chat_export_avatar_remove));
+            case "chat_create" -> {
                 htmlAction.append(AndroidUtils.getString(R.string.chat_export_chat_created));
                 var name = action.optString("text");
                 if (!name.isEmpty())
                     htmlAction.append(" \"").append(name).append("\"");
-                break;
-            case "chat_title_update":
+            }
+            case "chat_title_update" -> {
                 var newName = action.optString("text");
                 htmlAction.append(AndroidUtils.getString(R.string.chat_export_name_changed));
                 if (!newName.isEmpty())
                     htmlAction.append(" ")
-                              .append(AndroidUtils.getString(R.string.chat_export_to))
-                              .append(" \"")
-                              .append(newName)
-                              .append("\"");
-                break;
-            case "chat_invite_user":
+                            .append(AndroidUtils.getString(R.string.chat_export_to))
+                            .append(" \"")
+                            .append(newName)
+                            .append("\"");
+            }
+            case "chat_invite_user" -> {
                 var newMemberId = action.optInt("member_id");
                 htmlAction.append(AndroidUtils.getString(R.string.chat_export_user_added))
-                          .append(" ");
+                        .append(" ");
                 if (newMemberId != 0) {
                     int id;
                     String endpoint;
@@ -217,14 +213,14 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
                         endpoint = "club" + -newMemberId;
                     }
                     htmlAction.append(AndroidUtils.getString(id))
-                              .append(" <a href=\"https://" + Constants.VK_DOMAIN + "/")
-                              .append(endpoint)
-                              .append("\" class=\"msg-attach-link\">@")
-                              .append(endpoint)
-                              .append("</a>");
+                            .append(" <a href=\"https://" + Constants.VK_DOMAIN + "/")
+                            .append(endpoint)
+                            .append("\" class=\"msg-attach-link\">@")
+                            .append(endpoint)
+                            .append("</a>");
                 }
-                break;
-            case "chat_kick_user":
+            }
+            case "chat_kick_user" -> {
                 var removedMemberId = action.optInt("member_id");
                 htmlAction.append(AndroidUtils.getString(R.string.chat_export_user_kicked))
                         .append(" ");
@@ -245,27 +241,19 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
                             .append(endpoint)
                             .append("</a>");
                 }
-                break;
-            case "chat_pin_message":
+            }
+            case "chat_pin_message" -> {
                 var message = action.optString("message");
                 htmlAction.append(AndroidUtils.getString(R.string.chat_export_msg_pinned));
                 if (!message.isEmpty()) htmlAction.append(" \"").append(message).append("\"");
-                break;
-            case "chat_unpin_message":
-                htmlAction.append(AndroidUtils.getString(R.string.chat_export_msg_unpinned));
-                break;
-            case "chat_invite_user_by_link":
-                htmlAction.append(AndroidUtils.getString(R.string.chat_export_join_by_link));
-                break;
-            case "chat_screenshot":
-                htmlAction.append(AndroidUtils.getString(R.string.chat_export_chat_screenshot));
-                break;
-            case "custom":
-                htmlAction.append(action.optString("message"));
-                break;
-            default:
-                htmlAction.append(AndroidUtils.getString(R.string.vkim_msg_unsupported)).append(" (").append(type).append(")");
-                break;
+            }
+            case "chat_unpin_message" -> htmlAction.append(AndroidUtils.getString(R.string.chat_export_msg_unpinned));
+            case "chat_invite_user_by_link" ->
+                    htmlAction.append(AndroidUtils.getString(R.string.chat_export_join_by_link));
+            case "chat_screenshot" -> htmlAction.append(AndroidUtils.getString(R.string.chat_export_chat_screenshot));
+            case "custom" -> htmlAction.append(action.optString("message"));
+            default ->
+                    htmlAction.append(AndroidUtils.getString(R.string.vkim_msg_unsupported)).append(" (").append(type).append(")");
         }
 
         return htmlAction.append("</p>").toString();
@@ -281,150 +269,129 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
             if (item == null) continue;
 
             switch (type) { // market_album is not supported
-                case "photo":
+                case "photo" -> {
                     var sizes = item.getJSONArray("sizes");
                     rs.append("<a href=\"")
-                      .append(sizes.getJSONObject(sizes.length() - 1).getString("url"))
-                      .append("\" class=\"msg-attach-link\">")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_photo))
-                      .append("</a>");
-                    break;
-                case "doc":
-                    rs.append("<a href=\"")
-                      .append(item.getString("url"))
-                      .append("\" class=\"msg-attach-link\">")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_doc))
-                      .append("</a>");
-                    break;
-                case "link":
-                    rs.append("<a href=\"")
-                      .append(item.getString("url"))
-                      .append("\" class=\"msg-attach-link\">")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_link))
-                      .append("</a>");
-                    break;
-                case "wall":
-                    rs.append("<a href=\"https://" + Constants.VK_DOMAIN + "/wall")
-                      .append(item.optString("to_id", item.optString("owner_id")))
-                      .append("_").append(item.getString("id"))
-                      .append("\" class=\"msg-attach-link\">")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_wallpost))
-                      .append("</a>");
-                    break;
-                case "sticker":
-                    rs.append("<img style=\"width:128px;height:128px;\" src=\"")
-                      .append(item.getJSONArray("images")
-                                  .getJSONObject(1)
-                                  .getString("url"))
-                      .append("\"/>");
-                    break;
-                case "audio_message":
-                    rs.append("<a href=\"")
-                      .append(item.optString("link_mp3"))
-                      .append("\" class=\"msg-attach-link\">")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_audiomsg))
-                      .append("</a>");
-                    break;
-                case "audio":
-                    rs.append(AndroidUtils.getString(R.string.chat_export_type_audio))
-                      .append(" (")
-                      .append(item.optString("artist"))
-                      .append(" — ")
-                      .append(item.optString("title"))
-                      .append(")");
-                    break;
-                case "video":
-                    rs.append(AndroidUtils.getString(R.string.chat_export_type_video))
-                      .append(" (")
-                      .append(MessagesDownloader.getVideoHtml(item.optJSONObject("files")))
-                      .append(")");
-                    break;
-                case "wall_reply":
+                            .append(sizes.getJSONObject(sizes.length() - 1).getString("url"))
+                            .append("\" class=\"msg-attach-link\">")
+                            .append(AndroidUtils.getString(R.string.chat_export_type_photo))
+                            .append("</a>");
+                }
+                case "doc" -> rs.append("<a href=\"")
+                        .append(item.getString("url"))
+                        .append("\" class=\"msg-attach-link\">")
+                        .append(AndroidUtils.getString(R.string.chat_export_type_doc))
+                        .append("</a>");
+                case "link" -> rs.append("<a href=\"")
+                        .append(item.getString("url"))
+                        .append("\" class=\"msg-attach-link\">")
+                        .append(AndroidUtils.getString(R.string.chat_export_type_link))
+                        .append("</a>");
+                case "wall" -> rs.append("<a href=\"https://" + Constants.VK_DOMAIN + "/wall")
+                        .append(item.optString("to_id", item.optString("owner_id")))
+                        .append("_").append(item.getString("id"))
+                        .append("\" class=\"msg-attach-link\">")
+                        .append(AndroidUtils.getString(R.string.chat_export_type_wallpost))
+                        .append("</a>");
+                case "sticker" -> rs.append("<img style=\"width:128px;height:128px;\" src=\"")
+                        .append(item.getJSONArray("images")
+                                .getJSONObject(1)
+                                .getString("url"))
+                        .append("\"/>");
+                case "audio_message" -> rs.append("<a href=\"")
+                        .append(item.optString("link_mp3"))
+                        .append("\" class=\"msg-attach-link\">")
+                        .append(AndroidUtils.getString(R.string.chat_export_type_audiomsg))
+                        .append("</a>");
+                case "audio" -> rs.append(AndroidUtils.getString(R.string.chat_export_type_audio))
+                        .append(" (")
+                        .append(item.optString("artist"))
+                        .append(" — ")
+                        .append(item.optString("title"))
+                        .append(")");
+                case "video" -> rs.append(AndroidUtils.getString(R.string.chat_export_type_video))
+                        .append(" (")
+                        .append(MessagesDownloader.getVideoHtml(item.optJSONObject("files")))
+                        .append(")");
+                case "wall_reply" -> {
                     var link = String.format("https://" + Constants.VK_DOMAIN + "/wall%s_%s?reply=%s",
-                                      item.optString("owner_id"),
-                                      item.optString("post_id"),
-                                      item.optString("id"));
+                            item.optString("owner_id"),
+                            item.optString("post_id"),
+                            item.optString("id"));
                     rs.append("<a class=\"msg-attach-link\" href=\"")
-                      .append(link).append("\">")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_wallreply))
-                      .append("</a>");
-                    break;
-                case "story":
+                            .append(link).append("\">")
+                            .append(AndroidUtils.getString(R.string.chat_export_type_wallreply))
+                            .append("</a>");
+                }
+                case "story" -> {
                     var story_link = String.format("https://" + Constants.VK_DOMAIN + "/story%s_%s",
-                                            item.optString("owner_id"),
-                                            item.optString("id"));
+                            item.optString("owner_id"),
+                            item.optString("id"));
                     rs.append("<a class=\"msg-attach-link\" href=\"")
-                      .append(story_link)
-                      .append("\">")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_story))
-                      .append("</a>");
-                    break;
-                case "podcast":
+                            .append(story_link)
+                            .append("\">")
+                            .append(AndroidUtils.getString(R.string.chat_export_type_story))
+                            .append("</a>");
+                }
+                case "podcast" -> {
                     var podcast_link = String.format("https://" + Constants.VK_DOMAIN + "/podcast%s_%s",
-                                              item.optString("owner_id"),
-                                              item.optString("id"));
+                            item.optString("owner_id"),
+                            item.optString("id"));
                     rs.append("<a class=\"msg-attach-link\" href=\"")
-                      .append(podcast_link)
-                      .append("\">")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_podcast))
-                      .append("</a>");
-                    break;
-                case "gift":
-                    rs.append("<img src=\"")
-                      .append(item.optString("thumb_96"))
-                      .append("\"/>");
-                    break;
-                case "mini_app":
+                            .append(podcast_link)
+                            .append("\">")
+                            .append(AndroidUtils.getString(R.string.chat_export_type_podcast))
+                            .append("</a>");
+                }
+                case "gift" -> rs.append("<img src=\"")
+                        .append(item.optString("thumb_96"))
+                        .append("\"/>");
+                case "mini_app" -> {
                     var app = item.optJSONObject("app");
-
                     if (app != null) {
                         var miniapp_link = String.format("https://" + Constants.VK_DOMAIN + "/app%s", app.optString("id"));
                         rs.append("<a class=\"msg-attach-link\" href=\"")
-                          .append(miniapp_link)
-                          .append("\">")
-                          .append(AndroidUtils.getString(R.string.chat_export_type_miniapp))
-                          .append("</a>");
+                                .append(miniapp_link)
+                                .append("\">")
+                                .append(AndroidUtils.getString(R.string.chat_export_type_miniapp))
+                                .append("</a>");
                         break;
                     }
-
                     rs.append(AndroidUtils.getString(R.string.chat_export_error));
-                    break;
-                case "audio_playlist":
+                }
+                case "audio_playlist" -> {
                     var playlist_link = String.format("https://" + Constants.VK_DOMAIN + "/music/album/%s_%s_%s",
-                                                item.optString("owner_id"),
-                                                item.optString("id"),
-                                                item.optString("access_key"));
+                            item.optString("owner_id"),
+                            item.optString("id"),
+                            item.optString("access_key"));
                     rs.append("<a class=\"msg-attach-link\" href=\"")
-                      .append(playlist_link)
-                      .append("\">")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_playlist))
-                      .append(" (")
-                      .append(item.optString("title"))
-                      .append(")</a>");
-                    break;
-                case "poll":
-                    rs.append(AndroidUtils.getString(item.optBoolean("anonymous") ? R.string.chat_export_poll_anon : R.string.chat_export_poll_publ))
-                      .append(" ")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_poll))
-                      .append(" ")
-                      .append(MessagesDownloader.getPollHtml(item));
-                    break;
-                case "market":
+                            .append(playlist_link)
+                            .append("\">")
+                            .append(AndroidUtils.getString(R.string.chat_export_type_playlist))
+                            .append(" (")
+                            .append(item.optString("title"))
+                            .append(")</a>");
+                }
+                case "poll" ->
+                        rs.append(AndroidUtils.getString(item.optBoolean("anonymous") ? R.string.chat_export_poll_anon : R.string.chat_export_poll_publ))
+                                .append(" ")
+                                .append(AndroidUtils.getString(R.string.chat_export_type_poll))
+                                .append(" ")
+                                .append(MessagesDownloader.getPollHtml(item));
+                case "market" -> {
                     var market_item_link = String.format("https://" + Constants.VK_DOMAIN + "/market%s_%s",
-                                                  item.optString("owner_id"),
-                                                  item.optString("id"));
+                            item.optString("owner_id"),
+                            item.optString("id"));
                     rs.append("<a class=\"msg-attach-link\" href=\"")
-                      .append(market_item_link)
-                      .append("\">")
-                      .append(AndroidUtils.getString(R.string.chat_export_type_market))
-                      .append("</a>");
-                    break;
-                default:
-                    rs.append(AndroidUtils.getString(R.string.vkim_msg_unsupported))
-                      .append(" (")
-                      .append(type)
-                      .append(")");
-                    break;
+                            .append(market_item_link)
+                            .append("\">")
+                            .append(AndroidUtils.getString(R.string.chat_export_type_market))
+                            .append("</a>");
+                }
+                default -> rs.append(AndroidUtils.getString(R.string.vkim_msg_unsupported))
+                        .append(" (")
+                        .append(type)
+                        .append(")");
             }
 
             rs.append(" ");

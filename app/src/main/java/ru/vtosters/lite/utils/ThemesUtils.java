@@ -189,7 +189,7 @@ public class ThemesUtils {
     }
 
     public static int getMutedColor(int color) {
-        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), (isMilkshake() ? 0.5f : isDarkTheme() ? 0.32f : 0.2f));
+        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), (isMilkshake() ? 0.5f : isDarkTheme() ? 0.32f : 0.1f));
     }
 
     public static void setCustomAccentColor(int newColor, boolean async) {

@@ -29,14 +29,12 @@ public class NewsfeedHook {
         if (vkme()) {
             return MAX_VALUE;
         }
-        switch (getPrefsValue("newsupdate")) {
-            case "no_update":
-                return MAX_VALUE;
-            case "imd_update":
-                return 10000L;
-            default:
-                return Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
-        }
+        return switch (getPrefsValue("newsupdate")) {
+            case "no_update" -> MAX_VALUE;
+            case "imd_update" -> 10000L;
+            default ->
+                    Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
+        };
     }
 
     public static List hideElement(ArrayList list) {

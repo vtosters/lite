@@ -1,5 +1,6 @@
 package ru.vtosters.lite.themes;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
@@ -148,14 +149,13 @@ public class ThemesCore {
         themedColors.put(R.attr.im_bubble_outgoing_highlighted, accentColor);
     }
 
+    @SuppressLint("NonConstantResourceId")
     public static int getThemedAttr(Context context, @IdRes int attr) {
-        if (attr == R.attr.im_bubble_wallpaper_outgoing || attr == R.attr.im_bubble_outgoing) {
-            return outgoinging_msg;
-        } else if (attr == R.attr.im_bubble_outgoing_highlighted) {
-            return outgoinging_msg_highlight;
-        }
-
-        return themedColors.get(attr);
+        return switch (attr) {
+            case R.attr.im_bubble_wallpaper_outgoing, R.attr.im_bubble_outgoing -> outgoinging_msg;
+            case R.attr.im_bubble_outgoing_highlighted -> outgoinging_msg_highlight;
+            default -> themedColors.get(attr);
+        };
     }
 
     public static boolean hasThemedAttr(Context context, int attrID) {
