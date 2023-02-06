@@ -2538,6 +2538,8 @@
 
     .line 26
     :goto_4
+    const v1, 0x7f040403
+
     invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 27
@@ -3695,6 +3697,8 @@
     const v0, 0x7f040598
 
     :goto_0
+    const v0, 0x7f040403
+
     return v0
 .end method
 

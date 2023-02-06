@@ -25,6 +25,7 @@ public class ThemesCore {
     private static boolean cachedAccents = false;
     private static int outgoinging_msg;
     private static int outgoinging_msg_highlight;
+    private static int darken_color;
 
     static {
         setExceptions();
@@ -85,7 +86,6 @@ public class ThemesCore {
         cachedAccents = true;
         themedColors.clear();
 
-        themedColors.put(R.attr.text_link, accentColor);
         themedColors.put(R.attr.accent, accentColor);
         themedColors.put(R.attr.newsfeed_dropdown_color, accentColor);
         themedColors.put(R.attr.icon_name, accentColor);
@@ -125,7 +125,10 @@ public class ThemesCore {
         themedColors.put(R.attr.im_attach_tint, accentColor);
         themedColors.put(R.attr.im_forward_line_tint, accentColor);
         themedColors.put(R.attr.link_alternate, accentColor);
-        themedColors.put(R.attr.newsfeed_post_title_color, accentColor);
+
+        darken_color = ThemesUtils.darken(accentColor, 0.15f);
+        themedColors.put(R.attr.newsfeed_post_title_color, darken_color);
+        themedColors.put(R.attr.text_link, darken_color);
 
         themedColors.put(R.attr.attach_picker_tab_active_background, accentColor);
         themedColors.put(R.attr.attach_picker_tab_active_text, accentColor);
@@ -154,6 +157,7 @@ public class ThemesCore {
         return switch (attr) {
             case R.attr.im_bubble_wallpaper_outgoing, R.attr.im_bubble_outgoing -> outgoinging_msg;
             case R.attr.im_bubble_outgoing_highlighted -> outgoinging_msg_highlight;
+            case R.attr.newsfeed_post_title_color, R.attr.text_link -> darken_color;
             default -> themedColors.get(attr);
         };
     }

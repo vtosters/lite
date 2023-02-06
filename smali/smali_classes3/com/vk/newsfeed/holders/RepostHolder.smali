@@ -540,6 +540,8 @@
 
     .line 10
     :goto_2
+    const v0, 0x7f040403
+
     iget-object v1, p0, Lcom/vk/newsfeed/holders/RepostHolder;->H:Landroid/widget/TextView;
 
     invoke-static {v1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
