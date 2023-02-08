@@ -1,27 +1,23 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
-import static ru.vtosters.lite.utils.Preferences.copyright_post;
-
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-
 import androidx.preference.Preference;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.navigation.Navigator;
 import com.vk.newsfeed.NewsfeedSettingsFragment;
+import com.vk.newsfeed.controllers.NewsfeedController;
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
+import com.vtosters.lite.ui.SummaryListPreference;
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
 import ru.vtosters.lite.utils.NavigatorUtils;
+import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
+import ru.vtosters.lite.utils.Preferences;
+
+import java.util.Objects;
+
+import static ru.vtosters.lite.utils.AndroidUtils.*;
 
 public class FeedFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -33,28 +29,36 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
 
     private void prefs() {
         findPreference("officialnewssett").setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), SystemInfo.class);
-
+            NavigatorUtils.switchFragment(requireContext(), NewsfeedSettingsFragment.class);
             return true;
         });
-        findPreference("cringecopyright").setEnabled(!copyright_post());
+        findPreference("cringecopyright").setEnabled(!Preferences.copyright_post());
+
+        var findPreference = (SummaryListPreference) findPreference("newsfeed_order");
+        findPreference.setValue(NewsfeedController.e.k() ? "top" : "recent");
+        findPreference.setOnPreferenceChangeListener((preference, o) -> {
+            NewsfeedController.e.a(0);
+            NewsfeedController.e.a((Boolean) Objects.equals(o, "top"));
+            NewsfeedController.e.b(true);
+            return true;
+        });
 
         findPreference("spamfilters").setSummary(count(getPrefsValue("spamfilters")));
         findPreference("sourcenamefilter").setSummary(count(getPrefsValue("sourcenamefilter")));
         findPreference("linkfilter").setSummary(count(getPrefsValue("linkfilter")));
 
         findPreference("spamfilters").setOnPreferenceClickListener(preference -> {
-            setupFilters();
+            NewsFeedFiltersUtils.setupFilters();
             return true;
         });
 
         findPreference("sourcenamefilter").setOnPreferenceClickListener(preference -> {
-            setupFilters();
+            NewsFeedFiltersUtils.setupFilters();
             return true;
         });
 
         findPreference("linkfilter").setOnPreferenceClickListener(preference -> {
-            setupFilters();
+            NewsFeedFiltersUtils.setupFilters();
             return true;
         });
 
@@ -108,7 +112,7 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
                 .setPositiveButton(requireContext().getString(R.string.yes), (dialogInterface, i) -> {
                     edit().remove(key).apply();
                     sendToast(requireContext().getString(R.string.elements_deleted_success));
-                    setupFilters();
+                    NewsFeedFiltersUtils.setupFilters();
                 })
                 .setNegativeButton(requireContext().getString(R.string.cancel),
                         (dialogInterface, i) -> dialogInterface.dismiss())
@@ -136,8 +140,8 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        findPreference("cringecopyright").setEnabled(!copyright_post());
-        setupFilters();
+        findPreference("cringecopyright").setEnabled(!Preferences.copyright_post());
+        NewsFeedFiltersUtils.setupFilters();
         return super.onPreferenceTreeClick(preference);
     }
 
