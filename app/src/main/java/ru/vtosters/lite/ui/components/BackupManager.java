@@ -39,8 +39,8 @@ public class BackupManager {
 
     public static void deletePrefs() {
         getPrefs().edit().clear().commit();
-        File file = new File(new File(getGlobalContext().getFilesDir().getParent(), "shared_prefs"), "com.vtosters.lite_preferences");
-        file.delete();
+        new File(new File(getGlobalContext().getFilesDir().getParent(), "shared_prefs"), "com.vtosters.lite_preferences").delete();
+        new File(new File(getGlobalContext().getFilesDir().getParent(), "shared_prefs"), "null").delete();
     }
 
     public static void backupOnlines() throws IOException {
