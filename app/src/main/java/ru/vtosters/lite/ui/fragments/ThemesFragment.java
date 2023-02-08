@@ -141,13 +141,9 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         new VkAlertDialog.Builder(requireContext())
                 .setTitle(AndroidUtils.getString("change_accent_color"))
                 .setItems(titles, (dialog, which) -> {
-                    switch(which) {
-                        case 0:
-                            showColorPicker();
-                            break;
-                        case 1:
-                            showPalettesDialog();
-                            break;
+                    switch (which) {
+                        case 0 -> showColorPicker();
+                        case 1 -> showPalettesDialog();
                     }
                 })
                 .setNegativeButton(R.string.reset, (dialog, which) -> {

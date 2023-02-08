@@ -61,23 +61,14 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
     }
 
     public static String getThemesumm() {
-        String str;
         String[] themeTypeName = AndroidUtils.getArray("theme_type_name");
 
-        switch(AndroidUtils.getPrefsValue("currsystemtheme")) {
-            default:
-            case "system":
-                str = themeTypeName[0];
-                break;
-            case "dark":
-                str = themeTypeName[1];
-                break;
-            case "light":
-                str = themeTypeName[2];
-                break;
-        }
-
-        return AndroidUtils.getString("current_theme") + ": " + str;
+        return AndroidUtils.getString("current_theme") + ": " + switch (AndroidUtils.getPrefsValue("currsystemtheme")) {
+            case "system" -> themeTypeName[0];
+            case "dark" -> themeTypeName[1];
+            case "light" -> themeTypeName[2];
+            default -> ThemesUtils.isDarkTheme() ? themeTypeName[1] : themeTypeName[2];
+        };
     }
 
     private void switchTheme(boolean isDarkTheme) {

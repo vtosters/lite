@@ -46,13 +46,9 @@ public final class StickerDetailsAdapter extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-        switch(getItemViewType(i)) {
-            case 0:
-                ((c) viewHolder).a(this.mItem);
-                break;
-            case 1:
-                ((d) viewHolder).a(this.mItems.get(H(i)));
-                break;
+        switch (getItemViewType(i)) {
+            case 0 -> ((c) viewHolder).a(this.mItem);
+            case 1 -> ((d) viewHolder).a(this.mItems.get(H(i)));
         }
     }
 
