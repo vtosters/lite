@@ -228,7 +228,7 @@ public class DockBarEditorManager {
                     R.string.menu_apps,
                     R.id.menu_vk_apps,
                     AppsFragment.class);
-            case "tab_settings", default -> DockBarTab.valuesOf(
+            default -> DockBarTab.valuesOf(
                     "tab_settings",
                     R.drawable.ic_settings_outline_28,
                     R.string.menu_settings,
