@@ -43,7 +43,6 @@ public class RandomProxy {
         edit().putString("random_type", "none").putString("random_host", "").commit();
 
         resetProxy();
-        forceProxyApplying();
 
         showProxyResult = true;
         getProxy();

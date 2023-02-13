@@ -133,6 +133,7 @@ public class ProxyUtils {
     }
 
     public static void setProxy() throws IOException {
+        if (!isAnyProxyEnabled()) return;
         switch (getPrefsValue("proxy")) {
             case "zaborona" -> Zaborona.loadProxy();
             case "randomproxy" -> RandomProxy.loadProxy();
@@ -154,5 +155,6 @@ public class ProxyUtils {
         clearProperty("http.proxyPassword");
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
+        forceProxyApplying();
     } // Reset all proxies
 }
