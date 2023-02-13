@@ -79,6 +79,13 @@ public class NewsfeedHook {
         ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
     }
 
+    public static boolean isWhitelistedAdStories(ExtendedCommunityProfile eup) {
+        return getDefaultPrefs().getStringSet(
+                "whitelisted_stories_ad",
+                Collections.emptySet()
+        ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
+    }
+
     public static void setWhitelistedFilter(ExtendedCommunityProfile eup, boolean needWhitelist) {
         var id = String.valueOf(AccountManagerUtils.getUserID(eup));
 
@@ -109,6 +116,22 @@ public class NewsfeedHook {
         }
 
         getDefaultPrefs().edit().putStringSet("whitelisted_ad_groups", mutableAdsSet).apply();
+    }
+
+    public static void setWhitelistedAdStories(ExtendedCommunityProfile eup, boolean needWhitelist) {
+        var id = String.valueOf(AccountManagerUtils.getUserID(eup));
+
+        var mutableAdsSet = new LinkedHashSet<>(getDefaultPrefs().getStringSet(
+                "whitelisted_stories_ad",
+                Collections.emptySet()));
+
+        if (needWhitelist) {
+            mutableAdsSet.add(id);
+        } else {
+            mutableAdsSet.remove(id);
+        }
+
+        getDefaultPrefs().edit().putStringSet("whitelisted_stories_ad", mutableAdsSet).apply();
     }
 
     public static void adsParams(HashSet<String> hashSet) {

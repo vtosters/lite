@@ -64,6 +64,12 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("whitelisted_ad_groups").setSummary(countSet("whitelisted_ad_groups"));
         findPreference("whitelisted_filters_groups").setSummary(countSet("whitelisted_filters_groups"));
+        findPreference("whitelisted_stories_ad").setSummary(countSet("whitelisted_stories_ad"));
+
+        findPreference("whitelisted_stories_ad").setOnPreferenceClickListener(preference -> {
+            remdialog("whitelisted_stories_ad", getContext());
+            return true;
+        });
 
         findPreference("whitelisted_ad_groups").setOnPreferenceClickListener(preference -> {
             remdialog("whitelisted_ad_groups", getContext());

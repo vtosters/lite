@@ -6093,6 +6093,8 @@ QR-код"</string>
  <string name="remove_from_filter_whitelist">Выдаліць з вайтліста фільтраў</string>
  <string name="add_to_ads_whitelist">Дадаць у вайтліст рэкламы</string>
  <string name="remove_from_ads_whitelist">Выдаліць з вайтліста рэкламы</string>
+ <string name="add_to_ads_stories_whitelist">Дадаць у вайтліст гісторый</string>
+ <string name="remove_from_ads_stories_whitelist">Выдаліць з вайтліста гісторый</string>
  <string name="removed_from_whitelist_success">Група выдалена з вайтліста</string>
  <string name="added_to_whitelist_success">Група дададзена ў вайтліст</string>
  <string name="whitelisted_ad_groups_title">Вайтліст рэкламы</string>
