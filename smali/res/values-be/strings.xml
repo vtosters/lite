@@ -5375,6 +5375,10 @@ QR-код"</string>
  <string name="vtldads">Адключыць рэкламу</string>
  <string name="vtldgads">Адключыць рэкламу гуртоў</string>
  <string name="vtldgadssummary">Пасты з паметкай рэкламы</string>
+
+ <string name="storiesGroupsAdBlock">Адключыць рэкламу гісторый груп</string>
+ <string name="storiesGroupsAdBlocksummary">Блакаваць гісторыі у якіх ёсць спасылка\n\nМагчымыя ілжывыя спрацоўвання</string>
+
  <string name="vtldca">Адключыць карусель рэкламы</string>
  <string name="vtldas">Адключыць рэкламу ў гісторыях</string>
  <string name="vtad">Рэклама</string>
@@ -6098,6 +6102,9 @@ QR-код"</string>
  <string name="removed_from_whitelist_success">Група выдалена з вайтліста</string>
  <string name="added_to_whitelist_success">Група дададзена ў вайтліст</string>
  <string name="whitelisted_ad_groups_title">Вайтліст рэкламы</string>
+
+ <string name="whitelisted_ad_groups_stories_title">Вайтліст рэкламы гісторый</string>
+
  <string name="whitelisted_filters_groups_title">Вайтліст фільтраў і крыніц</string>
  <string name="download_dl">Спампаваць дыялог</string>
  <string name="download_dl_error">Адбылася памылка пры спробе спампаваць дыялог</string>

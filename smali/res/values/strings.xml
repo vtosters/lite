@@ -5505,6 +5505,10 @@ with video"</string>
     <string name="vtldads">Disable ads</string>
     <string name="vtldgads">Disable groups ads</string>
     <string name="vtldgadssummary">Posts with ads mark</string>
+
+    <string name="storiesGroupsAdBlock">Disable ads of group stories</string>
+    <string name="storiesGroupsAdBlocksummary">Block stories that have a link\n\nFalse positives may occur</string>
+
     <string name="vtldca">Disable ad carousel</string>
     <string name="vtldas">Disable ads in stories</string>
     <string name="vtad">Ads</string>
@@ -6330,6 +6334,8 @@ May look like a fake leaving the online"</string>
 
     <string name="whitelisted_ad_groups_title">Ads whitelist</string>
     <string name="whitelisted_filters_groups_title">Filters whitelist and copyrights</string>
+
+    <string name="whitelisted_ad_groups_stories_title">Ads stories whitelist</string>
 
     <string name="download_dl">Download dialog</string>
     <string name="download_dl_error">An error occurred while trying to download the dialog</string>

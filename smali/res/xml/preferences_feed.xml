@@ -11,14 +11,24 @@
                 android:key="adsgroup"
                 android:summary="@string/vtldgadssummary"
                 android:title="@string/vtldgads"/>
+        <Preference
+                android:key="whitelisted_ad_groups"
+                android:title="@string/whitelisted_ad_groups_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Истории">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="adsstories"
                 android:summary="@string/feed_ads_stories_summary"
                 android:title="@string/vtldas"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="storiesGroupsAdBlock"
+                android:title="@string/storiesGroupsAdBlock"
+                android:summary="@string/storiesGroupsAdBlocksummary"/>
         <Preference
-                android:key="whitelisted_ad_groups"
-                android:title="@string/whitelisted_ad_groups_title"/>
+                android:key="whitelisted_stories_ad"
+                android:title="@string/whitelisted_ad_groups_stories_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlrecommend">
         <com.vtosters.lite.ui.MaterialSwitchPreference

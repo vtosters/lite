@@ -5298,6 +5298,10 @@
     <string name="vtldads">Вимкнути рекламу</string>
     <string name="vtldgads">Вимкнути рекламу спільнот</string>
     <string name="vtldgadssummary">Записи з позначкою реклами</string>
+
+    <string name="storiesGroupsAdBlock">Відключити рекламу історій груп</string>
+    <string name="storiesGroupsAdBlocksummary">Блокувати історії з посиланнями\n\nМожуть бути помилкові спрацьовування</string>
+
     <string name="vtldca">Вимкнути карусель реклами</string>
     <string name="vtldas">Вимкнути рекламу в історіях</string>
     <string name="vtad">Реклама</string>
@@ -6117,6 +6121,8 @@
 
     <string name="whitelisted_ad_groups_title">Вайтліст реклами</string>
     <string name="whitelisted_filters_groups_title">Вайтліст фільтрів та джерел</string>
+
+    <string name="whitelisted_ad_groups_stories_title">Вайтліст реклами історій</string>
 
     <string name="download_dl">Завантажити діалог</string>
     <string name="download_dl_error">Відбулася помилка під час спроби завантажити діалог</string>
