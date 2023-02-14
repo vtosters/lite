@@ -4,6 +4,8 @@
     <style name="SplashTheme" parent="@style/VkDarkStyle">
         <item name="android:windowBackground">@drawable/bg_splash</item>
         <item name="android:navigationBarColor">@color/gray_850</item>
+        <item name="android:windowSplashScreenBackground">@color/gray_850</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash</item>
     </style>
 
     <style name="Theme.AppCompat.DayNight" parent="@style/Theme.AppCompat" />
