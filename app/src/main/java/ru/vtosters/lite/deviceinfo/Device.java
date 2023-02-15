@@ -113,7 +113,7 @@ public class Device {
                 + "- Board: " + this.boardName + "\n"
                 + "- Manufacturer: " + this.manufacturerName + "\n"
                 + "- Brand: " + this.brandName + "\n"
-                + "- Model: " + this.modelName
+                + "- Model: " + this.modelName + "\n"
                 + (isMIUI() ? "- Miui Version Code: " + this.MiuiUiVersionCode + "\n" + "- Miui Version Name: " + this.MiuiUiVersionName + "\n" : "")
                 + (isSamsung() ? "- OneUi Major Version: " + this.OneUiMajorVersion + "\n" + "- OneUi Minor Version: " + this.OneUiMinorVersion + "\n" : "")
                 + (hasMiuiIncrCode() ? "- Miui Version Incremental Code: " + this.MiuiIncrementalCode + "\n" : "")
