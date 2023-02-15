@@ -56,22 +56,22 @@ public class LibVKXClient {
     }
 
     public static void lambdaplay(List<MusicTrack> list, MusicTrack musicTrack, ILibVkxService iLibVkxService, MusicPlaybackLaunchContext playerRefer) {
-        var playbackContext = "";
-
-        if (playerRefer != null) {
-            playbackContext = playerRefer.v0();
-        }
-
-        int indexOf = list.indexOf(musicTrack);
-        var ids = new ArrayList<String>();
-        for (var track : list) {
-            ids.add(asId(track));
-        }
-        if (indexOf == -1) {
-            indexOf = 0;
-        }
-
         try {
+            var playbackContext = "";
+
+            if (playerRefer != null) {
+                playbackContext = playerRefer.v0();
+            }
+
+            int indexOf = list.indexOf(musicTrack);
+            var ids = new ArrayList<String>();
+            for (var track : list) {
+                ids.add(asId(track));
+            }
+            if (indexOf == -1) {
+                indexOf = 0;
+            }
+
             iLibVkxService.play(ids, indexOf, playbackContext);
         } catch (RemoteException e) {
             e.printStackTrace();
