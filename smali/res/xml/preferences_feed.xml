@@ -15,7 +15,7 @@
                 android:key="whitelisted_ad_groups"
                 android:title="@string/whitelisted_ad_groups_title"/>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Истории">
+    <PreferenceCategory android:title="@string/stories">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="adsstories"
