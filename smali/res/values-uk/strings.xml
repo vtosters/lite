@@ -5821,7 +5821,7 @@
     <string name="vtl_crash_save">Зберегти у файл</string>
 
     <string name="batteryissuetitle">Відключіть оптимізацію батареї!</string>
-    <string name="batteryissuesumm">"У зв'язку з тим, що ви використовуєте прошивку сторонніх виробників із наведеного нижче списку - повідомлення можуть надходити із затримкою або не приходити зовсім. \n Натисніть кнопку "Вимкнути оптимізацію", щоб виправити проблему. \n\nСторінні прошивки на яких спостерігаються проблеми з пушами:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience або TouchWiz, Magic UI, ZenUI, Funtouch OS"</string>
+    <string name="batteryissuesumm">"У зв'язку з тим, що ви використовуєте прошивку сторонніх виробників із наведеного нижче списку - повідомлення можуть надходити із затримкою або не приходити зовсім. \nНатисніть кнопку "Вимкнути оптимізацію", щоб виправити проблему. \n\nСторінні прошивки на яких спостерігаються проблеми з пушами:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience або TouchWiz, Magic UI, ZenUI, Funtouch OS"</string>
     <string name="batteryissuebtn1">Вимкнути оптимізацію</string>
     <string name="batteryissuebtn2">Ігнорувати</string>
 

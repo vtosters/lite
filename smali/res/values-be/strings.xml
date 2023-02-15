@@ -5865,7 +5865,7 @@ QR-код"</string>
  <string name="vtl_crash_upload">Загрузіць логі</string>
  <string name="vtl_crash_save">Захаваць у файл</string>
  <string name="batteryissuetitle">Адключыце аптымізацыю батарэі!</string>
- <string name="batteryissuesumm">У сувязі з тым, што вы карыстаецеся прашыўку іншых вытворцаў з прыведзенага ніжэй спісу - апавяшчэнні могуць прыходзіць з затрымкай або не прыходзіць зусім. \n Націсніце на кнопку \"Адключыць аптымізацыю\" каб выправіць праблему. \n\nПабочныя прашыўкі на якіх назіраюцца праблемы з пушамі: \nFlyme, EMUI, MIUI, ColorOS, Samsung Experience або TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
+ <string name="batteryissuesumm">У сувязі з тым, што вы карыстаецеся прашыўку іншых вытворцаў з прыведзенага ніжэй спісу - апавяшчэнні могуць прыходзіць з затрымкай або не прыходзіць зусім. \nНацісніце на кнопку \"Адключыць аптымізацыю\" каб выправіць праблему. \n\nПабочныя прашыўкі на якіх назіраюцца праблемы з пушамі: \nFlyme, EMUI, MIUI, ColorOS, Samsung Experience або TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
  <string name="batteryissuebtn1">Адключыць аптымізацыю</string>
  <string name="batteryissuebtn2">Ігнараваць</string>
  <string name="gmsissuesumm">На вашай прыладзе адсутнічае кампанент Google Play Services (GMS), які неабходны для карэктнай працы VTosters Lite</string>
