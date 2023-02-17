@@ -54,7 +54,7 @@ public class AudioGetLyrics extends ApiRequest<AudioGetLyrics.a> {
             return aVar;
         } catch (Exception e) {
             L.e("vk", e);
-            aVar.a = "Ошибка получения текста" + "\n" + "Ошибка: \n" + e.getLocalizedMessage();
+            aVar.a = "Ошибка получения текста" + "\n\n" + "Ошибка: \n" + e.getLocalizedMessage();
             return aVar;
         }
     }
