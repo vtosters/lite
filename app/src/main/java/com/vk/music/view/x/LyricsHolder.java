@@ -76,7 +76,7 @@ public class LyricsHolder extends RecyclerHolder<PlayerInfo> implements View.OnC
         this.f18328f.b(8);
         ViewUtils.a(this.g, 0);
         ViewUtils.a(this.h, 8);
-        new AudioGetLyrics(e2.G, e2.y1()).a(new b(e2)).a();
+        new AudioGetLyrics(e2.G, e2.y1(), e2).a(new b(e2)).a();
     }
 
     @Override // android.view.View.OnClickListener

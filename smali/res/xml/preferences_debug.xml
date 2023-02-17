@@ -22,6 +22,10 @@
                 android:key="calls"
                 android:summary="@string/messages_interface_calls_summary"
                 android:title="@string/vtlcalls"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="useGenius"
+                android:title="useGenius"/>
         <!-- <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="system"
             android:dialogTitle="@string/debug_experimental_language_summary"

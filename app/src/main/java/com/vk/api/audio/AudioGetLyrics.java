@@ -3,20 +3,31 @@ package com.vk.api.audio;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import com.vk.api.base.ApiRequest;
+import com.vk.dto.music.MusicTrack;
 import com.vk.log.L;
 import org.json.JSONObject;
+import ru.vtosters.lite.music.Genius;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.util.ArrayList;
 
 public class AudioGetLyrics extends ApiRequest<AudioGetLyrics.a> {
-    public AudioGetLyrics(int lyrics_id, String audio_id) {
+    private final MusicTrack musicTrack;
+
+    public AudioGetLyrics(int lyrics_id, String audio_id, MusicTrack mt) {
         super("audio.getLyrics");
         c("audio_id", audio_id);
+        musicTrack = mt;
     }
 
     /* renamed from: a */
     public a a(@NonNull JSONObject jSONObject) {
         var aVar = new a();
+
+        if (Preferences.getBoolValue("useGenius", false)) {
+            aVar.a = Genius.getTextMusic(musicTrack);
+            return aVar;
+        }
 
         try {
             var lines = new ArrayList<>();
