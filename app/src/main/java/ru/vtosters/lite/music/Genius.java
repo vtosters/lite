@@ -54,7 +54,7 @@ public class Genius {
             Log.d("Genius", payload);
             var path = new JSONObject(payload).getJSONObject("response").getJSONArray("sections").getJSONObject(0).getJSONArray("hits").getJSONObject(0).getJSONObject("result").getString("api_path");
             Log.d("Genius", path);
-            return getText(path);
+            return getText(path.replace("feat. ", ""));
         } catch (JSONException | IOException e) {
             e.printStackTrace();
             return null;
