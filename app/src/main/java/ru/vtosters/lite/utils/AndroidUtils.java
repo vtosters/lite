@@ -21,6 +21,7 @@ import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
 import ru.vtosters.lite.hooks.DateHook;
 
+import java.lang.reflect.Method;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
@@ -56,7 +57,8 @@ public class AndroidUtils {
     @NonNull
     public static Context getGlobalContext() {
         try {
-            return ReflectionUtils.invokeStaticMethod("android.app.AppGlobals", "getInitialApplication");
+            final Method getInitialApplicationMtd = ReflectionUtils.findMethod(Class.forName("android.app.AppGlobals"), "getInitialApplication");
+            return (Context) getInitialApplicationMtd.invoke(null);
         } catch (Exception e) {
             Log.d("GlobalContext", "Error while fetching context via refl");
         }

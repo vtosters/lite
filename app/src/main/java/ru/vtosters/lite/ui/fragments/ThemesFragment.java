@@ -1,18 +1,17 @@
 package ru.vtosters.lite.ui.fragments;
 
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.WindowManager;
 import androidx.preference.PreferenceCategory;
+import b.h.g.k.VKProgressDialog;
 import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.core.fragments.FragmentImpl;
-import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-import ru.vtosters.lite.themes.ThemesCore;
+import ru.vtosters.lite.concurrent.VTExecutors;
+import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.themes.palettes.PalettesManager;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
@@ -20,14 +19,22 @@ import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 import ru.vtosters.lite.utils.*;
 
+import java.io.IOException;
+
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
+    private VKProgressDialog mProgressDialog;
+
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+
+        mProgressDialog = new VKProgressDialog(requireContext());
+        mProgressDialog.setCancelable(false);
+
         addPreferencesFromResource(R.xml.preferences_themes);
         initPreferences();
     }
@@ -45,6 +52,22 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         dockbarEditor.setOnPreferenceClickListener(preference -> {
             NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
             return true;
+        });
+
+        var invalidateThemeCache = findPreference("invalidate_theme_cache");
+        invalidateThemeCache.setOnPreferenceClickListener(preference -> {
+            mProgressDialog.setMessage("Инвалидация кэша...");
+            mProgressDialog.show();
+            VTExecutors.getIoExecutor().execute(() -> {
+                ThemesManager.deleteBins();
+                try {
+                    ThemesManager.generateBins(requireContext());
+                    requireActivity().runOnUiThread(this::restart);
+                } catch(IOException e) {
+                    requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при инвалидации кэша"));
+                }
+            });
+            return false;
         });
 
         var navBarPreference = findPreference("navbar");
@@ -147,7 +170,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
                     }
                 })
                 .setNegativeButton(R.string.reset, (dialog, which) -> {
-                    ThemesUtils.setCustomAccentColor(0, false);
+                    ThemesManager.deleteTmpArchive();
                     LifecycleUtils.restartApplicationWithTimer();
                 })
                 .setPositiveButton(R.string.cancel, null)
@@ -193,9 +216,47 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     }
 
     void setAccentColor(int color) {
-        ThemesUtils.setCustomAccentColor(color, false);
-        ThemesCore.setThemedColors(color);
-        restart();
+        String message;
+        Runnable task;
+        if(!ThemesManager.hasBins()) {
+            message = "Генерация файлов...";
+            task = () -> {
+                try {
+                    ThemesManager.generateBins(requireContext());
+                    requireActivity().runOnUiThread(() -> setAccentColor(color));
+                } catch(IOException e) {
+                    Log.e("ThemesFragment", e+"");
+                    ThemesManager.deleteBins();
+                    requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при генерации файлов"));
+                }
+            };
+        } else {
+            message = "Применение акцента...";
+            task = () -> {
+                try {
+                    ThemesManager.generateTempResArchive(color);
+                    requireActivity().runOnUiThread(this::restart);
+                } catch(IOException e) {
+                    Log.e("ThemesFragment", e+"");
+                    ThemesManager.deleteTmpArchive();
+                    requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при применении акцента"));
+                }
+            };
+        }
+
+        mProgressDialog.setMessage(message);
+        mProgressDialog.show();
+
+        VTExecutors.getIoExecutor().execute(task);
+    }
+
+    void showErrorDialog(String msg) {
+        mProgressDialog.dismiss();
+        new VkAlertDialog.Builder(requireContext())
+                .setTitle("Ошибка")
+                .setMessage(msg)
+                .setPositiveButton("OK", null)
+                .show();
     }
 
     void restart() {

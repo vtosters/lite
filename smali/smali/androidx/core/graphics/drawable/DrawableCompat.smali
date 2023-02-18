@@ -645,10 +645,6 @@
         .end annotation
     .end param
 
-    invoke-static {p1}, Lru/vtosters/lite/themes/utils/RecolorUtils;->themeCSL(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
     .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 

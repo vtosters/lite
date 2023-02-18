@@ -241,9 +241,6 @@
 
     iput-object p2, p0, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderComponent;->B:Lcom/vk/im/ui/components/dialogs_header/vc/DialogsHeaderVc;
 
-    const v0, 0x0
-    invoke-static {p3, v0, v0}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
-
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderComponent;->B:Lcom/vk/im/ui/components/dialogs_header/vc/DialogsHeaderVc;
 

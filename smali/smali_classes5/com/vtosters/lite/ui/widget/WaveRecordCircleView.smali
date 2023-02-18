@@ -82,7 +82,7 @@
 
     const v0, 0x7f0600f7
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p3
 

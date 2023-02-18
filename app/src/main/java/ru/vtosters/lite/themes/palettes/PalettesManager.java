@@ -64,7 +64,7 @@ public class PalettesManager {
             if (assets == null || assets.length == 0) return false;
             for (var asset : assets) {
                 try {
-                    IOUtils.copyFile(manager.open(ASSETS_DIR + asset), new File(PALETTES_DIR, asset));
+                    IOUtils.copy(manager.open(ASSETS_DIR + asset), new File(PALETTES_DIR, asset));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

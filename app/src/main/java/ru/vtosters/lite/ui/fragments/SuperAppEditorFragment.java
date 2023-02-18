@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.vtosters.lite.R;
-import ru.vtosters.lite.themes.hooks.TextViewHook;
 import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 import ru.vtosters.lite.ui.components.ItemMovingCallback;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
@@ -67,8 +66,6 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
             restartApplication();
         });
 
-        new TextViewHook().inject(save, 0, false);
-
         var saveParams = LayoutUtils.createLinear(0, -2);
         saveParams.weight = 1.0f;
         buttonsContainer.addView(save, saveParams);
@@ -82,8 +79,6 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
             SuperAppEditorManager.getInstance().reset();
             restartApplication();
         });
-
-        new TextViewHook().inject(reset, 0, false);
 
         var resetParams = LayoutUtils.createLinear(0, -2);
         resetParams.weight = 1.0f;

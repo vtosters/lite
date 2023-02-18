@@ -41,7 +41,7 @@ public class ThumbnailDownloader {
 
     private static void downloadThumbnail(String url, int res, String trackId)
             throws IOException {
-        var data = IOUtils.readAllBytes(new URL(url).openStream());
+        var data = IOUtils.readFully(new URL(url).openStream());
         IOUtils.writeToFile(FileCacheImplementation.getTrackThumbnail(trackId, res), data);
     }
 }

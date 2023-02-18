@@ -79,7 +79,9 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+    iget-object v0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 

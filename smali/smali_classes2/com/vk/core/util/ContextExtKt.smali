@@ -920,19 +920,6 @@
         .end annotation
     .end param
 
-    invoke-static {p0, p1}, Lru/vtosters/lite/themes/ThemesCore;->hasThemedAttr(Landroid/content/Context;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    invoke-static {p0, p1}, Lru/vtosters/lite/themes/ThemesCore;->getThemedAttr(Landroid/content/Context;I)I
-
-    move-result v1
-
-    return v1
-    :cond_b
-
     .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 

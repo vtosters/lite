@@ -1,23 +1,17 @@
 package ru.vtosters.lite.utils;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
 import com.vk.articles.preload.WebCachePreloader;
 import com.vk.core.drawable.RecoloredDrawable;
@@ -27,12 +21,8 @@ import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
-import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.hooks.VKUIHook;
-import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
-
-import java.lang.reflect.Field;
 
 import static ru.vtosters.lite.utils.AndroidUtils.*;
 import static ru.vtosters.lite.utils.Preferences.*;
@@ -50,14 +40,6 @@ public class ThemesUtils {
         return ColorStateList.valueOf(getAccentColor());
     }
 
-    public static int getSystemModeTheme() {
-        return AppCompatDelegate.getDefaultNightMode();
-    }
-
-    public static void setSystemModeTheme(int theme) {
-        AppCompatDelegate.setDefaultNightMode(theme);
-    }
-
     public static void setTheme(VKTheme theme, Activity activity) {
         if (activity == null) {
             activity = LifecycleUtils.getCurrentActivity();
@@ -68,17 +50,6 @@ public class ThemesUtils {
         new WebView(activity).clearCache(true);
         WebCachePreloader.e();
     } // apply changed theme
-
-    public static void setThemeFL(VKTheme theme, Activity activity, float[] fl) {
-        if (activity == null) {
-            activity = LifecycleUtils.getCurrentActivity();
-        }
-        VKThemeHelper.theme(theme, activity, fl);
-        ThemeTracker.a();
-        VKUIHook.isLoaded = false;
-        new WebView(activity).clearCache(true);
-        WebCachePreloader.e();
-    }
 
     public static boolean isDarkTheme() {
         return VKThemeHelper.r();
@@ -93,109 +64,15 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        var accent = AndroidUtils.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
-        return (accent == 0 || !isMilkshake()) || isMonetTheme() ? getColorFromAttr(R.attr.accent) : accent;
+        return getColorFromAttr(R.attr.accent);
     } // Color accent
 
     public static int getMutedAccentColor() {
         return getMutedColor(getAccentColor());
     }
 
-    @SuppressLint("DiscouragedPrivateApi")
-    public static void setCursorColor(EditText view) {
-        try {
-            view.setHighlightColor(ThemesUtils.getMutedAccentColor());
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                view.getTextCursorDrawable().setColorFilter(new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN));
-            } else if (!OEMDetector.isMIUI()) {
-                Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
-                field.setAccessible(true);
-                int drawableResId = field.getInt(view);
-
-                field = TextView.class.getDeclaredField("mEditor");
-                field.setAccessible(true);
-                Object editor = field.get(view);
-
-                if (editor != null) {
-                    Drawable drawable = ContextCompat.getDrawable(view.getContext(), drawableResId);
-                    drawable.setColorFilter(getAccentColor(), PorterDuff.Mode.SRC_IN);
-                    Drawable[] drawables = {drawable, drawable};
-
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                        field = editor.getClass().getDeclaredField("mCursorDrawable");
-                    } else {
-                        field = editor.getClass().getDeclaredField("mDrawableForCursor");
-                    }
-                    field.setAccessible(true);
-                    field.set(editor, drawables);
-                }
-            }
-        } catch (Exception e) {
-            Log.e("ThemesUtils", "setCursorColor: ", e);
-        }
-    }
-    @SuppressLint("DiscouragedPrivateApi")
-    public static void colorHandles(TextView view) {
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                PorterDuffColorFilter filter = new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
-                view.getTextSelectHandle().setColorFilter(filter);
-                view.getTextSelectHandleRight().setColorFilter(filter);
-                view.getTextSelectHandleLeft().setColorFilter(filter);
-            } else if (!OEMDetector.isMIUI()) {
-                Field editorField = TextView.class.getDeclaredField("mEditor");
-
-                if (!editorField.isAccessible()) editorField.setAccessible(true);
-
-                Object editor = editorField.get(view);
-
-                if (editor != null) {
-                    Class<?> editorClass;
-
-                    editorClass = editor.getClass();
-
-                    String[] handleNames = {"mSelectHandleLeft", "mSelectHandleRight", "mSelectHandleCenter"};
-                    String[] resNames = {"mTextSelectHandleLeftRes", "mTextSelectHandleRightRes", "mTextSelectHandleRes"};
-
-                    for (int i = 0; i < handleNames.length; i++) {
-                        Field handleField = editorClass.getDeclaredField(handleNames[i]);
-                        if (!handleField.isAccessible()) {
-                            handleField.setAccessible(true);
-                        }
-
-                        Drawable handleDrawable = (Drawable) handleField.get(editor);
-
-                        if (handleDrawable == null) {
-                            Field resField = TextView.class.getDeclaredField(resNames[i]);
-                            if (!resField.isAccessible()) {
-                                resField.setAccessible(true);
-                            }
-                            int resId = resField.getInt(view);
-                            handleDrawable = view.getResources().getDrawable(resId);
-                        }
-
-                        if (handleDrawable != null) {
-                            Drawable drawable = handleDrawable.mutate();
-                            drawable.setColorFilter(getAccentColor(), PorterDuff.Mode.SRC_IN);
-                            handleField.set(editor, drawable);
-                        }
-                    }
-                }
-            }
-        } catch (Exception e) {
-            Log.e("ThemesUtils", "colorHandles: ", e);
-        }
-    }
-
     public static int getMutedColor(int color) {
         return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), (isMilkshake() ? 0.5f : isDarkTheme() ? 0.32f : 0.1f));
-    }
-
-    public static void setCustomAccentColor(int newColor, boolean async) {
-        var editor = AndroidUtils.edit().putInt("accent_color", newColor);
-        if (async) editor.apply();
-        else editor.commit();
     }
 
     public static int getTextAttr() {
@@ -304,10 +181,6 @@ public class ThemesUtils {
         tw.getBackground().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_OVER);
     }
 
-    public static void recolorBGView(View view) {
-        view.getBackground().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_OVER);
-    }
-
     public static int darken(int color, float by) {
         float[] hsl = new float[3];
         ColorUtils.colorToHSL(color, hsl);
@@ -335,8 +208,8 @@ public class ThemesUtils {
         return ColorUtils.setAlphaComponent(src, 169);
     }
 
-    public static int getColor(int i) {
-        return ThemesHacks.getHackedColor(getGlobalContext(), i);
+    public static int getColor(int color) {
+        return Build.VERSION.SDK_INT > 23 ? getGlobalContext().getColor(color) : getGlobalContext().getResources().getColor(color);
     } // Android Support color injector + accent color checker
 
     public static int getAlertStyle() {

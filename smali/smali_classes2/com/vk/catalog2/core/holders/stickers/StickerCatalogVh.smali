@@ -274,9 +274,6 @@
 
     invoke-virtual {v2, v3}, Landroidx/appcompat/widget/Toolbar;->setOnMenuItemClickListener(Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;)V
 
-    const v3, 0x0
-    invoke-static {v2, v3, v3}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
-
     const-string v3, "this"
 
     .line 12

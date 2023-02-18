@@ -82,7 +82,7 @@ public class M3UDownloader implements ITrackDownloader {
                         String key = IOUtils.readAllLines(IOUtils.openStream(ts.getKeyURL()));
                         content = IOUtils.decodeStream(is, key);
                     } else {
-                        content = IOUtils.readAllBytes(is);
+                        content = IOUtils.readFully(is);
                     }
                     File tsDump = new File(tsesDir, ts.getName());
                     IOUtils.writeToFile(tsDump, content);

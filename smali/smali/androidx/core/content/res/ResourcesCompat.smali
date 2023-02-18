@@ -48,7 +48,23 @@
         }
     .end annotation
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+        .line 1
+        sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+        const/16 v1, 0x17
+
+        if-lt v0, v1, :cond_0
+
+        .line 2
+        invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
+
+        move-result p0
+
+        return p0
+
+        .line 3
+        :cond_0
+        invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p0
 

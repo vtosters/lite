@@ -107,6 +107,7 @@ dependencies {
     implementation 'net.sourceforge.streamsupport:streamsupport-minifuture:1.7.4'
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.guava:guava:23.3-android'
 }
 
 task prepareDexForMerge(type: Copy) {

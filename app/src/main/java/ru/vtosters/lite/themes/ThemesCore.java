@@ -152,39 +152,6 @@ public class ThemesCore {
         themedColors.put(R.attr.im_bubble_outgoing_highlighted, accentColor);
     }
 
-    @SuppressLint("NonConstantResourceId")
-    public static int getThemedAttr(Context context, @IdRes int attr) {
-        return switch (attr) {
-            case R.attr.im_bubble_wallpaper_outgoing, R.attr.im_bubble_outgoing -> outgoinging_msg;
-            case R.attr.im_bubble_outgoing_highlighted -> outgoinging_msg_highlight;
-            case R.attr.newsfeed_post_title_color -> darken_color;
-            default -> themedColors.get(attr);
-        };
-    }
-
-    public static boolean hasThemedAttr(Context context, int attrID) {
-//        try {
-//            Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
-//        } catch (Exception e) {
-//        }
-
-        if (isCachedAccents()) {
-            if (ThemesUtils.isDarkTheme()) {
-                return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_DARK.get(attrID, true) && (
-                        ThemesUtils.isMilkshake() ?
-                        ACCENT_THEME_ONLY_MILK_DARK.get(attrID, true) :
-                        ACCENT_THEME_ONLY_NOMILK_DARK.get(attrID, true)));
-            } else {
-                return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_LIGHT.get(attrID, true) && (
-                        ThemesUtils.isMilkshake() ?
-                        ACCENT_THEME_ONLY_MILK_LIGHT.get(attrID, true) :
-                        ACCENT_THEME_ONLY_NOMILK_LIGHT.get(attrID, true)));
-            }
-        } else {
-            return themedColors.get(attrID) != 0;
-        }
-    }
-
     public static void clear() {
         cachedAccents = false;
         themedColors.clear();

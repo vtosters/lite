@@ -12,30 +12,12 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class RecolorUtils {
-    public static Drawable recolorDrawableToolbar(Drawable drawable) {
-        if (drawable == null) return null;
-
-        return new RecoloredDrawable(drawable, ThemesUtils.getHeaderText());
-    } // Recolor toolbar drawable to accent color
-
-    @SuppressLint("UseCompatLoadingForDrawables")
-    public static Drawable recolorDrawableInt(int drawable) {
-
-        @SuppressLint("UseCompatLoadingForDrawables") Drawable res = AndroidUtils.getResources().getDrawable(drawable);
-        return new RecoloredDrawable(res, ThemesUtils.getAccentColor());
-    } // Get res drawable via id and coloring to accent
 
     public static int recolorHexColor(int i){
         var accented = ColorReferences.isAccentedColor(i);
         var mutedaccented = ColorReferences.isMutedAccentedColor(i);
         return (accented || mutedaccented) ? (accented ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : i;
     }
-
-    public static ColorStateList recolorCSL(ColorStateList colorStateList) {
-        if (colorStateList == null) return null;
-
-        return ColorStateList.valueOf(ThemesUtils.getAccentColor());
-    } // Recolor ColorStateList to accent color
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList themeCSL(Context context, int color) {

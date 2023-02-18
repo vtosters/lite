@@ -2524,6 +2524,8 @@
     .line 2
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
+    invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/ThemesManager;->init(Landroid/app/Application;)V
+
     return-void
 
     .line 3
@@ -2535,6 +2537,8 @@
     .line 4
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
+    invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/ThemesManager;->init(Landroid/app/Application;)V
+
     .line 5
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->D()V
 
@@ -2543,6 +2547,8 @@
     .line 6
     :cond_1
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
+
+    invoke-static/range {p0 .. p0}, Lru/vtosters/lite/themes/ThemesManager;->init(Landroid/app/Application;)V
 
     .line 8
     new-instance v0, Lcom/vk/core/util/TimeLogger;
