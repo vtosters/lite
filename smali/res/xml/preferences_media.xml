@@ -36,6 +36,11 @@
         <Preference
                 android:key="audio_download"
                 android:title="@string/audio_download_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="useGenius"
+                android:summary="Получать тексты с сервиса Genius"
+                android:title="Тексты с Genius"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="Last.fm">
         <Preference
