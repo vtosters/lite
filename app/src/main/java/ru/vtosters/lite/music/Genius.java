@@ -10,7 +10,6 @@ import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class Genius {
     private static final String KEY = "Bearer ZTejoT_ojOEasIkT9WrMBhBQOz6eYKK5QULCMECmOhvwqjRZ6WbpamFe3geHnvp3";
@@ -21,7 +20,6 @@ public class Genius {
         var artist = musictrack.C;
         var title = musictrack.f;
         var duration = musictrack.h;
-        var album_id = musictrack.I;
 
         if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(artist) || TextUtils.isEmpty(title) || duration == 0) {
             Log.d("Genius", "grabTrackInfo: " + "Empty track, info: " + artist + " - " + title + " - " + duration + " - " + uid);
@@ -56,8 +54,7 @@ public class Genius {
             Log.d("Genius", path);
             return getText(path.replace("feat. ", ""));
         } catch (JSONException | IOException e) {
-            e.printStackTrace();
-            return null;
+            return "Ошибка получения текста, возможно текст не найден" + "\n\n" + "Ошибка: \n" + e.getLocalizedMessage();
         }
     }
 
@@ -78,13 +75,16 @@ public class Genius {
                 .b()
                 .a();
         try {
-            var payload = client.a(request).execute().a().g();
-            Log.d("Genius", payload);
+            var payload = new JSONObject(client.a(request).execute().a().g());
+            Log.d("Genius", String.valueOf(payload));
 
-            return " " + new JSONObject(payload).getJSONObject("response").getJSONObject("song").getJSONObject("lyrics").getString("plain");
+            if (!payload.has("response")) {
+                return "Ошибка получения текста, возможно текст не найден";
+            }
 
+            return " " + payload.getJSONObject("response").getJSONObject("song").getJSONObject("lyrics").getString("plain");
         } catch (JSONException | IOException e) {
-            throw new RuntimeException(e);
+            return "Ошибка получения текста, возможно текст не найден" + "\n\n" + "Ошибка: \n" + e.getLocalizedMessage();
         }
     }
 }
