@@ -49,10 +49,23 @@ public class Genius {
                 .a();
         try {
             var payload = client.a(request).execute().a().g();
+            var sections = new JSONObject(payload).getJSONObject("response").getJSONArray("sections");
+
             Log.d("Genius", payload);
-            var path = new JSONObject(payload).getJSONObject("response").getJSONArray("sections").getJSONObject(0).getJSONArray("hits").getJSONObject(0).getJSONObject("result").getString("api_path");
-            Log.d("Genius", path);
-            return getText(path.replace("feat. ", ""));
+
+            for (int i = 0; i < sections.length(); i++) {
+                var json = sections.optJSONObject(i);
+
+                if (json.optString("type").equals("song")) {
+                    var path = json.getJSONArray("hits").getJSONObject(0).getJSONObject("result").getString("api_path");
+
+                    Log.d("Genius", path);
+
+                    return getText(path);
+                }
+            }
+
+            return "Ошибка получения текста, возможно текст не найден";
         } catch (JSONException | IOException e) {
             return "Ошибка получения текста, возможно текст не найден" + "\n\n" + "Ошибка: \n" + e.getLocalizedMessage();
         }
