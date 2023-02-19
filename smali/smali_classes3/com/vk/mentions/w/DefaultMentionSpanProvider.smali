@@ -27,11 +27,7 @@
     .line 2
     sget v0, Lcom/vk/mentions/p;->light_blue:I
 
-    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
 
     move-result p1
 

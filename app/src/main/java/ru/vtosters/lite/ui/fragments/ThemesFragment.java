@@ -67,7 +67,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
                     requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при инвалидации кэша"));
                 }
             });
-            return false;
+            return true;
         });
 
         var navBarPreference = findPreference("navbar");

@@ -3494,14 +3494,14 @@
 
     const v1, 0x7f060018
 
-    invoke-static {p1, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
 
     move-result v2
 
     const v3, 0x7f060105
 
     .line 20
-    invoke-static {p1, v3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+    invoke-static {v3}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
 
     move-result v4
 

@@ -61,13 +61,9 @@
     .line 2
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
     sget v1, Lb/h/z/c;->light_blue:I
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
 
     move-result v0
 
