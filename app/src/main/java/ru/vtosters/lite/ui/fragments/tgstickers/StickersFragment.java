@@ -70,7 +70,7 @@ public class StickersFragment extends BaseToolbarFragment {
     @Override
     protected void onCreateMenu(Menu menu) {
         var item = menu.add(0, 0, 0, "");
-        item.setIcon(ThemesUtils.recolorDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_settings_24)))
+        item.setIcon(ThemesUtils.recolorDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_settings_outline_28)))
             .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
         super.onCreateMenu(menu);
