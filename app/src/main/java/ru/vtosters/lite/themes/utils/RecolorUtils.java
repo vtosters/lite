@@ -26,6 +26,7 @@ public class RecolorUtils {
     } // Get res drawable via id and coloring to accent
 
     public static int recolorHexColor(int i) {
+        if (!ThemesUtils.isCustomAccentEnabled()) return i;
         var accented = ColorReferences.isAccentedColor(i);
         var mutedaccented = ColorReferences.isMutedAccentedColor(i);
         return (accented || mutedaccented) ? (accented ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : i;
@@ -39,6 +40,14 @@ public class RecolorUtils {
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList themeCSL(Context context, int color) {
+        if (!ThemesUtils.isCustomAccentEnabled()) {
+            if (Build.VERSION.SDK_INT >= 23) {
+                return context.getColorStateList(color);
+            } else {
+                return context.getResources().getColorStateList(color);
+            }
+        }
+
         if (ColorReferences.isColorRefAccented(color)) {
             return ColorStateList.valueOf(ThemesUtils.getAccentColor());
         } else if (ColorReferences.isColorRefMutedAccented(color)) {
@@ -57,6 +66,8 @@ public class RecolorUtils {
     } // Recolor ColorStateList
 
     public static ColorStateList themeCSL(ColorStateList csl) {
+        if (!ThemesUtils.isCustomAccentEnabled()) return csl;
+
         try {
             int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
             int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);

@@ -167,14 +167,25 @@
     return-object v0
 
     :cond_7
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->isCustomAccentEnabled()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
     new-instance v0, Lru/vtosters/lite/themes/VTLResources;
 
     invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {v0, p0, v1}, Lru/vtosters/lite/themes/VTLResources;-><init>(Landroid/content/Context;Landroid/content/res/Resources;)V
+    invoke-direct {v0, p0, v2}, Lru/vtosters/lite/themes/VTLResources;-><init>(Landroid/content/Context;Landroid/content/res/Resources;)V
 
+    :cond_0
     iput-object v0, p0, Lcom/vk/core/ui/themes/VKThemeHelper$b;->resources:Landroid/content/res/Resources;
 
     goto :goto_6

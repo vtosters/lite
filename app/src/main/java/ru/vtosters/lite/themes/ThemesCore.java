@@ -166,22 +166,27 @@ public class ThemesCore {
 //        } catch (Exception e) {
 //        }
 
-        if (isCachedAccents()) {
-            if (ThemesUtils.isDarkTheme()) {
-                return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_DARK.get(attrID, true) && (
-                        ThemesUtils.isMilkshake() ?
-                                ACCENT_THEME_ONLY_MILK_DARK.get(attrID, true) :
-                                ACCENT_THEME_ONLY_NOMILK_DARK.get(attrID, true)));
+        if (ThemesUtils.isCustomAccentEnabled()) {
+            if (isCachedAccents()) {
+                if (ThemesUtils.isDarkTheme()) {
+                    return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_DARK.get(attrID, true) && (
+                            ThemesUtils.isMilkshake() ?
+                                    ACCENT_THEME_ONLY_MILK_DARK.get(attrID, true) :
+                                    ACCENT_THEME_ONLY_NOMILK_DARK.get(attrID, true)));
+                } else {
+                    return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_LIGHT.get(attrID, true) && (
+                            ThemesUtils.isMilkshake() ?
+                                    ACCENT_THEME_ONLY_MILK_LIGHT.get(attrID, true) :
+                                    ACCENT_THEME_ONLY_NOMILK_LIGHT.get(attrID, true)));
+                }
             } else {
-                return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_LIGHT.get(attrID, true) && (
-                        ThemesUtils.isMilkshake() ?
-                                ACCENT_THEME_ONLY_MILK_LIGHT.get(attrID, true) :
-                                ACCENT_THEME_ONLY_NOMILK_LIGHT.get(attrID, true)));
+                return themedColors.get(attrID) != 0;
             }
         } else {
-            return themedColors.get(attrID) != 0;
+            return false;
         }
     }
+
 
     public static void clear() {
         cachedAccents = false;
