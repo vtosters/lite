@@ -25,7 +25,7 @@ public class RecolorUtils {
         return new RecoloredDrawable(res, ThemesUtils.getAccentColor());
     } // Get res drawable via id and coloring to accent
 
-    public static int recolorHexColor(int i){
+    public static int recolorHexColor(int i) {
         var accented = ColorReferences.isAccentedColor(i);
         var mutedaccented = ColorReferences.isMutedAccentedColor(i);
         return (accented || mutedaccented) ? (accented ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : i;
@@ -56,7 +56,7 @@ public class RecolorUtils {
         return themeCSL(csl);
     } // Recolor ColorStateList
 
-    public static ColorStateList themeCSL(ColorStateList csl){
+    public static ColorStateList themeCSL(ColorStateList csl) {
         try {
             int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
             int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);

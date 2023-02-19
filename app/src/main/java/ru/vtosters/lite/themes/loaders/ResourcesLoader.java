@@ -13,7 +13,6 @@ import ru.vtosters.lite.utils.ReflectionUtils;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Collection;
@@ -47,22 +46,22 @@ public class ResourcesLoader {
             Class<?> loadedApkClz;
             try {
                 loadedApkClz = Class.forName("android.app.LoadedApk");
-            } catch(ClassNotFoundException ignored) {
+            } catch (ClassNotFoundException ignored) {
                 loadedApkClz = Class.forName("android.app.ActivityThread$PackagenInfo");
             }
 
             resDirFld = ReflectionUtils.findField(loadedApkClz, "mResDir");
             packagesFld = ReflectionUtils.findField(activityThreadClz, "mPackages");
-            if(Build.VERSION.SDK_INT < Build.VERSION_CODES.O_MR1)
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O_MR1)
                 resourcePackagesFld = ReflectionUtils.findField(activityThreadClz, "mResourcePackages");
 
             // fix jianGuo pro has private field 'mAssets' with Resource
             // try use mResourcesImpl first
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                 try {
                     // N moved the mAssets inside an mResourcesImpl field
                     resourcesImplFld = ReflectionUtils.findField(Resources.class, "mResourcesImpl");
-                } catch(Throwable ignored) {
+                } catch (Throwable ignored) {
                     // for safety
                     assetsFld = ReflectionUtils.findField(Resources.class, "mAssets");
                 }
@@ -83,8 +82,8 @@ public class ResourcesLoader {
             } catch (Throwable ignored) {
                 // Ignored.
             }
-        } catch(Throwable e) {
-            Log.d("WTF", e+"");
+        } catch (Throwable e) {
+            Log.d("WTF", String.valueOf(e));
         }
     }
 
@@ -114,18 +113,18 @@ public class ResourcesLoader {
         final ApplicationInfo appInfo = context.getApplicationInfo();
 
         final Field[] packagesFlds = Build.VERSION.SDK_INT < Build.VERSION_CODES.O_MR1
-                ? new Field[] { packagesFld, resourcePackagesFld }
-                : new Field[] { packagesFld };
-        for(var fld : packagesFlds) {
+                ? new Field[]{packagesFld, resourcePackagesFld}
+                : new Field[]{packagesFld};
+        for (var fld : packagesFlds) {
             final var value = fld.get(sCurrentActivityThread);
 
-            for(var entry
+            for (var entry
                     : ((Map<String, WeakReference<?>>) value).entrySet()) {
                 final var loadedApk = entry.getValue().get();
-                if(loadedApk == null) continue;
+                if (loadedApk == null) continue;
 
                 final var resDirPath = (String) resDirFld.get(loadedApk);
-                if(appInfo.sourceDir.equals(resDirPath))
+                if (appInfo.sourceDir.equals(resDirPath))
                     resDirFld.set(loadedApk, resPath);
             }
         }
@@ -137,16 +136,16 @@ public class ResourcesLoader {
 
         sAssetManager = AssetManager.class.newInstance();
         // Create a new AssetManager instance and point it to the resources installed under
-        if(AssetManagerHelper.addAssetPath(sAssetManager, resPath) == 0
-            || AssetManagerHelper.addAssetPath(sAssetManager, assetsPath) == 0)
+        if (AssetManagerHelper.addAssetPath(sAssetManager, resPath) == 0
+                || AssetManagerHelper.addAssetPath(sAssetManager, assetsPath) == 0)
             throw new IllegalStateException("Could not create new AssetManager");
 
         // Add SharedLibraries to AssetManager for resolve system resources not found issue
         // This influence SharedLibrary Package ID
-        if(shouldAddSharedLibraryAssets(appInfo)) {
-            for(var sharedLibrary : appInfo.sharedLibraryFiles) {
-                if(sharedLibrary.endsWith(".apk")) continue;
-                if(AssetManagerHelper.addAssetPathAsSharedLibrary(sAssetManager, sharedLibrary) == 0)
+        if (shouldAddSharedLibraryAssets(appInfo)) {
+            for (var sharedLibrary : appInfo.sharedLibraryFiles) {
+                if (sharedLibrary.endsWith(".apk")) continue;
+                if (AssetManagerHelper.addAssetPathAsSharedLibrary(sAssetManager, sharedLibrary) == 0)
                     throw new IllegalStateException("AssetManager add SharedLibrary Fail");
                 Log.i("ResourcesLoader", "addAssetPathAsSharedLibrary " + sharedLibrary);
             }
@@ -158,9 +157,9 @@ public class ResourcesLoader {
             stringBlocksFld.set(sAssetManager, null);
             ensureStringBlocksMtd.invoke(sAssetManager);
         }
-        for(var wr : sResourceReferences) {
+        for (var wr : sResourceReferences) {
             final var resources = wr.get();
-            if(resources == null) continue;
+            if (resources == null) continue;
 
             // Set the AssetManager of the Resources instance to our brand new one
             try {
@@ -215,6 +214,61 @@ public class ResourcesLoader {
         }
     }
 
+    private static boolean isPatchedResModifiedAfterLastLoad(String patchedResPath) {
+        long patchedResModifiedTime;
+        try {
+            patchedResModifiedTime = new File(patchedResPath).lastModified();
+        } catch (Throwable thr) {
+            thr.printStackTrace();
+            patchedResModifiedTime = 0L;
+        }
+        if (patchedResModifiedTime == 0) {
+            return false;
+        }
+        return patchedResModifiedTime != storedPatchedResModifiedTime;
+    }
+
+    private static void recordCurrentPatchedResModifiedTime(String patchedResPath) {
+        try {
+            storedPatchedResModifiedTime = new File(patchedResPath).lastModified();
+        } catch (Throwable thr) {
+            thr.printStackTrace();
+            storedPatchedResModifiedTime = 0L;
+        }
+    }
+
+    /**
+     * Why must I do these?
+     * Resource has mTypedArrayPool field, which just like Message Poll to reduce gc
+     * MiuiResource change TypedArray to MiuiTypedArray, but it get string block from offset instead of assetManager
+     */
+    private static void clearPreloadTypedArrayIssue(Resources resources) {
+        // Perform this trick not only in Miui system since we can't predict if any other
+        // manufacturer would do the same modification to Android.
+        // if (!isMiuiSystem) {
+        //     return;
+        // }
+        Log.w("ResourcesLoader", "try to clear typedArray cache!");
+        // Clear typedArray cache.
+        try {
+            final Field typedArrayPoolField = ReflectionUtils.findField(Resources.class, "mTypedArrayPool");
+            final Object origTypedArrayPool = typedArrayPoolField.get(resources);
+            final Method acquireMethod = ReflectionUtils.findMethod(origTypedArrayPool, "acquire");
+            while (true) {
+                if (acquireMethod.invoke(origTypedArrayPool) == null) {
+                    break;
+                }
+            }
+        } catch (Throwable ignored) {
+            Log.e("ResourcesLoader", "clearPreloadTypedArrayIssue failed, ignore error: " + ignored);
+        }
+    }
+
+    private static boolean shouldAddSharedLibraryAssets(ApplicationInfo applicationInfo) {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && applicationInfo != null &&
+                applicationInfo.sharedLibraryFiles != null;
+    }
+
     private static final class ResourceInsuranceHandlerCallback implements Handler.Callback {
         private static final String LAUNCH_ACTIVITY_LIFECYCLE_ITEM_CLASSNAME = "android.app.servertransaction.LaunchActivityItem";
 
@@ -240,7 +294,7 @@ public class ResourcesLoader {
             RELAUNCH_ACTIVITY = fetchMessageId(hClazz, "RELAUNCH_ACTIVITY", 126);
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                EXECUTE_TRANSACTION  = fetchMessageId(hClazz, "EXECUTE_TRANSACTION ", 159);
+                EXECUTE_TRANSACTION = fetchMessageId(hClazz, "EXECUTE_TRANSACTION ", 159);
             } else {
                 EXECUTE_TRANSACTION = -1;
             }
@@ -318,63 +372,5 @@ public class ResourcesLoader {
             }
             return false;
         }
-    }
-
-    private static boolean isPatchedResModifiedAfterLastLoad(String patchedResPath) {
-        long patchedResModifiedTime;
-        try {
-            patchedResModifiedTime = new File(patchedResPath).lastModified();
-        } catch (Throwable thr) {
-            thr.printStackTrace();
-            patchedResModifiedTime = 0L;
-        }
-        if (patchedResModifiedTime == 0) {
-            return false;
-        }
-        if (patchedResModifiedTime == storedPatchedResModifiedTime) {
-            return false;
-        }
-        return true;
-    }
-
-    private static void recordCurrentPatchedResModifiedTime(String patchedResPath) {
-        try {
-            storedPatchedResModifiedTime = new File(patchedResPath).lastModified();
-        } catch (Throwable thr) {
-            thr.printStackTrace();
-            storedPatchedResModifiedTime = 0L;
-        }
-    }
-
-    /**
-     * Why must I do these?
-     * Resource has mTypedArrayPool field, which just like Message Poll to reduce gc
-     * MiuiResource change TypedArray to MiuiTypedArray, but it get string block from offset instead of assetManager
-     */
-    private static void clearPreloadTypedArrayIssue(Resources resources) {
-        // Perform this trick not only in Miui system since we can't predict if any other
-        // manufacturer would do the same modification to Android.
-        // if (!isMiuiSystem) {
-        //     return;
-        // }
-        Log.w("ResourcesLoader", "try to clear typedArray cache!");
-        // Clear typedArray cache.
-        try {
-            final Field typedArrayPoolField = ReflectionUtils.findField(Resources.class, "mTypedArrayPool");
-            final Object origTypedArrayPool = typedArrayPoolField.get(resources);
-            final Method acquireMethod = ReflectionUtils.findMethod(origTypedArrayPool, "acquire");
-            while (true) {
-                if (acquireMethod.invoke(origTypedArrayPool) == null) {
-                    break;
-                }
-            }
-        } catch (Throwable ignored) {
-            Log.e("ResourcesLoader", "clearPreloadTypedArrayIssue failed, ignore error: " + ignored);
-        }
-    }
-
-    private static boolean shouldAddSharedLibraryAssets(ApplicationInfo applicationInfo) {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && applicationInfo != null &&
-                applicationInfo.sharedLibraryFiles != null;
     }
 }

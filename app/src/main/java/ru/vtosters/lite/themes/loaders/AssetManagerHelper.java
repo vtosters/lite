@@ -15,6 +15,7 @@ public class AssetManagerHelper {
     private final static Method addAssetPathMtd;
     private final static Method addAssetPathAsSharedLibraryMtd;
     private final static Method addOverlayPathMtd;
+
     static {
         try {
             getAssetPathMtd = ReflectionUtils.findMethod(Class.forName("android.content.res.ApkAssets"), "getAssetPath");
@@ -22,7 +23,7 @@ public class AssetManagerHelper {
             addAssetPathMtd = AssetManager.class.getMethod("addAssetPath", String.class);
             addAssetPathAsSharedLibraryMtd = AssetManager.class.getMethod("addAssetPathAsSharedLibrary", String.class);
             addOverlayPathMtd = AssetManager.class.getMethod("addOverlayPath", String.class);
-        } catch(ClassNotFoundException | NoSuchMethodException e) {
+        } catch (ClassNotFoundException | NoSuchMethodException e) {
             throw new RuntimeException();
         }
     }
@@ -31,9 +32,9 @@ public class AssetManagerHelper {
             throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Object[] apkAssetsArr = (Object[]) getAssetPathMtd.invoke(assetManager);
         // By default, base apk is the last element of array if is not, for execution speed, we should iterate array from the end to the beginning
-        for(int i = apkAssetsArr.length - 1; i >= 0; i--) {
+        for (int i = apkAssetsArr.length - 1; i >= 0; i--) {
             final String pathname = (String) getApkAssetsMtd.invoke(apkAssetsArr[i]);
-            if(pathname.contains(packagename)) return pathname;
+            if (pathname.contains(packagename)) return pathname;
         }
 
         throw new NullPointerException();

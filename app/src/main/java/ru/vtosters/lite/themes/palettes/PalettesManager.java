@@ -30,14 +30,14 @@ public class PalettesManager {
 
     private final List<VTLPalette> mPalettes = new ArrayList<>();
 
+    public PalettesManager() {
+        load();
+    }
+
     public static PalettesManager getInstance() {
         if (sInstance == null)
             sInstance = new PalettesManager();
         return sInstance;
-    }
-
-    public PalettesManager() {
-        load();
     }
 
     public void load() {

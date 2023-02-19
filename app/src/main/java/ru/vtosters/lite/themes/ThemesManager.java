@@ -10,7 +10,10 @@ import ru.vtosters.lite.themes.utils.ArscEditor;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
@@ -129,24 +132,24 @@ public class ThemesManager {
             Log.d("ThemesManager", "init paths");
             initPaths(app);
 
-            if(hasTmpArchive() && !ThemesUtils.isMonetTheme()) {
+            if (hasTmpArchive() && !ThemesUtils.isMonetTheme()) {
                 ResourcesLoader.init(app);
                 ResourcesLoader.load(app, resTmpZipFile.getAbsolutePath(), assetsZipFile.getAbsolutePath(), false);
             }
-        } catch(Exception e) {
-            Log.e("ThemesManager", e+"");
+        } catch (Exception e) {
+            Log.e("ThemesManager", String.valueOf(e));
         }
     }
 
     private static void initPaths(Context context) {
         mainDir = new File(context.getFilesDir(), "VTLThemes");
-        if(!mainDir.exists()) mainDir.mkdir();
+        if (!mainDir.exists()) mainDir.mkdir();
 
         binDir = new File(mainDir, "bin");
-        if(!binDir.exists()) mainDir.mkdir();
+        if (!binDir.exists()) mainDir.mkdir();
 
         palettesDir = new File(mainDir, "palettes");
-        if(!palettesDir.exists()) palettesDir.mkdir();
+        if (!palettesDir.exists()) palettesDir.mkdir();
 
         assetsZipFile = new File(binDir, "assets.zip");
         resZipFile = new File(binDir, "res.zip");
@@ -155,32 +158,32 @@ public class ThemesManager {
     }
 
     public static void generateBins(Context context)
-        throws IOException {
-        try(final var apk = new ZipFile(context.getApplicationInfo().sourceDir)) {
-            for(var filename : NAMES) {
+            throws IOException {
+        try (final var apk = new ZipFile(context.getApplicationInfo().sourceDir)) {
+            for (var filename : NAMES) {
                 final var bin = new File(binDir, filename);
-                if(!bin.exists())
-                    if(filename.contains(".")) extractFile(apk, filename, bin);
+                if (!bin.exists())
+                    if (filename.contains(".")) extractFile(apk, filename, bin);
                     else extractAndCompressDirectory(apk, filename, new File(binDir, filename + ".zip"));
             }
         }
     }
 
     private static void extractFile(ZipFile apk, String name, File out)
-        throws IOException {
+            throws IOException {
         final var is = apk.getInputStream(apk.getEntry(name));
-        if(!out.exists()) out.getParentFile().mkdirs();
+        if (!out.exists()) out.getParentFile().mkdirs();
         IOUtils.copy(is, out);
     }
 
     private static void extractAndCompressDirectory(ZipFile apk, String dirName, File out)
-        throws IOException {
+            throws IOException {
         final var zos = new ZipOutputStream(new FileOutputStream(out));
-        try(zos) {
+        try (zos) {
             final var entries = apk.entries();
-            while(entries.hasMoreElements()) {
+            while (entries.hasMoreElements()) {
                 final var entry = entries.nextElement();
-                if(!entry.getName().startsWith(dirName + "/")) continue;
+                if (!entry.getName().startsWith(dirName + "/")) continue;
 
                 zos.putNextEntry(new ZipEntry(entry.getName()));
 
@@ -202,12 +205,12 @@ public class ThemesManager {
     }
 
     public static void generateTempResArchive(int accentColor)
-        throws IOException {
+            throws IOException {
         final var resZip = new ZipFile(resZipFile);
         final var zos = new ZipOutputStream(new FileOutputStream(resTmpZipFile));
-        try(zos) {
+        try (zos) {
             final var entries = resZip.entries();
-            while(entries.hasMoreElements()) {
+            while (entries.hasMoreElements()) {
                 final var entry = entries.nextElement();
                 final var is = resZip.getInputStream(entry);
 
@@ -219,7 +222,7 @@ public class ThemesManager {
             }
 
             final var arsc = new BinaryResourceFile(IOUtils.readFully(resourcesArscFile));
-            if(!ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor)) {
+            if (!ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor)) {
                 resZip.close();
                 resTmpZipFile.delete();
                 throw new IOException("Error while generating res.tmp.res");

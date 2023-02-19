@@ -4,9 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
-
 import androidx.annotation.IdRes;
-
 import com.vtosters.lite.R;
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -94,7 +92,7 @@ public class ThemesCore {
         themedColors.put(R.attr.accentColor, accentColor);
         themedColors.put(R.attr.text_name, accentColor);
         themedColors.put(R.attr.tabbar_active_icon, accentColor);
-        
+
 //        themedColors.put(com.vtosters.lite.R.attr.header_background, accentColor);
 //        themedColors.put(com.vtosters.lite.R.attr.header_alternate_background, accentColor);
 //        themedColors.put(com.vtosters.lite.R.attr.header_background_before_blur, accentColor);
@@ -172,13 +170,13 @@ public class ThemesCore {
             if (ThemesUtils.isDarkTheme()) {
                 return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_DARK.get(attrID, true) && (
                         ThemesUtils.isMilkshake() ?
-                        ACCENT_THEME_ONLY_MILK_DARK.get(attrID, true) :
-                        ACCENT_THEME_ONLY_NOMILK_DARK.get(attrID, true)));
+                                ACCENT_THEME_ONLY_MILK_DARK.get(attrID, true) :
+                                ACCENT_THEME_ONLY_NOMILK_DARK.get(attrID, true)));
             } else {
                 return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_LIGHT.get(attrID, true) && (
                         ThemesUtils.isMilkshake() ?
-                        ACCENT_THEME_ONLY_MILK_LIGHT.get(attrID, true) :
-                        ACCENT_THEME_ONLY_NOMILK_LIGHT.get(attrID, true)));
+                                ACCENT_THEME_ONLY_MILK_LIGHT.get(attrID, true) :
+                                ACCENT_THEME_ONLY_NOMILK_LIGHT.get(attrID, true)));
             }
         } else {
             return themedColors.get(attrID) != 0;
