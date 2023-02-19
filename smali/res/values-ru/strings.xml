@@ -5692,7 +5692,7 @@
     <string name="stickersproxy1">Настройте IP-прокси!</string>
     <string name="stories_vtl">Истории</string>
     <string name="systememoji">Использовать системные эмодзи</string>
-    <string name="systememojisum">Ваши системные эмодзи - 😀😁🤑🥵👍</string>
+    <string name="systememojisum">Ваши системные эмодзи - </string>
     <string name="tokenwarning">Никому не передавайте этот токен, если вы не знаете что делать!</string>
     <string name="useproxy">Вариант прокси</string>
     <string name="useproxyinfo">Информация об использовании прокси</string>

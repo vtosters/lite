@@ -5826,7 +5826,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="stickersproxy1">Configure the IP proxy!</string>
     <string name="stories_vtl">Stories</string>
     <string name="systememoji">Use system emojis</string>
-    <string name="systememojisum">Your system emojis - 😀😁🤑🥵👍</string>
+    <string name="systememojisum">Your system emojis - </string>
     <string name="tokenwarning">"Don't give this token to anyone if you don't know what to do!"</string>
     <string name="useproxy">Proxy variant</string>
     <string name="useproxyinfo">Information about using a proxy</string>

@@ -5619,7 +5619,7 @@
     <string name="stickersproxy1">Налаштуйте IP-проксі!</string>
     <string name="stories_vtl">Історії</string>
     <string name="systememoji">Використовувати системні емодзі</string>
-    <string name="systememojisum">Ваші системні емодзі - 😀😁🤑🥵👍</string>
+    <string name="systememojisum">Ваші системні емодзі - </string>
     <string name="tokenwarning">Нікому не передавайте цей токен, якщо ви не знаєте, що робити!</string>
     <string name="useproxy">Варіант проксі</string>
     <string name="useproxyinfo">Інформація про використання проксі</string>

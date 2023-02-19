@@ -47,6 +47,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("systememoji").setSummary(getGlobalContext().getString(R.string.systememojisum) + " \uD83D\uDE00\uD83D\uDE01\uD83E\uDD11\uD83E\uDD75\uD83D\uDC4D");
+
         var dockbarEditor = findPreference("dockbareditor");
         dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
         dockbarEditor.setOnPreferenceClickListener(preference -> {
