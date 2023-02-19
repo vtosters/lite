@@ -1,6 +1,7 @@
 package ru.vtosters.lite.deviceinfo;
 
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 import static ru.vtosters.lite.deviceinfo.OEMDetector.hasMiuiIncrCode;
 import static ru.vtosters.lite.deviceinfo.OEMDetector.isEMUI;
@@ -91,8 +92,9 @@ public class Device {
     public String toDeviceName() {
         return "Device information: "
                 + "commit='" + getBuildNumber()
-                + "', sdkVersion=" + this.sdkVersion
-                + ", productName='" + this.productName
+                + "', isMilkshake='" + ThemesUtils.isMilkshake()
+                + "', sdkVersion='" + this.sdkVersion
+                + "', productName='" + this.productName
                 + "', deviceName='" + this.deviceName
                 + "', boardName='" + this.boardName
                 + "', manufacturerName='" + this.manufacturerName
