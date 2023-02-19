@@ -127,7 +127,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
         newsfeedNotificationsPreference.setVisible(Preferences.milkshake());
 
-        findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme() && ThemesUtils.isMilkshake());
+        findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme());
 
         var wp = findPreference("wallpapers");
         wp.setIcon(recolorDrawable(getGlobalContext().getDrawable(R.drawable.ic_media_outline_28)));

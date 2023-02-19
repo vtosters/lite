@@ -8,6 +8,7 @@ import com.vtosters.lite.R;
 import ru.vtosters.lite.themes.loaders.ResourcesLoader;
 import ru.vtosters.lite.themes.utils.ArscEditor;
 import ru.vtosters.lite.utils.IOUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.io.*;
 import java.util.zip.ZipEntry;
@@ -128,7 +129,7 @@ public class ThemesManager {
             Log.d("ThemesManager", "init paths");
             initPaths(app);
 
-            if(hasTmpArchive()) {
+            if(hasTmpArchive() && !ThemesUtils.isMonetTheme()) {
                 ResourcesLoader.init(app);
                 ResourcesLoader.load(app, resTmpZipFile.getAbsolutePath(), assetsZipFile.getAbsolutePath(), false);
             }
