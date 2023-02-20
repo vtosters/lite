@@ -16,4 +16,5 @@
     <bool name="spb_default_progressiveStart_activated">false</bool>
     <bool name="spb_default_reversed">false</bool>
     <bool name="vk_is_tablet">false</bool>
+    <bool name="com_samsung_android_icon_container_has_icon_container">true</bool>
 </resources>

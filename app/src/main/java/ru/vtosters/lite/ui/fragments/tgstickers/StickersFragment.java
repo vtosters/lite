@@ -29,6 +29,7 @@ import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
 import ru.vtosters.lite.ui.components.StickerTouchHelperCallback;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.io.File;
@@ -69,7 +70,7 @@ public class StickersFragment extends BaseToolbarFragment {
     @Override
     protected void onCreateMenu(Menu menu) {
         var item = menu.add(0, 0, 0, "");
-        item.setIcon(ThemesUtils.recolorDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_settings_24)))
+        item.setIcon(ThemesUtils.recolorDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_settings_outline_28)))
             .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
         super.onCreateMenu(menu);
@@ -85,9 +86,7 @@ public class StickersFragment extends BaseToolbarFragment {
         if (toast != null) {
             Toast.makeText(requireContext(), toast, Toast.LENGTH_SHORT).show();
         }
-        var intent = new Navigator(StickersPreferencesFragment.class, new Bundle()).b(requireContext());
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        super.requireContext().startActivity(intent);
+        NavigatorUtils.switchFragment(requireContext(), StickersPreferencesFragment.class);
     }
 
     @Override

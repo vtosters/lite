@@ -35,44 +35,32 @@ public class FragAnimationKit {
     public static void setAnimations(FragmentTransaction transaction) {
         if (transaction != null && !getPrefsValue("anim_rtrn_type").equals("noanim")) {
             switch (getPrefsValue("anim_rtrn_type")) {
-                case "q":
-                    transaction.setCustomAnimations(
-                            actOpenEnter,
-                            actOpenExit,
-                            actCloseEnter,
-                            actCloseExit
-                    );
-                    break;
-                case "slide":
-                    transaction.setCustomAnimations(
-                            SactOpenEnter,
-                            SactOpenExit,
-                            SactCloseEnter,
-                            SactCloseExit
-                    );
-                    break;
-                case "system":
-                    transaction.setCustomAnimations(
-                            SSactOpenEnter,
-                            SSactOpenExit,
-                            SSactCloseEnter,
-                            SSactCloseExit
-                    );
-                    break;
-                case "frag_enter":
-                    transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                    break;
-                case "frag_fade":
-                    transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                    break;
-                case "system_task":
-                    transaction.setCustomAnimations(
-                            SSTactOpenEnter,
-                            SSTactOpenExit,
-                            SSTactCloseEnter,
-                            SSTactCloseExit
-                    );
-                    break;
+                case "q" -> transaction.setCustomAnimations(
+                        actOpenEnter,
+                        actOpenExit,
+                        actCloseEnter,
+                        actCloseExit
+                );
+                case "slide" -> transaction.setCustomAnimations(
+                        SactOpenEnter,
+                        SactOpenExit,
+                        SactCloseEnter,
+                        SactCloseExit
+                );
+                case "system" -> transaction.setCustomAnimations(
+                        SSactOpenEnter,
+                        SSactOpenExit,
+                        SSactCloseEnter,
+                        SSactCloseExit
+                );
+                case "frag_enter" -> transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                case "frag_fade" -> transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                case "system_task" -> transaction.setCustomAnimations(
+                        SSTactOpenEnter,
+                        SSTactOpenExit,
+                        SSTactCloseEnter,
+                        SSTactCloseExit
+                );
             }
         }
     }

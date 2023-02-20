@@ -81,7 +81,7 @@ public class DNRInjector {
     }
 
     public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap) {
-        hashMap.put(DialogAction.STAT, AndroidUtils.getIdentifier("dialogstats", "string"));
+//        hashMap.put(DialogAction.STAT, AndroidUtils.getIdentifier("dialogstats", "string"));
         hashMap.put(DialogAction.DOWNLOAD, R.string.download_dl);
 
         hashMap.put(DialogAction.DNR_ON, R.string.DNR_ON);
@@ -101,7 +101,7 @@ public class DNRInjector {
     public static List<Object> injectToList(List<Object> actions) {
         var list = new ArrayList<>(actions);
 
-        list.add(new DialogActionsListView.b.a(DialogAction.STAT, 1, R.attr.im_ic_stats, R.string.dialogstats)); // DialogAction, Int, Icon, String
+//        list.add(new DialogActionsListView.b.a(DialogAction.STAT, 1, R.attr.im_ic_stats, R.string.dialogstats)); // DialogAction, Int, Icon, String
         list.add(new DialogActionsListView.b.a(DialogAction.DOWNLOAD, 1, R.attr.im_ic_msgdl, R.string.download_dl)); // DialogAction, Int, Icon, String
 
         list.add(new DialogActionsListView.b.a(DialogAction.DNR_ON, 2, R.attr.im_ic_pinned_msg_hide, R.string.DNR_ON)); // DialogAction, Int, Icon, String
@@ -318,27 +318,14 @@ public class DNRInjector {
 
         if (msg instanceof MsgFromUser) {
             var text = ((MsgFromUser) msg).f();
-            var fullMsg = ((MsgFromUser) msg).j2(); // text + reply
-            var reply = fullMsg.substring(text.length() + 1);
-
             var isTextExist = !text.isEmpty() && !text.equals(" ");
-            var isReplyExist = !reply.isEmpty() && !reply.equals(" ");
-
-
-            if (isReplyExist) {
-                reply = decryptMessage(reply, peerId);
-            }
 
             if (isTextExist) {
                 text = decryptMessage(text, peerId);
             }
 
             if (action == MsgAction.valueOf("TRANSLATE")) {
-                if (isTextExist && isReplyExist) {
-                    Translate.showTranslatedText(context, text + "\n\n" + context.getString(R.string.translator_reply) + "\n" + reply);
-                } else if (isReplyExist) {
-                    Translate.showTranslatedText(context, context.getString(R.string.translator_reply) + "\n" + reply);
-                } else if (isTextExist) {
+                if (isTextExist) {
                     Translate.showTranslatedText(context, text);
                 } else {
                     sendToast(context.getString(R.string.translator_no_text));

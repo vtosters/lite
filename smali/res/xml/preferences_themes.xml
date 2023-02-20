@@ -3,64 +3,87 @@
     <PreferenceCategory android:title="@string/accents"
                         android:key="accentprefs">
         <Preference
-            android:key="accent_color"
-            android:summary="@string/accent_color_summ"
-            android:icon="@drawable/bg_accent_circle"
-            android:title="@string/accent_color_title" />
+                android:key="accent_color"
+                android:summary="@string/accent_color_summ"
+                android:icon="@drawable/bg_accent_circle"
+                android:title="@string/accent_color_title"/>
+
+        <Preference
+                android:key="invalidate_theme_cache"
+                android:title="Инвалидация кэша темы" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlthemes">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="milkshake"
-            android:summary="@string/milkshake_summ"
-            android:title="@string/milkshake_title" />
+                android:defaultValue="true"
+                android:key="milkshake"
+                android:summary="@string/milkshake_summ"
+                android:title="@string/milkshake_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="amoledtheme"
-            android:summary="@string/amoledtheme_summ"
-            android:title="@string/amoledtheme_title" />
+                android:defaultValue="false"
+                android:key="amoledtheme"
+                android:summary="@string/amoledtheme_summ"
+                android:title="@string/amoledtheme_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="monettheme"
-            android:summary="@string/monettheme_summ"
-            android:title="@string/monettheme_title" />
+                android:defaultValue="false"
+                android:key="monettheme"
+                android:summary="@string/monettheme_summ"
+                android:title="@string/monettheme_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlmessages">
+        <Preference
+                android:key="wallpapers"
+                android:title="@string/wallpapers_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/interfaceemoji">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="alteremoji"
+                android:summary="@string/alteremojisum"
+                android:title="@string/alteremoji"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="systememoji"
+                android:title="@string/systememoji"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="dockbarsett"
-        android:title="@string/vtl_settings_dockbar_title">
+            android:key="dockbarsett"
+            android:title="@string/vtl_settings_dockbar_title">
+        <Preference
+                android:key="dockbareditor"
+                android:title="@string/dockbar_editor"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="dockbar_tab_titles"
-            android:title="@string/dockbar_tab_titles" />
+                android:defaultValue="true"
+                android:key="dockbar_tab_titles"
+                android:title="@string/dockbar_tab_titles"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="dockbar_accent"
-            android:title="@string/dockbar_accent_title" />
+                android:defaultValue="true"
+                android:key="dockbar_accent"
+                android:title="@string/dockbar_accent_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="dockcounter"
-            android:summary="@string/docknumberssum"
-            android:title="@string/docknumbers" />
+                android:defaultValue="true"
+                android:key="dockcounter"
+                android:summary="@string/docknumberssum"
+                android:title="@string/docknumbers"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="newsfeed_notif"
-            android:summary="@string/newsfeed_notif_summ"
-            android:title="@string/newsfeed_notif_title" />
+                android:defaultValue="true"
+                android:key="newsfeed_notif"
+                android:summary="@string/newsfeed_notif_summ"
+                android:title="@string/newsfeed_notif_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <Preference
-            android:key="iconmanager"
-            android:summary="@string/iconmanager_summ"
-            android:title="@string/iconmanager_title" />
+                android:key="iconmanager"
+                android:summary="@string/iconmanager_summ"
+                android:title="@string/iconmanager_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="navbar"
-            android:summary="@string/appearance_other_color_navbar_summary"
-            android:title="@string/vtlnavbar" />
+                android:defaultValue="true"
+                android:key="navbar"
+                android:summary="@string/appearance_other_color_navbar_summary"
+                android:title="@string/vtlnavbar"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="VKUI_INJ"
-            android:summary="@string/appearance_other_color_webview_summary"
-            android:title="@string/vkuiinj" />
+                android:defaultValue="true"
+                android:key="VKUI_INJ"
+                android:summary="@string/appearance_other_color_webview_summary"
+                android:title="@string/vkuiinj"/>
     </PreferenceCategory>
 </PreferenceScreen>

@@ -158,6 +158,9 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBlTHhNGPj7ktPWrUo_d4YJs_Sn_zsISZg" />
         <meta-data
+            android:name="com.samsung.android.icon_container.has_icon_container"
+            android:value="@bool/com_samsung_android_icon_container_has_icon_container"/>
+        <meta-data
             android:name="com.google.android.geo.API_SECRET"
             android:value="yu6ZAA0OWO3kmr4es7fGtSmiyfk=" />
         <meta-data
@@ -1620,9 +1623,6 @@
         <meta-data
             android:name="optimization_key"
             android:value="lONMnJymOutPww6aDtTpqGS77DtnW6hlwIrhgDPTGGyu+UvR7aR+nf8V4tSiVPyOZXgsTxne0umX209UUetCDGLXYcoMZLz/mNX4osYj/ACdI+6N7zFlO9+4L4vWJhlL59TKmQ3LDPyrd+InYdPl/WYwPBCBeeSMOPXVpUWEQsMH301NstEjSBZv+O0QzeuQS9/Jy94iop4kyFEtDkslfk6DyFEqeBLMA+D34UUhhsjwrwLC9FDtKJFTgSvfWbL0yT8GyNrUlsBlyRFsMUs6VvrMVJ9pft1rFEnn78jsaD8HrAWaIeq+DBjZ1KRokb2OI7U/XP14lbYMpLo4LgvfeQ==" />
-        <meta-data
-            android:name="com.samsung.android.icon_container.has_icon_container"
-            android:value="true" />
         <meta-data
             android:name="asset_statements"
             android:resource="@string/asset_statements" />

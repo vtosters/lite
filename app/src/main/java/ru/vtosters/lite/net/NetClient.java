@@ -45,27 +45,14 @@ public class NetClient {
         private PasswordAuthentication auth;
 
         public Builder connectTimeout(long l, TimeUnit unit) {
-            int m;
-            switch (unit) {
-                case SECONDS:
-                    m = 1000;
-                    break;
-                case MILLISECONDS:
-                    m = 1;
-                    break;
-                case HOURS:
-                    m = 1000 * 60 * 60;
-                    break;
-                case DAYS:
-                    m = 1000 * 60 * 60 * 24;
-                    break;
-                case MINUTES:
-                    m = 1000 * 60;
-                    break;
-                default:
-                    m = 1;
-                    break;
-            }
+            int m = switch (unit) {
+                case SECONDS -> 1000;
+                case MILLISECONDS -> 1;
+                case HOURS -> 1000 * 60 * 60;
+                case DAYS -> 1000 * 60 * 60 * 24;
+                case MINUTES -> 1000 * 60;
+                default -> 1;
+            };
             timeout = l * m;
             return this;
         }

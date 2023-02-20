@@ -2072,86 +2072,100 @@
 .method private final s()V
     .locals 4
 
-    .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
+    iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->j()Z
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->e()Lcom/vk/im/engine/models/dialogs/Dialog;
 
-    move-result v0
+    move-result-object v3
 
-    const/4 v1, 0x1
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->g()Landroid/view/View;
 
-    const/4 v2, 0x0
+    move-result-object p0
 
-    if-eqz v0, :cond_1
+    invoke-static {p0, v3}, Lru/vtosters/lite/hooks/CallsHook;->forwardToVkOffApps(Landroid/view/View;Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
-    .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
+    return-void
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->l()Z
+    # .line 1
+    # iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    move-result v0
+    # invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->j()Z
 
-    const/4 v3, 0x2
+    # move-result v0
 
-    if-eqz v0, :cond_0
+    # const/4 v1, 0x1
 
-    new-array v0, v3, [Lcom/vk/im/ui/components/common/DialogAction;
+    # const/4 v2, 0x0
 
-    sget-object v3, Lcom/vk/im/ui/components/common/DialogAction;->VIDEO_BTN_VIDEO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
+    # if-eqz v0, :cond_1
 
-    aput-object v3, v0, v2
+    # .line 2
+    # iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->VIDEO_BTN_AUDIO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
+    # invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->l()Z
 
-    aput-object v2, v0, v1
+    # move-result v0
 
-    invoke-static {v0}, Lkotlin/collections/l;->c([Ljava/lang/Object;)Ljava/util/List;
+    # const/4 v3, 0x2
 
-    move-result-object v0
+    # if-eqz v0, :cond_0
 
-    goto :goto_0
+    # new-array v0, v3, [Lcom/vk/im/ui/components/common/DialogAction;
 
-    :cond_0
-    new-array v0, v3, [Lcom/vk/im/ui/components/common/DialogAction;
+    # sget-object v3, Lcom/vk/im/ui/components/common/DialogAction;->VIDEO_BTN_VIDEO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
 
-    .line 3
-    sget-object v3, Lcom/vk/im/ui/components/common/DialogAction;->AUDIO_BTN_AUDIO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
+    # aput-object v3, v0, v2
 
-    aput-object v3, v0, v2
+    # sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->VIDEO_BTN_AUDIO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->AUDIO_BTN_VIDEO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
+    # aput-object v2, v0, v1
 
-    aput-object v2, v0, v1
+    # invoke-static {v0}, Lkotlin/collections/l;->c([Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-static {v0}, Lkotlin/collections/l;->c([Ljava/lang/Object;)Ljava/util/List;
+    # move-result-object v0
 
-    move-result-object v0
+    # goto :goto_0
 
-    .line 4
-    :goto_0
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
+    # :cond_0
+    # new-array v0, v3, [Lcom/vk/im/ui/components/common/DialogAction;
 
-    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$onMenuCallClick$1;
+    # .line 3
+    # sget-object v3, Lcom/vk/im/ui/components/common/DialogAction;->AUDIO_BTN_AUDIO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
 
-    invoke-direct {v2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$onMenuCallClick$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;)V
+    # aput-object v3, v0, v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
+    # sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->AUDIO_BTN_VIDEO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
 
-    goto :goto_1
+    # aput-object v2, v0, v1
 
-    .line 5
-    :cond_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
+    # invoke-static {v0}, Lkotlin/collections/l;->c([Ljava/lang/Object;)Ljava/util/List;
 
-    if-eqz v0, :cond_2
+    # move-result-object v0
 
-    const/4 v3, 0x0
+    # .line 4
+    # :goto_0
+    # iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
-    invoke-static {v0, v2, v1, v3}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback$a;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;ZILjava/lang/Object;)V
+    # new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$onMenuCallClick$1;
 
-    :cond_2
-    :goto_1
+    # invoke-direct {v2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$onMenuCallClick$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;)V
+
+    # invoke-virtual {v1, v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
+
+    # goto :goto_1
+
+    # .line 5
+    # :cond_1
+    # iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
+
+    # if-eqz v0, :cond_2
+
+    # const/4 v3, 0x0
+
+    # invoke-static {v0, v2, v1, v3}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback$a;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;ZILjava/lang/Object;)V
+
+    # :cond_2
+    # :goto_1
     return-void
 .end method
 

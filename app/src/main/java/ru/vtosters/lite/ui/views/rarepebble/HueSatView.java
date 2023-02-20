@@ -98,15 +98,17 @@ public class HueSatView extends SquareView implements ColorObserver {
     public boolean onTouchEvent(MotionEvent event) {
         int action = event.getActionMasked();
         switch (action) {
-            case MotionEvent.ACTION_DOWN:
+            case MotionEvent.ACTION_DOWN -> {
                 boolean withinPicker = clamp(pointer, event.getX(), event.getY(), true);
                 if (withinPicker) update();
                 return withinPicker;
-            case MotionEvent.ACTION_MOVE:
+            }
+            case MotionEvent.ACTION_MOVE -> {
                 clamp(pointer, event.getX(), event.getY(), false);
                 update();
                 getParent().requestDisallowInterceptTouchEvent(true);
                 return true;
+            }
         }
         return super.onTouchEvent(event);
     }

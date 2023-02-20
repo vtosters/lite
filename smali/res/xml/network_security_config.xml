@@ -2,8 +2,8 @@
 <network-security-config>
     <debug-overrides>
         <trust-anchors>
-            <certificates src="system" />
-            <certificates src="user" />
+            <certificates src="system"/>
+            <certificates src="user"/>
         </trust-anchors>
     </debug-overrides>
 </network-security-config>

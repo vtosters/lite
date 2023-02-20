@@ -16,12 +16,22 @@ import ru.vtosters.lite.music.interfaces.ITrackDownloader;
 
 public class TrackDownloader {
     public static void downloadTrack(MusicTrack track, String path, Callback callback) {
+        if (track.D.isEmpty()) {
+            Log.d("TrackDownloader", "link error: " + track.y1() + ", title: " + M3UDownloader.getTitle(track));
+            callback.onFailure();
+            return;
+        }
+
         download(track, path, callback, M3UDownloader.getInstance(), false);
     }
 
     public static void cacheTrack(MusicTrack track, Callback callback) {
         if (CacheDatabaseDelegate.isCached(track.y1())) {
             callback.onSuccess();
+            return;
+        } else if (track.D.isEmpty()) {
+            Log.d("TrackDownloader", "link error: " + track.y1() + ", title: " + M3UDownloader.getTitle(track));
+            callback.onFailure();
             return;
         }
 

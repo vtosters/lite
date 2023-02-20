@@ -158,10 +158,6 @@
 
     move-result v0
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/Preferences;->getMsgCount(I)I
-
-    move-result v0
-
     iput v0, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->d:I
 
     .line 9

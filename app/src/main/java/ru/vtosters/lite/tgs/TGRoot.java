@@ -29,14 +29,11 @@ public class TGRoot {
     private static final String TAG = "TGRoot";
 
     public static String getSummary() {
-        switch (TGPref.getTGConnectMethod()) {
-            case 0:
-                return AndroidUtils.getString(R.string.ctypedirect);
-            case 2:
-                return AndroidUtils.getString(R.string.ctypesocks);
-            default:
-                return AndroidUtils.getString(R.string.ctypedisabled);
-        }
+        return switch (TGPref.getTGConnectMethod()) {
+            case 0 -> AndroidUtils.getString(R.string.ctypedirect);
+            case 2 -> AndroidUtils.getString(R.string.ctypesocks);
+            default -> AndroidUtils.getString(R.string.ctypedisabled);
+        };
     }
 
     public static Attachment processSticker(StickerItem item) {

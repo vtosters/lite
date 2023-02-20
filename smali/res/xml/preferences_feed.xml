@@ -2,141 +2,159 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/vtad">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="__dbg_no_ads"
-            android:summary="@string/feed_ads_regular_summary"
-            android:title="@string/vtldads" />
+                android:defaultValue="true"
+                android:key="__dbg_no_ads"
+                android:summary="@string/feed_ads_regular_summary"
+                android:title="@string/vtldads"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="adsgroup"
-            android:summary="@string/vtldgadssummary"
-            android:title="@string/vtldgads" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="adsstories"
-            android:summary="@string/feed_ads_stories_summary"
-            android:title="@string/vtldas" />
+                android:defaultValue="true"
+                android:key="adsgroup"
+                android:summary="@string/vtldgadssummary"
+                android:title="@string/vtldgads"/>
         <Preference
-            android:key="whitelisted_ad_groups"
-            android:title="@string/whitelisted_ad_groups_title" />
+                android:key="whitelisted_ad_groups"
+                android:title="@string/whitelisted_ad_groups_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/stories">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="adsstories"
+                android:summary="@string/feed_ads_stories_summary"
+                android:title="@string/vtldas"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="storiesGroupsAdBlock"
+                android:title="@string/storiesGroupsAdBlock"
+                android:summary="@string/storiesGroupsAdBlocksummary"/>
+        <Preference
+                android:key="whitelisted_stories_ad"
+                android:title="@string/whitelisted_ad_groups_stories_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlrecommend">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="friendsrecomm"
-            android:summary="@string/feed_recommendations_friends_summary"
-            android:title="@string/vtlrecommendfriend" />
+                android:defaultValue="false"
+                android:key="friendsrecomm"
+                android:summary="@string/feed_recommendations_friends_summary"
+                android:title="@string/vtlrecommendfriend"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="authorsrecomm"
-            android:summary="@string/feed_recommendations_authors_summary"
-            android:title="@string/vtlrecommendauthor" />
+                android:defaultValue="false"
+                android:key="authorsrecomm"
+                android:summary="@string/feed_recommendations_authors_summary"
+                android:title="@string/vtlrecommendauthor"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="postsrecomm"
-            android:summary="@string/feed_recommendations_friends_reacted_summary"
-            android:title="@string/vtlrecommendfriendpost" />
+                android:defaultValue="false"
+                android:key="postsrecomm"
+                android:summary="@string/feed_recommendations_friends_reacted_summary"
+                android:title="@string/vtlrecommendfriendpost"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="captions"
-            android:summary="@string/vtlrecommendmarksummary"
-            android:title="@string/vtlrecommendmark" />
+                android:defaultValue="false"
+                android:key="captions"
+                android:summary="@string/vtlrecommendmarksummary"
+                android:title="@string/vtlrecommendmark"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfilters">
         <Preference
-            android:enabled="false"
-            android:summary="@string/vtlhtmfsummary"
-            android:title="@string/vtlhtmf" />
+                android:enabled="false"
+                android:summary="@string/vtlhtmfsummary"
+                android:title="@string/vtlhtmf"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="spamfilters"
-            android:title="@string/vtlownfilter" />
+                android:defaultValue=""
+                android:key="spamfilters"
+                android:title="@string/vtlownfilter"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="default_ad_list"
-            android:summary="@string/vtlsfiltersummary"
-            android:title="@string/vtlsfilter" />
+                android:defaultValue="false"
+                android:key="default_ad_list"
+                android:summary="@string/vtlsfiltersummary"
+                android:title="@string/vtlsfilter"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="shortlinkfilter"
-            android:summary="@string/vtlsfiltershortsummary"
-            android:title="@string/vtlsfiltershort" />
+                android:defaultValue="false"
+                android:key="shortlinkfilter"
+                android:summary="@string/vtlsfiltershortsummary"
+                android:title="@string/vtlsfiltershort"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="refsfilter"
-            android:summary="@string/vtlsfilterrefssummary"
-            android:title="@string/vtlsfilterrefs" />
+                android:defaultValue="false"
+                android:key="refsfilter"
+                android:summary="@string/vtlsfilterrefssummary"
+                android:title="@string/vtlsfilterrefs"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="shitposting"
-            android:summary="@string/shitpostingsummary"
-            android:title="@string/shitposting" />
+                android:defaultValue="false"
+                android:key="shitposting"
+                android:summary="@string/shitpostingsummary"
+                android:title="@string/shitposting"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="cringerepost"
-            android:summary="@string/cringerepost_summ"
-            android:title="@string/cringerepost_title" />
+                android:defaultValue="false"
+                android:key="cringerepost"
+                android:summary="@string/cringerepost_summ"
+                android:title="@string/cringerepost_title"/>
         <Preference
-            android:key="whitelisted_filters_groups"
-            android:title="@string/whitelisted_filters_groups_title" />
+                android:key="whitelisted_filters_groups"
+                android:title="@string/whitelisted_filters_groups_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/sources">
         <EditTextPreference
-            android:defaultValue=""
-            android:key="sourcenamefilter"
-            android:title="@string/vtlsourcenamefilter" />
+                android:defaultValue=""
+                android:key="sourcenamefilter"
+                android:title="@string/vtlsourcenamefilter"/>
         <EditTextPreference
-            android:defaultValue=""
-            android:key="linkfilter"
-            android:title="@string/vtllinkfilter" />
+                android:defaultValue=""
+                android:key="linkfilter"
+                android:title="@string/vtllinkfilter"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="cringecopyright"
-            android:summary="@string/cringecopyright_summ"
-            android:title="@string/cringecopyright_title" />
+                android:defaultValue="false"
+                android:key="cringecopyright"
+                android:summary="@string/cringecopyright_summ"
+                android:title="@string/cringecopyright_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="copyright_post"
-            android:summary="@string/feed_ads_sources_summary"
-            android:title="@string/feed_ads_sources" />
+                android:defaultValue="false"
+                android:key="copyright_post"
+                android:summary="@string/feed_ads_sources_summary"
+                android:title="@string/feed_ads_sources"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfeedwork">
         <Preference
-            android:key="officialnewssett"
-            android:summary="@string/officialnewssett_summary"
-            android:title="@string/officialnewssett" />
-        <Preference
-            android:enabled="false"
-            android:summary="@string/why_news_not_updated_summ"
-            android:title="@string/why_news_not_updated_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="blockminiapps"
-            android:summary="@string/blockminiapps_summ"
-            android:title="@string/blockminiapps_title" />
+                android:key="officialnewssett"
+                android:summary="@string/officialnewssett_summary"
+                android:title="@string/officialnewssett"/>
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="default"
-            android:dialogTitle="@string/feed_other_update_dialog_title"
-            android:entries="@array/newsupdate_value"
-            android:entryValues="@array/newsupdate"
-            android:key="newsupdate"
-            android:title="@string/feed_other_update" />
+                android:defaultValue="order"
+                android:dialogTitle="@string/newsfeed_settings_order"
+                android:entries="@array/newsfeed_settings_feed_type"
+                android:entryValues="@array/newsfeed_settings_feed_type_v"
+                android:key="newsfeed_order"
+                android:textColor="?text_secondary"
+                android:title="@string/newsfeed_settings_order"/>
+<!--        <Preference-->
+<!--                android:enabled="false"-->
+<!--                android:summary="@string/why_news_not_updated_summ"-->
+<!--                android:title="@string/why_news_not_updated_title"/>-->
+        <com.vtosters.lite.ui.SummaryListPreference
+                android:defaultValue="default"
+                android:dialogTitle="@string/feed_other_update_dialog_title"
+                android:entries="@array/newsupdate_value"
+                android:entryValues="@array/newsupdate"
+                android:key="newsupdate"
+                android:title="@string/feed_other_update"/>
         <Preference
-            android:key="newsfeedlistmanager"
-            android:summary="@string/newsfeedlistmanager_summ"
-            android:title="@string/newsfeedlistmanager_title" />
+                android:key="newsfeedlistmanager"
+                android:summary="@string/newsfeedlistmanager_summ"
+                android:title="@string/newsfeedlistmanager_title"/>
         <Preference
-            android:key="newsfeedlistmanager_reset"
-            android:title="@string/newsfeedlistmanager_reset_title" />
+                android:key="newsfeedlistmanager_reset"
+                android:title="@string/newsfeedlistmanager_reset_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="force_disable_psm"
-            android:summary="@string/force_disable_psm_summ"
-            android:title="@string/force_disable_psm_title" />
+                android:defaultValue="false"
+                android:key="force_disable_psm"
+                android:summary="@string/force_disable_psm_summ"
+                android:title="@string/force_disable_psm_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="feedcache"
-            android:summary="@string/feed_other_cache_summary"
-            android:title="@string/vtlfeedcache" />
+                android:defaultValue="true"
+                android:key="feedcache"
+                android:summary="@string/feed_other_cache_summary"
+                android:title="@string/vtlfeedcache"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="blockminiapps"
+                android:summary="@string/blockminiapps_summ"
+                android:title="@string/blockminiapps_title"/>
     </PreferenceCategory>
 </PreferenceScreen>

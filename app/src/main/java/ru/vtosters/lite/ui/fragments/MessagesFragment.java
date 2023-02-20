@@ -1,31 +1,20 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import androidx.preference.Preference;
+import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.R;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
+
+import java.util.Arrays;
+
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
 import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
-
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-
-import androidx.preference.Preference;
-
-import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.navigation.Navigator;
-import com.vk.stickers.Stickers;
-import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
-import java.util.Arrays;
-
-import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
-import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -37,10 +26,16 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
 
     @SuppressLint("UseCompatLoadingForDrawables")
     private void prefs() {
-        findPreference("vkme").setOnPreferenceClickListener(new MessagesFragment.restart());
-        findPreference("vkme_notifs").setOnPreferenceClickListener(new MessagesFragment.restart());
-        findPreference("systememoji").setOnPreferenceClickListener(new MessagesFragment.restart());
-        findPreference("wallpapers").setOnPreferenceClickListener(new MessagesFragment.openwp());
+        findPreference("vkme").setOnPreferenceClickListener(preference -> {
+            restart();
+
+            return true;
+        });
+        findPreference("vkme_notifs").setOnPreferenceClickListener(preference -> {
+            restart();
+
+            return true;
+        });
 
         findPreference("autotranslate").setEnabled(!autoalltranslate());
 
@@ -65,11 +60,9 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         });
 
         findPreference("vkme_notifs").setEnabled(vkme());
-        findPreference("wallpapers").setIcon(recolorDrawable(getGlobalContext().getDrawable(R.drawable.ic_media_outline_28)));
         findPreference("vkme").setIcon(R.drawable.ic_vkme_28);
 
         if (isTablet()) {
-            findPreference("alteremoji").setVisible(false);
             findPreference("vkmesett").setVisible(false);
         }
     }
@@ -89,30 +82,5 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public int T4() {
         return R.string.vtlmessages;
-    }
-
-    public class restart implements Preference.OnPreferenceClickListener {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            return MessagesFragment.this.restart();
-        }
-    }
-
-    public class clearCache implements Preference.OnPreferenceClickListener {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            return MessagesFragment.this.restart();
-        }
-    }
-
-    public class openwp implements Preference.OnPreferenceClickListener {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            Context context = requireContext();
-            Intent a2 = new Navigator(WallpaperMenuFragment.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return true;
-        }
     }
 }

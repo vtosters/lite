@@ -45,8 +45,7 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
 
         final var inflater = LayoutInflater.from(context);
 
-        final var bubbleFluidLayout = (BubbleFluidLayout) inflater
-                .inflate(R.layout.vkim_msg_list_item_msg_from_user, viewGroup, false);
+        final var bubbleFluidLayout = (BubbleFluidLayout) inflater.inflate(R.layout.vkim_msg_list_item_msg_from_user, viewGroup, false);
         bubbleFluidLayout.setPadding(0, AndroidUtils.dp2px(4), 0, 0);
         bubbleFluidLayout.setGravity(viewType);
 
@@ -61,8 +60,11 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
         messageBubbleView.setContentPaddingTop(AndroidUtils.dp2px(4));
         messageBubbleView.setContentPaddingRight(AndroidUtils.dp2px(4));
         messageBubbleView.setContentPaddingBottom(AndroidUtils.dp2px(0));
-        if (viewType == Gravity.END)
-            messageBubbleView.a(MsgBubbleStyle.b(false, false), MsgBubblePart.FULL, ThemesUtils.getAccentColor());
+        if (viewType == Gravity.END) {
+            messageBubbleView.a(MsgBubbleStyle.b(false, false), MsgBubblePart.FULL, ThemesUtils.isDarkTheme() ? ThemesUtils.getColorFromAttr(R.attr.im_bubble_outgoing) : ThemesUtils.lighten(ThemesUtils.getAccentColor(), 0.76f));
+        } else {
+            messageBubbleView.a(MsgBubbleStyle.b(false, false), MsgBubblePart.FULL, ThemesUtils.getColorFromAttr(R.attr.im_bubble_incoming));
+        }
         bubbleFluidLayout.setLayoutDirection(viewType);
 
         final var msgTextView = inflater.inflate(R.layout.vkim_msg_part_text, viewGroup, false);

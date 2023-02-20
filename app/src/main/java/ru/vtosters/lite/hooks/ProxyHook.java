@@ -24,6 +24,7 @@ import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
 
 import ru.vtosters.lite.ui.fragments.ProxySettingsFragment;
+import ru.vtosters.lite.utils.NavigatorUtils;
 
 public class ProxyHook {
     public static void hookAuth(View v) {
@@ -89,12 +90,9 @@ public class ProxyHook {
                         restartApplication();
                     }
                 }))
-                .setNeutralButton(ctx.getString(R.string.proxy_settings), ((dialog, which) -> {
-                    var intent = new Navigator(ProxySettingsFragment.class)
-                            .b(ctx)
-                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    ctx.startActivity(intent);
-                }))
+                .setNeutralButton(ctx.getString(R.string.proxy_settings), (dialog, which) -> {
+                    NavigatorUtils.switchFragment(ctx, ProxySettingsFragment.class);
+                })
                 .show();
     }
 }

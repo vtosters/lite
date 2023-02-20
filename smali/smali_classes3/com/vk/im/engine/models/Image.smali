@@ -94,10 +94,6 @@
 
     iput p2, p0, Lcom/vk/im/engine/models/Image;->b:I
 
-    invoke-static {p3}, Lru/vtosters/lite/utils/Preferences;->photoQuality(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p3
-
     iput-object p3, p0, Lcom/vk/im/engine/models/Image;->c:Ljava/lang/String;
 
     return-void

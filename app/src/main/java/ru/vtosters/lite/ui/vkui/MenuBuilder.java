@@ -1,8 +1,7 @@
 package ru.vtosters.lite.ui.vkui;
 
 import static ru.vtosters.lite.foaf.FoafBase.loadAndShow;
-import static ru.vtosters.lite.hooks.NewsfeedHook.setWhitelistedAd;
-import static ru.vtosters.lite.hooks.NewsfeedHook.setWhitelistedFilter;
+import static ru.vtosters.lite.hooks.NewsfeedHook.*;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserID;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
@@ -85,6 +84,7 @@ public class MenuBuilder {
             final Context ctx = ((View) apView.get(builder)).getContext();
             final boolean isPageWhitelistedFilter = NewsfeedHook.isWhitelistedFilter(ecp);
             final boolean isPageWhitelistedAds = NewsfeedHook.isWhitelistedAd(ecp);
+            final boolean isPageWhitelistedAdsStories = NewsfeedHook.isWhitelistedAdStories(ecp);
 
             addItem(builder, AndroidUtils.getString(R.string.menu_copy_id), () -> {
                 copy(ctx, String.valueOf(getUserID(ecp)));
@@ -105,6 +105,12 @@ public class MenuBuilder {
             addItem(builder, AndroidUtils.getString(isPageWhitelistedAds ? R.string.remove_from_ads_whitelist : R.string.add_to_ads_whitelist), () -> {
                 setWhitelistedAd(ecp, !isPageWhitelistedAds);
                 sendToast(AndroidUtils.getString(isPageWhitelistedAds ? R.string.removed_from_whitelist_success : R.string.added_to_whitelist_success));
+                return Unit.a;
+            });
+
+            addItem(builder, AndroidUtils.getString(isPageWhitelistedAdsStories ? R.string.remove_from_ads_stories_whitelist : R.string.add_to_ads_stories_whitelist), () -> {
+                setWhitelistedAdStories(ecp, !isPageWhitelistedAdsStories);
+                sendToast(AndroidUtils.getString(isPageWhitelistedAdsStories ? R.string.removed_from_whitelist_success : R.string.added_to_whitelist_success));
                 return Unit.a;
             });
 

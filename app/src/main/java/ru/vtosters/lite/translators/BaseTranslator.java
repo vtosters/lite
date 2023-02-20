@@ -32,15 +32,12 @@ public abstract class BaseTranslator {
     }
 
     public static BaseTranslator getInstance() {
-        switch (AndroidUtils.getPreferences().getInt("translator", 0)) {
-            case YANDEX:
-                return YandexTranslator.getInstance();
-            case GOOGLE:
-                return GoogleTranslator.getInstance();
-            case DEEPL:
-                return DeepLTranslator.getInstance();
-        }
-        return null;
+        return switch (AndroidUtils.getPreferences().getInt("translator", 0)) {
+            case YANDEX -> YandexTranslator.getInstance();
+            case GOOGLE -> GoogleTranslator.getInstance();
+            case DEEPL -> DeepLTranslator.getInstance();
+            default -> null;
+        };
     }
 
     @NonNull

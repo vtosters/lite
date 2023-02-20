@@ -1,42 +1,16 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static android.widget.Toast.LENGTH_LONG;
-import static android.widget.Toast.LENGTH_SHORT;
-import static android.widget.Toast.makeText;
-import static ru.vtosters.lite.ui.components.BackupManager.backupOnlines;
-import static ru.vtosters.lite.ui.components.BackupManager.backupSettings;
-import static ru.vtosters.lite.ui.components.BackupManager.deletePrefs;
-import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
+import android.content.*;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.widget.ArrayAdapter;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
-
+import android.widget.*;
 import androidx.appcompat.view.ContextThemeWrapper;
-import androidx.preference.Preference;
-
+import b.h.g.m.FileUtils;
 import com.vk.auth.api.VKAccount;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.ToastUtils;
@@ -54,15 +28,22 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
+import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
+import ru.vtosters.lite.ssfs.UsersList;
+import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
+import ru.vtosters.lite.ui.components.BackupManager;
+import ru.vtosters.lite.utils.*;
 
 import java.io.IOException;
 
-import b.h.g.m.FileUtils;
-import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
-import ru.vtosters.lite.ui.components.BackupManager;
-import ru.vtosters.lite.utils.AccountManagerUtils;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ContactsUtils;
+import static android.widget.Toast.LENGTH_LONG;
+import static android.widget.Toast.LENGTH_SHORT;
+import static ru.vtosters.lite.ui.components.BackupManager.*;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
+import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
@@ -82,32 +63,63 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             if (resultCode == Activity.RESULT_OK) {
                 String token = data.getStringExtra("token");
                 AndroidUtils.getPreferences().edit().putString("vk_admin_token", token).apply();
-                Log.d("VkAdminToken", token);
                 Toast.makeText(getContext(), requireContext().getString(R.string.token_saved), LENGTH_SHORT).show();
             }
         }
     }
 
     private void prefs() {
-        findPreference("firebasefix").setOnPreferenceClickListener(new a());
-        findPreference("applicationstop").setOnPreferenceClickListener(new b());
-        findPreference("tokencopy").setOnPreferenceClickListener(new c());
-        findPreference("applicationrestart").setOnPreferenceClickListener(new d());
+        findPreference("firebasefix").setOnPreferenceClickListener(preference -> {
+            VKAccount b = VKAccountManager.d();
+            PushSubscriber.e.a();
+            ToastUtils.a(requireContext().getString(R.string.fcmtokenrem));
+            AndroidUtils.getGlobalContext().getSharedPreferences("gcm", 0).edit().clear().apply();
+            OtherFragment.this.getListView().postDelayed(() -> {
+                PushSubscriber.e.a(true);
+
+                ToastUtils.a(requireContext().getString(R.string.fcmtokenget));
+                ToastUtils.a(requireContext().getString(R.string.fcmtokenfixed));
+            }, 1000);
+            return true;
+        });
+
+        findPreference("applicationstop").setOnPreferenceClickListener(preference -> {
+            System.exit(0);
+            return true;
+        });
+
+        findPreference("tokencopy").setOnPreferenceClickListener(preference -> {
+            copyText(getUserToken());
+
+            Toast.makeText(requireContext(), requireContext().getString(R.string.copybtn), LENGTH_SHORT).show();
+            ToastUtils.a(requireContext().getString(R.string.tokenwarning));
+            return true;
+        });
+
+        findPreference("copydebuginfo").setOnPreferenceClickListener(preference -> {
+            copyText(new DeviceInfoCollector().collect().forLogging());
+            Toast.makeText(requireContext(), AndroidUtils.getString("device_info_copied"), LENGTH_SHORT).show();
+            return true;
+        });
+
+        findPreference("applicationrestart").setOnPreferenceClickListener(preference -> {
+            restartApplication();
+            return true;
+        });
+
         findPreference("clearcache").setOnPreferenceClickListener(preference -> {
             cacheCleanDialog();
             return true;
         });
+
         findPreference("copyownlink").setOnPreferenceClickListener(preference -> {
-            ((ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", "https://vk.com/id" + AccountManagerUtils.getUserId()));
+            copyText("https://vk.com/id" + AccountManagerUtils.getUserId());
             ToastUtils.a(requireContext().getString(R.string.link_copied));
             return true;
         });
 
         findPreference("deviceinfo").setOnPreferenceClickListener(preference -> {
-            Context context = requireContext();
-            Intent a2 = new Navigator(SystemInfo.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
+            NavigatorUtils.switchFragment(requireContext(), SystemInfo.class);
             return true;
         });
 
@@ -116,31 +128,26 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("contacts_sync").setOnPreferenceClickListener((preference) -> {
-            ContactsUtils.getContactsStatus(requireContext());
+        findPreference("dialogrecomm").setVisible(!Preferences.hasVerification());
+
+        findPreference("updateverifdata").setOnPreferenceClickListener(preference -> {
+            UsersList.getUsersList();
+            VTVerifications.load(requireContext());
+            sendToast(AndroidUtils.getString("data_updated"));
             return true;
         });
 
         var pref = getDefaultPrefs().getString("autoclearcache", "Default");
         switch (pref) {
-            case "Default":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_disabled));
-                break;
-            case "100mb":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_100mb));
-                break;
-            case "500mb":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_500mb));
-                break;
-            case "1gb":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_1gb));
-                break;
-            case "2gb":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_2gb));
-                break;
-            case "5gb":
-                findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_5gb));
-                break;
+            case "Default" ->
+                    findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_disabled));
+            case "100mb" ->
+                    findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_100mb));
+            case "500mb" ->
+                    findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_500mb));
+            case "1gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_1gb));
+            case "2gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_2gb));
+            case "5gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_5gb));
         }
 
         findPreference("deleteprefs").setOnPreferenceClickListener(preference -> {
@@ -148,16 +155,52 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("saveonlines").setOnPreferenceClickListener(new onlines());
+        findPreference("saveonlines").setOnPreferenceClickListener(preference -> {
+            try {
+                backupOnlines();
+            } catch (IOException e) {
+                Toast.makeText(getContext(), requireContext().getString(R.string.no_data_to_backup), LENGTH_SHORT).show();
+            }
 
-        findPreference("saveprefs").setOnPreferenceClickListener(new saveprefs());
-        findPreference("restoreprefs").setOnPreferenceClickListener(new restoreprefs());
+            return true;
+        });
+
+        findPreference("saveprefs").setOnPreferenceClickListener(preference -> {
+            backupSettings();
+
+            return false;
+        });
+        findPreference("restoreprefs").setOnPreferenceClickListener(preference -> {
+            var arr = BackupManager.getBackupsNames();
+            var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr) {
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent) {
+                    TextView textView = (TextView) super.getView(position, convertView, parent);
+                    textView.setTextColor(getTextAttr());
+                    return textView;
+                }
+            };
+            new VkAlertDialog.Builder(getContext())
+                    .setTitle(requireContext().getString(R.string.select_backup))
+                    .setAdapter(adapter, (dialog, which) -> {
+                        try {
+                            restoreBackup(arr[which]);
+                            restartApplicationWithTimer();
+                            Toast.makeText(getContext(), requireContext().getString(R.string.backup_success), LENGTH_LONG).show();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            Toast.makeText(getContext(), requireContext().getString(R.string.backup_error), LENGTH_LONG).show();
+                        }
+                    })
+                    .show();
+
+            return true;
+        });
 
         var vkAdminTokenPref = findPreference("vk_admin_token");
         vkAdminTokenPref.setVisible(AndroidUtils.getDefaultPrefs().getBoolean("new_music_downloading_way", false));
         if (vkAdminTokenPref.isVisible()) {
             vkAdminTokenPref.setOnPreferenceClickListener(preference -> {
-
                 startActivityForResult(new Intent(getContext(), VKAdminTokenActivity.class), VK_ADMIN_TOKEN_REQUEST_CODE);
 
                 return true;
@@ -209,7 +252,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 .setTitle(requireContext().getString(R.string.select_which_clean))
                 .setItems(AndroidUtils.getArray(R.array.cache_cleaner), (dialog, which) -> {
                     switch (which) {
-                        case 0: {
+                        case 0 -> {
                             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
                             prefs2.edit().clear().commit();
                             clearWebViewCache();
@@ -222,30 +265,26 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                             ImEngineExt.a(ImEngine1.a());
                             AutoPlayCacheHolder.d.a();
                             MediaStorage.a();
-                            break;
                         }
-                        case 1: {
+                        case 1 -> {
                             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
                             prefs2.edit().clear().commit();
                             Stickers.l.c();
-                            break;
                         }
-                        case 2:
+                        case 2 -> {
                             VKImageLoader.e();
                             ImEngineExt.a(ImEngine1.a());
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             AutoPlayCacheHolder.d.a();
                             MediaStorage.a();
-                            break;
-                        case 4:
+                        }
+                        case 4 -> {
                             ImEngineProvider.b().a();
                             ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
                             ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-                            break;
-                        case 5:
-                            clearWebViewCache();
-                            break;
+                        }
+                        case 5 -> clearWebViewCache();
                     }
                     Toast.makeText(getContext(), requireContext().getString(R.string.cache_cleaned), LENGTH_SHORT).show();
                 })
@@ -269,115 +308,13 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 .show();
     }
 
+    private void copyText(String src) {
+        var manager = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
+        manager.setPrimaryClip(ClipData.newPlainText("MBH-ST", src));
+    }
+
     @Override
     public int T4() {
         return R.string.vtlother;
-    }
-
-    public static class d implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            restartApplication();
-            return true;
-        }
-    }
-
-    public static class b implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            System.exit(0);
-            return true;
-        }
-    }
-
-    public static class saveprefs implements Preference.OnPreferenceClickListener {
-        saveprefs() {
-        }
-
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            backupSettings();
-            return true;
-        }
-    }
-
-    public class onlines implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            try {
-                backupOnlines();
-            } catch (IOException e) {
-                Toast.makeText(getContext(), requireContext().getString(R.string.no_data_to_backup), LENGTH_SHORT).show();
-            }
-            return true;
-        }
-    }
-
-    class c implements Preference.OnPreferenceClickListener {
-        public void copy(Context context, String str) {
-            ((ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", str));
-            makeText(context, requireContext().getString(R.string.copybtn), LENGTH_SHORT).show();
-            ToastUtils.a(requireContext().getString(R.string.tokenwarning));
-        }
-
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            copy(getContext(), getUserToken());
-            return true;
-        }
-    }
-
-    public class a implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            VKAccount b = VKAccountManager.d();
-            PushSubscriber.e.a();
-            ToastUtils.a(requireContext().getString(R.string.fcmtokenrem));
-            AndroidUtils.getGlobalContext().getSharedPreferences("gcm", 0).edit().clear().apply();
-            OtherFragment.this.getListView().postDelayed(() -> {
-                PushSubscriber.e.a(true);
-
-                Context ctx;
-
-                try {
-                    ctx = requireContext();
-                } catch (Exception unused) {
-                    ctx = getGlobalContext();
-                }
-
-                ToastUtils.a(ctx.getString(R.string.fcmtokenget));
-                ToastUtils.a(ctx.getString(R.string.fcmtokenfixed));
-            }, 1000);
-            return true;
-        }
-    }
-
-    public class restoreprefs implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            var arr = BackupManager.getBackupsNames();
-            var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr) {
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    TextView textView = (TextView) super.getView(position, convertView, parent);
-                    textView.setTextColor(getTextAttr());
-                    return textView;
-                }
-            };
-            new VkAlertDialog.Builder(getContext())
-                    .setTitle(requireContext().getString(R.string.select_backup))
-                    .setAdapter(adapter, (dialog, which) -> {
-                        try {
-                            restoreBackup(arr[which]);
-                            restartApplicationWithTimer();
-                            Toast.makeText(getContext(), requireContext().getString(R.string.backup_success), LENGTH_LONG).show();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            Toast.makeText(getContext(), requireContext().getString(R.string.backup_error), LENGTH_LONG).show();
-                        }
-                    })
-                    .show();
-            return true;
-        }
     }
 }

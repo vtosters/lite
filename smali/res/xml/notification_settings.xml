@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <Preference
-        android:key="preference_report_reuse"
-        android:summary="@string/report_reuse_text_description"
-        android:title="@string/report_reuse_text" />
+            android:key="preference_report_reuse"
+            android:summary="@string/report_reuse_text_description"
+            android:title="@string/report_reuse_text"/>
     <ListPreference
-        android:dialogTitle="@string/block_for_text"
-        android:entries="@array/libverify_block_notification_names"
-        android:entryValues="@array/libverify_block_notification_values"
-        android:key="preference_block_notifications"
-        android:summary="@string/block_notifications_description"
-        android:title="@string/block_notifications_text" />
+            android:dialogTitle="@string/block_for_text"
+            android:entries="@array/libverify_block_notification_names"
+            android:entryValues="@array/libverify_block_notification_values"
+            android:key="preference_block_notifications"
+            android:summary="@string/block_notifications_description"
+            android:title="@string/block_notifications_text"/>
     <Preference
-        android:key="preference_show_history"
-        android:summary="@string/notification_history_text_description"
-        android:title="@string/notification_history_text" />
+            android:key="preference_show_history"
+            android:summary="@string/notification_history_text_description"
+            android:title="@string/notification_history_text"/>
 </PreferenceScreen>

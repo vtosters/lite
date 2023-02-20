@@ -213,24 +213,12 @@ public class PhotoViewer {
         }
 
         switch (i) {
-            case 1:
-                searchWithYandex(url);
-                break;
-            case 2:
-                searchWithGoogle(url);
-                break;
-            case 3:
-                searchWithBing(url);
-                break;
-            case 4:
-                searchWithTraceMoe(url);
-                break;
-            case 5:
-                searchWithAscii2d(url);
-                break;
-            case 6:
-                searchWithSaucenao(url);
-                break;
+            case 1 -> searchWithYandex(url);
+            case 2 -> searchWithGoogle(url);
+            case 3 -> searchWithBing(url);
+            case 4 -> searchWithTraceMoe(url);
+            case 5 -> searchWithAscii2d(url);
+            case 6 -> searchWithSaucenao(url);
         }
     }
 

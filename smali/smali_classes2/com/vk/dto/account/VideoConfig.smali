@@ -1202,6 +1202,8 @@
     .line 1
     iget-boolean v0, p0, Lcom/vk/dto/account/VideoConfig;->g:Z
 
+    const v0, 0x0
+
     return v0
 .end method
 

@@ -1,5 +1,6 @@
 package ru.vtosters.lite.music;
 
+import android.util.Log;
 import com.vk.dto.music.MusicTrack;
 
 import java.io.File;
@@ -33,6 +34,12 @@ public class M3UDownloader implements ITrackDownloader {
     }
 
     public void downloadTrack(MusicTrack track, File outDir, Callback callback, boolean cache) {
+        if (track.D.isEmpty()) {
+            Log.d("TrackDownloader", "link error: " + track.y1() + ", title: " + M3UDownloader.getTitle(track));
+            callback.onFailure();
+            return;
+        }
+
         var request = new Request.a().b(track.D).a();
         try {
             var response = client.a(request).execute().a().g();
@@ -60,16 +67,7 @@ public class M3UDownloader implements ITrackDownloader {
         tsesDir.mkdirs();
         var resultTs = new File(tsesDir, "result.ts");
 
-        String title = null;
-
-        if (track.f != null) {
-            title = track.f;
-            if (!track.g.isEmpty()) {
-                title += " (" + track.g + ")";
-            }
-        }
-
-        var fileName = IOUtils.getValidFileName((cache ? "track" : track.C + " - " + title) + ".mp3");
+        var fileName = IOUtils.getValidFileName((cache ? "track" : track.C + " - " + getTitle(track)) + ".mp3");
         var resultMp3 = new File(outDir, fileName);
 
         callback.onProgress(5);
@@ -84,7 +82,7 @@ public class M3UDownloader implements ITrackDownloader {
                         String key = IOUtils.readAllLines(IOUtils.openStream(ts.getKeyURL()));
                         content = IOUtils.decodeStream(is, key);
                     } else {
-                        content = IOUtils.readAllBytes(is);
+                        content = IOUtils.readFully(is);
                     }
                     File tsDump = new File(tsesDir, ts.getName());
                     IOUtils.writeToFile(tsDump, content);
@@ -107,6 +105,19 @@ public class M3UDownloader implements ITrackDownloader {
             else callback.onFailure();
             return convertResult;
         }).thenRun(() -> IOUtils.deleteRecursive(tsesDir)).thenRun(callback::onSuccess);
+    }
+
+    public static String getTitle(MusicTrack track) {
+        String title = null;
+
+        if (track.f != null) {
+            title = track.f;
+            if (!track.g.isEmpty()) {
+                title += " (" + track.g + ")";
+            }
+        }
+
+        return title;
     }
 
     // Initialization-on-demand

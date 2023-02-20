@@ -94,7 +94,7 @@ public class ServerDialog {
         showAlert = true;
 
         var activity = LifecycleUtils.getCurrentActivity();
-        if (activity != null && getBoolValue(key, true) && showForNotVerified() && showAlert) {
+        if (getBoolValue(key, true) && showForNotVerified() && showAlert) {
             activity.runOnUiThread(() -> {
                 new VkAlertDialog.Builder(activity)
                         .setTitle(title)

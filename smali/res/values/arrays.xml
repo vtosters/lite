@@ -817,7 +817,6 @@
     <string-array name="musicdefcatalog_value">
         <item>Default</item>
         <item>General</item>
-        <item>Recent</item>
         <item>My music</item>
         <item>Playlists</item>
         <item>Albums</item>
@@ -826,7 +825,6 @@
     <string-array name="musicdefcatalog">
         <item>default</item>
         <item>general</item>
-        <item>recent</item>
         <item>all</item>
         <item>my_playlists</item>
         <item>albums</item>

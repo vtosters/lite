@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android"
-    android:accountType="com.vkontakte.account"
-    android:contentAuthority="com.android.contacts"
-    android:supportsUploading="false"
-    android:userVisible="true" />
+              android:accountType="com.vkontakte.account"
+              android:contentAuthority="com.android.contacts"
+              android:supportsUploading="false"
+              android:userVisible="true"/>

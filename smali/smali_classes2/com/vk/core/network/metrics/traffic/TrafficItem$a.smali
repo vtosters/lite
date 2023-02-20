@@ -40,56 +40,6 @@
 
     if-nez p1, :cond_2
 
-    .line 1
-    invoke-virtual {p2}, Lokhttp3/Request;->g()Lokhttp3/HttpUrl;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lokhttp3/HttpUrl;->g()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "host"
-
-    .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 p2, 0x0
-
-    const/4 v0, 0x2
-
-    const/4 v1, 0x0
-
-    const-string v2, "stats.vk-portal.net"
-
-    invoke-static {p1, v2, v1, v0, p2}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 3
-    sget-object p1, Lcom/vk/core/network/metrics/traffic/TrafficItem$ContentType;->THIRD_PARTY_VIGO:Lcom/vk/core/network/metrics/traffic/TrafficItem$ContentType;
-
-    return-object p1
-
-    :cond_0
-    const-string v2, "mail.ru"
-
-    .line 4
-    invoke-static {p1, v2, v1, v0, p2}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    .line 5
-    sget-object p1, Lcom/vk/core/network/metrics/traffic/TrafficItem$ContentType;->THIRD_PARTY_MAIL:Lcom/vk/core/network/metrics/traffic/TrafficItem$ContentType;
-
-    return-object p1
-
-    .line 6
-    :cond_1
     sget-object p1, Lcom/vk/core/network/metrics/traffic/TrafficItem$ContentType;->EMPTY:Lcom/vk/core/network/metrics/traffic/TrafficItem$ContentType;
 
     return-object p1

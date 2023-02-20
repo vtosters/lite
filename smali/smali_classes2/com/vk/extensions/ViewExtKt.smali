@@ -1281,10 +1281,6 @@
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setOnMenuItemClickListener(Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;)V
 
-    const v1, 0x0
-
-    invoke-static {p0, v1, v1}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
-
     return-void
 .end method
 

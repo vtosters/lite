@@ -1,11 +1,10 @@
 package ru.vtosters.lite.themes;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
-
 import androidx.annotation.IdRes;
-
 import com.vtosters.lite.R;
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -17,13 +16,14 @@ public class ThemesCore {
     public static SparseBooleanArray ACCENT_THEME_ONLY_LIGHT = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_DARK = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_NOMILK_LIGHT = new SparseBooleanArray();
-    public static SparseBooleanArray ACCENT_THEME_ONLY_NOMILK = new SparseBooleanArray();
+    public static SparseBooleanArray ACCENT_THEME_ONLY_NOMILK_DARK = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_MILK_LIGHT = new SparseBooleanArray();
     public static SparseBooleanArray ACCENT_THEME_ONLY_MILK_DARK = new SparseBooleanArray();
 
     private static boolean cachedAccents = false;
     private static int outgoinging_msg;
     private static int outgoinging_msg_highlight;
+    private static int darken_color;
 
     static {
         setExceptions();
@@ -34,13 +34,16 @@ public class ThemesCore {
         ACCENT_THEME_ONLY_LIGHT.clear();
         ACCENT_THEME_ONLY_DARK.clear();
         ACCENT_THEME_ONLY_NOMILK_LIGHT.clear();
-        ACCENT_THEME_ONLY_NOMILK.clear();
+        ACCENT_THEME_ONLY_NOMILK_DARK.clear();
         ACCENT_THEME_ONLY_MILK_LIGHT.clear();
         ACCENT_THEME_ONLY_MILK_DARK.clear();
 
         ACCENT_THEME_ONLY_LIGHT.put(R.attr.attach_picker_tab_active_background, false);
         ACCENT_THEME_ONLY_LIGHT.put(R.attr.attach_picker_tab_active_text, false);
         ACCENT_THEME_ONLY_LIGHT.put(R.attr.newsfeed_action_color, false);
+
+        ACCENT_THEME_ONLY_MILK_LIGHT.put(R.attr.newsfeed_post_title_color, false);
+        ACCENT_THEME_ONLY_DARK.put(R.attr.newsfeed_post_title_color, false);
 
         ACCENT_THEME_ONLY_MILK_LIGHT.put(R.attr.header_background, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.header_background, false);
@@ -59,7 +62,7 @@ public class ThemesCore {
 
         ACCENT_THEME_ONLY_MILK_LIGHT.put(R.attr.im_dropdown_arrow_tint, false);
 
-        ACCENT_THEME_ONLY_NOMILK.put(R.attr.im_dropdown_icon_color, false);
+        ACCENT_THEME_ONLY_NOMILK_DARK.put(R.attr.im_dropdown_icon_color, false);
 
         ACCENT_THEME_ONLY_DARK.put(R.attr.icon_name, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.text_name, false);
@@ -68,7 +71,6 @@ public class ThemesCore {
         ACCENT_THEME_ONLY_DARK.put(R.attr.button_tertiary_foreground, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.button_muted_foreground, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.button_outline_border, false);
-        ACCENT_THEME_ONLY_DARK.put(R.attr.newsfeed_post_title_color, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.counter_primary_background, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.action_sheet_action_foreground, false);
         ACCENT_THEME_ONLY_DARK.put(R.attr.im_bubble_wallpaper_outgoing, false);
@@ -82,7 +84,6 @@ public class ThemesCore {
         cachedAccents = true;
         themedColors.clear();
 
-        themedColors.put(R.attr.text_link, accentColor);
         themedColors.put(R.attr.accent, accentColor);
         themedColors.put(R.attr.newsfeed_dropdown_color, accentColor);
         themedColors.put(R.attr.icon_name, accentColor);
@@ -91,7 +92,7 @@ public class ThemesCore {
         themedColors.put(R.attr.accentColor, accentColor);
         themedColors.put(R.attr.text_name, accentColor);
         themedColors.put(R.attr.tabbar_active_icon, accentColor);
-        
+
 //        themedColors.put(com.vtosters.lite.R.attr.header_background, accentColor);
 //        themedColors.put(com.vtosters.lite.R.attr.header_alternate_background, accentColor);
 //        themedColors.put(com.vtosters.lite.R.attr.header_background_before_blur, accentColor);
@@ -122,7 +123,10 @@ public class ThemesCore {
         themedColors.put(R.attr.im_attach_tint, accentColor);
         themedColors.put(R.attr.im_forward_line_tint, accentColor);
         themedColors.put(R.attr.link_alternate, accentColor);
-        themedColors.put(R.attr.newsfeed_post_title_color, accentColor);
+
+        darken_color = ThemesUtils.darken(accentColor, 0.15f);
+        themedColors.put(R.attr.newsfeed_post_title_color, darken_color);
+        themedColors.put(R.attr.text_link, accentColor);
 
         themedColors.put(R.attr.attach_picker_tab_active_background, accentColor);
         themedColors.put(R.attr.attach_picker_tab_active_text, accentColor);
@@ -146,14 +150,14 @@ public class ThemesCore {
         themedColors.put(R.attr.im_bubble_outgoing_highlighted, accentColor);
     }
 
+    @SuppressLint("NonConstantResourceId")
     public static int getThemedAttr(Context context, @IdRes int attr) {
-        if (attr == R.attr.im_bubble_wallpaper_outgoing || attr == R.attr.im_bubble_outgoing) {
-            return outgoinging_msg;
-        } else if (attr == R.attr.im_bubble_outgoing_highlighted) {
-            return outgoinging_msg_highlight;
-        }
-
-        return themedColors.get(attr);
+        return switch (attr) {
+            case R.attr.im_bubble_wallpaper_outgoing, R.attr.im_bubble_outgoing -> outgoinging_msg;
+            case R.attr.im_bubble_outgoing_highlighted -> outgoinging_msg_highlight;
+            case R.attr.newsfeed_post_title_color -> darken_color;
+            default -> themedColors.get(attr);
+        };
     }
 
     public static boolean hasThemedAttr(Context context, int attrID) {
@@ -162,22 +166,27 @@ public class ThemesCore {
 //        } catch (Exception e) {
 //        }
 
-        if (isCachedAccents()) {
-            if (ThemesUtils.isDarkTheme()) {
-                return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_DARK.get(attrID, true) && (
-                        ThemesUtils.isMilkshake() ?
-                        ACCENT_THEME_ONLY_MILK_DARK.get(attrID, true) :
-                        ACCENT_THEME_ONLY_NOMILK.get(attrID, true)));
+        if (ThemesUtils.isCustomAccentEnabled()) {
+            if (isCachedAccents()) {
+                if (ThemesUtils.isDarkTheme()) {
+                    return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_DARK.get(attrID, true) && (
+                            ThemesUtils.isMilkshake() ?
+                                    ACCENT_THEME_ONLY_MILK_DARK.get(attrID, true) :
+                                    ACCENT_THEME_ONLY_NOMILK_DARK.get(attrID, true)));
+                } else {
+                    return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_LIGHT.get(attrID, true) && (
+                            ThemesUtils.isMilkshake() ?
+                                    ACCENT_THEME_ONLY_MILK_LIGHT.get(attrID, true) :
+                                    ACCENT_THEME_ONLY_NOMILK_LIGHT.get(attrID, true)));
+                }
             } else {
-                return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_LIGHT.get(attrID, true) && (
-                        ThemesUtils.isMilkshake() ?
-                        ACCENT_THEME_ONLY_MILK_LIGHT.get(attrID, true) :
-                        ACCENT_THEME_ONLY_NOMILK_LIGHT.get(attrID, true)));
+                return themedColors.get(attrID) != 0;
             }
         } else {
-            return themedColors.get(attrID) != 0;
+            return false;
         }
     }
+
 
     public static void clear() {
         cachedAccents = false;

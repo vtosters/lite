@@ -1,83 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="@string/contact_sync_title">
-        <Preference
-            android:key="contacts_sync"
-            android:title="@string/contact_sync_title" />
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/other_fix_app">
         <Preference
-            android:key="firebasefix"
-            android:summary="@string/firebasefixsum"
-            android:title="@string/firebasefix" />
+                android:key="firebasefix"
+                android:summary="@string/firebasefixsum"
+                android:title="@string/firebasefix"/>
         <Preference
-            android:key="clearcache"
-            android:title="@string/clearcache_other_title" />
+                android:key="clearcache"
+                android:title="@string/clearcache_other_title"/>
         <Preference
-            android:key="autoclearcache"
-            android:title="@string/autoclearcache" />
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtsystem">
-        <Preference
-            android:key="applicationrestart"
-            android:title="@string/applicationrestart" />
-        <Preference
-            android:key="applicationstop"
-            android:title="@string/killappbtn" />
-        <Preference
-            android:key="tokencopy"
-            android:title="@string/copytokenbtn" />
-        <Preference
-            android:key="deviceinfo"
-            android:title="Device info" />
-        <Preference
-            android:key="vk_admin_token"
-            android:title="@string/vk_admin_token_title" />
+                android:key="autoclearcache"
+                android:title="@string/autoclearcache"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_other_backups_title">
         <Preference
-            android:key="saveonlines"
-            android:summary="@string/saveonlines_summ"
-            android:title="@string/saveonlines_title" />
+                android:key="saveonlines"
+                android:summary="@string/saveonlines_summ"
+                android:title="@string/saveonlines_title"/>
         <Preference
-            android:key="deleteprefs"
-            android:summary="@string/other_reset_settings_summary"
-            android:title="@string/other_reset_settings" />
+                android:key="deleteprefs"
+                android:summary="@string/other_reset_settings_summary"
+                android:title="@string/other_reset_settings"/>
         <Preference
-            android:key="saveprefs"
-            android:title="@string/saveprefs_title" />
+                android:key="saveprefs"
+                android:title="@string/saveprefs_title"/>
         <Preference
-            android:key="restoreprefs"
-            android:title="@string/restoreprefs_title" />
+                android:key="restoreprefs"
+                android:title="@string/restoreprefs_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference
-            android:enabled="false"
-            android:summary="@string/vtverifyinfosum"
-            android:title="@string/vtverifyinfo" />
+                android:enabled="false"
+                android:summary="@string/vtverifyinfosum"
+                android:title="@string/vtverifyinfo"/>
         <Preference
-            android:persistent="false"
-            android:summary="vtosters.app/donate"
-            android:title="@string/getvtverify">
+                android:persistent="false"
+                android:summary="vtosters.app/donate"
+                android:title="@string/getvtverify">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://vtosters.app/donate" />
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://vtosters.app/donate"/>
         </Preference>
         <Preference
-            android:key="copyownlink"
-            android:summary="@string/copyownlink_summ"
-            android:title="@string/copyownlink_title" />
+                android:key="updateverifdata"
+                android:summary="@string/updateverifdata_summ"
+                android:title="@string/updateverifdata_title"/>
+        <Preference
+                android:key="copyownlink"
+                android:summary="@string/copyownlink_summ"
+                android:title="@string/copyownlink_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="VT_Verification"
-            android:title="@string/showvtverify" />
+                android:defaultValue="true"
+                android:key="VT_Verification"
+                android:title="@string/showvtverify"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="VT_Fire"
-            android:title="@string/showvtfire" />
+                android:defaultValue="true"
+                android:key="VT_Fire"
+                android:title="@string/showvtfire"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="dialogrecomm"
-            android:title="@string/dialogrecomm" />
+                android:defaultValue="false"
+                android:key="dialogrecomm"
+                android:title="@string/dialogrecomm"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtsystem">
+        <Preference
+                android:key="copydebuginfo"
+                android:summary="@string/copydebuginfo_summ"
+                android:title="@string/copydebuginfo_title"/>
+        <Preference
+                android:key="applicationrestart"
+                android:title="@string/applicationrestart"/>
+        <Preference
+                android:key="applicationstop"
+                android:title="@string/killappbtn"/>
+        <Preference
+                android:key="tokencopy"
+                android:title="@string/copytokenbtn"/>
+        <Preference
+                android:key="deviceinfo"
+                android:title="Device info"/>
+        <Preference
+                android:key="vk_admin_token"
+                android:title="@string/vk_admin_token_title"/>
     </PreferenceCategory>
 </PreferenceScreen>

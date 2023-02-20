@@ -58,6 +58,10 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 3
 
+    const/4 p1, 0x0
+
+    return-object p1
+
     .line 2
     sget-object p1, Lvigo/sdk/config;->senderManager:Lvigo/sdk/VigoSenderManager;
 

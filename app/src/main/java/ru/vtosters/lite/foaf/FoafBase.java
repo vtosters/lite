@@ -149,8 +149,8 @@ public class FoafBase {
                     .setPositiveButton(android.R.string.ok, null)
                     .show());
         } catch (Exception e) {
-            e.printStackTrace();
             LifecycleUtils.getCurrentActivity().runOnUiThread(() -> makeText(getGlobalContext(), context.getString(R.string.foaferr), LENGTH_SHORT).show());
+            e.printStackTrace();
         }
     }
 

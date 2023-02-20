@@ -13,6 +13,7 @@ import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
 
 import ru.vtosters.lite.ui.fragments.VKUIwrapper;
+import ru.vtosters.lite.utils.NavigatorUtils;
 
 public class VKIDProtection {
     public static void alert(final Activity activity) {
@@ -29,9 +30,7 @@ public class VKIDProtection {
                             isAnyProxyEnabled()
                                     ? "https://id.vk.com/account"
                                     : "https://" + getApi() + "/_/id.vk.com/account");
-                    var intent = new Navigator(VKUIwrapper.class).b(activity)
-                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    activity.startActivity(intent);
+                    NavigatorUtils.switchFragment(activity, VKUIwrapper.class);
                 })
                 .show();
     }

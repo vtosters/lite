@@ -257,6 +257,10 @@
 
     .line 7
     :cond_3
+    invoke-static {p2}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+
+    move-result p2
+
     invoke-static {p0, p2}, Lcom/vk/medianative/MediaNative;->compressBitmapJpeg(Landroid/graphics/Bitmap;I)[B
 
     move-result-object p0

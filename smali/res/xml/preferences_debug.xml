@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:key="preferences_debug">
+                  android:key="preferences_debug">
     <Preference
-        android:enabled="false"
-        android:summary="@string/debug_warning_summary"
-        android:title="@string/warning" />
+            android:enabled="false"
+            android:summary="@string/debug_warning_summary"
+            android:title="@string/warning"/>
     <com.vtosters.lite.ui.MaterialSwitchPreference
-        android:defaultValue="false"
-        android:key="devmenu"
-        android:title="@string/debug_show_settings_item" />
+            android:defaultValue="false"
+            android:key="devmenu"
+            android:title="@string/debug_show_settings_item"/>
     <PreferenceCategory android:title="@string/debug_experimental">
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="noanim"
-            android:dialogTitle="@string/selectfranimation"
-            android:entries="@array/animations"
-            android:entryValues="@array/animations_values"
-            android:key="anim_rtrn_type"
-            android:title="@string/franimation" />
+                android:defaultValue="noanim"
+                android:dialogTitle="@string/selectfranimation"
+                android:entries="@array/animations"
+                android:entryValues="@array/animations_values"
+                android:key="anim_rtrn_type"
+                android:title="@string/franimation"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="calls"
-            android:summary="@string/messages_interface_calls_summary"
-            android:title="@string/vtlcalls" />
+                android:defaultValue="false"
+                android:key="calls"
+                android:summary="@string/messages_interface_calls_summary"
+                android:title="@string/vtlcalls"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="podcastcatalog"
-            android:title="@string/podcastcatalog_title" />
-        <!-- <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="opusmodule"
-            android:title="@string/debug_experimental_opusmodule" />
-        <com.vtosters.lite.ui.SummaryListPreference
+                android:defaultValue="false"
+                android:key="useGenius"
+                android:summary="Получать тексты с сервиса Genius"
+                android:title="Тексты с Genius"/>
+        <!-- <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="system"
             android:dialogTitle="@string/debug_experimental_language_summary"
             android:entries="@array/language"
@@ -38,229 +35,229 @@
             android:key="lang_value"
             android:title="@string/debug_experimental_language" /> -->
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="useNewSettings"
-            android:title="@string/useNewSettings_title" />
+                android:defaultValue="true"
+                android:key="useNewSettings"
+                android:title="@string/useNewSettings_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="promotedstickers"
-            android:title="@string/promotedstickers_title" />
+                android:defaultValue="true"
+                android:key="promotedstickers"
+                android:title="@string/promotedstickers_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vk_fix_music_other">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="new_music_downloading_way"
-            android:title="@string/new_music_downloading_way_title" />
+                android:defaultValue="false"
+                android:key="new_music_downloading_way"
+                android:title="@string/new_music_downloading_way_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/debug_developer_functions">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="dev"
-            android:summary="@string/debug_developer_mode_summary"
-            android:title="@string/debug_developer_mode" />
+                android:defaultValue="false"
+                android:key="dev"
+                android:summary="@string/debug_developer_mode_summary"
+                android:title="@string/debug_developer_mode"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="ssl"
-            android:summary="@string/debug_developer_force_ssl_summary"
-            android:title="@string/debug_developer_force_ssl" />
+                android:defaultValue="true"
+                android:key="ssl"
+                android:summary="@string/debug_developer_force_ssl_summary"
+                android:title="@string/debug_developer_force_ssl"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="isMusicRestricted"
-            android:summary="@string/debug_developer_is_music_restricted_summary"
-            android:title="@string/debug_developer_is_music_restricted" />
+                android:defaultValue="true"
+                android:key="isMusicRestricted"
+                android:summary="@string/debug_developer_is_music_restricted_summary"
+                android:title="@string/debug_developer_is_music_restricted"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="hasMusicSubscription"
-            android:summary="@string/debug_developer_has_music_subscription_summary"
-            android:title="@string/debug_developer_has_music_subscription" />
+                android:defaultValue="true"
+                android:key="hasMusicSubscription"
+                android:summary="@string/debug_developer_has_music_subscription_summary"
+                android:title="@string/debug_developer_has_music_subscription"/>
         <EditTextPreference
-            android:defaultValue="https://vtsf.vknext.net"
-            android:key="ssfscustom"
-            android:title="@string/debug_developer_ssfs_custom" />
+                android:defaultValue="https://vtsf.vknext.net"
+                android:key="ssfscustom"
+                android:title="@string/debug_developer_ssfs_custom"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="domains"
-        android:title="@string/debug_domains">
+            android:key="domains"
+            android:title="@string/debug_domains">
         <Preference
-            android:defaultValue="api.vk.com"
-            android:key="apiHost"
-            android:title="@string/debug_domains_api" />
+                android:defaultValue="api.vk.com"
+                android:key="apiHost"
+                android:title="@string/debug_domains_api"/>
         <Preference
-            android:defaultValue="oauth.vk.com"
-            android:key="oauthHost"
-            android:title="@string/debug_domains_oauth" />
+                android:defaultValue="oauth.vk.com"
+                android:key="oauthHost"
+                android:title="@string/debug_domains_oauth"/>
         <Preference
-            android:defaultValue="static.vk.com"
-            android:key="vkUiHostUri"
-            android:title="VK UI host uri" />
+                android:defaultValue="static.vk.com"
+                android:key="vkUiHostUri"
+                android:title="VK UI host uri"/>
         <Preference
-            android:defaultValue="vk.com/spa"
-            android:key="spaUri"
-            android:title="VK UI SPA uri" />
+                android:defaultValue="vk.com/spa"
+                android:key="spaUri"
+                android:title="VK UI SPA uri"/>
         <Preference
-            android:defaultValue="m.vk.com"
-            android:key="awayPhpDomain"
-            android:title="@string/debug_domains_awayphp" />
+                android:defaultValue="m.vk.com"
+                android:key="awayPhpDomain"
+                android:title="@string/debug_domains_awayphp"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="network"
-        android:title="@string/debug_network">
+            android:key="network"
+            android:title="@string/debug_network">
         <Preference
-            android:defaultValue="cronet_quic"
-            android:key="__dbg_network_executor"
-            android:title="Network: Executor" />
+                android:defaultValue="cronet_quic"
+                android:key="__dbg_network_executor"
+                android:title="Network: Executor"/>
         <Preference
-            android:key="__dbg_network_clear_internal_state"
-            android:title="Network: Clear internal state" />
+                android:key="__dbg_network_clear_internal_state"
+                android:title="Network: Clear internal state"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_network_netlog_write"
-            android:title="Network: NetLog: write" />
+                android:defaultValue="false"
+                android:key="__dbg_network_netlog_write"
+                android:title="Network: NetLog: write"/>
         <Preference
-            android:defaultValue="false"
-            android:key="__dbg_network_netlog_clear"
-            android:title="Network: NetLog: clear" />
+                android:defaultValue="false"
+                android:key="__dbg_network_netlog_clear"
+                android:title="Network: NetLog: clear"/>
         <Preference
-            android:defaultValue="false"
-            android:key="__dbg_network_netlog_send"
-            android:summary="Compress &amp; send"
-            android:title="Network: NetLog: send" />
+                android:defaultValue="false"
+                android:key="__dbg_network_netlog_send"
+                android:summary="Compress &amp; send"
+                android:title="Network: NetLog: send"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="logging"
-        android:title="@string/debug_logging">
+            android:key="logging"
+            android:title="@string/debug_logging">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_api"
-            android:title="@string/debug_logging_api" />
+                android:defaultValue="false"
+                android:key="__dbg_api"
+                android:title="@string/debug_logging_api"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_force_send"
-            android:title="@string/debug_logging_force_stats_sending" />
+                android:defaultValue="false"
+                android:key="__dbg_force_send"
+                android:title="@string/debug_logging_force_stats_sending"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_webview"
-            android:title="@string/debug_logging_webview" />
+                android:defaultValue="false"
+                android:key="__dbg_webview"
+                android:title="@string/debug_logging_webview"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_view_post_time_overlay"
-            android:summary="@string/debug_logging_visualise_viewposttime_summary"
-            android:title="@string/debug_logging_visualise_viewposttime" />
+                android:defaultValue="false"
+                android:key="__dbg_view_post_time_overlay"
+                android:summary="@string/debug_logging_visualise_viewposttime_summary"
+                android:title="@string/debug_logging_visualise_viewposttime"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_allow_requests_breakpoints"
-            android:summary="@string/debug_logging_breakpoints_summary"
-            android:title="@string/debug_logging_breakpoints" />
+                android:defaultValue="false"
+                android:key="__dbg_allow_requests_breakpoints"
+                android:summary="@string/debug_logging_breakpoints_summary"
+                android:title="@string/debug_logging_breakpoints"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_apply_spaces"
-            android:summary="@string/debug_logging_apply_spaces_summary"
-            android:title="@string/debug_logging_apply_spaces" />
+                android:defaultValue="false"
+                android:key="__dbg_apply_spaces"
+                android:summary="@string/debug_logging_apply_spaces_summary"
+                android:title="@string/debug_logging_apply_spaces"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_mem_leak"
-            android:title="@string/debug_logging_memleak" />
+                android:defaultValue="false"
+                android:key="__dbg_mem_leak"
+                android:title="@string/debug_logging_memleak"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_api_errors"
-            android:title="@string/debug_logging_api_errors" />
+                android:defaultValue="false"
+                android:key="__dbg_api_errors"
+                android:title="@string/debug_logging_api_errors"/>
         <Preference
-            android:key="__dbg_log_to_file"
-            android:summary="@string/debug_logging_file_summary"
-            android:title="@string/debug_logging_file" />
+                android:key="__dbg_log_to_file"
+                android:summary="@string/debug_logging_file_summary"
+                android:title="@string/debug_logging_file"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="cache"
-        android:title="@string/debug_cache">
+            android:key="cache"
+            android:title="@string/debug_cache">
         <Preference
-            android:key="clearTrustedHash"
-            android:title="@string/debug_cache_trusted_hash" />
+                android:key="clearTrustedHash"
+                android:title="@string/debug_cache_trusted_hash"/>
         <Preference
-            android:key="clearWebViewCache"
-            android:title="@string/debug_cache_webview" />
+                android:key="clearWebViewCache"
+                android:title="@string/debug_cache_webview"/>
         <Preference
-            android:key="clearVkPayTokenForQrPayments"
-            android:title="@string/debug_cache_vkpay_token" />
+                android:key="clearVkPayTokenForQrPayments"
+                android:title="@string/debug_cache_vkpay_token"/>
         <Preference
-            android:key="clearStickersCache"
-            android:title="@string/debug_cache_stickers" />
+                android:key="clearStickersCache"
+                android:title="@string/debug_cache_stickers"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="system"
-        android:title="@string/debug_system">
+            android:key="system"
+            android:title="@string/debug_system">
         <EditTextPreference
-            android:key="__dbg_lang_override"
-            android:title="@string/debug_system_language" />
+                android:key="__dbg_lang_override"
+                android:title="@string/debug_system_language"/>
         <Preference
-            android:key="__dbg_terminate"
-            android:title="@string/debug_system_terminate" />
+                android:key="__dbg_terminate"
+                android:title="@string/debug_system_terminate"/>
         <Preference
-            android:key="__dbg_re_register_firebase"
-            android:title="@string/debug_system_fcm" />
+                android:key="__dbg_re_register_firebase"
+                android:title="@string/debug_system_fcm"/>
         <Preference
-            android:key="__dbg_copy_firebase_token"
-            android:title="@string/debug_system_fcm_copy_token" />
+                android:key="__dbg_copy_firebase_token"
+                android:title="@string/debug_system_fcm_copy_token"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="stories"
-        android:title="@string/stories">
+            android:key="stories"
+            android:title="@string/stories">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_clickable_sticker_border"
-            android:title="@string/debug_clickable_sticker_border_title" />
+                android:defaultValue="false"
+                android:key="__dbg_clickable_sticker_border"
+                android:title="@string/debug_clickable_sticker_border_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_stories_create_sticker_border"
-            android:title="@string/debug_create_sticker_border_title" />
+                android:defaultValue="false"
+                android:key="__dbg_stories_create_sticker_border"
+                android:title="@string/debug_create_sticker_border_title"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="tests"
-        android:title="@string/debug_tests">
+            android:key="tests"
+            android:title="@string/debug_tests">
         <Preference
-            android:key="__dbg_test_bday"
-            android:title="@string/debug_tests_bd" />
+                android:key="__dbg_test_bday"
+                android:title="@string/debug_tests_bd"/>
         <Preference
-            android:key="__dbg_test_validation"
-            android:title="@string/debug_tests_validation" />
+                android:key="__dbg_test_validation"
+                android:title="@string/debug_tests_validation"/>
         <Preference
-            android:key="__dbg_test_captcha"
-            android:title="@string/debug_tests_captcha" />
+                android:key="__dbg_test_captcha"
+                android:title="@string/debug_tests_captcha"/>
         <Preference
-            android:key="__dbg_test_crash"
-            android:title="@string/debug_tests_crash" />
+                android:key="__dbg_test_crash"
+                android:title="@string/debug_tests_crash"/>
         <EditTextPreference
-            android:defaultValue="https://static.vk.com/demo"
-            android:key="__dbg_spa_uri"
-            android:title="@string/debug_tests_spa_uri" />
+                android:defaultValue="https://static.vk.com/demo"
+                android:key="__dbg_spa_uri"
+                android:title="@string/debug_tests_spa_uri"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_test_tooltip"
-            android:title="@string/debug_tests_tooltip" />
+                android:defaultValue="false"
+                android:key="__dbg_test_tooltip"
+                android:title="@string/debug_tests_tooltip"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="bugtracker"
-        android:title="@string/bugs">
+            android:key="bugtracker"
+            android:title="@string/bugs">
         <Preference
-            android:key="__dbg_app_versions_list"
-            android:title="@string/debug_app_versions_list_title" />
+                android:key="__dbg_app_versions_list"
+                android:title="@string/debug_app_versions_list_title"/>
         <Preference
-            android:key="__dbg_drop_bugtracker_token"
-            android:title="@string/debug_drop_bugtracker_token_title" />
+                android:key="__dbg_drop_bugtracker_token"
+                android:title="@string/debug_drop_bugtracker_token_title"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:key="others"
-        android:title="@string/debug_other">
+            android:key="others"
+            android:title="@string/debug_other">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_no_ads"
-            android:title="@string/debug_no_ads_title" />
+                android:defaultValue="false"
+                android:key="__dbg_no_ads"
+                android:title="@string/debug_no_ads_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_proxy_enable"
-            android:title="@string/debug_proxy_enable_title" />
+                android:defaultValue="false"
+                android:key="__dbg_proxy_enable"
+                android:title="@string/debug_proxy_enable_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="__dbg_use_libverify_for_auth"
-            android:title="@string/debug_use_libverify_for_auth_title" />
+                android:defaultValue="true"
+                android:key="__dbg_use_libverify_for_auth"
+                android:title="@string/debug_use_libverify_for_auth_title"/>
     </PreferenceCategory>
 </PreferenceScreen>

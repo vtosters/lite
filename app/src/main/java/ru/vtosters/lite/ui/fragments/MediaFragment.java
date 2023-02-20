@@ -91,12 +91,15 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
+        findPreference("download_video").setOnPreferenceClickListener(preference -> {
+            download(requireContext());
+
+            return true;
+        });
         findPreference("clearvideohistory").setOnPreferenceClickListener(preference -> {
             deleteVideoHistoryDialog(requireContext());
             return true;
         });
-        findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
         findPreference("lastfm_auth").setOnPreferenceClickListener(preference -> {
             if (isLoggedIn()) {
                 logout(getContext());
@@ -139,7 +142,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
             var items = Arrays.asList(
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "По выбору"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(null, AndroidUtils.getString("by_choice")),
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.yandex, "Yandex"),
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.google, "Google"),
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.microsoft, "Bing"),
@@ -148,7 +151,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "Saucenao")
                     );
 
-            var adapter = new ImagineArrayAdapter(getContext(), items);
+            var adapter = new ImagineArrayAdapter(requireContext(), items);
             adapter.setSelected(getPreferences().getInt("search_engine", 0));
 
             new VkAlertDialog.Builder(getActivity())
@@ -284,22 +287,5 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public int T4() {
         return R.string.vtlmedia;
-    }
-
-    private static class restart implements Preference.OnPreferenceChangeListener {
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object o) {
-            edit().putString("dateformat", o.toString()).commit();
-            restartApplicationWithTimer();
-            return false;
-        }
-    }
-
-    private class download implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            download(getActivity());
-            return true;
-        }
     }
 }

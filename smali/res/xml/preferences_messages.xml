@@ -1,85 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="@string/vtlinterfacemsg">
-        <Preference
-            android:key="wallpapers"
-            android:title="@string/wallpapers_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="voice"
-            android:summary="@string/vtlvoicesummary"
-            android:title="@string/vtlvoice" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="convBarRecomm"
-            android:summary="@string/convBarRecomm_summ"
-            android:title="@string/convBarRecomm_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="wbios"
-            android:title="@string/writebar_ios_title"/>
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/vk_messenger" android:key="vkmesett">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="vkme"
-            android:summary="@string/vkmesumm"
-            android:title="@string/vkme" />
+                android:defaultValue="false"
+                android:key="vkme"
+                android:summary="@string/vkmesumm"
+                android:title="@string/vkme"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="vkme_notifs"
-            android:title="@string/vkme_notifs" />
+                android:defaultValue="false"
+                android:key="vkme_notifs"
+                android:title="@string/vkme_notifs"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlinterfacemsg">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="voice"
+                android:summary="@string/vtlvoicesummary"
+                android:title="@string/vtlvoice"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="convBarRecomm"
+                android:summary="@string/convBarRecomm_summ"
+                android:title="@string/convBarRecomm_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="wbios"
+                android:title="@string/writebar_ios_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/translator_title">
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="system"
-            android:dialogTitle="@string/translator_choose_language"
-            android:entries="@array/targetlang_value"
-            android:entryValues="@array/targetlang"
-            android:key="lang_target"
-            android:title="@string/translator_translate_language" />
+                android:defaultValue="system"
+                android:dialogTitle="@string/translator_choose_language"
+                android:entries="@array/targetlang_value"
+                android:entryValues="@array/targetlang"
+                android:key="lang_target"
+                android:title="@string/translator_translate_language"/>
         <Preference
-            android:key="lang_service"
-            android:title="@string/translator_translate_service" />
+                android:key="lang_service"
+                android:title="@string/translator_translate_service"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="autotranslate"
-            android:summary="@string/autotranslate_summ"
-            android:title="@string/autotranslate_title" />
+                android:defaultValue="false"
+                android:key="autotranslate"
+                android:summary="@string/autotranslate_summ"
+                android:title="@string/autotranslate_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="autoalltranslate"
-            android:summary="@string/autoalltranslate_summ"
-            android:title="@string/autoalltranslate_title" />
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/interfaceemoji">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="alteremoji"
-            android:summary="@string/alteremojisum"
-            android:title="@string/alteremoji" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="systememoji"
-            android:summary="@string/systememojisum"
-            android:title="@string/systememoji" />
+                android:defaultValue="false"
+                android:key="autoalltranslate"
+                android:summary="@string/autoalltranslate_summ"
+                android:title="@string/autoalltranslate_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="businessDisabler"
-            android:title="@string/businessDisabler_title" />
+                android:defaultValue="false"
+                android:key="businessDisabler"
+                android:title="@string/businessDisabler_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="sendByEnter"
-            android:summary="@string/sett_send_by_enter_summary"
-            android:title="@string/sett_send_by_enter" />
-        <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="30"
-            android:dialogTitle="@string/messages_other_choose_count"
-            android:entries="@array/msgcount_value"
-            android:entryValues="@array/msgcount"
-            android:key="msgcount"
-            android:title="@string/messages_other_download_first" />
+                android:defaultValue="false"
+                android:key="sendByEnter"
+                android:summary="@string/sett_send_by_enter_summary"
+                android:title="@string/sett_send_by_enter"/>
     </PreferenceCategory>
 </PreferenceScreen>

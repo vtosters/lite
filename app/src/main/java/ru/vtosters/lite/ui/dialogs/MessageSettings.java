@@ -66,24 +66,12 @@ public class MessageSettings {
         five.setTextColor(getTextAttr());
 
         switch (bombCount) {
-            case "15s":
-                one.setChecked(true);
-                break;
-            case "1m":
-                two.setChecked(true);
-                break;
-            case "5m":
-                three.setChecked(true);
-                break;
-            case "1h":
-                four.setChecked(true);
-                break;
-            case "24h":
-                five.setChecked(true);
-                break;
-            default:
-                zero.setChecked(true);
-                break;
+            case "15s" -> one.setChecked(true);
+            case "1m" -> two.setChecked(true);
+            case "5m" -> three.setChecked(true);
+            case "1h" -> four.setChecked(true);
+            case "24h" -> five.setChecked(true);
+            default -> zero.setChecked(true);
         }
 
         @SuppressLint("UseSwitchCompatOrMaterialCode")

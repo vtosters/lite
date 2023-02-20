@@ -358,6 +358,8 @@
 .method private sendVigoEvent(Lvigo/sdk/VigoBinaryBuffer;)V
     .locals 8
 
+    return-void
+
     .line 1
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;

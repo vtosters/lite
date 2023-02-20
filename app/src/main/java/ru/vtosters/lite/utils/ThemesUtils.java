@@ -6,6 +6,7 @@ import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.Log;
@@ -29,6 +30,7 @@ import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.hooks.VKUIHook;
 import ru.vtosters.lite.themes.ThemesHacks;
+import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
 
 import java.lang.reflect.Field;
@@ -38,17 +40,16 @@ import static ru.vtosters.lite.utils.Preferences.*;
 
 public class ThemesUtils {
     public static void applyTheme(VKTheme theme) {
-        var currentActivity = LifecycleUtils.getCurrentActivity();
-        if (currentActivity != null) {
-            try {
-                VKThemeHelper.theme(theme, currentActivity, getCenterScreenCoords());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            Log.d("ThemesUtils", "Null activity lol");
+        try {
+            VKThemeHelper.theme(theme, LifecycleUtils.getCurrentActivity(), getCenterScreenCoords());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
+
+    public static boolean isCustomAccentEnabled() {
+        return ThemesUtils.isMonetTheme() || ThemesManager.hasTmpArchive();
+    }
 
     public static ColorStateList getAccenedColorStateList() {
         return ColorStateList.valueOf(getAccentColor());
@@ -65,8 +66,6 @@ public class ThemesUtils {
     public static void setTheme(VKTheme theme, Activity activity) {
         if (activity == null) {
             activity = LifecycleUtils.getCurrentActivity();
-
-            if (activity == null) return;
         }
         VKThemeHelper.theme(theme, activity, getCenterScreenCoords());
         ThemeTracker.a();
@@ -78,8 +77,6 @@ public class ThemesUtils {
     public static void setThemeFL(VKTheme theme, Activity activity, float[] fl) {
         if (activity == null) {
             activity = LifecycleUtils.getCurrentActivity();
-
-            if (activity == null) return;
         }
         VKThemeHelper.theme(theme, activity, fl);
         ThemeTracker.a();
@@ -101,8 +98,7 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        var accent = AndroidUtils.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
-        return (accent == 0 || !isMilkshake()) || isMonetTheme() ? getColorFromAttr(R.attr.accent) : accent;
+        return getColorFromAttr(R.attr.accent);
     } // Color accent
 
     public static int getMutedAccentColor() {
@@ -115,7 +111,7 @@ public class ThemesUtils {
             view.setHighlightColor(ThemesUtils.getMutedAccentColor());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                view.getTextCursorDrawable().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+                view.getTextCursorDrawable().setColorFilter(new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN));
             } else if (!OEMDetector.isMIUI()) {
                 Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
                 field.setAccessible(true);
@@ -139,16 +135,18 @@ public class ThemesUtils {
                     field.set(editor, drawables);
                 }
             }
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            Log.e("ThemesUtils", "setCursorColor: ", e);
         }
     }
     @SuppressLint("DiscouragedPrivateApi")
     public static void colorHandles(TextView view) {
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                view.getTextSelectHandle().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
-                view.getTextSelectHandleRight().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
-                view.getTextSelectHandleLeft().setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+                PorterDuffColorFilter filter = new PorterDuffColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
+                view.getTextSelectHandle().setColorFilter(filter);
+                view.getTextSelectHandleRight().setColorFilter(filter);
+                view.getTextSelectHandleLeft().setColorFilter(filter);
             } else if (!OEMDetector.isMIUI()) {
                 Field editorField = TextView.class.getDeclaredField("mEditor");
 
@@ -189,12 +187,13 @@ public class ThemesUtils {
                     }
                 }
             }
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            Log.e("ThemesUtils", "colorHandles: ", e);
         }
     }
 
     public static int getMutedColor(int color) {
-        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), (isMilkshake() ? 0.5f : isDarkTheme() ? 0.32f : 0.2f));
+        return ColorUtils.blendARGB(color, (isDarkTheme() ? Color.BLACK : Color.WHITE), (isMilkshake() ? 0.5f : isDarkTheme() ? 0.32f : 0.1f));
     }
 
     public static void setCustomAccentColor(int newColor, boolean async) {
@@ -301,6 +300,7 @@ public class ThemesUtils {
     } // Recolor drawable to accent color
 
     public static Drawable recolorToolbarDrawable(Drawable drawable) {
+        if (!ThemesUtils.isCustomAccentEnabled()) return drawable;
         if (drawable == null) return null;
         return new RecoloredDrawable(drawable, (ThemesUtils.isMilkshake() && !ThemesUtils.isDarkTheme()) ? ThemesUtils.getAccentColor() : ThemesUtils.getHeaderText());
     }

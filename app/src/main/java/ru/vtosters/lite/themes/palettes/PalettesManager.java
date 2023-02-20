@@ -30,14 +30,14 @@ public class PalettesManager {
 
     private final List<VTLPalette> mPalettes = new ArrayList<>();
 
+    public PalettesManager() {
+        load();
+    }
+
     public static PalettesManager getInstance() {
         if (sInstance == null)
             sInstance = new PalettesManager();
         return sInstance;
-    }
-
-    public PalettesManager() {
-        load();
     }
 
     public void load() {
@@ -64,7 +64,7 @@ public class PalettesManager {
             if (assets == null || assets.length == 0) return false;
             for (var asset : assets) {
                 try {
-                    IOUtils.copyFile(manager.open(ASSETS_DIR + asset), new File(PALETTES_DIR, asset));
+                    IOUtils.copy(manager.open(ASSETS_DIR + asset), new File(PALETTES_DIR, asset));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

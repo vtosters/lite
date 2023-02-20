@@ -1328,7 +1328,7 @@
     <string name="htmlgame_htmlgames_title">Ігри в додатку</string>
     <string name="htmlgame_leaderboard_continue_playing">Продовжити грати</string>
     <string name="htmlgame_leaderboard_current_level">%s рівень</string>
-    <string name="htmlgame_leaderboard_play_again">Сыграть еще раз</string>
+    <string name="htmlgame_leaderboard_play_again">Зіграти ще раз</string>
     <string name="htmlgame_leaderboard_you_reached_level">Ви досягли %1$s рівня</string>
     <string name="htmlgame_leaderboard_you_reached_level_and_rated">Ви досягли %1$s рівня і займаєте %2$s місце серед друзів</string>
     <string name="htmlgame_leaderboard_you_reached_level_x">Ви досягли &lt;b>%1$s рівня&lt;/b></string>
@@ -1445,7 +1445,7 @@
     <string name="live_broadcast_end_confirm">Завершити</string>
     <string name="live_broadcast_end_delete_video">Видалити запис</string>
     <string name="live_broadcast_end_finished">Трансляцію завершено</string>
-    <string name="live_broadcast_end_message">Если вы покинете экран, трансляция завершится</string>
+    <string name="live_broadcast_end_message">Якщо ви залишите екран, трансляція завершиться</string>
     <string name="live_broadcast_end_replay">Дивитися запис</string>
     <string name="live_broadcast_end_stat">Статистика</string>
     <string name="live_broadcast_end_sure_delete">Ви впевнені, що хочете видалити запис трансляції? Скасувати цю дію буде неможливо.</string>
@@ -3249,7 +3249,7 @@
     <string name="sett_account">Акаунт</string>
     <string name="sett_advanced">Розширені налаштування</string>
     <string name="sett_app">Додатки</string>
-    <string name="sett_app_restart_required">Це налаштування набуде чинності після перезапуску програми</string>
+    <string name="sett_app_restart_required">Це налаштування набуде чинності після перезапуску додатку</string>
     <string name="sett_audio_cache">Кеш аудіозаписів</string>
     <string name="sett_autoplay_unavailable">Недоступно в режимі економії трафіку</string>
     <string name="sett_bdays">Нагадування про дні народж.</string>
@@ -3926,7 +3926,7 @@
     <string name="suggest_type_nearby_desc">Знайти друзів поблизу</string>
     <string name="suggested_posts_title">Запропоновані новини</string>
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
-<!--    <string name="super_app_title">Огляд</string>-->
+    <string name="super_app_title">Огляд</string>
     <string name="superapp_menu_mini_apps">Додатки</string>
     <string name="sync_all">Всі друзі</string>
     <string name="sync_all_summary">Додати в контакти дані всіх Ваших друзів</string>
@@ -5266,4 +5266,1024 @@
     <string name="yesterday_at">вчора о</string>
     <string name="your_balance">Ваш баланс: </string>
     <string name="your_gender">Ваша стать:</string>
+
+    <string name="collection_item_hint_text">"Ви можете додавати об'єкти, якими ви зможете поділитися під час трансляції"</string>
+    <string name="item_no_place_in_result_text">Місця немає в списку</string>
+    <string name="watch_post_text">Дивитися пост</string>
+    <string name="for_loading_from_network">для завантаження з мережі</string>
+    <string name="where_from_send">Звідки списати</string>
+    <string name="where_to_send">Куди зарахувати</string>
+    <string name="any_bank_card">Карта будь-якого банку</string>
+    <string name="current_place_number">Номер поточного місця</string>
+    <string name="eight_friends">Грає 8 Ваших друзів</string>
+
+    <string name="vtlfeed">Стрічка</string>
+    <string name="vtlinterface">Інтерфейс</string>
+    <string name="vtlmedia">Медіаконтент</string>
+    <string name="vtlproxy">Проксі</string>
+    <string name="vtlother">Інше</string>
+    <string name="vtlactivity">Активність</string>
+    <string name="vtltgs">Telegram Стікери</string>
+    <string name="vtlthemes">Зовнішній вигляд</string>
+    <string name="vtlmessages">Повідомлення</string>
+    <string name="bugs">Баг-трекер</string>
+    <string name="promocode">Активувати промокод</string>
+    <string name="tgchannel">Telegram Канал</string>
+    <string name="tgchat">Telegram Чат</string>
+    <string name="vkgroup">Наша група у ВК</string>
+    <string name="vtfaqsumm">Відповіді на усі ваші питання тут</string>
+    <string name="vtsite">Наш сайт</string>
+    <string name="installgms">Встановіть Сервіси Google Play</string>
+    <string name="gmsname">Сервіси Google Play</string>
+    <string name="vtldads">Вимкнути рекламу</string>
+    <string name="vtldgads">Вимкнути рекламу спільнот</string>
+    <string name="vtldgadssummary">Записи з позначкою реклами</string>
+
+    <string name="storiesGroupsAdBlock">Відключити рекламу історій груп</string>
+    <string name="storiesGroupsAdBlocksummary">Блокувати історії з посиланнями\n\nМожуть бути помилкові спрацьовування</string>
+
+    <string name="vtldca">Вимкнути карусель реклами</string>
+    <string name="vtldas">Вимкнути рекламу в історіях</string>
+    <string name="vtad">Реклама</string>
+    <string name="vtlfilters">Фільтри</string>
+    <string name="vtlhtmf">Як робити фільтри?</string>
+    <string name="vtlhtmfsummary">"Формат фільтру: слова або речення, розділені комою з пробілом
+Приклад: #реклама, Виграйте сьогодні, НОВИНКА!
+Фільтри не чутливі до регістра!"</string>
+    <string name="vtlownfilter">Фільтр слів і виразів</string>
+    <string name="vtllinkfilter">Фільтр посилань в джерелі</string>
+    <string name="vtlsourcenamefilter">Фільтр по назві джерела</string>
+    <string name="vtlsfilter">Стандартний фільтр реклами</string>
+    <string name="vtlsfiltersummary">Фільтр для блокування записів з позначкою #реклама и тд \n\nРекомендуется увімкнути</string>
+    <string name="vtlusevkui">Використати VKUI</string>
+    <string name="vtlawayphp">Відключити редирект на away.php</string>
+    <string name="vtlinterfacemsg">Інтерфейс</string>
+    <string name="vtlcalls">Іконка дзвінків</string>
+    <string name="vtlvoice">Запис голосових повідомлень</string>
+    <string name="vtlvoicesummary">Іконка запису голосових повідомлень в полі введення повідомлення</string>
+    <string name="vtlnavbar">Пофарбувати панель навігації</string>
+    <string name="cringecopyright_title">Записи з можливою рекламою</string>
+    <string name="cringecopyright_summ">Блокувати записи з джерелом де є посилання на VK / Telegram (групу, сторінку або записи) чи на інші можливі рекламні ресурси \n\nРекомендуется увімкнути</string>
+    <string name="cringerepost_title">Репости з посиланнями</string>
+    <string name="cringerepost_summ">Блокувати записи з репостом усередині яких є посилання на VK / Telegram</string>
+    <string name="why_news_not_updated_title">Чому не оновлюються новини?</string>
+    <string name="why_news_not_updated_summ">Можливо у вас включена Цікава стрічка \n\Якщо ви хочете поміняти стрічку на Тимчасову, то ви можете змінити її натиснувши на пункт вище</string>
+    <string name="newsfeedlistmanager_title">Списки новин</string>
+    <string name="newsfeedlistmanager_summ">Налаштування списків новин</string>
+    <string name="newsfeedlistmanager_reset_title">Скинути список новин</string>
+    <string name="where_is_cache_settings">Де налаштування кеша?</string>
+    <string name="where_is_cache_settings_summ">Вони переїхали в налаштування мода у вкладку Інше</string>
+    <string name="gms_about">Про GMS</string>
+    <string name="gms_what_is_title">Що таке GMS?</string>
+    <string name="gms_what_is_summ">GMS - Google Mobile Services, необхідний компонент для нормальної роботи додатків. Всі повідомлення, вхід в ігри, Google Play та інші функції пристрою використовують цей компонент</string>
+    <string name="gms_why_need_title">Навіщо мені потрібний GMS для цього додатка?</string>
+    <string name="gms_why_need_summ">GMS необхідний для роботи повідомлень, для роботи музики та ще дуже багатьох компонентів додатка</string>
+    <string name="gms_how_to_download">Як завантажити?</string>
+    <string name="gms_what_to_do_then">Що тоді робити?</string>
+    <string name="gms_what_to_do_then_summ">Вам необхідно завантажити MicroG.</string>
+    <string name="gms_what_is_microg">Що таке MicroG?</string>
+    <string name="gms_what_is_microg_summ">Це відкрита альтернатива сервісам GMS з можливістю встановити її на пристрій без GMS</string>
+    <string name="gms_microg_site">Офіційний сайт MicroG</string>
+    <string name="gms_download_microg">Завантажити MicroG</string>
+    <string name="gms_what_to_do_next">Що робити далі?</string>
+    <string name="gms_what_to_do_after_microg_title">Що робити після встановлення MicroG?</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Увійдіть до свого облікового запису Google \n2. Дозвольте VTLite отримувати повідомлення\n3. Оновіть реєстрацію Firebase у налаштуваннях у розділі "Інше"</string>
+    <string name="donate">Допомогти проекту</string>
+    <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
+    <string name="fulltime2">dd MMMM в HH:mm:ss</string>
+    <string name="fulltime3">dd MMMM в HH:mm</string>
+    <string name="vtlsfiltershort">"Фільтр коротких посилань "</string>
+    <string name="vtlsfiltershortsummary">"Фільтр для блокування постів із короткими посиланнями, такими як bit.ly або cutt.ly
+Цей фільтр не зачіпає посилання vk.cc"</string>
+    <string name="vtlsfilterrefs">Фільтр реферальних посилань</string>
+    <string name="vtlsfilterrefssummary">Фільтр для блокування постів з реферальними посиланнями, такими як ali.pub та подібні</string>
+    <string name="vtlrecommend">Рекомендації</string>
+    <string name="vtlrecommendfriend">Вимкнути рекомендації друзів</string>
+    <string name="vtlrecommendauthor">Вимкнути рекомендації авторів</string>
+    <string name="vtlrecommendfriendpost">Вимкнути рекомендації постів</string>
+    <string name="BGStickers">Обведення стікерів</string>
+    <string name="vtlrecommendmarksummary">Пости за типом Вам може бути цікаво та подібні</string>
+    <string name="vtlfeedwork">Інше</string>
+    <string name="vtlfeedreload">Автоматичне оновлення стрічки</string>
+    <string name="vtlfeedcache">Кешувати пости у стрічці</string>
+    <string name="vtlrecommendmark">Вимкнути пости з позначкою</string>
+    <string name="vtlmsgtails">Хвости повідомлень</string>
+    <string name="vtlmsgflat">Плоскі повідомлення</string>
+    <string name="vtlupdmsg">Оновити</string>
+    <string name="BGStickerssum">Для увімкнення/вимкнення вам необхідно очистити кеш додатка</string>
+    <string name="addinf">додаткова інформація</string>
+    <string name="copyid">Копіювати ID</string>
+    <string name="vtssfs">VT Функції</string>
+    <string name="vticon">Іконка додатку</string>
+    <string name="vticonbtn">Використовувати оригінальну іконку</string>
+    <string name="vticonsummary">Використання оригінальної назви та іконки додатку як у офіційного клієнта ВК</string>
+    <string name="copytokenbtn">Скопіювати ваш access token</string>
+    <string name="killappbtn">Зупинити процес додатку</string>
+    <string name="experts">Експерти</string>
+    <string name="DNT_OFF">Вимкнути неписалку</string>
+    <string name="DNT_ON">Увімкнути неписалку</string>
+    <string name="pinmsg">Закріпити чат</string>
+    <string name="unpinmsg">Відкріпити чат</string>
+    <string name="accounts">Аккаунти</string>
+    <string name="act_bot">Для ботів/спільнот</string>
+    <string name="act_cnv">для бесід</string>
+    <string name="act_pm">Для особистих повідомлень</string>
+    <string name="alteremoji">Альтернативне меню з емодзі</string>
+    <string name="alteremojisum">Альтернативний вид вибору емодзі та стікерів у мініатюрному меню</string>
+    <string name="altnewsfeed">Альтернативний дизайн стрічки</string>
+    <string name="altnewsfeedsum">Дизайн з динамічними вкладками у стрічці</string>
+    <string name="applicationrestart">Перезапустити додаток</string>
+    <string name="benchapi">Бенчмарк API</string>
+    <string name="benchapisummary">Тестування швидкості надсилання запитів. Непотрібна функція для всіх, окрім розробників ВКонтакте</string>
+    <string name="cachecleaned">Кеш очищен</string>
+    <string name="clearcache">Очистити весь кеш</string>
+    <string name="clearcachesum">Очищення всього кешу додатка (крім кешу стрічки)</string>
+    <string name="convUsersOnline">Виправлення показу онлайн у бесідах</string>
+    <string name="convUsersOnlinesum">"Виправлення показу онлайну інших користувачів у бесідах (потрібно тільки якщо Ви приховали свій онлайн)
+
+УВАГА! Може викликати тривалі завантаження списків користувачів, якщо у бесіді багато користувачів"</string>
+    <string name="copybtn">Скопійовано!</string>
+    <string name="ctypedirect">Пряме</string>
+    <string name="ctypedisabled">Не встановлено</string>
+    <string name="ctypesocks">Socks</string>
+    <string name="dnr">Нечиталка</string>
+    <string name="dns">Вимкнути статус прочитання</string>
+    <string name="dnw">Неписалка</string>
+    <string name="docknumbers">Лічильники у докбарі</string>
+    <string name="docknumberssum">Вимкнення не працює в інтерфейсі для планшетів</string>
+    <string name="dockbar_tab_titles">Відображення заголовків у докбарі</string>
+    <string name="superapp_editor_message">Щоб вимкнути/увімкнути нерухомий елемент, проведіть по ньому вправо або вліво</string>
+    <string name="fcmtokenfixed">Повідомлення були відновлені!</string>
+    <string name="fcmtokenget">FCM токен отримано</string>
+    <string name="fcmtokenrem">FCM токен видалено</string>
+    <string name="firebasefix">Оновити реєстрацію Firebase</string>
+    <string name="firebasefixsum">Виправлення отримання повідомлень після встановлення GMS або після відновлення бекапу додатка</string>
+    <string name="foafdate">"
+Днів з дати реєстрації:"</string>
+    <string name="foaferr">Проблеми при завантаженні даних!</string>
+    <string name="foafid">ID профілю:</string>
+    <string name="foafregdate">"
+Дата реєстрації:"</string>
+    <string name="getvtverify">Отримати верифікацію на свою сторінку</string>
+    <string name="iconapplying">Застосування змін</string>
+    <string name="interfaceemoji">Емодзі та стікери</string>
+    <string name="interfaceglobal">Глобальні функції</string>
+    <string name="interfaceglobaldates">Округлення дат</string>
+    <string name="interfaceglobaldatessum">"Округлення дат записів та користувачів
+
+01 Січня 1970 00:00:00 -> 1 Січня 00:00"</string>
+    <string name="interfaceglobalnum">Округлення чисел</string>
+    <string name="interfaceglobalnumsum">"Округлення чисел переглядів, коментарів, лайків та репостів
+
+10000 -> 10k"</string>
+    <string name="interfaceglobalpost">Скорочення постів</string>
+    <string name="interfaceglobalpostsum">"Скорочувати текст у постах
+
+Показати повністю..."</string>
+    <string name="pollresults_title">Результати опитувань</string>
+    <string name="pollresults_summ">Відображати результати в опитуваннях без участі в них</string>
+    <string name="vtl_downloads_title">Завантаження</string>
+    <string name="current_download_folder">Вибрана папка:</string>
+    <string name="folder_for_downloads">Папка для завантажень</string>
+    <string name="folder_for_photos">Папка для фото</string>
+    <string name="folder_for_videos">Папка для відео</string>
+    <string name="folder_for_music">Папка для музики</string>
+    <string name="sett_compress_photo_summ">Відключення значно покращить якість фотографій, що завантажуються</string>
+    <string name="sett_compress_video_summ">Відключення значно покращить якість відео, що завантажується.</string>
+    <string name="lastfm_auth_title">Обліковий запис</string>
+    <string name="auth_error_vtl">Помилка входу</string>
+    <string name="lastfm_auth_summ">Ви не увійшли до облікового запису</string>
+    <string name="lastfm_logout_success">Ви успішно вийшли з облікового запису</string>
+    <string name="lastfm_enabled_title">Увімкнути скроблінг</string>
+    <string name="lastfm_enabled_summ">Корисний сервіс з обліку прослуховування пісень</string>
+    <string name="lastfm_credentials_empty">Логін або пароль не задано</string>
+    <string name="vtl_music_settings">Музика</string>
+    <string name="musicdefcatalog_dialogTitle">Виберіть розділ за замовчуванням</string>
+    <string name="musicdefcatalog_title">Розділ музики за замовчуванням</string>
+    <string name="vtl_video_settings">Відео</string>
+    <string name="vtl_download_video_title">Завантажити відео чи історію</string>
+    <string name="videonewcatalog_title">Новий розділ відео</string>
+    <string name="videonewcatalog_summ">Новий каталог відео розділу з динамічним контентом</string>
+    <string name="clearvideohistory_title">Очистити історію відео</string>
+    <string name="clearvideohistory_summ">Очищення історії перегляду відео видаляє всі відео з історії перегляду та рекомендації на них</string>
+    <string name="vtl_photo_settings">Фото</string>
+    <string name="photo_search_engine_title">Вибір сервісу для пошуку фото</string>
+    <string name="wallpapers_title">Тло у повідомленнях</string>
+    <string name="convBarRecomm_title">Сховати рекомендації</string>
+    <string name="convBarRecomm_summ">Приховати блок рекомендацій додавання до друзів у повідомленнях та інших порад</string>
+    <string name="vk_messenger">VK Месенджер</string>
+    <string name="translator_title">Перекладач</string>
+    <string name="translator_choose_language">Оберіть мову</string>
+    <string name="translator_translate_language">Мова перекладача</string>
+    <string name="translator_translate_service">Сервіс перекладів</string>
+    <string name="autotranslate_title">Автоматичний переклад</string>
+    <string name="autotranslate_summ">Автоматично перекладати ваші вихідні повідомлення</string>
+    <string name="autoalltranslate_title">Автоматичний переклад всього</string>
+    <string name="autoalltranslate_summ">Автоматично перекладати всі повідомлення\n\nМожуть бути проблеми із завантаженням повідомлень</string>
+    <string name="clearcache_other_title">Очищення кеша додатка</string>
+    <string name="reset_folders_locations">Скинути шляхи папок</string>
+    <string name="vk_admin_token_title">Токен від VK Admin</string>
+    <string name="vtl_other_backups_title">Бекапи</string>
+    <string name="saveonlines_title">Зберегти перелік онлайнів</string>
+    <string name="saveonlines_summ">Зберегти список AppId та їх назви у файл</string>
+    <string name="saveprefs_title">Зберегти налаштування</string>
+    <string name="restoreprefs_title">Відновити налаштування</string>
+    <string name="milkshake_title">Мілкшейк</string>
+    <string name="milkshake_summ">Глобальний редизайн ВКонтакте як на нових версіях</string>
+    <string name="vtl_settings_dockbar_title">Докбар</string>
+    <string name="dockbar_accent_title">Використовувати акцент для іконок</string>
+    <string name="iconmanager_title">Вибрати іконку для додатку</string>
+    <string name="iconmanager_summ">Великий вибір іконок для додатку</string>
+    <string name="interfacenewsfeed">Стрічка</string>
+    <string name="interfacenewsfeedswipe">Бічна камера в новинах</string>
+    <string name="interfacenewsfeedswipesum">Працює лише з класичним дизайном новин</string>
+    <string name="interfacestartfr">Стандартний стартовий фрагмент</string>
+    <string name="interfacestartfrsum">Виберіть стартовий фрагмент</string>
+    <string name="interfacevideo">Відео</string>
+    <string name="interfacevideoext_short">зовнішній плеєр</string>
+    <string name="interfacevideoext">Зовнішній відеоплеєр</string>
+    <string name="interfacevideoextsum">Використовувати зовнішній відеоплеєр для відтворення відео</string>
+    <string name="interfacevideorec">Вимкнення рекомендацій відео</string>
+    <string name="interfacevideorecsum">Відключення рекомендацій відео внизу відеоплеєра з рекомендаціями відео</string>
+    <string name="menucutter">Вимкнення скорочення меню</string>
+    <string name="menucuttersum">Забирає скорочення пунктів у меню розділів додатка</string>
+    <string name="newacc">Додати обліковий запис</string>
+    <string name="newvideo">Новий відео каталог</string>
+    <string name="offline_vtl">Офлайн</string>
+    <string name="online_vtl">Онлайн</string>
+    <string name="opencommit">Відкрити коміт</string>
+    <string name="otabranch">Вибрати гілку оновлень</string>
+    <string name="otacheckonstart">Перевіряти оновлення на старті</string>
+    <string name="otacheckupd">Перевірити оновлення</string>
+    <string name="otaerr">"Перевірте ваше інтернет з'єднання та спробуйте ще раз"</string>
+    <string name="otanoupd">Оновлень не знайдено</string>
+    <string name="otaok">OK</string>
+    <string name="otaretry">Пробувати знову</string>
+    <string name="otaupd">Оновити</string>
+    <string name="otaupdavalible">Доступне оновлення!</string>
+    <string name="otaupdchanges">Список змін</string>
+    <string name="privacy_vtl">Приватність</string>
+    <string name="proxyadvsettings">Розширені налаштування проксі</string>
+    <string name="proxyapi">API Домен</string>
+    <string name="proxydomain">Домен</string>
+    <string name="proxydonate">Донат</string>
+    <string name="proxyhttp">HTTP Проксі</string>
+    <string name="proxyhttps">HTTPS Проксі</string>
+    <string name="proxyimpinfosum">"Не використовуйте проксі, якщо ВК не заблоковано у вашій країні
+
+Для застосування змін необхідно перезапустити додаток"</string>
+    <string name="proxyoauth">OAuth Домен</string>
+    <string name="proxyowners">Власники проксі</string>
+    <string name="proxyownersxtr">Сайт xtrafrancyz</string>
+    <string name="proxyownersxtrsources">Вихідний код проксі сервера</string>
+    <string name="proxyownerszbr">Сайт zaborona</string>
+    <string name="proxyport">Порт</string>
+    <string name="proxysocks">Socks Проксі</string>
+    <string name="proxystatic">Static Домен</string>
+    <string name="reportbug">Повідомити про баг</string>
+    <string name="autoclearcache">Автоочищення кешу</string>
+    <string name="autoclearcachesumm">Розмір кешу:</string>
+    <string name="autoclearcachedisabled">Не очищати кеш</string>
+    <string name="reportbugsumm">Репорти багів допомагають нам їх виправляти</string>
+    <string name="restartapp">Перезапустіть додаток</string>
+    <string name="savedmsg">Збережені повідомлення</string>
+    <string name="selectacc">Виберіть обліковий запис</string>
+    <string name="shitposting">Однотипні новини</string>
+    <string name="shitpostingsummary">"Фільтр очищення запису з РФ та діями пов'язаними в Україні\n\nМожуть бути помилкові спрацьовування"</string>
+    <string name="showstories">Відображати історії</string>
+    <string name="showstoriessum">Блок історії у верхній частині стрічки</string>
+    <string name="whatsnew_summ">Блок написання записку у стрічці</string>
+    <string name="whatsnew_title">Відображати блок запису</string>
+    <string name="right_likes">Відображати лайки у пості праворуч</string>
+    <string name="customrounding_title">Розмір закруглення картинок</string>
+    <string name="postsredesign_title">Редизайн відеозаписів</string>
+    <string name="postsredesign_summ">Текст до відео відображатиметься під відеоматеріалом</string>
+    <string name="miniapps_title">Блок мініаппів</string>
+    <string name="miniapps_summ">Відображати Miniapps/Ігри в меню</string>
+    <string name="show_vkpay_title">Блок VK Pay</string>
+    <string name="show_vkpay_summ">Відображати VK Pay в меню</string>
+    <string name="show_superapps_title">Суперапи</string>
+    <string name="show_superapps_summ">Новий вид меню як у нових версіях ВКонтакте</string>
+    <string name="friendsblock_title">Приховати друзів</string>
+    <string name="friendsblock_summ">Приховати блок рекомендацій друзів у друзях</string>
+    <string name="onlineformatter_title">Розширений онлайн</string>
+    <string name="onlineformatter_summ">Показувати з якого додатка/клієнта людина в онлайні</string>
+    <string name="voices_vtl">Голосові повідомлення</string>
+    <string name="disable_voice_listening_summ">Функція дозволяє не надсилати статус прослуховування голосових повідомлень вами</string>
+    <string name="listen_v_title">Вимкнути статус прослуховування</string>
+    <string name="vkme_online_vtl">Прихований онлайн VK Me</string>
+    <string name="onlinefix_summ">Показувати онлайн користувачів у профілях якщо у вас включений режим приховування онлайн з VK Messenger</string>
+    <string name="onlinefix_title">Обходити онлайн</string>
+    <string name="globalUsersOnline_title">Глобальний обхід онлайну</string>
+    <string name="globalUsersOnline_summ">Може викликати тривале завантаження розділів і велике споживання трафіку \n\nНе рекомендується включати цю функцію</string>    
+    <string name="savemsgsett_title">Зберігати налаштування повідомлень</string>
+    <string name="savemsgsett_summ">Зберігати положення тумблерів у налаштуваннях повідомлень</string>
+    <string name="screenshotdetect_title">Вимкнути виявлення скріншотів</string>
+    <string name="screenshotdetect_summ">Відключити повідомлення про те, що ви зробили скриншот</string>
+    <string name="hideDeviceInfo_title">Вимкнути відправку метрики</string>
+    <string name="hideDeviceInfo_summ">Вимкнути надсилання інформації про пристрій користувача та місцезнаходження</string>
+    <string name="podcastcatalog_title">Додати каталог подкастів</string>
+    <string name="useNewSettings_title">Використовувати нові налаштування</string>
+    <string name="musicFixNew_title">Виправлення музики v2</string>
+    <string name="new_music_downloading_way_title">Новий спосіб завантаження музики</string>
+    <string name="dialogrecomm">Вимкнути рекомендації</string>
+    <string name="showvtfire">Відображати файрочки</string>
+    <string name="showvtverify">Відображати верифікацію</string>
+    <string name="sprefsctype">Тип підключення</string>
+    <string name="sprefsdelkey">Видалити ключ бота Telegram</string>
+    <string name="sprefsdelkey2">Ключ був успішно вилучений</string>
+    <string name="sprefsnetwork">Мережа</string>
+    <string name="sprefsstickers">Стікери</string>
+    <string name="ssocks">Налаштування Socks</string>
+    <string name="ssocksauth">Авторизація</string>
+    <string name="ssockshost">Хост</string>
+    <string name="ssockslogin">Логін</string>
+    <string name="ssockspass">Пароль</string>
+    <string name="ssocksport">Порт</string>
+    <string name="ssockswport">Неприпустимий порт</string>
+    <string name="stickersapi1">Перевірка ключа API</string>
+    <string name="stickersapi10">2. Скопіюйте токен бота, який вам відправить бот і вставте його в додаток</string>
+    <string name="stickersapi2">Невірний ключ API бота</string>
+    <string name="stickersapi3">Помилка під час перевірки ключа!</string>
+    <string name="stickersapi4">Спробувати знову</string>
+    <string name="stickersapi5">Введіть ключ API TG бота</string>
+    <string name="stickersapi6">Отримайте його за допомогою бота @BotFather</string>
+    <string name="stickersapi7">Детальніше</string>
+    <string name="stickersapi8">Інструкції щодо отримання ключа</string>
+    <string name="stickersapi9">"1. Створіть бота у @BotFather (Telegram)
+"</string>
+    <string name="stickersconnection">Виберіть спосіб підключення!</string>
+    <string name="stickerscount">стікерів</string>
+    <string name="stickershelp1">Введіть URL або ID стікерпаку</string>
+    <string name="stickershelp2">Посилання має бути у форматі https://t.me/addstickers/\"ID\"</string>
+    <string name="stickersproxy1">Налаштуйте IP-проксі!</string>
+    <string name="stories_vtl">Історії</string>
+    <string name="systememoji">Використовувати системні емодзі</string>
+    <string name="systememojisum">Ваші системні емодзі - </string>
+    <string name="tokenwarning">Нікому не передавайте цей токен, якщо ви не знаєте, що робити!</string>
+    <string name="useproxy">Варіант проксі</string>
+    <string name="useproxyinfo">Інформація про використання проксі</string>
+    <string name="useproxysum">Виберіть варіант проксі</string>
+    <string name="vkuiinj">Фарбування веб-сторінок</string>
+    <string name="vtlawayphpsummary">Стежка за користувачем для персоналізації реклами. Також перевірка посилань на блеклист від ВКонтакті та антивірус</string>
+    <string name="vtloffline">Не надсилати статус онлайн</string>
+    <string name="vtloffline2">Примусовий офлайн</string>
+    <string name="vtloffline2summary">"Працює тільки при включенні відправки статусу офлайн
+Відправляє миттєво в офлайн після відправлення повідомлень та інших методів, які відправляють в онлайн
+
+Може виглядати як несправжній вихід з мережі"</string>
+    <string name="vtlofflinesummary">Відключення онлайн дозволить вам залишатися в офлайні</string>
+    <string name="vtsystem">Системне</string>
+    <string name="vtverify">Верифікації VTosters</string>
+    <string name="vtverifyinfo">Що таке верифікація VTosters?</string>
+    <string name="vtverifyinfosum">Це наша подяка за підтримку проекту</string>
+    <string name="vtlota">Оновлення</string>
+
+    <string name="feed_ads_regular_summary">Звичайні рекламні вставки у стрічці між записами</string>
+    <string name="feed_ads_carousel_summary">Реклама зі списком (товарів)</string>
+    <string name="feed_ads_stories_summary">Реклама під час переходу між історіями</string>
+    <string name="feed_ads_sources">Вимкнути записи з джерелом</string>
+    <string name="feed_ads_sources_summary">У більшості випадків - рекламні записи з позначкою джерела рекламодавця</string>
+
+    <string name="feed_recommendations_friends_summary">Рекомендації можливих друзів</string>
+    <string name="feed_recommendations_authors_summary">Рекомендації записів популярних авторів контенту</string>
+    <string name="feed_recommendations_friends_reacted_summary">Рекомендації лайкнутих записів ваших друзів</string>
+
+    <string name="feed_other_update">Автоматичне оновлення новин</string>
+    <string name="feed_other_update_dialog_title">Виберіть тип оновлення</string>
+    <string name="feed_other_sort_comments">Сортування коментарів</string>
+    <string name="feed_other_sort_comments_summary">Сортувати коментарі за новизною</string>
+    <string name="feed_other_cache_summary">Залишати список завантажених записів у стрічці</string>
+    <string name="officialnewssett">Вбудовані налаштування новин</string>
+    <string name="officialnewssett_summary">Офіційні налаштування новин, вбудовані в клієнт</string>
+
+    <string name="appearance_theme_info">Корисна інформація</string>
+    <string name="appearance_theme_info_summary">Для застосування змін тем необхідно переключити тему</string>
+    <string name="appearance_theme_dialog_title">Виберіть тему</string>
+    <string name="appearance_theme_dark_theme">Темна тема додатку</string>
+    <string name="appearance_theme_light_theme">Світла тема додатку</string>
+    <string name="appearance_theme_use_system">Тема додатку</string>
+    <string name="appearance_theme_use_system_summary">Застосування системної теми під час запуску додатку</string>
+
+    <string name="appearance_other_color_navbar_summary">Якщо системно є</string>
+    <string name="appearance_other_color_webview_summary">Фарбування сторінок, таких як VKID, під тему додатка</string>
+
+    <string name="interface_global_old_icons">Старі іконки</string>
+    <string name="interface_global_old_icons_summary">Необхідно скинути налаштування докбару для застосування змін</string>
+
+    <string name="activity_what_is_it">Що це за функція?</string>
+    <string name="activity_dnr_summary">Функція дозволяє вам не надсилати статус прочитання вами повідомлення співрозмовника</string>
+    <string name="activity_dnw_summary">Функція дозволяє вам не надсилати статус вашого набору/написання повідомлення</string>
+    <string name="activity_dns_summary">Функція дозволяє вам не надсилати статус перегляду вами історій</string>
+    <string name="activity_dnr_visual">Визуально может работать некорректно (сообщение прочиталось локально), но у собеседника оно прочитано не будет</string>
+
+    <string name="activity_undel">Анти-видалення повідомлень</string>
+    <string name="activity_undel_tag">Помітка видаленого повідомлення</string>
+    <string name="activity_undel_dial">Виберіть помітку видаленого повідомлення</string>
+    <string name="activity_undel_enable">Залишати видалені повідомлення</string>
+    <string name="activity_undel_attachments">Може не зберігати вкладення</string>
+
+    <string name="messages_interface_calls_summary">Іконка дзвінків у повідомленнях</string>
+    <string name="messages_interface_tails_summary">Може некоректно працювати з вкладеннями</string>
+    <string name="messages_other_choose_count">Виберіть кількість</string>
+    <string name="messages_other_download_first">Кількість повідомлень, що завантажуються</string>
+
+    <string name="vkx_why">Навіщо?</string>
+    <string name="vkx_why_summary">Інтеграція дозволить використовувати можливості VK X прямо в VTosters Lite\n\nКрім відтворення, в клієнті буде працювати і кеш з плеєра</string>
+    <string name="vkx_download">Завантажити VKX</string>
+    <string name="vkx_integration">Інтеграція з VK X</string>
+    <string name="vk_fix_music_other">Інше</string>
+    <string name="vk_fix_music">Виправлення музичного розділу</string>
+    <string name="vk_fix_music_summary">Актуально якщо музичний розділ не працює (не відображається музика або замість музики написано Слухайте в офіційному додатку ВКонтакте) або відсутній компонент GMS</string>
+
+    <string name="proxy_if">Якщо є</string>
+    <string name="proxy_login_title">Логін</string>
+    <string name="proxy_password_title">Пароль</string>
+
+    <string name="other_fix_app">Виправлення роботи додатку</string>
+    <string name="other_clear_stickers_cache">Очистити кеш стікерів</string>
+    <string name="other_clear_stickers_cache_summary">Виправлення завантаження стікерів за їх повної відсутності</string>
+    <string name="other_reset_settings">Скинути налаштування</string>
+    <string name="other_reset_settings_summary">Скидає увімкнені вами функції модифікації на значення за замовчуванням</string>
+    <string name="other_fix_dynamic_colors">Виправлення кольорів для Android 12+</string>
+
+    <string name="dockbar_editor">Редактор докбару</string>
+    <string name="superapp_editor">SuperApp Редактор</string>
+    <string name="selected_items">Вибрані елементи</string>
+    <string name="unselected_items">Відключені елементи</string>
+
+    <string name="add_another_account">Додати новий обліковий запис</string>
+
+    <string name="checkforupdates">Перевірити оновлення</string>
+
+    <string name="debug_no_toggles">Значення toggles не були отримані з сервера</string>
+    
+    <string name="warning">Увага!</string>
+    <string name="debug_warning_summary">Це меню призначене лише для тестування працездатності додатку. Якщо ви є рядовим користувачем, то вам не слід нічого не чіпати в цих параметрах (будь ласка)</string>
+    <string name="debug_show_settings_item">Відображати список меню</string>
+
+    <string name="debug_experimental">Експериментальні</string>
+    <string name="debug_experimental_usevkui">Редагування профілю?</string>
+    <string name="debug_experimental_page_stats">Статистика профіля</string>
+    <string name="debug_experimental_page_stats_summary">Вкшники начебто перестали віддавати інфу</string>
+    <string name="debug_experimental_vk_sans_font">Шрифт VK Sans</string>
+    <string name="debug_experimental_vk_me_mode">Режим VK Me для чатів</string>
+    <string name="debug_experimental_libverify">Підтримка libverify</string>
+    <string name="debug_experimental_libverify_summary">Увімкнення може виправити 2фа вхід</string>
+    <string name="debug_experimental_opusmodule">Модуль Opus</string>
+    <string name="debug_experimental_language">Мова додатку</string>
+    <string name="debug_experimental_language_summary">Виберіть мову додатку</string>
+
+    <string name="debug_developer_functions">Функції для розробників</string>
+    <string name="debug_developer_mode">Режим розробника</string>
+    <string name="debug_developer_mode_summary">Форсування облікового запису розробника/тестера/працівника та форсування версії debug/deploy. Потрібно лише для розширеного дебагінгу</string>
+    <string name="debug_developer_force_ssl_summary">Перевірка сертифіката HTTPS. Відключення дозволить дивитися та редагувати трафік через Charles та інші додатки</string>
+    <string name="debug_developer_dark_mode">Темна тема</string>
+    <string name="debug_developer_is_music_restricted_summary">Вкшні обмеження на музику. Фактично нічого не обмежує, бо все вирізано.</string>
+    <string name="debug_developer_has_music_subscription_summary">Підписка до музики</string>
+    <string name="debug_developer_old_about">Повернути старі пункти до about</string>
+    <string name="debug_developer_ssfs_custom">Домен SSFS</string>
+
+    <string name="debug_domains">Домени</string>
+    <string name="debug_domains_editing">Зміна посилань доменів</string>
+    <string name="debug_domains_editing_summary">Вся логіка зміни доменів переїхала у вкладку з проксі</string>
+    <string name="debug_domains_api">Домен API</string>
+    <string name="debug_domains_oauth">Домен OAuth</string>
+    <string name="debug_domains_awayphp">Домен away.php</string>
+
+    <string name="debug_logging">Логування</string>
+    <string name="debug_logging_file">Запис логів у файл</string>
+    <string name="debug_logging_file_summary">Запис логів додатку. Працює до повної зупинки додатка</string>
+    <string name="debug_logging_api">Логування API</string>
+    <string name="debug_logging_api_summary">Можливість логування Api при записі логів</string>
+    <string name="debug_logging_api_errors">Відображати помилки API</string>
+    <string name="debug_logging_api_errors_summary">Відображати помилки api за допомогою тосту</string>
+    <string name="debug_logging_force_stats_sending">Моментальне відправлення стати</string>
+    <string name="debug_logging_webview">Дебаг WebView</string>
+    <string name="debug_logging_visualise_viewposttime">Візуалізація view_post_time</string>
+    <string name="debug_logging_visualise_viewposttime_summary">Підсвічувати пости під час реєстрації події view_post_time</string>
+    <string name="debug_logging_breakpoints">Дозволити брекпоінти</string>
+    <string name="debug_logging_breakpoints_summary">Дозволити брекпоінти запитів через Proxy (Charles)</string>
+    <string name="debug_logging_apply_spaces">Застосовувати дірки</string>
+    <string name="debug_logging_apply_spaces_summary">Застосовувати дірки для повідомлень після long poll history</string>
+    <string name="debug_logging_memleak">Увімкнути MemLeak detect</string>
+
+    <string name="debug_network">Мережа</string>
+
+    <string name="debug_cache">Кеш</string>
+    <string name="debug_cache_trusted_hash">Очистити хеш 2фа</string>
+    <string name="debug_cache_webview">Очистити кеш WebView</string>
+    <string name="debug_cache_vkpay_token">Видалити токен VK Pay для оплати через QR</string>
+    <string name="debug_cache_stickers">Очистити кеш стікерів</string>
+    <string name="debug_cache_video">Очистити відео кеш</string>
+
+    <string name="debug_clickable_sticker_border_title">Зона клікабельного стікера</string>
+    <string name="debug_create_sticker_border_title">Зони стікера під час створення</string>
+
+    <string name="debug_system">Системні</string>
+    <string name="debug_system_language">Змінити мову</string>
+    <string name="debug_system_terminate">Завершити процес</string>
+    <string name="debug_system_fcm">Оновити реєстрацію Firebase</string>
+    <string name="debug_system_fcm_copy_token">Скопіювати push-токен</string>
+    <string name="debug_system_google_now">Оновити Google Now</string>
+
+    <string name="debug_tests">Тести</string>
+    <string name="debug_tests_bd">Тест повідомлення про ДР</string>
+    <string name="debug_tests_validation">Тест помилки need_validation</string>
+    <string name="debug_tests_captcha">Тест помилки captcha</string>
+    <string name="debug_tests_crash">Тест помилки системи</string>
+    <string name="debug_tests_ads">Тестова реклама</string>
+    <string name="debug_tests_pretty_cards">Демо карусель карток</string>
+    <string name="debug_tests_spa_uri">VK UI Uri (для тесту)</string>
+    <string name="debug_tests_spa">Тест VK UI</string>
+    <string name="debug_tests_tooltip">Тестовий тултип</string>
+
+    <string name="debug_app_versions_list_title">Список версій</string>
+    <string name="debug_drop_bugtracker_token_title">Скинути токен баг-трекера</string>
+
+    <string name="debug_proxy">Офіційний проксі ВК</string>
+    <string name="debug_proxy_force_summary">Вкшні милиці для свого проксі</string>
+    <string name="debug_proxy_enable">Проксі</string>
+    <string name="debug_proxy_enable_summary">Не працює</string>
+
+    <string name="debug_other">Інше</string>
+    <string name="debug_no_ads_title">Вимкнути рекламу</string>
+    <string name="debug_proxy_enable_title">Проксі</string>
+    <string name="debug_use_libverify_for_auth_title">Використовувати libverify для авторизації</string>
+
+    <string name="nine_votes">9 голосів</string>
+
+    <string name="DNR_ON">Увімкнути нечиталку</string>
+    <string name="DNR_OFF">Вимкнути нечиталку</string>
+
+    <string name="vtl_crashed">Сталася помилка в роботі VTLite!</string>
+    <string name="vtl_crash_upload">Завантажити логі</string>
+    <string name="vtl_crash_save">Зберегти у файл</string>
+
+    <string name="batteryissuetitle">Відключіть оптимізацію батареї!</string>
+    <string name="batteryissuesumm">"У зв'язку з тим, що ви використовуєте прошивку сторонніх виробників із наведеного нижче списку - повідомлення можуть надходити із затримкою або не приходити зовсім. \nНатисніть кнопку "Вимкнути оптимізацію", щоб виправити проблему. \n\nСторінні прошивки на яких спостерігаються проблеми з пушами:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience або TouchWiz, Magic UI, ZenUI, Funtouch OS"</string>
+    <string name="batteryissuebtn1">Вимкнути оптимізацію</string>
+    <string name="batteryissuebtn2">Ігнорувати</string>
+
+    <string name="gmsissuesumm">На вашому пристрої відсутній компонент Google Play Services (GMS), який необхідний для коректної роботи VTosters Lite</string>
+    <string name="gmsissuebtn1">Продовжити без GMS</string>
+    <string name="gmsissuebtn2">Встановити GMS</string>
+
+    <string name="startsumm1">Модифікація VTosters Lite не має жодного відношення до VK Group!\nПоширюється безкоштовно!</string>
+    <string name="startsumm2">"\n\nДодаток може некоректно працювати у зв'язку з тим, що ви, швидше за все, використовуєте оболонку зі списку нижче. Всі проблеми з відображенням та роботою додатка пов'язані тільки з вашою прошивкою і тільки з нею. Всі багрепорти, надіслані через проблеми на цій прошивці, не розглядаються розробниками і не будуть виправлені.\n\nНатискаючи кнопку "Продовжити", ви погоджуєтесь з тим, що можливі баги додатка можуть статися через специфіку вашої прошивки. Рекомендуємо використовувати прошивки на базі AOSP для отримання максимальної стабільності.\n\nПрошивки на яких спостерігаються проблеми з додатками:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience або TouchWiz, Magic UI, ZenUI, Funtouch OS"</string>
+    <string name="startbtn1">Новини</string>
+    <string name="startbtn2">Продовжити</string>
+
+    <string name="vkiddisable">Вимкнути захист</string>
+    <string name="vkidsumm">ВКонтакті почали блокувати використання сторонніх додатків, тому для стабільної роботи всіх розділів додатка необхідно вимкнути Захист від підозрілих додатків \n\nVK ID -> Безпека та вхід -> Захист від підозрілих додатків</string>
+
+    <string name="videodownloaderr">Це відео неможливо завантажити</string>
+
+    <string name="roundedmsgs">Круглі повідомлення</string>
+
+    <string name="dateformat">Виберіть тип показу дат</string>
+
+    <string name="franimation">Анімація фрагментів (бета)</string>
+    <string name="selectfranimation">Виберіть анімацію фрагментів</string>
+
+    <string name="vkme">Режим VK Месенджера</string>
+    <string name="vkmesumm">Заміна докбару та деяких елементів на щось схоже як у VK Месенджері</string>
+
+    <string name="vtsettaccount">Акаунт</string>
+    <string name="vtsettdarktheme">Темна тема</string>
+    <string name="vtsettaboutmod">Про модифікацію</string>
+    <string name="vtsettmod">Налаштування моди</string>
+
+    <string name="vtlsettenabled">Увімкнено</string>
+    <string name="vtlsettdisabled">Вимкнено</string>
+
+    <string name="vtlsettverifno">Ні</string>
+    <string name="vtlsettverifyes">Так</string>
+
+    <string name="vtlfeedsumm">Блокувати рекламу</string>
+    <string name="vtldocksumm">Докбар елементів</string>
+    <string name="vtlmediasumm">VKX інтеграція</string>
+    <string name="vtlmsgsumm">Режим VK Месенджера</string>
+    <string name="vtlactivitysumm">Офлайн режим</string>
+    <string name="vtlthemessumm">Фарбування навбару</string>
+    <string name="vtltgssumm">Використовується паки</string>
+    <string name="vtlinterfacesumm">Округлення чисел</string>
+    <string name="vtlproxysumm">Тип проксіювання</string>
+    <string name="vtlothersumm">Відображення верифікацій</string>
+    <string name="vtlmultiaccsumm">Доступно облікових записів</string>
+    <string name="vtlhidesumm">Приховати підписи в налаштуваннях</string>
+    <string name="vtllogout">Вийти або змінити обліковий запис</string>
+    <string name="vtlvksettings">Налаштування ВКонтакті</string>
+
+    <string name="vtlssfssumm">Є доступ</string>
+    <string name="checkupdates">Авто оновлення</string>
+    <string name="updates">Оновлення</string>
+
+    <string name="vkme_notifs">Повернути вкладку повідомлень</string>
+    <string name="updateanddownload">Оновити</string>
+    <string name="newversion">Нова версія</string>
+    <string name="changelog">Список змін</string>
+    <string name="downloaderr">Помилка завантаження файлу</string>
+
+    <string name="download_mp3">Завантажити як mp3</string>
+    <string name="remove_from_cache">Видалити з кешу</string>
+    <string name="add_to_cache">Додати до кешу</string>
+
+    <string name="remove_from_cache_vkx">Видалити з VK X кешу</string>
+    <string name="add_to_cache_vkx">Додати до кешу VK X</string>
+
+    <string name="play_in_vkx">Відтворити у VK X</string>
+
+    <string name="thanksfordonate">Дякую тобі за підтримку проекту!</string>
+    <string name="getdonate">Підтримай проект донатом та отримай бонуси</string>
+
+    <string name="wallpapers">Тло</string>
+    <string name="readto">Прочитати до</string>
+
+    <string name="translator">Перекласти</string>
+
+    <string name="telegram_stickers_service">Сервіс стікерів Telegram у VTLite</string>
+    <string name="telegram_stickers_downloading">: завантаження</string>
+    <string name="telegram_stickers_updating">: оновлення</string>
+    <string name="telegram_stickers_gettinginfo">Отримання інформації</string>
+    <string name="telegram_stickers_updated">успішно оновлено</string>
+    <string name="telegram_stickers_downloaded">успішно завантажений</string>
+    <string name="telegram_stickers_error_update">: помилка під час оновлення</string>
+    <string name="telegram_stickers_error_download">: помилка під час завантаження</string>
+
+    <string name="lastfm_authorized_as">Ви авторизовані як</string>
+    <string name="lastfm_login">Логін</string>
+    <string name="lastfm_password">Пароль</string>
+    <string name="lastfm_enter_credentials">Введіть логін та пароль</string>
+    <string name="lastfm_enter">Увійти</string>
+    <string name="lastfm_logout_title">Ви впевнені?</string>
+    <string name="lastfm_logout_confirm">Ви дійсно хочете вийти з облікового запису?</string>
+
+    <string name="video_history_cleaned">Історія перегляду відео очищена</string>
+
+    <string name="video_dl_enter_link">Введіть посилання на відео</string>
+
+    <string name="music_dl_title">Завантаження музики</string>
+    <string name="music_dl_progress">Прогрес завантаження музики</string>
+
+    <string name="ffmpegkit_copy">Копіювання бібліотеки ffmpegkit</string>
+
+    <string name="logfile_error">Не вдалося зберегти лог-файл</string>
+    <string name="logfile_saved">Лог-файл було збережено</string>
+
+    <string name="menu_copy_id">Скопіювати ID</string>
+    <string name="menu_addon_info">Додаткова інформація</string>
+    <string name="menu_change_name">"Змінити ім'я"</string>
+    <string name="menu_copied">Скопійовано!</string>
+
+    <string name="vtl_confirm">Застосувати</string>
+
+    <string name="pic_rounding_title">Виберіть розмір закруглення кутів</string>
+    <string name="pic_rounding_info">Для відключення функції закруглення кутів поставте 0</string>
+
+    <string name="wallpapers_disabled">Вимкнено</string>
+    <string name="wallpapers_low">Низьке</string>
+    <string name="wallpapers_med">Середнє</string>
+    <string name="wallpapers_high">Висока</string>
+    <string name="wallpapers_dim_black">Затемнити</string>
+    <string name="wallpapers_dim_white">Освітлити</string>
+
+    <string name="translator_reply">Репла:</string>
+    <string name="translator_no_text">Немає тексту для перекладу</string>
+
+    <string name="pin_dialog">Діалог успішно</string>
+    <string name="dialog_pinned">закріплений</string>
+    <string name="dialog_unpinned">відкріплений</string>
+
+    <string name="debug_menu_already_activated">Меню для розробників вже активовано</string>
+    <string name="debug_menu_activated">Меню для розробників активовано</string>
+
+    <string name="vkme_mode_info">Деякі пункти налаштувань були приховані через режим VK Месенджер \n\nДля вимкнення режиму перейдіть до налаштувань повідомлень</string>
+
+    <string name="elements_hidden_count">Приховано елементів</string>
+
+    <string name="donate_to_vtl">Допоможи проекту донатом та отримай бонус!</string>
+    <string name="tester_profile">Картка Тестера</string>
+    <string name="i_bought">Я купив</string>
+    <string name="i_created_poop">Я створив говно</string>
+    <string name="no_data_error">Я не завантажив дані (9(9((</string>
+
+    <string name="token_saved">Токен успішно збережений</string>
+    <string name="download_folders_reseted">Папки успішно скинуті</string>
+
+    <string name="cache_disabled">Не увімкнено</string>
+    <string name="cache_100mb">Очищати кеш при щонайменше 100 Мб</string>
+    <string name="cache_500mb">Очищати кеш при щонайменше 500 Мб</string>
+    <string name="cache_1gb">Очищати кеш при щонайменше 1 Гб</string>
+    <string name="cache_2gb">Очищати кеш при щонайменше 2 Гб</string>
+    <string name="cache_5gb">Очищати кеш при щонайменше 5 Гб</string>
+    <string name="cache_clean_title">Очищення кешу</string>
+    <string name="cache_select_size">"Виберіть об'єм кешу для очищення"</string>
+    <string name="select_which_clean">Виберіть, що ви хочете очистити</string>
+    <string name="cache_cleaned">Кеш очищений</string>
+
+    <string name="no_data_to_backup">Немає даних для резервного копіювання</string>
+    <string name="select_backup">Виберіть бекап</string>
+    <string name="backup_success">Налаштування відновлено</string>
+    <string name="backup_error">Помилка: налаштування не відновлено</string>
+
+    <string name="rename_title">Зміна імені</string>
+    <string name="rename_message">Це локальна зміна, яка відображатиметься лише в даному клієнті.</string>
+    <string name="rename_success">Користувач успішно перейменований!</string>
+    <string name="rename_error">Помилка при перейменуванні користувача</string>
+    <string name="rename_reset">Скинути</string>
+    <string name="rename_remove_from_bd_success">Користувач успішно видалено з бази даних!</string>
+    <string name="rename_group_success">Спільнота успішно перейменована!</string>
+    <string name="rename_remove_group_from_bd_success">Спільнота успішно видалена з бази даних!</string>
+
+    <string name="link_audio_error">Не вдалося знайти посилання на аудіозапис</string>
+    <string name="load_audio_error">Не вдалося завантажити аудіозапис</string>
+    <string name="audio_downloading">Завантаження аудіозапису</string>
+
+    <string name="proxy_setup">Налаштувати проксі</string>
+    <string name="proxy_disable">Вимкнути</string>
+    <string name="proxy_enable">Увімкнути</string>
+    <string name="proxy_warning">"Zaborona ніяк не пов'язана з VTosters і ми не можемо гарантувати її роботу та безпеку"</string>
+    <string name="proxy_settings">Налаштування проксі</string>
+
+    <string name="apk_install_error">Помилка інсталяції оновлення</string>
+
+    <string name="message_self_destruct_15sec">15 секунд</string>
+    <string name="message_self_destruct_1min">1 хвилина</string>
+    <string name="message_self_destruct_5min">5 хвилин</string>
+    <string name="message_self_destruct_1hour">1 година</string>
+    <string name="message_self_destruct_24hours">24 години</string>
+
+    <string name="silent_messages">Безшумні повідомлення</string>
+    <string name="message_send_settings_title">Налаштування надсилання</string>
+    <string name="silent_messages_time_select">Виберіть час зникнення повідомлення</string>
+
+    <string name="update_vk_admin_token">Оновіть токен VK Admin у налаштуваннях у розділі Інше</string>
+
+    <string name="backup_saved_in">Збережено у файл</string>
+    <string name="backup_save_error">Не вдалося зберегти файл</string>
+
+    <string name="newsfeed_list_update_feed">Оновіть стрічку для отримання списку доступних пунктів</string>
+    <string name="newsfeed_list_choose_to_hide">Виберіть пункти для приховання</string>
+    <string name="newsfeed_list_update_feed_to_work">Для застосування змін оновіть стрічку</string>
+    <string name="newsfeed_list_hidden_reseted">Скинуто пункти для приховання</string>
+
+    <string name="video_dl_stories_not_supported">Завантаження історій не підтримується</string>
+    <string name="video_dl_wrong_link">Неправильне посилання</string>
+    <string name="video_dl_progress">Обробка відео</string>
+    <string name="video_dl_error">Відео не можна завантажити</string>
+
+    <string name="superapp_menu">Меню додатка</string>
+    <string name="superapp_miniapps">MiniApps: віджет</string>
+    <string name="superapp_vkpay">VK Pay</string>
+    <string name="superapp_greeting">Привітання</string>
+    <string name="superapp_miniapps_promo">MiniApps: промо</string>
+    <string name="superapp_holiday">Дні народження у друзів</string>
+    <string name="superapp_weather">Погода</string>
+    <string name="superapp_sport">Спортивні події</string>
+    <string name="superapp_games">Ігри</string>
+    <string name="superapp_informer">Інформер</string>
+    <string name="superapp_food">Їжа</string>
+    <string name="superapp_event">Заходи</string>
+    <string name="superapp_music">Музика</string>
+    <string name="superapp_vk_run">VK Run</string>
+
+    <string name="feed_hidden">Приховано %1$d стрічок новин</string>
+    <string name="feed_no_elements">Немає доданих елементів</string>
+    <string name="feed_elements_count">Додано %1$d елементів</string>
+
+    <string name="app_name_select_title">Виберіть назву додатку</string>
+    <string name="icons_warning">Доступні не всі функції!</string>
+    <string name="icons_warning_info">Для розблокування необхідно зробити пожертвування від 99 рублів</string>
+    <string name="icons_title">Іконки</string>
+    <string name="unavailable_icons">Недоступні іконки</string>
+    <string name="unavailable_icon_warning">Іконка доступна лише власникам верифікації</string>
+
+    <string name="rounding_size">Розмір закруглення: %1$ddp</string>
+
+    <string name="sferum_online">Сферум</string>
+    <string name="vk_calls_online">VK Дзвінки</string>
+    <string name="vk_music_online">VK Музика</string>
+    <string name="vk_clips_online">VK Кліпи</string>
+    <string name="vk_video_online">VK Відео</string>
+    <string name="vk_mail_online">VK Пошта</string>
+
+    <string name="wallpaper_select">Вибрати тло</string>
+    <string name="wallpaper_from_gallery">з галереї</string>
+    <string name="wallpaper_remove">Видалити тло</string>
+    <string name="filters_warning">Доступні не всі фільтри!</string>
+    <string name="filter_maybe_lag">Можливе навантаження на пристрій</string>
+    <string name="filter_blur">Розмиття фону повідомлень</string>
+    <string name="filter_dim">Затемнення зображення</string>
+    <string name="filter_mosaic">Мозаїка</string>
+    <string name="filter_monochrome">Чорно-біле тло</string>
+    <string name="filter_invert_colors">Інвертувати кольори</string>
+    <string name="filter_sepia">Ефект сепії</string>
+    <string name="filter_emboss">Emboss фільтр</string>
+    <string name="filter_engrave">Engrave фільтр</string>
+    <string name="filter_flea">Flea фільтр</string>
+    <string name="filter_snow">Ефект снігу</string>
+
+    <string name="encryption">Метод шифрування</string>
+    <string name="encryption_sett">Налаштування шифрування</string>
+    <string name="encryption_disable">Вимкнути шифрування</string>
+    <string name="encryption_settings_title">Налаштування шифрування</string>
+    <string name="encryption_public_algorithm_error">Вибраний алгоритм публічний і не має налаштувань!</string>
+    <string name="encryption_enter_key">Введіть ключ шифрування</string>
+    <string name="encryption_current_algorithm_title">Використовуваний алгоритм: %1$s.\nВрахуйте, що якщо поле буде порожнім, то використовуватиметься ключ за замовчуванням.</string>
+
+    <string name="update_error">Помилка оновлення</string>
+    <string name="update_error_text">Відбулася помилка при спробі завантажити нову версію додатка.\nОновити додаток вручну?</string>
+
+    <string name="photo_get_error">Неможливо отримати посилання на фото</string>
+
+    <string name="denial_of_responsibility_proxy">Відмова від відповідальності</string>
+    <string name="denial_of_responsibility_proxy_summ">Розробники клієнта VTLite не несуть жодної відповідальності за роботу та безпеку використання сторонніх проксі-серверів \n\nВикористовуйте на свій страх і ризик</string>
+
+    <string name="altervika_title">Альтернативний домен VikaMobile</string>
+
+    <string name="proxy_setup_title">Встановити проксі</string>
+    <string name="proxy_setup_summ">Отримання стороннього проксі з підтримуваних списків проксі</string>
+    <string name="proxy_setup_success">Проксі встановлений, хост:</string>
+
+    <string name="delete_elements_confirm">Ви дійсно хочете видалити всі елементи зі списку?</string>
+    <string name="elements_deleted_success">Список елементів успішно очищений</string>
+    <string name="get_proxy_error">Помилка при отриманні проксі</string>
+
+    <string name="add_to_filter_whitelist">Додати до вайтліста фільтрів</string>
+    <string name="remove_from_filter_whitelist">Видалити з вайтліста фільтрів</string>
+    <string name="add_to_ads_whitelist">Додати до вайтліста реклами</string>
+    <string name="remove_from_ads_whitelist">Видалити з вайтліста реклами</string>
+    <string name="add_to_ads_stories_whitelist">Додати до вайтліста історій</string>
+    <string name="remove_from_ads_stories_whitelist">Видалити з вайтліста історій</string>
+    <string name="removed_from_whitelist_success">Група видалена з вайтліста</string>
+    <string name="added_to_whitelist_success">Група додана до вайтліста</string>
+
+    <string name="whitelisted_ad_groups_title">Вайтліст реклами</string>
+    <string name="whitelisted_filters_groups_title">Вайтліст фільтрів та джерел</string>
+
+    <string name="whitelisted_ad_groups_stories_title">Вайтліст реклами історій</string>
+
+    <string name="download_dl">Завантажити діалог</string>
+    <string name="download_dl_error">Відбулася помилка під час спроби завантажити діалог</string>
+
+    <string name="dialogstats">Статистика діалогу</string>
+
+    <string name="saved_as">Збережено як</string>
+    <string name="settings_reset_confirm">Ви дійсно хочете скинути налаштування?</string>
+    <string name="system_theme_warning">У вас увімкнена системна тема \nПри перемиканні теми системна тема буде вимкнена \n\nВи дійсно хочете вимкнути її?</string>
+
+    <string name="compress_wallpaper_title">Стискати тло</string>
+    <string name="compress_wallpaper_summ">Значно прискорює відкриття чатів</string>
+
+    <string name="from_lower">від</string>
+    <string name="chat_export_error">помилка</string>
+
+    <string name="chat_export_title">Експорт з VTLite</string>
+    <string name="chat_export_header">Експорт історії чату</string>
+    <string name="chat_export_avatar_update">Оновив фотографію розмови</string>
+    <string name="chat_export_avatar_remove">Видалив фотографію розмови</string>
+    <string name="chat_export_chat_created">Створив розмову</string>
+    <string name="chat_export_name_changed">Змінив назву розмови</string>
+    <string name="chat_export_to">на</string>
+    <string name="chat_export_user_added">Додав</string>
+    <string name="chat_export_user_kicked">Виключив</string>
+    <string name="chat_export_type_group">групу</string>
+    <string name="chat_export_type_user">користувача</string>
+    <string name="chat_export_msg_pinned">Закріпив повідомлення</string>
+    <string name="chat_export_msg_unpinned">Відкріпив повідомлення</string>
+    <string name="chat_export_join_by_link">Вступив у розмову за посиланням</string>
+    <string name="chat_export_chat_screenshot">Зробив скріншот розмови</string>
+
+    <string name="chat_export_type_photo">фотографія</string>
+    <string name="chat_export_type_doc">документ</string>
+    <string name="chat_export_type_link">посилання</string>
+    <string name="chat_export_type_wallpost">запис на стіні</string>
+    <string name="chat_export_type_audiomsg">голосове повідомлення</string>
+    <string name="chat_export_type_audio">аудіозапис</string>
+    <string name="chat_export_type_video">відеозапис</string>
+    <string name="chat_export_type_wallreply">коментар на стіні</string>
+    <string name="chat_export_type_story">історія</string>
+    <string name="chat_export_type_podcast">подкаст</string>
+    <string name="chat_export_type_miniapp">міні-додаток</string>
+    <string name="chat_export_type_playlist">плейлист</string>
+    <string name="chat_export_poll_anon">анонімний</string>
+    <string name="chat_export_poll_publ">публічний</string>
+    <string name="chat_export_type_poll">опитування</string>
+    <string name="chat_export_type_market">товар</string>
+
+    <string name="chat_export_poll_voted">Проголосувало</string>
+    <string name="chat_export_users_name">чол.</string>
+
+    <string name="chat_export_video_nolinks">посилання відсутні</string>
+
+    <string name="delete_video_history_confirm">Ви дійсно хочете очистити історію відео?</string>
+    <string name="delete_video_history_error">Помилка при очищенні історії. Подробиці у логах</string>
+
+    <string name="wallpaper_size_limit">Розмір файлу перевищує ліміт 6 MB</string>
+
+    <string name="contact_sync_error">Помилка встановлення контактів</string>
+    <string name="contact_permission_toast">Для роботи цієї функції необхідно надати дозвіл на читання контактів</string>
+    <string name="contact_info_loading">Завантаження даних про контакти...</string>
+    <string name="contact_sync_title">Синхронізація контактів</string>
+    <string name="contact_sync_state">Статус синхронізації</string>
+    <string name="contact_sync_enabled">Увімкнено</string>
+    <string name="contact_sync_disabled">Відключено</string>
+
+    <string name="force_disable_psm_title">Приховати інформацію про батарею</string>
+    <string name="force_disable_psm_summ">Увімкнення цієї функції приховає інформацію про стан вашого пристрою в режимі економії батареї та ВКонтакті надсилатиме вам медіаконтент без сильного стиснення та блюру</string>
+
+    <string name="track_bd_insert_err">Помилка при записі треку до бази даних!</string>
+    <string name="cached_tracks_deleted">Закешовані треки видалені</string>
+    <string name="cached_track">Закешований трек</string>
+    <string name="cached_tracks_title">Закешовані треки</string>
+    <string name="saved_tracks_title">Збережені треки</string>
+    <string name="cached_tracks_desc">"Цей плейлист не відображається у вашому профілі і не синхронізується з серверами ВКонтакте.\n\nДеякі функції можуть працювати некоректно. За відсутності з'єднання з Інтернетом цей плейлист перетвориться на звичайний список треків."</string>
+    <string name="cached_album_warning">Це закешований альбом!</string>
+    <string name="cached_playlist_loading">Завантаження плейлиста</string>
+
+    <string name="cached_content_title">Закешований контент</string>
+    <string name="cached_content_empty">Схоже, тут нічого немає</string>
+    <string name="cached_content_empty_desc">У вас відсутній закешований контент</string>
+    <string name="cached_tracks_remove_confirm">Ви дійсно хочете видалити всі треки, що кешуються?</string>
+
+    <string name="vkx_integration_title">Увімкніть інтеграцію VK X!</string>
+    <string name="vkx_integration_desc">Отримайте доступ до сховища треків та можливості включати/закешувати треки з VTLite у VK X.\n\nДокладніше - у Налаштування > Медіа контент > VK X</string>
+
+    <string name="music_downloading">Завантаження музики</string>
+    <string name="music_downloading_progress">Прогрес завантаження музики</string>
+
+    <string name="playlist_downloading">Завантаження плейлиста</string>
+    <string name="playlist_downloading_progress">Прогрес завантаження плейлиста</string>
+
+    <string name="caching_track_or_pic">Кешування треку/обкладинки</string>
+
+    <string name="cached_tracks_counter">Усього закешовано %1$d пісень</string>
+
+    <string name="autocache_title">Автокешування треків</string>
+    <string name="autocache_summ">Автоматично кешувати всі відтворені вами пісні</string>
+
+    <string name="playlist_download_notf">Завантажено пісень: %1$d із %2$d</string>
+
+    <string name="all_audio">Всі аудіо</string>
+    <string name="notf_audio_dl_user">Скачування всіх аудіо користувача</string>
+    <string name="no_cache_error">Ви не маєте закешованих треків</string>
+
+    <string name="download_method">Спосіб завантаження</string>
+    <string name="download_method_desc">Виберіть спосіб завантаження всіх своїх аудіо (без плейлистів)</string>
+    <string name="download_method_cache">У кеш</string>
+    <string name="download_method_mp3">Як .mp3</string>
+
+    <string name="audio_download_title">Скачування всіх своїх аудіо</string>
+
+    <string name="app_activities_error">Помилка роботи додатку. Перезапустіть додаток</string>
+
+    <string name="vkx_integration_enabled_info">Включена інтеграція VK X. Глобальне кешування доступне всередині VK X</string>
+
+    <string name="current_theme">Поточна тема</string>
+
+    <string name="writebar_ios_title">Панель введення з iOS</string>
+    <string name="newsfeed_notif_title">Повідомлення в новинах</string>
+    <string name="newsfeed_notif_summ">Показувати лічильник повідомлень у докбарі на іконці новин</string>
+
+    <string name="invalid_pack_link">Неправильне посилання на набір</string>
+
+    <string name="blockminiapps_title">Записи з MiniApp</string>
+    <string name="blockminiapps_summ">Блокувати записи з міні-додатками</string>
+    <string name="maxquality_title">Максимальна якість</string>
+    <string name="maxquality_summ">Відкривати відео в максимальній якості через зовнішній відеоплеєр</string>
+    <string name="promotedstickers_title">Не отримувати промостикери</string>
+    <string name="useOldAppVer_title">Використовувати старий дизайн</string>
+    <string name="useOldAppVer_summ">Працює \"як є\". Можливі помилки</string>
+
+    <string name="downloading_update">Завантаження оновлення</string>
+    <string name="sources">Джерела</string>
+    <string name="businessDisabler_title">Вимкнути бізнес-сповіщення</string>
+    <string name="accent_color_title">Колір акценту</string>
+    <string name="accent_color_summ">Колір акценту в додатку</string>
+    <string name="change_accent_color">Виберіть колір акценту</string>
+    <string name="select_palette">Виберіть палітру кольорів</string>
+    <string name="select_color">Виберіть колір</string>
+
+    <string name="copyownlink_title">Посилання на свій профіль</string>
+    <string name="copyownlink_summ">Скопіювати посилання на свій профіль для подальшого отримання донатних функцій</string>
+    <string name="amoledtheme_title">AMOLED тема</string>
+    <string name="amoledtheme_summ">Цілком чорна тема для пристроїв з AMOLED-екранами</string>
+    <string name="monettheme_title">Monet-тема</string>
+    <string name="monettheme_summ">Динамічна фарбування інтерфейсу на основі тла телефону</string>
+    <string name="accents">Акценти</string>
+    <string name="cannot_write">Відсутня дозвіл на запис та читання файлів</string>
+    <string name="open_bot">Відкрити робота</string>
+    <string name="crash_service_name">Сповіщення про помилки</string>
+    <string name="custom_links_warning">Розробники клієнта не несуть жодної відповідальності за посилання користувача. Будьте уважні!</string>
+    <string name="by_choice">На вибір</string>
+    <string name="data_updated">Дані оновлені</string>
+    <string name="updateverifdata_title">Оновити дані</string>
+    <string name="updateverifdata_summ">Завантажити свіжі дані про верифікації та серверні функції</string>
+    <string name="device_info">Інформація про пристрій</string>
+    <string name="calls_not_available">Встановіть VK Месенджер або офіційний клієнт ВКонтакті</string>
+    <string name="copydebuginfo_title">Скопіювати інформацію про пристрій</string>
+    <string name="copydebuginfo_summ">Для надсилання інформації про помилку на GitHub Issues</string>
+    <string name="device_info_copied">Інформацію про пристрій скопійовано</string>
+    <string name="app_open_by_default_settings">Для нормальної роботи додатку необхідно дозволити додатку відкриття посилань за умовчанням</string>
 </resources>

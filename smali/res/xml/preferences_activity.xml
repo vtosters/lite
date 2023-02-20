@@ -2,123 +2,123 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/activity_undel">
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="🗑"
-            android:dialogTitle="@string/activity_undel_dial"
-            android:entries="@array/undel_value"
-            android:entryValues="@array/undel_value"
-            android:key="undeletemsg_prefix_value"
-            android:title="@string/activity_undel_tag" />
+                android:defaultValue="🗑"
+                android:dialogTitle="@string/activity_undel_dial"
+                android:entries="@array/undel_value"
+                android:entryValues="@array/undel_value"
+                android:key="undeletemsg_prefix_value"
+                android:title="@string/activity_undel_tag"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="undeletemsg"
-            android:summary="@string/activity_undel_attachments"
-            android:title="@string/activity_undel_enable" />
+                android:defaultValue="false"
+                android:key="undeletemsg"
+                android:summary="@string/activity_undel_attachments"
+                android:title="@string/activity_undel_enable"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/online_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="offline"
-            android:summary="@string/vtlofflinesummary"
-            android:title="@string/vtloffline" />
+                android:defaultValue="false"
+                android:key="offline"
+                android:summary="@string/vtlofflinesummary"
+                android:title="@string/vtloffline"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:enabled="false"
-            android:key="setoffline"
-            android:summary="@string/vtloffline2summary"
-            android:title="@string/vtloffline2" />
+                android:defaultValue="false"
+                android:enabled="false"
+                android:key="setoffline"
+                android:summary="@string/vtloffline2summary"
+                android:title="@string/vtloffline2"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="onlineformatter"
-            android:summary="@string/onlineformatter_summ"
-            android:title="@string/onlineformatter_title" />
+                android:defaultValue="true"
+                android:key="onlineformatter"
+                android:summary="@string/onlineformatter_summ"
+                android:title="@string/onlineformatter_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/dnr">
         <Preference
-            android:enabled="false"
-            android:summary="@string/activity_dnr_summary"
-            android:title="@string/activity_what_is_it" />
+                android:enabled="false"
+                android:summary="@string/activity_dnr_summary"
+                android:title="@string/activity_what_is_it"/>
         <Preference
-            android:enabled="false"
-            android:summary="@string/activity_dnr_visual"
-            android:title="@string/warning" />
+                android:enabled="false"
+                android:summary="@string/activity_dnr_visual"
+                android:title="@string/warning"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="read_pm"
-            android:title="@string/act_pm" />
+                android:defaultValue="false"
+                android:key="read_pm"
+                android:title="@string/act_pm"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="read_conversations"
-            android:title="@string/act_cnv" />
+                android:defaultValue="false"
+                android:key="read_conversations"
+                android:title="@string/act_cnv"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="read_bot"
-            android:title="@string/act_bot" />
+                android:defaultValue="false"
+                android:key="read_bot"
+                android:title="@string/act_bot"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/dnw">
         <Preference
-            android:enabled="false"
-            android:summary="@string/activity_dnw_summary"
-            android:title="@string/activity_what_is_it" />
+                android:enabled="false"
+                android:summary="@string/activity_dnw_summary"
+                android:title="@string/activity_what_is_it"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="write_pm"
-            android:title="@string/act_pm" />
+                android:defaultValue="false"
+                android:key="write_pm"
+                android:title="@string/act_pm"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="write_conversations"
-            android:title="@string/act_cnv" />
+                android:defaultValue="false"
+                android:key="write_conversations"
+                android:title="@string/act_cnv"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="write_bot"
-            android:title="@string/act_bot" />
+                android:defaultValue="false"
+                android:key="write_bot"
+                android:title="@string/act_bot"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/stories_vtl">
         <Preference
-            android:enabled="false"
-            android:summary="@string/activity_dns_summary"
-            android:title="@string/activity_what_is_it" />
+                android:enabled="false"
+                android:summary="@string/activity_dns_summary"
+                android:title="@string/activity_what_is_it"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="read_s"
-            android:title="@string/dns" />
+                android:defaultValue="false"
+                android:key="read_s"
+                android:title="@string/dns"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/voices_vtl">
         <Preference
-            android:enabled="false"
-            android:summary="@string/disable_voice_listening_summ"
-            android:title="@string/activity_what_is_it" />
+                android:enabled="false"
+                android:summary="@string/disable_voice_listening_summ"
+                android:title="@string/activity_what_is_it"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="listen_v"
-            android:title="@string/listen_v_title" />
+                android:defaultValue="false"
+                android:key="listen_v"
+                android:title="@string/listen_v_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vkme_online_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="onlinefix"
-            android:summary="@string/onlinefix_summ"
-            android:title="@string/onlinefix_title" />
+                android:defaultValue="false"
+                android:key="onlinefix"
+                android:summary="@string/onlinefix_summ"
+                android:title="@string/onlinefix_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="savemsgsett"
-            android:summary="@string/savemsgsett_summ"
-            android:title="@string/savemsgsett_title" />
+                android:defaultValue="false"
+                android:key="savemsgsett"
+                android:summary="@string/savemsgsett_summ"
+                android:title="@string/savemsgsett_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="screenshotdetect"
-            android:summary="@string/screenshotdetect_summ"
-            android:title="@string/screenshotdetect_title" />
+                android:defaultValue="true"
+                android:key="screenshotdetect"
+                android:summary="@string/screenshotdetect_summ"
+                android:title="@string/screenshotdetect_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="awayphp"
-            android:summary="@string/vtlawayphpsummary"
-            android:title="@string/vtlawayphp" />
+                android:defaultValue="true"
+                android:key="awayphp"
+                android:summary="@string/vtlawayphpsummary"
+                android:title="@string/vtlawayphp"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="hideDeviceInfo"
-            android:summary="@string/hideDeviceInfo_summ"
-            android:title="@string/hideDeviceInfo_title" />
+                android:defaultValue="true"
+                android:key="hideDeviceInfo"
+                android:summary="@string/hideDeviceInfo_summ"
+                android:title="@string/hideDeviceInfo_title"/>
     </PreferenceCategory>
 </PreferenceScreen>

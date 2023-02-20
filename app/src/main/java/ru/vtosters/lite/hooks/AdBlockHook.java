@@ -252,6 +252,30 @@ public class AdBlockHook {
         return items;
     }
 
+    private static void parseStoriesItem(JSONObject item) throws JSONException {
+        var stories = item.optJSONArray("stories");
+        var newStories = new JSONArray();
+
+        if (stories == null) return;
+
+        for (int j = 0; j < stories.length(); j++) {
+            var story = stories.optJSONObject(j);
+
+            if (!story.optBoolean("is_ads") && !story.optBoolean("is_promo")) {
+                if (isStoryNotAd(story)) {
+                    newStories.put(story);
+                }
+            } else {
+                if (dev()) Log.d("StoriesAds", "Fetched ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
+            }
+        }
+
+        item.put("stories", newStories);
+    }
+
+    private static Boolean isStoryNotAd(JSONObject json) {
+        return !getBoolValue("storiesGroupsAdBlock", false) || (json.has("link") ? isWhitelistedAdStories(json) : true);
+    }
 
     public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
         if (!adsstories()) {
@@ -277,8 +301,6 @@ public class AdBlockHook {
             }
         }
 
-        if (!json.has("items")) return json;
-
         var items = json.optJSONArray("items");
         if (items != null) {
             for (int i = 0; i < items.length(); i++) {
@@ -290,26 +312,6 @@ public class AdBlockHook {
         }
 
         return json;
-    }
-
-    private static void parseStoriesItem(JSONObject item) throws JSONException {
-        var stories = item.optJSONArray("stories");
-        var newStories = new JSONArray();
-
-        if (stories == null) return;
-
-        for (int j = 0; j < stories.length(); j++) {
-            var story = stories.optJSONObject(j);
-
-            if (!story.optBoolean("is_ads") && !story.optBoolean("is_promo")) {
-                newStories.put(story);
-            } else {
-                if (dev())
-                    Log.d("StoriesAds", "Fetched ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
-            }
-        }
-
-        item.put("stories", newStories);
     }
 
     public static Boolean isAds(JSONObject list, String type) throws JSONException {
@@ -366,6 +368,17 @@ public class AdBlockHook {
 
         var whitelist = AndroidUtils.getDefaultPrefs().getStringSet(
                 "whitelisted_ad_groups",
+                Collections.emptySet()
+        );
+
+        return whitelist.contains(id);
+    }
+
+    public static Boolean isWhitelistedAdStories(JSONObject list) {
+        var id = String.valueOf(list.optInt("owner_id"));
+
+        var whitelist = AndroidUtils.getDefaultPrefs().getStringSet(
+                "whitelisted_stories_ad",
                 Collections.emptySet()
         );
 

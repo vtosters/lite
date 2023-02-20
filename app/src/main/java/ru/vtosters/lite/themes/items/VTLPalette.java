@@ -1,7 +1,6 @@
 package ru.vtosters.lite.themes.items;
 
 import android.graphics.Color;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -23,38 +22,6 @@ public class VTLPalette {
         this.name = name;
         this.author = author;
         this.colors = colors;
-    }
-
-    public VTLPalette setId(String id) {
-        this.id = id;
-        return this;
-    }
-
-    public VTLPalette setName(String name) {
-        this.name = name;
-        return this;
-    }
-
-    public VTLPalette setAuthor(String author) {
-        this.author = author;
-        return this;
-    }
-
-    public VTLPalette setColors(List<VTLColor> colors) {
-        this.colors = colors;
-        return this;
-    }
-
-    public VTLPalette setColor(String name, int color) {
-        this.colors.add(new VTLColor(name, 0, color));
-        return this;
-    }
-
-    public int getColor(String name) {
-        for (var item : colors)
-            if (name.equals(item.resName))
-                return item.color;
-        return -1;
     }
 
     public static VTLPalette fromJson(JSONObject json) throws JSONException {
@@ -90,5 +57,37 @@ public class VTLPalette {
                 .setName(name)
                 .setAuthor(author)
                 .setColors(colors);
+    }
+
+    public VTLPalette setId(String id) {
+        this.id = id;
+        return this;
+    }
+
+    public VTLPalette setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public VTLPalette setAuthor(String author) {
+        this.author = author;
+        return this;
+    }
+
+    public VTLPalette setColors(List<VTLColor> colors) {
+        this.colors = colors;
+        return this;
+    }
+
+    public VTLPalette setColor(String name, int color) {
+        this.colors.add(new VTLColor(name, 0, color));
+        return this;
+    }
+
+    public int getColor(String name) {
+        for (var item : colors)
+            if (name.equals(item.resName))
+                return item.color;
+        return -1;
     }
 }

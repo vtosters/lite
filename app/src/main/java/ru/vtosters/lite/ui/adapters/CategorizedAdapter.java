@@ -176,22 +176,21 @@ public class CategorizedAdapter< T > extends RecyclerView.Adapter< CategorizedAd
         if(toPosition == 0 || isUnmovedItem(toPosition))
             return false;
 
-        switch(getTabType(fromPosition)) {
-            case SELECTED_STATE:
-                if(getTabType(toPosition) == DISABLED_STATE
+        switch (getTabType(fromPosition)) {
+            case SELECTED_STATE -> {
+                if (getTabType(toPosition) == DISABLED_STATE
                         && mSelectedItems.size() == mMinSelectedItems)
                     return false;
-                if(getItemViewType(toPosition) == CATEGORY_TITLE)
+                if (getItemViewType(toPosition) == CATEGORY_TITLE)
                     mDisabledItems.add(0, mSelectedItems.remove(fromPosition - 1));
                 else
                     Collections.swap(mSelectedItems, fromPosition - 1, toPosition - 1);
-                break;
-
-            case DISABLED_STATE:
-                if(getTabType(toPosition) == SELECTED_STATE
+            }
+            case DISABLED_STATE -> {
+                if (getTabType(toPosition) == SELECTED_STATE
                         && mSelectedItems.size() == mMaxSelectedItems)
                     return false;
-                if(getItemViewType(toPosition) == CATEGORY_TITLE)
+                if (getItemViewType(toPosition) == CATEGORY_TITLE)
                     mSelectedItems.add(mDisabledItems.remove(fromPosition - mSelectedItems.size() - 2));
                 else
                     Collections.swap(
@@ -199,7 +198,7 @@ public class CategorizedAdapter< T > extends RecyclerView.Adapter< CategorizedAd
                             fromPosition - mSelectedItems.size() - 2,
                             toPosition - mSelectedItems.size() - 2
                     );
-                break;
+            }
         }
 
         notifyItemMoved(fromPosition, toPosition);

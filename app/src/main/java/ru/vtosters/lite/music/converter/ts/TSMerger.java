@@ -36,7 +36,7 @@ public class TSMerger {
         for (var file : tsesList) {
             if (file.getName().endsWith(".ts")) {
                 try {
-                    mergedByteArrayStream.write(IOUtils.readAllBytes(file));
+                    mergedByteArrayStream.write(IOUtils.readFully(file));
                 } catch (IOException e) {
                     e.printStackTrace();
                     return false;

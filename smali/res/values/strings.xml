@@ -5505,6 +5505,10 @@ with video"</string>
     <string name="vtldads">Disable ads</string>
     <string name="vtldgads">Disable groups ads</string>
     <string name="vtldgadssummary">Posts with ads mark</string>
+
+    <string name="storiesGroupsAdBlock">Disable ads of group stories</string>
+    <string name="storiesGroupsAdBlocksummary">Block stories that have a link\n\nFalse positives may occur</string>
+
     <string name="vtldca">Disable ad carousel</string>
     <string name="vtldas">Disable ads in stories</string>
     <string name="vtad">Ads</string>
@@ -5822,7 +5826,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="stickersproxy1">Configure the IP proxy!</string>
     <string name="stories_vtl">Stories</string>
     <string name="systememoji">Use system emojis</string>
-    <string name="systememojisum">Your system emojis - 😀😁🤑🥵👍</string>
+    <string name="systememojisum">Your system emojis - </string>
     <string name="tokenwarning">"Don't give this token to anyone if you don't know what to do!"</string>
     <string name="useproxy">Proxy variant</string>
     <string name="useproxyinfo">Information about using a proxy</string>
@@ -6029,7 +6033,7 @@ May look like a fake leaving the online"</string>
     <string name="vtl_crash_save">Save to local file</string>
 
     <string name="batteryissuetitle">Disable battery optimization!</string>
-    <string name="batteryissuesumm">Due to the fact that you are using a third-party firmware from the list below, notifications may come with a delay or not at all. \n Click on the \"Disable optimization\" button to fix this problem. \n\nThird-party firmware on which problems with push are observed:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience or TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
+    <string name="batteryissuesumm">Due to the fact that you are using a third-party firmware from the list below, notifications may come with a delay or not at all. \nClick on the \"Disable optimization\" button to fix this problem. \n\nThird-party firmware on which problems with push are observed:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience or TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
     <string name="batteryissuebtn1">Disable optimization</string>
     <string name="batteryissuebtn2">Ignore</string>
 
@@ -6038,7 +6042,7 @@ May look like a fake leaving the online"</string>
     <string name="gmsissuebtn2">Install GMS</string>
 
     <string name="startsumm1">The VTosters Lite modification has nothing with VK Group!\nDistributed completely free of fee!</string>
-    <string name="startsumm2">\n\nThe application may not work correctly due to the fact that you are most likely using the shell from the list below. All problems with the display and work of the application are related only to your firmware and only with it. All bug reports sent due to problems on this firmware are not considered by the developers and will not be fixed.\n\n Pressing the \"Continue\" button, you agree that possible application bugs may occur due to the specifics of your firmware. We recommend using AOSP-based firmware for maximum stability.\n\n Firmware on which there are problems with applications:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience or TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
+    <string name="startsumm2">\n\nThe application may not work correctly due to the fact that you are most likely using the shell from the list below. All problems with the display and work of the application are related only to your firmware and only with it. All bug reports sent due to problems on this firmware are not considered by the developers and will not be fixed.\n\nPressing the \"Continue\" button, you agree that possible application bugs may occur due to the specifics of your firmware. We recommend using AOSP-based firmware for maximum stability.\n\nFirmware on which there are problems with applications:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience or TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
     <string name="startbtn1">News</string>
     <string name="startbtn2">Continue</string>
 
@@ -6140,7 +6144,7 @@ May look like a fake leaving the online"</string>
     <string name="logfile_saved">The log file has been saved</string>
 
     <string name="menu_copy_id">Copy ID</string>
-    <string name="menu_addon_info">Addon info</string>
+    <string name="menu_addon_info">Additional info</string>
     <string name="menu_change_name">Change name</string>
     <string name="menu_copied">Copied!</string>
 
@@ -6321,13 +6325,17 @@ May look like a fake leaving the online"</string>
 
     <string name="add_to_filter_whitelist">Add to filters whitelist</string>
     <string name="remove_from_filter_whitelist">Remove from filters whitelist</string>
-    <string name="add_to_ads_whitelist">Add to ads whitelist</string>
-    <string name="remove_from_ads_whitelist">Remove from ads whitelist</string>
+    <string name="add_to_ads_stories_whitelist">Add to stories whitelist</string>
+    <string name="remove_from_ads_stories_whitelist">Remove from stories whitelist</string>
+    <string name="add_to_ads_whitelist">Add to ads stories whitelist</string>
+    <string name="remove_from_ads_whitelist">Remove from ads stories whitelist</string>
     <string name="removed_from_whitelist_success">Group removed from whitelist</string>
     <string name="added_to_whitelist_success">Group added to whitelist</string>
 
     <string name="whitelisted_ad_groups_title">Ads whitelist</string>
     <string name="whitelisted_filters_groups_title">Filters whitelist and copyrights</string>
+
+    <string name="whitelisted_ad_groups_stories_title">Ads stories whitelist</string>
 
     <string name="download_dl">Download dialog</string>
     <string name="download_dl_error">An error occurred while trying to download the dialog</string>
@@ -6480,4 +6488,15 @@ May look like a fake leaving the online"</string>
     <string name="cannot_write">No permission to write or read files</string>
     <string name="open_bot">Open a bot</string>
     <string name="crash_service_name">Error notifications</string>
+    <string name="custom_links_warning">Developers are not responsible for user links. Be careful!</string>
+    <string name="by_choice">By choice</string>
+    <string name="data_updated">Data updated</string>
+    <string name="updateverifdata_title">Update data</string>
+    <string name="updateverifdata_summ">Load the latest data about verifications and server functions</string>
+    <string name="device_info">Device info</string>
+    <string name="calls_not_available">Install VK Messenger or official VK client</string>
+    <string name="copydebuginfo_title">Copy device info</string>
+    <string name="copydebuginfo_summ">To submit bug info to GitHub Issues</string>
+    <string name="device_info_copied">Device info copied</string>
+    <string name="app_open_by_default_settings">You need to allow the app to open links by default for the app to work properly</string>
 </resources>

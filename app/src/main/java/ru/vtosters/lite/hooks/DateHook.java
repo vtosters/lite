@@ -19,14 +19,11 @@ public class DateHook {
     }
 
     public static String getDateFormat() {
-        switch (getPrefsValue("dateformat")) {
-            case "noyear":
-                return AndroidUtils.getString(R.string.fulltime2);
-            case "full":
-                return AndroidUtils.getString(R.string.fulltime);
-            default:
-                return AndroidUtils.getString(R.string.fulltime3);
-        }
+        return switch (getPrefsValue("dateformat")) {
+            case "noyear" -> AndroidUtils.getString(R.string.fulltime2);
+            case "full" -> AndroidUtils.getString(R.string.fulltime);
+            default -> AndroidUtils.getString(R.string.fulltime3);
+        };
     }
 
     @SuppressLint("SimpleDateFormat")

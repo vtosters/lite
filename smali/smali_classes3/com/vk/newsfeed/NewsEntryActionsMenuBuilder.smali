@@ -218,7 +218,7 @@
 
     move-result v0
 
-    const v3, 0x15180
+    const v3, 0x93a80
 
     add-int/2addr v0, v3
 

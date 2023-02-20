@@ -19,24 +19,23 @@ public class RandomProxy {
 
     public static void loadProxy() throws IOException {
         if (host.isEmpty()) {
-            getProxy();
-            loadProxy();
+            if (getProxy()) loadProxy();
             return;
         }
 
         switch (type) {
-            case "socks":
+            case "socks" -> {
                 System.setProperty("socksProxyHost", host.split(":")[0]);
                 System.setProperty("socksProxyPort", host.split(":")[1]);
-                break;
-            case "http":
+            }
+            case "http" -> {
                 System.setProperty("http.proxyHost", host.split(":")[0]);
                 System.setProperty("http.proxyPort", host.split(":")[1]);
-                break;
-            case "https":
+            }
+            case "https" -> {
                 System.setProperty("https.proxyHost", host.split(":")[0]);
                 System.setProperty("https.proxyPort", host.split(":")[1]);
-                break;
+            }
         }
     }
 
@@ -44,41 +43,26 @@ public class RandomProxy {
         edit().putString("random_type", "none").putString("random_host", "").commit();
 
         resetProxy();
-        forceProxyApplying();
 
         showProxyResult = true;
         getProxy();
         edit().putString("proxy", "randomproxy").commit();
     }
 
-    public static void getProxy() throws IOException {
+    public static boolean getProxy() throws IOException {
         var random = new java.util.Random();
-        var randomInt = random.nextInt(7);
+        var randomInt = random.nextInt(8);
         switch (randomInt) {
-            case 0:
-                Hookzof.loadProxy();
-                break;
-            case 1:
-                TheSpeedX.loadProxy();
-                break;
-            case 2:
-                Jetkai.loadProxy();
-                break;
-            case 3:
-                Roosterkid.loadProxy();
-                break;
-            case 4:
-                ru.vtosters.lite.proxy.http.Jetkai.loadProxy();
-                break;
-            case 5:
-                ru.vtosters.lite.proxy.http.TheSpeedX.loadProxy();
-                break;
-            case 6:
-                ru.vtosters.lite.proxy.https.Jetkai.loadProxy();
-                break;
-            case 7:
-                ru.vtosters.lite.proxy.https.Roosterkid.loadProxy();
-                break;
+            case 0 -> Hookzof.loadProxy();
+            case 1 -> TheSpeedX.loadProxy();
+            case 2 -> Jetkai.loadProxy();
+            case 3 -> Roosterkid.loadProxy();
+            case 4 -> ru.vtosters.lite.proxy.http.Jetkai.loadProxy();
+            case 5 -> ru.vtosters.lite.proxy.http.TheSpeedX.loadProxy();
+            case 6 -> ru.vtosters.lite.proxy.https.Jetkai.loadProxy();
+            case 7 -> ru.vtosters.lite.proxy.https.Roosterkid.loadProxy();
         }
+
+        return true;
     }
 }

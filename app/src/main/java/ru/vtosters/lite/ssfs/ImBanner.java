@@ -5,6 +5,8 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import com.vtosters.lite.R;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.Preferences;
 
@@ -69,13 +71,13 @@ public class ImBanner {
 
         if (!bool) {
             new VkAlertDialog.Builder(context)
-                    .setTitle("Внимание!")
-                    .setMessage("Разработчики клиента не несут никакой ответственности за пользовательские ссылки. Будьте внимательны!")
+                    .setTitle(R.string.warning)
+                    .setMessage(AndroidUtils.getString("custom_links_warning"))
                     .setCancelable(false)
-                    .setPositiveButton("Продолжить", (dialogInterface, i) -> {
+                    .setPositiveButton(R.string.continue_, (dialogInterface, i) -> {
                         Preferences.preferences.edit().putBoolean("linkalert", true).commit();
                     })
-                    .setNeutralButton("Отмена", (dialogInterface, i) -> {
+                    .setNeutralButton(R.string.cancel, (dialogInterface, i) -> {
                         dialogInterface.cancel();
                     })
                     .show();

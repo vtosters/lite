@@ -547,4 +547,149 @@
         <item>У суботу</item>
         <item>У неділю</item>
     </string-array>
+    <string-array name="animations2">
+        <item>Без анімації</item>
+        <item>Fade</item>
+        <item>AndroidX</item>
+        <item>Слайд</item>
+    </string-array>
+    <string-array name="animations">
+        <item>Без анімації</item>
+        <item>Android Q</item>
+        <item>Fade</item>
+        <item>AndroidX</item>
+        <item>Слайд</item>
+    </string-array>
+    <string-array name="language">
+        <item>Системна</item>
+        <item>Англійська</item>
+        <item>Російська</item>
+        <item>Українська</item>
+    </string-array>
+    <string-array name="start">
+        <item>За замовчуванням</item>
+        <item>Новини</item>
+        <item>Повідомлення</item>
+        <item>Меню</item>
+        <item>Профіль</item>
+        <item>Документи</item>
+        <item>Трансляції</item>
+        <item>Дні народження</item>
+        <item>Спільноти</item>
+        <item>Музика</item>
+        <item>Друзі</item>
+        <item>Фотографії</item>
+        <item>Відео</item>
+        <item>Налаштування</item>
+        <item>Міні-додатки</item>
+        <item>Дискавер</item>
+        <item>Сповіщення</item>
+        <item>Історія переказів</item>
+        <item>Ігри</item>
+        <item>Закладки</item>
+    </string-array>
+    <string-array name="proxy">
+        <item>Без проксі</item>
+        <item>zaborona.help</item>
+        <item>VikaMobile</item>
+        <item>Випадковий проксі</item>
+        <item>Сторонній проксі для API</item>
+        <item>Сторонній HTTP</item>
+        <item>Сторонній HTTPS</item>
+        <item>Сторонній SOCKS</item>
+    </string-array>
+    <string-array name="targetlang_value">
+        <item>Системна</item>
+        <item>Російська</item>
+        <item>Англійська</item>
+        <item>Українська</item>
+        <item>Німецька</item>
+        <item>Французька</item>
+        <item>Казахська</item>
+        <item>Китайська</item>
+    </string-array>
+    <string-array name="msgcount_value">
+        <item>За замовчуванням</item>
+        <item>40 повідомлень</item>
+        <item>50 повідомлень</item>
+        <item>70 повідомлень</item>
+        <item>100 повідомлень</item>
+        <item>150 повідомлень</item>
+        <item>200 повідомлень</item>
+    </string-array>
+    <string-array name="darktheme_value">
+        <item>За замовчуванням</item>
+        <item>Повністю чорна</item>
+    </string-array>
+    <string-array name="lighttheme_value">
+        <item>За замовчуванням</item>
+    </string-array>
+    <string-array name="newsupdate_value">
+        <item>За замовчуванням</item>
+        <item>Не оновлювати</item>
+        <item>Оновлювати миттєво</item>
+    </string-array>
+    <string-array name="musicdefcatalog_value">
+        <item>За замовчуванням</item>
+        <item>Головна</item>
+        <item>Моя музика</item>
+        <item>Плейлисти</item>
+        <item>Альбоми</item>
+        <item>Огляд</item>
+    </string-array>
+    <string-array name="undel_value">
+        <item>[Видалено]</item>
+        <item>🗑</item>
+        <item>❌</item>
+    </string-array>
+    <string-array name="dateformat_value">
+        <item>За замовчуванням</item>
+        <item>15 квітня в 18:42</item>
+        <item>15 квітня в 18:42:28</item>
+        <item>15 квітня 2022 в 18:42:28</item>
+    </string-array>
+    <string-array name="wallpaper_change_dialog">
+        <item>Добрий час</item>
+        <item>Добрий ранок, день, вечір, ніч</item>
+        <item>Як живеш?</item>
+        <item>Не мертвий, і те добре</item>
+    </string-array>
+    <string-array name="cache_cleaner">
+        <item>Очистити увесь кеш</item>
+        <item>Очистити кеш стікерів</item>
+        <item>Очистити кеш зображень</item>
+        <item>Очистити кеш відео</item>
+        <item>Очистити кеш повідомлень</item>
+        <item>Очистити кеш WebView</item>
+    </string-array>
+    <string-array name="filter_types">
+        <item>Відключено</item>
+        <item>Низьке</item>
+        <item>Середнє</item>
+        <item>Високе</item>
+    </string-array>
+    <string-array name="filter_dim_types">
+        <item>Відключено</item>
+        <item>Затемнити</item>
+        <item>Освітлити</item>
+    </string-array>
+    <string-array name="msg_plurals">
+        <item>повідомлення</item>
+        <item>повідомлення</item>
+        <item>повідомлень</item>
+    </string-array>
+    <string-array name="theme_type_name">
+        <item>Системна</item>
+        <item>Темна</item>
+        <item>Світла</item>
+    </string-array>
+    <string-array name="theme_type_name_checkbox">
+        <item>Системна тема</item>
+        <item>Темна тема</item>
+        <item>Світла тема</item>
+    </string-array>
+    <string-array name="accent_select_type">
+        <item>Вибрати вручну</item>
+        <item>Передвстановлені кольори</item>
+    </string-array>
 </resources>

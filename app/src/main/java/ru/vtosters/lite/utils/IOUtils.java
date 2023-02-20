@@ -1,11 +1,6 @@
 package ru.vtosters.lite.utils;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
@@ -24,12 +19,14 @@ import javax.crypto.spec.SecretKeySpec;
 public class IOUtils {
     public static final int BUFFER_SIZE = 0x800;
 
-    public static byte[] decodeStream(InputStream encIs, String keyURL) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
+    public static byte[] decodeStream(InputStream encIs, String keyURL)
+        throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
         CipherInputStream cip = new CipherInputStream(encIs, getCipher(keyURL));
-        return readAllBytes(cip);
+        return readFully(cip);
     }
 
-    public static Cipher getCipher(String key) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException {
+    public static Cipher getCipher(String key)
+        throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException {
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         Key keySpec = new SecretKeySpec(key.getBytes(), "AES");
         // bypassing ecb
@@ -40,66 +37,72 @@ public class IOUtils {
         return cipher;
     }
 
-    public static InputStream openStream(String url) throws IOException {
+    public static InputStream openStream(String url)
+        throws IOException {
         URLConnection connection = new URL(url).openConnection();
         return connection.getInputStream();
     }
 
-    public static String readAllLines(File file) throws IOException {
+    public static String readAllLines(File file)
+        throws IOException {
         return readAllLines(new FileInputStream(file));
     }
 
-    public static String readAllLines(InputStream is) throws IOException {
-        return new String(readAllBytes(is), "utf-8");
+    public static String readAllLines(InputStream is)
+        throws IOException {
+        return new String(readFully(is), StandardCharsets.UTF_8);
     }
 
-    public static byte[] readAllBytes(File file) throws IOException {
-        return readAllBytes(new FileInputStream(file));
+    public static byte[] readFully(final InputStream is)
+        throws IOException {
+        final var bos = new ByteArrayOutputStream();
+        try(bos) {
+            final byte[] buff = new byte[BUFFER_SIZE];
+            int len;
+            while((len = is.read(buff)) > 0)
+                bos.write(buff, 0, len);
+            return bos.toByteArray();
+        }
     }
 
-    public static byte[] readAllBytes(InputStream is) throws IOException {
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        byte[] buffer = new byte[BUFFER_SIZE];
-        int len;
-        while ((len = is.read(buffer)) > 0)
-            bos.write(buffer, 0, len);
-        is.close();
-        bos.close();
-        return bos.toByteArray();
+    public static byte[] readFully(final File in)
+        throws IOException {
+        return readFully(new FileInputStream(in));
     }
 
-    public static void writeToFile(File file, String content) throws IOException {
+    public static void writeToFile(File file, String content)
+        throws IOException {
         writeToFile(file, content.getBytes(StandardCharsets.UTF_8));
     }
 
-    public static void writeToFile(File file, byte[] content) throws IOException {
-        if (!file.exists())
-            file.createNewFile();
+    public static void writeToFile(File file, byte[] content)
+        throws IOException {
         var fos = new FileOutputStream(file);
         fos.write(content);
         fos.close();
     }
 
-    public static void copyFileToDirectory(File dest, File targetDir) throws IOException {
-        if (!targetDir.exists())
-            targetDir.mkdirs();
-        var path = dest.getAbsolutePath();
-        var target = new File(targetDir, path.substring(path.lastIndexOf("/")));
-        copyFile(dest, target);
+    public static void copy(final InputStream is, final OutputStream os)
+        throws IOException {
+        final byte[] buff = new byte[BUFFER_SIZE];
+        int len;
+        while((len = is.read(buff)) > 0)
+            os.write(buff, 0, len);
     }
 
-    public static void copyFile(File dest, File target) throws IOException {
-        var parent = target.getParentFile();
-        if (!parent.exists())
-            parent.getParentFile().mkdirs();
-        writeToFile(target, readAllBytes(dest));
+    public static void copy(final byte[] buffer, final File out)
+        throws IOException {
+        copy(new ByteArrayInputStream(buffer), new FileOutputStream(out));
     }
 
-    public static void copyFile(InputStream is, File target) throws IOException {
-        var parent = target.getParentFile();
-        if (!parent.exists())
-            parent.getParentFile().mkdirs();
-        writeToFile(target, readAllBytes(is));
+    public static void copy(final InputStream is, final File out)
+        throws IOException {
+        copy(is, new FileOutputStream(out));
+    }
+
+    public static void copy(final File in, final File out)
+        throws IOException {
+        copy(new FileInputStream(in), new FileOutputStream(out));
     }
 
     public static void deleteRecursive(File f) {

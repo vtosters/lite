@@ -36,27 +36,19 @@ public final class StickerDetailsAdapter extends RecyclerView.Adapter<RecyclerVi
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        switch (i) {
-            case 0:
-                return new c(viewGroup);
-            case 1:
-                return new d(viewGroup);
-            case 2:
-                return new b(viewGroup);
-            default:
-                throw new IllegalArgumentException("Unknown viewType: " + i);
-        }
+        return switch (i) {
+            case 0 -> new c(viewGroup);
+            case 1 -> new d(viewGroup);
+            case 2 -> new b(viewGroup);
+            default -> throw new IllegalArgumentException("Unknown viewType: " + i);
+        };
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-        switch(getItemViewType(i)) {
-            case 0:
-                ((c) viewHolder).a(this.mItem);
-                break;
-            case 1:
-                ((d) viewHolder).a(this.mItems.get(H(i)));
-                break;
+        switch (getItemViewType(i)) {
+            case 0 -> ((c) viewHolder).a(this.mItem);
+            case 1 -> ((d) viewHolder).a(this.mItems.get(H(i)));
         }
     }
 

@@ -67,14 +67,14 @@ public abstract class SliderViewBase extends View {
     public boolean onTouchEvent(MotionEvent event) {
         int action = event.getActionMasked();
         switch (action) {
-            case MotionEvent.ACTION_DOWN:
-            case MotionEvent.ACTION_MOVE:
+            case MotionEvent.ACTION_DOWN, MotionEvent.ACTION_MOVE -> {
                 currentPos = valueForTouchPos(event.getX(), event.getY());
                 optimisePointerColor();
                 notifyListener(currentPos);
                 invalidate();
                 getParent().requestDisallowInterceptTouchEvent(true);
                 return true;
+            }
         }
         return super.onTouchEvent(event);
     }

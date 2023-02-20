@@ -8,7 +8,9 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.vk.core.fragments.FragmentImpl;
 import com.vk.navigation.Navigator;
+import com.vtosters.lite.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +55,7 @@ public class LifecycleUtils {
     }
 
     public static Activity getCurrentActivity() {
-        return activities.size() > 0 ? activities.get(activities.size() - 1) : null;
+        return activities.size() > 0 ? activities.get(activities.size() - 1) : new MainActivity();
     }
 
     public static void restartApplication() {
@@ -70,16 +72,5 @@ public class LifecycleUtils {
     public static void restartApplicationWithTimer() {
         Handler handler = new Handler();
         handler.postDelayed(LifecycleUtils::restartApplication, 500);
-    }
-
-    public static void restartApplicationInto(Class Class) {
-        Context ctx = AndroidUtils.getGlobalContext();
-
-        Intent intent = new Navigator(Class).b(ctx);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
-        ctx.startActivity(mainIntent);
-
-        Runtime.getRuntime().exit(0);
     }
 }
