@@ -30,6 +30,11 @@ public class WallpapersHooks {
     private static Drawable mWallpaper;
     private static boolean mUpdateWallpaperRequested = true;
 
+    // TODO: respect blur, when there is blur/mosaic effect applied these two can be even less, just HD (1280x720) for e.g.
+    private static final int MAX_WP_WIDTH = 1080;
+    private static final int MAX_WP_HEIGHT = 1920;
+
+
     public static void setBg(View view) {
         if (hasWallpapers()) {
             ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
@@ -70,8 +75,12 @@ public class WallpapersHooks {
         }
         try (var f = new FileOutputStream(compressedWp)) {
             var bitmap = BitmapFactory.decodeFile(originalWp.getAbsolutePath());
-            bitmap = resize(bitmap, 1080, 1920);
+
+            if (bitmap.getHeight() > MAX_WP_HEIGHT || bitmap.getWidth() > MAX_WP_WIDTH) {
+                bitmap = resize(bitmap, MAX_WP_WIDTH, MAX_WP_HEIGHT);
+            }
             var drawable = new BitmapDrawable(null, bitmap);
+            // TODO: remove duplication without changes when provided image already fits required params
             drawable.getBitmap().compress(Bitmap.CompressFormat.WEBP, 90, f);
         } catch (Exception e) {
             Log.d("Wallpapers", e.getMessage());
