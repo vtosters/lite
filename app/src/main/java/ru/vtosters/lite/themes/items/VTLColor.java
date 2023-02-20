@@ -10,6 +10,7 @@ public class VTLColor {
         this.id = id;
         this.color = color;
     }
+
     public VTLColor(String resName, int id, int color) {
         this.resName = resName;
         this.id = id;

@@ -30,6 +30,7 @@ import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.hooks.VKUIHook;
 import ru.vtosters.lite.themes.ThemesHacks;
+import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
 
 import java.lang.reflect.Field;
@@ -45,6 +46,10 @@ public class ThemesUtils {
             e.printStackTrace();
         }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
+
+    public static boolean isCustomAccentEnabled() {
+        return ThemesUtils.isMonetTheme() || ThemesManager.hasTmpArchive();
+    }
 
     public static ColorStateList getAccenedColorStateList() {
         return ColorStateList.valueOf(getAccentColor());
@@ -93,8 +98,7 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        var accent = AndroidUtils.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
-        return (accent == 0 || !isMilkshake()) || isMonetTheme() ? getColorFromAttr(R.attr.accent) : accent;
+        return getColorFromAttr(R.attr.accent);
     } // Color accent
 
     public static int getMutedAccentColor() {
@@ -296,6 +300,7 @@ public class ThemesUtils {
     } // Recolor drawable to accent color
 
     public static Drawable recolorToolbarDrawable(Drawable drawable) {
+        if (!ThemesUtils.isCustomAccentEnabled()) return drawable;
         if (drawable == null) return null;
         return new RecoloredDrawable(drawable, (ThemesUtils.isMilkshake() && !ThemesUtils.isDarkTheme()) ? ThemesUtils.getAccentColor() : ThemesUtils.getHeaderText());
     }

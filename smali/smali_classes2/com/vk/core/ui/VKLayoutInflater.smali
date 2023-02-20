@@ -343,12 +343,6 @@
 
     invoke-super {p0, p1, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    move-result-object p2
-
-    const/4 v0, 0x1
-
-    invoke-static {p2, p1, v0}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
-
     move-result-object p1
 
     return-object p1
@@ -358,10 +352,6 @@
     .registers 4
 
     invoke-super {p0, p1, p2, p3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
-
-    invoke-static {p2, p1, p3}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
 
     move-result-object p1
 
@@ -375,14 +365,6 @@
 
     move-result-object p1
 
-    const/4 p2, -0x1
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, p2, v0}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
-
-    move-result-object p1
-
     return-object p1
 .end method
 
@@ -390,12 +372,6 @@
     .registers 4
 
     invoke-super {p0, p1, p2, p3}, Landroid/view/LayoutInflater;->inflate(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p1
-
-    const/4 p2, -0x1
-
-    invoke-static {p1, p2, p3}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
 
     move-result-object p1
 

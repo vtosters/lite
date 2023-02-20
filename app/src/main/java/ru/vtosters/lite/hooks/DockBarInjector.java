@@ -89,9 +89,8 @@ public class DockBarInjector {
 
         for (DockBarTab tab : sManager.getSelectedTabs()) {
             MenuItem add = menu.add(0, tab.id, 0, tab.titleID);
-            Drawable drawable = getResources().getDrawable(tab.iconID);
 
-            add.setIcon(new RecoloredDrawable(drawable, getCSTDock()));
+            add.setIcon(new RecoloredDrawable(getResources().getDrawable(tab.iconID), getCSTDock()));
             add.setTitle(getGlobalContext().getString(tab.titleID));
             add.setCheckable(true);
         }

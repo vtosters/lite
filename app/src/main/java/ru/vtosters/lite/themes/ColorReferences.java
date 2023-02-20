@@ -20,7 +20,7 @@ public class ColorReferences {
             Color.parseColor("#5c9ce6"),
             Color.parseColor("#518bcc"),
             Color.parseColor("#74a2d6")
-            );
+    );
 
     public static List<Integer> mutedAccentColors = Arrays.asList(
             Color.parseColor("#663f8ae0"),

@@ -157,6 +157,19 @@
 .method public getResources()Landroid/content/res/Resources;
     .registers 3
 
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->isMonetTheme()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
     iget-object v0, p0, Lcom/vk/core/ui/themes/VKThemeHelper$b;->resources:Landroid/content/res/Resources;
 
     if-eqz v0, :cond_7

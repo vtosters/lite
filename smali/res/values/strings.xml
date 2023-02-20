@@ -5826,7 +5826,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="stickersproxy1">Configure the IP proxy!</string>
     <string name="stories_vtl">Stories</string>
     <string name="systememoji">Use system emojis</string>
-    <string name="systememojisum">Your system emojis - 😀😁🤑🥵👍</string>
+    <string name="systememojisum">Your system emojis - </string>
     <string name="tokenwarning">"Don't give this token to anyone if you don't know what to do!"</string>
     <string name="useproxy">Proxy variant</string>
     <string name="useproxyinfo">Information about using a proxy</string>
@@ -6033,7 +6033,7 @@ May look like a fake leaving the online"</string>
     <string name="vtl_crash_save">Save to local file</string>
 
     <string name="batteryissuetitle">Disable battery optimization!</string>
-    <string name="batteryissuesumm">Due to the fact that you are using a third-party firmware from the list below, notifications may come with a delay or not at all. \n Click on the \"Disable optimization\" button to fix this problem. \n\nThird-party firmware on which problems with push are observed:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience or TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
+    <string name="batteryissuesumm">Due to the fact that you are using a third-party firmware from the list below, notifications may come with a delay or not at all. \nClick on the \"Disable optimization\" button to fix this problem. \n\nThird-party firmware on which problems with push are observed:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience or TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
     <string name="batteryissuebtn1">Disable optimization</string>
     <string name="batteryissuebtn2">Ignore</string>
 
@@ -6042,7 +6042,7 @@ May look like a fake leaving the online"</string>
     <string name="gmsissuebtn2">Install GMS</string>
 
     <string name="startsumm1">The VTosters Lite modification has nothing with VK Group!\nDistributed completely free of fee!</string>
-    <string name="startsumm2">\n\nThe application may not work correctly due to the fact that you are most likely using the shell from the list below. All problems with the display and work of the application are related only to your firmware and only with it. All bug reports sent due to problems on this firmware are not considered by the developers and will not be fixed.\n\n Pressing the \"Continue\" button, you agree that possible application bugs may occur due to the specifics of your firmware. We recommend using AOSP-based firmware for maximum stability.\n\n Firmware on which there are problems with applications:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience or TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
+    <string name="startsumm2">\n\nThe application may not work correctly due to the fact that you are most likely using the shell from the list below. All problems with the display and work of the application are related only to your firmware and only with it. All bug reports sent due to problems on this firmware are not considered by the developers and will not be fixed.\n\nPressing the \"Continue\" button, you agree that possible application bugs may occur due to the specifics of your firmware. We recommend using AOSP-based firmware for maximum stability.\n\nFirmware on which there are problems with applications:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience or TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
     <string name="startbtn1">News</string>
     <string name="startbtn2">Continue</string>
 

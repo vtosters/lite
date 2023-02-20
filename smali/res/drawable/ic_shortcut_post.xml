@@ -10,7 +10,7 @@
         android:strokeWidth="1.0"
         android:strokeColor="#00000000" />
     <path
-        android:fillColor="#ff518bcc"
+        android:fillColor="@color/music_action_button_blue"
         android:pathData="M13,27.25L13,31L16.75,31L27.81,19.94L24.06,16.19L13,27.25L13,27.25ZM30.71,17.04C31.1,16.65 31.1,16.02 30.71,15.63L28.37,13.29C27.98,12.9 27.35,12.9 26.96,13.29L25.13,15.12L28.88,18.87L30.71,17.04L30.71,17.04Z"
         android:strokeWidth="1.0"
         android:strokeColor="#00000000" />
