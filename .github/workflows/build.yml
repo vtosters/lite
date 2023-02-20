@@ -26,9 +26,9 @@ jobs:
         with:
           java-version: '14'
           distribution: 'adopt'
-
+          
       - uses: actions/checkout@v3
-
+      
       - name: Download tools
         run: |
           sudo apt update
@@ -38,12 +38,9 @@ jobs:
           chmod +x scripts/apktool.jar
           chmod +x scripts/apksigner.jar
           rustup target add armv7-linux-androideabi
-          rustup target add aarch64-linux-android
-
+          rustup target add aarch64-linux-android 
+          
       - name: Build VTLite
-        uses: nttld/setup-ndk@v1
-        with:
-          ndk-version: r25b
         run: |
           gradle prepareDexForMerge
           java -jar scripts/apktool.jar b smali -o smali/VTLite.apk --use-aapt2 -p scripts/framework/
@@ -54,7 +51,7 @@ jobs:
         run: |
           java -jar scripts/apksigner.jar sign --ks scripts/debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android smali/VTLite.apk
           java -jar scripts/apksigner.jar verify smali/VTLite.apk
-
+                      
       - name: Upload apk to artifact
         uses: actions/upload-artifact@v3
         with:
