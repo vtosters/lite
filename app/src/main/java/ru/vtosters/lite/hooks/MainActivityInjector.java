@@ -7,7 +7,11 @@ import static ru.vtosters.lite.utils.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.ThemesUtils.setNeededTheme;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
+
+import com.guardanis.applock.AppLock;
+import com.guardanis.applock.activities.UnlockActivity;
 
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
@@ -37,6 +41,10 @@ public class MainActivityInjector {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannels.createChannels();
+        }
+        if (AppLock.isEnrolled(activity)) {
+            var intent = new Intent(activity, UnlockActivity.class);
+            activity.startActivity(intent);
         }
 
         // VKIDProtection.alert(activity);

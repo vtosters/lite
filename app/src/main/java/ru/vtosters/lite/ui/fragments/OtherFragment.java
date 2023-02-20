@@ -1,16 +1,39 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static android.widget.Toast.LENGTH_LONG;
+import static android.widget.Toast.LENGTH_SHORT;
+import static ru.vtosters.lite.ui.components.BackupManager.backupOnlines;
+import static ru.vtosters.lite.ui.components.BackupManager.backupSettings;
+import static ru.vtosters.lite.ui.components.BackupManager.deletePrefs;
+import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.*;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.widget.*;
+import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.view.ContextThemeWrapper;
-import b.h.g.m.FileUtils;
+
 import com.vk.auth.api.VKAccount;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.ToastUtils;
@@ -21,29 +44,25 @@ import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.media.player.cache.AutoPlayCacheHolder;
 import com.vk.mediastore.MediaStorage;
-import com.vk.navigation.Navigator;
 import com.vk.pushes.PushSubscriber;
 import com.vk.stickers.Stickers;
 import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
+
+import java.io.IOException;
+
+import b.h.g.m.FileUtils;
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
-import ru.vtosters.lite.utils.*;
-
-import java.io.IOException;
-
-import static android.widget.Toast.LENGTH_LONG;
-import static android.widget.Toast.LENGTH_SHORT;
-import static ru.vtosters.lite.ui.components.BackupManager.*;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.*;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
+import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.NavigatorUtils;
+import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.lite.utils.VTVerifications;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
@@ -69,6 +88,11 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
+        findPreference("pin").setOnPreferenceClickListener(preference -> {
+            NavigatorUtils.switchFragment(requireContext(), PinFragment.class);
+            return true;
+        });
+
         findPreference("firebasefix").setOnPreferenceClickListener(preference -> {
             VKAccount b = VKAccountManager.d();
             PushSubscriber.e.a();
