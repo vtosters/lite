@@ -117,9 +117,13 @@
 * Все необходимые скрипты/.jar файлы для компиляции APK, его подписывании и не только находятся в `/scripts`
 
 ### Необходимые зависимости
-<a href="https://www.oracle.com/java/technologies/downloads/"><img src="https://i.imgur.com/z8ZN19a.png" align="center" width="20" height="23"/> **JDK**</a> >11 версии
+<img src="https://i.imgur.com/z8ZN19a.png" align="center" width="20" height="23"/> [**JDK**](https://adoptium.net/temurin/releases/) >14 версии
 
-<a href="https://developer.android.com/studio"><img src="https://i.imgur.com/cPvvFDP.png" align="center" width="20" height="23"/> **Android Studio**</a>
+<img src="https://www.rust-lang.org/logos/rust-logo-32x32.png" align="center" width="20" height="20"/> [**Rust**](https://www.rust-lang.org/learn/get-started) с Android ARM тулчейнами: `rustup target add aarch64-linux-android armv7-linux-androideabi`
+
+<img src="https://developer.android.com/static/images/logos/android.svg" align="center" width="20" height="20"/> Android SDK и NDK (устанавливаются через 
+[sdkmanager](https://developer.android.com/studio/command-line/sdkmanager) или [Android Studio](https://developer.android.com/studio))
+
 
 ### Linux/macOS/Windows
 
