@@ -31,3 +31,5 @@ smali/assets/version.properties
 *.keystore
 gradle.properties
 scripts/build.sh
+smali/lib/arm64-v8a/libnative_effects.so
+smali/lib/armeabi-v7a/libnative_effects.so
