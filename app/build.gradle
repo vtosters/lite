@@ -7,16 +7,6 @@ import java.util.zip.ZipInputStream
 plugins {
     id 'com.android.application'
     id 'net.nemerosa.versioning' version '2.15.1'
-    id 'org.mozilla.rust-android-gradle.rust-android'
-}
-
-cargo {
-    profile = 'release'
-    module = '../native-effects'
-    libname = 'native-effects'
-    targets = ["arm", "arm64"]
-    prebuiltToolchains = true
-    pythonCommand = "python3"
 }
 
 def smaliFolder = projectDir.toPath().resolve("../smali").normalize()
@@ -110,7 +100,7 @@ android {
         targetCompatibility JavaVersion.VERSION_14
     }
     namespace 'ru.vtosters.lite'
-    ndkVersion '25.2.9519653'
+//    ndkVersion '25.2.9519653'
 }
 
 dependencies {
@@ -119,12 +109,12 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.google.guava:guava:23.3-android'
+    implementation 'ru.vtosters.lite:native_effects:5373b23'
 }
 
 task prepareDexForMerge(type: Copy) {
     dependsOn('exportDex')
     // Remove comment for native lib build
-    dependsOn('cargoBuild')
     into smaliFolder.toString()
     from(projectDir) {
         include 'classes6.dex'
@@ -135,11 +125,11 @@ task prepareDexForMerge(type: Copy) {
         into 'assets'
     }
     // Remove comment for native lib build
-    from('../native-effects/target/aarch64-linux-android/release'){
+    from('../native-effects/target/aarch64-linux-android/release') {
         include 'libnative_effects.so'
         into 'lib/arm64-v8a'
     }
-    from('../native-effects/target/armv7-linux-androideabi/release'){
+    from('../native-effects/target/armv7-linux-androideabi/release') {
         include 'libnative_effects.so'
         into 'lib/armeabi-v7a'
     }
