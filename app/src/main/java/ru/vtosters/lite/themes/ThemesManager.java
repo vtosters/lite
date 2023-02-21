@@ -8,12 +8,10 @@ import com.vtosters.lite.R;
 import ru.vtosters.lite.themes.loaders.ResourcesLoader;
 import ru.vtosters.lite.themes.utils.ArscEditor;
 import ru.vtosters.lite.utils.IOUtils;
+import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
@@ -95,11 +93,8 @@ public class ThemesManager {
             R.color.darker_blue,
             R.color.header_blue_opacity40
     };
-    private final static String[] NAMES = {
-            "resources.arsc",
-            "res",
-            "assets"
-    };
+
+    private static String baseApkPath;
 
     // Directories
     private static File mainDir;
@@ -111,10 +106,7 @@ public class ThemesManager {
     // Temp archive with resources.arsc and res.zip content for loading resources
     private static File resTmpZipFile = null;
 
-    // Archive with assets folder content for loading resources
-    private static File assetsZipFile = null;
-
-    // Archive with res folder content
+    // Archive with res and assets folders content
     private static File resZipFile = null;
 
     // Resources table file
@@ -125,9 +117,9 @@ public class ThemesManager {
             Log.d("ThemesManager", "init paths");
             initPaths(app);
 
-            if (hasTmpArchive() && !ThemesUtils.isMonetTheme()) {
+            if (!Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && hasBins() && hasTmpArchive()) {
                 ResourcesLoader.init(app);
-                ResourcesLoader.load(app, resTmpZipFile.getAbsolutePath(), assetsZipFile.getAbsolutePath(), false);
+                ResourcesLoader.load(app, resTmpZipFile.getAbsolutePath(), false);
             }
         } catch (Exception e) {
             Log.e("ThemesManager", String.valueOf(e));
@@ -135,62 +127,46 @@ public class ThemesManager {
     }
 
     private static void initPaths(Context context) {
+        baseApkPath = context.getApplicationInfo().sourceDir;
+
         mainDir = new File(context.getFilesDir(), "VTLThemes");
         if (!mainDir.exists()) mainDir.mkdir();
 
         binDir = new File(mainDir, "bin");
-        if (!binDir.exists()) mainDir.mkdir();
+        if (!binDir.exists()) binDir.mkdir();
 
         palettesDir = new File(mainDir, "palettes");
         if (!palettesDir.exists()) palettesDir.mkdir();
 
-        assetsZipFile = new File(binDir, "assets.zip");
         resZipFile = new File(binDir, "res.zip");
+
         resourcesArscFile = new File(binDir, "resources.arsc");
         resTmpZipFile = new File(binDir, "res.tmp.zip");
     }
 
-    public static void generateBins(Context context)
+    public static void generateBins()
             throws IOException {
-        try (final var apk = new ZipFile(context.getApplicationInfo().sourceDir)) {
-            for (var filename : NAMES) {
-                final var bin = new File(binDir, filename);
-                if (!bin.exists())
-                    if (filename.contains(".")) extractFile(apk, filename, bin);
-                    else extractAndCompressDirectory(apk, filename, new File(binDir, filename + ".zip"));
-            }
-        }
-    }
-
-    private static void extractFile(ZipFile apk, String name, File out)
-            throws IOException {
-        final var is = apk.getInputStream(apk.getEntry(name));
-        if (!out.exists()) out.getParentFile().mkdirs();
-        IOUtils.copy(is, out);
-    }
-
-    private static void extractAndCompressDirectory(ZipFile apk, String dirName, File out)
-            throws IOException {
-        final var zos = new ZipOutputStream(new FileOutputStream(out));
-        try (zos) {
+        final var apk = new ZipFile(baseApkPath);
+        final var zos = new ZipOutputStream(new FileOutputStream(resZipFile));
+        try(apk;zos) {
             final var entries = apk.entries();
-            while (entries.hasMoreElements()) {
+            while(entries.hasMoreElements()) {
                 final var entry = entries.nextElement();
-                if (!entry.getName().startsWith(dirName + "/")) continue;
-
-                zos.putNextEntry(new ZipEntry(entry.getName()));
-
-                final var zis = apk.getInputStream(entry);
-                IOUtils.copy(zis, zos);
-
-                zis.close();
-                zos.closeEntry();
+                final var name = entry.getName();
+                if(name.equals("resources.arsc")) {
+                    if (!resourcesArscFile.exists()) resourcesArscFile.getParentFile().mkdirs();
+                    IOUtils.copy(apk.getInputStream(entry), resourcesArscFile);
+                } else if(name.startsWith("assets/") || name.startsWith("res/")) {
+                    zos.putNextEntry(new ZipEntry(name));
+                    IOUtils.copy(apk.getInputStream(entry), zos);
+                    zos.closeEntry();
+                }
             }
         }
     }
 
     public static boolean hasBins() {
-        return assetsZipFile.exists() && resZipFile.exists() && resourcesArscFile.exists();
+        return resZipFile.exists() && resourcesArscFile.exists();
     }
 
     public static boolean hasTmpArchive() {
@@ -227,7 +203,6 @@ public class ThemesManager {
     }
 
     public static void deleteBins() {
-        assetsZipFile.delete();
         resZipFile.delete();
         resourcesArscFile.delete();
     }

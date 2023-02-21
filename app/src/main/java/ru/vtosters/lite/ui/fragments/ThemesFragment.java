@@ -58,17 +58,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
         var invalidateThemeCache = findPreference("invalidate_theme_cache");
         invalidateThemeCache.setOnPreferenceClickListener(preference -> {
-            mProgressDialog.setMessage("Инвалидация кэша...");
-            mProgressDialog.show();
-            VTExecutors.getIoExecutor().execute(() -> {
-                ThemesManager.deleteBins();
-                try {
-                    ThemesManager.generateBins(requireContext());
-                    requireActivity().runOnUiThread(this::restart);
-                } catch(IOException e) {
-                    requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при инвалидации кэша"));
-                }
-            });
+            ThemesManager.deleteBins();
+            setAccentColor(ThemesUtils.getReservedAccent(), true);
             return true;
         });
 
@@ -193,7 +184,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         alertDialog.setButton(
                 DialogInterface.BUTTON_POSITIVE,
                 requireContext().getString(R.string.select),
-                (dialog, which) -> setAccentColor(colorPickerView.getColor())
+                (dialog, which) -> setAccentColor(colorPickerView.getColor(), false)
         );
         alertDialog.setView(colorPickerView);
         alertDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
@@ -210,38 +201,39 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
                     .setTitle(AndroidUtils.getString("select_palette"))
                     .setItems(titles, (dialog, which) ->
                             PalettesBottomSheetDialog.create(requireActivity(), manager.getPalette(which),
-                                    (adapter, vtlcolor) -> setAccentColor(vtlcolor.color))
+                                    (adapter, vtlcolor) -> setAccentColor(vtlcolor.color, false))
                     )
                     .setPositiveButton(R.string.cancel, null)
                     .show();
         }
     }
 
-    void setAccentColor(int color) {
+    void setAccentColor(int color, boolean invalidate) {
         String message;
         Runnable task;
         if(!ThemesManager.hasBins()) {
-            message = "Генерация файлов...";
+            message = invalidate ? "Инвалидация кэша" : "Генерация файлов...";
             task = () -> {
                 try {
-                    ThemesManager.generateBins(requireContext());
-                    requireActivity().runOnUiThread(() -> setAccentColor(color));
+                    ThemesManager.generateBins();
+                    requireActivity().runOnUiThread(() -> setAccentColor(color, invalidate));
                 } catch(IOException e) {
                     Log.e("ThemesFragment", e+"");
                     ThemesManager.deleteBins();
-                    requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при генерации файлов"));
+                    requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при " + (invalidate ? "инвалидации кэша" : "генерации файлов")));
                 }
             };
         } else {
-            message = "Применение акцента...";
+            message = invalidate ? "Инвалидация кэша" : "Применение акцента...";
             task = () -> {
                 try {
+                    if(!invalidate) ThemesUtils.reserveAccentColor(color);
                     ThemesManager.generateTempResArchive(color);
                     requireActivity().runOnUiThread(this::restart);
                 } catch(IOException e) {
                     Log.e("ThemesFragment", e+"");
                     ThemesManager.deleteTmpArchive();
-                    requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при применении акцента"));
+                    requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при " + (invalidate ? "инвалидации кэша" : "применении акцента")));
                 }
             };
         }

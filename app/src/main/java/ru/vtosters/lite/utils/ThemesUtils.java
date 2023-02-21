@@ -101,6 +101,18 @@ public class ThemesUtils {
         return getColorFromAttr(R.attr.accent);
     } // Color accent
 
+    //region Used for migrating accent color to new version
+
+    public static int getReservedAccent() {
+        return AndroidUtils.getPreferences().getInt("reserved_accent_color", getAccentColor());
+    }
+
+    public static void reserveAccentColor(int accent) {
+        AndroidUtils.getPreferences().edit().putInt("reserved_accent_color", accent).apply();
+    }
+
+    //endregion
+
     public static int getMutedAccentColor() {
         return getMutedColor(getAccentColor());
     }

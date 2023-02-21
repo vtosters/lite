@@ -291,6 +291,15 @@ public class Preferences {
         return !getBoolValue("isRoamingState", false) && isValidSignature() && (!dev() || getBoolValue("autoupdates", true));
     }
 
+    public static boolean isNewBuild() {
+        return !preferences.getString("build_number", About.getBuildNumber())
+                        .equals(About.getBuildNumber());
+    }
+
+    public static void updateBuildNumber() {
+        preferences.edit().putString("build_number", About.getBuildNumber()).apply();
+    }
+
     public static boolean isValidSignature() {
         try {
             return validateAppSignature();
