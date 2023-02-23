@@ -11,7 +11,7 @@ import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 
 public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
@@ -45,7 +45,7 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
         });
 
         findPreference("dateformat").setOnPreferenceChangeListener((preference, o) -> {
-            edit().putString("dateformat", o.toString()).commit();
+            Preferences.getPreferences().edit().putString("dateformat", o.toString()).commit();
             restartApplicationWithTimer();
             return true;
         });
@@ -78,10 +78,10 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
             findPreference("anim_rtrn_type").setVisible(false);
         }
 
-        if (getPreferences().getInt("pic_rounding", 0) == 0) {
+        if (Preferences.getPreferences().getInt("pic_rounding", 0) == 0) {
             findPreference("customrounding").setSummary(requireContext().getString(R.string.disabled));
         } else {
-            findPreference("customrounding").setSummary(String.format(requireContext().getString(R.string.rounding_size), getPreferences().getInt("pic_rounding", 0)));
+            findPreference("customrounding").setSummary(String.format(requireContext().getString(R.string.rounding_size), Preferences.getPreferences().getInt("pic_rounding", 0)));
         }
     }
 

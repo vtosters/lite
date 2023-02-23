@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import static android.content.ContentValues.TAG;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.NetworkUtils.isNetworkIsSlow;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
@@ -24,6 +23,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 public class ServerDialog {
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
@@ -101,9 +101,9 @@ public class ServerDialog {
                         .setMessage(message)
                         .setCancelable(cancelable)
                         .setPositiveButton(positiveButton,
-                                (dialogInterface, i) -> edit().putBoolean(key, false).apply())
+                                (dialogInterface, i) -> Preferences.getPreferences().edit().putBoolean(key, false).apply())
                         .setNeutralButton(neutralButton, (dialogInterface, i) -> {
-                            edit().putBoolean(key, false).apply();
+                            Preferences.getPreferences().edit().putBoolean(key, false).apply();
                             var intent = new Intent(Intent.ACTION_VIEW)
                                     .setData(Uri.parse(link));
                             activity.startActivity(intent);

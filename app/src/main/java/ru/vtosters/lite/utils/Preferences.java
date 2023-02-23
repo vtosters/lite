@@ -1,33 +1,26 @@
 package ru.vtosters.lite.utils;
 
-import static java.lang.Long.MAX_VALUE;
-import static ru.vtosters.lite.proxy.ProxyUtils.setProxy;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
-import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
-import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
-import static ru.vtosters.lite.utils.VTVerifications.isVerified;
-
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.StrictMode;
-import android.preference.PreferenceManager;
-
-import android.util.Log;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
+import ru.vtosters.lite.ui.fragments.VTSettings;
 
 import java.security.NoSuchAlgorithmException;
 
-import ru.vtosters.lite.ui.fragments.VTSettings;
+import static java.lang.Long.MAX_VALUE;
+import static ru.vtosters.lite.proxy.ProxyUtils.setProxy;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
+import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
+import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
+import static ru.vtosters.lite.utils.VTVerifications.isVerified;
 
 public class Preferences {
-    public static SharedPreferences preferences = getGlobalContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
     public static String VERSIONNAME = "Beta";
 
     public static void init(Application application) throws Exception {
@@ -41,6 +34,14 @@ public class Preferences {
         LifecycleUtils.registerActivities(application);
     } // VK Init
 
+    public static SharedPreferences getPreferences() {
+        return getGlobalContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
+    }
+
+    public static String getString(String name) {
+        return getPreferences().getString(name, "");
+    }
+
     public static void forceOffline() {
         setupFilters();
 
@@ -50,10 +51,7 @@ public class Preferences {
     }
 
     public static boolean getBoolValue(String key, Boolean value) {
-        if (preferences == null) {
-            preferences = PreferenceManager.getDefaultSharedPreferences(getGlobalContext());
-        }
-        return preferences.getBoolean(key, value);
+        return getPreferences().getBoolean(key, value);
     } // Set bool by default and get value
 
     public static SharedPreferences getPrefsFromFile(String filename) {
@@ -292,12 +290,12 @@ public class Preferences {
     }
 
     public static boolean isNewBuild() {
-        return !preferences.getString("build_number", About.getBuildNumber())
+        return !getPreferences().getString("build_number", "")
                         .equals(About.getBuildNumber());
     }
 
     public static void updateBuildNumber() {
-        preferences.edit().putString("build_number", About.getBuildNumber()).apply();
+        getPreferences().edit().putString("build_number", About.getBuildNumber()).commit();
     }
 
     public static boolean isValidSignature() {
@@ -322,7 +320,7 @@ public class Preferences {
     }
 
     public static long getSizeForDelete() {
-        return switch (getPrefsValue("clearcache")) {
+        return switch (Preferences.getPreferences().getString("clearcache", "")) {
             case "100mb" -> 104857600L;
             case "500mb" -> 524288000L;
             case "1gb" -> 1073741824L;

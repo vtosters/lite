@@ -32,27 +32,9 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class AndroidUtils {
 
-    public static SharedPreferences getDefaultPrefs() {
-        if (Preferences.preferences == null)
-            Preferences.preferences = PreferenceManager.getDefaultSharedPreferences(getGlobalContext());
-        return Preferences.preferences;
-    }
-
-    public static SharedPreferences getPreferences() {
-        return PreferenceManager.getDefaultSharedPreferences(getGlobalContext());
-    }
-
     public static boolean isTablet() {
         return Screen.l(getGlobalContext());
     }
-
-    public static String getPrefsValue(String pref) {
-        return getPreferences().getString(pref, "");
-    } // Get pref value as string
-
-    public static SharedPreferences.Editor edit() {
-        return PreferenceManager.getDefaultSharedPreferences(getGlobalContext()).edit();
-    } // Edit SharedPreferences
 
     @NonNull
     public static Context getGlobalContext() {
@@ -176,7 +158,7 @@ public class AndroidUtils {
                         .setMessage(AndroidUtils.getString("app_open_by_default_settings"))
                         .setCancelable(false)
                         .setPositiveButton(com.vtosters.lite.R.string.social_graph_skip,
-                                (dialogInterface, i) -> edit().putBoolean("showUnverifDialog", false).apply()
+                                (dialogInterface, i) -> Preferences.getPreferences().edit().putBoolean("showUnverifDialog", false).apply()
                         )
                         .setNeutralButton(com.vtosters.lite.R.string.open_settings,
                                 (dialogInterface, i) -> {

@@ -18,6 +18,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 import ru.vtosters.lite.encryption.base.IMProcessor;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 public class VTostersAESProcessor extends IMProcessor {
     private final static String CIPHER_INSTANCE = "AES/CBC/PKCS7Padding";
@@ -114,7 +115,7 @@ public class VTostersAESProcessor extends IMProcessor {
     @Nullable
     @Override
     public String getEncryptionKeyFor(int id) {
-        return AndroidUtils.getDefaultPrefs().getString("VT_IMEncodeKey_" + getPrefKey() + "_" + id, "VTAesDefault");
+        return Preferences.getPreferences().getString("VT_IMEncodeKey_" + getPrefKey() + "_" + id, "VTAesDefault");
     }
 
     public static class Triple<F, S, T> {

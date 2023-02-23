@@ -1,7 +1,6 @@
 package com.vk.sharing.view;
 
 import static b.h.z.f.roboto_medium;
-import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 
 import android.content.Context;
@@ -32,6 +31,7 @@ import com.vk.imageloader.view.VKMultiImageView;
 import com.vk.navigation.NavigatorKeys;
 import com.vtosters.lite.R;
 import com.vtosters.lite.a0;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.util.Arrays;
 
@@ -208,7 +208,7 @@ public class TargetImageView extends VKMultiImageView {
     @Override // android.view.View
     protected void onDraw(Canvas canvas) {
         Canvas canvas2 = this.f21631f;
-        int pref = preferences.getInt("pic_rounding", 0);
+        int pref = Preferences.getPreferences().getInt("pic_rounding", 0);
 
         if (canvas2 != null) {
             canvas2.drawColor(0, PorterDuff.Mode.CLEAR);

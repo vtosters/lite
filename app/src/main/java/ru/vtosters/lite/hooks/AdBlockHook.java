@@ -22,6 +22,7 @@ import java.util.Collections;
 
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 public class AdBlockHook {
     public static Boolean discoverAdBlock(JSONObject jsonObject) {
@@ -351,7 +352,7 @@ public class AdBlockHook {
             return true;
         }
 
-        var whitelist = AndroidUtils.getDefaultPrefs().getStringSet(
+        var whitelist = Preferences.getPreferences().getStringSet(
                 "whitelisted_filters_groups",
                 Collections.emptySet()
         );
@@ -366,7 +367,7 @@ public class AdBlockHook {
             id = String.valueOf(list.optInt("source_id"));
         }
 
-        var whitelist = AndroidUtils.getDefaultPrefs().getStringSet(
+        var whitelist = Preferences.getPreferences().getStringSet(
                 "whitelisted_ad_groups",
                 Collections.emptySet()
         );
@@ -377,7 +378,7 @@ public class AdBlockHook {
     public static Boolean isWhitelistedAdStories(JSONObject list) {
         var id = String.valueOf(list.optInt("owner_id"));
 
-        var whitelist = AndroidUtils.getDefaultPrefs().getStringSet(
+        var whitelist = Preferences.getPreferences().getStringSet(
                 "whitelisted_stories_ad",
                 Collections.emptySet()
         );

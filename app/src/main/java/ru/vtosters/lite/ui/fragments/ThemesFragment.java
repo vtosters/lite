@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,21 +20,14 @@ import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 import ru.vtosters.lite.utils.*;
 
-import java.io.IOException;
-
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
-    private VKProgressDialog mProgressDialog;
-
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-
-        mProgressDialog = new VKProgressDialog(requireContext());
-        mProgressDialog.setCancelable(false);
 
         addPreferencesFromResource(R.xml.preferences_themes);
         initPreferences();
@@ -57,11 +51,12 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         });
 
         var invalidateThemeCache = findPreference("invalidate_theme_cache");
-        invalidateThemeCache.setOnPreferenceClickListener(preference -> {
-            ThemesManager.deleteBins();
-            setAccentColor(ThemesUtils.getReservedAccent(), true);
-            return true;
-        });
+        if(ThemesUtils.getReservedAccent() != Color.TRANSPARENT)
+            invalidateThemeCache.setOnPreferenceClickListener(preference -> {
+                setAccentColor(ThemesUtils.getReservedAccent());
+                return true;
+            });
+        else invalidateThemeCache.setVisible(false);
 
         var navBarPreference = findPreference("navbar");
         navBarPreference.setOnPreferenceClickListener(preference -> {
@@ -163,8 +158,9 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
                     }
                 })
                 .setNegativeButton(R.string.reset, (dialog, which) -> {
-                    ThemesManager.deleteTmpArchive();
-                    LifecycleUtils.restartApplicationWithTimer();
+                    ThemesManager.deleteModification();
+                    ThemesUtils.reserveAccentColor(Color.TRANSPARENT, false);
+                    restart();
                 })
                 .setPositiveButton(R.string.cancel, null)
                 .show();
@@ -184,7 +180,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         alertDialog.setButton(
                 DialogInterface.BUTTON_POSITIVE,
                 requireContext().getString(R.string.select),
-                (dialog, which) -> setAccentColor(colorPickerView.getColor(), false)
+                (dialog, which) -> setAccentColor(colorPickerView.getColor())
         );
         alertDialog.setView(colorPickerView);
         alertDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
@@ -201,56 +197,37 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
                     .setTitle(AndroidUtils.getString("select_palette"))
                     .setItems(titles, (dialog, which) ->
                             PalettesBottomSheetDialog.create(requireActivity(), manager.getPalette(which),
-                                    (adapter, vtlcolor) -> setAccentColor(vtlcolor.color, false))
+                                    (adapter, vtlcolor) -> setAccentColor(vtlcolor.color))
                     )
                     .setPositiveButton(R.string.cancel, null)
                     .show();
         }
     }
 
-    void setAccentColor(int color, boolean invalidate) {
-        String message;
-        Runnable task;
-        if(!ThemesManager.hasBins()) {
-            message = invalidate ? "Инвалидация кэша" : "Генерация файлов...";
-            task = () -> {
-                try {
-                    ThemesManager.generateBins();
-                    requireActivity().runOnUiThread(() -> setAccentColor(color, invalidate));
-                } catch(IOException e) {
-                    Log.e("ThemesFragment", e+"");
-                    ThemesManager.deleteBins();
-                    requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при " + (invalidate ? "инвалидации кэша" : "генерации файлов")));
-                }
-            };
-        } else {
-            message = invalidate ? "Инвалидация кэша" : "Применение акцента...";
-            task = () -> {
-                try {
-                    if(!invalidate) ThemesUtils.reserveAccentColor(color);
-                    ThemesManager.generateTempResArchive(color);
-                    requireActivity().runOnUiThread(this::restart);
-                } catch(IOException e) {
-                    Log.e("ThemesFragment", e+"");
-                    ThemesManager.deleteTmpArchive();
-                    requireActivity().runOnUiThread(() -> showErrorDialog("Ошибка при " + (invalidate ? "инвалидации кэша" : "применении акцента")));
-                }
-            };
-        }
+    void setAccentColor(int color) {
+        final VKProgressDialog dialog = new VKProgressDialog(requireContext());
+        dialog.setCancelable(false);
+        dialog.setMessage("Применение акцента...");
+        dialog.show();
 
-        mProgressDialog.setMessage(message);
-        mProgressDialog.show();
-
-        VTExecutors.getIoExecutor().execute(task);
-    }
-
-    void showErrorDialog(String msg) {
-        mProgressDialog.dismiss();
-        new VkAlertDialog.Builder(requireContext())
-                .setTitle("Ошибка")
-                .setMessage(msg)
-                .setPositiveButton("OK", null)
-                .show();
+        VTExecutors.getIoExecutor().execute(() -> {
+            try {
+                ThemesUtils.reserveAccentColor(color, true);
+                ThemesManager.generateModApk(color);
+                requireActivity().runOnUiThread(this::restart);
+            } catch(Throwable e) {
+                Log.e("ThemesFragment", e+"");
+                ThemesManager.deleteModification();
+                requireActivity().runOnUiThread(() -> {
+                    dialog.dismiss();
+                    new VkAlertDialog.Builder(requireContext())
+                            .setTitle("Ошибка")
+                            .setMessage("Ошибка при применении акцента:\n" + e)
+                            .setPositiveButton("OK", null)
+                            .show();
+                });
+            }
+        });
     }
 
     void restart() {

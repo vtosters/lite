@@ -18,8 +18,6 @@ import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-import java.io.IOException;
-
 import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
@@ -49,63 +47,33 @@ public class MainActivityInjector {
 
         // VKIDProtection.alert(activity);
 
-        if(Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.hasTmpArchive()) {
+        if(Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {
             Preferences.updateBuildNumber();
-            updateBinsAndTmpArchive(activity, false);
+            updateBinsAndTmpArchive(activity);
         }
     }
     
-    private static void updateBinsAndTmpArchive(Activity activity, boolean applyAccent) {
+    private static void updateBinsAndTmpArchive(Activity activity) {
         final VKProgressDialog dialog = new VKProgressDialog(activity);
 
-        String msg;
-        Runnable task;
-        if(ThemesManager.hasBins() && !applyAccent) {
-            msg = "Инвалидация кэша";
-            task = () -> {
-                try {
-                    ThemesManager.deleteBins();
-                    ThemesManager.generateBins();
-                    activity.runOnUiThread(() -> {
-                        dialog.cancel();
-                        updateBinsAndTmpArchive(activity, true);
-                    });
-                } catch(IOException e) {
-                    e.printStackTrace();
-                    activity.runOnUiThread(() -> {
-                        dialog.cancel();
-                        showErrorDialog(activity, "Ошибка при инвалидации кэша");
-                    });
-                }
-            };
-        } else {
-            msg = "Применение акцента";
-            task = () -> {
-                try {
-                    if(ThemesManager.hasTmpArchive()) ThemesManager.deleteTmpArchive();
-                    ThemesManager.generateTempResArchive(ThemesUtils.getReservedAccent());
-                    activity.runOnUiThread(LifecycleUtils::restartApplication);
-                } catch(IOException e) {
-                    e.printStackTrace();
-                    activity.runOnUiThread(() -> {
-                        dialog.cancel();
-                        showErrorDialog(activity, "Ошибка при применении акцента");
-                    });
-                }
-            };
-        }
-
-        dialog.setMessage(msg);
+        dialog.setMessage("Применение акцента");
         dialog.show();
 
-        VTExecutors.getIoExecutor().execute(task);
-    }
-
-    static void showErrorDialog(Activity activity, String msg) {
-        new VkAlertDialog.Builder(activity)
-                .setTitle("Ошикба")
-                .setMessage(msg)
-                .setPositiveButton(R.string.ok, null)
-                .show();
+        VTExecutors.getIoExecutor().execute(() -> {
+            try {
+                ThemesManager.generateModApk(ThemesUtils.getReservedAccent());
+                activity.runOnUiThread(LifecycleUtils::restartApplication);
+            } catch(Throwable e) {
+                e.printStackTrace();
+                activity.runOnUiThread(() -> {
+                    dialog.cancel();
+                    new VkAlertDialog.Builder(activity)
+                            .setTitle("Ошикба")
+                            .setMessage("Ошибка при применении акцента:\n" + e)
+                            .setPositiveButton(R.string.ok, null)
+                            .show();
+                });
+            }
+        });
     }
 }

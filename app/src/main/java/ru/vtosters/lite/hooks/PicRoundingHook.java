@@ -1,20 +1,12 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.Preferences.preferences;
-
-import android.graphics.Bitmap;
-import android.graphics.BitmapShader;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.RectF;
-import android.graphics.Shader;
-
+import android.graphics.*;
 import com.facebook.drawee.generic.RoundingParams;
-
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 public class PicRoundingHook {
-    private static final int pref = preferences.getInt("pic_rounding", 0);
+    private static final int pref = Preferences.getPreferences().getInt("pic_rounding", 0);
 
     public static RoundingParams inject() {
         if (pref > 0) {

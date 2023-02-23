@@ -8,8 +8,8 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class Start {
@@ -23,11 +23,11 @@ public class Start {
                     .setMessage(getWelcome())
                     .setCancelable(false)
                     .setPositiveButton(R.string.startbtn2,
-                            (dialogInterface, i) -> edit().putBoolean("showAlert", false).apply()
+                            (dialogInterface, i) -> Preferences.getPreferences().edit().putBoolean("showAlert", false).apply()
                     )
                     .setNeutralButton(R.string.startbtn1,
                             (dialogInterface, i) -> {
-                                edit().putBoolean("showAlert", false).apply();
+                                Preferences.getPreferences().edit().putBoolean("showAlert", false).apply();
                                 activity.startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://t.me/vtosters")));
                             }
                     )

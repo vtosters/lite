@@ -1,7 +1,7 @@
 package ru.vtosters.lite.proxy.http;
 
 import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.Preferences.getString;
 
 public class CustomHttp {
     public static void loadProxy() {
@@ -13,22 +13,22 @@ public class CustomHttp {
     }
 
     private static String proxyHostHTTP() {
-        var string = getPrefsValue("proxyHostHTTP");
+        var string = getString("proxyHostHTTP");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
     private static String proxyPortHTTP() {
-        var string = getPrefsValue("proxyPortHTTP");
+        var string = getString("proxyPortHTTP");
         return string.isEmpty() ? "8888" : string;
     }
 
     private static String proxyUserHTTP() {
-        var string = getPrefsValue("proxyUserHTTP");
+        var string = getString("proxyUserHTTP");
         return string.isEmpty() ? "" : string;
     }
 
     private static String proxyPassHTTP() {
-        var string = getPrefsValue("proxyPassHTTP");
+        var string = getString("proxyPassHTTP");
         return string.isEmpty() ? "" : string;
     }
 }

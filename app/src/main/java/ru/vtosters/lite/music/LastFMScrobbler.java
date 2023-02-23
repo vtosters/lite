@@ -180,7 +180,7 @@ public class LastFMScrobbler {
         var name = session.getString("name");
         var key = session.getString("key");
 
-        AndroidUtils.edit()
+        Preferences.getPreferences().edit()
                 .putString("username", name)
                 .putString("sessionKey", key)
                 .putBoolean("lastfm_enabled", true)
@@ -190,7 +190,7 @@ public class LastFMScrobbler {
     }
 
     public static void logout() {
-        AndroidUtils.edit()
+        Preferences.getPreferences().edit()
                 .remove("username")
                 .remove("sessionKey")
                 .putBoolean("lastfm_enabled", false)
@@ -208,14 +208,14 @@ public class LastFMScrobbler {
     }
 
     public static boolean isScrobblingEnabled() {
-        return AndroidUtils.getPreferences().getBoolean("lastfm_enabled", false);
+        return Preferences.getPreferences().getBoolean("lastfm_enabled", false);
     }
 
     public static String getUserName() {
-        return AndroidUtils.getDefaultPrefs().getString("username", null);
+        return Preferences.getPreferences().getString("username", null);
     }
 
     private static String getSessionKey() {
-        return AndroidUtils.getDefaultPrefs().getString("sessionKey", null);
+        return Preferences.getPreferences().getString("sessionKey", null);
     }
 }

@@ -1,18 +1,14 @@
 package ru.vtosters.lite.utils;
 
+import android.util.Log;
+import com.vtosters.lite.R;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.proxy.ProxyUtils.getOauth;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-
-import android.util.Log;
-
-import com.vtosters.lite.R;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class VKMeHandler {
     public static void getVkMeToken(String username, String password) {
@@ -45,15 +41,15 @@ public class VKMeHandler {
     }
 
     public static void removeToken() {
-        edit().remove("vkmetoken").commit();
+        Preferences.getPreferences().edit().remove("vkmetoken").commit();
     }
 
     public static String getToken() {
-        return getPrefsValue("vkmetoken");
+        return Preferences.getString("vkmetoken");
     }
 
     public static void setToken(String token) {
-        edit().putString("vkmetoken", token).commit();
+        Preferences.getPreferences().edit().putString("vkmetoken", token).commit();
     }
 
     public static void setPrivacyStatus(String status) {

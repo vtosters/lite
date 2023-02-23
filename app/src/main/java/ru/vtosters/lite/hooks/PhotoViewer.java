@@ -1,6 +1,5 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
 import android.annotation.SuppressLint;
 import android.content.ClipData;
@@ -12,9 +11,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
-
 import com.vk.core.dialogs.actionspopup.ActionsPopup;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.ui.themes.VKThemeHelper;
@@ -25,22 +22,17 @@ import com.vk.dto.common.ImageSize;
 import com.vtosters.lite.R;
 import com.vtosters.lite.attachments.DocumentAttachment;
 import com.vtosters.lite.attachments.PhotoAttachment;
-
+import okhttp3.*;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.List;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class PhotoViewer {
     static OkHttpClient client = VtOkHttpClient.getInstance();
@@ -203,7 +195,7 @@ public class PhotoViewer {
     }
 
     private static int selectedEngine() {
-        return getPreferences().getInt("search_engine", 0);
+        return Preferences.getPreferences().getInt("search_engine", 0);
     }
 
     private static void searchPhoto(int i, String url) {

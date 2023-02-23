@@ -52,7 +52,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
     }
 
     public static String getProxysumm() {
-        var type = AndroidUtils.getPrefsValue("proxy");
+        var type = Preferences.getString("proxy");
 
         if(type.equals("noproxy") || type.isEmpty())
             type = AndroidUtils.getString(R.string.vtlsettdisabled);
@@ -63,7 +63,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
     public static String getThemesumm() {
         String[] themeTypeName = AndroidUtils.getArray("theme_type_name");
 
-        return AndroidUtils.getString("current_theme") + ": " + switch (AndroidUtils.getPrefsValue("currsystemtheme")) {
+        return AndroidUtils.getString("current_theme") + ": " + switch (Preferences.getString("currsystemtheme")) {
             case "system" -> themeTypeName[0];
             case "dark" -> themeTypeName[1];
             case "light" -> themeTypeName[2];
@@ -175,7 +175,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                             var theme = value.equals("dark") ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme();
                             ThemesUtils.applyTheme(theme);
                         }
-                        AndroidUtils.edit().putString("currsystemtheme", value).commit();
+                        Preferences.getPreferences().edit().putString("currsystemtheme", value).commit();
                         SystemThemeChangerHook.onThemeChanged(getResources().getConfiguration());
                         return true;
                     });
@@ -235,7 +235,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                     R.drawable.ic_globe_outline_28,
                     true,
                     (preference, o) -> {
-                        AndroidUtils.edit().putBoolean("ssl", (boolean) o).commit();
+                        Preferences.getPreferences().edit().putBoolean("ssl", (boolean) o).commit();
                         return true;
                     }
             );
@@ -250,7 +250,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                         true,
                         (preference, o) -> {
                             boolean value = (boolean) o;
-                            AndroidUtils.edit().putBoolean("autoupdates", value).commit();
+                            Preferences.getPreferences().edit().putBoolean("autoupdates", value).commit();
                             return true;
                         }
                 );

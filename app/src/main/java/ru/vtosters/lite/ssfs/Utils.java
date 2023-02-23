@@ -3,7 +3,10 @@ package ru.vtosters.lite.ssfs;
 import com.vk.core.network.Network;
 import ru.vtosters.lite.hooks.DateHook;
 import ru.vtosters.lite.proxy.ProxyUtils;
-import ru.vtosters.lite.utils.*;
+import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.Base64Utils;
+import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class Utils {
     public static String getVKUILink() {
@@ -20,7 +23,7 @@ public class Utils {
     }
 
     public static String getDomain() {
-        String string = AndroidUtils.getPrefsValue("ssfscustom");
+        String string = Preferences.getString("ssfscustom");
 
         if (!string.isEmpty()) return string;
 

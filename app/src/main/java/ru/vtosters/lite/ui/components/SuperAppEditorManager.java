@@ -4,13 +4,12 @@ import android.os.Build;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.ui.items.SuperAppItem;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
 public class SuperAppEditorManager {
 
@@ -29,7 +28,7 @@ public class SuperAppEditorManager {
     }
 
     private void init() {
-        var tmp = getPreferences().getString("superapp_items", "menu,miniapps,vkpay_slim,greeting,promo,holiday,weather,sport,games,informer,food,event,music,vk_run");
+        var tmp = Preferences.getPreferences().getString("superapp_items", "menu,miniapps,vkpay_slim,greeting,promo,holiday,weather,sport,games,informer,food,event,music,vk_run");
         var selectedTags = !tmp.isEmpty() ? tmp.split(",") : new String[0];
         parseSelectedItems(selectedTags);
     }
@@ -49,7 +48,7 @@ public class SuperAppEditorManager {
     public void save() {
         if (mSelectedItems.size() > 0)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                getPreferences().edit().putString("superapp_items", mSelectedItems.stream()
+                Preferences.getPreferences().edit().putString("superapp_items", mSelectedItems.stream()
                                 .map(item -> item.type)
                                 .collect(Collectors.joining(",")))
                         .commit();
@@ -59,14 +58,14 @@ public class SuperAppEditorManager {
                     sb.append(item.type);
                     sb.append(",");
                 }
-                getPreferences().edit().putString("superapp_items", sb.toString()).commit();
+                Preferences.getPreferences().edit().putString("superapp_items", sb.toString()).commit();
             }
         else
             reset();
     }
 
     public void reset() {
-        AndroidUtils.getPreferences()
+        Preferences.getPreferences()
                 .edit()
                 .putString("superapp_items", "menu,miniapps,vkpay_slim,greeting,promo,holiday,informer,event,weather,sport,games,food,music,vk_run")
                 .commit();

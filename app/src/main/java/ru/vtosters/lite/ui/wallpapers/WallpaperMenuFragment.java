@@ -11,6 +11,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -19,7 +20,6 @@ import java.io.OutputStream;
 import java.util.Arrays;
 
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.*;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
@@ -119,7 +119,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                         );
                         pref.setSummary(it.getSummary());
                         pref.setOnPreferenceChangeListener((preference, o) -> {
-                            edit().putString(it.toString(), (String) o).apply();
+                            Preferences.getPreferences().edit().putString(it.toString(), (String) o).apply();
                             preference.setSummary(it.getSummary());
                             requestUpdateWallpaper();
                             mWPPreviewPref.redraw();
@@ -134,7 +134,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                                 0,
                                 false,
                                 (preference, o) -> {
-                                    edit().putBoolean(it.toString(), (Boolean) o).apply();
+                                    Preferences.getPreferences().edit().putBoolean(it.toString(), (Boolean) o).apply();
                                     requestUpdateWallpaper();
                                     mWPPreviewPref.redraw();
                                     return true;
@@ -151,7 +151,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 true,
                 (preference, o) -> {
                     boolean value = (boolean) o;
-                    edit().putBoolean("compresswp", value).commit();
+                    Preferences.getPreferences().edit().putBoolean("compresswp", value).commit();
                     requestUpdateWallpaper();
                     mWPPreviewPref.redraw();
                     return true;

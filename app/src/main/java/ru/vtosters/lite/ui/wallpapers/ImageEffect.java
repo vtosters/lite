@@ -4,11 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.nio.ByteBuffer;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
 enum ImageEffects {
     Blur(true,
@@ -19,7 +19,7 @@ enum ImageEffects {
         @Override
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
             int radius;
-            switch (getPreferences().getString(ImageEffects.Blur.toString(), "disabled")) {
+            switch (Preferences.getPreferences().getString(ImageEffects.Blur.toString(), "disabled")) {
                 case "low":
                     radius = 8;
                     break;
@@ -37,7 +37,7 @@ enum ImageEffects {
 
         @Override
         public String getSummary() {
-            switch (getPreferences().getString(ImageEffects.Blur.toString(), "disabled")) {
+            switch (Preferences.getPreferences().getString(ImageEffects.Blur.toString(), "disabled")) {
                 case "low":
                     return AndroidUtils.getString(R.string.wallpapers_low);
                 case "med":
@@ -56,7 +56,7 @@ enum ImageEffects {
         @Override
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
             var delta = 0;
-            switch (getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
+            switch (Preferences.getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
                 case "dim_black":
                     delta = -50; break;
                 case "dim_white":
@@ -69,7 +69,7 @@ enum ImageEffects {
 
         @Override
         public String getSummary() {
-            switch (getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
+            switch (Preferences.getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
                 case "dim_black":
                     return AndroidUtils.getString(R.string.wallpapers_dim_black);
                 case "dim_white":
@@ -86,7 +86,7 @@ enum ImageEffects {
         @Override
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
             var scale = 0;
-            switch (getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
+            switch (Preferences.getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
                 case "high":
                     scale = 50; break;
                 case "med":
@@ -101,7 +101,7 @@ enum ImageEffects {
 
         @Override
         public String getSummary() {
-            switch (getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
+            switch (Preferences.getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
                 case "low":
                     return AndroidUtils.getString(R.string.wallpapers_low);
                 case "med":
@@ -234,7 +234,7 @@ enum ImageEffects {
     public abstract void applyEffect(ByteBuffer bitmap, int height, int width);
 
     protected boolean isApplied() {
-        return getPreferences().getBoolean(this.toString(), false);
+        return Preferences.getPreferences().getBoolean(this.toString(), false);
     }
 
     @NonNull

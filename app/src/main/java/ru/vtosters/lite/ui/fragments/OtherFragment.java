@@ -62,7 +62,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         if (requestCode == VK_ADMIN_TOKEN_REQUEST_CODE) {
             if (resultCode == Activity.RESULT_OK) {
                 String token = data.getStringExtra("token");
-                AndroidUtils.getPreferences().edit().putString("vk_admin_token", token).apply();
+                Preferences.getPreferences().edit().putString("vk_admin_token", token).apply();
                 Toast.makeText(getContext(), requireContext().getString(R.string.token_saved), LENGTH_SHORT).show();
             }
         }
@@ -137,7 +137,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        var pref = getDefaultPrefs().getString("autoclearcache", "Default");
+        var pref = Preferences.getPreferences().getString("autoclearcache", "Default");
         switch (pref) {
             case "Default" ->
                     findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_disabled));
@@ -198,7 +198,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         });
 
         var vkAdminTokenPref = findPreference("vk_admin_token");
-        vkAdminTokenPref.setVisible(AndroidUtils.getDefaultPrefs().getBoolean("new_music_downloading_way", false));
+        vkAdminTokenPref.setVisible(Preferences.getPreferences().getBoolean("new_music_downloading_way", false));
         if (vkAdminTokenPref.isVisible()) {
             vkAdminTokenPref.setOnPreferenceClickListener(preference -> {
                 startActivityForResult(new Intent(getContext(), VKAdminTokenActivity.class), VK_ADMIN_TOKEN_REQUEST_CODE);
@@ -212,7 +212,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private void cacheAutoCleanDialog() {
         String[] cacheText = {null, "100 MB", "500 MB", "1 GB", "2 GB", "5 GB"};
 
-        var val = getDefaultPrefs().getInt("autoclearcache_size", 0);
+        var val = Preferences.getPreferences().getInt("autoclearcache_size", 0);
         RadioGroup rg = new RadioGroup(getContext());
 
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
@@ -239,7 +239,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 .setPositiveButton(requireContext().getString(R.string.save), (dialog, which) -> {
                     var sizes = new String[]{"Default", "100mb", "500mb", "1gb", "2gb", "5gb"};
                     var id = rg.getCheckedRadioButtonId();
-                    getDefaultPrefs().edit()
+                    Preferences.getPreferences().edit()
                             .putInt("autoclearcache_size", id)
                             .putString("autoclearcache", sizes[id])
                             .apply();

@@ -17,7 +17,7 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 public class IOUtils {
-    public static final int BUFFER_SIZE = 0x800;
+    public static final int BUFFER_SIZE = 8192;
 
     public static byte[] decodeStream(InputStream encIs, String keyURL)
         throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {

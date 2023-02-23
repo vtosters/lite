@@ -26,6 +26,7 @@ import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
 import ru.vtosters.lite.ui.items.DockBarTab;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -33,7 +34,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.Preferences.*;
 
 public class DockBarEditorManager {
@@ -110,7 +110,7 @@ public class DockBarEditorManager {
     }
 
     public void reset() {
-        AndroidUtils.getPreferences()
+        Preferences.getPreferences()
                 .edit()
                 .putString("dockbar_tabs", "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
                 .commit();

@@ -7,12 +7,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.PowerManager;
 import android.provider.Settings;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.deviceinfo.OEMDetector;
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.Preferences;
 
 public class DisableBattery {
@@ -33,7 +30,7 @@ public class DisableBattery {
                     activity.startActivity(intent);
                 })
                 .setNeutralButton(R.string.batteryissuebtn2,
-                        (dialogInterface, i) -> AndroidUtils.edit().putBoolean("showDoze", false).apply()
+                        (dialogInterface, i) -> Preferences.getPreferences().edit().putBoolean("showDoze", false).apply()
                 )
                 .show();
     }
