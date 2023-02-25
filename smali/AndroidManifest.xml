@@ -142,7 +142,7 @@
 
     <application
         android:name="com.vtosters.lite.VKApplication"
-        android:allowBackup="false"
+        android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="false"
         android:hardwareAccelerated="true"
