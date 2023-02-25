@@ -3,6 +3,8 @@ package ru.vtosters.lite.ui.wallpapers;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 
+import java.util.Arrays;
+
 public class ConvolutionMatrix {
     public static final int SIZE = 3;
 
@@ -83,17 +85,13 @@ public class ConvolutionMatrix {
 
     public void setAll(double value) {
         for (int x = 0; x < SIZE; ++x) {
-            for (int y = 0; y < SIZE; ++y) {
-                Matrix[x][y] = value;
-            }
+            Arrays.fill(Matrix[x], value);
         }
     }
 
     public void applyConfig(double[][] config) {
         for (int x = 0; x < SIZE; ++x) {
-            for (int y = 0; y < SIZE; ++y) {
-                Matrix[x][y] = config[x][y];
-            }
+            System.arraycopy(config[x], 0, Matrix[x], 0, SIZE);
         }
     }
 }
