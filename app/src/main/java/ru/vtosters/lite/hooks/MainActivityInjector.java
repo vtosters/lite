@@ -25,17 +25,10 @@ import static ru.vtosters.lite.utils.ThemesUtils.setNeededTheme;
 public class MainActivityInjector {
     public static void inject(Activity activity) {
         setNeededTheme(activity);
-        if(activity.getIntent().getAction() != null && Intent.ACTION_APPLICATION_PREFERENCES.equals(activity.getIntent().getAction())) {
-            NavigatorUtils.switchToSettings(activity);
-            return;
-        }
         sendRequest();
         UsersList.getUsersList();
+
         if (checkupdates()) OTADialog.checkUpdates(activity);
-        VTExecutors.getIoScheduler().a(DeletedMessagesHandler::reloadMessagesList); // ioScheduler
-        Start.alert(activity);
-        InstallGMS.alert(activity);
-        DisableBattery.alert(activity);
 
         VTExecutors.getSlowTasksScheduler().a(() -> {
             getInstance().autoCleaningCache();
@@ -47,12 +40,22 @@ public class MainActivityInjector {
             NotificationChannels.createChannels();
         }
 
-        // VKIDProtection.alert(activity);
-
         if(Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {
             Preferences.updateBuildNumber();
             updateBinsAndTmpArchive(activity);
         }
+
+        VTExecutors.getIoScheduler().a(DeletedMessagesHandler::reloadMessagesList); // ioScheduler
+
+        if(activity.getIntent().getAction() != null && Intent.ACTION_APPLICATION_PREFERENCES.equals(activity.getIntent().getAction())) {
+            NavigatorUtils.switchToSettings(activity);
+            return;
+        }
+
+        Start.alert(activity);
+        InstallGMS.alert(activity);
+        DisableBattery.alert(activity);
+        // VKIDProtection.alert(activity);
     }
     
     private static void updateBinsAndTmpArchive(Activity activity) {
