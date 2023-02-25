@@ -115,47 +115,49 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
 
         AndroidUtils.checkLinksVerified(this.requireActivity());
 
-        var accountSwitcher = PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "account_switcher",
-                AccountManagerUtils.getUsername(),
-                requireContext().getString(R.string.vtllogout),
-                requireContext().getDrawable(R.drawable.ic_user_circle_outline_28),
-                preference -> {
-                    try {
-                        VKAuth.a("logout", false);
-                    } catch(Exception ignored) {
-                    }
+        if (AccountManagerUtils.isLogin()) {
+            var accountSwitcher = PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "account_switcher",
+                    AccountManagerUtils.getUsername(),
+                    requireContext().getString(R.string.vtllogout),
+                    requireContext().getDrawable(R.drawable.ic_user_circle_outline_28),
+                    preference -> {
+                        try {
+                            VKAuth.a("logout", false);
+                        } catch(Exception ignored) {
+                        }
 
-                    var intent = new Intent(requireContext(), MainActivity.class)
-                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    requireContext().startActivity(intent);
+                        var intent = new Intent(requireContext(), MainActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        requireContext().startActivity(intent);
 
-                    return false;
+                        return false;
+                    });
+
+            VTExecutors.getIoScheduler().a(() -> {
+                var icon = ImageUtils.getDrawableFromUrl(AccountManagerUtils.getUserPhoto(), 0, true, true);
+                if(icon == null) return;
+                requireActivity().runOnUiThread(() -> {
+                    accountSwitcher.setIcon(icon);
                 });
-
-        VTExecutors.getIoScheduler().a(() -> {
-            var icon = ImageUtils.getDrawableFromUrl(AccountManagerUtils.getUserPhoto(), 0, true, true);
-            if(icon == null) return;
-            requireActivity().runOnUiThread(() -> {
-                accountSwitcher.setIcon(icon);
             });
-        });
 
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                requireContext().getString(R.string.vtssfs),
-                getSSFSsumm(),
-                R.drawable.ic_link_circle_outline_28,
-                preference -> {
-                    VKUIwrapper.setLink(Utils.getVKUILink());
-                    NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
-                    return false;
-                }
-        );
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.vtssfs),
+                    getSSFSsumm(),
+                    R.drawable.ic_link_circle_outline_28,
+                    preference -> {
+                        VKUIwrapper.setLink(Utils.getVKUILink());
+                        NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
+                        return false;
+                    }
+            );
+        }
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.appearance_theme_use_system);
 
@@ -257,58 +259,60 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
             }
         }
 
-        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.vtsettaccount);
+        if (AccountManagerUtils.isLogin()) {
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.vtsettaccount);
 
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                requireContext().getString(R.string.vkconnect),
-                "",
-                R.drawable.ic_user_circle_outline_28,
-                preference -> {
-                    VKUIwrapper.officalLinks("account");
-                    NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
-                    return false;
-                }
-        );
-
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                requireContext().getString(R.string.privacy_settings),
-                "",
-                R.drawable.ic_privacy_outline_28,
-                preference -> {
-                    NavigatorUtils.switchFragment(requireContext(), PrivacyFragment.class);
-                    return false;
-                }
-        );
-
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                requireContext().getString(R.string.sett_account),
-                "",
-                R.drawable.ic_user_outline_28,
-                preference -> {
-                    NavigatorUtils.switchFragment(requireContext(), SettingsAccountFragment.class);
-                    return false;
-                }
-        );
-
-        if(AccountManagerUtils.isVKTester()) {
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",
-                    requireContext().getString(R.string.bugs),
+                    requireContext().getString(R.string.vkconnect),
                     "",
-                    R.drawable.ic_bug_outline_28,
+                    R.drawable.ic_user_circle_outline_28,
                     preference -> {
-                        VKUIwrapper.officalLinks("bugs");
+                        VKUIwrapper.officalLinks("account");
                         NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
                         return false;
                     }
             );
+
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.privacy_settings),
+                    "",
+                    R.drawable.ic_privacy_outline_28,
+                    preference -> {
+                        NavigatorUtils.switchFragment(requireContext(), PrivacyFragment.class);
+                        return false;
+                    }
+            );
+
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.sett_account),
+                    "",
+                    R.drawable.ic_user_outline_28,
+                    preference -> {
+                        NavigatorUtils.switchFragment(requireContext(), SettingsAccountFragment.class);
+                        return false;
+                    }
+            );
+
+            if(AccountManagerUtils.isVKTester()) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        requireContext().getString(R.string.bugs),
+                        "",
+                        R.drawable.ic_bug_outline_28,
+                        preference -> {
+                            VKUIwrapper.officalLinks("bugs");
+                            NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
+                            return false;
+                        }
+                );
+            }
         }
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.vtlvksettings));

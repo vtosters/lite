@@ -53,6 +53,10 @@ public class AccountManagerUtils {
         return userProfile.b;
     } // UserId Profile via userProfile
 
+    public static boolean isLogin() {
+        return VKAccountManager.d().b1();
+    }
+
     public static int getUserID(ExtendedUserProfile extendedUserProfile) {
         return getUserID(fromEup(extendedUserProfile));
     } // UserId Profile via extendedUserProfile
