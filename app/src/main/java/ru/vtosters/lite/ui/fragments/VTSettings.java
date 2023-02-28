@@ -30,6 +30,9 @@ import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.*;
 
+import static ru.vtosters.lite.utils.Preferences.VERSIONNAME;
+import static ru.vtosters.lite.utils.Preferences.isValidSignature;
+
 public class VTSettings extends MaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
 
     public static String getValAsString(@StringRes int strRes, Boolean value) {
@@ -508,7 +511,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.menu_about),
-                "Commit: " + About.getBuildNumber(),
+                (isValidSignature() ? VERSIONNAME : "Dev") + " | " + About.getBuildNumber(),
                 R.drawable.ic_about_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), AboutAppFragment.class);
