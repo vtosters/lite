@@ -1,11 +1,13 @@
 package ru.vtosters.lite.themes.loaders;
 
+import android.annotation.SuppressLint;
 import android.content.res.AssetManager;
 import ru.vtosters.lite.utils.ReflectionUtils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+@SuppressLint("PrivateApi")
 public class AssetManagerHelper {
 
 
@@ -32,9 +34,9 @@ public class AssetManagerHelper {
             throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Object[] apkAssetsArr = (Object[]) getAssetPathMtd.invoke(assetManager);
         // By default, base apk is the last element of array if is not, for execution speed, we should iterate array from the end to the beginning
-        for (int i = apkAssetsArr.length - 1; i >= 0; i--) {
+        for (int i = (apkAssetsArr != null ? apkAssetsArr.length : 0) - 1; i >= 0; i--) {
             final String pathname = (String) getApkAssetsMtd.invoke(apkAssetsArr[i]);
-            if (pathname.contains(packagename)) return pathname;
+            if (pathname != null && pathname.contains(packagename)) return pathname;
         }
 
         throw new NullPointerException();

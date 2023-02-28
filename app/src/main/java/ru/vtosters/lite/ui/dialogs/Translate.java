@@ -32,7 +32,7 @@ public class Translate {
                 var translation = translator.getTranslation(text);
                 MAIN_EXECUTOR.execute(() -> showDialog(context, translation));
             } catch (Exception e) {
-                Log.e("Translate", e + "");
+                Log.e("Translate", String.valueOf(e));
             }
         });
     }

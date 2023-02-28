@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.dialogs;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -24,6 +25,7 @@ public class DisableBattery {
                 .setMessage(R.string.batteryissuesumm)
                 .setCancelable(false)
                 .setPositiveButton(R.string.batteryissuebtn1, (dialogInterface, i) -> {
+                    @SuppressLint("BatteryLife")
                     var intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                             .setData(Uri.parse("package:" + packName));
