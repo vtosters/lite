@@ -80,10 +80,17 @@ public class AppLock {
      * @return true if the user is enrolled in locking and the last successful unlock happened more than the default lock duration ago
      */
     public static boolean isUnlockRequired(Context context) {
-        int minutes = context.getResources()
-                .getInteger(AndroidUtils.getIdentifier("applock__activity_lock_reenable_minutes", "integer"));
+        int minutes = Integer.parseInt(getPinCodeTime(context));
+
+        if (minutes < 1) {
+            minutes = 1;
+        }
 
         return isUnlockRequired(context, TimeUnit.MINUTES.toMillis(minutes));
+    }
+
+    public static String getPinCodeTime(Context context) {
+        return context.getSharedPreferences(PREFS, 0).getString("pincode_time", "15");
     }
 
     /**

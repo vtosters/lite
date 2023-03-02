@@ -1,16 +1,16 @@
 package ru.vtosters.lite.ui.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-
 import com.guardanis.applock.AppLock;
 import com.guardanis.applock.activities.LockCreationActivity;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class PinFragment extends MaterialPreferenceToolbarFragment {
+    @SuppressLint("CommitPrefEdits")
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -39,6 +39,18 @@ public class PinFragment extends MaterialPreferenceToolbarFragment {
                     AndroidUtils.sendToast("Pin-код успешно сброшен");
                     return true;
                 }
+        );
+
+        PreferenceFragmentUtils.addEditTextValPreference(
+                getPreferenceScreen(),
+                "",
+                "Время для автоблокировки",
+                AppLock.getPinCodeTime(requireContext()),
+                ((preference, o) -> {
+                    AppLock.getInstance(requireContext()).getPreferences().edit().putString("pincode_time", o).apply();
+                    AndroidUtils.sendToast("Сохранено");
+                    return true;
+                })
         );
     }
 }
