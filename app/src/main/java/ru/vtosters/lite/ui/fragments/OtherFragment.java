@@ -8,7 +8,6 @@ import static ru.vtosters.lite.ui.components.BackupManager.deletePrefs;
 import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;

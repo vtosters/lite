@@ -41,6 +41,7 @@ public class MainActivityInjector {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannels.createChannels();
         }
+
         if (AppLock.isEnrolled(activity)) {
             var intent = new Intent(activity, UnlockActivity.class);
             activity.startActivity(intent);
