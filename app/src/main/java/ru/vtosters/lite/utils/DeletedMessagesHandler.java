@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.Preferences.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.annotation.SuppressLint;
@@ -73,7 +73,7 @@ public class DeletedMessagesHandler {
     }
 
     private static String getPrefixUndelete() {
-        var prefs = getPrefsValue("undeletemsg_prefix_value");
+        var prefs = getString("undeletemsg_prefix_value");
 
         if (prefs.isEmpty()) {
             return "\uD83D\uDDD1 ";

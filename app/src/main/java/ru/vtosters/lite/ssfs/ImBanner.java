@@ -75,7 +75,7 @@ public class ImBanner {
                     .setMessage(AndroidUtils.getString("custom_links_warning"))
                     .setCancelable(false)
                     .setPositiveButton(R.string.continue_, (dialogInterface, i) -> {
-                        Preferences.preferences.edit().putBoolean("linkalert", true).commit();
+                        Preferences.getPreferences().edit().putBoolean("linkalert", true).commit();
                     })
                     .setNeutralButton(R.string.cancel, (dialogInterface, i) -> {
                         dialogInterface.cancel();

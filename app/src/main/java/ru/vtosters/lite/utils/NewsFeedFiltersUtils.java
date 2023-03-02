@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.Preferences.getString;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
@@ -41,17 +41,17 @@ public class NewsFeedFiltersUtils {
         getFilter("shitposting", "IDontWantToReadIt.txt", mFilters);
         getFilter("cringecopyright", "CopyrightAds.txt", mFiltersLinks);
 
-        var customFilters = getPrefsValue("spamfilters");
+        var customFilters = getString("spamfilters");
         if (!customFilters.isEmpty()) {
             mFilters.addAll(Arrays.asList(customFilters.toLowerCase().split(", ")));
         }
 
-        var sourceNameFilter = getPrefsValue("sourcenamefilter");
+        var sourceNameFilter = getString("sourcenamefilter");
         if (!sourceNameFilter.isEmpty()) {
             mFiltersNames.addAll(Arrays.asList(sourceNameFilter.toLowerCase().split(", ")));
         }
 
-        var linkFilter = getPrefsValue("linkfilter");
+        var linkFilter = getString("linkfilter");
         if (!linkFilter.isEmpty()) {
             mFiltersLinks.addAll(Arrays.asList(linkFilter.toLowerCase().split(", ")));
         }
@@ -156,7 +156,7 @@ public class NewsFeedFiltersUtils {
     }
 
     public static String getAllFilters() {
-        return getPrefsValue("spamfilters");
+        return getString("spamfilters");
     }
 
     public static boolean isBadNews(String text) {

@@ -1,30 +1,23 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.proxy.ProxyUtils.isRandomProxyEnabled;
-import static ru.vtosters.lite.proxy.ProxyUtils.isVikaProxyEnabled;
-import static ru.vtosters.lite.proxy.ProxyUtils.isZaboronaEnabled;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
 import androidx.appcompat.view.ContextThemeWrapper;
-
 import com.vk.auth.ui.VkAuthTextView;
 import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.ui.fragments.ProxySettingsFragment;
 import ru.vtosters.lite.utils.NavigatorUtils;
+import ru.vtosters.lite.utils.Preferences;
+
+import static ru.vtosters.lite.proxy.ProxyUtils.*;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 public class ProxyHook {
     public static void hookAuth(View v) {
@@ -77,16 +70,16 @@ public class ProxyHook {
                 .setView(rg)
                 .setPositiveButton(ctx.getString(R.string.vtl_confirm), ((dialog, which) -> { // Применить
                     if (rgZaborona.isChecked()) {
-                        edit().putString("proxy", "zaborona").commit();
+                        Preferences.getPreferences().edit().putString("proxy", "zaborona").commit();
                         restartApplication();
                     } else if (rgRandomProxy.isChecked()) {
-                        edit().putString("proxy", "randomproxy").commit();
+                        Preferences.getPreferences().edit().putString("proxy", "randomproxy").commit();
                         restartApplication();
                     } else if (rgVika.isChecked()) {
-                        edit().putString("proxy", "vika").commit();
+                        Preferences.getPreferences().edit().putString("proxy", "vika").commit();
                         restartApplication();
                     } else {
-                        edit().putString("proxy", "noproxy").commit();
+                        Preferences.getPreferences().edit().putString("proxy", "noproxy").commit();
                         restartApplication();
                     }
                 }))

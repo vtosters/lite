@@ -43,9 +43,9 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("spamfilters").setSummary(count(getPrefsValue("spamfilters")));
-        findPreference("sourcenamefilter").setSummary(count(getPrefsValue("sourcenamefilter")));
-        findPreference("linkfilter").setSummary(count(getPrefsValue("linkfilter")));
+        findPreference("spamfilters").setSummary(count(Preferences.getString("spamfilters")));
+        findPreference("sourcenamefilter").setSummary(count(Preferences.getString("sourcenamefilter")));
+        findPreference("linkfilter").setSummary(count(Preferences.getString("linkfilter")));
 
         findPreference("spamfilters").setOnPreferenceClickListener(preference -> {
             NewsFeedFiltersUtils.setupFilters();
@@ -86,7 +86,7 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        var str = getDefaultPrefs().getString("news_feed_selected_items", "");
+        var str = Preferences.getPreferences().getString("news_feed_selected_items", "");
         findPreference("newsfeedlistmanager").setSummary(
                 String.format(requireContext().getString(R.string.feed_hidden), (!TextUtils.isEmpty(str) ? str.split(",").length : 0))
         );
@@ -96,7 +96,7 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("feedcache").setVisible(!getPrefsValue("newsupdate").equals("no_update"));
+        findPreference("feedcache").setVisible(!Preferences.getString("newsupdate").equals("no_update"));
     }
 
     private String count(String text) {
@@ -116,7 +116,7 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
                 .setMessage(requireContext().getString(R.string.delete_elements_confirm))
                 .setCancelable(false)
                 .setPositiveButton(requireContext().getString(R.string.yes), (dialogInterface, i) -> {
-                    edit().remove(key).apply();
+                    Preferences.getPreferences().edit().remove(key).apply();
                     sendToast(requireContext().getString(R.string.elements_deleted_success));
                     NewsFeedFiltersUtils.setupFilters();
                 })
@@ -126,7 +126,7 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private String countSet(String key) {
-        var set = getDefaultPrefs().getStringSet(key, null);
+        var set = Preferences.getPreferences().getStringSet(key, null);
         StringBuilder str = new StringBuilder();
         if (set != null) {
             for (var s : set) {

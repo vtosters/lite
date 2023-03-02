@@ -2,10 +2,12 @@ package ru.vtosters.lite.themes;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
 import androidx.annotation.IdRes;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 
@@ -161,12 +163,13 @@ public class ThemesCore {
     }
 
     public static boolean hasThemedAttr(Context context, int attrID) {
-//        try {
-//            Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
-//        } catch (Exception e) {
-//        }
-
         if (ThemesUtils.isCustomAccentEnabled()) {
+            if (Preferences.dev()) {
+                try {
+                    Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
+                } catch (Exception ignored) {}
+            }
+
             if (isCachedAccents()) {
                 if (ThemesUtils.isDarkTheme()) {
                     return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_DARK.get(attrID, true) && (

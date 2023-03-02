@@ -2,18 +2,18 @@ package ru.vtosters.lite.themes;
 
 import android.app.Application;
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceFile;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.themes.loaders.ResourcesLoader;
 import ru.vtosters.lite.themes.utils.ArscEditor;
 import ru.vtosters.lite.utils.IOUtils;
+import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.zip.CRC32;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
@@ -95,144 +95,126 @@ public class ThemesManager {
             R.color.darker_blue,
             R.color.header_blue_opacity40
     };
-    private final static String[] NAMES = {
-            "resources.arsc",
-            "res",
-            "assets"
+    // modify it if "doNotCompress" in apktool.yml has been edited
+    private final static String[] DO_NOT_COMPRESS = {
+            ".png",
+            ".jpg",
+            ".mp3",
+            "res/raw/keep_cronet_api.xml"
     };
+
+    private static String baseApkPath;
+
+    private static boolean validated = false;
 
     // Directories
     private static File mainDir;
-    private static File binDir;
-    private static File palettesDir;
+    private static File colorSchemesDir;
 
-    // Files
-
-    // Temp archive with resources.arsc and res.zip content for loading resources
-    private static File resTmpZipFile = null;
-
-    // Archive with assets folder content for loading resources
-    private static File assetsZipFile = null;
-
-    // Archive with res folder content
-    private static File resZipFile = null;
-
-    // Resources table file
-    private static File resourcesArscFile = null;
+    // Modified archive with resources.arsc, other resources and assets
+    private static File modApk;
 
     public static void init(Application app) {
         try {
-            Log.d("ThemesManager", "init paths");
             initPaths(app);
+            validateModApk();
 
-            if (hasTmpArchive() && !ThemesUtils.isMonetTheme()) {
+            if (!Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && canApplyCustomAccent()) {
                 ResourcesLoader.init(app);
-                ResourcesLoader.load(app, resTmpZipFile.getAbsolutePath(), assetsZipFile.getAbsolutePath(), false);
+                ResourcesLoader.load(app, modApk.getAbsolutePath(), false);
             }
         } catch (Exception e) {
-            Log.e("ThemesManager", String.valueOf(e));
+            Log.e("ThemesManager", e+"");
         }
+    }
+
+    // validate modded apk before loading
+    private static void validateModApk()
+        throws IOException {
+        final var apk = new ZipFile(modApk);
+        apk.close();
+
+        validated = true;
     }
 
     private static void initPaths(Context context) {
+        baseApkPath = context.getApplicationInfo().publicSourceDir;
+
         mainDir = new File(context.getFilesDir(), "VTLThemes");
         if (!mainDir.exists()) mainDir.mkdir();
 
-        binDir = new File(mainDir, "bin");
-        if (!binDir.exists()) mainDir.mkdir();
+        colorSchemesDir = new File(mainDir, "color_schemes");
+        if (!colorSchemesDir.exists()) colorSchemesDir.mkdir();
 
-        palettesDir = new File(mainDir, "palettes");
-        if (!palettesDir.exists()) palettesDir.mkdir();
-
-        assetsZipFile = new File(binDir, "assets.zip");
-        resZipFile = new File(binDir, "res.zip");
-        resourcesArscFile = new File(binDir, "resources.arsc");
-        resTmpZipFile = new File(binDir, "res.tmp.zip");
+        modApk = new File(mainDir, "mod.apk");
     }
 
-    public static void generateBins(Context context)
-            throws IOException {
-        try (final var apk = new ZipFile(context.getApplicationInfo().sourceDir)) {
-            for (var filename : NAMES) {
-                final var bin = new File(binDir, filename);
-                if (!bin.exists())
-                    if (filename.contains(".")) extractFile(apk, filename, bin);
-                    else extractAndCompressDirectory(apk, filename, new File(binDir, filename + ".zip"));
-            }
-        }
+    public static boolean canApplyCustomAccent() {
+        return validated && modApk.exists() && ThemesUtils.getReservedAccent() != Color.TRANSPARENT;
     }
 
-    private static void extractFile(ZipFile apk, String name, File out)
-            throws IOException {
-        final var is = apk.getInputStream(apk.getEntry(name));
-        if (!out.exists()) out.getParentFile().mkdirs();
-        IOUtils.copy(is, out);
-    }
+    public static void generateModApk(int accentColor)
+        throws Throwable {
+        try(
+           final var apk = new ZipFile(baseApkPath)
+        ) {
+            final var arscEntry = apk.getEntry("resources.arsc");
+            final var arscBis = new BufferedInputStream(apk.getInputStream(arscEntry));
+            final var arsc = BinaryResourceFile.fromInputStream(arscBis);
+            if(!ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor))
+                throw new IllegalStateException("Not all colors have been changed");
 
-    private static void extractAndCompressDirectory(ZipFile apk, String dirName, File out)
-            throws IOException {
-        final var zos = new ZipOutputStream(new FileOutputStream(out));
-        try (zos) {
-            final var entries = apk.entries();
-            while (entries.hasMoreElements()) {
-                final var entry = entries.nextElement();
-                if (!entry.getName().startsWith(dirName + "/")) continue;
+            try(
+                final var zos = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(modApk)))
+            ) {
+                final var arscBuff = arsc.toByteArray();
+                final var newArscEntry = new ZipEntry("resources.arsc");
 
-                zos.putNextEntry(new ZipEntry(entry.getName()));
+                final var crc = new CRC32();
+                crc.update(arscBuff);
 
-                final var zis = apk.getInputStream(entry);
-                IOUtils.copy(zis, zos);
+                newArscEntry.setSize(arscBuff.length);
+                newArscEntry.setMethod(ZipEntry.STORED);
+                newArscEntry.setCrc(crc.getValue());
 
-                zis.close();
+                zos.putNextEntry(newArscEntry);
+                zos.write(arscBuff);
                 zos.closeEntry();
+
+                final var entries = apk.entries();
+                while(entries.hasMoreElements()) {
+                    final var entry = entries.nextElement();
+                    final var name = entry.getName();
+
+                    if(!name.startsWith("res/") && !name.startsWith("assets/") || name.equals("resources.arsc")) continue;
+
+                    var doNotCompress = false;
+                    for(var suffix : DO_NOT_COMPRESS) {
+                       if(name.endsWith(suffix)) {
+                           doNotCompress = true;
+                           break;
+                       }
+                    }
+
+                    final var entryBis = new BufferedInputStream(apk.getInputStream(entry));
+                    final var newEntry = new ZipEntry(name);
+
+                    if(doNotCompress) {
+                        newEntry.setMethod(ZipEntry.STORED);
+                        newEntry.setSize(entry.getSize());
+                        newEntry.setCrc(entry.getCrc());
+                    } else newEntry.setMethod(ZipEntry.DEFLATED);
+
+                    zos.putNextEntry(newEntry);
+                    IOUtils.copy(entryBis, zos);
+                    entryBis.close();
+                    zos.closeEntry();
+                }
             }
         }
     }
 
-    public static boolean hasBins() {
-        return assetsZipFile.exists() && resZipFile.exists() && resourcesArscFile.exists();
-    }
-
-    public static boolean hasTmpArchive() {
-        return resTmpZipFile.exists();
-    }
-
-    public static void generateTempResArchive(int accentColor)
-            throws IOException {
-        final var resZip = new ZipFile(resZipFile);
-        final var zos = new ZipOutputStream(new FileOutputStream(resTmpZipFile));
-        try (zos) {
-            final var entries = resZip.entries();
-            while (entries.hasMoreElements()) {
-                final var entry = entries.nextElement();
-                final var is = resZip.getInputStream(entry);
-
-                zos.putNextEntry(new ZipEntry(entry.getName()));
-                IOUtils.copy(is, zos);
-
-                is.close();
-                zos.closeEntry();
-            }
-
-            final var arsc = new BinaryResourceFile(IOUtils.readFully(resourcesArscFile));
-            if (!ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor)) {
-                resZip.close();
-                resTmpZipFile.delete();
-                throw new IOException("Error while generating res.tmp.res");
-            }
-
-            zos.putNextEntry(new ZipEntry("resources.arsc"));
-            IOUtils.copy(new ByteArrayInputStream(arsc.toByteArray()), zos);
-        }
-    }
-
-    public static void deleteBins() {
-        assetsZipFile.delete();
-        resZipFile.delete();
-        resourcesArscFile.delete();
-    }
-
-    public static void deleteTmpArchive() {
-        resTmpZipFile.delete();
+    public static void deleteModification() {
+        modApk.delete();
     }
 }

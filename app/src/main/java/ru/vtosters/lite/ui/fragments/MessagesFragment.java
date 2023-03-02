@@ -7,10 +7,10 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.util.Arrays;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
@@ -47,11 +47,11 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
             );
 
             var adapter = new ImagineArrayAdapter(requireContext(), items);
-            adapter.setSelected(getPreferences().getInt("translator", 0));
+            adapter.setSelected(Preferences.getPreferences().getInt("translator", 0));
 
             new VkAlertDialog.Builder(getActivity())
                     .setAdapter(adapter, (dialog, which) -> {
-                        getPreferences().edit().putInt("translator", which).apply();
+                        Preferences.getPreferences().edit().putInt("translator", which).apply();
                         dialog.cancel();
                     })
                     .show();

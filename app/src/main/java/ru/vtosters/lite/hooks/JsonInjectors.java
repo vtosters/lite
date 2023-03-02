@@ -1,37 +1,22 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
-import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
-import static ru.vtosters.lite.proxy.ProxyUtils.getStatic;
-import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
-import static ru.vtosters.lite.utils.Preferences.dev;
-import static ru.vtosters.lite.utils.Preferences.friendsblock;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.hasVerification;
-import static ru.vtosters.lite.utils.VTVerifications.isDeveloper;
-import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
-import static ru.vtosters.lite.utils.VTVerifications.isVerified;
-
 import android.text.TextUtils;
 import android.util.Log;
-
-import com.vk.core.util.LangUtils;
-import com.vtosters.lite.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.LinkedHashSet;
-import java.util.Objects;
-import java.util.Random;
 
-import okhttp3.OkHttpClient;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
-import ru.vtosters.lite.utils.AccountManagerUtils;
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
+import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
+import static ru.vtosters.lite.utils.Preferences.dev;
+import static ru.vtosters.lite.utils.Preferences.friendsblock;
 
 public class JsonInjectors {
     public static JSONObject menu(JSONObject orig) throws JSONException {
@@ -47,7 +32,7 @@ public class JsonInjectors {
     }
 
     public static JSONObject superapp(JSONObject json) throws JSONException {
-        var superApps = AndroidUtils.getPreferences().getString("superapp_items",
+        var superApps = Preferences.getPreferences().getString("superapp_items",
                 "menu,miniapps,vkpay_slim,greeting,promo,holiday,weather,sport,games,informer,food,event,music,vk_run").split(",");
         if (superApps.length == 0) return json;
 
@@ -154,8 +139,8 @@ public class JsonInjectors {
     }
 
     public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
-        var selectedItems = getDefaultPrefs().getString("news_feed_selected_items", "");
-        var filtersSet = getDefaultPrefs().getStringSet("news_feed_items_set", null);
+        var selectedItems = Preferences.getPreferences().getString("news_feed_selected_items", "");
+        var filtersSet = Preferences.getPreferences().getStringSet("news_feed_items_set", null);
         var mutableFiltersSet = new LinkedHashSet<String>();
         if (filtersSet != null)
             mutableFiltersSet.addAll(filtersSet);
@@ -182,7 +167,7 @@ public class JsonInjectors {
                     .put("is_unavailable", hide);
             if (dev()) Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
         }
-        getDefaultPrefs().edit().putStringSet("news_feed_items_set", mutableFiltersSet)
+        Preferences.getPreferences().edit().putStringSet("news_feed_items_set", mutableFiltersSet)
                 .apply();
 
         return items;

@@ -1,9 +1,8 @@
 package ru.vtosters.lite.hooks;
 
 import static java.lang.Long.MAX_VALUE;
-import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.Preferences.getString;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
@@ -23,13 +22,14 @@ import java.util.LinkedHashSet;
 import java.util.List;
 
 import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 public class NewsfeedHook {
     public static long getUpdateNewsfeed(boolean refresh_timeout) {
         if (vkme()) {
             return MAX_VALUE;
         }
-        return switch (getPrefsValue("newsupdate")) {
+        return switch (getString("newsupdate")) {
             case "no_update" -> MAX_VALUE;
             case "imd_update" -> 10000L;
             default ->
@@ -67,20 +67,20 @@ public class NewsfeedHook {
     }
 
     public static boolean isWhitelistedFilter(ExtendedCommunityProfile eup) {
-        return getDefaultPrefs().getStringSet(
+        return Preferences.getPreferences().getStringSet(
                 "whitelisted_filters_groups", Collections.emptySet()
         ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
     }
 
     public static boolean isWhitelistedAd(ExtendedCommunityProfile eup) {
-        return getDefaultPrefs().getStringSet(
+        return Preferences.getPreferences().getStringSet(
                 "whitelisted_ad_groups",
                 Collections.emptySet()
         ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
     }
 
     public static boolean isWhitelistedAdStories(ExtendedCommunityProfile eup) {
-        return getDefaultPrefs().getStringSet(
+        return Preferences.getPreferences().getStringSet(
                 "whitelisted_stories_ad",
                 Collections.emptySet()
         ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
@@ -89,7 +89,7 @@ public class NewsfeedHook {
     public static void setWhitelistedFilter(ExtendedCommunityProfile eup, boolean needWhitelist) {
         var id = String.valueOf(AccountManagerUtils.getUserID(eup));
 
-        var mutableAdsSet = new LinkedHashSet<>(getDefaultPrefs().getStringSet(
+        var mutableAdsSet = new LinkedHashSet<>(Preferences.getPreferences().getStringSet(
                 "whitelisted_filters_groups",
                 Collections.emptySet())
         );
@@ -99,13 +99,13 @@ public class NewsfeedHook {
             mutableAdsSet.remove(id);
         }
 
-        getDefaultPrefs().edit().putStringSet("whitelisted_filters_groups", mutableAdsSet).apply();
+        Preferences.getPreferences().edit().putStringSet("whitelisted_filters_groups", mutableAdsSet).apply();
     }
 
     public static void setWhitelistedAd(ExtendedCommunityProfile eup, boolean needWhitelist) {
         var id = String.valueOf(AccountManagerUtils.getUserID(eup));
 
-        var mutableAdsSet = new LinkedHashSet<>(getDefaultPrefs().getStringSet(
+        var mutableAdsSet = new LinkedHashSet<>(Preferences.getPreferences().getStringSet(
                 "whitelisted_ad_groups",
                 Collections.emptySet()));
 
@@ -115,13 +115,13 @@ public class NewsfeedHook {
             mutableAdsSet.remove(id);
         }
 
-        getDefaultPrefs().edit().putStringSet("whitelisted_ad_groups", mutableAdsSet).apply();
+        Preferences.getPreferences().edit().putStringSet("whitelisted_ad_groups", mutableAdsSet).apply();
     }
 
     public static void setWhitelistedAdStories(ExtendedCommunityProfile eup, boolean needWhitelist) {
         var id = String.valueOf(AccountManagerUtils.getUserID(eup));
 
-        var mutableAdsSet = new LinkedHashSet<>(getDefaultPrefs().getStringSet(
+        var mutableAdsSet = new LinkedHashSet<>(Preferences.getPreferences().getStringSet(
                 "whitelisted_stories_ad",
                 Collections.emptySet()));
 
@@ -131,7 +131,7 @@ public class NewsfeedHook {
             mutableAdsSet.remove(id);
         }
 
-        getDefaultPrefs().edit().putStringSet("whitelisted_stories_ad", mutableAdsSet).apply();
+        Preferences.getPreferences().edit().putStringSet("whitelisted_stories_ad", mutableAdsSet).apply();
     }
 
     public static void adsParams(HashSet<String> hashSet) {

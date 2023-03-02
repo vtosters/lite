@@ -19,8 +19,8 @@ public class ArscEditor {
 
                             final var id = BinaryResourceIdentifier.create(packageChunk.getId(), typeSpecChunk.getId(), entry.getKey());
 
-                            for (int i = 0; i < colorIds.length; ++i) {
-                                if (colorIds[i] != id.resId()) continue;
+                            for (int colorId : colorIds) {
+                                if (colorId != id.resId()) continue;
 
                                 final var value = entry.getValue();
                                 value.updateValue(new BinaryResourceValue(8, value.value().type(), color /*colors[i]*/));

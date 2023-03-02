@@ -1,7 +1,7 @@
 package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.ui.components.DockBarEditorManager.getInstance;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.Preferences.getString;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
@@ -35,7 +35,7 @@ public class StartFragmentHook {
         if (vkme()) {
             return DialogsFragment.class;
         }
-        return switch (getPrefsValue("start_values")) {
+        return switch (getString("start_values")) {
             case "newsfeed" -> milkshake() ? HomeFragment.class : NewsfeedFragment.class;
             case "messenger" -> DialogsFragment.class;
             case "groups" -> milkshake() ? CommunitiesCatalogFragment.class : GroupsFragment1.class;

@@ -23,8 +23,8 @@ import ru.vtosters.lite.utils.ThemesUtils;
 public class IconsFragment extends MaterialPreferenceToolbarFragment {
     @SuppressLint("SetTextI18n")
     public static void callSelectDialog(Context ctx, String appicon) {
-        var defname = Preferences.preferences.getString("appname", "vt");
-        var deficon = Preferences.preferences.getString("selectedicon", "vt");
+        var defname = Preferences.getPreferences().getString("appname", "vt");
+        var deficon = Preferences.getPreferences().getString("selectedicon", "vt");
 
         RadioGroup rg = new RadioGroup(ctx);
 
@@ -60,18 +60,18 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
                 .setView(rg)
                 .setPositiveButton(R.string.vtl_confirm, ((dialog, which) -> {
                     if (rgDefault.isChecked()) {
-                        AndroidUtils.edit().putString("appname", "vt").commit();
-                        AndroidUtils.edit().putString("selectedicon", appicon).commit();
+                        Preferences.getPreferences().edit().putString("appname", "vt").commit();
+                        Preferences.getPreferences().edit().putString("selectedicon", appicon).commit();
 
                         IconManager.switchComponent(appicon, "vt");
                     } else if (rgVK.isChecked()) {
-                        AndroidUtils.edit().putString("appname", "standard").commit();
-                        AndroidUtils.edit().putString("selectedicon", appicon).commit();
+                        Preferences.getPreferences().edit().putString("appname", "standard").commit();
+                        Preferences.getPreferences().edit().putString("selectedicon", appicon).commit();
 
                         IconManager.switchComponent(appicon, "standard");
                     } else if (rgVKontakte.isChecked()) {
-                        AndroidUtils.edit().putString("appname", "vkontakte").commit();
-                        AndroidUtils.edit().putString("selectedicon", appicon).commit();
+                        Preferences.getPreferences().edit().putString("appname", "vkontakte").commit();
+                        Preferences.getPreferences().edit().putString("selectedicon", appicon).commit();
 
                         IconManager.switchComponent(appicon, "vkontakte");
                     }

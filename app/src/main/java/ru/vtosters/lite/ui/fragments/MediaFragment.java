@@ -25,6 +25,7 @@ import ru.vtosters.lite.music.LastFMScrobbler;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.io.IOException;
@@ -152,11 +153,11 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                     );
 
             var adapter = new ImagineArrayAdapter(requireContext(), items);
-            adapter.setSelected(getPreferences().getInt("search_engine", 0));
+            adapter.setSelected(Preferences.getPreferences().getInt("search_engine", 0));
 
             new VkAlertDialog.Builder(getActivity())
                     .setAdapter(adapter, (dialog, which) -> {
-                        getPreferences().edit().putInt("search_engine", which).apply();
+                        Preferences.getPreferences().edit().putInt("search_engine", which).apply();
                         dialog.cancel();
                     })
                     .show();

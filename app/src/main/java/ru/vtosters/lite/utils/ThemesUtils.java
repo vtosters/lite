@@ -48,7 +48,7 @@ public class ThemesUtils {
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
     public static boolean isCustomAccentEnabled() {
-        return ThemesUtils.isMonetTheme() || ThemesManager.hasTmpArchive();
+        return ThemesUtils.isMonetTheme() || ThemesManager.canApplyCustomAccent();
     }
 
     public static ColorStateList getAccenedColorStateList() {
@@ -100,6 +100,21 @@ public class ThemesUtils {
     public static int getAccentColor() {
         return getColorFromAttr(R.attr.accent);
     } // Color accent
+
+    //region Used for migrating accent color to new version
+
+    public static int getReservedAccent() {
+        return Preferences.getPreferences().getInt("reserved_accent_color", Color.TRANSPARENT);
+    }
+
+    public static void reserveAccentColor(int accent, boolean async) {
+        final var editor = Preferences.getPreferences().edit();
+        editor.putInt("reserved_accent_color", accent);
+        if(async) editor.apply();
+        else editor.commit();
+    }
+
+    //endregion
 
     public static int getMutedAccentColor() {
         return getMutedColor(getAccentColor());
@@ -197,7 +212,7 @@ public class ThemesUtils {
     }
 
     public static void setCustomAccentColor(int newColor, boolean async) {
-        var editor = AndroidUtils.edit().putInt("accent_color", newColor);
+        var editor = Preferences.getPreferences().edit().putInt("accent_color", newColor);
         if (async) editor.apply();
         else editor.commit();
     }

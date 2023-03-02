@@ -1,6 +1,6 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.Preferences.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.getStringDate;
 
 import android.annotation.SuppressLint;
@@ -15,11 +15,11 @@ import ru.vtosters.lite.utils.AndroidUtils;
 
 public class DateHook {
     public static boolean fulltime() {
-        return getPrefsValue("dateformat").equals("noyear") || getPrefsValue("dateformat").equals("full") || getPrefsValue("dateformat").equals("noseconds");
+        return getString("dateformat").equals("noyear") || getString("dateformat").equals("full") || getString("dateformat").equals("noseconds");
     }
 
     public static String getDateFormat() {
-        return switch (getPrefsValue("dateformat")) {
+        return switch (getString("dateformat")) {
             case "noyear" -> AndroidUtils.getString(R.string.fulltime2);
             case "full" -> AndroidUtils.getString(R.string.fulltime);
             default -> AndroidUtils.getString(R.string.fulltime3);
@@ -45,7 +45,7 @@ public class DateHook {
     }
 
     public static String getLocale() {
-        String string = getPrefsValue("lang_value");
+        String string = getString("lang_value");
 
         if (string.equals("system")) {
             return Locale.getDefault().getLanguage();

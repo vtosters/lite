@@ -12,8 +12,8 @@ import ru.vtosters.lite.utils.LayoutUtils;
 
 public class VTColorPickerBottomSheetDialog extends ModalBottomSheetWrapper<VTColorPickerBottomSheetDialog> {
 
-    private Activity mActivity;
-    private LinearLayout mContainer;
+    private final Activity mActivity;
+    private final LinearLayout mContainer;
 
     public VTColorPickerBottomSheetDialog(Activity activity) {
         super(activity);

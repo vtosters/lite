@@ -14,6 +14,7 @@ import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 
@@ -93,7 +94,7 @@ public class CatalogJsonInjector {
                     var title = item.optString("title");
                     var id = item.optString("id");
                     var url = item.optString("url");
-                    var value = AndroidUtils.getPrefsValue("musicdefcatalog");
+                    var value = Preferences.getString("musicdefcatalog");
 
                     Log.d("VKMusic", "title: " + title + " id: " + id + " url: " + url + " value: " + value);
 

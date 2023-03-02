@@ -1,20 +1,6 @@
 package ru.vtosters.lite.hooks;
 
-import static android.util.Base64.encodeToString;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getBackgroundContent;
-import static ru.vtosters.lite.utils.ThemesUtils.getBackgroundPage;
-import static ru.vtosters.lite.utils.ThemesUtils.getColorFromAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.getHeaderBackground;
-import static ru.vtosters.lite.utils.ThemesUtils.getHeaderText;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.hex;
-
 import android.webkit.WebView;
-
 import com.vk.articles.preload.WebCachePreloader;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
@@ -26,6 +12,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+
+import static android.util.Base64.encodeToString;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.ThemesUtils.*;
 
 public class VKUIHook {
     public static boolean isLoaded = false;

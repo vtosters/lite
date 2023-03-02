@@ -43,6 +43,9 @@ public abstract class BaseToolbarFragment extends FragmentImpl {
     public void setNavigationIconEnabled(boolean enabled) {
         if (enabled) {
             ViewUtils.a(mToolbar, R.drawable.ic_back_outline_28);
+            mToolbar.setNavigationOnClickListener(v -> {
+                ToolbarHelper.b(this);
+            });
         } else {
             ToolbarHelper.a(this, mToolbar);
         }

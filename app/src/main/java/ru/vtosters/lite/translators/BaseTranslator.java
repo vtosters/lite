@@ -1,6 +1,6 @@
 package ru.vtosters.lite.translators;
 
-import static ru.vtosters.lite.utils.Preferences.preferences;
+import static ru.vtosters.lite.utils.Preferences.getPreferences;
 
 import androidx.annotation.NonNull;
 import androidx.collection.LruCache;
@@ -8,6 +8,7 @@ import androidx.collection.LruCache;
 import java.util.Locale;
 
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 public abstract class BaseTranslator {
 
@@ -22,7 +23,7 @@ public abstract class BaseTranslator {
     };
 
     public static String getToLanguage() {
-        var lang = preferences.getString("lang_target", "system");
+        var lang = getPreferences().getString("lang_target", "system");
         var systemLang = Locale.getDefault().getLanguage();
 
         if (lang.isEmpty() || lang.equals(systemLang) || lang.equals("system"))
@@ -32,7 +33,7 @@ public abstract class BaseTranslator {
     }
 
     public static BaseTranslator getInstance() {
-        return switch (AndroidUtils.getPreferences().getInt("translator", 0)) {
+        return switch (Preferences.getPreferences().getInt("translator", 0)) {
             case YANDEX -> YandexTranslator.getInstance();
             case GOOGLE -> GoogleTranslator.getInstance();
             case DEEPL -> DeepLTranslator.getInstance();

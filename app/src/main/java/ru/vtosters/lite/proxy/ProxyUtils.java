@@ -5,7 +5,7 @@ import static ru.vtosters.lite.proxy.api.VikaMobile.getApiHost;
 import static ru.vtosters.lite.proxy.api.VikaMobile.getOauthHost;
 import static ru.vtosters.lite.proxy.api.VikaMobile.getStaticHost;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -21,10 +21,11 @@ import ru.vtosters.lite.proxy.http.CustomHttp;
 import ru.vtosters.lite.proxy.https.CustomHttps;
 import ru.vtosters.lite.proxy.socks.CustomSocks;
 import ru.vtosters.lite.proxy.socks.Zaborona;
+import ru.vtosters.lite.utils.Preferences;
 
 public class ProxyUtils {
     public static String getApi() {
-        var proxyapi = getPrefsValue("proxyapi");
+        var proxyapi = Preferences.getString("proxyapi");
 
         if (isVikaProxyEnabled()) {
             proxyapi = getApiHost();
@@ -38,7 +39,7 @@ public class ProxyUtils {
     }
 
     public static String getOauth() {
-        var oauth = getPrefsValue("proxyoauth");
+        var oauth = Preferences.getString("proxyoauth");
 
         if (isVikaProxyEnabled()) {
             oauth = getOauthHost();
@@ -52,7 +53,7 @@ public class ProxyUtils {
     }
 
     public static String getStatic() {
-        var staticapi = getPrefsValue("proxystatic");
+        var staticapi = Preferences.getString("proxystatic");
 
         if (isVikaProxyEnabled()) {
             staticapi = getStaticHost();
@@ -70,19 +71,19 @@ public class ProxyUtils {
     }
 
     public static Boolean isZaboronaEnabled() {
-        return getPrefsValue("proxy").equals("zaborona");
+        return Preferences.getString("proxy").equals("zaborona");
     }
 
     public static Boolean isRandomProxyEnabled() {
-        return getPrefsValue("proxy").equals("randomproxy");
+        return Preferences.getString("proxy").equals("randomproxy");
     }
 
     public static Boolean isApiProxyEnabled() {
-        return getPrefsValue("proxy").equals("apiproxy");
+        return Preferences.getString("proxy").equals("apiproxy");
     }
 
     public static Boolean isVikaProxyEnabled() {
-        return getPrefsValue("proxy").equals("vika");
+        return Preferences.getString("proxy").equals("vika");
     }
 
     public static void forceProxyApplying() {
@@ -134,7 +135,7 @@ public class ProxyUtils {
 
     public static void setProxy() throws IOException {
         if (!isAnyProxyEnabled()) return;
-        switch (getPrefsValue("proxy")) {
+        switch (Preferences.getString("proxy")) {
             case "zaborona" -> Zaborona.loadProxy();
             case "randomproxy" -> RandomProxy.loadProxy();
             case "socks" -> CustomSocks.loadProxy();

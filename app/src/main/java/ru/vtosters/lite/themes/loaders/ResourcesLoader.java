@@ -108,7 +108,7 @@ public class ResourcesLoader {
         }
     }
 
-    public static void load(Context context, String resPath, String assetsPath, boolean reinject)
+    public static void load(Context context, String resPath, boolean reinject)
             throws Exception {
         final ApplicationInfo appInfo = context.getApplicationInfo();
 
@@ -136,8 +136,7 @@ public class ResourcesLoader {
 
         sAssetManager = AssetManager.class.newInstance();
         // Create a new AssetManager instance and point it to the resources installed under
-        if (AssetManagerHelper.addAssetPath(sAssetManager, resPath) == 0
-                || AssetManagerHelper.addAssetPath(sAssetManager, assetsPath) == 0)
+        if (AssetManagerHelper.addAssetPath(sAssetManager, resPath) == 0)
             throw new IllegalStateException("Could not create new AssetManager");
 
         // Add SharedLibraries to AssetManager for resolve system resources not found issue
@@ -192,10 +191,10 @@ public class ResourcesLoader {
             }
         }
 
-        installResourceInsuranceHacks(context, resPath, assetsPath);
+        installResourceInsuranceHacks(context, resPath);
     }
 
-    private static void installResourceInsuranceHacks(Context context, String patchedResApkPath, String patchedAssetsApkPath) {
+    private static void installResourceInsuranceHacks(Context context, String patchedResApkPath) {
         try {
             final Object activityThread = ReflectionUtils.getActivityThread(context, null);
             final Field mHField = ReflectionUtils.findField(activityThread, "mH");
@@ -204,7 +203,7 @@ public class ResourcesLoader {
             final Handler.Callback originCallback = (Handler.Callback) mCallbackField.get(mH);
             if (!(originCallback instanceof ResourceInsuranceHandlerCallback)) {
                 final ResourceInsuranceHandlerCallback hackCallback = new ResourceInsuranceHandlerCallback(
-                        context, patchedResApkPath, patchedAssetsApkPath, originCallback, mH.getClass());
+                        context, patchedResApkPath, originCallback, mH.getClass());
                 mCallbackField.set(mH, hackCallback);
             } else {
                 Log.w("ResourcesLoader", "installResourceInsuranceHacks: already installed, skip rest logic.");
@@ -274,7 +273,6 @@ public class ResourcesLoader {
 
         private final Context mContext;
         private final String mPatchResApkPath;
-        private final String mPatchedAssetsApkPath;
         private final Handler.Callback mOriginalCallback;
 
         private final int LAUNCH_ACTIVITY;
@@ -284,11 +282,10 @@ public class ResourcesLoader {
         private Method mGetCallbacksMethod = null;
         private boolean mSkipInterceptExecuteTransaction = false;
 
-        ResourceInsuranceHandlerCallback(Context context, String patchResApkPath, String patchedAssetsApkPath, Handler.Callback original, Class<?> hClazz) {
+        ResourceInsuranceHandlerCallback(Context context, String patchResApkPath, Handler.Callback original, Class<?> hClazz) {
             Context appContext = context.getApplicationContext();
             mContext = (appContext != null ? appContext : context);
             mPatchResApkPath = patchResApkPath;
-            mPatchedAssetsApkPath = patchedAssetsApkPath;
             mOriginalCallback = original;
             LAUNCH_ACTIVITY = fetchMessageId(hClazz, "LAUNCH_ACTIVITY", 100);
             RELAUNCH_ACTIVITY = fetchMessageId(hClazz, "RELAUNCH_ACTIVITY", 126);
@@ -365,7 +362,7 @@ public class ResourcesLoader {
             }
             if (shouldReInjectPatchedResources) {
                 try {
-                    load(mContext, mPatchResApkPath, mPatchedAssetsApkPath, true);
+                    load(mContext, mPatchResApkPath, true);
                 } catch (Throwable thr) {
                     thr.printStackTrace();
                 }

@@ -58,7 +58,7 @@ public class ImageUtils {
         final int width = bitmap.getWidth();
         final int height = bitmap.getHeight();
         final Bitmap outputBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        int pref = Preferences.preferences.getInt("pic_rounding", 0);
+        int pref = Preferences.getPreferences().getInt("pic_rounding", 0);
         final Canvas canvas = new Canvas(outputBitmap);
 
         final Path path = new Path();

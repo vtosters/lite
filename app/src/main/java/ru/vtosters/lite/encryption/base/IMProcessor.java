@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 public abstract class IMProcessor {
     // By default it checks start and end tag.
@@ -67,20 +68,20 @@ public abstract class IMProcessor {
     }
 
     public void enableEncryptFor(int id) {
-        AndroidUtils.getDefaultPrefs().edit().putBoolean("VT_IMEncode_" + getPrefKey() + "_" + id, true).apply();
+        Preferences.getPreferences().edit().putBoolean("VT_IMEncode_" + getPrefKey() + "_" + id, true).apply();
     }
 
     public void disableEncryptFor(int id) {
-        AndroidUtils.getDefaultPrefs().edit().putBoolean("VT_IMEncode_" + getPrefKey() + "_" + id, false).apply();
+        Preferences.getPreferences().edit().putBoolean("VT_IMEncode_" + getPrefKey() + "_" + id, false).apply();
     }
 
     public void setEncryptionKeyFor(int id, @Nullable String key) {
         if (key == null || key.isEmpty()) key = "VTAesDefault";
-        AndroidUtils.getDefaultPrefs().edit().putString("VT_IMEncodeKey_" + getPrefKey() + "_" + id, key).apply();
+        Preferences.getPreferences().edit().putString("VT_IMEncodeKey_" + getPrefKey() + "_" + id, key).apply();
     }
 
     @Nullable
     public String getEncryptionKeyFor(int id) {
-        return AndroidUtils.getDefaultPrefs().getString("VT_IMEncodeKey_" + getPrefKey() + "_" + id, null);
+        return Preferences.getPreferences().getString("VT_IMEncodeKey_" + getPrefKey() + "_" + id, null);
     }
 }

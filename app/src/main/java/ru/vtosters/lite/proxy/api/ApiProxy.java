@@ -2,7 +2,7 @@ package ru.vtosters.lite.proxy.api;
 
 import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
 import static ru.vtosters.lite.proxy.ProxyUtils.isVikaProxyEnabled;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.Preferences.getString;
 
 import android.util.Log;
 
@@ -12,9 +12,9 @@ public class ApiProxy {
         var oauth = "oauth.vk.com";
         var vkstatic = "static.vk.com";
 
-        var proxyapi = getPrefsValue("proxyapi");
-        var proxyoauth = getPrefsValue("proxyoauth");
-        var proxystatic = getPrefsValue("proxystatic");
+        var proxyapi = getString("proxyapi");
+        var proxyoauth = getString("proxyoauth");
+        var proxystatic = getString("proxystatic");
 
         if (isVikaProxyEnabled()) {
             proxyapi = VikaMobile.getApiHost();
@@ -47,7 +47,7 @@ public class ApiProxy {
     }
 
     public static String staticFix(String str) {
-        var string = getPrefsValue("proxystatic");
+        var string = getString("proxystatic");
 
         if (isVikaProxyEnabled()) {
             string = VikaMobile.getStaticHost();
@@ -61,7 +61,7 @@ public class ApiProxy {
     }
 
     public static String getAwayPhpCom() {
-        var proxyapi = getPrefsValue("proxyapi");
+        var proxyapi = getString("proxyapi");
 
         if (isVikaProxyEnabled()) {
             proxyapi = VikaMobile.getApiHost();

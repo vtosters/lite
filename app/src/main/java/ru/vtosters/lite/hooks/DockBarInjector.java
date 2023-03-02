@@ -108,10 +108,8 @@ public class DockBarInjector {
 
     private static void removeAllChildren(ViewGroup view) {
         for (int i = 0; i < view.getChildCount(); i++) {
-            if (view instanceof ViewGroup) {
-                removeAllChildren((ViewGroup) view.getChildAt(i));
-                view.removeAllViews();
-            }
+            removeAllChildren((ViewGroup) view.getChildAt(i));
+            view.removeAllViews();
         }
     }
 
@@ -247,8 +245,8 @@ public class DockBarInjector {
         }
         try {
             JSONArray jSONArray = new JSONArray();
-            for (int i = 0; i < arrayList.size(); i++) {
-                jSONArray.put(new JSONObject().put("name", arrayList.get(i)));
+            for (String s : arrayList) {
+                jSONArray.put(new JSONObject().put("name", s));
             }
             for (int i2 = 0; i2 < arr.length(); i2++) {
                 jSONArray.put(arr.getJSONObject(i2));
