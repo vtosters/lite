@@ -8,6 +8,7 @@ import com.guardanis.applock.activities.LockCreationActivity;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class PinFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -23,6 +24,19 @@ public class PinFragment extends MaterialPreferenceToolbarFragment {
                 preference -> {
                     var intent = new Intent(this.getActivity(), LockCreationActivity.class);
                     startActivityForResult(intent, AppLock.REQUEST_CODE_LOCK_CREATION);
+                    return true;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "Сбросить PIN-код",
+                "",
+                null,
+                preference -> {
+                    AppLock.getInstance(requireContext()).invalidateEnrollments();
+                    AndroidUtils.sendToast("Pin-код успешно сброшен");
                     return true;
                 }
         );
