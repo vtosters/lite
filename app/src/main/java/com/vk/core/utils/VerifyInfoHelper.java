@@ -13,23 +13,21 @@ import com.vk.core.ui.themes.MilkshakeHelper;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.dto.common.VerifyInfo;
 import com.vk.extensions.ViewExtKt;
+import com.vtosters.lite.R;
 import ru.vtosters.lite.utils.ThemesUtils;
-
-import java.util.HashMap;
-import java.util.Map;
 
 
 public final class VerifyInfoHelper {
     public static final VerifyInfoHelper h;
+    public static int devIcon = R.drawable.ic_ghost_16;
 
     public static Integer enumSwitchMapping(VerifyInfoHelper.ColorTheme color) {
-        Map<VerifyInfoHelper.ColorTheme, Integer> enumSwitchMapping = new HashMap<>();
-        enumSwitchMapping.put(VerifyInfoHelper.ColorTheme.normal, 1);
-        enumSwitchMapping.put(VerifyInfoHelper.ColorTheme.light, 2);
-        enumSwitchMapping.put(VerifyInfoHelper.ColorTheme.ultraLight, 3);
-        enumSwitchMapping.put(VerifyInfoHelper.ColorTheme.white, 4);
-
-        return enumSwitchMapping.get(color);
+        return switch (color) {
+            case normal -> 1;
+            case light -> 2;
+            case ultraLight -> 3;
+            case white -> 4;
+        };
     }
 
     public enum ColorTheme {
@@ -55,19 +53,19 @@ public final class VerifyInfoHelper {
     }
 
     private int c() {
-        return ThemesUtils.getColor(com.vtosters.lite.R.color.fire_orange);
+        return ThemesUtils.getColor(R.color.fire_orange);
     }
 
     private int d() {
-        return ThemesUtils.getColor(com.vtosters.lite.R.color.light_blue);
+        return ThemesUtils.getColor(R.color.light_blue);
     }
 
     private int e() {
-        return ThemesUtils.getColor(com.vtosters.lite.R.color.white_alpha60);
+        return ThemesUtils.getColor(R.color.white_alpha60);
     }
 
     private int f() {
-        return ThemesUtils.getColor(com.vtosters.lite.R.color.white);
+        return ThemesUtils.getColor(R.color.white);
     }
 
     public int a(ColorTheme colorTheme) {
@@ -109,7 +107,7 @@ public final class VerifyInfoHelper {
 
     public Drawable b(Context context, VerifyInfo verifyInfo) {
         if (verifyInfo.dev()) {
-            return new RecoloredDrawable(ContextCompat.getDrawable(context, e.ic_bug_24), c(ColorTheme.normal));
+            return new RecoloredDrawable(ContextCompat.getDrawable(context, devIcon), c(ColorTheme.normal));
         } else if (verifyInfo.t1() && verifyInfo.u1()) {
             return ContextCompat.getDrawable(context, e.ic_fire_verified_border_composite_20_xml);
         } else if (verifyInfo.t1()) {
@@ -142,7 +140,7 @@ public final class VerifyInfoHelper {
 
     public Drawable a(Context context, VerifyInfo verifyInfo) {
         if (verifyInfo.dev()) {
-            return new RecoloredDrawable(ContextCompat.getDrawable(context, e.ic_bug_24), c(ColorTheme.normal));
+            return new RecoloredDrawable(ContextCompat.getDrawable(context, devIcon), c(ColorTheme.normal));
         } else if (verifyInfo.t1() && verifyInfo.u1()) {
             return ContextCompat.getDrawable(context, e.ic_fire_verified_border_composite_20_xml);
         } else if (verifyInfo.t1()) {
@@ -165,7 +163,7 @@ public final class VerifyInfoHelper {
         int c2 = 0;
 
         if (dev) {
-            i = e.ic_bug_24;
+            i = devIcon;
             c2 = c(colorTheme);
         } else if (z2 && z) {
             i = e.ic_fire_verified_16;
@@ -214,7 +212,7 @@ public final class VerifyInfoHelper {
         int c2 = 0;
 
         if (dev) {
-            i = e.ic_bug_24;
+            i = devIcon;
             c2 = c(colorTheme);
         } else if (z2 && z) {
             i = e.ic_fire_verified_12;
