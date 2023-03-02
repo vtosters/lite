@@ -1,16 +1,8 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
-import static ru.vtosters.lite.utils.CacheUtils.getInstance;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
-import static ru.vtosters.lite.utils.Preferences.checkupdates;
-import static ru.vtosters.lite.utils.ThemesUtils.setNeededTheme;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
-import com.guardanis.applock.AppLock;
-import com.guardanis.applock.activities.UnlockActivity;
 import b.h.g.k.VKProgressDialog;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
@@ -23,6 +15,12 @@ import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.dialogs.Start;
 import ru.vtosters.lite.utils.*;
+
+import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
+import static ru.vtosters.lite.utils.CacheUtils.getInstance;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
+import static ru.vtosters.lite.utils.Preferences.checkupdates;
+import static ru.vtosters.lite.utils.ThemesUtils.setNeededTheme;
 
 public class MainActivityInjector {
     public static void inject(Activity activity) {
@@ -40,11 +38,6 @@ public class MainActivityInjector {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannels.createChannels();
-        }
-
-        if (AppLock.isEnrolled(activity)) {
-            var intent = new Intent(activity, UnlockActivity.class);
-            activity.startActivity(intent);
         }
 
         if(Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {

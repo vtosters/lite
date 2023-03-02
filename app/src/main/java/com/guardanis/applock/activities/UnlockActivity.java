@@ -1,8 +1,11 @@
 package com.guardanis.applock.activities;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.WindowInsetsController;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,15 +28,25 @@ public class UnlockActivity extends AppCompatActivity implements UnlockViewContr
         super.onCreate(savedInstance);
 
         setContentView(AndroidUtils.getIdentifier("applock__activity_unlock", "layout"));
-        ((LinearLayout) findViewById(AndroidUtils.getIdentifier("applock__activity_unlock", "id"))).setBackgroundColor(ThemesUtils.getBackgroundContent());
+        findViewById(AndroidUtils.getIdentifier("applock__activity_unlock", "id")).setBackgroundColor(ThemesUtils.getBackgroundContent());
         ((TextView) findViewById(AndroidUtils.getIdentifier("pin__description", "id"))).setTextColor(ThemesUtils.getTextAttr());
-
 
         this.viewController = new UnlockViewController(this, findViewById(AndroidUtils.getIdentifier("pin__container", "id")));
         this.viewController.setAutoAuthorizationEnabled(false); // Disable auto authorization so fingerprint doesn't crash onResume
         this.viewController.setDelegate(this);
         this.viewController.setupRootFlow();
         this.viewController.setAutoAuthorizationEnabled(true);
+
+        this.getWindow().setStatusBarColor(ThemesUtils.getBackgroundContent());
+        this.getWindow().setNavigationBarColor(ThemesUtils.getBackgroundContent());
+
+        if (!ThemesUtils.isDarkTheme()) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                this.getWindow().getInsetsController().setSystemBarsAppearance(WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS, WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS);
+            } else {
+                this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR & View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+            }
+        }
     }
 
     @Override

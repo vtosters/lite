@@ -8,6 +8,8 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.guardanis.applock.AppLock;
+import com.guardanis.applock.activities.UnlockActivity;
 import com.vk.core.fragments.FragmentImpl;
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.MainActivity;
@@ -45,6 +47,11 @@ public class LifecycleUtils {
             @Override // android.app.Application.ActivityLifecycleCallbacks
             public void onActivityCreated(Activity activity, Bundle bundle) {
                 activities.add(activity);
+
+                if (AppLock.isUnlockRequired(activity)) {
+                    var intent = new Intent(activity, UnlockActivity.class);
+                    activity.startActivity(intent);
+                }
             }
 
             @Override // android.app.Application.ActivityLifecycleCallbacks

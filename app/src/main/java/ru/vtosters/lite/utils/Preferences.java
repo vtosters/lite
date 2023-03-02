@@ -2,10 +2,13 @@ package ru.vtosters.lite.utils;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.StrictMode;
+import com.guardanis.applock.AppLock;
+import com.guardanis.applock.activities.UnlockActivity;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 import ru.vtosters.lite.ui.fragments.VTSettings;
@@ -32,6 +35,10 @@ public class Preferences {
         setupFilters();
         VTVerifications.load(application);
         LifecycleUtils.registerActivities(application);
+
+        if (AppLock.isEnrolled(AndroidUtils.getGlobalContext())) {
+            AppLock.setAuthenticationRequired(AndroidUtils.getGlobalContext());
+        }
     } // VK Init
 
     public static SharedPreferences getPreferences() {

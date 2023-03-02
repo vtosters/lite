@@ -67,6 +67,15 @@ public class AppLock {
         return false;
     }
 
+    public static void setAuthenticationRequired(Context context) {
+        AppLock helper = getInstance(context);
+
+        helper.getPreferences()
+                .edit()
+                .putLong(PREF_UNLOCK_SUCCESS_TIME, 0)
+                .commit();
+    }
+
     /**
      * @return true if the user is enrolled in locking and the last successful unlock happened more than the default lock duration ago
      */
