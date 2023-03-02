@@ -43,8 +43,6 @@ public class Preferences {
     }
 
     public static void forceOffline() {
-        setupFilters();
-
         if (setoffline() && offline()) {
             Users.a();
         }
