@@ -73,8 +73,6 @@ public class UnlockActivity extends AppCompatActivity implements UnlockViewContr
 
     protected void handleBackPressed() {
         if (!getIntent().getBooleanExtra(INTENT_ALLOW_UNLOCKED_EXIT, false)) {
-            Toast.makeText(this, getString(AndroidUtils.getIdentifier("applock__toast_unlock_required", "string")), Toast.LENGTH_LONG).show();
-
             return;
         }
 
