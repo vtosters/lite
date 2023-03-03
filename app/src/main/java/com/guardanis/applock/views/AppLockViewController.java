@@ -42,8 +42,7 @@ public abstract class AppLockViewController implements LifeCycleUtils.AppLockAct
 
         this.pinInputView = new WeakReference((PINInputView) parent.findViewById(AndroidUtils.getIdentifier("pin__input_view", "id")));
 
-        int inputViewsCount = parent.getResources()
-                .getInteger(AndroidUtils.getIdentifier("applock__input_pin_item_count", "integer"));
+        int inputViewsCount = Integer.parseInt(AppLock.getPinCodeLimits(activity));
 
         boolean passwordCharsEnabled = parent.getResources()
                 .getBoolean(AndroidUtils.getIdentifier("applock__item_password_chars_enabled", "bool"));

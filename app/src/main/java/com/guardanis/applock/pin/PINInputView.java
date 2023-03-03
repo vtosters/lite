@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import java.util.WeakHashMap;
 
+import com.guardanis.applock.AppLock;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -50,7 +51,7 @@ public class PINInputView extends LinearLayout implements TextWatcher {
         itemBackgroundPaint.setColor(ThemesUtils.getMutedAccentColor());
 
 
-        inputViewsCount = getResources().getInteger(AndroidUtils.getIdentifier("applock__input_pin_item_count", "integer"));
+        inputViewsCount = Integer.parseInt(AppLock.getPinCodeLimits(AndroidUtils.getGlobalContext()));
 
         passwordCharacter = getResources().getString(AndroidUtils.getIdentifier("applock__password_char", "string"));
 

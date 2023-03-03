@@ -41,6 +41,11 @@ public class PinFragment extends MaterialPreferenceToolbarFragment {
                 }
         );
 
+        PreferenceFragmentUtils.addPreferenceCategory(
+                getPreferenceScreen(),
+                "Тестовые функции, потом выпилим/переделаем"
+        );
+
         PreferenceFragmentUtils.addEditTextValPreference(
                 getPreferenceScreen(),
                 "",
@@ -48,6 +53,18 @@ public class PinFragment extends MaterialPreferenceToolbarFragment {
                 AppLock.getPinCodeTime(requireContext()),
                 ((preference, o) -> {
                     AppLock.getInstance(requireContext()).getPreferences().edit().putString("pincode_time", o).apply();
+                    AndroidUtils.sendToast("Сохранено");
+                    return true;
+                })
+        );
+
+        PreferenceFragmentUtils.addEditTextValPreference(
+                getPreferenceScreen(),
+                "",
+                "Кол-во символов пин кода",
+                AppLock.getPinCodeLimits(requireContext()),
+                ((preference, o) -> {
+                    AppLock.getInstance(requireContext()).getPreferences().edit().putString("pincode_limits", o).apply();
                     AndroidUtils.sendToast("Сохранено");
                     return true;
                 })

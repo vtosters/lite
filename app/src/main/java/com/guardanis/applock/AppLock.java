@@ -93,6 +93,10 @@ public class AppLock {
         return context.getSharedPreferences(PREFS, 0).getString("pincode_time", "15");
     }
 
+    public static String getPinCodeLimits(Context context) {
+        return context.getSharedPreferences(PREFS, 0).getString("pincode_limits", "4");
+    }
+
     /**
      * @return true if the user is enrolled in locking and the last successful unlock happened more than lastSuccessValidMs ago
      */
