@@ -3,6 +3,7 @@ package com.guardanis.applock.pin;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.lang.ref.WeakReference;
 
@@ -97,7 +98,7 @@ public class PINInputController implements TextView.OnEditorActionListener, Inpu
 
     @Override
     public void onTextEntered(int count) {
-        if (count == 4) {
+        if (count == AndroidUtils.getResources().getInteger(AndroidUtils.getIdentifier("applock__input_pin_item_count", "integer"))) {
             var inputView = this.inputView.get();
             InputEventListener eventListener = this.eventListener.get();
 
