@@ -1,9 +1,11 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.Toast;
 import androidx.annotation.StringRes;
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
@@ -61,17 +63,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
             type = AndroidUtils.getString(R.string.vtlsettdisabled);
 
         return AndroidUtils.getString(R.string.vtlproxysumm) + ": " + type;
-    }
-
-    public static String getThemesumm() {
-        String[] themeTypeName = AndroidUtils.getArray("theme_type_name");
-
-        return AndroidUtils.getString("current_theme") + ": " + switch (Preferences.getString("currsystemtheme")) {
-            case "system" -> themeTypeName[0];
-            case "dark" -> themeTypeName[1];
-            case "light" -> themeTypeName[2];
-            default -> ThemesUtils.isDarkTheme() ? themeTypeName[1] : themeTypeName[2];
-        };
     }
 
     private void switchTheme(boolean isDarkTheme) {
@@ -164,38 +155,36 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.appearance_theme_use_system);
 
-        if(Build.VERSION.SDK_INT >= 28 && Preferences.milkshake()) {
-            PreferenceFragmentUtils.addListPreference(
-                    getPreferenceScreen(),
-                    "currsystemtheme",
-                    "system",
-                    requireContext().getString(R.string.appearance_theme_use_system),
-                    R.drawable.ic_palette_outline_28,
-                    getThemesumm(),
-                    AndroidUtils.getArray("theme_type_name_checkbox"),
-                    new String[] { "system", "dark", "light" },
-                    (preference, o) -> {
-                        String value = (String) o;
-                        if(!value.equals("system")) {
-                            var theme = value.equals("dark") ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme();
-                            ThemesUtils.applyTheme(theme);
-                        }
-                        Preferences.getPreferences().edit().putString("currsystemtheme", value).commit();
-                        SystemThemeChangerHook.onThemeChanged(getResources().getConfiguration());
-                        return true;
-                    });
-        } else {
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtsettdarktheme),
+                "",
+                R.drawable.ic_palette_outline_28,
+                ThemesUtils.isDarkTheme(),
+                (preference, o) -> {
+                    if (Preferences.systemtheme()) {
+                        AndroidUtils.sendToast("Включена установка темы как на устройстве");
+                        return false;
+                    }
+                    final var switchPreference = (MaterialSwitchPreference) preference;
+                    final var isDarkTheme = !switchPreference.isChecked();
+                    switchTheme(isDarkTheme);
+                    return true;
+                }
+        );
+
+        if (Build.VERSION.SDK_INT >= 28 && Preferences.milkshake()) {
             PreferenceFragmentUtils.addMaterialSwitchPreference(
                     getPreferenceScreen(),
-                    "",
-                    requireContext().getString(R.string.vtsettdarktheme),
-                    "",
+                    "system_theme",
+                    "Системная тема",
+                    "Использовать тему установленную на устройстве",
                     R.drawable.ic_palette_outline_28,
-                    ThemesUtils.isDarkTheme(),
+                    Preferences.systemtheme(),
                     (preference, o) -> {
-                        final var switchPreference = (MaterialSwitchPreference) preference;
-                        final var isDarkTheme = !switchPreference.isChecked();
-                        switchTheme(isDarkTheme);
+                        Preferences.getPreferences().edit().putBoolean("system_theme", (boolean) o).commit();
+                        SystemThemeChangerHook.onThemeChanged(requireActivity().getResources().getConfiguration());
                         return true;
                     }
             );
