@@ -1761,7 +1761,7 @@
     return-object v0
 .end method
 
-.method public final g5()J
+.method protected g5()J
     .locals 2
 
     .line 1
