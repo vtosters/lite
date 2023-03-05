@@ -90,7 +90,7 @@ public class AppLock {
     }
 
     public static String getPinCodeTime(Context context) {
-        return context.getSharedPreferences(PREFS, 0).getString("pincode_time", "15");
+        return context.getSharedPreferences(PREFS, 0).getString("pincode_time", "1440");
     }
 
     public static String getPinCodeLimits(Context context) {

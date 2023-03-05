@@ -46,17 +46,6 @@ public class PinFragment extends MaterialPreferenceToolbarFragment {
                 "Тестовые функции, потом выпилим/переделаем"
         );
 
-        PreferenceFragmentUtils.addEditTextValPreference(
-                getPreferenceScreen(),
-                "",
-                "Время для автоблокировки",
-                AppLock.getPinCodeTime(requireContext()),
-                ((preference, o) -> {
-                    AppLock.getInstance(requireContext()).getPreferences().edit().putString("pincode_time", o).apply();
-                    AndroidUtils.sendToast("Сохранено");
-                    return true;
-                })
-        );
 
         PreferenceFragmentUtils.addEditTextValPreference(
                 getPreferenceScreen(),
