@@ -5,7 +5,7 @@
     background-color: %accent% !important;
 }
 
-body[scheme=bright_light] {
+.vkuibright_light, [scheme=bright_light], body[scheme=bright_light] {
     --accent: %accent% !important;
     --action_sheet_action_foreground: %accent% !important;
     --attach_picker_tab_active_background: %accent% !important;
@@ -56,7 +56,7 @@ body[scheme=bright_light] {
 
 
 
-body[scheme=space_gray] {
+.vkuispace_gray, [scheme=space_gray], body[scheme=space_gray] {
     --accent: %accent% !important;
     --action_sheet_action_foreground: %accent% !important;
     --attach_picker_tab_active_background: %accent% !important;

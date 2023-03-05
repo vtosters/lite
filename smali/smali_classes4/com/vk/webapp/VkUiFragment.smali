@@ -1982,6 +1982,9 @@
     if-eqz v3, :cond_1
 
     .line 10
+
+    const-string v4, "api_host"
+
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 11
