@@ -68,6 +68,7 @@ public class ThemesUtils {
             activity = LifecycleUtils.getCurrentActivity();
         }
         VKThemeHelper.theme(theme, activity, getCenterScreenCoords());
+        activity.recreate();
         ThemeTracker.a();
         VKUIHook.isLoaded = false;
         new WebView(activity).clearCache(true);
@@ -79,6 +80,7 @@ public class ThemesUtils {
             activity = LifecycleUtils.getCurrentActivity();
         }
         VKThemeHelper.theme(theme, activity, fl);
+        activity.recreate();
         ThemeTracker.a();
         VKUIHook.isLoaded = false;
         new WebView(activity).clearCache(true);
