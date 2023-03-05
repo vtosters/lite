@@ -41,7 +41,7 @@ import static ru.vtosters.lite.utils.Preferences.*;
 public class ThemesUtils {
     public static void applyTheme(VKTheme theme) {
         try {
-            VKThemeHelper.theme(theme, LifecycleUtils.getCurrentActivity(), getCenterScreenCoords());
+            setTheme(theme, LifecycleUtils.getCurrentActivity());
         } catch (Exception e) {
             e.printStackTrace();
         }
