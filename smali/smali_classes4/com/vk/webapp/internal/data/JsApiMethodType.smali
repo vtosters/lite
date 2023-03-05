@@ -30,6 +30,8 @@
 
 .field public static final enum APP_INIT:Lcom/vk/webapp/internal/data/JsApiMethodType;
 
+.field public static final enum GET_CONFIG:Lcom/vk/webapp/internal/data/JsApiMethodType;
+
 .field public static final enum AUTH_BY_EXCHANGE_TOKEN:Lcom/vk/webapp/internal/data/JsApiMethodType;
 
 .field public static final enum CLOSE_APP:Lcom/vk/webapp/internal/data/JsApiMethodType;
@@ -169,7 +171,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    const/16 v0, 0x47
+    const/16 v0, 0x48
 
     new-array v0, v0, [Lcom/vk/webapp/internal/data/JsApiMethodType;
 
@@ -1489,6 +1491,25 @@
     sput-object v1, Lcom/vk/webapp/internal/data/JsApiMethodType;->SECURE_TOKEN_REQUEST_ACCESS:Lcom/vk/webapp/internal/data/JsApiMethodType;
 
     const/16 v2, 0x46
+
+    aput-object v1, v0, v2
+
+    new-instance v1, Lcom/vk/webapp/internal/data/JsApiMethodType;
+
+    .line 72
+    sget-object v2, Lcom/vk/webapp/internal/data/BackgroundWork;->ALLOWED:Lcom/vk/webapp/internal/data/BackgroundWork;
+
+    const-string v3, "GET_CONFIG"
+
+    const/16 v4, 0x47
+
+    const-string v5, "VKWebAppGetConfig"
+
+    invoke-direct {v1, v3, v4, v5, v2}, Lcom/vk/webapp/internal/data/JsApiMethodType;-><init>(Ljava/lang/String;ILjava/lang/String;Lcom/vk/webapp/internal/data/BackgroundWork;)V
+
+    sput-object v1, Lcom/vk/webapp/internal/data/JsApiMethodType;->GET_CONFIG:Lcom/vk/webapp/internal/data/JsApiMethodType;
+
+    const/16 v2, 0x47
 
     aput-object v1, v0, v2
 

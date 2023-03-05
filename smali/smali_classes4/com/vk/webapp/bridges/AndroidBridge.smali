@@ -1061,6 +1061,58 @@
     return-void
 .end method
 
+.method public VKWebAppGetConfig(Ljava/lang/String;)V
+    .locals 7
+    .annotation runtime Landroid/webkit/JavascriptInterface;
+    .end annotation
+
+    .line 1
+    sget-object v1, Lcom/vk/webapp/internal/data/JsApiMethodType;->GET_CONFIG:Lcom/vk/webapp/internal/data/JsApiMethodType;
+
+    const-string v3, "VKWebAppGetConfigFailed"
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0x8
+
+    const/4 v6, 0x0
+
+    move-object v0, p0
+
+    move-object v2, p1
+
+    invoke-static/range {v0 .. v6}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/bridges/AndroidBridge;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-static {}, Lru/vtosters/lite/utils/WebAppUtils;->getWebAppConfig()Lorg/json/JSONObject;
+
+    move-result-object p1
+
+    .line 3
+
+    .line 4
+
+    .line 5
+    sget-object v0, Lcom/vk/webapp/internal/data/JsApiMethodType;->GET_CONFIG:Lcom/vk/webapp/internal/data/JsApiMethodType;
+
+    const-string v1, "result"
+
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "VKWebAppGetConfigResult"
+
+    invoke-virtual {p0, v0, v1, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+
+    return-void
+.end method
+
 .method public VKWebAppShowImages(Ljava/lang/String;)V
     .locals 11
     .annotation runtime Landroid/webkit/JavascriptInterface;

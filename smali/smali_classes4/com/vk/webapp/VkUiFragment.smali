@@ -1761,7 +1761,7 @@
     return-object v0
 .end method
 
-.method protected g5()J
+.method public final g5()J
     .locals 2
 
     .line 1
@@ -1982,6 +1982,9 @@
     if-eqz v3, :cond_1
 
     .line 10
+
+    const-string v4, "api_host"
+
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 11
