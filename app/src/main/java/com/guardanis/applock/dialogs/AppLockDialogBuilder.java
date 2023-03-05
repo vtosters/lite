@@ -86,10 +86,7 @@ public abstract class AppLockDialogBuilder<ALVC extends AppLockViewController> {
             Context context = ((ContextWrapper) dialog.getContext()).getBaseContext();
             if (context instanceof Activity) {
                 if (!((Activity) context).isFinishing()) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                        if (!((Activity) context).isDestroyed())
-                            dialog.dismiss();
-                    } else
+                    if (!((Activity) context).isDestroyed())
                         dialog.dismiss();
                 }
             } else

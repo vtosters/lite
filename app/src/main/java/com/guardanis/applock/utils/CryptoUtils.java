@@ -26,9 +26,9 @@ public class CryptoUtils {
             int twoHalves = 0;
 
             do {
-                buf.append((0 <= half) && (half <= 9)
+                buf.append(half <= 9
                         ? (char) ('0' + half)
-                        : (char) ('a' + (half - 10)));
+                        : (char) ('a' + half - 10));
 
                 half = b & 0x0F;
             }

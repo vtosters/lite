@@ -37,10 +37,10 @@ public abstract class AppLockViewController implements LifeCycleUtils.AppLockAct
     public AppLockViewController(Activity activity, View parent) {
         this.activity = new WeakReference<>(activity);
         this.parent = new WeakReference<>(parent);
-        this.descriptionView = new WeakReference((TextView) parent.findViewById(AndroidUtils.getIdentifier("pin__description", "id")));
+        this.descriptionView = new WeakReference<>(parent.findViewById(AndroidUtils.getIdentifier("pin__description", "id")));
         this.actionSettings = new WeakReference<>(parent.findViewById(AndroidUtils.getIdentifier("pin__action_settings", "id")));
 
-        this.pinInputView = new WeakReference((PINInputView) parent.findViewById(AndroidUtils.getIdentifier("pin__input_view", "id")));
+        this.pinInputView = new WeakReference<>(parent.findViewById(AndroidUtils.getIdentifier("pin__input_view", "id")));
 
         int inputViewsCount = Integer.parseInt(AppLock.getPinCodeLimits(activity));
 
@@ -131,15 +131,11 @@ public abstract class AppLockViewController implements LifeCycleUtils.AppLockAct
         if (activity == null)
             return;
 
-        switch (errorCode) {
-            case AppLock.ERROR_CODE_FINGERPRINTS_PERMISSION_REQUIRED:
-                ActivityCompat.requestPermissions(
-                        activity,
-                        new String[]{Manifest.permission.USE_FINGERPRINT},
-                        AppLock.REQUEST_CODE_FINGERPRINT_PERMISSION);
-                break;
-            default:
-                break;
+        if (errorCode == AppLock.ERROR_CODE_FINGERPRINTS_PERMISSION_REQUIRED) {
+            ActivityCompat.requestPermissions(
+                    activity,
+                    new String[]{Manifest.permission.USE_FINGERPRINT},
+                    AppLock.REQUEST_CODE_FINGERPRINT_PERMISSION);
         }
     }
 

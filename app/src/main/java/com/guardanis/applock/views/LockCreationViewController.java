@@ -30,7 +30,7 @@ public class LockCreationViewController extends AppLockViewController
     public LockCreationViewController(Activity activity, View parent) {
         super(activity, parent);
 
-        this.chooserParent = new WeakReference(parent.findViewById(AndroidUtils.getIdentifier("pin__create_chooser_items", "id")));
+        this.chooserParent = new WeakReference<>(parent.findViewById(AndroidUtils.getIdentifier("pin__create_chooser_items", "id")));
     }
 
     public LockCreationViewController setDelegate(Delegate delegate) {

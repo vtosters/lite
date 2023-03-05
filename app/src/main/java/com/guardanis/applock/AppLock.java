@@ -36,7 +36,7 @@ public class AppLock {
     private static final String PREF_UNLOCK_SUCCESS_TIME = "pin__unlock_success_time";
     private static AppLock instance;
     protected Context context;
-    protected HashMap<Class, LockService> lockServices = new HashMap<Class, LockService>();
+    protected HashMap<Class<? extends LockService>, LockService> lockServices = new HashMap<>();
     protected int unlockAttemptsCount = 1;
 
     protected AppLock(Context context) {
