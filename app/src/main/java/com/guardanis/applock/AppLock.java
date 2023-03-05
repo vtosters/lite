@@ -147,6 +147,7 @@ public class AppLock {
             @Override
             public void onResolutionRequired(int errorCode) {
                 // eventListener.onResolutionRequired(errorCode);
+                eventListener.requestOpenKeyboard();
             }
 
             @Override
@@ -334,5 +335,6 @@ public class AppLock {
         void onAuthenticationHelp(int code, String message);
 
         void onFailureLimitExceeded(String message);
+        void requestOpenKeyboard();
     }
 }

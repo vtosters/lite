@@ -49,7 +49,7 @@ public class UnlockViewController extends AppLockViewController implements AppLo
 
         setDescription(AndroidUtils.getIdentifier("applock__description_unlock_pin", "string"));
 
-        pinInputController.ensureKeyboardVisible();
+        requestOpenKeyboard();
         pinInputController.setInputEventListener(this);
 
         FingerprintLockService fingerprintService = AppLock.getInstance(this.parent.get().getContext())
@@ -123,6 +123,11 @@ public class UnlockViewController extends AppLockViewController implements AppLo
     @Override
     public void onFailureLimitExceeded(String message) {
         setDescription(message);
+    }
+
+    @Override
+    public void requestOpenKeyboard() {
+        pinInputController.ensureKeyboardVisible();
     }
 
     @Override
