@@ -33,6 +33,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.view.ContextThemeWrapper;
 
+import com.guardanis.applock.AppLock;
+import com.guardanis.applock.activities.LockCreationActivity;
 import com.vk.auth.api.VKAccount;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.ToastUtils;
@@ -87,11 +89,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        findPreference("pin").setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), PinFragment.class);
-            return true;
-        });
-
         findPreference("firebasefix").setOnPreferenceClickListener(preference -> {
             VKAccount b = VKAccountManager.d();
             PushSubscriber.e.a();
@@ -108,6 +105,22 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("applicationstop").setOnPreferenceClickListener(preference -> {
             System.exit(0);
+            return true;
+        });
+
+        findPreference("pin_setup").setOnPreferenceClickListener(preference -> {
+            var intent = new Intent(this.getActivity(), LockCreationActivity.class);
+            startActivityForResult(intent, AppLock.REQUEST_CODE_LOCK_CREATION);
+            return true;
+        });
+
+        findPreference("pin_reset").setOnPreferenceClickListener(preference -> {
+            if (AppLock.isEnrolled(requireContext())) {
+                AppLock.getInstance(requireContext()).invalidateEnrollments();
+                AndroidUtils.sendToast("Pin-код успешно сброшен");
+            } else {
+                AndroidUtils.sendToast("Pin-код не установлен");
+            }
             return true;
         });
 

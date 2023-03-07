@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Настройки PIN">
+    <PreferenceCategory android:title="PIN-код">
         <Preference
-                android:key="pin"
+                android:key="pin_setup"
                 android:title="Установить PIN"/>
+        <Preference
+                android:key="pin_reset"
+                android:title="Сбросить PIN"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/other_fix_app">
         <Preference
