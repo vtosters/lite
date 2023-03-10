@@ -43,8 +43,6 @@ public class Preferences {
     }
 
     public static void forceOffline() {
-        setupFilters();
-
         if (setoffline() && offline()) {
             Users.a();
         }
@@ -59,7 +57,7 @@ public class Preferences {
     }
 
     public static boolean systemtheme() {
-        return Build.VERSION.SDK_INT >= 28 && milkshake() && (getPreferences().getString("currsystemtheme", "system").equals("system") || getPreferences().getString("currsystemtheme", "system").isEmpty());
+        return Build.VERSION.SDK_INT >= 28 && milkshake() && getBoolValue("system_theme", true);
     }
 
     public static boolean authorsrecomm() {

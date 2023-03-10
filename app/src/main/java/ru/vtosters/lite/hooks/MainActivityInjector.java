@@ -1,6 +1,7 @@
 package ru.vtosters.lite.hooks;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import b.h.g.k.VKProgressDialog;
 import com.vk.core.dialogs.alert.VkAlertDialog;
@@ -13,10 +14,7 @@ import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.dialogs.Start;
-import ru.vtosters.lite.utils.DeletedMessagesHandler;
-import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.lite.utils.*;
 
 import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
@@ -29,11 +27,8 @@ public class MainActivityInjector {
         setNeededTheme(activity);
         sendRequest();
         UsersList.getUsersList();
+
         if (checkupdates()) OTADialog.checkUpdates(activity);
-        VTExecutors.getIoScheduler().a(DeletedMessagesHandler::reloadMessagesList); // ioScheduler
-        Start.alert(activity);
-        InstallGMS.alert(activity);
-        DisableBattery.alert(activity);
 
         VTExecutors.getSlowTasksScheduler().a(() -> {
             getInstance().autoCleaningCache();
@@ -45,12 +40,22 @@ public class MainActivityInjector {
             NotificationChannels.createChannels();
         }
 
-        // VKIDProtection.alert(activity);
-
         if(Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {
             Preferences.updateBuildNumber();
             updateBinsAndTmpArchive(activity);
         }
+
+        VTExecutors.getIoScheduler().a(DeletedMessagesHandler::reloadMessagesList); // ioScheduler
+
+        if(activity.getIntent().getAction() != null && Intent.ACTION_APPLICATION_PREFERENCES.equals(activity.getIntent().getAction())) {
+            NavigatorUtils.switchToSettings(activity);
+            return;
+        }
+
+        Start.alert(activity);
+        InstallGMS.alert(activity);
+        DisableBattery.alert(activity);
+        // VKIDProtection.alert(activity);
     }
     
     private static void updateBinsAndTmpArchive(Activity activity) {

@@ -22,7 +22,7 @@ public class SystemThemeChangerHook {
                     || uiMode == Configuration.UI_MODE_NIGHT_NO)
                 theme = ThemesUtils.getLightTheme();
 
-            if (theme != null) {
+            if (theme != null && theme != ThemesUtils.getCurrentTheme()) {
                 ThemesUtils.applyTheme(theme);
                 sPrevUiMode = uiMode;
             }

@@ -43,13 +43,6 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("systememoji").setSummary(getGlobalContext().getString(R.string.systememojisum) + " \uD83D\uDE00\uD83D\uDE01\uD83E\uDD11\uD83E\uDD75\uD83D\uDC4D");
 
-        var dockbarEditor = findPreference("dockbareditor");
-        dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
-        dockbarEditor.setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
-            return true;
-        });
-
         var invalidateThemeCache = findPreference("invalidate_theme_cache");
         if(ThemesUtils.getReservedAccent() != Color.TRANSPARENT)
             invalidateThemeCache.setOnPreferenceClickListener(preference -> {
@@ -130,15 +123,10 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        if (Preferences.vkme()) {
-            findPreference("dockbareditor").setVisible(false);
-        }
-
         if(AndroidUtils.isTablet()) {
             PreferenceCategory dockbarSettingsPreferenceCategory = (PreferenceCategory) findPreference("dockbarsett");
             dockbarSettingsPreferenceCategory.setVisible(false);
             findPreference("alteremoji").setVisible(false);
-            findPreference("dockbareditor").setVisible(false);
         }
     }
 

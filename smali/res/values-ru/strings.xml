@@ -5917,7 +5917,7 @@
 
     <string name="dateformat">Выберите тип показа дат</string>
 
-    <string name="franimation">Анимация фрагментов (бета)</string>
+    <string name="franimation">Анимация фрагментов</string>
     <string name="selectfranimation">Выберите анимацию фрагментов</string>
 
     <string name="vkme">Режим VK Мессенджера</string>

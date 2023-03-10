@@ -6052,7 +6052,7 @@ May look like a fake leaving the online"</string>
 
     <string name="dateformat">Select the date display type</string>
 
-    <string name="franimation">Fragment animation (beta)</string>
+    <string name="franimation">Fragment animation</string>
     <string name="selectfranimation">Select fragment animation</string>
 
     <string name="vkme">VK Messenger mode</string>

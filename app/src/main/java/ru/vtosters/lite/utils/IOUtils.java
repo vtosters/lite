@@ -112,7 +112,7 @@ public class IOUtils {
     public static void deleteRecursive(File f, boolean selfDeletion) {
         if (f.isDirectory()) {
             var fs = f.listFiles();
-            if (fs != null && fs.length > 0)
+            if (fs != null)
                 for (var child : fs)
                     deleteRecursive(child, true);
         }

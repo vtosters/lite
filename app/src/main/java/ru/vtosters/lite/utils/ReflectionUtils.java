@@ -78,8 +78,7 @@ public class ReflectionUtils {
         return findMethod(instance.getClass(), methodName, params);
     }
 
-    public static Object getActivityThread(Context context, Class<?> clz)
-            throws InvocationTargetException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException {
+    public static Object getActivityThread(Context context, Class<?> clz) {
         try {
             if(clz == null) clz = findClass("android.app.ActivityThread");
             final Method currentActivityThreadMtd = findMethod(clz, "currentActivityThread");

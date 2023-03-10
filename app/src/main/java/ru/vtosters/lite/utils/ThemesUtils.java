@@ -41,7 +41,7 @@ import static ru.vtosters.lite.utils.Preferences.*;
 public class ThemesUtils {
     public static void applyTheme(VKTheme theme) {
         try {
-            VKThemeHelper.theme(theme, LifecycleUtils.getCurrentActivity(), getCenterScreenCoords());
+            setTheme(theme, LifecycleUtils.getCurrentActivity());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -64,14 +64,7 @@ public class ThemesUtils {
     }
 
     public static void setTheme(VKTheme theme, Activity activity) {
-        if (activity == null) {
-            activity = LifecycleUtils.getCurrentActivity();
-        }
-        VKThemeHelper.theme(theme, activity, getCenterScreenCoords());
-        ThemeTracker.a();
-        VKUIHook.isLoaded = false;
-        new WebView(activity).clearCache(true);
-        WebCachePreloader.e();
+        setThemeFL(theme, activity, getCenterScreenCoords());
     } // apply changed theme
 
     public static void setThemeFL(VKTheme theme, Activity activity, float[] fl) {
@@ -79,6 +72,7 @@ public class ThemesUtils {
             activity = LifecycleUtils.getCurrentActivity();
         }
         VKThemeHelper.theme(theme, activity, fl);
+        activity.recreate();
         ThemeTracker.a();
         VKUIHook.isLoaded = false;
         new WebView(activity).clearCache(true);

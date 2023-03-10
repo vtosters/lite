@@ -1,9 +1,11 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.Toast;
 import androidx.annotation.StringRes;
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
@@ -29,6 +31,9 @@ import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.*;
+
+import static ru.vtosters.lite.utils.Preferences.VERSIONNAME;
+import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
 
@@ -58,17 +63,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
             type = AndroidUtils.getString(R.string.vtlsettdisabled);
 
         return AndroidUtils.getString(R.string.vtlproxysumm) + ": " + type;
-    }
-
-    public static String getThemesumm() {
-        String[] themeTypeName = AndroidUtils.getArray("theme_type_name");
-
-        return AndroidUtils.getString("current_theme") + ": " + switch (Preferences.getString("currsystemtheme")) {
-            case "system" -> themeTypeName[0];
-            case "dark" -> themeTypeName[1];
-            case "light" -> themeTypeName[2];
-            default -> ThemesUtils.isDarkTheme() ? themeTypeName[1] : themeTypeName[2];
-        };
     }
 
     private void switchTheme(boolean isDarkTheme) {
@@ -115,82 +109,82 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
 
         AndroidUtils.checkLinksVerified(this.requireActivity());
 
-        var accountSwitcher = PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "account_switcher",
-                AccountManagerUtils.getUsername(),
-                requireContext().getString(R.string.vtllogout),
-                requireContext().getDrawable(R.drawable.ic_user_circle_outline_28),
-                preference -> {
-                    try {
-                        VKAuth.a("logout", false);
-                    } catch(Exception ignored) {
-                    }
+        if (AccountManagerUtils.isLogin()) {
+            var accountSwitcher = PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "account_switcher",
+                    AccountManagerUtils.getUsername(),
+                    requireContext().getString(R.string.vtllogout),
+                    requireContext().getDrawable(R.drawable.ic_user_circle_outline_28),
+                    preference -> {
+                        try {
+                            VKAuth.a("logout", false);
+                        } catch(Exception ignored) {
+                        }
 
-                    var intent = new Intent(requireContext(), MainActivity.class)
-                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    requireContext().startActivity(intent);
+                        var intent = new Intent(requireContext(), MainActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        requireContext().startActivity(intent);
 
-                    return false;
+                        return false;
+                    });
+
+            VTExecutors.getIoScheduler().a(() -> {
+                var icon = ImageUtils.getDrawableFromUrl(AccountManagerUtils.getUserPhoto(), 0, true, true);
+                if(icon == null) return;
+                requireActivity().runOnUiThread(() -> {
+                    accountSwitcher.setIcon(icon);
                 });
-
-        VTExecutors.getIoScheduler().a(() -> {
-            var icon = ImageUtils.getDrawableFromUrl(AccountManagerUtils.getUserPhoto(), 0, true, true);
-            if(icon == null) return;
-            requireActivity().runOnUiThread(() -> {
-                accountSwitcher.setIcon(icon);
             });
-        });
 
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                requireContext().getString(R.string.vtssfs),
-                getSSFSsumm(),
-                R.drawable.ic_link_circle_outline_28,
-                preference -> {
-                    VKUIwrapper.setLink(Utils.getVKUILink());
-                    NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
-                    return false;
-                }
-        );
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.vtssfs),
+                    getSSFSsumm(),
+                    R.drawable.ic_link_circle_outline_28,
+                    preference -> {
+                        VKUIwrapper.setLink(Utils.getVKUILink());
+                        NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
+                        return false;
+                    }
+            );
+        }
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.appearance_theme_use_system);
 
-        if(Build.VERSION.SDK_INT >= 28 && Preferences.milkshake()) {
-            PreferenceFragmentUtils.addListPreference(
-                    getPreferenceScreen(),
-                    "currsystemtheme",
-                    "system",
-                    requireContext().getString(R.string.appearance_theme_use_system),
-                    R.drawable.ic_palette_outline_28,
-                    getThemesumm(),
-                    AndroidUtils.getArray("theme_type_name_checkbox"),
-                    new String[] { "system", "dark", "light" },
-                    (preference, o) -> {
-                        String value = (String) o;
-                        if(!value.equals("system")) {
-                            var theme = value.equals("dark") ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme();
-                            ThemesUtils.applyTheme(theme);
-                        }
-                        Preferences.getPreferences().edit().putString("currsystemtheme", value).commit();
-                        SystemThemeChangerHook.onThemeChanged(getResources().getConfiguration());
-                        return true;
-                    });
-        } else {
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "",
+                requireContext().getString(R.string.vtsettdarktheme),
+                "",
+                R.drawable.ic_palette_outline_28,
+                ThemesUtils.isDarkTheme(),
+                (preference, o) -> {
+                    if (Preferences.systemtheme()) {
+                        AndroidUtils.sendToast("Включена установка темы как на устройстве");
+                        return false;
+                    }
+                    final var switchPreference = (MaterialSwitchPreference) preference;
+                    final var isDarkTheme = !switchPreference.isChecked();
+                    switchTheme(isDarkTheme);
+                    return true;
+                }
+        );
+
+        if (Build.VERSION.SDK_INT >= 28 && Preferences.milkshake()) {
             PreferenceFragmentUtils.addMaterialSwitchPreference(
                     getPreferenceScreen(),
-                    "",
-                    requireContext().getString(R.string.vtsettdarktheme),
-                    "",
+                    "system_theme",
+                    "Системная тема",
+                    "Использовать тему установленную на устройстве",
                     R.drawable.ic_palette_outline_28,
-                    ThemesUtils.isDarkTheme(),
+                    Preferences.systemtheme(),
                     (preference, o) -> {
-                        final var switchPreference = (MaterialSwitchPreference) preference;
-                        final var isDarkTheme = !switchPreference.isChecked();
-                        switchTheme(isDarkTheme);
+                        Preferences.getPreferences().edit().putBoolean("system_theme", (boolean) o).commit();
+                        SystemThemeChangerHook.onThemeChanged(requireActivity().getResources().getConfiguration());
                         return true;
                     }
             );
@@ -257,58 +251,60 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
             }
         }
 
-        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.vtsettaccount);
+        if (AccountManagerUtils.isLogin()) {
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.vtsettaccount);
 
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                requireContext().getString(R.string.vkconnect),
-                "",
-                R.drawable.ic_user_circle_outline_28,
-                preference -> {
-                    VKUIwrapper.officalLinks("account");
-                    NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
-                    return false;
-                }
-        );
-
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                requireContext().getString(R.string.privacy_settings),
-                "",
-                R.drawable.ic_privacy_outline_28,
-                preference -> {
-                    NavigatorUtils.switchFragment(requireContext(), PrivacyFragment.class);
-                    return false;
-                }
-        );
-
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                requireContext().getString(R.string.sett_account),
-                "",
-                R.drawable.ic_user_outline_28,
-                preference -> {
-                    NavigatorUtils.switchFragment(requireContext(), SettingsAccountFragment.class);
-                    return false;
-                }
-        );
-
-        if(AccountManagerUtils.isVKTester()) {
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",
-                    requireContext().getString(R.string.bugs),
+                    requireContext().getString(R.string.vkconnect),
                     "",
-                    R.drawable.ic_bug_outline_28,
+                    R.drawable.ic_user_circle_outline_28,
                     preference -> {
-                        VKUIwrapper.officalLinks("bugs");
+                        VKUIwrapper.officalLinks("account");
                         NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
                         return false;
                     }
             );
+
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.privacy_settings),
+                    "",
+                    R.drawable.ic_privacy_outline_28,
+                    preference -> {
+                        NavigatorUtils.switchFragment(requireContext(), PrivacyFragment.class);
+                        return false;
+                    }
+            );
+
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.sett_account),
+                    "",
+                    R.drawable.ic_user_outline_28,
+                    preference -> {
+                        NavigatorUtils.switchFragment(requireContext(), SettingsAccountFragment.class);
+                        return false;
+                    }
+            );
+
+            if(AccountManagerUtils.isVKTester()) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        requireContext().getString(R.string.bugs),
+                        "",
+                        R.drawable.ic_bug_outline_28,
+                        preference -> {
+                            VKUIwrapper.officalLinks("bugs");
+                            NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
+                            return false;
+                        }
+                );
+            }
         }
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.vtlvksettings));
@@ -504,7 +500,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment implements Tel
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.menu_about),
-                "Commit: " + About.getBuildNumber(),
+                (isValidSignature() ? VERSIONNAME : "Dev") + " | " + About.getBuildNumber(),
                 R.drawable.ic_about_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), AboutAppFragment.class);
