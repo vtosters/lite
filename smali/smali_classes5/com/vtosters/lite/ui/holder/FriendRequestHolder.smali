@@ -368,7 +368,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, p1, v4}, Lcom/vk/core/utils/VerifyInfoHelper;->a(Lcom/vk/dto/common/VerifyInfo;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v3, p1, v4}, Lcom/vk/core/utils/VerifyInfoHelper;->a(ZZLandroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
