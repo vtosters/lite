@@ -17,7 +17,7 @@
         android:paddingRight="16.0dip"
         android:text="@string/cancel"
         android:textAllCaps="true"
-        android:textColor="@color/header_blue"
+        android:textColor="?accent"
         android:textSize="14.0sp"
         android:visibility="gone" />
 
