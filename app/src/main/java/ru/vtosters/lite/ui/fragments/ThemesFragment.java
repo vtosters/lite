@@ -44,7 +44,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("systememoji").setSummary(getGlobalContext().getString(R.string.systememojisum) + " \uD83D\uDE00\uD83D\uDE01\uD83E\uDD11\uD83E\uDD75\uD83D\uDC4D");
 
         var invalidateThemeCache = findPreference("invalidate_theme_cache");
-        if(ThemesUtils.getReservedAccent() != Color.TRANSPARENT)
+        if(ThemesUtils.getReservedAccent() != Color.TRANSPARENT && Preferences.dev())
             invalidateThemeCache.setOnPreferenceClickListener(preference -> {
                 setAccentColor(ThemesUtils.getReservedAccent());
                 return true;
