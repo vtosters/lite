@@ -2,19 +2,6 @@ package ru.vtosters.lite.music;
 
 import android.util.Log;
 import com.vk.dto.music.MusicTrack;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import javax.crypto.NoSuchPaddingException;
-
 import java8.util.concurrent.CompletableFuture;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -25,6 +12,18 @@ import ru.vtosters.lite.music.downloader.ThumbnailDownloader;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
+
+import javax.crypto.NoSuchPaddingException;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URLEncoder;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class M3UDownloader implements ITrackDownloader {
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
@@ -72,7 +71,7 @@ public class M3UDownloader implements ITrackDownloader {
 
         callback.onProgress(5);
         for (TransportStream ts : tses) {
-            String tsURL = parser.getBaseUrl() + ts.getName();
+            String tsURL = parser.getBaseUrl() + URLEncoder.encode(ts.getName(), "UTF-8");
 
             futures.add(CompletableFuture.runAsync(() -> {
                 try {
