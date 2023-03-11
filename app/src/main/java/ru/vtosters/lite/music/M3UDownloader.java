@@ -17,6 +17,7 @@ import javax.crypto.NoSuchPaddingException;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -49,7 +50,7 @@ public class M3UDownloader implements ITrackDownloader {
         }
     }
 
-    private void parse(String payload, File outDir, Callback callback, MusicTrack track, boolean cache) {
+    private void parse(String payload, File outDir, Callback callback, MusicTrack track, boolean cache) throws UnsupportedEncodingException {
         if (cache) try {
             ThumbnailDownloader.downloadThumbnails(track);
         } catch (IOException e) {
