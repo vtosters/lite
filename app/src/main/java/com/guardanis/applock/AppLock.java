@@ -90,11 +90,11 @@ public class AppLock {
     }
 
     public static String getPinCodeTime(Context context) {
-        return context.getSharedPreferences(PREFS, 0).getString("pincode_time", "1440");
+        return context.getString(AndroidUtils.getIdentifier("applock__activity_lock_reenable_minutes", "integer"));
     }
 
     public static String getPinCodeLimits(Context context) {
-        return context.getSharedPreferences(PREFS, 0).getString("pincode_limits", "4");
+        return context.getString(AndroidUtils.getIdentifier("applock__input_pin_item_count", "integer"));
     }
 
     /**

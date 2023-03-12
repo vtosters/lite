@@ -19584,12 +19584,15 @@ public final class R {
         public static final int select_color = 0x7f121860; // 2131892320
         public static final int select_palette = 0x7f121861; // 2131892321
         public static final int sources = 0x7f121862; // 2131892322
-        public static final int updateverifdata_summ = 0x7f121863; // 2131892323
-        public static final int updateverifdata_title = 0x7f121864; // 2131892324
-        public static final int useOldAppVer_summ = 0x7f121865; // 2131892325
-        public static final int useOldAppVer_title = 0x7f121866; // 2131892326
-        public static final int vkx_integration_enabled_info = 0x7f121867; // 2131892327
-        public static final int writebar_ios_title = 0x7f121868; // 2131892328
+        public static final int storiesGroupsAdBlock = 0x7f121863; // 2131892323
+        public static final int storiesGroupsAdBlocksummary = 0x7f121864; // 2131892324
+        public static final int updateverifdata_summ = 0x7f121865; // 2131892325
+        public static final int updateverifdata_title = 0x7f121866; // 2131892326
+        public static final int useOldAppVer_summ = 0x7f121867; // 2131892327
+        public static final int useOldAppVer_title = 0x7f121868; // 2131892328
+        public static final int vkx_integration_enabled_info = 0x7f121869; // 2131892329
+        public static final int whitelisted_ad_groups_stories_title = 0x7f12186a; // 2131892330
+        public static final int writebar_ios_title = 0x7f12186b; // 2131892331
     }
 
     public static final class style {
