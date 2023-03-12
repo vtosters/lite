@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.core.hardware.fingerprint.FingerprintManagerCompat;
 import androidx.core.os.CancellationSignal;
 
+import com.vtosters.lite.R;
+
 import com.guardanis.applock.activities.UnlockActivity;
 import com.guardanis.applock.services.FingerprintLockService;
 import com.guardanis.applock.services.FingerprintLockService.AuthenticationDelegate;
@@ -296,9 +298,9 @@ public class AppLock {
         long seconds = TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis));
 
         if (TimeUnit.MILLISECONDS.toMinutes(millis) < 1)
-            return String.format("%d seconds", seconds);
+            return String.format(AndroidUtils.getString(R.string.n_seconds), seconds);
         else
-            return String.format("%d minutes, %d seconds", TimeUnit.MILLISECONDS.toMinutes(millis), seconds);
+            return String.format(AndroidUtils.getString(R.string.n_mins_secs), TimeUnit.MILLISECONDS.toMinutes(millis), seconds);
     }
 
     protected long getFailureDelayMs() {
