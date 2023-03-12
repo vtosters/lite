@@ -59,7 +59,7 @@ public class MainActivityInjector {
     private static void updateBinsAndTmpArchive(Activity activity) {
         final VKProgressDialog dialog = new VKProgressDialog(activity);
 
-        dialog.setMessage("Применение акцента");
+        dialog.setMessage(AndroidUtils.getString("applying_accent"));
         dialog.show();
 
         VTExecutors.getIoExecutor().execute(() -> {
@@ -71,8 +71,8 @@ public class MainActivityInjector {
                 activity.runOnUiThread(() -> {
                     dialog.cancel();
                     new VkAlertDialog.Builder(activity)
-                            .setTitle("Ошикба")
-                            .setMessage("Ошибка при применении акцента:\n" + e)
+                            .setTitle(activity.getString(R.string.error))
+                            .setMessage(AndroidUtils.getString("error_applying_accent") + ":\n" + e)
                             .setPositiveButton(R.string.ok, null)
                             .show();
                 });
