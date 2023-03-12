@@ -117,9 +117,9 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         findPreference("pin_reset").setOnPreferenceClickListener(preference -> {
             if (AppLock.isEnrolled(requireContext())) {
                 AppLock.getInstance(requireContext()).invalidateEnrollments();
-                AndroidUtils.sendToast("Pin-код успешно сброшен");
+                AndroidUtils.sendToast(AndroidUtils.getString("pin_reset"));
             } else {
-                AndroidUtils.sendToast("Pin-код не установлен");
+                AndroidUtils.sendToast(AndroidUtils.getString("pin_not_set"));
             }
             return true;
         });

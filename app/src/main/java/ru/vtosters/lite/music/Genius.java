@@ -7,7 +7,10 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.vtosters.lite.R;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
 
@@ -65,9 +68,9 @@ public class Genius {
                 }
             }
 
-            return "Ошибка получения текста, возможно текст не найден";
+            return AndroidUtils.getString("error_no_text");
         } catch (JSONException | IOException e) {
-            return "Ошибка получения текста, возможно текст не найден" + "\n\n" + "Ошибка: \n" + e.getLocalizedMessage();
+            return AndroidUtils.getString("error_no_text") + "\n\n" + AndroidUtils.getString(R.string.error) + ": \n" + e.getLocalizedMessage();
         }
     }
 
@@ -92,12 +95,12 @@ public class Genius {
             Log.d("Genius", String.valueOf(payload));
 
             if (!payload.has("response")) {
-                return "Ошибка получения текста, возможно текст не найден";
+                return AndroidUtils.getString("error_no_text");
             }
 
             return " " + payload.getJSONObject("response").getJSONObject("song").getJSONObject("lyrics").getString("plain");
         } catch (JSONException | IOException e) {
-            return "Ошибка получения текста, возможно текст не найден" + "\n\n" + "Ошибка: \n" + e.getLocalizedMessage();
+            return AndroidUtils.getString("error_no_text") + "\n\n" + AndroidUtils.getString(R.string.error) + ": \n" + e.getLocalizedMessage();
         }
     }
 }

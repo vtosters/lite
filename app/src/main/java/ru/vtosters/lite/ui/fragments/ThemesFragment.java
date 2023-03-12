@@ -207,7 +207,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     void setAccentColor(int color) {
         final VKProgressDialog dialog = new VKProgressDialog(requireContext());
         dialog.setCancelable(false);
-        dialog.setMessage("Применение акцента...");
+        dialog.setMessage(AndroidUtils.getString("applying_accent") + "...");
         dialog.show();
 
         VTExecutors.getIoExecutor().execute(() -> {
@@ -221,8 +221,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
                 requireActivity().runOnUiThread(() -> {
                     dialog.dismiss();
                     new VkAlertDialog.Builder(requireContext())
-                            .setTitle("Ошибка")
-                            .setMessage("Ошибка при применении акцента:\n" + e)
+                            .setTitle(AndroidUtils.getString(R.string.error))
+                            .setMessage(AndroidUtils.getString("error_applying_accent") + ":\n" + e)
                             .setPositiveButton("OK", null)
                             .show();
                 });
