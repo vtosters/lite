@@ -208,6 +208,10 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
 
         findPreference("analyticsDisabled").setVisible(!AndroidUtils.isDebuggable());
+        findPreference("analyticsDisabled").setOnPreferenceClickListener(preference -> {
+            restartApplicationWithTimer();
+            return true;
+        });
     }
 
     @SuppressLint({"CommitPrefEdits", "SetTextI18n"})

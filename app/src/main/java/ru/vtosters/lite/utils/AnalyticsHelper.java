@@ -81,7 +81,6 @@ public class AnalyticsHelper {
     public static void setAnalyticsStatus(Boolean bool) {
         Analytics.setEnabled(bool && Preferences.isValidSignature());
         Crashes.setEnabled(bool && !AndroidUtils.isDebuggable() && Preferences.isValidSignature());
-        Preferences.getPreferences().edit().putBoolean("analyticsDisabled", !bool).apply();
     }
 }
 
