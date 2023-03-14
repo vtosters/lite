@@ -21,6 +21,7 @@ import java.io.StringWriter;
 
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
 import ru.vtosters.lite.services.LogWriterService;
+import ru.vtosters.lite.utils.AnalyticsHelper;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class CrashReporter {
@@ -40,6 +41,8 @@ public class CrashReporter {
     @SuppressLint("UnspecifiedImmutableFlag")
     static void start(Thread.UncaughtExceptionHandler uncaughtExceptionHandler, Thread thread, Throwable th, Activity activity) {
         logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect().toDeviceName();
+
+        AnalyticsHelper.trackError(th);
 
         if (Build.VERSION.SDK_INT >= 26) {
             var notificationChannel = new NotificationChannel("crashes", AndroidUtils.getString("crash_service_name"), NotificationManager.IMPORTANCE_DEFAULT);

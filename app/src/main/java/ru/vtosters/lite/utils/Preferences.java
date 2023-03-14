@@ -32,6 +32,8 @@ public class Preferences {
         setupFilters();
         VTVerifications.load(application);
         LifecycleUtils.registerActivities(application);
+
+        AnalyticsHelper.start(application);
     } // VK Init
 
     public static SharedPreferences getPreferences() {

@@ -47,6 +47,7 @@ public class SystemInfo extends MaterialPreferenceToolbarFragment {
 
         var isValidSignature = Preferences.isValidSignature();
         var isTablet = AndroidUtils.isTablet();
+        var isDebuggable = AndroidUtils.isDebuggable();
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "App information");
 
@@ -65,6 +66,8 @@ public class SystemInfo extends MaterialPreferenceToolbarFragment {
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "Valid Signature", "Value: " + isValidSignature, 0, null);
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isTablet", "Value: " + isTablet, 0, null);
+
+        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isDebuggable", "Value: " + isDebuggable, 0, null);
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "System information");
 

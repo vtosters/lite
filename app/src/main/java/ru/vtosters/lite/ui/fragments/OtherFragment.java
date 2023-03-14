@@ -206,6 +206,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 return true;
             });
         }
+
+        findPreference("analyticsDisabled").setVisible(!AndroidUtils.isDebuggable());
     }
 
     @SuppressLint({"CommitPrefEdits", "SetTextI18n"})
