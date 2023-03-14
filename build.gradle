@@ -3,14 +3,9 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.1'
-        classpath 'org.mozilla.rust-android-gradle:plugin:0.9.3'
-
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -20,6 +15,18 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven {
+            name = "GitHubPackages"
+            // TODO: set vt org
+            url = uri("https://maven.pkg.github.com/Saoqq/native-effects")
+            // TODO: try to resolve from ENV first (for CI/manual publish) and only then use hardcoded read-only
+            // github moment: https://github.com/orgs/community/discussions/26634
+            // TODO: set vt org
+            credentials {
+                username = "saoqq"
+                password = new String(Base64.getDecoder().decode("Z2hwXzFCZEpBUFR0anNQOW9lSmpHNTRDaUJpaXFsN2RLYjNUd1NwaQ=="))
+            }
+        }
     }
 }
 

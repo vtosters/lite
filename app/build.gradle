@@ -7,16 +7,6 @@ import java.util.zip.ZipInputStream
 plugins {
     id 'com.android.application'
     id 'net.nemerosa.versioning' version '2.15.1'
-    id 'org.mozilla.rust-android-gradle.rust-android'
-}
-
-cargo {
-    profile = 'release'
-    module = '../native-effects'
-    libname = 'native-effects'
-    targets = ["arm", "arm64"]
-    prebuiltToolchains = true
-    pythonCommand = "python3"
 }
 
 def smaliFolder = projectDir.toPath().resolve("../smali").normalize()
@@ -30,55 +20,32 @@ task cleanVersionFile {
     projectDir.toPath().resolve("src/main/assets/version.properties").toFile().delete()
 }
 
+void copyToOut(InputStream source, OutputStream target) throws IOException {
+    byte[] buf = new byte[8192];
+    int length;
+    while ((length = source.read(buf)) != -1) {
+        target.write(buf, 0, length);
+    }
+    target.close()
+    source.close()
+}
+
 task exportDex {
     doLast {
+        File moduleDir = projectDir
         try {
-            File moduleDir = projectDir
-            ZipInputStream inputStream = new ZipInputStream(new FileInputStream(moduleDir.getAbsolutePath() + "/build/outputs/apk/release/app-release-unsigned.apk"))
-            ZipFile file = new ZipFile(moduleDir.getAbsolutePath() + "/build/outputs/apk/release/app-release-unsigned.apk");
-            ZipEntry entry
-            while ((entry = inputStream.nextEntry) != null) {
-                if (entry.getName().equals("classes.dex")) {
-                    print('classes.dex found!')
+            ZipFile file = new ZipFile(moduleDir.getAbsolutePath() + "/build/outputs/apk/release/app-release-unsigned.apk")
+            var out = moduleDir.getAbsoluteFile().toPath()
+            copyToOut(file.getInputStream(file.getEntry("classes.dex")), out.resolve("classes6.dex").toFile().newOutputStream())
+            copyToOut(file.getInputStream(file.getEntry("classes2.dex")), out.resolve("classes7.dex").toFile().newOutputStream())
+            copyToOut(file.getInputStream(file.getEntry("assets/version.properties")), out.resolve("version.properties").toFile().newOutputStream())
 
-                    FileOutputStream output = new FileOutputStream(new File(moduleDir.getAbsoluteFile(), "classes6.dex"))
-
-                    byte[] buffer = new byte[1024]
-                    int len = 0
-                    while ((len = inputStream.read(buffer)) > 0) {
-                        output.write(buffer, 0, len)
-                    }
-                    output.close()
-                }
-                if (entry.getName().equals("classes2.dex")) {
-                    print('\nclasses2.dex found!')
-
-                    FileOutputStream output = new FileOutputStream(new File(moduleDir.getAbsoluteFile(), "classes7.dex"))
-
-                    byte[] buffer = new byte[1024]
-                    int len = 0
-                    while ((len = inputStream.read(buffer)) > 0) {
-                        output.write(buffer, 0, len)
-                    }
-                    output.close()
-                }
-            }
-
-            for (ZipEntry e : Collections.list(file.entries())) {
-                if (e.getName().endsWith("assets/version.properties")) {
-                    var is = file.getInputStream(e)
-                    FileOutputStream output = new FileOutputStream(new File(moduleDir.getAbsoluteFile(), "version.properties"))
-
-                    byte[] buffer = new byte[1024]
-                    int len = 0
-                    while ((len = is.read(buffer)) > 0) {
-                        output.write(buffer, 0, len)
-                    }
-                    output.close()
-
-                    print('\nversion.properties found!')
-                }
-            }
+            var arm64 = out.resolve("lib/arm64-v8a/libnative_effects.so").toFile()
+            arm64.getParentFile().mkdirs()
+            copyToOut(file.getInputStream(file.getEntry("lib/arm64-v8a/libnative_effects.so")), arm64.newOutputStream())
+            var arm32 = out.resolve("lib/armeabi-v7a/libnative_effects.so").toFile()
+            arm32.getParentFile().mkdirs()
+            copyToOut(file.getInputStream(file.getEntry("lib/armeabi-v7a/libnative_effects.so")), arm32.newOutputStream())
         } catch (Exception e) {
             e.printStackTrace()
         }
@@ -110,7 +77,6 @@ android {
         targetCompatibility JavaVersion.VERSION_14
     }
     namespace 'ru.vtosters.lite'
-    ndkVersion '25.2.9519653'
 }
 
 dependencies {
@@ -119,12 +85,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.google.guava:guava:23.3-android'
+    implementation 'ru.vtosters.lite:native_effects:5373b23'
 }
 
 task prepareDexForMerge(type: Copy) {
     dependsOn('exportDex')
-    // Remove comment for native lib build
-    dependsOn('cargoBuild')
     into smaliFolder.toString()
     from(projectDir) {
         include 'classes6.dex'
@@ -134,19 +99,14 @@ task prepareDexForMerge(type: Copy) {
         include 'version.properties'
         into 'assets'
     }
-    // Remove comment for native lib build
-    from('../native-effects/target/aarch64-linux-android/release'){
-        include 'libnative_effects.so'
-        into 'lib/arm64-v8a'
-    }
-    from('../native-effects/target/armv7-linux-androideabi/release'){
-        include 'libnative_effects.so'
-        into 'lib/armeabi-v7a'
+    from("$projectDir/lib/") {
+        into 'lib/'
     }
     doLast {
         new File(projectDir, "classes6.dex").delete()
         new File(projectDir, "classes7.dex").delete()
         new File(projectDir, "version.properties").delete()
+        new File(projectDir, "lib").delete()
     }
 }
 
