@@ -207,7 +207,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             });
         }
 
-        findPreference("analyticsDisabled").setVisible(!AndroidUtils.isDebuggable());
+        findPreference("analyticsDisabled").setVisible(!AndroidUtils.isDebuggable() && Preferences.isValidSignature());
         findPreference("analyticsDisabled").setOnPreferenceClickListener(preference -> {
             restartApplicationWithTimer();
             return true;
