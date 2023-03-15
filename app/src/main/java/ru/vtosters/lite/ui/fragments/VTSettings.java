@@ -1,12 +1,15 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.Preferences.VERSIONNAME;
+import static ru.vtosters.lite.utils.Preferences.isValidSignature;
+
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.widget.Toast;
+
 import androidx.annotation.StringRes;
+
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
@@ -20,22 +23,27 @@ import com.vtosters.lite.auth.VKAuth;
 import com.vtosters.lite.fragments.money.music.control.subscription.MusicSubscriptionControlFragment;
 import com.vtosters.lite.fragments.n2.SettingsDebugFragment;
 import com.vtosters.lite.fragments.w2.BlacklistFragment;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.general.fragments.SettingsAccountFragment;
 import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
+
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ssfs.Utils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
-import ru.vtosters.lite.utils.*;
+import ru.vtosters.lite.utils.About;
+import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.GmsUtils;
+import ru.vtosters.lite.utils.ImageUtils;
+import ru.vtosters.lite.utils.NavigatorUtils;
+import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.lite.utils.VTVerifications;
 
-import static ru.vtosters.lite.utils.Preferences.VERSIONNAME;
-import static ru.vtosters.lite.utils.Preferences.isValidSignature;
-
-public class VTSettings extends MaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
+public class VTSettings extends TrackedMaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
 
     public static String getValAsString(@StringRes int strRes, Boolean value) {
         if(value) {

@@ -5,15 +5,16 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+
 import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.About;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.Preferences;
 
-public class SystemInfo extends MaterialPreferenceToolbarFragment {
+public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
 
     @Override
     public void onCreate(Bundle bundle) {

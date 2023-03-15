@@ -1,25 +1,27 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
+
 import androidx.preference.Preference;
+
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.newsfeed.NewsfeedSettingsFragment;
 import com.vk.newsfeed.controllers.NewsfeedController;
 import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.ui.SummaryListPreference;
+
+import java.util.Objects;
+
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
 import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
 import ru.vtosters.lite.utils.Preferences;
 
-import java.util.Objects;
-
-import static ru.vtosters.lite.utils.AndroidUtils.*;
-
-public class FeedFragment extends MaterialPreferenceToolbarFragment {
+public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);

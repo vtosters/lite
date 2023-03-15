@@ -2,7 +2,9 @@ package ru.vtosters.lite.utils;
 
 import android.app.Application;
 import android.os.Handler;
+
 import androidx.annotation.NonNull;
+
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.channel.AbstractChannelListener;
@@ -13,6 +15,7 @@ import com.microsoft.appcenter.ingestion.models.Log;
 import java.util.HashMap;
 
 import ru.vtosters.lite.BuildConfig;
+import ru.vtosters.lite.ui.fragments.TrackedMaterialPreferenceToolbarFragment;
 
 public class AnalyticsHelper {
     private static final boolean analyticsDisabled = Preferences.getBoolValue("analyticsDisabled", false);
@@ -74,6 +77,15 @@ public class AnalyticsHelper {
         if (analyticsDisabled) return;
 
         Analytics.trackEvent(event, map);
+    }
+
+    public static void trackSettingsFragment(Class<? extends TrackedMaterialPreferenceToolbarFragment> fragment) {
+        if (analyticsDisabled) return;
+
+        var props = new HashMap<String, String>();
+        props.put("fragment", fragment.getSimpleName());
+
+        AnalyticsHelper.trackEvent("Opened settings", props);
     }
 
     public static void trackError(Throwable th) {

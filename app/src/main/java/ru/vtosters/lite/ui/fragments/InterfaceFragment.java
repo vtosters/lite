@@ -1,9 +1,12 @@
 package ru.vtosters.lite.ui.fragments;
 
-import android.os.Build;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+
 import android.os.Bundle;
+
 import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.RoundingSeekbarDialog;
@@ -12,10 +15,7 @@ import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-
-public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
+public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
