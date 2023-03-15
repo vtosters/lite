@@ -50,10 +50,12 @@ android {
     }
 
     buildTypes {
-        debug {
+        dev {
+            initWith release
             buildConfigField 'String', 'APPCENTER_KEY', '""'
         }
         beta {
+            initWith release
             buildConfigField 'String', 'APPCENTER_KEY', '""'
         }
         release {
