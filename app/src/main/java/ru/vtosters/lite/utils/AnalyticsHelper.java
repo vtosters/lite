@@ -64,13 +64,13 @@ public class AnalyticsHelper {
     public static void trackEvent(String event) {
         if (analyticsDisabled) return;
 
-        AnalyticsHelper.trackEvent(event);
+        Analytics.trackEvent(event);
     }
 
     public static void trackEvent(String event, HashMap<String, String> map) {
         if (analyticsDisabled) return;
 
-        AnalyticsHelper.trackEvent(event, map);
+        Analytics.trackEvent(event, map);
     }
 
     public static void trackError(Throwable th) {
