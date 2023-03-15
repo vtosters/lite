@@ -16,6 +16,7 @@ import androidx.appcompat.widget.SwitchCompat;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 
+import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.utils.LayoutUtils;
 
 public class MessageSettings {
@@ -36,6 +37,13 @@ public class MessageSettings {
         RadioButton three = new RadioButton(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton four = new RadioButton(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton five = new RadioButton(new ContextThemeWrapper(context, R.style.Widget_AppCompat_CompoundButton_RadioButton));
+
+        SwitchHook.setCompoundButton(zero);
+        SwitchHook.setCompoundButton(one);
+        SwitchHook.setCompoundButton(two);
+        SwitchHook.setCompoundButton(three);
+        SwitchHook.setCompoundButton(four);
+        SwitchHook.setCompoundButton(five);
 
         rg.addView(zero);
         rg.addView(one);
@@ -85,6 +93,8 @@ public class MessageSettings {
         });
 
         silentSwitch.setPadding(dp2px(24f), dp2px(12f), dp2px(18f), dp2px(12f));
+
+        SwitchHook.setSwitchCompatColors(silentSwitch);
 
         mContainer.setLayoutParams(LayoutUtils.createLinear(-1, -1));
         mContainer.setOrientation(LinearLayout.VERTICAL);

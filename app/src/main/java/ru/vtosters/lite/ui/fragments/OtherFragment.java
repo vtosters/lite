@@ -53,6 +53,7 @@ import java.io.IOException;
 
 import b.h.g.m.FileUtils;
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
+import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
@@ -242,6 +243,7 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         for (int item = 0; item <= 5; item++) {
             RadioButton rb = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
+            SwitchHook.setCompoundButton(rb);
             rg.addView(rb);
             rb.setId(item);
             rb.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));

@@ -1,6 +1,5 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.ui.dialogs.MessageSettings.argDialog;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.bombCount;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.isSilentEnabled;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
@@ -17,6 +16,7 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import ru.vtosters.lite.translators.BaseTranslator;
+import ru.vtosters.lite.ui.dialogs.MessageSettings;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class MessagesHook {
@@ -70,7 +70,7 @@ public class MessagesHook {
 
     public static void onLongClick(View view) {
         view.setOnLongClickListener(v -> {
-            argDialog(v.getContext());
+            MessageSettings.argDialog(v.getContext());
             return true;
         });
     }

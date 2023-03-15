@@ -2,10 +2,12 @@ package ru.vtosters.lite.hooks;
 
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
+import androidx.core.widget.CompoundButtonCompat;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.ColorUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -34,8 +36,8 @@ public class SwitchHook {
             switchCompat.setThumbDrawable(setTintList(getCustomThumb(), new ColorStateList(createTrackColorStateList(), SWITCH_COLORS)));
             switchCompat.setTrackDrawable(setTintList(getCustomTrack(), new ColorStateList(createTrackColorStateList(), TRACK_COLORS)));
         } else {
-            DrawableCompat.setTintList(DrawableCompat.wrap(switchCompat.getThumbDrawable()), new ColorStateList(createTrackColorStateList(), SWITCH_COLORS));
-            DrawableCompat.setTintList(DrawableCompat.wrap(switchCompat.getTrackDrawable()), new ColorStateList(createTrackColorStateList(), TRACK_COLORS));
+            setTintList(switchCompat.getThumbDrawable(), new ColorStateList(createTrackColorStateList(), SWITCH_COLORS));
+            setTintList(switchCompat.getTrackDrawable(), new ColorStateList(createTrackColorStateList(), TRACK_COLORS));
         }
     }
 
@@ -44,9 +46,21 @@ public class SwitchHook {
             drawableCompat.setThumbDrawable(setTintList(getCustomThumb(), new ColorStateList(createTrackColorStateList(), SWITCH_COLORS)));
             drawableCompat.setTrackDrawable(setTintList(getCustomTrack(), new ColorStateList(createTrackColorStateList(), TRACK_COLORS)));
         } else {
-            DrawableCompat.setTintList(DrawableCompat.wrap(drawableCompat.getThumbDrawable()), new ColorStateList(createTrackColorStateList(), SWITCH_COLORS));
-            DrawableCompat.setTintList(DrawableCompat.wrap(drawableCompat.getTrackDrawable()), new ColorStateList(createTrackColorStateList(), TRACK_COLORS));
+            setTintList(drawableCompat.getThumbDrawable(), new ColorStateList(createTrackColorStateList(), SWITCH_COLORS));
+            setTintList(drawableCompat.getTrackDrawable(), new ColorStateList(createTrackColorStateList(), TRACK_COLORS));
         }
+    }
+
+    public static void setCompoundButton(CompoundButton compoundButton) {
+        CompoundButtonCompat.setButtonTintList(
+                compoundButton,
+                new ColorStateList(
+                        createTrackColorStateList(),
+                new int[]{
+                        ColorUtils.b(ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.selection_off_icon), 0.4f),
+                        ColorUtils.b(ThemesUtils.getAccentColor(), 0.4f),
+                        ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.selection_off_icon),
+                        ThemesUtils.getAccentColor()}));
     }
 
     private static int[][] createTrackColorStateList() {

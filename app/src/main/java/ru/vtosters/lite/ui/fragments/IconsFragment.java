@@ -16,6 +16,7 @@ import androidx.core.content.res.ResourcesCompat;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 
+import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.components.IconManager;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -33,6 +34,10 @@ public class IconsFragment extends TrackedMaterialPreferenceToolbarFragment {
         RadioButton rgDefault = new RadioButton(new ContextThemeWrapper(ctx, R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgVK = new RadioButton(new ContextThemeWrapper(ctx, R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgVKontakte = new RadioButton(new ContextThemeWrapper(ctx, R.style.Widget_AppCompat_CompoundButton_RadioButton));
+
+        SwitchHook.setCompoundButton(rgDefault);
+        SwitchHook.setCompoundButton(rgVK);
+        SwitchHook.setCompoundButton(rgVKontakte);
 
         rg.addView(rgDefault);
         rg.addView(rgVK);
