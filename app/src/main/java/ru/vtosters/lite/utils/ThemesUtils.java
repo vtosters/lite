@@ -29,6 +29,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.hooks.VKUIHook;
+import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
@@ -384,6 +385,8 @@ public class ThemesUtils {
                 setTheme(VKTheme.VKAPP_DARK, activity);
             }
         }
+
+        SystemThemeChangerHook.themeOnStart(activity);
     }
 
     public static void setNavbarColor(Window window, int i) {
