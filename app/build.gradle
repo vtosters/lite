@@ -30,6 +30,44 @@ task cleanVersionFile {
     projectDir.toPath().resolve("src/main/assets/version.properties").toFile().delete()
 }
 
+android {
+    compileSdkVersion 32
+    buildToolsVersion '32.0.0'
+
+    sourceSets {
+        main {
+            java.srcDirs += 'build/generated/aidl_source_output_dir/release/out'
+        }
+    }
+
+    defaultConfig {
+        applicationId "ru.vtosters.lite.utils.lite"
+        minSdk 22
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_14
+        targetCompatibility JavaVersion.VERSION_14
+    }
+    namespace 'ru.vtosters.lite'
+    ndkVersion '25.2.9519653'
+}
+
+dependencies {
+    implementation "com.microsoft.appcenter:appcenter-analytics:5.0.0"
+    implementation "com.microsoft.appcenter:appcenter-crashes:5.0.0"
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    implementation 'net.sourceforge.streamsupport:streamsupport-minifuture:1.7.4'
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.guava:guava:23.3-android'
+}
+
 task exportDex {
     doLast {
         try {
@@ -83,44 +121,6 @@ task exportDex {
             e.printStackTrace()
         }
     }
-}
-
-android {
-    compileSdkVersion 32
-    buildToolsVersion '32.0.0'
-
-    sourceSets {
-        main {
-            java.srcDirs += 'build/generated/aidl_source_output_dir/release/out'
-        }
-    }
-
-    defaultConfig {
-        applicationId "ru.vtosters.lite.utils.lite"
-        minSdk 22
-        targetSdkVersion 32
-        versionCode 1
-        versionName "1.0"
-        multiDexEnabled true
-    }
-
-    compileOptions {
-        coreLibraryDesugaringEnabled true
-        sourceCompatibility JavaVersion.VERSION_14
-        targetCompatibility JavaVersion.VERSION_14
-    }
-    namespace 'ru.vtosters.lite'
-    ndkVersion '25.2.9519653'
-}
-
-dependencies {
-    implementation "com.microsoft.appcenter:appcenter-analytics:5.0.0"
-    implementation "com.microsoft.appcenter:appcenter-crashes:5.0.0"
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
-    implementation 'net.sourceforge.streamsupport:streamsupport-minifuture:1.7.4'
-    implementation fileTree(dir: 'libs', include: ['*.aar'])
-    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.google.guava:guava:23.3-android'
 }
 
 task prepareDexForMerge(type: Copy) {
