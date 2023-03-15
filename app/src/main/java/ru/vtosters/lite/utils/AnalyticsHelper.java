@@ -12,10 +12,12 @@ import com.microsoft.appcenter.ingestion.models.Log;
 
 import java.util.HashMap;
 
-public class AnalyticsHelper {
-    private static final boolean analyticsDisabled = Preferences.getBoolValue("analyticsDisabled", false);;
+import ru.vtosters.lite.BuildConfig;
 
-    private static final String key = "5028aa35-9f16-44ed-b306-c4ed471a57eb";
+public class AnalyticsHelper {
+    private static final boolean analyticsDisabled = Preferences.getBoolValue("analyticsDisabled", false);
+
+    private static final String key = BuildConfig.APPCENTER_KEY;
 
     private static final Channel.Listener patchDeviceListener = new AbstractChannelListener() {
         @Override
@@ -50,8 +52,9 @@ public class AnalyticsHelper {
         }
     }
 
+    @SuppressWarnings("ConstantConditions")
     public static void start(Application application) {
-        if (analyticsDisabled) {
+        if (analyticsDisabled || key.isEmpty()) {
             setAnalyticsStatus(false);
             return;
         }
