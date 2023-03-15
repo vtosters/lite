@@ -14,11 +14,19 @@ public class AccountManagerUtils {
     } // Current UserId
 
     public static boolean isVKTester() {
-        return VKAccountManager.d().k0().equals("tester");
+        return role("tester");
     } // is vk tester
 
     public static boolean isVKWorker() {
-        return VKAccountManager.d().k0().equals("worker");
+        return role("worker");
+    }
+
+    public static boolean role(String role) {
+        try {
+            return VKAccountManager.d().k0().equals(role);
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public static String getUserSecret() {
