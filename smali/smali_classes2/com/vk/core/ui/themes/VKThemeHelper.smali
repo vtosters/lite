@@ -2783,6 +2783,10 @@
 .method public final a(Landroid/widget/Switch;)V
     .locals 4
 
+    invoke-static {p1}, Lru/vtosters/lite/hooks/SwitchHook;->setSwitchColors(Landroid/widget/Switch;)V
+
+    return-void
+
     .line 90
     invoke-virtual {p1}, Landroid/widget/Switch;->getThumbDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -2834,6 +2838,10 @@
 
 .method public final a(Landroidx/appcompat/widget/SwitchCompat;)V
     .locals 4
+
+    invoke-static {p1}, Lru/vtosters/lite/hooks/SwitchHook;->setSwitchCompatColors(Landroidx/appcompat/widget/SwitchCompat;)V
+
+    return-void
 
     .line 88
     invoke-virtual {p1}, Landroidx/appcompat/widget/SwitchCompat;->getThumbDrawable()Landroid/graphics/drawable/Drawable;
