@@ -115,6 +115,13 @@ public class ThemesUtils {
         return getMutedColor(getAccentColor());
     }
 
+    public static void colorTextView(TextView view) {
+        try {
+            ThemesUtils.colorHandles(view);
+            ThemesUtils.setCursorColor((EditText) view);
+        } catch (Exception ignored) {}
+    }
+
     @SuppressLint("DiscouragedPrivateApi")
     public static void setCursorColor(EditText view) {
         try {
