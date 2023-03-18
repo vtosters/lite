@@ -74,6 +74,11 @@
                 android:title="@string/iconmanager_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
+                android:key="useCustomPrefsStyle"
+                android:summary="Более современный и стильный вид тумблеров в настройках"
+                android:title="Использовать новые тумблеры"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
                 android:key="navbar"
                 android:summary="@string/appearance_other_color_navbar_summary"
                 android:title="@string/vtlnavbar"/>

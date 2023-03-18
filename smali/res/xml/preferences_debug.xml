@@ -40,10 +40,6 @@
                 android:title="@string/useNewSettings_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
-                android:key="useCustomPrefsStyle"
-                android:title="useCustomPrefsStyle"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="true"
                 android:key="promotedstickers"
                 android:title="@string/promotedstickers_title"/>
     </PreferenceCategory>

@@ -133,6 +133,11 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
             dockbarSettingsPreferenceCategory.setVisible(false);
             findPreference("alteremoji").setVisible(false);
         }
+
+        findPreference("useCustomPrefsStyle").setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
     }
 
     @Override
