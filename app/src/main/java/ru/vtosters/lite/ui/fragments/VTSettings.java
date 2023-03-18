@@ -9,6 +9,7 @@ import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
+import com.vk.identity.fragments.IdentityListFragment;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.MainActivity;
@@ -270,6 +271,20 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                         return false;
                     }
             );
+
+            if (VKAccountManager.d().N0()) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        requireContext().getString(R.string.identity_title),
+                        "",
+                        R.drawable.ic_services_outline_28,
+                        preference -> {
+                            NavigatorUtils.switchFragmentNavigator(requireContext(), new IdentityListFragment.a("menu").e());
+                            return false;
+                        }
+                );
+            }
 
             if (AccountManagerUtils.isVKTester()) {
                 PreferenceFragmentUtils.addPreference(

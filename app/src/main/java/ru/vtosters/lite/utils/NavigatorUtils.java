@@ -15,6 +15,12 @@ public class NavigatorUtils {
         context.startActivity(intent);
     }
 
+    public static void switchFragmentNavigator(Context context, Navigator fragmentClz) {
+        var intent = fragmentClz
+                .b(context)
+                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
     /**
      * switch to settings for {@link Intent.ACTION_APPLICATION_PREFERENCES}*/
     public static void switchToSettings(Context context) {
