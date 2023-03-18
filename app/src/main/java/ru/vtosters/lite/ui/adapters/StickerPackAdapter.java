@@ -141,7 +141,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             mSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> sService.setPackEnabled(pack, isChecked, true));
             mStickersCount.setText(pack.stickersCount + " " + mStickersCount.getContext().getString(R.string.stickerscount));
 
-            SwitchHook.setSwitchCompatColors(mSwitch);
+            SwitchHook.setSwitchCompatColors(mSwitch, mSwitch.getContext());
 
             // Color костыль
             int color = getTextAttr();

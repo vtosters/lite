@@ -94,7 +94,7 @@ public class MessageSettings {
 
         silentSwitch.setPadding(dp2px(24f), dp2px(12f), dp2px(18f), dp2px(12f));
 
-        SwitchHook.setSwitchCompatColors(silentSwitch);
+        SwitchHook.setSwitchCompatColors(silentSwitch, silentSwitch.getContext());
 
         mContainer.setLayoutParams(LayoutUtils.createLinear(-1, -1));
         mContainer.setOrientation(LinearLayout.VERTICAL);
