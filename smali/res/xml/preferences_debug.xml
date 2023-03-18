@@ -100,30 +100,6 @@
                 android:title="@string/debug_domains_awayphp"/>
     </PreferenceCategory>
     <PreferenceCategory
-            android:key="network"
-            android:title="@string/debug_network">
-        <Preference
-                android:defaultValue="cronet_quic"
-                android:key="__dbg_network_executor"
-                android:title="Network: Executor"/>
-        <Preference
-                android:key="__dbg_network_clear_internal_state"
-                android:title="Network: Clear internal state"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="__dbg_network_netlog_write"
-                android:title="Network: NetLog: write"/>
-        <Preference
-                android:defaultValue="false"
-                android:key="__dbg_network_netlog_clear"
-                android:title="Network: NetLog: clear"/>
-        <Preference
-                android:defaultValue="false"
-                android:key="__dbg_network_netlog_send"
-                android:summary="Compress &amp; send"
-                android:title="Network: NetLog: send"/>
-    </PreferenceCategory>
-    <PreferenceCategory
             android:key="logging"
             android:title="@string/debug_logging">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -132,12 +108,16 @@
                 android:title="@string/debug_logging_api"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
-                android:key="__dbg_force_send"
-                android:title="@string/debug_logging_force_stats_sending"/>
+                android:key="logColors"
+                android:title="Логгировать получение акцентов"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="__dbg_webview"
                 android:title="@string/debug_logging_webview"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="__dbg_force_send"
+                android:title="@string/debug_logging_force_stats_sending"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="__dbg_view_post_time_overlay"
@@ -165,6 +145,30 @@
                 android:key="__dbg_log_to_file"
                 android:summary="@string/debug_logging_file_summary"
                 android:title="@string/debug_logging_file"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+            android:key="network"
+            android:title="@string/debug_network">
+        <Preference
+                android:defaultValue="cronet_quic"
+                android:key="__dbg_network_executor"
+                android:title="Network: Executor"/>
+        <Preference
+                android:key="__dbg_network_clear_internal_state"
+                android:title="Network: Clear internal state"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="__dbg_network_netlog_write"
+                android:title="Network: NetLog: write"/>
+        <Preference
+                android:defaultValue="false"
+                android:key="__dbg_network_netlog_clear"
+                android:title="Network: NetLog: clear"/>
+        <Preference
+                android:defaultValue="false"
+                android:key="__dbg_network_netlog_send"
+                android:summary="Compress &amp; send"
+                android:title="Network: NetLog: send"/>
     </PreferenceCategory>
     <PreferenceCategory
             android:key="cache"

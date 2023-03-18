@@ -71,7 +71,7 @@ public class VKUIHook {
     }
 
     public static void inject(WebView webView) {
-        if (Preferences.dev()) {
+        if (Preferences.getBoolValue("__dbg_webview", false)) {
             WebView.setWebContentsDebuggingEnabled(true);
             webView.loadUrl("javascript:(function() {let parent = document.head || document.documentElement; let script = parent.appendChild(document.createElement('script')); script.src = 'https://cdn.jsdelivr.net/npm/eruda'; script.onload = () => eruda.init();})()");
         }
