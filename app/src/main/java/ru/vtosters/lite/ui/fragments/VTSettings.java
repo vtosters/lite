@@ -1,15 +1,10 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Preferences.VERSIONNAME;
-import static ru.vtosters.lite.utils.Preferences.isValidSignature;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-
 import androidx.annotation.StringRes;
-
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
@@ -26,27 +21,19 @@ import com.vtosters.lite.fragments.w2.BlacklistFragment;
 import com.vtosters.lite.general.fragments.SettingsAccountFragment;
 import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
-
+import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ssfs.Utils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
-import ru.vtosters.lite.utils.About;
-import ru.vtosters.lite.utils.AccountManagerUtils;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.GmsUtils;
-import ru.vtosters.lite.utils.ImageUtils;
-import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
-import ru.vtosters.lite.utils.VTVerifications;
+import ru.vtosters.lite.utils.*;
 
 public class VTSettings extends TrackedMaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
 
     public static String getValAsString(@StringRes int strRes, Boolean value) {
-        if(value) {
+        if (value) {
             return AndroidUtils.getString(strRes) + ": " + AndroidUtils.getString(R.string.vtlsettenabled);
         }
 
@@ -54,7 +41,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
     }
 
     public static String getSSFSsumm() {
-        if(Preferences.hasSpecialVerif())
+        if (Preferences.hasSpecialVerif())
             return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifyes);
 
         return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifno);
@@ -67,7 +54,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
     public static String getProxysumm() {
         var type = Preferences.getString("proxy");
 
-        if(type.equals("noproxy") || type.isEmpty())
+        if (type.equals("noproxy") || type.isEmpty())
             type = AndroidUtils.getString(R.string.vtlsettdisabled);
 
         return AndroidUtils.getString(R.string.vtlproxysumm) + ": " + type;
@@ -107,6 +94,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
 
     }
 
+    @SuppressWarnings("ConstantConditions")
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -127,7 +115,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                     preference -> {
                         try {
                             VKAuth.a("logout", false);
-                        } catch(Exception ignored) {
+                        } catch (Exception ignored) {
                         }
 
                         var intent = new Intent(requireContext(), MainActivity.class)
@@ -141,7 +129,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
 
             VTExecutors.getIoScheduler().a(() -> {
                 var icon = ImageUtils.getDrawableFromUrl(AccountManagerUtils.getUserPhoto(), 0, true, true);
-                if(icon == null) return;
+                if (icon == null) return;
                 requireActivity().runOnUiThread(() -> {
                     accountSwitcher.setIcon(icon);
                 });
@@ -198,7 +186,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
             );
         }
 
-        if(!GmsUtils.isGmsInstalled()) {
+        if (!GmsUtils.isGmsInstalled()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.gmsname);
 
             PreferenceFragmentUtils.addPreference(
@@ -214,7 +202,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
             );
         }
 
-        if(Preferences.devmenu()) {
+        if (Preferences.devmenu()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.sett_debug);
 
             PreferenceFragmentUtils.addPreference(
@@ -241,22 +229,6 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                         return true;
                     }
             );
-
-            if(Preferences.dev() && Preferences.isValidSignature()) {
-                PreferenceFragmentUtils.addMaterialSwitchPreference(
-                        getPreferenceScreen(),
-                        "autoupdates",
-                        requireContext().getString(R.string.checkupdates),
-                        "",
-                        R.drawable.ic_bug_outline_28,
-                        true,
-                        (preference, o) -> {
-                            boolean value = (boolean) o;
-                            Preferences.getPreferences().edit().putBoolean("autoupdates", value).commit();
-                            return true;
-                        }
-                );
-            }
         }
 
         if (AccountManagerUtils.isLogin()) {
@@ -299,7 +271,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                     }
             );
 
-            if(AccountManagerUtils.isVKTester()) {
+            if (AccountManagerUtils.isVKTester()) {
                 PreferenceFragmentUtils.addPreference(
                         getPreferenceScreen(),
                         "",
@@ -353,7 +325,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 }
         );
 
-        if(VKAccountManager.d().isMusicSubs()) {
+        if (VKAccountManager.d().isMusicSubs()) {
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",
@@ -381,7 +353,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.vtsettmod));
 
-        if(Preferences.vkme()) {
+        if (Preferences.vkme()) {
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",
@@ -508,7 +480,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.menu_about),
-                (isValidSignature() ? VERSIONNAME : "Dev") + " | " + About.getBuildNumber(),
+                Preferences.getBuildName() + " | " + About.getBuildNumber(),
                 R.drawable.ic_about_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), AboutAppFragment.class);
@@ -527,7 +499,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                     return false;
                 }
         );
-        
+
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
@@ -553,7 +525,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 }
         );
 
-        if(Preferences.isValidSignature()) {
+        if (Preferences.isValidSignature() && BuildConfig.BUILD_TYPE.equals("release")) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.updates));
 
             PreferenceFragmentUtils.addPreference(
