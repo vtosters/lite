@@ -138,11 +138,6 @@ public class Preferences {
         return getBoolValue("VKUI_INJ", true);
     }
 
-    public static boolean calls() {
-//        return getBoolValue("calls", false);
-        return true;
-    }
-
     @SuppressWarnings("ConstantConditions")
     public static boolean dev() {
         return getBoolValue("dev", false) || BuildConfig.BUILD_TYPE.equals("dev");
