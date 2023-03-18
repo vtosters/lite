@@ -37,7 +37,7 @@ public class SwitchHook {
 
 
     public static void setSwitchCompatColors(SwitchCompat switchCompat, Context ctx) {
-        if (Preferences.getBoolValue("useCustomPrefsStyle", false)) {
+        if (Preferences.getBoolValue("useCustomPrefsStyle", true)) {
             switchCompat.setThumbDrawable(setTintList(getCustomThumb(), new ColorStateList(createColorStateList(), getSwitchColors(ctx))));
             switchCompat.setTrackDrawable(setTintList(getCustomTrack(), new ColorStateList(createColorStateList(), getTrackColors())));
         } else {
@@ -47,7 +47,7 @@ public class SwitchHook {
     }
 
     public static void setSwitchColors(Switch drawableCompat, Context ctx) {
-        if (Preferences.getBoolValue("useCustomPrefsStyle", false)) {
+        if (Preferences.getBoolValue("useCustomPrefsStyle", true)) {
             drawableCompat.setThumbDrawable(setTintList(getCustomThumb(), new ColorStateList(createColorStateList(), getSwitchColors(ctx))));
             drawableCompat.setTrackDrawable(setTintList(getCustomTrack(), new ColorStateList(createColorStateList(), getTrackColors())));
         } else {
