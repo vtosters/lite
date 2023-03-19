@@ -6090,7 +6090,7 @@
     <string name="encryption_settings_title">Налаштування шифрування</string>
     <string name="encryption_public_algorithm_error">Вибраний алгоритм публічний і не має налаштувань!</string>
     <string name="encryption_enter_key">Введіть ключ шифрування</string>
-    <string name="encryption_current_algorithm_title">Використовуваний алгоритм: %1$s.\nВрахуйте, що якщо поле буде порожнім, то використовуватиметься ключ за замовчуванням.</string>
+    <string name="encryption_current_algorithm_title">Використовуваний алгоритм: %1$s</string>
 
     <string name="update_error">Помилка оновлення</string>
     <string name="update_error_text">Відбулася помилка при спробі завантажити нову версію додатка.\nОновити додаток вручну?</string>
