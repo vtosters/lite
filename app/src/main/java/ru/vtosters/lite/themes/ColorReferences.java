@@ -36,6 +36,8 @@ public class ColorReferences {
             Color.parseColor("#45678f"),
             Color.parseColor("#6645678f"),
             Color.parseColor("#0099cc"),
+            Color.parseColor("#ff485f79"),
+            Color.parseColor("#ffbad1eb"),
             Color.parseColor("#664986cc")
     );
 
@@ -120,7 +122,9 @@ public class ColorReferences {
             muted_blue_opacity40,
             muted_blue_old,
             darker_blue,
-            header_blue_opacity40
+            header_blue_opacity40,
+            switch_disabled_on_dark,
+            switch_disabled_on_light
     );
 
     public static boolean isAccentedColor(ColorStateList target) {
