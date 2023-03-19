@@ -29,6 +29,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.hooks.VKUIHook;
+import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
@@ -112,6 +113,13 @@ public class ThemesUtils {
 
     public static int getMutedAccentColor() {
         return getMutedColor(getAccentColor());
+    }
+
+    public static void colorTextView(TextView view) {
+        try {
+            ThemesUtils.colorHandles(view);
+            ThemesUtils.setCursorColor((EditText) view);
+        } catch (Exception ignored) {}
     }
 
     @SuppressLint("DiscouragedPrivateApi")
@@ -384,6 +392,8 @@ public class ThemesUtils {
                 setTheme(VKTheme.VKAPP_DARK, activity);
             }
         }
+
+        SystemThemeChangerHook.themeOnStart(activity);
     }
 
     public static void setNavbarColor(Window window, int i) {

@@ -104,16 +104,7 @@
         .end annotation
     .end param
 
-    .line 40
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/MenuController;->f:Landroid/app/Activity;
-
-    const v1, 0x7f040230
-
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->g(I)I
-
-    move-result v1
-
-    invoke-static {v0, p1, v1}, Lcom/vk/core/util/ContextExtKt;->b(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lru/vtosters/lite/themes/utils/RecolorUtils;->fixActionMenuIcons(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

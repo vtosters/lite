@@ -1,15 +1,17 @@
 package ru.vtosters.lite.ui.fragments.tgstickers;
 
 import android.os.Bundle;
+
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.tgs.TGRoot;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.ui.fragments.TrackedMaterialPreferenceToolbarFragment;
 
-public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragment {
+public class StickersPreferencesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
     @Override
     public void onCreate(Bundle bundle) {

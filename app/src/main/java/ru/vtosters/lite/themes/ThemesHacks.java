@@ -3,12 +3,14 @@ package ru.vtosters.lite.themes;
 import android.content.Context;
 import android.graphics.drawable.*;
 import android.os.Build;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import androidx.annotation.ColorRes;
 import androidx.annotation.NonNull;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.themes.utils.RecolorUtils;
+import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ThemesHacks {
@@ -23,6 +25,12 @@ public class ThemesHacks {
     public static int getHackedColor(@NonNull Context context, @ColorRes int color) {
 
         if (ThemesUtils.isCustomAccentEnabled()) {
+            if (Preferences.getBoolValue("logColors", false)) {
+                try {
+                    Log.d("ThemesCore", "Requesting color by color " + context.getResources().getResourceName(color));
+                } catch (Exception ignored) {}
+            }
+
             if (ThemesCore.isCachedAccents() && ColorReferences.isAccentedColor(context.getResources().getColor(color))) {
                 return ThemesUtils.getAccentColor();
             }

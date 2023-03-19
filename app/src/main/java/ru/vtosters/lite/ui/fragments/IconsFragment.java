@@ -9,18 +9,21 @@ import android.os.Bundle;
 import android.util.TypedValue;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.core.content.res.ResourcesCompat;
+
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+
+import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.components.IconManager;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-public class IconsFragment extends MaterialPreferenceToolbarFragment {
+public class IconsFragment extends TrackedMaterialPreferenceToolbarFragment {
     @SuppressLint("SetTextI18n")
     public static void callSelectDialog(Context ctx, String appicon) {
         var defname = Preferences.getPreferences().getString("appname", "vt");
@@ -31,6 +34,10 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         RadioButton rgDefault = new RadioButton(new ContextThemeWrapper(ctx, R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgVK = new RadioButton(new ContextThemeWrapper(ctx, R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgVKontakte = new RadioButton(new ContextThemeWrapper(ctx, R.style.Widget_AppCompat_CompoundButton_RadioButton));
+
+        SwitchHook.setCompoundButton(rgDefault);
+        SwitchHook.setCompoundButton(rgVK);
+        SwitchHook.setCompoundButton(rgVKontakte);
 
         rg.addView(rgDefault);
         rg.addView(rgVK);

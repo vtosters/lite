@@ -1,22 +1,24 @@
 package ru.vtosters.lite.ui.fragments;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
-import androidx.preference.Preference;
-import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
-import ru.vtosters.lite.utils.Preferences;
-
-import java.util.Arrays;
-
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
-public class MessagesFragment extends MaterialPreferenceToolbarFragment {
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+
+import androidx.preference.Preference;
+
+import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.R;
+
+import java.util.Arrays;
+
+import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
+import ru.vtosters.lite.utils.Preferences;
+
+public class MessagesFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);

@@ -19,7 +19,7 @@ import ru.vtosters.lite.utils.ThemesUtils;
 
 public final class VerifyInfoHelper {
     public static final VerifyInfoHelper h;
-    public static int devIcon = R.drawable.ic_ghost_16;
+    public static int devIcon = R.drawable.ic_favorite_16;
 
     public static Integer enumSwitchMapping(VerifyInfoHelper.ColorTheme color) {
         return switch (color) {

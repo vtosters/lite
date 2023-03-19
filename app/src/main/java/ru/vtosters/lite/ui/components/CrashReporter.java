@@ -21,6 +21,7 @@ import java.io.StringWriter;
 
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
 import ru.vtosters.lite.services.LogWriterService;
+import ru.vtosters.lite.utils.AnalyticsHelper;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class CrashReporter {

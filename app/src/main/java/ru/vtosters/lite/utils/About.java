@@ -48,6 +48,6 @@ public class About {
     }
 
     public static String getAppVersion() {
-        return getApplicationName() + " " + (isValidSignature() ? VERSIONNAME : "Dev") + " | " + getBuildNumber();
+        return getApplicationName() + " " + getBuildName() + " | " + getBuildNumber();
     }
 }

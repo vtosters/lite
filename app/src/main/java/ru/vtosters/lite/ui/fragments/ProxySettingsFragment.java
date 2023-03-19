@@ -6,11 +6,10 @@ import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import android.os.Bundle;
 
 import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import java.io.IOException;
 
-public class ProxySettingsFragment extends MaterialPreferenceToolbarFragment {
+public class ProxySettingsFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);

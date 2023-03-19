@@ -24,6 +24,7 @@ import com.vk.stickers.details.StickerDetailsAdapter;
 import com.vk.stickers.details.StickerDetailsView;
 import com.vtosters.lite.R;
 import org.json.JSONException;
+import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.tgs.TGRoot;
 import ru.vtosters.lite.ui.components.IItemMovingListener;
@@ -139,6 +140,8 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             mSwitch.setChecked(pack.enabled);
             mSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> sService.setPackEnabled(pack, isChecked, true));
             mStickersCount.setText(pack.stickersCount + " " + mStickersCount.getContext().getString(R.string.stickerscount));
+
+            SwitchHook.setSwitchCompatColors(mSwitch, mSwitch.getContext());
 
             // Color костыль
             int color = getTextAttr();

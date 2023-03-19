@@ -7,9 +7,8 @@ import android.os.Bundle;
 import androidx.preference.Preference;
 
 import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-public class ActivityFragment extends MaterialPreferenceToolbarFragment {
+public class ActivityFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);

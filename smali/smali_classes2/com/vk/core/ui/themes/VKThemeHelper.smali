@@ -2783,6 +2783,14 @@
 .method public final a(Landroid/widget/Switch;)V
     .locals 4
 
+    invoke-direct {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->o()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {p1, v1}, Lru/vtosters/lite/hooks/SwitchHook;->setSwitchColors(Landroid/widget/Switch;Landroid/content/Context;)V
+
+    return-void
+
     .line 90
     invoke-virtual {p1}, Landroid/widget/Switch;->getThumbDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -2834,6 +2842,14 @@
 
 .method public final a(Landroidx/appcompat/widget/SwitchCompat;)V
     .locals 4
+
+    invoke-direct {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->o()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {p1, v1}, Lru/vtosters/lite/hooks/SwitchHook;->setSwitchCompatColors(Landroidx/appcompat/widget/SwitchCompat;Landroid/content/Context;)V
+
+    return-void
 
     .line 88
     invoke-virtual {p1}, Landroidx/appcompat/widget/SwitchCompat;->getThumbDrawable()Landroid/graphics/drawable/Drawable;
