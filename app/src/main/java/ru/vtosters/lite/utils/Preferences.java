@@ -172,10 +172,6 @@ public class Preferences {
         return getBoolValue("vkpay", true);
     }
 
-    public static boolean fixPinnedMsg() {
-        return getBoolValue("fixPinnedMsg", false);
-    }
-
     public static boolean miniapps() {
         return getBoolValue("miniapps", true);
     }

@@ -234,13 +234,7 @@
 
     .line 6
     iget v2, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->a:I
-
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->fixPinnedMsg()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_7
-
+    
     const-string v3, "major_sort_id"
 
     const-string v4, "1023"
@@ -255,7 +249,6 @@
     :cond_4
     invoke-virtual {v1, v3, v4}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
-    :cond_7
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -310,18 +303,11 @@
 
     invoke-virtual {v1, v0}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->fixPinnedMsg()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_8
-
     const-string v2, "5.131"
 
     .line 10
     invoke-virtual {v1, v2}, Lcom/vk/api/internal/MethodCall$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
-    :cond_8
     .line 13
     invoke-virtual {v1}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
 
