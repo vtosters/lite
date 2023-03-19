@@ -86,7 +86,7 @@
     const/4 v0, 0x0
 
     .line 5
-    invoke-virtual {p1, v0, v0}, Landroid/content/res/TypedArray;->getColor(II)I
+    invoke-static {p1, v0, v0}, Lru/vtosters/lite/themes/utils/RecolorUtils;->getColor(Landroid/content/res/TypedArray;II)I
 
     move-result v1
 
@@ -114,10 +114,6 @@
     move-result-object v3
 
     sget-object v4, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {v1}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorHexColor(I)I
-
-    move-result v1
 
     invoke-virtual {v3, v1, v4}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 

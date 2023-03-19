@@ -3,9 +3,11 @@ package ru.vtosters.lite.themes.utils;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.widget.TextView;
 import com.vk.core.drawable.RecoloredDrawable;
 import ru.vtosters.lite.R;
 import ru.vtosters.lite.themes.ColorReferences;
@@ -29,6 +31,16 @@ public class RecolorUtils {
 
     public static Drawable fixActionMenuIcons(int drawable) {
         return recolorDrawable(drawable, ThemesUtils.isDarkTheme() ? ThemesUtils.getColor(com.vtosters.lite.R.color.gray_100) : ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.header_tint));
+    }
+
+    public static int getColor(TypedArray ta, int index, int defval) {
+        return recolorHexColor(ta.getColor(index, defval));
+    }
+
+    public static void recolorTextView(TextView tw) {
+        if (ColorReferences.isAccentedColor(tw.getTextColors())) {
+            tw.setTextColor(ThemesUtils.getAccentColor());
+        }
     }
 
     public static int recolorHexColor(int i) {

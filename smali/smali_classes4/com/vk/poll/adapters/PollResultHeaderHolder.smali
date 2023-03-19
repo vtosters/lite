@@ -95,6 +95,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    invoke-static {v0}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorTextView(Landroid/widget/TextView;)V
+
     return-void
 .end method
 

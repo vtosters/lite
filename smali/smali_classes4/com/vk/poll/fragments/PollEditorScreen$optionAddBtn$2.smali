@@ -59,6 +59,8 @@
 
     check-cast v0, Landroid/widget/TextView;
 
+    invoke-static {v0}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorTextView(Landroid/widget/TextView;)V
+
     return-object v0
 .end method
 
