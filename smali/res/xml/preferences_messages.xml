@@ -52,6 +52,11 @@
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
+                android:key="fixPinnedMsg"
+                android:summary="Очень нестабильно"
+                android:title="Исправить получение закреп диалогов"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
                 android:key="businessDisabler"
                 android:title="@string/businessDisabler_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
