@@ -15,6 +15,10 @@ import static ru.vtosters.lite.utils.AndroidUtils.getCenterScreenCoords;
 
 public class SystemThemeChangerHook {
     public static void onThemeChanged(Configuration configuration) {
+        onThemeChanged(configuration, true);
+    }
+
+    public static void onThemeChanged(Configuration configuration, Boolean restartActivity) {
         if (Preferences.systemtheme()) {
             var uiMode = configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK;
 
@@ -26,7 +30,7 @@ public class SystemThemeChangerHook {
                 theme = ThemesUtils.getLightTheme();
 
             if (theme != null && theme != ThemesUtils.getCurrentTheme()) {
-                ThemesUtils.applyTheme(theme);
+                ThemesUtils.applyTheme(theme, restartActivity);
             }
         }
     }
@@ -34,6 +38,6 @@ public class SystemThemeChangerHook {
     public static void themeOnStart(Activity activity) {
         if (activity == null) activity = LifecycleUtils.getCurrentActivity();
 
-        onThemeChanged(activity.getResources().getConfiguration());
+        onThemeChanged(activity.getResources().getConfiguration(), false);
     }
 }

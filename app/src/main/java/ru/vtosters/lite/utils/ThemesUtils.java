@@ -40,9 +40,9 @@ import static ru.vtosters.lite.utils.AndroidUtils.*;
 import static ru.vtosters.lite.utils.Preferences.*;
 
 public class ThemesUtils {
-    public static void applyTheme(VKTheme theme) {
+    public static void applyTheme(VKTheme theme, Boolean restartActivity) {
         try {
-            setTheme(theme, LifecycleUtils.getCurrentActivity(), true);
+            setTheme(theme, LifecycleUtils.getCurrentActivity(), restartActivity);
         } catch (Exception e) {
             e.printStackTrace();
         }
