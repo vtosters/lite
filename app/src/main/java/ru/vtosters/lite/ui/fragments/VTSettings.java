@@ -62,7 +62,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
     }
 
     private void switchTheme(boolean isDarkTheme) {
-        ThemesUtils.setTheme(isDarkTheme ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme(), requireActivity());
+        ThemesUtils.setTheme(isDarkTheme ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme(), requireActivity(), true);
     }
 
     @Override

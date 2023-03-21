@@ -546,6 +546,8 @@
     invoke-virtual {p0, p1, v0}, Landroidx/fragment/app/FragmentActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     :goto_1
+    invoke-static {p0}, Lru/vtosters/lite/hooks/ui/SystemThemeChangerHook;->themeOnStart(Landroid/app/Activity;)V
+
     return-void
 .end method
 
