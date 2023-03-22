@@ -47,6 +47,18 @@
         android:layout_marginEnd="16.0dip"
         android:layout_marginBottom="8.0dip"
         android:text="@string/vk_auth_already_have_account"
+        app:layout_constraintBottom_toTopOf="@id/account_backup_view"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.vk.auth.ui.VkAuthTextView
+        android:id="@id/account_backup_view"
+        style="@style/VkAuth.Button.Landing.Tertiary"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="@string/vk_auth_already_have_account"
         app:layout_constraintBottom_toTopOf="@id/login_button"
         app:layout_constraintVertical_bias="1.0" />
 

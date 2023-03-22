@@ -49,6 +49,8 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import b.h.g.m.FileUtils;
@@ -57,15 +59,11 @@ import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
-import ru.vtosters.lite.utils.AccountManagerUtils;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.VTVerifications;
+import ru.vtosters.lite.utils.*;
 
 public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
-
+    private static final int RECOVER_ACCOUNTS = 2;
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -77,11 +75,16 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == VK_ADMIN_TOKEN_REQUEST_CODE) {
-            if (resultCode == Activity.RESULT_OK) {
+        if (resultCode != Activity.RESULT_OK) return;
+
+        switch (requestCode) {
+            case VK_ADMIN_TOKEN_REQUEST_CODE -> {
                 String token = data.getStringExtra("token");
                 Preferences.getPreferences().edit().putString("vk_admin_token", token).apply();
                 Toast.makeText(getContext(), requireContext().getString(R.string.token_saved), LENGTH_SHORT).show();
+            }
+            case RECOVER_ACCOUNTS -> {
+                VKAccountDB.saveDatabase(data.getData());
             }
         }
     }
@@ -224,6 +227,11 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
                 return true;
             });
         }
+
+        findPreference("accounts_backups").setOnPreferenceClickListener(preference -> {
+            startActivityForResult(new Intent(Intent.ACTION_OPEN_DOCUMENT).addCategory(Intent.CATEGORY_OPENABLE).setType("application/*"), RECOVER_ACCOUNTS);
+            return true;
+        });
 
         findPreference("analyticsDisabled").setVisible(Preferences.isValidSignature());
         findPreference("analyticsDisabled").setOnPreferenceClickListener(preference -> {

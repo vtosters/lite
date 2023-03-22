@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+            android:key="accounts_backups"
+            android:title="Выбрать файл для восстановления аккаунтов"/>
     <PreferenceCategory android:title="@string/other_fix_app">
         <Preference
                 android:key="firebasefix"
