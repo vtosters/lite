@@ -233,6 +233,11 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("save_accounts").setOnPreferenceClickListener(preference -> {
+            VKAccountDB.saveData();
+            return true;
+        });
+
         findPreference("analyticsDisabled").setVisible(Preferences.isValidSignature());
         findPreference("analyticsDisabled").setOnPreferenceClickListener(preference -> {
             restartApplicationWithTimer();

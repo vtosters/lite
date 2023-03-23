@@ -6,13 +6,22 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
+import android.os.Environment;
 import android.util.Log;
 import com.vk.usersstore.contentprovider.a.UsersDbHelper;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import javax.crypto.Cipher;
+import javax.crypto.CipherOutputStream;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
+import java.io.*;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+import static android.widget.Toast.makeText;
 
 public class VKAccountDB {
     private static SQLiteOpenHelper getDatabase() {
@@ -80,5 +89,90 @@ public class VKAccountDB {
         }
 
         return null;
+    }
+
+    public static void saveData() {
+        var db = getDatabase().getReadableDatabase();
+        var dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
+        var file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/saved_accounts_" + dateFormat.format(new Date()) + ".vtl");
+
+        InputStream inputStream;
+        try {
+            inputStream = new FileInputStream(db.getPath());
+
+            FileOutputStream outputStream = new FileOutputStream(file);
+            byte[] buff = new byte[1024];
+            int read;
+            while ((read = inputStream.read(buff, 0, buff.length)) > 0)
+                outputStream.write(buff, 0, read);
+            inputStream.close();
+            outputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static FileOutputStream decrypt(File file, String key) {
+        FileInputStream fis;
+        FileOutputStream fos;
+        CipherOutputStream cos;
+
+        // File you are reading from
+        try {
+            fis = new FileInputStream(file.getPath());
+            fos = new FileOutputStream(file.getPath());
+
+            // Here the file is encrypted. The cipher1 has to be created.
+            // Key Length should be 128, 192 or 256 bit => i.e. 16 byte
+            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes(), "AES");
+            Cipher cipher1 = Cipher.getInstance("AES");
+            cipher1.init(Cipher.ENCRYPT_MODE, skeySpec);
+            cos = new CipherOutputStream(fos, cipher1);
+
+            // Here you read from the file in fis and write to cos.
+            byte[] b = new byte[8];
+            int i = fis.read(b);
+            while (i != -1) {
+                cos.write(b, 0, i);
+                i = fis.read(b);
+            }
+            cos.flush();
+
+            return fos;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    private static void encrypt(File file, String key) {
+        try {
+            // Here you read the cleartext.
+            FileInputStream fis = new FileInputStream(file.getPath());
+            // This stream write the encrypted text. This stream will be wrapped by another stream.
+            FileOutputStream fos = new FileOutputStream(file.getPath());
+
+            // Length is 16 byte
+            // Careful when taking user input!!! https://stackoverflow.com/a/3452620/1188357
+            SecretKeySpec sks = new SecretKeySpec(key.getBytes(), "AES");
+            // Create cipher
+            Cipher cipher = Cipher.getInstance("AES");
+            cipher.init(Cipher.ENCRYPT_MODE, sks);
+            // Wrap the output stream
+            CipherOutputStream cos = new CipherOutputStream(fos, cipher);
+            // Write bytes
+            int b;
+            byte[] d = new byte[8];
+            while((b = fis.read(d)) != -1) {
+                cos.write(d, 0, b);
+            }
+            // Flush and close streams.
+            cos.flush();
+            cos.close();
+            fis.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -3,6 +3,9 @@
     <Preference
             android:key="accounts_backups"
             android:title="Выбрать файл для восстановления аккаунтов"/>
+    <Preference
+            android:key="save_accounts"
+            android:title="Сохранить аккаунты"/>
     <PreferenceCategory android:title="@string/other_fix_app">
         <Preference
                 android:key="firebasefix"
