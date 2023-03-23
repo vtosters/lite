@@ -8,26 +8,33 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
+import com.vk.core.network.Network;
+import com.vk.core.util.DeviceIdProvider;
+import com.vk.core.util.LangUtils;
 import com.vk.usersstore.contentprovider.a.UsersDbHelper;
 import com.vtosters.lite.auth.VKAuth;
+import okhttp3.Headers;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import org.json.JSONException;
+import org.json.JSONObject;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.hooks.DateHook;
+import ru.vtosters.lite.proxy.ProxyUtils;
 
 import javax.crypto.Cipher;
 import javax.crypto.CipherOutputStream;
-import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
-import static android.widget.Toast.makeText;
 
 public class VKAccountDB {
     private static SQLiteOpenHelper getDatabase() {
         return new UsersDbHelper(AndroidUtils.getGlobalContext());
     }
+    private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
 
     @SuppressLint("Range")
     public static void copyDatabase(SQLiteDatabase db1, SQLiteDatabase db2) {
@@ -188,5 +195,66 @@ public class VKAccountDB {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private static JSONObject fetchAccountData(String token) {
+        if (token.isEmpty()) return null;
+
+        var request = new Request.a()
+                .b("https://" + ProxyUtils.getApi() + "/method/" + "account.getProfileInfo"
+                        + "?v=5.119"
+                        + "&https=1"
+                        + "&lang="
+                        + DateHook.getLocale()
+                        + "&device_id="
+                        + DeviceIdProvider.d(AndroidUtils.getGlobalContext())
+                        + "&access_token="
+                        + token)
+                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
+        try {
+            return new JSONObject(mClient.a(request).execute().a().g()).getJSONObject("response");
+        } catch (JSONException | IOException e) {
+            Log.d("VKAccountDB", "Error: " + e.getMessage());
+        }
+
+        return null;
+    }
+
+    public static void loginWithToken(String s) {
+        var json = fetchAccountData(s);
+        var db = getDatabase().getWritableDatabase();
+        
+        if (json == null) {
+            AndroidUtils.sendToast("Ошибка получения данных");
+            return;
+        } else if (!json.has("id")) {
+            AndroidUtils.sendToast("Ошибка получения данных об аккаунте");
+            return;
+        }
+
+        Log.d("VKAccountDB", json.toString());
+
+        int user_id = json.optInt("id");
+        String name = json.optString("first_name");
+        String avatar = json.optString("photo_200");
+
+        Log.d("VKAccountDB", String.valueOf(user_id));
+        Log.d("VKAccountDB", name);
+        Log.d("VKAccountDB", avatar);
+
+        ContentValues values = new ContentValues();
+        values.put("user_id", user_id);
+        values.put("name", name);
+        values.put("avatar", avatar);
+        values.put("exchange_token", s);
+        values.put("timestamp", System.currentTimeMillis() / 1000);
+        values.put("logged_in", false);
+        db.insertWithOnConflict("users", null, values, SQLiteDatabase.CONFLICT_REPLACE);
+
+        ContentValues values2 = new ContentValues();
+        values2.put("locale", LangUtils.a());
+        db.insert("android_metadata", null, values2);
+
+        LifecycleUtils.restartApplicationWithTimer();
     }
 }
