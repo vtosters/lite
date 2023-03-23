@@ -179,7 +179,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                 "Отключить сбор данных",
                 "Сбор данных о падениях приложения помогает нам улучшать приложение\n\nОтключение сбора логов падений заставит грустить бедных разработчиков",
                 null,
-                Preferences.systemtheme(),
+                false,
                 (preference, o) -> {
                     Preferences.getPreferences().edit().putBoolean("analyticsDisabled", (boolean) o).apply();
                     LifecycleUtils.restartApplicationWithTimer();
