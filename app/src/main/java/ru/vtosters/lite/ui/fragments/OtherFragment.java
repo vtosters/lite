@@ -63,7 +63,6 @@ import ru.vtosters.lite.utils.*;
 
 public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
-    private static final int RECOVER_ACCOUNTS = 2;
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -77,15 +76,10 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         if (resultCode != Activity.RESULT_OK) return;
 
-        switch (requestCode) {
-            case VK_ADMIN_TOKEN_REQUEST_CODE -> {
-                String token = data.getStringExtra("token");
-                Preferences.getPreferences().edit().putString("vk_admin_token", token).apply();
-                Toast.makeText(getContext(), requireContext().getString(R.string.token_saved), LENGTH_SHORT).show();
-            }
-            case RECOVER_ACCOUNTS -> {
-                VKAccountDB.saveDatabase(data.getData());
-            }
+        if (requestCode == VK_ADMIN_TOKEN_REQUEST_CODE) {
+            String token = data.getStringExtra("token");
+            Preferences.getPreferences().edit().putString("vk_admin_token", token).apply();
+            Toast.makeText(getContext(), requireContext().getString(R.string.token_saved), LENGTH_SHORT).show();
         }
     }
 
@@ -149,6 +143,11 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("datasettings").setOnPreferenceClickListener(preference -> {
+            NavigatorUtils.switchFragment(requireContext(), DataSettingsFragment.class);
+            return true;
+        });
+
         findPreference("dialogrecomm").setVisible(!Preferences.hasVerification());
 
         findPreference("updateverifdata").setOnPreferenceClickListener(preference -> {
@@ -171,53 +170,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             case "5gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_5gb));
         }
 
-        findPreference("deleteprefs").setOnPreferenceClickListener(preference -> {
-            delprefs(getContext());
-            return true;
-        });
-
-        findPreference("saveonlines").setOnPreferenceClickListener(preference -> {
-            try {
-                backupOnlines();
-            } catch (IOException e) {
-                Toast.makeText(getContext(), requireContext().getString(R.string.no_data_to_backup), LENGTH_SHORT).show();
-            }
-
-            return true;
-        });
-
-        findPreference("saveprefs").setOnPreferenceClickListener(preference -> {
-            backupSettings();
-
-            return false;
-        });
-        findPreference("restoreprefs").setOnPreferenceClickListener(preference -> {
-            var arr = BackupManager.getBackupsNames();
-            var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr) {
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    TextView textView = (TextView) super.getView(position, convertView, parent);
-                    textView.setTextColor(getTextAttr());
-                    return textView;
-                }
-            };
-            new VkAlertDialog.Builder(getContext())
-                    .setTitle(requireContext().getString(R.string.select_backup))
-                    .setAdapter(adapter, (dialog, which) -> {
-                        try {
-                            restoreBackup(arr[which]);
-                            restartApplicationWithTimer();
-                            Toast.makeText(getContext(), requireContext().getString(R.string.backup_success), LENGTH_LONG).show();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            Toast.makeText(getContext(), requireContext().getString(R.string.backup_error), LENGTH_LONG).show();
-                        }
-                    })
-                    .show();
-
-            return true;
-        });
-
         var vkAdminTokenPref = findPreference("vk_admin_token");
         vkAdminTokenPref.setVisible(Preferences.getPreferences().getBoolean("new_music_downloading_way", false));
         if (vkAdminTokenPref.isVisible()) {
@@ -227,22 +179,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
                 return true;
             });
         }
-
-        findPreference("accounts_backups").setOnPreferenceClickListener(preference -> {
-            startActivityForResult(new Intent(Intent.ACTION_OPEN_DOCUMENT).addCategory(Intent.CATEGORY_OPENABLE).setType("application/*"), RECOVER_ACCOUNTS);
-            return true;
-        });
-
-        findPreference("save_accounts").setOnPreferenceClickListener(preference -> {
-            VKAccountDB.saveData();
-            return true;
-        });
-
-        findPreference("analyticsDisabled").setVisible(Preferences.isValidSignature());
-        findPreference("analyticsDisabled").setOnPreferenceClickListener(preference -> {
-            restartApplicationWithTimer();
-            return true;
-        });
     }
 
     @SuppressLint({"CommitPrefEdits", "SetTextI18n"})
@@ -331,19 +267,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
 
     private void clearWebViewCache() {
         new WebView(requireContext()).clearCache(true);
-    }
-
-    private void delprefs(Context context) {
-        new VkAlertDialog.Builder(context)
-                .setTitle(requireContext().getString(R.string.warning))
-                .setMessage(requireContext().getString(R.string.settings_reset_confirm))
-                .setCancelable(false)
-                .setPositiveButton(requireContext().getString(R.string.yes), (dialogInterface, i) -> {
-                    deletePrefs();
-                    restartApplication();
-                })
-                .setNegativeButton(requireContext().getString(R.string.cancel), (dialogInterface, i) -> dialogInterface.dismiss())
-                .show();
     }
 
     private void copyText(String src) {

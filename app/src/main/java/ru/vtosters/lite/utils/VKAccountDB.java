@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
 import com.vk.usersstore.contentprovider.a.UsersDbHelper;
+import com.vtosters.lite.auth.VKAuth;
 
 import javax.crypto.Cipher;
 import javax.crypto.CipherOutputStream;
@@ -107,9 +108,22 @@ public class VKAccountDB {
                 outputStream.write(buff, 0, read);
             inputStream.close();
             outputStream.close();
+
+            AndroidUtils.sendToast("Аккаунты сохранены по пути " + file.getPath());
         } catch (IOException e) {
             e.printStackTrace();
+            AndroidUtils.sendToast("Ошибка при сохранении файла");
         }
+    }
+
+    public static void resetData() {
+        SQLiteDatabase db = getDatabase().getWritableDatabase();
+        db.execSQL("DELETE FROM users");
+        db.close();
+
+        VKAuth.a("logout", false);
+
+        LifecycleUtils.restartApplicationWithTimer();
     }
 
     private static FileOutputStream decrypt(File file, String key) {

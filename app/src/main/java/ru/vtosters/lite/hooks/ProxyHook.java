@@ -10,7 +10,7 @@ import androidx.appcompat.view.ContextThemeWrapper;
 import com.vk.auth.ui.VkAuthTextView;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-import ru.vtosters.lite.ui.fragments.OtherFragment;
+import ru.vtosters.lite.ui.fragments.DataSettingsFragment;
 import ru.vtosters.lite.ui.fragments.ProxySettingsFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NavigatorUtils;
@@ -29,7 +29,7 @@ public class ProxyHook {
 
         VkAuthTextView recoverAccounts = v.findViewById(AndroidUtils.getIdentifier("account_backup_view", "id"));
         recoverAccounts.setText("Восстановить аккаунты");
-        recoverAccounts.setOnClickListener(v1 -> NavigatorUtils.switchFragment(v.getContext(), OtherFragment.class));
+        recoverAccounts.setOnClickListener(v1 -> NavigatorUtils.switchFragment(v.getContext(), DataSettingsFragment.class));
     }
 
     @SuppressLint("SetTextI18n")
