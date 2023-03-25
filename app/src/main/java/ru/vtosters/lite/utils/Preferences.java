@@ -289,16 +289,6 @@ public class Preferences {
     public static boolean checkupdates() {
         return !getBoolValue("isRoamingState", false) && isValidSignature() && BuildConfig.BUILD_TYPE.equals("release");
     }
-
-    public static boolean isNewBuild() {
-        return !getPreferences().getString("build_number", "")
-                        .equals(About.getBuildNumber());
-    }
-
-    public static void updateBuildNumber() {
-        getPreferences().edit().putString("build_number", About.getBuildNumber()).commit();
-    }
-
     public static boolean isValidSignature() {
         try {
             return validateAppSignature();
