@@ -5,10 +5,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowInsetsController;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
@@ -19,6 +16,7 @@ import java.io.IOException;
 
 public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragment {
     private static final int RECOVER_ACCOUNTS = 2;
+    private static final int RECOVER_SETTINGS = 1;
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -26,8 +24,16 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
 
         if (resultCode != Activity.RESULT_OK) return;
 
-        if (requestCode == RECOVER_ACCOUNTS) {
-            VKAccountDB.saveDatabase(data.getData());
+        switch (requestCode) {
+            case RECOVER_ACCOUNTS -> VKAccountDB.saveDatabase(data.getData());
+            case RECOVER_SETTINGS -> {
+                try {
+                    BackupManager.restoreBackup(AndroidUtils.getRealPathFromURI(data.getData()));
+                    LifecycleUtils.restartApplicationWithTimer();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
@@ -111,7 +117,6 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                     } catch (IOException e) {
                         Toast.makeText(getContext(), requireContext().getString(com.vtosters.lite.R.string.no_data_to_backup), Toast.LENGTH_SHORT).show();
                     }
-
                     return false;
                 }
         );
@@ -123,29 +128,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                 "",
                 null,
                 preference -> {
-                    var arr = BackupManager.getBackupsNames();
-                    var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr) {
-                        @Override
-                        public View getView(int position, View convertView, ViewGroup parent) {
-                            TextView textView = (TextView) super.getView(position, convertView, parent);
-                            textView.setTextColor(ThemesUtils.getTextAttr());
-                            return textView;
-                        }
-                    };
-                    new VkAlertDialog.Builder(getContext())
-                            .setTitle(requireContext().getString(com.vtosters.lite.R.string.select_backup))
-                            .setAdapter(adapter, (dialog, which) -> {
-                                try {
-                                    BackupManager.restoreBackup(arr[which]);
-                                    LifecycleUtils.restartApplicationWithTimer();
-                                    Toast.makeText(getContext(), requireContext().getString(com.vtosters.lite.R.string.backup_success), Toast.LENGTH_LONG).show();
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                    Toast.makeText(getContext(), requireContext().getString(com.vtosters.lite.R.string.backup_error), Toast.LENGTH_LONG).show();
-                                }
-                            })
-                            .show();
-
+                    startActivityForResult(new Intent(Intent.ACTION_OPEN_DOCUMENT).setType("text/xml"), RECOVER_SETTINGS);
                     return false;
                 }
         );

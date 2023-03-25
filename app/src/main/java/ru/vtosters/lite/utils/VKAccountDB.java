@@ -8,23 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
-import com.vk.core.network.Network;
-import com.vk.core.util.DeviceIdProvider;
-import com.vk.core.util.LangUtils;
 import com.vk.usersstore.contentprovider.a.UsersDbHelper;
 import com.vtosters.lite.auth.VKAuth;
-import okhttp3.Headers;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import org.json.JSONException;
-import org.json.JSONObject;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
-import ru.vtosters.lite.hooks.DateHook;
-import ru.vtosters.lite.proxy.ProxyUtils;
 
-import javax.crypto.Cipher;
-import javax.crypto.CipherOutputStream;
-import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -34,7 +20,6 @@ public class VKAccountDB {
     private static SQLiteOpenHelper getDatabase() {
         return new UsersDbHelper(AndroidUtils.getGlobalContext());
     }
-    private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
 
     @SuppressLint("Range")
     public static void copyDatabase(SQLiteDatabase db1, SQLiteDatabase db2) {
@@ -66,7 +51,7 @@ public class VKAccountDB {
     }
 
     public static void saveDatabase(Uri uri) {
-        var path = getRealPathFromURI(uri);
+        var path = AndroidUtils.getRealPathFromURI(uri);
 
         if (path == null) AndroidUtils.sendToast("No path");
 
@@ -77,32 +62,10 @@ public class VKAccountDB {
         LifecycleUtils.restartApplicationWithTimer();
     }
 
-    public static String getRealPathFromURI(Uri uri) {
-        try {
-            InputStream inputStream = AndroidUtils.getGlobalContext().getContentResolver().openInputStream(uri);
-
-            File file = File.createTempFile("sqlite", "");
-
-            FileOutputStream outputStream = new FileOutputStream(file);
-            byte[] buff = new byte[1024];
-            int read;
-            while ((read = inputStream.read(buff, 0, buff.length)) > 0)
-                outputStream.write(buff, 0, read);
-            inputStream.close();
-            outputStream.close();
-
-            return file.getPath();
-        } catch (IOException e) {
-            Log.d("VKAccountDB", e.getMessage());
-        }
-
-        return null;
-    }
-
     public static void saveData() {
         var db = getDatabase().getReadableDatabase();
         var dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
-        var file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/saved_accounts_" + dateFormat.format(new Date()) + ".vtl");
+        var file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/VTLBackups/saved_accounts_" + dateFormat.format(new Date()) + ".vtl");
 
         InputStream inputStream;
         try {
