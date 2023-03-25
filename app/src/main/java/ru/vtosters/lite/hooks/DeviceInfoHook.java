@@ -40,7 +40,7 @@ public class DeviceInfoHook {
     }
 
     @SuppressLint("HardwareIds")
-    private static String findDeviceId() {
-        return Settings.Secure.getString(getGlobalContext().getContentResolver(), "android_id");
+    public static String findDeviceId() {
+        return Settings.Secure.getString(getGlobalContext().getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 }

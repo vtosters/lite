@@ -25,8 +25,7 @@ public class OEMDetector {
         try {
             getPropMtd = ReflectionUtils.findMethod(Class.forName("android.os.SystemProperties"), "get", String.class);
             semPlatformIntField = ReflectionUtils.findField(Build.VERSION.class, "SEM_PLATFORM_INT");
-        } catch (NoSuchFieldException | ClassNotFoundException | NoSuchMethodException e) {
-            e.printStackTrace();
+        } catch (NoSuchFieldException | ClassNotFoundException | NoSuchMethodException ignored) {
         }
     }
 

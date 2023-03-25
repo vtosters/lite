@@ -73,11 +73,6 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                 }
         );
 
-        PreferenceFragmentUtils.addEditTextPreference(getPreferenceScreen(), "", "Войти с помощью токена", (preference, o) -> {
-            VKAccountDB.loginWithToken(o);
-            return true;
-        });
-
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
