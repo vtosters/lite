@@ -8,7 +8,6 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
-import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
@@ -39,7 +38,8 @@ public class MainActivityInjector {
             NotificationChannels.createChannels();
         }
 
-        if (AndroidUtils.isInstallFromUpdate(activity) && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {
+        if (Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {
+            Preferences.updateBuildNumber();
             updateBinsAndTmpArchive(activity);
         }
 
