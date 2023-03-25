@@ -935,9 +935,8 @@
     move-result v1
 
     return v1
-    :cond_b
 
-    .line 1
+    :cond_b
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
