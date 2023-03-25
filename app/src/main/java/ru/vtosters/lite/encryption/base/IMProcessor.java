@@ -5,7 +5,6 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.Preferences;
 
 public abstract class IMProcessor {
@@ -83,5 +82,9 @@ public abstract class IMProcessor {
     @Nullable
     public String getEncryptionKeyFor(int id) {
         return Preferences.getPreferences().getString("VT_IMEncodeKey_" + getPrefKey() + "_" + id, null);
+    }
+
+    public void removeEncryptionKeyFor(int id) {
+        Preferences.getPreferences().edit().remove("VT_IMEncodeKey_" + getPrefKey() + "_" + id).apply();
     }
 }

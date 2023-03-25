@@ -1,9 +1,13 @@
 package ru.vtosters.lite.ui.fragments;
 
-import android.os.Build;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+
 import android.os.Bundle;
+
 import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+
+import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.RoundingSeekbarDialog;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -11,10 +15,7 @@ import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-
-public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
+public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -63,6 +64,17 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
             findPreference("swipe").setVisible(false);
         }
 
+        if (Preferences.vkme() || isTablet()) {
+            findPreference("dockbareditor").setVisible(false);
+        }
+
+        var dockbarEditor = findPreference("dockbareditor");
+        dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
+        dockbarEditor.setOnPreferenceClickListener(preference -> {
+            NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
+            return true;
+        });
+
         if (ThemesUtils.isMilkshake() && Preferences.superapp()) {
             findPreference("miniapps").setVisible(false);
 
@@ -73,10 +85,6 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
             RoundingSeekbarDialog.dialog(getContext());
             return true;
         });
-
-        if (Build.VERSION.SDK_INT >= 33) {
-            findPreference("anim_rtrn_type").setVisible(false);
-        }
 
         if (Preferences.getPreferences().getInt("pic_rounding", 0) == 0) {
             findPreference("customrounding").setSummary(requireContext().getString(R.string.disabled));

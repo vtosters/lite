@@ -49,13 +49,13 @@ import com.vk.pushes.PushSubscriber;
 import com.vk.stickers.Stickers;
 import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
 
 import java.io.IOException;
 
 import b.h.g.m.FileUtils;
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
+import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
@@ -65,7 +65,7 @@ import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.VTVerifications;
 
-public class OtherFragment extends MaterialPreferenceToolbarFragment {
+public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
 
     @Override
@@ -242,6 +242,12 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 return true;
             });
         }
+
+        findPreference("analyticsDisabled").setVisible(Preferences.isValidSignature());
+        findPreference("analyticsDisabled").setOnPreferenceClickListener(preference -> {
+            restartApplicationWithTimer();
+            return true;
+        });
     }
 
     @SuppressLint({"CommitPrefEdits", "SetTextI18n"})
@@ -255,6 +261,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
         for (int item = 0; item <= 5; item++) {
             RadioButton rb = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
+            SwitchHook.setCompoundButton(rb);
             rg.addView(rb);
             rb.setId(item);
             rb.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));

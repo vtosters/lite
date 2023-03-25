@@ -11,6 +11,7 @@ import com.guardanis.applock.AppLock;
 import com.guardanis.applock.activities.UnlockActivity;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
+import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.ui.fragments.VTSettings;
 
 import java.security.NoSuchAlgorithmException;
@@ -24,7 +25,6 @@ import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.utils.VTVerifications.isVerified;
 
 public class Preferences {
-    public static String VERSIONNAME = "Beta";
 
     public static void init(Application application) throws Exception {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -39,8 +39,17 @@ public class Preferences {
         if (AppLock.isEnrolled(AndroidUtils.getGlobalContext())) {
             AppLock.setAuthenticationRequired(AndroidUtils.getGlobalContext());
         }
+        
+        AnalyticsHelper.start(application);
+        
+        if (AppLock.isEnrolled(AndroidUtils.getGlobalContext())) {
+            AppLock.setAuthenticationRequired(AndroidUtils.getGlobalContext());
+        }
     } // VK Init
 
+    public static String getBuildName() {
+        return BuildConfig.BUILD_TYPE.substring(0,1).toUpperCase() + BuildConfig.BUILD_TYPE.substring(1).toLowerCase();
+    }
     public static SharedPreferences getPreferences() {
         return getGlobalContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
     }
@@ -50,8 +59,6 @@ public class Preferences {
     }
 
     public static void forceOffline() {
-        setupFilters();
-
         if (setoffline() && offline()) {
             Users.a();
         }
@@ -66,7 +73,7 @@ public class Preferences {
     }
 
     public static boolean systemtheme() {
-        return Build.VERSION.SDK_INT >= 28 && milkshake() && (getPreferences().getString("currsystemtheme", "system").equals("system") || getPreferences().getString("currsystemtheme", "system").isEmpty());
+        return Build.VERSION.SDK_INT >= 28 && milkshake() && getBoolValue("system_theme", true);
     }
 
     public static boolean authorsrecomm() {
@@ -142,17 +149,14 @@ public class Preferences {
         return getBoolValue("VKUI_INJ", true);
     }
 
-    public static boolean calls() {
-//        return getBoolValue("calls", false);
-        return true;
-    }
-
+    @SuppressWarnings("ConstantConditions")
     public static boolean dev() {
-        return getBoolValue("dev", false);
+        return getBoolValue("dev", false) || BuildConfig.BUILD_TYPE.equals("dev");
     }
 
+    @SuppressWarnings("ConstantConditions")
     public static boolean devmenu() {
-        return getBoolValue("devmenu", false);
+        return getBoolValue("devmenu", false) || !BuildConfig.BUILD_TYPE.equals("release");
     }
 
     public static boolean dnr() {
@@ -292,8 +296,9 @@ public class Preferences {
         return getBoolValue("screenshotdetect", true);
     }
 
+    @SuppressWarnings("ConstantConditions")
     public static boolean checkupdates() {
-        return !getBoolValue("isRoamingState", false) && isValidSignature() && (!dev() || getBoolValue("autoupdates", true));
+        return !getBoolValue("isRoamingState", false) && isValidSignature() && BuildConfig.BUILD_TYPE.equals("release");
     }
 
     public static boolean isNewBuild() {

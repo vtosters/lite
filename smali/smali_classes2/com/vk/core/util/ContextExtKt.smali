@@ -92,6 +92,10 @@
         .end annotation
     .end param
 
+    invoke-static {p2}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorHexColor(I)I
+
+    move-result p2
+
     .line 9
     invoke-static {p0, p1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -931,9 +935,8 @@
     move-result v1
 
     return v1
-    :cond_b
 
-    .line 1
+    :cond_b
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0

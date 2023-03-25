@@ -1,29 +1,34 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
+
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
+
 import androidx.preference.PreferenceCategory;
-import b.h.g.k.VKProgressDialog;
+
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+
+import b.h.g.k.VKProgressDialog;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.themes.palettes.PalettesManager;
-import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
 import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
-import ru.vtosters.lite.utils.*;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.NavigatorUtils;
+import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.lite.utils.ThemesUtils;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
-
-public class ThemesFragment extends MaterialPreferenceToolbarFragment {
+public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
     @Override
     public void onCreate(Bundle bundle) {
@@ -43,15 +48,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("systememoji").setSummary(getGlobalContext().getString(R.string.systememojisum) + " \uD83D\uDE00\uD83D\uDE01\uD83E\uDD11\uD83E\uDD75\uD83D\uDC4D");
 
-        var dockbarEditor = findPreference("dockbareditor");
-        dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
-        dockbarEditor.setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
-            return true;
-        });
-
         var invalidateThemeCache = findPreference("invalidate_theme_cache");
-        if(ThemesUtils.getReservedAccent() != Color.TRANSPARENT)
+        if (ThemesUtils.getReservedAccent() != Color.TRANSPARENT && Preferences.dev())
             invalidateThemeCache.setOnPreferenceClickListener(preference -> {
                 setAccentColor(ThemesUtils.getReservedAccent());
                 return true;
@@ -130,16 +128,16 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        if (Preferences.vkme()) {
-            findPreference("dockbareditor").setVisible(false);
-        }
-
-        if(AndroidUtils.isTablet()) {
+        if (AndroidUtils.isTablet()) {
             PreferenceCategory dockbarSettingsPreferenceCategory = (PreferenceCategory) findPreference("dockbarsett");
             dockbarSettingsPreferenceCategory.setVisible(false);
             findPreference("alteremoji").setVisible(false);
-            findPreference("dockbareditor").setVisible(false);
         }
+
+        findPreference("useCustomPrefsStyle").setOnPreferenceClickListener(preference -> {
+            restart();
+            return true;
+        });
     }
 
     @Override
@@ -190,8 +188,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     void showPalettesDialog() {
         final var manager = PalettesManager.getInstance();
         final var titles = new String[manager.getPalettesCount()];
-        if(titles.length > 0) {
-            for(int i = 0; i < titles.length; ++i)
+        if (titles.length > 0) {
+            for (int i = 0; i < titles.length; ++i)
                 titles[i] = manager.getPalette(i).name;
             new VkAlertDialog.Builder(requireContext())
                     .setTitle(AndroidUtils.getString("select_palette"))
@@ -215,8 +213,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
                 ThemesUtils.reserveAccentColor(color, true);
                 ThemesManager.generateModApk(color);
                 requireActivity().runOnUiThread(this::restart);
-            } catch(Throwable e) {
-                Log.e("ThemesFragment", e+"");
+            } catch (Throwable e) {
+                Log.e("ThemesFragment", e + "");
                 ThemesManager.deleteModification();
                 requireActivity().runOnUiThread(() -> {
                     dialog.dismiss();

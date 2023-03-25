@@ -3,10 +3,13 @@ package ru.vtosters.lite.themes.utils;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.widget.TextView;
 import com.vk.core.drawable.RecoloredDrawable;
+import ru.vtosters.lite.R;
 import ru.vtosters.lite.themes.ColorReferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
@@ -18,12 +21,27 @@ public class RecolorUtils {
         return new RecoloredDrawable(drawable, ThemesUtils.getHeaderText());
     } // Recolor toolbar drawable to accent color
 
-    @SuppressLint("UseCompatLoadingForDrawables")
     public static Drawable recolorDrawableInt(int drawable) {
-
-        @SuppressLint("UseCompatLoadingForDrawables") Drawable res = AndroidUtils.getResources().getDrawable(drawable);
-        return new RecoloredDrawable(res, ThemesUtils.getAccentColor());
+        return recolorDrawable(drawable, ThemesUtils.getAccentColor());
     } // Get res drawable via id and coloring to accent
+
+    public static Drawable recolorDrawable(int drawable, int color) {
+        return new RecoloredDrawable(AndroidUtils.getResources().getDrawable(drawable), color);
+    } // Get res drawable via id and coloring to accent
+
+    public static Drawable fixActionMenuIcons(int drawable) {
+        return recolorDrawable(drawable, ThemesUtils.isDarkTheme() ? ThemesUtils.getColor(com.vtosters.lite.R.color.gray_100) : ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.header_tint));
+    }
+
+    public static int getColor(TypedArray ta, int index, int defval) {
+        return recolorHexColor(ta.getColor(index, defval));
+    }
+
+    public static void recolorTextView(TextView tw) {
+        if (ColorReferences.isAccentedColor(tw.getTextColors())) {
+            tw.setTextColor(ThemesUtils.getAccentColor());
+        }
+    }
 
     public static int recolorHexColor(int i) {
         if (!ThemesUtils.isCustomAccentEnabled()) return i;

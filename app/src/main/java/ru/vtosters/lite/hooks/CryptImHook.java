@@ -100,7 +100,7 @@ public class CryptImHook {
             key = enabled.getEncryptionKeyFor(peerId);
         }
 
-        if (key.equals("VTAesDefault")) {
+        if (Objects.equals(key, "VTAesDefault")) {
             key = null;
         }
 
@@ -128,6 +128,9 @@ public class CryptImHook {
                     Editable edit = editText.getText();
                     finalEnabled.setEncryptionKeyFor(peerId, edit == null ? null : edit.toString());
                 }).setNegativeButton(android.R.string.cancel, null)
+                .setNeutralButton("Удалить ключ", (dialog, which) -> {
+                    finalEnabled.removeEncryptionKeyFor(peerId);
+                })
                 .show();
     }
 }

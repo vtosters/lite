@@ -6041,7 +6041,7 @@ May look like a fake leaving the online"</string>
     <string name="gmsissuebtn1">Continue without GMS</string>
     <string name="gmsissuebtn2">Install GMS</string>
 
-    <string name="startsumm1">The VTosters Lite modification has nothing with VK Group!\nDistributed completely free of fee!</string>
+    <string name="startsumm1">The VTosters Lite modification has nothing with VK Group!\nDistributed completely free of fee!\nBy clicking continue, you agree with the collection of basic information about the device and that the developers of this modification are not responsible for your account</string>
     <string name="startsumm2">\n\nThe application may not work correctly due to the fact that you are most likely using the shell from the list below. All problems with the display and work of the application are related only to your firmware and only with it. All bug reports sent due to problems on this firmware are not considered by the developers and will not be fixed.\n\nPressing the \"Continue\" button, you agree that possible application bugs may occur due to the specifics of your firmware. We recommend using AOSP-based firmware for maximum stability.\n\nFirmware on which there are problems with applications:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience or TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
     <string name="startbtn1">News</string>
     <string name="startbtn2">Continue</string>
@@ -6052,7 +6052,7 @@ May look like a fake leaving the online"</string>
 
     <string name="dateformat">Select the date display type</string>
 
-    <string name="franimation">Fragment animation (beta)</string>
+    <string name="franimation">Fragment animation</string>
     <string name="selectfranimation">Select fragment animation</string>
 
     <string name="vkme">VK Messenger mode</string>
@@ -6303,7 +6303,7 @@ May look like a fake leaving the online"</string>
     <string name="encryption_settings_title">Encryption settings</string>
     <string name="encryption_public_algorithm_error">The selected algorithm is public and has no settings!</string>
     <string name="encryption_enter_key">Enter encryption key</string>
-    <string name="encryption_current_algorithm_title">Algorithm used: %1$s.\nPlease note that if the field is empty, the default key will be used.</string>
+    <string name="encryption_current_algorithm_title">Algorithm used: %1$s</string>
 
     <string name="update_error">Update failed</string>
     <string name="update_error_text">An error occurred while trying to download the new version of the app.\nDo you want to update the app manually?</string>

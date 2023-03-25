@@ -5829,7 +5829,7 @@
     <string name="gmsissuebtn1">Продовжити без GMS</string>
     <string name="gmsissuebtn2">Встановити GMS</string>
 
-    <string name="startsumm1">Модифікація VTosters Lite не має жодного відношення до VK Group!\nПоширюється безкоштовно!</string>
+    <string name="startsumm1">Модифікація VTosters Lite не має жодного відношення до VK Group!\nПоширюється безкоштовно!\nНатискаючи кнопку продовжити, ви погоджуєтеся зі збором базової інформації про пристрій і тим, що розробники цієї модифікації не несуть відповідальності за ваш акаунт.</string>
     <string name="startsumm2">"\n\nДодаток може некоректно працювати у зв'язку з тим, що ви, швидше за все, використовуєте оболонку зі списку нижче. Всі проблеми з відображенням та роботою додатка пов'язані тільки з вашою прошивкою і тільки з нею. Всі багрепорти, надіслані через проблеми на цій прошивці, не розглядаються розробниками і не будуть виправлені.\n\nНатискаючи кнопку "Продовжити", ви погоджуєтесь з тим, що можливі баги додатка можуть статися через специфіку вашої прошивки. Рекомендуємо використовувати прошивки на базі AOSP для отримання максимальної стабільності.\n\nПрошивки на яких спостерігаються проблеми з додатками:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience або TouchWiz, Magic UI, ZenUI, Funtouch OS"</string>
     <string name="startbtn1">Новини</string>
     <string name="startbtn2">Продовжити</string>
@@ -5843,7 +5843,7 @@
 
     <string name="dateformat">Виберіть тип показу дат</string>
 
-    <string name="franimation">Анімація фрагментів (бета)</string>
+    <string name="franimation">Анімація фрагментів</string>
     <string name="selectfranimation">Виберіть анімацію фрагментів</string>
 
     <string name="vkme">Режим VK Месенджера</string>
@@ -6090,7 +6090,7 @@
     <string name="encryption_settings_title">Налаштування шифрування</string>
     <string name="encryption_public_algorithm_error">Вибраний алгоритм публічний і не має налаштувань!</string>
     <string name="encryption_enter_key">Введіть ключ шифрування</string>
-    <string name="encryption_current_algorithm_title">Використовуваний алгоритм: %1$s.\nВрахуйте, що якщо поле буде порожнім, то використовуватиметься ключ за замовчуванням.</string>
+    <string name="encryption_current_algorithm_title">Використовуваний алгоритм: %1$s</string>
 
     <string name="update_error">Помилка оновлення</string>
     <string name="update_error_text">Відбулася помилка при спробі завантажити нову версію додатка.\nОновити додаток вручну?</string>

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.verify.domain.DomainVerificationManager;
 import android.content.pm.verify.domain.DomainVerificationUserState;
@@ -31,6 +32,9 @@ import java.util.Objects;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class AndroidUtils {
+    public static boolean isDebuggable() {
+        return 0 != (AndroidUtils.getGlobalContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE);
+    }
 
     public static boolean isTablet() {
         return Screen.l(getGlobalContext());

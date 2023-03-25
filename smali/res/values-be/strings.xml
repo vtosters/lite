@@ -5871,7 +5871,7 @@ QR-код"</string>
  <string name="gmsissuesumm">На вашай прыладзе адсутнічае кампанент Google Play Services (GMS), які неабходны для карэктнай працы VTosters Lite</string>
  <string name="gmsissuebtn1">Працягнуць без GMS</string>
  <string name="gmsissuebtn2">Усталяваць GMS</string>
- <string name="startsumm1">Мадыфікацыя VTosters Lite не мае ніякага дачынення да VK Group!\nРаспаўсюджваецца цалкам бясплатна!</string>
+ <string name="startsumm1">Мадыфікацыя VTosters Lite не мае ніякага дачынення да VK Group!\nРаспаўсюджваецца цалкам бясплатна!\nНаціскаючы кнопку Працягнуць вы згаджаецеся з са зборам базавай інфармацыі пра прыладу і тым, што распрацоўшчыкі дадзенай мадыфікацыі не нясуць адказнасць за ваш рахунак</string>
  <string name="startsumm2">\n\nДадатак можа некарэктна працаваць у сувязі з тым, што вы, хутчэй за ўсё, выкарыстоўваеце абалонку са спісу ніжэй. Усе праблемы з адлюстраваннем і працай дадатку звязаны толькі з вашай прашыўкай і толькі з ёй. Усе багрэпарты, дасланыя з-за праблем на гэтай прашыўцы, не разглядаюцца распрацоўшчыкамі і не будуць выпраўлены.\n\nНаціскаючы на кнопку \"Працягнуць\", вы згаджаецеся з тым, што магчымыя багі дадатку могуць адбыцца з-за спецыфікі вашай прашыўкі. Рэкамендуем выкарыстоўваць прашыўкі на базе AOSP для атрымання максімальнай стабільнасці. Прашыўкі на якіх назіраюцца праблемы з дадаткамі: \nFlyme, EMUI, MIUI, ColorOS, Samsung Experience або TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
  <string name="startbtn1">Навіны</string>
  <string name="startbtn2">Працягнуць</string>
@@ -5881,7 +5881,7 @@ QR-код"</string>
  <string name="videodownloaderr">Дадзенае відэа немагчыма спампаваць</string>
  <string name="roundedmsgs">Круглыя ​​паведамленні</string>
  <string name="dateformat">Абярыце тып паказу дат</string>
- <string name="franimation">Анімацыя фрагментаў (бэта)</string>
+ <string name="franimation">Анімацыя фрагментаў</string>
  <string name="selectfranimation">Абярыце анімацыю фрагментаў</string>
  <string name="vkme">Рэжым VK Месенджара</string>
  <string name="vkmesumm">Замена докбара і некаторых элементаў на нешта падобнае як у VK Месенджэры</string>
@@ -6079,8 +6079,7 @@ QR-код"</string>
  <string name="encryption_settings_title">Налады шыфравання</string>
  <string name="encryption_public_algorithm_error">Абраны алгарытм публічны і не мае налад!</string>
  <string name="encryption_enter_key">Увядзіце ключ шыфравання</string>
- <string name="encryption_current_algorithm_title">Алгарытм, які выкарыстоўваецца: %1$s.\nУлічыце, што калі поле будзе пустым, то будзе выкарыстоўвацца ключ па змаўчанні.
-</string>
+ <string name="encryption_current_algorithm_title">Алгарытм, які выкарыстоўваецца: %1$s</string>
  <string name="update_error">Памылка абнаўлення</string>
  <string name="update_error_text">Адбылася памылка пры спробе спампаваць новую версію дадатку. \nАбнавіць дадатак ўручную?</string>
  <string name="photo_get_error">Не ўдалося атрымаць спасылку на фота</string>

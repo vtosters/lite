@@ -29,6 +29,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.hooks.VKUIHook;
+import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
@@ -39,9 +40,9 @@ import static ru.vtosters.lite.utils.AndroidUtils.*;
 import static ru.vtosters.lite.utils.Preferences.*;
 
 public class ThemesUtils {
-    public static void applyTheme(VKTheme theme) {
+    public static void applyTheme(VKTheme theme, Boolean restartActivity) {
         try {
-            VKThemeHelper.theme(theme, LifecycleUtils.getCurrentActivity(), getCenterScreenCoords());
+            setTheme(theme, LifecycleUtils.getCurrentActivity(), restartActivity);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -63,22 +64,16 @@ public class ThemesUtils {
         AppCompatDelegate.setDefaultNightMode(theme);
     }
 
-    public static void setTheme(VKTheme theme, Activity activity) {
-        if (activity == null) {
-            activity = LifecycleUtils.getCurrentActivity();
-        }
-        VKThemeHelper.theme(theme, activity, getCenterScreenCoords());
-        ThemeTracker.a();
-        VKUIHook.isLoaded = false;
-        new WebView(activity).clearCache(true);
-        WebCachePreloader.e();
+    public static void setTheme(VKTheme theme, Activity activity, Boolean restartActivity) {
+        setThemeFL(theme, activity, getCenterScreenCoords(), restartActivity);
     } // apply changed theme
 
-    public static void setThemeFL(VKTheme theme, Activity activity, float[] fl) {
+    public static void setThemeFL(VKTheme theme, Activity activity, float[] fl, Boolean restartActivity) {
         if (activity == null) {
             activity = LifecycleUtils.getCurrentActivity();
         }
         VKThemeHelper.theme(theme, activity, fl);
+        if (restartActivity) activity.recreate();
         ThemeTracker.a();
         VKUIHook.isLoaded = false;
         new WebView(activity).clearCache(true);
@@ -118,6 +113,13 @@ public class ThemesUtils {
 
     public static int getMutedAccentColor() {
         return getMutedColor(getAccentColor());
+    }
+
+    public static void colorTextView(TextView view) {
+        try {
+            ThemesUtils.colorHandles(view);
+            ThemesUtils.setCursorColor((EditText) view);
+        } catch (Exception ignored) {}
     }
 
     @SuppressLint("DiscouragedPrivateApi")
@@ -369,27 +371,6 @@ public class ThemesUtils {
 
     public static VKTheme getCurrentTheme() {
         return VKThemeHelper.l();
-    }
-
-    public static void setNeededTheme(Activity activity) {
-        var currentTheme = getCurrentTheme();
-        if (milkshake()) {
-            if (currentTheme == VKTheme.VKAPP_LIGHT) {
-                setTheme(VKTheme.VKAPP_MILK_LIGHT, activity);
-            }
-
-            if (currentTheme == VKTheme.VKAPP_DARK) {
-                setTheme(VKTheme.VKAPP_MILK_DARK, activity);
-            }
-        } else {
-            if (currentTheme == VKTheme.VKAPP_MILK_LIGHT) {
-                setTheme(VKTheme.VKAPP_LIGHT, activity);
-            }
-
-            if (currentTheme == VKTheme.VKAPP_MILK_DARK) {
-                setTheme(VKTheme.VKAPP_DARK, activity);
-            }
-        }
     }
 
     public static void setNavbarColor(Window window, int i) {

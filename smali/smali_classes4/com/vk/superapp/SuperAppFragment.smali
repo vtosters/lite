@@ -413,6 +413,10 @@
 
     invoke-virtual {p2, v1}, Landroidx/appcompat/widget/Toolbar;->setOnMenuItemClickListener(Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;)V
 
+    const v1, 0x0
+
+    invoke-static {p2, v1, v1}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
+
     .line 6
     new-instance p2, Lcom/vk/superapp/SuperAppAdapter;
 

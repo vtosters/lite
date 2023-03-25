@@ -1,19 +1,26 @@
 package ru.vtosters.lite.hooks.ui;
 
+import android.app.Activity;
 import android.content.res.Configuration;
 
 import com.vk.core.ui.themes.VKTheme;
 
+import com.vk.core.ui.themes.VKThemeHelper;
+import com.vtosters.lite.data.ThemeTracker;
+import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-public class SystemThemeChangerHook {
-    private static int sPrevUiMode = 0;
+import static ru.vtosters.lite.utils.AndroidUtils.getCenterScreenCoords;
 
+public class SystemThemeChangerHook {
     public static void onThemeChanged(Configuration configuration) {
+        onThemeChanged(configuration, true);
+    }
+
+    public static void onThemeChanged(Configuration configuration, Boolean restartActivity) {
         if (Preferences.systemtheme()) {
             var uiMode = configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK;
-            if (uiMode == sPrevUiMode) return;
 
             VKTheme theme = null;
             if (uiMode == Configuration.UI_MODE_NIGHT_YES)
@@ -22,10 +29,15 @@ public class SystemThemeChangerHook {
                     || uiMode == Configuration.UI_MODE_NIGHT_NO)
                 theme = ThemesUtils.getLightTheme();
 
-            if (theme != null) {
-                ThemesUtils.applyTheme(theme);
-                sPrevUiMode = uiMode;
+            if (theme != null && theme != ThemesUtils.getCurrentTheme()) {
+                ThemesUtils.applyTheme(theme, restartActivity);
             }
         }
+    }
+
+    public static void themeOnStart(Activity activity) {
+        if (activity == null) activity = LifecycleUtils.getCurrentActivity();
+
+        onThemeChanged(activity.getResources().getConfiguration(), false);
     }
 }

@@ -90,5 +90,10 @@
         <Preference
                 android:key="vk_admin_token"
                 android:title="@string/vk_admin_token_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="analyticsDisabled"
+                android:summary="Сбор данных о падениях приложения помогает нам улучшать приложение\n\nОтключение сбора логов падений заставит грустить бедных разработчиков"
+                android:title="Отключить сбор данных"/>
     </PreferenceCategory>
 </PreferenceScreen>

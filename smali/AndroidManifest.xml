@@ -146,6 +146,7 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="false"
+        android:localeConfig="@xml/locales_config"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/vt_launcher"
         android:label="@string/app_name"
@@ -897,6 +898,294 @@
             android:name=".id182"
             android:enabled="false"
             android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_orig"
+                android:icon="@mipmap/ic_launcher_balloon_pink"
+                android:name=".id190"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name"
+                android:icon="@mipmap/ic_launcher_balloon_pink"
+                android:name=".id191"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_alter"
+                android:icon="@mipmap/ic_launcher_balloon_pink"
+                android:name=".id192"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_orig"
+                android:icon="@mipmap/ic_launcher_bubble_gum"
+                android:name=".id200"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name"
+                android:icon="@mipmap/ic_launcher_bubble_gum"
+                android:name=".id201"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_alter"
+                android:icon="@mipmap/ic_launcher_bubble_gum"
+                android:name=".id202"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_orig"
+                android:icon="@mipmap/ic_launcher_comics"
+                android:name=".id210"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name"
+                android:icon="@mipmap/ic_launcher_comics"
+                android:name=".id211"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_alter"
+                android:icon="@mipmap/ic_launcher_comics"
+                android:name=".id212"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_orig"
+                android:icon="@mipmap/ic_launcher_flowers"
+                android:name=".id220"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name"
+                android:icon="@mipmap/ic_launcher_flowers"
+                android:name=".id221"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_alter"
+                android:icon="@mipmap/ic_launcher_flowers"
+                android:name=".id222"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_orig"
+                android:icon="@mipmap/ic_launcher_metal_dark"
+                android:name=".id230"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name"
+                android:icon="@mipmap/ic_launcher_metal_dark"
+                android:name=".id231"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_alter"
+                android:icon="@mipmap/ic_launcher_metal_dark"
+                android:name=".id232"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_orig"
+                android:icon="@mipmap/ic_launcher_pin_blue"
+                android:name=".id240"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name"
+                android:icon="@mipmap/ic_launcher_pin_blue"
+                android:name=".id241"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_alter"
+                android:icon="@mipmap/ic_launcher_pin_blue"
+                android:name=".id242"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_orig"
+                android:icon="@mipmap/ic_launcher_rabbit"
+                android:name=".id250"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name"
+                android:icon="@mipmap/ic_launcher_rabbit"
+                android:name=".id251"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_alter"
+                android:icon="@mipmap/ic_launcher_rabbit"
+                android:name=".id252"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_orig"
+                android:icon="@mipmap/ic_launcher_shine"
+                android:name=".id260"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name"
+                android:icon="@mipmap/ic_launcher_shine"
+                android:name=".id261"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:label="@string/app_name_alter"
+                android:icon="@mipmap/ic_launcher_shine"
+                android:name=".id262"
+                android:enabled="false"
+                android:targetActivity="com.vtosters.lite.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

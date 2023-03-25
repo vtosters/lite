@@ -5,6 +5,7 @@ import com.vk.articles.preload.WebCachePreloader;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.themes.ThemesCore;
+import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.io.BufferedReader;
@@ -66,10 +67,15 @@ public class VKUIHook {
     }
 
     private static void inject(WebView webView, String str) {
-        webView.loadUrl("javascript:(function() {var parent = document.getElementsByTagName('head').item(0);var style = document.createElement('style');style.type = 'text/css';style.innerHTML = window.atob('" + str + "');parent.appendChild(style)})()");
+        webView.loadUrl("javascript:(function() {let parent = document.head || document.documentElement; parent.appendChild(document.createElement('style')).innerText = window.atob('" + str + "');})()");
     }
 
     public static void inject(WebView webView) {
+        if (Preferences.getBoolValue("__dbg_webview", false)) {
+            WebView.setWebContentsDebuggingEnabled(true);
+            webView.loadUrl("javascript:(function() {let parent = document.head || document.documentElement; let script = parent.appendChild(document.createElement('script')); script.src = 'https://cdn.jsdelivr.net/npm/eruda'; script.onload = () => eruda.init();})()");
+        }
+
         if (getBoolValue("VKUI_INJ", true)) {
             if (!isLoaded) {
                 load();

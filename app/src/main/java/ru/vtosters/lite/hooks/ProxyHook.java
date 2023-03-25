@@ -35,6 +35,11 @@ public class ProxyHook {
         RadioButton rgRandomProxy = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgVika = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
 
+        SwitchHook.setCompoundButton(rgDefault);
+        SwitchHook.setCompoundButton(rgZaborona);
+        SwitchHook.setCompoundButton(rgRandomProxy);
+        SwitchHook.setCompoundButton(rgVika);
+
         rg.addView(rgDefault);
         rg.addView(rgVika);
         rg.addView(rgZaborona);

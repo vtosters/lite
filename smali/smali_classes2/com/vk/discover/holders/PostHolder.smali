@@ -872,7 +872,11 @@
 
     sget-object v10, Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;->light:Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;
 
-    invoke-virtual {v9, v6, v1, v7, v10}, Lcom/vk/core/utils/VerifyInfoHelper;->b(ZZLandroid/content/Context;Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/discover/DiscoverItem;->N1()Lcom/vk/dto/common/VerifyInfo;
+
+    move-result-object v11
+
+    invoke-virtual {v9, v11, v7, v10}, Lcom/vk/core/utils/VerifyInfoHelper;->b(Lcom/vk/dto/common/VerifyInfo;Landroid/content/Context;Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 

@@ -1063,6 +1063,8 @@
     const/4 v2, 0x1
 
     :cond_6
+    const/4 v2, 0x1
+
     invoke-direct {p0, v0, v2}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
 
     return-void
@@ -1241,232 +1243,189 @@
 .method private e5()V
     .locals 4
 
-    const-string v0, "__dbg_proxy_enable"
+    # const-string v0, "__dbg_proxy_enable"
 
-    .line 1
-    invoke-virtual {p0, v0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    # .line 1
+    # invoke-virtual {p0, v0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    move-result-object v0
+    # move-result-object v0
 
-    if-eqz v0, :cond_0
+    # if-eqz v0, :cond_0
 
-    .line 2
-    sget-object v1, Lcom/vtosters/lite/fragments/n2/d;->a:Lcom/vtosters/lite/fragments/n2/d;
+    # .line 2
+    # sget-object v1, Lcom/vtosters/lite/fragments/n2/d;->a:Lcom/vtosters/lite/fragments/n2/d;
 
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+    # invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 3
-    :cond_0
-    iget-boolean v0, p0, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->R:Z
+    # .line 3
+    # :cond_0
+    
+    # .line 4
+    # new-instance v0, Landroidx/preference/CheckBoxPreference;
 
-    if-eqz v0, :cond_2
+    # invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
 
-    .line 4
-    new-instance v0, Landroidx/preference/CheckBoxPreference;
+    # move-result-object v1
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
+    # invoke-direct {v0, v1}, Landroidx/preference/CheckBoxPreference;-><init>(Landroid/content/Context;)V
 
-    move-result-object v1
+    # const-string v1, "\u041e\u0442\u043a\u0440\u044b\u0432\u0430\u0442\u044c \u043c\u0435\u0441\u0441\u0435\u043d\u0434\u0436\u0435\u0440"
 
-    invoke-direct {v0, v1}, Landroidx/preference/CheckBoxPreference;-><init>(Landroid/content/Context;)V
+    # .line 5
+    # invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
-    const-string v1, "\u041e\u0442\u043a\u0440\u044b\u0432\u0430\u0442\u044c \u043c\u0435\u0441\u0441\u0435\u043d\u0434\u0436\u0435\u0440"
+    # const-string v1, "__dbg_open_vkme"
 
-    .line 5
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+    # .line 6
+    # invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
 
-    const-string v1, "__dbg_open_vkme"
+    # const/4 v1, 0x1
 
-    .line 6
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
+    # .line 7
+    # invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const/4 v1, 0x1
+    # move-result-object v1
 
-    .line 7
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    # invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setDefaultValue(Ljava/lang/Object;)V
 
-    move-result-object v1
+    # .line 8
+    # new-instance v1, Lcom/vtosters/lite/fragments/n2/a0;
 
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setDefaultValue(Ljava/lang/Object;)V
+    # invoke-direct {v1, p0}, Lcom/vtosters/lite/fragments/n2/a0;-><init>(Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;)V
 
-    .line 8
-    new-instance v1, Lcom/vtosters/lite/fragments/n2/a0;
-
-    invoke-direct {v1, p0}, Lcom/vtosters/lite/fragments/n2/a0;-><init>(Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;)V
-
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+    # invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
     const-string v1, "others"
 
-    .line 9
-    invoke-virtual {p0, v1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    # .line 9
+    # invoke-virtual {p0, v1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    move-result-object v2
+    # move-result-object v2
 
-    check-cast v2, Landroidx/preference/PreferenceCategory;
+    # check-cast v2, Landroidx/preference/PreferenceCategory;
 
-    .line 10
-    invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+    # .line 10
+    # invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
 
-    .line 11
-    new-instance v0, Landroidx/preference/CheckBoxPreference;
+    # .line 11
+    # new-instance v0, Landroidx/preference/CheckBoxPreference;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
+    # invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
 
-    move-result-object v3
+    # move-result-object v3
 
-    invoke-direct {v0, v3}, Landroidx/preference/CheckBoxPreference;-><init>(Landroid/content/Context;)V
+    # invoke-direct {v0, v3}, Landroidx/preference/CheckBoxPreference;-><init>(Landroid/content/Context;)V
 
-    const-string v3, "VkMe hardcore"
+    # const-string v3, "VkMe hardcore"
 
-    .line 12
-    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+    # .line 12
+    # invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
-    const-string v3, "__dbg_hardcore_vkme"
+    # const-string v3, "__dbg_hardcore_vkme"
 
-    .line 13
-    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
+    # .line 13
+    # invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
 
-    const/4 v3, 0x0
+    # const/4 v3, 0x0
 
-    .line 14
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    # .line 14
+    # invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v3
+    # move-result-object v3
 
-    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setDefaultValue(Ljava/lang/Object;)V
+    # invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setDefaultValue(Ljava/lang/Object;)V
 
-    .line 15
-    sget-object v3, Lcom/vtosters/lite/fragments/n2/v;->a:Lcom/vtosters/lite/fragments/n2/v;
+    # .line 15
+    # sget-object v3, Lcom/vtosters/lite/fragments/n2/v;->a:Lcom/vtosters/lite/fragments/n2/v;
 
-    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+    # invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 16
-    invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+    # .line 16
+    # invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
 
-    .line 17
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->f()Z
+    # .line 17
+    # invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->f()Z
 
-    move-result v0
+    # move-result v0
 
-    if-eqz v0, :cond_1
+    # if-eqz v0, :cond_1
 
-    .line 18
-    new-instance v0, Landroidx/preference/CheckBoxPreference;
+    # .line 18
+    # new-instance v0, Landroidx/preference/CheckBoxPreference;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
+    # invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
 
-    move-result-object v3
+    # move-result-object v3
 
-    invoke-direct {v0, v3}, Landroidx/preference/CheckBoxPreference;-><init>(Landroid/content/Context;)V
+    # invoke-direct {v0, v3}, Landroidx/preference/CheckBoxPreference;-><init>(Landroid/content/Context;)V
 
-    const-string v3, "Milkshake"
+    # const-string v3, "Milkshake"
 
-    .line 19
-    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+    # .line 19
+    # invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
-    const-string v3, "__dbg_milkshake"
+    # const-string v3, "__dbg_milkshake"
 
-    .line 20
-    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
+    # .line 20
+    # invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
 
-    .line 21
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    # .line 21
+    # invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
-    move-result v3
+    # move-result v3
 
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    # invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v3
+    # move-result-object v3
 
-    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setDefaultValue(Ljava/lang/Object;)V
+    # invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setDefaultValue(Ljava/lang/Object;)V
 
-    .line 22
-    invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+    # .line 22
+    # invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
 
-    .line 23
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    # .line 23
+    # invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
-    move-result v3
+    # move-result v3
 
-    invoke-virtual {v0, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    # invoke-virtual {v0, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    .line 24
-    new-instance v3, Lcom/vtosters/lite/fragments/n2/a;
+    # .line 24
+    # new-instance v3, Lcom/vtosters/lite/fragments/n2/a;
 
-    invoke-direct {v3, p0}, Lcom/vtosters/lite/fragments/n2/a;-><init>(Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;)V
+    # invoke-direct {v3, p0}, Lcom/vtosters/lite/fragments/n2/a;-><init>(Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;)V
 
-    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+    # invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 25
-    new-instance v0, Landroidx/preference/Preference;
+    # .line 25
+    # new-instance v0, Landroidx/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
+    # invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
 
-    move-result-object v3
+    # move-result-object v3
 
-    invoke-direct {v0, v3}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;)V
+    # invoke-direct {v0, v3}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;)V
 
-    const-string v3, "Reset Milkshake Onboarding"
+    # const-string v3, "Reset Milkshake Onboarding"
 
-    .line 26
-    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+    # .line 26
+    # invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
-    const-string v3, "__dbg_reset_milkshake_onboarding"
+    # const-string v3, "__dbg_reset_milkshake_onboarding"
 
-    .line 27
-    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
+    # .line 27
+    # invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
 
-    .line 28
-    invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+    # .line 28
+    # invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
 
-    .line 29
-    sget-object v2, Lcom/vtosters/lite/fragments/n2/s;->a:Lcom/vtosters/lite/fragments/n2/s;
+    # .line 29
+    # sget-object v2, Lcom/vtosters/lite/fragments/n2/s;->a:Lcom/vtosters/lite/fragments/n2/s;
 
-    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
+    # invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 30
-    :cond_1
-    new-instance v0, Landroidx/preference/Preference;
-
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;)V
-
-    const-string v2, "__dbg_toggles"
-
-    .line 31
-    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
-
-    const v2, 0x7f1202b0
-
-    .line 32
-    invoke-virtual {p0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
-
-    .line 33
-    new-instance v2, Lcom/vtosters/lite/fragments/n2/m;
-
-    invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/n2/m;-><init>(Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;)V
-
-    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
-
-    .line 34
-    invoke-virtual {p0, v1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/preference/PreferenceCategory;
-
-    .line 35
-    invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
-
-    .line 36
+    # .line 30
+    # :cond_1
     new-instance v0, Landroidx/preference/Preference;
 
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
@@ -1474,6 +1433,46 @@
     move-result-object v2
 
     invoke-direct {v0, v2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;)V
+
+    # const-string v2, "__dbg_toggles"
+
+    # .line 31
+    # invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
+
+    # const v2, 0x7f1202b0
+
+    # .line 32
+    # invoke-virtual {p0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    # move-result-object v2
+
+    # invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    # .line 33
+    # new-instance v2, Lcom/vtosters/lite/fragments/n2/m;
+
+    # invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/n2/m;-><init>(Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;)V
+
+    # invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
+
+    # .line 34
+    # invoke-virtual {p0, v1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    # move-result-object v2
+
+    # check-cast v2, Landroidx/preference/PreferenceCategory;
+
+    # .line 35
+    # invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+
+    # .line 36
+    # new-instance v0, Landroidx/preference/Preference;
+
+    # invoke-virtual {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->P4()Landroid/content/Context;
+
+    # move-result-object v2
+
+    # invoke-direct {v0, v2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;)V
 
     const-string v2, "__dbg_help_hints"
 
@@ -1505,13 +1504,6 @@
 
     .line 41
     invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
-
-    .line 42
-    invoke-static {}, Lb/h/g/g/BuildInfo;->j()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
 
     .line 43
     new-instance v0, Landroidx/preference/Preference;
@@ -1553,7 +1545,6 @@
     .line 48
     invoke-virtual {v1, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
 
-    :cond_2
     return-void
 .end method
 
@@ -1649,14 +1640,6 @@
 .method private g5()V
     .locals 2
 
-    .line 1
-    iget-boolean v0, p0, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->R:Z
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
     const-string v0, "__dbg_test_bday"
 
     .line 2
@@ -3189,168 +3172,63 @@
 
     invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->c1()Z
 
-    .line 6
-    iget-boolean p1, p0, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->R:Z
+    # .line 6
+    # iget-boolean p1, p0, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->R:Z
 
-    if-nez p1, :cond_2
+    # if-nez p1, :cond_2
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->e()Z
+    # invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->e()Z
 
-    move-result p1
+    # move-result p1
 
-    if-nez p1, :cond_2
+    # if-nez p1, :cond_2
 
-    const-string p1, "domains"
+    # const-string p1, "domains"
 
-    .line 7
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->M(Ljava/lang/String;)V
+    # .line 7
+    # invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->M(Ljava/lang/String;)V
 
-    goto :goto_3
+    # goto :goto_3
 
-    .line 8
-    :cond_2
-    invoke-direct {p0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->Z4()Ljava/util/List;
+    # .line 8
+    # :cond_2
+    # invoke-direct {p0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->Z4()Ljava/util/List;
 
-    move-result-object p1
+    # move-result-object p1
 
-    .line 9
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    # .line 9
+    # invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object p1
+    # move-result-object p1
 
-    :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    # :goto_2
+    # invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    # move-result v1
 
-    if-eqz v1, :cond_3
+    # if-eqz v1, :cond_3
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    # invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    # move-result-object v1
 
-    check-cast v1, Landroidx/preference/Preference;
+    # check-cast v1, Landroidx/preference/Preference;
 
-    .line 10
-    new-instance v2, Lcom/vtosters/lite/fragments/n2/g;
+    # .line 10
+    # new-instance v2, Lcom/vtosters/lite/fragments/n2/g;
 
-    invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/n2/g;-><init>(Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;)V
+    # invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/n2/g;-><init>(Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;)V
 
-    invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
+    # invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    goto :goto_2
+    # goto :goto_2
 
-    .line 11
-    :cond_3
-    :goto_3
-    invoke-static {}, Lb/h/g/g/BuildInfo;->l()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    .line 12
-    invoke-static {}, Lb/h/g/g/BuildInfo;->i()Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
+    # .line 11
+    # :cond_3
+    # :goto_3
     const-string p1, "__dbg_proxy_enable"
 
     .line 13
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    :cond_4
-    const-string p1, "__dbg_open_vkme"
-
-    .line 14
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_hardcore_vkme"
-
-    .line 15
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_use_libverify_for_auth"
-
-    .line 16
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_allow_requests_breakpoints"
-
-    .line 17
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_mem_leak"
-
-    .line 18
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_api_errors"
-
-    .line 19
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    .line 20
-    :cond_5
-    iget-boolean p1, p0, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->R:Z
-
-    if-nez p1, :cond_6
-
-    const-string p1, "__dbg_lang_override"
-
-    .line 21
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_apply_spaces"
-
-    .line 22
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_force_send"
-
-    .line 23
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_view_post_time_overlay"
-
-    .line 24
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "network"
-
-    .line 25
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_network_executor"
-
-    .line 26
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_network_clear_internal_state"
-
-    .line 27
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_network_netlog_write"
-
-    .line 28
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_network_netlog_clear"
-
-    .line 29
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_network_netlog_send"
-
-    .line 30
-    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
-
-    const-string p1, "__dbg_no_ads"
-
-    .line 31
     invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
 
     const-string p1, "apiHost"
@@ -3358,13 +3236,158 @@
     .line 32
     invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
 
-    const-string p1, "tests"
+    const-string p1, "domains"
 
-    .line 33
+    .line 7
     invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->M(Ljava/lang/String;)V
 
-    .line 34
-    :cond_6
+    const-string p1, "__dbg_open_vkme"
+
+    .line 13
+    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    const-string p1, "__dbg_hardcore_vkme"
+
+    .line 13
+    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    const-string p1, "__dbg_force_send"
+
+    .line 13
+    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    const-string p1, "__dbg_no_ads"
+
+    .line 13
+    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    const-string p1, "__dbg_lang_override"
+
+    .line 13
+    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # invoke-static {}, Lb/h/g/g/BuildInfo;->l()Z
+
+    # move-result p1
+
+    # if-eqz p1, :cond_5
+
+    # .line 12
+    # invoke-static {}, Lb/h/g/g/BuildInfo;->i()Z
+
+    # move-result p1
+
+    # if-nez p1, :cond_4
+
+    # const-string p1, "__dbg_proxy_enable"
+
+    # .line 13
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # :cond_4
+    # const-string p1, "__dbg_open_vkme"
+
+    # .line 14
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_hardcore_vkme"
+
+    # .line 15
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_use_libverify_for_auth"
+
+    # .line 16
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_allow_requests_breakpoints"
+
+    # .line 17
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_mem_leak"
+
+    # .line 18
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_api_errors"
+
+    # .line 19
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # .line 20
+    # :cond_5
+    # iget-boolean p1, p0, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->R:Z
+
+    # if-nez p1, :cond_6
+
+    # const-string p1, "__dbg_lang_override"
+
+    # .line 21
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_apply_spaces"
+
+    # .line 22
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_force_send"
+
+    # .line 23
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_view_post_time_overlay"
+
+    # .line 24
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "network"
+
+    # .line 25
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_network_executor"
+
+    # .line 26
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_network_clear_internal_state"
+
+    # .line 27
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_network_netlog_write"
+
+    # .line 28
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_network_netlog_clear"
+
+    # .line 29
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_network_netlog_send"
+
+    # .line 30
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "__dbg_no_ads"
+
+    # .line 31
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "apiHost"
+
+    # .line 32
+    # invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Ljava/lang/String;Z)V
+
+    # const-string p1, "tests"
+
+    # .line 33
+    # invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->M(Ljava/lang/String;)V
+
+    # .line 34
+    # :cond_6
     invoke-direct {p0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->c5()V
 
     .line 35
