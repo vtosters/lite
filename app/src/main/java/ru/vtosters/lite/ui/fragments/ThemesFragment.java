@@ -17,6 +17,7 @@ import com.vtosters.lite.R;
 
 import b.h.g.k.VKProgressDialog;
 import ru.vtosters.lite.concurrent.VTExecutors;
+import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.themes.palettes.PalettesManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
@@ -49,7 +50,7 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
         findPreference("systememoji").setSummary(getGlobalContext().getString(R.string.systememojisum) + " \uD83D\uDE00\uD83D\uDE01\uD83E\uDD11\uD83E\uDD75\uD83D\uDC4D");
 
         var invalidateThemeCache = findPreference("invalidate_theme_cache");
-        if (ThemesUtils.getReservedAccent() != Color.TRANSPARENT && Preferences.dev())
+        if (ThemesUtils.getReservedAccent() != Color.TRANSPARENT && Preferences.dev() && ThemesUtils.useNewColorEngine())
             invalidateThemeCache.setOnPreferenceClickListener(preference -> {
                 setAccentColor(ThemesUtils.getReservedAccent());
                 return true;
@@ -156,8 +157,12 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
                     }
                 })
                 .setNegativeButton(R.string.reset, (dialog, which) -> {
-                    ThemesManager.deleteModification();
-                    ThemesUtils.reserveAccentColor(Color.TRANSPARENT, false);
+                    if (ThemesUtils.useNewColorEngine()) {
+                        ThemesManager.deleteModification();
+                        ThemesUtils.reserveAccentColor(Color.TRANSPARENT, false);
+                    } else {
+                        ThemesUtils.setCustomAccentColor(0, false);
+                    }
                     restart();
                 })
                 .setPositiveButton(R.string.cancel, null)
@@ -203,29 +208,35 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
     }
 
     void setAccentColor(int color) {
-        final VKProgressDialog dialog = new VKProgressDialog(requireContext());
-        dialog.setCancelable(false);
-        dialog.setMessage("Применение акцента...");
-        dialog.show();
+        if (ThemesUtils.useNewColorEngine()) {
+            final VKProgressDialog dialog = new VKProgressDialog(requireContext());
+            dialog.setCancelable(false);
+            dialog.setMessage("Применение акцента...");
+            dialog.show();
 
-        VTExecutors.getIoExecutor().execute(() -> {
-            try {
-                ThemesUtils.reserveAccentColor(color, true);
-                ThemesManager.generateModApk(color);
-                requireActivity().runOnUiThread(this::restart);
-            } catch (Throwable e) {
-                Log.e("ThemesFragment", e + "");
-                ThemesManager.deleteModification();
-                requireActivity().runOnUiThread(() -> {
-                    dialog.dismiss();
-                    new VkAlertDialog.Builder(requireContext())
-                            .setTitle("Ошибка")
-                            .setMessage("Ошибка при применении акцента:\n" + e)
-                            .setPositiveButton("OK", null)
-                            .show();
-                });
-            }
-        });
+            VTExecutors.getIoExecutor().execute(() -> {
+                try {
+                    ThemesUtils.reserveAccentColor(color, true);
+                    ThemesManager.generateModApk(color);
+                    requireActivity().runOnUiThread(this::restart);
+                } catch (Throwable e) {
+                    Log.e("ThemesFragment", e + "");
+                    ThemesManager.deleteModification();
+                    requireActivity().runOnUiThread(() -> {
+                        dialog.dismiss();
+                        new VkAlertDialog.Builder(requireContext())
+                                .setTitle("Ошибка")
+                                .setMessage("Ошибка при применении акцента:\n" + e)
+                                .setPositiveButton("OK", null)
+                                .show();
+                    });
+                }
+            });
+        } else {
+            ThemesUtils.setCustomAccentColor(color, false);
+            ThemesCore.setThemedColors(color);
+            restart();
+        }
     }
 
     void restart() {

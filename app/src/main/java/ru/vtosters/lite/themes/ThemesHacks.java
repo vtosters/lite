@@ -23,7 +23,6 @@ public class ThemesHacks {
     }
 
     public static int getHackedColor(@NonNull Context context, @ColorRes int color) {
-
         if (ThemesUtils.isCustomAccentEnabled()) {
             if (Preferences.getBoolValue("logColors", false)) {
                 try {

@@ -29,9 +29,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.hooks.VKUIHook;
-import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.themes.ThemesHacks;
-import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
 
 import java.lang.reflect.Field;
@@ -49,7 +47,7 @@ public class ThemesUtils {
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
     public static boolean isCustomAccentEnabled() {
-        return ThemesUtils.isMonetTheme() || ThemesManager.canApplyCustomAccent();
+        return ThemesUtils.isMonetTheme() || !useNewColorEngine();
     }
 
     public static ColorStateList getAccenedColorStateList() {
@@ -92,8 +90,13 @@ public class ThemesUtils {
         return getBoolValue("amoledtheme", false);
     }
 
+    public static boolean useNewColorEngine() {
+        return getBoolValue("useNewColorEngine", false);
+    }
+
     public static int getAccentColor() {
-        return getColorFromAttr(R.attr.accent);
+        var color = Preferences.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
+        return color == 0 || useNewColorEngine() || isMonetTheme() ? getColorFromAttr(R.attr.accent) : color;
     } // Color accent
 
     //region Used for migrating accent color to new version

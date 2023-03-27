@@ -38,7 +38,7 @@ public class MainActivityInjector {
             NotificationChannels.createChannels();
         }
 
-        if (Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {
+        if (Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent() && ThemesUtils.useNewColorEngine()) {
             Preferences.updateBuildNumber();
             updateBinsAndTmpArchive(activity);
         }
