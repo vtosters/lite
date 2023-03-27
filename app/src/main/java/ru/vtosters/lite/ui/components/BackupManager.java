@@ -80,17 +80,6 @@ public class BackupManager {
         }
     }
 
-    public static String[] getBackupsNames() {
-        var arr = sBackupDir.list((dir, name) -> {
-            return name.endsWith(".xml");
-        });
-        if (arr == null) return new String[0];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = arr[i].replace(".xml", "");
-        }
-        return arr;
-    }
-
     public static String getPrefContent(String filename) throws IOException {
         File prefsDir = new File(getGlobalContext().getFilesDir().getParentFile(), "shared_prefs");
         if (!prefsDir.exists())
@@ -99,9 +88,9 @@ public class BackupManager {
         return IOUtils.readAllLines(pref);
     }
 
-    public static void restoreBackup(String backupName) throws IOException {
+    public static void restoreBackup(String path) throws IOException {
         SharedPreferences.Editor editor = getPrefs().edit();
-        File pref = new File(sBackupDir, backupName + ".xml");
+        File pref = new File(path);
         Scanner scanner = new Scanner(IOUtils.readAllLines(pref));
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine().trim();

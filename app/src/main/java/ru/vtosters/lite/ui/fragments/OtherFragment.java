@@ -1,38 +1,16 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static android.widget.Toast.LENGTH_LONG;
-import static android.widget.Toast.LENGTH_SHORT;
-import static ru.vtosters.lite.ui.components.BackupManager.backupOnlines;
-import static ru.vtosters.lite.ui.components.BackupManager.backupSettings;
-import static ru.vtosters.lite.ui.components.BackupManager.deletePrefs;
-import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
+import android.content.*;
 import android.os.Bundle;
 import android.util.TypedValue;
-import android.view.View;
-import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.view.ContextThemeWrapper;
-
+import b.h.g.m.FileUtils;
 import com.vk.auth.api.VKAccount;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.ToastUtils;
@@ -48,24 +26,14 @@ import com.vk.stickers.Stickers;
 import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
-
-import java.io.IOException;
-
-import b.h.g.m.FileUtils;
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
 import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
-import ru.vtosters.lite.ui.components.BackupManager;
-import ru.vtosters.lite.utils.AccountManagerUtils;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.VTVerifications;
+import ru.vtosters.lite.utils.*;
 
 public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
-
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -77,12 +45,12 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        if (resultCode != Activity.RESULT_OK) return;
+
         if (requestCode == VK_ADMIN_TOKEN_REQUEST_CODE) {
-            if (resultCode == Activity.RESULT_OK) {
-                String token = data.getStringExtra("token");
-                Preferences.getPreferences().edit().putString("vk_admin_token", token).apply();
-                Toast.makeText(getContext(), requireContext().getString(R.string.token_saved), LENGTH_SHORT).show();
-            }
+            String token = data.getStringExtra("token");
+            Preferences.getPreferences().edit().putString("vk_admin_token", token).apply();
+            Toast.makeText(getContext(), requireContext().getString(R.string.token_saved), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -107,21 +75,21 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
         });
 
         findPreference("tokencopy").setOnPreferenceClickListener(preference -> {
-            copyText(getUserToken());
+            copyText(AccountManagerUtils.getUserToken());
 
-            Toast.makeText(requireContext(), requireContext().getString(R.string.copybtn), LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), requireContext().getString(R.string.copybtn), Toast.LENGTH_SHORT).show();
             ToastUtils.a(requireContext().getString(R.string.tokenwarning));
             return true;
         });
 
         findPreference("copydebuginfo").setOnPreferenceClickListener(preference -> {
             copyText(new DeviceInfoCollector().collect().forLogging());
-            Toast.makeText(requireContext(), AndroidUtils.getString("device_info_copied"), LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), AndroidUtils.getString("device_info_copied"), Toast.LENGTH_SHORT).show();
             return true;
         });
 
         findPreference("applicationrestart").setOnPreferenceClickListener(preference -> {
-            restartApplication();
+            LifecycleUtils.restartApplication();
             return true;
         });
 
@@ -146,12 +114,17 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("datasettings").setOnPreferenceClickListener(preference -> {
+            NavigatorUtils.switchFragment(requireContext(), DataSettingsFragment.class);
+            return true;
+        });
+
         findPreference("dialogrecomm").setVisible(!Preferences.hasVerification());
 
         findPreference("updateverifdata").setOnPreferenceClickListener(preference -> {
             UsersList.getUsersList();
             VTVerifications.load(requireContext());
-            sendToast(AndroidUtils.getString("data_updated"));
+            AndroidUtils.sendToast(AndroidUtils.getString("data_updated"));
             return true;
         });
 
@@ -168,53 +141,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             case "5gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_5gb));
         }
 
-        findPreference("deleteprefs").setOnPreferenceClickListener(preference -> {
-            delprefs(getContext());
-            return true;
-        });
-
-        findPreference("saveonlines").setOnPreferenceClickListener(preference -> {
-            try {
-                backupOnlines();
-            } catch (IOException e) {
-                Toast.makeText(getContext(), requireContext().getString(R.string.no_data_to_backup), LENGTH_SHORT).show();
-            }
-
-            return true;
-        });
-
-        findPreference("saveprefs").setOnPreferenceClickListener(preference -> {
-            backupSettings();
-
-            return false;
-        });
-        findPreference("restoreprefs").setOnPreferenceClickListener(preference -> {
-            var arr = BackupManager.getBackupsNames();
-            var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr) {
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    TextView textView = (TextView) super.getView(position, convertView, parent);
-                    textView.setTextColor(getTextAttr());
-                    return textView;
-                }
-            };
-            new VkAlertDialog.Builder(getContext())
-                    .setTitle(requireContext().getString(R.string.select_backup))
-                    .setAdapter(adapter, (dialog, which) -> {
-                        try {
-                            restoreBackup(arr[which]);
-                            restartApplicationWithTimer();
-                            Toast.makeText(getContext(), requireContext().getString(R.string.backup_success), LENGTH_LONG).show();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            Toast.makeText(getContext(), requireContext().getString(R.string.backup_error), LENGTH_LONG).show();
-                        }
-                    })
-                    .show();
-
-            return true;
-        });
-
         var vkAdminTokenPref = findPreference("vk_admin_token");
         vkAdminTokenPref.setVisible(Preferences.getPreferences().getBoolean("new_music_downloading_way", false));
         if (vkAdminTokenPref.isVisible()) {
@@ -224,12 +150,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
                 return true;
             });
         }
-
-        findPreference("analyticsDisabled").setVisible(Preferences.isValidSignature());
-        findPreference("analyticsDisabled").setOnPreferenceClickListener(preference -> {
-            restartApplicationWithTimer();
-            return true;
-        });
     }
 
     @SuppressLint({"CommitPrefEdits", "SetTextI18n"})
@@ -239,19 +159,19 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
         var val = Preferences.getPreferences().getInt("autoclearcache_size", 0);
         RadioGroup rg = new RadioGroup(getContext());
 
-        rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
+        rg.setPadding(AndroidUtils.dp2px(18f), AndroidUtils.dp2px(12f), AndroidUtils.dp2px(18f), 0);
 
         for (int item = 0; item <= 5; item++) {
             RadioButton rb = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
             SwitchHook.setCompoundButton(rb);
             rg.addView(rb);
             rb.setId(item);
-            rb.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
+            rb.setTextSize(TypedValue.COMPLEX_UNIT_PX, AndroidUtils.dp2px(14f));
 
             var text = cacheText[item];
             rb.setText(text != null ? text : AndroidUtils.getString("autoclearcachedisabled"));
 
-            rb.setTextColor(getTextAttr());
+            rb.setTextColor(ThemesUtils.getTextAttr());
             rb.setChecked(val == item);
         }
 
@@ -311,26 +231,13 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
                         }
                         case 5 -> clearWebViewCache();
                     }
-                    Toast.makeText(getContext(), requireContext().getString(R.string.cache_cleaned), LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), requireContext().getString(R.string.cache_cleaned), Toast.LENGTH_SHORT).show();
                 })
                 .show();
     }
 
     private void clearWebViewCache() {
         new WebView(requireContext()).clearCache(true);
-    }
-
-    private void delprefs(Context context) {
-        new VkAlertDialog.Builder(context)
-                .setTitle(requireContext().getString(R.string.warning))
-                .setMessage(requireContext().getString(R.string.settings_reset_confirm))
-                .setCancelable(false)
-                .setPositiveButton(requireContext().getString(R.string.yes), (dialogInterface, i) -> {
-                    deletePrefs();
-                    restartApplication();
-                })
-                .setNegativeButton(requireContext().getString(R.string.cancel), (dialogInterface, i) -> dialogInterface.dismiss())
-                .show();
     }
 
     private void copyText(String src) {
