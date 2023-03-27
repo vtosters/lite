@@ -423,206 +423,30 @@
         }
     .end annotation
 
-    move-object/from16 v0, p0
-
     move/from16 v1, p1
+
+    move/from16 v2, p2
+
+    move/from16 v3, p3
+
+    move-object/from16 v4, p4
+
+    move-object/from16 v6, p0
+
+    iget-object v5, v6, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->f:Landroid/content/Context;
 
     .line 2
     invoke-virtual/range {p0 .. p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->c()V
 
-    const/4 v2, 0x1
-
-    if-eqz p2, :cond_0
-
-    if-ne v1, v2, :cond_0
-
-    .line 3
-    sget v3, Lcom/vk/im/ui/m;->vkim_popup_msg_delete_submit_title_question_single:I
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p2, :cond_1
-
-    .line 4
-    sget v3, Lcom/vk/im/ui/m;->vkim_popup_msg_delete_submit_title_question_many:I
-
-    :goto_0
-    move v5, v3
-
-    goto :goto_1
-
-    :cond_1
-    if-ne v1, v2, :cond_2
-
-    .line 5
-    sget v3, Lcom/vk/im/ui/m;->vkim_popup_msg_delete_submit_title_default_single:I
-
-    goto :goto_0
-
-    .line 6
-    :cond_2
-    sget v3, Lcom/vk/im/ui/m;->vkim_popup_msg_delete_submit_title_default_many:I
-
-    goto :goto_0
-
-    .line 7
-    :goto_1
-    iget-object v3, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->f:Landroid/content/Context;
-
-    sget v4, Lcom/vk/im/ui/m;->vkim_popup_msg_delete_submit_checkbox_for_all:I
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "context.getString(R.stri\u2026_submit_checkbox_for_all)"
-
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    new-array v15, v2, [Ljava/lang/String;
-
-    const/16 v20, 0x0
-
-    aput-object v3, v15, v20
-
-    new-array v3, v2, [Z
-
-    aput-boolean p3, v3, v20
-
-    .line 8
-    new-instance v14, Lkotlin/jvm/internal/Ref$BooleanRef;
-
-    invoke-direct {v14}, Lkotlin/jvm/internal/Ref$BooleanRef;-><init>()V
-
-    if-eqz p2, :cond_3
-
-    if-eqz p3, :cond_3
-
-    const/4 v4, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    const/4 v4, 0x0
-
-    :goto_2
-    iput-boolean v4, v14, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z
-
-    .line 9
-    iget-object v4, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->f:Landroid/content/Context;
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    .line 10
-    sget v9, Lcom/vk/im/ui/m;->vkim_popup_msg_delete_submit_yes:I
-
-    const/4 v10, 0x0
-
-    .line 11
-    sget v11, Lcom/vk/im/ui/m;->vkim_popup_msg_delete_submit_cancel:I
-
-    const/4 v12, 0x0
-
-    .line 12
-    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$showDeleteSubmit$builder$1;
-
-    move-object/from16 v13, p4
-
-    invoke-direct {v2, v13, v14}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$showDeleteSubmit$builder$1;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/internal/Ref$BooleanRef;)V
-
-    const/16 v16, 0x0
-
-    const/16 v17, 0x0
-
-    .line 13
-    new-instance v13, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$showDeleteSubmit$builder$2;
-
-    invoke-direct {v13, v0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$showDeleteSubmit$builder$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;)V
-
-    const/16 v18, 0x1b5c
-
-    const/16 v19, 0x0
-
-    move-object/from16 v21, v13
-
-    const/4 v13, 0x0
-
-    move-object/from16 v22, v14
-
-    move-object v14, v2
-
-    move-object v2, v15
-
-    move-object/from16 v15, v16
-
-    move-object/from16 v16, v17
-
-    move-object/from16 v17, v21
-
-    .line 14
-    invoke-static/range {v4 .. v19}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-static/range {v1 .. v6}, Lru/vtosters/lite/feature/msgDelete/MsgDeleteDialogHook;->getDialog(IZZLkotlin/jvm/b/Functions2;Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v4
 
-    if-eqz p2, :cond_4
-
-    .line 15
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$b;
-
-    move-object/from16 v5, v22
-
-    invoke-direct {v1, v5}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$b;-><init>(Lkotlin/jvm/internal/Ref$BooleanRef;)V
-
-    invoke-virtual {v4, v2, v3, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMultiChoiceItems([Ljava/lang/CharSequence;[ZLandroid/content/DialogInterface$OnMultiChoiceClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    goto :goto_3
-
-    .line 16
-    :cond_4
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->f:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    .line 17
-    sget v3, Lcom/vk/im/ui/l;->vkim_popup_msg_delete_submit_desc:I
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    .line 18
-    invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    aput-object v6, v5, v20
-
-    .line 19
-    invoke-virtual {v2, v3, v1, v5}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "context.resources.getQua\u2026      msgCount, msgCount)"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 20
-    invoke-virtual {v4, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    .line 21
-    :goto_3
     invoke-virtual {v4}, Landroidx/appcompat/app/AlertDialog$Builder;->show()Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a:Landroid/app/Dialog;
+    iput-object v1, v6, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a:Landroid/app/Dialog;
 
     return-void
 .end method
