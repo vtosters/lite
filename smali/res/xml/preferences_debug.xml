@@ -22,13 +22,6 @@
                 android:key="useGenius"
                 android:summary="Получать тексты с сервиса Genius"
                 android:title="Тексты с Genius"/>
-        <!-- <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="system"
-            android:dialogTitle="@string/debug_experimental_language_summary"
-            android:entries="@array/language"
-            android:entryValues="@array/lang_value"
-            android:key="lang_value"
-            android:title="@string/debug_experimental_language" /> -->
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="useNewSettings"

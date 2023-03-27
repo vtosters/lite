@@ -19,8 +19,6 @@ import ru.vtosters.lite.utils.ThemesUtils;
 public final class TextViewExt {
     public static void a(TextView textView, Drawable drawable) {
         a(textView, null, drawable);
-
-        ThemesUtils.colorTextView(textView);
     }
 
     public static boolean b(TextView textView) {
@@ -96,14 +94,10 @@ public final class TextViewExt {
 
     private static void a(TextView textView, Drawable drawable, Drawable drawable2) {
         textView.setCompoundDrawablesRelativeWithIntrinsicBounds(drawable, null, drawable2, null);
-
-        ThemesUtils.colorTextView(textView);
     }
 
     public static void a(TextView textView) {
         textView.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, null, null);
-
-        ThemesUtils.colorTextView(textView);
     }
 
     public static Drawable a(Drawable drawable, ColorStateList colorStateList) {

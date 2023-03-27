@@ -990,6 +990,10 @@
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setNavigationContentDescription(I)V
 
     :cond_1
+    const v0, 0x0
+
+    invoke-static {p0, v0, v0}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
+
     return-void
 .end method
 

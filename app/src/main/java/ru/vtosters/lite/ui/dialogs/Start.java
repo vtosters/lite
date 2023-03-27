@@ -17,7 +17,7 @@ public class Start {
         if (Build.VERSION.SDK_INT >= 23) {
             activity.requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
         }
-        if (getBoolValue("showAlert", true))
+        if (getBoolValue("showAlert", true) && AndroidUtils.isFirstInstall(activity))
             new VkAlertDialog.Builder(activity)
                     .setTitle(R.string.warning)
                     .setMessage(getWelcome())
