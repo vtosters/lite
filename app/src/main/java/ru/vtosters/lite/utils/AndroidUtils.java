@@ -234,7 +234,8 @@ public class AndroidUtils {
         }
 
         return null;
-    
+    }
+
     public static boolean isFirstInstall(Context context) {
         try {
             long firstInstallTime = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).firstInstallTime;
