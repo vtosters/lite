@@ -28,7 +28,7 @@ public class ProxyHook {
         button.setOnClickListener(v1 -> callProxyDialog(v1.getContext()));
 
         VkAuthTextView recoverAccounts = v.findViewById(AndroidUtils.getIdentifier("account_backup_view", "id"));
-        recoverAccounts.setText("Восстановить аккаунты");
+        recoverAccounts.setText(AndroidUtils.getString("restore_accounts"));
         recoverAccounts.setOnClickListener(v1 -> NavigatorUtils.switchFragment(v.getContext(), DataSettingsFragment.class));
     }
 

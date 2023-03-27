@@ -6499,4 +6499,42 @@ May look like a fake leaving the online"</string>
     <string name="copydebuginfo_summ">To submit bug info to GitHub Issues</string>
     <string name="device_info_copied">Device info copied</string>
     <string name="app_open_by_default_settings">You need to allow the app to open links by default for the app to work properly</string>
+
+    <string name="failed_to_get_text">Failed to get text</string>
+    <string name="error_no_text">Error receiving text, possibly no text found</string>
+    <string name="applying_accent">Applying accent</string>
+    <string name="error_applying_accent">Error when applying accent</string>
+    <string name="logColors_title">Logging accents</string>
+
+    <string name="remove_encryption_key">Remove key</string>
+    <string name="restore_accounts">Restore accounts</string>
+    <string name="save_accounts">Save accounts</string>
+    <string name="reset_accounts">Reset all accounts</string>
+    <string name="accounts_saved_by_path">Accounts saved by path</string>
+    <string name="error_saving_file">File saving error</string>
+
+    <string name="save_online_data">Save online data</string>
+
+    <string name="restore_settings">Restore settings</string>
+    <string name="reset_all_settings">Reset all settings</string>
+
+    <string name="disable_analytics">Disable data collection</string>
+    <string name="disable_analytics_summ">Collecting crash data helps us improve the app\n\nUnless we collect crash logs, it makes poor developers sad</string>
+
+    <string name="systemtheme_enabled">System theme enabled</string>
+    <string name="systemtheme">System theme</string>
+    <string name="systemtheme_summ">Use the theme installed on the device</string>
+
+    <string name="useGenius_summ">Genius service</string>
+    <string name="useGenius_title">Texts from Genius</string>
+
+    <string name="datasettings_title">Application data settings</string>
+    <string name="invalidate_theme_cache_title">Invalidate theme cache</string>
+
+    <string name="useCustomPrefsStyle_title">Use new switches</string>
+    <string name="useCustomPrefsStyle_summ">More modern and stylish toggle switches in settings</string>
+    <string name="useNewColorEngine_title">Use new accent engine</string>
+    <string name="useNewColorEngine_summ">May be unstable</string>
+
+    <string name="data">Data</string>
 </resources>

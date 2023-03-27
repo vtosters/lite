@@ -128,7 +128,7 @@ public class CryptImHook {
                     Editable edit = editText.getText();
                     finalEnabled.setEncryptionKeyFor(peerId, edit == null ? null : edit.toString());
                 }).setNegativeButton(android.R.string.cancel, null)
-                .setNeutralButton("Удалить ключ", (dialog, which) -> {
+                .setNeutralButton(AndroidUtils.getString("remove_encryption_key"), (dialog, which) -> {
                     finalEnabled.removeEncryptionKeyFor(peerId);
                 })
                 .show();

@@ -20,8 +20,8 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="useGenius"
-                android:summary="Получать тексты с сервиса Genius"
-                android:title="Тексты с Genius"/>
+                android:summary="@string/useGenius_summ"
+                android:title="@string/useGenius_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="useNewSettings"
@@ -97,7 +97,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="logColors"
-                android:title="Логгировать получение акцентов"/>
+                android:title="@string/logColors_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="__dbg_webview"

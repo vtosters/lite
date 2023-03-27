@@ -9,7 +9,7 @@
                 android:title="@string/accent_color_title"/>
         <Preference
                 android:key="invalidate_theme_cache"
-                android:title="Инвалидация кэша темы" />
+                android:title="@string/invalidate_theme_cache_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlthemes">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -74,8 +74,8 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="useCustomPrefsStyle"
-                android:summary="Более современный и стильный вид тумблеров в настройках"
-                android:title="Использовать новые тумблеры"/>
+                android:summary="@string/useCustomPrefsStyle_summ"
+                android:title="@string/useCustomPrefsStyle_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="navbar"
@@ -89,7 +89,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="useNewColorEngine"
-                android:summary="Может быть нестабильно"
-                android:title="Использовать новый движок акцентов"/>
+                android:summary="@string/useNewColorEngine_summ"
+                android:title="@string/useNewColorEngine_title"/>
     </PreferenceCategory>
 </PreferenceScreen>

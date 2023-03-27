@@ -58,7 +58,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                "Сохранить аккаунты",
+                AndroidUtils.getString("save_accounts"),
                 "",
                 null,
                 preference -> {
@@ -70,7 +70,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                "Восстановить аккаунты",
+                AndroidUtils.getString("restore_accounts"),
                 "",
                 null,
                 preference -> {
@@ -82,7 +82,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                "Сбросить все аккаунты",
+                AndroidUtils.getString("reset_accounts"),
                 "",
                 null,
                 preference -> {
@@ -96,7 +96,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                "Сохранить настройки",
+                AndroidUtils.getString("saveprefs_title"),
                 "",
                 null,
                 preference -> {
@@ -108,7 +108,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                "Сохранить данные об онлайне",
+                AndroidUtils.getString("save_online_data"),
                 "",
                 null,
                 preference -> {
@@ -124,7 +124,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                "Восстановить настройки",
+                AndroidUtils.getString("restore_settings"),
                 "",
                 null,
                 preference -> {
@@ -136,7 +136,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                "Сбросить все настройки",
+                AndroidUtils.getString("reset_all_settings"),
                 "",
                 null,
                 preference -> {
@@ -154,13 +154,13 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                 }
         );
 
-        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Прочее");
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), AndroidUtils.getString("sett_other"));
 
         PreferenceFragmentUtils.addMaterialSwitchPreference(
                 getPreferenceScreen(),
                 "analyticsDisabled",
-                "Отключить сбор данных",
-                "Сбор данных о падениях приложения помогает нам улучшать приложение\n\nОтключение сбора логов падений заставит грустить бедных разработчиков",
+                AndroidUtils.getString("disable_analytics"),
+                AndroidUtils.getString("disable_analytics_summ"),
                 null,
                 false,
                 (preference, o) -> {

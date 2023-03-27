@@ -161,7 +161,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 ThemesUtils.isDarkTheme(),
                 (preference, o) -> {
                     if (Preferences.systemtheme()) {
-                        AndroidUtils.sendToast("Включена установка темы как на устройстве");
+                        AndroidUtils.sendToast(AndroidUtils.getString("systemtheme_enabled"));
                         return false;
                     }
                     final var switchPreference = (MaterialSwitchPreference) preference;
@@ -175,8 +175,8 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
             PreferenceFragmentUtils.addMaterialSwitchPreference(
                     getPreferenceScreen(),
                     "system_theme",
-                    "Системная тема",
-                    "Использовать тему установленную на устройстве",
+                    AndroidUtils.getString("systemtheme"),
+                    AndroidUtils.getString("systemtheme_summ"),
                     R.drawable.ic_palette_outline_28,
                     Preferences.systemtheme(),
                     (preference, o) -> {

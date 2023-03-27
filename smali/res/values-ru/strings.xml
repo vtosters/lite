@@ -6362,40 +6362,41 @@
     <string name="device_info_copied">Информация об устройстве скопирована</string>
     <string name="app_open_by_default_settings">Для нормальной работы приложения необходимо разрешить приложению открытие ссылок по умолчанию</string>
 
-    <string name="applock__description_chooser">Защитить это приложение с помощью PIN-кода или отпечатка пальцев?</string>
-    <string name="applock__description_create_pin">Создайте PIN-код для защиты этого приложения</string>
-    <string name="applock__description_create_pin_reattempt">Неверный PIN-код. Попробуйте еще раз</string>
-    <string name="applock__description_create_fingerprint">Используйте свой отпечаток пальца, чтобы защитить это приложение</string>
-    <string name="applock__description_create_fingerprint_paused">Разблокировка по биометрии отменена. Попробуйте снова</string>
-    <string name="applock__description_confirm">Введите PIN-код для подтверждения</string>
-    <string name="applock__description_unlock_pin">Введите свой PIN-код для разблокировки</string>
-    <string name="applock__description_unlock_fingerprint">Приложите палец к сканеру</string>
-    <string name="applock__description_unlock_fingerprint_help">Проблема при распознавании отпечатка пальца: %1$s</string>
-    <string name="applock__create_chooser_option_pin">PIN</string>
-    <string name="applock__create_chooser_option_fingerprint">Отпечаток пальца</string>
-    <string name="applock__unlock_error_no_matching_pin_found">Не существует сохраненного PIN-кода для разблокировки</string>
-    <string name="applock__unlock_error_match_failed">Неверный PIN-код!</string>
-    <string name="applock__unlock_error_insufficient_selection">Неправильное количество цифр! Пожалуйста, попробуйте еще раз</string>
-    <string name="applock__unlock_error_retry_limit_exceeded">Слишком много неудачных попыток. Попробуйте снова через %1$s</string>
-    <string name="applock__toast_unlock_required">Вы не можете этого сделать</string>
-    <string name="applock__password_char">*</string>
-    <string name="applock__action_settings">Открыть системные настройки</string>
-    <string name="applock__fingerprint_alias">AppLock</string>
-    <string name="applock__fingerprint_error_not_enrolled">Вы не настроили разблокировку по отпечатку пальца</string>
-    <string name="applock__fingerprint_error_unrecognized">Ваш отпечаток пальца не был распознан</string>
-    <string name="applock__fingerprint_error_unknown">Произошло что-то странное</string>
-    <string name="applock__fingerprint_error_none">Отпечатки пальцев не найдены! Добавьте их в системных настройках</string>
-    <string name="applock__fingerprint_error_hardware">Отсутствует сканер отпечатков пальцев</string>
-    <string name="applock__fingerprint_error_permission">Требуется разрешение на использование отпечатков пальцев</string>
-    <string name="applock__fingerprint_error_permission_multiple">Разрешение на работу с биометрией не было получено. Выдайте его приложению в системных настройках</string>
-    <item name="applock__empty_item_min_size_percent" format="float" type="string">0.2</item>
-
-    <string name="pin_not_set">PIN-код не установлен</string>
-    <string name="pin_reset">PIN-код был успешно сброшен</string>
-
     <string name="failed_to_get_text">Ошибка получения текста</string>
     <string name="error_no_text">Ошибка получения текста, возможно текст не найден</string>
     <string name="applying_accent">Применение акцента</string>
     <string name="error_applying_accent">Ошибка при применении акцента</string>
+    <string name="logColors_title">Логгировать получение акцентов</string>
 
+    <string name="remove_encryption_key">Удалить ключ</string>
+    <string name="restore_accounts">Восстановить аккаунты</string>
+    <string name="save_accounts">Сохранить аккаунты</string>
+    <string name="reset_accounts">Сбросить все аккаунты</string>
+    <string name="accounts_saved_by_path">Аккаунты сохранены по пути</string>
+    <string name="error_saving_file">Ошибка при сохранении файла</string>
+
+    <string name="save_online_data">Сохранить данные об онлайне</string>
+
+    <string name="restore_settings">Восстановить настройки</string>
+    <string name="reset_all_settings">Сбросить все настройки</string>
+
+    <string name="disable_analytics">Отключить сбор данных</string>
+    <string name="disable_analytics_summ">Сбор данных о падениях приложения помогает нам улучшать приложение\n\nОтключение сбора логов падений заставит грустить бедных разработчиков</string>
+
+    <string name="systemtheme_enabled">Включена установка темы как на устройстве</string>
+    <string name="systemtheme">Системная тема</string>
+    <string name="systemtheme_summ">Использовать тему установленную на устройстве</string>
+
+    <string name="useGenius_summ">Получать тексты с сервиса Genius</string>
+    <string name="useGenius_title">Тексты с Genius</string>
+
+    <string name="datasettings_title">Настройки данных приложения</string>
+    <string name="invalidate_theme_cache_title">Инвалидация кэша темы</string>
+
+    <string name="useCustomPrefsStyle_title">Использовать новые переключатели</string>
+    <string name="useCustomPrefsStyle_summ">Более современный и стильный вид тумблеров в настройках</string>
+    <string name="useNewColorEngine_title">Использовать новый движок акцентов</string>
+    <string name="useNewColorEngine_summ">Может быть нестабильно</string>
+
+    <string name="data">Данные</string>
 </resources>
