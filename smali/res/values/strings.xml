@@ -6303,7 +6303,7 @@ May look like a fake leaving the online"</string>
     <string name="encryption_settings_title">Encryption settings</string>
     <string name="encryption_public_algorithm_error">The selected algorithm is public and has no settings!</string>
     <string name="encryption_enter_key">Enter encryption key</string>
-    <string name="encryption_current_algorithm_title">Algorithm used: %1$s.\nPlease note that if the field is empty, the default key will be used.</string>
+    <string name="encryption_current_algorithm_title">Algorithm used: %1$s</string>
 
     <string name="update_error">Update failed</string>
     <string name="update_error_text">An error occurred while trying to download the new version of the app.\nDo you want to update the app manually?</string>

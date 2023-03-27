@@ -42,4 +42,24 @@ public class ThemesHacks {
 
         return Build.VERSION.SDK_INT > 23 ? context.getColor(color) : context.getResources().getColor(color);
     }
+
+    // Фиксит селектор (все/свои/архив) в профиле
+    public static void fixProfileSelector(View view) {
+        if (!ThemesUtils.isMilkshake()) return;
+        var id = view.getId();
+
+        if (id == R.id.profile_wall_owner_posts || id == R.id.profile_wall_all_posts || id == R.id.profile_wall_archived_posts) {
+            StateListDrawable states = (StateListDrawable) ((LayerDrawable) view.getBackground()).getDrawable(0);
+            LayerDrawable selected = (LayerDrawable) ((DrawableContainer.DrawableContainerState) states.getConstantState()).getChildren()[0];
+            ((ColorDrawable) selected.getDrawable(0)).setColor(ThemesUtils.getAccentColor());
+        }
+    }
+
+    public static void fixThemedFeed(TextView textView, int i) {
+        if (i != R.layout.themed_feed_tab_2) {
+            return;
+        }
+        textView.setTextColor(RecolorUtils.recolorCSL(textView.getTextColors()));
+        ((InsetDrawable) ((DrawableContainer.DrawableContainerState) textView.getBackground().getConstantState()).getChildren()[0]).getDrawable().setTint(ThemesUtils.lighten(ThemesUtils.getAccentColor(), 0.15f));
+    }
 }

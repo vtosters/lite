@@ -20,11 +20,9 @@ import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
-import static ru.vtosters.lite.utils.ThemesUtils.setNeededTheme;
 
 public class MainActivityInjector {
     public static void inject(Activity activity) {
-        setNeededTheme(activity);
         sendRequest();
         UsersList.getUsersList();
 
@@ -40,7 +38,7 @@ public class MainActivityInjector {
             NotificationChannels.createChannels();
         }
 
-        if(Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {
+        if (Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {
             Preferences.updateBuildNumber();
             updateBinsAndTmpArchive(activity);
         }

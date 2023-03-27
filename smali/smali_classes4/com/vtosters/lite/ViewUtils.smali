@@ -285,7 +285,7 @@
     move-result-object p0
 
     .line 92
-    invoke-virtual {p0, v2, v2}, Landroid/content/res/TypedArray;->getColor(II)I
+    invoke-static {p0, v2, v2}, Lru/vtosters/lite/themes/utils/RecolorUtils;->getColor(Landroid/content/res/TypedArray;II)I
 
     move-result p1
 
@@ -990,6 +990,10 @@
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setNavigationContentDescription(I)V
 
     :cond_1
+    const v0, 0x0
+
+    invoke-static {p0, v0, v0}, Lru/vtosters/lite/themes/ViewInjector;->inject(Landroid/view/View;IZ)Landroid/view/View;
+
     return-void
 .end method
 

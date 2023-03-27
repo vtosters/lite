@@ -6079,8 +6079,7 @@ QR-код"</string>
  <string name="encryption_settings_title">Налады шыфравання</string>
  <string name="encryption_public_algorithm_error">Абраны алгарытм публічны і не мае налад!</string>
  <string name="encryption_enter_key">Увядзіце ключ шыфравання</string>
- <string name="encryption_current_algorithm_title">Алгарытм, які выкарыстоўваецца: %1$s.\nУлічыце, што калі поле будзе пустым, то будзе выкарыстоўвацца ключ па змаўчанні.
-</string>
+ <string name="encryption_current_algorithm_title">Алгарытм, які выкарыстоўваецца: %1$s</string>
  <string name="update_error">Памылка абнаўлення</string>
  <string name="update_error_text">Адбылася памылка пры спробе спампаваць новую версію дадатку. \nАбнавіць дадатак ўручную?</string>
  <string name="photo_get_error">Не ўдалося атрымаць спасылку на фота</string>

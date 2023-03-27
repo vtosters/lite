@@ -8,6 +8,7 @@ import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceFile;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.themes.loaders.ResourcesLoader;
 import ru.vtosters.lite.themes.utils.ArscEditor;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;

@@ -71,6 +71,8 @@
 
     invoke-virtual {p1, p2, v0, v0, v0}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
+    invoke-static {p1}, Lru/vtosters/lite/themes/utils/RecolorUtils;->recolorTextView(Landroid/widget/TextView;)V
+
     return-void
 
     :cond_0

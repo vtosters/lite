@@ -16,6 +16,7 @@ import java.security.NoSuchAlgorithmException;
 import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.proxy.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPackageName;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
@@ -291,12 +292,20 @@ public class Preferences {
     }
 
     public static boolean isNewBuild() {
-        return !getPreferences().getString("build_number", "")
-                        .equals(About.getBuildNumber());
+        try {
+            return getPreferences().getLong("setupTime", 0L) != AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo(getPackageName(), 0).lastUpdateTime;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public static void updateBuildNumber() {
-        getPreferences().edit().putString("build_number", About.getBuildNumber()).commit();
+        try {
+            getPreferences().edit().putLong("setupTime", AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo(getPackageName(), 0).lastUpdateTime).apply();
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public static boolean isValidSignature() {
