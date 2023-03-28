@@ -6537,4 +6537,7 @@ May look like a fake leaving the online"</string>
     <string name="useNewColorEngine_summ">May be unstable</string>
 
     <string name="data">Data</string>
+
+    <string name="currentLanguage">Current language:</string>
+    <string name="appLanguage">App language</string>
 </resources>

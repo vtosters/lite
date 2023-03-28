@@ -38,7 +38,7 @@ public class Preferences {
     } // VK Init
 
     public static String getBuildName() {
-        return BuildConfig.BUILD_TYPE.substring(0,1).toUpperCase() + BuildConfig.BUILD_TYPE.substring(1).toLowerCase();
+        return AndroidUtils.upString(BuildConfig.BUILD_TYPE);
     }
     public static SharedPreferences getPreferences() {
         return getGlobalContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);

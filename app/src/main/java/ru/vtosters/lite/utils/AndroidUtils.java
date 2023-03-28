@@ -18,6 +18,7 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.Screen;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
+import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.hooks.DateHook;
 
 import java.io.File;
@@ -96,26 +97,6 @@ public class AndroidUtils {
     public static String getApplicationName() {
         return getGlobalContext().getApplicationInfo().loadLabel(getGlobalContext().getPackageManager()).toString();
     }
-
-    public static Context setDefaultLocale(Context context) {
-        Locale locale = new Locale(DateHook.getLocale());
-        Locale.setDefault(locale);
-
-        var resources = context.getResources();
-        var configuration = resources.getConfiguration();
-
-        if (Build.VERSION.SDK_INT >= 24) {
-            configuration.setLocale(locale);
-            configuration.setLayoutDirection(locale);
-            return context.createConfigurationContext(configuration);
-        }
-
-        configuration.locale = locale;
-        configuration.setLayoutDirection(locale);
-        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
-
-        return context;
-    } // Language changer and BaseContext injector
 
     public static float[] getCenterScreenCoords() {
         int width = getResources().getDisplayMetrics().widthPixels;
@@ -245,5 +226,9 @@ public class AndroidUtils {
             e.printStackTrace();
             return true;
         }
+    }
+
+    public static String upString(String s) {
+        return s.substring(0,1).toUpperCase() + s.substring(1).toLowerCase();
     }
 }

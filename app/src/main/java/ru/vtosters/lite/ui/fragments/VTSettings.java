@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import androidx.annotation.StringRes;
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
@@ -30,6 +31,8 @@ import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.*;
+
+import java.util.Locale;
 
 public class VTSettings extends TrackedMaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
 
@@ -470,12 +473,27 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 "",
                 requireContext().getString(R.string.vtlproxy),
                 getProxysumm(),
-                R.drawable.ic_globe_outline_28,
+                R.drawable.ic_linked_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), ProxySettingsFragment.class);
                     return false;
                 }
         );
+
+        if (Build.VERSION.SDK_INT >= 33) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    AndroidUtils.getString("appLanguage"),
+                    AndroidUtils.getString("currentLanguage") + " " + AndroidUtils.upString(Locale.getDefault().getDisplayLanguage()),
+                    R.drawable.ic_globe_outline_28,
+                    preference -> {
+                        Intent intent = new Intent("android.settings.APP_LOCALE_SETTINGS", Uri.parse("package:" + AndroidUtils.getPackageName()));
+                        startActivity(intent);
+                        return false;
+                    }
+            );
+        }
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),

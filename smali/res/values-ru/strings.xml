@@ -6399,4 +6399,7 @@
     <string name="useNewColorEngine_summ">Может быть нестабильно</string>
 
     <string name="data">Данные</string>
+
+    <string name="currentLanguage">Текущий язык:</string>
+    <string name="appLanguage">Язык приложения</string>
 </resources>
