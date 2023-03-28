@@ -53,7 +53,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
             }
         }
 
-        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Аккаунты");
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), AndroidUtils.getString("accounts"));
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
@@ -91,7 +91,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                 }
         ).setVisible(AccountManagerUtils.isLogin());
 
-        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Настройки");
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), AndroidUtils.getString("menu_settings"));
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
