@@ -44,7 +44,7 @@ public class DockBarEditorManager {
             "tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
             "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos",
             "tab_lives", "tab_games", "tab_liked", "tab_fave", "tab_documents",
-            "tab_payments", "tab_vk_apps", "tab_settings");
+            "tab_payments", "tab_settings");
 
     private static DockBarEditorManager sInstance;
     private final List< DockBarTab > mSelectedTabs = new ArrayList<>();
