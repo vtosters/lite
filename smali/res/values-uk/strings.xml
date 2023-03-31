@@ -6286,4 +6286,45 @@
     <string name="copydebuginfo_summ">Для надсилання інформації про помилку на GitHub Issues</string>
     <string name="device_info_copied">Інформацію про пристрій скопійовано</string>
     <string name="app_open_by_default_settings">Для нормальної роботи додатку необхідно дозволити додатку відкриття посилань за умовчанням</string>
+    
+    <string name="failed_to_get_text">Помилка отримання тексту</string>
+    <string name="error_no_text">Помилка отримання тексту, можливо текст не знайдено</string>
+    <string name="applying_accent">Застосування акценту</string>
+    <string name="error_applying_accent">Помилка при застосуванні акценту</string>
+    <string name="logColors_title">Логувати отримання акцентів</string>
+
+    <string name="remove_encryption_key">Видалити ключ</string>
+    <string name="restore_accounts">Відновити акаунти</string>
+    <string name="save_accounts">Зберегти акаунти</string>
+    <string name="reset_accounts">Скинути всі акаунти</string>
+    <string name="accounts_saved_by_path">Акаунти збережені за шляхом</string>
+    <string name="error_saving_file">Помилка під час збереження файлу</string>
+
+    <string name="save_online_data">Зберегти дані про онлайн</string>
+
+    <string name="restore_settings">Відновити налаштування</string>
+    <string name="reset_all_settings">Скинути всі налаштування</string>
+
+    <string name="disable_analytics">Відключити збір даних</string>
+    <string name="disable_analytics_summ">Збір даних про падіння додатку допомагає нам покращувати додаток\\n\nВідключення збору логів падінь змусить сумувати бідних розробників</string>
+
+    <string name="systemtheme_enabled">Увімкнено встановлення теми як на пристрої</string>
+    <string name="systemtheme">Системна тема</string>
+    <string name="systemtheme_summ">Використовувати тему встановлену на пристрої</string>
+
+    <string name="useGenius_summ">Отримувати тексти з сервісу Genius</string>
+    <string name="useGenius_title">Тексти з Genius</string>
+
+    <string name="datasettings_title">Налаштування даних додатку</string>
+    <string name="invalidate_theme_cache_title">Інвалідація кешу теми</string>
+
+    <string name="useCustomPrefsStyle_title">Використовувати нові перемикачі</string>
+    <string name="useCustomPrefsStyle_summ">Більш сучасний і стильний вигляд тумблерів у налаштуваннях</string>
+    <string name="useNewColorEngine_title">Використовувати новий движок акцентів</string>
+    <string name="useNewColorEngine_summ">Може бути нестабільно</string>
+
+    <string name="data">Дані</string>
+
+    <string name="currentLanguage">Поточна мова:</string>
+    <string name="appLanguage">Мова додатку</string>
 </resources>
