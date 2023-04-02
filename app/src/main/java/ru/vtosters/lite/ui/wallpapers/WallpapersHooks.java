@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.view.View;
 import android.widget.ImageView;
 import com.vtosters.lite.R;
@@ -24,16 +25,14 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 public class WallpapersHooks {
     // TODO: force compress by default not asking user about that?
     private static final Supplier<Boolean> compress = () -> getBoolValue("compresswp", true);
-    private static final File originalWp = new File(getGlobalContext().getFilesDir(), "wallpaper.jpeg");
-    private static final File compressedWp = new File(getGlobalContext().getFilesDir(), "compressedwp.jpeg");
-    // TODO: cache to file?
-    private static Drawable mWallpaper;
-    private static boolean mUpdateWallpaperRequested = true;
-
+    private static final File originalWp = new File(getGlobalContext().getFilesDir(), "wallpaper_new.jpeg");
+    private static final File compressedWp = new File(getGlobalContext().getFilesDir(), "compressedwp_new.jpeg");
     // TODO: respect blur, when there is blur/mosaic effect applied these two can be even less, just HD (1280x720) for e.g.
     private static final int MAX_WP_WIDTH = 1080;
     private static final int MAX_WP_HEIGHT = 1920;
-
+    // TODO: cache to file?
+    private static Drawable mWallpaper;
+    private static boolean mUpdateWallpaperRequested = true;
 
     public static void setBg(View view) {
         if (hasWallpapers()) {
@@ -44,6 +43,14 @@ public class WallpapersHooks {
     }
 
     public static Drawable getWallpaper() {
+        var oldwp = new File(getGlobalContext().getFilesDir(), "wallpaper.jpeg");
+        var oldwpcompressed = new File(getGlobalContext().getFilesDir(), "compressedwp.jpeg");
+
+        if (oldwp.exists() || oldwpcompressed.exists()) {
+            oldwp.delete();
+            oldwpcompressed.delete();
+        }
+
         if (mWallpaper == null || mUpdateWallpaperRequested) {
             if (!originalWp.exists()) {
                 return null;
@@ -61,6 +68,7 @@ public class WallpapersHooks {
             if (drawable == null) {
                 return null;
             }
+
             mWallpaper = getFilteredDrawable(drawable);
             mUpdateWallpaperRequested = false;
         }
@@ -70,9 +78,9 @@ public class WallpapersHooks {
 
     private static boolean prepareCompressed() {
         // TODO remove this check? with "compress" enabled it should be fine
-        if (!eligibleWallpaperFile(originalWp)) {
-            return false;
-        }
+//        if (!eligibleWallpaperFile(originalWp)) {
+//            return false;
+//        }
         try (var f = new FileOutputStream(compressedWp)) {
             var bitmap = BitmapFactory.decodeFile(originalWp.getAbsolutePath());
 
@@ -81,7 +89,13 @@ public class WallpapersHooks {
             }
             var drawable = new BitmapDrawable(null, bitmap);
             // TODO: remove duplication without changes when provided image already fits required params
-            drawable.getBitmap().compress(Bitmap.CompressFormat.WEBP, 90, f);
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                drawable.getBitmap().compress(Bitmap.CompressFormat.WEBP_LOSSY, 85, f);
+            } else {
+                drawable.getBitmap().compress(Bitmap.CompressFormat.WEBP, 85, f);
+            }
+
         } catch (Exception e) {
             Log.d("Wallpapers", e.getMessage());
             return false;

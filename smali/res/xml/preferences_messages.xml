@@ -12,6 +12,9 @@
                 android:title="@string/vkme_notifs"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlinterfacemsg">
+        <Preference
+                android:key="wallpapers"
+                android:title="@string/wallpapers_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="voice"

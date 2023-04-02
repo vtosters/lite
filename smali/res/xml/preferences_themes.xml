@@ -28,11 +28,6 @@
                 android:summary="@string/monettheme_summ"
                 android:title="@string/monettheme_title"/>
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtlmessages">
-        <Preference
-                android:key="wallpapers"
-                android:title="@string/wallpapers_title"/>
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceemoji">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"

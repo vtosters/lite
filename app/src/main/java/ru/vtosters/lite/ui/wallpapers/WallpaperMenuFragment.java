@@ -69,7 +69,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                             ),
                             1488
                     );
-                    removeStickCache();
                     return true;
                 });
 
@@ -83,7 +82,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                     removeWallpaper();
                     requestUpdateWallpaper();
                     mWPPreviewPref.redraw();
-                    removeStickCache();
                     return true;
                 });
 
@@ -182,12 +180,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
             e.printStackTrace();
             Toast.makeText(requireActivity(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         }
-    }
-
-    private void removeStickCache() {
-        SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-        prefs2.edit().clear().apply();
-        ImEngineProvider.b().a();
     }
 
     @Override

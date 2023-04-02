@@ -1,23 +1,20 @@
 package ru.vtosters.lite.ui.wallpapers;
 
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.*;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.ui.adapters.MessagesPreviewAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
+
+import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 
 public class WallpaperPreferences extends Preference {
 

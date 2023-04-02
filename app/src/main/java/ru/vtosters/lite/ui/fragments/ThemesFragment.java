@@ -6,13 +6,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
-
 import androidx.preference.PreferenceCategory;
-
+import b.h.g.k.VKProgressDialog;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-
-import b.h.g.k.VKProgressDialog;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.ThemesManager;
@@ -20,12 +17,7 @@ import ru.vtosters.lite.themes.palettes.PalettesManager;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
 import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
-import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.lite.utils.*;
 
 public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
@@ -113,13 +105,6 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
         newsfeedNotificationsPreference.setVisible(Preferences.milkshake());
 
         findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme());
-
-        var wp = findPreference("wallpapers");
-        wp.setIcon(ThemesUtils.recolorDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_media_outline_28)));
-        wp.setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), WallpaperMenuFragment.class);
-            return true;
-        });
 
         findPreference("systememoji").setOnPreferenceClickListener(preference -> {
             restart();
