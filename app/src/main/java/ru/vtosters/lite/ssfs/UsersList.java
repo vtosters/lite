@@ -39,7 +39,7 @@ public class UsersList {
         VtOkHttpClient.getInstance().a(request).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
-                Log.d(TAG, e.getMessage());
+                e.printStackTrace();
             }
 
             @Override
@@ -47,7 +47,7 @@ public class UsersList {
                 try {
                     parseJson(new JSONObject(response.a().g()).getJSONObject("response"));
                 } catch (JSONException | IOException e) {
-                    Log.d(TAG, e.getMessage());
+                    e.printStackTrace();
                 }
             }
         });
