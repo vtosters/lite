@@ -8,6 +8,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ import java.util.regex.Pattern;
 
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.Preferences;
 
 public class BackupManager {
@@ -49,6 +51,10 @@ public class BackupManager {
             return;
         }
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            LifecycleUtils.getCurrentActivity().requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
+        }
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         var dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
         var file = new File(dir, "Onlines_" + dateFormat.format(new Date()) + ".xml");
@@ -65,6 +71,10 @@ public class BackupManager {
     }
 
     public static void backupSettings() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            LifecycleUtils.getCurrentActivity().requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
+        }
+        
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
         var file = new File(sBackupDir,
                 "Backup_" + dateFormat.format(new Date()) + ".xml");

@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 import com.vk.usersstore.contentprovider.a.UsersDbHelper;
@@ -63,6 +64,10 @@ public class VKAccountDB {
     }
 
     public static void saveData() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            LifecycleUtils.getCurrentActivity().requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
+        }
+
         var db = getDatabase().getReadableDatabase();
         var dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
         var file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/VTLBackups/saved_accounts_" + dateFormat.format(new Date()) + ".vtl");
