@@ -488,8 +488,14 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                     AndroidUtils.getString("currentLanguage") + " " + AndroidUtils.upString(Locale.getDefault().getDisplayLanguage()),
                     R.drawable.ic_globe_outline_28,
                     preference -> {
-                        Intent intent = new Intent("android.settings.APP_LOCALE_SETTINGS", Uri.parse("package:" + AndroidUtils.getPackageName()));
-                        startActivity(intent);
+                        try {
+                            Intent intent = new Intent("android.settings.APP_LOCALE_SETTINGS", Uri.parse("package:" + AndroidUtils.getPackageName()));
+                            startActivity(intent);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            AndroidUtils.sendToast("Ваша система не поддерживает смену языка приложения");
+                        }
+
                         return false;
                     }
             );
