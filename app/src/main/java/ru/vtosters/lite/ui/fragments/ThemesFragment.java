@@ -39,6 +39,8 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("systememoji").setSummary(AndroidUtils.getGlobalContext().getString(R.string.systememojisum) + " \uD83D\uDE00\uD83D\uDE01\uD83E\uDD11\uD83E\uDD75\uD83D\uDC4D");
 
+        findPreference("useNewColorEngine").setVisible(Preferences.dev());
+
         var invalidateThemeCache = findPreference("invalidate_theme_cache");
         if (ThemesUtils.getReservedAccent() != Color.TRANSPARENT && Preferences.dev() && ThemesUtils.useNewColorEngine())
             invalidateThemeCache.setOnPreferenceClickListener(preference -> {
