@@ -57,7 +57,7 @@ public class OEMDetector {
     }
 
     public static boolean isOEM() {
-        return isMIUI() || isEMUI() || isFlyme() || isZenUI() || isSamsung() || isVivo();
+        return isMIUI() || isEMUI() || isFlyme() || isZenUI() || isSamsung() || isVivo() || isOneUi();
     }
 
     public static boolean isMIUI() {
