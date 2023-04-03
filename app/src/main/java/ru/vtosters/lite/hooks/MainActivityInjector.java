@@ -8,6 +8,7 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
+import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
@@ -23,6 +24,7 @@ import static ru.vtosters.lite.utils.Preferences.checkupdates;
 
 public class MainActivityInjector {
     public static void inject(Activity activity) {
+        SystemThemeChangerHook.themeOnStart(activity);
         sendRequest();
         UsersList.getUsersList();
 
