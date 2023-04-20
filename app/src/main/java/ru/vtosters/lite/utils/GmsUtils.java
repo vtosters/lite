@@ -11,20 +11,28 @@ import com.google.firebase.iid.FirebaseInstanceIdReceiver2;
 import com.vtosters.lite.R;
 
 public class GmsUtils {
-    public static boolean gmsless = isGmsInstalled();
+    public static boolean needToSpoof = !isGmsInstalled() && isFakeGmsInstalled();
     public static boolean isGmsInstalled() {
         try {
             AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("com.google.android.gms", 0);
             return true;
         } catch (Exception unused) {
-            try {
-                AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("com.mgoogle.android.gms", 0);
-                return true;
-            } catch (Exception ignored) {
-                return false;
-            }
+            return false;
         }
     } // Google Market Services check
+
+    public static boolean isFakeGmsInstalled() {
+        try {
+            AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("com.mgoogle.android.gms", 0);
+            return true;
+        } catch (Exception unused) {
+            return false;
+        }
+    } // Microg Google Market Services check
+
+    public static boolean isAnyServicesInstalled() {
+        return isGmsInstalled() || isFakeGmsInstalled();
+    }
 
     public static void fixGapps() {
         if (Build.VERSION.SDK_INT >= 26 && !isGmsInstalled()) {
@@ -37,13 +45,13 @@ public class GmsUtils {
     } // Music channels fix
 
     public static void applyGMSReceiver() {
-        int flagSpoofed = gmsless ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
-        int flagOrig = !gmsless ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+        int flagSpoofed = needToSpoof ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+        int flagOrig = !needToSpoof ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
 
         ComponentName spoofed = new ComponentName(AndroidUtils.getGlobalContext(), FirebaseInstanceIdReceiver2.class);
         ComponentName orig = new ComponentName(AndroidUtils.getGlobalContext(), FirebaseInstanceIdReceiver.class);
 
-        if (isComponentEnabled(orig) && gmsless || isComponentEnabled(spoofed) && !gmsless) {
+        if (isComponentEnabled(orig) && needToSpoof || isComponentEnabled(spoofed) && !needToSpoof) {
             setComponentEnabled(spoofed, flagSpoofed);
             setComponentEnabled(orig, flagOrig);
         }
@@ -58,14 +66,14 @@ public class GmsUtils {
     }
 
     public static String replaceGMSPackage(String str) {
-        return gmsless ? str.replace("com.google", "com.mgoogle") : str;
+        return needToSpoof ? str.replace("com.google", "com.mgoogle") : str;
     }
 
     public static String getFirebaseInstanceIdReceiver() {
-        return "com.google.firebase.iid.FirebaseInstanceIdReceiver" + (gmsless ? "2" : "");
+        return "com.google.firebase.iid.FirebaseInstanceIdReceiver" + (needToSpoof ? "2" : "");
     }
 
     public static Class getFirebaseInstanceIdReceiverClass() {
-        return gmsless ? FirebaseInstanceIdReceiver2.class : FirebaseInstanceIdReceiver.class;
+        return needToSpoof ? FirebaseInstanceIdReceiver2.class : FirebaseInstanceIdReceiver.class;
     }
 }

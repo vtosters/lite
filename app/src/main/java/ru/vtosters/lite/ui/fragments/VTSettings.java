@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import androidx.annotation.StringRes;
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
@@ -190,7 +189,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
             );
         }
 
-        if (!GmsUtils.isGmsInstalled()) {
+        if (!GmsUtils.isAnyServicesInstalled()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.gmsname);
 
             PreferenceFragmentUtils.addPreference(
