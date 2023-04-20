@@ -8,6 +8,10 @@
 
     const-string v0, "com.google.android.gms"
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     .line 1
     invoke-static {p0, p1, v0}, Lcom/google/android/gms/common/util/q;->a(Landroid/content/Context;ILjava/lang/String;)Z
 

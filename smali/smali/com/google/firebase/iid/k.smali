@@ -300,7 +300,15 @@
 
     const-string v1, "com.google.android.c2dm.permission.SEND"
 
+    invoke-static {v1}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     const-string v2, "com.google.android.gms"
+
+    invoke-static {v2}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
 
     .line 4
     invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
@@ -343,9 +351,17 @@
 
     const-string v4, "com.google.android.c2dm.intent.REGISTER"
 
+    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     const-string v4, "com.google.android.gms"
+
+    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
 
     .line 9
     invoke-virtual {v1, v4}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
@@ -383,10 +399,18 @@
 
     const-string v4, "com.google.iid.TOKEN_REQUEST"
 
+    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     const-string v4, "com.google.android.gms"
 
+    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+    
     .line 15
     invoke-virtual {v1, v4}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
@@ -530,6 +554,10 @@
     if-nez v0, :cond_0
 
     const-string v0, "com.google.android.gms"
+
+    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     .line 2
     invoke-direct {p0, v0}, Lcom/google/firebase/iid/k;->a(Ljava/lang/String;)Landroid/content/pm/PackageInfo;

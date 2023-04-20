@@ -32,6 +32,10 @@
 
     const-string v0, "com.google"
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     const-string v1, "com.google.work"
 
     const-string v2, "cn.google"
@@ -58,7 +62,15 @@
 
     const-string v1, "com.google.android.gms"
 
+    invoke-static {v1}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     const-string v2, "com.google.android.gms.auth.GetToken"
+
+    invoke-static {v2}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -325,6 +337,10 @@
     new-instance v0, Landroid/accounts/Account;
 
     const-string v1, "com.google"
+
+    invoke-static {v1}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-direct {v0, p1, v1}, Landroid/accounts/Account;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

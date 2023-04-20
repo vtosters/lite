@@ -30,6 +30,10 @@
 .method private b()Ljava/lang/String;
     .locals 4
 
+    const/4 v0, 0x0
+
+    return-object v0
+
     const-string v0, "com.google.android.gms.ads.identifier.AdvertisingIdClient$Info"
 
     .line 1
@@ -89,6 +93,8 @@
     const-string v0, "com.google.android.gms.ads.identifier.AdvertisingIdClient"
 
     const/4 v1, 0x0
+
+    return-object v1
 
     .line 1
     :try_start_0
@@ -150,6 +156,8 @@
     const-string v0, "com.google.android.gms.ads.identifier.AdvertisingIdClient$Info"
 
     const/4 v1, 0x0
+
+    return v1
 
     .line 1
     :try_start_0

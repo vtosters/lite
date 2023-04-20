@@ -41,205 +41,207 @@
 .method public a()Lcom/twitter/sdk/android/core/u/AdvertisingInfo;
     .locals 7
 
-    const-string v0, "Could not bind to Google Play Service to capture AdvertisingId"
-
-    .line 1
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
     const/4 v3, 0x0
 
-    const-string v4, "Twitter"
+    # const-string v0, "Could not bind to Google Play Service to capture AdvertisingId"
 
-    if-ne v1, v2, :cond_0
+    # .line 1
+    # invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    .line 2
-    invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
+    # move-result-object v1
 
-    move-result-object v0
+    # invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    const-string v1, "AdvertisingInfoServiceStrategy cannot be called on the main thread"
+    # move-result-object v2
 
-    invoke-interface {v0, v4, v1}, Lcom/twitter/sdk/android/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    # const/4 v3, 0x0
 
-    return-object v3
+    # const-string v4, "Twitter"
 
-    .line 3
-    :cond_0
-    :try_start_0
-    iget-object v1, p0, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy;->a:Landroid/content/Context;
+    # if-ne v1, v2, :cond_0
 
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    # .line 2
+    # invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
 
-    move-result-object v1
+    # move-result-object v0
 
-    const-string v2, "com.android.vending"
+    # const-string v1, "AdvertisingInfoServiceStrategy cannot be called on the main thread"
 
-    const/4 v5, 0x0
+    # invoke-interface {v0, v4, v1}, Lcom/twitter/sdk/android/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
-    invoke-virtual {v1, v2, v5}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    # return-object v3
 
-    .line 5
-    new-instance v1, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$b;
+    # .line 3
+    # :cond_0
+    # :try_start_0
+    # iget-object v1, p0, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy;->a:Landroid/content/Context;
 
-    invoke-direct {v1, v3}, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$b;-><init>(Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$a;)V
+    # invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    .line 6
-    new-instance v2, Landroid/content/Intent;
+    # move-result-object v1
 
-    const-string v5, "com.google.android.gms.ads.identifier.service.START"
+    # const-string v2, "com.android.vending"
 
-    invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    # const/4 v5, 0x0
 
-    const-string v5, "com.google.android.gms"
+    # .line 4
+    # invoke-virtual {v1, v2, v5}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    # :try_end_0
+    # .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
+    # .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 7
-    invoke-virtual {v2, v5}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    # .line 5
+    # new-instance v1, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$b;
 
-    .line 8
-    :try_start_1
-    iget-object v5, p0, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy;->a:Landroid/content/Context;
+    # invoke-direct {v1, v3}, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$b;-><init>(Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$a;)V
 
-    const/4 v6, 0x1
+    # .line 6
+    # new-instance v2, Landroid/content/Intent;
 
-    invoke-virtual {v5, v2, v1, v6}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    # const-string v5, "com.google.android.gms.ads.identifier.service.START"
 
-    move-result v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    # invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    if-eqz v2, :cond_1
+    # const-string v5, "com.google.android.gms"
 
-    .line 9
-    :try_start_2
-    new-instance v2, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$c;
+    # .line 7
+    # invoke-virtual {v2, v5}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 10
-    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$b;->a()Landroid/os/IBinder;
+    # .line 8
+    # :try_start_1
+    # iget-object v5, p0, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy;->a:Landroid/content/Context;
 
-    move-result-object v5
+    # const/4 v6, 0x1
 
-    invoke-direct {v2, v5, v3}, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$c;-><init>(Landroid/os/IBinder;Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$a;)V
+    # invoke-virtual {v5, v2, v1, v6}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    .line 11
-    new-instance v5, Lcom/twitter/sdk/android/core/u/AdvertisingInfo;
+    # move-result v2
+    # :try_end_1
+    # .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {v2}, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$c;->getId()Ljava/lang/String;
+    # if-eqz v2, :cond_1
 
-    move-result-object v6
+    # .line 9
+    # :try_start_2
+    # new-instance v2, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$c;
 
-    .line 12
-    invoke-static {v2}, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$c;->a(Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$c;)Z
+    # .line 10
+    # invoke-virtual {v1}, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$b;->a()Landroid/os/IBinder;
 
-    move-result v2
+    # move-result-object v5
 
-    invoke-direct {v5, v6, v2}, Lcom/twitter/sdk/android/core/u/AdvertisingInfo;-><init>(Ljava/lang/String;Z)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    # invoke-direct {v2, v5, v3}, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$c;-><init>(Landroid/os/IBinder;Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$a;)V
 
-    .line 13
-    :try_start_3
-    iget-object v2, p0, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy;->a:Landroid/content/Context;
+    # .line 11
+    # new-instance v5, Lcom/twitter/sdk/android/core/u/AdvertisingInfo;
 
-    invoke-virtual {v2, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    # invoke-virtual {v2}, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$c;->getId()Ljava/lang/String;
 
-    return-object v5
+    # move-result-object v6
 
-    :catchall_0
-    move-exception v2
+    # .line 12
+    # invoke-static {v2}, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$c;->a(Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy$c;)Z
 
-    goto :goto_0
+    # move-result v2
 
-    :catch_0
-    move-exception v2
+    # invoke-direct {v5, v6, v2}, Lcom/twitter/sdk/android/core/u/AdvertisingInfo;-><init>(Ljava/lang/String;Z)V
+    # :try_end_2
+    # .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    # .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 14
-    :try_start_4
-    invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
+    # .line 13
+    # :try_start_3
+    # iget-object v2, p0, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy;->a:Landroid/content/Context;
 
-    move-result-object v5
+    # invoke-virtual {v2, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+    # :try_end_3
+    # .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    const-string v6, "Exception in binding to Google Play Service to capture AdvertisingId"
+    # return-object v5
 
-    invoke-interface {v5, v4, v6, v2}, Lcom/twitter/sdk/android/core/Logger;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    # :catchall_0
+    # move-exception v2
 
-    .line 15
-    :try_start_5
-    iget-object v2, p0, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy;->a:Landroid/content/Context;
+    # goto :goto_0
 
-    invoke-virtual {v2, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+    # :catch_0
+    # move-exception v2
 
-    goto :goto_1
+    # .line 14
+    # :try_start_4
+    # invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
 
-    :goto_0
-    iget-object v5, p0, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy;->a:Landroid/content/Context;
+    # move-result-object v5
 
-    invoke-virtual {v5, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+    # const-string v6, "Exception in binding to Google Play Service to capture AdvertisingId"
 
-    throw v2
+    # invoke-interface {v5, v4, v6, v2}, Lcom/twitter/sdk/android/core/Logger;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    # :try_end_4
+    # .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 16
-    :cond_1
-    invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
+    # .line 15
+    # :try_start_5
+    # iget-object v2, p0, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy;->a:Landroid/content/Context;
 
-    move-result-object v1
+    # invoke-virtual {v2, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    invoke-interface {v1, v4, v0}, Lcom/twitter/sdk/android/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+    # goto :goto_1
 
-    goto :goto_1
+    # :goto_0
+    # iget-object v5, p0, Lcom/twitter/sdk/android/core/u/AdvertisingInfoServiceStrategy;->a:Landroid/content/Context;
 
-    :catchall_1
-    move-exception v1
+    # invoke-virtual {v5, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 17
-    invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
+    # throw v2
 
-    move-result-object v2
+    # .line 16
+    # :cond_1
+    # invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
 
-    invoke-interface {v2, v4, v0, v1}, Lcom/twitter/sdk/android/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    # move-result-object v1
 
-    :goto_1
-    return-object v3
+    # invoke-interface {v1, v4, v0}, Lcom/twitter/sdk/android/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    # :try_end_5
+    # .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    :catch_1
-    move-exception v0
+    # goto :goto_1
 
-    .line 18
-    invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
+    # :catchall_1
+    # move-exception v1
 
-    move-result-object v1
+    # .line 17
+    # invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
 
-    const-string v2, "Unable to determine if Google Play Services is available"
+    # move-result-object v2
 
-    invoke-interface {v1, v4, v2, v0}, Lcom/twitter/sdk/android/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    # invoke-interface {v2, v4, v0, v1}, Lcom/twitter/sdk/android/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object v3
+    # :goto_1
+    # return-object v3
 
-    .line 19
-    :catch_2
-    invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
+    # :catch_1
+    # move-exception v0
 
-    move-result-object v0
+    # .line 18
+    # invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
 
-    const-string v1, "Unable to find Google Play Services package name"
+    # move-result-object v1
 
-    invoke-interface {v0, v4, v1}, Lcom/twitter/sdk/android/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    # const-string v2, "Unable to determine if Google Play Services is available"
+
+    # invoke-interface {v1, v4, v2, v0}, Lcom/twitter/sdk/android/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    # return-object v3
+
+    # .line 19
+    # :catch_2
+    # invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
+
+    # move-result-object v0
+
+    # const-string v1, "Unable to find Google Play Services package name"
+
+    # invoke-interface {v0, v4, v1}, Lcom/twitter/sdk/android/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v3
 .end method

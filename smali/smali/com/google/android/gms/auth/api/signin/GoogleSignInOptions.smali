@@ -403,6 +403,10 @@
 
     const-string v4, "com.google"
 
+    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
     invoke-direct {v3, v2, v4}, Landroid/accounts/Account;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v8, v3

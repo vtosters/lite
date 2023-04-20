@@ -29,6 +29,7 @@ public class Preferences {
         StrictMode.setThreadPolicy(policy);
 
         GmsUtils.fixGapps();
+        GmsUtils.applyGMSReceiver();
         setProxy();
         setupFilters();
         VTVerifications.load(application);
