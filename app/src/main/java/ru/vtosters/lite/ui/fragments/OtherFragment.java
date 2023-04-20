@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.*;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.webkit.WebView;
@@ -71,6 +72,20 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("applicationstop").setOnPreferenceClickListener(preference -> {
             System.exit(0);
+
+            return true;
+        });
+
+        findPreference("microgsettings").setVisible(GmsUtils.isFakeGmsInstalled() && !GmsUtils.isGmsInstalled());
+
+        findPreference("microgsettings").setOnPreferenceClickListener(preference -> {
+            try {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.setComponent(new ComponentName("com.mgoogle.android.gms","org.microg.gms.ui.SettingsActivity"));
+                startActivity(intent);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             return true;
         });
 

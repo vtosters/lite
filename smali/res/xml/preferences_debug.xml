@@ -19,6 +19,10 @@
                 android:title="@string/franimation"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
+                android:key="forceMicrogUsage"
+                android:title="Использовать MicroG"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
                 android:key="useGenius"
                 android:summary="@string/useGenius_summ"
                 android:title="@string/useGenius_title"/>

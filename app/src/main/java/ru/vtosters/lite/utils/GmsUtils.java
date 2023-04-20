@@ -11,11 +11,11 @@ import com.google.firebase.iid.FirebaseInstanceIdReceiver2;
 import com.vtosters.lite.R;
 
 public class GmsUtils {
-    public static boolean needToSpoof = !isGmsInstalled() && isFakeGmsInstalled();
+    private static final boolean needToSpoof = !isGmsInstalled() && isFakeGmsInstalled();
     public static boolean isGmsInstalled() {
         try {
             AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("com.google.android.gms", 0);
-            return true;
+            return !Preferences.getBoolValue("forceMicrogUsage", false);
         } catch (Exception unused) {
             return false;
         }
