@@ -2310,7 +2310,6 @@
         <receiver
                 android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver2"
                 android:exported="true"
-                android:enabled="false"
                 android:permission="com.mgoogle.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.mgoogle.android.c2dm.intent.RECEIVE" />

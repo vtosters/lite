@@ -81,6 +81,10 @@
 
     const-string v0, "content://com.google.android.gsf.gservices"
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -89,6 +93,10 @@
 
     const-string v0, "content://com.google.android.gsf.gservices/prefix"
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+    
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

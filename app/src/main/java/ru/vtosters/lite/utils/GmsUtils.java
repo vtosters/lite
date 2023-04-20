@@ -15,7 +15,7 @@ public class GmsUtils {
     public static boolean isGmsInstalled() {
         try {
             AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("com.google.android.gms", 0);
-            return !Preferences.getBoolValue("forceMicrogUsage", false);
+            return true;
         } catch (Exception unused) {
             return false;
         }
@@ -44,33 +44,21 @@ public class GmsUtils {
         }
     } // Music channels fix
 
-    public static void applyGMSReceiver() {
-        int flagSpoofed = needToSpoof ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
-        int flagOrig = !needToSpoof ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
-
-        ComponentName spoofed = new ComponentName(AndroidUtils.getGlobalContext(), FirebaseInstanceIdReceiver2.class);
-        ComponentName orig = new ComponentName(AndroidUtils.getGlobalContext(), FirebaseInstanceIdReceiver.class);
-
-        if (isComponentEnabled(orig) && needToSpoof || isComponentEnabled(spoofed) && !needToSpoof) {
-            setComponentEnabled(spoofed, flagSpoofed);
-            setComponentEnabled(orig, flagOrig);
-        }
-    }
-
     private static boolean isComponentEnabled(ComponentName componentName) {
-        return AndroidUtils.getGlobalContext().getPackageManager().getComponentEnabledSetting(componentName) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+        return AndroidUtils.getGlobalContext().getPackageManager().getComponentEnabledSetting(componentName) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED || AndroidUtils.getGlobalContext().getPackageManager().getComponentEnabledSetting(componentName) == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT;
     }
 
     private static void setComponentEnabled(ComponentName componentName, int newState) {
         AndroidUtils.getGlobalContext().getPackageManager().setComponentEnabledSetting(componentName, newState, PackageManager.DONT_KILL_APP);
+        AndroidUtils.getGlobalContext().getPackageManager().setComponentEnabledSetting(componentName, newState, PackageManager.DONT_KILL_APP);
     }
 
     public static String replaceGMSPackage(String str) {
-        return needToSpoof ? str.replace("com.google", "com.mgoogle") : str;
+        return needToSpoof ? str.replaceAll("com.google", "com.mgoogle") : str;
     }
 
     public static String getFirebaseInstanceIdReceiver() {
-        return "com.google.firebase.iid.FirebaseInstanceIdReceiver" + (needToSpoof ? "2" : "");
+        return getFirebaseInstanceIdReceiverClass().getName();
     }
 
     public static Class getFirebaseInstanceIdReceiverClass() {
