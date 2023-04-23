@@ -79,12 +79,12 @@ public class VideoDownloader {
             qualities.add("720p");
             urls.add(videoFile.h);
         }
-        
+
         if (!TextUtils.isEmpty(videoFile.g)) {
             qualities.add("480p");
             urls.add(videoFile.g);
         }
-        
+
         if (!TextUtils.isEmpty(videoFile.f)) {
             qualities.add("360p");
             urls.add(videoFile.f);
@@ -105,12 +105,12 @@ public class VideoDownloader {
                 finalContext,
                 android.R.layout.simple_list_item_1,
                 qualities.toArray(new String[0])) {
-                    @Override
-                    public View getView(int position, View convertView, ViewGroup parent) {
-                        TextView textView = (TextView) super.getView(position, convertView, parent);
-                        textView.setTextColor(getTextAttr());
-                        return textView;
-                }
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                TextView textView = (TextView) super.getView(position, convertView, parent);
+                textView.setTextColor(getTextAttr());
+                return textView;
+            }
         };
 
         new VkAlertDialog.Builder(finalContext)

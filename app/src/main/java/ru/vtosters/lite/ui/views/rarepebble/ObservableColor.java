@@ -9,15 +9,15 @@ public class ObservableColor {
 
     // Store as HSV & A, otherwise round-trip to int causes color drift.
     private final float[] hsv = {0, 0, 0};
-    private int alpha;
     private final List<ColorObserver> observers = new ArrayList<ColorObserver>();
+    private int alpha;
 
     public ObservableColor(int color) {
         Color.colorToHSV(color, hsv);
         alpha = Color.alpha(color);
     }
 
-    public void getHsv(float hsvOut[]) {
+    public void getHsv(float[] hsvOut) {
         hsvOut[0] = hsv[0];
         hsvOut[1] = hsv[1];
         hsvOut[2] = hsv[2];
@@ -50,7 +50,7 @@ public class ObservableColor {
     public float getLightnessWithValue(float value) {
         float[] hsV = {hsv[0], hsv[1], value};
         final int color = Color.HSVToColor(hsV);
-        return (Color.red(color) * 0.2126f + Color.green(color) * 0.7152f + Color.blue(color) * 0.0722f)/0xff;
+        return (Color.red(color) * 0.2126f + Color.green(color) * 0.7152f + Color.blue(color) * 0.0722f) / 0xff;
     }
 
     public void addObserver(ColorObserver observer) {

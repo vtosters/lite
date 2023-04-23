@@ -1,22 +1,20 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.translators.BaseTranslator;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import ru.vtosters.lite.translators.BaseTranslator;
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 public class Translate {
     private static final Executor ASYNC_EXECUTOR
@@ -29,7 +27,7 @@ public class Translate {
         if (translator == null) return;
         ASYNC_EXECUTOR.execute(() -> {
             try {
-                var translation = translator.getTranslation(text);
+                String translation = translator.getTranslation(text);
                 MAIN_EXECUTOR.execute(() -> showDialog(context, translation));
             } catch (Exception e) {
                 Log.e("Translate", String.valueOf(e));

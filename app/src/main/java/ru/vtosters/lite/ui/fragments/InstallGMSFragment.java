@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.os.Bundle;
-
 import com.vtosters.lite.R;
 
 public class InstallGMSFragment extends TrackedMaterialPreferenceToolbarFragment {

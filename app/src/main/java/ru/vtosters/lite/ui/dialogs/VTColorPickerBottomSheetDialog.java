@@ -2,10 +2,8 @@ package ru.vtosters.lite.ui.dialogs;
 
 import android.app.Activity;
 import android.widget.LinearLayout;
-
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import ru.vtosters.lite.ui.adapters.ColorPickerAdapter;
 import ru.vtosters.lite.ui.vkui.ModalBottomSheetWrapper;
 import ru.vtosters.lite.utils.LayoutUtils;

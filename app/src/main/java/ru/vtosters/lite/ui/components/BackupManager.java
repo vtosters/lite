@@ -1,35 +1,29 @@
 package ru.vtosters.lite.ui.components;
 
-import static android.os.Environment.DIRECTORY_DOWNLOADS;
-import static android.os.Environment.getExternalStoragePublicDirectory;
-import static android.widget.Toast.LENGTH_LONG;
-import static android.widget.Toast.LENGTH_SHORT;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
-
 import com.vtosters.lite.R;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.IOUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.IOUtils;
-import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.Preferences;
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
+import static android.os.Environment.getExternalStoragePublicDirectory;
+import static android.widget.Toast.LENGTH_LONG;
+import static android.widget.Toast.LENGTH_SHORT;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class BackupManager {
 
@@ -74,7 +68,7 @@ public class BackupManager {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             LifecycleUtils.getCurrentActivity().requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
         }
-        
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
         var file = new File(sBackupDir,
                 "Backup_" + dateFormat.format(new Date()) + ".xml");

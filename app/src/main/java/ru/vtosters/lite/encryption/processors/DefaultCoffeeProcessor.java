@@ -1,14 +1,12 @@
 package ru.vtosters.lite.encryption.processors;
 
 import android.util.Base64;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import ru.vtosters.lite.encryption.base.IMProcessor;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
-
-import ru.vtosters.lite.encryption.base.IMProcessor;
 
 public class DefaultCoffeeProcessor extends IMProcessor {
     private final static String KEY = "stupidUsersMustD";

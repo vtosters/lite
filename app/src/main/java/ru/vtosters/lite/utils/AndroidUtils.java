@@ -18,8 +18,6 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.Screen;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
-import ru.vtosters.lite.BuildConfig;
-import ru.vtosters.lite.hooks.DateHook;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -28,7 +26,6 @@ import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 
@@ -229,6 +226,6 @@ public class AndroidUtils {
     }
 
     public static String upString(String s) {
-        return s.substring(0,1).toUpperCase() + s.substring(1).toLowerCase();
+        return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
     }
 }

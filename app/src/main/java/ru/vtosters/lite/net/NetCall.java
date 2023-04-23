@@ -7,11 +7,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.PasswordAuthentication;
-import java.net.Proxy;
-import java.net.URL;
-import java.net.URLEncoder;
+import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.TreeMap;
@@ -20,7 +16,7 @@ public final class NetCall {
     private final NetRequest req;
     private final NetClient cl;
 
-    protected NetCall(NetClient cl, NetRequest req) {
+    NetCall(NetClient cl, NetRequest req) {
         this.req = req;
         this.cl = cl;
     }

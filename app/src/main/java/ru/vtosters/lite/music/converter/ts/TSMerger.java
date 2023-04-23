@@ -1,6 +1,7 @@
 package ru.vtosters.lite.music.converter.ts;
 
 import android.os.Build;
+import ru.vtosters.lite.utils.IOUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -8,8 +9,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Arrays;
-
-import ru.vtosters.lite.utils.IOUtils;
 
 public class TSMerger {
     /**

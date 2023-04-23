@@ -45,7 +45,7 @@ public class ValueView extends SliderViewBase implements ColorObserver {
         observableColor.getHsv(hsv);
 
         for (int i = 0; i < n; ++i) {
-            hsv[2] = isWide ? (float)i / n : 1 - (float)i / n;
+            hsv[2] = isWide ? (float) i / n : 1 - (float) i / n;
             colors[i] = Color.HSVToColor(hsv);
         }
         final int bmpWidth = isWide ? w : 1;

@@ -182,6 +182,19 @@ enum ImageEffects {
         this.title = title;
     }
 
+    public static Boolean hasEffects() {
+        return !Preferences.getString("msg_Blur").contains("disabled") && !Preferences.getString("msg_Blur").isEmpty() ||
+                !Preferences.getString("msg_Dim").contains("disabled") && !Preferences.getString("msg_Dim").isEmpty() ||
+                !Preferences.getString("msg_Mosaic").contains("disabled") && !Preferences.getString("msg_Mosaic").isEmpty() ||
+                Preferences.getBoolValue("msg_Emboss", false) ||
+                Preferences.getBoolValue("msg_Sepia", false) ||
+                Preferences.getBoolValue("msg_Invert", false) ||
+                Preferences.getBoolValue("msg_Snow", false) ||
+                Preferences.getBoolValue("msg_Flea", false) ||
+                Preferences.getBoolValue("msg_Engrave", false) ||
+                Preferences.getBoolValue("msg_Monochrome", false);
+    }
+
     public String getTitle() {
         return title;
     }
@@ -216,19 +229,6 @@ enum ImageEffects {
 
     protected boolean isApplied() {
         return Preferences.getPreferences().getBoolean(this.toString(), false);
-    }
-
-    public static Boolean hasEffects() {
-        return !Preferences.getString("msg_Blur").contains("disabled") && !Preferences.getString("msg_Blur").isEmpty() ||
-                !Preferences.getString("msg_Dim").contains("disabled") && !Preferences.getString("msg_Dim").isEmpty() ||
-                !Preferences.getString("msg_Mosaic").contains("disabled") && !Preferences.getString("msg_Mosaic").isEmpty() ||
-                Preferences.getBoolValue("msg_Emboss", false) ||
-                Preferences.getBoolValue("msg_Sepia", false) ||
-                Preferences.getBoolValue("msg_Invert", false) ||
-                Preferences.getBoolValue("msg_Snow", false) ||
-                Preferences.getBoolValue("msg_Flea", false) ||
-                Preferences.getBoolValue("msg_Engrave", false) ||
-                Preferences.getBoolValue("msg_Monochrome", false);
     }
 
     @NonNull

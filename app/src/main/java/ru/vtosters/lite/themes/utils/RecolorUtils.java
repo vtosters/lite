@@ -9,7 +9,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.widget.TextView;
 import com.vk.core.drawable.RecoloredDrawable;
-import ru.vtosters.lite.R;
 import ru.vtosters.lite.themes.ColorReferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;

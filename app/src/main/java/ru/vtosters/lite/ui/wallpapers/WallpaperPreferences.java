@@ -13,11 +13,7 @@ import com.vtosters.lite.R;
 import ru.vtosters.lite.ui.adapters.MessagesPreviewAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
 
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-
 public class WallpaperPreferences extends Preference {
-
     RecyclerView mRecyclerView;
     ImageView mChatBackground;
     private MessagesPreviewAdapter mAdapter;
@@ -44,7 +40,7 @@ public class WallpaperPreferences extends Preference {
         super.onBindViewHolder(preferenceViewHolder);
 
         mRecyclerView = (RecyclerView) preferenceViewHolder.findViewById(R.id.install_btn_container);
-        mRecyclerView.setPadding(0, dp2px(8), 0, 0);
+        mRecyclerView.setPadding(0, AndroidUtils.dp2px(8), 0, 0);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setAdapter((mAdapter = new MessagesPreviewAdapter(AndroidUtils.getArray(R.array.wallpaper_change_dialog))));
         mRecyclerView.setClickable(false);
@@ -55,7 +51,7 @@ public class WallpaperPreferences extends Preference {
     }
 
     private void requestBg() {
-        final Drawable drawable = getWallpaper();
+        final Drawable drawable = WallpapersHooks.getWallpaper();
         mChatBackground.setImageDrawable(drawable);
     }
 

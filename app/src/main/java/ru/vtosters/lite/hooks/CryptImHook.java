@@ -1,11 +1,5 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.dnr.DNRInjector.forceInvalidateDialogActions;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -13,17 +7,21 @@ import android.text.Editable;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.encryption.EncryptProvider;
+import ru.vtosters.lite.encryption.base.IMProcessor;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.List;
 import java.util.Objects;
 
-import ru.vtosters.lite.encryption.EncryptProvider;
-import ru.vtosters.lite.encryption.base.IMProcessor;
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.dnr.DNRInjector.forceInvalidateDialogActions;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
+import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 
 public class CryptImHook {
     public static boolean isPrivateProcessor(int peerID) {

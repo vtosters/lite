@@ -215,7 +215,7 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
                     ThemesManager.generateModApk(color);
                     requireActivity().runOnUiThread(this::restart);
                 } catch (Throwable e) {
-                    Log.e("ThemesFragment", e + "");
+                    Log.e("ThemesFragment", String.valueOf(e));
                     ThemesManager.deleteModification();
                     requireActivity().runOnUiThread(() -> {
                         dialog.dismiss();

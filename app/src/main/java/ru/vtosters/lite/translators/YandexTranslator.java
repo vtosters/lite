@@ -1,19 +1,16 @@
 package ru.vtosters.lite.translators;
 
 import android.util.Log;
-
 import androidx.annotation.NonNull;
-
-import org.json.JSONObject;
-
-import java.net.URLEncoder;
-import java.util.UUID;
-
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
+import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+
+import java.net.URLEncoder;
+import java.util.UUID;
 
 public class YandexTranslator extends BaseTranslator {
 

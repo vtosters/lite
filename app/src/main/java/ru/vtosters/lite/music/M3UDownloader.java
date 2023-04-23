@@ -33,6 +33,19 @@ public class M3UDownloader implements ITrackDownloader {
         return Holder.INSTANCE;
     }
 
+    public static String getTitle(MusicTrack track) {
+        String title = null;
+
+        if (track.f != null) {
+            title = track.f;
+            if (!track.g.isEmpty()) {
+                title += " (" + track.g + ")";
+            }
+        }
+
+        return title;
+    }
+
     public void downloadTrack(MusicTrack track, File outDir, Callback callback, boolean cache) {
         if (track.D.isEmpty()) {
             Log.d("TrackDownloader", "link error: " + track.y1() + ", title: " + M3UDownloader.getTitle(track));
@@ -88,7 +101,8 @@ public class M3UDownloader implements ITrackDownloader {
                     IOUtils.writeToFile(tsDump, content);
                     callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
                     callback.onSizeReceived((long) content.length * tses.size(), parser.getHeapSize());
-                } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidAlgorithmParameterException | InvalidKeyException e) {
+                } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException |
+                         InvalidAlgorithmParameterException | InvalidKeyException e) {
                     callback.onFailure();
                     throw new RuntimeException(e);
                 }
@@ -105,19 +119,6 @@ public class M3UDownloader implements ITrackDownloader {
             else callback.onFailure();
             return convertResult;
         }).thenRun(() -> IOUtils.deleteRecursive(tsesDir)).thenRun(callback::onSuccess);
-    }
-
-    public static String getTitle(MusicTrack track) {
-        String title = null;
-
-        if (track.f != null) {
-            title = track.f;
-            if (!track.g.isEmpty()) {
-                title += " (" + track.g + ")";
-            }
-        }
-
-        return title;
     }
 
     // Initialization-on-demand

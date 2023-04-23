@@ -1,27 +1,20 @@
 package ru.vtosters.lite.encryption;
 
-import static ru.vtosters.lite.hooks.MessagesHook.injectOwnText;
-import static ru.vtosters.lite.hooks.MessagesHook.injectOwnTextAll;
-
 import android.util.Log;
 import android.util.Pair;
-
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.models.messages.MsgFromUser;
 import com.vk.im.ui.components.msg_list.MsgListComponent;
+import ru.vtosters.lite.encryption.base.IMProcessor;
+import ru.vtosters.lite.encryption.processors.*;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.vtosters.lite.encryption.base.IMProcessor;
-import ru.vtosters.lite.encryption.processors.BeeCryptProcessor;
-import ru.vtosters.lite.encryption.processors.DefaultCoffeeProcessor;
-import ru.vtosters.lite.encryption.processors.DonateCoffeeProcessor;
-import ru.vtosters.lite.encryption.processors.MP3InvisibleProcessor;
-import ru.vtosters.lite.encryption.processors.VTostersAESProcessor;
-import ru.vtosters.lite.encryption.processors.VTostersProcessor;
+import static ru.vtosters.lite.hooks.MessagesHook.injectOwnText;
+import static ru.vtosters.lite.hooks.MessagesHook.injectOwnTextAll;
 
 public class EncryptProvider {
     public static List<IMProcessor> processors = new ArrayList<>();

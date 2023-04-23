@@ -39,6 +39,7 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
                 + AndroidUtils.getString(R.string.chat_export_header)
                 + " (" + date + ")</h5></div><div class=\"vtex-milk-msgcont\">";
     }
+
     @Override
     public String provideMessage(MiniMsg message, MiniUser user) throws JSONException {
         String isOut = (user.id == getUserId()) ? " vtex-milk-msg-out" : "";
@@ -64,8 +65,8 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
 
         return "<div class=\"vtex-milk-msg" + isOut + "\" id=\"" + message.id + "\">" +
                 "<p class=\"msg-from\">" + AndroidUtils.getString(R.string.from_lower)
-                    + " <a href=\"https://" + Constants.VK_DOMAIN + "/" + userLink + "\">" + user.firstName + " " + user.lastName
-                    + "</a> <span class=\"msg-from-date\">" + MessagesDownloader.formatTime(message.date) + "</span></p>" + // TODO photo100
+                + " <a href=\"https://" + Constants.VK_DOMAIN + "/" + userLink + "\">" + user.firstName + " " + user.lastName
+                + "</a> <span class=\"msg-from-date\">" + MessagesDownloader.formatTime(message.date) + "</span></p>" + // TODO photo100
                 "<p class=\"msg-body\">" + mentionsReplace(message.text) + "</p>" +
                 geoPosition +
                 chatAction +

@@ -14,13 +14,14 @@ public class ImageUtils {
     // must be called asynchronously
     public static Drawable getDrawableFromUrl(String url, int placeholderRes, boolean rounded, boolean scaled) {
 
-        if (NetworkUtils.isNetworkConnected() && !NetworkUtils.isNetworkIsSlow()) {
+        if (NetworkUtils.isNetworkConnected()) {
             try {
                 var bmp = BitmapFactory.decodeStream(new URL(url).openStream());
 
                 if (bmp != null) {
                     if (rounded) bmp = getBitmapClippedCircle(bmp);
-                    if (scaled) bmp = Bitmap.createScaledBitmap(bmp, AndroidUtils.dp2px(256), AndroidUtils.dp2px(256), true);
+                    if (scaled)
+                        bmp = Bitmap.createScaledBitmap(bmp, AndroidUtils.dp2px(256), AndroidUtils.dp2px(256), true);
 
                     return new BitmapDrawable(AndroidUtils.getResources(), bmp);
                 }

@@ -2,18 +2,10 @@ package ru.vtosters.lite.themes;
 
 import android.view.View;
 import android.view.ViewGroup;
+import ru.vtosters.lite.themes.hooks.*;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.util.ArrayList;
-
-import ru.vtosters.lite.themes.hooks.BaseHook;
-import ru.vtosters.lite.themes.hooks.ButtonHook;
-import ru.vtosters.lite.themes.hooks.ImageViewHook;
-import ru.vtosters.lite.themes.hooks.ProgressWheelHook;
-import ru.vtosters.lite.themes.hooks.TabLayoutHook;
-import ru.vtosters.lite.themes.hooks.TextViewHook;
-import ru.vtosters.lite.themes.hooks.ToolbarHook;
-import ru.vtosters.lite.themes.hooks.VKImageViewHook;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ViewInjector {
     public static ArrayList<BaseHook> hooks = new ArrayList<>();

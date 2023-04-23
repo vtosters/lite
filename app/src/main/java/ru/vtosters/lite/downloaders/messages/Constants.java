@@ -90,7 +90,6 @@ public class Constants {
             "}\n" +
             ".vtex-milk-msg.poll p { color: white; }\n" +
             ".vtex-milk-msg.poll hr { border-top: 1px; background: #ffffff; }\n" +
-            "\n" +
-            "";
+            "\n";
 
 }

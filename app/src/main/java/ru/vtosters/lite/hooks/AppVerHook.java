@@ -1,8 +1,8 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-
 import b.h.g.g.BuildInfo;
+
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class AppVerHook {
     public static int appBuild() {

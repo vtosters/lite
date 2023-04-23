@@ -1,20 +1,18 @@
 package ru.vtosters.lite.dnr.helpers;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import ru.vtosters.lite.dnr.DNRPrefs;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.vtosters.lite.dnr.DNRPrefs;
-
 public class DoNotTypeDBHelper extends SQLiteOpenHelper {
     public DoNotTypeDBHelper() {
-        super(getGlobalContext(), "dnt", null, 1);
+        super(AndroidUtils.getGlobalContext(), "dnt", null, 1);
     }
 
     @Override

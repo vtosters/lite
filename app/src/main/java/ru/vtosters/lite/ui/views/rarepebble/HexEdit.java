@@ -9,11 +9,11 @@ import android.widget.EditText;
 
 class HexEdit {
 
-    private static InputFilter[] withoutAlphaDigits = {
+    private static final InputFilter[] withoutAlphaDigits = {
             new ColorPasteLengthFilter(),
             new HexFilter()
     };
-    private static InputFilter[] withAlphaDigits = {
+    private static final InputFilter[] withAlphaDigits = {
             new InputFilter.LengthFilter(8),
             new HexFilter()
     };
@@ -65,9 +65,8 @@ class HexEdit {
 
     private static int parseHexColor(CharSequence s) {
         try {
-            return (int)(Long.parseLong(s.toString(), 16) & 0xffffffffL);
-        }
-        catch (NumberFormatException e) {
+            return (int) (Long.parseLong(s.toString(), 16) & 0xffffffffL);
+        } catch (NumberFormatException e) {
             return Color.GRAY;
         }
     }
@@ -92,8 +91,7 @@ class HexEdit {
             if (srcLength == PASTED_LEN && dstSelLength == dest.length()) {
                 // Discard alpha digits:
                 return source.subSequence(PASTED_LEN - MAX_LENGTH, PASTED_LEN);
-            }
-            else {
+            } else {
                 return sixDigitFilter.filter(source, start, end, dest, dstart, dend);
             }
         }
@@ -103,10 +101,10 @@ class HexEdit {
 
         @Override
         public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
-            var state = true;
+            boolean state = true;
             for (int i = start; i < end; i++) {
                 char ch = source.charAt(i);
-                if (ch < '0' || ch> '9' && ch < 'A' || ch > 'F' && ch < 'a' || ch > 'f') {
+                if (ch < '0' || ch > '9' && ch < 'A' || ch > 'F' && ch < 'a' || ch > 'f') {
                     state = false;
                     break;
                 }

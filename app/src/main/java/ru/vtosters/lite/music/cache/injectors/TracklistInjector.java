@@ -1,34 +1,28 @@
 package ru.vtosters.lite.music.cache.injectors;
 
-import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.hasTracks;
-import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogHeader;
-import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogPlaylist;
-import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getCatalogSeparator;
-import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.getPlaylist;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
-
 import android.util.Log;
-
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.catalog2.core.CatalogParser;
 import com.vk.catalog2.core.api.dto.CatalogResponse;
 import com.vk.dto.music.MusicTrack;
 import com.vtosters.lite.R;
-
+import io.reactivex.Observable;
+import io.reactivex.ObservableOnSubscribe;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.NetworkUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
-import io.reactivex.Observable;
-import io.reactivex.ObservableOnSubscribe;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
-import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.NetworkUtils;
+import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.hasTracks;
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 
 public class TracklistInjector {
 

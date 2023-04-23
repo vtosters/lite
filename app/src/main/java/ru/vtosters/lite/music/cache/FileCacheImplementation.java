@@ -1,13 +1,11 @@
 package ru.vtosters.lite.music.cache;
 
 import android.net.Uri;
-
 import com.vk.dto.music.MusicTrack;
-
-import java.io.File;
-
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
+
+import java.io.File;
 
 public class FileCacheImplementation {
 

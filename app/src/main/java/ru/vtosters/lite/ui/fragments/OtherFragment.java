@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui.fragments;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.*;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.webkit.WebView;
@@ -35,6 +34,7 @@ import ru.vtosters.lite.utils.*;
 
 public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
+
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -81,7 +81,7 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
         findPreference("microgsettings").setOnPreferenceClickListener(preference -> {
             try {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.setComponent(new ComponentName("com.mgoogle.android.gms","org.microg.gms.ui.SettingsActivity"));
+                intent.setComponent(new ComponentName("com.mgoogle.android.gms", "org.microg.gms.ui.SettingsActivity"));
                 startActivity(intent);
             } catch (Exception e) {
                 e.printStackTrace();

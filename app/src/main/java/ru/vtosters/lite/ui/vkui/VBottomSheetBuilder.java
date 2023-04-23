@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-
 import androidx.annotation.Nullable;
 
 public class VBottomSheetBuilder {

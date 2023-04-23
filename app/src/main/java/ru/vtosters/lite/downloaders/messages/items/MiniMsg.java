@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
+
 public class MiniMsg {
     public long date;
     public int fromId;

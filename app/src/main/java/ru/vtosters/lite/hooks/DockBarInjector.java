@@ -1,34 +1,9 @@
 package ru.vtosters.lite.hooks;
 
-import static com.vtosters.lite.R.id.menu_fave;
-import static com.vtosters.lite.R.id.menu_feedback;
-import static com.vtosters.lite.R.id.menu_friends;
-import static com.vtosters.lite.R.id.menu_games;
-import static com.vtosters.lite.R.id.menu_groups;
-import static com.vtosters.lite.R.id.menu_messages;
-import static com.vtosters.lite.R.id.menu_newsfeed;
-import static com.vtosters.lite.R.id.menu_photos;
-import static com.vtosters.lite.R.id.menu_search;
-import static com.vtosters.lite.R.id.menu_videos;
-import static com.vtosters.lite.R.id.menu_vk_pay;
-import static com.vtosters.lite.R.id.tab_discover;
-import static com.vtosters.lite.R.id.tab_feedback;
-import static com.vtosters.lite.R.id.tab_menu;
-import static com.vtosters.lite.R.id.tab_messages;
-import static com.vtosters.lite.R.id.tab_news;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.Preferences.dockcounter;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
-import static ru.vtosters.lite.utils.ThemesUtils.getCSTDock;
-
 import android.annotation.SuppressLint;
-import android.graphics.drawable.Drawable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
-
 import com.vk.apps.AppsFragment;
 import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.fragments.FragmentImpl;
@@ -37,22 +12,22 @@ import com.vk.navigation.right.RightMenu;
 import com.vtosters.lite.MenuCountersState;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationMenuView;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationView;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.ui.components.DockBarEditorManager;
+import ru.vtosters.lite.ui.items.DockBarTab;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-import ru.vtosters.lite.ui.components.DockBarEditorManager;
-import ru.vtosters.lite.ui.items.DockBarTab;
+import static com.vtosters.lite.R.id.*;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getResources;
+import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.ThemesUtils.getCSTDock;
 
 public class DockBarInjector {
     private static final DockBarEditorManager sManager = DockBarEditorManager.getInstance();
@@ -83,7 +58,7 @@ public class DockBarInjector {
             }
 
         } catch (NoSuchFieldException | IllegalAccessException | ClassNotFoundException |
-                NoSuchMethodException | InvocationTargetException e) {
+                 NoSuchMethodException | InvocationTargetException e) {
             e.printStackTrace();
         }
 

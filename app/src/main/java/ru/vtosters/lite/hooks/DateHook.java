@@ -1,17 +1,15 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.Preferences.getString;
-import static ru.vtosters.lite.utils.AndroidUtils.getStringDate;
-
 import android.annotation.SuppressLint;
-
 import com.vtosters.lite.R;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.utils.AndroidUtils.getStringDate;
+import static ru.vtosters.lite.utils.Preferences.getString;
 
 public class DateHook {
     public static boolean fulltime() {

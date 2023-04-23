@@ -1,5 +1,10 @@
 package ru.vtosters.lite.utils;
 
+import javax.crypto.Cipher;
+import javax.crypto.CipherInputStream;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
@@ -10,23 +15,17 @@ import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
-import javax.crypto.Cipher;
-import javax.crypto.CipherInputStream;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
-
 public class IOUtils {
     public static final int BUFFER_SIZE = 8192;
 
     public static byte[] decodeStream(InputStream encIs, String keyURL)
-        throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
+            throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
         CipherInputStream cip = new CipherInputStream(encIs, getCipher(keyURL));
         return readFully(cip);
     }
 
     public static Cipher getCipher(String key)
-        throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException {
+            throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException {
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         Key keySpec = new SecretKeySpec(key.getBytes(), "AES");
         // bypassing ecb
@@ -38,70 +37,70 @@ public class IOUtils {
     }
 
     public static InputStream openStream(String url)
-        throws IOException {
+            throws IOException {
         URLConnection connection = new URL(url).openConnection();
         return connection.getInputStream();
     }
 
     public static String readAllLines(File file)
-        throws IOException {
+            throws IOException {
         return readAllLines(new FileInputStream(file));
     }
 
     public static String readAllLines(InputStream is)
-        throws IOException {
+            throws IOException {
         return new String(readFully(is), StandardCharsets.UTF_8);
     }
 
     public static byte[] readFully(final InputStream is)
-        throws IOException {
+            throws IOException {
         final var bos = new ByteArrayOutputStream();
-        try(bos) {
+        try (bos) {
             final byte[] buff = new byte[BUFFER_SIZE];
             int len;
-            while((len = is.read(buff)) > 0)
+            while ((len = is.read(buff)) > 0)
                 bos.write(buff, 0, len);
             return bos.toByteArray();
         }
     }
 
     public static byte[] readFully(final File in)
-        throws IOException {
+            throws IOException {
         return readFully(new FileInputStream(in));
     }
 
     public static void writeToFile(File file, String content)
-        throws IOException {
+            throws IOException {
         writeToFile(file, content.getBytes(StandardCharsets.UTF_8));
     }
 
     public static void writeToFile(File file, byte[] content)
-        throws IOException {
+            throws IOException {
         var fos = new FileOutputStream(file);
         fos.write(content);
         fos.close();
     }
 
     public static void copy(final InputStream is, final OutputStream os)
-        throws IOException {
+            throws IOException {
         final byte[] buff = new byte[BUFFER_SIZE];
         int len;
-        while((len = is.read(buff)) > 0)
+        while ((len = is.read(buff)) > 0)
             os.write(buff, 0, len);
     }
 
     public static void copy(final byte[] buffer, final File out)
-        throws IOException {
+            throws IOException {
         copy(new ByteArrayInputStream(buffer), new FileOutputStream(out));
     }
 
     public static void copy(final InputStream is, final File out)
-        throws IOException {
+            throws IOException {
         copy(is, new FileOutputStream(out));
     }
 
     public static void copy(final File in, final File out)
-        throws IOException {
+            throws IOException {
         copy(new FileInputStream(in), new FileOutputStream(out));
     }
 

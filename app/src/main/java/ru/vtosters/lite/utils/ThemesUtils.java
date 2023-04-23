@@ -81,11 +81,11 @@ public class ThemesUtils {
     public static boolean isDarkTheme() {
         return VKThemeHelper.r();
     }
-    
+
     public static boolean isMonetTheme() {
         return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
     }
-    
+
     public static boolean isAmoledTheme() {
         return getBoolValue("amoledtheme", false);
     }
@@ -108,7 +108,7 @@ public class ThemesUtils {
     public static void reserveAccentColor(int accent, boolean async) {
         final var editor = Preferences.getPreferences().edit();
         editor.putInt("reserved_accent_color", accent);
-        if(async) editor.apply();
+        if (async) editor.apply();
         else editor.commit();
     }
 
@@ -122,7 +122,8 @@ public class ThemesUtils {
         try {
             ThemesUtils.colorHandles(view);
             ThemesUtils.setCursorColor((EditText) view);
-        } catch (Exception ignored) {}
+        } catch (Exception ignored) {
+        }
     }
 
     @SuppressLint("DiscouragedPrivateApi")
@@ -159,6 +160,7 @@ public class ThemesUtils {
             Log.e("ThemesUtils", "setCursorColor: ", e);
         }
     }
+
     @SuppressLint("DiscouragedPrivateApi")
     public static void colorHandles(TextView view) {
         try {
@@ -310,7 +312,7 @@ public class ThemesUtils {
         return MilkshakeHelper.e();
     }
 
-    public static void setImageViewColored(ImageView view){
+    public static void setImageViewColored(ImageView view) {
         view.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.MULTIPLY);
     }
 

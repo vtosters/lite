@@ -1,15 +1,7 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -17,22 +9,23 @@ import android.util.SparseArray;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-
 import androidx.core.util.Pair;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.dto.user.UserProfile;
 import com.vk.im.engine.models.users.User;
 import com.vtosters.lite.R;
 import com.vtosters.lite.api.ExtendedCommunityProfile;
 import com.vtosters.lite.api.ExtendedUserProfile;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Field;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+
+import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 public class RenameTool {
     private static final int DB_VERSION = 2;

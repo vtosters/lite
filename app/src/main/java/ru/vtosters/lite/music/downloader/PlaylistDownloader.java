@@ -1,14 +1,12 @@
 package ru.vtosters.lite.music.downloader;
 
 import android.util.Log;
-
 import com.vk.dto.music.MusicTrack;
+import ru.vtosters.lite.music.Callback;
 
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import ru.vtosters.lite.music.Callback;
 
 public class PlaylistDownloader {
     public static void downloadPlaylist(List<MusicTrack> playlist, String playlistName, String path, Callback callback) {

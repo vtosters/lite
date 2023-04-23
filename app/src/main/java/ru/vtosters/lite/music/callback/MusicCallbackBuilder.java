@@ -1,12 +1,9 @@
 package ru.vtosters.lite.music.callback;
 
 import android.util.Log;
-
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
-
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.music.Callback;
 import ru.vtosters.lite.utils.AndroidUtils;

@@ -53,8 +53,8 @@ public class PreferenceFragmentUtils {
             CharSequence[] entriesValue,
             Preference.OnPreferenceChangeListener listener
     ) {
-        var icon = iconRes > 0 
-                ? ImageUtils.setTint(screen.getContext(), ContextCompat.getDrawable(screen.getContext(), iconRes)) 
+        var icon = iconRes > 0
+                ? ImageUtils.setTint(screen.getContext(), ContextCompat.getDrawable(screen.getContext(), iconRes))
                 : null;
         var title = titleRes > 0
                 ? screen.getContext().getString(titleRes)
@@ -84,15 +84,15 @@ public class PreferenceFragmentUtils {
     }
 
     public static ListPreference addListPreference(
-        PreferenceScreen screen,
-        String key,
-        String def,
-        CharSequence title,
-        @Nullable Drawable icon,
-        CharSequence summary,
-        CharSequence[] entries,
-        CharSequence[] entriesValue,
-        Preference.OnPreferenceChangeListener listener
+            PreferenceScreen screen,
+            String key,
+            String def,
+            CharSequence title,
+            @Nullable Drawable icon,
+            CharSequence summary,
+            CharSequence[] entries,
+            CharSequence[] entriesValue,
+            Preference.OnPreferenceChangeListener listener
     ) {
         ListPreference preference = new ListPreference(screen.getContext());
         preference.setEntries(entries);
@@ -155,8 +155,8 @@ public class PreferenceFragmentUtils {
             boolean defValue,
             Preference.OnPreferenceChangeListener listener
     ) {
-        var icon = iconRes > 0 
-                ? ImageUtils.setTint(screen.getContext(), ContextCompat.getDrawable(screen.getContext(), iconRes)) 
+        var icon = iconRes > 0
+                ? ImageUtils.setTint(screen.getContext(), ContextCompat.getDrawable(screen.getContext(), iconRes))
                 : null;
         return addMaterialSwitchPreference(screen, key, title, summary, icon, defValue, listener);
     }

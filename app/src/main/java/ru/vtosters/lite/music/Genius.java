@@ -3,12 +3,11 @@ package ru.vtosters.lite.music;
 import android.text.TextUtils;
 import android.util.Log;
 import com.vk.dto.music.MusicTrack;
+import com.vtosters.lite.R;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.vtosters.lite.R;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AndroidUtils;
 
@@ -18,6 +17,7 @@ public class Genius {
     private static final String KEY = "Bearer ZTejoT_ojOEasIkT9WrMBhBQOz6eYKK5QULCMECmOhvwqjRZ6WbpamFe3geHnvp3";
     private static final String URL = "https://api.genius.com";
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
+
     public static String getTextMusic(MusicTrack musictrack) {
         var uid = musictrack.y1();
         var artist = musictrack.C;

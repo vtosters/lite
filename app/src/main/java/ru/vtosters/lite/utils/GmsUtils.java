@@ -12,6 +12,7 @@ import com.vtosters.lite.R;
 
 public class GmsUtils {
     private static final boolean needToSpoof = !isGmsInstalled() && isFakeGmsInstalled();
+
     public static boolean isGmsInstalled() {
         try {
             AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("com.google.android.gms", 0);

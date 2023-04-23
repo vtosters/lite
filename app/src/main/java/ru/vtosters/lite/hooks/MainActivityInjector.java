@@ -47,7 +47,7 @@ public class MainActivityInjector {
 
         VTExecutors.getIoScheduler().a(DeletedMessagesHandler::reloadMessagesList); // ioScheduler
 
-        if(activity.getIntent().getAction() != null && Intent.ACTION_APPLICATION_PREFERENCES.equals(activity.getIntent().getAction())) {
+        if (activity.getIntent().getAction() != null && Intent.ACTION_APPLICATION_PREFERENCES.equals(activity.getIntent().getAction())) {
             NavigatorUtils.switchToSettings(activity);
             return;
         }
@@ -57,7 +57,7 @@ public class MainActivityInjector {
         DisableBattery.alert(activity);
         // VKIDProtection.alert(activity);
     }
-    
+
     private static void updateBinsAndTmpArchive(Activity activity) {
         final VKProgressDialog dialog = new VKProgressDialog(activity);
 
@@ -68,7 +68,7 @@ public class MainActivityInjector {
             try {
                 ThemesManager.generateModApk(ThemesUtils.getReservedAccent());
                 activity.runOnUiThread(LifecycleUtils::restartApplication);
-            } catch(Throwable e) {
+            } catch (Throwable e) {
                 e.printStackTrace();
                 activity.runOnUiThread(() -> {
                     dialog.cancel();

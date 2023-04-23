@@ -27,7 +27,8 @@ public class ThemesHacks {
             if (Preferences.getBoolValue("logColors", false)) {
                 try {
                     Log.d("ThemesCore", "Requesting color by color " + context.getResources().getResourceName(color));
-                } catch (Exception ignored) {}
+                } catch (Exception ignored) {
+                }
             }
 
             if (ThemesCore.isCachedAccents() && ColorReferences.isAccentedColor(context.getResources().getColor(color))) {

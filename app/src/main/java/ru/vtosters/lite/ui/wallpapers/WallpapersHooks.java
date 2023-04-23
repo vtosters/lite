@@ -7,8 +7,10 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.view.View;
 import android.widget.ImageView;
+import com.vk.im.engine.h;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
 import vigo.sdk.Log;
 
@@ -16,17 +18,11 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.function.Supplier;
 
-import static com.vk.im.engine.h.im_bg_chat;
-import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getFilteredDrawable;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-
 public class WallpapersHooks {
     // TODO: force compress by default not asking user about that?
-    private static final Supplier<Boolean> compress = () -> getBoolValue("compresswp", true);
-    private static final File originalWp = new File(getGlobalContext().getFilesDir(), "wallpaper_new.jpeg");
-    private static final File compressedWp = new File(getGlobalContext().getFilesDir(), "compressedwp_new.jpeg");
+    private static final Supplier<Boolean> compress = () -> Preferences.getBoolValue("compresswp", true);
+    private static final File originalWp = new File(AndroidUtils.getGlobalContext().getFilesDir(), "wallpaper_new.jpeg");
+    private static final File compressedWp = new File(AndroidUtils.getGlobalContext().getFilesDir(), "compressedwp_new.jpeg");
     // TODO: respect blur, when there is blur/mosaic effect applied these two can be even less, just HD (1280x720) for e.g.
     private static final int MAX_WP_WIDTH = 1080;
     private static final int MAX_WP_HEIGHT = 1920;
@@ -38,13 +34,13 @@ public class WallpapersHooks {
         if (hasWallpapers()) {
             ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
         } else {
-            view.setBackgroundColor(ThemesUtils.getColorFromAttr(im_bg_chat)); // set default bg color
+            view.setBackgroundColor(ThemesUtils.getColorFromAttr(h.im_bg_chat)); // set default bg color
         }
     }
 
     public static Drawable getWallpaper() {
-        var oldwp = new File(getGlobalContext().getFilesDir(), "wallpaper.jpeg");
-        var oldwpcompressed = new File(getGlobalContext().getFilesDir(), "compressedwp.jpeg");
+        File oldwp = new File(AndroidUtils.getGlobalContext().getFilesDir(), "wallpaper.jpeg");
+        File oldwpcompressed = new File(AndroidUtils.getGlobalContext().getFilesDir(), "compressedwp.jpeg");
 
         if (oldwp.exists() || oldwpcompressed.exists()) {
             oldwp.delete();
@@ -69,7 +65,7 @@ public class WallpapersHooks {
                 return null;
             }
 
-            mWallpaper = getFilteredDrawable(drawable);
+            mWallpaper = ImageFilters.getFilteredDrawable(drawable);
             mUpdateWallpaperRequested = false;
         }
 
@@ -82,12 +78,12 @@ public class WallpapersHooks {
 //            return false;
 //        }
         try (var f = new FileOutputStream(compressedWp)) {
-            var bitmap = BitmapFactory.decodeFile(originalWp.getAbsolutePath());
+            Bitmap bitmap = BitmapFactory.decodeFile(originalWp.getAbsolutePath());
 
             if (bitmap.getHeight() > MAX_WP_HEIGHT || bitmap.getWidth() > MAX_WP_WIDTH) {
                 bitmap = resize(bitmap, MAX_WP_WIDTH, MAX_WP_HEIGHT);
             }
-            var drawable = new BitmapDrawable(null, bitmap);
+            BitmapDrawable drawable = new BitmapDrawable(null, bitmap);
             // TODO: remove duplication without changes when provided image already fits required params
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -110,7 +106,7 @@ public class WallpapersHooks {
 
     private static Boolean eligibleWallpaperFile(File file) {
         if (file.length() >= 0x600000) {
-            sendToast(AndroidUtils.getString(R.string.wallpaper_size_limit));
+            AndroidUtils.sendToast(AndroidUtils.getString(R.string.wallpaper_size_limit));
             removeWallpaper();
             return false;
         } else {

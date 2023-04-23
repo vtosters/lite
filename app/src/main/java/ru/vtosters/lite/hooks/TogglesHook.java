@@ -1,14 +1,9 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.Preferences.feedcache;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
-import static ru.vtosters.lite.utils.Preferences.miniapps;
-import static ru.vtosters.lite.utils.Preferences.postsredesign;
-import static ru.vtosters.lite.utils.Preferences.superapp;
-
 import com.vk.toggle.FeatureManager;
 import com.vk.toggle.Features;
+
+import static ru.vtosters.lite.utils.Preferences.*;
 
 public class TogglesHook {
     public static boolean shouldPatch(Features.Type feature) {

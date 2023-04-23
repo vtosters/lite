@@ -13,6 +13,7 @@ import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.Preferences;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class MessagesFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
@@ -38,13 +39,13 @@ public class MessagesFragment extends TrackedMaterialPreferenceToolbarFragment {
         findPreference("autotranslate").setEnabled(!Preferences.autoalltranslate());
 
         findPreference("lang_service").setOnPreferenceClickListener(preference -> {
-            var items = Arrays.asList(
+            List<ImagineArrayAdapter.ImagineArrayAdapterItem> items = Arrays.asList(
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.ic_yandex_translate_icon, "Yandex Translate"),
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.ic_google_translate_logo, "Google Translate")
 //                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_deepl_logo_icon", "drawable"), "DeepL")
             );
 
-            var adapter = new ImagineArrayAdapter(requireContext(), items);
+            ImagineArrayAdapter adapter = new ImagineArrayAdapter(requireContext(), items);
             adapter.setSelected(Preferences.getPreferences().getInt("translator", 0));
 
             new VkAlertDialog.Builder(getActivity())

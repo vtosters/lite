@@ -8,11 +8,11 @@ public final class NetResponse {
     private final byte[] data;
     private int code;
 
-    protected NetResponse(byte[] data) {
+    NetResponse(byte[] data) {
         this.data = data;
     }
 
-    protected void setCode(int code) {
+    void setCode(int code) {
         this.code = code;
     }
 

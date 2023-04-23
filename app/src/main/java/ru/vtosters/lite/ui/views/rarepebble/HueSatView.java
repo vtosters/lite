@@ -1,32 +1,23 @@
 package ru.vtosters.lite.ui.views.rarepebble;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.PointF;
-import android.graphics.Rect;
-import android.graphics.RectF;
+import android.graphics.*;
 import android.os.Build;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 
 public class HueSatView extends SquareView implements ColorObserver {
 
-    private Paint borderPaint;
-    private Paint pointerPaint;
-    private Path pointerPath;
-    private Path borderPath;
-    private Rect viewRect = new Rect();
-    private int w;
-    private int h;
-
     // Bitmap is generated once and shared across instances.
     private static Bitmap bitmap;
-
     private final PointF pointer = new PointF();
+    private final Paint borderPaint;
+    private final Paint pointerPaint;
+    private final Path pointerPath;
+    private final Path borderPath;
+    private final Rect viewRect = new Rect();
+    private int w;
+    private int h;
     private ObservableColor observableColor = new ObservableColor(0);
 
     public HueSatView(Context context) {
@@ -44,11 +35,65 @@ public class HueSatView extends SquareView implements ColorObserver {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
             // Need clipPath() and setLayerType()...
             throw new UnsupportedOperationException("Android API 10 and below is not supported.");
-        }
-        else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR2) {
+        } else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR2) {
             // clipPath() is only supported on a software layer.
             setLayerType(LAYER_TYPE_SOFTWARE, null);
         }
+    }
+
+    private static void makeBorderPath(Path borderPath, int w, int h, float inset) {
+        w -= inset;
+        h -= inset;
+        borderPath.reset();
+        borderPath.moveTo(w, inset);
+        borderPath.lineTo(w, h);
+        borderPath.lineTo(inset, h);
+        borderPath.addArc(new RectF(inset, inset, 2 * w, 2 * h), 180, 270);
+        borderPath.close();
+    }
+
+    private static Bitmap makeBitmap(int radiusPx) {
+        int[] colors = new int[radiusPx * radiusPx];
+        float[] hsv = new float[]{0f, 0f, 1f};
+        for (int y = 0; y < radiusPx; ++y) {
+            for (int x = 0; x < radiusPx; ++x) {
+                final int i = x + y * radiusPx;
+                final float sat = satForPos(x, y, radiusPx);
+                final float arcBleed = 2f / radiusPx; // extend curved edge pixels just outside clip area.
+                if (sat <= 1 + arcBleed) {
+                    hsv[0] = hueForPos(x, y, radiusPx);
+                    hsv[1] = sat;
+                    colors[i] = Color.HSVToColor(0xff, hsv);
+                }
+            }
+        }
+        return Bitmap.createBitmap(colors, radiusPx, radiusPx, Bitmap.Config.ARGB_8888);
+    }
+
+    private static float hueForPos(float x, float y, float radiusPx) {
+        final double r = radiusPx - 1; // gives values 0...1 inclusive
+        final double dx = (r - x) / r;
+        final double dy = (r - y) / r;
+        final double angle = Math.atan2(dy, dx);
+        final double hue = 360 * angle / (Math.PI / 2);
+        return (float) hue;
+    }
+
+    private static float satForPos(float x, float y, float radiusPx) {
+        final double r = radiusPx - 1; // gives values 0...1 inclusive
+        final double dx = (r - x) / r;
+        final double dy = (r - y) / r;
+        final double sat = dx * dx + dy * dy; // leave it squared -- exaggerates pale colors
+        return (float) sat;
+    }
+
+    private static void setPointer(PointF pointer, float hue, float sat, float radiusPx) {
+        final float r = radiusPx - 1; // for values 0...1 inclusive
+        final double distance = r * Math.sqrt(sat);
+        final double angle = hue / 360 * Math.PI / 2;
+        final double dx = distance * Math.cos(angle);
+        final double dy = distance * Math.sin(angle);
+        pointer.set(r - (float) dx, r - (float) dy);
     }
 
     private int optimalBitmapSize() {
@@ -81,17 +126,6 @@ public class HueSatView extends SquareView implements ColorObserver {
 
         // Sets pointer position
         updateColor(observableColor);
-    }
-
-    private static void makeBorderPath(Path borderPath, int w, int h, float inset) {
-        w -= inset;
-        h -= inset;
-        borderPath.reset();
-        borderPath.moveTo(w, inset);
-        borderPath.lineTo(w, h);
-        borderPath.lineTo(inset, h);
-        borderPath.addArc(new RectF(inset, inset, 2 * w, 2 * h), 180, 270);
-        borderPath.close();
     }
 
     @Override
@@ -127,7 +161,7 @@ public class HueSatView extends SquareView implements ColorObserver {
         y = Math.min(y, h);
         final float dx = w - x;
         final float dy = h - y;
-        final float r = (float)Math.sqrt(dx * dx + dy * dy);
+        final float r = (float) Math.sqrt(dx * dx + dy * dy);
         boolean outside = r > w;
         if (!outside || !rejectOutside) {
             if (outside) {
@@ -159,49 +193,5 @@ public class HueSatView extends SquareView implements ColorObserver {
         canvas.restore();
 
         canvas.drawPath(borderPath, borderPaint);
-    }
-
-    private static Bitmap makeBitmap(int radiusPx) {
-        int[] colors = new int[radiusPx * radiusPx];
-        float[] hsv = new float[]{0f, 0f, 1f};
-        for (int y = 0; y < radiusPx; ++y) {
-            for (int x = 0; x < radiusPx; ++x) {
-                final int i = x + y * radiusPx;
-                final float sat = satForPos(x, y, radiusPx);
-                final float arcBleed = 2f / radiusPx; // extend curved edge pixels just outside clip area.
-                if (sat <= 1 + arcBleed) {
-                    hsv[0] = hueForPos(x, y, radiusPx);
-                    hsv[1] = sat;
-                    colors[i] = Color.HSVToColor(0xff, hsv);
-                }
-            }
-        }
-        return Bitmap.createBitmap(colors, radiusPx, radiusPx, Bitmap.Config.ARGB_8888);
-    }
-
-    private static float hueForPos(float x, float y, float radiusPx) {
-        final double r = radiusPx - 1; // gives values 0...1 inclusive
-        final double dx = (r - x) / r;
-        final double dy = (r - y) / r;
-        final double angle = Math.atan2(dy, dx);
-        final double hue = 360 * angle / (Math.PI / 2);
-        return (float)hue;
-    }
-
-    private static float satForPos(float x, float y, float radiusPx) {
-        final double r = radiusPx - 1; // gives values 0...1 inclusive
-        final double dx = (r - x) / r;
-        final double dy = (r - y) / r;
-        final double sat = dx * dx + dy * dy; // leave it squared -- exaggerates pale colors
-        return (float)sat;
-    }
-
-    private static void setPointer(PointF pointer, float hue, float sat, float radiusPx) {
-        final float r = radiusPx - 1; // for values 0...1 inclusive
-        final double distance = r * Math.sqrt(sat);
-        final double angle = hue / 360 * Math.PI / 2;
-        final double dx = distance * Math.cos(angle);
-        final double dy = distance * Math.sin(angle);
-        pointer.set(r - (float)dx, r - (float)dy);
     }
 }

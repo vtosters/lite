@@ -3,12 +3,9 @@ package ru.vtosters.lite.hooks;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.vk.newsfeed.holders.BaseFooterHolder;
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.utils.Preferences;
 
 public class PostViewHook {

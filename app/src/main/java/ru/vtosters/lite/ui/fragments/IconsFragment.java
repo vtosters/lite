@@ -9,13 +9,10 @@ import android.os.Bundle;
 import android.util.TypedValue;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.core.content.res.ResourcesCompat;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.components.IconManager;

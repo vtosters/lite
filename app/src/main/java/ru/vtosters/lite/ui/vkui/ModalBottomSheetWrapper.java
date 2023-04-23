@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui.vkui;
 
 import android.app.Activity;
 import android.view.View;
-
 import com.vk.core.dialogs.bottomsheet.ModalBottomSheet;
 
 public class ModalBottomSheetWrapper<T> {

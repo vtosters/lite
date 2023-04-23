@@ -1,12 +1,7 @@
 package ru.vtosters.lite.ui.views.rarepebble;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.Rect;
-import android.graphics.RectF;
+import android.graphics.*;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -15,13 +10,12 @@ public abstract class SliderViewBase extends View {
     private final Paint borderPaint;
     private final Paint checkerPaint;
     private final Rect viewRect = new Rect();
-    private int w;
-    private int h;
     private final Path borderPath;
-    private Bitmap bitmap;
     private final Path pointerPath;
     private final Paint pointerPaint;
-
+    private int w;
+    private int h;
+    private Bitmap bitmap;
     private float currentPos;
 
     public SliderViewBase(Context context) {
@@ -89,8 +83,7 @@ public abstract class SliderViewBase extends View {
         canvas.save();
         if (isWide()) {
             canvas.translate(w * currentPos, h / 2);
-        }
-        else {
+        } else {
             canvas.translate(w / 2, h * (1 - currentPos));
         }
         canvas.drawPath(pointerPath, pointerPaint);

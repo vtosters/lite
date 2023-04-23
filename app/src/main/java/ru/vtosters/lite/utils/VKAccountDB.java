@@ -84,7 +84,7 @@ public class VKAccountDB {
             inputStream.close();
             outputStream.close();
 
-            AndroidUtils.sendToast( AndroidUtils.getString("accounts_saved_by_path") + " " + file.getPath());
+            AndroidUtils.sendToast(AndroidUtils.getString("accounts_saved_by_path") + " " + file.getPath());
         } catch (IOException e) {
             e.printStackTrace();
             AndroidUtils.sendToast(AndroidUtils.getString("error_saving_file"));

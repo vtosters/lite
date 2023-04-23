@@ -22,7 +22,6 @@ import com.aefyr.tsg.g2.TelegramStickersService;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
@@ -69,9 +68,9 @@ public class StickersFragment extends BaseToolbarFragment {
 
     @Override
     protected void onCreateMenu(Menu menu) {
-        var item = menu.add(0, 0, 0, "");
+        MenuItem item = menu.add(0, 0, 0, "");
         item.setIcon(ThemesUtils.recolorDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_settings_outline_28)))
-            .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
         super.onCreateMenu(menu);
     }
@@ -107,8 +106,8 @@ public class StickersFragment extends BaseToolbarFragment {
         mAdapter = new StickerPackAdapter();
         RecyclerView mRecycler = new RecyclerView(requireContext());
 
-        var callback = new StickerTouchHelperCallback(mAdapter);
-        var touchHelper = new ItemTouchHelper(callback);
+        StickerTouchHelperCallback callback = new StickerTouchHelperCallback(mAdapter);
+        ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
         touchHelper.attachToRecyclerView(mRecycler);
 
         mRecycler.setAdapter(mAdapter);

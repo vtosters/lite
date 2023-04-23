@@ -2,21 +2,18 @@ package ru.vtosters.lite.translators;
 
 import android.text.TextUtils;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
-
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
 import org.json.JSONObject;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Pattern;
-
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 public class DeepLTranslator extends BaseTranslator {
 
@@ -130,7 +127,7 @@ public class DeepLTranslator extends BaseTranslator {
 
             return text;
         } catch (Throwable e) {
-            Log.d("DeepL", e + "");
+            Log.d("DeepL", String.valueOf(e));
         }
         return text;
     }

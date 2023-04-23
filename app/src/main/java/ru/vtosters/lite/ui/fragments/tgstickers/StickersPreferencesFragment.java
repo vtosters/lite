@@ -1,11 +1,9 @@
 package ru.vtosters.lite.ui.fragments.tgstickers;
 
 import android.os.Bundle;
-
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.tgs.TGRoot;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
@@ -28,9 +26,9 @@ public class StickersPreferencesFragment extends TrackedMaterialPreferenceToolba
         });
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.sprefsnetwork));
-        PreferenceFragmentUtils.addListPreference(getPreferenceScreen(), "VTGS:CM", "0", requireContext().getString(R.string.sprefsctype), new CharSequence[] {
+        PreferenceFragmentUtils.addListPreference(getPreferenceScreen(), "VTGS:CM", "0", requireContext().getString(R.string.sprefsctype), new CharSequence[]{
                 requireContext().getString(R.string.ctypedirect), requireContext().getString(R.string.ctypesocks)
-        }, new String[] {
+        }, new String[]{
                 "0", "2"
         });
 
@@ -54,7 +52,7 @@ public class StickersPreferencesFragment extends TrackedMaterialPreferenceToolba
             try {
                 TGPref.setTGProxyPort(Integer.parseInt(o));
                 return true;
-            } catch(Exception e) {
+            } catch (Exception e) {
                 ToastUtils.a(requireContext().getString(R.string.ssockswport));
                 return false;
             }

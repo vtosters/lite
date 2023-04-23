@@ -1,23 +1,20 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.TypedValue;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.appcompat.widget.SwitchCompat;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.utils.LayoutUtils;
+
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 public class MessageSettings {
     public static Boolean isSilentEnabled = false;

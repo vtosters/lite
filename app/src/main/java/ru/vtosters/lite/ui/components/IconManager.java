@@ -70,7 +70,8 @@ public class IconManager {
 
         String currentState = "11";
 
-        main: for (int i = 0; i < iconsList.size(); i++) {
+        main:
+        for (int i = 0; i < iconsList.size(); i++) {
             for (int o = 0; o < labelsList.size(); o++) {
                 if (isComponentEnabled("id" + i + o)) {
                     currentState = i + String.valueOf(o);

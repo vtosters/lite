@@ -1,23 +1,19 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.ui.dialogs.MessageSettings.bombCount;
-import static ru.vtosters.lite.ui.dialogs.MessageSettings.isSilentEnabled;
-import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
-import static ru.vtosters.lite.utils.Preferences.autotranslate;
-import static ru.vtosters.lite.utils.Preferences.savemsgsett;
-
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
-
 import com.vk.api.internal.MethodCall;
+import ru.vtosters.lite.translators.BaseTranslator;
+import ru.vtosters.lite.ui.dialogs.MessageSettings;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
-import ru.vtosters.lite.translators.BaseTranslator;
-import ru.vtosters.lite.ui.dialogs.MessageSettings;
-import ru.vtosters.lite.utils.LifecycleUtils;
+import static ru.vtosters.lite.ui.dialogs.MessageSettings.bombCount;
+import static ru.vtosters.lite.ui.dialogs.MessageSettings.isSilentEnabled;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 public class MessagesHook {
     public static String injectOwnText(String oldText) {
@@ -46,7 +42,7 @@ public class MessagesHook {
             var mentions = new ArrayList<String>();
             while (matcher.find()) {
                 mentions.add(matcher.group());
-                matcher.appendReplacement(textBuff, "vtl_mention" + mentionsCount + "");
+                matcher.appendReplacement(textBuff, "vtl_mention" + mentionsCount);
                 ++mentionsCount;
             }
             matcher.appendTail(textBuff);

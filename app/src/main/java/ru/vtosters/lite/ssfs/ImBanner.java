@@ -2,10 +2,10 @@ package ru.vtosters.lite.ssfs;
 
 import android.util.Log;
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.vtosters.lite.R;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.Preferences;

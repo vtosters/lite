@@ -1,13 +1,12 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.vk.dto.polls.PollOption;
 import com.vk.polls.ui.views.PollOptionView;
+
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class PollHook {
     public static void show(PollOptionView view) {

@@ -6,15 +6,11 @@ import android.os.Build;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.widget.AppCompatCheckedTextView;
-
-import com.vk.core.extensions.EditTextExt;
 import com.vk.core.view.OverlayTextView;
 import com.vk.core.view.TintTextView;
 import com.vk.core.view.links.LinkedTextView;
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.themes.ColorReferences;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.themes.utils.VkUiThemer;
@@ -23,6 +19,26 @@ import ru.vtosters.lite.utils.ThemesUtils;
 public class TextViewHook implements BaseHook {
 
     private static final String TAG = "TextViewHook";
+
+    public static boolean eligibleForStartTinting(TintTextView view) {
+        return ColorReferences.isAccentedColor(view.getTextColors()) || view.getTextColors().getDefaultColor() == ThemesUtils.getAccentColor();
+    }
+
+    public static boolean eligibleForStartTintingMuted(TintTextView view) {
+        return ColorReferences.isMutedAccentedColor(view.getTextColors()) || view.getTextColors().getDefaultColor() == ThemesUtils.getMutedAccentColor();
+    }
+
+    public static boolean eligibleForTinting(int id) {
+        return !ThemesUtils.isDarkTheme() && (id == R.id.attach_title || id == R.id.post_retweet_name);
+    }
+
+    public static boolean isPositiveButton(View view) {
+        return !ThemesUtils.isDarkTheme() && (view.getId() == R.id.positive || view.getId() == R.id.positive_button);
+    }
+
+    public static boolean isVkUiButton(View view) {
+        return !ThemesUtils.isDarkTheme() && (view.getId() == R.id.empty_button || view.getId() == R.id.button);
+    }
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -111,26 +127,6 @@ public class TextViewHook implements BaseHook {
             ThemesHacks.fixProfileSelector(textView);
             ThemesHacks.fixThemedFeed(textView, i);
         }
-    }
-
-    public static boolean eligibleForStartTinting(TintTextView view) {
-        return ColorReferences.isAccentedColor(view.getTextColors()) || view.getTextColors().getDefaultColor() == ThemesUtils.getAccentColor();
-    }
-
-    public static boolean eligibleForStartTintingMuted(TintTextView view) {
-        return ColorReferences.isMutedAccentedColor(view.getTextColors()) || view.getTextColors().getDefaultColor() == ThemesUtils.getMutedAccentColor();
-    }
-
-    public static boolean eligibleForTinting(int id) {
-        return !ThemesUtils.isDarkTheme() && (id == R.id.attach_title || id == R.id.post_retweet_name);
-    }
-
-    public static boolean isPositiveButton(View view) {
-        return !ThemesUtils.isDarkTheme() && (view.getId() == R.id.positive || view.getId() == R.id.positive_button);
-    }
-
-    public static boolean isVkUiButton(View view) {
-        return !ThemesUtils.isDarkTheme() && (view.getId() == R.id.empty_button || view.getId() == R.id.button);
     }
 }
 
