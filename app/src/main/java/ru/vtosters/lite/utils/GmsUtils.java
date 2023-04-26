@@ -45,15 +45,6 @@ public class GmsUtils {
         }
     } // Music channels fix
 
-    private static boolean isComponentEnabled(ComponentName componentName) {
-        return AndroidUtils.getGlobalContext().getPackageManager().getComponentEnabledSetting(componentName) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED || AndroidUtils.getGlobalContext().getPackageManager().getComponentEnabledSetting(componentName) == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT;
-    }
-
-    private static void setComponentEnabled(ComponentName componentName, int newState) {
-        AndroidUtils.getGlobalContext().getPackageManager().setComponentEnabledSetting(componentName, newState, PackageManager.DONT_KILL_APP);
-        AndroidUtils.getGlobalContext().getPackageManager().setComponentEnabledSetting(componentName, newState, PackageManager.DONT_KILL_APP);
-    }
-
     public static String replaceGMSPackage(String str) {
         return needToSpoof ? str.replaceAll("com.google", "com.mgoogle") : str;
     }
