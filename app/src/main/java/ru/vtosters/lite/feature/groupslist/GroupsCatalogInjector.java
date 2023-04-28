@@ -3,6 +3,7 @@ package ru.vtosters.lite.feature.groupslist;
 import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.ArrayList;
 
@@ -42,7 +43,7 @@ public class GroupsCatalogInjector {
             var type = nestedAction.optString("type");
             if (!type.contains("open_section")) continue;
             try {
-                action.put("title", "Показать все");
+                action.put("title", AndroidUtils.getGlobalContext().getString(com.vtosters.lite.R.string.catalog_button_show_all));
                 block.put("data_type", "none");
                 var layout = block.optJSONObject("layout");
                 if (layout != null) {
