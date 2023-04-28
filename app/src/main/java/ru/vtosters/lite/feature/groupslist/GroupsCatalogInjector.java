@@ -1,8 +1,6 @@
 package ru.vtosters.lite.feature.groupslist;
 
 import android.util.Log;
-import com.vk.catalog2.core.api.dto.buttons.CatalogButtonOpenSection;
-import com.vk.core.serialize.Serializer;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -16,6 +14,18 @@ public class GroupsCatalogInjector {
         fixGroups(sections.optJSONObject(0));
 
         return jsonObject;
+    }
+
+    public static void injectIntoCatalog(JSONObject jsonObject) {
+        var section = jsonObject.optJSONObject("section");
+        if (section == null) return; // early return if section is null
+        var blocks = section.optJSONArray("blocks");
+        if (blocks == null) return; // early return if blocks are null
+        var json = blocks.optJSONObject(1);
+        if (json == null) return; // early return if json is null
+        var data_type = json.optString("data_type");
+        if (!data_type.contains("groups")) return; // early return if data_type does not contain "groups"
+        fixGroups(section);
     }
 
     public static void fixGroups(JSONObject section) {

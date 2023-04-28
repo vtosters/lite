@@ -221,7 +221,8 @@ public class CatalogJsonInjector {
     public static JSONObject injectIntoCatalogs(JSONObject json) {
 
         musicLinkFix(json);
-        fixGroups(json.optJSONObject("section"));
+
+        injectIntoCatalog(json);
 
         return json;
     }
