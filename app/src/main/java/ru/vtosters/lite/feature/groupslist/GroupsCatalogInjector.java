@@ -47,8 +47,7 @@ public class GroupsCatalogInjector {
                 block.put("data_type", "none");
                 var layout = block.optJSONObject("layout");
                 if (layout != null) {
-                    Log.d("CatalogButtonOpen", "Layout: " + layout);
-                    layout.put("title", "");
+                    if (layout.optString("title").isEmpty()) layout.put("title", "");
                     layout.put("name", "header");
                     layout.remove("owner_id");
                     layout.remove("style");
