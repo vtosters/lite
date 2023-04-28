@@ -11,6 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.feature.groupslist.GroupsCatalogInjector;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -18,6 +19,7 @@ import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 
+import static ru.vtosters.lite.feature.groupslist.GroupsCatalogInjector.*;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
@@ -216,7 +218,15 @@ public class CatalogJsonInjector {
         return json;
     }
 
-    public static JSONObject musiclink(JSONObject json) {
+    public static JSONObject injectIntoCatalogs(JSONObject json) {
+
+        musicLinkFix(json);
+        fixGroups(json.optJSONObject("section"));
+
+        return json;
+    }
+
+    public static JSONObject musicLinkFix(JSONObject json) {
         var links = json.optJSONArray("links");
 
         if (links != null && !getBoolValue("useOldAppVer", false)) {

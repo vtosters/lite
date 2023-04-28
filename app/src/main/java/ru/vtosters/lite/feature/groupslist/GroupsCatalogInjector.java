@@ -12,9 +12,15 @@ public class GroupsCatalogInjector {
     public static JSONObject injectIntoGetGroups(JSONObject jsonObject) {
         var sections = jsonObject.optJSONObject("catalog").optJSONArray("sections");
         if (sections == null) return jsonObject;
-        var section = sections.optJSONObject(0);
+
+        fixGroups(sections.optJSONObject(0));
+
+        return jsonObject;
+    }
+
+    public static void fixGroups(JSONObject section) {
         var blocks = section.optJSONArray("blocks");
-        if (blocks == null) return jsonObject;
+        if (blocks == null) return;
         for (int i = 0; i < blocks.length(); i++) {
             var block = blocks.optJSONObject(i);
             var actions = block.optJSONArray("buttons");
@@ -41,7 +47,7 @@ public class GroupsCatalogInjector {
             }
             break;
         }
-        return jsonObject;
+
     }
 
     public static ArrayList<String> injectIntoJsonParser(JSONObject jsonObject, String str) {
@@ -58,14 +64,5 @@ public class GroupsCatalogInjector {
             return arrayList;
         }
         return null;
-    }
-
-    public static CatalogButtonOpenSection injectIntoSerializer(Serializer serializer) {
-        serializer.v();
-        serializer.v();
-        serializer.v();
-        var title = serializer.v();
-        var id = serializer.v();
-        return new CatalogButtonOpenSection(title, id);
     }
 }
