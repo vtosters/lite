@@ -46,38 +46,9 @@
     .end annotation
 
     .line 2
-    new-instance v0, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButtonOpenSection;
+    invoke-static { p1 }, Lru/vtosters/lite/feature/groupslist/GroupsCatalogInjector;->injectIntoSerializer(Lcom/vk/core/serialize/Serializer;)Lcom/vk/catalog2/core/api/dto/buttons/CatalogButtonOpenSection;
 
-    .line 3
-    invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->v()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ""
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v1, v2
-
-    .line 4
-    :goto_0
-    invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->v()Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move-object p1, v2
-
-    .line 5
-    :goto_1
-    invoke-direct {v0, v1, p1}, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButtonOpenSection;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
     return-object v0
 .end method
