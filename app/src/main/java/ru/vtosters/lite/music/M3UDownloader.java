@@ -6,6 +6,7 @@ import java8.util.concurrent.CompletableFuture;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.converter.ts.FFMpeg;
 import ru.vtosters.lite.music.converter.ts.TSMerger;
 import ru.vtosters.lite.music.downloader.ThumbnailDownloader;
@@ -117,7 +118,10 @@ public class M3UDownloader implements ITrackDownloader {
                 callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / parser.mTransportStreams.size()));
             else callback.onFailure();
             return convertResult;
-        }).thenRun(() -> IOUtils.deleteRecursive(tsesDir)).thenRun(callback::onSuccess);
+        }).thenRun(() -> IOUtils.deleteRecursive(tsesDir)).thenRun(() -> {
+            callback.onSuccess();
+            if (cache) CacheDatabaseDelegate.insertTrack(track);
+        });
     }
 
     // Initialization-on-demand
