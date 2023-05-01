@@ -1,36 +1,42 @@
 package ru.vtosters.lite.music;
 
+import android.text.TextUtils;
+
 public class TransportStream {
 
-    public static final String METHOD_NONE = "NONE";
-    public static final String METHOD_AES128 = "AES-128";
+    private String mKeyUri;
+    private String mMediaSegmentUri;
+    private String mMediaSegmentName;
 
-    private final String mMethod;
-    private String mName;
-    private String mKeyURL;
-
-    public TransportStream() {
-        this.mMethod = METHOD_NONE;
+    public TransportStream(String baseURI,String mediaSegmentName)
+    {
+        this.mMediaSegmentUri=baseURI+mediaSegmentName;
     }
 
-    public TransportStream(String method, String keyURL) {
-        this.mMethod = method;
-        this.mKeyURL = keyURL;
+    public TransportStream(String keyURI,String baseURI,String mediaSegmentName)
+    {
+        this.mKeyUri=keyURI;
+        this.mMediaSegmentUri=baseURI+mediaSegmentName;
+        this.mMediaSegmentName=mediaSegmentName;
     }
 
-    public String getMethod() {
-        return mMethod;
+    public boolean needDecoding()
+    {
+        return !TextUtils.isEmpty(mKeyUri);
     }
 
-    public String getName() {
-        return mName;
+    public String getKeyURL()
+    {
+        return mKeyUri;
     }
 
-    public void setName(String name) {
-        mName = name;
+    public String getMediaSegmentUri()
+    {
+        return this.mMediaSegmentUri;
     }
 
-    public String getKeyURL() {
-        return mKeyURL;
+    public String getMediaSegmentName()
+    {
+        return this.mMediaSegmentName;
     }
 }
