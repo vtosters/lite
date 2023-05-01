@@ -71,9 +71,8 @@ public class M3UDownloader implements ITrackDownloader {
         }
 
         VKM3UParser parser = new VKM3UParser(payload);
-        List<TransportStream> tses = parser.getTransportStreams();
         AtomicInteger progress = new AtomicInteger(0);
-        List<CompletableFuture<Void>> futures = new ArrayList<>(tses.size());
+        List<CompletableFuture<Void>> futures = new ArrayList<>(parser.mTransportStreams.size());
 
         var filesDir = AndroidUtils.getGlobalContext().getFilesDir();
         var tsesDir = new File(filesDir, String.valueOf(track.d));
@@ -84,23 +83,23 @@ public class M3UDownloader implements ITrackDownloader {
         var resultMp3 = new File(outDir, fileName);
 
         callback.onProgress(5);
-        for (TransportStream ts : tses) {
-            String tsURL = parser.getBaseUrl() + URLEncoder.encode(ts.getName(), "UTF-8");
-
+        for (int i = 0; i < parser.mTransportStreams.size(); i++) {
+            var ts=parser.mTransportStreams.get(i);
+            var index=i;
             futures.add(CompletableFuture.runAsync(() -> {
                 try {
-                    InputStream is = IOUtils.openStream(tsURL);
+                    InputStream is = IOUtils.openStream(ts.getMediaSegmentUri());
                     byte[] content;
-                    if (TransportStream.METHOD_AES128.equals(ts.getMethod())) {
+                    if (ts.needDecoding()) {
                         String key = IOUtils.readAllLines(IOUtils.openStream(ts.getKeyURL()));
                         content = IOUtils.decodeStream(is, key);
                     } else {
                         content = IOUtils.readFully(is);
                     }
-                    File tsDump = new File(tsesDir, ts.getName());
+                    File tsDump = new File(tsesDir,index+".ts");
                     IOUtils.writeToFile(tsDump, content);
-                    callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
-                    callback.onSizeReceived((long) content.length * tses.size(), parser.getHeapSize());
+                    callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / parser.mTransportStreams.size()));
+                    callback.onSizeReceived((long) content.length * parser.mTransportStreams.size(), parser.mHeapSize);
                 } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException |
                          InvalidAlgorithmParameterException | InvalidKeyException e) {
                     callback.onFailure();
@@ -115,7 +114,7 @@ public class M3UDownloader implements ITrackDownloader {
             return null;
         }).thenApply(v -> TSMerger.merge(tsesDir, resultTs)).thenApply(mergeResult -> mergeResult && FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track)).thenApply(convertResult -> {
             if (convertResult)
-                callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
+                callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / parser.mTransportStreams.size()));
             else callback.onFailure();
             return convertResult;
         }).thenRun(() -> IOUtils.deleteRecursive(tsesDir)).thenRun(callback::onSuccess);
