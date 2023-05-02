@@ -26,10 +26,13 @@ public class TSMerger {
 
         var mergedByteArrayStream = new ByteArrayOutputStream();
 
-        Arrays.sort(tsesList, (o1, o2) -> {
-            var index1 = Integer.parseInt(o1.getName().split("-")[1]);
-            var index2 = Integer.parseInt(o2.getName().split("-")[1]);
-            return index1 - index2;
+        //0.ts,1.ts,...
+        Arrays.sort(tsesList, (ts1,ts2) -> {
+            final var ts1Name=ts1.getName();
+            final var ts2Name=ts2.getName();
+            final var i1=Integer.parseInt(ts1Name.substring(0,ts1Name.indexOf('.',1)));
+            final var i2=Integer.parseInt(ts2Name.substring(0,ts2Name.indexOf('.',1)));
+            return Integer.compare(i1,i2);
         });
 
         for (var file : tsesList) {
