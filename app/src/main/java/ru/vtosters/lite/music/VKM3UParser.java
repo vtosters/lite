@@ -59,13 +59,12 @@ public class VKM3UParser {
     }
 
     public static boolean isTS(String str) {
-        return str.endsWith(".ts") || str.endsWith(".tp") || str.endsWith(".mpeg-ts") || str.endsWith(".m2ts");
+        return str.endsWith(".ts")||str.endsWith(".tp")||str.endsWith(".mpeg-ts")||str.endsWith(".m2ts");
     }
 
     private void init()
     {
           if(TextUtils.isEmpty(mData))throw new NullPointerException("mData==null");
-          Log.e("Parser",mData);
           final var scanner=new Scanner(mData);
           var line=scanner.nextLine();
           if(!"#EXTM3U".equals(line))throw new IllegalStateException(String.format("Unknown initial M3U tag: %s",line));
@@ -106,12 +105,12 @@ public class VKM3UParser {
                   else if(line.startsWith("#EXT-X-KEY:"))
                   {
                       var substr=line.substring(11);
-                      if((aes128 = substr.startsWith("METHOD=AES-128")))
+                      if((aes128=substr.startsWith("METHOD=AES-128")))
                       {
                           substr=substr.substring(20,substr.length()-1);
                           if(!substr.startsWith("http"))throw new IllegalStateException(String.format("Failed to parse URI: %s",substr));
                           keyUri=substr;
-                          baseUri=substr.substring(0,substr.lastIndexOf("/")+1);
+                          baseUri=substr.substring(0,substr.lastIndexOf('/')+1);
                       }
                   }
                   else if(line.startsWith("#EXTINF"))
@@ -119,15 +118,15 @@ public class VKM3UParser {
               }
               else if(extinf&&isTS(line))
               {
-                  var ts=aes128
+                  final var ts=aes128
                           ?new TransportStream(keyUri,baseUri,line)
                           :new TransportStream(baseUri,line);
                   mTransportStreams.add(ts);
-
+                  aes128=extinf=false;
               }
               else throw new RuntimeException(String.format("Failed to parse: %s",line));
               mHeapSize+=line.getBytes().length;
           }
-          for(var ts:mTransportStreams)Log.e("Parser",String.format("Added segment:\n method: %s,\n key_uri: %s,\n segment_uri: %s", ts.needDecoding(),ts.getKeyURL(),ts.getMediaSegmentUri()));
+          if(baseUri.isEmpty())throw new NullPointerException("baseUri==null");
     }
 }
