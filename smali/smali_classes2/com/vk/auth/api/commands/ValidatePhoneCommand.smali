@@ -87,6 +87,11 @@
     .line 5
     invoke-virtual {p0, p2, p1}, Lcom/vk/api/sdk/o/VKRequest;->a(Ljava/lang/String;I)Lcom/vk/api/sdk/o/VKRequest;
 
+    const-string p2, "vk_connect_auth"
+
+    .line 5
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/sdk/o/VKRequest;->a(Ljava/lang/String;I)Lcom/vk/api/sdk/o/VKRequest;
+
     :cond_3
     return-void
 .end method

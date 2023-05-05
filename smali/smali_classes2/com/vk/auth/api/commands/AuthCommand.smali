@@ -92,6 +92,13 @@
     .line 7
     invoke-virtual {p0, p1, p2}, Lcom/vk/auth/api/commands/AuthCommand;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/auth/api/commands/AuthCommand;
 
+    const-string p1, "vk_connect_auth"
+
+    const-string p2, "1"
+
+    .line 7
+    invoke-virtual {p0, p1, p2}, Lcom/vk/auth/api/commands/AuthCommand;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/auth/api/commands/AuthCommand;
+
     :cond_1
     if-eqz p3, :cond_3
 
