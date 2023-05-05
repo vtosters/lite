@@ -166,9 +166,6 @@
             android:name="com.google.android.geo.API_SECRET"
             android:value="yu6ZAA0OWO3kmr4es7fGtSmiyfk=" />
         <meta-data
-            android:name="com.vk.safetynet.API_SECRET"
-            android:value="AIzaSyBf_eM-cgRbg1gOkyEc2Il5gHqgsnFyVug" />
-        <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/fb_app_id" />
         <meta-data
