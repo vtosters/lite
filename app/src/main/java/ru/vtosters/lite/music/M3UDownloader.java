@@ -53,9 +53,9 @@ public class M3UDownloader implements ITrackDownloader {
             return;
         }
 
-        var request = new Request.a().b(track.D).a();
         try {
-            var response = client.a(request).execute().a().g();
+            Request request = new Request.a().b(track.D).a();
+            String response = client.a(request).execute().a().g();
             parse(response, outDir, callback, track, cache);
         } catch (IOException e) {
             e.printStackTrace();
@@ -64,70 +64,91 @@ public class M3UDownloader implements ITrackDownloader {
     }
 
     private void parse(String payload, File outDir, Callback callback, MusicTrack track, boolean cache) throws UnsupportedEncodingException {
-        if (cache) try {
+        if (cache) downloadThumbnails(track);
+
+        VKM3UParser parser = new VKM3UParser(track.D.substring(0, track.D.lastIndexOf("/") + 1), payload);
+        AtomicInteger progress = new AtomicInteger(0);
+        List<CompletableFuture<Void>> futures = createFutures(parser, progress, callback, track);
+
+        var resultTs = getResultTsFile(track);
+        var resultMp3 = getResultMp3File(outDir, cache, track);
+
+        callback.onProgress(5);
+        var future = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
+        future.join();
+        future.exceptionally(throwable -> {
+                    callback.onFailure();
+                    return null;
+                }).thenApply(v -> TSMerger.merge(getTsesDir(track), resultTs))
+                .thenApply(mergeResult -> mergeResult && FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track))
+                .thenApply(convertResult -> {
+                    if (convertResult)
+                        callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / parser.mTransportStreams.size()));
+                    else callback.onFailure();
+                    return convertResult;
+                }).thenRun(() -> IOUtils.deleteRecursive(getTsesDir(track))).thenRun(() -> {
+                    callback.onSuccess();
+                    if (cache) CacheDatabaseDelegate.insertTrack(track);
+                });
+    }
+
+    private void downloadThumbnails(MusicTrack track) {
+        try {
             ThumbnailDownloader.downloadThumbnails(track);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
-        VKM3UParser parser = new VKM3UParser(track.D.substring(0,track.D.lastIndexOf("/")+1),payload);
-        AtomicInteger progress = new AtomicInteger(0);
+    private List<CompletableFuture<Void>> createFutures(VKM3UParser parser, AtomicInteger progress, Callback callback, MusicTrack track) {
         List<CompletableFuture<Void>> futures = new ArrayList<>(parser.mTransportStreams.size());
 
+        var tses = parser.mTransportStreams;
+        for (var i = 0; i < tses.size(); ++i) {
+            final var ts = tses.get(i);
+            final var filename = i + ".ts";
+            futures.add(CompletableFuture.runAsync(() -> processTransportStream(parser, ts, filename, progress, tses.size(), callback, track)));
+        }
+        return futures;
+    }
+
+    private void processTransportStream(VKM3UParser parser, TransportStream ts, String filename, AtomicInteger progress, int size, Callback callback, MusicTrack track) {
+        try {
+            InputStream mediaIs = IOUtils.openStream(ts.getMediaSegmentUri());
+            byte[] content;
+            if (ts.needDecoding()) {
+                InputStream keyPubIs = IOUtils.openStream(ts.getKeyURL());
+                content = IOUtils.decodeStream(mediaIs, IOUtils.readFully(keyPubIs));
+                keyPubIs.close();
+            } else {
+                content = IOUtils.readFully(mediaIs);
+            }
+            File tsDump = new File(getTsesDir(track), filename);
+            IOUtils.writeToFile(tsDump, content);
+            callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / size));
+            callback.onSizeReceived((long) content.length * size, parser.mHeapSize);
+            mediaIs.close();
+        } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException |
+                 InvalidAlgorithmParameterException | InvalidKeyException e) {
+            callback.onFailure();
+            throw new RuntimeException(e);
+        }
+    }
+
+    private File getTsesDir(MusicTrack track) {
         var filesDir = AndroidUtils.getGlobalContext().getFilesDir();
-        var tses=parser.mTransportStreams;
         var tsesDir = new File(filesDir, String.valueOf(track.d));
         tsesDir.mkdirs();
-        var resultTs = new File(tsesDir, "result.ts");
+        return tsesDir;
+    }
 
+    private File getResultTsFile(MusicTrack track) {
+        return new File(getTsesDir(track), "result.ts");
+    }
+
+    private File getResultMp3File(File outDir, boolean cache, MusicTrack track) {
         var fileName = IOUtils.getValidFileName((cache ? "track" : track.C + " - " + getTitle(track)) + ".mp3");
-        var resultMp3 = new File(outDir, fileName);
-
-        callback.onProgress(5);
-        for (var i=0;i<tses.size();++i) {
-            final var ts=tses.get(i);
-            final var filename=i+".ts";
-            futures.add(CompletableFuture.runAsync(() -> {
-                InputStream mediaIs,keyPubIs;
-                mediaIs=keyPubIs=null;
-                try {
-                    mediaIs=IOUtils.openStream(ts.getMediaSegmentUri());
-                    byte[] content;
-                    if (ts.needDecoding()) {
-                        keyPubIs=IOUtils.openStream(ts.getKeyURL());
-                        content=IOUtils.decodeStream(mediaIs,IOUtils.readFully(keyPubIs));
-                    } else {
-                        content=IOUtils.readFully(mediaIs);
-                    }
-                    File tsDump = new File(tsesDir,filename);
-                    IOUtils.writeToFile(tsDump, content);
-                    callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
-                    callback.onSizeReceived((long) content.length * tses.size(), parser.mHeapSize);
-                    mediaIs.close();
-                    keyPubIs.close();
-                } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException |
-                         InvalidAlgorithmParameterException | InvalidKeyException e) {
-                    callback.onFailure();
-                    throw new RuntimeException(e);
-                }
-            }));
-        }
-        var future = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
-        future.join();
-        future.exceptionally(throwable -> {
-            callback.onFailure();
-            return null;
-        }).thenApply(v -> TSMerger.merge(tsesDir, resultTs))
-          .thenApply(mergeResult -> mergeResult && FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track))
-          .thenApply(convertResult -> {
-            if (convertResult)
-                callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
-            else callback.onFailure();
-            return convertResult;
-        }).thenRun(() -> IOUtils.deleteRecursive(tsesDir)).thenRun(() -> {
-            callback.onSuccess();
-            if (cache) CacheDatabaseDelegate.insertTrack(track);
-        });
+        return new File(outDir, fileName);
     }
 
     // Initialization-on-demand
