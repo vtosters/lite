@@ -70,7 +70,7 @@ public class M3UDownloader implements ITrackDownloader {
             e.printStackTrace();
         }
 
-        VKM3UParser parser = new VKM3UParser(payload);
+        VKM3UParser parser = new VKM3UParser(track.D.substring(0,track.D.lastIndexOf("/")+1),payload);
         AtomicInteger progress = new AtomicInteger(0);
         List<CompletableFuture<Void>> futures = new ArrayList<>(parser.mTransportStreams.size());
 
@@ -88,19 +88,23 @@ public class M3UDownloader implements ITrackDownloader {
             final var ts=tses.get(i);
             final var filename=i+".ts";
             futures.add(CompletableFuture.runAsync(() -> {
+                InputStream mediaIs,keyPubIs;
+                mediaIs=keyPubIs=null;
                 try {
-                    InputStream is = IOUtils.openStream(ts.getMediaSegmentUri());
+                    mediaIs=IOUtils.openStream(ts.getMediaSegmentUri());
                     byte[] content;
                     if (ts.needDecoding()) {
-                        String key = IOUtils.readAllLines(IOUtils.openStream(ts.getKeyURL()));
-                        content = IOUtils.decodeStream(is, key);
+                        keyPubIs=IOUtils.openStream(ts.getKeyURL());
+                        content=IOUtils.decodeStream(mediaIs,IOUtils.readFully(keyPubIs));
                     } else {
-                        content = IOUtils.readFully(is);
+                        content=IOUtils.readFully(mediaIs);
                     }
                     File tsDump = new File(tsesDir,filename);
                     IOUtils.writeToFile(tsDump, content);
                     callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
                     callback.onSizeReceived((long) content.length * tses.size(), parser.mHeapSize);
+                    mediaIs.close();
+                    keyPubIs.close();
                 } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException |
                          InvalidAlgorithmParameterException | InvalidKeyException e) {
                     callback.onFailure();
