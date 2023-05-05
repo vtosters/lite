@@ -18,17 +18,16 @@ import java.util.Arrays;
 public class IOUtils {
     public static final int BUFFER_SIZE = 8192;
 
-    public static byte[] decodeStream(InputStream encIs, String keyURL)
+    public static byte[] decodeStream(InputStream encIs,byte[] aesKey)
             throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
-        CipherInputStream cip = new CipherInputStream(encIs, getCipher(keyURL));
+        CipherInputStream cip = new CipherInputStream(encIs, getCipher(aesKey));
         return readFully(cip);
     }
 
-    public static Cipher getCipher(String key)
+    public static Cipher getCipher(byte[] aesKey)
             throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException {
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-        Key keySpec = new SecretKeySpec(key.getBytes(), "AES");
-        // bypassing ecb
+        Key keySpec = new SecretKeySpec(aesKey, "AES");
         byte[] iv = new byte[16];
         Arrays.fill(iv, (byte) 0x0);
         IvParameterSpec ivps = new IvParameterSpec(iv);

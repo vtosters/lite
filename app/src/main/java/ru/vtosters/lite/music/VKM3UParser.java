@@ -53,19 +53,19 @@ public class VKM3UParser {
     final private String mData;
     final public List<TransportStream> mTransportStreams = new ArrayList<>();
 
-    public VKM3UParser(String data) {
+    public VKM3UParser(String baseUri,String data) {
         mData=data;
-        init();
+        init(baseUri);
     }
 
     public static boolean isTS(String str) {
-        return str.endsWith(".ts")||str.endsWith(".tp")||str.endsWith(".mpeg-ts")||str.endsWith(".m2ts");
+        return str.matches(".+\\.ts.*");
     }
 
-    private void init()
+    private void init(String baseUri)
     {
-          if(TextUtils.isEmpty(mData))throw new NullPointerException("mData==null");
-          final var scanner=new Scanner(mData);
+        if(TextUtils.isEmpty(mData))throw new NullPointerException("mData==null");
+        final var scanner=new Scanner(mData);
           var line=scanner.nextLine();
           if(!"#EXTM3U".equals(line))throw new IllegalStateException(String.format("Unknown initial M3U tag: %s",line));
           //indicators for EXT-X-KEY and EXTINF tags
@@ -75,9 +75,7 @@ public class VKM3UParser {
           * VK follows own URI attribute for EXT-X-KEY tag.
           * @see <a href="https://datatracker.ietf.org/doc/html/rfc8216#section-4.3.2.4">EXT-X-KEY</a>
           **/
-          String keyUri;
-          String baseUri;//At least one media segment must be encrypted to get the base uri
-          keyUri=baseUri="";
+          String keyUri="";
           while(scanner.hasNextLine())
           {
               line=scanner.nextLine();
@@ -105,12 +103,12 @@ public class VKM3UParser {
                   else if(line.startsWith("#EXT-X-KEY:"))
                   {
                       var substr=line.substring(11);
-                      if((aes128=substr.startsWith("METHOD=AES-128")))
+                      if((aes128=substr.contains("METHOD=AES-128")))
                       {
-                          substr=substr.substring(20,substr.length()-1);
-                          if(!substr.startsWith("http"))throw new IllegalStateException(String.format("Failed to parse URI: %s",substr));
-                          keyUri=substr;
-                          baseUri=substr.substring(0,substr.lastIndexOf('/')+1);
+                          substr=substr.substring(substr.indexOf('"')+1,substr.lastIndexOf('"'));
+                          //TODO: supposed endpoint
+                          keyUri=substr.startsWith("http")?substr:baseUri+substr;
+                          Log.d("keyURL",keyUri);
                       }
                   }
                   else if(line.startsWith("#EXTINF"))
@@ -127,6 +125,5 @@ public class VKM3UParser {
               else throw new RuntimeException(String.format("Failed to parse: %s",line));
               mHeapSize+=line.getBytes().length;
           }
-          if(baseUri.isEmpty())throw new NullPointerException("baseUri==null");
     }
 }
