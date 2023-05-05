@@ -155,6 +155,7 @@
         android:resizeableActivity="true"
         android:roundIcon="@mipmap/vt_launcher_round"
         android:supportsRtl="true"
+        android:appCategory="social"
         android:theme="@style/VkLightStyle">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
