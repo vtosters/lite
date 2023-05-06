@@ -12,17 +12,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
-
-import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.hasTracks;
-import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
+import java.util.*;
 
 public class TracklistInjector {
 
@@ -58,7 +54,7 @@ public class TracklistInjector {
                     }
                 });
             } else {
-                if (!hasTracks()) {
+                if (!CacheDatabaseDelegate.hasTracks()) {
                     observableEmitter.b(parser.c(getEmptyCatalog()));
                 } else {
                     observableEmitter.b(parser.c(createVirtualCatalog(TracklistHelper.getTracks())));
@@ -68,66 +64,114 @@ public class TracklistInjector {
     }
 
     private static JSONObject getEmptyCatalog() throws JSONException {
-        return new JSONObject("{\"catalog\":{\"default_section\":\"cache\",\"sections\":[{\"id\":\"cache\",\"title\":\"" + AndroidUtils.getString(R.string.cached_content_title) + "\",\"blocks\":[{\"data_type\":\"placeholder\",\"id\":\"0\",\"layout\":{\"name\":\"placeholder_big\"},\"placeholder_ids\":[\"_synth_trackEmpty\"]}]}]},\"audios\":[],\"playlists\":[],\"placeholders\":[{\"id\":\"_synth_trackEmpty\",\"title\":\"" + AndroidUtils.getString(R.string.cached_content_empty) + "\",\"text\":\"" + AndroidUtils.getString(R.string.cached_content_empty_desc) + "\",\"buttons\":[]}]}");
+        JSONObject emptyCatalog = new JSONObject();
+
+        JSONObject catalog = new JSONObject();
+        catalog.put("default_section", "cache");
+
+        JSONArray sections = new JSONArray();
+        JSONObject section = new JSONObject();
+        section.put("id", "cache");
+        section.put("title", AndroidUtils.getString(R.string.cached_content_title));
+
+        JSONArray blocks = new JSONArray();
+        JSONObject block = new JSONObject();
+        block.put("data_type", "placeholder");
+        block.put("id", "0");
+
+        JSONObject layout = new JSONObject();
+        layout.put("name", "placeholder_big");
+        block.put("layout", layout);
+
+        JSONArray placeholderIds = new JSONArray();
+        placeholderIds.put("_synth_trackEmpty");
+        block.put("placeholder_ids", placeholderIds);
+        blocks.put(block);
+        section.put("blocks", blocks);
+        sections.put(section);
+        catalog.put("sections", sections);
+
+        emptyCatalog.put("catalog", catalog);
+        emptyCatalog.put("audios", new JSONArray());
+        emptyCatalog.put("playlists", new JSONArray());
+
+        JSONArray placeholders = new JSONArray();
+        JSONObject placeholder = new JSONObject();
+        placeholder.put("id", "_synth_trackEmpty");
+        placeholder.put("title", AndroidUtils.getString(R.string.cached_content_empty));
+        placeholder.put("text", AndroidUtils.getString(R.string.cached_content_empty_desc));
+        placeholder.put("buttons", new JSONArray());
+        placeholders.put(placeholder);
+
+        emptyCatalog.put("placeholders", placeholders);
+
+        return emptyCatalog;
+    }
+
+    private static JSONObject getShuffleButton() throws JSONException {
+        JSONObject shuffleButton = new JSONObject();
+        shuffleButton.put("id", getRandomId());
+        shuffleButton.put("data_type", "action");
+
+        JSONObject layout = new JSONObject();
+        layout.put("name", "horizontal_buttons");
+        layout.put("owner_id", AccountManagerUtils.getUserId());
+
+        shuffleButton.put("layout", layout);
+
+        JSONArray listenEvents = new JSONArray();
+        listenEvents.put("music_audios_remove");
+        listenEvents.put("music_audios_add");
+
+        shuffleButton.put("listen_events", listenEvents);
+
+        JSONArray buttons = new JSONArray();
+        JSONObject button = new JSONObject();
+
+        JSONObject action = new JSONObject();
+        action.put("type", "play_shuffled_audios_from_block");
+
+        button.put("action", action);
+        button.put("block_id", "shuffle");
+        button.put("ref_items_count", CacheDatabaseDelegate.getTrackCount());
+        button.put("ref_layout_name", "list");
+        button.put("ref_data_type", "music_audios");
+
+        buttons.put(button);
+
+        shuffleButton.put("buttons", buttons);
+
+        return shuffleButton;
     }
 
     public static void injectIntoExistingCatalog(JSONObject catalogNode) {
-        Log.d("TracklistInjector", "injectIntoExistingCatalog");
-
         try {
-            var catalog = catalogNode.getJSONObject("catalog");
-            var sectionsNode = catalog.getJSONArray("sections");
-            var firstSection = sectionsNode.getJSONObject(0);
+            JSONObject catalog = catalogNode.getJSONObject("catalog");
+            JSONArray sectionsNode = catalog.getJSONArray("sections");
+            JSONObject firstSection = sectionsNode.getJSONObject(0);
 
-            if (!firstSection.getString("url").equals("https://vk.com/audios" + getUserId() + "?section=all"))
+            if (!isFirstSectionUrlValid(firstSection)) {
                 return;
+            }
 
-            var blocks = firstSection.getJSONArray("blocks");
+            JSONArray blocks = firstSection.getJSONArray("blocks");
 
             if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
-                var noPlaylists = blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type").equals("create_playlist");
+                boolean noPlaylists = hasNoPlaylists(blocks);
 
                 if (noPlaylists) {
-                    catalogNode.put("playlists", new JSONArray().put(getPlaylist()));
-                    Log.d("catalogInjector", "added new pl");
+                    catalogNode.put("playlists", new JSONArray().put(PlaylistHelper.getPlaylist()));
 
-                    var newBlocks = new JSONArray();
-
-                    newBlocks
-                            .put(getCatalogHeader())
-                            .put(getCatalogPlaylist())
-                            .put(getCatalogSeparator());
+                    JSONArray newBlocks = createNewBlocks(blocks);
 
                     Log.d("catalogInjector", "added cache catalog playlist");
-
-                    for (int i = 0; i < blocks.length(); i++) {
-                        newBlocks.put(blocks.optJSONObject(i));
-                    }
 
                     firstSection.put("blocks", newBlocks);
                 } else {
                     try {
-                        catalogNode.optJSONArray("playlists").put(getPlaylist());
-                        Log.d("catalogInjector", "added to exist pl");
+                        catalogNode.optJSONArray("playlists").put(PlaylistHelper.getPlaylist());
 
-                        for (int i = 0; i < blocks.length(); i++) {
-                            var j = blocks.optJSONObject(i);
-                            var type = j.optString("data_type");
-
-                            if (type.equals("music_playlists") && j.has("playlists_ids")) {
-                                var newarr = new JSONArray();
-                                var playlists_ids = j.optJSONArray("playlists_ids");
-
-                                newarr.put(getUserId() + "_-1");
-
-                                for (int n = 0; n < playlists_ids.length(); n++) {
-                                    newarr.put(playlists_ids.optString(n));
-                                }
-
-                                j.put("playlists_ids", newarr);
-                                break;
-                            }
-                        }
+                        updatePlaylistsIds(blocks);
                     } catch (Exception e) {
                         Log.d("catalogInjector", e.toString());
                     }
@@ -138,24 +182,49 @@ public class TracklistInjector {
         }
     }
 
-    public static JSONObject createVirtualCatalog(List<MusicTrack> tracks)
-            throws JSONException {
-        Log.d("TracklistInjector", "createVirtualCatalog");
+    private static boolean isFirstSectionUrlValid(JSONObject firstSection) throws JSONException {
+        return firstSection.getString("url").equals("https://vk.com/audios" + AccountManagerUtils.getUserId() + "?section=all");
+    }
 
-        var clickAction = new JSONObject()
-                .put("type", "open_url")
-                .put("target", "internal")
-                .put("url", "https://vkx.app/index.html?app=vt_ctg");
+    private static boolean hasNoPlaylists(JSONArray blocks) throws JSONException {
+        return blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type").equals("create_playlist");
+    }
 
-        var catalogBanner = new JSONObject()
-                .put("id", 1234)
-                .put("image_mode", "cover")
-                .put("title", AndroidUtils.getString(R.string.vkx_integration_title))
-                .put("text", AndroidUtils.getString(R.string.vkx_integration_desc))
-                .put("click_action", new JSONObject().put("action", clickAction));
-        var catalogBanners = new JSONArray()
-                .put(catalogBanner);
+    private static JSONArray createNewBlocks(JSONArray blocks) throws JSONException {
+        JSONArray newBlocks = new JSONArray();
 
+        newBlocks
+                .put(PlaylistHelper.getCatalogHeader())
+                .put(PlaylistHelper.getCatalogPlaylist())
+                .put(PlaylistHelper.getCatalogSeparator());
+
+        for (int i = 0; i < blocks.length(); i++) {
+            newBlocks.put(blocks.optJSONObject(i));
+        }
+        return newBlocks;
+    }
+
+    private static void updatePlaylistsIds(JSONArray blocks) throws JSONException {
+        for (int i = 0; i < blocks.length(); i++) {
+            JSONObject j = blocks.optJSONObject(i);
+            String type = j.optString("data_type");
+
+            if (type.equals("music_playlists") && j.has("playlists_ids")) {
+                JSONArray newarr = new JSONArray();
+                JSONArray playlists_ids = j.optJSONArray("playlists_ids");
+
+                newarr.put(AccountManagerUtils.getUserId() + "_-1");
+
+                for (int n = 0; n < playlists_ids.length(); n++) {
+                    newarr.put(playlists_ids.optString(n));
+                }
+
+                j.put("playlists_ids", newarr);
+                break;
+            }
+        }
+    }
+    public static JSONObject createVirtualCatalog(List<MusicTrack> tracks) throws JSONException {
         var audiosBlock = new JSONObject()
                 .put("id", getRandomId())
                 .put("data_type", "music_audios")
@@ -164,28 +233,12 @@ public class TracklistInjector {
 
         var layout = new JSONObject()
                 .put("name", "list")
-                .put("owner_id", getUserId());
+                .put("owner_id", AccountManagerUtils.getUserId());
 
         audiosBlock.put("layout", layout);
 
-        var blocks = new JSONArray()
-                .put(audiosBlock);
+        var blocks = new JSONArray().put(getShuffleButton()).put(audiosBlock);
 
-//        var vkxPostirony = new JSONObject()
-//                .put("id", getRandomId())
-//                .put("data_type", "catalog_banners")
-//                .put("url", "synth:cache:vkx")
-//                .put("catalog_banner_ids", new JSONArray().put(1234));
-//
-//        var vkxlayout = new JSONObject()
-//                .put("name", "large_list")
-//                .put("owner_id", Globals.getUserId())
-//                .put("infinite_repeat", true);
-//
-//        vkxPostirony.put("layout", vkxlayout);
-//
-//       if (eligibleForVkxAd())
-//            blocks.put(vkxPostirony);
         var randomId = getRandomId();
 
         var section = new JSONObject()
@@ -203,8 +256,7 @@ public class TracklistInjector {
 
         return new JSONObject()
                 .put("catalog", catalog)
-                .put("audios", TracklistHelper.tracksToJsons(tracks))
-                .put("catalog_banners", catalogBanners);
+                .put("audios", TracklistHelper.tracksToJsons(tracks));
     }
 
     private static String getRandomId() {

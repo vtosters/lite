@@ -1362,6 +1362,18 @@
 
     .line 44
     :cond_0
+    invoke-static {}, Lru/vtosters/lite/music/cache/injectors/TracklistInjector;->eligibleForOfflineCaching()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p0}, Lru/vtosters/lite/music/cache/injectors/ShuffleInjector;->shuffleTracks(Lcom/vk/music/model/PlayerModelImpl;)V
+
+    return-void
+
+    .line 90
+    :cond_1
     new-instance v0, Lcom/vk/api/audio/AudioGetButtonTracks;
 
     const/16 v1, 0x64
