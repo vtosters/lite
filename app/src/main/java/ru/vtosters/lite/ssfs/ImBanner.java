@@ -19,11 +19,12 @@ public class ImBanner {
         var user_id = orig.getJSONObject("peer").getInt("id");
 
         if (!UsersList.hasBanner(user_id) || user_id == 0) {
-            if (getBoolValue("convBarRecomm", false)) {
-                return null;
-            } else {
-                return orig.optJSONObject("conversation_bar");
-            }
+//            if (getBoolValue("convBarRecomm", false)) {
+//                return null;
+//            } else {
+//                return orig.optJSONObject("conversation_bar");
+//            }
+            return null;
         }
 
         try {
