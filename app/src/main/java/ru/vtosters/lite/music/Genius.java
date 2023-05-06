@@ -12,6 +12,7 @@ import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 
 public class Genius {
     private static final String KEY = "Bearer ZTejoT_ojOEasIkT9WrMBhBQOz6eYKK5QULCMECmOhvwqjRZ6WbpamFe3geHnvp3";
@@ -38,10 +39,10 @@ public class Genius {
             return null;
         }
 
-        Log.d("Genius", "/search/multi?q=" + artist + "%20" + track + "&from_background=0");
+        Log.d("Genius", "/search/multi?q=" + URLEncoder.encode(artist + " " + track) + "&from_background=0");
 
         var request = new Request.a()
-                .b(URL + "/search/multi?q=" + artist + "%20" + track + "&from_background=0")
+                .b(URL + "/search/multi?q=" + URLEncoder.encode(artist + " " + track) + "&from_background=0")
                 .a("User-Agent", "Genius/5.14.0 (Android; Android 13; Google Pixel 4 XL)")
                 .a("Authorization", KEY)
                 .a("x-genius-app-background-request", "0")

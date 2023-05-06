@@ -18,11 +18,6 @@
                 android:key="anim_rtrn_type"
                 android:title="@string/franimation"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="useGenius"
-                android:summary="@string/useGenius_summ"
-                android:title="@string/useGenius_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="useNewSettings"
                 android:title="@string/useNewSettings_title"/>

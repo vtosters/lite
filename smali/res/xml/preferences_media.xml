@@ -23,6 +23,11 @@
                 android:title="@string/autocache_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
+                android:key="useGenius"
+                android:summary="@string/useGenius_summ"
+                android:title="@string/useGenius_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
                 android:key="useOldAppVer"
                 android:summary="@string/useOldAppVer_summ"
                 android:title="@string/useOldAppVer_title"/>
