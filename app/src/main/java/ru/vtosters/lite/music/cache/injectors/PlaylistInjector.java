@@ -9,7 +9,6 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.downloaders.AudioDownloader;
@@ -84,7 +83,7 @@ public class PlaylistInjector {
                 }
 
                 if (isVirtualPlaylist) {
-                    response.c = (ArrayList<MusicTrack>) TracklistHelper.getTracksWithThumbnails();
+                    response.c = (ArrayList<MusicTrack>) TracklistHelper.getMyCachedMusicTracks();
                     response.b = PlaylistHelper.createCachedPlaylistMetadata();
                 } else {
                     response.c = (ArrayList<MusicTrack>) TracklistHelper.getTracks(requestArgs.get("owner_id"));

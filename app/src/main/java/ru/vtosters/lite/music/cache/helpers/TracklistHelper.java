@@ -15,6 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TracklistHelper {
+    public static List<MusicTrack> getMyCachedMusicTracks() {
+        return getTracksWithThumbnails(TracklistHelper.getTracks());
+    }
 
     public static List<MusicTrack> getTracks() {
         return CacheDatabaseDelegate.getTracks();
@@ -51,19 +54,18 @@ public class TracklistHelper {
         return arr;
     }
 
-    public static List<MusicTrack> getTracksWithThumbnails() {
-        ArrayList<MusicTrack> tracks = new ArrayList<>();
-        JSONArray cache = TracklistHelper.tracksToJsons(TracklistHelper.getTracks());
-
-        try {
-            for (int i = 0; i < cache.length(); i++) {
-                tracks.add(new MusicTrack(cache.getJSONObject(i)));
+    public static List<MusicTrack> getTracksWithThumbnails(List<MusicTrack> list) {
+        List<MusicTrack> tracks = new ArrayList<>();
+        for (MusicTrack track : list) {
+            var json = track.J();
+            var folder = FileCacheImplementation.getThumbnailsFolder(LibVKXClient.asId(track));
+            try {
+                addCachedThumbnails(json, folder);
+            } catch (JSONException | MalformedURLException e) {
+                Log.d("TracklistHelper", e.getMessage());
             }
-        } catch (JSONException e) {
-            tracks = (ArrayList<MusicTrack>) TracklistHelper.getTracks();
-            e.printStackTrace();
+            tracks.add(new MusicTrack(json));
         }
-
         return tracks;
     }
 

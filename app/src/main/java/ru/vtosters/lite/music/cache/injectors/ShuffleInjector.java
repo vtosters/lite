@@ -18,7 +18,7 @@ public class ShuffleInjector {
     }
 
     private static List<MusicTrack> getShuffledList() {
-        List<MusicTrack> shuffled = TracklistHelper.getTracksWithThumbnails();
+        List<MusicTrack> shuffled = TracklistHelper.getMyCachedMusicTracks();
         Collections.shuffle(shuffled);
         return shuffled;
     }
