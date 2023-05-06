@@ -83,7 +83,6 @@ public class PlaylistHelper {
     }
 
     public static JSONObject getPlaylist() throws JSONException {
-
         return new JSONObject()
                 .put("id", -1)
                 .put("owner_id", getUserId())

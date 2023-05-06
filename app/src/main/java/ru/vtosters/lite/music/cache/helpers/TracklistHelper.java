@@ -11,6 +11,7 @@ import ru.vtosters.lite.music.cache.FileCacheImplementation;
 
 import java.io.File;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TracklistHelper {
@@ -48,6 +49,22 @@ public class TracklistHelper {
             arr.put(json);
         }
         return arr;
+    }
+
+    public static List<MusicTrack> getTracksWithThumbnails() {
+        ArrayList<MusicTrack> tracks = new ArrayList<>();
+        JSONArray cache = TracklistHelper.tracksToJsons(TracklistHelper.getTracks());
+
+        try {
+            for (int i = 0; i < cache.length(); i++) {
+                tracks.add(new MusicTrack(cache.getJSONObject(i)));
+            }
+        } catch (JSONException e) {
+            tracks = (ArrayList<MusicTrack>) TracklistHelper.getTracks();
+            e.printStackTrace();
+        }
+
+        return tracks;
     }
 
     private static void addCachedThumbnails(JSONObject target, File thumbnailsDir)
