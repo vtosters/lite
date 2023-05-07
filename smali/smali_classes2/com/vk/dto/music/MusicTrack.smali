@@ -2998,7 +2998,9 @@
 
     if-eqz v3, :cond_37
 
-    const v14, 0x1
+    invoke-static {}, Lru/vtosters/lite/utils/NetworkUtils;->isNetworkConnected()Z
+
+    move-result v14
     ###
     :cond_37
     const-string v2, "album"
