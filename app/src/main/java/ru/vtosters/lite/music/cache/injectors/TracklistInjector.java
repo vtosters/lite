@@ -20,6 +20,8 @@ import ru.vtosters.lite.utils.NetworkUtils;
 
 import java.util.*;
 
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
+
 public class TracklistInjector {
 
     public static boolean eligibleForOfflineCaching() {
@@ -160,16 +162,12 @@ public class TracklistInjector {
                 boolean noPlaylists = hasNoPlaylists(blocks);
 
                 if (noPlaylists) {
-                    catalogNode.put("playlists", new JSONArray().put(PlaylistHelper.getPlaylist()));
+                    PlaylistHelper.addCachedPlaylists(catalogNode.optJSONArray("playlists"), true);
 
-                    JSONArray newBlocks = createNewBlocks(blocks);
-
-                    Log.d("catalogInjector", "added cache catalog playlist");
-
-                    firstSection.put("blocks", newBlocks);
+                    firstSection.put("blocks", createNewBlocks(blocks));
                 } else {
                     try {
-                        catalogNode.optJSONArray("playlists").put(PlaylistHelper.getPlaylist());
+                        PlaylistHelper.addCachedPlaylists(catalogNode.optJSONArray("playlists"), false);
 
                         updatePlaylistsIds(blocks);
                     } catch (Exception e) {
@@ -186,7 +184,7 @@ public class TracklistInjector {
         return firstSection.getString("url").equals("https://vk.com/audios" + AccountManagerUtils.getUserId() + "?section=all");
     }
 
-    private static boolean hasNoPlaylists(JSONArray blocks) throws JSONException {
+    private static boolean hasNoPlaylists(JSONArray blocks) {
         return blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type").equals("create_playlist");
     }
 
@@ -201,6 +199,7 @@ public class TracklistInjector {
         for (int i = 0; i < blocks.length(); i++) {
             newBlocks.put(blocks.optJSONObject(i));
         }
+
         return newBlocks;
     }
 
@@ -210,16 +209,15 @@ public class TracklistInjector {
             String type = j.optString("data_type");
 
             if (type.equals("music_playlists") && j.has("playlists_ids")) {
-                JSONArray newarr = new JSONArray();
+                JSONArray newarr = PlaylistHelper.getCachedPlaylistsIds();
                 JSONArray playlists_ids = j.optJSONArray("playlists_ids");
-
-                newarr.put(AccountManagerUtils.getUserId() + "_-1");
 
                 for (int n = 0; n < playlists_ids.length(); n++) {
                     newarr.put(playlists_ids.optString(n));
                 }
 
                 j.put("playlists_ids", newarr);
+
                 break;
             }
         }
@@ -237,7 +235,12 @@ public class TracklistInjector {
 
         audiosBlock.put("layout", layout);
 
-        var blocks = new JSONArray().put(getShuffleButton()).put(audiosBlock);
+        var blocks = new JSONArray()
+                .put(getCatalogHeader())
+                .put(getCatalogPlaylist())
+                .put(getCatalogSeparator())
+                .put(getShuffleButton())
+                .put(audiosBlock);
 
         var randomId = getRandomId();
 
@@ -256,6 +259,7 @@ public class TracklistInjector {
 
         return new JSONObject()
                 .put("catalog", catalog)
+                .put("playlists", addCachedPlaylists(new JSONArray(), false))
                 .put("audios", TracklistHelper.tracksToJsons(tracks));
     }
 

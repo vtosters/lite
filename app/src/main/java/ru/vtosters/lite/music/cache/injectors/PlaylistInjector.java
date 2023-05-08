@@ -22,20 +22,15 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class PlaylistInjector {
-    public final static String CHANNEL_NAME = "VTCH";
     private static final ExecutorService executor = Executors.newCachedThreadPool();
 
     public static void injectDownloadPlaylist(Playlist playlist) {
         executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
     }
 
-    public static boolean eligibleForOfflineCaching() {
-        return CacheDatabaseDelegate.hasTracks();
-    }
-
     public static Observable<AudioGetPlaylist.c> injectGetPlaylist(AudioGetPlaylist audioGetPlaylist) {
         try {
-            if (!eligibleForOfflineCaching())
+            if (!CacheDatabaseDelegate.hasTracks())
                 return null;
             var requestArgs = audioGetPlaylist.b();
 
@@ -44,8 +39,6 @@ public class PlaylistInjector {
             var accessKey = requestArgs.get("access_key");
             boolean isVirtualPlaylist = accessKey != null && (accessKey.equals("cache"));
             boolean isAlbumVirtualPlaylist = accessKey != null && (accessKey.equals("cacheAlbum"));
-
-            Log.d("PlaylistInjector", "id = " + id + " / owner = " + ownerId + " / access = " + accessKey + " / " + isVirtualPlaylist + " + " + isAlbumVirtualPlaylist);
 
             if (TextUtils.isEmpty(id) || (!isVirtualPlaylist && !isAlbumVirtualPlaylist))
                 return null;
@@ -86,8 +79,8 @@ public class PlaylistInjector {
                     response.c = (ArrayList<MusicTrack>) TracklistHelper.getMyCachedMusicTracks();
                     response.b = PlaylistHelper.createCachedPlaylistMetadata();
                 } else {
-                    response.c = (ArrayList<MusicTrack>) TracklistHelper.getTracks(requestArgs.get("owner_id"));
-                    response.b = PlaylistHelper.createCachedPlaylistMetadata(requestArgs.get("owner_id"));
+                    response.c = (ArrayList<MusicTrack>) CacheDatabaseDelegate.getPlaylistSongs(requestArgs.get("id"), requestArgs.get("owner_id"));
+                    response.b = CacheDatabaseDelegate.getPlaylist(requestArgs.get("id"), requestArgs.get("owner_id"));
                 }
 
                 observableEmitter.b(response);
