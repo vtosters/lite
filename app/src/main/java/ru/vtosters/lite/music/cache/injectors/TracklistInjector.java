@@ -235,11 +235,15 @@ public class TracklistInjector {
 
         audiosBlock.put("layout", layout);
 
-        var blocks = new JSONArray()
-                .put(getCatalogHeader())
-                .put(getCatalogPlaylist())
-                .put(getCatalogSeparator())
-                .put(getShuffleButton())
+        var blocks = new JSONArray();
+
+        if (CacheDatabaseDelegate.hasPlaylist()) {
+            blocks.put(getCatalogHeader())
+                    .put(getCatalogPlaylist())
+                    .put(getCatalogSeparator());
+        }
+
+        blocks.put(getShuffleButton())
                 .put(audiosBlock);
 
         var randomId = getRandomId();

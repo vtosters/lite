@@ -235,6 +235,10 @@ public class CacheDatabaseDelegate {
         return null; // get playlist from db
     }
 
+    public static boolean hasPlaylist() {
+        return false; // has playlists or not
+    }
+
     public static List<MusicTrack> getTracks(String query) {
         List<MusicTrack> list = new ArrayList<>();
         try (Cursor cursor = getHelper().getReadableDatabase().rawQuery(query, new String[0])) {
