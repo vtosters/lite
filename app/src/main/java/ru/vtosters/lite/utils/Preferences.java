@@ -9,18 +9,10 @@ import android.os.StrictMode;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 import ru.vtosters.lite.BuildConfig;
+import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ui.fragments.VTSettings;
 
 import java.security.NoSuchAlgorithmException;
-
-import static java.lang.Long.MAX_VALUE;
-import static ru.vtosters.lite.proxy.ProxyUtils.setProxy;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPackageName;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
-import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
-import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
-import static ru.vtosters.lite.utils.VTVerifications.isVerified;
 
 public class Preferences {
 
@@ -29,8 +21,8 @@ public class Preferences {
         StrictMode.setThreadPolicy(policy);
 
         GmsUtils.fixGapps();
-        setProxy();
-        setupFilters();
+        ProxyUtils.setProxy();
+        NewsFeedFiltersUtils.setupFilters();
         VTVerifications.load(application);
         LifecycleUtils.registerActivities(application);
 
@@ -38,10 +30,11 @@ public class Preferences {
     } // VK Init
 
     public static String getBuildName() {
-        return BuildConfig.BUILD_TYPE.substring(0,1).toUpperCase() + BuildConfig.BUILD_TYPE.substring(1).toLowerCase();
+        return AndroidUtils.upString(BuildConfig.BUILD_TYPE);
     }
+
     public static SharedPreferences getPreferences() {
-        return getGlobalContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
+        return AndroidUtils.getGlobalContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
     }
 
     public static String getString(String name) {
@@ -59,7 +52,7 @@ public class Preferences {
     } // Set bool by default and get value
 
     public static SharedPreferences getPrefsFromFile(String filename) {
-        return getGlobalContext().getSharedPreferences(filename, Context.MODE_PRIVATE);
+        return AndroidUtils.getGlobalContext().getSharedPreferences(filename, Context.MODE_PRIVATE);
     }
 
     public static boolean systemtheme() {
@@ -293,7 +286,7 @@ public class Preferences {
 
     public static boolean isNewBuild() {
         try {
-            return getPreferences().getLong("setupTime", 0L) != AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo(getPackageName(), 0).lastUpdateTime;
+            return getPreferences().getLong("setupTime", 0L) != AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo(AndroidUtils.getPackageName(), 0).lastUpdateTime;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
             return false;
@@ -302,7 +295,7 @@ public class Preferences {
 
     public static void updateBuildNumber() {
         try {
-            getPreferences().edit().putLong("setupTime", AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo(getPackageName(), 0).lastUpdateTime).apply();
+            getPreferences().edit().putLong("setupTime", AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo(AndroidUtils.getPackageName(), 0).lastUpdateTime).apply();
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -310,7 +303,7 @@ public class Preferences {
 
     public static boolean isValidSignature() {
         try {
-            return validateAppSignature();
+            return SignatureChecker.validateAppSignature();
         } catch (PackageManager.NameNotFoundException | NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
@@ -318,11 +311,11 @@ public class Preferences {
     }
 
     public static boolean hasVerification() {
-        return isVerified(AccountManagerUtils.getUserId());
+        return VTVerifications.isVerified(AccountManagerUtils.getUserId());
     }
 
     public static boolean hasSpecialVerif() {
-        return isPrometheus(AccountManagerUtils.getUserId());
+        return VTVerifications.isPrometheus(AccountManagerUtils.getUserId());
     }
 
     public static boolean isLikesOnRightEnabled() {
@@ -336,7 +329,7 @@ public class Preferences {
             case "1gb" -> 1073741824L;
             case "2gb" -> 2147483648L;
             case "5gb" -> 5368709120L;
-            default -> MAX_VALUE;
+            default -> Long.MAX_VALUE;
         };
     }
 

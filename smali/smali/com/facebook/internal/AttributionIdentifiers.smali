@@ -87,6 +87,8 @@
 
     const/4 v0, 0x0
 
+    return-object v0
+
     .line 1
     :try_start_0
     invoke-static {p0}, Lcom/facebook/internal/AttributionIdentifiers;->f(Landroid/content/Context;)Z
@@ -229,6 +231,8 @@
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/facebook/internal/AttributionIdentifiers$c;-><init>(Lcom/facebook/internal/AttributionIdentifiers$a;)V
+
+    return-object v1
 
     .line 2
     new-instance v2, Landroid/content/Intent;

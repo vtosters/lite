@@ -1,10 +1,5 @@
 package ru.vtosters.lite.music.cache;
 
-import static ru.vtosters.lite.music.cache.FileCacheImplementation.getCacheDir;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.IOUtils.deleteRecursive;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
@@ -12,25 +7,26 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.RemoteException;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
+import bruhcollective.itaysonlab.libvkx.ILibVkxService;
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
 import com.vtosters.lite.R;
-
 import org.json.JSONObject;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import bruhcollective.itaysonlab.libvkx.ILibVkxService;
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.music.cache.FileCacheImplementation.getCacheDir;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+import static ru.vtosters.lite.utils.IOUtils.deleteRecursive;
 
 public class CacheDatabaseDelegate {
     private static final int DB_VERSION = 0x1;

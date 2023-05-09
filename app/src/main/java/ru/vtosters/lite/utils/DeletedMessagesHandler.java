@@ -1,13 +1,8 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.Preferences.getString;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
-
 import com.vk.im.engine.events.OnMsgUpdateEvent;
 import com.vk.im.engine.internal.longpoll.tasks.MsgDeleteLpTask;
 import com.vk.im.engine.internal.storage.StorageEnvironment;
@@ -15,13 +10,16 @@ import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.models.messages.MsgFromUser;
 import com.vk.im.engine.models.messages.NestedMsg;
 import com.vk.libsqliteext.CustomSqliteExtensionsKt;
+import io.requery.android.database.sqlite.SQLiteDatabase;
+import io.requery.android.database.sqlite.SQLiteOpenHelper;
+import ru.vtosters.lite.encryption.EncryptProvider;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.requery.android.database.sqlite.SQLiteDatabase;
-import io.requery.android.database.sqlite.SQLiteOpenHelper;
-import ru.vtosters.lite.encryption.EncryptProvider;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.Preferences.getString;
 
 public class DeletedMessagesHandler {
     private static List<Integer> sDeletedMessagesList = new ArrayList<>();

@@ -10,7 +10,9 @@ import androidx.appcompat.view.ContextThemeWrapper;
 import com.vk.auth.ui.VkAuthTextView;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.ui.fragments.DataSettingsFragment;
 import ru.vtosters.lite.ui.fragments.ProxySettingsFragment;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.Preferences;
 
@@ -21,9 +23,13 @@ import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 public class ProxyHook {
     public static void hookAuth(View v) {
-        VkAuthTextView button = (VkAuthTextView) v;
+        VkAuthTextView button = v.findViewById(AndroidUtils.getIdentifier("already_have_account", "id"));
         button.setText(R.string.proxy_setup);
         button.setOnClickListener(v1 -> callProxyDialog(v1.getContext()));
+
+        VkAuthTextView recoverAccounts = v.findViewById(AndroidUtils.getIdentifier("account_backup_view", "id"));
+        recoverAccounts.setText(AndroidUtils.getString("restore_accounts"));
+        recoverAccounts.setOnClickListener(v1 -> NavigatorUtils.switchFragment(v.getContext(), DataSettingsFragment.class));
     }
 
     @SuppressLint("SetTextI18n")

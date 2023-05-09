@@ -96,6 +96,10 @@
 
     const-string p2, "com.google.android.gms"
 
+    invoke-static {p2}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
     .line 10
     invoke-virtual {p2, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

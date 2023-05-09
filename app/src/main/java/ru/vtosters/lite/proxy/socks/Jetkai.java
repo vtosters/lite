@@ -1,19 +1,17 @@
 package ru.vtosters.lite.proxy.socks;
 
-import static ru.vtosters.lite.proxy.GithubList.getProxy;
-import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
-import static ru.vtosters.lite.proxy.ProxyUtils.hasProxy;
-
 import android.util.Log;
-
 import com.vtosters.lite.R;
+import ru.vtosters.lite.proxy.RandomProxy;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-import ru.vtosters.lite.proxy.RandomProxy;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
+import static ru.vtosters.lite.proxy.GithubList.getProxy;
+import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
+import static ru.vtosters.lite.proxy.ProxyUtils.hasProxy;
 
 public class Jetkai {
     private static final String TAG = "Jetkai_Socks";

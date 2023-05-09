@@ -1,33 +1,29 @@
 package ru.vtosters.lite.ui.components;
 
-import static android.os.Environment.DIRECTORY_DOWNLOADS;
-import static android.os.Environment.getExternalStoragePublicDirectory;
-import static android.widget.Toast.LENGTH_LONG;
-import static android.widget.Toast.LENGTH_SHORT;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
-
 import com.vtosters.lite.R;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.IOUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.IOUtils;
-import ru.vtosters.lite.utils.Preferences;
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
+import static android.os.Environment.getExternalStoragePublicDirectory;
+import static android.widget.Toast.LENGTH_LONG;
+import static android.widget.Toast.LENGTH_SHORT;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class BackupManager {
 
@@ -49,6 +45,10 @@ public class BackupManager {
             return;
         }
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            LifecycleUtils.getCurrentActivity().requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
+        }
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         var dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
         var file = new File(dir, "Onlines_" + dateFormat.format(new Date()) + ".xml");
@@ -65,6 +65,10 @@ public class BackupManager {
     }
 
     public static void backupSettings() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            LifecycleUtils.getCurrentActivity().requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
+        }
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
         var file = new File(sBackupDir,
                 "Backup_" + dateFormat.format(new Date()) + ".xml");
@@ -80,17 +84,6 @@ public class BackupManager {
         }
     }
 
-    public static String[] getBackupsNames() {
-        var arr = sBackupDir.list((dir, name) -> {
-            return name.endsWith(".xml");
-        });
-        if (arr == null) return new String[0];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = arr[i].replace(".xml", "");
-        }
-        return arr;
-    }
-
     public static String getPrefContent(String filename) throws IOException {
         File prefsDir = new File(getGlobalContext().getFilesDir().getParentFile(), "shared_prefs");
         if (!prefsDir.exists())
@@ -99,9 +92,9 @@ public class BackupManager {
         return IOUtils.readAllLines(pref);
     }
 
-    public static void restoreBackup(String backupName) throws IOException {
+    public static void restoreBackup(String path) throws IOException {
         SharedPreferences.Editor editor = getPrefs().edit();
-        File pref = new File(sBackupDir, backupName + ".xml");
+        File pref = new File(path);
         Scanner scanner = new Scanner(IOUtils.readAllLines(pref));
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine().trim();

@@ -1,13 +1,13 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.AndroidUtils.MD5;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.provider.Settings;
 import android.util.Log;
+
+import static ru.vtosters.lite.utils.AndroidUtils.MD5;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class DeviceInfoHook {
     public static String getDeviceInfo(String input) {
@@ -40,7 +40,7 @@ public class DeviceInfoHook {
     }
 
     @SuppressLint("HardwareIds")
-    private static String findDeviceId() {
-        return Settings.Secure.getString(getGlobalContext().getContentResolver(), "android_id");
+    public static String findDeviceId() {
+        return Settings.Secure.getString(getGlobalContext().getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 }

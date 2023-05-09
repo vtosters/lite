@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="@string/other_fix_app">
+    <PreferenceCategory android:title="@string/data">
         <Preference
-                android:key="firebasefix"
-                android:summary="@string/firebasefixsum"
-                android:title="@string/firebasefix"/>
+                android:key="datasettings"
+                android:title="@string/datasettings_title"/>
         <Preference
                 android:key="clearcache"
                 android:title="@string/clearcache_other_title"/>
@@ -12,21 +11,14 @@
                 android:key="autoclearcache"
                 android:title="@string/autoclearcache"/>
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtl_other_backups_title">
+    <PreferenceCategory android:title="@string/other_fix_app">
         <Preference
-                android:key="saveonlines"
-                android:summary="@string/saveonlines_summ"
-                android:title="@string/saveonlines_title"/>
+                android:key="firebasefix"
+                android:summary="@string/firebasefixsum"
+                android:title="@string/firebasefix"/>
         <Preference
-                android:key="deleteprefs"
-                android:summary="@string/other_reset_settings_summary"
-                android:title="@string/other_reset_settings"/>
-        <Preference
-                android:key="saveprefs"
-                android:title="@string/saveprefs_title"/>
-        <Preference
-                android:key="restoreprefs"
-                android:title="@string/restoreprefs_title"/>
+                android:key="microgsettings"
+                android:title="Настройки MicroG"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference
@@ -82,10 +74,5 @@
         <Preference
                 android:key="vk_admin_token"
                 android:title="@string/vk_admin_token_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="analyticsDisabled"
-                android:summary="Сбор данных о падениях приложения помогает нам улучшать приложение\n\nОтключение сбора логов падений заставит грустить бедных разработчиков"
-                android:title="Отключить сбор данных"/>
     </PreferenceCategory>
 </PreferenceScreen>

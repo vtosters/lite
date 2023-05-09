@@ -1,29 +1,23 @@
 package ru.vtosters.lite.music.hook;
 
-import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.asId;
-import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.getInstance;
-import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isIntegrationEnabled;
-import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalled;
-import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.lambdaplay;
-import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isCached;
-import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isVkxCached;
-import static ru.vtosters.lite.utils.NetworkUtils.isNetworkConnected;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
-
 import android.os.RemoteException;
-
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vk.music.bottomsheets.a.MusicAction;
 import com.vk.music.common.MusicPlaybackLaunchContext;
 import com.vtosters.lite.R;
-
-import java.util.ArrayList;
-
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.utils.AndroidUtils;
+
+import java.util.ArrayList;
+
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.*;
+import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isCached;
+import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isVkxCached;
+import static ru.vtosters.lite.utils.NetworkUtils.isNetworkConnected;
+import static ru.vtosters.lite.utils.Preferences.milkshake;
 
 public class MusicBottomSheetHook {
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
@@ -38,13 +32,13 @@ public class MusicBottomSheetHook {
         if (isIntegrationEnabled()) {
             if (isVkxCached(trackid)) {
                 actions.add(getRemoveCacheTrackVkxAction());
-            } else if (isNetworkConnected()){
+            } else if (isNetworkConnected()) {
                 actions.add(addToCacheTrackVkxAction());
             }
         } else {
             if (isCached(trackid)) {
                 actions.add(getRemoveCacheTrackAction());
-            } else if (isNetworkConnected()){
+            } else if (isNetworkConnected()) {
                 actions.add(addToCacheTrackAction());
             }
         }
@@ -93,10 +87,10 @@ public class MusicBottomSheetHook {
         if (isIntegrationEnabled()) {
             if (isVkxCached(playlist.a, playlist.b)) {
                 actions.add(getRemoveCacheTrackVkxAction());
-            } else if (isNetworkConnected()){
+            } else if (isNetworkConnected()) {
                 actions.add(addToCacheTrackVkxAction());
             }
-        } else if (isNetworkConnected()){
+        } else if (isNetworkConnected()) {
             actions.add(addToCacheTrackAction());
         }
 

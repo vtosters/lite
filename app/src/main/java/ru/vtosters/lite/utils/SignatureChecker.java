@@ -1,16 +1,16 @@
 package ru.vtosters.lite.utils;
 
-import static android.content.pm.PackageManager.GET_SIGNATURES;
-import static android.content.pm.PackageManager.NameNotFoundException;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPackageName;
-
 import android.annotation.SuppressLint;
 import android.content.pm.PackageInfo;
 import android.content.pm.Signature;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
+import static android.content.pm.PackageManager.GET_SIGNATURES;
+import static android.content.pm.PackageManager.NameNotFoundException;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPackageName;
 
 public class SignatureChecker {
     private static final String APP_SIGNATURE = "QzNFQTI3Q0ExNEJENzJFM0U2QUUyMDM0OTdCNDQ0NUFEQUMxRjk0NQ==";

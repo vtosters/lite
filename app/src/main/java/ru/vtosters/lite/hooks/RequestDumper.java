@@ -1,12 +1,11 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.Preferences.dev;
-
 import android.util.Log;
-
 import com.vk.api.internal.MethodCall;
 
 import java.util.LinkedHashMap;
+
+import static ru.vtosters.lite.utils.Preferences.dev;
 
 public class RequestDumper {
     public static void addParams(MethodCall.a paramslist, String method, LinkedHashMap<String, String> params, String apiver) {

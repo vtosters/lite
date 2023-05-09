@@ -7,9 +7,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
-
-import com.vk.core.fragments.FragmentImpl;
-import com.vk.navigation.Navigator;
 import com.vtosters.lite.MainActivity;
 
 import java.util.ArrayList;

@@ -239,6 +239,10 @@
 
     const-string v1, "com.google.android.gms"
 
+    invoke-static {v1}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     if-eq p2, v0, :cond_1
 
     const/4 v0, 0x2

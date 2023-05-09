@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui.fragments;
 
 import android.net.Uri;
 import android.os.Bundle;
-
 import com.vk.core.util.LangUtils;
 import com.vk.core.util.UriExt;
 import com.vk.webapp.VkUiFragment;

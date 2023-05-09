@@ -1,9 +1,9 @@
 package ru.vtosters.lite.tgs;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class TGPref {
     private static final SharedPreferences Prefs = PreferenceManager.getDefaultSharedPreferences(getGlobalContext());

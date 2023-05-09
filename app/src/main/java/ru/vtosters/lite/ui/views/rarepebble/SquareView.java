@@ -1,9 +1,9 @@
 package ru.vtosters.lite.ui.views.rarepebble;
 
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-
 import android.content.Context;
 import android.view.View;
+
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 
 class SquareView extends View {
     private static final int MIN_SIZE_DIP = 200;
@@ -25,11 +25,9 @@ class SquareView extends View {
         int size = minSizePx;
         if (modeW == MeasureSpec.UNSPECIFIED) {
             size = h;
-        }
-        else if (modeH == MeasureSpec.UNSPECIFIED) {
+        } else if (modeH == MeasureSpec.UNSPECIFIED) {
             size = w;
-        }
-        else {
+        } else {
             size = Math.min(w, h);
         }
         size = Math.max(size, minSizePx);

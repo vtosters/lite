@@ -1,7 +1,6 @@
 package ru.vtosters.lite.music.hook;
 
 import android.content.Context;
-
 import com.vk.music.fragment.MusicFragment;
 
 public class MusicArtistSelectorHook {

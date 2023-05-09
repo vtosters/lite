@@ -1,22 +1,20 @@
 package ru.vtosters.lite.music.converter.ts;
 
 import android.util.Log;
-
 import com.arthenica.ffmpegkit.FFmpegKit;
 import com.arthenica.ffmpegkit.ReturnCode;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.Artist;
 import com.vk.dto.music.MusicTrack;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.IOUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.stream.Collectors;
-
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.IOUtils;
 
 public class FFMpeg {
     private static final int BUFFER_SIZE = 2048;

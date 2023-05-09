@@ -1,13 +1,12 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.proxy.RandomProxy.setupNewProxy;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-
 import android.os.Bundle;
-
 import com.vtosters.lite.R;
 
 import java.io.IOException;
+
+import static ru.vtosters.lite.proxy.RandomProxy.setupNewProxy;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 public class ProxySettingsFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override

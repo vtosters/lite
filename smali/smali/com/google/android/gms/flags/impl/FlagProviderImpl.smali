@@ -165,6 +165,10 @@
     :try_start_0
     const-string v0, "com.google.android.gms"
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     const/4 v1, 0x0
 
     .line 3

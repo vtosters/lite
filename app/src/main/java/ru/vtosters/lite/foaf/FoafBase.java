@@ -1,22 +1,19 @@
 package ru.vtosters.lite.foaf;
 
-import static android.widget.Toast.LENGTH_SHORT;
-import static android.widget.Toast.makeText;
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
-import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 import com.vtosters.lite.R;
-
+import okhttp3.Headers;
+import okhttp3.OkHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.net.Request;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -29,11 +26,11 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import okhttp3.Headers;
-import okhttp3.OkHttpClient;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
-import ru.vtosters.lite.net.Request;
-import ru.vtosters.lite.utils.LifecycleUtils;
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"");

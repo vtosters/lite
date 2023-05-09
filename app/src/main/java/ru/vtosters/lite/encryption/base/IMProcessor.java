@@ -1,11 +1,10 @@
 package ru.vtosters.lite.encryption.base;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import ru.vtosters.lite.utils.Preferences;
+
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public abstract class IMProcessor {
     // By default it checks start and end tag.

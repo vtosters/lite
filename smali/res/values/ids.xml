@@ -3919,4 +3919,5 @@
     <item name="download_mp3" type="id" />
     <item name="remove_from_cache_vkx" type="id" />
     <item name="add_to_cache_vkx" type="id" />
+    <item name="account_backup_view" type="id" />
 </resources>

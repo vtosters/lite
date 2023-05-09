@@ -137,6 +137,7 @@
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.mgoogle.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
@@ -154,6 +155,7 @@
         android:resizeableActivity="true"
         android:roundIcon="@mipmap/vt_launcher_round"
         android:supportsRtl="true"
+        android:appCategory="social"
         android:theme="@style/VkLightStyle">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -164,9 +166,6 @@
         <meta-data
             android:name="com.google.android.geo.API_SECRET"
             android:value="yu6ZAA0OWO3kmr4es7fGtSmiyfk=" />
-        <meta-data
-            android:name="com.vk.safetynet.API_SECRET"
-            android:value="AIzaSyBf_eM-cgRbg1gOkyEc2Il5gHqgsnFyVug" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/fb_app_id" />
@@ -2304,6 +2303,14 @@
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+                android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver2"
+                android:exported="true"
+                android:permission="com.mgoogle.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.mgoogle.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </receiver>
         <activity

@@ -1,18 +1,16 @@
 package ru.vtosters.lite.music.downloader;
 
 import android.util.Log;
-
-import com.vk.dto.music.MusicTrack;
-
-import java.io.File;
-
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+import com.vk.dto.music.MusicTrack;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.music.Callback;
 import ru.vtosters.lite.music.M3UDownloader;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.FileCacheImplementation;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
+
+import java.io.File;
 
 public class TrackDownloader {
     public static void downloadTrack(MusicTrack track, String path, Callback callback) {
@@ -37,7 +35,6 @@ public class TrackDownloader {
 
         var path = FileCacheImplementation.getTrackFolder(LibVKXClient.asId(track)).getAbsolutePath();
         download(track, path, callback, M3UDownloader.getInstance(), true);
-        CacheDatabaseDelegate.insertTrack(track);
     }
 
     private static void download(MusicTrack track, String path, Callback callback, ITrackDownloader downloader, boolean cache) {

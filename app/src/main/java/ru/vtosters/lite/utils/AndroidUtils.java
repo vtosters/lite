@@ -3,7 +3,6 @@ package ru.vtosters.lite.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.verify.domain.DomainVerificationManager;
@@ -11,7 +10,6 @@ import android.content.pm.verify.domain.DomainVerificationUserState;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
-import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.util.Log;
 import androidx.annotation.NonNull;
@@ -20,18 +18,22 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.Screen;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
-import ru.vtosters.lite.hooks.DateHook;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Locale;
 import java.util.Map;
-import java.util.Objects;
+import java.util.Random;
 
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class AndroidUtils {
+    private static final String ALLOWED_CHARACTERS = "0123456789qwertyuiopasdfghjklzxcvbnm";
+
     public static boolean isDebuggable() {
         return 0 != (AndroidUtils.getGlobalContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE);
     }
@@ -93,26 +95,6 @@ public class AndroidUtils {
         return getGlobalContext().getApplicationInfo().loadLabel(getGlobalContext().getPackageManager()).toString();
     }
 
-    public static Context setDefaultLocale(Context context) {
-        Locale locale = new Locale(DateHook.getLocale());
-        Locale.setDefault(locale);
-
-        var resources = context.getResources();
-        var configuration = resources.getConfiguration();
-
-        if (Build.VERSION.SDK_INT >= 24) {
-            configuration.setLocale(locale);
-            configuration.setLayoutDirection(locale);
-            return context.createConfigurationContext(configuration);
-        }
-
-        configuration.locale = locale;
-        configuration.setLayoutDirection(locale);
-        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
-
-        return context;
-    } // Language changer and BaseContext injector
-
     public static float[] getCenterScreenCoords() {
         int width = getResources().getDisplayMetrics().widthPixels;
         int height = getResources().getDisplayMetrics().heightPixels;
@@ -173,9 +155,10 @@ public class AndroidUtils {
                                         try {
                                             Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()));
                                             activity.startActivity(intent);
-                                        } catch (Throwable ignored) {}
+                                        } catch (Throwable ignored) {
+                                        }
                                     }
-                        }
+                                }
                         )
                         .show();
             }
@@ -201,6 +184,36 @@ public class AndroidUtils {
         return null;
     }
 
+    private static String getRandomString(int sizeOfRandomString) {
+        final Random random = new Random();
+        final StringBuilder sb = new StringBuilder(sizeOfRandomString);
+        for (int i = 0; i < sizeOfRandomString; ++i)
+            sb.append(ALLOWED_CHARACTERS.charAt(random.nextInt(ALLOWED_CHARACTERS.length())));
+        return sb.toString();
+    }
+
+    public static String getRealPathFromURI(Uri uri) {
+        try {
+            InputStream inputStream = AndroidUtils.getGlobalContext().getContentResolver().openInputStream(uri);
+
+            File file = File.createTempFile(getRandomString(10), "");
+
+            FileOutputStream outputStream = new FileOutputStream(file);
+            byte[] buff = new byte[1024];
+            int read;
+            while ((read = inputStream.read(buff, 0, buff.length)) > 0)
+                outputStream.write(buff, 0, read);
+            inputStream.close();
+            outputStream.close();
+
+            return file.getPath();
+        } catch (IOException e) {
+            Log.d("AndroidUtils", e.getMessage());
+        }
+
+        return null;
+    }
+
     public static boolean isFirstInstall(Context context) {
         try {
             long firstInstallTime = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).firstInstallTime;
@@ -210,5 +223,9 @@ public class AndroidUtils {
             e.printStackTrace();
             return true;
         }
+    }
+
+    public static String upString(String s) {
+        return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
     }
 }

@@ -1,15 +1,20 @@
 package com.vk.api.audio;
 
 import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
+
 import com.vk.api.base.ApiRequest;
 import com.vk.dto.music.MusicTrack;
 import com.vk.log.L;
+
 import org.json.JSONObject;
-import ru.vtosters.lite.music.Genius;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.util.ArrayList;
+
+import ru.vtosters.lite.music.Genius;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 public class AudioGetLyrics extends ApiRequest<AudioGetLyrics.a> {
     private final MusicTrack musicTrack;
@@ -65,7 +70,7 @@ public class AudioGetLyrics extends ApiRequest<AudioGetLyrics.a> {
             return aVar;
         } catch (Exception e) {
             L.e("vk", e);
-            aVar.a = "Ошибка получения текста" + "\n\n" + "Ошибка: \n" + e.getLocalizedMessage();
+            aVar.a = AndroidUtils.getString("failed_to_get_text") + "\n\n" + AndroidUtils.getString("error") + ": \n" + e.getLocalizedMessage();
             return aVar;
         }
     }

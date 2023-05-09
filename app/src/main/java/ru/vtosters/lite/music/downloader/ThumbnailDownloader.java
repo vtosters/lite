@@ -1,13 +1,12 @@
 package ru.vtosters.lite.music.downloader;
 
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.dto.music.MusicTrack;
+import ru.vtosters.lite.music.cache.FileCacheImplementation;
+import ru.vtosters.lite.utils.IOUtils;
 
 import java.io.IOException;
 import java.net.URL;
-
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
-import ru.vtosters.lite.music.cache.FileCacheImplementation;
-import ru.vtosters.lite.utils.IOUtils;
 
 public class ThumbnailDownloader {
 

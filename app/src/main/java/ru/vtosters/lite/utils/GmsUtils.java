@@ -2,12 +2,16 @@ package ru.vtosters.lite.utils;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Build;
-
+import com.google.firebase.iid.FirebaseInstanceIdReceiver;
+import com.google.firebase.iid.FirebaseInstanceIdReceiver2;
 import com.vtosters.lite.R;
 
 public class GmsUtils {
+    private static final boolean needToSpoof = !isGmsInstalled() && isFakeGmsInstalled();
 
     public static boolean isGmsInstalled() {
         try {
@@ -18,6 +22,19 @@ public class GmsUtils {
         }
     } // Google Market Services check
 
+    public static boolean isFakeGmsInstalled() {
+        try {
+            AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("com.mgoogle.android.gms", 0);
+            return true;
+        } catch (Exception unused) {
+            return false;
+        }
+    } // Microg Google Market Services check
+
+    public static boolean isAnyServicesInstalled() {
+        return isGmsInstalled() || isFakeGmsInstalled();
+    }
+
     public static void fixGapps() {
         if (Build.VERSION.SDK_INT >= 26 && !isGmsInstalled()) {
             NotificationManager notificationManager = (NotificationManager) AndroidUtils.getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE);
@@ -27,4 +44,16 @@ public class GmsUtils {
             }
         }
     } // Music channels fix
+
+    public static String replaceGMSPackage(String str) {
+        return needToSpoof ? str.replaceAll("com.google", "com.mgoogle") : str;
+    }
+
+    public static String getFirebaseInstanceIdReceiver() {
+        return getFirebaseInstanceIdReceiverClass().getName();
+    }
+
+    public static Class getFirebaseInstanceIdReceiverClass() {
+        return needToSpoof ? FirebaseInstanceIdReceiver2.class : FirebaseInstanceIdReceiver.class;
+    }
 }

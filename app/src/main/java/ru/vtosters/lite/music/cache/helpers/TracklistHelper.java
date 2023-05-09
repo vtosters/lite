@@ -1,22 +1,23 @@
 package ru.vtosters.lite.music.cache.helpers;
 
 import android.util.Log;
-
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.dto.music.MusicTrack;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.File;
-import java.net.MalformedURLException;
-import java.util.List;
-
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.FileCacheImplementation;
 
+import java.io.File;
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class TracklistHelper {
+    public static List<MusicTrack> getMyCachedMusicTracks() {
+        return getTracksWithThumbnails(TracklistHelper.getTracks());
+    }
 
     public static List<MusicTrack> getTracks() {
         return CacheDatabaseDelegate.getTracks();
@@ -51,6 +52,21 @@ public class TracklistHelper {
             arr.put(json);
         }
         return arr;
+    }
+
+    public static List<MusicTrack> getTracksWithThumbnails(List<MusicTrack> list) {
+        List<MusicTrack> tracks = new ArrayList<>();
+        for (MusicTrack track : list) {
+            var json = track.J();
+            var folder = FileCacheImplementation.getThumbnailsFolder(LibVKXClient.asId(track));
+            try {
+                addCachedThumbnails(json, folder);
+            } catch (JSONException | MalformedURLException e) {
+                Log.d("TracklistHelper", e.getMessage());
+            }
+            tracks.add(new MusicTrack(json));
+        }
+        return tracks;
     }
 
     private static void addCachedThumbnails(JSONObject target, File thumbnailsDir)

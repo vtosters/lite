@@ -1,12 +1,5 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.ui.components.DockBarEditorManager.getInstance;
-import static ru.vtosters.lite.utils.Preferences.getString;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
-import static ru.vtosters.lite.utils.Preferences.superapp;
-import static ru.vtosters.lite.utils.Preferences.useNewSettings;
-import static ru.vtosters.lite.utils.Preferences.vkme;
-
 import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
@@ -29,6 +22,9 @@ import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideoCatalogFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
+
+import static ru.vtosters.lite.ui.components.DockBarEditorManager.getInstance;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 public class StartFragmentHook {
     public static Class getStartFragment() {

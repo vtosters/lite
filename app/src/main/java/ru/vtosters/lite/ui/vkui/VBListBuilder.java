@@ -1,8 +1,5 @@
 package ru.vtosters.lite.ui.vkui;
 
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.content.Context;
 import android.util.TypedValue;
 import android.view.ViewGroup;
@@ -10,6 +7,9 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
 import java.util.List;
+
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 public class VBListBuilder {
     public static ViewGroup buildListOf(Context ctx, List<VBListItem> items) {

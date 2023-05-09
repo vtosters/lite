@@ -35,9 +35,6 @@
         <Preference
                 android:key="customrounding"
                 android:title="@string/customrounding_title"/>
-        <Preference
-                android:key="dockbareditor"
-                android:title="@string/dockbar_editor"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacenewsfeed">
         <com.vtosters.lite.ui.MaterialSwitchPreference

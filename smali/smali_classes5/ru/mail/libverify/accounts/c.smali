@@ -536,6 +536,10 @@
 
     const-string v4, "com.google"
 
+    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
     invoke-virtual {v3, v4}, Landroid/accounts/AccountManager;->getAccountsByType(Ljava/lang/String;)[Landroid/accounts/Account;
 
     move-result-object v3
@@ -1007,6 +1011,10 @@
     iget-object v4, v3, Landroid/accounts/Account;->type:Ljava/lang/String;
 
     const-string v5, "com.google"
+
+    invoke-static {v5}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 

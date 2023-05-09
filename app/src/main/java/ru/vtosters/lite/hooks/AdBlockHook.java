@@ -1,28 +1,16 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isBadNews;
-import static ru.vtosters.lite.utils.Preferences.ads;
-import static ru.vtosters.lite.utils.Preferences.adsgroup;
-import static ru.vtosters.lite.utils.Preferences.adsstories;
-import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
-import static ru.vtosters.lite.utils.Preferences.dev;
-import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.postsrecomm;
-
 import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.util.Collections;
 
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
-import ru.vtosters.lite.utils.Preferences;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.*;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 public class AdBlockHook {
     public static Boolean discoverAdBlock(JSONObject jsonObject) {
@@ -267,7 +255,8 @@ public class AdBlockHook {
                     newStories.put(story);
                 }
             } else {
-                if (dev()) Log.d("StoriesAds", "Fetched ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
+                if (dev())
+                    Log.d("StoriesAds", "Fetched ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
             }
         }
 
@@ -315,7 +304,7 @@ public class AdBlockHook {
         return json;
     }
 
-    public static Boolean isAds(JSONObject list, String type) throws JSONException {
+    public static Boolean isAds(JSONObject list, String type) {
         if (list == null || type == null || !ads()) return false;
 
         if (list.has("ads")

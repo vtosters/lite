@@ -2,10 +2,10 @@ package ru.vtosters.lite.ssfs;
 
 import android.util.Log;
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.vtosters.lite.R;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.Preferences;
@@ -19,11 +19,12 @@ public class ImBanner {
         var user_id = orig.getJSONObject("peer").getInt("id");
 
         if (!UsersList.hasBanner(user_id) || user_id == 0) {
-            if (getBoolValue("convBarRecomm", false)) {
-                return null;
-            } else {
-                return orig.optJSONObject("conversation_bar");
-            }
+//            if (getBoolValue("convBarRecomm", false)) {
+//                return null;
+//            } else {
+//                return orig.optJSONObject("conversation_bar");
+//            }
+            return null;
         }
 
         try {

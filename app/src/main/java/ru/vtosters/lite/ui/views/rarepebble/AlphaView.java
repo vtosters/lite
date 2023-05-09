@@ -18,14 +18,14 @@ public class AlphaView extends SliderViewBase implements ColorObserver {
 
     @Override
     public void updateColor(ObservableColor observableColor) {
-        setPos((float)observableColor.getAlpha()/0xff);
+        setPos((float) observableColor.getAlpha() / 0xff);
         updateBitmap();
         invalidate();
     }
 
     @Override
     protected void notifyListener(float currentPos) {
-        observableColor.updateAlpha((int)(currentPos * 0xff), this);
+        observableColor.updateAlpha((int) (currentPos * 0xff), this);
     }
 
     @Override
@@ -42,8 +42,8 @@ public class AlphaView extends SliderViewBase implements ColorObserver {
         int color = observableColor.getColor();
         int[] colors = new int[n];
         for (int i = 0; i < n; ++i) {
-            float alpha = isWide ? (float)i / n : 1 - (float)i / n;
-            colors[i] = color & 0xffffff | (int)(alpha * 0xff) << 24;
+            float alpha = isWide ? (float) i / n : 1 - (float) i / n;
+            colors[i] = color & 0xffffff | (int) (alpha * 0xff) << 24;
         }
         final int bmpWidth = isWide ? w : 1;
         final int bmpHeight = isWide ? 1 : h;

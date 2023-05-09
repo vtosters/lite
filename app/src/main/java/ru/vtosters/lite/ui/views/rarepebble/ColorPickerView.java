@@ -1,7 +1,5 @@
 package ru.vtosters.lite.ui.views.rarepebble;
 
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
@@ -15,8 +13,9 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-
 import ru.vtosters.lite.utils.LayoutUtils;
+
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 
 public class ColorPickerView extends FrameLayout {
 
@@ -29,14 +28,14 @@ public class ColorPickerView extends FrameLayout {
     public ColorPickerView(Context context) {
         super(context);
 
-        var container = new LinearLayout(context);
+        LinearLayout container = new LinearLayout(context);
         container.setOrientation(LinearLayout.VERTICAL);
         container.setPadding(dp2px(16), dp2px(16), dp2px(16), dp2px(16));
         container.setGravity(Gravity.CENTER);
         this.addView(container, LayoutUtils.createFrame(-2, -2));
 
-        var colorPickerFrame = new FrameLayout(context);
-        var colorPickerFrameParams = LayoutUtils.createLinear(-2, -2);
+        FrameLayout colorPickerFrame = new FrameLayout(context);
+        LinearLayout.LayoutParams colorPickerFrameParams = LayoutUtils.createLinear(-2, -2);
         colorPickerFrameParams.weight = 1.0f;
         container.addView(colorPickerFrame, colorPickerFrameParams);
 
@@ -47,12 +46,12 @@ public class ColorPickerView extends FrameLayout {
         colorPickerFrame.addView(hueSatView, LayoutUtils.createFrame(-2, -2));
 
         ValueView valueView = new ValueView(context);
-        var valueViewParams = LayoutUtils.createLinear(-1, dp2px(36));
+        LinearLayout.LayoutParams valueViewParams = LayoutUtils.createLinear(-1, dp2px(36));
         valueViewParams.topMargin = dp2px(16);
         container.addView(valueView, valueViewParams);
 
         alphaView = new AlphaView(context);
-        var alphaViewParams = LayoutUtils.createLinear(-1, dp2px(36));
+        LinearLayout.LayoutParams alphaViewParams = LayoutUtils.createLinear(-1, dp2px(36));
         valueViewParams.topMargin = dp2px(16);
         container.addView(alphaView, alphaViewParams);
 
@@ -60,7 +59,7 @@ public class ColorPickerView extends FrameLayout {
         hexEdit.setText("000000");
         hexEdit.setKeyListener(DigitsKeyListener.getInstance("0123456789ABCDEFabcdef"));
         hexEdit.setGravity(Gravity.CENTER_HORIZONTAL);
-        hexEdit.setFilters(new InputFilter[]{ new InputFilter.LengthFilter(4) });
+        hexEdit.setFilters(new InputFilter[]{new InputFilter.LengthFilter(4)});
         hexEdit.setBackground(null);
         hexEdit.setTypeface(Typeface.MONOSPACE);
         hexEdit.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
@@ -81,15 +80,17 @@ public class ColorPickerView extends FrameLayout {
         // thanks to the EditText and its listeners!
     }
 
-    /** Returns the color selected by the user */
+    /**
+     * Returns the color selected by the user
+     */
     public int getColor() {
         return observableColor.getColor();
     }
 
     /**
-     *  Sets the original color swatch and the current color to the specified value.<br>
-     *  Using dark colors may lead to a loss of color information caused by the ARGB color space.
-     *  Use {@link #setColor(int, float, float, float)} instead to avoid this.
+     * Sets the original color swatch and the current color to the specified value.<br>
+     * Using dark colors may lead to a loss of color information caused by the ARGB color space.
+     * Use {@link #setColor(int, float, float, float)} instead to avoid this.
      */
     public void setColor(int color) {
         setOriginalColor(color);
@@ -105,28 +106,37 @@ public class ColorPickerView extends FrameLayout {
      *   <li>Saturation [0...1]</li>
      *   <li>Brightness [0...1]</li>
      * </ul>
-     */	public void setColor(int alpha, float hue, float sat, float bri) {
+     */
+    public void setColor(int alpha, float hue, float sat, float bri) {
         setOriginalColor(alpha, hue, sat, bri);
         setCurrentColor(alpha, hue, sat, bri);
     }
 
-    /** Sets the original color swatch without changing the current color. */
+    /**
+     * Sets the original color swatch without changing the current color.
+     */
     public void setOriginalColor(int color) {
         swatchView.setOriginalColor(color);
     }
 
-    /** Sets the original color swatch without changing the current color. */
+    /**
+     * Sets the original color swatch without changing the current color.
+     */
     public void setOriginalColor(int alpha, float hue, float sat, float bri) {
         int color = Color.HSVToColor(alpha, new float[]{hue, sat, bri});
         swatchView.setOriginalColor(color);
     }
 
-    /** Updates the current color without changing the original color swatch. */
+    /**
+     * Updates the current color without changing the original color swatch.
+     */
     public void setCurrentColor(int color) {
         observableColor.updateColor(color, null);
     }
 
-    /** Updates the current color without changing the original color swatch. */
+    /**
+     * Updates the current color without changing the original color swatch.
+     */
     public void setCurrentColor(int alpha, float hue, float sat, float bri) {
         observableColor.updateColor(alpha, hue, sat, bri, null);
     }

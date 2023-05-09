@@ -440,6 +440,10 @@
     :cond_1
     const-string v4, "com.google.android.gms"
 
+    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
     .line 56
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -1347,6 +1351,10 @@
     :try_start_1
     const-string v1, "com.google.android.gms"
 
+    invoke-static {v1}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     const/4 v3, 0x3
 
     .line 107
@@ -1360,6 +1368,10 @@
     move-result-object p0
 
     const-string v1, "com.google.android.gms.chimera.container.DynamiteLoaderImpl"
+
+    invoke-static {v1}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
 
     .line 109
     invoke-virtual {p0, v1}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
@@ -1962,6 +1974,10 @@
     invoke-direct {v2, p2}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string p2, "content://com.google.android.gms.chimera/"
+
+    invoke-static {p2}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
 
     invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

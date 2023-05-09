@@ -6,17 +6,13 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-
-import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
-
 import com.vk.core.fragments.FragmentImpl;
 import com.vtosters.lite.R;
 import com.vtosters.lite.ViewUtils;
 import com.vtosters.lite.m0.ToolbarHelper;
-
 import ru.vtosters.lite.utils.LayoutUtils;
 
 public abstract class BaseToolbarFragment extends FragmentImpl {

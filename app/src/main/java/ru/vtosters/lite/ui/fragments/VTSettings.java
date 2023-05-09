@@ -1,10 +1,12 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.StringRes;
+import androidx.preference.Preference;
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
@@ -31,6 +33,8 @@ import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.*;
 
+import java.util.Locale;
+
 public class VTSettings extends TrackedMaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
 
     public static String getValAsString(@StringRes int strRes, Boolean value) {
@@ -53,7 +57,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
     }
 
     public static String getProxysumm() {
-        var type = Preferences.getString("proxy");
+        String type = Preferences.getString("proxy");
 
         if (type.equals("noproxy") || type.isEmpty())
             type = AndroidUtils.getString(R.string.vtlsettdisabled);
@@ -107,7 +111,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
         AndroidUtils.checkLinksVerified(this.requireActivity());
 
         if (AccountManagerUtils.isLogin()) {
-            var accountSwitcher = PreferenceFragmentUtils.addPreference(
+            Preference accountSwitcher = PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "account_switcher",
                     AccountManagerUtils.getUsername(),
@@ -119,7 +123,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                         } catch (Exception ignored) {
                         }
 
-                        var intent = new Intent(requireContext(), MainActivity.class)
+                        Intent intent = new Intent(requireContext(), MainActivity.class)
                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -129,7 +133,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                     });
 
             VTExecutors.getIoScheduler().a(() -> {
-                var icon = ImageUtils.getDrawableFromUrl(AccountManagerUtils.getUserPhoto(), 0, true, true);
+                Drawable icon = ImageUtils.getDrawableFromUrl(AccountManagerUtils.getUserPhoto(), 0, true, true);
                 if (icon == null) return;
                 requireActivity().runOnUiThread(() -> {
                     accountSwitcher.setIcon(icon);
@@ -161,11 +165,11 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 ThemesUtils.isDarkTheme(),
                 (preference, o) -> {
                     if (Preferences.systemtheme()) {
-                        AndroidUtils.sendToast("Включена установка темы как на устройстве");
+                        AndroidUtils.sendToast(AndroidUtils.getString("systemtheme_enabled"));
                         return false;
                     }
-                    final var switchPreference = (MaterialSwitchPreference) preference;
-                    final var isDarkTheme = !switchPreference.isChecked();
+                    final MaterialSwitchPreference switchPreference = (MaterialSwitchPreference) preference;
+                    final boolean isDarkTheme = !switchPreference.isChecked();
                     switchTheme(isDarkTheme);
                     return true;
                 }
@@ -175,8 +179,8 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
             PreferenceFragmentUtils.addMaterialSwitchPreference(
                     getPreferenceScreen(),
                     "system_theme",
-                    "Системная тема",
-                    "Использовать тему установленную на устройстве",
+                    AndroidUtils.getString("systemtheme"),
+                    AndroidUtils.getString("systemtheme_summ"),
                     R.drawable.ic_palette_outline_28,
                     Preferences.systemtheme(),
                     (preference, o) -> {
@@ -187,7 +191,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
             );
         }
 
-        if (!GmsUtils.isGmsInstalled()) {
+        if (!GmsUtils.isAnyServicesInstalled()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.gmsname);
 
             PreferenceFragmentUtils.addPreference(
@@ -470,12 +474,33 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 "",
                 requireContext().getString(R.string.vtlproxy),
                 getProxysumm(),
-                R.drawable.ic_globe_outline_28,
+                R.drawable.ic_linked_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), ProxySettingsFragment.class);
                     return false;
                 }
         );
+
+        if (Build.VERSION.SDK_INT >= 33) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    AndroidUtils.getString("appLanguage"),
+                    AndroidUtils.getString("currentLanguage") + " " + AndroidUtils.upString(Locale.getDefault().getDisplayLanguage()),
+                    R.drawable.ic_globe_outline_28,
+                    preference -> {
+                        try {
+                            Intent intent = new Intent("android.settings.APP_LOCALE_SETTINGS", Uri.parse("package:" + AndroidUtils.getPackageName()));
+                            startActivity(intent);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            AndroidUtils.sendToast("Ваша система не поддерживает смену языка приложения");
+                        }
+
+                        return false;
+                    }
+            );
+        }
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),

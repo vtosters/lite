@@ -24,7 +24,9 @@ import ru.vtosters.lite.downloaders.messages.MessagesDownloader;
 import ru.vtosters.lite.encryption.EncryptProvider;
 import ru.vtosters.lite.encryption.base.IMProcessor;
 import ru.vtosters.lite.hooks.CryptImHook;
+import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ui.dialogs.Translate;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.File;
@@ -32,13 +34,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
-
-import static ru.vtosters.lite.dnr.DNRModule.*;
-import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
@@ -61,13 +56,13 @@ public class DNRInjector {
         list.add(DialogAction.pinmsg);
         list.add(DialogAction.unpinmsg);
 
-        if (isDnrEnabledFor(peerId)) {
+        if (DNRModule.isDnrEnabledFor(peerId)) {
             list.add(DialogAction.DNR_OFF);
         } else {
             list.add(DialogAction.DNR_ON);
         }
 
-        if (isDntEnabledFor(peerId)) {
+        if (DNRModule.isDntEnabledFor(peerId)) {
             list.add(DialogAction.DNT_OFF);
         } else {
             list.add(DialogAction.DNT_ON);
@@ -110,7 +105,7 @@ public class DNRInjector {
         list.add(new DialogActionsListView.b.a(DialogAction.DNT_ON, 2, R.attr.im_ic_edit_msg, R.string.DNT_ON)); // DialogAction, Int, Icon, String
         list.add(new DialogActionsListView.b.a(DialogAction.DNT_OFF, 2, R.attr.im_ic_edit_msg, R.string.DNT_OFF)); // DialogAction, Int, Icon, String
 
-        if (!isTablet()) {
+        if (!AndroidUtils.isTablet()) {
             list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT, 3, R.attr.im_ic_keyboard, R.string.encryption)); // DialogAction, Int, Icon, String
             list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT_SETT, 3, R.attr.im_ic_more_vertical, R.string.encryption_sett)); // DialogAction, Int, Icon, String
         }
@@ -145,13 +140,13 @@ public class DNRInjector {
 
         actions.add(DialogAction.DOWNLOAD);
 
-        if (isDnrEnabledFor(peerId)) {
+        if (DNRModule.isDnrEnabledFor(peerId)) {
             actions.add(DialogAction.DNR_OFF);
         } else {
             actions.add(DialogAction.DNR_ON);
         }
 
-        if (isDntEnabledFor(peerId)) {
+        if (DNRModule.isDntEnabledFor(peerId)) {
             actions.add(DialogAction.DNT_OFF);
         } else {
             actions.add(DialogAction.DNT_ON);
@@ -197,7 +192,7 @@ public class DNRInjector {
             try {
                 new MessagesDownloader().downloadDialog(peerId, new HtmlDialogDownloaderFormatProvider(), out);
             } catch (Exception e) {
-                sendToast(AndroidUtils.getString(R.string.download_dl_error));
+                AndroidUtils.sendToast(AndroidUtils.getString(R.string.download_dl_error));
                 e.printStackTrace();
             }
             return true;
@@ -321,14 +316,14 @@ public class DNRInjector {
             var isTextExist = !text.isEmpty() && !text.equals(" ");
 
             if (isTextExist) {
-                text = decryptMessage(text, peerId);
+                text = EncryptProvider.decryptMessage(text, peerId);
             }
 
             if (action == MsgAction.valueOf("TRANSLATE")) {
                 if (isTextExist) {
                     Translate.showTranslatedText(context, text);
                 } else {
-                    sendToast(context.getString(R.string.translator_no_text));
+                    AndroidUtils.sendToast(context.getString(R.string.translator_no_text));
                 }
             }
         }
@@ -340,7 +335,7 @@ public class DNRInjector {
         Thread thread = new Thread(() -> {
             try {
                 var request = new Request.a()
-                        .b("https://" + getApi() + "/method/" + (needToBePinned ? "messages.pinConversation" : "messages.unpinConversation") + "?peer_id=" + dialogid + "&access_token=" + getUserToken() + "&v=5.119")
+                        .b("https://" + ProxyUtils.getApi() + "/method/" + (needToBePinned ? "messages.pinConversation" : "messages.unpinConversation") + "?peer_id=" + dialogid + "&access_token=" + AccountManagerUtils.getUserToken() + "&v=5.119")
                         .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
                         .a();
 
@@ -357,7 +352,7 @@ public class DNRInjector {
 
         thread.start();
 
-        sendToast(AndroidUtils.getString(R.string.pin_dialog) + " " + AndroidUtils.getString(needToBePinned ? R.string.dialog_pinned : R.string.dialog_unpinned));
+        AndroidUtils.sendToast(AndroidUtils.getString(R.string.pin_dialog) + " " + AndroidUtils.getString(needToBePinned ? R.string.dialog_pinned : R.string.dialog_unpinned));
     }
 
     public static void setDnr(Dialog dialog, boolean value) {
@@ -367,7 +362,7 @@ public class DNRInjector {
             peerId = dialog.getId();
         }
 
-        hookDNR(peerId);
+        DNRModule.hookDNR(peerId);
     }
 
     public static void setDnt(Dialog dialog, boolean value) {
@@ -377,7 +372,7 @@ public class DNRInjector {
             peerId = dialog.getId();
         }
 
-        hookDNT(peerId);
+        DNRModule.hookDNT(peerId);
     }
 }
 

@@ -30,7 +30,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class MessagesDownloader {
-    private static final int[] VIDEO_QUALITIES = { 144, 240, 360, 480, 720, 1080, 1440, 2160 };
+    private static final int[] VIDEO_QUALITIES = {144, 240, 360, 480, 720, 1080, 1440, 2160};
 
     private static final SimpleDateFormat SDFORMAT = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss", AndroidUtils.getResources().getConfiguration().locale);
 
@@ -111,7 +111,7 @@ public class MessagesDownloader {
         VtOkHttpClient.getInstance().a(req).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
-                Log.d("MessagesDownloader", e+"");
+                Log.d("MessagesDownloader", String.valueOf(e));
             }
 
             @Override

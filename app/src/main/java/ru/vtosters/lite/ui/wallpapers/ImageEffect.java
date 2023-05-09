@@ -20,33 +20,24 @@ enum ImageEffects {
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
             int radius;
             switch (Preferences.getPreferences().getString(ImageEffects.Blur.toString(), "disabled")) {
-                case "low":
-                    radius = 8;
-                    break;
-                case "med":
-                    radius = 14;
-                    break;
-                case "high":
-                    radius = 20;
-                    break;
-                default:
+                case "low" -> radius = 8;
+                case "med" -> radius = 14;
+                case "high" -> radius = 20;
+                default -> {
                     return;
+                }
             }
             NativeEffects.gaussian(bitmap, height, width, radius);
         }
 
         @Override
         public String getSummary() {
-            switch (Preferences.getPreferences().getString(ImageEffects.Blur.toString(), "disabled")) {
-                case "low":
-                    return AndroidUtils.getString(R.string.wallpapers_low);
-                case "med":
-                    return AndroidUtils.getString(R.string.wallpapers_med);
-                case "high":
-                    return AndroidUtils.getString(R.string.wallpapers_high);
-                default:
-                    return AndroidUtils.getString(R.string.wallpapers_disabled);
-            }
+            return switch (Preferences.getPreferences().getString(ImageEffects.Blur.toString(), "disabled")) {
+                case "low" -> AndroidUtils.getString(R.string.wallpapers_low);
+                case "med" -> AndroidUtils.getString(R.string.wallpapers_med);
+                case "high" -> AndroidUtils.getString(R.string.wallpapers_high);
+                default -> AndroidUtils.getString(R.string.wallpapers_disabled);
+            };
         }
     },
     Dim(true,
@@ -57,26 +48,22 @@ enum ImageEffects {
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
             var delta = 0;
             switch (Preferences.getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
-                case "dim_black":
-                    delta = -50; break;
-                case "dim_white":
-                    delta = 50; break;
-                default:
+                case "dim_black" -> delta = -50;
+                case "dim_white" -> delta = 50;
+                default -> {
                     return;
+                }
             }
             NativeEffects.dim(bitmap, height, width, delta);
         }
 
         @Override
         public String getSummary() {
-            switch (Preferences.getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
-                case "dim_black":
-                    return AndroidUtils.getString(R.string.wallpapers_dim_black);
-                case "dim_white":
-                    return AndroidUtils.getString(R.string.wallpapers_dim_white);
-                default:
-                    return AndroidUtils.getString(R.string.wallpapers_disabled);
-            }
+            return switch (Preferences.getPreferences().getString(ImageEffects.Dim.toString(), "disabled")) {
+                case "dim_black" -> AndroidUtils.getString(R.string.wallpapers_dim_black);
+                case "dim_white" -> AndroidUtils.getString(R.string.wallpapers_dim_white);
+                default -> AndroidUtils.getString(R.string.wallpapers_disabled);
+            };
         }
     },
     Mosaic(true,
@@ -87,30 +74,24 @@ enum ImageEffects {
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
             var scale = 0;
             switch (Preferences.getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
-                case "high":
-                    scale = 50; break;
-                case "med":
-                    scale = 25; break;
-                case "low":
-                    scale = 10; break;
-                default:
+                case "high" -> scale = 50;
+                case "med" -> scale = 25;
+                case "low" -> scale = 10;
+                default -> {
                     return;
+                }
             }
             NativeEffects.mosaic(bitmap, height, width, scale);
         }
 
         @Override
         public String getSummary() {
-            switch (Preferences.getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
-                case "low":
-                    return AndroidUtils.getString(R.string.wallpapers_low);
-                case "med":
-                    return AndroidUtils.getString(R.string.wallpapers_med);
-                case "high":
-                    return AndroidUtils.getString(R.string.wallpapers_high);
-                default:
-                    return AndroidUtils.getString(R.string.wallpapers_disabled);
-            }
+            return switch (Preferences.getPreferences().getString(ImageEffects.Mosaic.toString(), "disabled")) {
+                case "low" -> AndroidUtils.getString(R.string.wallpapers_low);
+                case "med" -> AndroidUtils.getString(R.string.wallpapers_med);
+                case "high" -> AndroidUtils.getString(R.string.wallpapers_high);
+                default -> AndroidUtils.getString(R.string.wallpapers_disabled);
+            };
         }
     },
     Monochrome(false, null, null,
@@ -181,7 +162,7 @@ enum ImageEffects {
             getGlobalContext().getString(R.string.filter_snow)) {
         @Override
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
-            if (isApplied()){
+            if (isApplied()) {
                 NativeEffects.snow(bitmap);
             }
         }
@@ -199,6 +180,19 @@ enum ImageEffects {
         this.entries = entries;
         this.entryValues = entryValues;
         this.title = title;
+    }
+
+    public static Boolean hasEffects() {
+        return !Preferences.getString("msg_Blur").contains("disabled") && !Preferences.getString("msg_Blur").isEmpty() ||
+                !Preferences.getString("msg_Dim").contains("disabled") && !Preferences.getString("msg_Dim").isEmpty() ||
+                !Preferences.getString("msg_Mosaic").contains("disabled") && !Preferences.getString("msg_Mosaic").isEmpty() ||
+                Preferences.getBoolValue("msg_Emboss", false) ||
+                Preferences.getBoolValue("msg_Sepia", false) ||
+                Preferences.getBoolValue("msg_Invert", false) ||
+                Preferences.getBoolValue("msg_Snow", false) ||
+                Preferences.getBoolValue("msg_Flea", false) ||
+                Preferences.getBoolValue("msg_Engrave", false) ||
+                Preferences.getBoolValue("msg_Monochrome", false);
     }
 
     public String getTitle() {

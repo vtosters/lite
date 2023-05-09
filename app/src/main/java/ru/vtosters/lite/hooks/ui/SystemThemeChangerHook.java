@@ -2,16 +2,10 @@ package ru.vtosters.lite.hooks.ui;
 
 import android.app.Activity;
 import android.content.res.Configuration;
-
 import com.vk.core.ui.themes.VKTheme;
-
-import com.vk.core.ui.themes.VKThemeHelper;
-import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
-
-import static ru.vtosters.lite.utils.AndroidUtils.getCenterScreenCoords;
 
 public class SystemThemeChangerHook {
     public static void onThemeChanged(Configuration configuration) {

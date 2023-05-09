@@ -173,6 +173,10 @@
         }
     .end annotation
 
+    const/4 v2, 0x0
+
+    return-object v2
+
     .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 

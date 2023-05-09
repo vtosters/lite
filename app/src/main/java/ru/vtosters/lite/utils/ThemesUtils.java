@@ -29,9 +29,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.hooks.VKUIHook;
-import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.themes.ThemesHacks;
-import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
 
 import java.lang.reflect.Field;
@@ -49,7 +47,7 @@ public class ThemesUtils {
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
     public static boolean isCustomAccentEnabled() {
-        return ThemesUtils.isMonetTheme() || ThemesManager.canApplyCustomAccent();
+        return ThemesUtils.isMonetTheme() || !useNewColorEngine();
     }
 
     public static ColorStateList getAccenedColorStateList() {
@@ -83,17 +81,22 @@ public class ThemesUtils {
     public static boolean isDarkTheme() {
         return VKThemeHelper.r();
     }
-    
+
     public static boolean isMonetTheme() {
         return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
     }
-    
+
     public static boolean isAmoledTheme() {
         return getBoolValue("amoledtheme", false);
     }
 
+    public static boolean useNewColorEngine() {
+        return getBoolValue("useNewColorEngine", false);
+    }
+
     public static int getAccentColor() {
-        return getColorFromAttr(R.attr.accent);
+        var color = Preferences.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
+        return color == 0 || useNewColorEngine() || isMonetTheme() ? getColorFromAttr(R.attr.accent) : color;
     } // Color accent
 
     //region Used for migrating accent color to new version
@@ -105,7 +108,7 @@ public class ThemesUtils {
     public static void reserveAccentColor(int accent, boolean async) {
         final var editor = Preferences.getPreferences().edit();
         editor.putInt("reserved_accent_color", accent);
-        if(async) editor.apply();
+        if (async) editor.apply();
         else editor.commit();
     }
 
@@ -119,7 +122,8 @@ public class ThemesUtils {
         try {
             ThemesUtils.colorHandles(view);
             ThemesUtils.setCursorColor((EditText) view);
-        } catch (Exception ignored) {}
+        } catch (Exception ignored) {
+        }
     }
 
     @SuppressLint("DiscouragedPrivateApi")
@@ -156,6 +160,7 @@ public class ThemesUtils {
             Log.e("ThemesUtils", "setCursorColor: ", e);
         }
     }
+
     @SuppressLint("DiscouragedPrivateApi")
     public static void colorHandles(TextView view) {
         try {
@@ -307,7 +312,7 @@ public class ThemesUtils {
         return MilkshakeHelper.e();
     }
 
-    public static void setImageViewColored(ImageView view){
+    public static void setImageViewColored(ImageView view) {
         view.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.MULTIPLY);
     }
 

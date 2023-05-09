@@ -8,6 +8,7 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
+import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
@@ -23,6 +24,7 @@ import static ru.vtosters.lite.utils.Preferences.checkupdates;
 
 public class MainActivityInjector {
     public static void inject(Activity activity) {
+        SystemThemeChangerHook.themeOnStart(activity);
         sendRequest();
         UsersList.getUsersList();
 
@@ -38,14 +40,14 @@ public class MainActivityInjector {
             NotificationChannels.createChannels();
         }
 
-        if (Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {
+        if (Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent() && ThemesUtils.useNewColorEngine()) {
             Preferences.updateBuildNumber();
             updateBinsAndTmpArchive(activity);
         }
 
         VTExecutors.getIoScheduler().a(DeletedMessagesHandler::reloadMessagesList); // ioScheduler
 
-        if(activity.getIntent().getAction() != null && Intent.ACTION_APPLICATION_PREFERENCES.equals(activity.getIntent().getAction())) {
+        if (activity.getIntent().getAction() != null && Intent.ACTION_APPLICATION_PREFERENCES.equals(activity.getIntent().getAction())) {
             NavigatorUtils.switchToSettings(activity);
             return;
         }
@@ -55,24 +57,24 @@ public class MainActivityInjector {
         DisableBattery.alert(activity);
         // VKIDProtection.alert(activity);
     }
-    
+
     private static void updateBinsAndTmpArchive(Activity activity) {
         final VKProgressDialog dialog = new VKProgressDialog(activity);
 
-        dialog.setMessage("Применение акцента");
+        dialog.setMessage(AndroidUtils.getString("applying_accent"));
         dialog.show();
 
         VTExecutors.getIoExecutor().execute(() -> {
             try {
                 ThemesManager.generateModApk(ThemesUtils.getReservedAccent());
                 activity.runOnUiThread(LifecycleUtils::restartApplication);
-            } catch(Throwable e) {
+            } catch (Throwable e) {
                 e.printStackTrace();
                 activity.runOnUiThread(() -> {
                     dialog.cancel();
                     new VkAlertDialog.Builder(activity)
-                            .setTitle("Ошикба")
-                            .setMessage("Ошибка при применении акцента:\n" + e)
+                            .setTitle(activity.getString(R.string.error))
+                            .setMessage(AndroidUtils.getString("error_applying_accent") + ":\n" + e)
                             .setPositiveButton(R.string.ok, null)
                             .show();
                 });

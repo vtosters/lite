@@ -1,9 +1,7 @@
 package ru.vtosters.lite.themes.hooks;
 
 import android.view.View;
-
 import com.pnikosis.materialishprogress.ProgressWheel;
-
 import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.utils.ThemesUtils;
 

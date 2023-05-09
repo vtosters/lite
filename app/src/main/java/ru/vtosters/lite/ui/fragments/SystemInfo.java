@@ -5,9 +5,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
-
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.About;
@@ -21,34 +19,34 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
         super.onCreate(bundle);
         addPreferencesFromResource(R.xml.empty);
 
-        var oneUiMajorVersion = String.valueOf(OEMDetector.getOneUiMajorVersion());
-        var oneUiMinorVersion = String.valueOf(OEMDetector.getOneUiMinorVersion());
-        var sdkVersion = String.valueOf(Build.VERSION.SDK_INT);
-        var productName = Build.PRODUCT;
-        var deviceName = Build.DEVICE;
-        var boardName = Build.BOARD;
-        var manufacturerName = Build.MANUFACTURER;
-        var brandName = Build.BRAND;
-        var modelName = Build.MODEL;
-        var miuiUiVersionName = OEMDetector.getMiuiUiVersionName();
-        var miuiIncrementalCodeName = OEMDetector.getMiuiUiVersionIncrementalCode();
-        var miuiUiVersionCodeName = OEMDetector.getMiuiUiVersionCode();
-        var emuiVersionCode = OEMDetector.getEmuiVersionCode();
-        var packageName = requireContext().getPackageName();
-        var commit = About.getBuildNumber();
+        String oneUiMajorVersion = String.valueOf(OEMDetector.getOneUiMajorVersion());
+        String oneUiMinorVersion = String.valueOf(OEMDetector.getOneUiMinorVersion());
+        String sdkVersion = String.valueOf(Build.VERSION.SDK_INT);
+        String productName = Build.PRODUCT;
+        String deviceName = Build.DEVICE;
+        String boardName = Build.BOARD;
+        String manufacturerName = Build.MANUFACTURER;
+        String brandName = Build.BRAND;
+        String modelName = Build.MODEL;
+        String miuiUiVersionName = OEMDetector.getMiuiUiVersionName();
+        String miuiIncrementalCodeName = OEMDetector.getMiuiUiVersionIncrementalCode();
+        String miuiUiVersionCodeName = OEMDetector.getMiuiUiVersionCode();
+        String emuiVersionCode = OEMDetector.getEmuiVersionCode();
+        String packageName = requireContext().getPackageName();
+        String commit = About.getBuildNumber();
 
-        var isMiui = OEMDetector.isMIUI();
-        var isFlyme = OEMDetector.isFlyme();
-        var isSamsung = OEMDetector.isSamsung();
-        var isOneUi = OEMDetector.isOneUi();
-        var isVivo = OEMDetector.isVivo();
-        var isZenUI = OEMDetector.isZenUI();
-        var isEMUI = OEMDetector.isEMUI();
-        var hasMiuiIncrCode = OEMDetector.hasMiuiIncrCode();
+        boolean isMiui = OEMDetector.isMIUI();
+        boolean isFlyme = OEMDetector.isFlyme();
+        boolean isSamsung = OEMDetector.isSamsung();
+        boolean isOneUi = OEMDetector.isOneUi();
+        boolean isVivo = OEMDetector.isVivo();
+        boolean isZenUI = OEMDetector.isZenUI();
+        boolean isEMUI = OEMDetector.isEMUI();
+        boolean hasMiuiIncrCode = OEMDetector.hasMiuiIncrCode();
 
-        var isValidSignature = Preferences.isValidSignature();
-        var isTablet = AndroidUtils.isTablet();
-        var isDebuggable = AndroidUtils.isDebuggable();
+        boolean isValidSignature = Preferences.isValidSignature();
+        boolean isTablet = AndroidUtils.isTablet();
+        boolean isDebuggable = AndroidUtils.isDebuggable();
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "App information");
 

@@ -1,27 +1,19 @@
 package ru.vtosters.lite.ui.adapters;
 
 import android.content.Context;
-import android.graphics.ColorFilter;
-import android.graphics.ColorMatrixColorFilter;
-import android.graphics.PorterDuff;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.vk.core.widget.BubbleFluidLayout;
 import com.vk.im.ui.components.viewcontrollers.msg_list.entry.MsgTextBuilder;
 import com.vk.im.ui.views.msg.MsgPartTextView;
-import com.vk.im.ui.views.msg.bubble.MsgBubbleDrawable;
 import com.vk.im.ui.views.msg.bubble.MsgBubblePart;
 import com.vk.im.ui.views.msg.bubble.MsgBubbleStyle;
 import com.vk.im.ui.views.msg.bubble.MsgBubbleView;
 import com.vtosters.lite.R;
-import com.vtosters.lite.m0.ToolbarHelper;
-
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 

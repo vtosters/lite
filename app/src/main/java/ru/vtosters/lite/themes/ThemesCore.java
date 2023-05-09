@@ -167,7 +167,8 @@ public class ThemesCore {
             if (Preferences.getBoolValue("logColors", false)) {
                 try {
                     Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
-                } catch (Exception ignored) {}
+                } catch (Exception ignored) {
+                }
             }
 
             if (isCachedAccents()) {

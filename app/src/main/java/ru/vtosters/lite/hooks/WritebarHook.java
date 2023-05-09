@@ -1,10 +1,9 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.Preferences.wbios;
-
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.utils.ThemesUtils;
+
+import static ru.vtosters.lite.utils.Preferences.wbios;
 
 public class WritebarHook {
     public static int getWriteBar() {

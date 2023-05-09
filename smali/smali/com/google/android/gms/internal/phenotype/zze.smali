@@ -49,6 +49,10 @@
     :cond_0
     const-string v0, "com.google.android.gms.phenotype.internal.IPhenotypeService"
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+    
     invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
@@ -82,6 +86,10 @@
 
     const-string v0, "com.google.android.gms.phenotype.internal.IPhenotypeService"
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
 .end method
 
@@ -89,6 +97,10 @@
     .locals 1
 
     const-string v0, "com.google.android.gms.phenotype.service.START"
+
+    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,19 +1,10 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-
 import android.os.Bundle;
-
 import com.vtosters.lite.R;
-
-import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.RoundingSeekbarDialog;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.lite.utils.*;
 
 public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
@@ -25,55 +16,44 @@ public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment 
 
     private void prefs() {
         findPreference("stories").setOnPreferenceClickListener(preference -> {
-            restartApplicationWithTimer();
+            LifecycleUtils.restartApplicationWithTimer();
 
             return true;
         });
         findPreference("swipe").setOnPreferenceClickListener(preference -> {
-            restartApplicationWithTimer();
+            LifecycleUtils.restartApplicationWithTimer();
 
             return true;
         });
         findPreference("is_likes_on_right").setOnPreferenceClickListener(preference -> {
-            restartApplicationWithTimer();
+            LifecycleUtils.restartApplicationWithTimer();
 
             return true;
         });
         findPreference("superapp").setOnPreferenceClickListener(preference -> {
-            restartApplicationWithTimer();
+            LifecycleUtils.restartApplicationWithTimer();
 
             return true;
         });
 
         findPreference("dateformat").setOnPreferenceChangeListener((preference, o) -> {
             Preferences.getPreferences().edit().putString("dateformat", o.toString()).commit();
-            restartApplicationWithTimer();
+            LifecycleUtils.restartApplicationWithTimer();
             return true;
         });
 
         var superappeditor = findPreference("superappeditor");
         superappeditor.setSummary(AndroidUtils.getString(R.string.elements_hidden_count) + ": " + SuperAppEditorManager.getInstance().getDisabledTabs().size());
-        superappeditor.setVisible(!Preferences.vkme() && !isTablet() && Preferences.superapp());
+        superappeditor.setVisible(!Preferences.vkme() && !AndroidUtils.isTablet() && Preferences.superapp());
         superappeditor.setOnPreferenceClickListener(preference -> {
             NavigatorUtils.switchFragment(requireContext(), SuperAppEditorFragment.class);
             return true;
         });
 
-        if (isTablet()) {
+        if (AndroidUtils.isTablet()) {
             findPreference("menusett").setVisible(false);
             findPreference("swipe").setVisible(false);
         }
-
-        if (Preferences.vkme() || isTablet()) {
-            findPreference("dockbareditor").setVisible(false);
-        }
-
-        var dockbarEditor = findPreference("dockbareditor");
-        dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
-        dockbarEditor.setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
-            return true;
-        });
 
         if (ThemesUtils.isMilkshake() && Preferences.superapp()) {
             findPreference("miniapps").setVisible(false);

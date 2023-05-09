@@ -1,28 +1,19 @@
 package ru.vtosters.lite.hooks;
 
-import static java.lang.Long.MAX_VALUE;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.Preferences.getString;
-import static ru.vtosters.lite.utils.Preferences.ads;
-import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
-import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.vkme;
-
 import android.content.Context;
 import android.os.PowerManager;
-
+import androidx.recyclerview.widget.RecyclerView;
 import com.vk.core.preference.Preference;
+import com.vk.discover.DiscoverItemDecorator;
 import com.vtosters.lite.api.ExtendedCommunityProfile;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.List;
-
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.Preferences;
+
+import java.util.*;
+
+import static java.lang.Long.MAX_VALUE;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 public class NewsfeedHook {
     public static long getUpdateNewsfeed(boolean refresh_timeout) {
@@ -35,6 +26,24 @@ public class NewsfeedHook {
             default ->
                     Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
         };
+    }
+
+    public static boolean samsungFixRem(RecyclerView recyclerView, DiscoverItemDecorator discoverItemDecorator) {
+        if (!recyclerView.isComputingLayout() && recyclerView.getScrollState() == RecyclerView.SCROLL_STATE_IDLE) {
+            recyclerView.removeItemDecoration(discoverItemDecorator);
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean samsungFixAdd(RecyclerView recyclerView, DiscoverItemDecorator discoverItemDecorator) {
+        if (!recyclerView.isComputingLayout() && recyclerView.getScrollState() == RecyclerView.SCROLL_STATE_IDLE) {
+            recyclerView.addItemDecoration(discoverItemDecorator);
+            return true;
+        }
+
+        return false;
     }
 
     public static List hideElement(ArrayList list) {

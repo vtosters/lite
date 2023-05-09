@@ -1,20 +1,18 @@
 package ru.vtosters.lite.music.cache.helpers;
 
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
-
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.FileCacheImplementation;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
-import ru.vtosters.lite.music.cache.FileCacheImplementation;
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 
 public class PlaylistHelper {
 
@@ -85,7 +83,6 @@ public class PlaylistHelper {
     }
 
     public static JSONObject getPlaylist() throws JSONException {
-
         return new JSONObject()
                 .put("id", -1)
                 .put("owner_id", getUserId())

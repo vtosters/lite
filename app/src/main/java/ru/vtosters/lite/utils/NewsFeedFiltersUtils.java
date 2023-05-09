@@ -1,21 +1,9 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.Preferences.getString;
-import static ru.vtosters.lite.utils.Preferences.ads;
-import static ru.vtosters.lite.utils.Preferences.adsgroup;
-import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
-import static ru.vtosters.lite.utils.Preferences.captions;
-import static ru.vtosters.lite.utils.Preferences.copyright_post;
-import static ru.vtosters.lite.utils.Preferences.dev;
-import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.postsrecomm;
-
 import android.util.Log;
-
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.hooks.AdBlockHook;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,7 +11,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import ru.vtosters.lite.hooks.AdBlockHook;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 public class NewsFeedFiltersUtils {
     public static List<String> mFilters;

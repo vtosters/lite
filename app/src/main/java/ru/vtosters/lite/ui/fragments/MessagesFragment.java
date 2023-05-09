@@ -1,22 +1,19 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
-import static ru.vtosters.lite.utils.Preferences.vkme;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-
 import androidx.preference.Preference;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
+import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.NavigatorUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 import java.util.Arrays;
-
-import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
-import ru.vtosters.lite.utils.Preferences;
+import java.util.List;
 
 public class MessagesFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
@@ -39,16 +36,16 @@ public class MessagesFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("autotranslate").setEnabled(!autoalltranslate());
+        findPreference("autotranslate").setEnabled(!Preferences.autoalltranslate());
 
         findPreference("lang_service").setOnPreferenceClickListener(preference -> {
-            var items = Arrays.asList(
+            List<ImagineArrayAdapter.ImagineArrayAdapterItem> items = Arrays.asList(
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.ic_yandex_translate_icon, "Yandex Translate"),
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.ic_google_translate_logo, "Google Translate")
 //                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_deepl_logo_icon", "drawable"), "DeepL")
             );
 
-            var adapter = new ImagineArrayAdapter(requireContext(), items);
+            ImagineArrayAdapter adapter = new ImagineArrayAdapter(requireContext(), items);
             adapter.setSelected(Preferences.getPreferences().getInt("translator", 0));
 
             new VkAlertDialog.Builder(getActivity())
@@ -61,23 +58,29 @@ public class MessagesFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("vkme_notifs").setEnabled(vkme());
+        findPreference("vkme_notifs").setEnabled(Preferences.vkme());
         findPreference("vkme").setIcon(R.drawable.ic_vkme_28);
 
-        if (isTablet()) {
+        if (AndroidUtils.isTablet()) {
             findPreference("vkmesett").setVisible(false);
         }
+
+        var wp = findPreference("wallpapers");
+        wp.setOnPreferenceClickListener(preference -> {
+            NavigatorUtils.switchFragment(requireContext(), WallpaperMenuFragment.class);
+            return true;
+        });
     }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        findPreference("autotranslate").setEnabled(!autoalltranslate());
-        findPreference("vkme_notifs").setEnabled(vkme());
+        findPreference("autotranslate").setEnabled(!Preferences.autoalltranslate());
+        findPreference("vkme_notifs").setEnabled(Preferences.vkme());
         return super.onPreferenceTreeClick(preference);
     }
 
     public boolean restart() {
-        restartApplicationWithTimer();
+        LifecycleUtils.restartApplicationWithTimer();
         return true;
     }
 

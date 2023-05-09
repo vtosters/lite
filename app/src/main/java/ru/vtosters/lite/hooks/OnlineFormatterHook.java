@@ -1,27 +1,22 @@
 package ru.vtosters.lite.hooks;
 
+import android.util.Log;
+import com.vtosters.lite.R;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import ru.vtosters.lite.utils.AndroidUtils;
+
+import java.io.IOException;
+import java.text.ParseException;
+
 import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfo;
 import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfoUsers;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.Preferences.dev;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.getPrefsFromFile;
-
-import android.util.Log;
-
-import com.vtosters.lite.R;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.text.ParseException;
-
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 public class OnlineFormatterHook {
     private static String AppName;

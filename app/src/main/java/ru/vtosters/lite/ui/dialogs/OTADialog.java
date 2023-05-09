@@ -1,20 +1,17 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import android.app.Activity;
-
-import android.graphics.Typeface;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.downloaders.OTADownloader;
 import ru.vtosters.lite.ui.vkui.ModalBottomSheetWrapper;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.OTAUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-public class OTADialog  extends ModalBottomSheetWrapper<OTADialog> implements OTAUtils.OTAListener {
+public class OTADialog extends ModalBottomSheetWrapper<OTADialog> implements OTAUtils.OTAListener {
     private final Activity mActivity;
 
     private final OTAUtils mHelper;
@@ -36,17 +33,17 @@ public class OTADialog  extends ModalBottomSheetWrapper<OTADialog> implements OT
         mActivity.runOnUiThread(() -> {
             // Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
             setTitle(mActivity.getString(R.string.newversion) + " " + mHelper.getNewVersionName())
-            .setView(makeUpdateInfoView(mHelper.getUpdateDescription()))
-            .setPositiveButton(mActivity.getString(R.string.updateanddownload), () -> {
-                OTADownloader.downloadBuild(mHelper.getDownloadUrl(), mHelper.getCommitSHA());
-            })
-            .show("ota");
+                    .setView(makeUpdateInfoView(mHelper.getUpdateDescription()))
+                    .setPositiveButton(mActivity.getString(R.string.updateanddownload), () -> {
+                        OTADownloader.downloadBuild(mHelper.getDownloadUrl(), mHelper.getCommitSHA());
+                    })
+                    .show("ota");
         });
     }
 
     private View makeUpdateInfoView(String changelog) {
-        var container = new LinearLayout(mActivity);
-        var changelogView = new TextView(mActivity);
+        LinearLayout container = new LinearLayout(mActivity);
+        TextView changelogView = new TextView(mActivity);
 
         container.setOrientation(LinearLayout.VERTICAL);
 

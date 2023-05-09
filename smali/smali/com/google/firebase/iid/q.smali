@@ -234,6 +234,10 @@
 
     const-string v1, "com.google.android.c2dm.intent.REGISTRATION"
 
+    invoke-static {v1}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     .line 12
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -781,6 +785,10 @@
 
     const-string v3, "com.google.android.gms"
 
+    invoke-static {v3}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
     .line 8
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
@@ -797,6 +805,10 @@
 
     const-string v3, "com.google.iid.TOKEN_REQUEST"
 
+    invoke-static {v3}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+    
     .line 10
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
@@ -804,6 +816,10 @@
 
     :cond_0
     const-string v3, "com.google.android.c2dm.intent.REGISTER"
+
+    invoke-static {v3}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
 
     .line 11
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;

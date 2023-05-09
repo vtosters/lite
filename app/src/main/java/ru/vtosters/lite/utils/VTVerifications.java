@@ -1,31 +1,22 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.hasVerification;
-
 import android.content.Context;
 import android.util.Log;
-
 import com.vk.dto.common.VerifyInfo;
 import com.vk.navigation.NavigatorKeys;
-
+import okhttp3.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 public class VTVerifications {
     public static final List<Integer> sVerifications = new ArrayList<>();
@@ -64,7 +55,7 @@ public class VTVerifications {
 
             @Override
             public void a(Call call, IOException e) {
-                Log.d("VTVerifications", "" + e);
+                Log.d("VTVerifications", String.valueOf(e));
             }
 
         });

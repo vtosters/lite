@@ -6235,4 +6235,46 @@ QR-код"</string>
  <string name="copydebuginfo_summ">Для адпраўкі інфармацыі аб памылцы на GitHub Issues</string>
  <string name="device_info_copied">Інфармацыя аб прыладзе скапіявана</string>
  <string name="app_open_by_default_settings">Для нармальнай працы прыкладання неабходна дазволіць дадатку адкрыццё спасылак па змаўчанні</string>
+
+ 
+    <string name="failed_to_get_text">Памылка пры атрыманні тэксту</string>
+    <string name="error_no_text">Памылка пры атрыманні тэксту, магчыма тэкст не знойдзены</string>
+    <string name="applying_accent">Прымяненне акцэнту</string>
+    <string name="error_applying_accent">Памылка пры прымяненнi акцэнту</string>
+    <string name="logColors_title">Лагiраваць атрыманне акцэнтаў</string>
+
+    <string name="remove_encryption_key">Выдаліць ключ</string>
+    <string name="restore_accounts">Аднавіць акаўнты</string>
+    <string name="save_accounts">Захаваць акаўнты</string>
+    <string name="reset_accounts">Скінуць ўсе акаўнты</string>
+    <string name="accounts_saved_by_path">Акаўнты захаваны па шляху</string>
+    <string name="error_saving_file">Памылка пры захаванні файла</string>
+
+    <string name="save_online_data">Захаваць дадзеныя аб анлайне</string>
+
+    <string name="restore_settings">Аднавіць налады</string>
+    <string name="reset_all_settings">Скінуць усе налады</string>
+
+    <string name="disable_analytics">Адключыць збор дадзеных</string>
+    <string name="disable_analytics_summ">Збор дадзеных аб падзеннях дадатку дапамагае нам паляпшаць яго\n\nАдключэнне збору логаў падзенняў прымусіць сумаваць бедных распрацоўшчыкаў</string>
+
+    <string name="systemtheme_enabled">Ўключана ўстаноўка тэмы як на тэлефоне</string>
+    <string name="systemtheme">Сістэмная тэма</string>
+    <string name="systemtheme_summ">Выкарыстоўваць тэму ўсталяваную на тэлефоне</string>
+
+    <string name="useGenius_summ">Атрымліваць тэксты з сэрвісу Genius</string>
+    <string name="useGenius_title">Тэксты з Genius</string>
+
+    <string name="datasettings_title">Налады дадзеных прыкладання</string>
+    <string name="invalidate_theme_cache_title">Інвалідацыя кэша тэмы</string>
+
+    <string name="useCustomPrefsStyle_title">Выкарыстоўваць новыя тумблеры</string>
+    <string name="useCustomPrefsStyle_summ">Больш сучасны і стыльны выгляд тумблераў у наладах</string>
+    <string name="useNewColorEngine_title">Выкарыстоўваць новы рухавічок акцэнтаў</string>
+    <string name="useNewColorEngine_summ">Можа працаваць нестабільна</string>
+
+    <string name="data">Дадзеныя</string>
+
+    <string name="currentLanguage">Бягучая мова:</string>
+    <string name="appLanguage">Мова дадатку</string>
 </resources>

@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui.components;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
-
 import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 
 public class ItemMovingCallback extends ItemTouchHelper.Callback {

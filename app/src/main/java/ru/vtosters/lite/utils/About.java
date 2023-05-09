@@ -10,7 +10,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import static ru.vtosters.lite.utils.AndroidUtils.*;
-import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.Preferences.devmenu;
+import static ru.vtosters.lite.utils.Preferences.getBuildName;
 
 public class About {
     public static String getBuildNumber() {
@@ -36,12 +37,12 @@ public class About {
     public static String getBuild(Context context, String name) {
         try {
             final var scanner = new Scanner(context.getAssets().open(name, AssetManager.ACCESS_BUFFER));
-            while(scanner.hasNextLine()) {
+            while (scanner.hasNextLine()) {
                 final var line = scanner.findInLine("VERSION_BUILD=.+");
-                if(!TextUtils.isEmpty(line))
+                if (!TextUtils.isEmpty(line))
                     return line.substring(14);
             }
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return "0000000";

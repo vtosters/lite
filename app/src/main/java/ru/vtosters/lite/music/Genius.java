@@ -3,18 +3,23 @@ package ru.vtosters.lite.music;
 import android.text.TextUtils;
 import android.util.Log;
 import com.vk.dto.music.MusicTrack;
+import com.vtosters.lite.R;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 
 public class Genius {
     private static final String KEY = "Bearer ZTejoT_ojOEasIkT9WrMBhBQOz6eYKK5QULCMECmOhvwqjRZ6WbpamFe3geHnvp3";
     private static final String URL = "https://api.genius.com";
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
+
     public static String getTextMusic(MusicTrack musictrack) {
         var uid = musictrack.y1();
         var artist = musictrack.C;
@@ -35,10 +40,8 @@ public class Genius {
             return null;
         }
 
-        Log.d("Genius", "/search/multi?q=" + artist + "%20" + track + "&from_background=0");
-
-        var request = new Request.a()
-                .b(URL + "/search/multi?q=" + artist + "%20" + track + "&from_background=0")
+        Request request = new Request.a()
+                .b(URL + "/search/multi?q=" + URLEncoder.encode(artist + " " + track) + "&from_background=0")
                 .a("User-Agent", "Genius/5.14.0 (Android; Android 13; Google Pixel 4 XL)")
                 .a("Authorization", KEY)
                 .a("x-genius-app-background-request", "0")
@@ -48,26 +51,29 @@ public class Genius {
                 .b()
                 .a();
         try {
-            var payload = client.a(request).execute().a().g();
-            var sections = new JSONObject(payload).getJSONObject("response").getJSONArray("sections");
-
-            Log.d("Genius", payload);
+            String payload = client.a(request).execute().a().g();
+            JSONArray sections = new JSONObject(payload).getJSONObject("response").getJSONArray("sections");
 
             for (int i = 0; i < sections.length(); i++) {
-                var json = sections.optJSONObject(i);
+                JSONObject json = sections.optJSONObject(i);
 
                 if (json.optString("type").equals("song")) {
-                    var path = json.getJSONArray("hits").getJSONObject(0).getJSONObject("result").getString("api_path");
+                    JSONArray hits = json.getJSONArray("hits");
 
-                    Log.d("Genius", path);
+                    for (int j = 0; j < hits.length(); j++) {
+                        JSONObject json2 = hits.optJSONObject(j);
+                        JSONObject result = json2.getJSONObject("result");
 
-                    return getText(path);
+                        if (json2.optString("index").equals("song") && result.optString("path").contains("lyrics")) {
+                            return getText(result.getString("api_path"));
+                        }
+                    }
                 }
             }
 
-            return "Ошибка получения текста, возможно текст не найден";
+            return AndroidUtils.getString("error_no_text");
         } catch (JSONException | IOException e) {
-            return "Ошибка получения текста, возможно текст не найден" + "\n\n" + "Ошибка: \n" + e.getLocalizedMessage();
+            return AndroidUtils.getString("error_no_text") + "\n\n" + AndroidUtils.getString(R.string.error) + ": \n" + e.getMessage();
         }
     }
 
@@ -77,7 +83,7 @@ public class Genius {
             return null;
         }
 
-        var request = new Request.a()
+        Request request = new Request.a()
                 .b(URL + track + "?text_format=plain")
                 .a("User-Agent", "Genius/5.14.0 (Android; Android 13; Google Pixel 4 XL)")
                 .a("Authorization", KEY)
@@ -88,16 +94,15 @@ public class Genius {
                 .b()
                 .a();
         try {
-            var payload = new JSONObject(client.a(request).execute().a().g());
-            Log.d("Genius", String.valueOf(payload));
+            JSONObject payload = new JSONObject(client.a(request).execute().a().g());
 
             if (!payload.has("response")) {
-                return "Ошибка получения текста, возможно текст не найден";
+                return AndroidUtils.getString("error_no_text");
             }
 
-            return " " + payload.getJSONObject("response").getJSONObject("song").getJSONObject("lyrics").getString("plain");
+            return payload.getJSONObject("response").getJSONObject("song").getJSONObject("lyrics").getString("plain");
         } catch (JSONException | IOException e) {
-            return "Ошибка получения текста, возможно текст не найден" + "\n\n" + "Ошибка: \n" + e.getLocalizedMessage();
+            return AndroidUtils.getString("error_no_text") + "\n\n" + AndroidUtils.getString(R.string.error) + ": \n" + e.getMessage();
         }
     }
 }

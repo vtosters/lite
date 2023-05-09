@@ -1,15 +1,12 @@
 package ru.vtosters.lite.ui.wallpapers;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-import com.vtosters.lite.im.ImEngineProvider;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.Preferences;
 
@@ -18,10 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Arrays;
-
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.*;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
@@ -69,7 +62,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                             ),
                             1488
                     );
-                    removeStickCache();
                     return true;
                 });
 
@@ -80,16 +72,15 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 "",
                 R.drawable.ic_delete_outline_28,
                 preference -> {
-                    removeWallpaper();
-                    requestUpdateWallpaper();
+                    WallpapersHooks.removeWallpaper();
+                    WallpapersHooks.requestUpdateWallpaper();
                     mWPPreviewPref.redraw();
-                    removeStickCache();
                     return true;
                 });
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.vtlfilters));
 
-        if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
+        if (!Preferences.hasVerification() && !Preferences.getBoolValue("dialogrecomm", false)) {
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",
@@ -106,7 +97,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
         }
 
         Arrays.stream(ImageEffects.values())
-                .filter(imageEffects -> imageEffects.isFree() || hasVerification())
+                .filter(imageEffects -> imageEffects.isFree() || Preferences.hasVerification())
                 .forEach(it -> {
                     if (it.isList()) {
                         var pref = PreferenceFragmentUtils.addListPreference(
@@ -121,7 +112,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                         pref.setOnPreferenceChangeListener((preference, o) -> {
                             Preferences.getPreferences().edit().putString(it.toString(), (String) o).apply();
                             preference.setSummary(it.getSummary());
-                            requestUpdateWallpaper();
+                            WallpapersHooks.requestUpdateWallpaper();
                             mWPPreviewPref.redraw();
                             return true;
                         });
@@ -135,7 +126,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                                 false,
                                 (preference, o) -> {
                                     Preferences.getPreferences().edit().putBoolean(it.toString(), (Boolean) o).apply();
-                                    requestUpdateWallpaper();
+                                    WallpapersHooks.requestUpdateWallpaper();
                                     mWPPreviewPref.redraw();
                                     return true;
                                 });
@@ -152,7 +143,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 (preference, o) -> {
                     boolean value = (boolean) o;
                     Preferences.getPreferences().edit().putBoolean("compresswp", value).commit();
-                    requestUpdateWallpaper();
+                    WallpapersHooks.requestUpdateWallpaper();
                     mWPPreviewPref.redraw();
                     return true;
                 });
@@ -166,13 +157,13 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
             return;
 
         try {
-            removeWallpaper();
+            WallpapersHooks.removeWallpaper();
             InputStream fileInputStream = requireActivity().getContentResolver().openInputStream(intent.getData());
-            OutputStream outputStream = new FileOutputStream(getWallpaperFile());
+            OutputStream outputStream = new FileOutputStream(WallpapersHooks.getWallpaperFile());
 
             copyStream(fileInputStream, outputStream);
 
-            requestUpdateWallpaper();
+            WallpapersHooks.requestUpdateWallpaper();
 
             if (i == 1488) {
                 mWPPreviewPref.redraw();
@@ -182,12 +173,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
             e.printStackTrace();
             Toast.makeText(requireActivity(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         }
-    }
-
-    private void removeStickCache() {
-        SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-        prefs2.edit().clear().apply();
-        ImEngineProvider.b().a();
     }
 
     @Override

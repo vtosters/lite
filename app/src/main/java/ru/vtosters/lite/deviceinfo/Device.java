@@ -3,10 +3,7 @@ package ru.vtosters.lite.deviceinfo;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-import static ru.vtosters.lite.deviceinfo.OEMDetector.hasMiuiIncrCode;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.isEMUI;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.isMIUI;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.isSamsung;
+import static ru.vtosters.lite.deviceinfo.OEMDetector.*;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 
 public class Device {

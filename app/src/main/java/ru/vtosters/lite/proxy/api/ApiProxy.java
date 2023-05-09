@@ -1,10 +1,10 @@
 package ru.vtosters.lite.proxy.api;
 
+import android.util.Log;
+
 import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
 import static ru.vtosters.lite.proxy.ProxyUtils.isVikaProxyEnabled;
 import static ru.vtosters.lite.utils.Preferences.getString;
-
-import android.util.Log;
 
 public class ApiProxy {
     public static String linkReplacer(String link) {

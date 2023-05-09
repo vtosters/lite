@@ -8,7 +8,6 @@ import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceFile;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.themes.loaders.ResourcesLoader;
 import ru.vtosters.lite.themes.utils.ArscEditor;
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.ThemesUtils;
@@ -120,18 +119,18 @@ public class ThemesManager {
             initPaths(app);
             validateModApk();
 
-            if (!Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && canApplyCustomAccent()) {
+            if (!Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && canApplyCustomAccent() && ThemesUtils.useNewColorEngine()) {
                 ResourcesLoader.init(app);
                 ResourcesLoader.load(app, modApk.getAbsolutePath(), false);
             }
         } catch (Exception e) {
-            Log.e("ThemesManager", e+"");
+            Log.e("ThemesManager", String.valueOf(e));
         }
     }
 
     // validate modded apk before loading
     private static void validateModApk()
-        throws IOException {
+            throws IOException {
         final var apk = new ZipFile(modApk);
         apk.close();
 
@@ -155,18 +154,18 @@ public class ThemesManager {
     }
 
     public static void generateModApk(int accentColor)
-        throws Throwable {
-        try(
-           final var apk = new ZipFile(baseApkPath)
+            throws Throwable {
+        try (
+                final var apk = new ZipFile(baseApkPath)
         ) {
             final var arscEntry = apk.getEntry("resources.arsc");
             final var arscBis = new BufferedInputStream(apk.getInputStream(arscEntry));
             final var arsc = BinaryResourceFile.fromInputStream(arscBis);
-            if(!ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor))
+            if (!ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor))
                 throw new IllegalStateException("Not all colors have been changed");
 
-            try(
-                final var zos = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(modApk)))
+            try (
+                    final var zos = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(modApk)))
             ) {
                 final var arscBuff = arsc.toByteArray();
                 final var newArscEntry = new ZipEntry("resources.arsc");
@@ -183,24 +182,25 @@ public class ThemesManager {
                 zos.closeEntry();
 
                 final var entries = apk.entries();
-                while(entries.hasMoreElements()) {
+                while (entries.hasMoreElements()) {
                     final var entry = entries.nextElement();
                     final var name = entry.getName();
 
-                    if(!name.startsWith("res/") && !name.startsWith("assets/") || name.equals("resources.arsc")) continue;
+                    if (!name.startsWith("res/") && !name.startsWith("assets/") || name.equals("resources.arsc"))
+                        continue;
 
                     var doNotCompress = false;
-                    for(var suffix : DO_NOT_COMPRESS) {
-                       if(name.endsWith(suffix)) {
-                           doNotCompress = true;
-                           break;
-                       }
+                    for (var suffix : DO_NOT_COMPRESS) {
+                        if (name.endsWith(suffix)) {
+                            doNotCompress = true;
+                            break;
+                        }
                     }
 
                     final var entryBis = new BufferedInputStream(apk.getInputStream(entry));
                     final var newEntry = new ZipEntry(name);
 
-                    if(doNotCompress) {
+                    if (doNotCompress) {
                         newEntry.setMethod(ZipEntry.STORED);
                         newEntry.setSize(entry.getSize());
                         newEntry.setCrc(entry.getCrc());

@@ -1,18 +1,12 @@
 package ru.vtosters.lite.utils;
 
 import android.util.Log;
-
+import okhttp3.*;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 public class OTAUtils {
 

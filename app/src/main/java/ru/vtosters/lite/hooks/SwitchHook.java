@@ -18,7 +18,7 @@ import static com.vtosters.lite.R.color.*;
 
 public class SwitchHook {
     private static int[] getSwitchColors(Context ctx) {
-        return new int[] {
+        return new int[]{
                 ContextCompat.getColor(ctx, ThemesUtils.isDarkTheme() ? gray_800 : white),
                 ContextCompat.getColor(ctx, ThemesUtils.isDarkTheme() ? switch_disabled_on_dark : switch_disabled_on_light),
                 ContextCompat.getColor(ctx, gray_20),
@@ -27,7 +27,7 @@ public class SwitchHook {
     }
 
     private static int[] getTrackColors() {
-        return new int[] {
+        return new int[]{
                 ColorUtils.b(ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.loader_track_fill), 0.4f),
                 ColorUtils.b(ThemesUtils.getAccentColor(), 0.12f),
                 ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.loader_track_fill),
@@ -61,11 +61,11 @@ public class SwitchHook {
                 compoundButton,
                 new ColorStateList(
                         createColorStateList(),
-                new int[]{
-                        ColorUtils.b(ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.selection_off_icon), 0.4f),
-                        ColorUtils.b(ThemesUtils.getAccentColor(), 0.4f),
-                        ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.selection_off_icon),
-                        ThemesUtils.getAccentColor()}));
+                        new int[]{
+                                ColorUtils.b(ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.selection_off_icon), 0.4f),
+                                ColorUtils.b(ThemesUtils.getAccentColor(), 0.4f),
+                                ThemesUtils.getColorFromAttr(com.vtosters.lite.R.attr.selection_off_icon),
+                                ThemesUtils.getAccentColor()}));
     }
 
     private static int[][] createColorStateList() {

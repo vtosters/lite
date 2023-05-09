@@ -25,7 +25,6 @@ import com.vtosters.lite.fragments.y2.VideoCatalogFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
 import ru.vtosters.lite.ui.items.DockBarTab;
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.Preferences;
 
 import java.io.File;
@@ -40,15 +39,15 @@ public class DockBarEditorManager {
     public static final int MIN_SELECTED_TABS = 3;
     public static final int MAX_SELECTED_TABS = 9;
 
-    private static final List< String > ALL_TAGS = Arrays.asList(
+    private static final List<String> ALL_TAGS = Arrays.asList(
             "tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
             "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos",
             "tab_lives", "tab_games", "tab_liked", "tab_fave", "tab_documents",
-            "tab_payments", "tab_vk_apps", "tab_settings");
+            "tab_payments", "tab_settings");
 
     private static DockBarEditorManager sInstance;
-    private final List< DockBarTab > mSelectedTabs = new ArrayList<>();
-    private final List< DockBarTab > mDisabledTabs = new ArrayList<>();
+    private final List<DockBarTab> mSelectedTabs = new ArrayList<>();
+    private final List<DockBarTab> mDisabledTabs = new ArrayList<>();
 
     public DockBarEditorManager() {
         init();
@@ -61,10 +60,10 @@ public class DockBarEditorManager {
     }
 
     private void init() {
-        if(vkme()) {
+        if (vkme()) {
             mSelectedTabs.add(getTabByTag("tab_settings"));
-            if(vkme_notifs()) {
-                if(milkshake()) {
+            if (vkme_notifs()) {
+                if (milkshake()) {
                     mSelectedTabs.add(getTabByTag("tab_feedback"));
                 } else {
                     mSelectedTabs.add(getTabByTag("tab_friends"));
@@ -86,25 +85,25 @@ public class DockBarEditorManager {
 
     private void checkOldConfig() {
         File config = new File(getGlobalContext().getFilesDir(), "dockbar.json");
-        if(config.exists()) config.deleteOnExit();
+        if (config.exists()) config.deleteOnExit();
     }
 
     private void parseSelectedTabs(String[] selectedTabsTags) {
         var allTags = new ArrayList<>(ALL_TAGS);
 
-        for(String tag : selectedTabsTags) {
+        for (String tag : selectedTabsTags) {
             mSelectedTabs.add(getTabByTag(tag));
             allTags.remove(tag);
         }
 
-        for(String tag : allTags) {
+        for (String tag : allTags) {
             mDisabledTabs.add(getTabByTag(tag));
         }
     }
 
     public void save() {
         var sb = new StringBuilder();
-        for(DockBarTab tab : mSelectedTabs)
+        for (DockBarTab tab : mSelectedTabs)
             sb.append(tab.tag).append(",");
         getPreferences().edit().putString("dockbar_tabs", sb.toString()).commit();
     }
@@ -116,11 +115,11 @@ public class DockBarEditorManager {
                 .commit();
     }
 
-    public List< DockBarTab > getSelectedTabs() {
+    public List<DockBarTab> getSelectedTabs() {
         return mSelectedTabs;
     }
 
-    public List< DockBarTab > getDisabledTabs() {
+    public List<DockBarTab> getDisabledTabs() {
         return mDisabledTabs;
     }
 

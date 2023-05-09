@@ -18,6 +18,7 @@ import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 
+import static ru.vtosters.lite.feature.groupslist.GroupsCatalogInjector.*;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
@@ -144,67 +145,65 @@ public class CatalogJsonInjector {
         return json;
     }
 
-    public static JSONObject catalogInjector(JSONObject json) {
+    public static void catalogInjector(JSONObject json) {
         try {
             var section = json.optJSONObject("section");
+            if (section == null) return; // early return if section is null
             var useOldAppVer = getBoolValue("useOldAppVer", false);
             var isUsersCatalog = section.optString("url").equals("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
 
-            if (isUsersCatalog && CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) {
-                var blocks = section.getJSONArray("blocks");
-                var noPlaylists = !json.has("playlists");
+            if (!isUsersCatalog || !CacheDatabaseDelegate.hasTracks() || LibVKXClient.isIntegrationEnabled()) return; // early return if not users catalog or no tracks or integration enabled
+            var blocks = section.getJSONArray("blocks");
+            var noPlaylists = !json.has("playlists");
 
-                // Log.d("catalogInjector", "type: " + blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type"));
+            if (noPlaylists) {
+                json.put("playlists", new JSONArray().put(getPlaylist()));
+                Log.d("catalogInjector", "added new pl");
+            } else {
+                try {
+                    json.optJSONArray("playlists").put(getPlaylist());
+                    Log.d("catalogInjector", "added to exist pl");
+                } catch (Exception e) {
+                    Log.d("catalogInjector", e.toString());
+                }
+            }
 
-                if (noPlaylists) {
-                    json.put("playlists", new JSONArray().put(getPlaylist()));
-                    Log.d("catalogInjector", "added new pl");
-                } else {
-                    try {
-                        json.optJSONArray("playlists").put(getPlaylist());
-                        Log.d("catalogInjector", "added to exist pl");
-                    } catch (Exception e) {
-                        Log.d("catalogInjector", e.toString());
-                    }
+            if ((!useOldAppVer || noPlaylists) && !isLoaded) {
+                var newBlocks = new JSONArray();
+
+                newBlocks
+                        .put(getCatalogHeader())
+                        .put(getCatalogPlaylist())
+                        .put(getCatalogSeparator());
+
+                isLoaded = true;
+
+                Log.d("catalogInjector", "added cache catalog playlist");
+
+                for (int i = 0; i < blocks.length(); i++) {
+                    newBlocks.put(blocks.optJSONObject(i));
                 }
 
-                if ((!useOldAppVer || noPlaylists) && !isLoaded) {
-                    var newBlocks = new JSONArray();
+                section.put("blocks", newBlocks);
+            } else {
+                for (int i = 0; i < blocks.length(); i++) {
+                    var j = blocks.optJSONObject(i);
+                    var type = j.optString("data_type");
 
-                    newBlocks
-                            .put(getCatalogHeader())
-                            .put(getCatalogPlaylist())
-                            .put(getCatalogSeparator());
+                    if (type.equals("music_playlists") && j.has("playlists_ids")) {
+                        var newarr = new JSONArray();
+                        var playlists_ids = j.optJSONArray("playlists_ids");
 
-                    isLoaded = true;
+                        newarr.put(getUserId() + "_-1");
 
-                    Log.d("catalogInjector", "added cache catalog playlist");
-
-                    for (int i = 0; i < blocks.length(); i++) {
-                        newBlocks.put(blocks.optJSONObject(i));
-                    }
-
-                    section.put("blocks", newBlocks);
-                } else {
-                    for (int i = 0; i < blocks.length(); i++) {
-                        var j = blocks.optJSONObject(i);
-                        var type = j.optString("data_type");
-
-                        if (type.equals("music_playlists") && j.has("playlists_ids")) {
-                            var newarr = new JSONArray();
-                            var playlists_ids = j.optJSONArray("playlists_ids");
-
-                            newarr.put(getUserId() + "_-1");
-
-                            for (int n = 0; n < playlists_ids.length(); n++) {
-                                newarr.put(playlists_ids.optString(n));
-                            }
-
-                            Log.d("catalogInjector", "added to pl ids");
-
-                            j.put("playlists_ids", newarr);
-                            break;
+                        for (int n = 0; n < playlists_ids.length(); n++) {
+                            newarr.put(playlists_ids.optString(n));
                         }
+
+                        Log.d("catalogInjector", "added to pl ids");
+
+                        j.put("playlists_ids", newarr);
+                        break;
                     }
                 }
             }
@@ -212,11 +211,18 @@ public class CatalogJsonInjector {
         } catch (JSONException e) {
             Log.d("catalogInjector", e.toString());
         }
+    }
+
+    public static JSONObject injectIntoCatalogs(JSONObject json) {
+
+        musicLinkFix(json);
+
+        injectIntoCatalog(json);
 
         return json;
     }
 
-    public static JSONObject musiclink(JSONObject json) {
+    public static void musicLinkFix(JSONObject json) {
         var links = json.optJSONArray("links");
 
         if (links != null && !getBoolValue("useOldAppVer", false)) {
@@ -233,7 +239,7 @@ public class CatalogJsonInjector {
             e.printStackTrace();
         }
 
-        return catalogInjector(json);
+        catalogInjector(json);
     }
 
     public static JSONObject fixArtists(JSONObject json) {
@@ -250,21 +256,18 @@ public class CatalogJsonInjector {
     public static void fixHeaders(JSONObject json) {
         var blocks = json.optJSONArray("blocks");
 
-        if (blocks != null) {
-            for (int i = 0; i < blocks.length(); i++) {
-                var block = blocks.optJSONObject(i);
-                var layout = block.optJSONObject("layout");
-                if (layout != null) {
-                    var name = layout.optString("name");
-                    if (name.equals("header_extended")) {
-                        if (layout.has("top_title")) blocks.remove(i);
-                        try {
-                            layout.put("name", "header");
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
+        if (blocks == null) return; // early return if blocks are null
+        for (int i = 0; i < blocks.length(); i++) {
+            var block = blocks.optJSONObject(i);
+            var layout = block.optJSONObject("layout");
+            if (layout == null) continue; // skip iteration if layout is null
+            var name = layout.optString("name");
+            if (!name.equals("header_extended")) continue; // skip iteration if name is not "header_extended"
+            if (layout.has("top_title")) blocks.remove(i);
+            try {
+                layout.put("name", "header");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         }
     }
