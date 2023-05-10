@@ -129,6 +129,15 @@
 
 Для сборки необходимо вызвать одну из следующих gradle tasks:
 
-+ `./gradlew buildVTL` - соберет и подпишет APK
-+ `./gradlew buildAndInstallVTL` - соберет, подпишет и попытается установить через ADB
-+ [FOR DEVS] `./gradlew prepareDexForMerge` - соберет все необходимое для сборки в `smali/` 
++ `./gradlew buildVTL + <Build Type>` - соберет и подпишет APK
++ `./gradlew buildAndInstallVTL + <Build Type>` - соберет, подпишет и попытается установить через ADB
++ `./gradlew buildAndLaunchVTL + <Build Type>` - соберет, подпишет, попытается установить через ADB и запустит на устройстве
++ [FOR DEVS] `./gradlew prepareDexForMerge + <Build Type>` - соберет все необходимое для сборки в `smali/` 
++ [FOR DEVS] `./gradlew exportDex + <Build Type>` - экспортирование дексов из собранного приложения для переноса в `smali/`
+```
+Build types:
+
+Dev
+Beta
+Release
+```
