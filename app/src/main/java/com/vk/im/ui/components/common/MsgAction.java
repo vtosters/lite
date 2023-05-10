@@ -11,5 +11,6 @@ public enum MsgAction {
     PIN,
     UNPIN,
     TRANSLATE,
-    READTO
+    READTO,
+    KICK
 }

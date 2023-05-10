@@ -298,16 +298,22 @@ public class DNRInjector {
     }
 
     public static LinkedHashMap<MsgAction, DelegateMsg.a.a> injectToHashMapMsg(LinkedHashMap<MsgAction, DelegateMsg.a.a> hashMap) {
-        hashMap.put(MsgAction.valueOf("TRANSLATE"), new DelegateMsg.a.a(R.string.translator));
-        hashMap.put(MsgAction.valueOf("READTO"), new DelegateMsg.a.a(R.string.readto));
+        hashMap.put(MsgAction.KICK, new DelegateMsg.a.a(R.string.vkim_accessibility_kick_from_chat));
+        hashMap.put(MsgAction.TRANSLATE, new DelegateMsg.a.a(R.string.translator));
+        hashMap.put(MsgAction.READTO, new DelegateMsg.a.a(R.string.readto));
         return hashMap;
     }
 
     public static boolean onClickMsg(Context context, MsgAction action, Msg msg) {
         var peerId = msg.v1();
 
-        if (action == MsgAction.valueOf("READTO")) {
+        if (action == MsgAction.READTO) {
             DNRModule.hookReadStartMsgTo(msg);
+            return true;
+        }
+
+        if (action == MsgAction.KICK) {
+            DNRModule.hookKick(msg);
             return true;
         }
 
@@ -319,7 +325,7 @@ public class DNRInjector {
                 text = EncryptProvider.decryptMessage(text, peerId);
             }
 
-            if (action == MsgAction.valueOf("TRANSLATE")) {
+            if (action == MsgAction.TRANSLATE) {
                 if (isTextExist) {
                     Translate.showTranslatedText(context, text);
                 } else {

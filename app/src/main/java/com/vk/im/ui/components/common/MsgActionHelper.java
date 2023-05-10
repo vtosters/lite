@@ -35,6 +35,14 @@ public final class MsgActionHelper {
             CollectionExt.a(arrayList, MsgAction.TRANSLATE, true);
             CollectionExt.a(arrayList, MsgAction.READTO, true);
 
+            boolean isAdmin;
+            try {
+                isAdmin = aVar.a().z1().t1().contains(aVar.b().j().b()); // get admin list and check if it has you
+            } catch (Exception ignored) {
+                isAdmin = false;
+            }
+            CollectionExt.a(arrayList, MsgAction.KICK, isAdmin);
+
             return arrayList;
         }
 
