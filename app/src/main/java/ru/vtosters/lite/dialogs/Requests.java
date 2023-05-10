@@ -26,6 +26,7 @@ public class Requests {
     }
 
     public static void hookKick(Msg dialog) {
+        if (dialog.getFrom().t1() == AccountManagerUtils.getUserId()) return;
         Request.makeRequest("https://" + ProxyUtils.getApi() + "/method/messages.removeChatUser?member_id=" + dialog.getFrom().t1() + "&chat_id=" + ImDialogsUtils.c(dialog.v1()) + "&v=5.119&access_token=" + AccountManagerUtils.getUserToken(), response -> {
         });
     }
