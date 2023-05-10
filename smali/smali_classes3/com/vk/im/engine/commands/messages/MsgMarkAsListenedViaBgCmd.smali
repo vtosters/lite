@@ -49,7 +49,7 @@
 .method public a(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 4
 
-    invoke-static {}, Lru/vtosters/lite/dnr/DNRPrefs;->getVoiceListened()Z
+    invoke-static {}, Lru/vtosters/lite/dialogs/DNRPrefs;->getVoiceListened()Z
 
     move-result v1
 

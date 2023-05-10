@@ -668,7 +668,7 @@
 
     sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->g:Ljava/util/LinkedHashMap;
 
-    invoke-static {v1}, Lru/vtosters/lite/dnr/DNRInjector;->injectToHashMapMsg(Ljava/util/LinkedHashMap;)Ljava/util/LinkedHashMap;
+    invoke-static {v1}, Lru/vtosters/lite/dialogs/DialogMessageInjector;->injectToHashMap(Ljava/util/LinkedHashMap;)Ljava/util/LinkedHashMap;
 
     move-result-object v1
 

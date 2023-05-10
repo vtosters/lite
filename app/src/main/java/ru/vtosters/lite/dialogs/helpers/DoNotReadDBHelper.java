@@ -1,10 +1,10 @@
-package ru.vtosters.lite.dnr.helpers;
+package ru.vtosters.lite.dialogs.helpers;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import ru.vtosters.lite.dnr.DNRPrefs;
+import ru.vtosters.lite.dialogs.DNRPrefs;
 
 import java.util.ArrayList;
 import java.util.List;

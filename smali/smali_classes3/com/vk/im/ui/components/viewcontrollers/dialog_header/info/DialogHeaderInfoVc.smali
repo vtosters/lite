@@ -1280,7 +1280,7 @@
 
     move-result-object v3
 
-    invoke-static {p1, v3}, Lru/vtosters/lite/dnr/DNRInjector;->onClickHeader(Lcom/vk/im/ui/components/common/DialogAction;Lcom/vk/im/engine/models/dialogs/Dialog;)Z
+    invoke-static {p1, v3}, Lru/vtosters/lite/dialogs/DialogHeaderInjector;->onClick(Lcom/vk/im/ui/components/common/DialogAction;Lcom/vk/im/engine/models/dialogs/Dialog;)Z
 
     move-result v0
 

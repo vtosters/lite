@@ -68,7 +68,7 @@
 
     iget v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgMarkAsReadJob;->b:I
 
-    invoke-static {v0}, Lru/vtosters/lite/dnr/DNRModule;->isDnrEnabledFor(I)Z
+    invoke-static {v0}, Lru/vtosters/lite/dialogs/DNRModule;->isDnrEnabledFor(I)Z
 
     move-result v3
 

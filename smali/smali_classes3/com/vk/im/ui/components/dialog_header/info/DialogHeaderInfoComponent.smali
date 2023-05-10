@@ -440,7 +440,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lru/vtosters/lite/dnr/DNRInjector;->injectToListAccess(Ljava/util/List;Lcom/vk/im/engine/models/dialogs/Dialog;)Ljava/util/List;
+    invoke-static {v0, v3}, Lru/vtosters/lite/dialogs/DialogHeaderInjector;->injectToListAccess(Ljava/util/List;Lcom/vk/im/engine/models/dialogs/Dialog;)Ljava/util/List;
 
     move-result-object v0
 

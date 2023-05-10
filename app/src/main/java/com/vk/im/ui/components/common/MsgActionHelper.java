@@ -37,8 +37,8 @@ public final class MsgActionHelper {
 
             boolean isAdmin;
             try {
-                isAdmin = aVar.a().z1().t1().contains(aVar.b().j().b()); // get admin list and check if it has you
-            } catch (Exception ignored) {
+                isAdmin = aVar.a().z1().t1().contains(aVar.b().j().b()) && !aVar.a().z1().K1(); // get admin list and check if it has you | is you kicked
+            } catch (Exception e) {
                 isAdmin = false;
             }
             CollectionExt.a(arrayList, MsgAction.KICK, isAdmin);

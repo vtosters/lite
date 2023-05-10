@@ -15,7 +15,7 @@ import com.vk.im.ui.p.ImBridge7;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.vtosters.lite.dnr.DNRInjector;
+import ru.vtosters.lite.dialogs.DialogMenuInjectors;
 
 public final class DialogActionsHelper {
     public static final DialogActionsHelper a = new DialogActionsHelper();
@@ -28,7 +28,7 @@ public final class DialogActionsHelper {
             boolean I1 = z1 != null && z1.I1();
             ArrayList<DialogAction> arrayList = new ArrayList<>();
 
-            DNRInjector.inject(dialog, arrayList);
+            DialogMenuInjectors.inject(dialog, arrayList);
 
             arrayList.add(DialogAction.SEARCH);
 
@@ -97,7 +97,7 @@ public final class DialogActionsHelper {
         ChatSettings z1 = dialog.z1();
         ArrayList<DialogAction> arrayList = new ArrayList<>();
 
-        DNRInjector.inject(dialog, arrayList);
+        DialogMenuInjectors.inject(dialog, arrayList);
 
 //        if (dialog.hasUnread()) {
         arrayList.add(DialogAction.MARK_AS_READ);

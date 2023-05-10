@@ -1941,7 +1941,7 @@
 
     .line 43
     :cond_0
-    invoke-static {}, Lru/vtosters/lite/dnr/DNRPrefs;->getStoriesRead()Z
+    invoke-static {}, Lru/vtosters/lite/dialogs/DNRPrefs;->getStoriesRead()Z
 
     move-result v2
 
@@ -1999,7 +1999,7 @@
 .method public static a(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;I)V
     .locals 15
 
-    invoke-static {}, Lru/vtosters/lite/dnr/DNRPrefs;->getStoriesRead()Z
+    invoke-static {}, Lru/vtosters/lite/dialogs/DNRPrefs;->getStoriesRead()Z
 
     move-result v2
 

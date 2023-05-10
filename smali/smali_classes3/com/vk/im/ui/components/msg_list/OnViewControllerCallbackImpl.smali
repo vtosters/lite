@@ -587,7 +587,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1, p2}, Lru/vtosters/lite/dnr/DNRInjector;->onClickMsg(Landroid/content/Context;Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)Z
+    invoke-static {v0, p1, p2}, Lru/vtosters/lite/dialogs/DialogMessageInjector;->onClick(Landroid/content/Context;Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)Z
 
     move-result v0
 

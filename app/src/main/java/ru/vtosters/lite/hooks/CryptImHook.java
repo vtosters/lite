@@ -17,7 +17,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import java.util.List;
 import java.util.Objects;
 
-import static ru.vtosters.lite.dnr.DNRInjector.forceInvalidateDialogActions;
+import static ru.vtosters.lite.dialogs.DialogHeaderInjector.forceInvalidateDialogActions;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;

@@ -157,7 +157,7 @@
     .line 10
     iget v1, p0, Lcom/vk/im/engine/commands/messages/SetUserActivityCmd;->b:I
 
-    invoke-static {v1}, Lru/vtosters/lite/dnr/DNRModule;->isDntEnabledFor(I)Z
+    invoke-static {v1}, Lru/vtosters/lite/dialogs/DNRModule;->isDntEnabledFor(I)Z
 
     move-result v2
 

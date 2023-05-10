@@ -1,12 +1,12 @@
-package ru.vtosters.lite.dnr;
+package ru.vtosters.lite.dialogs;
 
+import com.vk.core.network.Network;
 import com.vk.core.util.LangUtils;
-import com.vk.im.engine.commands.messages.SetUserActivityCmd;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.utils.ImDialogsUtils;
-import ru.vtosters.lite.dnr.helpers.DoNotReadDBHelper;
-import ru.vtosters.lite.dnr.helpers.DoNotTypeDBHelper;
+import okhttp3.Headers;
+import okhttp3.OkHttpClient;
 import ru.vtosters.lite.net.Request;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -14,42 +14,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
-import java.util.List;
-
-public class DNRModule {
-    public static DoNotReadDBHelper mDoNotReadDBHelper = new DoNotReadDBHelper();
-    public static DoNotTypeDBHelper mDoNotTypeDBHelper = new DoNotTypeDBHelper();
-
-    public static boolean isDnrEnabledFor(int id) {
-        return mDoNotReadDBHelper.isEnabledForPeerId(id);
-    }
-
-    public static List<Integer> getDnrEnabled() {
-        return mDoNotReadDBHelper.get();
-    }
-
-    public static List<Integer> getDntEnabled() {
-        return mDoNotTypeDBHelper.get();
-    }
-
-    public static boolean isDntEnabledFor(int id) {
-        return mDoNotTypeDBHelper.isEnabledForPeerId(id);
-    }
-
-    public static boolean isDntEnabledFor(SetUserActivityCmd cmd) {
-        return isDntEnabledFor(cmd.b);
-    }
-
-    public static boolean isDnrEnabledFor(Dialog dialog) {
-        if (dialog == null) return false;
-        return isDnrEnabledFor(dialog.getId());
-    }
-
-    public static boolean isDntEnabledFor(Dialog dialog) {
-        if (dialog == null) return false;
-        return isDntEnabledFor(dialog.getId());
-    }
-
+public class Requests {
     public static void hookRead(Dialog dialog) {
         Request.makeRequest("https://" + ProxyUtils.getApi() + "/method/messages.markAsRead?start_message_id=" + dialog.F1() + "&peer_id=" + dialog.getId() + "&v=5.119&access_token=" + AccountManagerUtils.getUserToken(), response -> {
         });
@@ -76,11 +41,22 @@ public class DNRModule {
                 ThemesUtils.hexx(ThemesUtils.getAccentColor()), LifecycleUtils.getCurrentActivity());
     }
 
-    public static void hookDNR(int peerId) {
-        mDoNotReadDBHelper.setEnabledForPeerId(peerId, !mDoNotReadDBHelper.isEnabledForPeerId(peerId));
-    }
+    public static void pinnedMsg(int dialogid, boolean needToBePinned) {
+        Thread thread = new Thread(() -> {
+            try {
+                var request = new okhttp3.Request.a()
+                        .b("https://" + ProxyUtils.getApi() + "/method/" + (needToBePinned ? "messages.pinConversation" : "messages.unpinConversation") + "?peer_id=" + dialogid + "&access_token=" + AccountManagerUtils.getUserToken() + "&v=5.119")
+                        .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
+                        .a();
 
-    public static void hookDNT(int peerId) {
-        mDoNotTypeDBHelper.setEnabledForPeerId(peerId, !mDoNotTypeDBHelper.isEnabledForPeerId(peerId));
+                new OkHttpClient().a(request).execute().a().g();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        thread.start();
+
+        AndroidUtils.sendToast(AndroidUtils.getString(com.vtosters.lite.R.string.pin_dialog) + " " + AndroidUtils.getString(needToBePinned ? com.vtosters.lite.R.string.dialog_pinned : com.vtosters.lite.R.string.dialog_unpinned));
     }
 }

@@ -1,4 +1,4 @@
-package ru.vtosters.lite.dnr;
+package ru.vtosters.lite.dialogs;
 
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
