@@ -31,7 +31,7 @@ public class About {
     }
 
     public static String getCommitLink() {
-        return "https://git.maki.su/gdlbo/lite/commit/" + getBuild(getGlobalContext(), "version.properties"); // https://github.com/vtosters/lite/commit/ github repo
+        return "https://github.com/vtosters/lite/commit/" + getBuild(getGlobalContext(), "version.properties"); // https://git.maki.su/gdlbo/lite/commit/ github repo
     }
 
     public static String getBuild(Context context, String name) {
