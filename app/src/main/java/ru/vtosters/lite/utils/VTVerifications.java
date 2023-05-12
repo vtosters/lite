@@ -28,7 +28,7 @@ public class VTVerifications {
     public static void load(Context context) {
         var prefs = context.getSharedPreferences("vt_another_data", 0);
 
-        if ((!NetworkUtils.isNetworkConnected() || getBoolValue("isRoamingState", false)) && prefs.contains("ids")) {
+        if ((!NetworkUtils.isNetworkConnected() && NetworkUtils.isInternetSlow() || getBoolValue("isRoamingState", false)) && prefs.contains("ids")) {
             parseJson(prefs.getString("ids", "[]"));
             return;
         }
