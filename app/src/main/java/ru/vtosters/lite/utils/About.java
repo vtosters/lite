@@ -9,7 +9,7 @@ import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Preferences.getBuildName;
 
 public class About {
-    public static void injectToToolBar(View view) {
+    public static void inject(View view) {
         view.setOnLongClickListener(v -> {
             if (devmenu()) {
                 sendToast(AndroidUtils.getString(R.string.debug_menu_already_activated));
@@ -22,7 +22,7 @@ public class About {
     }
 
     public static String getCommitLink() {
-        return "https://github.com/vtosters/lite/commit/" + VersionReader.getVersionCommit(); // https://git.maki.su/gdlbo/lite/commit/ github repo
+        return "https://github.com/vtosters/lite/commit/" + VersionReader.getVersionCommit();
     }
 
     public static String getAppVersion() {
