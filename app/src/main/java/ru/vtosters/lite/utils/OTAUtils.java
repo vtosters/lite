@@ -84,7 +84,7 @@ public class OTAUtils {
 
     public boolean isNewVersion() {
         try {
-            return !mCommitSHA.startsWith(About.getBuildNumber());
+            return !mCommitSHA.startsWith(VersionReader.getVersionBuild());
         } catch (Exception e) {
             return false;
         }

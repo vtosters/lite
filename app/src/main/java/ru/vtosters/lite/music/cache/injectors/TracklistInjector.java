@@ -18,7 +18,9 @@ import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public class TracklistInjector {
 
@@ -224,6 +226,7 @@ public class TracklistInjector {
             }
         }
     }
+
     public static JSONObject createVirtualCatalog(List<MusicTrack> tracks) throws JSONException {
         var audiosBlock = new JSONObject()
                 .put("id", getRandomId())

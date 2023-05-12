@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static ru.vtosters.lite.utils.Preferences.dev;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class UsersList {
     private static final String TAG = "UsersList";

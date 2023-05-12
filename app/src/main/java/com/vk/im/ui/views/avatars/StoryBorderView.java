@@ -9,7 +9,6 @@ import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.vk.im.ui.o;
 
 public class StoryBorderView extends View {

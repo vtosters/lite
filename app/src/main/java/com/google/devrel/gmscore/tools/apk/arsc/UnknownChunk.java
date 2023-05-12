@@ -17,6 +17,7 @@
 package com.google.devrel.gmscore.tools.apk.arsc;
 
 import androidx.annotation.Nullable;
+
 import java.io.DataOutput;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -27,35 +28,35 @@ import java.nio.ByteBuffer;
  */
 public final class UnknownChunk extends Chunk {
 
-  private final Type type;
+    private final Type type;
 
-  private final byte[] header;
+    private final byte[] header;
 
-  private final byte[] payload;
+    private final byte[] payload;
 
-  protected UnknownChunk(ByteBuffer buffer, @Nullable Chunk parent) {
-    super(buffer, parent);
+    protected UnknownChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+        super(buffer, parent);
 
-    type = Type.fromCode(buffer.getShort(offset));
-    header = new byte[headerSize - Chunk.METADATA_SIZE];
-    payload = new byte[chunkSize - headerSize];
-    buffer.get(header);
-    buffer.get(payload);
-  }
+        type = Type.fromCode(buffer.getShort(offset));
+        header = new byte[headerSize - Chunk.METADATA_SIZE];
+        payload = new byte[chunkSize - headerSize];
+        buffer.get(header);
+        buffer.get(payload);
+    }
 
-  @Override
-  protected void writeHeader(ByteBuffer output) {
-    output.put(header);
-  }
+    @Override
+    protected void writeHeader(ByteBuffer output) {
+        output.put(header);
+    }
 
-  @Override
-  protected void writePayload(DataOutput output, ByteBuffer header, boolean shrink)
-      throws IOException {
-    output.write(payload);
-  }
+    @Override
+    protected void writePayload(DataOutput output, ByteBuffer header, boolean shrink)
+            throws IOException {
+        output.write(payload);
+    }
 
-  @Override
-  protected Type getType() {
-    return type;
-  }
+    @Override
+    protected Type getType() {
+        return type;
+    }
 }

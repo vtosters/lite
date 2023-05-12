@@ -8,9 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
 import android.util.Log;
-
 import com.aefyr.tsg.g2.TelegramStickersPack;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 

@@ -520,7 +520,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.menu_about),
-                Preferences.getBuildName() + " | " + About.getBuildNumber(),
+                Preferences.getBuildName() + " | " + (Preferences.isValidSignature() ? VersionReader.getVersionBuild() : VersionReader.getVersionFull()),
                 R.drawable.ic_about_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), AboutAppFragment.class);

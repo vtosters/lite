@@ -8,9 +8,9 @@ import android.os.Bundle;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
-import ru.vtosters.lite.utils.About;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.lite.utils.VersionReader;
 
 public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
 
@@ -33,7 +33,9 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
         String miuiUiVersionCodeName = OEMDetector.getMiuiUiVersionCode();
         String emuiVersionCode = OEMDetector.getEmuiVersionCode();
         String packageName = requireContext().getPackageName();
-        String commit = About.getBuildNumber();
+        String commit = VersionReader.getVersionCommit();
+        String branch = VersionReader.getVersionBranch();
+        String fullbuildinfo = VersionReader.getVersionFull();
 
         boolean isMiui = OEMDetector.isMIUI();
         boolean isFlyme = OEMDetector.isFlyme();
@@ -58,6 +60,18 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "Commit", commit, 0, preference -> {
             ((ClipboardManager) requireActivity().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", commit));
+            AndroidUtils.sendToast(requireContext().getString(R.string.copied_to_clipboard));
+            return false;
+        });
+
+        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "Branch", branch, 0, preference -> {
+            ((ClipboardManager) requireActivity().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", branch));
+            AndroidUtils.sendToast(requireContext().getString(R.string.copied_to_clipboard));
+            return false;
+        });
+
+        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "Build Info", fullbuildinfo, 0, preference -> {
+            ((ClipboardManager) requireActivity().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", fullbuildinfo));
             AndroidUtils.sendToast(requireContext().getString(R.string.copied_to_clipboard));
             return false;
         });

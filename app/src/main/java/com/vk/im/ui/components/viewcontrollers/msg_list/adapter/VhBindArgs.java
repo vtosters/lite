@@ -17,11 +17,7 @@ import com.vk.im.engine.models.ProfilesSimpleInfo;
 import com.vk.im.engine.models.attaches.AttachAudioMsg;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.dialogs.DialogTheme;
-import com.vk.im.engine.models.messages.Msg;
-import com.vk.im.engine.models.messages.MsgFromUser;
-import com.vk.im.engine.models.messages.MsgIdType;
-import com.vk.im.engine.models.messages.MsgSyncState;
-import com.vk.im.engine.models.messages.WithUserContent;
+import com.vk.im.engine.models.messages.*;
 import com.vk.im.engine.utils.collection.IntSet;
 import com.vk.im.ui.components.viewcontrollers.msg_list.entry.AdapterEntry;
 import com.vk.im.ui.media.audio.AudioTrack;
@@ -149,7 +145,7 @@ public class VhBindArgs {
     public boolean E() {
         Msg var1 = this.b.c;
         boolean var2;
-        if (var1 instanceof MsgFromUser && ((MsgFromUser)var1).i2()) {
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).i2()) {
             var2 = true;
         } else {
             var2 = false;
@@ -161,7 +157,7 @@ public class VhBindArgs {
     public boolean F() {
         Msg var1 = this.b.c;
         boolean var2;
-        if (var1 instanceof MsgFromUser && ((MsgFromUser)var1).F0()) {
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).F0()) {
             var2 = true;
         } else {
             var2 = false;
@@ -207,7 +203,7 @@ public class VhBindArgs {
         } else if (!(var1 instanceof MsgFromUser)) {
             return false;
         } else {
-            MsgFromUser var7 = (MsgFromUser)var1;
+            MsgFromUser var7 = (MsgFromUser) var1;
             Msg var3 = this.a.c;
             boolean var4;
             if (var3 != null && var3.d() == MsgSyncState.DONE) {
@@ -246,7 +242,7 @@ public class VhBindArgs {
         byte var2 = 0;
         int var3 = var2;
         if (var1) {
-            AttachAudioMsg var4 = (AttachAudioMsg)((MsgFromUser)this.b.c).c(AttachAudioMsg.class, false);
+            AttachAudioMsg var4 = (AttachAudioMsg) ((MsgFromUser) this.b.c).c(AttachAudioMsg.class, false);
             var3 = var2;
             if (var4 != null) {
                 var3 = var4.f();
@@ -271,7 +267,7 @@ public class VhBindArgs {
     public boolean c() {
         Msg var1 = this.b.c;
         boolean var2;
-        if (var1 instanceof MsgFromUser && ((MsgFromUser)var1).I0()) {
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).I0()) {
             var2 = true;
         } else {
             var2 = false;
@@ -283,7 +279,7 @@ public class VhBindArgs {
     public boolean d() {
         Msg var1 = this.b.c;
         boolean var2;
-        if (var1 instanceof WithUserContent && ((WithUserContent)var1).D0() != null) {
+        if (var1 instanceof WithUserContent && ((WithUserContent) var1).D0() != null) {
             var2 = true;
         } else {
             var2 = false;
@@ -321,7 +317,7 @@ public class VhBindArgs {
     public boolean g() {
         Msg var1 = this.b.c;
         boolean var2;
-        if (var1 instanceof MsgFromUser && ((MsgFromUser)var1).G0()) {
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).G0()) {
             var2 = true;
         } else {
             var2 = false;
@@ -333,7 +329,7 @@ public class VhBindArgs {
     public boolean h() {
         Msg var1 = this.b.c;
         boolean var2;
-        if (var1 instanceof MsgFromUser && ((MsgFromUser)var1).Z1()) {
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).Z1()) {
             var2 = true;
         } else {
             var2 = false;
@@ -447,7 +443,7 @@ public class VhBindArgs {
     public boolean r() {
         Msg var1 = this.b.c;
         boolean var2;
-        if (var1 instanceof MsgFromUser && ((MsgFromUser)var1).e2()) {
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).e2()) {
             var2 = true;
         } else {
             var2 = false;
@@ -457,7 +453,7 @@ public class VhBindArgs {
     }
 
     public boolean s() {
-        if(this.C != null)
+        if (this.C != null)
             return switch (this.C) {
                 case LOCAL_ID -> this.D == this.b.c.getLocalId();
                 case VK_ID -> this.D == this.b.c.C1();

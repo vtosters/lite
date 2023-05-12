@@ -18,7 +18,7 @@ import java.util.Arrays;
 public class IOUtils {
     public static final int BUFFER_SIZE = 8192;
 
-    public static byte[] decodeStream(InputStream encIs,byte[] aesKey)
+    public static byte[] decodeStream(InputStream encIs, byte[] aesKey)
             throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
         CipherInputStream cip = new CipherInputStream(encIs, getCipher(aesKey));
         return readFully(cip);

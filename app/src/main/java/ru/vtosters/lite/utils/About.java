@@ -1,23 +1,14 @@
 package ru.vtosters.lite.utils;
 
-import android.content.Context;
-import android.content.res.AssetManager;
-import android.text.TextUtils;
 import android.view.View;
 import com.vtosters.lite.R;
 
-import java.io.IOException;
-import java.util.Scanner;
-
-import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.AndroidUtils.getApplicationName;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Preferences.getBuildName;
 
 public class About {
-    public static String getBuildNumber() {
-        return getBuild(getGlobalContext(), "version.properties");
-    }
-
     public static void injectToToolBar(View view) {
         view.setOnLongClickListener(v -> {
             if (devmenu()) {
@@ -31,24 +22,10 @@ public class About {
     }
 
     public static String getCommitLink() {
-        return "https://github.com/vtosters/lite/commit/" + getBuild(getGlobalContext(), "version.properties"); // https://git.maki.su/gdlbo/lite/commit/ github repo
-    }
-
-    public static String getBuild(Context context, String name) {
-        try {
-            final var scanner = new Scanner(context.getAssets().open(name, AssetManager.ACCESS_BUFFER));
-            while (scanner.hasNextLine()) {
-                final var line = scanner.findInLine("VERSION_BUILD=.+");
-                if (!TextUtils.isEmpty(line))
-                    return line.substring(14);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "0000000";
+        return "https://github.com/vtosters/lite/commit/" + VersionReader.getVersionCommit(); // https://git.maki.su/gdlbo/lite/commit/ github repo
     }
 
     public static String getAppVersion() {
-        return getApplicationName() + " " + getBuildName() + " | " + getBuildNumber();
+        return getApplicationName() + " " + getBuildName() + " | " + VersionReader.getVersionFull();
     }
 }

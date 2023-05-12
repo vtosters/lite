@@ -35,243 +35,293 @@ import java.util.Map.Entry;
  */
 public class ArscBlamer {
 
-  /** Maps package key pool indices to blamed resources. */
-  private final Map<PackageChunk, List<ResourceEntry>[]> keyToBlame = new HashMap<>();
+    /**
+     * Maps package key pool indices to blamed resources.
+     */
+    private final Map<PackageChunk, List<ResourceEntry>[]> keyToBlame = new HashMap<>();
 
-  /** Maps types to blamed resources. */
-  private final Map<PackageChunk, List<ResourceEntry>[]> typeToBlame = new HashMap<>();
+    /**
+     * Maps types to blamed resources.
+     */
+    private final Map<PackageChunk, List<ResourceEntry>[]> typeToBlame = new HashMap<>();
 
-  /** Maps package to blamed resources. */
-  private final Multimap<PackageChunk, ResourceEntry> packageToBlame = HashMultimap.create();
+    /**
+     * Maps package to blamed resources.
+     */
+    private final Multimap<PackageChunk, ResourceEntry> packageToBlame = HashMultimap.create();
 
-  /** Maps string indices to blamed resources. */
-  private final List<ResourceEntry>[] stringToBlame;
+    /**
+     * Maps string indices to blamed resources.
+     */
+    private final List<ResourceEntry>[] stringToBlame;
 
-  /** Maps type chunk entries to blamed resources. */
-  private final Multimap<TypeChunk.Entry, ResourceEntry> typeEntryToBlame = HashMultimap.create();
+    /**
+     * Maps type chunk entries to blamed resources.
+     */
+    private final Multimap<TypeChunk.Entry, ResourceEntry> typeEntryToBlame = HashMultimap.create();
 
-  /** Maps resources to the type chunk entries they reference. */
-  private Multimap<ResourceEntry, TypeChunk.Entry> resourceEntries;
+    /**
+     * Maps resources to the type chunk entries they reference.
+     */
+    private Multimap<ResourceEntry, TypeChunk.Entry> resourceEntries;
 
-  /** Maps resources which have no base config to the type chunk entries they reference. */
-  private Multimap<ResourceEntry, TypeChunk.Entry> baselessKeys;
+    /**
+     * Maps resources which have no base config to the type chunk entries they reference.
+     */
+    private Multimap<ResourceEntry, TypeChunk.Entry> baselessKeys;
 
-  /** Contains all of the type chunks in {@link #resourceTable}. */
-  private List<TypeChunk> typeChunks;
+    /**
+     * Contains all of the type chunks in {@link #resourceTable}.
+     */
+    private List<TypeChunk> typeChunks;
 
-  /** This is the {@link ResourceTableChunk} inside of the resources.arsc file in the APK. */
-  private final ResourceTableChunk resourceTable;
+    /**
+     * This is the {@link ResourceTableChunk} inside of the resources.arsc file in the APK.
+     */
+    private final ResourceTableChunk resourceTable;
 
-  /**
-   * Creates a new {@link ArscBlamer}.
-   *
-   * @param resourceTable The resources.arsc resource table to blame.
-   */
-  public ArscBlamer(ResourceTableChunk resourceTable) {
-    this.resourceTable = resourceTable;
-    this.stringToBlame = createEntryListArray(resourceTable.getStringPool().getStringCount());
-  }
-
-  /** Generates blame mappings. */
-  public void blame() {
-    Multimap<ResourceEntry, TypeChunk.Entry> entries = getResourceEntries();
-    for (Entry<ResourceEntry, Collection<TypeChunk.Entry>> entry : entries.asMap().entrySet()) {
-      ResourceEntry resourceEntry = entry.getKey();
-      PackageChunk packageChunk = Preconditions.checkNotNull(
-          resourceTable.getPackage(resourceEntry.packageName()));
-      int keyCount = packageChunk.getKeyStringPool().getStringCount();
-      int typeCount = packageChunk.getTypeStringPool().getStringCount();
-      for (TypeChunk.Entry chunkEntry : entry.getValue()) {
-        blameKeyOrType(keyToBlame, packageChunk, chunkEntry.keyIndex(), resourceEntry, keyCount);
-        blameKeyOrType(typeToBlame, packageChunk, chunkEntry.parent().getId() - 1, resourceEntry,
-            typeCount);
-        blameFromTypeChunkEntry(chunkEntry);
-      }
-      blamePackage(packageChunk, resourceEntry);
+    /**
+     * Creates a new {@link ArscBlamer}.
+     *
+     * @param resourceTable The resources.arsc resource table to blame.
+     */
+    public ArscBlamer(ResourceTableChunk resourceTable) {
+        this.resourceTable = resourceTable;
+        this.stringToBlame = createEntryListArray(resourceTable.getStringPool().getStringCount());
     }
-    Multimaps.invertFrom(entries, typeEntryToBlame);
-    for (TypeChunk.Entry entry : typeEntryToBlame.keySet()) {
-      blameFromTypeChunkEntry(entry);
-    }
-  }
 
-  private void blameKeyOrType(Map<PackageChunk, List<ResourceEntry>[]> keyOrType,
-      PackageChunk packageChunk, int keyIndex, ResourceEntry entry, int entryCount) {
-    if (!keyOrType.containsKey(packageChunk)) {
-      keyOrType.put(packageChunk, createEntryListArray(entryCount));
-    }
-    keyOrType.get(packageChunk)[keyIndex].add(entry);
-  }
-
-  private void blamePackage(PackageChunk packageChunk, ResourceEntry entry) {
-    packageToBlame.put(packageChunk, entry);
-  }
-
-  private void blameFromTypeChunkEntry(TypeChunk.Entry chunkEntry) {
-    for (BinaryResourceValue value : getAllResourceValues(chunkEntry)) {
-      for (ResourceEntry entry : typeEntryToBlame.get(chunkEntry)) {
-        switch (value.type()) {
-          case STRING:
-            blameString(value.data(), entry);
-            break;
-          default:
-            break;
+    /**
+     * Generates blame mappings.
+     */
+    public void blame() {
+        Multimap<ResourceEntry, TypeChunk.Entry> entries = getResourceEntries();
+        for (Entry<ResourceEntry, Collection<TypeChunk.Entry>> entry : entries.asMap().entrySet()) {
+            ResourceEntry resourceEntry = entry.getKey();
+            PackageChunk packageChunk = Preconditions.checkNotNull(
+                    resourceTable.getPackage(resourceEntry.packageName()));
+            int keyCount = packageChunk.getKeyStringPool().getStringCount();
+            int typeCount = packageChunk.getTypeStringPool().getStringCount();
+            for (TypeChunk.Entry chunkEntry : entry.getValue()) {
+                blameKeyOrType(keyToBlame, packageChunk, chunkEntry.keyIndex(), resourceEntry, keyCount);
+                blameKeyOrType(typeToBlame, packageChunk, chunkEntry.parent().getId() - 1, resourceEntry,
+                        typeCount);
+                blameFromTypeChunkEntry(chunkEntry);
+            }
+            blamePackage(packageChunk, resourceEntry);
         }
-      }
-    }
-  }
-
-  /** Returns all {@link BinaryResourceValue} for a single {@code entry}. */
-  private Collection<BinaryResourceValue> getAllResourceValues(TypeChunk.Entry entry) {
-    Set<BinaryResourceValue> values = new HashSet<BinaryResourceValue>();
-    BinaryResourceValue binaryResourceValue = entry.value();
-    if (binaryResourceValue != null) {
-      values.add(binaryResourceValue);
-    }
-    for (BinaryResourceValue value : entry.values().values()) {
-      values.add(value);
-    }
-    return values;
-  }
-
-  private void blameString(int stringIndex, ResourceEntry entry) {
-    stringToBlame[stringIndex].add(entry);
-  }
-
-  /** Must first call {@link #blame}. */
-  public Map<PackageChunk, List<ResourceEntry>[]> getKeyToBlamedResources() {
-    return Collections.unmodifiableMap(keyToBlame);
-  }
-
-  /** Must first call {@link #blame}. */
-  public Map<PackageChunk, List<ResourceEntry>[]> getTypeToBlamedResources() {
-    return Collections.unmodifiableMap(typeToBlame);
-  }
-
-  /** Must first call {@link #blame}. */
-  public Multimap<PackageChunk, ResourceEntry> getPackageToBlamedResources() {
-    return Multimaps.unmodifiableMultimap(packageToBlame);
-  }
-
-  /** Must first call {@link #blame}. */
-  public List<ResourceEntry>[] getStringToBlamedResources() {
-    return stringToBlame;
-  }
-
-  /** Must first call {@link #blame}. */
-  public Multimap<TypeChunk.Entry, ResourceEntry> getTypeEntryToBlamedResources() {
-    return Multimaps.unmodifiableMultimap(typeEntryToBlame);
-  }
-
-  /** Returns a multimap of keys for which there is no default resource. */
-  public Multimap<ResourceEntry, TypeChunk.Entry> getBaselessKeys() {
-    if (baselessKeys != null) {
-      return baselessKeys;
-    }
-    Multimap<ResourceEntry, TypeChunk.Entry> result = HashMultimap.create();
-    for (Entry<ResourceEntry, Collection<TypeChunk.Entry>> entry
-        : getResourceEntries().asMap().entrySet()) {
-      Collection<TypeChunk.Entry> chunkEntries = entry.getValue();
-      if (!hasBaseConfiguration(chunkEntries)) {
-        result.putAll(entry.getKey(), chunkEntries);
-      }
-    }
-    baselessKeys = result;
-    return result;
-  }
-
-  /** Returns a multimap of resource entries to the chunk entries they reference in this APK. */
-  public Multimap<ResourceEntry, TypeChunk.Entry> getResourceEntries() {
-    if (resourceEntries != null) {
-      return resourceEntries;
-    }
-    Multimap<ResourceEntry, TypeChunk.Entry> result = HashMultimap.create();
-    for (TypeChunk typeChunk : getTypeChunks()) {
-      for (TypeChunk.Entry entry : typeChunk.getEntries().values()) {
-        result.put(ResourceEntry.create(entry), entry);
-      }
-    }
-    resourceEntries = result;
-    return result;
-  }
-
-  /** Returns all {@link TypeChunk} in resources.arsc. */
-  public List<TypeChunk> getTypeChunks() {
-    if (typeChunks != null) {
-      return typeChunks;
-    }
-    List<TypeChunk> result = new ArrayList<>();
-    for (PackageChunk packageChunk : resourceTable.getPackages()) {
-      for (TypeChunk typeChunk : packageChunk.getTypeChunks()) {
-        result.add(typeChunk);
-      }
-    }
-    typeChunks = result;
-    return result;
-  }
-
-  private boolean hasBaseConfiguration(Collection<TypeChunk.Entry> entries) {
-    for (TypeChunk.Entry entry : entries) {
-      if (entry.parent().getConfiguration().isDefault()) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  private static List<ResourceEntry>[] createEntryListArray(int size) {
-    ArrayListResourceEntry[] result = new ArrayListResourceEntry[size];
-    for (int i = 0; i < size; ++i) {
-      result[i] = new ArrayListResourceEntry();
-    }
-    return result;
-  }
-
-  /** Allows creation of concrete parameterized type arr {@link ArscBlamer#createEntryListArray}. */
-  private static class ArrayListResourceEntry extends ArrayList<ResourceEntry> {
-
-    private ArrayListResourceEntry() {
-      super(2);  // ~90-95% of these lists end up with only 1 or 2 elements.
-    }
-  }
-
-  /** Describes a single resource entry. */
-  public static class ResourceEntry {
-    private final String packageName;
-    private final String typeName;
-    private final String entryName;
-
-    static ResourceEntry create(TypeChunk.Entry entry) {
-      PackageChunk packageChunk = Preconditions.checkNotNull(entry.parent().getPackageChunk());
-      String packageName = packageChunk.getPackageName();
-      String typeName = entry.typeName();
-      String entryName = entry.key();
-      return new ResourceEntry(packageName, typeName, entryName);
+        Multimaps.invertFrom(entries, typeEntryToBlame);
+        for (TypeChunk.Entry entry : typeEntryToBlame.keySet()) {
+            blameFromTypeChunkEntry(entry);
+        }
     }
 
-    private ResourceEntry(String packageName, String typeName, String entryName) {
-      this.packageName = packageName;
-      this.typeName = typeName;
-      this.entryName = entryName;
+    private void blameKeyOrType(Map<PackageChunk, List<ResourceEntry>[]> keyOrType,
+                                PackageChunk packageChunk, int keyIndex, ResourceEntry entry, int entryCount) {
+        if (!keyOrType.containsKey(packageChunk)) {
+            keyOrType.put(packageChunk, createEntryListArray(entryCount));
+        }
+        keyOrType.get(packageChunk)[keyIndex].add(entry);
     }
 
-    public String packageName() { return packageName; }
-    public String typeName() { return typeName; }
-    public String entryName() { return entryName; }
-
-    @Override
-    public boolean equals(Object o) {
-      if (this == o) return true;
-      if (o == null || getClass() != o.getClass()) return false;
-      ResourceEntry that = (ResourceEntry)o;
-      return Objects.equals(packageName, that.packageName) &&
-             Objects.equals(typeName, that.typeName) &&
-             Objects.equals(entryName, that.entryName);
+    private void blamePackage(PackageChunk packageChunk, ResourceEntry entry) {
+        packageToBlame.put(packageChunk, entry);
     }
 
-    @Override
-    public int hashCode() {
-      return Objects.hash(packageName, typeName, entryName);
+    private void blameFromTypeChunkEntry(TypeChunk.Entry chunkEntry) {
+        for (BinaryResourceValue value : getAllResourceValues(chunkEntry)) {
+            for (ResourceEntry entry : typeEntryToBlame.get(chunkEntry)) {
+                switch (value.type()) {
+                    case STRING:
+                        blameString(value.data(), entry);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
-  }
+
+    /**
+     * Returns all {@link BinaryResourceValue} for a single {@code entry}.
+     */
+    private Collection<BinaryResourceValue> getAllResourceValues(TypeChunk.Entry entry) {
+        Set<BinaryResourceValue> values = new HashSet<BinaryResourceValue>();
+        BinaryResourceValue binaryResourceValue = entry.value();
+        if (binaryResourceValue != null) {
+            values.add(binaryResourceValue);
+        }
+        for (BinaryResourceValue value : entry.values().values()) {
+            values.add(value);
+        }
+        return values;
+    }
+
+    private void blameString(int stringIndex, ResourceEntry entry) {
+        stringToBlame[stringIndex].add(entry);
+    }
+
+    /**
+     * Must first call {@link #blame}.
+     */
+    public Map<PackageChunk, List<ResourceEntry>[]> getKeyToBlamedResources() {
+        return Collections.unmodifiableMap(keyToBlame);
+    }
+
+    /**
+     * Must first call {@link #blame}.
+     */
+    public Map<PackageChunk, List<ResourceEntry>[]> getTypeToBlamedResources() {
+        return Collections.unmodifiableMap(typeToBlame);
+    }
+
+    /**
+     * Must first call {@link #blame}.
+     */
+    public Multimap<PackageChunk, ResourceEntry> getPackageToBlamedResources() {
+        return Multimaps.unmodifiableMultimap(packageToBlame);
+    }
+
+    /**
+     * Must first call {@link #blame}.
+     */
+    public List<ResourceEntry>[] getStringToBlamedResources() {
+        return stringToBlame;
+    }
+
+    /**
+     * Must first call {@link #blame}.
+     */
+    public Multimap<TypeChunk.Entry, ResourceEntry> getTypeEntryToBlamedResources() {
+        return Multimaps.unmodifiableMultimap(typeEntryToBlame);
+    }
+
+    /**
+     * Returns a multimap of keys for which there is no default resource.
+     */
+    public Multimap<ResourceEntry, TypeChunk.Entry> getBaselessKeys() {
+        if (baselessKeys != null) {
+            return baselessKeys;
+        }
+        Multimap<ResourceEntry, TypeChunk.Entry> result = HashMultimap.create();
+        for (Entry<ResourceEntry, Collection<TypeChunk.Entry>> entry
+                : getResourceEntries().asMap().entrySet()) {
+            Collection<TypeChunk.Entry> chunkEntries = entry.getValue();
+            if (!hasBaseConfiguration(chunkEntries)) {
+                result.putAll(entry.getKey(), chunkEntries);
+            }
+        }
+        baselessKeys = result;
+        return result;
+    }
+
+    /**
+     * Returns a multimap of resource entries to the chunk entries they reference in this APK.
+     */
+    public Multimap<ResourceEntry, TypeChunk.Entry> getResourceEntries() {
+        if (resourceEntries != null) {
+            return resourceEntries;
+        }
+        Multimap<ResourceEntry, TypeChunk.Entry> result = HashMultimap.create();
+        for (TypeChunk typeChunk : getTypeChunks()) {
+            for (TypeChunk.Entry entry : typeChunk.getEntries().values()) {
+                result.put(ResourceEntry.create(entry), entry);
+            }
+        }
+        resourceEntries = result;
+        return result;
+    }
+
+    /**
+     * Returns all {@link TypeChunk} in resources.arsc.
+     */
+    public List<TypeChunk> getTypeChunks() {
+        if (typeChunks != null) {
+            return typeChunks;
+        }
+        List<TypeChunk> result = new ArrayList<>();
+        for (PackageChunk packageChunk : resourceTable.getPackages()) {
+            for (TypeChunk typeChunk : packageChunk.getTypeChunks()) {
+                result.add(typeChunk);
+            }
+        }
+        typeChunks = result;
+        return result;
+    }
+
+    private boolean hasBaseConfiguration(Collection<TypeChunk.Entry> entries) {
+        for (TypeChunk.Entry entry : entries) {
+            if (entry.parent().getConfiguration().isDefault()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static List<ResourceEntry>[] createEntryListArray(int size) {
+        ArrayListResourceEntry[] result = new ArrayListResourceEntry[size];
+        for (int i = 0; i < size; ++i) {
+            result[i] = new ArrayListResourceEntry();
+        }
+        return result;
+    }
+
+    /**
+     * Allows creation of concrete parameterized type arr {@link ArscBlamer#createEntryListArray}.
+     */
+    private static class ArrayListResourceEntry extends ArrayList<ResourceEntry> {
+
+        private ArrayListResourceEntry() {
+            super(2);  // ~90-95% of these lists end up with only 1 or 2 elements.
+        }
+    }
+
+    /**
+     * Describes a single resource entry.
+     */
+    public static class ResourceEntry {
+        private final String packageName;
+        private final String typeName;
+        private final String entryName;
+
+        static ResourceEntry create(TypeChunk.Entry entry) {
+            PackageChunk packageChunk = Preconditions.checkNotNull(entry.parent().getPackageChunk());
+            String packageName = packageChunk.getPackageName();
+            String typeName = entry.typeName();
+            String entryName = entry.key();
+            return new ResourceEntry(packageName, typeName, entryName);
+        }
+
+        private ResourceEntry(String packageName, String typeName, String entryName) {
+            this.packageName = packageName;
+            this.typeName = typeName;
+            this.entryName = entryName;
+        }
+
+        public String packageName() {
+            return packageName;
+        }
+
+        public String typeName() {
+            return typeName;
+        }
+
+        public String entryName() {
+            return entryName;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            ResourceEntry that = (ResourceEntry) o;
+            return Objects.equals(packageName, that.packageName) &&
+                    Objects.equals(typeName, that.typeName) &&
+                    Objects.equals(entryName, that.entryName);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(packageName, typeName, entryName);
+        }
+    }
 }

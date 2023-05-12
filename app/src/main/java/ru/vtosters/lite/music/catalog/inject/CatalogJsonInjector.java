@@ -18,7 +18,7 @@ import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 
-import static ru.vtosters.lite.feature.groupslist.GroupsCatalogInjector.*;
+import static ru.vtosters.lite.feature.groupslist.GroupsCatalogInjector.injectIntoCatalog;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
@@ -152,7 +152,8 @@ public class CatalogJsonInjector {
             var useOldAppVer = getBoolValue("useOldAppVer", false);
             var isUsersCatalog = section.optString("url").equals("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
 
-            if (!isUsersCatalog || !CacheDatabaseDelegate.hasTracks() || LibVKXClient.isIntegrationEnabled()) return; // early return if not users catalog or no tracks or integration enabled
+            if (!isUsersCatalog || !CacheDatabaseDelegate.hasTracks() || LibVKXClient.isIntegrationEnabled())
+                return; // early return if not users catalog or no tracks or integration enabled
             var blocks = section.getJSONArray("blocks");
             var noPlaylists = !json.has("playlists");
 

@@ -10,8 +10,6 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.Preferences;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-
 public class ImBanner {
     private static final String TAG = "ImBanner";
 

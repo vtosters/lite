@@ -11,11 +11,10 @@ import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.groups.Group;
 import com.vk.im.engine.utils.DialogPermissionHelper;
 import com.vk.im.ui.p.ImBridge7;
+import ru.vtosters.lite.dialogs.DialogMenuInjectors;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import ru.vtosters.lite.dialogs.DialogMenuInjectors;
 
 public final class DialogActionsHelper {
     public static final DialogActionsHelper a = new DialogActionsHelper();

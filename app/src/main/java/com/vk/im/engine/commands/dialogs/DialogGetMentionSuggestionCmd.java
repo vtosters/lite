@@ -186,8 +186,7 @@ public final class DialogGetMentionSuggestionCmd extends BaseImEngineCmd<Suggest
             }
         }), a(b2)));
         EntityValue entityValue = new EntityValue(z2 ? null : l, z3);
-        switch (this.d)
-        {
+        switch (this.d) {
             case CACHE:
                 source = Source.CACHE;
                 break;

@@ -1,7 +1,6 @@
 package ru.vtosters.lite.music;
 
 import android.text.TextUtils;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +64,8 @@ public class VKM3UParser {
         if (TextUtils.isEmpty(mData)) throw new NullPointerException("mData==null");
         Scanner scanner = new Scanner(mData);
         String line = scanner.nextLine();
-        if (!"#EXTM3U".equals(line)) throw new IllegalStateException(String.format("Unknown initial M3U tag: %s", line));
+        if (!"#EXTM3U".equals(line))
+            throw new IllegalStateException(String.format("Unknown initial M3U tag: %s", line));
         boolean aes128 = false;
         String keyUri = "";
         while (scanner.hasNextLine()) {
@@ -82,7 +82,7 @@ public class VKM3UParser {
             } else {
                 throw new RuntimeException(String.format("Failed to parse: %s", line));
             }
-            mHeapSize += line.getBytes().length;;
+            mHeapSize += line.getBytes().length;
         }
     }
 

@@ -16,9 +16,9 @@
 
 package com.google.devrel.gmscore.tools.apk.arsc;
 
+import androidx.annotation.Nullable;
 import com.google.common.base.Preconditions;
 
-import androidx.annotation.Nullable;
 import java.nio.ByteBuffer;
 import java.util.Collection;
 import java.util.Collections;
@@ -36,57 +36,67 @@ import java.util.Map;
  */
 public final class ResourceTableChunk extends ChunkWithChunks {
 
-  /** A string pool containing all string resource values in the entire resource table. */
-  private StringPoolChunk stringPool;
+    /**
+     * A string pool containing all string resource values in the entire resource table.
+     */
+    private StringPoolChunk stringPool;
 
-  /** The packages contained in this resource table. */
-  private final Map<String, PackageChunk> packages = new HashMap<>();
+    /**
+     * The packages contained in this resource table.
+     */
+    private final Map<String, PackageChunk> packages = new HashMap<>();
 
-  protected ResourceTableChunk(ByteBuffer buffer, @Nullable Chunk parent) {
-    super(buffer, parent);
-    // packageCount. We ignore this, because we already know how many chunks we have.
-    Preconditions.checkState(buffer.getInt() >= 1, "ResourceTableChunk package count was < 1.");
-  }
-
-  @Override
-  protected void init(ByteBuffer buffer) {
-    super.init(buffer);
-    packages.clear();
-    for (Chunk chunk : getChunks().values()) {
-      if (chunk instanceof PackageChunk) {
-        PackageChunk packageChunk = (PackageChunk) chunk;
-        packages.put(packageChunk.getPackageName(), packageChunk);
-      } else  if (chunk instanceof StringPoolChunk) {
-        stringPool = (StringPoolChunk) chunk;
-      }
+    protected ResourceTableChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+        super(buffer, parent);
+        // packageCount. We ignore this, because we already know how many chunks we have.
+        Preconditions.checkState(buffer.getInt() >= 1, "ResourceTableChunk package count was < 1.");
     }
-    Preconditions.checkNotNull(stringPool, "ResourceTableChunk must have a string pool.");
-  }
 
-  /** Returns the string pool containing all string resource values in the resource table. */
-  public StringPoolChunk getStringPool() {
-    return stringPool;
-  }
+    @Override
+    protected void init(ByteBuffer buffer) {
+        super.init(buffer);
+        packages.clear();
+        for (Chunk chunk : getChunks().values()) {
+            if (chunk instanceof PackageChunk) {
+                PackageChunk packageChunk = (PackageChunk) chunk;
+                packages.put(packageChunk.getPackageName(), packageChunk);
+            } else if (chunk instanceof StringPoolChunk) {
+                stringPool = (StringPoolChunk) chunk;
+            }
+        }
+        Preconditions.checkNotNull(stringPool, "ResourceTableChunk must have a string pool.");
+    }
 
-  /** Returns the package with the given {@code packageName}. Else, returns null. */
-  @Nullable
-  public PackageChunk getPackage(String packageName) {
-    return packages.get(packageName);
-  }
+    /**
+     * Returns the string pool containing all string resource values in the resource table.
+     */
+    public StringPoolChunk getStringPool() {
+        return stringPool;
+    }
 
-  /** Returns the packages contained in this resource table. */
-  public Collection<PackageChunk> getPackages() {
-    return Collections.unmodifiableCollection(packages.values());
-  }
+    /**
+     * Returns the package with the given {@code packageName}. Else, returns null.
+     */
+    @Nullable
+    public PackageChunk getPackage(String packageName) {
+        return packages.get(packageName);
+    }
 
-  @Override
-  protected Type getType() {
-    return Type.TABLE;
-  }
+    /**
+     * Returns the packages contained in this resource table.
+     */
+    public Collection<PackageChunk> getPackages() {
+        return Collections.unmodifiableCollection(packages.values());
+    }
 
-  @Override
-  protected void writeHeader(ByteBuffer output) {
-    super.writeHeader(output);
-    output.putInt(packages.size());
-  }
+    @Override
+    protected Type getType() {
+        return Type.TABLE;
+    }
+
+    @Override
+    protected void writeHeader(ByteBuffer output) {
+        super.writeHeader(output);
+        output.putInt(packages.size());
+    }
 }

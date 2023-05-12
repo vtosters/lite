@@ -1,8 +1,5 @@
 package com.vk.im.ui.views.dialogs;
 
-import static com.vk.im.ui.d.vkim_administration_title;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -17,10 +14,9 @@ import android.view.ViewGroup;
 import android.view.ViewPropertyAnimator;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.ColorInt;
 import androidx.appcompat.widget.AppCompatImageView;
-
+import b.h.g.r.MathExt;
 import com.vk.core.extensions.AnimationExtKt;
 import com.vk.core.util.ContextExtKt;
 import com.vk.core.util.Screen;
@@ -42,9 +38,10 @@ import com.vk.im.ui.views.FixTextView;
 import com.vk.im.ui.views.avatars.AvatarView;
 import com.vk.im.ui.views.avatars.StoryBorderView;
 
-import b.h.g.r.MathExt;
+import static com.vk.im.ui.d.vkim_administration_title;
+import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 
-public class DialogItemView extends ViewGroup{
+public class DialogItemView extends ViewGroup {
     private final int B;
     private final int C;
     private final int D;
@@ -80,15 +77,15 @@ public class DialogItemView extends ViewGroup{
     private boolean g0;
     private boolean h0;
 
-    public DialogItemView(Context context){
+    public DialogItemView(Context context) {
         this(context, null, 0, 6);
     }
 
-    public DialogItemView(Context context, AttributeSet attributeSet){
+    public DialogItemView(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0, 4);
     }
 
-    public DialogItemView(Context context, AttributeSet attributeSet, int i){
+    public DialogItemView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         Resources resources = getResources();
         this.a = resources.getDisplayMetrics();
@@ -255,11 +252,11 @@ public class DialogItemView extends ViewGroup{
         addView(this.f0);
     }
 
-    public DialogItemView(Context context, AttributeSet attributeSet, int i, int i2){
+    public DialogItemView(Context context, AttributeSet attributeSet, int i, int i2) {
         this(context, (i2 & 2) != 0 ? null : attributeSet, (i2 & 4) != 0 ? 0 : i);
     }
 
-    public static ViewPropertyAnimator b(View view, float f, long j, long j2, Runnable runnable, int i, Object obj){
+    public static ViewPropertyAnimator b(View view, float f, long j, long j2, Runnable runnable, int i, Object obj) {
         if ((i & 1) != 0) {
             f = 0.0f;
         }
@@ -279,7 +276,7 @@ public class DialogItemView extends ViewGroup{
         return AnimationExtKt.b(view, f, j, j2, runnable);
     }
 
-    public static void a(View view, float f, float f2, int i, Object obj){
+    public static void a(View view, float f, float f2, int i, Object obj) {
         if ((i & 1) != 0) {
             f = 1.0f;
         }
@@ -291,7 +288,7 @@ public class DialogItemView extends ViewGroup{
         AnimationExtKt.a(view, f, f2);
     }
 
-    public static ViewPropertyAnimator a(View view, float f, long j, long j2, Runnable runnable, int i, Object obj){
+    public static ViewPropertyAnimator a(View view, float f, long j, long j2, Runnable runnable, int i, Object obj) {
         if ((i & 1) != 0) {
             f = 1.0f;
         }
@@ -311,14 +308,14 @@ public class DialogItemView extends ViewGroup{
         return AnimationExtKt.a(view, f, j, j2, runnable);
     }
 
-    static void a(DialogItemView dialogItemView, int i, int i2, int i3, int i4, Object obj){
+    static void a(DialogItemView dialogItemView, int i, int i2, int i3, int i4, Object obj) {
         if ((i4 & 4) != 0) {
             i3 = 0;
         }
         dialogItemView.a(i, i2, i3);
     }
 
-    static ViewGroup.MarginLayoutParams a(DialogItemView dialogItemView, int i, int i2, int i3, int i4, int i5, int i6, int i7, Object obj){
+    static ViewGroup.MarginLayoutParams a(DialogItemView dialogItemView, int i, int i2, int i3, int i4, int i5, int i6, int i7, Object obj) {
         if ((i7 & 1) != 0) {
             i = -2;
         }
@@ -340,19 +337,19 @@ public class DialogItemView extends ViewGroup{
         return dialogItemView.a(i, i2, i3, i4, i5, i6);
     }
 
-    private Drawable getDrOnlineMobile(){
+    private Drawable getDrOnlineMobile() {
         return ContextExtKt.c(getContext(), f.ic_online_mobile_vkapp_composite_16);
     }
 
-    private Drawable getDrOnlineVkMe(){
+    private Drawable getDrOnlineVkMe() {
         return ContextExtKt.c(getContext(), f.ic_online_mobile_vkme_composite_16);
     }
 
-    private Drawable getDrOnlineWeb(){
+    private Drawable getDrOnlineWeb() {
         return ContextExtKt.c(getContext(), f.ic_online_web_composite_16);
     }
 
-    private int getTimeMargin(){
+    private int getTimeMargin() {
         Layout layout = this.T.getLayout();
 
         if (layout == null) {
@@ -374,11 +371,11 @@ public class DialogItemView extends ViewGroup{
         return 0;
     }
 
-    private int getTitleColorHighlight(){
+    private int getTitleColorHighlight() {
         return ContextExtKt.a(getContext(), vkim_administration_title);
     }
 
-    private void h(int i, int i2, int i3, int i4){
+    private void h(int i, int i2, int i3, int i4) {
         int paddingLeft = getPaddingLeft();
         int paddingTop = getPaddingTop();
         int measuredWidth = getMeasuredWidth() - getPaddingRight();
@@ -412,51 +409,51 @@ public class DialogItemView extends ViewGroup{
         j(measuredWidth - r, max6, measuredWidth, q + max6);
     }
 
-    private int i(){
+    private int i() {
         return g(this.K);
     }
 
-    private int j(){
+    private int j() {
         return f(this.T) + Math.max(f(this.V), f(this.U));
     }
 
-    private int k(){
+    private int k() {
         return Math.max(g(this.T), g(this.V) + g(this.U));
     }
 
-    private int l(){
+    private int l() {
         return Math.max(Math.max(f(this.N), f(this.R)), Math.max(f(this.O), f(this.P)));
     }
 
-    private int m(){
+    private int m() {
         return View.MeasureSpec.makeMeasureSpec(0, 0);
     }
 
-    private boolean n(){
+    private boolean n() {
         return e(this.S);
     }
 
-    private int o(){
+    private int o() {
         return f(this.S);
     }
 
-    private int p(){
+    private int p() {
         return g(this.S);
     }
 
-    private int q(){
+    private int q() {
         return MathExt.a(f(this.b0), f(this.c0), f(this.d0), f(this.e0), f(this.f0));
     }
 
-    private int r(){
+    private int r() {
         return g(this.b0) + MathExt.a(g(this.c0), g(this.d0), g(this.e0), g(this.f0));
     }
 
-    private int s(){
+    private int s() {
         return Math.max(f(this.a0), f(this.W));
     }
 
-    private void setAttach(CharSequence charSequence){
+    private void setAttach(CharSequence charSequence) {
         int i = VISIBLE;
 
         if (charSequence == null || charSequence.length() == 0) {
@@ -467,57 +464,57 @@ public class DialogItemView extends ViewGroup{
         this.U.setText(charSequence);
     }
 
-    private void setBodyLinesCount(int i){
+    private void setBodyLinesCount(int i) {
         boolean z = i == 1;
         this.T.setSingleLine(z);
         this.T.setMaxLines(i);
     }
 
-    private int t(){
+    private int t() {
         return g(this.a0) + g(this.W);
     }
 
-    private void u(){
+    private void u() {
         ViewExtKt.b(this.b0, this.g0 | this.h0);
     }
 
-    public void a(Dialog dialog, ProfilesSimpleInfo profilesSimpleInfo){
+    public void a(Dialog dialog, ProfilesSimpleInfo profilesSimpleInfo) {
         this.K.a(dialog, profilesSimpleInfo);
     }
 
-    public void b(){
+    public void b() {
         a(null, (ComposingType) null);
     }
 
-    public void c(){
+    public void c() {
         a(getDrOnlineMobile());
     }
 
-    public void d(){
+    public void d() {
         a(getDrOnlineVkMe());
     }
 
-    public void e(){
+    public void e() {
         a(getDrOnlineWeb());
     }
 
-    public void f(){
+    public void f() {
         this.S.setVisibility(GONE);
         this.S.e();
     }
 
-    public void g(){
+    public void g() {
         b(this.L, 0.0f, 0L, 0L, null, 15, null);
     }
 
     @Override // android.view.ViewGroup, android.view.View
-    protected void onDetachedFromWindow(){
+    protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         a(this.L, 0.0f, 0.0f, 3, null);
     }
 
     @Override // android.view.ViewGroup, android.view.View
-    protected void onLayout(boolean z, int i, int i2, int i3, int i4){
+    protected void onLayout(boolean z, int i, int i2, int i3, int i4) {
         if (this.E) {
             g(i, i2, i3, i4);
         } else {
@@ -526,7 +523,7 @@ public class DialogItemView extends ViewGroup{
     }
 
     @Override // android.view.View
-    protected void onMeasure(int i, int i2){
+    protected void onMeasure(int i, int i2) {
         if (this.E) {
             c(i);
         } else {
@@ -534,11 +531,11 @@ public class DialogItemView extends ViewGroup{
         }
     }
 
-    public void setAvatar(Profile profile){
+    public void setAvatar(Profile profile) {
         this.K.a(profile);
     }
 
-    public void setBombVisible(boolean z){
+    public void setBombVisible(boolean z) {
         if (z) {
             this.b0.setImageResource(f.ic_bomb_composite_24);
         }
@@ -548,23 +545,23 @@ public class DialogItemView extends ViewGroup{
         u();
     }
 
-    public void setCasperIconColor(@ColorInt int i){
+    public void setCasperIconColor(@ColorInt int i) {
         ViewExtKt.a(this.Q, i);
     }
 
-    public void setCasperIconVisible(boolean z){
+    public void setCasperIconVisible(boolean z) {
         this.Q.setVisibility(z ? VISIBLE : GONE);
     }
 
-    public void setErrorVisible(boolean z){
+    public void setErrorVisible(boolean z) {
         this.f0.setVisibility(z ? VISIBLE : GONE);
     }
 
-    public void setGiftVisible(boolean z){
+    public void setGiftVisible(boolean z) {
         this.V.setVisibility(z ? VISIBLE : GONE);
     }
 
-    public void setHasStories(boolean z){
+    public void setHasStories(boolean z) {
         if (this.I == z) {
             return;
         }
@@ -590,7 +587,7 @@ public class DialogItemView extends ViewGroup{
         setClipToPadding(!z);
     }
 
-    public void setMentionVisible(boolean z){
+    public void setMentionVisible(boolean z) {
         if (z) {
             this.b0.setImageResource(f.ic_mention_composite_24);
         }
@@ -600,15 +597,15 @@ public class DialogItemView extends ViewGroup{
         u();
     }
 
-    public void setMutedVisible(boolean z){
+    public void setMutedVisible(boolean z) {
         this.P.setVisibility(z ? VISIBLE : GONE);
     }
 
-    public void setOnStoryClickListener(View.OnClickListener onClickListener){
+    public void setOnStoryClickListener(View.OnClickListener onClickListener) {
         ViewExtKt.b(this.M, onClickListener);
     }
 
-    public void setSender(Profile profile){
+    public void setSender(Profile profile) {
         if (profile == null) {
             f();
             return;
@@ -617,29 +614,29 @@ public class DialogItemView extends ViewGroup{
         this.S.a(profile);
     }
 
-    public void setSendingVisible(boolean z){
+    public void setSendingVisible(boolean z) {
         this.e0.setVisibility(z ? VISIBLE : GONE);
     }
 
-    public void setTime(CharSequence charSequence){
+    public void setTime(CharSequence charSequence) {
         this.R.setText(charSequence);
     }
 
-    public void setUnreadOutVisible(boolean z){
+    public void setUnreadOutVisible(boolean z) {
         this.d0.setVisibility(z ? VISIBLE : GONE);
     }
 
-    public void setVerifiedVisible(boolean z){
+    public void setVerifiedVisible(boolean z) {
         this.O.setVisibility(z ? VISIBLE : GONE);
     }
 
-    private void a(Drawable drawable){
+    private void a(Drawable drawable) {
         ViewExtKt.c(this.L, a(16), a(20));
         this.L.setImageDrawable(drawable);
         a(this.L, 0.0f, 0L, 0L, null, 15, null);
     }
 
-    private void c(int i){
+    private void c(int i) {
         int size = (View.MeasureSpec.getSize(i) - getPaddingLeft()) - getPaddingRight();
         d(b(size - this.K.getViewSize()), m());
         int r = r();
@@ -655,7 +652,7 @@ public class DialogItemView extends ViewGroup{
         setMeasuredDimension(View.MeasureSpec.getSize(i), getPaddingTop() + getPaddingBottom() + Math.max(f(this.K), l() + Math.max(Math.max(o(), j()), Math.max(s(), q()))));
     }
 
-    private void d(int i){
+    private void d(int i) {
         int size = (View.MeasureSpec.getSize(i) - getPaddingLeft()) - getPaddingRight();
         d(b(size - this.K.getViewSize()), m());
         int r = r();
@@ -672,7 +669,7 @@ public class DialogItemView extends ViewGroup{
         setMeasuredDimension(View.MeasureSpec.getSize(i), getPaddingTop() + getPaddingBottom() + Math.max(f(this.K), l() + Math.max(Math.max(o(), j()), Math.max(s(), q()))));
     }
 
-    private void e(int i, int i2, int i3, int i4){
+    private void e(int i, int i2, int i3, int i4) {
         if (e(this.T) && e(this.U)) {
             c(i, i2, i3, i4);
         } else if (e(this.T)) {
@@ -683,7 +680,7 @@ public class DialogItemView extends ViewGroup{
         }
     }
 
-    private void g(int i, int i2, int i3, int i4){
+    private void g(int i, int i2, int i3, int i4) {
         int paddingLeft = getPaddingLeft();
         int paddingTop = getPaddingTop();
         int measuredWidth = getMeasuredWidth() - getPaddingRight();
@@ -706,12 +703,12 @@ public class DialogItemView extends ViewGroup{
         j(measuredWidth - r, i8, measuredWidth, q + i8);
     }
 
-    private void i(int i, int i2, int i3, int i4){
+    private void i(int i, int i2, int i3, int i4) {
         AvatarView avatarView = this.S;
         b(avatarView, i + b(avatarView), ((i2 + ((i4 - i2) / 2)) - (this.S.getMeasuredHeight() / 2)) + d(this.S));
     }
 
-    private void j(int i, int i2, int i3, int i4){
+    private void j(int i, int i2, int i3, int i4) {
         int i5 = i2 + ((i4 - i2) / 2);
         AppCompatImageView appCompatImageView = this.b0;
         b(appCompatImageView, b(appCompatImageView) + i, (i5 - (this.b0.getMeasuredHeight() / 2)) + d(this.b0));
@@ -728,7 +725,7 @@ public class DialogItemView extends ViewGroup{
         b(appCompatImageView4, i + b(appCompatImageView4), (i5 - (this.f0.getMeasuredHeight() / 2)) + d(this.f0));
     }
 
-    private void k(int i, int i2, int i3, int i4){
+    private void k(int i, int i2, int i3, int i4) {
         int i5 = i2 + ((i4 - i2) / 2);
         TextView textView = this.W;
         b(textView, b(textView) + i, (i5 - (this.W.getMeasuredHeight() / 2)) + d(this.W));
@@ -741,7 +738,7 @@ public class DialogItemView extends ViewGroup{
         b(appCompatImageView, i + b(appCompatImageView), (i5 - (this.a0.getMeasuredHeight() / 2)) + d(this.a0));
     }
 
-    public void b(CharSequence charSequence, boolean z){
+    public void b(CharSequence charSequence, boolean z) {
         int i = VISIBLE;
 
         if (charSequence == null || charSequence.length() == 0) {
@@ -755,7 +752,7 @@ public class DialogItemView extends ViewGroup{
         this.g.a(z ? this.B : this.h);
     }
 
-    private void f(int i, int i2, int i3, int i4){
+    private void f(int i, int i2, int i3, int i4) {
         TextView textView = this.N;
         b(textView, i + b(textView), d(this.N) + i2);
         int right = this.N.getRight() + c(this.N);
@@ -783,7 +780,7 @@ public class DialogItemView extends ViewGroup{
         }
     }
 
-    private void l(int i, int i2, int i3, int i4){
+    private void l(int i, int i2, int i3, int i4) {
         TextView textView = this.W;
         b(textView, i + b(textView), i2);
         int right = this.W.getRight() + c(this.W);
@@ -791,33 +788,33 @@ public class DialogItemView extends ViewGroup{
         b(appCompatImageView, right + b(appCompatImageView), (((this.W.getBottom() + this.W.getTop()) / 2) - (this.a0.getMeasuredHeight() / 2)) + d(this.a0));
     }
 
-    private void e(int i, int i2){
+    private void e(int i, int i2) {
         b(this.a0, i, 0, i2, 0);
         b(this.W, i, g(this.a0), i2, 0);
     }
 
-    public void a(CharSequence charSequence, boolean z){
+    public void a(CharSequence charSequence, boolean z) {
         this.N.setText(charSequence);
         this.N.setTextColor(z ? getTitleColorHighlight() : this.f15761e);
     }
 
-    private void b(int i, int i2){
+    private void b(int i, int i2) {
         b(this.O, i, 0, i2, 0);
         b(this.Q, i, 0, i2, 0);
         b(this.P, i, 0, i2, 0);
         b(this.R, i, 0, i2, 0);
     }
 
-    public void a(){
+    public void a() {
         a(null, 1);
         setAttach(null);
     }
 
-    private boolean e(View view){
+    private boolean e(View view) {
         return view.getVisibility() == VISIBLE;
     }
 
-    public void a(CharSequence charSequence, int i, CharSequence charSequence2){
+    public void a(CharSequence charSequence, int i, CharSequence charSequence2) {
         boolean z = false;
 
         if (!(charSequence == null || charSequence.length() == 0)) {
@@ -840,11 +837,11 @@ public class DialogItemView extends ViewGroup{
         }
     }
 
-    private void b(int i, int i2, int i3){
+    private void b(int i, int i2, int i3) {
         a(this.N, i, i3, i2, 0);
     }
 
-    private void b(int i, int i2, int i3, int i4){
+    private void b(int i, int i2, int i3, int i4) {
         int g = e(this.V) ? g(this.V) + i : i;
         TextView textView = this.U;
         a(textView, g + b(textView), i2 + d(this.U));
@@ -852,7 +849,7 @@ public class DialogItemView extends ViewGroup{
         b(appCompatImageView, i + b(appCompatImageView), (this.U.getTop() + (this.U.getMeasuredHeight() / 2)) - (this.V.getMeasuredHeight() / 2));
     }
 
-    private void a(CharSequence charSequence, int i){
+    private void a(CharSequence charSequence, int i) {
         int i2 = VISIBLE;
 
         if (charSequence == null || charSequence.length() == 0) {
@@ -864,13 +861,13 @@ public class DialogItemView extends ViewGroup{
         setBodyLinesCount(i);
     }
 
-    private void b(View view, int i, int i2, int i3, int i4){
+    private void b(View view, int i, int i2, int i3, int i4) {
         if (view.getVisibility() != GONE) {
             a(view, i, i2, i3, i4);
         }
     }
 
-    public void a(CharSequence charSequence, ComposingType composingType){
+    public void a(CharSequence charSequence, ComposingType composingType) {
         Drawable drawable = composingType == ComposingType.AUDIO ? this.H : this.G;
         boolean z = false;
         drawable.setVisible(!(charSequence == null || charSequence.length() == 0), false);
@@ -885,13 +882,13 @@ public class DialogItemView extends ViewGroup{
         this.W.setText(charSequence);
     }
 
-    private void b(View view, int i, int i2){
+    private void b(View view, int i, int i2) {
         if (view.getVisibility() == VISIBLE) {
             a(view, i, i2);
         }
     }
 
-    private int b(View view){
+    private int b(View view) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
 
         if (marginLayoutParams != null) {
@@ -901,11 +898,11 @@ public class DialogItemView extends ViewGroup{
         return 0;
     }
 
-    private int b(int i){
+    private int b(int i) {
         return View.MeasureSpec.makeMeasureSpec(i, MeasureSpec.AT_MOST);
     }
 
-    private int g(View view){
+    private int g(View view) {
         if (view.getVisibility() == GONE) {
             return 0;
         }
@@ -915,13 +912,13 @@ public class DialogItemView extends ViewGroup{
         return marginLayoutParams != null ? measuredWidth + marginLayoutParams.leftMargin + marginLayoutParams.rightMargin : measuredWidth;
     }
 
-    private void a(int i, int i2){
+    private void a(int i, int i2) {
         a(this.K, i, 0, i2, 0);
         b(this.M, i, 0, i2, 0);
         b(this.L, i, 0, i2, 0);
     }
 
-    private int f(View view){
+    private int f(View view) {
         if (view.getVisibility() == GONE) {
             return 0;
         }
@@ -934,32 +931,32 @@ public class DialogItemView extends ViewGroup{
         return measuredHeight;
     }
 
-    private void a(int i, int i2, int i3, int i4){
+    private void a(int i, int i2, int i3, int i4) {
         AvatarView avatarView = this.K;
         a(avatarView, i + b(avatarView), i2 + d(this.K));
         a(this.M, this.K.getLeft() - this.K.getPaddingLeft(), this.K.getTop() - this.K.getPaddingTop());
         b(this.L, this.K.getRight() - this.L.getMeasuredWidth(), this.K.getBottom() - this.L.getMeasuredHeight());
     }
 
-    private void c(int i, int i2){
+    private void c(int i, int i2) {
         b(this.S, i, 0, i2, 0);
     }
 
-    private void c(int i, int i2, int i3, int i4){
+    private void c(int i, int i2, int i3, int i4) {
         d(i, i2, i3, f(this.T) + i2);
         b(i, i2 + f(this.T), i3, i4);
     }
 
-    private int h(){
+    private int h() {
         return f(this.K);
     }
 
-    private void d(int i, int i2, int i3, int i4){
+    private void d(int i, int i2, int i3, int i4) {
         TextView textView = this.T;
         a(textView, i + b(textView), i2 + d(this.T));
     }
 
-    private int c(View view){
+    private int c(View view) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
 
         if (marginLayoutParams != null) {
@@ -969,7 +966,7 @@ public class DialogItemView extends ViewGroup{
         return 0;
     }
 
-    private void d(int i, int i2){
+    private void d(int i, int i2) {
         b(this.b0, i, 0, i2, 0);
         b(this.c0, i, 0, i2, 0);
         b(this.d0, i, 0, i2, 0);
@@ -977,13 +974,13 @@ public class DialogItemView extends ViewGroup{
         b(this.f0, i, 0, i2, 0);
     }
 
-    private void a(int i, int i2, int i3){
+    private void a(int i, int i2, int i3) {
         b(this.T, i, i3, i2, 0);
         b(this.V, i, i3, i2, 0);
         b(this.U, i, i3 + g(this.V), i2, 0);
     }
 
-    private int d(View view){
+    private int d(View view) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
 
         if (marginLayoutParams != null) {
@@ -993,7 +990,7 @@ public class DialogItemView extends ViewGroup{
         return 0;
     }
 
-    private ViewGroup.MarginLayoutParams a(int i, int i2, int i3, int i4, int i5, int i6){
+    private ViewGroup.MarginLayoutParams a(int i, int i2, int i3, int i4, int i5, int i6) {
         ViewGroup.MarginLayoutParams marginLayoutParams = new ViewGroup.MarginLayoutParams(i, i2);
         marginLayoutParams.leftMargin = i3;
         marginLayoutParams.topMargin = i4;
@@ -1002,23 +999,23 @@ public class DialogItemView extends ViewGroup{
         return marginLayoutParams;
     }
 
-    public int a(int i){
+    public int a(int i) {
         return (int) (i * (this.a.densityDpi / 160.0f));
     }
 
-    public int a(float f2){
+    public int a(float f2) {
         return (int) (f2 * (this.a.densityDpi / 160.0f));
     }
 
-    private void a(View view, int i, int i2, int i3, int i4){
+    private void a(View view, int i, int i2, int i3, int i4) {
         view.measure(ViewGroup.getChildMeasureSpec(i, i2 + b(view) + c(view), view.getLayoutParams().width), ViewGroup.getChildMeasureSpec(i3, i4 + d(view) + a(view), view.getLayoutParams().height));
     }
 
-    private void a(View view, int i, int i2){
+    private void a(View view, int i, int i2) {
         view.layout(i, i2, view.getMeasuredWidth() + i, view.getMeasuredHeight() + i2);
     }
 
-    private int a(View view){
+    private int a(View view) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
 
         if (marginLayoutParams != null) {

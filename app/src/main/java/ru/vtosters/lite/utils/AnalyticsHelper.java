@@ -23,8 +23,8 @@ public class AnalyticsHelper {
         @Override
         public void onPreparedLog(@NonNull Log log, @NonNull String groupName, int flags) {
             var device = log.getDevice();
-            device.setAppVersion(About.getBuildNumber());
-            device.setAppBuild(About.getBuildNumber());
+            device.setAppVersion(VersionReader.getVersionBuild());
+            device.setAppBuild(VersionReader.getVersionBuild());
         }
     };
 
