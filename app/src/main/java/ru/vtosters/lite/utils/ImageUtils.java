@@ -13,8 +13,7 @@ public class ImageUtils {
 
     // must be called asynchronously
     public static Drawable getDrawableFromUrl(String url, int placeholderRes, boolean rounded, boolean scaled) {
-
-        if (NetworkUtils.isNetworkConnected()) {
+        if (NetworkUtils.isNetworkConnected() && !NetworkUtils.isInternetSlow()) {
             try {
                 var bmp = BitmapFactory.decodeStream(new URL(url).openStream());
 

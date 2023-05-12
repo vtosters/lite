@@ -28,7 +28,7 @@ public class UsersList {
     public static void getUsersList() {
         var prefs = AndroidUtils.getGlobalContext().getSharedPreferences("vt_another_data", 0);
 
-        if ((!NetworkUtils.isNetworkConnected() || getBoolValue("isRoamingState", false)) && prefs.contains("ids")) {
+        if ((!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) && prefs.contains("ids")) {
             return;
         }
 
