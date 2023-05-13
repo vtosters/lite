@@ -5,18 +5,18 @@ import android.util.Log;
 import com.vk.dto.common.VerifyInfo;
 import com.vk.navigation.NavigatorKeys;
 import okhttp3.*;
+import okio.BufferedSink;
+import okio.Okio;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 public class VTVerifications {
     public static final List<Integer> sVerifications = new ArrayList<>();
@@ -28,7 +28,7 @@ public class VTVerifications {
     public static void load(Context context) {
         var prefs = context.getSharedPreferences("vt_another_data", 0);
 
-        if ((!NetworkUtils.isNetworkConnected() && NetworkUtils.isInternetSlow() || getBoolValue("isRoamingState", false)) && prefs.contains("ids")) {
+        if ((!NetworkUtils.isNetworkConnected() && NetworkUtils.isInternetSlow() || Preferences.getBoolValue("isRoamingState", false)) && prefs.contains("ids")) {
             parseJson(prefs.getString("ids", "[]"));
             return;
         }
@@ -38,27 +38,24 @@ public class VTVerifications {
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"types\":[0,228,404,1337]}"))
                 .a();
 
-        sClient.a(request).a(new Callback() {
 
-            @Override
-            public void a(Call call, Response response) {
-                try {
-                    var payload = response.a().g();
-                    parseJson(payload);
-                    prefs.edit()
-                            .putString("ids", payload)
-                            .apply();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        try (Response response = sClient.a(request).execute()) {
+            File file = new File(AndroidUtils.getGlobalContext().getCacheDir(), "response.json");
+
+            try (BufferedSink sink = Okio.a(Okio.b(file))) {
+                sink.a(response.a().f());
             }
 
-            @Override
-            public void a(Call call, IOException e) {
-                Log.d("VTVerifications", String.valueOf(e));
-            }
+            String r = IOUtils.readAllLines(file);
 
-        });
+            parseJson(r);
+            prefs.edit()
+                    .putString("ids", r)
+                    .apply();
+        } catch (IOException e) {
+            if (prefs.contains("ids")) parseJson(prefs.getString("ids", "[]"));
+            Log.d("VTVerifications", e.getMessage());
+        }
     }
 
     /**
@@ -104,7 +101,7 @@ public class VTVerifications {
     }
 
     public static boolean vtverif() {
-        return getBoolValue("VT_Verification", true);
+        return Preferences.getBoolValue("VT_Verification", true);
     }
 
     private static int getId(JSONObject json) {
@@ -121,7 +118,7 @@ public class VTVerifications {
             return true;
         }
 
-        if (!getBoolValue("VT_Verification", true)) {
+        if (!Preferences.getBoolValue("VT_Verification", true)) {
             return false;
         }
 
@@ -133,7 +130,7 @@ public class VTVerifications {
             return true;
         }
 
-        if (!getBoolValue("VT_Fire", true)) {
+        if (!Preferences.getBoolValue("VT_Fire", true)) {
             return false;
         }
 
@@ -141,7 +138,7 @@ public class VTVerifications {
     }
 
     public static boolean hasDeveloper(JSONObject jSONObject) {
-        if (!getBoolValue("VT_Dev", true)) {
+        if (!Preferences.getBoolValue("VT_Dev", true)) {
             return false;
         }
 
@@ -153,6 +150,6 @@ public class VTVerifications {
     }
 
     public static boolean haveDonateButton() {
-        return hasVerification() || new Random().nextInt(6) != 1;
+        return Preferences.hasVerification() || new Random().nextInt(6) != 1;
     }
 }
