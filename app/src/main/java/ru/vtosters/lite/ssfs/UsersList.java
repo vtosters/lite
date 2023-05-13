@@ -1,18 +1,20 @@
 package ru.vtosters.lite.ssfs;
 
 import android.util.Log;
-import okhttp3.Call;
-import okhttp3.Callback;
 import okhttp3.Request;
 import okhttp3.Response;
+import okio.BufferedSink;
+import okio.Okio;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,21 +37,18 @@ public class UsersList {
                 .b(Utils.getDomain() + "/api/getUsersWithServiceDescriptionsAndBanners")
                 .a();
 
-        VtOkHttpClient.getInstance().a(request).a(new Callback() {
-            @Override
-            public void a(Call call, IOException e) {
-                e.printStackTrace();
+        try (Response response = VtOkHttpClient.getInstance().a(request).execute()) {
+            File file = new File(AndroidUtils.getGlobalContext().getCacheDir(), "response" + "_user_list" + ".json");
+
+            try (BufferedSink sink = Okio.a(Okio.b(file))) {
+                sink.a(response.a().f());
             }
 
-            @Override
-            public void a(Call call, Response response) {
-                try {
-                    parseJson(new JSONObject(response.a().g()).getJSONObject("response"));
-                } catch (JSONException | IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+            parseJson(new JSONObject(IOUtils.readAllLines(file)).getJSONObject("response"));
+            file.delete();
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public static boolean hasDescription(int id) {

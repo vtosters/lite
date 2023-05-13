@@ -1,14 +1,13 @@
 package ru.vtosters.lite.downloaders.messages;
 
-import android.util.Log;
 import android.util.SparseArray;
 import androidx.annotation.Nullable;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
-import okhttp3.Call;
-import okhttp3.Callback;
 import okhttp3.Request;
 import okhttp3.Response;
+import okio.BufferedSink;
+import okio.Okio;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,6 +17,7 @@ import ru.vtosters.lite.downloaders.messages.items.MiniUser;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.IOUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -108,38 +108,36 @@ public class MessagesDownloader {
         var req = new Request.a()
                 .b(url)
                 .a();
-        VtOkHttpClient.getInstance().a(req).a(new Callback() {
-            @Override
-            public void a(Call call, IOException e) {
-                Log.d("MessagesDownloader", String.valueOf(e));
+
+        try (Response response = VtOkHttpClient.getInstance().a(req).execute()) {
+            File file = new File(AndroidUtils.getGlobalContext().getCacheDir(), "response" + "_user_list" + ".json");
+
+            try (BufferedSink sink = Okio.a(Okio.b(file))) {
+                sink.a(response.a().f());
             }
 
-            @Override
-            public void a(Call call, Response response)
-                    throws IOException {
-                try {
-                    JSONObject obj = new JSONObject(response.a().g()).getJSONObject("response");
+            JSONObject obj = new JSONObject(IOUtils.readAllLines(file)).getJSONObject("response");
 
-                    SparseArray<MiniUser> users = new SparseArray<>();
-                    parseUsers(users, obj.optJSONArray("profiles"), false);
-                    parseUsers(users, obj.optJSONArray("groups"), true);
+            SparseArray<MiniUser> users = new SparseArray<>();
+            parseUsers(users, obj.optJSONArray("profiles"), false);
+            parseUsers(users, obj.optJSONArray("groups"), true);
 
-                    List<MiniMsg> msgs = parseMessages(obj.getJSONArray("items"));
+            List<MiniMsg> msgs = parseMessages(obj.getJSONArray("items"));
 
-                    usersArray = users;
+            usersArray = users;
 
-                    fos.write(format.provideHeader("TODO", formatTime(System.currentTimeMillis())).getBytes(StandardCharsets.UTF_8));
-                    for (MiniMsg msg : msgs) {
-                        fos.write(format.provideMessage(msg, users.get(msg.fromId)).getBytes(StandardCharsets.UTF_8));
-                    }
-                    fos.write(format.provideDocumentEnd().getBytes(StandardCharsets.UTF_8));
-                    fos.close();
-                    ToastUtils.a(AndroidUtils.getString(R.string.saved_as) + " " + out.getAbsolutePath());
-                } catch (IOException | JSONException e) {
-                    e.printStackTrace();
-                }
+            fos.write(format.provideHeader("TODO", formatTime(System.currentTimeMillis())).getBytes(StandardCharsets.UTF_8));
+            for (MiniMsg msg : msgs) {
+                fos.write(format.provideMessage(msg, users.get(msg.fromId)).getBytes(StandardCharsets.UTF_8));
             }
-        });
+            fos.write(format.provideDocumentEnd().getBytes(StandardCharsets.UTF_8));
+            fos.close();
+            ToastUtils.a(AndroidUtils.getString(R.string.saved_as) + " " + out.getAbsolutePath());
+
+            file.delete();
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     private List<MiniMsg> parseMessages(JSONArray jsonArray) throws JSONException {
