@@ -12,7 +12,7 @@
                 android:entries="@array/compression_value"
                 android:entryValues="@array/compression"
                 android:key="compression"
-                android:title="Способ компрессии фото и видео"/>
+                android:title="Способ компрессии фото"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_music_settings">
         <Preference
