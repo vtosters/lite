@@ -50,13 +50,16 @@ public class MediaImageEncoder {
         if (bitmap != null && !bitmap.isRecycled() && bitmap.getWidth() * bitmap.getHeight() != 0) {
             switch (Preferences.getPreferences().getString("compression", "jpeg")) {
                 case "skip" -> {
-                    return true;
+                    return compressBitmapJpeg(bitmap, file, 100);
                 }
                 case "jpeg" -> {
                     return compressBitmapJpeg(bitmap, file, quality);
                 }
                 case "native" -> {
                     return compressBitmapNative(bitmap, file, quality);
+                }
+                default -> {
+                    return true;
                 }
             }
         }
@@ -73,11 +76,11 @@ public class MediaImageEncoder {
     }
 
     public static boolean encodeJpeg(Bitmap bitmap, File file) {
-        return encodePicture(bitmap, file, needToSkipCompression() ? 96 : 86);
+        return encodePicture(bitmap, file, 90);
     }
 
     public static boolean encodeJpegWithoutCompression(Bitmap bitmap, File file) {
-        return encodePicture(bitmap, file, 100);
+        return encodePicture(bitmap, file, 95);
     }
 
     public static boolean encodeJpeg(Bitmap bitmap, File file, int quality) {

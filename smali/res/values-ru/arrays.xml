@@ -693,8 +693,8 @@
         <item>Предустановленные цвета</item>
     </string-array>
     <string-array name="compression_value">
-        <item>Пропускать сжатие (Медленно)</item>
-        <item>JPEG (Сбалансировано)</item>
-        <item>Нативно (Быстро)</item>
+        <item>Пропустить сжатие</item>
+        <item>Стандартное</item>
+        <item>Быстрое сжатие</item>
     </string-array>
 </resources>

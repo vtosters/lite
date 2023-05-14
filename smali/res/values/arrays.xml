@@ -892,9 +892,9 @@
         <item>From Palettes</item>
     </string-array>
     <string-array name="compression_value">
-        <item>Skip compression (Slow)</item>
-        <item>JPEG (Balanced)</item>
-        <item>Natively (Fast)</item>
+        <item>Skip compression</item>
+        <item>Standard</item>
+        <item>Fast compression</item>
     </string-array>
     <string-array name="compression">
         <item>skip</item>
