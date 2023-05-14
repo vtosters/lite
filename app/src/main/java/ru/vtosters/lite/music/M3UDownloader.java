@@ -5,9 +5,6 @@ import com.vk.dto.music.MusicTrack;
 import java8.util.concurrent.CompletableFuture;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
-import okio.BufferedSink;
-import okio.Okio;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.converter.ts.FFMpeg;
@@ -56,19 +53,13 @@ public class M3UDownloader implements ITrackDownloader {
             return;
         }
 
-        Request request = new Request.a().b(track.D).a();
-
-        try (Response response = client.a(request).execute()) {
-            File file = new File(AndroidUtils.getGlobalContext().getCacheDir(), track.y1());
-
-            try (BufferedSink sink = Okio.a(Okio.b(file))) {
-                sink.a(response.a().f());
-            }
-
-            parse(IOUtils.readAllLines(file), outDir, callback, track, cache);
-            file.delete();
+        try {
+            Request request = new Request.a().b(track.D).a();
+            String response = client.a(request).execute().a().g();
+            parse(response, outDir, callback, track, cache);
         } catch (IOException e) {
             e.printStackTrace();
+            callback.onFailure();
         }
     }
 

@@ -52,7 +52,6 @@ public class VTVerifications {
             prefs.edit()
                     .putString("ids", r)
                     .apply();
-            file.delete();
         } catch (IOException e) {
             if (prefs.contains("ids")) parseJson(prefs.getString("ids", "[]"));
             Log.d("VTVerifications", e.getMessage());
