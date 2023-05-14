@@ -12,6 +12,7 @@ import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
 import com.vk.identity.fragments.IdentityListFragment;
+import com.vk.medianative.MediaImageEncoder;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.MainActivity;
@@ -399,7 +400,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.vtlmedia),
-                getValAsString(R.string.sett_compress_photos, Preferences.getBoolValue("compressPhotos", true)),
+                getValAsString(R.string.sett_compress_photos, MediaImageEncoder.needToCompress()),
                 R.drawable.ic_media_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), MediaFragment.class);

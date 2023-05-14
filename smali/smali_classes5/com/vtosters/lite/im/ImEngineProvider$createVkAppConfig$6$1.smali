@@ -63,24 +63,7 @@
 .method public final invoke()Z
     .locals 3
 
-    .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6$1;->this$0:Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;
-
-    iget-object v1, v0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;->$sp:Lkotlin/Lazy2;
-
-    iget-object v0, v0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;->$sp$metadata:Lkotlin/u/KProperty5;
-
-    invoke-interface {v1}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/SharedPreferences;
-
-    const-string v1, "compressPhotos"
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {}, Lcom/vk/medianative/MediaImageEncoder;->needToCompress()Z
 
     move-result v0
 

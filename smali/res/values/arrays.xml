@@ -891,4 +891,14 @@
         <item>Color Picker</item>
         <item>From Palettes</item>
     </string-array>
+    <string-array name="compression_value">
+        <item>Skip compression (Slow)</item>
+        <item>JPEG (Balanced)</item>
+        <item>Natively (Fast)</item>
+    </string-array>
+    <string-array name="compression">
+        <item>skip</item>
+        <item>jpeg</item>
+        <item>native</item>
+    </string-array>
 </resources>

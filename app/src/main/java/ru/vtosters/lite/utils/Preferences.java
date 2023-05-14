@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.StrictMode;
+import com.vk.medianative.MediaImageEncoder;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 import ru.vtosters.lite.BuildConfig;
@@ -334,9 +335,7 @@ public class Preferences {
     }
 
     public static int compress(int origquality) {
-        if (!getBoolValue("compressPhotos", true)) {
-            return 100;
-        }
+        if (MediaImageEncoder.needToSkipCompression()) return 100;
         return origquality;
     }
 }

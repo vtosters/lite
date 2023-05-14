@@ -1,5 +1,6 @@
 package ru.vtosters.lite.hooks;
 
+import com.vk.medianative.MediaImageEncoder;
 import com.vk.toggle.FeatureManager;
 import com.vk.toggle.Features;
 
@@ -19,10 +20,11 @@ public class TogglesHook {
             case EXPERIMENT_NEWS_DISABLE_CACHE -> !feedcache();
             case FEATURE_SUPERAPP_MENU -> superapp();
             case FEATURE_MILKSHAKE -> milkshake();
+            case FEATURE_MOZJPEG -> MediaImageEncoder.needToCompress();
             case FEATURE_MILKSHAKE_FORCE_DISABLED, FEATURE_MILKSHAKE_ACTIVATION_DISABLED -> !milkshake();
             case AB_NEWS_VIDEO_LAYOUT_TEXT, FEATURE_COMPACT_REPOST, EXPERIMENT_NEWS_VIDEO_LAYOUT_TEXT ->
                     postsredesign();
-            case FEATURE_IMAGE_QUALITY_UPGRADE -> !getBoolValue("compressPhotos", true);
+            case FEATURE_IMAGE_QUALITY_UPGRADE -> MediaImageEncoder.needToSkipCompression();
             case FEATURE_MENU_GAMES_CAROUSEL -> miniapps();
             default -> true;
         };
