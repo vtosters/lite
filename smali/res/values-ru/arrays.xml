@@ -692,4 +692,9 @@
         <item>Выбрать вручную</item>
         <item>Предустановленные цвета</item>
     </string-array>
+    <string-array name="compression_value">
+        <item>Сжатие без потерь</item>
+        <item>Стандартное сжатие</item>
+        <item>Эффективное сжатие</item>
+    </string-array>
 </resources>
