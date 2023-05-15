@@ -892,9 +892,9 @@
         <item>From Palettes</item>
     </string-array>
     <string-array name="compression_value">
-        <item>Skip compression</item>
-        <item>Standard</item>
-        <item>Fast compression</item>
+        <item>Lossless compression</item>
+        <item>Default compression</item>
+        <item>Effective compression</item>
     </string-array>
     <string-array name="compression">
         <item>skip</item>

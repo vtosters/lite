@@ -1,10 +1,9 @@
 package com.vk.medianative;
 
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.CompressFormat;
 import android.os.Build;
 import android.util.Log;
-import com.vk.toggle.FeatureManager;
-import com.vk.toggle.Features;
 import ru.vtosters.lite.utils.Preferences;
 
 import java.io.File;
@@ -12,9 +11,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class MediaImageEncoder {
-    private static boolean compressBitmap(Bitmap bitmap, File file, int quality) {
+    private static boolean compressBitmap(Bitmap bitmap, File file, CompressFormat format, int quality) {
         try (FileOutputStream fileOutputStream = new FileOutputStream(file)) {
-            return bitmap.compress(Bitmap.CompressFormat.JPEG, quality, fileOutputStream);
+            return bitmap.compress(format, quality, fileOutputStream);
         } catch (IOException e) {
             Log.e(MediaImageEncoder.class.getSimpleName(), "Bitmap compression error: " + e);
             return false;
@@ -22,13 +21,17 @@ public class MediaImageEncoder {
     }
 
     private static boolean compressBitmapJpeg(Bitmap bitmap, File file, int quality) {
-        return compressBitmap(bitmap, file, quality);
+        return compressBitmap(bitmap, file, CompressFormat.JPEG, quality);
+    }
+
+    private static boolean compressBitmapLossless(Bitmap bitmap, File file) {
+        return compressBitmap(bitmap, file, CompressFormat.PNG, 100);
     }
 
     private static boolean compressBitmapNative(Bitmap bitmap, File file, int quality) {
         if (MediaNative.isX86() || MediaNative.isAsus() || Build.VERSION.SDK_INT < 24) {
             Log.e(MediaImageEncoder.class.getSimpleName(), "JPEG turbo not supported on this device!");
-            return false;
+            return compressBitmapJpeg(bitmap, file, quality);
         }
 
         byte[] jpegData = MediaNative.compressBitmapJpeg(bitmap, quality);
@@ -50,16 +53,13 @@ public class MediaImageEncoder {
         if (bitmap != null && !bitmap.isRecycled() && bitmap.getWidth() * bitmap.getHeight() != 0) {
             switch (Preferences.getPreferences().getString("compression", "jpeg")) {
                 case "skip" -> {
-                    return compressBitmapJpeg(bitmap, file, 100);
+                    return compressBitmapLossless(bitmap, file);
                 }
                 case "jpeg" -> {
                     return compressBitmapJpeg(bitmap, file, quality);
                 }
                 case "native" -> {
                     return compressBitmapNative(bitmap, file, quality);
-                }
-                default -> {
-                    return true;
                 }
             }
         }
@@ -85,7 +85,7 @@ public class MediaImageEncoder {
 
     public static boolean encodeJpeg(Bitmap bitmap, File file, int quality) {
         if (bitmap != null && !bitmap.isRecycled() && bitmap.getWidth() * bitmap.getHeight() != 0) {
-            return FeatureManager.b(Features.Type.FEATURE_MOZJPEG) ? compressBitmapNative(bitmap, file, quality) : compressBitmapJpeg(bitmap, file, quality);
+            return needToCompress() ? compressBitmapNative(bitmap, file, quality) : compressBitmapJpeg(bitmap, file, quality);
         } else {
             return false;
         }
