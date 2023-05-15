@@ -7,7 +7,6 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -99,28 +98,26 @@ public class PhotoViewer {
 
     @SuppressLint("UseCompatLoadingForDrawables")
     public static void addMenuItems(AttachmentWithMedia attachment, ActionsPopup.b actionPopup, int i, boolean z) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            actionPopup.a(R.string.copy,
-                    ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_copy_outline_28, VKThemeHelper.g(R.attr.header_tint)),
-                    false,
-                    () -> {
-                        if (attachment instanceof PhotoAttachment) {
-                            copyImage(getUrlFromPhotoAttachment((PhotoAttachment) attachment), String.valueOf(attachment.getId()));
-                        } else if (attachment instanceof DocumentAttachment) {
-                            var documentAttachment = (DocumentAttachment) attachment;
-                            if (documentAttachment.J != null)
-                                try {
-                                    copyImage(getUrlFromDocumentAttachment(documentAttachment), String.valueOf(attachment.getId()));
-                                } catch (Exception e) {
-                                    ToastUtils.a(R.string.photo_get_error);
-                                }
-                            else
+        actionPopup.a(R.string.copy,
+                ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_copy_outline_28, VKThemeHelper.g(R.attr.header_tint)),
+                false,
+                () -> {
+                    if (attachment instanceof PhotoAttachment) {
+                        copyImage(getUrlFromPhotoAttachment((PhotoAttachment) attachment), String.valueOf(attachment.getId()));
+                    } else if (attachment instanceof DocumentAttachment) {
+                        var documentAttachment = (DocumentAttachment) attachment;
+                        if (documentAttachment.J != null)
+                            try {
+                                copyImage(getUrlFromDocumentAttachment(documentAttachment), String.valueOf(attachment.getId()));
+                            } catch (Exception e) {
                                 ToastUtils.a(R.string.photo_get_error);
-                        }
-                        return null;
+                            }
+                        else
+                            ToastUtils.a(R.string.photo_get_error);
                     }
-            );
-        }
+                    return null;
+                }
+        );
         actionPopup.a(R.string.search_photo_content,
                 ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_menu_search_outline_28, VKThemeHelper.g(R.attr.header_tint)),
                 false,
