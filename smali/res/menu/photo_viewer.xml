@@ -41,6 +41,10 @@
         android:showAsAction="never"
         android:title="@string/report_content" />
     <item
+            android:id="@id/copy_image"
+            android:showAsAction="never"
+            android:title="@string/copy" />
+    <item
         android:id="@id/search_photo"
         android:showAsAction="never"
         android:title="@string/search_photo_content" />

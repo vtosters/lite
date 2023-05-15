@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
+import androidx.core.content.FileProvider;
 import com.vk.core.dialogs.actionspopup.ActionsPopup;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.ui.themes.VKThemeHelper;
@@ -23,6 +24,8 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.attachments.DocumentAttachment;
 import com.vtosters.lite.attachments.PhotoAttachment;
 import okhttp3.*;
+import okio.BufferedSink;
+import okio.Okio;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
@@ -30,6 +33,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.Preferences;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.List;
@@ -37,58 +41,83 @@ import java.util.List;
 public class PhotoViewer {
     static OkHttpClient client = VtOkHttpClient.getInstance();
 
+    @SuppressLint("NonConstantResourceId")
     public static boolean interceptClick(AttachmentWithMedia attachment, MenuItem item, View view) {
-        if (item.getItemId() == R.id.search_photo) {
-            if (attachment instanceof PhotoAttachment) {
-                searchDialog(LifecycleUtils.getCurrentActivity(), getUrlFromPhotoAttachment((PhotoAttachment) attachment));
-            } else if (attachment instanceof DocumentAttachment) {
-                var documentAttachment = (DocumentAttachment) attachment;
-                if (documentAttachment.J != null)
-                    try {
-                        searchDialog(LifecycleUtils.getCurrentActivity(), getUrlFromDocumentAttachment(documentAttachment));
-                    } catch (Exception e) {
+        switch (item.getItemId()) {
+            case R.id.copy_image -> {
+                if (attachment instanceof PhotoAttachment) {
+                    copyImage(getUrlFromPhotoAttachment((PhotoAttachment) attachment), String.valueOf(attachment.getId()));
+                } else if (attachment instanceof DocumentAttachment) {
+                    var documentAttachment = (DocumentAttachment) attachment;
+                    if (documentAttachment.J != null)
+                        try {
+                            copyImage(getUrlFromDocumentAttachment(documentAttachment), String.valueOf(attachment.getId()));
+                        } catch (Exception e) {
+                            ToastUtils.a(R.string.photo_get_error);
+                        }
+                    else
                         ToastUtils.a(R.string.photo_get_error);
-                    }
-                else
-                    ToastUtils.a(R.string.photo_get_error);
+                }
+                return true;
             }
-            return true;
-        } else if (item.getItemId() == R.id.copy_photo_url) {
-            if (attachment instanceof PhotoAttachment) {
-                copyPhotoUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
-            } else if (attachment instanceof DocumentAttachment) {
-                var documentAttachment = (DocumentAttachment) attachment;
-                if (documentAttachment.J != null)
-                    try {
-                        copyPhotoUrl(getUrlFromDocumentAttachment(documentAttachment));
-                    } catch (Exception e) {
+            case R.id.copy_photo_url -> {
+                if (attachment instanceof PhotoAttachment) {
+                    copyPhotoUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+                } else if (attachment instanceof DocumentAttachment) {
+                    var documentAttachment = (DocumentAttachment) attachment;
+                    if (documentAttachment.J != null)
+                        try {
+                            copyPhotoUrl(getUrlFromDocumentAttachment(documentAttachment));
+                        } catch (Exception e) {
+                            ToastUtils.a(R.string.photo_get_error);
+                        }
+                    else
                         ToastUtils.a(R.string.photo_get_error);
-                    }
-                else
-                    ToastUtils.a(R.string.photo_get_error);
+                }
+                return true;
             }
-            return true;
-        } else if (item.getItemId() == R.id.open_original_photo) {
-            if (attachment instanceof PhotoAttachment) {
-                openUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
-            } else if (attachment instanceof DocumentAttachment) {
-                var documentAttachment = (DocumentAttachment) attachment;
-                if (documentAttachment.J != null)
-                    try {
-                        openUrl(getUrlFromDocumentAttachment(documentAttachment));
-                    } catch (Exception e) {
+            case R.id.open_original_photo -> {
+                if (attachment instanceof PhotoAttachment) {
+                    openUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+                } else if (attachment instanceof DocumentAttachment) {
+                    var documentAttachment = (DocumentAttachment) attachment;
+                    if (documentAttachment.J != null)
+                        try {
+                            openUrl(getUrlFromDocumentAttachment(documentAttachment));
+                        } catch (Exception e) {
+                            ToastUtils.a(R.string.photo_get_error);
+                        }
+                    else
                         ToastUtils.a(R.string.photo_get_error);
-                    }
-                else
-                    ToastUtils.a(R.string.photo_get_error);
+                }
+                return true;
             }
-            return true;
         }
         return true;
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
     public static void addMenuItems(AttachmentWithMedia attachment, ActionsPopup.b actionPopup, int i, boolean z) {
+        actionPopup.a(R.string.copy,
+                ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_copy_outline_28, VKThemeHelper.g(R.attr.header_tint)),
+                false,
+                () -> {
+                    if (attachment instanceof PhotoAttachment) {
+                        copyImage(getUrlFromPhotoAttachment((PhotoAttachment) attachment), String.valueOf(attachment.getId()));
+                    } else if (attachment instanceof DocumentAttachment) {
+                        var documentAttachment = (DocumentAttachment) attachment;
+                        if (documentAttachment.J != null)
+                            try {
+                                copyImage(getUrlFromDocumentAttachment(documentAttachment), String.valueOf(attachment.getId()));
+                            } catch (Exception e) {
+                                ToastUtils.a(R.string.photo_get_error);
+                            }
+                        else
+                            ToastUtils.a(R.string.photo_get_error);
+                    }
+                    return null;
+                }
+        );
         actionPopup.a(R.string.search_photo_content,
                 ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_menu_search_outline_28, VKThemeHelper.g(R.attr.header_tint)),
                 false,
@@ -192,6 +221,37 @@ public class PhotoViewer {
         } else {
             searchPhoto(selectedEngine(), url);
         }
+    }
+
+    private static void copyImage(String link, String name) {
+        Request request = new Request.a().b(link).a();
+        File file = new File(AndroidUtils.getGlobalContext().getExternalCacheDir(), name + ".jpg");
+
+        if (file.exists()) {
+            copyImageToClipboard(file);
+            return;
+        }
+
+        new Thread() {
+            @Override
+            public void run() {
+                try (Response response = client.a(request).execute()) {
+                    try (BufferedSink sink = Okio.a(Okio.b(file))) {
+                        sink.a(response.a().f());
+                    }
+
+                    copyImageToClipboard(file);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+    }
+
+    private static void copyImageToClipboard(File file) {
+        Uri path = FileProvider.getUriForFile(AndroidUtils.getGlobalContext(), "com.vtosters.lite.common.VKFileProvider", file);
+        ClipData clip = ClipData.newUri(AndroidUtils.getGlobalContext().getContentResolver(), "Image", path);
+        ((ClipboardManager) AndroidUtils.getGlobalContext().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(clip);
     }
 
     private static int selectedEngine() {
