@@ -46,6 +46,7 @@ public class CatalogJsonInjector {
             var blocks = oldItems.optJSONObject(0).optJSONArray("blocks");
 
             if (!useOldAppVer) {
+                fixDailyMix(blocks);
                 if (blocks != null) {
                     for (int i = 0; i < blocks.length(); i++) {
                         var block = blocks.optJSONObject(i);
@@ -267,6 +268,23 @@ public class CatalogJsonInjector {
             if (layout.has("top_title")) blocks.remove(i);
             try {
                 layout.put("name", "header");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    // TODO: Fix pictures
+    public static void fixDailyMix(JSONArray blocks) {
+        if (blocks == null) return;
+        for (int i = 0; i < blocks.length(); i++) {
+            var block = blocks.optJSONObject(i);
+            var layout = block.optJSONObject("layout");
+            if (layout == null) continue;
+            var name = layout.optString("name");
+            if (!name.equals("recomms_slider")) continue;
+            try {
+                layout.put("name", "large_slider");
             } catch (JSONException e) {
                 e.printStackTrace();
             }
