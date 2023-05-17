@@ -56,7 +56,6 @@ public class FFMpeg {
         if (track.I != null) {
             sb.append(" -metadata album=\"").append(track.I.getTitle()).append("\"");
         }
-        sb.append(" -write_xing 0");
 
         sb.append(" -c copy \"").append(out).append("\"");
 
