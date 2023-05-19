@@ -206,7 +206,7 @@
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    const/16 p1, 0xa
+    const p1, 0x7fffffff
 
     .line 2
     iput p1, p0, Lcom/vtosters/lite/ui/WriteBar;->g:I
@@ -335,7 +335,7 @@
     .line 22
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const/16 p1, 0xa
+    const p1, 0x7fffffff
 
     .line 23
     iput p1, p0, Lcom/vtosters/lite/ui/WriteBar;->g:I
@@ -464,7 +464,7 @@
     .line 43
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const/16 p1, 0xa
+    const p1, 0x7fffffff
 
     .line 44
     iput p1, p0, Lcom/vtosters/lite/ui/WriteBar;->g:I

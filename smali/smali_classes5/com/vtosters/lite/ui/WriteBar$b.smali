@@ -108,6 +108,8 @@
 
     sub-int/2addr v1, v2
 
+    const v1, 0x7fffffff
+
     const-string v2, "selection_limit"
 
     invoke-virtual {p1, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;

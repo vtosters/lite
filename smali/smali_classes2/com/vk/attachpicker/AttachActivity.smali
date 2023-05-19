@@ -2156,7 +2156,7 @@
 
     move-result-object v1
 
-    const/16 v2, 0xa
+    const v2, 0x7fffffff
 
     const-string v3, "selection_limit"
 

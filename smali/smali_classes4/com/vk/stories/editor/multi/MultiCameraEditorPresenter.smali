@@ -2286,6 +2286,8 @@
 
     rsub-int/lit8 v2, v2, 0xa
 
+    const v2, 0x7fffffff
+
     const-string v3, "selection_limit"
 
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
