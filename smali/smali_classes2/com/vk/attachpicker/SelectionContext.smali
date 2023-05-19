@@ -70,7 +70,7 @@
 
     iput-object v0, p0, Lcom/vk/attachpicker/SelectionContext;->c:Ljava/util/ArrayList;
 
-    const/16 v0, 0xa
+    const v0, 0x7fffffff
 
     .line 3
     iput v0, p0, Lcom/vk/attachpicker/SelectionContext;->d:I

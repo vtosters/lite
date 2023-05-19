@@ -740,7 +740,7 @@
 
     move/from16 v35, v4
 
-    const/16 v4, 0xa
+    const v4, 0x7fffffff
 
     move-object/from16 v36, v8
 
