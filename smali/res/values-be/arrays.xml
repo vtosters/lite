@@ -703,14 +703,8 @@
     <item>Прадусталяваныя колеры</item>
   </string-array>
   <string-array name="compression_value">
-        <item>Прапусціць сціск</item>
         <item>Сціск без страт</item>
         <item>Сціск па змаўчанні. </item>
         <item>Эфектыўнае сцісканне</item>
-    </string-array>
-  <string-array name="compression">
-        <item>прапусціць</item>
-        <item>jpeg</item>
-        <item>стандартнае</item>
     </string-array>
 </resources>
