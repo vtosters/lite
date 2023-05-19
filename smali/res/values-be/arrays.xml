@@ -704,7 +704,7 @@
   </string-array>
   <string-array name="compression_value">
         <item>Сціск без страт</item>
-        <item>Сціск па змаўчанні. </item>
+        <item>Сціск па змаўчанні</item>
         <item>Эфектыўнае сцісканне</item>
     </string-array>
 </resources>
