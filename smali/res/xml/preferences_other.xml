@@ -18,7 +18,7 @@
                 android:title="@string/firebasefix"/>
         <Preference
                 android:key="microgsettings"
-                android:title="Настройки MicroG"/>
+                android:title="@string/microgsett"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference

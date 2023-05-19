@@ -6402,4 +6402,9 @@
 
     <string name="currentLanguage">Текущий язык:</string>
     <string name="appLanguage">Язык приложения</string>
+
+    <string name="microgsett">Настройки MicroG</string>
+
+    <string name="compression_types">Способ компрессии фото</string>
+    <string name="compression_types_selection">Выберите способ компрессии</string>
 </resources>

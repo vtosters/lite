@@ -6540,4 +6540,9 @@ May look like a fake leaving the online"</string>
 
     <string name="currentLanguage">Current language:</string>
     <string name="appLanguage">App language</string>
+
+    <string name="microgsett">MicroG Settings</string>
+
+    <string name="compression_types">Photo compression method</string>
+    <string name="compression_types_selection">Choose the compression method</string>
 </resources>
