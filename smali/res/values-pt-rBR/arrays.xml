@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compression_value">
+        <item>Pular</item>
+        <item>Compressão sem perdas</item>
+        <item>Compressão Padrão</item>
+        <item>compressão Efetiva</item>
+    </string-array>
+    <string-array name="compression">
+        <item>Pular</item>
+        <item>jpeg</item>
+        <item>Nativo</item>
+    </string-array>
+</resources>
