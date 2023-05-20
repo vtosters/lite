@@ -23,7 +23,6 @@ import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
-import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class CatalogJsonInjector {
@@ -149,13 +148,14 @@ public class CatalogJsonInjector {
             if (section == null) return; // early return if section is null
             var useOldAppVer = getBoolValue("useOldAppVer", false);
             var isUsersCatalog = section.optString("url").equals("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
-
-            if (!isUsersCatalog || !CacheDatabaseDelegate.hasTracks() || LibVKXClient.isIntegrationEnabled())
-                return; // early return if not users catalog or no tracks or integration enabled
             var blocks = section.getJSONArray("blocks");
-            var noPlaylists = !json.has("playlists");
 
             fixDailyMix(blocks);
+
+            if (!isUsersCatalog || !CacheDatabaseDelegate.hasTracks() || LibVKXClient.isIntegrationEnabled()) {
+                return; // early return if not users catalog or no tracks or integration enabled
+            }
+            var noPlaylists = !json.has("playlists");
 
             if (noPlaylists) {
                 json.put("playlists", new JSONArray().put(getPlaylist()));
