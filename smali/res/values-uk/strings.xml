@@ -6327,4 +6327,9 @@
 
     <string name="currentLanguage">Поточна мова:</string>
     <string name="appLanguage">Мова додатку</string>
+
+    <string name="microgsett">Налаштування MicroG</string>
+
+    <string name="compression_types">Спосіб компресії фото</string>
+    <string name="compression_types_selection">Виберіть спосіб компресії</string>
 </resources>
