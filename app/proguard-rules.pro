@@ -39,13 +39,5 @@
   public <methods>;
   public <init>(...);
 }
--keep,allowoptimization class com.vtosters.lite.** {
-  public <fields>;
-  public <methods>;
-  public <init>(...);
-}
--keep,allowoptimization class com.vk.** {
-  public <fields>;
-  public <methods>;
-  public <init>(...);
-}
+-keep class com.vtosters.lite.** { *; }
+-keep class com.vk.** { *; }
