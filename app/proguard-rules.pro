@@ -20,8 +20,6 @@
         ##-renamesourcefileattribute SourceFile
 #-keepclassmembers class fq
 
--dontshrink
--dontobfuscate
 -assumenosideeffects class android.util.Log {
     public static boolean isLoggable(java.lang.String, int);
     public static int v(...);
@@ -30,3 +28,29 @@
     public static int d(...);
     public static int e(...);
 }
+
+-repackageclasses
+-allowaccessmodification
+-renamesourcefileattribute
+-optimizations
+-keepattributes !Annotation,!Signature,!LineNumberTable
+
+-keep,allowoptimization class ru.vtosters.lite.** {
+  public <fields>;
+  public <methods>;
+  public <init>(...);
+}
+-keep,allowoptimization class com.vtosters.lite.** {
+  public <fields>;
+  public <methods>;
+  public <init>(...);
+}
+-keep,allowoptimization class com.vk.** {
+  public <fields>;
+  public <methods>;
+  public <init>(...);
+}
+
+#-keep,allowoptimization class ru.vtosters.lite.** { *; }
+#-keep,allowoptimization class com.vtosters.lite.** { *; }
+#-keep,allowoptimization class com.vk.** { *; }
