@@ -83,7 +83,7 @@ public class ResourcesLoader {
                 // Ignored.
             }
         } catch (Throwable e) {
-            Log.d("WTF", String.valueOf(e));
+            Log.d("WTF", e.getMessage());
         }
     }
 

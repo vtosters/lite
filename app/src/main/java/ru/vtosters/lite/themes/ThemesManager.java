@@ -124,7 +124,7 @@ public class ThemesManager {
                 ResourcesLoader.load(app, modApk.getAbsolutePath(), false);
             }
         } catch (Exception e) {
-            Log.e("ThemesManager", String.valueOf(e));
+            Log.e("ThemesManager", e.getMessage());
         }
     }
 

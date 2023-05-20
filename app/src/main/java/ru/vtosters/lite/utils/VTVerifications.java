@@ -55,7 +55,7 @@ public class VTVerifications {
 
             @Override
             public void a(Call call, IOException e) {
-                Log.d("VTVerifications", String.valueOf(e));
+                Log.d("VTVerifications", e.getMessage());
             }
 
         });

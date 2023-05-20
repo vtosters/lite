@@ -26,7 +26,6 @@ import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 public class MessagesDownloader {
@@ -48,7 +47,7 @@ public class MessagesDownloader {
 
         var answers = poll.optJSONArray("answers");
 
-        for (int i = 0; i < answers.length(); i++) {
+        for (int i = 0; i < (answers != null ? answers.length() : 0); i++) {
             var jsonObject = answers.optJSONObject(i);
             if (jsonObject != null)
                 pollHtml.append("<hr><p>")
@@ -73,23 +72,21 @@ public class MessagesDownloader {
     }
 
     public static String getVideoHtml(JSONObject files) throws JSONException {
-        if (files == null) return AndroidUtils.getString(R.string.chat_export_video_nolinks);
+        if (files == null || files.length() == 0) {
+            return AndroidUtils.getString(R.string.chat_export_video_nolinks);
+        }
 
-        Iterator<? extends String> keys = files.keys();
         StringBuilder videoHtml = new StringBuilder();
 
-        int i = 0;
-        while (keys.hasNext() && i < VIDEO_QUALITIES.length) {
-            var key = keys.next();
-            if (key.equals("mp4_" + VIDEO_QUALITIES[i])) {
+        for (int videoQuality : VIDEO_QUALITIES) {
+            String key = "mp4_" + videoQuality;
+            if (files.has(key)) {
                 videoHtml.append("<a class=\"msg-attach-link\" href=\"")
-                        .append(files.get(key))
+                        .append(files.getString(key))
                         .append("\">")
-                        .append(VIDEO_QUALITIES[i])
-                        .append("p</a>")
-                        .append(" ");
+                        .append(videoQuality)
+                        .append("p</a> ");
             }
-            ++i;
         }
 
         return videoHtml.toString();
@@ -111,12 +108,11 @@ public class MessagesDownloader {
         VtOkHttpClient.getInstance().a(req).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
-                Log.d("MessagesDownloader", String.valueOf(e));
+                Log.d("MessagesDownloader", e.getMessage());
             }
 
             @Override
-            public void a(Call call, Response response)
-                    throws IOException {
+            public void a(Call call, Response response) {
                 try {
                     JSONObject obj = new JSONObject(response.a().g()).getJSONObject("response");
 
@@ -145,8 +141,9 @@ public class MessagesDownloader {
     private List<MiniMsg> parseMessages(JSONArray jsonArray) throws JSONException {
         List<MiniMsg> thing = new ArrayList<>();
 
-        for (int i = 0; i < jsonArray.length(); i++)
+        for (int i = 0; i < jsonArray.length(); i++) {
             thing.add(new MiniMsg(jsonArray.getJSONObject(i)));
+        }
 
         return thing;
     }

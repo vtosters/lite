@@ -41,7 +41,7 @@ public class ServerDialog {
             client.a(request).a(new Callback() {
                 @Override
                 public void a(Call call, IOException e) {
-                    Log.d(TAG, String.valueOf(e));
+                    Log.d(TAG, e.getMessage());
                     showAlert = false;
                 }
 

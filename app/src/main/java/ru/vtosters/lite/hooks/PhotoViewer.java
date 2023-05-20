@@ -286,7 +286,7 @@ public class PhotoViewer {
         client.a(request).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
-                Log.d("PhotoViewer", String.valueOf(e));
+                Log.d("PhotoViewer", e.getMessage());
             }
 
             @Override

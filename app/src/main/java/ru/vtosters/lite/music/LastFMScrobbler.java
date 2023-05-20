@@ -93,7 +93,7 @@ public class LastFMScrobbler {
         fetch(params, new Callback() {
             @Override
             public void a(Call call, IOException e) {
-                Log.d("Scrobbler", String.valueOf(e));
+                Log.d("Scrobbler", e.getMessage());
             }
 
             @Override

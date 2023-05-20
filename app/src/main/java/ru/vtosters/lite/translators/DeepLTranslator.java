@@ -127,7 +127,7 @@ public class DeepLTranslator extends BaseTranslator {
 
             return text;
         } catch (Throwable e) {
-            Log.d("DeepL", String.valueOf(e));
+            Log.d("DeepL", e.getMessage());
         }
         return text;
     }
