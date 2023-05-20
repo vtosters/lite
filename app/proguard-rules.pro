@@ -31,9 +31,8 @@
 
 -repackageclasses
 -allowaccessmodification
--renamesourcefileattribute
 -optimizations
--keepattributes !Annotation,!Signature,!LineNumberTable
+-keepattributes SourceFile, LineNumberTable
 
 -keep,allowoptimization class ru.vtosters.lite.** {
   public <fields>;
@@ -50,7 +49,3 @@
   public <methods>;
   public <init>(...);
 }
-
-#-keep,allowoptimization class ru.vtosters.lite.** { *; }
-#-keep,allowoptimization class com.vtosters.lite.** { *; }
-#-keep,allowoptimization class com.vk.** { *; }
