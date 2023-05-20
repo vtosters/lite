@@ -60,7 +60,7 @@ public class TelegramStickersGrabber {
         try {
             sha256 = MessageDigest.getInstance("SHA-256");
         } catch (NoSuchAlgorithmException e) {
-            Log.wtf(TAG, "No support for SHA-256");
+            Log.d(TAG, "No support for SHA-256");
             e.printStackTrace();
             throw new RuntimeException(e);
         }
