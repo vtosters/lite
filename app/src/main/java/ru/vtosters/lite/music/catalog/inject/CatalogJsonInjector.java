@@ -28,7 +28,6 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class CatalogJsonInjector {
     private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
-    private static boolean isLoaded;
 
     public static JSONObject music(JSONObject json) throws JSONException {
         var catalog = json.optJSONObject("catalog");
@@ -130,8 +129,6 @@ public class CatalogJsonInjector {
                             .put(getCatalogPlaylist())
                             .put(getCatalogSeparator());
 
-                    isLoaded = false;
-
                     Log.d("VKMusic", "added cache catalog playlist");
 
                     for (int i = 0; i < blocks.length(); i++) {
@@ -158,6 +155,8 @@ public class CatalogJsonInjector {
             var blocks = section.getJSONArray("blocks");
             var noPlaylists = !json.has("playlists");
 
+            fixDailyMix(blocks);
+
             if (noPlaylists) {
                 json.put("playlists", new JSONArray().put(getPlaylist()));
                 Log.d("catalogInjector", "added new pl");
@@ -170,15 +169,13 @@ public class CatalogJsonInjector {
                 }
             }
 
-            if ((!useOldAppVer || noPlaylists) && !isLoaded) {
+            if (!useOldAppVer || noPlaylists) {
                 var newBlocks = new JSONArray();
 
                 newBlocks
                         .put(getCatalogHeader())
                         .put(getCatalogPlaylist())
                         .put(getCatalogSeparator());
-
-                isLoaded = true;
 
                 Log.d("catalogInjector", "added cache catalog playlist");
 
@@ -216,11 +213,9 @@ public class CatalogJsonInjector {
     }
 
     public static JSONObject injectIntoCatalogs(JSONObject json) {
-
         musicLinkFix(json);
-
         injectIntoCatalog(json);
-
+        catalogInjector(json);
         return json;
     }
 
@@ -240,8 +235,6 @@ public class CatalogJsonInjector {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        catalogInjector(json);
     }
 
     public static JSONObject fixArtists(JSONObject json) {
