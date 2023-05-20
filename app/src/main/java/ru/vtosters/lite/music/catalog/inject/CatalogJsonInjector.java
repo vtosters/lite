@@ -73,7 +73,7 @@ public class CatalogJsonInjector {
                     var id = catalogarr.optString("id");
                     var url = catalogarr.optString("url");
 
-                    if (dev()) Log.d("VKMusic", "Added " + title + " in music sections");
+                    Log.d("VKMusic", "Added " + title + " in music sections");
 
                     oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
                 }
@@ -86,7 +86,7 @@ public class CatalogJsonInjector {
                     var id = catalogarr.optString("id");
                     var url = catalogarr.optString("url");
 
-                    if (dev()) Log.d("VKMusic", "Added " + title + " in music sections");
+                    Log.d("VKMusic", "Added " + title + " in music sections");
 
                     oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
                 }
@@ -102,7 +102,7 @@ public class CatalogJsonInjector {
 
                     if (url.contains(value) && !value.isEmpty()) {
                         catalog.put("default_section", id);
-                        if (dev()) Log.d("VKMusic", "Added " + title + " as default music section");
+                        Log.d("VKMusic", "Added " + title + " as default music section");
                     }
                 }
             }
@@ -231,7 +231,7 @@ public class CatalogJsonInjector {
             if (links.optJSONObject(0).optString("url").contains("?section=recent")) {
                 json.remove("links");
 
-                if (dev()) Log.d("VKMusic", "Removed links buttons");
+                Log.d("VKMusic", "Removed links buttons");
             }
         }
 

@@ -60,6 +60,8 @@ android {
         }
         release {
             buildConfigField 'String', 'APPCENTER_KEY', '""'
+            minifyEnabled true
+            proguardFile 'proguard-rules.pro'
         }
     }
 

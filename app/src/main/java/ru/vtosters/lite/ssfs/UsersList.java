@@ -64,10 +64,8 @@ public class UsersList {
         var idsDescription = json.getJSONArray("with_service_descriptions");
         var idsBanner = json.getJSONArray("with_chat_banners");
 
-        if (dev()) {
-            Log.d(TAG, idsDescription.toString());
-            Log.d(TAG, idsBanner.toString());
-        }
+        Log.d(TAG, idsDescription.toString());
+        Log.d(TAG, idsBanner.toString());
 
         processIds(idsBanner, bannersList);
         processIds(idsDescription, descriptionsList);

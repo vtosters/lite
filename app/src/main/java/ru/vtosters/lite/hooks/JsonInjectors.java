@@ -164,7 +164,7 @@ public class JsonInjectors {
             Log.d("NewsfeedList", "Added list " + id + " to feed");
             item.put("is_hidden", hide)
                     .put("is_unavailable", hide);
-            if (dev()) Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
+            Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
         }
         Preferences.getPreferences().edit().putStringSet("news_feed_items_set", mutableFiltersSet)
                 .apply();
