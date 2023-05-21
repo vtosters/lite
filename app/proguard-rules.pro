@@ -41,3 +41,4 @@
 }
 -keep class com.vtosters.lite.** { *; }
 -keep class com.vk.** { *; }
+-keep class bruhcollective.itaysonlab.libvkx.client.** { *; }
