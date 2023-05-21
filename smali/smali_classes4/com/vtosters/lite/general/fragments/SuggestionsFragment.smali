@@ -410,7 +410,7 @@
 
     move-result-object p3
 
-    invoke-static {v2}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+    invoke-static {v2}, Lru/vtosters/hooks/other/ThemesUtils;->getColor(I)I
 
     move-result p3
 

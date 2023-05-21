@@ -26,8 +26,11 @@ import com.vk.stickers.Stickers;
 import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
+import ru.vtosters.hooks.GmsHook;
+import ru.vtosters.hooks.SwitchHook;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
-import ru.vtosters.lite.hooks.SwitchHook;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.utils.*;
@@ -76,7 +79,7 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("microgsettings").setVisible(GmsUtils.isFakeGmsInstalled() && !GmsUtils.isGmsInstalled());
+        findPreference("microgsettings").setVisible(GmsHook.isFakeGmsInstalled() && !GmsHook.isGmsInstalled());
 
         findPreference("microgsettings").setOnPreferenceClickListener(preference -> {
             try {

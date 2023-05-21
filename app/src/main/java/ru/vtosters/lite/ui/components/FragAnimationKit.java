@@ -4,7 +4,7 @@ import android.content.res.Resources;
 import androidx.fragment.app.FragmentTransaction;
 import com.vtosters.lite.R;
 
-import static ru.vtosters.lite.utils.Preferences.getString;
+import static ru.vtosters.hooks.other.Preferences.getString;
 
 public class FragAnimationKit {
 

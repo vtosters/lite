@@ -2,8 +2,8 @@ package ru.vtosters.lite.themes;
 
 import android.view.View;
 import android.view.ViewGroup;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.hooks.*;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.util.ArrayList;
 

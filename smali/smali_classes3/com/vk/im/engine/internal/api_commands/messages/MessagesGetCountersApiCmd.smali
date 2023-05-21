@@ -76,7 +76,7 @@
 
     check-cast p1, Lcom/vk/im/engine/models/messages/MsgCounters;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-object p1
 .end method

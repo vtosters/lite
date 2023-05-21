@@ -59,7 +59,7 @@
 .method protected b(Lcom/vk/im/engine/internal/longpoll/LongPollChanges;)V
     .locals 2
 
-    invoke-static {}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->hook()Z
+    invoke-static {}, Lru/vtosters/hooks/DeletedMessagesHook;->hook()Z
 
     move-result v0
 
@@ -86,13 +86,13 @@
 .method protected b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;)V
     .locals 3
 
-    invoke-static {}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->hook()Z
+    invoke-static {}, Lru/vtosters/hooks/DeletedMessagesHook;->hook()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    invoke-static {p0}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->updateDialog(Lcom/vk/im/engine/internal/longpoll/tasks/MsgDeleteLpTask;)V
+    invoke-static {p0}, Lru/vtosters/hooks/DeletedMessagesHook;->updateDialog(Lcom/vk/im/engine/internal/longpoll/tasks/MsgDeleteLpTask;)V
 
     return-void
 
@@ -142,9 +142,9 @@
 .method protected b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;Lcom/vk/im/engine/internal/longpoll/LongPollEntityMissed;)V
     .locals 1
 
-    invoke-static {p0}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->hookDeletedMessageId(Lcom/vk/im/engine/internal/longpoll/tasks/MsgDeleteLpTask;)V
+    invoke-static {p0}, Lru/vtosters/hooks/DeletedMessagesHook;->hookDeletedMessageId(Lcom/vk/im/engine/internal/longpoll/tasks/MsgDeleteLpTask;)V
 
-    invoke-static {}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->hook()Z
+    invoke-static {}, Lru/vtosters/hooks/DeletedMessagesHook;->hook()Z
 
     move-result v0
 

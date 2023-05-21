@@ -1,7 +1,7 @@
 package ru.vtosters.lite.deviceinfo;
 
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 import ru.vtosters.lite.utils.VersionReader;
 
 import static ru.vtosters.lite.deviceinfo.OEMDetector.*;

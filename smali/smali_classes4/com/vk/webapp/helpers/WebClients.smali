@@ -300,7 +300,7 @@
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/hooks/VKUIHook;->inject(Landroid/webkit/WebView;)V
+    invoke-static/range {p1 .. p1}, Lru/vtosters/hooks/VKUIHook;->inject(Landroid/webkit/WebView;)V
 
     const/4 v0, 0x2
 

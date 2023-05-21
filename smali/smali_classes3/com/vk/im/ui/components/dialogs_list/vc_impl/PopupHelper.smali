@@ -95,7 +95,7 @@
 .method private final a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/ui/components/common/DialogAction;)V
     .locals 2
 
-    invoke-static {p1, p3}, Lru/vtosters/lite/dialogs/DialogMenuInjectors;->onClick(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/ui/components/common/DialogAction;)Z
+    invoke-static {p1, p3}, Lru/vtosters/hooks/DialogMenuInjectors;->onClick(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/ui/components/common/DialogAction;)Z
 
     move-result v0
 

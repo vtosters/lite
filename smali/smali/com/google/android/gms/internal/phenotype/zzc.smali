@@ -11,7 +11,7 @@
 
     const-string v0, "com.google.android.gms.phenotype.internal.IPhenotypeService"
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
     

@@ -3,8 +3,8 @@ package ru.vtosters.lite.ui.components;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.util.Log;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.util.Arrays;
 import java.util.List;

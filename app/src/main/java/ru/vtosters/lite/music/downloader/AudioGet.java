@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
-import static ru.vtosters.lite.hooks.DateHook.getLocale;
+import static ru.vtosters.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;

@@ -26,8 +26,8 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import me.grishka.appkit.utils.V;
 
-import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.ThemesUtils.getCSTDock;
+import static ru.vtosters.hooks.other.Preferences.vkme;
+import static ru.vtosters.hooks.other.ThemesUtils.getCSTDock;
 
 public class BottomNavigationItemView extends FrameLayout implements MenuView.ItemView {
     private final TextView mSmallLabel;

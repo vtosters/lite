@@ -8,7 +8,7 @@ import com.vk.log.L;
 import org.json.JSONObject;
 import ru.vtosters.lite.music.Genius;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.hooks.other.Preferences;
 
 import java.util.ArrayList;
 

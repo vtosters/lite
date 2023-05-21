@@ -5,12 +5,12 @@ import android.os.Bundle;
 import androidx.preference.Preference;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.util.Arrays;
 import java.util.List;

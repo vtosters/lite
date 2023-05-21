@@ -682,7 +682,7 @@
 
     const-string v0, "com.google.android.c2dm.intent.REGISTER"
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -690,7 +690,7 @@
 
     const-string v0, "com.google.android.gms"
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
     

@@ -231,7 +231,7 @@
 .method public static final e()Z
     .locals 3
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->milkshake()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->milkshake()Z
 
     move-result v0
 

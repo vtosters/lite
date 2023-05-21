@@ -498,7 +498,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->a:Landroid/graphics/Paint;
 
-    invoke-static {p1, v3, v2}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;Landroid/graphics/Paint;F)V
+    invoke-static {p1, v3, v2}, Lru/vtosters/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;Landroid/graphics/Paint;F)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->b:Landroid/graphics/Paint;

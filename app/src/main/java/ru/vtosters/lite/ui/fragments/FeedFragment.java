@@ -9,10 +9,10 @@ import com.vk.newsfeed.NewsfeedSettingsFragment;
 import com.vk.newsfeed.controllers.NewsfeedController;
 import com.vtosters.lite.R;
 import com.vtosters.lite.ui.SummaryListPreference;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
 import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.util.Objects;
 

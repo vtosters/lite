@@ -39,7 +39,7 @@ import com.vk.im.ui.views.avatars.AvatarView;
 import com.vk.im.ui.views.avatars.StoryBorderView;
 
 import static com.vk.im.ui.d.vkim_administration_title;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+import static ru.vtosters.hooks.other.ThemesUtils.getAccentColor;
 
 public class DialogItemView extends ViewGroup {
     private final int B;

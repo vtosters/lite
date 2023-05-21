@@ -7,8 +7,8 @@ import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
 import androidx.annotation.IdRes;
 import com.vtosters.lite.R;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 
 
 public class ThemesCore {

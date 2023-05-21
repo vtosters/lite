@@ -54,13 +54,7 @@
 
     move-result p1
 
-    const-string v0, "id"
-
-    const-string v1, "msgupdate"
-
-    invoke-static {v1, v0}, Lru/vtosters/lite/utils/AndroidUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v0
+    const v0, 0x7f0a1016 ## "msgupdate"
 
     if-ne p1, v0, :cond_2
 

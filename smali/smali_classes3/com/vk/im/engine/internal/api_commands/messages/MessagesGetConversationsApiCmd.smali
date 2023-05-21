@@ -324,7 +324,7 @@
 
     check-cast p1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd$b;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-object p1
 .end method

@@ -119,11 +119,11 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/hooks/AppVerHook;->appVer()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/hooks/AppVerHook;->appVer()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {}, Lru/vtosters/lite/hooks/AppVerHook;->appBuild()I
+    invoke-static {}, Lru/vtosters/hooks/AppVerHook;->appBuild()I
 
     move-result v1
 

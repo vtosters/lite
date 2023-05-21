@@ -120,13 +120,13 @@
 
     const-string v1, "message"
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
-    invoke-static {p2}, Lru/vtosters/lite/hooks/MessagesHook;->injRequest(Lcom/vk/api/internal/MethodCall$a;)V
+    invoke-static {p2}, Lru/vtosters/hooks/MessagesHook;->injRequest(Lcom/vk/api/internal/MethodCall$a;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendUncheckedJob;->d:Ljava/lang/String;
@@ -176,7 +176,7 @@
 
     invoke-virtual {p1, p2}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/VKMethodCall;)V
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-void
 .end method

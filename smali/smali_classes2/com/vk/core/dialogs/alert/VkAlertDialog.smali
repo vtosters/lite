@@ -40,7 +40,7 @@
     sput-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog;->e:Lcom/vk/core/dialogs/alert/VkAlertDialog$a;
 
     .line 1
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAlertStyle()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAlertStyle()I
 
     move-result v0
 

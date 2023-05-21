@@ -78,7 +78,7 @@
 
     iput p4, p0, Lcom/vk/im/ui/components/dialogs_list/v/DialogsListModels5;->d:I
 
-    invoke-static {p5}, Lru/vtosters/lite/hooks/BusinessNotifHook;->hook(Z)Z
+    invoke-static {p5}, Lru/vtosters/hooks/BusinessNotifHook;->hook(Z)Z
 
     move-result p5
 

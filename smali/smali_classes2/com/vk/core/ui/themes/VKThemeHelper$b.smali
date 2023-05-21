@@ -157,7 +157,7 @@
 .method public getResources()Landroid/content/res/Resources;
     .registers 3
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->isCustomAccentEnabled()Z
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->isCustomAccentEnabled()Z
 
     move-result v1
 

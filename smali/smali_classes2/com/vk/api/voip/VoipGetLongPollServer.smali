@@ -100,7 +100,7 @@
 
     invoke-virtual {v0, p1}, Lcom/vk/api/voip/VoipGetLongPollServer$a;->b(Ljava/lang/String;)V
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-object v0
 .end method

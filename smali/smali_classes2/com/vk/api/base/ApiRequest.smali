@@ -842,7 +842,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v1, v2, v3}, Lru/vtosters/lite/hooks/RequestDumper;->addParams(Lcom/vk/api/internal/MethodCall$a;Ljava/lang/String;Ljava/util/LinkedHashMap;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lru/vtosters/hooks/RequestDumper;->addParams(Lcom/vk/api/internal/MethodCall$a;Ljava/lang/String;Ljava/util/LinkedHashMap;Ljava/lang/String;)V
 
 
     .line 11
@@ -1258,7 +1258,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1267,7 +1267,7 @@
     :cond_0
     const-string v0, "api.vk.com"
 
-    invoke-static {v0}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

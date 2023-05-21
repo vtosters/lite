@@ -10,8 +10,8 @@ import android.os.PowerManager;
 import android.provider.Settings;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
-import ru.vtosters.lite.utils.Preferences;
 
 public class DisableBattery {
     public static void alert(Activity activity) {

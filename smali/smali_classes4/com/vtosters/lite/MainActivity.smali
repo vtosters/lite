@@ -111,7 +111,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lru/vtosters/lite/hooks/StartFragmentHook;->getStartFragment()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/hooks/StartFragmentHook;->getStartFragment()Ljava/lang/Class;
 
     move-result-object p2
 
@@ -400,7 +400,7 @@
 
     .line 7
     :cond_0
-    invoke-static {p0}, Lru/vtosters/lite/hooks/MainActivityInjector;->inject(Landroid/app/Activity;)V
+    invoke-static {p0}, Lru/vtosters/hooks/MainActivityInjector;->inject(Landroid/app/Activity;)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -619,7 +619,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lru/vtosters/lite/hooks/StartFragmentHook;->getStartFragment()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/hooks/StartFragmentHook;->getStartFragment()Ljava/lang/Class;
 
     move-result-object v1
 

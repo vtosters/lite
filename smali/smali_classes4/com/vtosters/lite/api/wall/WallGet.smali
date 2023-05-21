@@ -524,7 +524,7 @@
 
     .line 19
     :goto_2
-    invoke-static {p1}, Lru/vtosters/lite/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    invoke-static {p1}, Lru/vtosters/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
     move-result-object p1
 

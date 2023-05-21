@@ -64,7 +64,7 @@ public class ProfileButtons {
         return orig;
     }
 
-    public static JSONObject generateJsonObject(String title, String link, String text_color, String url_type, HashMap<Object, Object> iconsList) {
+    private static JSONObject generateJsonObject(String title, String link, String text_color, String url_type, HashMap<Object, Object> iconsList) {
         try {
             var json = new JSONObject();
             var icons = new JSONArray();

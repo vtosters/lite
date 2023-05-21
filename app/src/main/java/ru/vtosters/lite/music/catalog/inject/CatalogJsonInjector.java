@@ -10,20 +10,20 @@ import okhttp3.Request;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 
+import static ru.vtosters.hooks.DateHook.getLocale;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.lite.feature.groupslist.GroupsCatalogInjector.injectIntoCatalog;
-import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class CatalogJsonInjector {
     private static final OkHttpClient mClient = VtOkHttpClient.getInstance();

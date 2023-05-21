@@ -686,7 +686,7 @@
 .method public getMaxItemCount()I
     .locals 1
 
-    invoke-static {}, Lru/vtosters/lite/hooks/DockBarInjector;->getItemCount()I
+    invoke-static {}, Lru/vtosters/hooks/DockBarInjector;->getItemCount()I
 
     move-result v0
 

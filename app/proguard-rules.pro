@@ -34,11 +34,18 @@
 -optimizations
 -keepattributes SourceFile, LineNumberTable
 
--keep,allowoptimization class ru.vtosters.lite.** {
+-keep,allowoptimization class ru.vtosters.hooks.** {
   public <fields>;
   public <methods>;
   public <init>(...);
 }
+
+-keep,allowoptimization class ru.vtosters.lite.utils.AndroidUtils, ru.vtosters.lite.utils.NetworkUtils, ru.vtosters.lite.ui.**, ru.vtosters.lite.themes.**, ru.vtosters.lite.feature.**, ru.vtosters.lite.music.**, ru.vtosters.lite.downloaders.**  {
+  public <fields>;
+  public <methods>;
+  public <init>(...);
+}
+
 -keep class com.vtosters.lite.** { *; }
 -keep class com.vk.** { *; }
 -keep class bruhcollective.itaysonlab.libvkx.client.** { *; }

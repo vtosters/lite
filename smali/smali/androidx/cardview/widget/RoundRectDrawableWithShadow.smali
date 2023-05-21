@@ -95,7 +95,7 @@
     .line 5
     sget v1, Landroidx/cardview/R$color;->cardview_shadow_start_color:I
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/hooks/other/ThemesUtils;->getColor(I)I
 
     move-result v1
 
@@ -104,7 +104,7 @@
     .line 6
     sget v1, Landroidx/cardview/R$color;->cardview_shadow_end_color:I
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/hooks/other/ThemesUtils;->getColor(I)I
 
     move-result v1
 

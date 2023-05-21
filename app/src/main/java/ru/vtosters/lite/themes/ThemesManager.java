@@ -6,11 +6,11 @@ import android.graphics.Color;
 import android.util.Log;
 import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceFile;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.loaders.ResourcesLoader;
 import ru.vtosters.lite.themes.utils.ArscEditor;
 import ru.vtosters.lite.utils.IOUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.io.*;
 import java.util.zip.CRC32;

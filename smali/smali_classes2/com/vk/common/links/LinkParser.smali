@@ -1606,7 +1606,7 @@
 .method public static a(Ljava/lang/CharSequence;ZF)Ljava/lang/CharSequence;
     .locals 8
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortpost()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->shortpost()Z
 
     move-result v0
 

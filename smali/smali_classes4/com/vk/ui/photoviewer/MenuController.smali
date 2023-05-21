@@ -721,7 +721,7 @@
 
     move/from16 v3, p4
 
-    invoke-static/range {v0 .. v3}, Lru/vtosters/lite/hooks/PhotoViewer;->addMenuItems(Lcom/vk/dto/common/AttachmentWithMedia;Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;IZ)V
+    invoke-static/range {v0 .. v3}, Lru/vtosters/hooks/PhotoViewer;->addMenuItems(Lcom/vk/dto/common/AttachmentWithMedia;Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;IZ)V
 
     invoke-virtual/range {p2 .. p2}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
@@ -2748,7 +2748,7 @@
 .method public final a(Lcom/vk/dto/common/AttachmentWithMedia;Landroid/view/MenuItem;Landroid/view/View;)Z
     .locals 2
 
-    invoke-static {p1, p2, p3}, Lru/vtosters/lite/hooks/PhotoViewer;->interceptClick(Lcom/vk/dto/common/AttachmentWithMedia;Landroid/view/MenuItem;Landroid/view/View;)Z
+    invoke-static {p1, p2, p3}, Lru/vtosters/hooks/PhotoViewer;->interceptClick(Lcom/vk/dto/common/AttachmentWithMedia;Landroid/view/MenuItem;Landroid/view/View;)Z
 
     move-result v0
 

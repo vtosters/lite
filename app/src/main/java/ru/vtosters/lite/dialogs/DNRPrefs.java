@@ -1,15 +1,10 @@
 package ru.vtosters.lite.dialogs;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import ru.vtosters.hooks.MessagesActivityHook;
+
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
 public class DNRPrefs {
-    public static boolean getStoriesRead() {
-        return getBoolValue("read_s", false);
-    }
-
-    public static boolean getVoiceListened() {
-        return getBoolValue("listen_v", false);
-    }
 
     public static boolean getMarkAsReadWithoutExceptions(int peerId) {
         if (readPM(peerId))
@@ -24,34 +19,34 @@ public class DNRPrefs {
     }
 
     public static boolean isInDNRExceptions(int peerId) {
-        return DNRModule.mDoNotReadDBHelper.isEnabledForPeerId(peerId);
+        return MessagesActivityHook.mDoNotReadDBHelper.isEnabledForPeerId(peerId);
     }
 
     public static boolean isInDNTExceptions(int peerId) {
-        return DNRModule.mDoNotTypeDBHelper.isEnabledForPeerId(peerId);
+        return MessagesActivityHook.mDoNotTypeDBHelper.isEnabledForPeerId(peerId);
     }
 
-    public static boolean readPM(int peer) {
+    private static boolean readPM(int peer) {
         return (peer > 0 && peer < 2000000000) && getBoolValue("read_pm", false);
     }
 
-    public static boolean readConversations(int peer) {
+    private static boolean readConversations(int peer) {
         return (peer > 2000000000) && getBoolValue("read_conversations", false);
     }
 
-    public static boolean readBots(int peer) {
+    private static boolean readBots(int peer) {
         return (peer < 0) && getBoolValue("read_bot", false);
     }
 
-    public static boolean writePM(int peer) {
+    private static boolean writePM(int peer) {
         return (peer > 0 && peer < 2000000000) && getBoolValue("write_pm", false);
     }
 
-    public static boolean writeConversations(int peer) {
+    private static boolean writeConversations(int peer) {
         return (peer > 2000000000) && getBoolValue("write_conversations", false);
     }
 
-    public static boolean writeBots(int peer) {
+    private static boolean writeBots(int peer) {
         return (peer < 0) && getBoolValue("write_bot", false);
     }
 

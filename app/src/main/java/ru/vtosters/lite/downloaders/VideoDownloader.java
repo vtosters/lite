@@ -26,10 +26,10 @@ import ru.vtosters.lite.utils.LifecycleUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 public class VideoDownloader {
     private static final int DOWNLOAD_ID = 0;

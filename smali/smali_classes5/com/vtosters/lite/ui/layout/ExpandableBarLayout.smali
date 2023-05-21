@@ -87,7 +87,7 @@
 
     const v0, 0x7f070067
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->getNavigationHeight(I)I
+    invoke-static {v0}, Lru/vtosters/hooks/other/ThemesUtils;->getNavigationHeight(I)I
 
     move-result v0
 
@@ -161,7 +161,7 @@
 
     const p2, 0x7f070067
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/ThemesUtils;->getNavigationHeight(I)I
+    invoke-static {p2}, Lru/vtosters/hooks/other/ThemesUtils;->getNavigationHeight(I)I
 
     move-result p2
 
@@ -235,7 +235,7 @@
 
     const p2, 0x7f070067
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/ThemesUtils;->getNavigationHeight(I)I
+    invoke-static {p2}, Lru/vtosters/hooks/other/ThemesUtils;->getNavigationHeight(I)I
 
     move-result p2
 
@@ -312,7 +312,7 @@
 
     const p2, 0x7f070067
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/ThemesUtils;->getNavigationHeight(I)I
+    invoke-static {p2}, Lru/vtosters/hooks/other/ThemesUtils;->getNavigationHeight(I)I
 
     move-result p2
 

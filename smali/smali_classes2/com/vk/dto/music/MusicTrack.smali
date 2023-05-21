@@ -2992,7 +2992,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/utils/Preferences;->getBoolValue(Ljava/lang/String;Ljava/lang/Boolean;)Z
+    invoke-static {v2, v3}, Lru/vtosters/hooks/other/Preferences;->getBoolValue(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
     move-result v3
 

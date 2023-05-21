@@ -6,10 +6,10 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.VersionReader;
 
 public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {

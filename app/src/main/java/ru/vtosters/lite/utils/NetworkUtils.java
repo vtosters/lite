@@ -7,7 +7,7 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.telephony.TelephonyManager;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
 public class NetworkUtils {
     public static boolean isNetworkConnected() {

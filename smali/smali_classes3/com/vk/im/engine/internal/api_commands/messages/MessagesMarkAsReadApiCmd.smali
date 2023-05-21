@@ -55,7 +55,7 @@
     .line 4
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesMarkAsReadApiCmd;->a:I
 
-    invoke-static {v1}, Lru/vtosters/lite/dialogs/DNRModule;->isDnrEnabledFor(I)Z
+    invoke-static {v1}, Lru/vtosters/hooks/MessagesActivityHook;->isDnrEnabledFor(I)Z
 
     move-result v3
 
@@ -100,7 +100,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-object p1
 
@@ -113,7 +113,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-object p1
 .end method

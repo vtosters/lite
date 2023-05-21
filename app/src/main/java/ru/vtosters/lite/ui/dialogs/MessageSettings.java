@@ -10,11 +10,11 @@ import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.appcompat.widget.SwitchCompat;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-import ru.vtosters.lite.hooks.SwitchHook;
+import ru.vtosters.hooks.SwitchHook;
 import ru.vtosters.lite.utils.LayoutUtils;
 
+import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 public class MessageSettings {
     public static Boolean isSilentEnabled = false;

@@ -1,11 +1,8 @@
 package ru.vtosters.lite.utils;
 
 import com.vk.dto.user.UserProfile;
-import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
-import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.auth.VKAccountManager;
-import com.vtosters.lite.im.ImEngineProvider;
 
 public class AccountManagerUtils {
 
@@ -72,10 +69,4 @@ public class AccountManagerUtils {
     public static UserProfile fromEup(ExtendedUserProfile extendedUserProfile) {
         return extendedUserProfile.a;
     }
-
-    public static void reloadMSG() {
-        ImEngineProvider.b().a();
-        ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
-        ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-    } // Delete and reload msg cache
 }

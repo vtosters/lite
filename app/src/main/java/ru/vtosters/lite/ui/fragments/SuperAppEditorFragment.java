@@ -15,13 +15,13 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.hooks.TextViewHook;
 import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 import ru.vtosters.lite.ui.components.ItemMovingCallback;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.items.SuperAppItem;
 import ru.vtosters.lite.utils.LayoutUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;

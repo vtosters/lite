@@ -7,16 +7,16 @@ import android.util.Log;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import okhttp3.*;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 import java.util.Random;
 
 import static android.content.ContentValues.TAG;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.hasVerification;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
+import static ru.vtosters.hooks.other.Preferences.hasVerification;
 
 public class ServerDialog {
     private static final OkHttpClient client = VtOkHttpClient.getInstance();

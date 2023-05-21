@@ -3,8 +3,8 @@ package ru.vtosters.lite.encryption.processors;
 import android.util.Base64;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.encryption.base.IMProcessor;
-import ru.vtosters.lite.utils.Preferences;
 
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;

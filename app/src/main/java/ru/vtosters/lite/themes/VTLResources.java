@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
 import androidx.annotation.Nullable;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.hooks.other.ThemesUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

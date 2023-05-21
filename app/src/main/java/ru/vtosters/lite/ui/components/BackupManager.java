@@ -6,10 +6,10 @@ import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.io.File;
 import java.io.FileWriter;

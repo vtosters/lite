@@ -3,8 +3,8 @@ package ru.vtosters.lite.ui.dialogs;
 import android.app.Activity;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 
 public class ThemeChanging {
     public static void changeTheme(Activity activity, float[] f) {

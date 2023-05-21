@@ -696,7 +696,7 @@
     return v0
 
     :cond_1
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->ssl()Z
 
     move-result v0
 

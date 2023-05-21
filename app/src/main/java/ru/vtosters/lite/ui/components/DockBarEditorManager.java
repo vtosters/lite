@@ -24,16 +24,16 @@ import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideoCatalogFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ui.items.DockBarTab;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static ru.vtosters.hooks.other.Preferences.*;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.Preferences.*;
 
 public class DockBarEditorManager {
     public static final int MIN_SELECTED_TABS = 3;

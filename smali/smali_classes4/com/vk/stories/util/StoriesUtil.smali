@@ -403,7 +403,7 @@
 .method public final a(I)Ljava/lang/String;
     .locals 10
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->shortinfo()Z
 
     move-result v1
 

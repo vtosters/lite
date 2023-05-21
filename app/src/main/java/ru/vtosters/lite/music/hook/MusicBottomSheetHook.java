@@ -14,10 +14,10 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import java.util.ArrayList;
 
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.*;
+import static ru.vtosters.hooks.other.Preferences.milkshake;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isCached;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isVkxCached;
 import static ru.vtosters.lite.utils.NetworkUtils.isNetworkConnected;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
 
 public class MusicBottomSheetHook {
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {

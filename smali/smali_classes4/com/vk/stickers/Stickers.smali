@@ -2362,7 +2362,7 @@
 .method public final a(I)Lcom/vk/dto/stickers/StickerStockItem;
     .locals 1
 
-    invoke-static {p1}, Lru/vtosters/lite/tgs/TGRoot;->getPackBySticker(I)Lcom/vk/dto/stickers/StickerStockItem;
+    invoke-static {p1}, Lru/vtosters/hooks/TelegramStickersHook;->getPackBySticker(I)Lcom/vk/dto/stickers/StickerStockItem;
 
     move-result-object v0
 
@@ -2678,7 +2678,7 @@
 .method public final b(I)Lcom/vk/dto/stickers/StickerStockItem;
     .locals 1
 
-    invoke-static {p1}, Lru/vtosters/lite/tgs/TGRoot;->getPackBySticker(I)Lcom/vk/dto/stickers/StickerStockItem;
+    invoke-static {p1}, Lru/vtosters/hooks/TelegramStickersHook;->getPackBySticker(I)Lcom/vk/dto/stickers/StickerStockItem;
 
     move-result-object v0
 

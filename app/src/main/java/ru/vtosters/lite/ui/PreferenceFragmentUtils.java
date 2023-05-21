@@ -13,9 +13,9 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ImageUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class PreferenceFragmentUtils {
 

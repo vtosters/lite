@@ -92,7 +92,7 @@
     :goto_0
     const-string p2, "com.google.android.gms"
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

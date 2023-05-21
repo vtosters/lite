@@ -219,7 +219,7 @@
 .method private final a(ZJ)Ljava/lang/String;
     .locals 2
 
-    invoke-static {p1, p2, p3}, Lru/vtosters/lite/hooks/DateHook;->getFormattedDate(ZJ)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lru/vtosters/hooks/DateHook;->getFormattedDate(ZJ)Ljava/lang/String;
 
     move-result-object v0
 

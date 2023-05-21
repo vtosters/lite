@@ -297,7 +297,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHookItems(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static {v5}, Lru/vtosters/hooks/OnlineFormatterHook;->onlineHookItems(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v5
 

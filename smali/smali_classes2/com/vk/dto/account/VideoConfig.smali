@@ -1210,7 +1210,7 @@
 .method public final w1()Z
     .locals 2
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->isEnableExternalOpening()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->isEnableExternalOpening()Z
 
     move-result v1
 

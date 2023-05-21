@@ -67,7 +67,7 @@
 
     const v2, 0x0
 
-    invoke-static {p1, v1, v2}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessages(Ljava/lang/String;IZ)Ljava/lang/String;
+    invoke-static {p1, v1, v2}, Lru/vtosters/hooks/EncryptionMessagesHook;->decryptMessages(Ljava/lang/String;IZ)Ljava/lang/String;
 
     move-result-object v1
 

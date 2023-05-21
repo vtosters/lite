@@ -25,9 +25,14 @@ import com.vtosters.lite.fragments.w2.BlacklistFragment;
 import com.vtosters.lite.general.fragments.SettingsAccountFragment;
 import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
+import ru.vtosters.hooks.AboutHook;
+import ru.vtosters.hooks.GmsHook;
+import ru.vtosters.hooks.VerificationsHook;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
+import ru.vtosters.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.concurrent.VTExecutors;
-import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ssfs.Utils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -192,7 +197,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
             );
         }
 
-        if (!GmsUtils.isAnyServicesInstalled()) {
+        if (!GmsHook.isAnyServicesInstalled()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.gmsname);
 
             PreferenceFragmentUtils.addPreference(
@@ -507,7 +512,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.vtlother),
-                getValAsString(R.string.vtlothersumm, VTVerifications.vtverif()),
+                getValAsString(R.string.vtlothersumm, VerificationsHook.vtverif()),
                 R.drawable.ic_more_horizontal_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), OtherFragment.class);
@@ -536,7 +541,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 "",
                 R.drawable.ic_link_outline_28,
                 preference -> {
-                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(About.getCommitLink())));
+                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(AboutHook.getCommitLink())));
                     return false;
                 }
         );

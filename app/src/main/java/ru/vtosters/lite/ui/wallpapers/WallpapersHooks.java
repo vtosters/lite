@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.ImageView;
 import com.vk.im.engine.h;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 import vigo.sdk.Log;
 
 import java.io.File;

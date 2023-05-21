@@ -5,11 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.ArrayMap;
 import android.util.Log;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.proxy.http.CustomHttp;
 import ru.vtosters.lite.proxy.https.CustomHttps;
 import ru.vtosters.lite.proxy.socks.CustomSocks;
 import ru.vtosters.lite.proxy.socks.Zaborona;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 import java.lang.reflect.Field;

@@ -18,12 +18,12 @@ import com.vk.imageloader.view.VKMultiImageView;
 import com.vk.navigation.NavigatorKeys;
 import com.vtosters.lite.R;
 import com.vtosters.lite.a0;
-import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.hooks.other.Preferences;
 
 import java.util.Arrays;
 
 import static b.h.z.f.roboto_medium;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+import static ru.vtosters.hooks.other.ThemesUtils.getAccentColor;
 
 @UiThread
 public class TargetImageView extends VKMultiImageView {

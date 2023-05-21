@@ -14,8 +14,8 @@ import com.vk.im.ui.views.msg.bubble.MsgBubblePart;
 import com.vk.im.ui.views.msg.bubble.MsgBubbleStyle;
 import com.vk.im.ui.views.msg.bubble.MsgBubbleView;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreviewAdapter.MessagePreviewViewHolder> {
 

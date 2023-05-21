@@ -5,8 +5,8 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.view.View;
 import com.vk.imageloader.view.VKImageView;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.utils.RecolorUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VKImageViewHook implements BaseHook {
     private static final Paint paint = new Paint();

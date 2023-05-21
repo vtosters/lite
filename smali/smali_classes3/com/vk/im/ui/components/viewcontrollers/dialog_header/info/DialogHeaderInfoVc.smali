@@ -1280,7 +1280,7 @@
 
     move-result-object v3
 
-    invoke-static {p1, v3}, Lru/vtosters/lite/dialogs/DialogHeaderInjector;->onClick(Lcom/vk/im/ui/components/common/DialogAction;Lcom/vk/im/engine/models/dialogs/Dialog;)Z
+    invoke-static {p1, v3}, Lru/vtosters/hooks/DialogHeaderInjector;->onClick(Lcom/vk/im/ui/components/common/DialogAction;Lcom/vk/im/engine/models/dialogs/Dialog;)Z
 
     move-result v0
 
@@ -2082,7 +2082,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, v3}, Lru/vtosters/lite/hooks/CallsHook;->forwardToVkOffApps(Landroid/view/View;Lcom/vk/im/engine/models/dialogs/Dialog;)V
+    invoke-static {p0, v3}, Lru/vtosters/hooks/CallsHook;->forwardToVkOffApps(Landroid/view/View;Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
     return-void
 

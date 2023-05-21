@@ -11,10 +11,10 @@ import com.vk.core.view.OverlayTextView;
 import com.vk.core.view.TintTextView;
 import com.vk.core.view.links.LinkedTextView;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.ColorReferences;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.themes.utils.VkUiThemer;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class TextViewHook implements BaseHook {
 

@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    invoke-static/range {v0 .. v0}, Lru/vtosters/lite/hooks/PostViewHook;->injectPhotoViewer(Landroid/view/View;)V
+    invoke-static/range {v0 .. v0}, Lru/vtosters/hooks/PostViewHook;->injectPhotoViewer(Landroid/view/View;)V
 
     const-string v1, "LayoutInflater.from(cont\u2026hoto_viewer_bottom, null)"
 

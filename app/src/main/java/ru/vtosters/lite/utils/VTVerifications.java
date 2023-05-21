@@ -2,7 +2,6 @@ package ru.vtosters.lite.utils;
 
 import android.content.Context;
 import android.util.Log;
-import com.vk.dto.common.VerifyInfo;
 import com.vk.navigation.NavigatorKeys;
 import okhttp3.*;
 import org.json.JSONArray;
@@ -15,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.hasVerification;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
+import static ru.vtosters.hooks.other.Preferences.hasVerification;
 
 public class VTVerifications {
     public static final List<Integer> sVerifications = new ArrayList<>();
@@ -87,10 +86,6 @@ public class VTVerifications {
             member.add(jsonIds.optInt(i));
     }
 
-    public static boolean isVerified(int id) {
-        return sVerifications.contains(id);
-    }
-
     public static boolean isPrometheus(int id) {
         return sPrometheuses.contains(id);
     }
@@ -103,53 +98,13 @@ public class VTVerifications {
         return sServiceAccounts.contains(id);
     }
 
-    public static boolean vtverif() {
-        return getBoolValue("VT_Verification", true);
-    }
-
-    private static int getId(JSONObject json) {
+    public static int getId(JSONObject json) {
         var id = json.optInt("id", 0);
         if (!json.optString(NavigatorKeys.e).equals("group") && !json.optString(NavigatorKeys.e).equals("page")
                 || json.optString(NavigatorKeys.e).isEmpty())
             return id;
         else
             return -id;
-    }
-
-    public static boolean isVerified(JSONObject jSONObject) {
-        if (jSONObject.optInt("verified", 0) == 1) {
-            return true;
-        }
-
-        if (!getBoolValue("VT_Verification", true)) {
-            return false;
-        }
-
-        return isVerified(getId(jSONObject));
-    }
-
-    public static boolean hasPrometheus(JSONObject jSONObject) {
-        if (jSONObject.optInt("trending", 0) == 1) {
-            return true;
-        }
-
-        if (!getBoolValue("VT_Fire", true)) {
-            return false;
-        }
-
-        return isPrometheus(getId(jSONObject));
-    }
-
-    public static boolean hasDeveloper(JSONObject jSONObject) {
-        if (!getBoolValue("VT_Dev", true)) {
-            return false;
-        }
-
-        return isDeveloper(getId(jSONObject));
-    }
-
-    public static VerifyInfo VerifyInfo(JSONObject jSONObject) {
-        return new VerifyInfo(isVerified(jSONObject), hasPrometheus(jSONObject));
     }
 
     public static boolean haveDonateButton() {

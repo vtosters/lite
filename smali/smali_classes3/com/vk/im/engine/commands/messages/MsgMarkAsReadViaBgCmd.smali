@@ -226,7 +226,7 @@
 
     iget v0, p0, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->b:I
 
-    invoke-static {v0}, Lru/vtosters/lite/dialogs/DNRModule;->isDnrEnabledFor(I)Z
+    invoke-static {v0}, Lru/vtosters/hooks/MessagesActivityHook;->isDnrEnabledFor(I)Z
 
     move-result v0
 

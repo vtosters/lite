@@ -186,7 +186,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/FragAnimationHook;->animateOpen(Landroidx/fragment/app/FragmentTransaction;)Z
+    invoke-static {v0}, Lru/vtosters/hooks/FragAnimationHook;->animateOpen(Landroidx/fragment/app/FragmentTransaction;)Z
 
     move-result v1
 
@@ -355,7 +355,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/FragAnimationHook;->animateClose(Landroidx/fragment/app/FragmentTransaction;)V
+    invoke-static {v0}, Lru/vtosters/hooks/FragAnimationHook;->animateClose(Landroidx/fragment/app/FragmentTransaction;)V
 
     iput-object v0, p0, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->b:Landroidx/fragment/app/FragmentTransaction;
 

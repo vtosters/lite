@@ -10,6 +10,8 @@ import androidx.preference.PreferenceCategory;
 import b.h.g.k.VKProgressDialog;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.ThemesManager;
@@ -17,7 +19,9 @@ import ru.vtosters.lite.themes.palettes.PalettesManager;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
 import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
-import ru.vtosters.lite.utils.*;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.NavigatorUtils;
 
 public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
 

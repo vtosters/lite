@@ -354,7 +354,7 @@
     .line 20
     invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-object v0
 .end method
@@ -498,7 +498,7 @@
     .line 18
     invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-object v6
 .end method
@@ -663,7 +663,7 @@
     .line 19
     invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-object v0
 .end method

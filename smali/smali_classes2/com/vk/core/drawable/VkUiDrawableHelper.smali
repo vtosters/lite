@@ -213,7 +213,7 @@
     if-eqz p2, :cond_2
 
     .line 3
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result p4
 
@@ -486,7 +486,7 @@
     if-eqz p2, :cond_2
 
     .line 3
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result p4
 
