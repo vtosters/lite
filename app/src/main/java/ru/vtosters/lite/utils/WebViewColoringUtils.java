@@ -50,6 +50,6 @@ public class WebViewColoringUtils {
     }
 
     public static void inject(WebView webView, String str) {
-        webView.loadUrl("javascript:(function() {let parent = document.head || document.documentElement; parent.appendChild(document.createElement('style')).innerText = window.atob('" + str + "');})()");
+        webView.loadUrl("javascript:(function() {let parent = document.head || document.documentElement; let style = document.getElementById('custom-style'); if (!style) {style = parent.appendChild(document.createElement('style')); style.id = 'custom-style';} style.innerText = window.atob('" + str + "');})()");
     }
 }
