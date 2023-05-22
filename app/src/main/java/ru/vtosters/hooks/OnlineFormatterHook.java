@@ -132,7 +132,7 @@ public class OnlineFormatterHook {
         return jsonArr;
     }
 
-    public static JSONObject onlineHookProfiles(JSONObject json) throws ParseException, IOException, JSONException {
+    public static JSONObject onlineHookProfiles(JSONObject json) {
         if (!getBoolValue("onlinefix", false)) return json;
 
         try {
@@ -140,10 +140,11 @@ public class OnlineFormatterHook {
         } catch (Exception e) {
             Log.e("onlineHookProfiles", e.getMessage());
         }
+
         return json;
     }
 
-    public static JSONObject onlineHookItems(JSONObject json) throws ParseException, IOException, JSONException {
+    public static JSONObject onlineHookItems(JSONObject json) {
         if (!getBoolValue("onlinefix", false)) return json;
 
         try {
@@ -151,6 +152,7 @@ public class OnlineFormatterHook {
         } catch (Exception e) {
             Log.e("onlineHookItems", e.getMessage());
         }
+
         return json;
     }
 
@@ -174,6 +176,7 @@ public class OnlineFormatterHook {
         } catch (Exception e) {
             Log.e("onlineHookItems", e.getMessage());
         }
+
         return json;
     }
 }

@@ -5,9 +5,6 @@ import android.os.PowerManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.vk.core.preference.Preference;
 import com.vk.discover.DiscoverItemDecorator;
-import com.vtosters.lite.api.ExtendedCommunityProfile;
-import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.utils.AccountManagerUtils;
 
 import java.util.*;
 
@@ -73,74 +70,6 @@ public class NewsfeedHook {
         }
 
         return params.toArray(new String[0]);
-    }
-
-    public static boolean isWhitelistedFilter(ExtendedCommunityProfile eup) {
-        return Preferences.getPreferences().getStringSet(
-                "whitelisted_filters_groups", Collections.emptySet()
-        ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
-    }
-
-    public static boolean isWhitelistedAd(ExtendedCommunityProfile eup) {
-        return Preferences.getPreferences().getStringSet(
-                "whitelisted_ad_groups",
-                Collections.emptySet()
-        ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
-    }
-
-    public static boolean isWhitelistedAdStories(ExtendedCommunityProfile eup) {
-        return Preferences.getPreferences().getStringSet(
-                "whitelisted_stories_ad",
-                Collections.emptySet()
-        ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
-    }
-
-    public static void setWhitelistedFilter(ExtendedCommunityProfile eup, boolean needWhitelist) {
-        var id = String.valueOf(AccountManagerUtils.getUserID(eup));
-
-        var mutableAdsSet = new LinkedHashSet<>(Preferences.getPreferences().getStringSet(
-                "whitelisted_filters_groups",
-                Collections.emptySet())
-        );
-        if (needWhitelist) {
-            mutableAdsSet.add(id);
-        } else {
-            mutableAdsSet.remove(id);
-        }
-
-        Preferences.getPreferences().edit().putStringSet("whitelisted_filters_groups", mutableAdsSet).apply();
-    }
-
-    public static void setWhitelistedAd(ExtendedCommunityProfile eup, boolean needWhitelist) {
-        var id = String.valueOf(AccountManagerUtils.getUserID(eup));
-
-        var mutableAdsSet = new LinkedHashSet<>(Preferences.getPreferences().getStringSet(
-                "whitelisted_ad_groups",
-                Collections.emptySet()));
-
-        if (needWhitelist) {
-            mutableAdsSet.add(id);
-        } else {
-            mutableAdsSet.remove(id);
-        }
-
-        Preferences.getPreferences().edit().putStringSet("whitelisted_ad_groups", mutableAdsSet).apply();
-    }
-
-    public static void setWhitelistedAdStories(ExtendedCommunityProfile eup, boolean needWhitelist) {
-        var id = String.valueOf(AccountManagerUtils.getUserID(eup));
-
-        var mutableAdsSet = new LinkedHashSet<>(Preferences.getPreferences().getStringSet(
-                "whitelisted_stories_ad",
-                Collections.emptySet()));
-
-        if (needWhitelist) {
-            mutableAdsSet.add(id);
-        } else {
-            mutableAdsSet.remove(id);
-        }
-
-        Preferences.getPreferences().edit().putStringSet("whitelisted_stories_ad", mutableAdsSet).apply();
     }
 
     public static void adsParams(HashSet<String> hashSet) {
