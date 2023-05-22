@@ -17,14 +17,8 @@ public class WebViewColoringUtils {
     public static String loadedCSSAmoled = "";
 
     private static String load(String str) {
-        try (Reader reader = new InputStreamReader(getGlobalContext().getAssets().open(str), StandardCharsets.UTF_8)) {
-            StringWriter writer = new StringWriter();
-            char[] buffer = new char[1024];
-            int len;
-            while ((len = reader.read(buffer)) != -1) {
-                writer.write(buffer, 0, len);
-            }
-            return writer.toString();
+        try (var is = getGlobalContext().getAssets().open(str)) {
+            return IOUtils.readAllLines(is);
         } catch (IOException e) {
             e.printStackTrace();
             return "";
