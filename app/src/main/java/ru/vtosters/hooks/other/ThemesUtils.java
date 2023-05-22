@@ -27,11 +27,11 @@ import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
-import ru.vtosters.hooks.VKUIHook;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
 import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.WebViewColoringUtils;
 
 import java.lang.reflect.Field;
 
@@ -74,7 +74,7 @@ public class ThemesUtils {
         VKThemeHelper.theme(theme, activity, fl);
         if (restartActivity) activity.recreate();
         ThemeTracker.a();
-        VKUIHook.isLoaded = false;
+        WebViewColoringUtils.isLoaded = false;
         new WebView(activity).clearCache(true);
         WebCachePreloader.e();
     }
