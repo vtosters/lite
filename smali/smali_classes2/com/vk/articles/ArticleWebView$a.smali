@@ -82,7 +82,7 @@
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
 
-    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/hooks/VKUIHook;->inject(Landroid/webkit/WebView;)V
+    invoke-static/range {p1 .. p1}, Lru/vtosters/hooks/VKUIHook;->inject(Landroid/webkit/WebView;)V
 
     .line 1
     iget-object v0, p0, Lcom/vk/articles/ArticleWebView$a;->c:Lcom/vk/articles/ArticleWebView;

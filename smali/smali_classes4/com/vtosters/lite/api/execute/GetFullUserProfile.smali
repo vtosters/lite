@@ -127,13 +127,13 @@
         }
     .end annotation
 
-    invoke-static/range {p2 .. p2}, Lru/vtosters/lite/utils/RenameTool;->injectIntoJson(Lorg/json/JSONObject;)V
+    invoke-static/range {p2 .. p2}, Lru/vtosters/hooks/RenameHook;->injectIntoJson(Lorg/json/JSONObject;)V
 
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
 
-    invoke-static {v1}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHook(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static {v1}, Lru/vtosters/hooks/OnlineFormatterHook;->onlineHook(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v1
 
@@ -152,7 +152,7 @@
 
     iput v4, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-static {v0, v1}, Lru/vtosters/lite/ssfs/ProfileHider;->fetchInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;Lorg/json/JSONObject;)V
+    invoke-static {v0, v1}, Lru/vtosters/hooks/ssfs/ProfileHook;->fetchInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;Lorg/json/JSONObject;)V
 
     .line 3
     iget-object v2, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;

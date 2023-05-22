@@ -815,7 +815,7 @@
 
     :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/feature/discover/DiscoverTemplates;->getTemplates()Ljava/util/ArrayList;
+    invoke-static {}, Lru/vtosters/hooks/DiscoverTemplates;->getTemplates()Ljava/util/ArrayList;
 
     move-result-object v1
 

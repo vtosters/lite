@@ -128,7 +128,7 @@
 .method private a()V
     .locals 2
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getBackgroundContent()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getBackgroundContent()I
 
     move-result v0
 
@@ -172,7 +172,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/stories/view/VolumeControlView;->c:Landroid/graphics/Paint;
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v1
 

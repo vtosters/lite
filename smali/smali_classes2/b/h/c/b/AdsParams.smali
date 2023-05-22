@@ -48,7 +48,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
     
@@ -62,7 +62,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

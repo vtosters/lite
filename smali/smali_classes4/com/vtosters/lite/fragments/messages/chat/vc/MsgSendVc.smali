@@ -2724,7 +2724,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v4}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;Z)Ljava/lang/String;
+    invoke-static {v0, v4}, Lru/vtosters/hooks/EncryptionMessagesHook;->decryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;Z)Ljava/lang/String;
 
     move-result-object v1
 
@@ -5666,7 +5666,7 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->D:Lcom/vk/im/ui/views/WriteBarDisabled;
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->colorWriteBar(Landroid/view/View;)V
+    invoke-static {p1}, Lru/vtosters/hooks/other/ThemesUtils;->colorWriteBar(Landroid/view/View;)V
 
     .line 15
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->C:Landroid/view/View;
@@ -5687,7 +5687,7 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->colorWriteBar(Landroid/view/View;)V
+    invoke-static {p1}, Lru/vtosters/hooks/other/ThemesUtils;->colorWriteBar(Landroid/view/View;)V
 
     .line 16
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
@@ -6348,7 +6348,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static {v2, v5, v8}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Ljava/lang/CharSequence;Lcom/vk/im/engine/models/messages/MsgFromUser;Z)Ljava/lang/CharSequence;
+    invoke-static {v2, v5, v8}, Lru/vtosters/hooks/EncryptionMessagesHook;->decryptMessage(Ljava/lang/CharSequence;Lcom/vk/im/engine/models/messages/MsgFromUser;Z)Ljava/lang/CharSequence;
 
     move-result-object v2
 

@@ -62,7 +62,7 @@
     .line 1
     invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;-><init>(ILandroid/view/ViewGroup;)V
 
-    invoke-static/range {p0 .. p0}, Lru/vtosters/lite/hooks/PostViewHook;->injectBaseFooterHolder(Lcom/vk/newsfeed/holders/BaseFooterHolder;)V
+    invoke-static/range {p0 .. p0}, Lru/vtosters/hooks/PostViewHook;->injectBaseFooterHolder(Lcom/vk/newsfeed/holders/BaseFooterHolder;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

@@ -46,7 +46,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    invoke-static {}, Lru/vtosters/lite/hooks/NewsfeedHook;->feedParams()[Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/hooks/NewsfeedHook;->feedParams()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -548,7 +548,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -566,7 +566,7 @@
 
     invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;Z)Lcom/vk/api/base/ApiRequest;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-void
 .end method
@@ -734,7 +734,7 @@
     .line 37
     :cond_2
     :goto_2
-    invoke-static {v1}, Lru/vtosters/lite/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    invoke-static {v1}, Lru/vtosters/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
     move-result-object v1
 
@@ -805,7 +805,7 @@
 .method public static c(Z)J
     .locals 3
 
-    invoke-static {p0}, Lru/vtosters/lite/hooks/NewsfeedHook;->getUpdateNewsfeed(Z)J
+    invoke-static {p0}, Lru/vtosters/hooks/NewsfeedHook;->getUpdateNewsfeed(Z)J
 
     move-result-wide v0
 
@@ -1506,7 +1506,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedlist(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    invoke-static {p2}, Lru/vtosters/hooks/JsonInjectors;->newsfeedlist(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
     move-result-object p2
 

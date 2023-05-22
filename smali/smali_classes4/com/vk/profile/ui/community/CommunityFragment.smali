@@ -2657,7 +2657,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lio/reactivex/disposables/Disposable;)V
 
     :cond_0
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-void
 .end method

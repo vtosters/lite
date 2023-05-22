@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.ImageView;
 import com.vk.im.engine.h;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 import vigo.sdk.Log;
 
 import java.io.File;
@@ -29,14 +29,6 @@ public class WallpapersHooks {
     // TODO: cache to file?
     private static Drawable mWallpaper;
     private static boolean mUpdateWallpaperRequested = true;
-
-    public static void setBg(View view) {
-        if (hasWallpapers()) {
-            ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
-        } else {
-            view.setBackgroundColor(ThemesUtils.getColorFromAttr(h.im_bg_chat)); // set default bg color
-        }
-    }
 
     public static Drawable getWallpaper() {
         File oldwp = new File(AndroidUtils.getGlobalContext().getFilesDir(), "wallpaper.jpeg");

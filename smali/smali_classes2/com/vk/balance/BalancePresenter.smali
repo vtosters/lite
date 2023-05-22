@@ -166,7 +166,7 @@
 
     const-string v2, "https://static.vk.com/promo_codes/"
 
-    invoke-static {v2}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

@@ -88,7 +88,7 @@
 
     const/high16 v4, 0x40000000    # 2.0f
 
-    invoke-static {v4}, Lru/vtosters/lite/utils/ThemesUtils;->fixSeparator(F)I
+    invoke-static {v4}, Lru/vtosters/hooks/other/ThemesUtils;->fixSeparator(F)I
 
     move-result v4
 

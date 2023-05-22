@@ -14,7 +14,7 @@ import b.h.v.InitialValueObservable;
 import b.h.v.TextViewTextChangeEvent;
 import b.h.v.TextViewTextChangeEventObservable;
 import com.vk.core.util.ContextExtKt;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.hooks.other.ThemesUtils;
 
 public final class TextViewExt {
     public static void a(TextView textView, Drawable drawable) {

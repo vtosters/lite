@@ -24,7 +24,7 @@ import com.vk.stickers.details.StickerDetailsAdapter;
 import com.vk.stickers.details.StickerDetailsView;
 import com.vtosters.lite.R;
 import org.json.JSONException;
-import ru.vtosters.lite.hooks.SwitchHook;
+import ru.vtosters.hooks.SwitchHook;
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.tgs.TGRoot;
 import ru.vtosters.lite.ui.components.IItemMovingListener;
@@ -32,9 +32,9 @@ import ru.vtosters.lite.ui.components.IItemMovingListener;
 import java.io.File;
 import java.util.ArrayList;
 
+import static ru.vtosters.hooks.other.ThemesUtils.*;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.ThemesUtils.*;
 
 public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.StickerPackViewHolder> implements IItemMovingListener {
     private static final TelegramStickersService sService = TelegramStickersService.getInstance(getGlobalContext());

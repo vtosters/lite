@@ -640,7 +640,7 @@
     const-string v0, ""
 
     :goto_0
-    invoke-static {}, Lru/vtosters/lite/proxy/api/ApiProxy;->getAwayPhpCom()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/hooks/ProxyHook;->getAwayPhpCom()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1086,7 +1086,7 @@
 .method public final a(Landroid/net/Uri;Landroid/os/Bundle;)Landroid/net/Uri;
     .locals 1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->awayphp()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->awayphp()Z
 
     move-result v0
 
@@ -1170,7 +1170,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->awayphp()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->awayphp()Z
 
     move-result v0
 

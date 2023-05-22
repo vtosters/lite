@@ -703,7 +703,7 @@
 
     .line 17
     :cond_0
-    invoke-static {p1}, Lru/vtosters/lite/music/LastFMScrobbler;->grabMusicTrack(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-static {p1}, Lru/vtosters/hooks/LastFMHook;->grabMusicTrack(Lcom/vk/dto/music/MusicTrack;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/music/MusicTrack;->y1()Ljava/lang/String;
 

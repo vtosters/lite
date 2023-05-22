@@ -26,7 +26,7 @@
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->grabVKDatabase(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+    invoke-static {p1}, Lru/vtosters/hooks/DeletedMessagesHook;->grabVKDatabase(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
 
     .line 2
     new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;

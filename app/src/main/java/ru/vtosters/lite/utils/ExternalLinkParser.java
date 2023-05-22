@@ -1,7 +1,6 @@
 package ru.vtosters.lite.utils;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,9 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
 public class ExternalLinkParser {
 
@@ -26,18 +23,6 @@ public class ExternalLinkParser {
             "youtu.be",
             "m.youtube.com"
     );
-
-    public static boolean parseVideoFile(VideoFile file) {
-        return parseVideoFile(file, getGlobalContext(), isEnableExternalOpening());
-    }
-
-    public static boolean parseVideoFile(VideoFile file, Context context) {
-        return parseVideoFile(file, context, isEnableExternalOpening());
-    }
-
-    public static boolean parseVideoFile(VideoFile file, Activity activity) {
-        return parseVideoFile(file, activity, isEnableExternalOpening());
-    }
 
     public static boolean parseVideoFile(VideoFile videoFile, Context context, Boolean isEnabled) {
         if (checkYoutubeLink(videoFile)) {

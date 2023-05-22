@@ -151,7 +151,7 @@
     new-array v1, v1, [I
 
     .line 2
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v4
 
@@ -221,7 +221,7 @@
     new-array v1, v1, [I
 
     .line 2
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v4
 

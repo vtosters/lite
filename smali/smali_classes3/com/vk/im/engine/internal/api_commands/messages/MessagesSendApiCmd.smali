@@ -249,7 +249,7 @@
     :goto_2
     if-eqz v8, :cond_7
 
-    invoke-static {p1}, Lru/vtosters/lite/encryption/EncryptProvider;->encryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;)Ljava/lang/String;
+    invoke-static {p1}, Lru/vtosters/hooks/EncryptionMessagesHook;->encryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -805,7 +805,7 @@
 
     # .line 18
     # :cond_4
-    invoke-static {v0}, Lru/vtosters/lite/hooks/MessagesHook;->injRequest(Lcom/vk/api/internal/MethodCall$a;)V
+    invoke-static {v0}, Lru/vtosters/hooks/MessagesHook;->injRequest(Lcom/vk/api/internal/MethodCall$a;)V
 
     iget-boolean v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesSendApiCmd;->f:Z
 
@@ -828,7 +828,7 @@
 
     check-cast p1, Ljava/lang/Integer;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-object p1
 .end method

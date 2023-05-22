@@ -7,12 +7,12 @@ import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.utils.ImDialogsUtils;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.net.Request;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class Requests {
     public static void hookRead(Dialog dialog) {

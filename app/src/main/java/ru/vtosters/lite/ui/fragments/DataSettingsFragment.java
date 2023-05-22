@@ -8,9 +8,14 @@ import android.view.View;
 import android.view.WindowInsetsController;
 import android.widget.Toast;
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.components.BackupManager;
-import ru.vtosters.lite.utils.*;
+import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.VKAccountDB;
 
 import java.io.IOException;
 

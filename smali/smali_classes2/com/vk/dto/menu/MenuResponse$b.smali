@@ -38,7 +38,7 @@
 .method public final a(Lorg/json/JSONObject;)Lcom/vk/dto/menu/MenuResponse;
     .locals 9
 
-    invoke-static {p1}, Lru/vtosters/lite/hooks/JsonInjectors;->menu(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static {p1}, Lru/vtosters/hooks/JsonInjectors;->menu(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -55,7 +55,7 @@
 
     if-eqz v0, :cond_1
 
-#   invoke-static {v0}, Lru/vtosters/lite/hooks/DockBarInjector;->injectMenuJSON(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+#   invoke-static {v0}, Lru/vtosters/hooks/DockBarInjector;->injectMenuJSON(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
 #   move-result-object v0
 

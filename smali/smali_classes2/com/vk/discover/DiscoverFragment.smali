@@ -744,7 +744,7 @@
     .line 50
     # invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    invoke-static {p1, v0}, Lru/vtosters/lite/hooks/NewsfeedHook;->samsungFixRem(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/discover/DiscoverItemDecorator;)Z
+    invoke-static {p1, v0}, Lru/vtosters/hooks/NewsfeedHook;->samsungFixRem(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/discover/DiscoverItemDecorator;)Z
 
     move-result v0
 
@@ -818,7 +818,7 @@
     .line 55
     # invoke-virtual {p1, v3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    invoke-static {p1, v3}, Lru/vtosters/lite/hooks/NewsfeedHook;->samsungFixAdd(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/discover/DiscoverItemDecorator;)Z
+    invoke-static {p1, v3}, Lru/vtosters/hooks/NewsfeedHook;->samsungFixAdd(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/discover/DiscoverItemDecorator;)Z
 
     move-result v0
 

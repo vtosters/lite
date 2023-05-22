@@ -3,7 +3,7 @@ package ru.vtosters.lite.themes.hooks;
 import android.view.View;
 import androidx.appcompat.widget.Toolbar;
 import com.vk.core.drawable.RecoloredDrawable;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.hooks.other.ThemesUtils;
 
 public class ToolbarHook implements BaseHook {
     @Override

@@ -5,11 +5,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.downloaders.OTADownloader;
 import ru.vtosters.lite.ui.vkui.ModalBottomSheetWrapper;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.OTAUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class OTADialog extends ModalBottomSheetWrapper<OTADialog> implements OTAUtils.OTAListener {
     private final Activity mActivity;

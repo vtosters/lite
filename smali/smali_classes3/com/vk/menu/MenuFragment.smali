@@ -302,7 +302,7 @@
 
     invoke-virtual {v3, v5, v1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-#    invoke-static {v1}, Lru/vtosters/lite/hooks/DockBarInjector;->injectMenuFragment(Landroid/view/Menu;)V
+#    invoke-static {v1}, Lru/vtosters/hooks/DockBarInjector;->injectMenuFragment(Landroid/view/Menu;)V
 
     .line 5
     invoke-direct {p0, v1}, Lcom/vk/menu/MenuFragment;->a(Landroidx/appcompat/view/menu/MenuBuilder;)Ljava/util/List;
@@ -318,7 +318,7 @@
 
     if-eqz v5, :cond_f
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->showmenu()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->showmenu()Z
 
     move-result v7
 

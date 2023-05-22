@@ -204,7 +204,7 @@
     iput v0, p0, Lcom/fourmob/datetimepicker/time/AmPmCirclesView;->c:I
 
     .line 6
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

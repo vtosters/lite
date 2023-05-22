@@ -242,7 +242,7 @@
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-static {v0, p1}, Lru/vtosters/lite/ui/dialogs/ThemeChanging;->changeTheme(Landroid/app/Activity;[F)V
+    invoke-static {v0, p1}, Lru/vtosters/hooks/ThemeChangeDrawerHook;->changeTheme(Landroid/app/Activity;[F)V
 
     :cond_0
     return-void

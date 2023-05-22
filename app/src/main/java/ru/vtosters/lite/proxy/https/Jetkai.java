@@ -2,9 +2,9 @@ package ru.vtosters.lite.proxy.https;
 
 import android.util.Log;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.proxy.RandomProxy;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -1326,7 +1326,7 @@
 
     check-cast v0, Landroid/app/Activity;
 
-    invoke-static {v2, v0}, Lru/vtosters/lite/utils/ExternalLinkParser;->parseVideoFile(Lcom/vk/dto/common/VideoFile;Landroid/app/Activity;)Z
+    invoke-static {v2, v0}, Lru/vtosters/hooks/VideoPlayerHook;->parseVideoFile(Lcom/vk/dto/common/VideoFile;Landroid/app/Activity;)Z
 
     move-result v3
 

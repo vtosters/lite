@@ -3,8 +3,8 @@ package ru.vtosters.lite.themes.hooks;
 import android.content.res.ColorStateList;
 import android.view.View;
 import android.widget.Button;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.ColorReferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ButtonHook implements BaseHook {
     @Override

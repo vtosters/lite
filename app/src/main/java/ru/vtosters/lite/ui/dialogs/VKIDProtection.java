@@ -3,10 +3,10 @@ package ru.vtosters.lite.ui.dialogs;
 import android.app.Activity;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ui.fragments.VKUIwrapper;
 import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 public class VKIDProtection {
     public static void alert(final Activity activity) {

@@ -45,7 +45,7 @@
 .method public static final a(Ljava/lang/String;)I
     .locals 3
 
-    invoke-static {p0}, Lru/vtosters/lite/hooks/DockBarInjector;->injectId(Ljava/lang/String;)I
+    invoke-static {p0}, Lru/vtosters/hooks/DockBarInjector;->injectId(Ljava/lang/String;)I
 
     move-result v0
 
@@ -1021,7 +1021,7 @@
 
     const-class v5, Lcom/vtosters/lite/fragments/SettingsListFragment;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->useNewSettings()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->useNewSettings()Ljava/lang/Class;
 
     move-result-object v5
 

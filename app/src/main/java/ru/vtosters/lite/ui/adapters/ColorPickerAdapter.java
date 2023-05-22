@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.vk.core.drawable.BorderDrawable;
 import com.vk.core.util.Screen;
 import com.vk.stories.view.StoryCircleImageView;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.items.VTLColor;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.util.List;
 

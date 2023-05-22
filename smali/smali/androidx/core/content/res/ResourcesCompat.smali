@@ -48,7 +48,7 @@
         }
     .end annotation
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+    invoke-static {p1}, Lru/vtosters/hooks/other/ThemesUtils;->getColor(I)I
 
     move-result p0
 

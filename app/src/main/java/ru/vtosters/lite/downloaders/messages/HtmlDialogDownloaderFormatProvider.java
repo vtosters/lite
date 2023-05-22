@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
+import static ru.vtosters.hooks.EncryptionMessagesHook.decryptMessage;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 import static ru.vtosters.lite.utils.AndroidUtils.getArray;
 

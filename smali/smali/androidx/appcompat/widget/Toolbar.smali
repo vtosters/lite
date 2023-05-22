@@ -2084,7 +2084,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseIcon:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1}, Lru/vtosters/hooks/other/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5307,7 +5307,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lru/vtosters/hooks/other/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
     
@@ -5654,7 +5654,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lru/vtosters/hooks/other/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

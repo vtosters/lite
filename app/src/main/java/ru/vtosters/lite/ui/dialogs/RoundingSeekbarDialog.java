@@ -5,10 +5,10 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 public class RoundingSeekbarDialog {
     public static void dialog(Context context) {

@@ -8,8 +8,8 @@ import android.widget.LinearLayout;
 
 import java.util.List;
 
+import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 public class VBListBuilder {
     public static ViewGroup buildListOf(Context ctx, List<VBListItem> items) {

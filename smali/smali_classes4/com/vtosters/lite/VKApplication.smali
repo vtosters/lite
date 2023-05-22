@@ -2512,7 +2512,7 @@
 .method public onCreate()V
     .locals 11
 
-    invoke-static {p0}, Lru/vtosters/lite/utils/Preferences;->init(Landroid/app/Application;)V
+    invoke-static {p0}, Lru/vtosters/hooks/other/Preferences;->init(Landroid/app/Application;)V
 
     .line 1
     invoke-static {p0}, Lcom/squareup/leakcanary/LeakCanary;->isInAnalyzerProcess(Landroid/content/Context;)Z

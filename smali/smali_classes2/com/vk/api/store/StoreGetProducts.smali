@@ -40,7 +40,7 @@
 
     const-string v0, "filters"
 
-    invoke-static {}, Lru/vtosters/lite/hooks/PromoStickersHook;->hook()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/hooks/PromoStickersHook;->hook()Ljava/lang/String;
 
     move-result-object v1
 

@@ -52,7 +52,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/MsgListComponent$d;->a:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
-    invoke-static {p1, v0}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListComponent;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lru/vtosters/hooks/EncryptionMessagesHook;->decryptMessage(Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListComponent;)Ljava/lang/String;
 
     move-result-object v3
 

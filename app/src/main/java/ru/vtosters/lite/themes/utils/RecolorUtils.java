@@ -9,9 +9,9 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.widget.TextView;
 import com.vk.core.drawable.RecoloredDrawable;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.ColorReferences;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class RecolorUtils {
     public static Drawable recolorDrawableToolbar(Drawable drawable) {

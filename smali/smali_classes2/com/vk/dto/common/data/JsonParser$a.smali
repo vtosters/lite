@@ -165,7 +165,7 @@
             ">;"
         }
     .end annotation
-    invoke-static { p1, p2 }, Lru/vtosters/lite/feature/groupslist/GroupsCatalogInjector;->injectIntoJsonParser(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-static { p1, p2 }, Lru/vtosters/hooks/GroupsCatalogInjector;->injectIntoJsonParser(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
 

@@ -984,7 +984,7 @@
 
     invoke-virtual {p0, p1}, Landroid/view/Window;->setNavigationBarColor(I)V
 
-    invoke-static {p0, p1}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {p0, p1}, Lru/vtosters/hooks/other/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     return-void
 
@@ -1006,7 +1006,7 @@
     .line 70
     invoke-virtual {p0, p1}, Landroid/view/Window;->setNavigationBarColor(I)V
 
-    invoke-static {p0, p1}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {p0, p1}, Lru/vtosters/hooks/other/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     const/4 p0, 0x1
 
@@ -1188,7 +1188,7 @@
     aput v1, v0, v3
 
     .line 84
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v1
 
@@ -1212,7 +1212,7 @@
     aput v1, v0, v2
 
     .line 86
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v1
 
@@ -2573,7 +2573,7 @@
     const/4 v1, 0x3
 
     .line 4
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v2
 
@@ -2607,7 +2607,7 @@
     aput v1, v0, v2
 
     .line 2
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v1
 
@@ -2633,7 +2633,7 @@
     aput v1, v0, v2
 
     .line 4
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v1
 
@@ -2787,7 +2787,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Lru/vtosters/lite/hooks/SwitchHook;->setSwitchColors(Landroid/widget/Switch;Landroid/content/Context;)V
+    invoke-static {p1, v1}, Lru/vtosters/hooks/SwitchHook;->setSwitchColors(Landroid/widget/Switch;Landroid/content/Context;)V
 
     return-void
 
@@ -2847,7 +2847,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Lru/vtosters/lite/hooks/SwitchHook;->setSwitchCompatColors(Landroidx/appcompat/widget/SwitchCompat;Landroid/content/Context;)V
+    invoke-static {p1, v1}, Lru/vtosters/hooks/SwitchHook;->setSwitchCompatColors(Landroidx/appcompat/widget/SwitchCompat;Landroid/content/Context;)V
 
     return-void
 

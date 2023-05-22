@@ -13,9 +13,6 @@ import static ru.vtosters.lite.downloaders.VideoDownloader.downloadVideo;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class StoryDownloader {
-    public static Runnable injectButton(StoryEntry story) {
-        return () -> downloadStory(story);
-    }
 
     public static void downloadStory(StoryEntry story) {
         if (story.T1()) {

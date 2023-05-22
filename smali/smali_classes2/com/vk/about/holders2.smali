@@ -17,7 +17,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/About;->inject(Landroid/view/View;)V
+    invoke-static {v0}, Lru/vtosters/hooks/AboutHook;->inject(Landroid/view/View;)V
 
     const v0, 0x7f0a0e71
 
@@ -26,7 +26,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/About;->inject(Landroid/view/View;)V
+    invoke-static {v0}, Lru/vtosters/hooks/AboutHook;->inject(Landroid/view/View;)V
 
     const-string v1, "itemView.findViewById<TextView>(R.id.version_name)"
 
@@ -71,7 +71,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lru/vtosters/lite/utils/About;->getAppVersion()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/hooks/AboutHook;->getAppVersion()Ljava/lang/String;
 
     move-result-object p1
 

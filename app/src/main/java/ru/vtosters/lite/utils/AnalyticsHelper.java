@@ -9,6 +9,7 @@ import com.microsoft.appcenter.channel.AbstractChannelListener;
 import com.microsoft.appcenter.channel.Channel;
 import com.microsoft.appcenter.crashes.Crashes;
 import com.microsoft.appcenter.ingestion.models.Log;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.ui.fragments.TrackedMaterialPreferenceToolbarFragment;
 

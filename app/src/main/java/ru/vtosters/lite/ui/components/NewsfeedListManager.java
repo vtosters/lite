@@ -2,9 +2,9 @@ package ru.vtosters.lite.ui.components;
 
 import android.app.Activity;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.util.ArrayList;
 import java.util.Collections;

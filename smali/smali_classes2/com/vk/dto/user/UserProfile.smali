@@ -1215,7 +1215,7 @@
         }
     .end annotation
 
-    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/utils/RenameTool;->injectIntoJson(Lorg/json/JSONObject;)V
+    invoke-static/range {p1 .. p1}, Lru/vtosters/hooks/RenameHook;->injectIntoJson(Lorg/json/JSONObject;)V
 
     move-object/from16 v0, p0
 

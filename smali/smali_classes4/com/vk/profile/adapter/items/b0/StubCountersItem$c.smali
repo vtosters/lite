@@ -140,7 +140,7 @@
 
     if-le v1, v3, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->shortinfo()Z
 
     move-result v5
 

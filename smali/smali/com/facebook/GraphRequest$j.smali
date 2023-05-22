@@ -139,7 +139,7 @@
 
     const/16 v2, 0x64
 
-    invoke-static {v2}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+    invoke-static {v2}, Lru/vtosters/hooks/other/Preferences;->compress(I)I
 
     move-result v2
 

@@ -2820,7 +2820,7 @@
     iput-object v2, p0, Lcom/fourmob/datetimepicker/time/RadialTimePickerDialog;->V:Ljava/lang/String;
 
     .line 10
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v2
 

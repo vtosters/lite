@@ -196,7 +196,7 @@
     :cond_0
     invoke-virtual {p1, p2}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-static {p1, p2}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {p1, p2}, Lru/vtosters/hooks/other/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     :cond_1
     return-void
@@ -263,7 +263,7 @@
     :goto_0
     invoke-virtual {p1, p2}, Landroid/view/Window;->setNavigationBarColor(I)V
 
-    invoke-static {p1, p2}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {p1, p2}, Lru/vtosters/hooks/other/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     :cond_1
     return-void

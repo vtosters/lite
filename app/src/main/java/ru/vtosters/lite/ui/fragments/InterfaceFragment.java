@@ -2,9 +2,13 @@ package ru.vtosters.lite.ui.fragments;
 
 import android.os.Bundle;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.RoundingSeekbarDialog;
-import ru.vtosters.lite.utils.*;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.NavigatorUtils;
 
 public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override

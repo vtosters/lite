@@ -205,7 +205,7 @@
 .method private final b(I)Ljava/lang/CharSequence;
     .locals 2
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->shortinfo()Z
 
     move-result v1
 
@@ -321,7 +321,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->recolorTextView(Landroid/widget/TextView;)V
+    invoke-static {v0}, Lru/vtosters/hooks/other/ThemesUtils;->recolorTextView(Landroid/widget/TextView;)V
 
     .line 6
     sget v1, Lcom/vk/im/ui/o;->ScrollToBottomView_vkim_stb_counter_fontFamily:I

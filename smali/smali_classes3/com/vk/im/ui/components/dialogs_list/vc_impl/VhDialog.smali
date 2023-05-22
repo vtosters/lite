@@ -1466,7 +1466,7 @@
     if-eqz p1, :cond_1
 
     .line 181
-    invoke-static {}, Lru/vtosters/lite/utils/VTVerifications;->vtverif()Z
+    invoke-static {}, Lru/vtosters/hooks/VerificationsHook;->vtverif()Z
 
     move-result p2
 
@@ -1476,7 +1476,7 @@
 
     move-result p2
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/VTVerifications;->isVerified(I)Z
+    invoke-static {p2}, Lru/vtosters/hooks/VerificationsHook;->isVerified(I)Z
 
     move-result v0
 
@@ -1485,7 +1485,7 @@
     goto :goto_51
 
     :cond_45
-    invoke-static {}, Lru/vtosters/lite/utils/VTVerifications;->vtverif()Z
+    invoke-static {}, Lru/vtosters/hooks/VerificationsHook;->vtverif()Z
 
     move-result p2
 
@@ -1495,7 +1495,7 @@
 
     move-result p2
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/VTVerifications;->isVerified(I)Z
+    invoke-static {p2}, Lru/vtosters/hooks/VerificationsHook;->isVerified(I)Z
 
     move-result v0
 

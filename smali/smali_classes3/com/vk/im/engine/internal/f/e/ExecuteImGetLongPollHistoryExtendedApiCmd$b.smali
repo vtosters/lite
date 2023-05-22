@@ -123,7 +123,7 @@
 
     move v1, p10
 
-    invoke-static {v1}, Lru/vtosters/lite/hooks/BusinessNotifHook;->hook(Z)Z
+    invoke-static {v1}, Lru/vtosters/hooks/BusinessNotifHook;->hook(Z)Z
 
     move-result v1
 

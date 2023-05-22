@@ -228,7 +228,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
     
@@ -738,7 +738,7 @@
 
     invoke-direct {v0, p0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/NewsfeedHook;->adsParams(Ljava/util/HashSet;)V
+    invoke-static {v0}, Lru/vtosters/hooks/NewsfeedHook;->adsParams(Ljava/util/HashSet;)V
 
     .line 20
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I

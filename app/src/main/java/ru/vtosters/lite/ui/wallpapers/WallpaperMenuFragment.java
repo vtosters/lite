@@ -7,8 +7,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

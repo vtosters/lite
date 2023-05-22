@@ -45,7 +45,7 @@
 
     invoke-direct {p1, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lru/vtosters/lite/hooks/DateHook;->setDateFormat()Ljava/text/SimpleDateFormat;
+    invoke-static {}, Lru/vtosters/hooks/DateHook;->setDateFormat()Ljava/text/SimpleDateFormat;
 
     move-result-object p1
 
