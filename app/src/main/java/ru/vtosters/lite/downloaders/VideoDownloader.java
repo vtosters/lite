@@ -20,7 +20,6 @@ import com.vtosters.lite.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.utils.ExternalLinkParser;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
 import java.util.ArrayList;
@@ -32,27 +31,10 @@ import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 
 public class VideoDownloader {
-    private static final int DOWNLOAD_ID = 0;
-    private static final int OPEN_EXTERNAL_LINK_ID = 1;
+    public static final int DOWNLOAD_ID = 0;
+    public static final int OPEN_EXTERNAL_LINK_ID = 1;
 
-    public static boolean onClick(int id, VideoFile video, Context ctx) {
-        if (id == DOWNLOAD_ID) {
-            downloadVideo(video, ctx);
-            return true;
-        } else if (id == OPEN_EXTERNAL_LINK_ID) {
-            ExternalLinkParser.parseVideoFile(video, ctx, true);
-        }
-        return false;
-    }
-
-    public static void injectAction(ArrayList<MenuBottomSheetAction> list, VideoFile video) {
-        if (!video.U && !video.I1()) {
-            addAction(list, DOWNLOAD_ID, R.drawable.ic_download_outline_24, R.string.download, 9);
-            addAction(list, OPEN_EXTERNAL_LINK_ID, R.drawable.ic_link_outline_28, R.string.interfacevideoext_short, 9);
-        }
-    }
-
-    private static void addAction(List<MenuBottomSheetAction> actions, int... ints) {
+    public static void addAction(List<MenuBottomSheetAction> actions, int... ints) {
         actions.add(new MenuBottomSheetAction(ints[0], ints[1], ints[2], ints[3]));
     }
 

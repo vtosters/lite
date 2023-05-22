@@ -343,7 +343,7 @@
     .line 1
     invoke-super {p0, p1}, Lcom/vk/navigation/NavigationDelegateActivity;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-static {p0}, Lru/vtosters/lite/ui/components/CrashReporter;->init(Landroid/app/Activity;)V
+    invoke-static {p0}, Lru/vtosters/lite/utils/CrashReporter;->init(Landroid/app/Activity;)V
 
     .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->isTaskRoot()Z

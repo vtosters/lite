@@ -1,4 +1,4 @@
-package ru.vtosters.lite.ui.components;
+package ru.vtosters.lite.utils;
 
 import android.annotation.SuppressLint;
 import android.app.*;
@@ -10,7 +10,6 @@ import android.util.Log;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
 import ru.vtosters.lite.services.LogWriterService;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

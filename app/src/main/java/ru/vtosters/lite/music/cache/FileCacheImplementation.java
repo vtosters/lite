@@ -2,6 +2,7 @@ package ru.vtosters.lite.music.cache;
 
 import android.net.Uri;
 import com.vk.dto.music.MusicTrack;
+import ru.vtosters.hooks.MusicCacheFilesHook;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 
@@ -30,16 +31,8 @@ public class FileCacheImplementation {
         return dir;
     }
 
-    public static File getTrackFile(String trackId) {
-        return new File(getTrackFolder(trackId), "track.mp3");
-    }
-
-    public static boolean isTrackExist(String trackId) {
-        return CacheDatabaseDelegate.isCached(trackId);
-    }
-
     public static File getTrackFile(MusicTrack track) {
-        return getTrackFile(track.y1());
+        return MusicCacheFilesHook.getTrackFile(track.y1());
     }
 
     public static File getTrackThumbnail(String trackId, int factor) {

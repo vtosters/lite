@@ -279,7 +279,7 @@
 
     move-result v0
 
-    invoke-static {v0, v2, p1}, Lru/vtosters/lite/downloaders/VideoDownloader;->onClick(ILcom/vk/dto/common/VideoFile;Landroid/content/Context;)Z
+    invoke-static {v0, v2, p1}, Lru/vtosters/hooks/DownloadersHook;->onClickVideo(ILcom/vk/dto/common/VideoFile;Landroid/content/Context;)Z
 
     .line 35
     sget v1, Lcom/vk/libvideo/g;->attach_link:I
@@ -961,7 +961,7 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v1, p1}, Lru/vtosters/lite/downloaders/VideoDownloader;->injectAction(Ljava/util/ArrayList;Lcom/vk/dto/common/VideoFile;)V
+    invoke-static {v1, p1}, Lru/vtosters/hooks/DownloadersHook;->injectActionVideo(Ljava/util/ArrayList;Lcom/vk/dto/common/VideoFile;)V
 
     .line 86
     iget-boolean v2, p1, Lcom/vk/dto/common/VideoFile;->e0:Z

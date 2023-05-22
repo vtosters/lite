@@ -1,4 +1,4 @@
-package ru.vtosters.lite.ui.dialogs;
+package ru.vtosters.hooks;
 
 import android.app.Activity;
 import com.vk.core.dialogs.alert.VkAlertDialog;
@@ -6,7 +6,7 @@ import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 
-public class ThemeChanging {
+public class ThemeChangeDrawerHook {
     public static void changeTheme(Activity activity, float[] f) {
         if (Preferences.systemtheme()) {
             new VkAlertDialog.Builder(activity)

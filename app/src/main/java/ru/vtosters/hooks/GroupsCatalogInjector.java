@@ -1,4 +1,4 @@
-package ru.vtosters.lite.feature.groupslist;
+package ru.vtosters.hooks;
 
 import android.util.Log;
 import org.json.JSONArray;

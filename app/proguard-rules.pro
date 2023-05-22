@@ -35,7 +35,7 @@
 -optimizationpasses 5
 -keepattributes SourceFile, LineNumberTable
 
--keep,allowoptimization class ru.vtosters.hooks.**, ru.vtosters.lite.utils.AndroidUtils, ru.vtosters.lite.utils.NetworkUtils, ru.vtosters.lite.ui.**, ru.vtosters.lite.themes.**, ru.vtosters.lite.feature.**, ru.vtosters.lite.music.**, ru.vtosters.lite.downloaders.**  {
+-keep,allowoptimization class ru.vtosters.hooks.**, ru.vtosters.lite.utils.AndroidUtils, ru.vtosters.lite.utils.NetworkUtils, ru.vtosters.lite.utils.CrashReporter, ru.vtosters.lite.ui.activities.**, ru.vtosters.lite.services.**, ru.vtosters.lite.ui.fragments.**, ru.vtosters.lite.themes.**, ru.vtosters.lite.music.hook.**, ru.vtosters.lite.music.cache.injectors.**, ru.vtosters.lite.ui.wallpapers.NativeEffects {
   public <fields>;
   public <methods>;
   public <init>(...);

@@ -30,14 +30,6 @@ public class WallpapersHooks {
     private static Drawable mWallpaper;
     private static boolean mUpdateWallpaperRequested = true;
 
-    public static void setBg(View view) {
-        if (hasWallpapers()) {
-            ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
-        } else {
-            view.setBackgroundColor(ThemesUtils.getColorFromAttr(h.im_bg_chat)); // set default bg color
-        }
-    }
-
     public static Drawable getWallpaper() {
         File oldwp = new File(AndroidUtils.getGlobalContext().getFilesDir(), "wallpaper.jpeg");
         File oldwpcompressed = new File(AndroidUtils.getGlobalContext().getFilesDir(), "compressedwp.jpeg");

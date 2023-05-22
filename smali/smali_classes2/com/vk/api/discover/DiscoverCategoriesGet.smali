@@ -66,9 +66,9 @@
 #    :cond_0
 
     .line 2
-    # ru.vtosters.lite.feature.discover.DiscoverTemplates. ArrayList<DiscoverItem.Template> getTemplates()
+    # ru.vtosters.hooks.DiscoverTemplates. ArrayList<DiscoverItem.Template> getTemplates()
 
-    invoke-static {}, Lru/vtosters/lite/feature/discover/DiscoverTemplates;->getTemplates()Ljava/util/ArrayList;
+    invoke-static {}, Lru/vtosters/hooks/DiscoverTemplates;->getTemplates()Ljava/util/ArrayList;
 
     move-result-object v0
 

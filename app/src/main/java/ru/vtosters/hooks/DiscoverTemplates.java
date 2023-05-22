@@ -1,4 +1,4 @@
-package ru.vtosters.lite.feature.discover;
+package ru.vtosters.hooks;
 
 import com.vk.dto.discover.DiscoverItem;
 

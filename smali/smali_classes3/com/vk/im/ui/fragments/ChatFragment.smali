@@ -5161,7 +5161,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lru/vtosters/lite/ui/wallpapers/WallpapersHooks;->setBg(Landroid/view/View;)V
+    invoke-static {v1}, Lru/vtosters/hooks/WallpapersHooks;->setBg(Landroid/view/View;)V
 
     .line 69
     sget v1, Lcom/vk/im/ui/h;->sticker_bar_container_stub:I

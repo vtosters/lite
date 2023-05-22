@@ -20,7 +20,7 @@ import java.io.IOException;
 
 import static ru.vtosters.hooks.DateHook.getLocale;
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
-import static ru.vtosters.lite.feature.groupslist.GroupsCatalogInjector.injectIntoCatalog;
+import static ru.vtosters.hooks.GroupsCatalogInjector.injectIntoCatalog;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
@@ -237,14 +237,8 @@ public class CatalogJsonInjector {
         }
     }
 
-    public static JSONObject fixArtists(JSONObject json) {
-
-        try {
-            fixHeaders(json.getJSONObject("catalog").getJSONArray("sections").getJSONObject(0));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+    public static JSONObject fixArtists(JSONObject json) throws JSONException {
+        fixHeaders(json.getJSONObject("catalog").getJSONArray("sections").getJSONObject(0));
         return json;
     }
 
