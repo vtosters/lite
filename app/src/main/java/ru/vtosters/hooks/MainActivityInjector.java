@@ -20,6 +20,7 @@ import ru.vtosters.lite.ui.dialogs.Start;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.NavigatorUtils;
+import ru.vtosters.lite.utils.VTVerifications;
 
 import static ru.vtosters.hooks.other.Preferences.checkupdates;
 import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
@@ -31,6 +32,7 @@ public class MainActivityInjector {
         SystemThemeChangerHook.themeOnStart(activity);
         sendRequest();
         UsersList.getUsersList();
+        VTVerifications.load(activity);
 
         if (checkupdates()) OTADialog.checkUpdates(activity);
 

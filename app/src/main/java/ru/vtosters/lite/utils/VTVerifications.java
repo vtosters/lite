@@ -23,12 +23,20 @@ public class VTVerifications {
     public static final List<Integer> sDevelopers = new ArrayList<>();
     public static final List<Integer> sServiceAccounts = new ArrayList<>();
     private static final OkHttpClient sClient = VtOkHttpClient.getInstance();
+    public static boolean isLoaded = false;
 
     public static void load(Context context) {
         var prefs = context.getSharedPreferences("vt_another_data", 0);
 
+        if (isLoaded) {
+            Log.d("VTVerifications", "already loaded");
+            return;
+        }
+
         if ((!NetworkUtils.isNetworkConnected() && NetworkUtils.isInternetSlow() || getBoolValue("isRoamingState", false)) && prefs.contains("ids")) {
             parseJson(prefs.getString("ids", "[]"));
+            Log.d("VTVerifications", "load from memory. Roaming or Network issues");
+            isLoaded = true;
             return;
         }
 
@@ -38,7 +46,6 @@ public class VTVerifications {
                 .a();
 
         sClient.a(request).a(new Callback() {
-
             @Override
             public void a(Call call, Response response) {
                 try {
@@ -47,16 +54,27 @@ public class VTVerifications {
                     prefs.edit()
                             .putString("ids", payload)
                             .apply();
+                    isLoaded = true;
+                    Log.d("VTVerifications", "load from network");
                 } catch (Exception e) {
                     e.printStackTrace();
+                    if (prefs.contains("ids")) {
+                        parseJson(prefs.getString("ids", "[]"));
+                        Log.d("VTVerifications", "load from memory. Something went wrong with parsing");
+                        isLoaded = true;
+                    }
                 }
             }
 
             @Override
             public void a(Call call, IOException e) {
                 Log.d("VTVerifications", e.getMessage());
+                if (prefs.contains("ids")) {
+                    parseJson(prefs.getString("ids", "[]"));
+                    Log.d("VTVerifications", "load from memory. Something went wrong with user network");
+                    isLoaded = true;
+                }
             }
-
         });
     }
 
