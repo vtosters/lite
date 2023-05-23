@@ -65,10 +65,10 @@ public class MenuBuilder {
                 return Unit.a;
             });
 
-            addItem(builder, AndroidUtils.getString(R.string.menu_change_name), () -> {
-                RenameTool.createDialog(eup, ctx);
-                return Unit.a;
-            });
+//            addItem(builder, AndroidUtils.getString(R.string.menu_change_name), () -> {
+//                RenameTool.createDialog(eup, ctx);
+//                return Unit.a;
+//            });
 
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
@@ -88,10 +88,10 @@ public class MenuBuilder {
                 return Unit.a;
             });
 
-            addItem(builder, AndroidUtils.getString(R.string.menu_change_name), () -> {
-                RenameTool.createDialogGroup(ecp, ctx);
-                return Unit.a;
-            });
+//            addItem(builder, AndroidUtils.getString(R.string.menu_change_name), () -> {
+//                RenameTool.createDialogGroup(ecp, ctx);
+//                return Unit.a;
+//            });
 
             addItem(builder, AndroidUtils.getString(isPageWhitelistedFilter ? R.string.remove_from_filter_whitelist : R.string.add_to_filter_whitelist), () -> {
                 setWhitelistedFilter(ecp, !isPageWhitelistedFilter);
