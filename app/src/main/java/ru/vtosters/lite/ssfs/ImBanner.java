@@ -16,8 +16,13 @@ public class ImBanner {
             return null;
         }
 
+        var jsonBanner = Handler.getBanner(user_id);
+
+        if (jsonBanner == null) {
+            return null;
+        }
+
         try {
-            var jsonBanner = Handler.getBanner(user_id);
             var pic = jsonBanner.optString("picture");
             var text = jsonBanner.getString("text");
 
