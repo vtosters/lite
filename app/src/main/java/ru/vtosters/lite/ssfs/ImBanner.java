@@ -8,10 +8,11 @@ import org.json.JSONObject;
 public class ImBanner {
     private static final String TAG = "ImBanner";
 
-    public static JSONObject convBar(JSONObject orig) throws JSONException {
-        var user_id = orig.getJSONObject("peer").getInt("id");
+    public static JSONObject convBar(JSONObject orig) {
+        var user = orig.optJSONObject("peer");
+        var user_id = user != null ? user.optInt("id") : 0;
 
-        if (!UsersList.hasBanner(user_id) || user_id == 0) {
+        if (user_id == 0 || !UsersList.hasBanner(user_id)) {
             return null;
         }
 

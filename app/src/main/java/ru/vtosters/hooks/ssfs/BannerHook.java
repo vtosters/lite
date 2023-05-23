@@ -9,7 +9,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class BannerHook {
-    public static JSONObject convBar(JSONObject orig) throws JSONException {
+    public static JSONObject convBar(JSONObject orig) {
         return ImBanner.convBar(orig);
     }
 
