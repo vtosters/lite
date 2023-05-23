@@ -10,7 +10,7 @@ import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class BannerHook {
     public static JSONObject convBar(JSONObject orig) {
-        return ImBanner.convBar(orig);
+        return ImBanner.convertToBanner(orig);
     }
 
     public static boolean showAlert() {

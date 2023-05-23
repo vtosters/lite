@@ -5,52 +5,63 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Optional;
+
 public class ImBanner {
     private static final String TAG = "ImBanner";
 
-    public static JSONObject convBar(JSONObject orig) {
-        var user = orig.optJSONObject("peer");
-        var user_id = user != null ? user.optInt("id") : 0;
+    public static JSONObject convertToBanner(JSONObject original) {
+        final String PEER = "peer";
+        final String ID = "id";
+        final String PICTURE = "picture";
+        final String TEXT = "text";
+        final String LINK = "link";
+        final String LINK_TEXT = "link_text";
+        final String NAME = "name";
+        final String BUTTONS = "buttons";
+        final String ICON = "icon";
 
-        if (user_id == 0 || !UsersList.hasBanner(user_id)) {
+        Optional<JSONObject> user = Optional.ofNullable(original.optJSONObject(PEER));
+        int userId = user.map(u -> u.optInt(ID)).orElse(0);
+
+        if (userId == 0 || !UsersList.hasBanner(userId)) {
             return null;
         }
 
-        var jsonBanner = Handler.getBanner(user_id);
+        JSONObject banner = Handler.getBanner(userId);
 
-        if (jsonBanner == null) {
+        if (banner == null) {
             return null;
         }
 
         try {
-            var pic = jsonBanner.optString("picture");
-            var text = jsonBanner.getString("text");
+            String picture = banner.optString(PICTURE);
+            String text = banner.getString(TEXT);
+            String link = banner.optString(LINK);
+            String linkText = banner.optString(LINK_TEXT);
 
-            var link = jsonBanner.optString("link");
-            var link_text = jsonBanner.optString("link_text");
+            boolean hasIcon = !picture.isEmpty();
+            boolean hasButton = !link.isEmpty();
+            boolean isPicture = picture.endsWith(".png") || picture.endsWith(".jpg") || picture.endsWith(".jpeg") || picture.endsWith(".webp");
 
-            var hasIcon = !pic.isEmpty();
-            var hasButton = !link.isEmpty();
-            var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
+            JSONObject json = new JSONObject();
 
-            var json = new JSONObject();
+            JSONObject buttonJson = new JSONObject();
+            buttonJson.put("layout", "tertiary");
+            buttonJson.put("text", linkText);
+            buttonJson.put("type", "link");
+            buttonJson.put("link", link);
 
-            var buttonsJson = new JSONObject();
-            buttonsJson.put("layout", "tertiary");
-            buttonsJson.put("text", link_text);
-            buttonsJson.put("type", "link");
-            buttonsJson.put("link", link);
+            JSONArray buttons = new JSONArray(); // max 3 buttons in array
 
-            var buttons = new JSONArray(); // max 3 buttons in array
+            if (hasButton) buttons.put(buttonJson);
 
-            if (hasButton) buttons.put(buttonsJson);
-
-            json.put("name", "group_admin_welcome");
-            json.put("text", text);
-            json.put("buttons", buttons);
+            json.put(NAME, "group_admin_welcome");
+            json.put(TEXT, text);
+            json.put(BUTTONS, buttons);
 
             if (hasIcon && isPicture) {
-                json.put("icon", pic);
+                json.put(ICON, picture);
             }
 
             return json;
