@@ -33,6 +33,7 @@ import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.concurrent.VTExecutors;
+import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.ssfs.Utils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -487,7 +488,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 }
         );
 
-        if (Build.VERSION.SDK_INT >= 33) {
+        if (Build.VERSION.SDK_INT >= 33 && !OEMDetector.isMIUI()) {
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",
