@@ -131,17 +131,17 @@ public final class MediaNative {
         return nativeAudioSeekOpusFile(f2);
     }
 
-    public static int audioStartRecord(String str) {
+    public static int audioStartRecord(String str) { // need to hack
         waitForContext();
         return nativeAudioStartRecord(str);
     }
 
-    public static void audioStopRecord() {
+    public static void audioStopRecord() { // need to hack
         waitForContext();
         nativeAudioStopRecord();
     }
 
-    public static int audioWriteFrame(ByteBuffer byteBuffer, int i) {
+    public static int audioWriteFrame(ByteBuffer byteBuffer, int i) { // need to hack
         waitForContext();
         return nativeAudioWriteFrame(byteBuffer, i);
     }
@@ -244,7 +244,7 @@ public final class MediaNative {
         nativeEnhance(bitmap, f2, Runtime.getRuntime().availableProcessors());
     }
 
-    private static void f() {
+    private static void loadVKMediaLibs() {
         if (isMediaLoaded) {
             return;
         }
@@ -274,7 +274,7 @@ public final class MediaNative {
             SoLoader.init(context2, false);
             NativeLibLoader.loadLibrary("gnustl_shared");
             NativeLibLoader.loadLibrary("vkchronicle");
-            f();
+            loadVKMediaLibs();
             f17443d.notifyAll();
         }
     }
