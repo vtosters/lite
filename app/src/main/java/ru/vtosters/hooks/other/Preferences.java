@@ -21,6 +21,9 @@ import java.security.NoSuchAlgorithmException;
 public class Preferences {
 
     public static void init(Application application) throws Exception {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy); // fix profiles hide hook
+
         GmsHook.fixGapps();
         ProxyUtils.setProxy();
         NewsFeedFiltersUtils.setupFilters();
