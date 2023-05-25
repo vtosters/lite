@@ -34,7 +34,9 @@ public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment 
 
             return true;
         });
-        findPreference("superapp").setOnPreferenceClickListener(preference -> {
+        var superapp = findPreference("superapp");
+        superapp.setVisible(Preferences.milkshake());
+        superapp.setOnPreferenceClickListener(preference -> {
             LifecycleUtils.restartApplicationWithTimer();
 
             return true;
@@ -69,6 +71,8 @@ public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment 
             RoundingSeekbarDialog.dialog(getContext());
             return true;
         });
+
+        findPreference("friendsblock").setVisible(Preferences.milkshake());
 
         if (Preferences.getPreferences().getInt("pic_rounding", 0) == 0) {
             findPreference("customrounding").setSummary(requireContext().getString(R.string.disabled));

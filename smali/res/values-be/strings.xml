@@ -6327,8 +6327,8 @@
     <string name="globalUsersOnline_summ">Можа выклікаць доўгія загрузкі раздзелаў і вялікае спажыванне трафіку \n\nНе
         рэкамендуецца ўключаць дадзеную функцыю
     </string>
-    <string name="savemsgsett_title">Захоўваць налады паведамленняў</string>
-    <string name="savemsgsett_summ">Захоўваць становішча тумблераў у наладах паведамленняў</string>
+    <string name="savemsgsett_title">Захоўваць параметры адпраўкі паведамленняў</string>
+    <string name="savemsgsett_summ">Захоўваць выбраныя параметры статусу выходных паведамленняў як знікненне паведамленняў і бясшумная адпраўка</string>
     <string name="screenshotdetect_title">Адключыць дэтэкт скрыншотаў</string>
     <string name="screenshotdetect_summ">Адключыць апавяшчэнне аб тым, што вы зрабілі скрыншот</string>
     <string name="hideDeviceInfo_title">Адключыць адпраўку метрыкі</string>

@@ -160,7 +160,7 @@ public class Preferences {
     }
 
     public static boolean superapp() {
-        return getBoolValue("superapp", true);
+        return getBoolValue("superapp", true) && milkshake();
     }
 
     public static boolean vkpay() {

@@ -5576,8 +5576,8 @@
     <string name="onlinefix_title">Обходити онлайн</string>
     <string name="globalUsersOnline_title">Глобальний обхід онлайну</string>
     <string name="globalUsersOnline_summ">Може викликати тривале завантаження розділів і велике споживання трафіку \n\nНе рекомендується включати цю функцію</string>    
-    <string name="savemsgsett_title">Зберігати налаштування повідомлень</string>
-    <string name="savemsgsett_summ">Зберігати положення тумблерів у налаштуваннях повідомлень</string>
+    <string name="savemsgsett_title">Зберігати параметри відправки повідомлень</string>
+    <string name="savemsgsett_summ">Зберігати вибрані параметри статусу вихідних повідомлень як зникнення повідомлень і безшумна відправка</string>
     <string name="screenshotdetect_title">Вимкнути виявлення скріншотів</string>
     <string name="screenshotdetect_summ">Відключити повідомлення про те, що ви зробили скриншот</string>
     <string name="hideDeviceInfo_title">Вимкнути відправку метрики</string>

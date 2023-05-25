@@ -91,6 +91,7 @@ public class NewsfeedHook {
     public static boolean isPowerSaveMode() {
         var pw = (PowerManager) getGlobalContext().getSystemService(Context.POWER_SERVICE);
 
-        return !getBoolValue("force_disable_psm", false) && pw.isPowerSaveMode();
+//        return !getBoolValue("force_disable_psm", false) && pw.isPowerSaveMode();
+        return false;
     }
 }
