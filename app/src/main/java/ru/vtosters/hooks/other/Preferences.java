@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.StrictMode;
 import com.vk.medianative.MediaImageEncoder;
+import com.vk.medianative.MediaNative;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 import ru.vtosters.hooks.GmsHook;
@@ -23,6 +24,8 @@ public class Preferences {
     public static void init(Application application) throws Exception {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy); // fix profiles hide hook
+
+        MediaNative.init(application);
 
         GmsHook.fixGapps();
         ProxyUtils.setProxy();
