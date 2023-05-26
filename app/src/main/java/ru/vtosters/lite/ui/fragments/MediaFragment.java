@@ -29,6 +29,7 @@ import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.SearchEngine;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -133,26 +134,27 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
         });
 
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
-            var deficon = ThemesUtils.recolorDrawable(AndroidUtils.getResources().getDrawable(R.drawable.ic_picture_outline_28));
-            var choiceicon = ThemesUtils.recolorDrawable(AndroidUtils.getResources().getDrawable(R.drawable.link_outline_28));
+            var items = new ImagineArrayAdapter.ImagineArrayAdapterItem[SearchEngine.values().length + 1];
+            items[0] = new ImagineArrayAdapter.ImagineArrayAdapterItem(
+                    ThemesUtils.recolorDrawable(AndroidUtils.getResources().getDrawable(R.drawable.link_outline_28)),
+                    AndroidUtils.getString("by_choice"));
+            for(int i = 0; i < SearchEngine.values().length; ++i)
+            {
+                var engine = SearchEngine.values()[i];
+                items[i + 1] = engine.mIconRes != R.drawable.ic_picture_outline_28
+                        ? new ImagineArrayAdapter.ImagineArrayAdapterItem(engine.mIconRes, engine.mTitle)
+                        : new ImagineArrayAdapter.ImagineArrayAdapterItem(
+                                ThemesUtils.recolorDrawable(AndroidUtils.getResources().getDrawable(R.drawable.ic_picture_outline_28)),
+                                engine.mTitle);
+            }
 
-            var items = Arrays.asList(
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(choiceicon, AndroidUtils.getString("by_choice")),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.yandex, "Yandex"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.google, "Google"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.microsoft, "Bing"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(deficon, "TraceMoe"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(deficon, "Ascii2d"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(deficon, "Saucenao")
-            );
-
-            var adapter = new ImagineArrayAdapter(requireContext(), items);
+            var adapter = new ImagineArrayAdapter(requireContext(), Arrays.asList(items));
             adapter.setSelected(Preferences.getPreferences().getInt("search_engine", 0));
 
             new VkAlertDialog.Builder(getActivity())
-                    .setAdapter(adapter, (dialog, which) -> {
-                        Preferences.getPreferences().edit().putInt("search_engine", which).apply();
-                        dialog.cancel();
+                    .setAdapter(adapter, (di, i) -> {
+                        SearchEngine.setDefaultSearchEngine(i != 0 ? i - 1 : -1);
+                        di.cancel();
                     })
                     .show();
             return true;
