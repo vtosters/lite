@@ -15,8 +15,6 @@ import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import com.vk.core.dialogs.actionspopup.ActionsPopup;
 import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.core.ui.themes.VKThemeHelper;
-import com.vk.core.util.ContextExtKt;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.AttachmentWithMedia;
 import com.vk.dto.common.ImageSize;
@@ -30,6 +28,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.themes.utils.RecolorUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
@@ -99,7 +98,7 @@ public class PhotoViewer {
     @SuppressLint("UseCompatLoadingForDrawables")
     public static void addMenuItems(AttachmentWithMedia attachment, ActionsPopup.b actionPopup, int i, boolean z) {
         actionPopup.a(R.string.copy,
-                ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_copy_outline_28, VKThemeHelper.g(R.attr.header_tint)),
+                RecolorUtils.fixActionMenuIcons(R.drawable.ic_copy_outline_28),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
@@ -119,7 +118,7 @@ public class PhotoViewer {
                 }
         );
         actionPopup.a(R.string.search_photo_content,
-                ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_menu_search_outline_28, VKThemeHelper.g(R.attr.header_tint)),
+                RecolorUtils.fixActionMenuIcons(R.drawable.ic_menu_search_outline_28),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
@@ -139,7 +138,7 @@ public class PhotoViewer {
                 }
         );
         actionPopup.a(R.string.copy_photo_url_content,
-                ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_copy_outline_28, VKThemeHelper.g(R.attr.header_tint)),
+                RecolorUtils.fixActionMenuIcons(R.drawable.ic_copy_outline_28),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
@@ -159,7 +158,7 @@ public class PhotoViewer {
                 }
         );
         actionPopup.a(R.string.open_original_photo_content,
-                ContextExtKt.b(AndroidUtils.getGlobalContext(), R.drawable.ic_link_outline_28, VKThemeHelper.g(R.attr.header_tint)),
+                RecolorUtils.fixActionMenuIcons(R.drawable.ic_link_outline_28),
                 false,
                 () -> {
                     if (attachment instanceof PhotoAttachment) {
