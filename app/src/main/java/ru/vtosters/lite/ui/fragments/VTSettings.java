@@ -572,7 +572,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 }
         );
 
-        if (Preferences.isValidSignature() && BuildConfig.BUILD_TYPE.equals("release")) {
+        if (Preferences.isValidSignature() && !BuildConfig.BUILD_TYPE.equals("dev")) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.updates));
 
             PreferenceFragmentUtils.addPreference(
