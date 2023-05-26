@@ -86,25 +86,22 @@ public class PhotoViewer {
     }
     //endregion
 
-    private static void copyImage(AttachmentWithMedia attachment)
-    {
+    private static void copyImage(AttachmentWithMedia attachment) {
         var req = new Request.a()
-            .b(getImageUrlFromAttachment(attachment))
-            .a();
-        client.a(req).a(new Callback()
-        {
+                .b(getImageUrlFromAttachment(attachment))
+                .a();
+        client.a(req).a(new Callback() {
             @Override
-            public void a(Call call, IOException e)
-            { e.printStackTrace(); }
+            public void a(Call call, IOException e) {
+                e.printStackTrace();
+            }
 
             @Override
             public void a(Call call, Response response)
-            throws IOException
-            {
+                    throws IOException {
                 var tmpImage = new File(AndroidUtils.getGlobalContext().getExternalCacheDir(), attachment.getId() + ".jpg");
-                try(var resp = client.a(req).execute();
-                    var sink = Okio.a(Okio.b(tmpImage)))
-                {
+                try (var resp = client.a(req).execute();
+                     var sink = Okio.a(Okio.b(tmpImage))) {
                     sink.a(resp.a().f());
                     var manager = (ClipboardManager) AndroidUtils.getGlobalContext().getSystemService(Context.CLIPBOARD_SERVICE);
                     var uri = FileProvider.getUriForFile(
@@ -121,23 +118,23 @@ public class PhotoViewer {
         });
     }
 
-    private static void searchImageWithUrl(AttachmentWithMedia attachment)
-    {
+    private static void searchImageWithUrl(AttachmentWithMedia attachment) {
         String url = getImageUrlFromAttachment(attachment);
-        if(TextUtils.isEmpty(url)) return;
+        if (TextUtils.isEmpty(url)) return;
         int selectedEngine = SearchEngine.getDefaultSearchEngine();
         if (selectedEngine < 0) {
             var items = new String[SearchEngine.values().length];
-            for(int i = 0;i < SearchEngine.values().length; ++i)
+            for (int i = 0; i < SearchEngine.values().length; ++i)
                 items[i] = SearchEngine.values()[i].mTitle;
             new VkAlertDialog.Builder(LifecycleUtils.getCurrentActivity())
                     .setItems(items, (di, i) -> openUrl(SearchEngine.values()[i].buildSearchUrl(url)))
                     .show();
-        } else openUrl(SearchEngine.values()[selectedEngine].buildSearchUrl(url));
+        } else {
+            openUrl(SearchEngine.values()[selectedEngine].buildSearchUrl(url));
+        }
     }
 
-    private static void copyImageUrl(AttachmentWithMedia attachment)
-    {
+    private static void copyImageUrl(AttachmentWithMedia attachment) {
         String url = getImageUrlFromAttachment(attachment);
         if (TextUtils.isEmpty(url)) return;
         ClipboardManager manager = (ClipboardManager) AndroidUtils.getGlobalContext().getSystemService(Context.CLIPBOARD_SERVICE);
@@ -145,8 +142,7 @@ public class PhotoViewer {
         Toast.makeText(AndroidUtils.getGlobalContext(), R.string.copied_to_clipboard, Toast.LENGTH_SHORT).show();
     }
 
-    private static void openUrl(String url)
-    {
+    private static void openUrl(String url) {
         if (TextUtils.isEmpty(url)) {
             Log.d("PhotoViewer", "url is null or empty");
             return;
@@ -156,25 +152,24 @@ public class PhotoViewer {
         AndroidUtils.getGlobalContext().startActivity(intent);
     }
 
-    private static String getImageUrlFromAttachment(AttachmentWithMedia attachment)
-    {
-        List< ImageSize > imageSizes;
-        if(attachment instanceof PhotoAttachment)
+    private static String getImageUrlFromAttachment(AttachmentWithMedia attachment) {
+        List<ImageSize> imageSizes;
+
+        if (attachment instanceof PhotoAttachment) {
             imageSizes = ((PhotoAttachment) attachment).D.Q.t1();
-        else if(attachment instanceof DocumentAttachment
-                && ((DocumentAttachment) attachment).J != null)
+        } else if (attachment instanceof DocumentAttachment && ((DocumentAttachment) attachment).J != null) {
             imageSizes = ((DocumentAttachment) attachment).J.t1();
-        else
-        {
+        } else {
             ToastUtils.a(R.string.photo_get_error);
             return "";
         }
-        if(imageSizes.isEmpty()) return "";
+
+        if (imageSizes.isEmpty()) return "";
+
         var max = imageSizes.get(0);
-        for(int i = 1; i < imageSizes.size(); i++)
-        {
+        for (int i = 1; i < imageSizes.size(); i++) {
             var tmp = imageSizes.get(i);
-            if(max.t1() < tmp.t1()) max = tmp;
+            if (max.t1() < tmp.t1()) max = tmp;
         }
         return max.url;
     }

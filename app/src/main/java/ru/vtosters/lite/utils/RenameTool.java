@@ -27,19 +27,18 @@ import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 import static ru.vtosters.lite.utils.AndroidUtils.*;
 
 public class RenameTool {
-    private static final int DB_VERSION = 2;
-
-    private static final String COLUMN_NAME = "name";
     public static final String COLUMN_FIRSTNAME = "first_name";
     public static final String COLUMN_LASTNAME = "last_name";
+    public static final SparseArray<Pair<String, String>> renamedUsers = new SparseArray<>();
+    public static final SparseArray<String> renamedGroups = new SparseArray<>();
+    private static final int DB_VERSION = 2;
+    private static final String COLUMN_NAME = "name";
     private static final String COLUMN_VKID = "vk_id";
     private static final String DB_NAME = "vt_rename.db";
     private static final String TABLE_NAME = "renames";
     private static final String TABLE_NAME_GROUP = "renames_group";
-    public static final SparseArray<Pair<String, String>> renamedUsers = new SparseArray<>();
-    public static final SparseArray<String> renamedGroups = new SparseArray<>();
-    private static RenameTool.DbHelper helperInstance;
     public static boolean updateRequested = true;
+    private static RenameTool.DbHelper helperInstance;
 
     protected static RenameTool.DbHelper getHelper() {
         if (helperInstance == null) {

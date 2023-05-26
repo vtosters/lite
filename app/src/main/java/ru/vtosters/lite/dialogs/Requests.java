@@ -8,6 +8,7 @@ import com.vk.im.engine.utils.ImDialogsUtils;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import ru.vtosters.hooks.other.ThemesUtils;
+import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.net.Request;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -43,7 +44,7 @@ public class Requests {
     }
 
     public static void pinnedMsg(int dialogid, boolean needToBePinned) {
-        Thread thread = new Thread(() -> {
+        VTExecutors.getIoExecutor().execute(() -> {
             try {
                 var request = new okhttp3.Request.a()
                         .b("https://" + ProxyUtils.getApi() + "/method/" + (needToBePinned ? "messages.pinConversation" : "messages.unpinConversation") + "?peer_id=" + dialogid + "&access_token=" + AccountManagerUtils.getUserToken() + "&v=5.119")
@@ -55,8 +56,6 @@ public class Requests {
                 e.printStackTrace();
             }
         });
-
-        thread.start();
 
         AndroidUtils.sendToast(AndroidUtils.getString(com.vtosters.lite.R.string.pin_dialog) + " " + AndroidUtils.getString(needToBePinned ? com.vtosters.lite.R.string.dialog_pinned : com.vtosters.lite.R.string.dialog_unpinned));
     }
