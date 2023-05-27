@@ -16,13 +16,13 @@ public enum SearchEngine {
     BING(R.drawable.microsoft,
             "Bing",
             "https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIIDP&sbisrc=UrlPaste&q=imgurl:"),
-    TRACEMOE(R.drawable.ic_picture_outline_28,
+    TRACEMOE(R.drawable.tracemoe,
             "trace.moe",
             "https://trace.moe/?url="),
     ASCII2D(R.drawable.ic_picture_outline_28,
             "Ascii2d",
             "https://ascii2d.net/search/url/"),
-    SAUCENAO(R.drawable.ic_picture_outline_28,
+    SAUCENAO(R.drawable.sauceNAO,
             "SauceNAO",
             "https://saucenao.com/search.php?url=");
 
