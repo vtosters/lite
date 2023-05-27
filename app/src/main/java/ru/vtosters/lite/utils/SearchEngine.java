@@ -13,7 +13,7 @@ public enum SearchEngine {
     GOOGLE(R.drawable.google,
             "Google",
             "https://www.google.com/searchbyimage?client=app&image_url="),
-    BING(R.drawable.microsoft,
+    BING(R.drawable.bing,
             "Bing",
             "https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIIDP&sbisrc=UrlPaste&q=imgurl:"),
     TRACEMOE(R.drawable.tracemoe,
