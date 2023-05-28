@@ -20,7 +20,7 @@ body.article_body.article_dark {
 }
 
 .article_dark .article>h1 {
-    color: %textColorPrimary% !important;
+    color: %text_primary% !important;
 }
 
 .article__info_line {
