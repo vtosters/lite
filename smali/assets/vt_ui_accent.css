@@ -1,12 +1,14 @@
-/* vkui.css V2 by iTaysonLab */
+/* vkui coloring V2 by iTaysonLab */
+/* rewrited by vtosters team */
 /* Generic VKUI */
 /* additional fixes for various VKUI */
 .Tooltip__content {
     background-color: %accent% !important;
 }
 
-.vkuibright_light, [scheme=bright_light], body[scheme=bright_light] {
+.vkuibright_light, [scheme=bright_light], body[scheme=bright_light], .vkui--vkBase--light, .vkui--vkIOS--light, .vkui--vkCom--light {
     --accent: %accent% !important;
+    --vkui--color_icon_accent: %accent% !important;
     --action_sheet_action_foreground: %accent% !important;
     --attach_picker_tab_active_background: %accent% !important;
     --attach_picker_tab_active_text: %accent% !important;
@@ -29,22 +31,33 @@
     --landing_text_title: %accent% !important;
     --landing_secondary_button_foreground: %accent% !important;
     --link_alternate: %accent% !important;
+    --vkui--color_text_link_themed: %accent% !important;
     --loader_track_value_fill: %accent% !important;
+    --vkui--color_track_buffer: %accent% !important;
     --feed_recommended_friend_promo_background: %accent% !important;
     --tabbar_active_icon: %accent% !important;
     --tabbar_tablet_active_icon: %accent% !important;
     --text_link: %accent% !important;
     --text_name: %accent% !important;
+    --vkui--color_text_link: %accent% !important;
+    --vkui--color_text_name: %accent% !important;
     --writebar_icon: %accent% !important;
+    --vkui--color_write_bar_icon: %accent% !important;
     --dynamic_blue: %accent% !important;
     /* backgrounds */
     --background_content: %background_content% !important;
+    --vkui--color_background_content: %background_content% !important;
     --background_page: %background_page% !important;
+    --vkui--color_background: %background_page% !important;
     --content_tint_background: %content_tint_background% !important;
+    --vkui--color_background_secondary: %content_tint_background% !important;
     --loader_background: %background_page% !important;
     --header_background: %header_background% !important;
     --header_background_before_blur: %header_background% !important;
     --header_background_before_blur_alternate: %header_background% !important;
+    --vkui--color_header_background: %header_background% !important;
+    --vkui--color_header_background_before_blur: %header_background% !important;
+    --vkui--color_header_background_before_blur_alternate: %header_background% !important;
     --header_alternate_background: %header_background% !important;
 
     --header_text_alternate: %header_text% !important;
@@ -52,12 +65,14 @@
     --header_text_secondary: %header_text% !important;
     --header_tint: %header_text% !important;
     --header_tint_alternate: %header_text% !important;
+    --vkui--color_icon_accent_themed: %header_text% !important;
 }
 
 
 
-.vkuispace_gray, [scheme=space_gray], body[scheme=space_gray] {
+.vkuispace_gray, [scheme=space_gray], body[scheme=space_gray], .vkui--vkBase--dark, .vkui--vkIOS--dark, .vkui--vkCom--dark {
     --accent: %accent% !important;
+    --vkui--color_icon_accent: %accent% !important;
     --action_sheet_action_foreground: %accent% !important;
     --attach_picker_tab_active_background: %accent% !important;
     --attach_picker_tab_active_text: %accent% !important;
@@ -80,25 +95,36 @@
     --landing_text_title: %accent% !important;
     --landing_secondary_button_foreground: %accent% !important;
     --link_alternate: %accent% !important;
+    --vkui--color_text_link_themed: %accent% !important;
     --loader_track_value_fill: %accent% !important;
+    --vkui--color_track_buffer: %accent% !important;
     --feed_recommended_friend_promo_background: %accent% !important;
     --tabbar_active_icon: %accent% !important;
     --tabbar_tablet_active_icon: %accent% !important;
     --text_link: %accent% !important;
     --text_name: %accent% !important;
+    --vkui--color_text_link: %accent% !important;
+    --vkui--color_text_name: %accent% !important;
     --writebar_icon: %accent% !important;
+    --vkui--color_write_bar_icon: %accent% !important;
     --dynamic_blue: %accent% !important;
     --background_content: %background_content% !important;
+    --vkui--color_background_content: %background_content% !important;
     --background_page: %background_page% !important;
+    --vkui--color_background: %background_page% !important;
     --content_tint_background: %content_tint_background% !important;
+    --vkui--color_background_secondary: %content_tint_background% !important;
     --loader_background: %background_page% !important;
     --header_background: %header_background% !important;
     --header_background_before_blur: %header_background% !important;
     --header_background_before_blur_alternate: %header_background% !important;
+    --vkui--color_header_background: %header_background% !important;
+    --vkui--color_header_background_before_blur: %header_background% !important;
+    --vkui--color_header_background_before_blur_alternate: %header_background% !important;
     --header_alternate_background: %header_background% !important;
     --header_tint: %header_text% !important;
     --header_tint_alternate: %header_text% !important;
-
+    --vkui--color_icon_accent_themed: %header_text% !important;
     --header_text_alternate: %header_text% !important;
     --header_text: %header_text% !important;
     --header_text_secondary: %header_text% !important;
