@@ -150,7 +150,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             }
 
             var adapter = new ImagineArrayAdapter(requireContext(), Arrays.asList(items));
-            adapter.setSelected(SearchEngine.getDefaultSearchEngine());
+            adapter.setSelected(SearchEngine.getDefaultSearchEngine() + 1);
 
             new VkAlertDialog.Builder(getActivity())
                     .setAdapter(adapter, (di, i) -> {
