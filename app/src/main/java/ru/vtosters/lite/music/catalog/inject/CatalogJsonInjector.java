@@ -169,7 +169,7 @@ public class CatalogJsonInjector {
                 }
             }
 
-            if (!useOldAppVer || noPlaylists) {
+            if (!useOldAppVer && !noPlaylists) {
                 var newBlocks = new JSONArray();
 
                 newBlocks
