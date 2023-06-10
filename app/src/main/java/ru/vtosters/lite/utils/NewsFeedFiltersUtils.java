@@ -382,7 +382,7 @@ public class NewsFeedFiltersUtils {
             id = String.valueOf(list.optInt("source_id"));
         }
 
-        if (id.equals("-189659924")) {
+        if (id.equals("-189659924") || id.equals(String.valueOf(AccountManagerUtils.getUserId()))) {
             return true;
         }
 
