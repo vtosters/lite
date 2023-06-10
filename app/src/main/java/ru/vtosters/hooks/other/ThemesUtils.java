@@ -427,7 +427,7 @@ public class ThemesUtils {
                 },
                 new int[]{
                         dockbar_accent() ? getAccentColor() : (isDarkTheme() ? getResources().getColor(R.color.white) : getResources().getColor(R.color.gray_700)),
-                        isDarkTheme() ? getResources().getColor(R.color.gray_500) : getResources().getColor(R.color.vk_steel_gray_300)
+                        getColorFromAttr(R.attr.tabbar_inactive_icon)
                 }
         );
     }
