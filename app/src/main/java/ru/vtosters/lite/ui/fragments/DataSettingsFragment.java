@@ -341,6 +341,11 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
     }
 
     @Override
+    public int T4() {
+        return com.vtosters.lite.R.string.data;
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
         updateCacheSize();
