@@ -330,7 +330,7 @@ public class Preferences {
     }
 
     public static long getSizeForDelete() {
-        return switch (Preferences.getPreferences().getString("clearcache", "")) {
+        return switch (Preferences.getPreferences().getString("autoclearcache", "")) {
             case "100mb" -> 104857600L;
             case "500mb" -> 524288000L;
             case "1gb" -> 1073741824L;

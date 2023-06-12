@@ -111,11 +111,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("clearcache").setOnPreferenceClickListener(preference -> {
-            cacheCleanDialog();
-            return true;
-        });
-
         findPreference("copyownlink").setOnPreferenceClickListener(preference -> {
             copyText("https://vk.com/id" + AccountManagerUtils.getUserId());
             ToastUtils.a(requireContext().getString(R.string.link_copied));
@@ -124,11 +119,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("deviceinfo").setOnPreferenceClickListener(preference -> {
             NavigatorUtils.switchFragment(requireContext(), SystemInfo.class);
-            return true;
-        });
-
-        findPreference("autoclearcache").setOnPreferenceClickListener(preference -> {
-            cacheAutoCleanDialog();
             return true;
         });
 
@@ -146,19 +136,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        var pref = Preferences.getPreferences().getString("autoclearcache", "Default");
-        switch (pref) {
-            case "Default" ->
-                    findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_disabled));
-            case "100mb" ->
-                    findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_100mb));
-            case "500mb" ->
-                    findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_500mb));
-            case "1gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_1gb));
-            case "2gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_2gb));
-            case "5gb" -> findPreference("autoclearcache").setSummary(requireContext().getString(R.string.cache_5gb));
-        }
-
         var vkAdminTokenPref = findPreference("vk_admin_token");
         vkAdminTokenPref.setVisible(Preferences.getPreferences().getBoolean("new_music_downloading_way", false));
         if (vkAdminTokenPref.isVisible()) {
@@ -170,93 +147,7 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
         }
     }
 
-    @SuppressLint({"CommitPrefEdits", "SetTextI18n"})
-    private void cacheAutoCleanDialog() {
-        String[] cacheText = {null, "100 MB", "500 MB", "1 GB", "2 GB", "5 GB"};
 
-        var val = Preferences.getPreferences().getInt("autoclearcache_size", 0);
-        RadioGroup rg = new RadioGroup(getContext());
-
-        rg.setPadding(AndroidUtils.dp2px(18f), AndroidUtils.dp2px(12f), AndroidUtils.dp2px(18f), 0);
-
-        for (int item = 0; item <= 5; item++) {
-            RadioButton rb = new RadioButton(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-            SwitchHook.setCompoundButton(rb);
-            rg.addView(rb);
-            rb.setId(item);
-            rb.setTextSize(TypedValue.COMPLEX_UNIT_PX, AndroidUtils.dp2px(14f));
-
-            var text = cacheText[item];
-            rb.setText(text != null ? text : AndroidUtils.getString("autoclearcachedisabled"));
-
-            rb.setTextColor(ThemesUtils.getTextAttr());
-            rb.setChecked(val == item);
-        }
-
-        new VkAlertDialog.Builder(getContext())
-                .setTitle(requireContext().getString(R.string.cache_clean_title))
-                .setMessage(requireContext().getString(R.string.cache_select_size))
-                .setCancelable(true)
-                .setNegativeButton(requireContext().getString(R.string.cancel), null)
-                .setView(rg)
-                .setPositiveButton(requireContext().getString(R.string.save), (dialog, which) -> {
-                    var sizes = new String[]{"Default", "100mb", "500mb", "1gb", "2gb", "5gb"};
-                    var id = rg.getCheckedRadioButtonId();
-                    Preferences.getPreferences().edit()
-                            .putInt("autoclearcache_size", id)
-                            .putString("autoclearcache", sizes[id])
-                            .apply();
-                })
-                .show();
-    }
-
-    private void cacheCleanDialog() {
-        new VkAlertDialog.Builder(getContext())
-                .setTitle(requireContext().getString(R.string.select_which_clean))
-                .setItems(AndroidUtils.getArray(R.array.cache_cleaner), (dialog, which) -> {
-                    switch (which) {
-                        case 0 -> {
-                            SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-                            prefs2.edit().clear().commit();
-                            clearWebViewCache();
-                            VKImageLoader.e();
-                            ImEngineProvider.b().a();
-                            ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
-                            ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-                            FileUtils.l();
-                            Stickers.l.c();
-                            ImEngineExt.a(ImEngine1.a());
-                            AutoPlayCacheHolder.d.a();
-                            MediaStorage.a();
-                        }
-                        case 1 -> {
-                            SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-                            prefs2.edit().clear().commit();
-                            Stickers.l.c();
-                        }
-                        case 2 -> {
-                            VKImageLoader.e();
-                            ImEngineExt.a(ImEngine1.a());
-                        }
-                        case 3 -> {
-                            AutoPlayCacheHolder.d.a();
-                            MediaStorage.a();
-                        }
-                        case 4 -> {
-                            ImEngineProvider.b().a();
-                            ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
-                            ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-                        }
-                        case 5 -> clearWebViewCache();
-                    }
-                    Toast.makeText(getContext(), requireContext().getString(R.string.cache_cleaned), Toast.LENGTH_SHORT).show();
-                })
-                .show();
-    }
-
-    private void clearWebViewCache() {
-        new WebView(requireContext()).clearCache(true);
-    }
 
     private void copyText(String src) {
         var manager = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);

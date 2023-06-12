@@ -4,12 +4,6 @@
         <Preference
                 android:key="datasettings"
                 android:title="@string/datasettings_title"/>
-        <Preference
-                android:key="clearcache"
-                android:title="@string/clearcache_other_title"/>
-        <Preference
-                android:key="autoclearcache"
-                android:title="@string/autoclearcache"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/other_fix_app">
         <Preference
