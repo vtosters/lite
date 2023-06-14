@@ -79,12 +79,12 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "currcache",
-                "Размер приложения",
-                "Вес кеша приложения: " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())),
+                getString(com.vtosters.lite.R.string.cache_size),
+                getString(com.vtosters.lite.R.string.cache_size_summ) + ": " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())),
                 null,
                 preference -> {
                     new VkAlertDialog.Builder(requireContext())
-                            .setTitle("Очистить весь кеш?")
+                            .setTitle(getString(com.vtosters.lite.R.string.clear_all_cache))
                             .setPositiveButton(requireContext().getString(com.vtosters.lite.R.string.yes), (dialogInterface, i) -> {
                                 new WebView(requireContext()).clearCache(true);
                                 VKImageLoader.e();
@@ -297,7 +297,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
     }
 
     private void updateCacheSize() {
-        findPreference("currcache").setSummary("Вес кеша приложения: " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())));
+        findPreference("currcache").setSummary(getString(com.vtosters.lite.R.string.cache_size_summ) + ": " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())));
     }
 
     @SuppressLint({"CommitPrefEdits", "SetTextI18n"})

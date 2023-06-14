@@ -6545,4 +6545,8 @@ May look like a fake leaving the online"</string>
 
     <string name="compression_types">Photo compression method</string>
     <string name="compression_types_selection">Choose the compression method</string>
+
+    <string name="clear_all_cache">Clear all cache?</string>
+    <string name="cache_size">App size</string>
+    <string name="cache_size_summ">Cache size</string>
 </resources>

@@ -7025,4 +7025,8 @@
 
     <string name="compression_types">Спосаб кампрэсіі фота</string>
     <string name="compression_types_selection">Выберыце спосаб кампрэсіі</string>
+
+    <string name="clear_all_cache">Ачысціць ўвесь кэш?</string>
+    <string name="cache_size">Памер прыкладання</string>
+    <string name="cache_size_summ">Вага кэша прыкладання</string>
 </resources>

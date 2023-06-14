@@ -6407,4 +6407,8 @@
 
     <string name="compression_types">Способ компрессии фото</string>
     <string name="compression_types_selection">Выберите способ компрессии</string>
+
+    <string name="clear_all_cache">Очистить весь кеш?</string>
+    <string name="cache_size">Размер приложения</string>
+    <string name="cache_size_summ">Вес кеша приложения</string>
 </resources>

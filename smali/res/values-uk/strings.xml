@@ -6332,4 +6332,8 @@
 
     <string name="compression_types">Спосіб компресії фото</string>
     <string name="compression_types_selection">Виберіть спосіб компресії</string>
+
+    <string name="clear_all_cache">Очистити весь кеш?</string>
+    <string name="cache_size">Розмір програми</string>
+    <string name="cache_size_summ">Вага кеша додатки</string>
 </resources>
