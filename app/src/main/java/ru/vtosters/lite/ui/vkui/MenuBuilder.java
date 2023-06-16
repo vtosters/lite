@@ -46,15 +46,17 @@ public class MenuBuilder {
             cfambObject = CommunityFragmentActionsMenuBuilder.class.getDeclaredField("b");
             cfambObject.setAccessible(true);
         } catch (NoSuchFieldException | NoSuchMethodException e) {
-            Log.e("VTLite", "Reflection failed");
+            Log.e("MenuBuilder", "Reflection failed");
             e.printStackTrace();
         }
     }
 
     public static void injectAP(final ProfileFragmentActionsMenuBuilder mb, final ActionsPopup.b builder) {
         try {
-            final ExtendedUserProfile eup = (ExtendedUserProfile) pfambObject.get(mb);
-            final Context ctx = ((View) Objects.requireNonNull(apView.get(builder))).getContext();
+            ExtendedUserProfile eup = (ExtendedUserProfile) pfambObject.get(mb);
+            Context ctx = ((View) Objects.requireNonNull(apView.get(builder))).getContext();
+            boolean isPageWhitelistedFilter = isWhitelistedFilter(eup);
+            boolean isPageWhitelistedAdsStories = isWhitelistedAdStories(eup);
             addItem(builder, AndroidUtils.getString(R.string.menu_copy_id), () -> {
                 copy(ctx, String.valueOf(AccountManagerUtils.getUserID(eup)));
                 return Unit.a;
@@ -70,6 +72,17 @@ public class MenuBuilder {
 //                return Unit.a;
 //            });
 
+            addItem(builder, AndroidUtils.getString(isPageWhitelistedFilter ? R.string.remove_from_filter_whitelist : R.string.add_to_filter_whitelist), () -> {
+                setWhitelistedFilter(eup, !isPageWhitelistedFilter);
+                AndroidUtils.sendToast(AndroidUtils.getString(isPageWhitelistedFilter ? R.string.removed_from_whitelist_success : R.string.added_to_whitelist_success));
+                return Unit.a;
+            });
+
+            addItem(builder, AndroidUtils.getString(isPageWhitelistedAdsStories ? R.string.remove_from_ads_stories_whitelist : R.string.add_to_ads_stories_whitelist), () -> {
+                setWhitelistedAdStories(eup, !isPageWhitelistedAdsStories);
+                AndroidUtils.sendToast(AndroidUtils.getString(isPageWhitelistedAdsStories ? R.string.removed_from_whitelist_success : R.string.added_to_whitelist_success));
+                return Unit.a;
+            });
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
@@ -77,11 +90,11 @@ public class MenuBuilder {
 
     public static void injectAP(final CommunityFragmentActionsMenuBuilder mb, final ActionsPopup.b builder) {
         try {
-            final ExtendedCommunityProfile ecp = (ExtendedCommunityProfile) cfambObject.get(mb);
-            final Context ctx = ((View) apView.get(builder)).getContext();
-            final boolean isPageWhitelistedFilter = isWhitelistedFilter(ecp);
-            final boolean isPageWhitelistedAds = isWhitelistedAd(ecp);
-            final boolean isPageWhitelistedAdsStories = isWhitelistedAdStories(ecp);
+            ExtendedCommunityProfile ecp = (ExtendedCommunityProfile) cfambObject.get(mb);
+            Context ctx = ((View) apView.get(builder)).getContext();
+            boolean isPageWhitelistedFilter = isWhitelistedFilter(ecp);
+            boolean isPageWhitelistedAds = isWhitelistedAd(ecp);
+            boolean isPageWhitelistedAdsStories = isWhitelistedAdStories(ecp);
 
             addItem(builder, AndroidUtils.getString(R.string.menu_copy_id), () -> {
                 copy(ctx, String.valueOf(AccountManagerUtils.getUserID(ecp)));
@@ -110,7 +123,6 @@ public class MenuBuilder {
                 AndroidUtils.sendToast(AndroidUtils.getString(isPageWhitelistedAdsStories ? R.string.removed_from_whitelist_success : R.string.added_to_whitelist_success));
                 return Unit.a;
             });
-
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
@@ -142,6 +154,19 @@ public class MenuBuilder {
     }
 
     public static boolean isWhitelistedAdStories(ExtendedCommunityProfile eup) {
+        return Preferences.getPreferences().getStringSet(
+                "whitelisted_stories_ad",
+                Collections.emptySet()
+        ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
+    }
+
+    public static boolean isWhitelistedFilter(ExtendedUserProfile eup) {
+        return Preferences.getPreferences().getStringSet(
+                "whitelisted_filters_groups", Collections.emptySet()
+        ).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
+    }
+
+    public static boolean isWhitelistedAdStories(ExtendedUserProfile eup) {
         return Preferences.getPreferences().getStringSet(
                 "whitelisted_stories_ad",
                 Collections.emptySet()
@@ -181,6 +206,38 @@ public class MenuBuilder {
     }
 
     public static void setWhitelistedAdStories(ExtendedCommunityProfile eup, boolean needWhitelist) {
+        var id = String.valueOf(AccountManagerUtils.getUserID(eup));
+
+        var mutableAdsSet = new LinkedHashSet<>(Preferences.getPreferences().getStringSet(
+                "whitelisted_stories_ad",
+                Collections.emptySet()));
+
+        if (needWhitelist) {
+            mutableAdsSet.add(id);
+        } else {
+            mutableAdsSet.remove(id);
+        }
+
+        Preferences.getPreferences().edit().putStringSet("whitelisted_stories_ad", mutableAdsSet).apply();
+    }
+
+    public static void setWhitelistedFilter(ExtendedUserProfile eup, boolean needWhitelist) {
+        var id = String.valueOf(AccountManagerUtils.getUserID(eup));
+
+        var mutableAdsSet = new LinkedHashSet<>(Preferences.getPreferences().getStringSet(
+                "whitelisted_filters_groups",
+                Collections.emptySet())
+        );
+        if (needWhitelist) {
+            mutableAdsSet.add(id);
+        } else {
+            mutableAdsSet.remove(id);
+        }
+
+        Preferences.getPreferences().edit().putStringSet("whitelisted_filters_groups", mutableAdsSet).apply();
+    }
+
+    public static void setWhitelistedAdStories(ExtendedUserProfile eup, boolean needWhitelist) {
         var id = String.valueOf(AccountManagerUtils.getUserID(eup));
 
         var mutableAdsSet = new LinkedHashSet<>(Preferences.getPreferences().getStringSet(

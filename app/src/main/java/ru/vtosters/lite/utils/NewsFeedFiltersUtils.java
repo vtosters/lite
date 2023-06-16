@@ -14,57 +14,46 @@ import static ru.vtosters.hooks.other.Preferences.*;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class NewsFeedFiltersUtils {
-    public static List<String> mFilters;
-    public static List<String> mFiltersNames;
-    public static List<String> mFiltersLinks;
+    public static List<String> mFilters = new ArrayList<>();
+    public static List<String> mFiltersNames = new ArrayList<>();
+    public static List<String> mFiltersLinks = new ArrayList<>();
 
     public static void setupFilters() {
-        mFilters = new ArrayList<>();
-        mFiltersNames = new ArrayList<>();
-        mFiltersLinks = new ArrayList<>();
-
         getFilter("refsfilter", "Referals.txt", mFilters);
         getFilter("shortlinkfilter", "LinkShorter.txt", mFilters);
         getFilter("default_ad_list", "StandartFilter.txt", mFilters);
         getFilter("shitposting", "IDontWantToReadIt.txt", mFilters);
         getFilter("cringecopyright", "CopyrightAds.txt", mFiltersLinks);
 
-        var customFilters = getString("spamfilters");
-        if (!customFilters.isEmpty()) {
-            mFilters.addAll(Arrays.asList(customFilters.toLowerCase().split(", ")));
-        }
-
-        var sourceNameFilter = getString("sourcenamefilter");
-        if (!sourceNameFilter.isEmpty()) {
-            mFiltersNames.addAll(Arrays.asList(sourceNameFilter.toLowerCase().split(", ")));
-        }
-
-        var linkFilter = getString("linkfilter");
-        if (!linkFilter.isEmpty()) {
-            mFiltersLinks.addAll(Arrays.asList(linkFilter.toLowerCase().split(", ")));
-        }
+        setCustomFilters(mFilters, getString("spamfilters"));
+        setCustomFilters(mFiltersNames, getString("sourcenamefilter"));
+        setCustomFilters(mFiltersLinks, getString("linkfilter"));
     }
 
+    // Get needed filter list from assets
     public static void getFilter(String boolname, String filename, List<String> list) {
-        var ctx = getGlobalContext();
-
         if (getBoolValue(boolname, false)) {
-            try {
-                Scanner scanner;
-                scanner = new Scanner(ctx.getAssets().open(filename));
-
+            try (Scanner scanner = new Scanner(getGlobalContext().getAssets().open(filename))) {
                 while (scanner.hasNextLine()) {
-                    var line = scanner.nextLine();
-                    if (!line.isEmpty())
-                        list.add(line.toLowerCase());
+                    addNonEmptyLineToList(scanner.nextLine(), list);
                 }
             } catch (IOException e) {
                 Log.d("NewsFeedFiltersUtils", e.getMessage());
             }
         }
-    } // Get needed filter list from assets
+    }
 
-    public static boolean injectFiltersReposts(JSONObject obj) throws JSONException {
+    private static void addNonEmptyLineToList(String line, List<String> list) {
+        if (!line.isEmpty()) {
+            list.add(line.toLowerCase());
+        }
+    }
+
+    public static void setCustomFilters(List<String> list, String filters) {
+        if (!filters.isEmpty()) list.addAll(Arrays.asList(filters.toLowerCase().split(", ")));
+    }
+
+    public static boolean injectFiltersReposts(JSONObject obj) {
         if (obj.has("copy_history")) {
             var copyHistoryNode = obj.optJSONArray("copy_history");
             if (copyHistoryNode != null && copyHistoryNode.length() != 0) {
@@ -94,6 +83,7 @@ public class NewsFeedFiltersUtils {
                 }
             }
         }
+
         return false;
     }
 
@@ -101,17 +91,12 @@ public class NewsFeedFiltersUtils {
         if (json.has("copyright")) {
             if (copyright_post()) return true;
 
-            var copyright = json.optJSONObject("copyright");
-
+            JSONObject copyright = json.optJSONObject("copyright");
             String copyrightName = null;
-
-            if (copyright != null) {
-                copyrightName = copyright.getString("name").toLowerCase();
-            }
-
             String copyrightLink = null;
 
             if (copyright != null) {
+                copyrightName = copyright.getString("name").toLowerCase();
                 copyrightLink = copyright.getString("link").toLowerCase();
             }
 
@@ -126,8 +111,8 @@ public class NewsFeedFiltersUtils {
                     if (copyrightLink != null && copyrightLink.contains(filter)) return true;
                 }
             }
-
         }
+
         return false;
     }
 
@@ -144,7 +129,6 @@ public class NewsFeedFiltersUtils {
             }
         }
 
-
         return false;
     }
 
@@ -154,9 +138,8 @@ public class NewsFeedFiltersUtils {
             var caption = postJson.optJSONObject("caption");
             if (postsrecomm()) {
                 try {
-                    String type;
                     if (caption != null) {
-                        type = caption.getString("type");
+                        String type = caption.getString("type");
                         return type.equals("explorebait") || // Может быть интересно
                                 type.equals("shared") || // Поделился записью
                                 type.equals("digest") || // Рекомедации
@@ -187,7 +170,7 @@ public class NewsFeedFiltersUtils {
             var title = item.optString("title");
 
             if (TextUtils.isEmpty(id) || TextUtils.isEmpty(title)
-                    // this items not working
+                    // these items not working
                     || id.equals("kpop") || id.equals("foryou")
                     || id.equals("qazaqstan") || id.equals("podcasts"))
                 continue;
@@ -201,8 +184,8 @@ public class NewsFeedFiltersUtils {
                     .put("is_unavailable", hide);
             Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
         }
-        Preferences.getPreferences().edit().putStringSet("news_feed_items_set", mutableFiltersSet)
-                .apply();
+
+        Preferences.getPreferences().edit().putStringSet("news_feed_items_set", mutableFiltersSet).apply();
 
         return items;
     }
@@ -284,45 +267,6 @@ public class NewsFeedFiltersUtils {
         return true;
     }
 
-    public static JSONObject discoverObj() throws JSONException {
-        var mainjson = new JSONObject();
-
-        var info = new JSONObject();
-        info.put("title", "Test Injection");
-        info.put("text_color", "#ffffff");
-        info.put("description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat");
-
-        var image = new JSONArray();
-        var imageQuality1 = new JSONObject();
-        imageQuality1.put("url", "https://w7.pngwing.com/pngs/505/1021/png-transparent-konata-izumi-lucky-star-desktop-anime-anime-blue-mammal-face.png");
-        imageQuality1.put("width", 72); // 72, 108, 144, 216, 288
-        imageQuality1.put("height", 72); // 72, 108, 144, 216, 288
-        image.put(imageQuality1);
-
-        var background = new JSONArray();
-        var backgroundQuality1 = new JSONObject();
-        backgroundQuality1.put("url", "https://2ch.life/vg/arch/2022-08-22/src/38524739/16440606579870.jpg");
-        backgroundQuality1.put("width", 344); // 344, 516, 680, 1032, 1376
-        backgroundQuality1.put("height", 215); // 215, 323, 426, 645, 860
-        background.put(backgroundQuality1);
-
-        info.put("image", image);
-        info.put("background", background);
-
-        mainjson.put("info", info);
-        mainjson.put("track_code", "info_banner_donut_catalog");
-        mainjson.put("template", "info");
-
-        var action = new JSONObject();
-        action.put("type", "open_url");
-        action.put("url", "vk.com/vtosters_official");
-        action.put("target", "internal");
-
-        mainjson.put("action", action);
-
-        return mainjson;
-    }
-
     public static void parseStoriesItem(JSONObject item) throws JSONException {
         var stories = item.optJSONArray("stories");
         var newStories = new JSONArray();
@@ -382,7 +326,7 @@ public class NewsFeedFiltersUtils {
             id = String.valueOf(list.optInt("source_id"));
         }
 
-        if (id.equals("-189659924")) {
+        if (id.equals("-189659924") || id.equals(String.valueOf(AccountManagerUtils.getUserId()))) {
             return true;
         }
 
@@ -425,7 +369,7 @@ public class NewsFeedFiltersUtils {
 
         if (attachments != null && getBoolValue("blockminiapps", false)) {
             for (int j = 0; j < attachments.length(); j++) {
-                var type = attachments.optJSONObject(j).optString("type");
+                String type = attachments.optJSONObject(j).optString("type");
                 if (type.contains("mini_app")) return true;
             }
         }
@@ -439,7 +383,7 @@ public class NewsFeedFiltersUtils {
 
         for (int i = 0; i < (items != null ? items.length() : 0); i++) {
             try {
-                var curr = items.getJSONObject(i);
+                JSONObject curr = items.getJSONObject(i);
                 if (!curr.optString("template").contains("info") && discoverAdBlock(curr)) {
                     newObj.put(items.optJSONObject(i));
                 }
@@ -460,11 +404,11 @@ public class NewsFeedFiltersUtils {
             var newItems = new JSONArray();
 
             for (int j = 0; j < items.length(); j++) {
-                var list = items.optJSONObject(j);
+                JSONObject list = items.optJSONObject(j);
 
                 if (list == null) continue;
 
-                var type = list.optString("type");
+                String type = list.optString("type");
 
                 if (isAds(list, type)) {
                     continue;
@@ -549,7 +493,7 @@ public class NewsFeedFiltersUtils {
         }
 
         if (json.has("ads")) {
-            var ad = json.optJSONObject("ads");
+            JSONObject ad = json.optJSONObject("ads");
             if (isDeleteFix) {
                 if (ad != null) {
                     ad.optJSONObject("settings")
@@ -567,10 +511,10 @@ public class NewsFeedFiltersUtils {
             }
         }
 
-        var items = json.optJSONArray("items");
+        JSONArray items = json.optJSONArray("items");
         if (items != null) {
             for (int i = 0; i < items.length(); i++) {
-                var item = items.optJSONObject(i);
+                JSONObject item = items.optJSONObject(i);
                 if (item != null) {
                     parseStoriesItem(item);
                 }

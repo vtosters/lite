@@ -19658,6 +19658,9 @@ public final class R {
         public static final int vkx_integration_enabled_info = 0x7f12188a; // 2131892362
         public static final int whitelisted_ad_groups_stories_title = 0x7f12188b; // 2131892363
         public static final int writebar_ios_title = 0x7f12188c; // 2131892364
+        public static final int cache_size = 0x7f12188d; // 2131892365
+        public static final int cache_size_summ = 0x7f12188e; // 2131892366
+        public static final int clear_all_cache = 0x7f12188f; // 2131892367
     }
 
     public static final class style {

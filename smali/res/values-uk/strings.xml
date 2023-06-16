@@ -6116,8 +6116,8 @@
     <string name="remove_from_ads_whitelist">Видалити з вайтліста реклами</string>
     <string name="add_to_ads_stories_whitelist">Додати до вайтліста історій</string>
     <string name="remove_from_ads_stories_whitelist">Видалити з вайтліста історій</string>
-    <string name="removed_from_whitelist_success">Група видалена з вайтліста</string>
-    <string name="added_to_whitelist_success">Група додана до вайтліста</string>
+    <string name="removed_from_whitelist_success">Видалена з вайтліста</string>
+    <string name="added_to_whitelist_success">Додана до вайтліста</string>
 
     <string name="whitelisted_ad_groups_title">Вайтліст реклами</string>
     <string name="whitelisted_filters_groups_title">Вайтліст фільтрів та джерел</string>
@@ -6332,4 +6332,8 @@
 
     <string name="compression_types">Спосіб компресії фото</string>
     <string name="compression_types_selection">Виберіть спосіб компресії</string>
+
+    <string name="clear_all_cache">Очистити весь кеш?</string>
+    <string name="cache_size">Розмір програми</string>
+    <string name="cache_size_summ">Вага кеша додатки</string>
 </resources>

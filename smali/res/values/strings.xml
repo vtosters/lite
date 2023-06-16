@@ -6329,8 +6329,8 @@ May look like a fake leaving the online"</string>
     <string name="remove_from_ads_stories_whitelist">Remove from stories whitelist</string>
     <string name="add_to_ads_whitelist">Add to ads stories whitelist</string>
     <string name="remove_from_ads_whitelist">Remove from ads stories whitelist</string>
-    <string name="removed_from_whitelist_success">Group removed from whitelist</string>
-    <string name="added_to_whitelist_success">Group added to whitelist</string>
+    <string name="removed_from_whitelist_success">Removed from whitelist</string>
+    <string name="added_to_whitelist_success">Added to whitelist</string>
 
     <string name="whitelisted_ad_groups_title">Ads whitelist</string>
     <string name="whitelisted_filters_groups_title">Filters whitelist and copyrights</string>
@@ -6545,4 +6545,8 @@ May look like a fake leaving the online"</string>
 
     <string name="compression_types">Photo compression method</string>
     <string name="compression_types_selection">Choose the compression method</string>
+
+    <string name="clear_all_cache">Clear all cache?</string>
+    <string name="cache_size">App size</string>
+    <string name="cache_size_summ">Cache size</string>
 </resources>

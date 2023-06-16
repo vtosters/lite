@@ -19,13 +19,10 @@ import static ru.vtosters.hooks.other.Preferences.isValidSignature;
 
 
 public class GcmHook {
-
     private static final String agent = String.format("Android-GCM/1.5 (%s %s)", Build.MODEL, Build.MODEL);
-
     private static KeyPair pair;
-
     private static int rid = 0;
-
+    
     static {
         genNewKey();
     }
@@ -35,15 +32,15 @@ public class GcmHook {
     }
 
     public static String requestToken(String orig) {
-        return "yssp9o9p9pamz5t-nvmq8spgwtin3e0==";
+        return isValidSignature() ? "yssp9o9p9pamz5t-nvmq8spgwtin3e0==" : requestToken();
     }
 
     public static String requestToken() {
-        String xappide;
         try {
             String aid = getRandomAid();
             String pub2 = genNewKey();
             String sig = getSig(pub2);
+            String xappide;
             try {
                 byte[] bytes = MessageDigest.getInstance("SHA1").digest(pair.getPublic().getEncoded());
                 bytes[0] = (byte) (((bytes[0] & 15) + 112) & 255);
@@ -200,7 +197,6 @@ public class GcmHook {
             }).getBytes(StandardCharsets.UTF_8));
             return Base64.encodeToString(sign.sign(), 0);
         } catch (Exception e) {
-            e.printStackTrace();
             return null;
         }
     }

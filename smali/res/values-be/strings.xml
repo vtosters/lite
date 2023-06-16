@@ -6823,8 +6823,8 @@
     <string name="remove_from_ads_whitelist">Выдаліць з вайтліста рэкламы</string>
     <string name="add_to_ads_stories_whitelist">Дадаць у вайтліст гісторый</string>
     <string name="remove_from_ads_stories_whitelist">Выдаліць з вайтліста гісторый</string>
-    <string name="removed_from_whitelist_success">Група выдалена з вайтліста</string>
-    <string name="added_to_whitelist_success">Група дададзена ў вайтліст</string>
+    <string name="removed_from_whitelist_success">Выдаленая з вайтлиста</string>
+    <string name="added_to_whitelist_success">Дададзена ў вайтліст</string>
     <string name="whitelisted_ad_groups_title">Вайтліст рэкламы</string>
 
     <string name="whitelisted_ad_groups_stories_title">Вайтліст рэкламы гісторый</string>
@@ -7025,4 +7025,8 @@
 
     <string name="compression_types">Спосаб кампрэсіі фота</string>
     <string name="compression_types_selection">Выберыце спосаб кампрэсіі</string>
+
+    <string name="clear_all_cache">Ачысціць ўвесь кэш?</string>
+    <string name="cache_size">Памер прыкладання</string>
+    <string name="cache_size_summ">Вага кэша прыкладання</string>
 </resources>

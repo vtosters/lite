@@ -6191,8 +6191,8 @@
     <string name="remove_from_ads_whitelist">Удалить из вайтлиста рекламы</string>
     <string name="add_to_ads_stories_whitelist">Добавить в вайтлист историй</string>
     <string name="remove_from_ads_stories_whitelist">Удалить из вайтлиста историй</string>
-    <string name="removed_from_whitelist_success">Группа удалена из вайтлиста</string>
-    <string name="added_to_whitelist_success">Группа добавлена в вайтлист</string>
+    <string name="removed_from_whitelist_success">Удалено из вайтлиста</string>
+    <string name="added_to_whitelist_success">Добавлено в вайтлист</string>
 
     <string name="whitelisted_ad_groups_title">Вайтлист рекламы</string>
     <string name="whitelisted_filters_groups_title">Вайтлист фильтров и источников</string>
@@ -6407,4 +6407,8 @@
 
     <string name="compression_types">Способ компрессии фото</string>
     <string name="compression_types_selection">Выберите способ компрессии</string>
+
+    <string name="clear_all_cache">Очистить весь кеш?</string>
+    <string name="cache_size">Размер приложения</string>
+    <string name="cache_size_summ">Вес кеша приложения</string>
 </resources>
