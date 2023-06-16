@@ -130,6 +130,8 @@ public class PhotoViewer {
                     .setItems(items, (di, i) -> openUrl(SearchEngine.values()[i].buildSearchUrl(url)))
                     .show();
         } else {
+            // index correction for old versions with numeration "1-x"
+            if (selectedEngine >= SearchEngine.values().length) SearchEngine.setDefaultSearchEngine(--selectedEngine);
             openUrl(SearchEngine.values()[selectedEngine].buildSearchUrl(url));
         }
     }

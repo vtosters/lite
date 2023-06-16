@@ -17,7 +17,6 @@ import com.vtosters.lite.R;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
@@ -33,7 +32,6 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.SearchEngine;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -261,7 +259,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        });;
+        });
     }
 
     private void deleteVideoHistoryDialog(Context context) {
