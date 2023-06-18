@@ -56,14 +56,6 @@ public class ThemesUtils {
         return ColorStateList.valueOf(getAccentColor());
     }
 
-    public static int getSystemModeTheme() {
-        return AppCompatDelegate.getDefaultNightMode();
-    }
-
-    public static void setSystemModeTheme(int theme) {
-        AppCompatDelegate.setDefaultNightMode(theme);
-    }
-
     public static void setTheme(VKTheme theme, Activity activity, Boolean restartActivity) {
         setThemeFL(theme, activity, getCenterScreenCoords(), restartActivity);
     } // apply changed theme
@@ -263,14 +255,6 @@ public class ThemesUtils {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? isDarkTheme() ? View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
     }
 
-    public static int getStockAccent() {
-        if (isMilkshake()) {
-            return isDarkTheme() ? Color.parseColor("#71aaeb") : Color.parseColor("#3f8ae0");
-        } else {
-            return isDarkTheme() ? Color.parseColor("#71aaeb") : Color.parseColor("#528bcc");
-        }
-    }
-
     public static int getDarkThemeRes() {
         if (isMonetTheme()) {
             if (isAmoledTheme()) {
@@ -410,15 +394,11 @@ public class ThemesUtils {
     }
 
     public static int getNavigationHeight(int Default) {
-        int VKME = R.dimen.design_bottom_sheet_peek_height_min;
-
-        return vkme() ? VKME : Default;
+        return vkme() ? R.dimen.design_bottom_sheet_peek_height_min : Default;
     }
 
     public static int getNavigationWidth(int Default) {
-        int VKME = R.dimen.app_minimumsize_h;
-
-        return vkme() ? VKME : Default;
+        return vkme() ? R.dimen.app_minimumsize_h : Default;
     }
 
     public static ColorStateList getCSTDock() {
@@ -432,9 +412,5 @@ public class ThemesUtils {
                         getColorFromAttr(R.attr.tabbar_inactive_icon)
                 }
         );
-    }
-
-    private void getCurrentThemeID(VKTheme paramVKTheme) {
-        Preference.b("vk_theme_helper", "current_theme", paramVKTheme.getId());
     }
 }
