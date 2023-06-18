@@ -72,6 +72,9 @@ android {
     }
     namespace 'ru.vtosters.lite'
     ndkVersion '25.2.9519653'
+    buildFeatures {
+        aidl true
+    }
 }
 
 dependencies {
