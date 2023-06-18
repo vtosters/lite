@@ -143,8 +143,11 @@ public class ThemesCore {
         themedColors.put(R.attr.im_reply_separator, accentColor);
         themedColors.put(R.attr.im_text_name, accentColor);
 
-        outgoinging_msg = ThemesUtils.lighten(accentColor, 0.76f);
-        outgoinging_msg_highlight = ThemesUtils.lighten(accentColor, 0.5f);
+        float out = ThemesUtils.isMonetTheme() ? 0.85f : 0.76f;
+        float outhighlight = ThemesUtils.isMonetTheme() ? 0.75f : 0.5f;
+
+        outgoinging_msg = ThemesUtils.lighten(accentColor, out);
+        outgoinging_msg_highlight = ThemesUtils.lighten(accentColor, outhighlight);
 
         themedColors.put(R.attr.im_ic_send_msg, accentColor);
         themedColors.put(R.attr.im_bubble_wallpaper_outgoing, accentColor);
