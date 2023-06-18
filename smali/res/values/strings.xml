@@ -6468,6 +6468,8 @@ May look like a fake leaving the online"</string>
     <string name="promotedstickers_title">Don\'t receive promoted stickers</string>
     <string name="useOldAppVer_title">Use old music catalog</string>
     <string name="useOldAppVer_summ">Works \"as is\". There may be errors</string>
+    <string name="invertFilters">Invert exceptions</string>
+    <string name="invertFilters_summ">Groups added to exceptions will be filtered</string>
 
     <string name="downloading_update">Downloading update</string>
     <string name="sources">Sources</string>

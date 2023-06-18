@@ -335,7 +335,7 @@ public class NewsFeedFiltersUtils {
                 Collections.emptySet()
         );
 
-        return whitelist.contains(id);
+        return Preferences.getBoolValue("invertFilters", false) != whitelist.contains(id);
     }
 
     public static Boolean isWhitelistedAd(JSONObject list) {

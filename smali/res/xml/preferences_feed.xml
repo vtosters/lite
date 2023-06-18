@@ -91,6 +91,11 @@
                 android:title="@string/whitelisted_filters_groups_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
+                android:key="invertFilters"
+                android:summary="@string/invertFilters_summ"
+                android:title="@string/invertFilters"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
                 android:key="blockminiapps"
                 android:summary="@string/blockminiapps_summ"
                 android:title="@string/blockminiapps_title"/>

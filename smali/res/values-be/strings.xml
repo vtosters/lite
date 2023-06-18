@@ -6942,6 +6942,8 @@
     <string name="promotedstickers_title">Не атрымліваць промостикеры</string>
     <string name="useOldAppVer_title">Выкарыстоўваць стары дызайн</string>
     <string name="useOldAppVer_summ">Працуе \"як ёсць\". Могуць быць памылкі</string>
+    <string name="invertFilters">Інвертаваць выключэння</string>
+    <string name="invertFilters_summ">Дададзеныя ў выключэння групы будуць фільтраваць</string>
     <string name="downloading_update">Спампоўка абнаўлення</string>
     <string name="sources">Крыніцы</string>
     <string name="businessDisabler_title">Адключыць бізнес-паведамлення</string>

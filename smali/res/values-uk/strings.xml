@@ -6255,6 +6255,8 @@
     <string name="promotedstickers_title">Не отримувати промостикери</string>
     <string name="useOldAppVer_title">Використовувати старий дизайн</string>
     <string name="useOldAppVer_summ">Працює \"як є\". Можливі помилки</string>
+    <string name="invertFilters">Інвертувати винятки</string>
+    <string name="invertFilters_summ">Додані в виключення групи будуть фільтруватися</string>
 
     <string name="downloading_update">Завантаження оновлення</string>
     <string name="sources">Джерела</string>
