@@ -65,7 +65,7 @@ public class ThemesUtils {
             activity = LifecycleUtils.getCurrentActivity();
         }
         VKThemeHelper.theme(theme, activity, fl);
-        ThemesCore.clear();
+        if (isMonetTheme()) ThemesCore.clear();
         if (restartActivity) activity.recreate();
         ThemeTracker.a();
         WebViewColoringUtils.isLoaded = false;
