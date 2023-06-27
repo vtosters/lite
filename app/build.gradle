@@ -52,22 +52,25 @@ android {
     }
 
     buildTypes {
-        dev {
-            initWith release
+        base {
             buildConfigField 'String', 'APPCENTER_KEY', '""'
         }
-        beta {
-            initWith release
-            buildConfigField 'String', 'APPCENTER_KEY', '""'
+        debug {
+            initWith base
+            minifyEnabled false
         }
         release {
-            buildConfigField 'String', 'APPCENTER_KEY', '""'
+            initWith base
             minifyEnabled true
             proguardFile 'proguard-rules.pro'
         }
-        debug {
-            buildConfigField 'String', 'APPCENTER_KEY', '""'
-            minifyEnabled false
+        dev {
+            initWith debug
+            //etc
+        }
+        beta {
+            initWith release
+            //etc
         }
     }
 
@@ -98,13 +101,16 @@ task generateBuildTasks() {
     android.applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def buildType = output.name.toString().capitalize()
-
+            if(buildType=="Base")return
             task "exportDex$buildType"() {
                 dependsOn('assemble' + buildType)
                 doLast {
                     try {
                         def suffix=buildType.toLowerCase()
-                        def zip=new ZipFile(new File(projectDir,"/build/outputs/apk/$suffix/app-$suffix${suffix!="debug"?"-unsigned.apk":".apk"}"))
+                        String apkPath=projectDir.getAbsolutePath()+"/build/outputs/apk/$suffix/app-$suffix"
+                        def apk=new File(apkPath+"-unsigned.apk")
+                        if(!apk.exists())apk=new File(apkPath+".apk")
+                        def zip=new ZipFile(apk)
                         def entries=zip.entries()
                         def dexCounter=dexes
                         while(entries.hasMoreElements())
