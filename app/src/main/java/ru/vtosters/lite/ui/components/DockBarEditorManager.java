@@ -123,7 +123,7 @@ public class DockBarEditorManager {
         return mDisabledTabs;
     }
 
-    private DockBarTab getTabByTag(String tag) {
+    public static DockBarTab getTabByTag(String tag) {
         return switch (tag) {
             case "tab_news" -> DockBarTab.valuesOf(
                     "tab_news",

@@ -2,7 +2,8 @@ package ru.vtosters.lite.ui.items;
 
 import com.vk.core.fragments.FragmentImpl;
 
-public class DockBarTab {
+public class DockBarTab
+{
 
     public String tag;
     public int iconID;
@@ -30,5 +31,11 @@ public class DockBarTab {
             int resID,
             Class<?> fragmentClass) {
         return new DockBarTab(tag, iconID, titleID, resID, fragmentClass);
+    }
+
+    @Override
+    public boolean equals(Object arg)
+    {
+        return this.id==((DockBarTab)arg).id;
     }
 }

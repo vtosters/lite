@@ -82,6 +82,9 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
             holder.bindMovingItem(tab.iconID, tab.titleID);
         });
         adapter.setMinAndMaxCounts(DockBarEditorManager.MIN_SELECTED_TABS, DockBarEditorManager.MAX_SELECTED_TABS);
+        adapter.setExceptions(
+                DockBarEditorManager.getTabByTag("tab_profile"),
+                DockBarEditorManager.getTabByTag("")/*settings*/);
 
         var recyclerView = new RecyclerView(requireContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
