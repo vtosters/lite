@@ -34,7 +34,3 @@ cd ../scripts
 check_result
 
 echo -e "${BOLD}VTosters Lite успешно собран! APK находится в папке scripts${NC}"
-
-cd ../smali
-rm classes6.dex
-rm classes7.dex

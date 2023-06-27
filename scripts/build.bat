@@ -22,9 +22,6 @@ if "%ERRORLEVEL%" == "0" (
     echo %ESC%[31mFailed%ESC%[0m
     exit /B 1
 )
-del classes6.dex
-del classes7.dex
-del assets\version.properties
 
 echo.
 echo %ESC%[1;4mSign apk...%ESC%[0m
