@@ -166,7 +166,7 @@ public class ThemesCore {
     }
 
     public static boolean hasThemedAttr(Context context, int attrID) {
-        if (ThemesUtils.isMonetTheme()) {
+        if (ThemesUtils.isMonetTheme() || ThemesManager.canApplyCustomAccent()) {
             if (Preferences.getBoolValue("logColors", false)) {
                 try {
                     Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));

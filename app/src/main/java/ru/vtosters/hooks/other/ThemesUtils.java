@@ -28,6 +28,7 @@ import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.ThemesHacks;
+import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.WebViewColoringUtils;
@@ -59,7 +60,7 @@ public class ThemesUtils {
             activity = LifecycleUtils.getCurrentActivity();
         }
         VKThemeHelper.theme(theme, activity, fl);
-        if (isMonetTheme()) ThemesCore.clear();
+        if (isMonetTheme() || ThemesManager.canApplyCustomAccent()) ThemesCore.clear();
         if (restartActivity) activity.recreate();
         ThemeTracker.a();
         WebViewColoringUtils.isLoaded = false;
