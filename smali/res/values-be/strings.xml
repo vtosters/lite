@@ -7012,7 +7012,7 @@
 
     <string name="datasettings_title">Налады дадзеных прыкладання</string>
     <string name="invalidate_theme_cache_title">Інвалідацыя кэша тэмы</string>
-    <string name="invalidate_theme_cache_each_update_title">Інвалідацыя кэша тэмы пры кожным абнаўленні</string>
+    <string name="invalidate_theme_cache_each_update_title">Ачыстка кэша тэмы пасля абнаўлення для прадухілення праблем з акцэнтамі</string>
 
     <string name="useCustomPrefsStyle_title">Выкарыстоўваць новыя тумблеры</string>
     <string name="useCustomPrefsStyle_summ">Больш сучасны і стыльны выгляд тумблераў у наладах</string>

@@ -6394,7 +6394,7 @@
 
     <string name="datasettings_title">Настройки данных приложения</string>
     <string name="invalidate_theme_cache_title">Инвалидация кэша темы</string>
-    <string name="invalidate_theme_cache_each_update_title">Инвалидация кэша темы при каждом обновлении</string>
+    <string name="invalidate_theme_cache_each_update_title">Очистка кэша темы после обновления для предотвращения проблем с акцентами</string>
 
     <string name="useCustomPrefsStyle_title">Использовать новые переключатели</string>
     <string name="useCustomPrefsStyle_summ">Более современный и стильный вид тумблеров в настройках</string>

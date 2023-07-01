@@ -6319,7 +6319,7 @@
 
     <string name="datasettings_title">Налаштування даних додатку</string>
     <string name="invalidate_theme_cache_title">Інвалідація кешу теми</string>
-    <string name="invalidate_theme_cache_each_update_title">Інвалідація кешу теми при кожному оновленні</string>
+    <string name="invalidate_theme_cache_each_update_title">Очищення кешу теми після оновлення для запобігання проблем з акцентами</string>
 
     <string name="useCustomPrefsStyle_title">Використовувати нові перемикачі</string>
     <string name="useCustomPrefsStyle_summ">Більш сучасний і стильний вигляд тумблерів у налаштуваннях</string>
