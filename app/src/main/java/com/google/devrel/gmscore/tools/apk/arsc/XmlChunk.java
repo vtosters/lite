@@ -28,7 +28,7 @@ import java.nio.ByteBuffer;
  */
 public final class XmlChunk extends ChunkWithChunks {
 
-    XmlChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    protected XmlChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
     }
 

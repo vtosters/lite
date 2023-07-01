@@ -71,7 +71,7 @@ public final class XmlStartElementChunk extends XmlNodeChunk {
      */
     private final List<XmlAttribute> attributes = new ArrayList<>();
 
-    XmlStartElementChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    protected XmlStartElementChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
         namespace = buffer.getInt();
         name = buffer.getInt();

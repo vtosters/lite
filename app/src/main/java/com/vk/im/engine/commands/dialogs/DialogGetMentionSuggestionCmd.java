@@ -31,6 +31,30 @@ public final class DialogGetMentionSuggestionCmd extends BaseImEngineCmd<Suggest
     private final boolean e;
     private final Object f;
 
+    public static final class a<T> implements Comparator<Member> {
+        List a;
+
+        a(List list) {
+            this.a = list;
+        }
+
+        @Override // java.util.Comparator
+        /* renamed from: a */
+        public int compare(Member member, Member member2) {
+            int indexOf = this.a.indexOf(member);
+            int indexOf2 = this.a.indexOf(member2);
+            int i = indexOf;
+            if (indexOf < 0) {
+                i = Integer.MAX_VALUE;
+            }
+            int i2 = indexOf2;
+            if (indexOf2 < 0) {
+                i2 = Integer.MAX_VALUE;
+            }
+            return Intrinsics.a(i, i2);
+        }
+    }
+
     public DialogGetMentionSuggestionCmd(int i, String str, Source source, boolean z, Object obj) {
         this.f2365b = i;
         this.c = str;
@@ -126,7 +150,7 @@ public final class DialogGetMentionSuggestionCmd extends BaseImEngineCmd<Suggest
         Collection<Member> a2;
         Source source;
         if (ImDialogsUtils.d(this.f2365b) != PeerType.CHAT) {
-            return new Suggestion(null, null);
+            return new Suggestion((EntityValue) null, (ProfilesInfo) null);
         }
         Member Z = imEnvironment.Z();
         int d = imEnvironment.a0().n().d();
@@ -210,29 +234,5 @@ public final class DialogGetMentionSuggestionCmd extends BaseImEngineCmd<Suggest
 
     public String toString() {
         return "DialogGetMentionSuggestionCmd(dialogId=" + this.f2365b + ", query=" + this.c + ", source=" + this.d + ", isAwaitNetwork=" + this.e + ", changerTag=" + this.f + ")";
-    }
-
-    public static final class a<T> implements Comparator<Member> {
-        List a;
-
-        a(List list) {
-            this.a = list;
-        }
-
-        @Override // java.util.Comparator
-        /* renamed from: a */
-        public int compare(Member member, Member member2) {
-            int indexOf = this.a.indexOf(member);
-            int indexOf2 = this.a.indexOf(member2);
-            int i = indexOf;
-            if (indexOf < 0) {
-                i = Integer.MAX_VALUE;
-            }
-            int i2 = indexOf2;
-            if (indexOf2 < 0) {
-                i2 = Integer.MAX_VALUE;
-            }
-            return Intrinsics.a(i, i2);
-        }
     }
 }

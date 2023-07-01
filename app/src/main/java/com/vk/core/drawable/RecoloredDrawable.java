@@ -27,15 +27,6 @@ public class RecoloredDrawable extends Drawable implements Drawable.Callback {
         onStateChange(new int[0]);
     }
 
-    public RecoloredDrawable(Drawable drawable, int i) {
-        this(drawable, new ColorStateList(new int[][]{new int[0]}, new int[]{i}));
-    }
-
-    public RecoloredDrawable() {
-        this.c = 255;
-        this.d = 255;
-    }
-
     public void a(int i) {
         a(new ColorStateList(new int[][]{new int[0]}, new int[]{i}));
     }
@@ -128,5 +119,14 @@ public class RecoloredDrawable extends Drawable implements Drawable.Callback {
 
     public Drawable a() {
         return this.drawable;
+    }
+
+    public RecoloredDrawable(Drawable drawable, int i) {
+        this(drawable, new ColorStateList(new int[][]{new int[0]}, new int[]{i}));
+    }
+
+    public RecoloredDrawable() {
+        this.c = 255;
+        this.d = 255;
     }
 }

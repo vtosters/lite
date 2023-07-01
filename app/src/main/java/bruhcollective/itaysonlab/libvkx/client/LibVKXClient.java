@@ -10,9 +10,9 @@ import com.vk.music.common.MusicPlaybackLaunchContext;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.hooks.other.Preferences.isValidSignature;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class LibVKXClient {
     @SuppressLint("StaticFieldLeak")

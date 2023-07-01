@@ -37,7 +37,7 @@ public final class XmlEndElementChunk extends XmlNodeChunk {
      */
     private final int name;
 
-    XmlEndElementChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    protected XmlEndElementChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
         namespace = buffer.getInt();
         name = buffer.getInt();

@@ -18,6 +18,7 @@ import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.foaf.FoafBase;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.RenameTool;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

@@ -74,7 +74,11 @@ public class VhBindArgs {
 
     private boolean L() {
         boolean var1;
-        var1 = this.K() > this.m || TimeProvider.f.c();
+        if (this.K() <= this.m && !TimeProvider.f.c()) {
+            var1 = false;
+        } else {
+            var1 = true;
+        }
 
         return var1;
     }
@@ -105,7 +109,11 @@ public class VhBindArgs {
     public boolean B() {
         AdapterEntry var1 = this.a;
         boolean var2;
-        var2 = var1 != null && var1.c();
+        if (var1 != null && var1.c()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -113,7 +121,11 @@ public class VhBindArgs {
     public boolean C() {
         AdapterEntry var1 = this.a;
         boolean var2;
-        var2 = var1 != null && var1.c() && this.a.c.getLocalId() == this.b.c.getLocalId();
+        if (var1 != null && var1.c() && this.a.c.getLocalId() == this.b.c.getLocalId()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -121,7 +133,11 @@ public class VhBindArgs {
     public boolean D() {
         AdapterEntry var1 = this.a;
         boolean var2;
-        var2 = var1 != null && var1.a == 83;
+        if (var1 != null && var1.a == 83) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -129,7 +145,11 @@ public class VhBindArgs {
     public boolean E() {
         Msg var1 = this.b.c;
         boolean var2;
-        var2 = var1 instanceof MsgFromUser && ((MsgFromUser) var1).i2();
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).i2()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -137,7 +157,11 @@ public class VhBindArgs {
     public boolean F() {
         Msg var1 = this.b.c;
         boolean var2;
-        var2 = var1 instanceof MsgFromUser && ((MsgFromUser) var1).F0();
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).F0()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -145,7 +169,11 @@ public class VhBindArgs {
     public boolean G() {
         AdapterEntry var1 = this.b;
         boolean var2;
-        var2 = var1 != null && var1.a == 51;
+        if (var1 != null && var1.a == 51) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -158,7 +186,11 @@ public class VhBindArgs {
         long var1 = this.K();
         long var3 = this.m;
         boolean var5;
-        var5 = var1 > var3 && var1 < var3 * 2L;
+        if (var1 > var3 && var1 < var3 * 2L) {
+            var5 = true;
+        } else {
+            var5 = false;
+        }
 
         return var5;
     }
@@ -174,10 +206,18 @@ public class VhBindArgs {
             MsgFromUser var7 = (MsgFromUser) var1;
             Msg var3 = this.a.c;
             boolean var4;
-            var4 = var3 != null && var3.d() == MsgSyncState.DONE;
+            if (var3 != null && var3.d() == MsgSyncState.DONE) {
+                var4 = true;
+            } else {
+                var4 = false;
+            }
 
             boolean var5;
-            var5 = this.o == ImBgSyncState.CONNECTED;
+            if (this.o == ImBgSyncState.CONNECTED) {
+                var5 = true;
+            } else {
+                var5 = false;
+            }
 
             boolean var6 = var2;
             if (!var7.H0()) {
@@ -202,7 +242,7 @@ public class VhBindArgs {
         byte var2 = 0;
         int var3 = var2;
         if (var1) {
-            AttachAudioMsg var4 = ((MsgFromUser) this.b.c).c(AttachAudioMsg.class, false);
+            AttachAudioMsg var4 = (AttachAudioMsg) ((MsgFromUser) this.b.c).c(AttachAudioMsg.class, false);
             var3 = var2;
             if (var4 != null) {
                 var3 = var4.f();
@@ -227,7 +267,11 @@ public class VhBindArgs {
     public boolean c() {
         Msg var1 = this.b.c;
         boolean var2;
-        var2 = var1 instanceof MsgFromUser && ((MsgFromUser) var1).I0();
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).I0()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -235,14 +279,22 @@ public class VhBindArgs {
     public boolean d() {
         Msg var1 = this.b.c;
         boolean var2;
-        var2 = var1 instanceof WithUserContent && ((WithUserContent) var1).D0() != null;
+        if (var1 instanceof WithUserContent && ((WithUserContent) var1).D0() != null) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
 
     public boolean e() {
         boolean var1;
-        var1 = this.b.i > 0;
+        if (this.b.i > 0) {
+            var1 = true;
+        } else {
+            var1 = false;
+        }
 
         return var1;
     }
@@ -265,7 +317,11 @@ public class VhBindArgs {
     public boolean g() {
         Msg var1 = this.b.c;
         boolean var2;
-        var2 = var1 instanceof MsgFromUser && ((MsgFromUser) var1).G0();
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).G0()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -273,21 +329,33 @@ public class VhBindArgs {
     public boolean h() {
         Msg var1 = this.b.c;
         boolean var2;
-        var2 = var1 instanceof MsgFromUser && ((MsgFromUser) var1).Z1();
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).Z1()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
 
     public boolean i() {
         boolean var1;
-        var1 = this.j && !this.u() && !this.l();
+        if (this.j && !this.u() && !this.l()) {
+            var1 = true;
+        } else {
+            var1 = false;
+        }
 
         return var1;
     }
 
     public boolean j() {
         boolean var1;
-        var1 = this.j && !this.u() && (!this.B() || !this.A() || this.a.c.H1());
+        if (!this.j || this.u() || this.B() && this.A() && !this.a.c.H1()) {
+            var1 = false;
+        } else {
+            var1 = true;
+        }
 
         return var1;
     }
@@ -295,7 +363,11 @@ public class VhBindArgs {
     public boolean k() {
         Dialog var1 = this.e;
         boolean var2;
-        var2 = var1 != null && var1.U1();
+        if (var1 != null && var1.U1()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -303,7 +375,11 @@ public class VhBindArgs {
     public boolean l() {
         Dialog var1 = this.e;
         boolean var2;
-        var2 = var1 != null && var1.V1();
+        if (var1 != null && var1.V1()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -311,7 +387,11 @@ public class VhBindArgs {
     public boolean m() {
         Dialog var1 = this.e;
         boolean var2;
-        var2 = var1 != null && var1.W1();
+        if (var1 != null && var1.W1()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -324,7 +404,11 @@ public class VhBindArgs {
     public boolean o() {
         AdapterEntry var1 = this.b;
         boolean var2;
-        var2 = var1 != null && var1.a == 101;
+        if (var1 != null && var1.a == 101) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -332,7 +416,11 @@ public class VhBindArgs {
     public boolean p() {
         Msg var1 = this.b.c;
         boolean var2;
-        var2 = var1 != null && var1.G1();
+        if (var1 != null && var1.G1()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -355,7 +443,11 @@ public class VhBindArgs {
     public boolean r() {
         Msg var1 = this.b.c;
         boolean var2;
-        var2 = var1 instanceof MsgFromUser && ((MsgFromUser) var1).e2();
+        if (var1 instanceof MsgFromUser && ((MsgFromUser) var1).e2()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -396,19 +488,27 @@ public class VhBindArgs {
     public boolean v() {
         IntSet var1 = this.r;
         boolean var2;
-        var2 = var1 != null && var1.a(this.b.c.getLocalId());
+        if (var1 != null && var1.a(this.b.c.getLocalId())) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
 
     public boolean w() {
-        return !this.z();
+        return this.z() ^ true;
     }
 
     public boolean x() {
         AdapterEntry var1 = this.c;
         boolean var2;
-        var2 = var1 != null && var1.a == 100;
+        if (var1 != null && var1.a == 100) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -416,7 +516,11 @@ public class VhBindArgs {
     public boolean y() {
         AdapterEntry var1 = this.c;
         boolean var2;
-        var2 = var1 != null && var1.a == 96;
+        if (var1 != null && var1.a == 96) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }
@@ -424,7 +528,11 @@ public class VhBindArgs {
     public boolean z() {
         AdapterEntry var1 = this.c;
         boolean var2;
-        var2 = var1 != null && var1.c() && this.c.c.getLocalId() == this.b.c.getLocalId();
+        if (var1 != null && var1.c() && this.c.c.getLocalId() == this.b.c.getLocalId()) {
+            var2 = true;
+        } else {
+            var2 = false;
+        }
 
         return var2;
     }

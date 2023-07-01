@@ -59,22 +59,26 @@ public class ArscBlamer {
      * Maps type chunk entries to blamed resources.
      */
     private final Multimap<TypeChunk.Entry, ResourceEntry> typeEntryToBlame = HashMultimap.create();
-    /**
-     * This is the {@link ResourceTableChunk} inside of the resources.arsc file in the APK.
-     */
-    private final ResourceTableChunk resourceTable;
+
     /**
      * Maps resources to the type chunk entries they reference.
      */
     private Multimap<ResourceEntry, TypeChunk.Entry> resourceEntries;
+
     /**
      * Maps resources which have no base config to the type chunk entries they reference.
      */
     private Multimap<ResourceEntry, TypeChunk.Entry> baselessKeys;
+
     /**
      * Contains all of the type chunks in {@link #resourceTable}.
      */
     private List<TypeChunk> typeChunks;
+
+    /**
+     * This is the {@link ResourceTableChunk} inside of the resources.arsc file in the APK.
+     */
+    private final ResourceTableChunk resourceTable;
 
     /**
      * Creates a new {@link ArscBlamer}.
@@ -84,14 +88,6 @@ public class ArscBlamer {
     public ArscBlamer(ResourceTableChunk resourceTable) {
         this.resourceTable = resourceTable;
         this.stringToBlame = createEntryListArray(resourceTable.getStringPool().getStringCount());
-    }
-
-    private static List<ResourceEntry>[] createEntryListArray(int size) {
-        ArrayListResourceEntry[] result = new ArrayListResourceEntry[size];
-        for (int i = 0; i < size; ++i) {
-            result[i] = new ArrayListResourceEntry();
-        }
-        return result;
     }
 
     /**
@@ -261,6 +257,14 @@ public class ArscBlamer {
         return false;
     }
 
+    private static List<ResourceEntry>[] createEntryListArray(int size) {
+        ArrayListResourceEntry[] result = new ArrayListResourceEntry[size];
+        for (int i = 0; i < size; ++i) {
+            result[i] = new ArrayListResourceEntry();
+        }
+        return result;
+    }
+
     /**
      * Allows creation of concrete parameterized type arr {@link ArscBlamer#createEntryListArray}.
      */
@@ -279,18 +283,18 @@ public class ArscBlamer {
         private final String typeName;
         private final String entryName;
 
-        private ResourceEntry(String packageName, String typeName, String entryName) {
-            this.packageName = packageName;
-            this.typeName = typeName;
-            this.entryName = entryName;
-        }
-
         static ResourceEntry create(TypeChunk.Entry entry) {
             PackageChunk packageChunk = Preconditions.checkNotNull(entry.parent().getPackageChunk());
             String packageName = packageChunk.getPackageName();
             String typeName = entry.typeName();
             String entryName = entry.key();
             return new ResourceEntry(packageName, typeName, entryName);
+        }
+
+        private ResourceEntry(String packageName, String typeName, String entryName) {
+            this.packageName = packageName;
+            this.typeName = typeName;
+            this.entryName = entryName;
         }
 
         public String packageName() {
