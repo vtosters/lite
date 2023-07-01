@@ -6532,6 +6532,7 @@ May look like a fake leaving the online"</string>
 
     <string name="datasettings_title">Application data settings</string>
     <string name="invalidate_theme_cache_title">Invalidate theme cache</string>
+    <string name="invalidate_theme_cache_each_update_title">Invalidate theme cache each update</string>
 
     <string name="useCustomPrefsStyle_title">Use new switches</string>
     <string name="useCustomPrefsStyle_summ">More modern and stylish toggle switches in settings</string>

@@ -46,7 +46,10 @@ public class MainActivityInjector {
             NotificationChannels.createChannels();
         }
 
-        if (Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && ThemesManager.canApplyCustomAccent()) {
+        if (Preferences.isNewBuild()
+                &&!ThemesUtils.isMonetTheme()
+                &&ThemesManager.canApplyCustomAccent())
+        {
             Preferences.updateBuildNumber();
             updateBinsAndTmpArchive(activity);
         }
