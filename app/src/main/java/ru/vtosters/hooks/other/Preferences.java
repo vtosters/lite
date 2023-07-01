@@ -292,12 +292,16 @@ public class Preferences {
     }
 
     public static boolean isNewBuild() {
-        try {
-            return getPreferences().getLong("setupTime", 0L) != AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo(AndroidUtils.getPackageName(), 0).lastUpdateTime;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-            return false;
-        }
+        if(Preferences.getBoolValue("invalidate_theme_cache_each_update",true))
+            try {
+                return AndroidUtils.getGlobalContext()
+                                   .getPackageManager()
+                                   .getPackageInfo(AndroidUtils.getPackageName(), 0)
+                                   .lastUpdateTime != getPreferences().getLong("setupTime", 0L);
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+            }
+        return false;
     }
 
     public static void updateBuildNumber() {

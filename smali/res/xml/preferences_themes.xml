@@ -7,6 +7,10 @@
                 android:summary="@string/accent_color_summ"
                 android:icon="@drawable/bg_accent_circle"
                 android:title="@string/accent_color_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="invalidate_theme_cache_each_update"
+                android:title="@string/invalidate_theme_cache_each_update_title"/>
         <Preference
                 android:key="invalidate_theme_cache"
                 android:title="@string/invalidate_theme_cache_title" />

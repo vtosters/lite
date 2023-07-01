@@ -19661,6 +19661,9 @@ public final class R {
         public static final int cache_size = 0x7f12188d; // 2131892365
         public static final int cache_size_summ = 0x7f12188e; // 2131892366
         public static final int clear_all_cache = 0x7f12188f; // 2131892367
+        public static final int invalidate_theme_cache_each_update_title = 0x7f121890; // 2131892368
+        public static final int invertFilters = 0x7f121891; // 2131892369
+        public static final int invertFilters_summ = 0x7f121892; // 2131892370
     }
 
     public static final class style {
