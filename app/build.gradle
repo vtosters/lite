@@ -52,25 +52,23 @@ android {
     }
 
     buildTypes {
-        base {
-            buildConfigField 'String', 'APPCENTER_KEY', '""'
-        }
-        debug {
-            initWith base
-            minifyEnabled false
-        }
         release {
-            initWith base
             minifyEnabled true
+            buildConfigField 'String', 'APPCENTER_KEY', '""'
+            proguardFile 'proguard-rules.pro'
+        }
+        rc {
+            minifyEnabled true
+            buildConfigField 'String', 'APPCENTER_KEY', '""'
             proguardFile 'proguard-rules.pro'
         }
         dev {
-            initWith debug
-            //etc
+            minifyEnabled false
+            buildConfigField 'String', 'APPCENTER_KEY', '""'
         }
         beta {
-            initWith release
-            //etc
+            minifyEnabled false
+            buildConfigField 'String', 'APPCENTER_KEY', '""'
         }
     }
 
