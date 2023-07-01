@@ -23,7 +23,7 @@ public class ThemesHacks {
     }
 
     public static int getHackedColor(@NonNull Context context, @ColorRes int color) {
-        if (ThemesUtils.isCustomAccentEnabled()) {
+        if (ThemesUtils.isMonetTheme()) {
             if (Preferences.getBoolValue("logColors", false)) {
                 try {
                     Log.d("ThemesCore", "Requesting color by color " + context.getResources().getResourceName(color));

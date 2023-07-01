@@ -46,10 +46,6 @@ public class ThemesUtils {
         }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
-    public static boolean isCustomAccentEnabled() {
-        return ThemesUtils.isMonetTheme() || !useNewColorEngine();
-    }
-
     public static ColorStateList getAccenedColorStateList() {
         return ColorStateList.valueOf(getAccentColor());
     }
@@ -83,13 +79,8 @@ public class ThemesUtils {
         return getBoolValue("amoledtheme", false);
     }
 
-    public static boolean useNewColorEngine() {
-        return getBoolValue("useNewColorEngine", false);
-    }
-
     public static int getAccentColor() {
-        var color = Preferences.getPreferences().getInt("accent_color", getColorFromAttr(R.attr.accent));
-        return color == 0 || useNewColorEngine() || isMonetTheme() ? getColorFromAttr(R.attr.accent) : color;
+        return getColorFromAttr(R.attr.accent);
     } // Color accent
 
     //region Used for migrating accent color to new version
@@ -307,7 +298,7 @@ public class ThemesUtils {
     } // Recolor drawable to accent color
 
     public static Drawable recolorToolbarDrawable(Drawable drawable) {
-        if (!ThemesUtils.isCustomAccentEnabled()) return drawable;
+        if (!ThemesUtils.isMonetTheme()) return drawable;
         if (drawable == null) return null;
         return new RecoloredDrawable(drawable, (ThemesUtils.isMilkshake() && !ThemesUtils.isDarkTheme()) ? ThemesUtils.getAccentColor() : ThemesUtils.getHeaderText());
     }

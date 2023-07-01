@@ -21,7 +21,7 @@ public class ViewInjector {
     }
 
     public static View inject(View view, int i, boolean z) {
-        if (ThemesUtils.isCustomAccentEnabled()) {
+        if (ThemesUtils.isMonetTheme()) {
             for (BaseHook hook : hooks) {
                 hook.inject(view, i, z);
             }
