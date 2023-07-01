@@ -36,7 +36,7 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
     private final List<T> mSelectedItems;
     private final List<T> mDisabledItems;
     private final List<T> mUnmovedItems;
-    final private List< T > mExceptions=new ArrayList<>();
+    final private List<T> mExceptions = new ArrayList<>();
     private final IViewHolderBinder mBinder;
 
     // Min and max counts
@@ -50,8 +50,7 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
         this.mBinder = binder;
     }
 
-    public void setExceptions(T... exceptions)
-    {
+    public void setExceptions(T... exceptions) {
         mExceptions.clear();
         mExceptions.addAll(Arrays.asList(exceptions));
     }
@@ -183,21 +182,18 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
             return false;
         switch (getTabType(fromPosition)) {
             case SELECTED_STATE -> {
-                if((getTabType(toPosition) == DISABLED_STATE
+                if ((getTabType(toPosition) == DISABLED_STATE
                         && mSelectedItems.size() == mMinSelectedItems))
                     return false;
-                if (getItemViewType(toPosition) == CATEGORY_TITLE)
-                {
-                    if(mExceptions.size()>0)
-                    {
-                        int q=0;
-                        for(var ex:mExceptions)
-                            if(mSelectedItems.contains(ex))++q;
-                        if(q==1)return false;
+                if (getItemViewType(toPosition) == CATEGORY_TITLE) {
+                    if (mExceptions.size() > 0) {
+                        int q = 0;
+                        for (var ex : mExceptions)
+                            if (mSelectedItems.contains(ex)) ++q;
+                        if (q == 1) return false;
                     }
-                    mDisabledItems.add(0,mSelectedItems.remove(fromPosition-1));
-                }
-                else Collections.swap(mSelectedItems, fromPosition - 1, toPosition - 1);
+                    mDisabledItems.add(0, mSelectedItems.remove(fromPosition - 1));
+                } else Collections.swap(mSelectedItems, fromPosition - 1, toPosition - 1);
             }
             case DISABLED_STATE -> {
                 if (getTabType(toPosition) == SELECTED_STATE

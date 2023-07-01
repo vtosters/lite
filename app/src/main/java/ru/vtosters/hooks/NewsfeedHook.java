@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.vk.core.preference.Preference;
 import com.vk.discover.DiscoverItemDecorator;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.hooks.other.Preferences.*;

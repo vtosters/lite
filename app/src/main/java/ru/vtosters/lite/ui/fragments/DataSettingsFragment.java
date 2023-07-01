@@ -168,12 +168,18 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
 
         var pref = Preferences.getPreferences().getString("autoclearcache", "Default");
         switch (pref) {
-            case "Default" -> findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_disabled));
-            case "100mb" -> findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_100mb));
-            case "500mb" -> findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_500mb));
-            case "1gb" -> findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_1gb));
-            case "2gb" -> findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_2gb));
-            case "5gb" -> findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_5gb));
+            case "Default" ->
+                    findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_disabled));
+            case "100mb" ->
+                    findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_100mb));
+            case "500mb" ->
+                    findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_500mb));
+            case "1gb" ->
+                    findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_1gb));
+            case "2gb" ->
+                    findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_2gb));
+            case "5gb" ->
+                    findPreference("autoclearcache_btn").setSummary(requireContext().getString(com.vtosters.lite.R.string.cache_5gb));
         }
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), AndroidUtils.getString("accounts"));

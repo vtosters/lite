@@ -1,7 +1,6 @@
 package ru.vtosters.hooks.ssfs;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
-import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ssfs.ImBanner;
