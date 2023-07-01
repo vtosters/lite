@@ -161,8 +161,7 @@ public class ThemesManager {
             final var arscEntry = apk.getEntry("resources.arsc");
             final var arscBis = new BufferedInputStream(apk.getInputStream(arscEntry));
             final var arsc = BinaryResourceFile.fromInputStream(arscBis);
-            if (!ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor))
-                throw new IllegalStateException("Not all colors have been changed");
+            ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor);
 
             try (
                     final var zos = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(modApk)))

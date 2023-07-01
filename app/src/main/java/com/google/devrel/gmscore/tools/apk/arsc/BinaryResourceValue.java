@@ -130,9 +130,9 @@ public class BinaryResourceValue implements SerializableResource {
      */
     public static final int SIZE = 8;
 
-    private final int size;
-    private final Type type;
-    private final int data;
+    public int size;
+    public Type type;
+    public int data;
 
     public static BinaryResourceValue create(ByteBuffer buffer) {
         int size = (buffer.getShort() & 0xFFFF);
