@@ -26,30 +26,23 @@ import com.vtosters.lite.R;
 
 public final class MentionsController {
     private final RichEditText a;
-
+    private final ImEngine mImEngine;
+    private final View j;
+    private final b k;
     private boolean state;
     private CoordinatorLayout mCoordinatorLayout;
     private VkBottomSheetBehavior<RecyclerView> mBottomSheetBehavior;
     private boolean e;
-    private DialogMentionComponent mDialogMentionComponent;
-    private MentionsManager mMentionsManager;
-    private final ImEngine mImEngine;
-    private int i;
-    private final View j;
-    private final b k;
-
-    public interface b {
-        boolean c();
-
-        boolean d();
-    }
+    private final DialogMentionComponent mDialogMentionComponent;
+    private final MentionsManager mMentionsManager;
+    private final int i;
 
     public MentionsController(ImEngine imEngine, int i, View view, b bVar) {
         this.mImEngine = imEngine;
         this.i = i;
         this.j = view;
         this.k = bVar;
-        this.a = (RichEditText) this.j.findViewById(R.id.writebar_edit);
+        this.a = this.j.findViewById(R.id.writebar_edit);
         this.mMentionsManager = new MentionsManager(this.a, new MentionSuggestionsSupplier() {
 
             @Override
@@ -71,7 +64,7 @@ public final class MentionsController {
 
             @Override
             public void b() {
-                MentionsController.this.mDialogMentionComponent.a(0, (String) null);
+                MentionsController.this.mDialogMentionComponent.a(0, null);
                 MentionsController.this.g();
             }
         });
@@ -92,18 +85,18 @@ public final class MentionsController {
         });
     }
 
-    public final void g() {
+    public void g() {
         this.e = false;
         j();
     }
 
-    private final void h() {
+    private void h() {
         if (this.state) {
             return;
         }
         View inflate = ((ViewStub) this.j.findViewById(R.id.mentions_container_stub)).inflate();
-        ViewGroup viewGroup = (ViewGroup) inflate.findViewById(R.id.mentions_container);
-        viewGroup.addView(this.mDialogMentionComponent.a(viewGroup, (Bundle) null));
+        ViewGroup viewGroup = inflate.findViewById(R.id.mentions_container);
+        viewGroup.addView(this.mDialogMentionComponent.a(viewGroup, null));
         this.mCoordinatorLayout = inflate.findViewById(R.id.mentions_cl);
         this.mBottomSheetBehavior = (VkBottomSheetBehavior<RecyclerView>) ((CoordinatorLayout.LayoutParams) viewGroup.getLayoutParams()).getBehavior();
         this.mBottomSheetBehavior.a(new VkBottomSheetBehavior.b() {
@@ -120,12 +113,12 @@ public final class MentionsController {
         this.state = true;
     }
 
-    public final void i() {
+    public void i() {
         this.e = true;
         j();
     }
 
-    public final void j() {
+    public void j() {
         if (this.k.d()) {
             Context context = this.j.getContext();
             Activity f = ContextExtKt.f(context);
@@ -139,27 +132,33 @@ public final class MentionsController {
         }
     }
 
-    public final void a() {
+    public void a() {
         this.mDialogMentionComponent.g();
     }
 
-    public final void b() {
+    public void b() {
         this.mDialogMentionComponent.h();
     }
 
-    public final b c() {
+    public b c() {
         return this.k;
     }
 
-    public final int d() {
+    public int d() {
         return this.i;
     }
 
-    public final void e() {
+    public void e() {
         this.mDialogMentionComponent.q();
     }
 
-    public final void f() {
+    public void f() {
         this.mDialogMentionComponent.r();
+    }
+
+    public interface b {
+        boolean c();
+
+        boolean d();
     }
 }

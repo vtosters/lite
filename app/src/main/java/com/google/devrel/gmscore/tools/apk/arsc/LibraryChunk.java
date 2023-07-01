@@ -43,7 +43,7 @@ public final class LibraryChunk extends Chunk {
      */
     private final List<Entry> entries = new ArrayList<>();
 
-    protected LibraryChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    LibraryChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
         entryCount = buffer.getInt();
     }
@@ -98,15 +98,15 @@ public final class LibraryChunk extends Chunk {
         private final int packageId;
         private final String packageName;
 
+        private Entry(int packageId, String packageName) {
+            this.packageId = packageId;
+            this.packageName = packageName;
+        }
+
         static Entry create(ByteBuffer buffer, int offset) {
             int packageId = buffer.getInt(offset);
             String packageName = PackageUtils.readPackageName(buffer, offset + 4);
             return new Entry(packageId, packageName);
-        }
-
-        private Entry(int packageId, String packageName) {
-            this.packageId = packageId;
-            this.packageName = packageName;
         }
 
         /**

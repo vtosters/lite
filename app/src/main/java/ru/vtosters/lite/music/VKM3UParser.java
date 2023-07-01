@@ -15,10 +15,9 @@ public class VKM3UParser {
     //Playlist types
     static public int PLAYLIST_TYPE_VOD = 0;
     static public int PLAYLIST_TYPE_EVENT = 1;
-
+    private final String mData;
     //region Extended M3U global extensions
     public List<TransportStream> mTransportStreams = new ArrayList<>();
-    private final String mData;
     /**
      * @see <a href="https://datatracker.ietf.org/doc/html/rfc8216#section-4.3.1.2">EXT-X-VERSION</a>
      **/

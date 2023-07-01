@@ -59,70 +59,6 @@ public class DockBarEditorManager {
                 : sInstance;
     }
 
-    private void init() {
-        if (vkme()) {
-            mSelectedTabs.add(getTabByTag("tab_settings"));
-            if (vkme_notifs()) {
-                if (milkshake()) {
-                    mSelectedTabs.add(getTabByTag("tab_feedback"));
-                } else {
-                    mSelectedTabs.add(getTabByTag("tab_friends"));
-                }
-            }
-            mSelectedTabs.add(getTabByTag("tab_messages"));
-            mSelectedTabs.add(getTabByTag("tab_profile"));
-            return;
-        }
-
-        checkOldConfig();
-
-        var selectedTabsTags = getPreferences()
-                .getString("dockbar_tabs",
-                        "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
-                .split(",");
-        parseSelectedTabs(selectedTabsTags);
-    }
-
-    private void checkOldConfig() {
-        File config = new File(getGlobalContext().getFilesDir(), "dockbar.json");
-        if (config.exists()) config.deleteOnExit();
-    }
-
-    private void parseSelectedTabs(String[] selectedTabsTags) {
-        var allTags = new ArrayList<>(ALL_TAGS);
-
-        for (String tag : selectedTabsTags) {
-            mSelectedTabs.add(getTabByTag(tag));
-            allTags.remove(tag);
-        }
-
-        for (String tag : allTags) {
-            mDisabledTabs.add(getTabByTag(tag));
-        }
-    }
-
-    public void save() {
-        var sb = new StringBuilder();
-        for (DockBarTab tab : mSelectedTabs)
-            sb.append(tab.tag).append(",");
-        getPreferences().edit().putString("dockbar_tabs", sb.toString()).commit();
-    }
-
-    public void reset() {
-        Preferences.getPreferences()
-                .edit()
-                .putString("dockbar_tabs", "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
-                .commit();
-    }
-
-    public List<DockBarTab> getSelectedTabs() {
-        return mSelectedTabs;
-    }
-
-    public List<DockBarTab> getDisabledTabs() {
-        return mDisabledTabs;
-    }
-
     public static DockBarTab getTabByTag(String tag) {
         return switch (tag) {
             case "tab_news" -> DockBarTab.valuesOf(
@@ -234,5 +170,69 @@ public class DockBarEditorManager {
                     R.id.menu_settings,
                     useNewSettings());
         };
+    }
+
+    private void init() {
+        if (vkme()) {
+            mSelectedTabs.add(getTabByTag("tab_settings"));
+            if (vkme_notifs()) {
+                if (milkshake()) {
+                    mSelectedTabs.add(getTabByTag("tab_feedback"));
+                } else {
+                    mSelectedTabs.add(getTabByTag("tab_friends"));
+                }
+            }
+            mSelectedTabs.add(getTabByTag("tab_messages"));
+            mSelectedTabs.add(getTabByTag("tab_profile"));
+            return;
+        }
+
+        checkOldConfig();
+
+        var selectedTabsTags = getPreferences()
+                .getString("dockbar_tabs",
+                        "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
+                .split(",");
+        parseSelectedTabs(selectedTabsTags);
+    }
+
+    private void checkOldConfig() {
+        File config = new File(getGlobalContext().getFilesDir(), "dockbar.json");
+        if (config.exists()) config.deleteOnExit();
+    }
+
+    private void parseSelectedTabs(String[] selectedTabsTags) {
+        var allTags = new ArrayList<>(ALL_TAGS);
+
+        for (String tag : selectedTabsTags) {
+            mSelectedTabs.add(getTabByTag(tag));
+            allTags.remove(tag);
+        }
+
+        for (String tag : allTags) {
+            mDisabledTabs.add(getTabByTag(tag));
+        }
+    }
+
+    public void save() {
+        var sb = new StringBuilder();
+        for (DockBarTab tab : mSelectedTabs)
+            sb.append(tab.tag).append(",");
+        getPreferences().edit().putString("dockbar_tabs", sb.toString()).commit();
+    }
+
+    public void reset() {
+        Preferences.getPreferences()
+                .edit()
+                .putString("dockbar_tabs", "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
+                .commit();
+    }
+
+    public List<DockBarTab> getSelectedTabs() {
+        return mSelectedTabs;
+    }
+
+    public List<DockBarTab> getDisabledTabs() {
+        return mDisabledTabs;
     }
 }

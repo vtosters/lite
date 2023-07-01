@@ -16,11 +16,11 @@ import java.util.List;
 public final class MsgActionHelper {
     public static final MsgActionHelper a = new MsgActionHelper();
 
-    public final List<MsgAction> a(ImEngine imEngine, Dialog dialog, Collection<? extends Msg> collection) {
+    public List<MsgAction> a(ImEngine imEngine, Dialog dialog, Collection<? extends Msg> collection) {
         return a(imEngine != null ? imEngine.g() : null, dialog, collection);
     }
 
-    public final List<MsgAction> a(ImConfig imConfig, Dialog dialog, Collection<? extends Msg> collection) {
+    public List<MsgAction> a(ImConfig imConfig, Dialog dialog, Collection<? extends Msg> collection) {
         if (imConfig != null && dialog != null && collection != null) {
             MsgPermissionHelper.a aVar = new MsgPermissionHelper.a(imConfig, dialog, collection);
             ArrayList<MsgAction> arrayList = new ArrayList<>();

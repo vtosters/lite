@@ -19,8 +19,8 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import java.io.IOException;
 
 import static ru.vtosters.hooks.DateHook.getLocale;
-import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.hooks.GroupsCatalogInjector.injectIntoCatalog;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;

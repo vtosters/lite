@@ -1,35 +1,16 @@
 package ru.vtosters.lite.ui.fragments;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.*;
 import android.os.Bundle;
-import android.util.TypedValue;
-import android.webkit.WebView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
-import androidx.appcompat.view.ContextThemeWrapper;
-import b.h.g.m.FileUtils;
 import com.vk.auth.api.VKAccount;
-import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.ToastUtils;
-import com.vk.im.engine.ImEngine1;
-import com.vk.im.engine.ImEngineExt;
-import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
-import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
-import com.vk.imageloader.VKImageLoader;
-import com.vk.media.player.cache.AutoPlayCacheHolder;
-import com.vk.mediastore.MediaStorage;
 import com.vk.pushes.PushSubscriber;
-import com.vk.stickers.Stickers;
 import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
-import com.vtosters.lite.im.ImEngineProvider;
 import ru.vtosters.hooks.GmsHook;
-import ru.vtosters.hooks.SwitchHook;
 import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
@@ -146,7 +127,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             });
         }
     }
-
 
 
     private void copyText(String src) {

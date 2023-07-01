@@ -1,9 +1,7 @@
 package ru.vtosters.hooks;
 
-import androidx.core.util.Pair;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.utils.RenameTool;
 
 public class RenameHook {
     public static void injectIntoJson(JSONObject obj) throws JSONException {

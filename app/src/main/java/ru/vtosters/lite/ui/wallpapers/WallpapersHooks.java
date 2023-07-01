@@ -5,12 +5,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.view.View;
-import android.widget.ImageView;
-import com.vk.im.engine.h;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import vigo.sdk.Log;
 

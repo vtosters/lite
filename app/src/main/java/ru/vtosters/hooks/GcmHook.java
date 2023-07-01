@@ -22,7 +22,7 @@ public class GcmHook {
     private static final String agent = String.format("Android-GCM/1.5 (%s %s)", Build.MODEL, Build.MODEL);
     private static KeyPair pair;
     private static int rid = 0;
-    
+
     static {
         genNewKey();
     }

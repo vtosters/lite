@@ -12,15 +12,15 @@ import android.view.ViewGroup;
 import com.vk.im.ui.o;
 
 public class StoryBorderView extends View {
-    private boolean B;
     private final Paint a;
+    private final int g;
+    private final int h;
+    private boolean B;
     private LinearGradient f15747b;
     private int f15748c;
     private int f15749d;
     private int f15750e;
     private int f15751f;
-    private final int g;
-    private final int h;
 
     public StoryBorderView(Context context) {
         this(context, null, 0, 6);
@@ -34,8 +34,30 @@ public class StoryBorderView extends View {
         this(context, (i2 & 2) != 0 ? null : attributeSet, (i2 & 4) != 0 ? 0 : i);
     }
 
+    public StoryBorderView(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        Paint paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setStyle(Paint.Style.STROKE);
+        this.a = paint;
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, o.StoryBorderView);
+        setBorderColor(obtainStyledAttributes.getInt(o.StoryBorderView_vkim_borderColor, 0));
+        this.g = obtainStyledAttributes.getInt(o.StoryBorderView_vkim_borderGradientStartColor, 0);
+        this.h = obtainStyledAttributes.getInt(o.StoryBorderView_vkim_borderGradientEndColor, 0);
+        setBorderWidth(obtainStyledAttributes.getDimensionPixelSize(o.StoryBorderView_vkim_borderWidth, 0));
+        obtainStyledAttributes.recycle();
+    }
+
     public int getBorderColor() {
         return this.f15749d;
+    }
+
+    public void setBorderColor(int i) {
+        if (this.f15749d != i) {
+            this.f15749d = i;
+            this.a.setColor(i);
+            invalidate();
+        }
     }
 
     public int getBorderGradientEndColor() {
@@ -50,12 +72,31 @@ public class StoryBorderView extends View {
         return this.f15750e;
     }
 
+    public void setBorderWidth(int i) {
+        if (this.f15750e != i) {
+            this.f15750e = i;
+            this.a.setStrokeWidth(i);
+            invalidate();
+        }
+    }
+
     public int getPadding() {
         return this.f15751f;
     }
 
+    public void setPadding(int i) {
+        if (this.f15751f != i) {
+            this.f15751f = i;
+            setPadding(i, i, i, i);
+        }
+    }
+
     public int getViewSize() {
         return this.f15748c;
+    }
+
+    public void setViewSize(int i) {
+        this.f15748c = i;
     }
 
     @Override
@@ -67,22 +108,6 @@ public class StoryBorderView extends View {
     protected void onMeasure(int i, int i2) {
         int i3 = this.f15748c;
         setMeasuredDimension(i3, i3);
-    }
-
-    public void setBorderColor(int i) {
-        if (this.f15749d != i) {
-            this.f15749d = i;
-            this.a.setColor(i);
-            invalidate();
-        }
-    }
-
-    public void setBorderWidth(int i) {
-        if (this.f15750e != i) {
-            this.f15750e = i;
-            this.a.setStrokeWidth(i);
-            invalidate();
-        }
     }
 
     @Override
@@ -107,30 +132,5 @@ public class StoryBorderView extends View {
             this.B = z;
             invalidate();
         }
-    }
-
-    public void setPadding(int i) {
-        if (this.f15751f != i) {
-            this.f15751f = i;
-            setPadding(i, i, i, i);
-        }
-    }
-
-    public void setViewSize(int i) {
-        this.f15748c = i;
-    }
-
-    public StoryBorderView(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        Paint paint = new Paint();
-        paint.setAntiAlias(true);
-        paint.setStyle(Paint.Style.STROKE);
-        this.a = paint;
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, o.StoryBorderView);
-        setBorderColor(obtainStyledAttributes.getInt(o.StoryBorderView_vkim_borderColor, 0));
-        this.g = obtainStyledAttributes.getInt(o.StoryBorderView_vkim_borderGradientStartColor, 0);
-        this.h = obtainStyledAttributes.getInt(o.StoryBorderView_vkim_borderGradientEndColor, 0);
-        setBorderWidth(obtainStyledAttributes.getDimensionPixelSize(o.StoryBorderView_vkim_borderWidth, 0));
-        obtainStyledAttributes.recycle();
     }
 }
