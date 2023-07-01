@@ -10,7 +10,11 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="invalidate_theme_cache_each_update"
+<<<<<<< HEAD
                 android:title="@string/invalidate_theme_cache_each_update_title"/>
+=======
+                android:title="@string/invalidate_theme_cache_title"/>
+>>>>>>> b2028d86ba606fca09ca094082d7e68fbb59ef5c
         <Preference
                 android:key="invalidate_theme_cache"
                 android:title="@string/invalidate_theme_cache_title" />
