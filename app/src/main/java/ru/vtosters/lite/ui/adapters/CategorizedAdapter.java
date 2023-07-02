@@ -187,10 +187,16 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
                     return false;
                 if (getItemViewType(toPosition) == CATEGORY_TITLE) {
                     if (mExceptions.size() > 0) {
-                        int q = 0;
-                        for (var ex : mExceptions)
-                            if (mSelectedItems.contains(ex)) ++q;
-                        if (q == 1) return false;
+                        boolean except=false;
+                        int q=0;
+                        for(var ex:mExceptions)
+                        {
+                            var i=mSelectedItems.indexOf(ex);
+                            if(i==-1)continue;
+                            if(i+1==fromPosition)except=true;
+                            ++q;
+                        }
+                        if(except&&q==1)return false;
                     }
                     mDisabledItems.add(0, mSelectedItems.remove(fromPosition - 1));
                 } else Collections.swap(mSelectedItems, fromPosition - 1, toPosition - 1);
