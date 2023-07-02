@@ -242,13 +242,13 @@ public class NewsFeedFiltersUtils {
                     return false;
                 }
 
-                if (checkCopyright(post) && !isWhitelistedFilters(post)) {
+                if (checkCopyright(post)) {
                     if (dev())
                         Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: copyright filters");
                     return false;
                 }
 
-                if (checkCaption(post) && !isWhitelistedFilters(post)) {
+                if (checkCaption(post)) {
                     if (dev())
                         Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: caption filters");
                     return false;
@@ -448,13 +448,13 @@ public class NewsFeedFiltersUtils {
                     continue;
                 }
 
-                if (checkCopyright(list) && !isWhitelistedFilters(list)) {
+                if (checkCopyright(list)) {
                     if (dev())
                         Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: copyright filters");
                     continue;
                 }
 
-                if (checkCaption(list) && !isWhitelistedFilters(list)) {
+                if (checkCaption(list)) {
                     if (dev())
                         Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: caption filters");
                     continue;
