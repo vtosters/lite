@@ -17,6 +17,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
+import static android.os.Environment.getExternalStoragePublicDirectory;
+
 public class VKAccountDB {
     private static SQLiteOpenHelper getDatabase() {
         return new UsersDbHelper(AndroidUtils.getGlobalContext());
@@ -70,11 +73,11 @@ public class VKAccountDB {
 
         var db = getDatabase().getReadableDatabase();
         var dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
-        var file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/VTLBackups/saved_accounts_" + dateFormat.format(new Date()) + ".vtl");
+        var dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
+        var file = new File(dir, "saved_accounts_" + dateFormat.format(new Date()) + ".vtl");
 
-        InputStream inputStream;
-        try {
-            inputStream = new FileInputStream(db.getPath());
+        try (InputStream inputStream = new FileInputStream(db.getPath())){
+            dir.mkdirs();
 
             FileOutputStream outputStream = new FileOutputStream(file);
             byte[] buff = new byte[1024];
@@ -86,7 +89,6 @@ public class VKAccountDB {
 
             AndroidUtils.sendToast(AndroidUtils.getString("accounts_saved_by_path") + " " + file.getPath());
         } catch (IOException e) {
-            e.printStackTrace();
             AndroidUtils.sendToast(AndroidUtils.getString("error_saving_file"));
         }
     }
