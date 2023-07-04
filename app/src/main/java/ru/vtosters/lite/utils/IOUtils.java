@@ -16,7 +16,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 public class IOUtils {
-    public static final int BUFFER_SIZE = 8192;
+    public static int BUFFER_SIZE = 8192;
 
     public static byte[] decodeStream(InputStream encIs, byte[] aesKey)
             throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
@@ -51,11 +51,11 @@ public class IOUtils {
         return new String(readFully(is), StandardCharsets.UTF_8);
     }
 
-    public static byte[] readFully(final InputStream is)
+    public static byte[] readFully(InputStream is)
             throws IOException {
-        final var bos = new ByteArrayOutputStream();
+        var bos = new ByteArrayOutputStream();
         try (bos) {
-            final byte[] buff = new byte[BUFFER_SIZE];
+            byte[] buff = new byte[BUFFER_SIZE];
             int len;
             while ((len = is.read(buff)) > 0)
                 bos.write(buff, 0, len);
@@ -63,7 +63,7 @@ public class IOUtils {
         }
     }
 
-    public static byte[] readFully(final File in)
+    public static byte[] readFully(File in)
             throws IOException {
         return readFully(new FileInputStream(in));
     }
@@ -80,25 +80,25 @@ public class IOUtils {
         fos.close();
     }
 
-    public static void copy(final InputStream is, final OutputStream os)
+    public static void copy(InputStream is, OutputStream os)
             throws IOException {
-        final byte[] buff = new byte[BUFFER_SIZE];
+        byte[] buff = new byte[BUFFER_SIZE];
         int len;
         while ((len = is.read(buff)) > 0)
             os.write(buff, 0, len);
     }
 
-    public static void copy(final byte[] buffer, final File out)
+    public static void copy(byte[] buffer, File out)
             throws IOException {
         copy(new ByteArrayInputStream(buffer), new FileOutputStream(out));
     }
 
-    public static void copy(final InputStream is, final File out)
+    public static void copy(InputStream is, File out)
             throws IOException {
         copy(is, new FileOutputStream(out));
     }
 
-    public static void copy(final File in, final File out)
+    public static void copy(File in, File out)
             throws IOException {
         copy(new FileInputStream(in), new FileOutputStream(out));
     }
@@ -119,7 +119,7 @@ public class IOUtils {
     }
 
     public static long getDirSize(File dir) {
-        final var arr = dir.listFiles();
+        var arr = dir.listFiles();
         if (arr == null || arr.length == 0)
             return 0;
 

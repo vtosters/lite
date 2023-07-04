@@ -8,15 +8,15 @@ public class ArscEditor {
 
     public static void changeColors(BinaryResourceFile arsc, int[] colorIds, int color) {
         for (var chunk : arsc.getChunks()) {
-            final var resTableChunk = (ResourceTableChunk) chunk;
+            var resTableChunk = (ResourceTableChunk) chunk;
             for (var packageChunk : resTableChunk.getPackages()) {
                 for (var typeChunk : packageChunk.getTypeChunks("color")) {
                     for (var entry : typeChunk.getEntries().entrySet()) {
-                        final var value = entry.getValue();
+                        var value = entry.getValue();
                         if (value.isComplex()) continue;
-                        final var binValue = value.value();
+                        var binValue = value.value();
                         if (!isColorResourceValue(binValue)) continue;
-                        final var resId = packageChunk.getId() << 24 | typeChunk.getId() << 16 | entry.getKey();
+                        var resId = packageChunk.getId() << 24 | typeChunk.getId() << 16 | entry.getKey();
                         for (var colodId : colorIds) {
                             if (resId == colodId) {
                                 binValue.data = color;

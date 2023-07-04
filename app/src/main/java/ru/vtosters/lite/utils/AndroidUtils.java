@@ -46,7 +46,7 @@ public class AndroidUtils {
     @NonNull
     public static Context getGlobalContext() {
         try {
-            final Method getInitialApplicationMtd = ReflectionUtils.findMethod(Class.forName("android.app.AppGlobals"), "getInitialApplication");
+            Method getInitialApplicationMtd = ReflectionUtils.findMethod(Class.forName("android.app.AppGlobals"), "getInitialApplication");
             return (Context) getInitialApplicationMtd.invoke(null);
         } catch (Exception e) {
             Log.d("GlobalContext", "Error while fetching context via refl");
@@ -186,8 +186,8 @@ public class AndroidUtils {
     }
 
     private static String getRandomString(int sizeOfRandomString) {
-        final Random random = new Random();
-        final StringBuilder sb = new StringBuilder(sizeOfRandomString);
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder(sizeOfRandomString);
         for (int i = 0; i < sizeOfRandomString; ++i)
             sb.append(ALLOWED_CHARACTERS.charAt(random.nextInt(ALLOWED_CHARACTERS.length())));
         return sb.toString();
@@ -221,7 +221,6 @@ public class AndroidUtils {
             long lastUpdateTime = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).lastUpdateTime;
             return firstInstallTime == lastUpdateTime;
         } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
             return true;
         }
     }

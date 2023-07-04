@@ -37,16 +37,16 @@ public class AlphaView extends SliderViewBase implements ColorObserver {
 
     @Override
     protected Bitmap makeBitmap(int w, int h) {
-        final boolean isWide = w > h;
-        final int n = Math.max(w, h);
+        boolean isWide = w > h;
+        int n = Math.max(w, h);
         int color = observableColor.getColor();
         int[] colors = new int[n];
         for (int i = 0; i < n; ++i) {
             float alpha = isWide ? (float) i / n : 1 - (float) i / n;
             colors[i] = color & 0xffffff | (int) (alpha * 0xff) << 24;
         }
-        final int bmpWidth = isWide ? w : 1;
-        final int bmpHeight = isWide ? 1 : h;
+        int bmpWidth = isWide ? w : 1;
+        int bmpHeight = isWide ? 1 : h;
         return Bitmap.createBitmap(colors, bmpWidth, bmpHeight, Bitmap.Config.ARGB_8888);
     }
 

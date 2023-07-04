@@ -17,8 +17,8 @@ public class DisableBattery {
     public static void alert(Activity activity) {
         if (!(OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && Preferences.getBoolValue("showDoze", true)))
             return;
-        final String packName = activity.getPackageName();
-        final PowerManager manager = (PowerManager) activity.getSystemService(Context.POWER_SERVICE);
+        String packName = activity.getPackageName();
+        PowerManager manager = (PowerManager) activity.getSystemService(Context.POWER_SERVICE);
         if (manager.isIgnoringBatteryOptimizations(packName)) return;
         new VkAlertDialog.Builder(activity)
                 .setTitle(R.string.batteryissuetitle)

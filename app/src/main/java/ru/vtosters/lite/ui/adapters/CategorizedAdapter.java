@@ -36,7 +36,7 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
     private final List<T> mSelectedItems;
     private final List<T> mDisabledItems;
     private final List<T> mUnmovedItems;
-    final private List<T> mExceptions = new ArrayList<>();
+    private final List<T> mExceptions = new ArrayList<>();
     private final IViewHolderBinder mBinder;
 
     // Min and max counts
@@ -50,7 +50,8 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
         this.mBinder = binder;
     }
 
-    public void setExceptions(T... exceptions) {
+    @SafeVarargs
+    public final void setExceptions(T... exceptions) {
         mExceptions.clear();
         mExceptions.addAll(Arrays.asList(exceptions));
     }
@@ -186,17 +187,16 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
                         && mSelectedItems.size() == mMinSelectedItems))
                     return false;
                 if (getItemViewType(toPosition) == CATEGORY_TITLE) {
-                    if (mExceptions.size() > 0) {
-                        boolean except=false;
-                        int q=0;
-                        for(var ex:mExceptions)
-                        {
-                            var i=mSelectedItems.indexOf(ex);
-                            if(i==-1)continue;
-                            if(i+1==fromPosition)except=true;
+                    if (!mExceptions.isEmpty()) {
+                        boolean except = false;
+                        int q = 0;
+                        for (var ex : mExceptions) {
+                            var i = mSelectedItems.indexOf(ex);
+                            if (i == -1) continue;
+                            if (i + 1 == fromPosition) except = true;
                             ++q;
                         }
-                        if(except&&q==1)return false;
+                        if (except && q == 1) return false;
                     }
                     mDisabledItems.add(0, mSelectedItems.remove(fromPosition - 1));
                 } else Collections.swap(mSelectedItems, fromPosition - 1, toPosition - 1);
@@ -224,7 +224,6 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
     }
 
     public static class CategorizedViewHolder extends RecyclerView.ViewHolder {
-
         private final LinearLayout mMovingItemContainer;
         private final ImageView mIcon;
         private final TextView mName;

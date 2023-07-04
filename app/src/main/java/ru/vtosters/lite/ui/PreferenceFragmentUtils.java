@@ -301,7 +301,7 @@ public class PreferenceFragmentUtils {
         return addPreference(screen, key, title, null, null, preference -> {
             LinearLayout linearLayout = new LinearLayout(screen.getContext());
 
-            final EditText editText = new EditText(screen.getContext());
+            EditText editText = new EditText(screen.getContext());
             editText.setText(PreferenceManager.getDefaultSharedPreferences(screen.getContext()).getString(key, ""));
             editText.setHint(title);
             editText.setTextColor(ThemesUtils.getTextAttr());

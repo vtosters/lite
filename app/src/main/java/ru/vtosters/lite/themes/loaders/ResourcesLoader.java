@@ -1,5 +1,6 @@
 package ru.vtosters.lite.themes.loaders;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.res.AssetManager;
@@ -19,6 +20,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
+@SuppressLint("PrivateApi")
 public class ResourcesLoader {
 
     private static Collection<WeakReference<Resources>> sResourceReferences = null;
@@ -42,7 +44,7 @@ public class ResourcesLoader {
     static {
         try {
             // API version 8 has PackageInfo, 10 has LoadedApk. Needs to check 9
-            final Class<?> activityThreadClz = Class.forName("android.app.ActivityThread");
+            Class<?> activityThreadClz = Class.forName("android.app.ActivityThread");
             Class<?> loadedApkClz;
             try {
                 loadedApkClz = Class.forName("android.app.LoadedApk");
@@ -93,37 +95,36 @@ public class ResourcesLoader {
 
         //pre-N
         // Find the singleton instance of ResourcesManager
-        final Class<?> resourcesManagerClass = Class.forName("android.app.ResourcesManager");
-        final Method mGetInstance = ReflectionUtils.findMethod(resourcesManagerClass, "getInstance");
-        final Object resourcesManager = mGetInstance.invoke(null);
+        Class<?> resourcesManagerClass = Class.forName("android.app.ResourcesManager");
+        Method mGetInstance = ReflectionUtils.findMethod(resourcesManagerClass, "getInstance");
+        Object resourcesManager = mGetInstance.invoke(null);
         try {
             Field fMActiveResources = ReflectionUtils.findField(resourcesManagerClass, "mActiveResources");
-            final ArrayMap<?, WeakReference<Resources>> activeResources19 =
+            ArrayMap<?, WeakReference<Resources>> activeResources19 =
                     (ArrayMap<?, WeakReference<Resources>>) fMActiveResources.get(resourcesManager);
             sResourceReferences = activeResources19.values();
         } catch (NoSuchFieldException ignore) {
             // N moved the resources to mResourceReferences
-            final Field mResourceReferences = ReflectionUtils.findField(resourcesManagerClass, "mResourceReferences");
+            Field mResourceReferences = ReflectionUtils.findField(resourcesManagerClass, "mResourceReferences");
             sResourceReferences = (Collection<WeakReference<Resources>>) mResourceReferences.get(resourcesManager);
         }
     }
 
     public static void load(Context context, String resPath, boolean reinject)
             throws Exception {
-        final ApplicationInfo appInfo = context.getApplicationInfo();
+        ApplicationInfo appInfo = context.getApplicationInfo();
 
-        final Field[] packagesFlds = Build.VERSION.SDK_INT < Build.VERSION_CODES.O_MR1
+        Field[] packagesFlds = Build.VERSION.SDK_INT < Build.VERSION_CODES.O_MR1
                 ? new Field[]{packagesFld, resourcePackagesFld}
                 : new Field[]{packagesFld};
         for (var fld : packagesFlds) {
-            final var value = fld.get(sCurrentActivityThread);
+            var value = fld.get(sCurrentActivityThread);
 
-            for (var entry
-                    : ((Map<String, WeakReference<?>>) value).entrySet()) {
-                final var loadedApk = entry.getValue().get();
+            for (var entry : ((Map<String, WeakReference<?>>) value).entrySet()) {
+                var loadedApk = entry.getValue().get();
                 if (loadedApk == null) continue;
 
-                final var resDirPath = (String) resDirFld.get(loadedApk);
+                var resDirPath = (String) resDirFld.get(loadedApk);
                 if (appInfo.sourceDir.equals(resDirPath))
                     resDirFld.set(loadedApk, resPath);
             }
@@ -157,7 +158,7 @@ public class ResourcesLoader {
             ensureStringBlocksMtd.invoke(sAssetManager);
         }
         for (var wr : sResourceReferences) {
-            final var resources = wr.get();
+            var resources = wr.get();
             if (resources == null) continue;
 
             // Set the AssetManager of the Resources instance to our brand new one
@@ -166,9 +167,9 @@ public class ResourcesLoader {
                 assetsFld.set(resources, sAssetManager);
             } catch (Throwable ignore) {
                 // N
-                final var resourceImpl = resourcesImplFld.get(resources);
+                var resourceImpl = resourcesImplFld.get(resources);
                 // for Huawei HwResourcesImpl
-                final Field implAssets = ReflectionUtils.findField(resourceImpl, "mAssets");
+                Field implAssets = ReflectionUtils.findField(resourceImpl, "mAssets");
                 implAssets.set(resourceImpl, sAssetManager);
             }
 
@@ -196,13 +197,13 @@ public class ResourcesLoader {
 
     private static void installResourceInsuranceHacks(Context context, String patchedResApkPath) {
         try {
-            final Object activityThread = ReflectionUtils.getActivityThread(context, null);
-            final Field mHField = ReflectionUtils.findField(activityThread, "mH");
-            final Handler mH = (Handler) mHField.get(activityThread);
-            final Field mCallbackField = ReflectionUtils.findField(Handler.class, "mCallback");
-            final Handler.Callback originCallback = (Handler.Callback) mCallbackField.get(mH);
+            Object activityThread = ReflectionUtils.getActivityThread(context, null);
+            Field mHField = ReflectionUtils.findField(activityThread, "mH");
+            Handler mH = (Handler) mHField.get(activityThread);
+            Field mCallbackField = ReflectionUtils.findField(Handler.class, "mCallback");
+            Handler.Callback originCallback = (Handler.Callback) mCallbackField.get(mH);
             if (!(originCallback instanceof ResourceInsuranceHandlerCallback)) {
-                final ResourceInsuranceHandlerCallback hackCallback = new ResourceInsuranceHandlerCallback(
+                ResourceInsuranceHandlerCallback hackCallback = new ResourceInsuranceHandlerCallback(
                         context, patchedResApkPath, originCallback, mH.getClass());
                 mCallbackField.set(mH, hackCallback);
             } else {
@@ -250,9 +251,9 @@ public class ResourcesLoader {
         Log.w("ResourcesLoader", "try to clear typedArray cache!");
         // Clear typedArray cache.
         try {
-            final Field typedArrayPoolField = ReflectionUtils.findField(Resources.class, "mTypedArrayPool");
-            final Object origTypedArrayPool = typedArrayPoolField.get(resources);
-            final Method acquireMethod = ReflectionUtils.findMethod(origTypedArrayPool, "acquire");
+            Field typedArrayPoolField = ReflectionUtils.findField(Resources.class, "mTypedArrayPool");
+            Object origTypedArrayPool = typedArrayPoolField.get(resources);
+            Method acquireMethod = ReflectionUtils.findMethod(origTypedArrayPool, "acquire");
             while (true) {
                 if (acquireMethod.invoke(origTypedArrayPool) == null) {
                     break;
@@ -268,9 +269,8 @@ public class ResourcesLoader {
                 applicationInfo.sharedLibraryFiles != null;
     }
 
-    private static final class ResourceInsuranceHandlerCallback implements Handler.Callback {
+    private static class ResourceInsuranceHandlerCallback implements Handler.Callback {
         private static final String LAUNCH_ACTIVITY_LIFECYCLE_ITEM_CLASSNAME = "android.app.servertransaction.LaunchActivityItem";
-
         private final Context mContext;
         private final String mPatchResApkPath;
         private final Handler.Callback mOriginalCallback;
@@ -319,48 +319,56 @@ public class ResourcesLoader {
         }
 
         @SuppressWarnings("unchecked")
-        private boolean hackMessage(Message msg) {
-            boolean shouldReInjectPatchedResources = false;
+        // A method to check if the message requires re-injecting patched resources
+        private boolean shouldReInjectPatchedResources(Message msg) {
             if (!isPatchedResModifiedAfterLastLoad(mPatchResApkPath)) {
-                shouldReInjectPatchedResources = false;
-            } else {
-                if (msg.what == LAUNCH_ACTIVITY || msg.what == RELAUNCH_ACTIVITY) {
-                    shouldReInjectPatchedResources = true;
-                } else if (msg.what == EXECUTE_TRANSACTION) {
-                    do {
-                        if (mSkipInterceptExecuteTransaction) {
-                            break;
-                        }
-                        final Object transaction = msg.obj;
-                        if (transaction == null) {
-                            Log.w("ResourcesLoader", "transaction is null, skip rest insurance logic.");
-                            break;
-                        }
-                        if (mGetCallbacksMethod == null) {
-                            try {
-                                mGetCallbacksMethod = ReflectionUtils.findMethod(transaction, "getCallbacks");
-                            } catch (Throwable ignored) {
-                                // Ignored.
-                            }
-                        }
-                        if (mGetCallbacksMethod == null) {
-                            Log.e("ResourcesLoader", "fail to find getLifecycleStateRequest method, skip rest insurance logic.");
-                            mSkipInterceptExecuteTransaction = true;
-                            break;
-                        }
-                        try {
-                            final List<Object> req = (List<Object>) mGetCallbacksMethod.invoke(transaction);
-                            if (req != null && req.size() > 0) {
-                                final Object cb = req.get(0);
-                                shouldReInjectPatchedResources = cb != null && cb.getClass().getName().equals(LAUNCH_ACTIVITY_LIFECYCLE_ITEM_CLASSNAME);
-                            }
-                        } catch (Throwable ignored) {
-                            Log.e("ResourcesLoader", "fail to call getLifecycleStateRequest method, skip rest insurance logic.");
-                        }
-                    } while (false);
+                return false;
+            }
+            if (msg.what == LAUNCH_ACTIVITY || msg.what == RELAUNCH_ACTIVITY) {
+                return true;
+            }
+            // If the message is executing a transaction, check the callbacks
+            if (msg.what == EXECUTE_TRANSACTION) {
+                // Skip the logic if the method is not found or an error occurs
+                if (mSkipInterceptExecuteTransaction) {
+                    return false;
+                }
+                // Get the transaction object from the message
+                Object transaction = msg.obj;
+                if (transaction == null) {
+                    Log.w("ResourcesLoader", "transaction is null, skip rest insurance logic.");
+                    return false;
+                }
+                // Get the getCallbacks method from the transaction class
+                if (mGetCallbacksMethod == null) {
+                    try {
+                        mGetCallbacksMethod = ReflectionUtils.findMethod(transaction, "getCallbacks");
+                    } catch (Throwable ignored) {
+                        // Ignored.
+                    }
+                }
+                if (mGetCallbacksMethod == null) {
+                    Log.e("ResourcesLoader", "fail to find getCallbacks method, skip rest insurance logic.");
+                    mSkipInterceptExecuteTransaction = true;
+                    return false;
+                }
+                try {
+                    List<Object> callbacks = (List<Object>) mGetCallbacksMethod.invoke(transaction);
+                    if (callbacks != null && !callbacks.isEmpty()) {
+                        Object cb = callbacks.get(0);
+                        return cb != null && cb.getClass().getName().equals(LAUNCH_ACTIVITY_LIFECYCLE_ITEM_CLASSNAME);
+                    }
+                } catch (Throwable ignored) {
+                    Log.e("ResourcesLoader", "fail to call getCallbacks method, skip rest insurance logic.");
                 }
             }
-            if (shouldReInjectPatchedResources) {
+            return false;
+        }
+
+        // A method to hack the message and re-inject patched resources if needed
+        @SuppressWarnings("unchecked")
+        private boolean hackMessage(Message msg) {
+            if (shouldReInjectPatchedResources(msg)) {
                 try {
                     load(mContext, mPatchResApkPath, true);
                 } catch (Throwable thr) {

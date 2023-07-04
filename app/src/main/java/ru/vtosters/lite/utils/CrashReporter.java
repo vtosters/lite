@@ -26,7 +26,7 @@ public class CrashReporter {
     }
 
     public static void init(Activity activity) {
-        final var defaultUncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
+        var defaultUncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
         Thread.setDefaultUncaughtExceptionHandler((thread, th) -> CrashReporter.start(defaultUncaughtExceptionHandler, thread, th, activity));
     }
 
@@ -76,9 +76,8 @@ public class CrashReporter {
     }
 
     private static boolean isFoxbinInstalled() {
-        var pm = getGlobalContext().getPackageManager();
         try {
-            pm.getPackageInfo("com.f0x1d.dogbin", 0);
+            getGlobalContext().getPackageManager().getPackageInfo("com.f0x1d.dogbin", 0);
             return true;
         } catch (Exception e) {
             return false;

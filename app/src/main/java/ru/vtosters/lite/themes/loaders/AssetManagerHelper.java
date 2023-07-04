@@ -10,11 +10,11 @@ public class AssetManagerHelper {
 
 
     // methods
-    private final static Method getAssetPathMtd;
-    private final static Method getApkAssetsMtd;
-    private final static Method addAssetPathMtd;
-    private final static Method addAssetPathAsSharedLibraryMtd;
-    private final static Method addOverlayPathMtd;
+    private static final Method getAssetPathMtd;
+    private static final Method getApkAssetsMtd;
+    private static final Method addAssetPathMtd;
+    private static final Method addAssetPathAsSharedLibraryMtd;
+    private static final Method addOverlayPathMtd;
 
     static {
         try {
@@ -33,7 +33,7 @@ public class AssetManagerHelper {
         Object[] apkAssetsArr = (Object[]) getAssetPathMtd.invoke(assetManager);
         // By default, base apk is the last element of array if is not, for execution speed, we should iterate array from the end to the beginning
         for (int i = apkAssetsArr.length - 1; i >= 0; i--) {
-            final String pathname = (String) getApkAssetsMtd.invoke(apkAssetsArr[i]);
+            String pathname = (String) getApkAssetsMtd.invoke(apkAssetsArr[i]);
             if (pathname.contains(packagename)) return pathname;
         }
 

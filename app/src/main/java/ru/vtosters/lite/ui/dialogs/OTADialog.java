@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.dialogs;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -41,6 +42,7 @@ public class OTADialog extends ModalBottomSheetWrapper<OTADialog> implements OTA
         });
     }
 
+    @SuppressLint("SetTextI18n")
     private View makeUpdateInfoView(String changelog) {
         LinearLayout container = new LinearLayout(mActivity);
         TextView changelogView = new TextView(mActivity);
