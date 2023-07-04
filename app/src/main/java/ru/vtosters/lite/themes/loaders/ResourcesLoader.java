@@ -14,7 +14,9 @@ import ru.vtosters.lite.utils.ReflectionUtils;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.List;
@@ -25,7 +27,6 @@ public class ResourcesLoader {
 
     private static Collection<WeakReference<Resources>> sResourceReferences = null;
     private static Object sCurrentActivityThread = null;
-    private static AssetManager sAssetManager = null;
 
     // methods
     private static Method ensureStringBlocksMtd = null;
@@ -89,8 +90,7 @@ public class ResourcesLoader {
         }
     }
 
-    public static void init(Context context)
-            throws Exception {
+    public static void init(Context context) throws Exception {
         sCurrentActivityThread = ReflectionUtils.getActivityThread(context, null);
 
         //pre-N
@@ -110,8 +110,7 @@ public class ResourcesLoader {
         }
     }
 
-    public static void load(Context context, String resPath, boolean reinject)
-            throws Exception {
+    public static void load(Context context, String resPath, boolean reinject) throws IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchFieldException, NoSuchMethodException {
         ApplicationInfo appInfo = context.getApplicationInfo();
 
         Field[] packagesFlds = Build.VERSION.SDK_INT < Build.VERSION_CODES.O_MR1
@@ -135,10 +134,10 @@ public class ResourcesLoader {
             return;
         }
 
-        sAssetManager = AssetManager.class.newInstance();
         // Create a new AssetManager instance and point it to the resources installed under
-        if (AssetManagerHelper.addAssetPath(sAssetManager, resPath) == 0)
-            throw new IllegalStateException("Could not create new AssetManager");
+        AssetManager sAssetManager = AssetManager.class.newInstance();
+
+        AssetManagerHelper.addAssetPath(sAssetManager, resPath);
 
         // Add SharedLibraries to AssetManager for resolve system resources not found issue
         // This influence SharedLibrary Package ID

@@ -124,7 +124,7 @@ public class ThemesManager {
                 ResourcesLoader.load(app, modApk.getAbsolutePath(), false);
             }
         } catch (Exception e) {
-            Log.e("ThemesManager", e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -152,8 +152,7 @@ public class ThemesManager {
         return validated && modApk.exists() && ThemesUtils.getReservedAccent() != Color.TRANSPARENT;
     }
 
-    public static void generateModApk(int accentColor)
-            throws Throwable {
+    public static void generateModApk(int accentColor) throws Throwable {
         try (var apk = new ZipFile(baseApkPath)) {
             var arscEntry = apk.getEntry("resources.arsc");
             var arscBis = new BufferedInputStream(apk.getInputStream(arscEntry));
