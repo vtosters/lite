@@ -11,15 +11,15 @@ public class ImBanner {
     private static final String TAG = "ImBanner";
 
     public static JSONObject convertToBanner(JSONObject original) {
-        final String PEER = "peer";
-        final String ID = "id";
-        final String PICTURE = "picture";
-        final String TEXT = "text";
-        final String LINK = "link";
-        final String LINK_TEXT = "link_text";
-        final String NAME = "name";
-        final String BUTTONS = "buttons";
-        final String ICON = "icon";
+        String PEER = "peer";
+        String ID = "id";
+        String PICTURE = "picture";
+        String TEXT = "text";
+        String LINK = "link";
+        String LINK_TEXT = "link_text";
+        String NAME = "name";
+        String BUTTONS = "buttons";
+        String ICON = "icon";
 
         Optional<JSONObject> user = Optional.ofNullable(original.optJSONObject(PEER));
         int userId = user.map(u -> u.optInt(ID)).orElse(0);
