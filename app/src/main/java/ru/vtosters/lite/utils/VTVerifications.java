@@ -56,8 +56,7 @@ public class VTVerifications {
                             .apply();
                     isLoaded = true;
                     Log.d("VTVerifications", "load from network");
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception ignored) {
                     if (prefs.contains("ids")) {
                         parseJson(prefs.getString("ids", "[]"));
                         Log.d("VTVerifications", "load from memory. Something went wrong with parsing");
@@ -92,7 +91,7 @@ public class VTVerifications {
             processIds(json.optJSONArray("404"), sDevelopers);
             processIds(json.optJSONArray("1337"), sServiceAccounts);
         } catch (JSONException e) {
-            e.printStackTrace();
+            // ignored
         }
     }
 
@@ -100,8 +99,13 @@ public class VTVerifications {
         if (jsonIds == null || jsonIds.length() == 0)
             return;
 
-        for (int i = 0; i < jsonIds.length(); i++)
-            member.add(jsonIds.optInt(i));
+        for (int i = 0; i < jsonIds.length(); i++) {
+            try {
+                member.add(jsonIds.optInt(i));
+            } catch (Exception ignored) {
+                // ignored
+            }
+        }
     }
 
     public static boolean isPrometheus(int id) {
