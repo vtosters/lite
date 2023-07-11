@@ -637,7 +637,7 @@
         <item name="im_bubble_button_background_disabled">#10ffffff</item>
         <item name="im_bubble_button_background_highlighted">#3dffffff</item>
         <item name="im_bubble_button_background_highlighted_disabled">#18ffffff</item>
-        <item name="im_bubble_button_foreground">@android:color/system_neutral1_900</item>
+        <item name="im_bubble_button_foreground">@android:color/system_neutral1_0</item>
         <item name="im_bubble_button_foreground_disabled">#66e1e3e6</item>
         <item name="im_bubble_expiring">@color/mint_400</item>
         <item name="im_bubble_expiring_highlighted">@color/mint_500</item>
@@ -897,7 +897,7 @@
         <item name="im_bubble_button_background_disabled">#10ffffff</item>
         <item name="im_bubble_button_background_highlighted">#3dffffff</item>
         <item name="im_bubble_button_background_highlighted_disabled">#18ffffff</item>
-        <item name="im_bubble_button_foreground">@android:color/system_neutral1_900</item>
+        <item name="im_bubble_button_foreground">@android:color/system_neutral1_0</item>
         <item name="im_bubble_button_foreground_disabled">#66e1e3e6</item>
         <item name="im_bubble_expiring">@color/mint_400</item>
         <item name="im_bubble_expiring_highlighted">@color/mint_500</item>
