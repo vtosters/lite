@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import b.h.g.k.VKProgressDialog;
+import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
@@ -65,6 +66,8 @@ public class MainActivityInjector {
         InstallGMS.alert(activity);
         DisableBattery.alert(activity);
         // VKIDProtection.alert(activity);
+        //needs to show selected tgs pack count in settings after cold launch
+        TelegramStickersService.getInstance(activity);
     }
 
     private static void updateBinsAndTmpArchive(Activity activity) {

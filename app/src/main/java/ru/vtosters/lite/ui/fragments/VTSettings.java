@@ -1,13 +1,15 @@
 package ru.vtosters.lite.ui.fragments;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.StringRes;
 import androidx.preference.Preference;
-import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
@@ -42,7 +44,19 @@ import ru.vtosters.lite.utils.*;
 
 import java.util.Locale;
 
-public class VTSettings extends TrackedMaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
+public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
+
+    final static public String ACTION_INVALIDATE_TGS_COUNT="com.vtosters.lite.intent.action.INVALIDATE_TGS_COUNT";
+
+    final BroadcastReceiver mTgsReceiver=new BroadcastReceiver()
+    {
+        @Override
+        public void onReceive(Context context, Intent intent)
+        {
+            if(ACTION_INVALIDATE_TGS_COUNT.equals(intent.getAction()))
+                findPreference("tgs_stickers").setSummary(getTGSsumm());
+        }
+    };
 
     public static String getValAsString(@StringRes int strRes, Boolean value) {
         if (value) {
@@ -76,42 +90,12 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
         ThemesUtils.setTheme(isDarkTheme ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme(), requireActivity(), true);
     }
 
-    @Override
-    public void onPackAdded(TelegramStickersPack pack, int atIndex) {
-
-    }
-
-    @Override
-    public void onPackRemoved(TelegramStickersPack pack, int atIndex) {
-
-    }
-
-    @Override
-    public void onPackChanged(TelegramStickersPack pack, int atIndex) {
-
-    }
-
-    @Override
-    public void onPackDownloadError(TelegramStickersPack pack, Exception error) {
-
-    }
-
-    @Override
-    public void onActivePacksListChanged() {
-        findPreference("tgs_stickers").setSummary(getTGSsumm());
-    }
-
-    @Override
-    public void onInactivePacksListChanged() {
-
-    }
-
     @SuppressWarnings("ConstantConditions")
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
-        TelegramStickersService.getInstance(requireContext()).addStickersEventsListener(this);
+        requireContext().registerReceiver(mTgsReceiver,new IntentFilter(ACTION_INVALIDATE_TGS_COUNT));
 
         this.addPreferencesFromResource(R.xml.empty);
 
@@ -590,18 +574,14 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onDestroy()
+    {
+        requireContext().unregisterReceiver(mTgsReceiver);
+        super.onDestroy();
     }
 
     @Override
     public int T4() {
         return R.string.notification_settings;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        TelegramStickersService.getInstance(requireContext()).removeStickersEventsListener(this);
     }
 }
