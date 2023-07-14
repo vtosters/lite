@@ -224,7 +224,7 @@ public class TelegramStickersService {
         final TelegramStickersPack newPack = pack;
         final boolean isUpdate = update;
 
-        currentlyDownloading.add(id.toLowerCase());
+        currentlyDownloading.add(id);
         notificationsHelper.packStartedDownloading(newPack);
 
 

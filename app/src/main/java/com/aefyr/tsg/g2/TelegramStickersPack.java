@@ -36,10 +36,8 @@ public class TelegramStickersPack extends CustomStickersPack {
     public HashMap<String, List<Integer>> emojis = new HashMap<>();
 
     public TelegramStickersPack(String id) {
-        final var idLowerCase = id.toLowerCase();
-        this.id = idLowerCase;
-        this.hash = idLowerCase.hashCode();
-        title = id;
+        this.id=this.title=id;
+        this.hash=id.hashCode();
     }
 
     public JSONObject encodeEmojis() throws JSONException {
@@ -103,7 +101,7 @@ public class TelegramStickersPack extends CustomStickersPack {
 
     @Override
     public boolean equals(Object obj) {
-        return obj instanceof TelegramStickersPack && ((TelegramStickersPack) obj).id.equalsIgnoreCase(id);
+        return obj instanceof TelegramStickersPack && ((TelegramStickersPack) obj).id.equals(id);
     }
 
     @Override
