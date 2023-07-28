@@ -23,7 +23,7 @@ public class VKUIHook {
     }
 
     private static void applyVKUIStyles(WebView webView) {
-        if (getBoolValue("VKUI_INJ", true) && webView != null &&webView.getUrl() != null && !webView.getUrl().contains("static.vk.com/memories")) {
+        if (getBoolValue("VKUI_INJ", true) && webView != null && webView.getUrl() != null && !webView.getUrl().contains("static.vk.com/memories")) {
             if (!WebViewColoringUtils.isLoaded) {
                 WebViewColoringUtils.load();
             }

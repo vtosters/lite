@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.vk.core.drawable.RecoloredDrawable;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.ColorReferences;
+import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class RecolorUtils {
@@ -43,7 +44,7 @@ public class RecolorUtils {
     }
 
     public static int recolorHexColor(int i) {
-        if (!ThemesUtils.isMonetTheme()) return i;
+        if (!ThemesUtils.isMonetTheme() || !ThemesManager.canApplyCustomAccent()) return i;
         var accented = ColorReferences.isAccentedColor(i);
         var mutedaccented = ColorReferences.isMutedAccentedColor(i);
         return (accented || mutedaccented) ? (accented ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : i;
