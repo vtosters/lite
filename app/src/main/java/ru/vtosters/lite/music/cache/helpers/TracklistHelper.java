@@ -35,7 +35,7 @@ public class TracklistHelper {
     public static JSONArray tracksToIds(List<MusicTrack> tracks, boolean invertList) {
         var arr = new JSONArray();
 
-        if (!invertList) Collections.shuffle(tracks);
+        if (!invertList) Collections.reverse(tracks);
 
         for (MusicTrack track : tracks) {
             arr.put(track.y1());
