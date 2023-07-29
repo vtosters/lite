@@ -6414,4 +6414,7 @@
     <string name="clear_all_cache">Очистить весь кеш?</string>
     <string name="cache_size">Размер приложения</string>
     <string name="cache_size_summ">Вес кеша приложения</string>
+
+    <string name="invertcached_title">Инвертировать список</string>
+    <string name="invertcached_summ">Инвертировать список кешированных треков</string>
 </resources>

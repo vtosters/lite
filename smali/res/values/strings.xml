@@ -6552,4 +6552,7 @@ May look like a fake leaving the online"</string>
     <string name="clear_all_cache">Clear all cache?</string>
     <string name="cache_size">App size</string>
     <string name="cache_size_summ">Cache size</string>
+
+    <string name="invertcached_title">Invert list</string>
+    <string name="invertcached_summ">Invert cached track list</string>
 </resources>

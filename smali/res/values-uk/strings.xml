@@ -6339,4 +6339,7 @@
     <string name="clear_all_cache">Очистити весь кеш?</string>
     <string name="cache_size">Розмір програми</string>
     <string name="cache_size_summ">Вага кеша додатки</string>
+
+    <string name="invertcached_title">Інвертувати список</string>
+    <string name="invertcached_summ">Інвертувати список кешованих треків</string>
 </resources>

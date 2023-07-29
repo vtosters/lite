@@ -12,6 +12,7 @@ import ru.vtosters.lite.music.cache.FileCacheImplementation;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TracklistHelper {
@@ -31,11 +32,15 @@ public class TracklistHelper {
         return CacheDatabaseDelegate.getTracksByAlbumOne(id);
     }
 
-    public static JSONArray tracksToIds(List<MusicTrack> tracks) {
+    public static JSONArray tracksToIds(List<MusicTrack> tracks, boolean invertList) {
         var arr = new JSONArray();
+
+        if (!invertList) Collections.shuffle(tracks);
+
         for (MusicTrack track : tracks) {
             arr.put(track.y1());
         }
+
         return arr;
     }
 

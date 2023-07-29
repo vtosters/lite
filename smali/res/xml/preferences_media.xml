@@ -20,6 +20,11 @@
                 android:title="@string/cached_tracks_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
+                android:key="invertCachedTracks"
+                android:summary="@string/invertcached_summ"
+                android:title="@string/invertcached_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
                 android:key="autocache"
                 android:summary="@string/autocache_summ"
                 android:title="@string/autocache_title"/>

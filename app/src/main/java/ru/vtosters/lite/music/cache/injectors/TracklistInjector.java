@@ -11,6 +11,7 @@ import io.reactivex.ObservableOnSubscribe;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
@@ -232,7 +233,7 @@ public class TracklistInjector {
                 .put("id", getRandomId())
                 .put("data_type", "music_audios")
                 .put("url", "synth:cache:list")
-                .put("audios_ids", TracklistHelper.tracksToIds(tracks));
+                .put("audios_ids", TracklistHelper.tracksToIds(tracks, Preferences.getBoolValue("invertCachedTracks", false)));
 
         var layout = new JSONObject()
                 .put("name", "list")

@@ -123,6 +123,8 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("invertCachedTracks").setVisible(CacheDatabaseDelegate.hasTracks());
+
         if (!LibVKXClient.isVkxInstalled()) {
             findPreference("vkx_sett").setVisible(false);
         }

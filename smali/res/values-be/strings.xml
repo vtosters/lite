@@ -7032,4 +7032,7 @@
     <string name="clear_all_cache">Ачысціць ўвесь кэш?</string>
     <string name="cache_size">Памер прыкладання</string>
     <string name="cache_size_summ">Вага кэша прыкладання</string>
+
+    <string name="invertcached_title">Інвертаваць cпіс</string>
+    <string name="invertcached_summ">Інвертаваць cпіс кэшаваных трэкаў</string>
 </resources>
