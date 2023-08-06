@@ -1298,7 +1298,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="new.vk.ru"
+                    android:host="new.vk.com"
                     android:pathPattern="/.*"
                     android:scheme="http" />
             </intent-filter>
@@ -1331,7 +1331,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="new.vk.ru"
+                    android:host="new.vk.com"
                     android:pathPattern="/.*"
                     android:scheme="https" />
             </intent-filter>
