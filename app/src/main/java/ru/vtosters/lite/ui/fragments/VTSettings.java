@@ -1,18 +1,19 @@
 package ru.vtosters.lite.ui.fragments;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
+import android.annotation.SuppressLint;
+import android.content.*;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
 import androidx.preference.Preference;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.identity.fragments.IdentityListFragment;
 import com.vk.medianative.MediaImageEncoder;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
@@ -45,16 +46,14 @@ import ru.vtosters.lite.utils.*;
 import java.util.Locale;
 
 public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
+    public static String ACTION_INVALIDATE_TGS_COUNT = "com.vtosters.lite.intent.action.INVALIDATE_TGS_COUNT";
 
-    final static public String ACTION_INVALIDATE_TGS_COUNT="com.vtosters.lite.intent.action.INVALIDATE_TGS_COUNT";
-
-    final BroadcastReceiver mTgsReceiver=new BroadcastReceiver()
-    {
+    BroadcastReceiver mTgsReceiver = new BroadcastReceiver() {
         @Override
-        public void onReceive(Context context, Intent intent)
-        {
-            if(ACTION_INVALIDATE_TGS_COUNT.equals(intent.getAction()))
+        public void onReceive(Context context, Intent intent) {
+            if (ACTION_INVALIDATE_TGS_COUNT.equals(intent.getAction())) {
                 findPreference("tgs_stickers").setSummary(getTGSsumm());
+            }
         }
     };
 
@@ -90,12 +89,13 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         ThemesUtils.setTheme(isDarkTheme ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme(), requireActivity(), true);
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @SuppressWarnings("ConstantConditions")
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
-        requireContext().registerReceiver(mTgsReceiver,new IntentFilter(ACTION_INVALIDATE_TGS_COUNT));
+        requireContext().registerReceiver(mTgsReceiver, new IntentFilter(ACTION_INVALIDATE_TGS_COUNT));
 
         this.addPreferencesFromResource(R.xml.empty);
 
@@ -112,6 +112,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         try {
                             VKAuth.a("logout", false);
                         } catch (Exception ignored) {
+                            // ignored
                         }
 
                         Intent intent = new Intent(requireContext(), MainActivity.class)
@@ -159,8 +160,8 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         AndroidUtils.sendToast(AndroidUtils.getString("systemtheme_enabled"));
                         return false;
                     }
-                    final MaterialSwitchPreference switchPreference = (MaterialSwitchPreference) preference;
-                    final boolean isDarkTheme = !switchPreference.isChecked();
+                    MaterialSwitchPreference switchPreference = (MaterialSwitchPreference) preference;
+                    boolean isDarkTheme = !switchPreference.isChecked();
                     switchTheme(isDarkTheme);
                     return true;
                 }
@@ -175,7 +176,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                     R.drawable.ic_palette_outline_28,
                     Preferences.systemtheme(),
                     (preference, o) -> {
-                        Preferences.getPreferences().edit().putBoolean("system_theme", (boolean) o).commit();
+                        Preferences.getPreferences().edit().putBoolean("system_theme", (boolean) o).apply();
                         SystemThemeChangerHook.onThemeChanged(requireActivity().getResources().getConfiguration());
                         return true;
                     }
@@ -480,14 +481,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                     AndroidUtils.getString("currentLanguage") + " " + AndroidUtils.upString(Locale.getDefault().getDisplayLanguage()),
                     R.drawable.ic_globe_outline_28,
                     preference -> {
-                        try {
-                            Intent intent = new Intent("android.settings.APP_LOCALE_SETTINGS", Uri.parse("package:" + AndroidUtils.getPackageName()));
-                            startActivity(intent);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                            AndroidUtils.sendToast("Ваша система не поддерживает смену языка приложения");
-                        }
-
+                        startActivity(new Intent("android.settings.APP_LOCALE_SETTINGS", Uri.parse("package:" + AndroidUtils.getPackageName())));
                         return false;
                     }
             );
@@ -519,18 +513,57 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
+        if (AndroidUtils.isAdbOrDeveloperOptionsEnabled(requireContext().getContentResolver())) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.opencommit),
+                    "",
+                    R.drawable.ic_link_outline_28,
+                    preference -> {
+                        requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(AboutHook.getCommitLink())));
+                        return false;
+                    }
+            );
+        }
+
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                requireContext().getString(R.string.opencommit),
-                "",
-                R.drawable.ic_link_outline_28,
+                "Наши чаты",
+                "Активные чаты по обсуждению модификации и многому другому",
+                R.drawable.ic_message_outline_28,
                 preference -> {
-                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(AboutHook.getCommitLink())));
+                    var args = new Bundle();
+                    var dialog = new AboutInformation();
+
+                    args.putString("vk_link", "https://vk.me/join/jKE1bIZczHTF2mLkuoiQcd0qIBYgHuGFPRA=");
+                    args.putString("tg_link", "https://t.me/vtosterschat");
+
+                    dialog.setArguments(args);
+                    dialog.show(requireFragmentManager(), "");
                     return false;
                 }
         );
 
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "Наши сообщества",
+                "Самая свежая информация об обновлениях и не только!",
+                R.drawable.users_3_outline_28,
+                preference -> {
+                    var args = new Bundle();
+                    var dialog = new AboutInformation();
+
+                    args.putString("vk_link", "https://vk.com/vtosters_official");
+                    args.putString("tg_link", "https://t.me/vtosters");
+
+                    dialog.setArguments(args);
+                    dialog.show(requireFragmentManager(), "");
+                    return false;
+                }
+        );
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
@@ -566,7 +599,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                     "",
                     R.drawable.ic_download_outline_28,
                     preference -> {
-                        OTADialog.checkUpdates(getActivity());
+                        OTADialog.checkUpdatesManual(getActivity());
                         return false;
                     }
             );
@@ -574,8 +607,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
     }
 
     @Override
-    public void onDestroy()
-    {
+    public void onDestroy() {
         requireContext().unregisterReceiver(mTgsReceiver);
         super.onDestroy();
     }
@@ -583,5 +615,26 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
     @Override
     public int T4() {
         return R.string.notification_settings;
+    }
+
+    public static class AboutInformation extends DialogFragment {
+        @Override
+        public AlertDialog onCreateDialog(Bundle savedInstanceState) {
+            VkAlertDialog.Builder builder = new VkAlertDialog.Builder(requireActivity());
+
+            String[] items = {AndroidUtils.getString(R.string.app_name_alter), "Telegram"};
+
+            builder.setItems(items, (dialog, which) -> {
+                switch (which) {
+                    case 0 ->
+                            requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getArguments().getString("vk_link"))));
+                    case 1 ->
+                            requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getArguments().getString("tg_link"))));
+                }
+                dismiss();
+            });
+
+            return builder.create();
+        }
     }
 }

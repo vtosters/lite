@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -37,6 +38,12 @@ public class AndroidUtils {
 
     public static boolean isDebuggable() {
         return 0 != (AndroidUtils.getGlobalContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE);
+    }
+
+    public static boolean isAdbOrDeveloperOptionsEnabled(ContentResolver contentResolver) {
+        int adbEnabled = Settings.Global.getInt(contentResolver, Settings.Global.ADB_ENABLED, 0);
+        int developerOptionsEnabled = Settings.Global.getInt(contentResolver, Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+        return adbEnabled == 1 || developerOptionsEnabled == 1;
     }
 
     public static boolean isTablet() {

@@ -44,7 +44,7 @@ public class ExternalLinkParser {
 
         parseVKVideo(videoFile, qualities, urls);
 
-        if (urls.size() > 0)
+        if (!urls.isEmpty())
             if (getBoolValue("maxquality", false) || qualities.size() == 1)
                 startExternalVideo(context, urls.get(0));
             else

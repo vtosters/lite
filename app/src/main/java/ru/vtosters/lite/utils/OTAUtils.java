@@ -22,7 +22,7 @@ public class OTAUtils {
         this.mListener = listener;
     }
 
-    public void loadData() {
+    public void loadData(boolean isManualCheck) {
         Request release = new Request.a()
                 .b(LATEST_RELEASE_URL)
                 .a();
@@ -31,13 +31,13 @@ public class OTAUtils {
             @Override
             public void a(Call call, IOException e) {
                 Log.d("OTAHelper", "Error while getting latest release info: " + e);
-                mListener.onUpdateCanceled();
+                mListener.onUpdateError();
             }
 
             @Override
             public void a(Call call, Response response) throws IOException {
                 try {
-                    setData(response);
+                    setData(response, isManualCheck);
                 } catch (JSONException | NullPointerException e) {
                     e.printStackTrace();
                 }
@@ -46,7 +46,7 @@ public class OTAUtils {
         });
     }
 
-    void setData(Response response) throws IOException, JSONException {
+    void setData(Response response, boolean isManualCheck) throws IOException, JSONException {
         mReleaseJson = new JSONObject(response.a().g());
 
         String tag = mReleaseJson.getString("tag_name");
@@ -58,7 +58,7 @@ public class OTAUtils {
             @Override
             public void a(Call call, IOException e) {
                 Log.d("OTAHelper", "Error while getting latest commit info: " + e);
-                mListener.onUpdateCanceled();
+                mListener.onUpdateError();
             }
 
             @Override
@@ -67,12 +67,12 @@ public class OTAUtils {
                     mCommitJson = new JSONObject(response.a().g());
                     mCommitSHA = mCommitJson.getJSONObject("object").getString("sha");
                     if (isNewVersion())
-                        mListener.onUpdateApplied();
+                        mListener.onUpdateApplied(isManualCheck);
                     else
-                        mListener.onUpdateCanceled();
+                        mListener.onUpdateLatest(isManualCheck);
                 } catch (NullPointerException | JSONException e) {
                     e.printStackTrace();
-                    mListener.onUpdateCanceled();
+                    mListener.onUpdateError();
                 }
             }
         });
@@ -118,9 +118,10 @@ public class OTAUtils {
 
     public interface OTAListener {
 
-        void onUpdateApplied();
+        void onUpdateApplied(boolean isManualCheck);
 
-        void onUpdateCanceled();
+        void onUpdateError();
 
+        void onUpdateLatest(boolean isManualCheck);
     }
 }

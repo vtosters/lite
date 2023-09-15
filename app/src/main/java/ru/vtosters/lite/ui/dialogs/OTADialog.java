@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.downloaders.OTADownloader;
@@ -17,22 +18,26 @@ public class OTADialog extends ModalBottomSheetWrapper<OTADialog> implements OTA
 
     private final OTAUtils mHelper;
 
-    public OTADialog(Activity activity) {
+    public OTADialog(Activity activity, boolean isManualCheck) {
         super(activity);
         mActivity = activity;
 
         mHelper = new OTAUtils(this);
-        mHelper.loadData();
+        mHelper.loadData(isManualCheck);
     }
 
     public static void checkUpdates(Activity activity) {
-        new OTADialog(activity);
+        new OTADialog(activity, false);
+    }
+
+    public static void checkUpdatesManual(Activity activity) {
+        new OTADialog(activity, true);
     }
 
     @Override
-    public void onUpdateApplied() {
+    public void onUpdateApplied(boolean isManualCheck) {
         mActivity.runOnUiThread(() -> {
-            // Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
+            if (isManualCheck) Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
             setTitle(mActivity.getString(R.string.newversion) + " " + mHelper.getNewVersionName())
                     .setView(makeUpdateInfoView(mHelper.getUpdateDescription()))
                     .setPositiveButton(mActivity.getString(R.string.updateanddownload), () -> {
@@ -57,9 +62,18 @@ public class OTADialog extends ModalBottomSheetWrapper<OTADialog> implements OTA
     }
 
     @Override
-    public void onUpdateCanceled() {
-//        mActivity.runOnUiThread(() -> {
-//            // Toast.makeText(mActivity, "Обновлений не найдено", Toast.LENGTH_SHORT).show();
-//        });
+    public void onUpdateLatest(boolean isManualCheck) {
+        if (isManualCheck) {
+            mActivity.runOnUiThread(() -> {
+                Toast.makeText(mActivity, "У вас установлена последняя версия приложения", Toast.LENGTH_SHORT).show();
+            });
+        }
+    }
+
+    @Override
+    public void onUpdateError() {
+        mActivity.runOnUiThread(() -> {
+            Toast.makeText(mActivity, "Ошибка проверки обновления", Toast.LENGTH_SHORT).show();
+        });
     }
 }
