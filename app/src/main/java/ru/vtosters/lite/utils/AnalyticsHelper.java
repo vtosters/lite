@@ -9,6 +9,7 @@ import com.microsoft.appcenter.channel.AbstractChannelListener;
 import com.microsoft.appcenter.channel.Channel;
 import com.microsoft.appcenter.crashes.Crashes;
 import com.microsoft.appcenter.ingestion.models.Log;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.ui.fragments.TrackedMaterialPreferenceToolbarFragment;
 
@@ -23,8 +24,8 @@ public class AnalyticsHelper {
         @Override
         public void onPreparedLog(@NonNull Log log, @NonNull String groupName, int flags) {
             var device = log.getDevice();
-            device.setAppVersion(About.getBuildNumber());
-            device.setAppBuild(About.getBuildNumber());
+            device.setAppVersion(VersionReader.getVersionBuild());
+            device.setAppBuild(VersionReader.getVersionBuild());
         }
     };
 

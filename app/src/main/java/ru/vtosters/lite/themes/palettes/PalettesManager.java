@@ -23,8 +23,8 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class PalettesManager {
 
-    private final static File PALETTES_DIR = new File(Environment.getExternalStorageDirectory(), "VTL/palettes");
-    private final static String ASSETS_DIR = "vtl_themes/palettes/";
+    private static final File PALETTES_DIR = new File(Environment.getExternalStorageDirectory(), "VTL/palettes");
+    private static final String ASSETS_DIR = "vtl_themes/palettes/";
 
     private static PalettesManager sInstance;
 
@@ -51,17 +51,17 @@ public class PalettesManager {
             return;
         }
 
-        final var palettes = PALETTES_DIR.listFiles((dir, name) -> name.endsWith(".json"));
+        var palettes = PALETTES_DIR.listFiles((dir, name) -> name.endsWith(".json"));
         if (palettes == null || palettes.length == 0)
             copyPaletteFromAssets();
         parsePalettes();
     }
 
-    private boolean copyPaletteFromAssets() {
+    private void copyPaletteFromAssets() {
         try {
-            final var manager = AndroidUtils.getGlobalContext().getAssets();
-            final var assets = manager.list(ASSETS_DIR);
-            if (assets == null || assets.length == 0) return false;
+            var manager = AndroidUtils.getGlobalContext().getAssets();
+            var assets = manager.list(ASSETS_DIR);
+            if (assets == null || assets.length == 0) return;
             for (var asset : assets) {
                 try {
                     IOUtils.copy(manager.open(ASSETS_DIR + asset), new File(PALETTES_DIR, asset));
@@ -69,11 +69,9 @@ public class PalettesManager {
                     e.printStackTrace();
                 }
             }
-            return true;
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return false;
     }
 
     private void parsePalettes() {

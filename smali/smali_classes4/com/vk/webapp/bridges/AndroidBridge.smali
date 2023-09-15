@@ -548,7 +548,7 @@
 
     const-string v3, "https://oauth.vk.com/blank.html"
 
-    invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1091,13 +1091,9 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lru/vtosters/lite/utils/WebAppUtils;->getWebAppConfig()Lorg/json/JSONObject;
+    invoke-static {}, Lru/vtosters/hooks/WebAppHook;->getWebAppConfig()Lorg/json/JSONObject;
 
     move-result-object p1
-
-    .line 3
-
-    .line 4
 
     .line 5
     sget-object v0, Lcom/vk/webapp/internal/data/JsApiMethodType;->GET_CONFIG:Lcom/vk/webapp/internal/data/JsApiMethodType;
@@ -1547,7 +1543,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/proxy/api/ApiProxy;->staticFix(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lru/vtosters/hooks/ProxyHook;->staticFix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1641,7 +1637,7 @@
 
     const-string p3, "https://oauth.vk.com/authorize"
 
-    invoke-static {p3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -2197,7 +2193,7 @@
 
     const-string v3, "https://oauth.vk.com/blank.html"
 
-    invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

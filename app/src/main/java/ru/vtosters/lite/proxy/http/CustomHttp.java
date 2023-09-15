@@ -1,7 +1,7 @@
 package ru.vtosters.lite.proxy.http;
 
+import static ru.vtosters.hooks.other.Preferences.getString;
 import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
-import static ru.vtosters.lite.utils.Preferences.getString;
 
 public class CustomHttp {
     public static void loadProxy() {

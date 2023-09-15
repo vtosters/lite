@@ -60,7 +60,7 @@
     new-instance v10, Lcom/vk/core/ui/themes/VKTheme;
 
     .line 1
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getLightThemeRes()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getLightThemeRes()I
 
     move-result v8
 
@@ -91,7 +91,7 @@
     .line 2
     sget v18, Lb/h/g/e;->VkDarkStyle:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getDarkThemeRes()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getDarkThemeRes()I
 
     move-result v18
 
@@ -172,7 +172,7 @@
     new-instance v1, Lcom/vk/core/ui/themes/VKTheme;
 
     .line 5
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getLightThemeRes()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getLightThemeRes()I
 
     move-result v10
 
@@ -203,7 +203,7 @@
     .line 6
     sget v10, Lb/h/g/e;->VkMilkDarkStyle:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getDarkThemeRes()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getDarkThemeRes()I
 
     move-result v10
 

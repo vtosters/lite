@@ -7,8 +7,8 @@ import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
 import androidx.annotation.IdRes;
 import com.vtosters.lite.R;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 
 
 public class ThemesCore {
@@ -143,8 +143,11 @@ public class ThemesCore {
         themedColors.put(R.attr.im_reply_separator, accentColor);
         themedColors.put(R.attr.im_text_name, accentColor);
 
-        outgoinging_msg = ThemesUtils.lighten(accentColor, 0.76f);
-        outgoinging_msg_highlight = ThemesUtils.lighten(accentColor, 0.5f);
+        float out = ThemesUtils.isMonetTheme() ? 0.85f : 0.76f;
+        float outhighlight = ThemesUtils.isMonetTheme() ? 0.75f : 0.5f;
+
+        outgoinging_msg = ThemesUtils.lighten(accentColor, out);
+        outgoinging_msg_highlight = ThemesUtils.lighten(accentColor, outhighlight);
 
         themedColors.put(R.attr.im_ic_send_msg, accentColor);
         themedColors.put(R.attr.im_bubble_wallpaper_outgoing, accentColor);
@@ -163,26 +166,25 @@ public class ThemesCore {
     }
 
     public static boolean hasThemedAttr(Context context, int attrID) {
-        if (ThemesUtils.isCustomAccentEnabled()) {
-            if (Preferences.getBoolValue("logColors", false)) {
-                try {
-                    Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
-                } catch (Exception ignored) {
-                }
+        if (Preferences.getBoolValue("logColors", false)) {
+            try {
+                Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
+            } catch (Exception ignored) {
             }
+        }
 
+        if (ThemesUtils.isMonetTheme() || ThemesManager.canApplyCustomAccent()) {
             if (isCachedAccents()) {
-                if (ThemesUtils.isDarkTheme()) {
-                    return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_DARK.get(attrID, true) && (
-                            ThemesUtils.isMilkshake() ?
-                                    ACCENT_THEME_ONLY_MILK_DARK.get(attrID, true) :
-                                    ACCENT_THEME_ONLY_NOMILK_DARK.get(attrID, true)));
-                } else {
-                    return (themedColors.get(attrID) != 0 && ACCENT_THEME_ONLY_LIGHT.get(attrID, true) && (
-                            ThemesUtils.isMilkshake() ?
-                                    ACCENT_THEME_ONLY_MILK_LIGHT.get(attrID, true) :
-                                    ACCENT_THEME_ONLY_NOMILK_LIGHT.get(attrID, true)));
-                }
+                boolean isDark = ThemesUtils.isDarkTheme();
+                boolean isMilkshake = ThemesUtils.isMilkshake();
+                SparseBooleanArray themeOnlyMap = isDark ? ACCENT_THEME_ONLY_DARK : ACCENT_THEME_ONLY_LIGHT;
+                SparseBooleanArray milkshakeMap = isDark ? ACCENT_THEME_ONLY_MILK_DARK : ACCENT_THEME_ONLY_MILK_LIGHT;
+                SparseBooleanArray noMilkshakeMap = isDark ? ACCENT_THEME_ONLY_NOMILK_DARK : ACCENT_THEME_ONLY_NOMILK_LIGHT;
+
+                return (themedColors.get(attrID) != 0 && themeOnlyMap.get(attrID, true) && (
+                        isMilkshake ?
+                                milkshakeMap.get(attrID, true) :
+                                noMilkshakeMap.get(attrID, true)));
             } else {
                 return themedColors.get(attrID) != 0;
             }
@@ -190,7 +192,6 @@ public class ThemesCore {
             return false;
         }
     }
-
 
     public static void clear() {
         cachedAccents = false;

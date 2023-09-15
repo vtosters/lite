@@ -5723,7 +5723,7 @@
     sget v5, Landroidx/appcompat/R$color;->abc_input_method_navigation_guard:I
 
     .line 19
-    invoke-static {v5}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+    invoke-static {v5}, Lru/vtosters/hooks/other/ThemesUtils;->getColor(I)I
 
     move-result v4
 

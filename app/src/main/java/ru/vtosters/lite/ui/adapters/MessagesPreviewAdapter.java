@@ -14,11 +14,10 @@ import com.vk.im.ui.views.msg.bubble.MsgBubblePart;
 import com.vk.im.ui.views.msg.bubble.MsgBubbleStyle;
 import com.vk.im.ui.views.msg.bubble.MsgBubbleView;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreviewAdapter.MessagePreviewViewHolder> {
-
     private final String[] mMessages;
 
     public MessagesPreviewAdapter(String... messages) {
@@ -35,9 +34,9 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
     public MessagePreviewViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         Context context = viewGroup.getContext();
 
-        final var inflater = LayoutInflater.from(context);
+        var inflater = LayoutInflater.from(context);
 
-        final var bubbleFluidLayout = (BubbleFluidLayout) inflater.inflate(R.layout.vkim_msg_list_item_msg_from_user, viewGroup, false);
+        var bubbleFluidLayout = (BubbleFluidLayout) inflater.inflate(R.layout.vkim_msg_list_item_msg_from_user, viewGroup, false);
         bubbleFluidLayout.setPadding(0, AndroidUtils.dp2px(4), 0, 0);
         bubbleFluidLayout.setGravity(viewType);
 
@@ -47,7 +46,7 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
         bubbleFluidLayout.findViewById(R.id.status).setVisibility(View.GONE);
         bubbleFluidLayout.findViewById(R.id.status_space).setVisibility(View.GONE);
 
-        final var messageBubbleView = (MsgBubbleView) bubbleFluidLayout.findViewById(R.id.bubble);
+        var messageBubbleView = (MsgBubbleView) bubbleFluidLayout.findViewById(R.id.bubble);
         messageBubbleView.setContentPaddingLeft(AndroidUtils.dp2px(10));
         messageBubbleView.setContentPaddingTop(AndroidUtils.dp2px(4));
         messageBubbleView.setContentPaddingRight(AndroidUtils.dp2px(4));
@@ -59,10 +58,10 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
         }
         bubbleFluidLayout.setLayoutDirection(viewType);
 
-        final var msgTextView = inflater.inflate(R.layout.vkim_msg_part_text, viewGroup, false);
+        var msgTextView = inflater.inflate(R.layout.vkim_msg_part_text, viewGroup, false);
         msgTextView.setId(R.id.msg_text);
 
-        final var msgBubbleView = (MsgBubbleView) bubbleFluidLayout.findViewById(R.id.bubble);
+        var msgBubbleView = (MsgBubbleView) bubbleFluidLayout.findViewById(R.id.bubble);
         msgBubbleView.setContentView(msgTextView);
 
         return new MessagePreviewViewHolder(bubbleFluidLayout);

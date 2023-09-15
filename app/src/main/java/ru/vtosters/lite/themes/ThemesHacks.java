@@ -9,9 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.ColorRes;
 import androidx.annotation.NonNull;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.utils.RecolorUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ThemesHacks {
     public static void fixDropdown(Drawable drawable) {
@@ -23,7 +23,7 @@ public class ThemesHacks {
     }
 
     public static int getHackedColor(@NonNull Context context, @ColorRes int color) {
-        if (ThemesUtils.isCustomAccentEnabled()) {
+        if (ThemesUtils.isMonetTheme() || ThemesManager.canApplyCustomAccent()) {
             if (Preferences.getBoolValue("logColors", false)) {
                 try {
                     Log.d("ThemesCore", "Requesting color by color " + context.getResources().getResourceName(color));

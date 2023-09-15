@@ -234,7 +234,7 @@
 
     const-string v1, "com.google.android.c2dm.intent.REGISTRATION"
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -785,7 +785,7 @@
 
     const-string v3, "com.google.android.gms"
 
-    invoke-static {v3}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -805,7 +805,7 @@
 
     const-string v3, "com.google.iid.TOKEN_REQUEST"
 
-    invoke-static {v3}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
     
@@ -817,7 +817,7 @@
     :cond_0
     const-string v3, "com.google.android.c2dm.intent.REGISTER"
 
-    invoke-static {v3}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

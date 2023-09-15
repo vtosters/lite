@@ -11,11 +11,9 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.ViewTreeObserver;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-
 import com.airbnb.lottie.LottieComposition;
 import com.airbnb.lottie.LottieCompositionFactory;
 import com.airbnb.lottie.LottieDrawable;
@@ -47,7 +45,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
-public class StoryCircleImageView extends BorderedCircleImageView implements Themable{
+public class StoryCircleImageView extends BorderedCircleImageView implements Themable {
     private static final HashSet<Integer> B0 = new HashSet<>();
     private final PipelineDraweeControllerBuilder f0;
     private int A0;
@@ -72,35 +70,35 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
     private String y0;
     private LottieDrawable z0;
 
-    public StoryCircleImageView(Context context){
+    public StoryCircleImageView(Context context) {
         this(context, null);
     }
 
-    public StoryCircleImageView(Context context, AttributeSet attributeSet){
+    public StoryCircleImageView(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
     }
 
-    public StoryCircleImageView(Context context, AttributeSet attributeSet, int i){
+    public StoryCircleImageView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.f0 = FrescoWrapper.c.d();
         a(context, attributeSet, i);
     }
 
-    private void b(Canvas canvas){
+    private void b(Canvas canvas) {
         this.z0.draw(canvas);
     }
 
-    private boolean o(){
+    private boolean o() {
         return !this.u0 && !this.t0 && this.z0 == null && !this.w0 && !this.v0;
     }
 
-    private void p(){
+    private void p() {
         this.z0.stop();
         this.z0 = null;
         invalidate();
     }
 
-    private void q(){
+    private void q() {
         int i = this.j0;
         if (i != 0 && VKThemeHelper.k.a(i)) {
             this.k0 = VKThemeHelper.d(this.j0);
@@ -132,19 +130,19 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
         this.s0 = DrawableUtils.a(a4, i8, i8);
     }
 
-    private void r(){
+    private void r() {
         this.c0 = Screen.a(o() ? 0 : 2);
         m();
         q();
     }
 
-    private void setUploadFailed(boolean z){
+    private void setUploadFailed(boolean z) {
         this.u0 = z;
         invalidate();
     }
 
     @Override // com.vk.stories.view.ClippedImageView, android.widget.ImageView, android.view.View
-    public void onDraw(Canvas canvas){
+    public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         setBorderAlpha(255);
         if (this.u0) {
@@ -170,13 +168,13 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
     }
 
     @Override // com.vk.stories.view.BorderedCircleImageView, android.view.View
-    public void onSizeChanged(int i, int i2, int i3, int i4){
+    public void onSizeChanged(int i, int i2, int i3, int i4) {
         super.onSizeChanged(i, i2, i3, i4);
         this.i0.setBounds(0, 0, i, i2);
         b(i);
     }
 
-    public void setStoryContainer(@Nullable StoriesContainer storiesContainer){
+    public void setStoryContainer(@Nullable StoriesContainer storiesContainer) {
         boolean z = true;
         boolean z2 = storiesContainer != null && storiesContainer.Q1();
         this.v0 = storiesContainer != null && storiesContainer.S1() && !storiesContainer.L1();
@@ -246,12 +244,12 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
     }
 
     @Override // com.vk.core.ui.themes.Themable
-    public void v(){
+    public void v() {
         r();
         invalidate();
     }
 
-    private void b(int i){
+    private void b(int i) {
         LottieDrawable lottieDrawable = this.z0;
         if (lottieDrawable == null || lottieDrawable.e() == null) {
             return;
@@ -259,7 +257,7 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
         this.z0.d(i / this.z0.e().a().width());
     }
 
-    protected void a(Context context, AttributeSet attributeSet, int i){
+    protected void a(Context context, AttributeSet attributeSet, int i) {
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, com.vtosters.lite.a0.StoryCircleImageView, i, 0);
         a(context, attributeSet, obtainStyledAttributes);
         obtainStyledAttributes.recycle();
@@ -267,7 +265,7 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
         this.T = this.p0;
     }
 
-    public void b(@Nullable List<String> list){
+    public void b(@Nullable List<String> list) {
         PipelineDraweeControllerBuilder pipelineDraweeControllerBuilder = this.f0;
         pipelineDraweeControllerBuilder.j();
         pipelineDraweeControllerBuilder.a(getController());
@@ -277,7 +275,7 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
     }
 
     @SuppressLint("ResourceType")
-    private void a(Context context, AttributeSet attributeSet, TypedArray typedArray){ // bullshit vk code is not working with custom bordered circle image
+    private void a(Context context, AttributeSet attributeSet, TypedArray typedArray) { // bullshit vk code is not working with custom bordered circle image
         Drawable drawable;
         this.A0 = typedArray.getDimensionPixelSize(0, Screen.a(64.0f));
         if (typedArray.hasValue(2)) {
@@ -344,13 +342,13 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
         this.s0 = DrawableUtils.a(drawable4, i4, i4);
     }
 
-    public void a(StoriesContainer storiesContainer){
+    public void a(StoriesContainer storiesContainer) {
         if (this.z0 == null) {
             LottieCompositionFactory.a(getContext(), this.y0).b(new a(storiesContainer));
         }
     }
 
-    public void a(StoriesContainer storiesContainer, LottieComposition lottieComposition){
+    public void a(StoriesContainer storiesContainer, LottieComposition lottieComposition) {
         this.z0 = new LottieDrawable();
         this.z0.a(lottieComposition);
         this.z0.d(-1);
@@ -363,7 +361,7 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
         this.z0.stop();
     }
 
-    private void a(boolean z, boolean z2){
+    private void a(boolean z, boolean z2) {
         k();
         this.t0 = z;
         if (!z2) {
@@ -373,7 +371,7 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
         }
     }
 
-    private void a(@NonNull PipelineDraweeControllerBuilder pipelineDraweeControllerBuilder, @Nullable final List<String> list){
+    private void a(@NonNull PipelineDraweeControllerBuilder pipelineDraweeControllerBuilder, @Nullable final List<String> list) {
         pipelineDraweeControllerBuilder.b(null);
         pipelineDraweeControllerBuilder.a((Supplier<DataSource<CloseableReference<com.facebook.x.g.CloseableImage>>>) null);
         if (list != null && !list.isEmpty()) {
@@ -390,7 +388,7 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
         pipelineDraweeControllerBuilder.b(null);
     }
 
-    public DataSource<CloseableReference<CloseableImage>> a(@Nullable List<String> list){
+    public DataSource<CloseableReference<CloseableImage>> a(@Nullable List<String> list) {
         ArrayList<Image> arrayList = new ArrayList<>();
         for (String o : Objects.requireNonNull(list)) {
             arrayList.add(new Image(-1, -1, o));
@@ -398,15 +396,15 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
         return AvatarDataSource.a(arrayList, this.A0, 0);
     }
 
-    public class a implements LottieListener<LottieComposition>{
+    public class a implements LottieListener<LottieComposition> {
         final StoriesContainer a;
 
-        a(StoriesContainer storiesContainer){
+        a(StoriesContainer storiesContainer) {
             this.a = storiesContainer;
         }
 
         @Override // com.airbnb.lottie.LottieListener
-        public void a(LottieComposition lottieComposition){
+        public void a(LottieComposition lottieComposition) {
             if (StoryCircleImageView.this.getWidth() > 0) {
                 StoryCircleImageView.this.a(this.a, lottieComposition);
             } else {
@@ -414,15 +412,15 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
             }
         }
 
-        public class ViewTreeObserver$OnGlobalLayoutListenerC0393a implements ViewTreeObserver.OnGlobalLayoutListener{
+        public class ViewTreeObserver$OnGlobalLayoutListenerC0393a implements ViewTreeObserver.OnGlobalLayoutListener {
             final LottieComposition a;
 
-            ViewTreeObserver$OnGlobalLayoutListenerC0393a(LottieComposition lottieComposition){
+            ViewTreeObserver$OnGlobalLayoutListenerC0393a(LottieComposition lottieComposition) {
                 this.a = lottieComposition;
             }
 
             @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
-            public void onGlobalLayout(){
+            public void onGlobalLayout() {
                 StoryCircleImageView.this.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 a aVar = a.this;
                 StoryCircleImageView.this.a(aVar.a, this.a);
@@ -430,12 +428,12 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
         }
     }
 
-    public class b implements ValueAnimator.AnimatorUpdateListener{
-        b(){
+    public class b implements ValueAnimator.AnimatorUpdateListener {
+        b() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
-        public void onAnimationUpdate(ValueAnimator valueAnimator){
+        public void onAnimationUpdate(ValueAnimator valueAnimator) {
             StoryCircleImageView.this.invalidate();
         }
     }

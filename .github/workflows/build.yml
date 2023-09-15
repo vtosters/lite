@@ -21,10 +21,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up JDK 14
+      - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '14'
+          java-version: '17'
           distribution: 'adopt'
           
       - uses: actions/checkout@v3

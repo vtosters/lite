@@ -28,7 +28,6 @@ import com.vk.im.engine.models.Profile;
 import com.vk.im.engine.models.dialogs.BubbleColors;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
-import com.vk.im.engine.models.messages.MsgSyncState;
 import com.vk.im.engine.utils.MsgPermissionHelper;
 import com.vk.im.ui.components.viewcontrollers.msg_list.BombView;
 import com.vk.im.ui.components.viewcontrollers.msg_list.SwipeToReplyItemTouchCallback;
@@ -144,7 +143,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         this.X = context.getString(m.vkim_accessibility_msg_unread);
         MsgBubbleView var5 = this.e;
         var5.setContentView(this.B.a(var4, var5));
-        ViewGroup.MarginLayoutParams var7 = (ViewGroup.MarginLayoutParams)this.e.getLayoutParams();
+        ViewGroup.MarginLayoutParams var7 = (ViewGroup.MarginLayoutParams) this.e.getLayoutParams();
         Rect var6 = this.G;
         var6.left = var7.leftMargin;
         var6.right = var7.rightMargin;
@@ -337,7 +336,8 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         if (args.w()) {
             var12 = var11;
             if (args.k()) {
-                label30: {
+                label30:
+                {
                     if (args.G()) {
                         var12 = Screen.a(4);
                     } else {
@@ -671,7 +671,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
     private void f(VhBindArgs args) {
         Msg var2 = args.b.c;
         if (var2 != null) {
-            this.P.setStateListener((BombView.d)null);
+            this.P.setStateListener((BombView.d) null);
             if (var2.M1() && !var2.E1()) {
                 this.P.setVisibility(View.GONE);
             } else {
@@ -832,7 +832,8 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         MsgBubbleView var8 = this.e;
         boolean var6 = var4;
         if (var5) {
-            label57: {
+            label57:
+            {
                 if (!args.C()) {
                     var6 = var4;
                     if (!args.z()) {
@@ -877,7 +878,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         if (args.s()) {
             this.itemView.setBackground(this.H);
         } else {
-            this.itemView.setBackground((Drawable)null);
+            this.itemView.setBackground((Drawable) null);
         }
 
     }
@@ -985,7 +986,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
 
     public void a(@NonNull Msg var1, int var2) {
         if (this.f0()) {
-            ((MsgPartCarouselHolder)this.B).a(var1, var2);
+            ((MsgPartCarouselHolder) this.B).a(var1, var2);
         }
 
     }
@@ -1110,7 +1111,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
 
         public Unit invoke() {
             if (VhMsg.this.e.getMeasuredWidth() < VhMsg.h0) {
-                ((ViewGroup.MarginLayoutParams)VhMsg.this.e.getLayoutParams()).leftMargin = VhMsg.h0 - VhMsg.this.e.getMeasuredWidth() + this.a;
+                ((ViewGroup.MarginLayoutParams) VhMsg.this.e.getLayoutParams()).leftMargin = VhMsg.h0 - VhMsg.this.e.getMeasuredWidth() + this.a;
                 VhMsg.this.e.invalidate();
                 VhMsg.this.e.requestLayout();
             } else {

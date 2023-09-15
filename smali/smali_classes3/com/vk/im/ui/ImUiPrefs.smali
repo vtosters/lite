@@ -424,39 +424,6 @@
     return v0
 .end method
 
-# .method public final c()Ljava/lang/String;
-#     .locals 3
-
-#     invoke-static {}, Lru/vtosters/lite/ui/wallpapers/WallpapersHooks;->getWallpaperUrl()Ljava/lang/String;
-
-#     move-result-object v0
-
-#     return-object v0
-
-#     .line 1
-#     invoke-direct {p0}, Lcom/vk/im/ui/ImUiPrefs;->k()Landroid/content/SharedPreferences;
-
-#     move-result-object v0
-
-#     const-string v1, "pref_dialog_background_uri"
-
-#     const-string v2, "default"
-
-#     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-#     move-result-object v0
-
-#     if-eqz v0, :cond_0
-
-#     goto :goto_0
-
-#     :cond_0
-#     const-string v0, ""
-
-#     :goto_0
-#     return-object v0
-# .end method
-
 .method public final d()J
     .locals 4
 

@@ -5849,7 +5849,7 @@
     const v4, 0x7f12032e
 
     .line 8
-    invoke-static {v0}, Lru/vtosters/lite/downloaders/StoryDownloader;->injectButton(Lcom/vk/dto/stories/model/StoryEntry;)Ljava/lang/Runnable;
+    invoke-static {v0}, Lru/vtosters/hooks/DownloadersHook;->injectActionStory(Lcom/vk/dto/stories/model/StoryEntry;)Ljava/lang/Runnable;
 
     move-result-object v5
 

@@ -5783,8 +5783,8 @@ You need to restart the application to apply proxy settings"</string>
     <string name="onlinefix_title">Bypass online indicator</string>
     <string name="globalUsersOnline_title">Global online bypass</string>
     <string name="globalUsersOnline_summ">May cause slow partition loading and high traffic consumption \n\nIt is not recommended to enable this feature</string>
-    <string name="savemsgsett_title">Save message settings</string>
-    <string name="savemsgsett_summ">Save the position of the toggle switches in the message settings</string>
+    <string name="savemsgsett_title">Save message sending parameters</string>
+    <string name="savemsgsett_summ">Save selected outgoing message status parameters like message disappearing and silent sending</string>
     <string name="screenshotdetect_title">Disable screenshot detection</string>
     <string name="screenshotdetect_summ">Turn off the notification that you took a screenshot</string>
     <string name="hideDeviceInfo_title">Disable sending metric</string>
@@ -6329,8 +6329,8 @@ May look like a fake leaving the online"</string>
     <string name="remove_from_ads_stories_whitelist">Remove from stories whitelist</string>
     <string name="add_to_ads_whitelist">Add to ads stories whitelist</string>
     <string name="remove_from_ads_whitelist">Remove from ads stories whitelist</string>
-    <string name="removed_from_whitelist_success">Group removed from whitelist</string>
-    <string name="added_to_whitelist_success">Group added to whitelist</string>
+    <string name="removed_from_whitelist_success">Removed from whitelist</string>
+    <string name="added_to_whitelist_success">Added to whitelist</string>
 
     <string name="whitelisted_ad_groups_title">Ads whitelist</string>
     <string name="whitelisted_filters_groups_title">Filters whitelist and copyrights</string>
@@ -6468,6 +6468,8 @@ May look like a fake leaving the online"</string>
     <string name="promotedstickers_title">Don\'t receive promoted stickers</string>
     <string name="useOldAppVer_title">Use old music catalog</string>
     <string name="useOldAppVer_summ">Works \"as is\". There may be errors</string>
+    <string name="invertFilters">Invert exceptions</string>
+    <string name="invertFilters_summ">Groups added to exceptions will be filtered</string>
 
     <string name="downloading_update">Downloading update</string>
     <string name="sources">Sources</string>
@@ -6530,6 +6532,7 @@ May look like a fake leaving the online"</string>
 
     <string name="datasettings_title">Application data settings</string>
     <string name="invalidate_theme_cache_title">Invalidate theme cache</string>
+    <string name="invalidate_theme_cache_each_update_title">Clear theme cache after update to prevent problems with accents</string>
 
     <string name="useCustomPrefsStyle_title">Use new switches</string>
     <string name="useCustomPrefsStyle_summ">More modern and stylish toggle switches in settings</string>
@@ -6540,4 +6543,16 @@ May look like a fake leaving the online"</string>
 
     <string name="currentLanguage">Current language:</string>
     <string name="appLanguage">App language</string>
+
+    <string name="microgsett">MicroG Settings</string>
+
+    <string name="compression_types">Photo compression method</string>
+    <string name="compression_types_selection">Choose the compression method</string>
+
+    <string name="clear_all_cache">Clear all cache?</string>
+    <string name="cache_size">App size</string>
+    <string name="cache_size_summ">Cache size</string>
+
+    <string name="invertcached_title">Invert list</string>
+    <string name="invertcached_summ">Invert cached track list</string>
 </resources>

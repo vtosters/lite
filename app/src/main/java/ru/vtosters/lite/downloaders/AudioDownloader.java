@@ -6,8 +6,8 @@ import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.MusicCacheFilesHook;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
-import ru.vtosters.lite.music.cache.FileCacheImplementation;
 import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
 import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
 import ru.vtosters.lite.music.downloader.AudioGet;
@@ -66,7 +66,7 @@ public class AudioDownloader {
             return;
         }
 
-        var trackFile = FileCacheImplementation.getTrackFile(trackId);
+        var trackFile = MusicCacheFilesHook.getTrackFile(trackId);
         if (!trackFile.exists())
             trackFile.getParentFile().mkdirs();
         executor.submit(() -> downloadM3U8(track, true));

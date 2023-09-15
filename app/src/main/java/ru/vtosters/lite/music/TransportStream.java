@@ -4,8 +4,8 @@ import android.text.TextUtils;
 
 public class TransportStream {
 
-    private String mKeyUri;
     private final String mMediaSegmentUri;
+    private String mKeyUri;
     private String mMediaSegmentName;
 
     public TransportStream(String baseURI, String mediaSegmentName) {

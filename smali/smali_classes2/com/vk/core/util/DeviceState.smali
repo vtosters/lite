@@ -1081,7 +1081,7 @@
 
     # move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/hooks/NewsfeedHook;->isPowerSaveMode()Z
+    invoke-static {}, Lru/vtosters/hooks/NewsfeedHook;->isPowerSaveMode()Z
 
     move-result v0
 

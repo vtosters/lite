@@ -5,12 +5,11 @@ import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-
 import com.aefyr.tsg.g2.stickersgrabber.util.Flag;
 import com.aefyr.tsg.g2.stickersgrabber.util.GoalCounter;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
+import ru.vtosters.lite.net.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,12 +25,6 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import ru.vtosters.lite.net.NetCall;
-import ru.vtosters.lite.net.NetCallback;
-import ru.vtosters.lite.net.NetClient;
-import ru.vtosters.lite.net.NetRequest;
-import ru.vtosters.lite.net.NetResponse;
 
 /**
  * Created by Aefyr on 11.05.2018.
@@ -67,7 +60,7 @@ public class TelegramStickersGrabber {
         try {
             sha256 = MessageDigest.getInstance("SHA-256");
         } catch (NoSuchAlgorithmException e) {
-            Log.wtf(TAG, "No support for SHA-256");
+            Log.d(TAG, "No support for SHA-256");
             e.printStackTrace();
             throw new RuntimeException(e);
         }

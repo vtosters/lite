@@ -78,11 +78,6 @@ public class Genius {
     }
 
     private static String getText(String track) {
-        if (TextUtils.isEmpty(track)) {
-            Log.d("Genius", "No track");
-            return null;
-        }
-
         Request request = new Request.a()
                 .b(URL + track + "?text_format=plain")
                 .a("User-Agent", "Genius/5.14.0 (Android; Android 13; Google Pixel 4 XL)")
@@ -100,7 +95,7 @@ public class Genius {
                 return AndroidUtils.getString("error_no_text");
             }
 
-            return payload.getJSONObject("response").getJSONObject("song").getJSONObject("lyrics").getString("plain");
+            return " " + payload.getJSONObject("response").getJSONObject("song").getJSONObject("lyrics").getString("plain");
         } catch (JSONException | IOException e) {
             return AndroidUtils.getString("error_no_text") + "\n\n" + AndroidUtils.getString(R.string.error) + ": \n" + e.getMessage();
         }

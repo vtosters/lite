@@ -2,7 +2,6 @@ package com.arthenica.ffmpegkit;
 
 import android.os.Build;
 import android.util.Log;
-
 import com.arthenica.smartexception.java.Exceptions;
 
 import java.util.Collections;

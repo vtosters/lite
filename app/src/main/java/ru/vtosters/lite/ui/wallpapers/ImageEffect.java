@@ -3,8 +3,8 @@ package ru.vtosters.lite.ui.wallpapers;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.nio.ByteBuffer;
 

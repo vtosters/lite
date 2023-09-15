@@ -1,10 +1,10 @@
 package ru.vtosters.lite.proxy;
 
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.proxy.socks.Hookzof;
 import ru.vtosters.lite.proxy.socks.Jetkai;
 import ru.vtosters.lite.proxy.socks.Roosterkid;
 import ru.vtosters.lite.proxy.socks.TheSpeedX;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 

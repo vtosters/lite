@@ -136,7 +136,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/music/catalog/inject/CatalogJsonInjector;->injectIntoCatalogs(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static {p1}, Lru/vtosters/hooks/CatalogsHook;->injectCatalogGetSection(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 

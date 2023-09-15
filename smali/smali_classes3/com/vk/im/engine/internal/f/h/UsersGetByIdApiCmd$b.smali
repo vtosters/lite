@@ -64,7 +64,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHookList(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    invoke-static {p1}, Lru/vtosters/hooks/OnlineFormatterHook;->onlineHookList(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
     move-result-object p1
 

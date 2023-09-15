@@ -423,12 +423,9 @@
         .end annotation
     .end param
 
+    # ru.vtosters.lite.music.hook.PlaylistFormatterHook -> public static CharSequence titleAndSubtitleMergeFix(Context context, Playlist playlist, @AttrRes int i)
     .line 15
-    iget-object v0, p2, Lcom/vk/dto/music/Playlist;->g:Ljava/lang/String;
-
-    iget-object p2, p2, Lcom/vk/dto/music/Playlist;->h:Ljava/lang/String;
-
-    invoke-static {p1, v0, p2, p3}, Lcom/vk/core/utils/MediaFormatter;->a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/String;I)Ljava/lang/CharSequence;
+    invoke-static {p1, p2, p3}, Lru/vtosters/lite/music/hook/PlaylistFormatterHook;->titleAndSubtitleMergeFix(Landroid/content/Context;Lcom/vk/dto/music/Playlist;I)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -891,15 +888,9 @@
 
     if-eqz v0, :cond_1
 
-    sget p2, Lcom/vk/music/m/i;->music_my_playlist:I
-
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-static {p1, p2}, Lru/vtosters/lite/music/hook/PlaylistFormatterHook;->getOwnerText(Landroid/content/Context;Lcom/vk/dto/music/Playlist;)Ljava/lang/String;
 
     move-result-object p1
-
-    const-string p2, "context.getString(R.string.music_my_playlist)"
-
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 

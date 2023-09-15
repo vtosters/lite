@@ -220,7 +220,7 @@
     .line 13
     new-instance v6, Landroid/content/Intent;
 
-    invoke-static {}, Lru/vtosters/lite/utils/GmsUtils;->getFirebaseInstanceIdReceiverClass()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/hooks/GmsHook;->getFirebaseInstanceIdReceiverClass()Ljava/lang/Class;
 
     move-result-object v7
 

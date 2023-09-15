@@ -6,11 +6,11 @@ import android.graphics.Color;
 import android.util.Log;
 import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceFile;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.loaders.ResourcesLoader;
 import ru.vtosters.lite.themes.utils.ArscEditor;
 import ru.vtosters.lite.utils.IOUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.io.*;
 import java.util.zip.CRC32;
@@ -20,7 +20,7 @@ import java.util.zip.ZipOutputStream;
 
 public class ThemesManager {
 
-    private final static int[] ACCENT_COLORS = {
+    private static final int[] ACCENT_COLORS = {
             R.color.vk_sky_300,
             R.color.sky_300,
             R.color.viewer_retry_button_text_color,
@@ -96,7 +96,7 @@ public class ThemesManager {
             R.color.header_blue_opacity40
     };
     // modify it if "doNotCompress" in apktool.yml has been edited
-    private final static String[] DO_NOT_COMPRESS = {
+    private static final String[] DO_NOT_COMPRESS = {
             ".png",
             ".jpg",
             ".mp3",
@@ -119,19 +119,18 @@ public class ThemesManager {
             initPaths(app);
             validateModApk();
 
-            if (!Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && canApplyCustomAccent() && ThemesUtils.useNewColorEngine()) {
+            if (!Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && canApplyCustomAccent()) {
                 ResourcesLoader.init(app);
                 ResourcesLoader.load(app, modApk.getAbsolutePath(), false);
             }
         } catch (Exception e) {
-            Log.e("ThemesManager", String.valueOf(e));
+            e.printStackTrace();
         }
     }
 
     // validate modded apk before loading
-    private static void validateModApk()
-            throws IOException {
-        final var apk = new ZipFile(modApk);
+    private static void validateModApk() throws IOException {
+        var apk = new ZipFile(modApk);
         apk.close();
 
         validated = true;
@@ -153,24 +152,18 @@ public class ThemesManager {
         return validated && modApk.exists() && ThemesUtils.getReservedAccent() != Color.TRANSPARENT;
     }
 
-    public static void generateModApk(int accentColor)
-            throws Throwable {
-        try (
-                final var apk = new ZipFile(baseApkPath)
-        ) {
-            final var arscEntry = apk.getEntry("resources.arsc");
-            final var arscBis = new BufferedInputStream(apk.getInputStream(arscEntry));
-            final var arsc = BinaryResourceFile.fromInputStream(arscBis);
-            if (!ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor))
-                throw new IllegalStateException("Not all colors have been changed");
+    public static void generateModApk(int accentColor) throws Throwable {
+        try (var apk = new ZipFile(baseApkPath)) {
+            var arscEntry = apk.getEntry("resources.arsc");
+            var arscBis = new BufferedInputStream(apk.getInputStream(arscEntry));
+            var arsc = BinaryResourceFile.fromInputStream(arscBis);
+            ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor);
 
-            try (
-                    final var zos = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(modApk)))
-            ) {
-                final var arscBuff = arsc.toByteArray();
-                final var newArscEntry = new ZipEntry("resources.arsc");
+            try (var zos = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(modApk)))) {
+                var arscBuff = arsc.toByteArray();
+                var newArscEntry = new ZipEntry("resources.arsc");
 
-                final var crc = new CRC32();
+                var crc = new CRC32();
                 crc.update(arscBuff);
 
                 newArscEntry.setSize(arscBuff.length);
@@ -181,10 +174,10 @@ public class ThemesManager {
                 zos.write(arscBuff);
                 zos.closeEntry();
 
-                final var entries = apk.entries();
+                var entries = apk.entries();
                 while (entries.hasMoreElements()) {
-                    final var entry = entries.nextElement();
-                    final var name = entry.getName();
+                    var entry = entries.nextElement();
+                    var name = entry.getName();
 
                     if (!name.startsWith("res/") && !name.startsWith("assets/") || name.equals("resources.arsc"))
                         continue;
@@ -197,8 +190,8 @@ public class ThemesManager {
                         }
                     }
 
-                    final var entryBis = new BufferedInputStream(apk.getInputStream(entry));
-                    final var newEntry = new ZipEntry(name);
+                    var entryBis = new BufferedInputStream(apk.getInputStream(entry));
+                    var newEntry = new ZipEntry(name);
 
                     if (doNotCompress) {
                         newEntry.setMethod(ZipEntry.STORED);

@@ -23,7 +23,7 @@ public class MsgPartTextHolder extends MsgPartHolderBase<Attach> {
             MsgPartTextHolder.this.f.a(MsgPartTextHolder.this.g.getLocalId());
         });
         mTextPart.setOnLongClickListener(view -> {
-            if(!mTextPart.isTextSelectable()) MsgPartTextHolder.this.f.b(MsgPartTextHolder.this.g.getLocalId());
+            if (!mTextPart.isTextSelectable()) MsgPartTextHolder.this.f.b(MsgPartTextHolder.this.g.getLocalId());
             return false;
         });
 

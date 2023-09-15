@@ -89,6 +89,16 @@
         <Preference
                 android:key="whitelisted_filters_groups"
                 android:title="@string/whitelisted_filters_groups_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="invertFilters"
+                android:summary="@string/invertFilters_summ"
+                android:title="@string/invertFilters"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="blockminiapps"
+                android:summary="@string/blockminiapps_summ"
+                android:title="@string/blockminiapps_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/sources">
         <EditTextPreference
@@ -141,20 +151,15 @@
         <Preference
                 android:key="newsfeedlistmanager_reset"
                 android:title="@string/newsfeedlistmanager_reset_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="force_disable_psm"
-                android:summary="@string/force_disable_psm_summ"
-                android:title="@string/force_disable_psm_title"/>
+<!--        <com.vtosters.lite.ui.MaterialSwitchPreference-->
+<!--                android:defaultValue="false"-->
+<!--                android:key="force_disable_psm"-->
+<!--                android:summary="@string/force_disable_psm_summ"-->
+<!--                android:title="@string/force_disable_psm_title"/>-->
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="feedcache"
                 android:summary="@string/feed_other_cache_summary"
                 android:title="@string/vtlfeedcache"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="blockminiapps"
-                android:summary="@string/blockminiapps_summ"
-                android:title="@string/blockminiapps_title"/>
     </PreferenceCategory>
 </PreferenceScreen>

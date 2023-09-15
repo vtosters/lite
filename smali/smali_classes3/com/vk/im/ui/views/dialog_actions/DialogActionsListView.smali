@@ -409,7 +409,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/vtosters/lite/dnr/DNRInjector;->injectToList(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Lru/vtosters/hooks/DialogHeaderInjector;->injectToList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
     
@@ -472,7 +472,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lru/vtosters/hooks/other/ThemesUtils;->recolorDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

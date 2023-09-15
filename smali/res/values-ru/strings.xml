@@ -5649,8 +5649,8 @@
     <string name="onlinefix_title">Обходить онлайн</string>
     <string name="globalUsersOnline_title">Глобальный обход онлайна</string>
     <string name="globalUsersOnline_summ">Может вызывать долгие загрузки разделов и большое потребление трафика \n\nНе рекомендуется включать данную функцию</string>    
-    <string name="savemsgsett_title">Сохранять настройки сообщений</string>
-    <string name="savemsgsett_summ">Сохранять положение тумблеров в настройках сообщений</string>
+    <string name="savemsgsett_title">Сохранять параметры отправки сообщений</string>
+    <string name="savemsgsett_summ">Сохранять выбранные параметры статуса исходящих сообщений как исчезновение сообщений и бесшумная отправка</string>
     <string name="screenshotdetect_title">Отключить детект скриншотов</string>
     <string name="screenshotdetect_summ">Отключить уведомление о том, что вы сделали скриншот</string>    
     <string name="hideDeviceInfo_title">Отключить отправку метрики</string>
@@ -6191,8 +6191,8 @@
     <string name="remove_from_ads_whitelist">Удалить из вайтлиста рекламы</string>
     <string name="add_to_ads_stories_whitelist">Добавить в вайтлист историй</string>
     <string name="remove_from_ads_stories_whitelist">Удалить из вайтлиста историй</string>
-    <string name="removed_from_whitelist_success">Группа удалена из вайтлиста</string>
-    <string name="added_to_whitelist_success">Группа добавлена в вайтлист</string>
+    <string name="removed_from_whitelist_success">Удалено из вайтлиста</string>
+    <string name="added_to_whitelist_success">Добавлено в вайтлист</string>
 
     <string name="whitelisted_ad_groups_title">Вайтлист рекламы</string>
     <string name="whitelisted_filters_groups_title">Вайтлист фильтров и источников</string>
@@ -6330,6 +6330,8 @@
     <string name="promotedstickers_title">Не получать промостикеры</string>
     <string name="useOldAppVer_title">Использовать старый дизайн</string>
     <string name="useOldAppVer_summ">Работает \"как есть\". Могут быть ошибки</string>
+    <string name="invertFilters">Инвертировать исключения</string>
+    <string name="invertFilters_summ">Добавленные в исключения группы будут фильтроваться</string>
 
     <string name="downloading_update">Скачивание обновления</string>
     <string name="sources">Источники</string>
@@ -6392,6 +6394,7 @@
 
     <string name="datasettings_title">Настройки данных приложения</string>
     <string name="invalidate_theme_cache_title">Инвалидация кэша темы</string>
+    <string name="invalidate_theme_cache_each_update_title">Очистка кэша темы после обновления для предотвращения проблем с акцентами</string>
 
     <string name="useCustomPrefsStyle_title">Использовать новые переключатели</string>
     <string name="useCustomPrefsStyle_summ">Более современный и стильный вид тумблеров в настройках</string>
@@ -6402,4 +6405,16 @@
 
     <string name="currentLanguage">Текущий язык:</string>
     <string name="appLanguage">Язык приложения</string>
+
+    <string name="microgsett">Настройки MicroG</string>
+
+    <string name="compression_types">Способ компрессии фото</string>
+    <string name="compression_types_selection">Выберите способ компрессии</string>
+
+    <string name="clear_all_cache">Очистить весь кеш?</string>
+    <string name="cache_size">Размер приложения</string>
+    <string name="cache_size_summ">Вес кеша приложения</string>
+
+    <string name="invertcached_title">Инвертировать список</string>
+    <string name="invertcached_summ">Инвертировать список кешированных треков</string>
 </resources>

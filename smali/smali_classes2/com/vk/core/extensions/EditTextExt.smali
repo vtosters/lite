@@ -95,7 +95,7 @@
     .line 11
     sget-object v6, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result p1
 

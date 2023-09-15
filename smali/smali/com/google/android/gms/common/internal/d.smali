@@ -2086,7 +2086,7 @@
 
     const-string v2, "com.google"
 
-    invoke-static {v2}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2389,7 +2389,7 @@
 
     const-string v0, "com.google.android.gms"
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -10,6 +10,8 @@ import androidx.preference.PreferenceCategory;
 import b.h.g.k.VKProgressDialog;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.ThemesManager;
@@ -17,7 +19,9 @@ import ru.vtosters.lite.themes.palettes.PalettesManager;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
 import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
-import ru.vtosters.lite.utils.*;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.NavigatorUtils;
 
 public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
@@ -39,15 +43,15 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("systememoji").setSummary(AndroidUtils.getGlobalContext().getString(R.string.systememojisum) + " \uD83D\uDE00\uD83D\uDE01\uD83E\uDD11\uD83E\uDD75\uD83D\uDC4D");
 
-        findPreference("useNewColorEngine").setVisible(Preferences.dev());
-
         var invalidateThemeCache = findPreference("invalidate_theme_cache");
-        if (ThemesUtils.getReservedAccent() != Color.TRANSPARENT && Preferences.dev() && ThemesUtils.useNewColorEngine())
+        if (ThemesUtils.getReservedAccent() != Color.TRANSPARENT && Preferences.dev()) {
             invalidateThemeCache.setOnPreferenceClickListener(preference -> {
                 setAccentColor(ThemesUtils.getReservedAccent());
                 return true;
             });
-        else invalidateThemeCache.setVisible(false);
+        } else {
+            invalidateThemeCache.setVisible(false);
+        }
 
         var navBarPreference = findPreference("navbar");
         navBarPreference.setOnPreferenceClickListener(preference -> {
@@ -152,12 +156,8 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
                     }
                 })
                 .setNegativeButton(R.string.reset, (dialog, which) -> {
-                    if (ThemesUtils.useNewColorEngine()) {
-                        ThemesManager.deleteModification();
-                        ThemesUtils.reserveAccentColor(Color.TRANSPARENT, false);
-                    } else {
-                        ThemesUtils.setCustomAccentColor(0, false);
-                    }
+                    ThemesManager.deleteModification();
+                    ThemesUtils.reserveAccentColor(Color.TRANSPARENT, false);
                     restart();
                 })
                 .setPositiveButton(R.string.cancel, null)
@@ -203,35 +203,29 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
     }
 
     void setAccentColor(int color) {
-        if (ThemesUtils.useNewColorEngine()) {
-            final VKProgressDialog dialog = new VKProgressDialog(requireContext());
-            dialog.setCancelable(false);
-            dialog.setMessage(AndroidUtils.getString("applying_accent") + "...");
-            dialog.show();
+        final VKProgressDialog dialog = new VKProgressDialog(requireContext());
+        dialog.setCancelable(false);
+        dialog.setMessage(AndroidUtils.getString("applying_accent") + "...");
+        dialog.show();
 
-            VTExecutors.getIoExecutor().execute(() -> {
-                try {
-                    ThemesUtils.reserveAccentColor(color, true);
-                    ThemesManager.generateModApk(color);
-                    requireActivity().runOnUiThread(this::restart);
-                } catch (Throwable e) {
-                    Log.e("ThemesFragment", String.valueOf(e));
-                    ThemesManager.deleteModification();
-                    requireActivity().runOnUiThread(() -> {
-                        dialog.dismiss();
-                        new VkAlertDialog.Builder(requireContext())
-                                .setTitle(AndroidUtils.getString("error"))
-                                .setMessage(AndroidUtils.getString("error_applying_accent") + ":\n" + e)
-                                .setPositiveButton("OK", null)
-                                .show();
-                    });
-                }
-            });
-        } else {
-            ThemesUtils.setCustomAccentColor(color, false);
-            ThemesCore.setThemedColors(color);
-            restart();
-        }
+        VTExecutors.getIoExecutor().execute(() -> {
+            try {
+                ThemesUtils.reserveAccentColor(color, true);
+                ThemesManager.generateModApk(color);
+                requireActivity().runOnUiThread(this::restart);
+            } catch (Throwable e) {
+                Log.e("ThemesFragment", e.getMessage());
+                ThemesManager.deleteModification();
+                requireActivity().runOnUiThread(() -> {
+                    dialog.dismiss();
+                    new VkAlertDialog.Builder(requireContext())
+                            .setTitle(AndroidUtils.getString("error"))
+                            .setMessage(AndroidUtils.getString("error_applying_accent") + ":\n" + e)
+                            .setPositiveButton("OK", null)
+                            .show();
+                });
+            }
+        });
     }
 
     void restart() {

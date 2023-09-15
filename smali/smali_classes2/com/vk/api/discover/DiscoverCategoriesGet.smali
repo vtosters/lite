@@ -43,9 +43,9 @@
 #    .line 4
 #    array-length v1, p1
 #
-#    const/4 v2, 0x0
-#
-#    const/4 v3, 0x0
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
 #
 #    :goto_0
 #    if-ge v3, v1, :cond_0
@@ -66,9 +66,9 @@
 #    :cond_0
 
     .line 2
-    # ru.vtosters.lite.feature.discover.DiscoverTemplates. ArrayList<DiscoverItem.Template> getTemplates()
+    # ru.vtosters.hooks.DiscoverTemplates. ArrayList<DiscoverItem.Template> getTemplates()
 
-    invoke-static {}, Lru/vtosters/lite/feature/discover/DiscoverTemplates;->getTemplates()Ljava/util/ArrayList;
+    invoke-static {}, Lru/vtosters/hooks/DiscoverTemplates;->getTemplates()Ljava/util/ArrayList;
 
     move-result-object v0
 

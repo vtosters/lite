@@ -87,7 +87,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lru/vtosters/lite/proxy/api/ApiProxy;->staticFix(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lru/vtosters/hooks/ProxyHook;->staticFix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 

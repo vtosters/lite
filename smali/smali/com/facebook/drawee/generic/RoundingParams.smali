@@ -74,7 +74,7 @@
 .method public static b(FFFF)Lcom/facebook/drawee/generic/RoundingParams;
     .locals 1
 
-    invoke-static {p0, p1, p2, p3}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(FFFF)Lcom/facebook/drawee/generic/RoundingParams;
+    invoke-static {p0, p1, p2, p3}, Lru/vtosters/hooks/PicRoundingHook;->inject(FFFF)Lcom/facebook/drawee/generic/RoundingParams;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
 .method public static d(F)Lcom/facebook/drawee/generic/RoundingParams;
     .locals 1
 
-    invoke-static {p0}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(F)Lcom/facebook/drawee/generic/RoundingParams;
+    invoke-static {p0}, Lru/vtosters/hooks/PicRoundingHook;->inject(F)Lcom/facebook/drawee/generic/RoundingParams;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
 .method public static i()Lcom/facebook/drawee/generic/RoundingParams;
     .locals 2
 
-    invoke-static {}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject()Lcom/facebook/drawee/generic/RoundingParams;
+    invoke-static {}, Lru/vtosters/hooks/PicRoundingHook;->inject()Lcom/facebook/drawee/generic/RoundingParams;
 
     move-result-object v0
 

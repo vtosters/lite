@@ -11,13 +11,15 @@ import android.net.Uri;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
-
+import b.h.g.m.CameraUtils;
+import b.h.g.m.FileUtils;
 import com.facebook.common.i.MediaUtils;
 import com.facebook.x.g.EncodedImage;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.log.L;
 import com.vk.metrics.eventtracking.VkTracker;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.concurrent.VTExecutors;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -25,10 +27,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import java.util.HashSet;
-
-import b.h.g.m.CameraUtils;
-import b.h.g.m.FileUtils;
-import ru.vtosters.lite.concurrent.VTExecutors;
 
 public class DownloadUtils {
     public static final HashSet<Long> a = new HashSet<>();
@@ -49,7 +47,7 @@ public class DownloadUtils {
             ToastUtils.a(context.getString(R.string.error) + " [" + e2.getMessage() + "]");
         }
     }
-    
+
     private static void b(final Context context, String str, String uri, boolean z) {
         if (TextUtils.isEmpty(uri)) {
             return;

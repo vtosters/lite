@@ -15,14 +15,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.TextViewCompat;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
+import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 
 public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.ImagineArrayAdapterItem> {
 

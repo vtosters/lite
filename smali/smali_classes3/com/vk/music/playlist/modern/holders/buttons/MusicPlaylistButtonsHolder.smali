@@ -178,7 +178,7 @@
 
     invoke-virtual {p1, p4}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->setImageViewColored(Landroid/widget/ImageView;)V
+    invoke-static {p1}, Lru/vtosters/hooks/other/ThemesUtils;->setImageViewColored(Landroid/widget/ImageView;)V
 
     .line 16
     iget-object p4, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->d:Lcom/vk/music/view/MusicActionButton;
@@ -289,7 +289,7 @@
     .line 26
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->setImageViewColored(Landroid/widget/ImageView;)V
+    invoke-static {p1}, Lru/vtosters/hooks/other/ThemesUtils;->setImageViewColored(Landroid/widget/ImageView;)V
 
     .line 27
     iget-object p3, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->f:Landroid/widget/ImageView;
@@ -307,7 +307,7 @@
     .line 28
     iput-object p1, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->D:Landroid/widget/ImageView;
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->setImageViewColored(Landroid/widget/ImageView;)V
+    invoke-static {p1}, Lru/vtosters/hooks/other/ThemesUtils;->setImageViewColored(Landroid/widget/ImageView;)V
 
     .line 29
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

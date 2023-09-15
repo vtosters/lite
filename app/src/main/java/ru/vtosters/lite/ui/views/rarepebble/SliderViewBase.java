@@ -6,7 +6,6 @@ import android.view.MotionEvent;
 import android.view.View;
 
 public abstract class SliderViewBase extends View {
-
     private final Paint borderPaint;
     private final Paint checkerPaint;
     private final Rect viewRect = new Rect();

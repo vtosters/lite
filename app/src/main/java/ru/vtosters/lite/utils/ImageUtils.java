@@ -6,6 +6,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 
 import java.net.URL;
 
@@ -13,8 +15,7 @@ public class ImageUtils {
 
     // must be called asynchronously
     public static Drawable getDrawableFromUrl(String url, int placeholderRes, boolean rounded, boolean scaled) {
-
-        if (NetworkUtils.isNetworkConnected()) {
+        if (NetworkUtils.isNetworkConnected() && !NetworkUtils.isInternetSlow()) {
             try {
                 var bmp = BitmapFactory.decodeStream(new URL(url).openStream());
 

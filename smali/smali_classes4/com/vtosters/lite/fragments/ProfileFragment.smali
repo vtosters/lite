@@ -3941,6 +3941,8 @@
 
     move-result v0
 
+    const v0, 0x1 #  disable calls in nonmilk
+
     if-nez v0, :cond_8
 
     const v0, 0x7f0e0029

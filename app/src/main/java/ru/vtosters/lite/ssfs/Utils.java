@@ -1,12 +1,12 @@
 package ru.vtosters.lite.ssfs;
 
 import com.vk.core.network.Network;
-import ru.vtosters.lite.hooks.DateHook;
+import ru.vtosters.hooks.DateHook;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.Base64Utils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class Utils {
     public static String getVKUILink() {

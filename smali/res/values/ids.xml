@@ -3920,4 +3920,5 @@
     <item name="remove_from_cache_vkx" type="id" />
     <item name="add_to_cache_vkx" type="id" />
     <item name="account_backup_view" type="id" />
+    <item name="copy_image" type="id" />
 </resources>

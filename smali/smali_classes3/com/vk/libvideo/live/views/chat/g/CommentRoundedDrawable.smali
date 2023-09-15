@@ -21,7 +21,7 @@
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     .line 2
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

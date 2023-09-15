@@ -758,7 +758,7 @@
     .line 3
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/vk/medianative/MediaNative;->init(Landroid/content/Context;)V
+    # invoke-static {v0}, Lcom/vk/medianative/MediaNative;->init(Landroid/content/Context;)V
 
     .line 4
     sget-object v0, Lcom/vk/libvideo/storage/VideoPositionStorage;->e:Lcom/vk/libvideo/storage/VideoPositionStorage$c;
@@ -2512,7 +2512,7 @@
 .method public onCreate()V
     .locals 11
 
-    invoke-static {p0}, Lru/vtosters/lite/utils/Preferences;->init(Landroid/app/Application;)V
+    invoke-static {p0}, Lru/vtosters/hooks/other/Preferences;->init(Landroid/app/Application;)V
 
     .line 1
     invoke-static {p0}, Lcom/squareup/leakcanary/LeakCanary;->isInAnalyzerProcess(Landroid/content/Context;)Z

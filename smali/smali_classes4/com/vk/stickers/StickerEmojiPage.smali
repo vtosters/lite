@@ -98,7 +98,7 @@
     invoke-virtual {v0, p1}, Lcom/vk/emoji/EmojiKeyboardView;->setFastScrollBarColor(I)V
 
     .line 9
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result p1
 

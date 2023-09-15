@@ -377,7 +377,7 @@
 
     if-eqz v3, :cond_3
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v4
 
@@ -450,7 +450,7 @@
 
     if-eqz v1, :cond_8
 
-    invoke-static {v1}, Lru/vtosters/lite/ssfs/ProfileHider;->getInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/hooks/ssfs/ProfileHook;->getInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
 
     move-result-object v1
 

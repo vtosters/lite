@@ -1,37 +1,38 @@
 package ru.vtosters.lite.themes.utils;
 
-import com.google.devrel.gmscore.tools.apk.arsc.*;
+import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceFile;
+import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceValue;
+import com.google.devrel.gmscore.tools.apk.arsc.ResourceTableChunk;
 
 public class ArscEditor {
 
-    public static boolean changeColors(BinaryResourceFile arsc, int[] colorIds, int color /*int[] colors*/) {
-        int q = 0;
+    public static void changeColors(BinaryResourceFile arsc, int[] colorIds, int color) {
         for (var chunk : arsc.getChunks()) {
-            final var resourceTableChunk = (ResourceTableChunk) chunk;
-
-            for (PackageChunk packageChunk : resourceTableChunk.getPackages()) {
-                for (TypeSpecChunk typeSpecChunk : packageChunk.getTypeSpecChunks()) {
-                    for (TypeChunk typeChunk : packageChunk.getTypeChunks(typeSpecChunk.getId())) {
-                        if (!"color".equals(typeChunk.getTypeName())) continue;
-
-                        for (var entry : typeChunk.getEntries().entrySet()) {
-                            if (entry.getValue().isComplex()) continue;
-
-                            final var id = BinaryResourceIdentifier.create(packageChunk.getId(), typeSpecChunk.getId(), entry.getKey());
-
-                            for (int colorId : colorIds) {
-                                if (colorId != id.resId()) continue;
-
-                                final var value = entry.getValue();
-                                value.updateValue(new BinaryResourceValue(8, value.value().type(), color /*colors[i]*/));
-                                ++q;
+            var resTableChunk = (ResourceTableChunk) chunk;
+            for (var packageChunk : resTableChunk.getPackages()) {
+                for (var typeChunk : packageChunk.getTypeChunks("color")) {
+                    for (var entry : typeChunk.getEntries().entrySet()) {
+                        var value = entry.getValue();
+                        if (value.isComplex()) continue;
+                        var binValue = value.value();
+                        if (!isColorResourceValue(binValue)) continue;
+                        var resId = packageChunk.getId() << 24 | typeChunk.getId() << 16 | entry.getKey();
+                        for (var colodId : colorIds) {
+                            if (resId == colodId) {
+                                binValue.data = color;
+                                break;
                             }
                         }
                     }
                 }
             }
         }
+    }
 
-        return q == colorIds.length;
+    private static boolean isColorResourceValue(BinaryResourceValue value) {
+        return value.type == BinaryResourceValue.Type.INT_COLOR_ARGB8
+                || value.type == BinaryResourceValue.Type.INT_COLOR_RGB8
+                || value.type == BinaryResourceValue.Type.INT_COLOR_ARGB4
+                || value.type == BinaryResourceValue.Type.INT_COLOR_RGB4;
     }
 }

@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 
 public class ValueView extends SliderViewBase implements ColorObserver {
-
     private ObservableColor observableColor = new ObservableColor(0);
 
     public ValueView(Context context) {
@@ -37,8 +36,8 @@ public class ValueView extends SliderViewBase implements ColorObserver {
     }
 
     protected Bitmap makeBitmap(int w, int h) {
-        final boolean isWide = w > h;
-        final int n = Math.max(w, h);
+        boolean isWide = w > h;
+        int n = Math.max(w, h);
         int[] colors = new int[n];
 
         float[] hsv = new float[]{0, 0, 0};
@@ -48,8 +47,8 @@ public class ValueView extends SliderViewBase implements ColorObserver {
             hsv[2] = isWide ? (float) i / n : 1 - (float) i / n;
             colors[i] = Color.HSVToColor(hsv);
         }
-        final int bmpWidth = isWide ? w : 1;
-        final int bmpHeight = isWide ? 1 : h;
+        int bmpWidth = isWide ? w : 1;
+        int bmpHeight = isWide ? 1 : h;
         return Bitmap.createBitmap(colors, bmpWidth, bmpHeight, Bitmap.Config.ARGB_8888);
     }
 

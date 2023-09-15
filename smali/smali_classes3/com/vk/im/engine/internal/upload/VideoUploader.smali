@@ -1266,7 +1266,7 @@
 
     const/16 v5, 0x5a
 
-    invoke-static {v5}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+    invoke-static {v5}, Lru/vtosters/hooks/other/Preferences;->compress(I)I
 
     move-result v5
 

@@ -181,7 +181,7 @@
 .method public final a()V
     .locals 8
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->screenshotdetect()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->screenshotdetect()Z
 
     move-result v0
 

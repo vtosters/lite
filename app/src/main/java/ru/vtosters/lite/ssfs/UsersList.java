@@ -17,9 +17,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.vtosters.lite.utils.Preferences.dev;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-
 public class UsersList {
     private static final String TAG = "UsersList";
     private static final List<Integer> descriptionsList = new ArrayList<>();
@@ -28,7 +25,7 @@ public class UsersList {
     public static void getUsersList() {
         var prefs = AndroidUtils.getGlobalContext().getSharedPreferences("vt_another_data", 0);
 
-        if ((!NetworkUtils.isNetworkConnected() || getBoolValue("isRoamingState", false)) && prefs.contains("ids")) {
+        if ((!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) && prefs.contains("ids")) {
             return;
         }
 
@@ -65,10 +62,8 @@ public class UsersList {
         var idsDescription = json.getJSONArray("with_service_descriptions");
         var idsBanner = json.getJSONArray("with_chat_banners");
 
-        if (dev()) {
-            Log.d(TAG, idsDescription.toString());
-            Log.d(TAG, idsBanner.toString());
-        }
+        Log.d(TAG, idsDescription.toString());
+        Log.d(TAG, idsBanner.toString());
 
         processIds(idsBanner, bannersList);
         processIds(idsDescription, descriptionsList);

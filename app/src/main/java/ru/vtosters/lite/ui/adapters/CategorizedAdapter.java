@@ -12,12 +12,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.components.IItemMovingListener;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
     private final List<T> mSelectedItems;
     private final List<T> mDisabledItems;
     private final List<T> mUnmovedItems;
+    private final List<T> mExceptions = new ArrayList<>();
     private final IViewHolderBinder mBinder;
 
     // Min and max counts
@@ -46,6 +48,12 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
         this.mDisabledItems = disabledItems;
         this.mUnmovedItems = new ArrayList<>();
         this.mBinder = binder;
+    }
+
+    @SafeVarargs
+    public final void setExceptions(T... exceptions) {
+        mExceptions.clear();
+        mExceptions.addAll(Arrays.asList(exceptions));
     }
 
     public void setMinAndMaxCounts(int min, int max) {
@@ -173,16 +181,25 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
     public boolean onItemMove(int fromPosition, int toPosition) {
         if (toPosition == 0 || isUnmovedItem(toPosition))
             return false;
-
         switch (getTabType(fromPosition)) {
             case SELECTED_STATE -> {
-                if (getTabType(toPosition) == DISABLED_STATE
-                        && mSelectedItems.size() == mMinSelectedItems)
+                if ((getTabType(toPosition) == DISABLED_STATE
+                        && mSelectedItems.size() == mMinSelectedItems))
                     return false;
-                if (getItemViewType(toPosition) == CATEGORY_TITLE)
+                if (getItemViewType(toPosition) == CATEGORY_TITLE) {
+                    if (!mExceptions.isEmpty()) {
+                        boolean except = false;
+                        int q = 0;
+                        for (var ex : mExceptions) {
+                            var i = mSelectedItems.indexOf(ex);
+                            if (i == -1) continue;
+                            if (i + 1 == fromPosition) except = true;
+                            ++q;
+                        }
+                        if (except && q == 1) return false;
+                    }
                     mDisabledItems.add(0, mSelectedItems.remove(fromPosition - 1));
-                else
-                    Collections.swap(mSelectedItems, fromPosition - 1, toPosition - 1);
+                } else Collections.swap(mSelectedItems, fromPosition - 1, toPosition - 1);
             }
             case DISABLED_STATE -> {
                 if (getTabType(toPosition) == SELECTED_STATE
@@ -198,7 +215,6 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
                     );
             }
         }
-
         notifyItemMoved(fromPosition, toPosition);
         return true;
     }
@@ -208,7 +224,6 @@ public class CategorizedAdapter<T> extends RecyclerView.Adapter<CategorizedAdapt
     }
 
     public static class CategorizedViewHolder extends RecyclerView.ViewHolder {
-
         private final LinearLayout mMovingItemContainer;
         private final ImageView mIcon;
         private final TextView mName;

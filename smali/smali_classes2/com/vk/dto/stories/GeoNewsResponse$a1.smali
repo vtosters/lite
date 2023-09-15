@@ -235,7 +235,7 @@
 
     .line 20
     :cond_5
-    invoke-static {v11}, Lru/vtosters/lite/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    invoke-static {v11}, Lru/vtosters/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
     move-result-object v11
 

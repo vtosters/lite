@@ -2,9 +2,13 @@ package ru.vtosters.lite.ui.fragments;
 
 import android.os.Bundle;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.RoundingSeekbarDialog;
-import ru.vtosters.lite.utils.*;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.NavigatorUtils;
 
 public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
@@ -30,7 +34,9 @@ public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment 
 
             return true;
         });
-        findPreference("superapp").setOnPreferenceClickListener(preference -> {
+        var superapp = findPreference("superapp");
+        superapp.setVisible(Preferences.milkshake());
+        superapp.setOnPreferenceClickListener(preference -> {
             LifecycleUtils.restartApplicationWithTimer();
 
             return true;
@@ -65,6 +71,8 @@ public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment 
             RoundingSeekbarDialog.dialog(getContext());
             return true;
         });
+
+        findPreference("friendsblock").setVisible(Preferences.milkshake());
 
         if (Preferences.getPreferences().getInt("pic_rounding", 0) == 0) {
             findPreference("customrounding").setSummary(requireContext().getString(R.string.disabled));

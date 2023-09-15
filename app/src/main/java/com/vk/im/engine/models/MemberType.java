@@ -16,12 +16,18 @@ public enum MemberType {
 
     public static MemberType a(int i) {
         switch (i) {
-            case 0: return UNKNOWN;
-            case 1: return USER;
-            case 2: return GROUP;
-            case 3: return EMAIL;
-            case 4: return CONTACT;
-            case 5: return CUSTOM_BOT;
+            case 0:
+                return UNKNOWN;
+            case 1:
+                return USER;
+            case 2:
+                return GROUP;
+            case 3:
+                return EMAIL;
+            case 4:
+                return CONTACT;
+            case 5:
+                return CUSTOM_BOT;
         }
         throw new IllegalArgumentException("Unknown member type value: " + i);
     }

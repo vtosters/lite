@@ -24,7 +24,7 @@ import com.vtosters.lite.ViewUtils;
 import com.vtosters.lite.ui.MusicErrorViewHelper;
 import com.vtosters.lite.ui.holder.RecyclerHolder;
 import ru.vtosters.lite.music.Genius;
-import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.hooks.other.Preferences;
 
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;

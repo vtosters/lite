@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -18,6 +19,7 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.Screen;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
+import ru.vtosters.hooks.other.Preferences;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -29,13 +31,19 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 import java.util.Random;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
 public class AndroidUtils {
     private static final String ALLOWED_CHARACTERS = "0123456789qwertyuiopasdfghjklzxcvbnm";
 
     public static boolean isDebuggable() {
         return 0 != (AndroidUtils.getGlobalContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE);
+    }
+
+    public static boolean isAdbOrDeveloperOptionsEnabled(ContentResolver contentResolver) {
+        int adbEnabled = Settings.Global.getInt(contentResolver, Settings.Global.ADB_ENABLED, 0);
+        int developerOptionsEnabled = Settings.Global.getInt(contentResolver, Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+        return adbEnabled == 1 || developerOptionsEnabled == 1;
     }
 
     public static boolean isTablet() {
@@ -45,7 +53,7 @@ public class AndroidUtils {
     @NonNull
     public static Context getGlobalContext() {
         try {
-            final Method getInitialApplicationMtd = ReflectionUtils.findMethod(Class.forName("android.app.AppGlobals"), "getInitialApplication");
+            Method getInitialApplicationMtd = ReflectionUtils.findMethod(Class.forName("android.app.AppGlobals"), "getInitialApplication");
             return (Context) getInitialApplicationMtd.invoke(null);
         } catch (Exception e) {
             Log.d("GlobalContext", "Error while fetching context via refl");
@@ -185,8 +193,8 @@ public class AndroidUtils {
     }
 
     private static String getRandomString(int sizeOfRandomString) {
-        final Random random = new Random();
-        final StringBuilder sb = new StringBuilder(sizeOfRandomString);
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder(sizeOfRandomString);
         for (int i = 0; i < sizeOfRandomString; ++i)
             sb.append(ALLOWED_CHARACTERS.charAt(random.nextInt(ALLOWED_CHARACTERS.length())));
         return sb.toString();
@@ -220,7 +228,6 @@ public class AndroidUtils {
             long lastUpdateTime = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).lastUpdateTime;
             return firstInstallTime == lastUpdateTime;
         } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
             return true;
         }
     }

@@ -31,4 +31,9 @@ public class DockBarTab {
             Class<?> fragmentClass) {
         return new DockBarTab(tag, iconID, titleID, resID, fragmentClass);
     }
+
+    @Override
+    public boolean equals(Object arg) {
+        return this.id == ((DockBarTab) arg).id;
+    }
 }

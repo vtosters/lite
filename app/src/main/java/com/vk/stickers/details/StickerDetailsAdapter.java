@@ -129,23 +129,23 @@ public final class StickerDetailsAdapter extends RecyclerView.Adapter<RecyclerVi
             this.mImageBg.getHierarchy().a().setVisible(true, true);
             this.mImageBg.getHierarchy().a(0);
             this.mImageBg.getHierarchy().e(new ColorDrawable(VKThemeHelper.d(R.attr.placeholder_icon_background)));
-            
+
             this.mPackImage.a(stickerStockItem.h(Screen.a(68)));
             this.mPackImage.getHierarchy().a().setVisible(true, true);
             this.mPackImage.getHierarchy().a(0);
-            
+
             if (stickerStockItem.E1()) {
                 ViewExtKt.r(this.mAnimPack);
             } else {
                 ViewExtKt.p(this.mAnimPack);
             }
-            
+
             this.mPackTitle.setText(stickerStockItem.getTitle());
-            
+
             this.mPackAuthor.setText(stickerStockItem.v1());
-            
+
             ViewExtKt.p(this.mPackSubtitle);
-            
+
             this.mDescription.setText(stickerStockItem.C1());
         }
     }

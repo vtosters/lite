@@ -344,7 +344,7 @@
 
     move-object/from16 v9, p2
 
-    invoke-static {v3}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+    invoke-static {v3}, Lru/vtosters/hooks/other/Preferences;->compress(I)I
 
     move-result v3
 

@@ -47,7 +47,7 @@
 
     const-string v0, "images"
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getBackgroundStickers()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getBackgroundStickers()Ljava/lang/String;
 
     move-result-object v0
 

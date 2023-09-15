@@ -1571,7 +1571,7 @@
     .param p0, "s"  # I
 
     .line 17
-    invoke-static {}, Lru/vtosters/lite/hooks/DateHook;->fulltime()Z
+    invoke-static {}, Lru/vtosters/hooks/DateHook;->fulltime()Z
 
     move-result v0
 
@@ -1592,7 +1592,7 @@
     .local v0, "d":Ljava/util/Date;
     new-instance v1, Ljava/text/SimpleDateFormat;
 
-    invoke-static {}, Lru/vtosters/lite/hooks/DateHook;->getDateFormat()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/hooks/DateHook;->getDateFormat()Ljava/lang/String;
 
     move-result-object v3
 

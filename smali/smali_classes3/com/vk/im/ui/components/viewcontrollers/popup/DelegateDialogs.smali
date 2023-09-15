@@ -409,7 +409,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lru/vtosters/lite/dnr/DNRInjector;->injectToHashMap(Ljava/util/LinkedHashMap;)Ljava/util/LinkedHashMap;
+    invoke-static {v1}, Lru/vtosters/hooks/DialogMenuInjectors;->injectToHashMap(Ljava/util/LinkedHashMap;)Ljava/util/LinkedHashMap;
 
     move-result-object v1
 

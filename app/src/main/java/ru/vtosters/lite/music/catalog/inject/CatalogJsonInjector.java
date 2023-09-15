@@ -10,100 +10,43 @@ import okhttp3.Request;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 
-import static ru.vtosters.lite.feature.groupslist.GroupsCatalogInjector.*;
-import static ru.vtosters.lite.hooks.DateHook.getLocale;
+import static ru.vtosters.hooks.DateHook.getLocale;
+import static ru.vtosters.hooks.GroupsCatalogInjector.injectIntoCatalog;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
-import static ru.vtosters.lite.utils.Preferences.dev;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class CatalogJsonInjector {
     private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
 
     public static JSONObject music(JSONObject json) throws JSONException {
         var catalog = json.optJSONObject("catalog");
-
-        JSONArray oldItems = null;
-
-        if (catalog != null) {
-            oldItems = catalog.optJSONArray("sections");
-        }
-
+        var oldItems = catalog != null ? catalog.optJSONArray("sections") : null;
         var useOldAppVer = getBoolValue("useOldAppVer", false);
         var isUsersCatalog = oldItems.optJSONObject(0).optString("url").equals("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
+        var blocks = oldItems.optJSONObject(0).optJSONArray("blocks");
 
-        if (isUsersCatalog) {
-            var blocks = oldItems.optJSONObject(0).optJSONArray("blocks");
-
+        if (isUsersCatalog && blocks != null) {
             if (!useOldAppVer) {
-                if (blocks != null) {
-                    for (int i = 0; i < blocks.length(); i++) {
-                        var block = blocks.optJSONObject(i);
-                        var layout = block.optJSONObject("layout");
-                        if (layout != null) {
-                            var name = layout.optString("name");
-                            if (name.equals("header_extended")) {
-                                if (layout.has("top_title")) blocks.remove(i);
-                                try {
-                                    layout.put("name", "header");
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    }
-                }
+                fixDailyMix(blocks);
 
-                var playlists = fetchCatalogId("https://vk.com/audio?section=my_playlists");
-                if (playlists != null) {
-                    var catalogarr = playlists.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
+                removeUnsupportedLayouts(blocks);
 
-                    var title = catalogarr.optString("title");
-                    var id = catalogarr.optString("id");
-                    var url = catalogarr.optString("url");
+                fetchCatalogId("https://vk.com/audio?section=my_playlists", oldItems);
 
-                    if (dev()) Log.d("VKMusic", "Added " + title + " in music sections");
+                fetchCatalogId("https://vk.com/audio?section=albums", oldItems);
 
-                    oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
-                }
-
-                var albums = fetchCatalogId("https://vk.com/audio?section=albums");
-                if (albums != null) {
-                    var catalogarr = albums.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
-
-                    var title = catalogarr.optString("title");
-                    var id = catalogarr.optString("id");
-                    var url = catalogarr.optString("url");
-
-                    if (dev()) Log.d("VKMusic", "Added " + title + " in music sections");
-
-                    oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
-                }
-
-                for (int i = 0; i < oldItems.length(); i++) {
-                    var item = oldItems.optJSONObject(i);
-                    var title = item.optString("title");
-                    var id = item.optString("id");
-                    var url = item.optString("url");
-                    var value = Preferences.getString("musicdefcatalog");
-
-                    Log.d("VKMusic", "title: " + title + " id: " + id + " url: " + url + " value: " + value);
-
-                    if (url.contains(value) && !value.isEmpty()) {
-                        catalog.put("default_section", id);
-                        if (dev()) Log.d("VKMusic", "Added " + title + " as default music section");
-                    }
-                }
+                setDefaultAudioPage(oldItems, catalog);
             }
 
             if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
@@ -111,7 +54,7 @@ public class CatalogJsonInjector {
 
                 PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"), noPlaylists);
 
-                if (blocks != null && (!useOldAppVer || noPlaylists)) {
+                if (!useOldAppVer || noPlaylists) {
                     var newBlocks = new JSONArray();
 
                     newBlocks
@@ -139,14 +82,20 @@ public class CatalogJsonInjector {
             if (section == null) return; // early return if section is null
             var useOldAppVer = getBoolValue("useOldAppVer", false);
             var isUsersCatalog = section.optString("url").equals("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
-
-            if (!isUsersCatalog || !CacheDatabaseDelegate.hasTracks() || LibVKXClient.isIntegrationEnabled()) return; // early return if not users catalog or no tracks or integration enabled
             var blocks = section.getJSONArray("blocks");
+
+            fixDailyMix(blocks);
+
+            if (!isUsersCatalog || !CacheDatabaseDelegate.hasTracks() || LibVKXClient.isIntegrationEnabled()) {
+                return; // early return if not users catalog or no tracks or integration enabled
+            }
+
             var noPlaylists = !json.has("playlists");
 
             PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"), noPlaylists);
 
-            if (!useOldAppVer || noPlaylists) {
+
+            if (!useOldAppVer && !noPlaylists) {
                 var newBlocks = new JSONArray();
 
                 newBlocks
@@ -203,7 +152,7 @@ public class CatalogJsonInjector {
             if (links.optJSONObject(0).optString("url").contains("?section=recent")) {
                 json.remove("links");
 
-                if (dev()) Log.d("VKMusic", "Removed links buttons");
+                Log.d("VKMusic", "Removed links buttons");
             }
         }
 
@@ -214,14 +163,8 @@ public class CatalogJsonInjector {
         }
     }
 
-    public static JSONObject fixArtists(JSONObject json) {
-
-        try {
-            fixHeaders(json.getJSONObject("catalog").getJSONArray("sections").getJSONObject(0));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+    public static JSONObject fixArtists(JSONObject json) throws JSONException {
+        fixHeaders(json.getJSONObject("catalog").getJSONArray("sections").getJSONObject(0));
         return json;
     }
 
@@ -244,9 +187,55 @@ public class CatalogJsonInjector {
         }
     }
 
-    private static JSONObject fetchCatalogId(String section) {
-        if (section.isEmpty()) return null;
+    // TODO: Fix pictures
+    public static void fixDailyMix(JSONArray blocks) {
+        if (blocks == null) return;
+        for (int i = 0; i < blocks.length(); i++) {
+            var block = blocks.optJSONObject(i);
+            var layout = block.optJSONObject("layout");
+            if (layout == null) continue;
+            var name = layout.optString("name");
+            if (!name.equals("recomms_slider")) continue;
+            try {
+                layout.put("name", "large_slider");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
+    private static void removeUnsupportedLayouts(JSONArray blocks) throws JSONException {
+        for (int i = 0; i < blocks.length(); i++) {
+            var block = blocks.optJSONObject(i);
+            var layout = block.optJSONObject("layout");
+            if (layout != null) {
+                var name = layout.optString("name");
+                if (name.equals("header_extended")) {
+                    if (layout.has("top_title")) blocks.remove(i);
+                    layout.put("name", "header");
+                }
+            }
+        }
+    }
+
+    private static void setDefaultAudioPage(JSONArray jsonArray, JSONObject catalog) throws JSONException {
+        for (int i = 0; i < jsonArray.length(); i++) {
+            var item = jsonArray.optJSONObject(i);
+            var title = item.optString("title");
+            var id = item.optString("id");
+            var url = item.optString("url");
+            var value = Preferences.getString("musicdefcatalog");
+
+            Log.d("VKMusic", "title: " + title + " id: " + id + " url: " + url + " value: " + value);
+
+            if (url.contains(value) && !value.isEmpty()) {
+                catalog.put("default_section", id);
+                Log.d("VKMusic", "Added " + title + " as default music section");
+            }
+        }
+    }
+
+    private static void fetchCatalogId(String sectionUrl, JSONArray jsonArray) {
         var request = new Request.a()
                 .b("https://" + getApi() + "/method/" + "catalog.getAudio"
                         + "?v=5.119"
@@ -257,16 +246,23 @@ public class CatalogJsonInjector {
                         + "&device_id="
                         + DeviceIdProvider.d(AndroidUtils.getGlobalContext())
                         + "&url="
-                        + section
+                        + sectionUrl
                         + "&access_token="
                         + AccountManagerUtils.getUserToken())
                 .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
         try {
-            return new JSONObject(mClient.a(request).execute().a().g()).getJSONObject("response");
+            var json = new JSONObject(mClient.a(request).execute().a().g()).getJSONObject("response");
+            var catalogarr = json.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
+
+            var title = catalogarr.optString("title");
+            var id = catalogarr.optString("id");
+            var url = catalogarr.optString("url");
+
+            Log.d("VKMusic", "Added " + title + " in music sections");
+
+            jsonArray.put(new JSONObject().put("id", id).put("title", title).put("url", url));
         } catch (JSONException | IOException e) {
             Log.d("VTLMusic", "Error: " + e.getMessage());
         }
-
-        return null;
     }
 }

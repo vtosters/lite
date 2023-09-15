@@ -1,8 +1,5 @@
 package com.vtosters.lite.ui.bottomnavigation;
 
-import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.ThemesUtils.getCSTDock;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -18,7 +15,6 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.view.menu.MenuItemImpl;
@@ -26,11 +22,12 @@ import androidx.appcompat.view.menu.MenuView;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.ViewCompat;
-
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
-
 import me.grishka.appkit.utils.V;
+
+import static ru.vtosters.hooks.other.Preferences.vkme;
+import static ru.vtosters.hooks.other.ThemesUtils.getCSTDock;
 
 public class BottomNavigationItemView extends FrameLayout implements MenuView.ItemView {
     private final TextView mSmallLabel;
@@ -224,7 +221,7 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
 
                 int textsize;
 
-                if (vkme()){
+                if (vkme()) {
                     textsize = 11;
                 } else {
                     textsize = 10;

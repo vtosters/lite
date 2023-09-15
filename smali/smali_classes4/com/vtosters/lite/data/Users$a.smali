@@ -51,13 +51,13 @@
 .method public a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
     .locals 5
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->offline()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->offline()Z
 
     move-result v2
 
     if-eqz v2, :cond_a
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-void
 

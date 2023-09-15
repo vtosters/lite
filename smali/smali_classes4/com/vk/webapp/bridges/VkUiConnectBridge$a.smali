@@ -132,7 +132,7 @@
 
     aput-object p1, v0, v1
 
-    invoke-static {p3}, Lru/vtosters/lite/proxy/api/ApiProxy;->staticFix(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3}, Lru/vtosters/hooks/ProxyHook;->staticFix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -244,7 +244,7 @@
 
     move-result-object p3
 
-    invoke-static {p3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 

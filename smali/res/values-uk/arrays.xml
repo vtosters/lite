@@ -692,4 +692,9 @@
         <item>Вибрати вручну</item>
         <item>Передвстановлені кольори</item>
     </string-array>
+    <string-array name="compression_value">
+        <item>Стиснення без втрат</item>
+        <item>Стиснення за замовчуванням</item>
+        <item>Ефективне стиснення</item>
+    </string-array>
 </resources>

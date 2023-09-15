@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
+import static ru.vtosters.hooks.EncryptionMessagesHook.decryptMessage;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 import static ru.vtosters.lite.utils.AndroidUtils.getArray;
 
@@ -20,7 +20,6 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
 
     @Override
     public String provideDocumentStart(String dialogName, String date) {
-
         return "<html><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><title>"
                 + AndroidUtils.getString(R.string.chat_export_title)
                 + "</title><style>"
@@ -58,9 +57,9 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
         }
 
         String chatAction = (message.chat_action != null) ? getHtmlForChatAction(message.chat_action) : "";
-        String attaches = (message.attachments.size() > 0) ? "<p class=\"msg-attaches\">" + AndroidUtils.getString(R.string.attachments) + ": " + getHtmlForAttach(message.attachments) + "</p>" : "";
+        String attaches = (!message.attachments.isEmpty()) ? "<p class=\"msg-attaches\">" + AndroidUtils.getString(R.string.attachments) + ": " + getHtmlForAttach(message.attachments) + "</p>" : "";
         String reply = (message.reply_message != null) ? provideReply(message.reply_message) : "";
-        String fwdMessages = (message.fwd_messages.size() > 0) ? provideForwardMessages(message.fwd_messages) : "";
+        String fwdMessages = (!message.fwd_messages.isEmpty()) ? provideForwardMessages(message.fwd_messages) : "";
         String userLink = (user.isGroup ? "club" : "id") + user.id;
 
         return "<div class=\"vtex-milk-msg" + isOut + "\" id=\"" + message.id + "\">" +

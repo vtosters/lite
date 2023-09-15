@@ -300,13 +300,13 @@
 
     const-string v1, "com.google.android.c2dm.permission.SEND"
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "com.google.android.gms"
 
-    invoke-static {v2}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -351,7 +351,7 @@
 
     const-string v4, "com.google.android.c2dm.intent.REGISTER"
 
-    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -359,7 +359,7 @@
 
     const-string v4, "com.google.android.gms"
 
-    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -399,7 +399,7 @@
 
     const-string v4, "com.google.iid.TOKEN_REQUEST"
 
-    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -407,7 +407,7 @@
 
     const-string v4, "com.google.android.gms"
 
-    invoke-static {v4}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
     
@@ -555,7 +555,7 @@
 
     const-string v0, "com.google.android.gms"
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/GmsUtils;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

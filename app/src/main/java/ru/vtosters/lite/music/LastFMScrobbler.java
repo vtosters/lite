@@ -11,11 +11,11 @@ import okhttp3.Callback;
 import okhttp3.*;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -93,7 +93,7 @@ public class LastFMScrobbler {
         fetch(params, new Callback() {
             @Override
             public void a(Call call, IOException e) {
-                Log.d("Scrobbler", String.valueOf(e));
+                Log.d("Scrobbler", e.getMessage());
             }
 
             @Override

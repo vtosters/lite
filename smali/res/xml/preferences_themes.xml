@@ -7,6 +7,11 @@
                 android:summary="@string/accent_color_summ"
                 android:icon="@drawable/bg_accent_circle"
                 android:title="@string/accent_color_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="invalidate_theme_cache_each_update"
+                android:summary="@string/invalidate_theme_cache_each_update_title"
+                android:title="@string/invalidate_theme_cache_title"/>
         <Preference
                 android:key="invalidate_theme_cache"
                 android:title="@string/invalidate_theme_cache_title" />
@@ -84,10 +89,5 @@
                 android:key="VKUI_INJ"
                 android:summary="@string/appearance_other_color_webview_summary"
                 android:title="@string/vkuiinj"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="useNewColorEngine"
-                android:summary="@string/useNewColorEngine_summ"
-                android:title="@string/useNewColorEngine_title"/>
     </PreferenceCategory>
 </PreferenceScreen>

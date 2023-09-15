@@ -2,8 +2,8 @@ package ru.vtosters.lite.themes;
 
 import android.view.View;
 import android.view.ViewGroup;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.hooks.*;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 import java.util.ArrayList;
 
@@ -21,7 +21,7 @@ public class ViewInjector {
     }
 
     public static View inject(View view, int i, boolean z) {
-        if (ThemesUtils.isCustomAccentEnabled()) {
+        if (ThemesUtils.isMonetTheme()) {
             for (BaseHook hook : hooks) {
                 hook.inject(view, i, z);
             }

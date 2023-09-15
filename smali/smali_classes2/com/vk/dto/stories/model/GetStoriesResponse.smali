@@ -208,7 +208,7 @@
 .method public constructor <init>(Lorg/json/JSONObject;Z)V
     .locals 7
 
-    invoke-static {p1, p2}, Lru/vtosters/lite/hooks/AdBlockHook;->storiesads(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
+    invoke-static {p1, p2}, Lru/vtosters/hooks/AdBlockHook;->storiesads(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -313,7 +313,7 @@
 
     invoke-static {v5, v6, v2, v3}, Lcom/vk/dto/stories/model/GetStoriesResponse;->a(Lorg/json/JSONArray;Ljava/util/Collection;Landroid/util/SparseArray;Landroid/util/SparseArray;)V
 
-    invoke-static {}, Lru/vtosters/lite/hooks/StoriesHook;->ads()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/hooks/StoriesHook;->ads()Ljava/lang/String;
 
     move-result-object v5
 
@@ -398,7 +398,7 @@
 
     const v0, 0x0
 
-    invoke-static {p1, v0}, Lru/vtosters/lite/hooks/AdBlockHook;->storiesads(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
+    invoke-static {p1, v0}, Lru/vtosters/hooks/AdBlockHook;->storiesads(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -503,7 +503,7 @@
 
     invoke-static {v5, v6, v2, v3}, Lcom/vk/dto/stories/model/GetStoriesResponse;->a(Lorg/json/JSONArray;Ljava/util/Collection;Landroid/util/SparseArray;Landroid/util/SparseArray;)V
 
-    invoke-static {}, Lru/vtosters/lite/hooks/StoriesHook;->ads()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/hooks/StoriesHook;->ads()Ljava/lang/String;
 
     move-result-object v5
 

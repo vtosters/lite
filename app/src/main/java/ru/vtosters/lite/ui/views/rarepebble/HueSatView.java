@@ -57,9 +57,9 @@ public class HueSatView extends SquareView implements ColorObserver {
         float[] hsv = new float[]{0f, 0f, 1f};
         for (int y = 0; y < radiusPx; ++y) {
             for (int x = 0; x < radiusPx; ++x) {
-                final int i = x + y * radiusPx;
-                final float sat = satForPos(x, y, radiusPx);
-                final float arcBleed = 2f / radiusPx; // extend curved edge pixels just outside clip area.
+                int i = x + y * radiusPx;
+                float sat = satForPos(x, y, radiusPx);
+                float arcBleed = 2f / radiusPx; // extend curved edge pixels just outside clip area.
                 if (sat <= 1 + arcBleed) {
                     hsv[0] = hueForPos(x, y, radiusPx);
                     hsv[1] = sat;
@@ -71,35 +71,35 @@ public class HueSatView extends SquareView implements ColorObserver {
     }
 
     private static float hueForPos(float x, float y, float radiusPx) {
-        final double r = radiusPx - 1; // gives values 0...1 inclusive
-        final double dx = (r - x) / r;
-        final double dy = (r - y) / r;
-        final double angle = Math.atan2(dy, dx);
-        final double hue = 360 * angle / (Math.PI / 2);
+        double r = radiusPx - 1; // gives values 0...1 inclusive
+        double dx = (r - x) / r;
+        double dy = (r - y) / r;
+        double angle = Math.atan2(dy, dx);
+        double hue = 360 * angle / (Math.PI / 2);
         return (float) hue;
     }
 
     private static float satForPos(float x, float y, float radiusPx) {
-        final double r = radiusPx - 1; // gives values 0...1 inclusive
-        final double dx = (r - x) / r;
-        final double dy = (r - y) / r;
-        final double sat = dx * dx + dy * dy; // leave it squared -- exaggerates pale colors
+        double r = radiusPx - 1; // gives values 0...1 inclusive
+        double dx = (r - x) / r;
+        double dy = (r - y) / r;
+        double sat = dx * dx + dy * dy; // leave it squared -- exaggerates pale colors
         return (float) sat;
     }
 
     private static void setPointer(PointF pointer, float hue, float sat, float radiusPx) {
-        final float r = radiusPx - 1; // for values 0...1 inclusive
-        final double distance = r * Math.sqrt(sat);
-        final double angle = hue / 360 * Math.PI / 2;
-        final double dx = distance * Math.cos(angle);
-        final double dy = distance * Math.sin(angle);
+        float r = radiusPx - 1; // for values 0...1 inclusive
+        double distance = r * Math.sqrt(sat);
+        double angle = hue / 360 * Math.PI / 2;
+        double dx = distance * Math.cos(angle);
+        double dy = distance * Math.sin(angle);
         pointer.set(r - (float) dx, r - (float) dy);
     }
 
     private int optimalBitmapSize() {
-        final int scale = 2;
-        final int maxBitmapSize = 128;
-        final DisplayMetrics dm = getResources().getDisplayMetrics();
+        int scale = 2;
+        int maxBitmapSize = 128;
+        DisplayMetrics dm = getResources().getDisplayMetrics();
         return Math.min(maxBitmapSize, Math.min(dm.widthPixels, dm.heightPixels) / scale);
     }
 
@@ -159,9 +159,9 @@ public class HueSatView extends SquareView implements ColorObserver {
     private boolean clamp(PointF pointer, float x, float y, boolean rejectOutside) {
         x = Math.min(x, w);
         y = Math.min(y, h);
-        final float dx = w - x;
-        final float dy = h - y;
-        final float r = (float) Math.sqrt(dx * dx + dy * dy);
+        float dx = w - x;
+        float dy = h - y;
+        float r = (float) Math.sqrt(dx * dx + dy * dy);
         boolean outside = r > w;
         if (!outside || !rejectOutside) {
             if (outside) {

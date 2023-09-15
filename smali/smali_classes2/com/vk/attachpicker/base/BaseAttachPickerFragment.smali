@@ -256,7 +256,7 @@
 
     iput-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P:Lcom/vk/attachpicker/base/StreamParcelableSelection;
 
-    const/16 v0, 0xa
+    const v0, 0x7fffffff
 
     .line 4
     iput v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->T:I
@@ -1702,7 +1702,7 @@
 
     move-result-object v0
 
-    const/16 v1, 0xa
+    const v1, 0x7fffffff
 
     if-eqz v0, :cond_0
 
@@ -1715,7 +1715,7 @@
     goto :goto_0
 
     :cond_0
-    const/16 v0, 0xa
+    const v0, 0x7fffffff
 
     :goto_0
     iput v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->S:I

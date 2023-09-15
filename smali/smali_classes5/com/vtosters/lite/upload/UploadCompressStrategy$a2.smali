@@ -45,7 +45,7 @@
 
     if-eqz v0, :cond_0
 
-    const/16 v0, 0x1000
+    const/16 v0, 0x800
 
     goto :goto_0
 
@@ -79,7 +79,7 @@
 
     if-eqz v0, :cond_0
 
-    const/16 v0, 0x1000
+    const/16 v0, 0xa00
 
     goto :goto_0
 

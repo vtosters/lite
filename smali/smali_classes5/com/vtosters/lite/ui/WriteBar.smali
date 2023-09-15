@@ -206,7 +206,7 @@
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    const/16 p1, 0xa
+    const p1, 0x7fffffff
 
     .line 2
     iput p1, p0, Lcom/vtosters/lite/ui/WriteBar;->g:I
@@ -335,7 +335,7 @@
     .line 22
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const/16 p1, 0xa
+    const p1, 0x7fffffff
 
     .line 23
     iput p1, p0, Lcom/vtosters/lite/ui/WriteBar;->g:I
@@ -464,7 +464,7 @@
     .line 43
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const/16 p1, 0xa
+    const p1, 0x7fffffff
 
     .line 44
     iput p1, p0, Lcom/vtosters/lite/ui/WriteBar;->g:I
@@ -1314,7 +1314,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lru/vtosters/lite/hooks/WritebarHook;->getWriteBar()I
+    invoke-static {}, Lru/vtosters/hooks/WritebarHook;->getWriteBar()I
 
     move-result v0
 
@@ -1328,7 +1328,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->colorWriteBar(Landroid/view/View;)V
+    invoke-static {v0}, Lru/vtosters/hooks/other/ThemesUtils;->colorWriteBar(Landroid/view/View;)V
 
     check-cast v0, Landroid/view/ViewGroup;
 
@@ -1701,7 +1701,7 @@
 
     invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/MessagesHook;->onLongClick(Landroid/view/View;)V
+    invoke-static {v0}, Lru/vtosters/hooks/MessagesHook;->onLongClick(Landroid/view/View;)V
 
     .line 62
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->a0:Landroid/view/View;
@@ -2135,7 +2135,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->voice()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->voice()Z
 
     move-result v0
 
@@ -2162,7 +2162,7 @@
 
     if-eqz v4, :cond_1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->voice()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->voice()Z
 
     move-result v4
 
@@ -3491,7 +3491,7 @@
         .end annotation
     .end param
 
-    invoke-static {p3}, Lru/vtosters/lite/hooks/WritebarHook;->getIconsColors(I)I
+    invoke-static {p3}, Lru/vtosters/hooks/WritebarHook;->getIconsColors(I)I
 
     move-result p3
 
@@ -4512,7 +4512,7 @@
 
     move-result v1
 
-    invoke-static {v0, p1, p2, v1}, Lru/vtosters/lite/hooks/ReplyMsgHook;->injectWithDecrypt(Lcom/vk/im/ui/views/ReplyView;Lcom/vk/im/engine/models/messages/MsgFromUser;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Z)V
+    invoke-static {v0, p1, p2, v1}, Lru/vtosters/hooks/ReplyMsgHook;->injectWithDecrypt(Lcom/vk/im/ui/views/ReplyView;Lcom/vk/im/engine/models/messages/MsgFromUser;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Z)V
 
     .line 177
     iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->m0:Lcom/vk/im/engine/models/messages/MsgFromUser;
@@ -5826,7 +5826,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v0
 
@@ -5963,7 +5963,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->voice()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->voice()Z
 
     move-result v0
 

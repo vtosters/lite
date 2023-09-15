@@ -2,13 +2,13 @@ package com.vk.im.ui.views;
 
 import androidx.annotation.NonNull;
 
-public class Corners{
+public class Corners {
     private int topLeft;
     private int topRight;
     private int bottomLeft;
     private int bottomRight;
 
-    public Corners(int i, int i2, int i3, int i4){
+    public Corners(int i, int i2, int i3, int i4) {
         this.topLeft = i;
         this.topRight = i2;
         this.bottomLeft = i3;
@@ -23,7 +23,7 @@ public class Corners{
         this(0, 0, 0, 0, 15);
     }
 
-    public static Corners a(Corners corners, int i, int i2, int i3, int i4, int i5, Object obj){
+    public static Corners a(Corners corners, int i, int i2, int i3, int i4, int i5, Object obj) {
         if ((i5 & 1) != 0) {
             i = corners.topLeft;
         }
@@ -40,30 +40,30 @@ public class Corners{
         return corners;
     }
 
-    public int a(){
+    public int a() {
         return this.bottomLeft;
     }
 
-    public int b(){
+    public int b() {
         return this.bottomRight;
     }
 
-    public int c(){
+    public int c() {
         return this.topLeft;
     }
 
-    public int d(){
+    public int d() {
         return this.topRight;
     }
 
-    public boolean e(){
+    public boolean e() {
         int i;
         int i2 = this.topLeft;
         int i3 = this.topRight;
         return i2 == i3 && i3 == (i = this.bottomRight) && this.bottomLeft == i;
     }
 
-    public boolean equals(Object obj){
+    public boolean equals(Object obj) {
         if (this != obj) {
             if (!(obj instanceof Corners)) {
                 return false;
@@ -74,24 +74,24 @@ public class Corners{
         return true;
     }
 
-    public boolean f(){
+    public boolean f() {
         return this.topLeft == 0 && e();
     }
 
-    public void g(){
+    public void g() {
         a(0, 0);
     }
 
-    public int hashCode(){
+    public int hashCode() {
         return (((((this.topLeft * 31) + this.topRight) * 31) + this.bottomLeft) * 31) + this.bottomRight;
     }
 
     @NonNull
-    public String toString(){
+    public String toString() {
         return "Corners(topLeft=" + this.topLeft + ", topRight=" + this.topRight + ", bottomLeft=" + this.bottomLeft + ", bottomRight=" + this.bottomRight + ")";
     }
 
-    public Corners a(int i, int i2){
+    public Corners a(int i, int i2) {
         if ((i2 & 1) > 0) {
             this.topLeft = i;
         }
@@ -113,7 +113,7 @@ public class Corners{
         return this;
     }
 
-    public Corners a(int i, int i2, int i3, int i4){
+    public Corners a(int i, int i2, int i3, int i4) {
         this.topLeft = i;
         this.topRight = i2;
         this.bottomLeft = i3;
@@ -121,7 +121,7 @@ public class Corners{
         return this;
     }
 
-    public Corners a(Corners corners){
+    public Corners a(Corners corners) {
         this.topLeft = corners.topLeft;
         this.topRight = corners.topRight;
         this.bottomLeft = corners.bottomLeft;

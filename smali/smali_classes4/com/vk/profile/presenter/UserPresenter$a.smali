@@ -105,7 +105,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/ssfs/ProfileHider;->isService(Ljava/lang/Integer;)Z
+    invoke-static {p1}, Lru/vtosters/hooks/ssfs/ProfileHook;->isService(Ljava/lang/Integer;)Z
 
     move-result p1
 

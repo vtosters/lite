@@ -30,7 +30,7 @@ public class Translate {
                 String translation = translator.getTranslation(text);
                 MAIN_EXECUTOR.execute(() -> showDialog(context, translation));
             } catch (Exception e) {
-                Log.e("Translate", String.valueOf(e));
+                Log.e("Translate", e.getMessage());
             }
         });
     }

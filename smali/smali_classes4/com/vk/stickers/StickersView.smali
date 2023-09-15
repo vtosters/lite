@@ -719,7 +719,7 @@
 
     new-array v1, v1, [I
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v4
 
@@ -914,7 +914,7 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-static {v2}, Lru/vtosters/lite/tgs/TGRoot;->injectStickers(Ljava/util/List;)V
+    invoke-static {v2}, Lru/vtosters/hooks/TelegramStickersHook;->injectStickers(Ljava/util/List;)V
 
     .line 9
     sget-object v3, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;

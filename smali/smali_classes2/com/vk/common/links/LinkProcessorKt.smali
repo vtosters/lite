@@ -2706,7 +2706,7 @@
     :cond_21
     new-instance v0, Lcom/vk/navigation/Navigator;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->useNewSettings()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->useNewSettings()Ljava/lang/Class;
 
     move-result-object v1
 
@@ -2801,7 +2801,7 @@
     :goto_9
     new-instance v0, Lcom/vk/navigation/Navigator;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->useNewSettings()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->useNewSettings()Ljava/lang/Class;
 
     move-result-object v1
 

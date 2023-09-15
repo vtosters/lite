@@ -59,7 +59,7 @@
     .line 1
     new-instance v0, Landroidx/core/util/Pools$SynchronizedPool;
 
-    invoke-static {}, Lru/vtosters/lite/hooks/DockBarInjector;->getItemCount()I
+    invoke-static {}, Lru/vtosters/hooks/DockBarInjector;->getItemCount()I
 
     move-result v1
 
@@ -125,7 +125,7 @@
 
     const p2, 0x7f070060
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/ThemesUtils;->getNavigationWidth(I)I
+    invoke-static {p2}, Lru/vtosters/hooks/other/ThemesUtils;->getNavigationWidth(I)I
 
     move-result p2
 
@@ -138,7 +138,7 @@
 
     const p2, 0x7f070061
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/ThemesUtils;->getNavigationWidth(I)I
+    invoke-static {p2}, Lru/vtosters/hooks/other/ThemesUtils;->getNavigationWidth(I)I
 
     move-result p2
 
@@ -147,7 +147,7 @@
 
     const p2, 0x7f070067
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/ThemesUtils;->getNavigationHeight(I)I
+    invoke-static {p2}, Lru/vtosters/hooks/other/ThemesUtils;->getNavigationHeight(I)I
 
     move-result p2
 
@@ -176,7 +176,7 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->e:Landroid/view/View$OnClickListener;
 
-    invoke-static {}, Lru/vtosters/lite/hooks/DockBarInjector;->getItemCount()I
+    invoke-static {}, Lru/vtosters/hooks/DockBarInjector;->getItemCount()I
 
     move-result p1
 

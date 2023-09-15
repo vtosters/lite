@@ -358,7 +358,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->ssl()Z
 
     move-result v0
 
@@ -385,7 +385,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->ssl()Z
 
     move-result v0
 
@@ -407,7 +407,7 @@
 .method public getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
     .locals 1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->ssl()Z
 
     move-result v0
 

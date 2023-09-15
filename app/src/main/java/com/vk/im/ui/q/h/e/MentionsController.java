@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
-import android.widget.TextView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import com.vk.core.ui.VkBottomSheetBehavior;
@@ -55,7 +54,7 @@ public final class MentionsController {
 
             @Override
             public boolean a() {
-                if(MentionsController.this.state)
+                if (MentionsController.this.state)
                     return ViewExtKt.i(MentionsController.this.mCoordinatorLayout);
                 return false;
             }
@@ -105,7 +104,7 @@ public final class MentionsController {
         View inflate = ((ViewStub) this.j.findViewById(R.id.mentions_container_stub)).inflate();
         ViewGroup viewGroup = (ViewGroup) inflate.findViewById(R.id.mentions_container);
         viewGroup.addView(this.mDialogMentionComponent.a(viewGroup, (Bundle) null));
-        this.mCoordinatorLayout = inflate.findViewById(R.id.mentions_cl);;
+        this.mCoordinatorLayout = inflate.findViewById(R.id.mentions_cl);
         this.mBottomSheetBehavior = (VkBottomSheetBehavior<RecyclerView>) ((CoordinatorLayout.LayoutParams) viewGroup.getLayoutParams()).getBehavior();
         this.mBottomSheetBehavior.a(new VkBottomSheetBehavior.b() {
             @Override

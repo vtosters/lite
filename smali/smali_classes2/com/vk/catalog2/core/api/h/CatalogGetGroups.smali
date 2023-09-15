@@ -75,7 +75,7 @@
 
     const-string v1, "r.getJSONObject(ServerKeys.RESPONSE)"
 
-    invoke-static { p1 }, Lru/vtosters/lite/feature/groupslist/GroupsCatalogInjector;->injectIntoGetGroups(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static { p1 }, Lru/vtosters/hooks/GroupsCatalogInjector;->injectIntoGetGroups(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 

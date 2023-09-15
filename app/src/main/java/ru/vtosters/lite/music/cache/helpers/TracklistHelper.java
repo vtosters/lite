@@ -6,12 +6,14 @@ import com.vk.dto.music.MusicTrack;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.FileCacheImplementation;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TracklistHelper {
@@ -20,8 +22,17 @@ public class TracklistHelper {
     }
 
     public static List<MusicTrack> getTracks() {
-        return CacheDatabaseDelegate.getTracks();
+        List<MusicTrack> tracks = CacheDatabaseDelegate.getTracks();
+
+        boolean doNotinvertOrder = Preferences.getBoolValue("invertCachedTracks", false);
+
+        if (!doNotinvertOrder) {
+            Collections.reverse(tracks);
+        }
+
+        return tracks;
     }
+
 
     public static List<MusicTrack> getTracks(String id) {
         return CacheDatabaseDelegate.getTracksByAlbum(id);
@@ -33,9 +44,11 @@ public class TracklistHelper {
 
     public static JSONArray tracksToIds(List<MusicTrack> tracks) {
         var arr = new JSONArray();
+
         for (MusicTrack track : tracks) {
             arr.put(track.y1());
         }
+
         return arr;
     }
 

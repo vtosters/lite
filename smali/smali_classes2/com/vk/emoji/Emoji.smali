@@ -832,7 +832,7 @@
 .method public a(Ljava/lang/CharSequence;II)Ljava/lang/CharSequence;
     .locals 8
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->systememoji()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->systememoji()Z
 
     move-result v0
 

@@ -157,7 +157,7 @@
     .line 10
     iget v1, p0, Lcom/vk/im/engine/commands/messages/SetUserActivityCmd;->b:I
 
-    invoke-static {v1}, Lru/vtosters/lite/dnr/DNRModule;->isDntEnabledFor(I)Z
+    invoke-static {v1}, Lru/vtosters/hooks/MessagesActivityHook;->isDntEnabledFor(I)Z
 
     move-result v2
 
@@ -187,7 +187,7 @@
     .line 13
     invoke-virtual {p1, p2}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/VKMethodCall;)V
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-void
 .end method

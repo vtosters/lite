@@ -995,7 +995,7 @@
 .method public a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;)V
     .locals 2
 
-    invoke-static {p2}, Lru/vtosters/lite/tgs/TGRoot;->processSticker(Lcom/vk/dto/stickers/StickerItem;)Lcom/vk/dto/common/Attachment;
+    invoke-static {p2}, Lru/vtosters/hooks/TelegramStickersHook;->processSticker(Lcom/vk/dto/stickers/StickerItem;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v0
 
