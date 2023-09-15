@@ -37,7 +37,6 @@ public class OTADialog extends ModalBottomSheetWrapper<OTADialog> implements OTA
     @Override
     public void onUpdateApplied(boolean isManualCheck) {
         mActivity.runOnUiThread(() -> {
-            if (isManualCheck) Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
             setTitle(mActivity.getString(R.string.newversion) + " " + mHelper.getNewVersionName())
                     .setView(makeUpdateInfoView(mHelper.getUpdateDescription()))
                     .setPositiveButton(mActivity.getString(R.string.updateanddownload), () -> {
