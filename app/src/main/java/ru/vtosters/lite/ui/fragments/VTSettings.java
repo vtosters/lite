@@ -441,10 +441,22 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.vtlinterface),
-                getValAsString(R.string.showstories, Preferences.stories()),
+                getValAsString(R.string.show_superapps_title, Preferences.superapp()),
                 R.drawable.ic_interface_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), InterfaceFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                AndroidUtils.getString(R.string.datasettings_title),
+                getString(com.vtosters.lite.R.string.cache_size_summ) + ": " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())),
+                R.drawable.ic_document_outline_28,
+                preference -> {
+                    NavigatorUtils.switchFragment(requireContext(), DataSettingsFragment.class);
                     return false;
                 }
         );

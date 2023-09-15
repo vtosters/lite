@@ -6317,7 +6317,7 @@
     <string name="useGenius_summ">Отримувати тексти з сервісу Genius</string>
     <string name="useGenius_title">Тексти з Genius</string>
 
-    <string name="datasettings_title">Налаштування даних додатку</string>
+    <string name="datasettings_title">"Дані та пам'ять"</string>
     <string name="invalidate_theme_cache_title">Інвалідація кешу теми</string>
     <string name="invalidate_theme_cache_each_update_title">Очищення кешу теми після оновлення для запобігання проблем з акцентами</string>
 

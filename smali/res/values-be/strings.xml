@@ -7010,7 +7010,7 @@
     <string name="useGenius_summ">Атрымліваць тэксты з сэрвісу Genius</string>
     <string name="useGenius_title">Тэксты з Genius</string>
 
-    <string name="datasettings_title">Налады дадзеных прыкладання</string>
+    <string name="datasettings_title">Дадзеныя і памяць</string>
     <string name="invalidate_theme_cache_title">Інвалідацыя кэша тэмы</string>
     <string name="invalidate_theme_cache_each_update_title">Ачыстка кэша тэмы пасля абнаўлення для прадухілення праблем з акцэнтамі</string>
 

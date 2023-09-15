@@ -6530,7 +6530,7 @@ May look like a fake leaving the online"</string>
     <string name="useGenius_summ">Genius service</string>
     <string name="useGenius_title">Texts from Genius</string>
 
-    <string name="datasettings_title">Application data settings</string>
+    <string name="datasettings_title">Data and storage</string>
     <string name="invalidate_theme_cache_title">Invalidate theme cache</string>
     <string name="invalidate_theme_cache_each_update_title">Clear theme cache after update to prevent problems with accents</string>
 

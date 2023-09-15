@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="@string/data">
-        <Preference
-                android:key="datasettings"
-                android:title="@string/datasettings_title"/>
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/other_fix_app">
         <Preference
                 android:key="firebasefix"

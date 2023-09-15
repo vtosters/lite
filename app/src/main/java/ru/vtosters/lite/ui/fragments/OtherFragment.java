@@ -103,11 +103,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("datasettings").setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), DataSettingsFragment.class);
-            return true;
-        });
-
         findPreference("dialogrecomm").setVisible(!Preferences.hasVerification());
 
         findPreference("updateverifdata").setOnPreferenceClickListener(preference -> {
