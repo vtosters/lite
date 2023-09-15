@@ -5258,6 +5258,10 @@ com vídeo"</string>
     <string name="your_balance">Seu saldo: </string>
     <string name="your_gender">Seu gênero:</string>
 
+    <!--    vtl -->
+    <!--    use "" fix ´ compile error-->
+    <!--    <item quantity="one">"%s comenta´rio"</item> -->
+
     <string name="collection_item_hint_text">You can add items that you can share while streaming</string>
     <string name="item_no_place_in_result_text">There is no place in the list</string>
     <string name="watch_post_text">Watch post</string>
