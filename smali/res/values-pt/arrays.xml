@@ -2,38 +2,38 @@
 <resources>
     <string-array name="ad_report_reasons">
         <item>Spam</item>
-        <item>Insulto</item>
-        <item>Conteúdo adulto</item>
+        <item>Assédio</item>
+        <item>Conteúdo Adulto</item>
         <item>Fraude</item>
         <item>Outro</item>
     </string-array>
     <string-array name="address_will_be_opened">
-        <item>Abre na segunda-feira</item>
-        <item>Abre na terça-feira</item>
-        <item>Abre na quarta-feira</item>
-        <item>Abre na quinta-feira</item>
-        <item>Abre na sexta-feira</item>
-        <item>Abre no sábado</item>
-        <item>Abre no domingo</item>
+        <item>Abre na Segunda-feira</item>
+        <item>Abre na Terça-feira</item>
+        <item>Abre na Quarta-feira</item>
+        <item>Abre na Quinta-feira</item>
+        <item>Abre na Sexta-feira</item>
+        <item>Abre no Sábado</item>
+        <item>Abre no Domingo</item>
     </string-array>
     <string-array name="album_displayable_privacy_options">
         <item>Todos usuários</item>
-        <item>Somente amigos</item>
-        <item>Amigos e amigos de amigos</item>
+        <item>Apenas amigos</item>
+        <item>Amigos de amigos</item>
         <item>Somente eu</item>
     </string-array>
     <string-array name="album_privacy_options">
         <item>Todos usuários</item>
         <item>Somente amigos</item>
-        <item>Amigos e amigos de amigos</item>
-        <item>Somente eu</item>
-        <item>Parâmetros avançados</item>
+        <item>Amigos de amigos</item>
+        <item>Apenas eu</item>
+        <item>opções avançadas</item>
     </string-array>
     <string-array name="app_report_types">
-        <item>Aplicativo não funciona</item>
+        <item>Aplicativo não funcionando</item>
         <item>Aplicativo malicioso</item>
-        <item>Publicidade chata</item>
-        <item>Fraude</item>
+        <item>Publicidade Intrusiva</item>
+        <item>Fraude ou Enganação</item>
     </string-array>
     <string-array name="community_types">
         <item>Eventos</item>
@@ -41,9 +41,9 @@
         <item>Páginas</item>
     </string-array>
     <string-array name="date_ago_hrs">
-        <item>uma hora atrás</item>
-        <item>duas horas atrás</item>
-        <item>três horas atrás</item>
+        <item>uma hora atrás</item>
+        <item>duas horas atrás</item>
+        <item>três horas atrás</item>
     </string-array>
     <string-array name="dnd_options">
         <item>1 hora</item>
@@ -52,13 +52,13 @@
         <item>Sempre</item>
     </string-array>
     <string-array name="edit_bdate_visibility">
-        <item>Mostrar no perfil</item>
-        <item>Mostrar somente o dia &amp; mês</item>
-        <item>Não mostrar no perfil</item>
+        <item>Mostrar no meu perfil</item>
+        <item>Mostrar apenas dia e mês</item>
+        <item>"Não mostrar no meu perfil"</item>
     </string-array>
     <string-array name="fave_tabs">
         <item>Pessoas</item>
-        <item>Recados</item>
+        <item>Postagens</item>
         <item>Links</item>
         <item>Artigos</item>
         <item>Podcasts</item>
@@ -68,38 +68,38 @@
     </string-array>
     <string-array name="group_audios_options_descriptions">
         <item></item>
-        <item>Acesso aberto significa que todos os membros da comunidade podem adicionar novos arquivos de áudio.</item>
-        <item>Acesso limitado significa que somente administradores e editores podem adicionar novos arquivos de áudio.</item>
+        <item>Acesso aberto significa que todos os membros da comunidade podem adicionar novas faixas.</item>
+        <item>Acesso limitado significa que apenas editores e administradores podem adicionar novas faixas.</item>
     </string-array>
     <string-array name="group_ban_duration_options">
-        <item>Para sempre</item>
-        <item>Um ano</item>
-        <item>Um mês</item>
-        <item>Uma semana</item>
-        <item>Um dia</item>
-        <item>Uma hora</item>
+        <item>Para Sempre</item>
+        <item>1 ano</item>
+        <item>1 mês</item>
+        <item>1 semana</item>
+        <item>1 dia</item>
+        <item>1 hora</item>
     </string-array>
     <string-array name="group_ban_reasons">
         <item>Outro</item>
         <item>Spam</item>
-        <item>Abuso verbal</item>
-        <item>Palavreado inadequado</item>
+        <item>Assédio</item>
+        <item>Profanidade</item>
         <item>Mensagens irrelevantes</item>
     </string-array>
     <string-array name="group_board_options_descriptions">
         <item></item>
-        <item>Acesso aberto significa que todos os membros da comunidade podem iniciar novas discussões.</item>
-        <item>Acesso limitado significa que somente administradores e editores podem iniciar novas discussões..</item>
+        <item>Acesso aberto significa que todos os membros da comunidade podem iniciar novos tópicos.</item>
+        <item>Acesso limitado significa que apenas editores e administradores podem iniciar novos tópicos.</item>
     </string-array>
     <string-array name="group_docs_options_descriptions">
         <item></item>
         <item>Acesso aberto significa que todos os membros da comunidade podem adicionar novos documentos.</item>
-        <item>Acesso limitado significa que somente administradores e editores podem adicionar novos documentos..</item>
+        <item>Acesso limitado significa que apenas editores e administradores podem adicionar novos documentos.</item>
     </string-array>
     <string-array name="group_photos_options_descriptions">
         <item></item>
         <item>Acesso aberto significa que todos os membros da comunidade podem criar novos álbuns.</item>
-        <item>Acesso limitado significa que somente administradores e editores podem criar novos álbuns.</item>
+        <item>Acesso limitado significa que apenas editores e administradores podem criar novos álbuns.</item>
     </string-array>
     <string-array name="group_service_options">
         <item>Desabilitado</item>
@@ -109,37 +109,32 @@
     <string-array name="group_videos_options_descriptions">
         <item></item>
         <item>Acesso aberto significa que todos os membros da comunidade podem adicionar novos vídeos.</item>
-        <item>Acesso limitado significa que somente administradores e editores podem adicionar novos vídeos..</item>
+        <item>Acesso limitado significa que apenas editores e administradores podem adicionar novos vídeos.</item>
     </string-array>
     <string-array name="group_wall_options">
         <item>Desabilitado</item>
         <item>Aberto</item>
-        <item>Privado</item>
-        <item>Fechado</item>
+        <item>Limitado</item>
+        <item>Restrito</item>
     </string-array>
     <string-array name="group_wall_options_descriptions">
         <item></item>
-        <item>Em um mural aberto, todos os membros da comunidade podem deixar comentários e escrever publicações.</item>
-        <item>Em um mural privado, publicações só podem ser feitas em nome da comunidade e todos os membros podem comentá-las.</item>
-        <item>Em um mural fechado, publicações só podem ser feitas em nome da comunidade e todos os comentários estão desabilitados.</item>
-    </string-array>
-    <string-array name="group_wiki_options_descriptions">
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Com um mural aberto, todos os membros da comunidade podem escrever postagens e deixar comentários.</item>
+        <item>Um mural limitado suporta apenas postagens em nome da comunidade, mas todos os usuários podem deixar comentários.</item>
+        <item>Em um mural restrito, apenas a comunidade pode criar postagens e os comentários estão desabilitados.</item>
     </string-array>
     <string-array name="last_seen_female_hours_ago">
-        <item>vista pela última vez uma hora atrás</item>
-        <item>vista pela última vez duas horas atrás</item>
-        <item>vista pela última vez três horas atrás</item>
+        <item>visto por último à uma hora atrás</item>
+        <item>visto por último à duas horas atrás</item>
+        <item>visto por último à três horas atrás</item>
     </string-array>
     <string-array name="last_seen_male_hours_ago">
-        <item>visto pela última vez uma hora atrás</item>
-        <item>visto pela última vez duas horas atrás</item>
-        <item>visto pela última vez três horas atrás</item>
+        <item>visto por último à uma hora atrás</item>
+        <item>visto por último à duas horas atrás</item>
+        <item>visto por último à três horas atrás</item>
     </string-array>
     <string-array name="like_menu">
-        <item>Descurtir</item>
+        <item>Remover Gostei</item>
         <item>Compartilhar com amigos</item>
     </string-array>
     <string-array name="months_full">
@@ -157,18 +152,18 @@
         <item>Dezembro</item>
     </string-array>
     <string-array name="months_full_dep">
-        <item>de janeiro</item>
-        <item>de fevereiro</item>
-        <item>de março</item>
-        <item>de abril</item>
-        <item>de maio</item>
-        <item>de junho</item>
-        <item>de julho</item>
-        <item>de agosto</item>
-        <item>de setembro</item>
-        <item>de outubro</item>
-        <item>de novembro</item>
-        <item>de dezembro</item>
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Agosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Novembro</item>
+        <item>Dezembro</item>
     </string-array>
     <string-array name="months_short">
         <item>Jan</item>
@@ -185,17 +180,17 @@
         <item>Dez</item>
     </string-array>
     <string-array name="newsfeed_settings_feed_type">
-        <item>Por hora de publicação</item>
-        <item>Interessantes primeiro</item>
+        <item>Novo</item>
+        <item>Top interessantes</item>
     </string-array>
     <string-array name="ntf_accepted_f">
-        <item>aceitou sua solicitação de amizade</item>
+        <item>aceito seu pedido de amizade</item>
     </string-array>
     <string-array name="ntf_accepted_m">
-        <item>aceitou sua solicitação de amizade</item>
+        <item>aceitou seu pedido de amizade</item>
     </string-array>
     <string-array name="ntf_accepted_x">
-        <item>aceitaram sua solicitação de amizade</item>
+        <item>aceitou seu pedido de amizade</item>
     </string-array>
     <string-array name="ntf_follow_f">
         <item>começou a seguir você</item>
@@ -204,82 +199,86 @@
         <item>começou a seguir você</item>
     </string-array>
     <string-array name="ntf_follow_x">
-        <item>começaram a seguir você</item>
+        <item>começou a seguir você</item>
     </string-array>
     <string-array name="ntf_like_f">
-        <item>curtiu a publicação</item>
-        <item>curtiu a foto</item>
-        <item>curtiu o vídeo</item>
-        <item>curtiu o comentário</item>
+        <item>curtiu uma postagem</item>
+        <item>curtiu uma foto</item>
+        <item>curtiu um vídeo</item>
+        <item>curtiu um comentário</item>
     </string-array>
     <string-array name="ntf_like_m">
-        <item>curtiu a publicação</item>
-        <item>curtiu a foto</item>
-        <item>curtiu o vídeo</item>
-        <item>curtiu o comentário</item>
+        <item>curtiu uma postagem</item>
+        <item>curtiu uma foto</item>
+        <item>curtiu um vídeo</item>
+        <item>curtiu um comentário</item>
     </string-array>
     <string-array name="ntf_like_x">
-        <item>curtiram o recado</item>
-        <item>curtiram a foto</item>
-        <item>curtiram o vídeo</item>
-        <item>curtiram o comentário</item>
+        <item>curtiu uma postagem</item>
+        <item>curtiu uma foto</item>
+        <item>curtiu um vídeo</item>
+        <item>curtiu um comentário</item>
     </string-array>
     <string-array name="ntf_rt_f">
-        <item>compartilhou uma publicação</item>
+        <item>compartilhou uma postagem</item>
         <item>compartilhou uma foto</item>
         <item>compartilhou um vídeo</item>
         <item>compartilhou um comentário</item>
     </string-array>
     <string-array name="ntf_rt_m">
-        <item>compartilhou um recado</item>
+        <item>compartilhou uma postagem</item>
         <item>compartilhou uma foto</item>
         <item>compartilhou um vídeo</item>
         <item>compartilhou um comentário</item>
     </string-array>
     <string-array name="ntf_rt_x">
-        <item>compartilharam uma publicação</item>
-        <item>compartilharam uma foto</item>
-        <item>compartilharam um vídeo</item>
-        <item>compartilharam um comentário</item>
+        <item>compartilhou uma postagem</item>
+        <item>compartilhou uma foto</item>
+        <item>compartilhou um vídeo</item>
+        <item>compartilhou um comentário</item>
+    </string-array>
+    <string-array name="on_off">
+        <item>ligado</item>
+        <item>desligado</item>
     </string-array>
     <string-array name="personal_life_options">
-        <item>Família e filhos</item>
+        <item>Família e crianças</item>
         <item>Carreira e dinheiro</item>
-        <item>Entretenimento e lazer</item>
-        <item>Ciência e pesquisa</item>
-        <item>Melhorar o mundo</item>
-        <item>Desenvolvimento pessoal</item>
-        <item>Beleza e arte</item>
+        <item>Entreterimento e lazer</item>
+        <item>Ciência e Pesquisa</item>
+        <item>Melhorando o Mundo</item>
+        <item>Desenvolvimento Pessoal</item>
+        <item>Beleza e Arte</item>
         <item>Fama e influência</item>
     </string-array>
     <string-array name="personal_people_options">
-        <item>Intelecto e criatividade</item>
-        <item>Gentileza e honestidade</item>
-        <item>Beleza e saúde</item>
-        <item>Influência e riqueza</item>
-        <item>Coragem e persistência</item>
+        <item>Intelecto e criatividade</item> 
+        <item>Amabilidade e honestidade</item> 
+        <item>Saúde e beleza</item> 
+        <item>Riqueza e poder</item> 
+        <item>Coragem e persistência</item> 
         <item>Humor e amor pela vida</item>
     </string-array>
     <string-array name="personal_politics_options">
-        <item>Comunista</item>
-        <item>Socialista</item>
-        <item>Centrista</item>
-        <item>Liberal</item>
-        <item>Conservador</item>
-        <item>Monarquista</item>
-        <item>Ultraconservador</item>
-        <item>Apático</item>
-        <item>Liberal</item>
+        <item>Comunista</item> 
+        <item>Socialista</item> 
+        <item>Moderado</item> 
+        <item>Liberal</item> 
+        <item>Conservador</item> 
+        <item>Monarquista</item> 
+        <item>Ultraconservador</item> 
+        <item>Apatético</item> 
+        <item>Libertário</item> 
+    </string-array> 
+    <string-array name="personal_views_options"> 
+        <item>Muito negativo</item> 
+        <item>Negativo</item> 
+        <item>Compromissável</item> 
+        <item>Neutro</item> 
+        <item>Positivo</item> 
     </string-array>
-    <string-array name="personal_views_options">
-        <item>Muito negativa</item>
-        <item>Negativa</item>
-        <item>Compromedor</item>
-        <item>Neutra</item>
-        <item>Positiva</item>
-    </string-array>
-    <string-array name="photo_tagged_goods_menu">
-        <item>Abrir produto</item>
+    <string-array name="photo_tagged_goods_menu"> 
+        <item>Abrir produto</item> 
         <item>Remover produto</item>
     </string-array>
     <string-array name="poll_months_short">
@@ -297,79 +296,87 @@
         <item>Dez</item>
     </string-array>
     <string-array name="post_options">
-        <item>Somente amigos</item>
-        <item>Exportar ao Twitter</item>
-        <item>Exportar ao Facebook</item>
-    </string-array>
-    <string-array name="public_types">
-        <item>Local ou uma companhia pequena</item>
-        <item>Companhia, organização ou website</item>
-        <item>Celebridade ou grupo</item>
-        <item>Obra ou produto</item>
+        <item>Apenas amigos</item> 
+        <item>Exportar para o Twitter</item> 
+        <item>Exportar para o Facebook</item> 
+    </string-array> 
+    <string-array name="public_types"> 
+        <item>Local ou pequena empresa</item>
+        <item>Empresa, organização ou site</item> 
+        <item>Pessoa famosa ou grupo de pessoas</item> 
+        <item>Obra de arte ou produção</item> 
         <item>Tipo de página…</item>
+    </string-array> 
+    <string-array name="replies_options"> 
+        <item>Curtir</item> 
+        <item>Responder</item> 
+    </string-array> 
+    <string-array name="report_types"> 
+        <item>Spam</item> 
+        <item>Assédio</item> 
+        <item>Conteúdo adulto</item> 
+        <item>Defesa de drogas</item> 
+        <item>Pornografia infantil</item> 
+        <item>Extremismo/Violência</item> 
+        <item>Incentivo ao suicídio</item> 
     </string-array>
-    <string-array name="replies_options">
-        <item>Curtir</item>
-        <item>Responder</item>
-    </string-array>
-    <string-array name="report_types">
-        <item>Spam</item>
-        <item>Insulto</item>
-        <item>Conteúdo para adultos</item>
-        <item>Apologia às drogas</item>
-        <item>Pornografia infantil</item>
-        <item>Extremismo/Violencia</item>
-        <item>Incentivando o suicídio</item>
-    </string-array>
-    <string-array name="sett_dnd_options">
-        <item>1 hora</item>
-        <item>8 horas</item>
-        <item>24 horas</item>
-    </string-array>
+    <string-array name="sett_dnd_options"> 
+        <item>1 hora</item> 
+        <item>8 horas</item> 
+        <item>24 horas</item> 
+    </string-array> 
     <string-array name="sett_friends_order">
-        <item>Por nome</item>
-        <item>Por sobrenome</item>
+        <item>Por primeiro nome</item>
+        <item>Por último nome</item>
         <item>Por importância</item>
     </string-array>
     <string-array name="sett_gif_autoplay_entries">
         <item>Sempre</item>
-        <item>Somente com Wi-Fi</item>
+        <item>Apenas Wi-fi</item>
         <item>Nunca</item>
     </string-array>
     <string-array name="sett_img_cache_location">
+        <item>"Armazenamento do disposivito"</item>
         <item>Cartão SD</item>
-        <item>Cartão de memória</item>
     </string-array>
     <string-array name="sett_notifications_no_text_options">
         <item>Nome e texto</item>
-        <item>Somente nome</item>
+        <item>Apenas Nome</item>
     </string-array>
     <string-array name="sett_notifications_no_text_options_group">
         <item>Nome da comunidade e texto</item>
-        <item>Somente nome da comunidade</item>
+        <item>Apenas o nome da comunidade</item>
+    </string-array>
+    <string-array name="sett_notifications_no_text_values">
+        <item>name_and_text</item>
+        <item>name_only</item>
+    </string-array>
+    <string-array name="sett_posts_default_items">
+        <item>@string/wall_all_posts</item>
+        <item>@string/wall_my_posts</item>
     </string-array>
     <string-array name="sett_update_interval_items">
         <item>30 segundos</item>
         <item>45 segundos</item>
-        <item>Um minuto</item>
+        <item>1 minuto</item>
         <item>2 minutos</item>
         <item>3 minutos</item>
         <item>5 minutos</item>
         <item>10 minutos</item>
         <item>15 minutos</item>
         <item>30 minutos</item>
-        <item>Uma hora</item>
-        <item>Duas horas</item>
-        <item>Desabilitar</item>
+        <item>1 hora</item>
+        <item>2 horas</item>
+        <item>Desativar</item>
     </string-array>
     <string-array name="short_time">
-        <item> seg</item>
-        <item> min</item>
-        <item> h</item>
-        <item> dia</item>
-        <item> sem</item>
-        <item> mês</item>
-        <item> ano</item>
+        <item> seg</item>
+        <item> min</item>
+        <item> h</item>
+        <item> dia</item>
+        <item> s</item>
+        <item> m</item>
+        <item> a</item>
     </string-array>
     <string-array name="story_months_short">
         <item>Jan</item>
@@ -387,7 +394,7 @@
     </string-array>
     <string-array name="story_time_hours">
         <item>zero</item>
-        <item>uma</item>
+        <item>um</item>
         <item>dois</item>
         <item>três</item>
         <item>quatro</item>
@@ -413,15 +420,15 @@
     </string-array>
     <string-array name="story_time_minutes">
         <item>zero zero</item>
-        <item>zero e um</item>
-        <item>zero e dois</item>
-        <item>zero e três</item>
-        <item>zero e quatro</item>
-        <item>zero e cinco</item>
-        <item>zero e seis</item>
-        <item>zero e sete</item>
-        <item>zero e oito</item>
-        <item>zero e nove</item>
+        <item>zero um</item>
+        <item>zero dois</item>
+        <item>zero três</item>
+        <item>zero quatro</item>
+        <item>zero cinco</item>
+        <item>zero seis</item>
+        <item>zero sete</item>
+        <item>zero oito</item>
+        <item>zero nove</item>
         <item>dez</item>
         <item>onze</item>
         <item>doze</item>
@@ -441,7 +448,7 @@
         <item>vinte e seis</item>
         <item>vinte e sete</item>
         <item>vinte e oito</item>
-        <item>vinte e nove</item>
+        <item>twenty nine</item>
         <item>trinta</item>
         <item>trinta e um</item>
         <item>trinta e dois</item>
@@ -474,30 +481,30 @@
         <item>cinquenta e nove</item>
     </string-array>
     <string-array name="video_search_date">
-        <item>Qualquer</item>
+        <item>Any</item>
         <item>Últimas 24 horas</item>
-        <item>Últimos 7 días</item>
-        <item>Por mês</item>
-        <item>Este ano</item>
+        <item>Últimos 7 dias</item>
+        <item>Últimos 30 dias</item>
+        <item>Últimos 365 dias</item>
     </string-array>
     <string-array name="video_search_date_options">
-        <item>Qualquer periodo</item>
+        <item>A qualquer momento</item>
         <item>Últimas 24 horas</item>
         <item>Último mês</item>
-        <item>Último ano</item>
+        <item>Ano passado</item>
     </string-array>
     <string-array name="video_search_duration">
         <item>Qualquer</item>
-        <item>Curtos (menos que 5 minutos)</item>
-        <item>Longos (mais que 20 minutos)</item>
+        <item>Curto (menos de 5 minutos)</item>
+        <item>Longa (mais de 20 minutos)</item>
     </string-array>
     <string-array name="video_search_length">
-        <item>Qualquer duração</item>
+        <item>Qualquer comprimento</item>
         <item>Curto</item>
         <item>Longo</item>
     </string-array>
     <string-array name="video_search_quality">
-        <item>Qualquer definição</item>
+        <item>Qualquer qualidade</item>
         <item>Somente HD</item>
     </string-array>
     <string-array name="video_search_sort">
@@ -518,7 +525,7 @@
         <item>Maio</item>
         <item>Junho</item>
         <item>Julho</item>
-        <item>Augosto</item>
+        <item>agosto</item>
         <item>Setembro</item>
         <item>Outubro</item>
         <item>Novembro</item>
@@ -530,12 +537,168 @@
         <item>Documento</item>
     </string-array>
     <string-array name="when_day_of_week">
-        <item>Na segunda-feira</item>
-        <item>Na terça-feira</item>
-        <item>Na quarta-feira</item>
-        <item>Na quinta-feira</item>
-        <item>Na sexta-feira</item>
-        <item>No sábado</item>
-        <item>No domingo</item>
+        <item>Segunda-feira</item>
+        <item>Terça-feira</item>
+        <item>Quarta-feira</item>
+        <item>Quinta-feira</item>
+        <item>Sexta-feira</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
+    <string-array name="animations">
+        <item>Sem animação</item>
+        <item>Android Q</item>
+        <item>Fade</item>
+        <item>AndroidX</item>
+        <item>Slide</item>
+    </string-array>
+    <string-array name="animations2">
+        <item>Sem animação</item>
+        <item>Fade</item>
+        <item>AndroidX</item>
+        <item>Slide</item>
+    </string-array>
+    <string-array name="language">
+        <item>Sistema</item>
+        <item>Inglês</item>
+        <item>Russo</item>
+        <item>Ucraniano</item>
+    </string-array>
+    <string-array name="start">
+        <item>Padrão</item>
+        <item>Notícias</item>
+        <item>Diálogos</item>
+        <item>Menu</item>
+        <item>Perfil</item>
+        <item>Documentos</item>
+        <item>Vidas</item>
+        <item>Aniversários</item>
+        <item>Grupos</item>
+        <item>Música</item>
+        <item>Amigos</item>
+        <item>Fotos</item>
+        <item>Vídeos</item>
+        <item>Configurações</item>
+        <item>Aplicativos</item>
+        <item>Descobrir</item>
+        <item>Notificações</item>
+        <item>Transferência de dinheiro</item>
+        <item>Jogos</item>
+        <item>Marcadores</item>
+    </string-array>
+    <string-array name="proxy">
+        <item>Sem proxy</item>
+        <item>zaborona.help</item>
+        <item>VikaMobile</item>
+        <item>Proxy aleatório</item>
+        <item>Proxy API personalizado</item>
+        <item>HTTP personalizado</item>
+        <item>HTTPS personalizado</item>
+        <item>MEIAS personalizadas</item>
+    </string-array>
+    <string-array name="targetlang_value">
+        <item>Sistema</item>
+        <item>Russo</item>
+        <item>Inglês</item>
+        <item>Ucraniano</item>
+        <item>Alemão</item>
+        <item>Francês</item>
+        <item>Cazaque</item>
+        <item>Chinês</item>
+    </string-array>
+    <string-array name="msgcount_value">
+        <item>Padrão</item>
+        <item>40 mensagens</item>
+        <item>50 mensagens</item>
+        <item>70 mensagens</item>
+        <item>100 mensagens</item>
+        <item>150 mensagens</item>
+        <item>200 mensagens</item>
+    </string-array>
+    <string-array name="lighttheme_value">
+        <item>Padrão</item>
+    </string-array>
+    <string-array name="darktheme_value">
+        <item>Padrão</item>
+        <item>Amoled</item>
+    </string-array>
+    <string-array name="newsupdate_value">
+        <item>Padrão</item>
+        <item>Não atualizar</item>
+        <item>Atualizar imediatamente</item>
+    </string-array>
+    <string-array name="musicdefcatalog_value">
+        <item>Padrão</item>
+        <item>Geral</item>
+        <item>Minhas músicas</item>
+        <item>Listas de reprodução</item>
+        <item>Álbuns</item>
+        <item>Explorar</item>
+    </string-array>
+    <string-array name="undel_value">
+        <item>[Deletado]</item>
+        <item>🗑</item>
+        <item>❌</item>
+    </string-array>
+    <string-array name="dateformat_value">
+        <item>Padrão</item>
+        <item>15 de abril 18:42</item>
+        <item>15 de abril 18:42:28</item>
+        <item>15 de abril de 2022 18:42:28</item>
+    </string-array>
+    <string-array name="dateformat">
+        <item>padrão</item>
+        <item>sem segundos</item>
+        <item>sem ano</item>
+        <item>completo</item>
+    </string-array>
+    <string-array name="wallpaper_change_dialog">
+        <item>Boa hora</item>
+        <item>Bom dia, tarde, noite</item>
+        <item>Como você está?</item>
+        <item>Não está morto, isso é bom</item>
+    </string-array>
+    <string-array name="cache_cleaner">
+        <item>Limpar todo o cache</item>
+        <item>Limpar cache de adesivos</item>
+        <item>Limpar cache de imagens</item>
+        <item>Limpar cache de vídeos</item>
+        <item>Limpar cache de mensagens</item>
+        <item>Limpar cache do WebView</item>
+    </string-array>
+    <string-array name="filter_types">
+        <item>Desativado</item>
+        <item>Baixo</item>
+        <item>Média</item>
+        <item>Alto</item>
+    </string-array>
+    <string-array name="filter_dim_types">
+        <item>Desativado</item>
+        <item>Diminuir</item>
+        <item>Iluminar</item>
+    </string-array>
+    <string-array name="msg_plurals">
+        <item>mensagem</item>
+        <item>mensagens</item>
+        <item>mensagens</item>
+    </string-array>
+    <string-array name="theme_type_name">
+        <item>Sistema</item>
+        <item>Escuro</item>
+        <item>Luz</item>
+    </string-array>
+    <string-array name="theme_type_name_checkbox">
+        <item>Tema do sistema</item>
+        <item>Tema escuro</item>
+        <item>Tema claro</item>
+    </string-array>
+    <string-array name="accent_select_type">
+        <item>Seletor de cores</item>
+        <item>Das paletas</item>
+    </string-array>
+    <string-array name="compression_value">
+        <item>Compressão sem perdas</item>
+        <item>Compressão padrão</item>
+        <item>Compressão eficaz</item>
     </string-array>
 </resources>

@@ -2,19 +2,19 @@
 <resources>
     <plurals name="accessibility_comments">
         <item quantity="other">%s comentários</item>
-        <item quantity="one">%s comentário</item>
+        <item quantity="one">%s comenta´rio</item>
     </plurals>
     <plurals name="accessibility_likes">
-        <item quantity="other">%,d pessoas curtiram isso</item>
+        <item quantity="other">%,d pessoas curtiram disso</item>
         <item quantity="one">%,d pessoa curtiu isso</item>
     </plurals>
     <plurals name="accessibility_reposts">
-        <item quantity="other">%d pessoas compartilharam</item>
-        <item quantity="one">%d pessoa compartilhou</item>
+        <item quantity="other">%d pessoas compartilharam isso</item>
+        <item quantity="one">%d pessoa compartilhou isso</item>
     </plurals>
     <plurals name="accessibility_views">
         <item quantity="other">%,d visualizações</item>
-        <item quantity="one">%,d visualização</item>
+        <item quantity="one">%,d visualizações</item>
     </plurals>
     <plurals name="address_plurals">
         <item quantity="other">/m%d/e endereços</item>
@@ -29,15 +29,15 @@
         <item quantity="one">%,d vídeo</item>
     </plurals>
     <plurals name="albums">
-        <item quantity="other">%,d álbuns</item>
-        <item quantity="one">%,d álbum</item>
+        <item quantity="other">%,d albums</item>
+        <item quantity="one">%,d album</item>
     </plurals>
     <plurals name="article_friends">
         <item quantity="other">%s amigos</item>
         <item quantity="one">%s amigo</item>
     </plurals>
     <plurals name="article_subscribers">
-        <item quantity="other">%s seguidores</item>
+       <item quantity="other">%s seguidores</item>
         <item quantity="one">%s seguidor</item>
     </plurals>
     <plurals name="article_view_count">
@@ -49,36 +49,36 @@
         <item quantity="one">%,d voto</item>
     </plurals>
     <plurals name="balance_votes_simple">
-        <item quantity="other"> votos</item>
-        <item quantity="one"> voto</item>
+        <item quantity="other"> votos</item>
+        <item quantity="one"> voto</item>
     </plurals>
     <plurals name="birthday_age">
-        <item quantity="other">%,d anos</item>
-        <item quantity="one">%,d ano</item>
+        <item quantity="other">%d anos</item>
+        <item quantity="one">%d ano</item>
     </plurals>
     <plurals name="birthday_today">
-        <item quantity="other">fez %,d anos</item>
-        <item quantity="one">fez %,d ano</item>
+        <item quantity="other">completou %d anos</item>
+        <item quantity="one">completou %d ano</item>
     </plurals>
     <plurals name="catalog_video_total_title">
-        <item quantity="other">%,d vídeos</item>
-        <item quantity="one">%,d vídeo</item>
+        <item quantity="other">%d vídeos</item>
+        <item quantity="one">%d vídeo</item>
     </plurals>
     <plurals name="chat_members">
-        <item quantity="other">%,d membros</item>
-        <item quantity="one">%,d membro</item>
+        <item quantity="other">%d membros</item>
+        <item quantity="one">%d membro</item>
     </plurals>
     <plurals name="comment_likes">
-        <item quantity="other">%,d pessoas curtiram isso</item>
-        <item quantity="one">%,d pessoa curtiu isso</item>
+        <item quantity="other">%d pessoas curtiram isso</item>
+        <item quantity="one">%d pessoa curtiu isso</item>
     </plurals>
     <plurals name="comments">
         <item quantity="other">%s comentários</item>
         <item quantity="one">%s comentário</item>
     </plurals>
     <plurals name="communities">
-        <item quantity="other">%1$d comunidades</item>
-        <item quantity="one">%1$d comunidade</item>
+        <item quantity="other">%$1d comunidades</item>
+        <item quantity="one">%$1d comunidade</item>
     </plurals>
     <plurals name="community_friends">
         <item quantity="other">%s amigos</item>
@@ -93,12 +93,12 @@
         <item quantity="one">%s seguidor</item>
     </plurals>
     <plurals name="date_ago_mins">
-        <item quantity="other">%,d minutos atrás</item>
-        <item quantity="one">um minuto atrás</item>
+        <item quantity="other">%,d minutos atrás</item>
+        <item quantity="one">%,d minuto atrás</item>
     </plurals>
     <plurals name="date_ago_secs">
-        <item quantity="other">um segundos atrás</item>
-        <item quantity="one">um segundo atrás</item>
+        <item quantity="other">%,d segundos atrás</item>
+        <item quantity="one">%,d segundo atrás</item>
     </plurals>
     <plurals name="discover_comments">
         <item quantity="other">%s comentários</item>
@@ -121,20 +121,20 @@
         <item quantity="one">%,d evento</item>
     </plurals>
     <plurals name="fave_tags_add_successful">
-        <item quantity="other">Etiquetas adicionadas</item>
-        <item quantity="one">Etiqueta adicionada</item>
+        <item quantity="other">Tags adicionadas</item>
+        <item quantity="one">Tag adicionada</item>
     </plurals>
     <plurals name="followers_count">
         <item quantity="other">%s seguidores</item>
         <item quantity="one">%s seguidor</item>
     </plurals>
     <plurals name="friend_requests_new">
-        <item quantity="other">%s novas solicitações</item>
-        <item quantity="one">%s nova solicitação</item>
+        <item quantity="other">%s novos pedidos</item>
+        <item quantity="one">%s novo pedido</item>
     </plurals>
     <plurals name="friends_catalog_and_more_people">
-        <item quantity="other">%1$s e mais %2$s pessoas</item>
-        <item quantity="one">%1$s e mais %2$s pessoas</item>
+        <item quantity="other">%1$s e %2$s outras pessoas</item>
+        <item quantity="one">%1$s e %2$s outra pessoa</item>
     </plurals>
     <plurals name="friends_catalog_mutual_friends">
         <item quantity="other">%,d amigos em comum</item>
@@ -152,17 +152,17 @@
         <item quantity="other">%,d online</item>
         <item quantity="one">%,d online</item>
     </plurals>
-    <plurals name="friends_tab_requests">
-        <item quantity="other">%,d solicitações</item>
-        <item quantity="one">%,d solicitação</item>
+        <plurals name="friends_tab_requests">
+        <item quantity="other">%,d pedidos</item>
+    <item quantity="one">%,d pedido</item>
     </plurals>
     <plurals name="friends_tab_requests_in">
-        <item quantity="other">%,d recebidas</item>
-        <item quantity="one">%,d recebida</item>
+        <item quantity="other">%,d pendentes</item>
+        <item quantity="one">%,d pendente</item>
     </plurals>
     <plurals name="friends_tab_requests_out">
-        <item quantity="other">%,d enviadas</item>
-        <item quantity="one">%,d enviada</item>
+        <item quantity="other">%,d pendentes</item>
+        <item quantity="one">%,d pendente</item>
     </plurals>
     <plurals name="friends_tab_suggestions">
         <item quantity="other">%,d sugestões</item>
@@ -173,8 +173,8 @@
         <item quantity="one">%,d amigo jogando</item>
     </plurals>
     <plurals name="games_friends_played">
-        <item quantity="other">%,d amigos seus estão jogando</item>
-        <item quantity="one">%,d amigo seu está jogando</item>
+        <item quantity="other">%,d dos seus amigos estão jogando</item>
+        <item quantity="one">%,d dos seus amigos está jogando</item>
     </plurals>
     <plurals name="games_invites">
         <item quantity="other">%,d convites</item>
@@ -189,20 +189,20 @@
         <item quantity="one">%,d ponto</item>
     </plurals>
     <plurals name="games_requests">
-        <item quantity="other">%,d solicitações novas</item>
-        <item quantity="one">%,d solicitação nova</item>
+        <item quantity="other">%,d novos pedidos</item>
+        <item quantity="one">%,d novo pedido</item>
     </plurals>
     <plurals name="games_show_more_reqs">
-        <item quantity="other">Mostrar %,d mais solicitações</item>
-        <item quantity="one">Mostrar %,d mais solicitação</item>
+        <item quantity="other">Mostrar mais %,d pedidos</item>
+        <item quantity="one">Mostrar mais %,d pedido</item>
     </plurals>
     <plurals name="gifts">
         <item quantity="other">%,d presentes</item>
         <item quantity="one">%,d presente</item>
     </plurals>
     <plurals name="gifts_remains">
-        <item quantity="other">%,d gratuitos</item>
-        <item quantity="one">%,d gratuito</item>
+        <item quantity="other">%,d grátis</item>
+        <item quantity="one">%,d grátis</item>
     </plurals>
     <plurals name="good_comments">
         <item quantity="other">%,d comentários</item>
@@ -213,16 +213,16 @@
         <item quantity="one">%,d produto</item>
     </plurals>
     <plurals name="group_chats">
-        <item quantity="other">%d bate-papos</item>
-        <item quantity="one">%d bate-papo</item>
+        <item quantity="other">%d bate-papos em grupo</item>
+        <item quantity="one">%d bate-papo em grupo</item>
     </plurals>
     <plurals name="group_chats_members">
-        <item quantity="other">%d participantes</item>
-        <item quantity="one">%d participante</item>
+        <item quantity="other">%d membros</item>
+        <item quantity="one">%d membro</item>
     </plurals>
     <plurals name="group_chats_members_active">
-        <item quantity="other">%d participantes conversando</item>
-        <item quantity="one">%d participante conversando</item>
+        <item quantity="other">%d membros conversando</item>
+        <item quantity="one">%d membro conversando</item>
     </plurals>
     <plurals name="group_invites">
         <item quantity="other">%,d convites</item>
@@ -253,56 +253,56 @@
         <item quantity="one">Você ganhou %1$s ponto</item>
     </plurals>
     <plurals name="htmlgame_leaderboard_you_earned_points_and_rated">
-        <item quantity="other">Você ganhou %1$s pontos e está no %2$s lugar entre seus amigos</item>
-        <item quantity="one">Você ganhou %1$s ponto e está no %2$s lugar entre seus amigos</item>
+        <item quantity="other">Você ganhou %1$s pontos e está classificado como %2$s entre os amigos</item>
+        <item quantity="one">Você ganhou %1$s ponto e está classificado como %2$s entre os amigos</item>
     </plurals>
     <plurals name="htmlgame_leaderboard_you_got_points">
         <item quantity="other">Você marcou &lt;b>%1$s pontos&lt;/b></item>
         <item quantity="one">Você marcou &lt;b>%1$s ponto&lt;/b></item>
     </plurals>
     <plurals name="last_seen_female_minutes_ago">
-        <item quantity="other">vista pela última vez %d minutos atrás</item>
-        <item quantity="one">vista pela última vez %d minuto atrás</item>
+        <item quantity="other">visto pela última vez há %d minutos</item>
+        <item quantity="one">visto pela última vez há %d minuto</item>
     </plurals>
     <plurals name="last_seen_male_minutes_ago">
-        <item quantity="other">visto pela última vez %d minutos atrás</item>
-        <item quantity="one">visto pela última vez %d minuto atrás</item>
+        <item quantity="other">visto pela última vez há %d minutos</item>
+        <item quantity="one">visto pela última vez há %d minuto</item>
     </plurals>
     <plurals name="like_notification_multiple">
-        <item quantity="other">%,d pessoas</item>
-        <item quantity="one">%,d pessoa</item>
+        <item quantity="other">%d pessoas</item>
+        <item quantity="one">%d pessoa</item>
     </plurals>
     <plurals name="like_notification_stacked">
-        <item quantity="other">%,d novas notificações</item>
-        <item quantity="one">%,d nova notificação</item>
+        <item quantity="other">%d novas notificações</item>
+        <item quantity="one">%d nova notificação</item>
     </plurals>
     <plurals name="live_balance_votes">
-        <item quantity="other">%,d votos</item>
-        <item quantity="one">%,d voto</item>
+        <item quantity="other">%d votos</item>
+        <item quantity="one">%d voto</item>
     </plurals>
     <plurals name="live_balance_votes_simple">
-        <item quantity="other"> votos</item>
-        <item quantity="one"> voto</item>
+        <item quantity="other"> votos</item>
+        <item quantity="one"> voto</item>
     </plurals>
     <plurals name="live_broadcast_end_text_more">
-        <item quantity="other">" e mais %d pessoas assistiram sua transmissão"</item>
-        <item quantity="one">" e mais %d pessoa assistiram sua transmissão"</item>
+        <item quantity="other">" e mais %d pessoas assistiram sua transmissão ao vivo"</item>
+        <item quantity="one">" e mais %d outra pessoa assistiu sua transmissão ao vivo"</item>
     </plurals>
     <plurals name="live_broadcast_end_text_more_no_friends">
-        <item quantity="other">%d pessoas assistiram sua transmissão</item>
-        <item quantity="one">%d pessoa assistiu sua transmissão</item>
+        <item quantity="other">%d usuários assistiram sua transmissão</item>
+        <item quantity="one">%d usuário assistiu sua transmissão</item>
     </plurals>
     <plurals name="live_broadcast_friends_more">
-        <item quantity="other">" e mais %s amigos estão online"</item>
-        <item quantity="one">" e mais %s amigo estão online"</item>
+        <item quantity="other">" e mais %s outros amigos estão online"</item>
+        <item quantity="one">" e mais %s outro amigo está online"</item>
     </plurals>
     <plurals name="live_broadcast_friends_text_more_no_friends">
-        <item quantity="other">%s amigo estão online</item>
-        <item quantity="one">%s amigo está online</item>
+        <item quantity="other">%s amigos estão online</item>
+        <item quantity="one">%s amigo está online</item>
     </plurals>
     <plurals name="live_broadcast_group_members_more">
-        <item quantity="other">" e mais %s membros"</item>
-        <item quantity="one">" e mais %s membro"</item>
+        <item quantity="other">"e mais %s membros"</item>
+        <item quantity="one">"e mais %s membro"</item>
     </plurals>
     <plurals name="live_broadcast_group_members_text_more_no_friends">
         <item quantity="other">%s membros da comunidade</item>
@@ -310,23 +310,23 @@
     </plurals>
     <plurals name="live_da_comments_left">
         <item quantity="other">%d caracteres restantes</item>
-        <item quantity="one">%d caracter restante</item>
+        <item quantity="one">%d caractere restante</item>
     </plurals>
     <plurals name="live_gifts_remains">
-        <item quantity="other">%,d presentes restantes</item>
-        <item quantity="one">%,d presente restante</item>
+        <item quantity="other">Restam %,d presentes</item>
+        <item quantity="one">Resta %,d presente</item>
     </plurals>
     <plurals name="live_viewers_more_users">
-        <item quantity="other">e mais %d usuários</item>
-        <item quantity="one">e mais %d usuário</item>
+        <item quantity="other">e mais %d outros usuários</item>
+        <item quantity="one">e mais %d outro usuário</item>
     </plurals>
     <plurals name="market_cart_full_description">
-        <item quantity="other">Você pode adicionar não mais que %1$d peças de um produto.</item>
-        <item quantity="one">Você pode adicionar não mais que %1$d peça de um produto.</item>
+        <item quantity="other">"Você não pode adicionar mais do que %1$d deste produto."</item>
+        <item quantity="one">"Você não pode adicionar mais do que %1$d deste produto."</item>
     </plurals>
     <plurals name="market_cart_total_quantity">
-        <item quantity="other">%1$d produtos, a taxa de entrega não incluída</item>
-        <item quantity="one">%1$d produto, a taxa de entrega não incluída</item>
+        <item quantity="other">%1$d itens (antes dos custos de entrega)</item>
+        <item quantity="one">%1$d item (antes dos custos de entrega)</item>
     </plurals>
     <plurals name="members_count">
         <item quantity="other">%s membros</item>
@@ -337,8 +337,8 @@
         <item quantity="one">mensagem</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="other">%d munitos</item>
-        <item quantity="one">%d munito</item>
+        <item quantity="other">%d minutos</item>
+        <item quantity="one">%d minuto</item>
     </plurals>
     <plurals name="minutes_end_date">
         <item quantity="other">%1$d minutos restantes</item>
@@ -353,8 +353,8 @@
         <item quantity="one">%s pessoa doou</item>
     </plurals>
     <plurals name="money_transfer_friends_used">
-        <item quantity="other">%d amigos já utilizaram o serviço de transferências de dineiro do VK</item>
-        <item quantity="one">%d amigo já utilizou o serviço de transferências de dineiro do VK</item>
+        <item quantity="other">%d dos seus amigos já usaram as Transferências de Dinheiro do VK</item>
+        <item quantity="one">%d do seu amigo já usou as Transferências de Dinheiro do VK</item>
     </plurals>
     <plurals name="music_hours">
         <item quantity="other">%d horas</item>
@@ -365,72 +365,72 @@
         <item quantity="one">%d minuto</item>
     </plurals>
     <plurals name="music_playlist_show_all_playlist">
-        <item quantity="other">Mostrar %d músicas</item>
-        <item quantity="one">Mostrar %d música</item>
+        <item quantity="other">Mostrar todos os %d arquivos de áudio</item>
+        <item quantity="one">Mostrar %d arquivo de áudio</item>
     </plurals>
     <plurals name="music_seconds">
         <item quantity="other">%d segundos</item>
         <item quantity="one">%d segundo</item>
     </plurals>
     <plurals name="music_snippet_listenings">
-        <item quantity="other">%s arquivos de áudio</item>
-        <item quantity="one">%s arquivo de áudio</item>
+        <item quantity="other">%s reproduções</item>
+        <item quantity="one">%s reprodução</item>
     </plurals>
     <plurals name="music_snippet_uptime_day">
-        <item quantity="other">atualizada %d dias atrás</item>
-        <item quantity="one">atualizada %d dia atrás</item>
+        <item quantity="other">atualizado há %d dias</item>
+        <item quantity="one">atualizado há %d dia</item>
     </plurals>
     <plurals name="music_snippet_uptime_hour">
-        <item quantity="other">atualizada %d horas atrás</item>
-        <item quantity="one">atualizada %d hora atrás</item>
+        <item quantity="other">atualizado há %d horas</item>
+        <item quantity="one">atualizado há %d hora</item>
     </plurals>
     <plurals name="music_snippet_uptime_minute">
-        <item quantity="other">atualizada %d minutos atrás</item>
-        <item quantity="one">atualizada %d minuto atrás</item>
+        <item quantity="other">atualizado há %d minutos</item>
+        <item quantity="one">atualizado há %d minuto</item>
     </plurals>
     <plurals name="music_snippet_uptime_month">
-        <item quantity="other">atualizada %d meses atrás</item>
-        <item quantity="one">atualizada %d mês atrás</item>
+        <item quantity="other">atualizado há %d meses</item>
+        <item quantity="one">atualizado há %d mês</item>
     </plurals>
     <plurals name="music_snippet_uptime_week">
-        <item quantity="other">atualizada %d semanas atrás</item>
-        <item quantity="one">atualizada %d semana atrás</item>
+        <item quantity="other">atualizado há %d semanas</item>
+        <item quantity="one">atualizado há %d semana</item>
     </plurals>
     <plurals name="music_snippet_uptime_year">
-        <item quantity="other">atualizada %d anos atrás</item>
-        <item quantity="one">atualizada %d ano atrás</item>
+        <item quantity="other">atualizado há %d anos</item>
+        <item quantity="one">atualizado há %d ano</item>
     </plurals>
     <plurals name="music_songs">
-        <item quantity="other">%d músicas</item>
-        <item quantity="one">%d música</item>
+        <item quantity="other">%d faixas</item>
+        <item quantity="one">%d faixa</item>
     </plurals>
     <plurals name="music_subscriptipn_also_boght_by">
         <item quantity="other">e mais %d amigos</item>
         <item quantity="one">e mais %d amigo</item>
     </plurals>
     <plurals name="music_toast_playlist_attaching_done">
-        <item quantity="other">Arquivos de áudio adicionados</item>
-        <item quantity="one">Arquivo de áudio adicionado</item>
+        <item quantity="other">Faixas adicionadas</item>
+        <item quantity="one">Faixa adicionada</item>
     </plurals>
     <plurals name="music_toast_playlist_attaching_failed">
-        <item quantity="other">Não foi possível adicionar os arquivos de áudio</item>
-        <item quantity="one">Não foi possível adicionar a música</item>
+        <item quantity="other">Não foi possível adicionar as faixas</item>
+        <item quantity="one">Não foi possível adicionar a faixa</item>
     </plurals>
     <plurals name="narrative_views">
         <item quantity="other">%d visualizações</item>
         <item quantity="one">%d visualização</item>
     </plurals>
     <plurals name="narrative_views_and_info">
-        <item quantity="other">%1$s · %2$d visualizações</item>
-        <item quantity="one">%1$s · %2$d visualização</item>
+        <item quantity="other">%1$s · %2$d visualizações</item>
+        <item quantity="one">%1$s · %2$d visualização</item>
     </plurals>
     <plurals name="ncomments_last">
         <item quantity="other">Último de %,d comentários</item>
         <item quantity="one">%,d comentário</item>
     </plurals>
     <plurals name="new_posts">
-        <item quantity="other">Mostrar %,d publicações novas</item>
-        <item quantity="one">Mostrar %,d publicação nova</item>
+        <item quantity="other">Mostrar %,d novas postagens</item>
+        <item quantity="one">Mostrar %,d nova postagem</item>
     </plurals>
     <plurals name="news_added_photo_f">
         <item quantity="other">adicionou %,d fotos</item>
@@ -442,11 +442,11 @@
     </plurals>
     <plurals name="news_tagged_photo_f">
         <item quantity="other">foi marcada em %,d fotos</item>
-        <item quantity="one">foi marcada na foto</item>
+        <item quantity="one">foi marcada em uma foto</item>
     </plurals>
     <plurals name="news_tagged_photo_m">
         <item quantity="other">foi marcado em %,d fotos</item>
-        <item quantity="one">foi marcado na foto</item>
+        <item quantity="one">foi marcado em uma foto</item>
     </plurals>
     <plurals name="not_n_new_notifications">
         <item quantity="other">%s novas notificações</item>
@@ -454,27 +454,27 @@
     </plurals>
     <plurals name="not_name_and_n_more_people">
         <item quantity="other">%1$s e mais %2$d pessoas</item>
-        <item quantity="one">%1$s e mais %2$d pessoa</item>
+        <item quantity="one">%1$s e mais %2$d outra pessoa</item>
     </plurals>
     <plurals name="not_sources">
         <item quantity="other">%s fontes</item>
         <item quantity="one">%s fonte</item>
     </plurals>
     <plurals name="notification_business_notify_unread">
-        <item quantity="other">%d notificações de empresa</item>
-        <item quantity="one">%d notificação de empresa</item>
+        <item quantity="other">%d notificações de negócios</item>
+        <item quantity="one">%d notificação de negócio</item>
     </plurals>
     <plurals name="notification_dialogs_unread">
-        <item quantity="other">%d conversas não lidas</item>
-        <item quantity="one">%d conversa não lida</item>
+        <item quantity="other">%d chats não lidos</item>
+        <item quantity="one">%d chat não lido</item>
     </plurals>
     <plurals name="notification_msg_unread">
         <item quantity="other">%d mensagens não lidas</item>
         <item quantity="one">%d mensagem não lida</item>
     </plurals>
     <plurals name="ntf_x_more_users">
-        <item quantity="other">e mais &lt;b>%,d&lt;/b> pessoas</item>
-        <item quantity="one">e mais &lt;b>%,d&lt;/b> pessoa</item>
+        <item quantity="other">e &lt;b>%,d&lt;/b> outras pessoas</item>
+        <item quantity="one">e &lt;b>%,d&lt;/b> outra pessoa</item>
     </plurals>
     <plurals name="num_attach_article_short">
         <item quantity="other">artigos</item>
@@ -485,12 +485,12 @@
         <item quantity="one">artista</item>
     </plurals>
     <plurals name="num_attach_audio">
-        <item quantity="other">%,d músicas</item>
-        <item quantity="one">Música</item>
+        <item quantity="other">%,d faixas</item>
+        <item quantity="one">Faixa</item>
     </plurals>
     <plurals name="num_attach_audio_short">
-        <item quantity="other">músicas</item>
-        <item quantity="one">música</item>
+        <item quantity="other">faixas</item>
+        <item quantity="one">faixa</item>
     </plurals>
     <plurals name="num_attach_doc_short">
         <item quantity="other">documentos</item>
@@ -509,8 +509,8 @@
         <item quantity="one">Mensagem encaminhada</item>
     </plurals>
     <plurals name="num_attach_graffiti_short">
-        <item quantity="other">grafites</item>
-        <item quantity="one">grafite</item>
+        <item quantity="other">graffiti</item>
+        <item quantity="one">graffiti</item>
     </plurals>
     <plurals name="num_attach_link_short">
         <item quantity="other">links</item>
@@ -521,8 +521,8 @@
         <item quantity="one">produto</item>
     </plurals>
     <plurals name="num_attach_narrative_short">
-        <item quantity="other">enredos</item>
-        <item quantity="one">enredo</item>
+        <item quantity="other">narrativas</item>
+        <item quantity="one">narrativa</item>
     </plurals>
     <plurals name="num_attach_photo">
         <item quantity="other">%,d fotos</item>
@@ -537,8 +537,8 @@
         <item quantity="one">foto</item>
     </plurals>
     <plurals name="num_attach_playlist_short">
-        <item quantity="other">playlists</item>
-        <item quantity="one">playlist</item>
+        <item quantity="other">listas de reprodução</item>
+        <item quantity="one">lista de reprodução</item>
     </plurals>
     <plurals name="num_attach_podcast_short">
         <item quantity="other">podcasts</item>
@@ -570,11 +570,11 @@
     </plurals>
     <plurals name="num_mutual_friends_req">
         <item quantity="other">%,d amigos em comum</item>
-        <item quantity="one">Um amigo em comum</item>
+        <item quantity="one">%,d amigo em comum</item>
     </plurals>
     <plurals name="num_new_messages">
-        <item quantity="other">Você tem %,d mensagens novas.</item>
-        <item quantity="one">%,d mensagem nova.</item>
+        <item quantity="other">Você tem %,d novas mensagens.</item>
+        <item quantity="one">Você tem uma nova mensagem.</item>
     </plurals>
     <plurals name="num_poll_votes">
         <item quantity="other">%,d votos</item>
@@ -586,7 +586,7 @@
     </plurals>
     <plurals name="people_found">
         <item quantity="other">%,d pessoas encontradas</item>
-        <item quantity="one">%,d pessoa encontrada</item>
+        <item quantity="one">Uma pessoa encontrada</item>
     </plurals>
     <plurals name="photos">
         <item quantity="other">%,d fotos</item>
@@ -594,23 +594,23 @@
     </plurals>
     <plurals name="photos_tagged_short_f">
         <item quantity="other">marcada em %,d fotos</item>
-        <item quantity="one">marcada na foto</item>
+        <item quantity="one">marcada em %,d foto</item>
     </plurals>
     <plurals name="photos_tagged_short_m">
         <item quantity="other">marcado em %,d fotos</item>
-        <item quantity="one">marcado na foto</item>
+        <item quantity="one">marcado em %,d foto</item>
     </plurals>
     <plurals name="picker_share_photo_plural">
         <item quantity="other">Compartilhar fotos</item>
         <item quantity="one">Compartilhar foto</item>
     </plurals>
     <plurals name="picker_trim_video_length_multi_minutes">
-        <item quantity="other">Dá para escolher o vídeo de até %d minutos</item>
-        <item quantity="one">Dá para escolher o vídeo de até %d minuto</item>
+        <item quantity="other">Você pode selecionar um vídeo com duração de até %d minutos</item>
+        <item quantity="one">Você pode selecionar um vídeo com duração de até %d minuto</item>
     </plurals>
     <plurals name="picker_trim_video_length_multi_seconds">
-        <item quantity="other">Dá para escolher o vídeo de até %d segundos</item>
-        <item quantity="one">Dá para escolher o vídeo de até %d segundo</item>
+        <item quantity="other">Você pode selecionar um vídeo com duração de até %d segundos</item>
+        <item quantity="one">Você pode selecionar um vídeo com duração de até %d segundo</item>
     </plurals>
     <plurals name="poll_friends">
         <item quantity="other">%d amigos</item>
@@ -637,32 +637,32 @@
         <item quantity="one">%d pessoa compartilhou isso</item>
     </plurals>
     <plurals name="postponed_posts">
-        <item quantity="other">/m%,d/e recados agendados</item>
-        <item quantity="one">/m%,d/e recado agendado</item>
+        <item quantity="other">%d postagens agendadas</item>
+        <item quantity="one">%d postagem agendada</item>
     </plurals>
     <plurals name="posts">
-        <item quantity="other">%,d recados</item>
-        <item quantity="one">%,d recado</item>
+        <item quantity="other">%d postagens</item>
+        <item quantity="one">%d postagem</item>
     </plurals>
     <plurals name="product_number_of_items_in_cart">
-        <item quantity="other">%,d itens no cesto</item>
-        <item quantity="one">%,d item no cesto</item>
+        <item quantity="other">%d itens no carrinho</item>
+        <item quantity="one">%d item no carrinho</item>
     </plurals>
     <plurals name="profile_age_years">
-        <item quantity="other">%,d anos</item>
-        <item quantity="one">%,d ano</item>
+        <item quantity="other">%d anos</item>
+        <item quantity="one">%d ano</item>
     </plurals>
     <plurals name="profile_audios">
-        <item quantity="other">áudios</item>
-        <item quantity="one">áudio</item>
+        <item quantity="other">Faixas</item>
+        <item quantity="one">Faixa</item>
     </plurals>
     <plurals name="profile_counter_articles">
         <item quantity="other">Artigos</item>
         <item quantity="one">Artigo</item>
     </plurals>
     <plurals name="profile_counter_audios">
-        <item quantity="other">Músicas</item>
-        <item quantity="one">Música</item>
+        <item quantity="other">Faixas</item>
+        <item quantity="one">Faixa</item>
     </plurals>
     <plurals name="profile_counter_docs">
         <item quantity="other">Documentos</item>
@@ -674,7 +674,7 @@
     </plurals>
     <plurals name="profile_counter_photos">
         <item quantity="other">Fotos</item>
-        <item quantity="one">Fotos</item>
+        <item quantity="one">Foto</item>
     </plurals>
     <plurals name="profile_counter_podcasts">
         <item quantity="other">Podcasts</item>
@@ -693,28 +693,28 @@
         <item quantity="one">documento</item>
     </plurals>
     <plurals name="profile_followers">
-        <item quantity="other">/m%,d/e seguidores</item>
-        <item quantity="one">/m%,d/e seguidor</item>
+        <item quantity="other">%d seguidores</item>
+        <item quantity="one">%d seguidor</item>
     </plurals>
     <plurals name="profile_friends">
-        <item quantity="other">/m%,d/e amigos</item>
-        <item quantity="one">/m%,d/e amigo</item>
+        <item quantity="other">%d amigos</item>
+        <item quantity="one">%d amigo</item>
     </plurals>
     <plurals name="profile_friends_members">
-        <item quantity="other">Há /m%,d/e amigos na comunidade</item>
-        <item quantity="one">Há /m%,d/e amigo na comunidade</item>
+        <item quantity="other">%d amigos na comunidade</item>
+        <item quantity="one">%d amigo na comunidade</item>
     </plurals>
     <plurals name="profile_groups">
-        <item quantity="other">grupos</item>
-        <item quantity="one">grupo</item>
+        <item quantity="other">Grupos</item>
+        <item quantity="one">Grupo</item>
     </plurals>
     <plurals name="profile_members">
         <item quantity="other">%s seguidores</item>
         <item quantity="one">%s seguidor</item>
     </plurals>
     <plurals name="profile_mutual_friends">
-        <item quantity="other">/m%,d/e em comum</item>
-        <item quantity="one">/m%,d/e em comum</item>
+        <item quantity="other">%d amigos em comum</item>
+        <item quantity="one">%d amigo em comum</item>
     </plurals>
     <plurals name="profile_photos">
         <item quantity="other">fotos</item>
@@ -725,19 +725,19 @@
         <item quantity="one">tópico</item>
     </plurals>
     <plurals name="profile_videos">
-        <item quantity="other">vídeos</item>
-        <item quantity="one">vídeo</item>
+        <item quantity="other">Vídeos</item>
+        <item quantity="one">Vídeo</item>
     </plurals>
     <plurals name="push_sync_msg_send_text_normal">
-        <item quantity="other">Envio de %d mensagens</item>
-        <item quantity="one">Envio de %d mensagem</item>
+        <item quantity="other">Enviando %d mensagens</item>
+        <item quantity="one">Enviando %d mensagem</item>
     </plurals>
     <plurals name="qty_msgs">
         <item quantity="other">%,d mensagens</item>
-        <item quantity="one">%,d mensagem</item>
+        <item quantity="one">esta mensagem</item>
     </plurals>
     <plurals name="show_all_addresses">
-        <item quantity="other">Mostrar %d endereços</item>
+        <item quantity="other">Mostrar todas as %d endereços</item>
         <item quantity="one">Mostrar %d endereço</item>
     </plurals>
     <plurals name="show_more_notifications">
@@ -746,7 +746,7 @@
     </plurals>
     <plurals name="stories_replies_from_n_authors">
         <item quantity="other">de %1$s autores</item>
-        <item quantity="one">de %1$s autor</item>
+        <item quantity="one">do autor %1$s</item>
     </plurals>
     <plurals name="stories_replies_replies_count">
         <item quantity="other">%1$s respostas</item>
@@ -765,24 +765,24 @@
         <item quantity="one">amigo</item>
     </plurals>
     <plurals name="story_geo_friends_count">
-        <item quantity="other">%s amigos estão seguindo</item>
-        <item quantity="one">%s amigo está seguindo</item>
+        <item quantity="other">%s amigos acompanhando</item>
+        <item quantity="one">%s amigo acompanhando</item>
     </plurals>
     <plurals name="story_new">
-        <item quantity="other">%1$s novas</item>
-        <item quantity="one">%1$s nova</item>
+        <item quantity="other">%1$s novo</item>
+        <item quantity="one">%1$s novo</item>
     </plurals>
     <plurals name="story_questions_quantity">
-        <item quantity="other">%1$d respostas</item>
-        <item quantity="one">%1$d resposta</item>
+        <item quantity="other">%1$d peças de feedback</item>
+        <item quantity="one">%1$d peça de feedback</item>
     </plurals>
     <plurals name="suggested_posts">
-        <item quantity="other">/m%,d/e notícias sugeridas</item>
-        <item quantity="one">/m%,d/e notícia sugerida</item>
+        <item quantity="other">/m%,d/e posts sugeridos</item>
+        <item quantity="one">/m%,d/e post sugerido</item>
     </plurals>
     <plurals name="suggested_posts_by_me">
-        <item quantity="other">/m%,d/e notícias sugeridas por você</item>
-        <item quantity="one">/m%,d/e notícia sugerida por você</item>
+        <item quantity="other">/m%,d/e posts sugeridos por você</item>
+        <item quantity="one">/m%,d/e post sugerido por você</item>
     </plurals>
     <plurals name="time_ago_day">
         <item quantity="other">%dd</item>
@@ -801,24 +801,24 @@
         <item quantity="one">%dm</item>
     </plurals>
     <plurals name="time_ago_week">
-        <item quantity="other">%ds</item>
-        <item quantity="one">%ds</item>
+        <item quantity="other">%dw</item>
+        <item quantity="one">%dw</item>
     </plurals>
     <plurals name="time_ago_year">
-        <item quantity="other">%da</item>
-        <item quantity="one">%da</item>
+        <item quantity="other">%dy</item>
+        <item quantity="one">%dy</item>
     </plurals>
     <plurals name="time_seconds">
         <item quantity="other">%ds</item>
         <item quantity="one">%ds</item>
     </plurals>
     <plurals name="topic_posts">
-        <item quantity="other">%,d mensagens</item>
-        <item quantity="one">%,d mensagem</item>
+        <item quantity="other">%,d publicações</item>
+        <item quantity="one">%,d publicação</item>
     </plurals>
     <plurals name="typing_more">
         <item quantity="other">%1$s e mais %2$d pessoas</item>
-        <item quantity="one">%1$s e mais %2$d pessoa</item>
+        <item quantity="one">%1$s e mais %2$d outra pessoa</item>
     </plurals>
     <plurals name="video_views">
         <item quantity="other">%,d visualizações</item>
@@ -841,12 +841,12 @@
         <item quantity="one">%s mensagem</item>
     </plurals>
     <plurals name="vkim_business_notify_count_many">
-        <item quantity="other">%d notificações de empresa</item>
-        <item quantity="one">%d notificação de empresa</item>
+        <item quantity="other">%d notificações comerciais</item>
+        <item quantity="one">%d notificação comercial</item>
     </plurals>
     <plurals name="vkim_chat_invite_members_count">
         <item quantity="other">%1$s e mais %2$d pessoas</item>
-        <item quantity="one">%1$s e mais %2$d pessoa</item>
+        <item quantity="one">%1$s e mais %2$d outra pessoa</item>
     </plurals>
     <plurals name="vkim_chat_settings_invites_count">
         <item quantity="other">%d convites</item>
@@ -857,16 +857,16 @@
         <item quantity="one">%d membro</item>
     </plurals>
     <plurals name="vkim_contact_replies_delayed">
-        <item quantity="other">Tempo de resposta — %d minutos</item>
-        <item quantity="one">Tempo de resposta — %d minuto</item>
+        <item quantity="other">Tempo de resposta: %d minutos</item>
+        <item quantity="one">Tempo de resposta: %d minuto</item>
     </plurals>
     <plurals name="vkim_contacts_label">
-        <item quantity="other">%s pessoas de sua lista de contatos já estão no VK. Envie uma mensagem!</item>
-        <item quantity="one">%s pessoa de sua lista de contatos já está no VK. Envie uma mensagem!</item>
+        <item quantity="other">%s pessoas dos seus contatos já estão no VK. Escreva para eles!</item>
+        <item quantity="one">%s pessoa dos seus contatos já está no VK. Escreva para ela!</item>
     </plurals>
     <plurals name="vkim_contacts_show_new_users">
-        <item quantity="other">Ver %s contatos</item>
-        <item quantity="one">Ver %s contato</item>
+        <item quantity="other>Ver %s contatos</item>
+        <item quantity="one>Ver %s contato</item>
     </plurals>
     <plurals name="vkim_history_attaches_video_views">
         <item quantity="other">%d visualizações</item>
@@ -878,11 +878,11 @@
     </plurals>
     <plurals name="vkim_money_request_members_info">
         <item quantity="other">%1$s e mais %2$s pessoas</item>
-        <item quantity="one">%1$s e mais %2$s pessoa</item>
+        <item quantity="one">%1$s e mais %2$s outra pessoa</item>
     </plurals>
     <plurals name="vkim_money_request_members_info_when_has_transfers_from_myself">
-        <item quantity="other">você e mais %s pessoas</item>
-        <item quantity="one">você e mais %s pessoa</item>
+        <item quantity="other">Você e mais %s pessoas</item>
+        <item quantity="one">Você e mais %s outra pessoa</item>
     </plurals>
     <plurals name="vkim_msg_album_multiple">
         <item quantity="other">%d álbuns</item>
@@ -901,24 +901,24 @@
         <item quantity="one">%d anexo</item>
     </plurals>
     <plurals name="vkim_msg_audio_multiple">
-        <item quantity="other">%d arquivos de áudio</item>
-        <item quantity="one">%d arquivo de áudio</item>
+        <item quantity="other">%d faixas</item>
+        <item quantity="one">%d faixa</item>
     </plurals>
     <plurals name="vkim_msg_audiomsg_multiple">
-        <item quantity="other">%d mensagens de voz</item>
-        <item quantity="one">%d mensagem de voz</item>
+        <item quantity="other">%d mensagens de áudio</item>
+        <item quantity="one">%d mensagem de áudio</item>
     </plurals>
     <plurals name="vkim_msg_call_multiple">
-        <item quantity="other">%d ligações</item>
-        <item quantity="one">%d ligação</item>
+        <item quantity="other">%d chamadas</item>
+        <item quantity="one">%d chamada</item>
     </plurals>
     <plurals name="vkim_msg_doc_multiple">
         <item quantity="other">%d documentos</item>
         <item quantity="one">%d documento</item>
     </plurals>
     <plurals name="vkim_msg_expired">
-        <item quantity="other">%d mensagens desaparecidas</item>
-        <item quantity="one">Mensagem desaparecida</item>
+        <item quantity="other">%d mensagens autodestrutivas</item>
+        <item quantity="one">Mensagem autodestrutiva</item>
     </plurals>
     <plurals name="vkim_msg_fwd_multiple">
         <item quantity="other">%d mensagens encaminhadas</item>
@@ -961,40 +961,40 @@
         <item quantity="one">%d link</item>
     </plurals>
     <plurals name="vkim_msg_map_multiple">
-        <item quantity="other">%d localidades</item>
-        <item quantity="one">%d localidade</item>
+        <item quantity="other">%d localizações</item>
+        <item quantity="one">%d localização</item>
     </plurals>
     <plurals name="vkim_msg_market_multiple">
         <item quantity="other">%d produtos</item>
         <item quantity="one">%d produto</item>
     </plurals>
     <plurals name="vkim_msg_mini_app_multiple">
-        <item quantity="other">%d mini apps</item>
-        <item quantity="one">%d mini app</item>
+        <item quantity="other">%d mini aplicativos</item>
+        <item quantity="one">%d mini aplicativo</item>
     </plurals>
     <plurals name="vkim_msg_money_request_multiple">
         <item quantity="other">%d solicitações de dinheiro</item>
         <item quantity="one">%d solicitação de dinheiro</item>
     </plurals>
     <plurals name="vkim_msg_money_transfer_multiple">
-        <item quantity="other">%d transferências</item>
-        <item quantity="one">%d transferência</item>
+        <item quantity="other">%d transferências de dinheiro</item>
+        <item quantity="one">%d transferência de dinheiro</item>
     </plurals>
     <plurals name="vkim_msg_narrative_multiple">
-        <item quantity="other">%d enredos</item>
-        <item quantity="one">%d enredo</item>
+        <item quantity="other">%d narrativas</item>
+        <item quantity="one">%d narrativa</item>
     </plurals>
     <plurals name="vkim_msg_photo_multiple">
         <item quantity="other">%d fotos</item>
         <item quantity="one">%d foto</item>
     </plurals>
     <plurals name="vkim_msg_playlist_multiple">
-        <item quantity="other">%d playlists</item>
-        <item quantity="one">%d playlist</item>
+        <item quantity="other">%d listas de reprodução</item>
+        <item quantity="one">%d lista de reprodução</item>
     </plurals>
     <plurals name="vkim_msg_podcast_episode_multiple">
-        <item quantity="other">%d podasts</item>
-        <item quantity="one">%d podast</item>
+        <item quantity="other">%d episódios de podcast</item>
+        <item quantity="one">%d episódio de podcast</item>
     </plurals>
     <plurals name="vkim_msg_poll_multiple">
         <item quantity="other">%d enquetes</item>
@@ -1025,40 +1025,40 @@
         <item quantity="one">%d vídeo</item>
     </plurals>
     <plurals name="vkim_msg_wall_multiple">
-        <item quantity="other">%d recados no mural</item>
-        <item quantity="one">%d recado no mural</item>
+        <item quantity="other">%d postagens</item>
+        <item quantity="one">%d postagem</item>
     </plurals>
     <plurals name="vkim_msg_wall_reply_multiple">
-        <item quantity="other">%d comentários no mural</item>
-        <item quantity="one">%d comentário no mural</item>
+        <item quantity="other">%d comentários de postagem</item>
+        <item quantity="one">%d comentário de postagem</item>
     </plurals>
     <plurals name="vkim_password_too_short">
-        <item quantity="other">Sua senha deve possuir no mínimo %s caracteres</item>
-        <item quantity="one">Sua senha deve possuir no mínimo %s caractere</item>
+        <item quantity="other">Sua senha deve ter pelo menos %s caracteres</item>
+        <item quantity="one">Sua senha deve ter pelo menos %s caractere</item>
     </plurals>
     <plurals name="vkim_popup_msg_delete_submit_desc">
-        <item quantity="other">Deseja realmente remover %d mensagens?</item>
-        <item quantity="one">Deseja realmente remover %d mensagem?</item>
+        <item quantity="other">Tem certeza de que deseja excluir %d mensagens?</item>
+        <item quantity="one">Tem certeza de que deseja excluir %d mensagem?</item>
     </plurals>
     <plurals name="vkim_popup_msg_spam_submit_desc">
-        <item quantity="other">Deseja realmente marcar %d mensagens como spam?</item>
-        <item quantity="one">Deseja realmente marcar %d mensagem como spam?</item>
+        <item quantity="other">Tem certeza de que deseja marcar %d mensagens como spam?</item>
+        <item quantity="one">Tem certeza de que deseja marcar %d mensagem como spam?</item>
     </plurals>
     <plurals name="vkim_screen_name_status_too_short">
-        <item quantity="other">Ao menos %s símbolos</item>
-        <item quantity="one">Ao menos %s símbolo</item>
+        <item quantity="other">Mínimo de %s caracteres</item>
+        <item quantity="one">Mínimo de %s caractere</item>
     </plurals>
     <plurals name="vkim_typing_many">
         <item quantity="other">%1$s e mais %2$d pessoas</item>
-        <item quantity="one">%1$s e mais %2$d pessoa</item>
+        <item quantity="one">%1$s e mais %2$d outra pessoa</item>
     </plurals>
     <plurals name="vkim_typing_many_new">
-        <item quantity="other">%1$s e mais %2$d pessoas estão digitando…</item>
-        <item quantity="one">%1$s e mais %2$d pessoa estão digitando…</item>
+        <item quantity="other">%1$s e mais %2$d pessoas estão digitando...</item>
+        <item quantity="one">%1$s e mais %2$d outra pessoa está digitando...</item>
     </plurals>
     <plurals name="vkim_wall_post_see_more">
-        <item quantity="other">mais %d anexos</item>
-        <item quantity="one">mais %d anexo</item>
+        <item quantity="other">%d anexos adicionais</item>
+        <item quantity="one">%d anexo adicional</item>
     </plurals>
     <plurals name="wall_comment_replies">
         <item quantity="other">Mostrar %,d respostas</item>
@@ -1066,15 +1066,11 @@
     </plurals>
     <plurals name="wallview_comments">
         <item quantity="other">Mostrar mais %,d comentários</item>
-        <item quantity="one">Mostrar mais um comentário</item>
+        <item quantity="one">Mostrar mais %,d comentário</item>
     </plurals>
     <plurals name="wallview_likes">
         <item quantity="other">%,d pessoas curtiram isso</item>
-        <item quantity="one">Uma pessoa curtiu isso</item>
-    </plurals>
-    <plurals name="wallview_likes_me">
-        <item quantity="other">Você e mais %,d pessoas curtiram isso</item>
-        <item quantity="one">Você e mais uma pessoa curtiram isso</item>
+        <item quantity="one">%,d pessoa curtiu isso</item>
     </plurals>
     <plurals name="x_stickers">
         <item quantity="other">%,d adesivos</item>
