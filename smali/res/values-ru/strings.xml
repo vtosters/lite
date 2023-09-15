@@ -5405,7 +5405,7 @@
     <string name="newsfeedlistmanager_summ">Настройки списков новостей</string>
     <string name="newsfeedlistmanager_reset_title">Сбросить список новостей</string>
     <string name="where_is_cache_settings">Где настройки кеша?</string>
-    <string name="where_is_cache_settings_summ">Они переехали в настройки мода во вкладку Другое</string>
+    <string name="where_is_cache_settings_summ">Они переехали в настройки мода во вкладку Данные и память</string>
     <string name="gms_about">О GMS</string>
     <string name="gms_what_is_title">Что такое GMS?</string>
     <string name="gms_what_is_summ">GMS - Google Mobile Services, необходимый компонент для нормальной работы приложений. Все уведомления, вход в игры, Google Play и прочие функции устройства используют этот компонент</string>
