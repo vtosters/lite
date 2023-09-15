@@ -263,7 +263,7 @@ public class Preferences {
     }
 
     public static boolean stories() {
-        return getBoolValue("stories", true);
+        return getBoolValue("stories", false);
     }
 
     public static boolean swipe() {
