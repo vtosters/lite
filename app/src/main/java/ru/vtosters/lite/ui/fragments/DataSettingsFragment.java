@@ -93,6 +93,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                                 FileUtils.l();
                                 AutoPlayCacheHolder.d.a();
                                 MediaStorage.a();
+                                IOUtils.deleteRecursive(AndroidUtils.getGlobalContext().getCacheDir());
                                 updateCacheSize();
                             })
                             .setNegativeButton(requireContext().getString(com.vtosters.lite.R.string.cancel), (dialogInterface, i) -> dialogInterface.dismiss())
@@ -125,6 +126,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                                         ImEngineExt.a(ImEngine1.a());
                                         AutoPlayCacheHolder.d.a();
                                         MediaStorage.a();
+                                        IOUtils.deleteRecursive(AndroidUtils.getGlobalContext().getCacheDir());
                                     }
                                     case 1 -> {
                                         SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);

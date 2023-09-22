@@ -451,7 +451,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
-                "",
+                "currcache",
                 AndroidUtils.getString(R.string.datasettings_title),
                 getString(com.vtosters.lite.R.string.cache_size_summ) + ": " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())),
                 R.drawable.ic_document_outline_28,
@@ -622,6 +622,16 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
     public void onDestroy() {
         requireContext().unregisterReceiver(mTgsReceiver);
         super.onDestroy();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateCacheSize();
+    }
+
+    private void updateCacheSize() {
+        findPreference("currcache").setSummary(getString(com.vtosters.lite.R.string.cache_size_summ) + ": " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())));
     }
 
     @Override
