@@ -65,7 +65,7 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
         findPreference("microgsettings").setOnPreferenceClickListener(preference -> {
             try {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.setComponent(new ComponentName("com.mgoogle.android.gms", "org.microg.gms.ui.SettingsActivity"));
+                intent.setComponent(new ComponentName((GmsHook.isFakeGms2Installed() ? "app.revanced.android.gms" : "com.mgoogle.android.gms"), "org.microg.gms.ui.SettingsActivity"));
                 startActivity(intent);
             } catch (Exception e) {
                 e.printStackTrace();
