@@ -14,7 +14,6 @@ import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.themes.ThemesManager;
-import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.dialogs.Start;
@@ -64,7 +63,6 @@ public class MainActivityInjector {
 
         Start.alert(activity);
         InstallGMS.alert(activity);
-        DisableBattery.alert(activity);
         // VKIDProtection.alert(activity);
         //needs to show selected tgs pack count in settings after cold launch
         TelegramStickersService.getInstance(activity);

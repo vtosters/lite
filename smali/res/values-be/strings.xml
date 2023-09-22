@@ -6066,9 +6066,7 @@
     <string name="gms_download_microg">Спампаваць MicroG</string>
     <string name="gms_what_to_do_next">Што рабіць далей?</string>
     <string name="gms_what_to_do_after_microg_title">Што рабіць пасля ўстаноўкі MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Увайдзіце ў свой Google акаўнт \n2. Дазвольце VTLite атрымліваць
-        апавяшчэнні \n3. Абнавіце рэгістрацыю Firebase у наладах у раздзеле "Іншае"
-    </string>
+    <string name="gms_what_to_do_after_microg_summ">1. Увайдзіце ў свой Google акаўнт \n2. Пераўсталюеце прыкладанне VTLite</string>
     <string name="donate">Дапамагчы праекту</string>
     <string name="fulltime">dd MMMM yyyy у HH:mm:ss</string>
     <string name="fulltime2">dd MMMM у HH:mm:ss</string>

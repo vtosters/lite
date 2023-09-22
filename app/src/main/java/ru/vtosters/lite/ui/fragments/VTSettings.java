@@ -6,6 +6,8 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.provider.Settings;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
@@ -38,6 +40,7 @@ import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.ssfs.Utils;
+import ru.vtosters.lite.themes.utils.RecolorUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
@@ -99,7 +102,11 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
 
         this.addPreferencesFromResource(R.xml.empty);
 
-        AndroidUtils.checkLinksVerified(this.requireActivity());
+        PowerManager manager = (PowerManager) requireActivity().getSystemService(Context.POWER_SERVICE);
+        boolean isLinksUnverified = AndroidUtils.isLinksUnverified(requireActivity());
+        boolean isDozingAvailable = Build.VERSION.SDK_INT >= 23 && !manager.isIgnoringBatteryOptimizations(AndroidUtils.getPackageName());
+        boolean areNotificationsDisabled = !AndroidUtils.areNotificationsEnabled();
+        boolean isGMSNotInstalled = !GmsHook.isAnyServicesInstalled();
 
         if (AccountManagerUtils.isLogin()) {
             Preference accountSwitcher = PreferenceFragmentUtils.addPreference(
@@ -183,20 +190,82 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
             );
         }
 
-        if (!GmsHook.isAnyServicesInstalled()) {
-            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.gmsname);
+        if (isLinksUnverified || isDozingAvailable || areNotificationsDisabled || isGMSNotInstalled) {
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Рекомендации");
 
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    requireContext().getString(R.string.installgms),
-                    "",
-                    R.drawable.ic_about_outline_28,
-                    preference -> {
-                        NavigatorUtils.switchFragment(requireContext(), InstallGMSFragment.class);
-                        return false;
-                    }
-            );
+            if (isGMSNotInstalled) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        requireContext().getString(R.string.installgms),
+                        "Отсутствие этих сервисов приводит к поломке фоновых уведомлений и проблемами работы компонентов приложения",
+                        RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            NavigatorUtils.switchFragment(requireContext(), InstallGMSFragment.class);
+                            return false;
+                        }
+                );
+            }
+
+            if (isLinksUnverified) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        "Не выбраны ссылки для открытия приложением",
+                        "Это помешает открытию внешинх ссылок для их открытия с помощью этого приложения\n\nВ некоторых случаях необходимо отключить открытие ссылок официальным приложениям ВКонтакте",
+                        RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            try {
+                                Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:" + AndroidUtils.getPackageName()));
+                                requireActivity().startActivity(intent);
+                            } catch (Throwable t1) {
+                                try {
+                                    Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + AndroidUtils.getPackageName()));
+                                    requireActivity().startActivity(intent);
+                                } catch (Throwable ignored) {
+                                    // ignored
+                                }
+                            }
+                            return false;
+                        }
+                );
+            }
+
+            if (isDozingAvailable) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        "Отключите экономию батареи",
+                        "Экономия батареи мешает получению фоновых сообщений, уведомлений и работе музыки",
+                        RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            @SuppressLint("BatteryLife")
+                            var intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+                                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                    .setData(Uri.parse("package:" + AndroidUtils.getPackageName()));
+                            requireActivity().startActivity(intent);
+                            return false;
+                        }
+                );
+            }
+
+            if (areNotificationsDisabled) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        "Включите уведомления",
+                        "Без включенных уведомлений не получится получать сообщения и многое другое",
+                        RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            @SuppressLint("BatteryLife")
+                            var intent = new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+                                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                    .putExtra(Settings.EXTRA_APP_PACKAGE, AndroidUtils.getPackageName());
+                            requireActivity().startActivity(intent);
+                            return false;
+                        }
+                );
+            }
         }
 
         if (Preferences.devmenu()) {
@@ -573,6 +642,18 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
 
                     dialog.setArguments(args);
                     dialog.show(requireFragmentManager(), "");
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "Помочь проекту",
+                "За донат можно получить приятные бонусы на аккаунт",
+                R.drawable.ic_money_circle_outline_28,
+                preference -> {
+                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://vtosters.app/donate")));
                     return false;
                 }
         );

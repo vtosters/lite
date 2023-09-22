@@ -1,9 +1,9 @@
 package ru.vtosters.lite.utils;
 
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.verify.domain.DomainVerificationManager;
@@ -15,11 +15,10 @@ import android.provider.Settings;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
-import com.vk.core.dialogs.alert.VkAlertDialog;
+import androidx.core.app.NotificationManagerCompat;
 import com.vk.core.util.Screen;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
-import ru.vtosters.hooks.other.Preferences;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -30,8 +29,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 import java.util.Random;
-
-import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
 public class AndroidUtils {
     private static final String ALLOWED_CHARACTERS = "0123456789qwertyuiopasdfghjklzxcvbnm";
@@ -124,8 +121,8 @@ public class AndroidUtils {
         new WebViewFragment.g(url).l().m().h().j().a(activity);
     }
 
-    public static void checkLinksVerified(Activity activity) {
-        if (Build.VERSION.SDK_INT < 31) return;
+    public static boolean isLinksUnverified(Activity activity) {
+        if (Build.VERSION.SDK_INT < 31) return false;
 
         DomainVerificationManager manager = activity.getSystemService(DomainVerificationManager.class);
         DomainVerificationUserState userState;
@@ -133,7 +130,7 @@ public class AndroidUtils {
         try {
             userState = manager.getDomainVerificationUserState(getPackageName());
         } catch (PackageManager.NameNotFoundException ignore) {
-            return;
+            return false;
         }
 
         boolean hasUnverified = false;
@@ -145,32 +142,7 @@ public class AndroidUtils {
             hasUnverified = stateValue != null && stateValue != DomainVerificationUserState.DOMAIN_STATE_VERIFIED && stateValue != DomainVerificationUserState.DOMAIN_STATE_SELECTED;
         }
 
-        if (hasUnverified) {
-            if (getBoolValue("showUnverifDialog", true)) {
-                new VkAlertDialog.Builder(activity)
-                        .setTitle(com.vtosters.lite.R.string.warning)
-                        .setMessage(AndroidUtils.getString("app_open_by_default_settings"))
-                        .setCancelable(false)
-                        .setPositiveButton(com.vtosters.lite.R.string.social_graph_skip,
-                                (dialogInterface, i) -> Preferences.getPreferences().edit().putBoolean("showUnverifDialog", false).apply()
-                        )
-                        .setNeutralButton(com.vtosters.lite.R.string.open_settings,
-                                (dialogInterface, i) -> {
-                                    try {
-                                        Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:" + getPackageName()));
-                                        activity.startActivity(intent);
-                                    } catch (Throwable t1) {
-                                        try {
-                                            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()));
-                                            activity.startActivity(intent);
-                                        } catch (Throwable ignored) {
-                                        }
-                                    }
-                                }
-                        )
-                        .show();
-            }
-        }
+        return hasUnverified;
     }
 
     public static String MD5(String s) {
@@ -190,6 +162,15 @@ public class AndroidUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static boolean areNotificationsEnabled() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager manager = (NotificationManager) getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE);
+            return manager.areNotificationsEnabled();
+        } else {
+            return NotificationManagerCompat.from(getGlobalContext()).areNotificationsEnabled();
+        }
     }
 
     private static String getRandomString(int sizeOfRandomString) {
