@@ -190,7 +190,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
             );
         }
 
-        if (isLinksUnverified || isDozingAvailable || areNotificationsDisabled || isGMSNotInstalled) {
+        if ((isLinksUnverified || isDozingAvailable || areNotificationsDisabled || isGMSNotInstalled) && !Preferences.getBoolValue("dialogrecomm", false)) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Рекомендации");
 
             if (isGMSNotInstalled) {
@@ -198,7 +198,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         getPreferenceScreen(),
                         "",
                         requireContext().getString(R.string.installgms),
-                        "Отсутствие этих сервисов приводит к поломке фоновых уведомлений и проблемами работы компонентов приложения",
+                        "Отсутствие этих сервисов приводит к поломке фоновых уведомлений и проблемам работы компонентов приложения",
                         RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
                         preference -> {
                             NavigatorUtils.switchFragment(requireContext(), InstallGMSFragment.class);
@@ -212,7 +212,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         getPreferenceScreen(),
                         "",
                         "Не выбраны ссылки для открытия приложением",
-                        "Это помешает открытию внешинх ссылок для их открытия с помощью этого приложения\n\nВ некоторых случаях необходимо отключить открытие ссылок официальным приложениям ВКонтакте",
+                        "Это помешает открытию внешних ссылок для их открытия с помощью этого приложения\n\nВ некоторых случаях необходимо отключить открытие ссылок официальным приложениям ВКонтакте",
                         RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
                         preference -> {
                             try {
@@ -646,17 +646,19 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                "Помочь проекту",
-                "За донат можно получить приятные бонусы на аккаунт",
-                R.drawable.ic_money_circle_outline_28,
-                preference -> {
-                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://vtosters.app/donate")));
-                    return false;
-                }
-        );
+        if (!Preferences.hasVerification() && !Preferences.getBoolValue("dialogrecomm", false)) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Помочь проекту",
+                    "За донат можно получить приятные бонусы на аккаунт",
+                    R.drawable.ic_money_circle_outline_28,
+                    preference -> {
+                        requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://vtosters.app/donate")));
+                        return false;
+                    }
+            );
+        }
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
