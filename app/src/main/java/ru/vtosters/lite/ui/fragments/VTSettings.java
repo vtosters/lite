@@ -236,7 +236,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         getPreferenceScreen(),
                         "",
                         "Отключите экономию батареи",
-                        "Экономия батареи мешает получению фоновых сообщений, уведомлений и работе музыки",
+                        "Экономия батареи мешает получению фоновых сообщений, уведомлений и работе музыки" + (OEMDetector.isMIUI() ? "\n\nДля устройств Xiaomi необходимо вручную включить в настройках системы пункт Автозапуск данному приложению" : ""),
                         RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
                         preference -> {
                             @SuppressLint("BatteryLife")
