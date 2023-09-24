@@ -202,7 +202,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         "",
                         requireContext().getString(R.string.installgms),
                         "Отсутствие этих сервисов приводит к поломке фоновых уведомлений и проблемам работы компонентов приложения",
-                        RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
+                        RecolorUtils.recolorDrawable(R.drawable.ic_logo_google_28, ThemesUtils.getColor(R.color.red)),
                         preference -> {
                             NavigatorUtils.switchFragment(requireContext(), InstallGMSFragment.class);
                             return false;
@@ -216,7 +216,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         "",
                         "Не выбраны ссылки для открытия приложением",
                         "Это помешает открытию внешних ссылок для их открытия с помощью этого приложения\n\nВ некоторых случаях необходимо отключить открытие ссылок официальным приложениям ВКонтакте",
-                        RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
+                        RecolorUtils.recolorDrawable(R.drawable.ic_linked_outline_28, ThemesUtils.getColor(R.color.red)),
                         preference -> {
                             try {
                                 Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:" + AndroidUtils.getPackageName()));
@@ -239,8 +239,8 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         getPreferenceScreen(),
                         "",
                         "Отключите экономию батареи",
-                        "Экономия батареи мешает получению фоновых сообщений, уведомлений и работе музыки",
-                        RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
+                        "Экономия батареи мешает получению фоновых сообщений, уведомлений и работе музыки" + (OEMDetector.isMIUI() ? "\n\nДля устройств Xiaomi необходимо вручную включить в настройках системы пункт Автозапуск данному приложению" : ""),
+                        RecolorUtils.recolorDrawable(R.drawable.ic_filter_outline_28, ThemesUtils.getColor(R.color.red)),
                         preference -> {
                             @SuppressLint("BatteryLife")
                             var intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
@@ -258,7 +258,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         "",
                         "Включите уведомления",
                         "Без включенных уведомлений не получится получать сообщения и многое другое",
-                        RecolorUtils.recolorDrawable(R.drawable.ic_about_outline_28, ThemesUtils.getColor(R.color.red)),
+                        RecolorUtils.recolorDrawable(R.drawable.ic_notifications_outline_28, ThemesUtils.getColor(R.color.red)),
                         preference -> {
                             @SuppressLint("BatteryLife")
                             var intent = new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
