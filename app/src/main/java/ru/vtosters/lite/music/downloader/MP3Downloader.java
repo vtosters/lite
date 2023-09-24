@@ -70,7 +70,7 @@
 //    }
 //
 //    @Override
-//    public void downloadTrack(String url, File outDir, ru.vtosters.lite.music.Callback callback) {
+//    public void downloadTrack(String url, File outDir, ru.vtosters.lite.music.interfaces.Callback callback) {
 //
 //    }
 //}

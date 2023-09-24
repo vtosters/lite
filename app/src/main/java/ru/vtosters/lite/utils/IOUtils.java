@@ -1,39 +1,12 @@
 package ru.vtosters.lite.utils;
 
-import javax.crypto.Cipher;
-import javax.crypto.CipherInputStream;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.Key;
-import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
 
 public class IOUtils {
     public static int BUFFER_SIZE = 8192;
-
-    public static byte[] decodeStream(InputStream encIs, byte[] aesKey)
-            throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
-        CipherInputStream cip = new CipherInputStream(encIs, getCipher(aesKey));
-        return readFully(cip);
-    }
-
-    public static Cipher getCipher(byte[] aesKey)
-            throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException {
-        Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-        Key keySpec = new SecretKeySpec(aesKey, "AES");
-        byte[] iv = new byte[16];
-        Arrays.fill(iv, (byte) 0x0);
-        IvParameterSpec ivps = new IvParameterSpec(iv);
-        cipher.init(Cipher.DECRYPT_MODE, keySpec, ivps);
-        return cipher;
-    }
 
     public static InputStream openStream(String url)
             throws IOException {

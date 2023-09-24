@@ -139,7 +139,7 @@
 
     move-result p1
 
-    invoke-static {p1, p2}, Lru/vtosters/lite/music/hook/MusicBottomSheetHook;->injectOnClick(ILcom/vk/dto/music/Playlist;)Z
+    invoke-static {p1, p2}, Lru/vtosters/hooks/music/MusicBottomSheetHook;->injectOnClick(ILcom/vk/dto/music/Playlist;)Z
 
     move-result v3
 
@@ -162,7 +162,7 @@
 
     iget-object v0, p0, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;->e:Lcom/vk/dto/music/Playlist;
 
-    invoke-static/range {v0 .. v0}, Lru/vtosters/lite/music/cache/injectors/PlaylistInjector;->injectDownloadPlaylist(Lcom/vk/dto/music/Playlist;)V
+    invoke-static/range {v0 .. v0}, Lru/vtosters/hooks/music/injectors/PlaylistInjector;->injectDownloadPlaylist(Lcom/vk/dto/music/Playlist;)V
 
     goto/16 :goto_0
 

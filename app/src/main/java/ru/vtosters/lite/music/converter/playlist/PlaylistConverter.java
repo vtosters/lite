@@ -26,7 +26,8 @@ import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
  * stuff for converting playlists DTO
  */
 public class PlaylistConverter {
-    public static List<MusicTrack> getPlaylist(Playlist oldPlaylist) {
+    public static List<MusicTrack> getPlaylist(Playlist oldPlaylist)
+    {
         var tracks = requestPlaylist(0, oldPlaylist.b, oldPlaylist.Q, oldPlaylist.a);
         return tracks.stream().filter(track -> !track.D.isEmpty()).collect(Collectors.toList());
     }

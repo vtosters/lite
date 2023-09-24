@@ -1,4 +1,4 @@
-package ru.vtosters.lite.music.catalog.inject;
+package ru.vtosters.hooks.music.injectors;
 
 import android.util.Log;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
@@ -12,7 +12,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
@@ -48,7 +48,7 @@ public class CatalogJsonInjector {
                 setDefaultAudioPage(oldItems, catalog);
             }
 
-            if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
+            if (!MusicCacheImpl.isEmpty() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
                 var noPlaylists = !json.has("playlists");
 
                 if (noPlaylists) {
@@ -91,7 +91,7 @@ public class CatalogJsonInjector {
 
             fixDailyMix(blocks);
 
-            if (!isUsersCatalog || !CacheDatabaseDelegate.hasTracks() || LibVKXClient.isIntegrationEnabled()) {
+            if (!isUsersCatalog || MusicCacheImpl.isEmpty() || LibVKXClient.isIntegrationEnabled()) {
                 return; // early return if not users catalog or no tracks or integration enabled
             }
 

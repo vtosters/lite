@@ -1,7 +1,10 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.annotation.SuppressLint;
-import android.content.*;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;

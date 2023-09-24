@@ -593,7 +593,7 @@
 
     move-result-object v0
 
-    invoke-static/range {v0 .. v0}, Lru/vtosters/lite/music/cache/injectors/PlaylistInjector;->injectDownloadPlaylist(Lcom/vk/dto/music/Playlist;)V
+    invoke-static/range {v0 .. v0}, Lru/vtosters/hooks/music/injectors/PlaylistInjector;->injectDownloadPlaylist(Lcom/vk/dto/music/Playlist;)V
 
     return-void
 

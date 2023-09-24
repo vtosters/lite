@@ -1,4 +1,4 @@
-package ru.vtosters.lite.music.hook;
+package ru.vtosters.hooks.music;
 
 import android.content.Context;
 import com.vk.music.fragment.MusicFragment;

@@ -423,9 +423,9 @@
         .end annotation
     .end param
 
-    # ru.vtosters.lite.music.hook.PlaylistFormatterHook -> public static CharSequence titleAndSubtitleMergeFix(Context context, Playlist playlist, @AttrRes int i)
+    # ru.vtosters.hooks.music.PlaylistFormatterHook -> public static CharSequence titleAndSubtitleMergeFix(Context context, Playlist playlist, @AttrRes int i)
     .line 15
-    invoke-static {p1, p2, p3}, Lru/vtosters/lite/music/hook/PlaylistFormatterHook;->titleAndSubtitleMergeFix(Landroid/content/Context;Lcom/vk/dto/music/Playlist;I)Ljava/lang/CharSequence;
+    invoke-static {p1, p2, p3}, Lru/vtosters/hooks/music/PlaylistFormatterHook;->titleAndSubtitleMergeFix(Landroid/content/Context;Lcom/vk/dto/music/Playlist;I)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -888,7 +888,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {p1, p2}, Lru/vtosters/lite/music/hook/PlaylistFormatterHook;->getOwnerText(Landroid/content/Context;Lcom/vk/dto/music/Playlist;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lru/vtosters/hooks/music/PlaylistFormatterHook;->getOwnerText(Landroid/content/Context;Lcom/vk/dto/music/Playlist;)Ljava/lang/String;
 
     move-result-object p1
 

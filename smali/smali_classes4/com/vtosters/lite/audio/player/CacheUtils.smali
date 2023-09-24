@@ -112,14 +112,14 @@
 .method static a(Ljava/lang/String;)Ljava/io/File;
     .locals 6
 
-    invoke-static {p0}, Lru/vtosters/hooks/MusicCacheFilesHook;->isTrackExist(Ljava/lang/String;)Z
+    invoke-static {p0}, Lru/vtosters/hooks/music/MusicCacheFilesHook;->isTrackExist(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_228
     
     .line 5
-    invoke-static {p0}, Lru/vtosters/hooks/MusicCacheFilesHook;->getTrackFile(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0}, Lru/vtosters/hooks/music/MusicCacheFilesHook;->getTrackFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 

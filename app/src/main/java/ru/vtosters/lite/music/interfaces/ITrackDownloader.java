@@ -1,7 +1,6 @@
 package ru.vtosters.lite.music.interfaces;
 
 import com.vk.dto.music.MusicTrack;
-import ru.vtosters.lite.music.Callback;
 
 import java.io.File;
 

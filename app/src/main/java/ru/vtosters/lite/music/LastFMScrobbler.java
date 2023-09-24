@@ -14,7 +14,7 @@ import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.downloaders.AudioDownloader;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
@@ -47,7 +47,7 @@ public class LastFMScrobbler {
             return;
         }
 
-        if (Preferences.autocache() && !CacheDatabaseDelegate.isCached(uid)) {
+        if (Preferences.autocache() && !MusicCacheImpl.isCachedTrack(uid)) {
             if (LibVKXClient.isIntegrationEnabled()) {
                 LibVKXClient.getInstance().runOnService(service -> {
                     try {

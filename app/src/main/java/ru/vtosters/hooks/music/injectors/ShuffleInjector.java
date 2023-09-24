@@ -1,4 +1,4 @@
-package ru.vtosters.lite.music.cache.injectors;
+package ru.vtosters.hooks.music.injectors;
 
 import com.vk.dto.music.MusicTrack;
 import com.vk.music.model.IpcPlayerModelImpl;

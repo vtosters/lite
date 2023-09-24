@@ -1,4 +1,4 @@
-package ru.vtosters.lite.music.cache.injectors;
+package ru.vtosters.hooks.music.injectors;
 
 import android.util.Log;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
@@ -11,7 +11,7 @@ import io.reactivex.ObservableOnSubscribe;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -56,7 +56,7 @@ public class TracklistInjector {
                     }
                 });
             } else {
-                if (!CacheDatabaseDelegate.hasTracks()) {
+                if (MusicCacheImpl.isEmpty()) {
                     observableEmitter.b(parser.c(getEmptyCatalog()));
                 } else {
                     observableEmitter.b(parser.c(createVirtualCatalog(TracklistHelper.getTracks())));
@@ -135,7 +135,7 @@ public class TracklistInjector {
 
         button.put("action", action);
         button.put("block_id", "shuffle");
-        button.put("ref_items_count", CacheDatabaseDelegate.getTrackCount());
+        button.put("ref_items_count", MusicCacheImpl.getTracksCount());
         button.put("ref_layout_name", "list");
         button.put("ref_data_type", "music_audios");
 
@@ -158,7 +158,7 @@ public class TracklistInjector {
 
             JSONArray blocks = firstSection.getJSONArray("blocks");
 
-            if (CacheDatabaseDelegate.hasTracks() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
+            if (!MusicCacheImpl.isEmpty() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
                 boolean noPlaylists = hasNoPlaylists(blocks);
 
                 if (noPlaylists) {

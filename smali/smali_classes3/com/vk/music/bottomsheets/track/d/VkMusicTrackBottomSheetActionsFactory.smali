@@ -111,7 +111,7 @@
 
     move-object/from16 v10, p1
 
-    invoke-static {v1, v10}, Lru/vtosters/lite/music/hook/MusicBottomSheetHook;->hookDownloadBTN(Ljava/util/ArrayList;Lcom/vk/dto/music/MusicTrack;)Ljava/util/ArrayList;
+    invoke-static {v1, v10}, Lru/vtosters/hooks/music/MusicBottomSheetHook;->hookDownloadBTN(Ljava/util/ArrayList;Lcom/vk/dto/music/MusicTrack;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -705,7 +705,7 @@
 
     .line 31
     :cond_9
-    invoke-static {v3, v1}, Lru/vtosters/lite/music/hook/MusicBottomSheetHook;->hook(Ljava/util/ArrayList;Lcom/vk/dto/music/MusicTrack;)Ljava/util/ArrayList;
+    invoke-static {v3, v1}, Lru/vtosters/hooks/music/MusicBottomSheetHook;->hook(Ljava/util/ArrayList;Lcom/vk/dto/music/MusicTrack;)Ljava/util/ArrayList;
 
     move-result-object v3
     

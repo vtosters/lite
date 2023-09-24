@@ -1,4 +1,4 @@
-package ru.vtosters.lite.music.hook;
+package ru.vtosters.hooks.music;
 
 import android.os.RemoteException;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
@@ -8,45 +8,33 @@ import com.vk.music.bottomsheets.a.MusicAction;
 import com.vk.music.common.MusicPlaybackLaunchContext;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.downloaders.AudioDownloader;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.utils.music.VKXUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.ArrayList;
 
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.*;
 import static ru.vtosters.hooks.other.Preferences.milkshake;
-import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isCached;
-import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isVkxCached;
 import static ru.vtosters.lite.utils.NetworkUtils.isNetworkConnected;
 
 public class MusicBottomSheetHook {
-    public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
+    public static ArrayList<MusicAction> hook(final ArrayList<MusicAction> actions,final MusicTrack musicTrack)
+    {
         if (musicTrack.F1()) return actions;
-
-        var trackid = asId(musicTrack);
-
-        if (isVkxInstalled()) {
-            actions.add(getPlayInVKXAction());
+        final var trackId=asId(musicTrack);
+        if (isVkxInstalled())actions.add(getPlayInVKXAction());
+        if (isIntegrationEnabled())
+        {
+            if(VKXUtils.isVkxCached(trackId))actions.add(getRemoveCacheTrackVkxAction());
+            else if(isNetworkConnected())actions.add(addToCacheTrackVkxAction());
         }
-
-        if (isIntegrationEnabled()) {
-            if (isVkxCached(trackid)) {
-                actions.add(getRemoveCacheTrackVkxAction());
-            } else if (isNetworkConnected()) {
-                actions.add(addToCacheTrackVkxAction());
-            }
-        } else {
-            if (isCached(trackid)) {
-                actions.add(getRemoveCacheTrackAction());
-            } else if (isNetworkConnected()) {
-                actions.add(addToCacheTrackAction());
-            }
+        else
+        {
+            if(MusicCacheImpl.isCachedTrack(trackId))actions.add(getRemoveCacheTrackAction());
+            else if(isNetworkConnected())actions.add(addToCacheTrackAction());
         }
-
-        if (isNetworkConnected()) {
-            actions.add(downloadAsMp3Action());
-        }
-
+        if (isNetworkConnected())actions.add(downloadAsMp3Action());
         return actions;
     }
 
@@ -54,9 +42,7 @@ public class MusicBottomSheetHook {
     public static ArrayList<MusicAction> hookDownloadBTN(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
         if (musicTrack.F1()) return actions;
 
-        var trackid = asId(musicTrack);
-
-        if (isCached(trackid)) {
+        if (MusicCacheImpl.isCachedTrack(musicTrack.y1())) {
             actions.add(new MusicAction(
                     R.id.music_action_toggle_download,
                     milkshake() ? R.drawable.ic_delete_outline_28 : R.drawable.ic_delete_24,
@@ -85,7 +71,7 @@ public class MusicBottomSheetHook {
         if (isVkxInstalled()) actions.add(getPlayInVKXAction());
 
         if (isIntegrationEnabled()) {
-            if (isVkxCached(playlist.a, playlist.b)) {
+            if (VKXUtils.isVkxCached(playlist.a, playlist.b)) {
                 actions.add(getRemoveCacheTrackVkxAction());
             } else if (isNetworkConnected()) {
                 actions.add(addToCacheTrackVkxAction());
@@ -124,7 +110,7 @@ public class MusicBottomSheetHook {
         }
 
         if (actionId == R.id.remove_from_cache) {
-            CacheDatabaseDelegate.removeTrackFromCache(asId(track));
+            MusicCacheImpl.removeTrack(asId(track));
             AndroidUtils.sendToast(AndroidUtils.getString("audio_deleted_from_cache"));
             return true;
         } else if (actionId == R.id.add_to_cache) {
