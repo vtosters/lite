@@ -1534,7 +1534,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/vk/core/bundle/Container;->a(Lcom/vk/core/bundle/Fields4;Z)Z
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->hasMusicSubscription()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->hasMusicSubscription()Z
 
     move-result v0
 
@@ -1932,7 +1932,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->miniapps()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->miniapps()Z
 
     move-result v0
 
@@ -2072,7 +2072,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkpay()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->vkpay()Z
 
     move-result v0
 
@@ -2397,7 +2397,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->dev()Z
 
     move-result v0
 
@@ -2414,7 +2414,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/vk/core/bundle/Container;->a(Lcom/vk/core/bundle/Fields4;Z)Z
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->isMusicRestricted()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->isMusicRestricted()Z
 
     move-result v0
 
@@ -4946,7 +4946,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->dev()Z
 
     move-result v0
 

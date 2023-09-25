@@ -1,8 +1,6 @@
 import org.apache.tools.ant.taskdefs.condition.Os
 
-import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
-import java.util.zip.ZipInputStream
 
 plugins {
     id 'com.android.application'
@@ -21,6 +19,10 @@ cargo {
 
 def smaliFolder = projectDir.toPath().resolve("../smali").normalize()
 def scriptsFolder = projectDir.toPath().resolve("../scripts").normalize()
+//you can add own folders with decompiled smali code
+def dexes=smaliFolder.toFile()
+            .listFiles( { f -> f.isDirectory() && f.name.startsWith("smali") } as FileFilter)
+            .size()
 
 versionFile {
     file = projectDir.toPath().resolve("src/main/assets/version.properties").toFile()
@@ -50,15 +52,22 @@ android {
     }
 
     buildTypes {
+        release {
+            minifyEnabled true
+            buildConfigField 'String', 'APPCENTER_KEY', '""'
+            proguardFile 'proguard-rules.pro'
+        }
+        rc {
+            minifyEnabled true
+            buildConfigField 'String', 'APPCENTER_KEY', '""'
+            proguardFile 'proguard-rules.pro'
+        }
         dev {
-            initWith release
+            minifyEnabled false
             buildConfigField 'String', 'APPCENTER_KEY', '""'
         }
         beta {
-            initWith release
-            buildConfigField 'String', 'APPCENTER_KEY', '""'
-        }
-        release {
+            minifyEnabled false
             buildConfigField 'String', 'APPCENTER_KEY', '""'
         }
     }
@@ -70,77 +79,60 @@ android {
     }
     namespace 'ru.vtosters.lite'
     ndkVersion '25.2.9519653'
+    buildFeatures {
+        aidl true
+    }
+}
+
+task testClasses {
+    doLast {
+        println 'This is a dummy testClasses task'
+    }
 }
 
 dependencies {
-    implementation "com.microsoft.appcenter:appcenter-analytics:5.0.0"
-    implementation "com.microsoft.appcenter:appcenter-crashes:5.0.0"
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    implementation 'com.microsoft.appcenter:appcenter-analytics:5.0.1'
+    implementation 'com.microsoft.appcenter:appcenter-crashes:5.0.1'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
     implementation 'net.sourceforge.streamsupport:streamsupport-minifuture:1.7.4'
+    implementation 'com.google.guava:guava:23.3-android'
+
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.google.guava:guava:23.3-android'
 }
 
 task generateBuildTasks() {
     android.applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def buildType = output.name.toString().capitalize()
-            def lowerBuildType = buildType.toLowerCase()
+            if(buildType=="Base")return
             task "exportDex$buildType"() {
                 dependsOn('assemble' + buildType)
                 doLast {
                     try {
-                        var z = ""
-                        if (lowerBuildType != "debug") {
-                            z = "-unsigned"
-                        }
-
-                        File moduleDir = projectDir
-                        ZipInputStream inputStream = new ZipInputStream(new FileInputStream(moduleDir.getAbsolutePath() + "/build/outputs/apk/$lowerBuildType/app-$lowerBuildType${z}.apk"))
-                        ZipFile file = new ZipFile(moduleDir.getAbsolutePath() + "/build/outputs/apk/$lowerBuildType/app-$lowerBuildType${z}.apk");
-                        ZipEntry entry
-                        while ((entry = inputStream.nextEntry) != null) {
-                            if (entry.getName().equals("classes.dex")) {
-                                print('classes.dex found!')
-
-                                FileOutputStream outputStream = new FileOutputStream(new File(moduleDir.getAbsoluteFile(), "classes6.dex"))
-
-                                byte[] buffer = new byte[1024]
-                                int len = 0
-                                while ((len = inputStream.read(buffer)) > 0) {
-                                    outputStream.write(buffer, 0, len)
-                                }
-                                outputStream.close()
-                            }
-                            if (entry.getName().equals("classes2.dex")) {
-                                print('\nclasses2.dex found!')
-
-                                FileOutputStream outputStream = new FileOutputStream(new File(moduleDir.getAbsoluteFile(), "classes7.dex"))
-
-                                byte[] buffer = new byte[1024]
-                                int len = 0
-                                while ((len = inputStream.read(buffer)) > 0) {
-                                    outputStream.write(buffer, 0, len)
-                                }
-                                outputStream.close()
-                            }
-                        }
-
-                        for (ZipEntry e : Collections.list(file.entries())) {
-                            if (e.getName().endsWith("assets/version.properties")) {
-                                var is = file.getInputStream(e)
-                                FileOutputStream outputStream = new FileOutputStream(new File(moduleDir.getAbsoluteFile(), "version.properties"))
-
-                                byte[] buffer = new byte[1024]
-                                int len = 0
-                                while ((len = is.read(buffer)) > 0) {
-                                    outputStream.write(buffer, 0, len)
-                                }
-                                outputStream.close()
-
-                                print('\nversion.properties found!')
-                            }
+                        def suffix=buildType.toLowerCase()
+                        String apkPath=projectDir.getAbsolutePath()+"/build/outputs/apk/$suffix/app-$suffix"
+                        def apk=new File(apkPath+"-unsigned.apk")
+                        if(!apk.exists())apk=new File(apkPath+".apk")
+                        def zip=new ZipFile(apk)
+                        def entries=zip.entries()
+                        def dexCounter=dexes
+                        while(entries.hasMoreElements())
+                        {
+                            def entry=entries.nextElement()
+                            String filename
+                            if(entry.name.matches("^classes(?:(?=\\d)2|)\\.dex\$"))filename="classes${++dexCounter}.dex"
+                            else if(entry.name=="assets/version.properties")filename="version.properties"
+                            else continue
+                            println("Exporting "+entry.name)
+                            def tmpFile=new File(projectDir,filename)
+                            def is=zip.getInputStream(entry)
+                            def fos=new FileOutputStream(tmpFile)
+                            def buff=new byte[0x800]
+                            int len
+                            while((len=is.read(buff))>0)fos.write(buff,0,len)
+                            is.close()
+                            fos.close()
                         }
                     } catch (Exception e) {
                         e.printStackTrace()
@@ -150,17 +142,16 @@ task generateBuildTasks() {
             task "prepareDexForMerge$buildType"(type: Copy) {
                 dependsOn('exportDex' + buildType)
                 // Remove comment for native lib build
-                dependsOn('cargoBuild')
+                //dependsOn('cargoBuild')
                 into smaliFolder.toString()
                 from(projectDir) {
-                    include 'classes6.dex'
-                    include 'classes7.dex'
+                    into '../smali'
+                    include "classes*.dex"
                 }
                 from(projectDir) {
                     include 'version.properties'
                     into 'assets'
                 }
-                // Remove comment for native lib build
                 from('../native-effects/target/aarch64-linux-android/release'){
                     include 'libnative_effects.so'
                     into 'lib/arm64-v8a'
@@ -169,15 +160,16 @@ task generateBuildTasks() {
                     include 'libnative_effects.so'
                     into 'lib/armeabi-v7a'
                 }
-                doLast {
-                    new File(projectDir, "classes6.dex").delete()
-                    new File(projectDir, "classes7.dex").delete()
-                    new File(projectDir, "version.properties").delete()
-                }
+            }
+            task "cleanTemporaryFiles$buildType"(type:Delete)
+            {
+                delete fileTree(dir:projectDir,include:["*.dex","version.properties"])
+                delete fileTree(dir:smaliFolder,include:['*.dex',"assets/version.properties"])
             }
             task "buildVTL$buildType"(type: Exec) {
                 dependsOn('prepareDexForMerge' + buildType)
                 workingDir(projectDir.parentFile)
+                finalizedBy "cleanTemporaryFiles$buildType"
                 if (Os.isFamily("unix") || Os.isFamily("mac")) {
                     commandLine 'bash', '-c', './scripts/build.sh'
                 } else {
@@ -204,7 +196,6 @@ task generateBuildTasks() {
         }
     }
 }
-
 
 task generateRjava(type: Exec) {
     workingDir(projectDir.parentFile)

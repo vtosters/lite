@@ -5,11 +5,9 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
-
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class SwatchView extends SquareView implements ColorObserver {
-
     private final Paint borderPaint;
     private final Path borderPath;
     private final Paint checkerPaint;
@@ -34,6 +32,31 @@ public class SwatchView extends SquareView implements ColorObserver {
         newFillPath = new Path();
     }
 
+    private static void beginBorder(Path path, float inset, float edgeLen, float cornerRadius, float cornerSweepAngle) {
+        path.reset();
+        path.moveTo(inset, inset);
+        cornerArc(path, edgeLen, inset, cornerRadius - inset, 0, cornerSweepAngle);
+    }
+
+    private static void endBorder(Path path, float inset, float edgeLen, float cornerRadius, float cornerSweepAngle) {
+        cornerArc(path, inset, edgeLen, cornerRadius - inset, 90 - cornerSweepAngle, cornerSweepAngle);
+        path.lineTo(inset, inset);
+        path.close();
+    }
+
+    private static void cornerArc(Path path, float cx, float cy, float r, float startAngle, float sweepAngle) {
+        RectF ovalRect = new RectF(-r, -r, r, r);
+        ovalRect.offset(cx, cy);
+        path.arcTo(ovalRect, startAngle, sweepAngle);
+    }
+
+    private static void mainArc(Path path, float viewSize, float margin, float startAngle, float sweepAngle) {
+        float r = viewSize + margin;
+        RectF ovalRect = new RectF(-r, -r, r, r);
+        ovalRect.offset(viewSize, viewSize);
+        path.arcTo(ovalRect, startAngle, sweepAngle);
+    }
+
     void setOriginalColor(int color) {
         oldFillPaint.setColor(color);
         invalidate();
@@ -53,23 +76,23 @@ public class SwatchView extends SquareView implements ColorObserver {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         // We expect to be stacked behind a square HueSatView and fill the top left corner.
 
-        final float inset = borderPaint.getStrokeWidth() / 2;
-        final float r = Math.min(w, h);
+        float inset = borderPaint.getStrokeWidth() / 2;
+        float r = Math.min(w, h);
 
         // Trim the corners of the swatch is where it is radialMarginPx thick.
         // find how long the outeredges are:
-        final float margin = radialMarginPx;
-        final float diagonal = r + 2 * margin;
-        final float opp = (float)Math.sqrt(diagonal * diagonal - r * r);
-        final float edgeLen = r - opp;
+        float margin = radialMarginPx;
+        float diagonal = r + 2 * margin;
+        float opp = (float) Math.sqrt(diagonal * diagonal - r * r);
+        float edgeLen = r - opp;
 
         // Arc angles for drawing CCW
-        final float outerAngle = (float)Math.toDegrees(Math.atan2(opp, r));
-        final float startAngle = 270 - outerAngle;
+        float outerAngle = (float) Math.toDegrees(Math.atan2(opp, r));
+        float startAngle = 270 - outerAngle;
         // Sweep angle for each half of the swatch:
-        final float sweepAngle = outerAngle - 45;
+        float sweepAngle = outerAngle - 45;
         // Sweep angle for the smooth corners:
-        final float cornerSweepAngle = 90 - outerAngle;
+        float cornerSweepAngle = 90 - outerAngle;
 
         // Outer border:
         beginBorder(borderPath, inset, edgeLen, margin, cornerSweepAngle);
@@ -87,31 +110,6 @@ public class SwatchView extends SquareView implements ColorObserver {
         mainArc(newFillPath, r, margin, startAngle, sweepAngle);
         newFillPath.lineTo(inset, inset);
         newFillPath.close();
-    }
-
-    private static void beginBorder(Path path, float inset, float edgeLen, float cornerRadius, float cornerSweepAngle) {
-        path.reset();
-        path.moveTo(inset, inset);
-        cornerArc(path, edgeLen, inset, cornerRadius-inset, 0, cornerSweepAngle);
-    }
-
-    private static void endBorder(Path path, float inset, float edgeLen, float cornerRadius, float cornerSweepAngle) {
-        cornerArc(path, inset, edgeLen, cornerRadius - inset, 90 - cornerSweepAngle, cornerSweepAngle);
-        path.lineTo(inset, inset);
-        path.close();
-    }
-
-    private static void cornerArc(Path path, float cx, float cy, float r, float startAngle, float sweepAngle) {
-        final RectF ovalRect = new RectF(-r, -r, r, r);
-        ovalRect.offset(cx, cy);
-        path.arcTo(ovalRect, startAngle, sweepAngle);
-    }
-
-    private static void mainArc(Path path, float viewSize, float margin, float startAngle, float sweepAngle) {
-        float r = viewSize + margin;
-        final RectF ovalRect = new RectF(-r, -r, r, r);
-        ovalRect.offset(viewSize, viewSize);
-        path.arcTo(ovalRect, startAngle, sweepAngle);
     }
 
     protected void onDraw(Canvas canvas) {

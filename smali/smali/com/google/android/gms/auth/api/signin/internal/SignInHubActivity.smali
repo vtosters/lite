@@ -426,6 +426,10 @@
 
     const-string v1, "com.google.android.gms"
 
+    invoke-static {v1}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     .line 21
     invoke-virtual {p1, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 

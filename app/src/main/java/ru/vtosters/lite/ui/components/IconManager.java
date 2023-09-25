@@ -3,8 +3,8 @@ package ru.vtosters.lite.ui.components;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.util.Log;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 import java.util.Arrays;
 import java.util.List;
@@ -70,7 +70,8 @@ public class IconManager {
 
         String currentState = "11";
 
-        main: for (int i = 0; i < iconsList.size(); i++) {
+        main:
+        for (int i = 0; i < iconsList.size(); i++) {
             for (int o = 0; o < labelsList.size(); o++) {
                 if (isComponentEnabled("id" + i + o)) {
                     currentState = i + String.valueOf(o);

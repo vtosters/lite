@@ -4385,7 +4385,7 @@
 
     if-eqz p2, :cond_5
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->videofeed()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->videofeed()Z
 
     move-result v0
 

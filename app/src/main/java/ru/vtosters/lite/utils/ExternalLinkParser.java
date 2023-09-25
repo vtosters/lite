@@ -1,7 +1,6 @@
 package ru.vtosters.lite.utils;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,9 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
 public class ExternalLinkParser {
 
@@ -26,18 +23,6 @@ public class ExternalLinkParser {
             "youtu.be",
             "m.youtube.com"
     );
-
-    public static boolean parseVideoFile(VideoFile file) {
-        return parseVideoFile(file, getGlobalContext(), isEnableExternalOpening());
-    }
-
-    public static boolean parseVideoFile(VideoFile file, Context context) {
-        return parseVideoFile(file, context, isEnableExternalOpening());
-    }
-
-    public static boolean parseVideoFile(VideoFile file, Activity activity) {
-        return parseVideoFile(file, activity, isEnableExternalOpening());
-    }
 
     public static boolean parseVideoFile(VideoFile videoFile, Context context, Boolean isEnabled) {
         if (checkYoutubeLink(videoFile)) {
@@ -59,7 +44,7 @@ public class ExternalLinkParser {
 
         parseVKVideo(videoFile, qualities, urls);
 
-        if (urls.size() > 0)
+        if (!urls.isEmpty())
             if (getBoolValue("maxquality", false) || qualities.size() == 1)
                 startExternalVideo(context, urls.get(0));
             else
@@ -68,7 +53,7 @@ public class ExternalLinkParser {
                                 qualities.toArray(new String[0]),
                                 (dialog, which) -> startExternalVideo(context, urls.get(which))
                         )
-                       .show();
+                        .show();
         return true;
     }
 
@@ -93,7 +78,7 @@ public class ExternalLinkParser {
      */
     public static boolean parseVKVideo(VideoFile videoFile, List<String> qualities, List<String> urls) {
         if (!TextUtils.isEmpty(videoFile.D)) {
-           qualities.add("2160p");
+            qualities.add("2160p");
             urls.add(videoFile.D);
         }
 
@@ -138,11 +123,11 @@ public class ExternalLinkParser {
             String packageName = getMXPlayerPackageName(context);
             if (!TextUtils.isEmpty(packageName)) {
                 intent.setPackage(packageName)
-                      .setDataAndType(uri, "application/mp4")
-                      .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        .setDataAndType(uri, "application/mp4")
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             } else {
                 intent.setAction(Intent.ACTION_VIEW)
-                      .setDataAndType(uri, "video/mp4");
+                        .setDataAndType(uri, "video/mp4");
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);

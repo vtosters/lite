@@ -1585,7 +1585,7 @@
 .method public setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lru/vtosters/hooks/other/ThemesUtils;->recolorToolbarDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
     

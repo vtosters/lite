@@ -2,20 +2,18 @@ package ru.vtosters.lite.utils;
 
 import android.app.Application;
 import android.os.Handler;
-
 import androidx.annotation.NonNull;
-
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.channel.AbstractChannelListener;
 import com.microsoft.appcenter.channel.Channel;
 import com.microsoft.appcenter.crashes.Crashes;
 import com.microsoft.appcenter.ingestion.models.Log;
-
-import java.util.HashMap;
-
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.ui.fragments.TrackedMaterialPreferenceToolbarFragment;
+
+import java.util.HashMap;
 
 public class AnalyticsHelper {
     private static final boolean analyticsDisabled = Preferences.getBoolValue("analyticsDisabled", false);
@@ -26,8 +24,8 @@ public class AnalyticsHelper {
         @Override
         public void onPreparedLog(@NonNull Log log, @NonNull String groupName, int flags) {
             var device = log.getDevice();
-            device.setAppVersion(About.getBuildNumber());
-            device.setAppBuild(About.getBuildNumber());
+            device.setAppVersion(VersionReader.getVersionBuild());
+            device.setAppBuild(VersionReader.getVersionBuild());
         }
     };
 
@@ -93,6 +91,7 @@ public class AnalyticsHelper {
 
         Crashes.trackError(th);
     }
+
     public static void setAnalyticsStatus(Boolean bool) {
         Analytics.setEnabled(bool && Preferences.isValidSignature());
         Crashes.setEnabled(bool && !AndroidUtils.isDebuggable() && Preferences.isValidSignature());

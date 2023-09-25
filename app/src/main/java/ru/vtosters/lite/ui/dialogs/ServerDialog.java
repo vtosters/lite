@@ -1,29 +1,22 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static android.content.ContentValues.TAG;
-import static ru.vtosters.lite.utils.NetworkUtils.isNetworkIsSlow;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.hasVerification;
-
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
-
+import okhttp3.*;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 import java.io.IOException;
 import java.util.Random;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
-import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.Preferences;
+import static android.content.ContentValues.TAG;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
+import static ru.vtosters.hooks.other.Preferences.hasVerification;
 
 public class ServerDialog {
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
@@ -40,7 +33,7 @@ public class ServerDialog {
     public static void sendRequest() {
         if (getBoolValue("dialogrecomm", false)) return;
 
-        if (!isNetworkIsSlow() && !getBoolValue("isRoamingState", false)) {
+        if (!getBoolValue("isRoamingState", false)) {
             Request request = new Request.a()
                     .b("https://vtosters.app/dialog.json")
                     .a();
@@ -48,7 +41,7 @@ public class ServerDialog {
             client.a(request).a(new Callback() {
                 @Override
                 public void a(Call call, IOException e) {
-                    Log.d(TAG, "" + e);
+                    Log.d(TAG, e.getMessage());
                     showAlert = false;
                 }
 
@@ -93,7 +86,7 @@ public class ServerDialog {
 
         showAlert = true;
 
-        var activity = LifecycleUtils.getCurrentActivity();
+        Activity activity = LifecycleUtils.getCurrentActivity();
         if (getBoolValue(key, true) && showForNotVerified() && showAlert) {
             activity.runOnUiThread(() -> {
                 new VkAlertDialog.Builder(activity)
@@ -104,7 +97,7 @@ public class ServerDialog {
                                 (dialogInterface, i) -> Preferences.getPreferences().edit().putBoolean(key, false).apply())
                         .setNeutralButton(neutralButton, (dialogInterface, i) -> {
                             Preferences.getPreferences().edit().putBoolean(key, false).apply();
-                            var intent = new Intent(Intent.ACTION_VIEW)
+                            Intent intent = new Intent(Intent.ACTION_VIEW)
                                     .setData(Uri.parse(link));
                             activity.startActivity(intent);
                         })

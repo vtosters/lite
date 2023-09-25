@@ -18,7 +18,7 @@
 .method public static synthetic a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;Ljava/lang/String;Lcom/vk/im/engine/models/dialogs/ConversationBar$ButtonType;ILjava/lang/Object;)V
     .locals 1
 
-    invoke-static {}, Lru/vtosters/lite/ssfs/ImBanner;->showAlert()Z
+    invoke-static {}, Lru/vtosters/hooks/ssfs/BannerHook;->showAlert()Z
 
     move-result v0
 

@@ -43,7 +43,7 @@
 .method public a()I
     .locals 3
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->swipe()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->swipe()Z
 
     move-result v2
 

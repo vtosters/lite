@@ -2983,7 +2983,26 @@
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v14
+    ###
+    const-string v2, "useGenius"
 
+    const/4 v3, 0x0
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lru/vtosters/hooks/other/Preferences;->getBoolValue(Ljava/lang/String;Ljava/lang/Boolean;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_37
+
+    invoke-static {}, Lru/vtosters/lite/utils/NetworkUtils;->isNetworkConnected()Z
+
+    move-result v14
+    ###
+    :cond_37
     const-string v2, "album"
 
     .line 44

@@ -82,7 +82,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/music/catalog/inject/CatalogJsonInjector;->fixArtists(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static {p1}, Lru/vtosters/hooks/CatalogsHook;->injectCatalogGetAudioArtist(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 

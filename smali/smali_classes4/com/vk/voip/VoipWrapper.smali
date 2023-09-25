@@ -2472,6 +2472,16 @@
 .method private final i()Z
     .locals 10
 
+    sget-object v3, Lcom/vk/voip/VoipWrapper;->j0:Lcom/vk/voip/VoipWrapper;
+
+    sget-object v4, Lcom/vk/voip/VoipWrapper$State;->NativeLibraryLoadFailure:Lcom/vk/voip/VoipWrapper$State;
+
+    invoke-direct {v3, v4}, Lcom/vk/voip/VoipWrapper;->a(Lcom/vk/voip/VoipWrapper$State;)V
+
+    const/4 v1, 0x0
+
+    return v1
+
     .line 1
     sget-object v0, Lcom/vk/voip/VoipWrapper;->d0:Ljava/lang/Object;
 

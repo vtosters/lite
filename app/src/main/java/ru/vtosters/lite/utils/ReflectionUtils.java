@@ -1,9 +1,10 @@
 package ru.vtosters.lite.utils;
 
 import android.content.Context;
-import com.vk.im.ui.views.Corners;
 
-import java.lang.reflect.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 public class ReflectionUtils {
 
@@ -22,65 +23,65 @@ public class ReflectionUtils {
             throws NoSuchFieldException {
         NoSuchFieldException ex = null;
         Field fld = null;
-        for(; clz != null; clz = clz.getSuperclass()) {
+        for (; clz != null; clz = clz.getSuperclass()) {
             try {
                 fld = clz.getDeclaredField(fieldName);
                 break;
-            } catch(NoSuchFieldException e) {
+            } catch (NoSuchFieldException e) {
                 ex = e;
             }
         }
-        if(fld == null) throw ex;
+        if (fld == null) throw ex;
         fld.setAccessible(true);
         return fld;
     }
 
     public static Field findField(Object instance, String fieldName)
-        throws NoSuchFieldException {
+            throws NoSuchFieldException {
         return findField(instance.getClass(), fieldName);
     }
 
     public static Constructor<?> findConstructor(Class<?> clz, Class<?>... params)
-        throws NoSuchMethodException {
+            throws NoSuchMethodException {
         Constructor<?> cctor = null;
-        for(; clz != null; clz = clz.getSuperclass()) {
+        for (; clz != null; clz = clz.getSuperclass()) {
             try {
                 cctor = clz.getDeclaredConstructor(params);
-            } catch(NoSuchMethodException ignored) {
+            } catch (NoSuchMethodException ignored) {
             }
         }
-        if(cctor == null) throw new NoSuchMethodException("");
+        if (cctor == null) throw new NoSuchMethodException("");
         cctor.setAccessible(true);
         return cctor;
     }
 
     public static Constructor<?> findConstructor(Object instance, Class<?>... params)
-        throws  NoSuchMethodException {
+            throws NoSuchMethodException {
         return findConstructor(instance.getClass(), params);
     }
 
     public static Method findMethod(Class<?> clz, String methodName, Class<?>... params)
-        throws NoSuchMethodException {
+            throws NoSuchMethodException {
         Method mtd = null;
-        for(; clz != null; clz = clz.getSuperclass()) {
+        for (; clz != null; clz = clz.getSuperclass()) {
             try {
                 mtd = clz.getDeclaredMethod(methodName, params);
-            } catch(NoSuchMethodException ignored) {
+            } catch (NoSuchMethodException ignored) {
             }
         }
-        if(mtd == null) throw new NoSuchMethodException("methodName == " + methodName);
+        if (mtd == null) throw new NoSuchMethodException("methodName == " + methodName);
         mtd.setAccessible(true);
         return mtd;
     }
 
     public static Method findMethod(Object instance, String methodName, Class<?>... params)
-        throws  NoSuchMethodException {
+            throws NoSuchMethodException {
         return findMethod(instance.getClass(), methodName, params);
     }
 
     public static Object getActivityThread(Context context, Class<?> clz) {
         try {
-            if(clz == null) clz = findClass("android.app.ActivityThread");
+            if (clz == null) clz = findClass("android.app.ActivityThread");
             final Method currentActivityThreadMtd = findMethod(clz, "currentActivityThread");
             Object currentActivityThread = currentActivityThreadMtd.invoke(null);
             if (currentActivityThread == null && context != null) {
@@ -93,7 +94,7 @@ public class ReflectionUtils {
                 currentActivityThread = activityThreadFld.get(apk);
             }
             return currentActivityThread;
-        } catch(Throwable th) {
+        } catch (Throwable th) {
             return null;
         }
     }

@@ -81,7 +81,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/music/catalog/inject/CatalogJsonInjector;->music(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static {p1}, Lru/vtosters/hooks/CatalogsHook;->injectCatalogGetAudio(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -89,7 +89,7 @@
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/music/cache/injectors/TracklistInjector;->injectIntoExistingCatalog(Lorg/json/JSONObject;)V
+    invoke-static/range {p1 .. p1}, Lru/vtosters/hooks/music/injectors/TracklistInjector;->injectIntoExistingCatalog(Lorg/json/JSONObject;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/CatalogParser;->c(Lorg/json/JSONObject;)Lcom/vk/catalog2/core/api/dto/CatalogResponse;
 

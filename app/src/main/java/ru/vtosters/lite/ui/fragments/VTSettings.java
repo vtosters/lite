@@ -1,15 +1,26 @@
 package ru.vtosters.lite.ui.fragments;
 
+import android.annotation.SuppressLint;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.provider.Settings;
 import androidx.annotation.StringRes;
-import com.aefyr.tsg.g2.TelegramStickersPack;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
+import androidx.preference.Preference;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.identity.fragments.IdentityListFragment;
+import com.vk.medianative.MediaImageEncoder;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.MainActivity;
@@ -22,16 +33,35 @@ import com.vtosters.lite.fragments.w2.BlacklistFragment;
 import com.vtosters.lite.general.fragments.SettingsAccountFragment;
 import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
+import ru.vtosters.hooks.AboutHook;
+import ru.vtosters.hooks.GmsHook;
+import ru.vtosters.hooks.VerificationsHook;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
+import ru.vtosters.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.concurrent.VTExecutors;
-import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
+import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.ssfs.Utils;
+import ru.vtosters.lite.themes.utils.RecolorUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.*;
 
-public class VTSettings extends TrackedMaterialPreferenceToolbarFragment implements TelegramStickersService.StickersEventsListener {
+import java.util.Locale;
+
+public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
+    public static String ACTION_INVALIDATE_TGS_COUNT = "com.vtosters.lite.intent.action.INVALIDATE_TGS_COUNT";
+
+    BroadcastReceiver mTgsReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (ACTION_INVALIDATE_TGS_COUNT.equals(intent.getAction())) {
+                findPreference("tgs_stickers").setSummary(getTGSsumm());
+            }
+        }
+    };
 
     public static String getValAsString(@StringRes int strRes, Boolean value) {
         if (value) {
@@ -53,7 +83,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
     }
 
     public static String getProxysumm() {
-        var type = Preferences.getString("proxy");
+        String type = Preferences.getString("proxy");
 
         if (type.equals("noproxy") || type.isEmpty())
             type = AndroidUtils.getString(R.string.vtlsettdisabled);
@@ -65,49 +95,24 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
         ThemesUtils.setTheme(isDarkTheme ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme(), requireActivity(), true);
     }
 
-    @Override
-    public void onPackAdded(TelegramStickersPack pack, int atIndex) {
-
-    }
-
-    @Override
-    public void onPackRemoved(TelegramStickersPack pack, int atIndex) {
-
-    }
-
-    @Override
-    public void onPackChanged(TelegramStickersPack pack, int atIndex) {
-
-    }
-
-    @Override
-    public void onPackDownloadError(TelegramStickersPack pack, Exception error) {
-
-    }
-
-    @Override
-    public void onActivePacksListChanged() {
-        findPreference("tgs_stickers").setSummary(getTGSsumm());
-    }
-
-    @Override
-    public void onInactivePacksListChanged() {
-
-    }
-
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @SuppressWarnings("ConstantConditions")
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
-        TelegramStickersService.getInstance(requireContext()).addStickersEventsListener(this);
+        requireContext().registerReceiver(mTgsReceiver, new IntentFilter(ACTION_INVALIDATE_TGS_COUNT));
 
         this.addPreferencesFromResource(R.xml.empty);
 
-        AndroidUtils.checkLinksVerified(this.requireActivity());
+        PowerManager manager = (PowerManager) requireActivity().getSystemService(Context.POWER_SERVICE);
+        boolean isLinksUnverified = AndroidUtils.isLinksUnverified(requireActivity());
+        boolean isDozingAvailable = Build.VERSION.SDK_INT >= 23 && !manager.isIgnoringBatteryOptimizations(AndroidUtils.getPackageName());
+        boolean areNotificationsDisabled = !AndroidUtils.areNotificationsEnabled();
+        boolean isGMSNotInstalled = !GmsHook.isAnyServicesInstalled();
 
         if (AccountManagerUtils.isLogin()) {
-            var accountSwitcher = PreferenceFragmentUtils.addPreference(
+            Preference accountSwitcher = PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "account_switcher",
                     AccountManagerUtils.getUsername(),
@@ -117,9 +122,10 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                         try {
                             VKAuth.a("logout", false);
                         } catch (Exception ignored) {
+                            // ignored
                         }
 
-                        var intent = new Intent(requireContext(), MainActivity.class)
+                        Intent intent = new Intent(requireContext(), MainActivity.class)
                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -129,7 +135,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                     });
 
             VTExecutors.getIoScheduler().a(() -> {
-                var icon = ImageUtils.getDrawableFromUrl(AccountManagerUtils.getUserPhoto(), 0, true, true);
+                Drawable icon = ImageUtils.getDrawableFromUrl(AccountManagerUtils.getUserPhoto(), 0, true, true);
                 if (icon == null) return;
                 requireActivity().runOnUiThread(() -> {
                     accountSwitcher.setIcon(icon);
@@ -161,11 +167,11 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 ThemesUtils.isDarkTheme(),
                 (preference, o) -> {
                     if (Preferences.systemtheme()) {
-                        AndroidUtils.sendToast("Включена установка темы как на устройстве");
+                        AndroidUtils.sendToast(AndroidUtils.getString("systemtheme_enabled"));
                         return false;
                     }
-                    final var switchPreference = (MaterialSwitchPreference) preference;
-                    final var isDarkTheme = !switchPreference.isChecked();
+                    MaterialSwitchPreference switchPreference = (MaterialSwitchPreference) preference;
+                    boolean isDarkTheme = !switchPreference.isChecked();
                     switchTheme(isDarkTheme);
                     return true;
                 }
@@ -175,32 +181,94 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
             PreferenceFragmentUtils.addMaterialSwitchPreference(
                     getPreferenceScreen(),
                     "system_theme",
-                    "Системная тема",
-                    "Использовать тему установленную на устройстве",
+                    AndroidUtils.getString("systemtheme"),
+                    AndroidUtils.getString("systemtheme_summ"),
                     R.drawable.ic_palette_outline_28,
                     Preferences.systemtheme(),
                     (preference, o) -> {
-                        Preferences.getPreferences().edit().putBoolean("system_theme", (boolean) o).commit();
+                        Preferences.getPreferences().edit().putBoolean("system_theme", (boolean) o).apply();
                         SystemThemeChangerHook.onThemeChanged(requireActivity().getResources().getConfiguration());
                         return true;
                     }
             );
         }
 
-        if (!GmsUtils.isGmsInstalled()) {
-            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.gmsname);
+        if ((isLinksUnverified || isDozingAvailable || areNotificationsDisabled || isGMSNotInstalled) && !Preferences.getBoolValue("dialogrecomm", false)) {
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Рекомендации");
 
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    requireContext().getString(R.string.installgms),
-                    "",
-                    R.drawable.ic_about_outline_28,
-                    preference -> {
-                        NavigatorUtils.switchFragment(requireContext(), InstallGMSFragment.class);
-                        return false;
-                    }
-            );
+            if (isGMSNotInstalled) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        requireContext().getString(R.string.installgms),
+                        "Отсутствие этих сервисов приводит к поломке фоновых уведомлений и проблемам работы компонентов приложения",
+                        RecolorUtils.recolorDrawable(R.drawable.ic_logo_google_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            NavigatorUtils.switchFragment(requireContext(), InstallGMSFragment.class);
+                            return false;
+                        }
+                );
+            }
+
+            if (isLinksUnverified) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        "Не выбраны ссылки для открытия приложением",
+                        "Это помешает открытию внешних ссылок для их открытия с помощью этого приложения\n\nВ некоторых случаях необходимо отключить открытие ссылок официальным приложениям ВКонтакте",
+                        RecolorUtils.recolorDrawable(R.drawable.ic_linked_outline_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            try {
+                                Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:" + AndroidUtils.getPackageName()));
+                                requireActivity().startActivity(intent);
+                            } catch (Throwable t1) {
+                                try {
+                                    Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + AndroidUtils.getPackageName()));
+                                    requireActivity().startActivity(intent);
+                                } catch (Throwable ignored) {
+                                    // ignored
+                                }
+                            }
+                            return false;
+                        }
+                );
+            }
+
+            if (isDozingAvailable) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        "Отключите экономию батареи",
+                        "Экономия батареи мешает получению фоновых сообщений, уведомлений и работе музыки" + (OEMDetector.isMIUI() ? "\n\nДля устройств Xiaomi необходимо вручную включить в настройках системы пункт Автозапуск данному приложению" : ""),
+                        RecolorUtils.recolorDrawable(R.drawable.ic_filter_outline_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            @SuppressLint("BatteryLife")
+                            var intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+                                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                    .setData(Uri.parse("package:" + AndroidUtils.getPackageName()));
+                            requireActivity().startActivity(intent);
+                            return false;
+                        }
+                );
+            }
+
+            if (areNotificationsDisabled) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        "Включите уведомления",
+                        "Без включенных уведомлений не получится получать сообщения и многое другое",
+                        RecolorUtils.recolorDrawable(R.drawable.ic_notifications_outline_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            @SuppressLint("BatteryLife")
+                            var intent = new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+                                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                    .putExtra(Settings.EXTRA_APP_PACKAGE, AndroidUtils.getPackageName());
+                            requireActivity().startActivity(intent);
+                            return false;
+                        }
+                );
+            }
         }
 
         if (Preferences.devmenu()) {
@@ -395,7 +463,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.vtlmedia),
-                getValAsString(R.string.sett_compress_photos, Preferences.getBoolValue("compressPhotos", true)),
+                getValAsString(R.string.sett_compress_photos, MediaImageEncoder.needToCompress()),
                 R.drawable.ic_media_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), MediaFragment.class);
@@ -445,10 +513,22 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.vtlinterface),
-                getValAsString(R.string.showstories, Preferences.stories()),
+                getValAsString(R.string.show_superapps_title, Preferences.superapp()),
                 R.drawable.ic_interface_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), InterfaceFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "currcache",
+                AndroidUtils.getString(R.string.datasettings_title),
+                getString(com.vtosters.lite.R.string.cache_size_summ) + ": " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())),
+                R.drawable.ic_document_outline_28,
+                preference -> {
+                    NavigatorUtils.switchFragment(requireContext(), DataSettingsFragment.class);
                     return false;
                 }
         );
@@ -470,18 +550,32 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 "",
                 requireContext().getString(R.string.vtlproxy),
                 getProxysumm(),
-                R.drawable.ic_globe_outline_28,
+                R.drawable.ic_linked_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), ProxySettingsFragment.class);
                     return false;
                 }
         );
 
+        if (Build.VERSION.SDK_INT >= 33 && !OEMDetector.isMIUI()) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    AndroidUtils.getString("appLanguage"),
+                    AndroidUtils.getString("currentLanguage") + " " + AndroidUtils.upString(Locale.getDefault().getDisplayLanguage()),
+                    R.drawable.ic_globe_outline_28,
+                    preference -> {
+                        startActivity(new Intent("android.settings.APP_LOCALE_SETTINGS", Uri.parse("package:" + AndroidUtils.getPackageName())));
+                        return false;
+                    }
+            );
+        }
+
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.vtlother),
-                getValAsString(R.string.vtlothersumm, VTVerifications.vtverif()),
+                getValAsString(R.string.vtlothersumm, VerificationsHook.vtverif()),
                 R.drawable.ic_more_horizontal_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), OtherFragment.class);
@@ -495,7 +589,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.menu_about),
-                Preferences.getBuildName() + " | " + About.getBuildNumber(),
+                Preferences.getBuildName() + " | " + (Preferences.isValidSignature() ? VersionReader.getVersionBuild() : VersionReader.getVersionFull()),
                 R.drawable.ic_about_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), AboutAppFragment.class);
@@ -503,18 +597,71 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 }
         );
 
+        if (AndroidUtils.isAdbOrDeveloperOptionsEnabled(requireContext().getContentResolver())) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.opencommit),
+                    "",
+                    R.drawable.ic_link_outline_28,
+                    preference -> {
+                        requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(AboutHook.getCommitLink())));
+                        return false;
+                    }
+            );
+        }
+
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                requireContext().getString(R.string.opencommit),
-                "",
-                R.drawable.ic_link_outline_28,
+                "Наши чаты",
+                "Активные чаты по обсуждению модификации и многому другому",
+                R.drawable.ic_message_outline_28,
                 preference -> {
-                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(About.getCommitLink())));
+                    var args = new Bundle();
+                    var dialog = new AboutInformation();
+
+                    args.putString("vk_link", "https://vk.me/join/jKE1bIZczHTF2mLkuoiQcd0qIBYgHuGFPRA=");
+                    args.putString("tg_link", "https://t.me/vtosterschat");
+
+                    dialog.setArguments(args);
+                    dialog.show(requireFragmentManager(), "");
                     return false;
                 }
         );
 
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "Наши сообщества",
+                "Самая свежая информация об обновлениях и не только!",
+                R.drawable.users_3_outline_28,
+                preference -> {
+                    var args = new Bundle();
+                    var dialog = new AboutInformation();
+
+                    args.putString("vk_link", "https://vk.com/vtosters_official");
+                    args.putString("tg_link", "https://t.me/vtosters");
+
+                    dialog.setArguments(args);
+                    dialog.show(requireFragmentManager(), "");
+                    return false;
+                }
+        );
+
+        if (!Preferences.hasVerification() && !Preferences.getBoolValue("dialogrecomm", false)) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Помочь проекту",
+                    "За донат можно получить приятные бонусы на аккаунт",
+                    R.drawable.ic_money_circle_outline_28,
+                    preference -> {
+                        requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://vtosters.app/donate")));
+                        return false;
+                    }
+            );
+        }
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
@@ -540,7 +687,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                 }
         );
 
-        if (Preferences.isValidSignature() && BuildConfig.BUILD_TYPE.equals("release")) {
+        if (Preferences.isValidSignature() && !BuildConfig.BUILD_TYPE.equals("dev")) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.updates));
 
             PreferenceFragmentUtils.addPreference(
@@ -550,7 +697,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
                     "",
                     R.drawable.ic_download_outline_28,
                     preference -> {
-                        OTADialog.checkUpdates(getActivity());
+                        OTADialog.checkUpdatesManual(getActivity());
                         return false;
                     }
             );
@@ -558,8 +705,19 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
     }
 
     @Override
+    public void onDestroy() {
+        requireContext().unregisterReceiver(mTgsReceiver);
+        super.onDestroy();
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
+        updateCacheSize();
+    }
+
+    private void updateCacheSize() {
+        findPreference("currcache").setSummary(getString(com.vtosters.lite.R.string.cache_size_summ) + ": " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())));
     }
 
     @Override
@@ -567,9 +725,24 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment impleme
         return R.string.notification_settings;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        TelegramStickersService.getInstance(requireContext()).removeStickersEventsListener(this);
+    public static class AboutInformation extends DialogFragment {
+        @Override
+        public AlertDialog onCreateDialog(Bundle savedInstanceState) {
+            VkAlertDialog.Builder builder = new VkAlertDialog.Builder(requireActivity());
+
+            String[] items = {AndroidUtils.getString(R.string.app_name_alter), "Telegram"};
+
+            builder.setItems(items, (dialog, which) -> {
+                switch (which) {
+                    case 0 ->
+                            requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getArguments().getString("vk_link"))));
+                    case 1 ->
+                            requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getArguments().getString("tg_link"))));
+                }
+                dismiss();
+            });
+
+            return builder.create();
+        }
     }
 }

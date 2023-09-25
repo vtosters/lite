@@ -11,11 +11,10 @@ import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.groups.Group;
 import com.vk.im.engine.utils.DialogPermissionHelper;
 import com.vk.im.ui.p.ImBridge7;
+import ru.vtosters.hooks.DialogMenuInjectors;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import ru.vtosters.lite.dnr.DNRInjector;
 
 public final class DialogActionsHelper {
     public static final DialogActionsHelper a = new DialogActionsHelper();
@@ -28,7 +27,7 @@ public final class DialogActionsHelper {
             boolean I1 = z1 != null && z1.I1();
             ArrayList<DialogAction> arrayList = new ArrayList<>();
 
-            DNRInjector.inject(dialog, arrayList);
+            DialogMenuInjectors.inject(dialog, arrayList);
 
             arrayList.add(DialogAction.SEARCH);
 
@@ -97,7 +96,7 @@ public final class DialogActionsHelper {
         ChatSettings z1 = dialog.z1();
         ArrayList<DialogAction> arrayList = new ArrayList<>();
 
-        DNRInjector.inject(dialog, arrayList);
+        DialogMenuInjectors.inject(dialog, arrayList);
 
 //        if (dialog.hasUnread()) {
         arrayList.add(DialogAction.MARK_AS_READ);

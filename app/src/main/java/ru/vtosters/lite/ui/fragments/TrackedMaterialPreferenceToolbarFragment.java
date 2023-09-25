@@ -1,9 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.os.Bundle;
-
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
 import ru.vtosters.lite.utils.AnalyticsHelper;
 
 public class TrackedMaterialPreferenceToolbarFragment extends MaterialPreferenceToolbarFragment {

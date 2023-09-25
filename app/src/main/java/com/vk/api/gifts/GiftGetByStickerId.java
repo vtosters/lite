@@ -1,10 +1,8 @@
 package com.vk.api.gifts;
 
 import android.content.Context;
-
 import com.vk.api.base.ApiRequest;
 import com.vk.dto.gift.CatalogedGift;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -29,7 +27,7 @@ public class GiftGetByStickerId extends ApiRequest<GiftGetByStickerId.a> {
     @Override // com.vk.api.sdk.o.VKRequest
     public GiftGetByStickerId.a a(JSONObject jSONObject) throws JSONException {
         JSONObject jSONObject2 = jSONObject.getJSONObject("response");
-        return  new a(jSONObject2.optInt("balance"),
+        return new a(jSONObject2.optInt("balance"),
                 new CatalogedGift(jSONObject2.getJSONObject("gift")));
     }
 }

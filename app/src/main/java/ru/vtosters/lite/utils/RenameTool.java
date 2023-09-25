@@ -1,15 +1,7 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -17,37 +9,36 @@ import android.util.SparseArray;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-
 import androidx.core.util.Pair;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.dto.user.UserProfile;
 import com.vk.im.engine.models.users.User;
 import com.vtosters.lite.R;
 import com.vtosters.lite.api.ExtendedCommunityProfile;
 import com.vtosters.lite.api.ExtendedUserProfile;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import ru.vtosters.hooks.other.ThemesUtils;
 
 import java.lang.reflect.Field;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 
-public class RenameTool {
-    private static final int DB_VERSION = 2;
+import static ru.vtosters.hooks.other.ThemesUtils.getSTextAttr;
+import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
+import static ru.vtosters.lite.utils.AndroidUtils.*;
 
+public class RenameTool {
+    public static final String COLUMN_FIRSTNAME = "first_name";
+    public static final String COLUMN_LASTNAME = "last_name";
+    public static final SparseArray<Pair<String, String>> renamedUsers = new SparseArray<>();
+    public static final SparseArray<String> renamedGroups = new SparseArray<>();
+    private static final int DB_VERSION = 2;
     private static final String COLUMN_NAME = "name";
-    private static final String COLUMN_FIRSTNAME = "first_name";
-    private static final String COLUMN_LASTNAME = "last_name";
     private static final String COLUMN_VKID = "vk_id";
     private static final String DB_NAME = "vt_rename.db";
     private static final String TABLE_NAME = "renames";
     private static final String TABLE_NAME_GROUP = "renames_group";
-    private static final SparseArray<Pair<String, String>> renamedUsers = new SparseArray<>();
-    private static final SparseArray<String> renamedGroups = new SparseArray<>();
+    public static boolean updateRequested = true;
     private static RenameTool.DbHelper helperInstance;
-    private static boolean updateRequested = true;
 
     protected static RenameTool.DbHelper getHelper() {
         if (helperInstance == null) {
@@ -71,31 +62,8 @@ public class RenameTool {
         return null;
     }
 
-    public static void injectIntoJson(JSONObject obj) throws JSONException {
-        int i = obj.getInt("id");
-        if (updateRequested) {
-            reloadDB();
-        }
-
-        Pair<String, String> user = renamedUsers.get(i);
-        if (user == null) return;
-        obj.put(COLUMN_FIRSTNAME, user.first).put(COLUMN_LASTNAME, user.second);
-    }
-
-    public static void injectIntoJsonGroup(JSONObject obj) throws JSONException {
-        int i = obj.getInt("id");
-
-        if (updateRequested) {
-            reloadDB();
-        }
-
-        String user = renamedGroups.get(i);
-        if (user == null) return;
-        obj.put("name", user);
-    }
-
     // Reload all values from DB
-    private static void reloadDB() {
+    public static void reloadDB() {
         renamedGroups.clear();
         renamedUsers.clear();
         updateRequested = false;

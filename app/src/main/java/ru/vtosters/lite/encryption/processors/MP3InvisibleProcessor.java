@@ -1,13 +1,11 @@
 package ru.vtosters.lite.encryption.processors;
 
 import android.text.TextUtils;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import ru.vtosters.lite.encryption.base.IMProcessor;
 
 import java.nio.charset.StandardCharsets;
-
-import ru.vtosters.lite.encryption.base.IMProcessor;
 
 public class MP3InvisibleProcessor extends IMProcessor {
     private static String toStr(int a, String cc) {

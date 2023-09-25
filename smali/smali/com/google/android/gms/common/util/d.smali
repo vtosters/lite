@@ -86,6 +86,10 @@
 
     const-string v0, "com.google.android.gms"
 
+    invoke-static {v0}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     .line 1
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

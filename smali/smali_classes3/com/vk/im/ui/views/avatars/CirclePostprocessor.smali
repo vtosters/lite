@@ -119,7 +119,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, p2, v0}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Paint;)V
+    invoke-static {p1, p2, v0}, Lru/vtosters/hooks/PicRoundingHook;->inject(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Paint;)V
 
     return-void
 .end method

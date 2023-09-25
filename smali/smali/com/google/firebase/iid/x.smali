@@ -220,7 +220,9 @@
     .line 13
     new-instance v6, Landroid/content/Intent;
 
-    const-class v7, Lcom/google/firebase/iid/FirebaseInstanceIdReceiver;
+    invoke-static {}, Lru/vtosters/hooks/GmsHook;->getFirebaseInstanceIdReceiverClass()Ljava/lang/Class;
+
+    move-result-object v7
 
     invoke-direct {v6, v4, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 

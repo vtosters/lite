@@ -1,20 +1,19 @@
 package ru.vtosters.lite.music.cache.helpers;
 
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
-
+import android.net.Uri;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
-import ru.vtosters.lite.music.cache.FileCacheImplementation;
-import ru.vtosters.lite.utils.AndroidUtils;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 
 public class PlaylistHelper {
 
@@ -46,8 +45,8 @@ public class PlaylistHelper {
             if (!photo.isEmpty())
                 jPhoto.put("height", 600)
                         .put("width", 600)
-                        .putOpt("photo_300", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackThumbnail(trackId, 300)))
-                        .putOpt("photo_600", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackThumbnail(trackId, 600)));
+                        .putOpt("photo_300", Uri.fromFile(MusicCacheStorageUtils.getTrackThumb(trackId, 300)).toString())
+                        .putOpt("photo_600", Uri.fromFile(MusicCacheStorageUtils.getTrackThumb(trackId, 600)).toString());
             var obj = new JSONObject()
                     .put("id", -2)
                     .put("owner_id", albumId)
@@ -70,7 +69,7 @@ public class PlaylistHelper {
 
     public static List<Playlist> getAlbumPlaylists() {
         List<Playlist> list = new ArrayList<>();
-        for (var track : CacheDatabaseDelegate.getTracksAsPlaylist()) {
+        for (var track : MusicCacheImpl.getPlaylist()) {
             var albumLink = track.I;
             var thumb = albumLink.u1();
             list.add(createAlbum(
@@ -85,7 +84,6 @@ public class PlaylistHelper {
     }
 
     public static JSONObject getPlaylist() throws JSONException {
-
         return new JSONObject()
                 .put("id", -1)
                 .put("owner_id", getUserId())

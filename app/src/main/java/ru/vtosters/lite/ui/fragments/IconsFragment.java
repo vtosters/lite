@@ -9,19 +9,16 @@ import android.os.Bundle;
 import android.util.TypedValue;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.core.content.res.ResourcesCompat;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-
-import ru.vtosters.lite.hooks.SwitchHook;
+import ru.vtosters.hooks.SwitchHook;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.ui.components.IconManager;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class IconsFragment extends TrackedMaterialPreferenceToolbarFragment {
     @SuppressLint("SetTextI18n")

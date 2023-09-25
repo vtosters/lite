@@ -27,7 +27,7 @@
     .line 2
     sget v0, Lcom/vk/mentions/p;->light_blue:I
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+    invoke-static {v0}, Lru/vtosters/hooks/other/ThemesUtils;->getColor(I)I
 
     move-result p1
 

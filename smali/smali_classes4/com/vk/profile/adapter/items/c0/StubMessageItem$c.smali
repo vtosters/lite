@@ -18,7 +18,7 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Z)V
     .locals 2
 
-    invoke-static {p2}, Lru/vtosters/lite/ssfs/ProfileHider;->getInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
+    invoke-static {p2}, Lru/vtosters/hooks/ssfs/ProfileHook;->getInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
 
     move-result-object p1
 

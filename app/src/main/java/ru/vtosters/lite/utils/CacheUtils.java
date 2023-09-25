@@ -1,12 +1,6 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.Preferences.dev;
-import static ru.vtosters.lite.utils.Preferences.getSizeForDelete;
-
 import android.annotation.SuppressLint;
-
 import com.vk.im.engine.ImEngine1;
 import com.vk.im.engine.ImEngineExt;
 import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
@@ -18,6 +12,11 @@ import com.vtosters.lite.R;
 
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
+
+import static ru.vtosters.hooks.other.Preferences.dev;
+import static ru.vtosters.hooks.other.Preferences.getSizeForDelete;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 public class CacheUtils {
     private static CacheUtils sInstance = new CacheUtils();

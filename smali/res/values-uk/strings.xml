@@ -5332,7 +5332,7 @@
     <string name="newsfeedlistmanager_summ">Налаштування списків новин</string>
     <string name="newsfeedlistmanager_reset_title">Скинути список новин</string>
     <string name="where_is_cache_settings">Де налаштування кеша?</string>
-    <string name="where_is_cache_settings_summ">Вони переїхали в налаштування мода у вкладку Інше</string>
+    <string name="where_is_cache_settings_summ">"Вони переїхали в налаштування мода у вкладку Дані та пам'ять"</string>
     <string name="gms_about">Про GMS</string>
     <string name="gms_what_is_title">Що таке GMS?</string>
     <string name="gms_what_is_summ">GMS - Google Mobile Services, необхідний компонент для нормальної роботи додатків. Всі повідомлення, вхід в ігри, Google Play та інші функції пристрою використовують цей компонент</string>
@@ -5347,7 +5347,7 @@
     <string name="gms_download_microg">Завантажити MicroG</string>
     <string name="gms_what_to_do_next">Що робити далі?</string>
     <string name="gms_what_to_do_after_microg_title">Що робити після встановлення MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Увійдіть до свого облікового запису Google \n2. Дозвольте VTLite отримувати повідомлення\n3. Оновіть реєстрацію Firebase у налаштуваннях у розділі "Інше"</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Увійдіть до свого облікового запису Google \n2. Перевстановіть додаток VTLite"</string>
     <string name="donate">Допомогти проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
     <string name="fulltime2">dd MMMM в HH:mm:ss</string>
@@ -5576,8 +5576,8 @@
     <string name="onlinefix_title">Обходити онлайн</string>
     <string name="globalUsersOnline_title">Глобальний обхід онлайну</string>
     <string name="globalUsersOnline_summ">Може викликати тривале завантаження розділів і велике споживання трафіку \n\nНе рекомендується включати цю функцію</string>    
-    <string name="savemsgsett_title">Зберігати налаштування повідомлень</string>
-    <string name="savemsgsett_summ">Зберігати положення тумблерів у налаштуваннях повідомлень</string>
+    <string name="savemsgsett_title">Зберігати параметри відправки повідомлень</string>
+    <string name="savemsgsett_summ">Зберігати вибрані параметри статусу вихідних повідомлень як зникнення повідомлень і безшумна відправка</string>
     <string name="screenshotdetect_title">Вимкнути виявлення скріншотів</string>
     <string name="screenshotdetect_summ">Відключити повідомлення про те, що ви зробили скриншот</string>
     <string name="hideDeviceInfo_title">Вимкнути відправку метрики</string>
@@ -6116,8 +6116,8 @@
     <string name="remove_from_ads_whitelist">Видалити з вайтліста реклами</string>
     <string name="add_to_ads_stories_whitelist">Додати до вайтліста історій</string>
     <string name="remove_from_ads_stories_whitelist">Видалити з вайтліста історій</string>
-    <string name="removed_from_whitelist_success">Група видалена з вайтліста</string>
-    <string name="added_to_whitelist_success">Група додана до вайтліста</string>
+    <string name="removed_from_whitelist_success">Видалена з вайтліста</string>
+    <string name="added_to_whitelist_success">Додана до вайтліста</string>
 
     <string name="whitelisted_ad_groups_title">Вайтліст реклами</string>
     <string name="whitelisted_filters_groups_title">Вайтліст фільтрів та джерел</string>
@@ -6255,6 +6255,8 @@
     <string name="promotedstickers_title">Не отримувати промостикери</string>
     <string name="useOldAppVer_title">Використовувати старий дизайн</string>
     <string name="useOldAppVer_summ">Працює \"як є\". Можливі помилки</string>
+    <string name="invertFilters">Інвертувати винятки</string>
+    <string name="invertFilters_summ">Додані в виключення групи будуть фільтруватися</string>
 
     <string name="downloading_update">Завантаження оновлення</string>
     <string name="sources">Джерела</string>
@@ -6286,4 +6288,58 @@
     <string name="copydebuginfo_summ">Для надсилання інформації про помилку на GitHub Issues</string>
     <string name="device_info_copied">Інформацію про пристрій скопійовано</string>
     <string name="app_open_by_default_settings">Для нормальної роботи додатку необхідно дозволити додатку відкриття посилань за умовчанням</string>
+    
+    <string name="failed_to_get_text">Помилка отримання тексту</string>
+    <string name="error_no_text">Помилка отримання тексту, можливо текст не знайдено</string>
+    <string name="applying_accent">Застосування акценту</string>
+    <string name="error_applying_accent">Помилка при застосуванні акценту</string>
+    <string name="logColors_title">Логувати отримання акцентів</string>
+
+    <string name="remove_encryption_key">Видалити ключ</string>
+    <string name="restore_accounts">Відновити акаунти</string>
+    <string name="save_accounts">Зберегти акаунти</string>
+    <string name="reset_accounts">Скинути всі акаунти</string>
+    <string name="accounts_saved_by_path">Акаунти збережені за шляхом</string>
+    <string name="error_saving_file">Помилка під час збереження файлу</string>
+
+    <string name="save_online_data">Зберегти дані про онлайн</string>
+
+    <string name="restore_settings">Відновити налаштування</string>
+    <string name="reset_all_settings">Скинути всі налаштування</string>
+
+    <string name="disable_analytics">Відключити збір даних</string>
+    <string name="disable_analytics_summ">Збір даних про падіння додатку допомагає нам покращувати додаток\\n\nВідключення збору логів падінь змусить сумувати бідних розробників</string>
+
+    <string name="systemtheme_enabled">Увімкнено встановлення теми як на пристрої</string>
+    <string name="systemtheme">Системна тема</string>
+    <string name="systemtheme_summ">Використовувати тему встановлену на пристрої</string>
+
+    <string name="useGenius_summ">Отримувати тексти з сервісу Genius</string>
+    <string name="useGenius_title">Тексти з Genius</string>
+
+    <string name="datasettings_title">"Дані та пам'ять"</string>
+    <string name="invalidate_theme_cache_title">Інвалідація кешу теми</string>
+    <string name="invalidate_theme_cache_each_update_title">Очищення кешу теми після оновлення для запобігання проблем з акцентами</string>
+
+    <string name="useCustomPrefsStyle_title">Використовувати нові перемикачі</string>
+    <string name="useCustomPrefsStyle_summ">Більш сучасний і стильний вигляд тумблерів у налаштуваннях</string>
+    <string name="useNewColorEngine_title">Використовувати новий движок акцентів</string>
+    <string name="useNewColorEngine_summ">Може бути нестабільно</string>
+
+    <string name="data">Дані</string>
+
+    <string name="currentLanguage">Поточна мова:</string>
+    <string name="appLanguage">Мова додатку</string>
+
+    <string name="microgsett">Налаштування MicroG</string>
+
+    <string name="compression_types">Спосіб компресії фото</string>
+    <string name="compression_types_selection">Виберіть спосіб компресії</string>
+
+    <string name="clear_all_cache">Очистити весь кеш?</string>
+    <string name="cache_size">Розмір програми</string>
+    <string name="cache_size_summ">Вага кеша додатки</string>
+
+    <string name="invertcached_title">Інвертувати список</string>
+    <string name="invertcached_summ">Інвертувати список кешованих треків</string>
 </resources>

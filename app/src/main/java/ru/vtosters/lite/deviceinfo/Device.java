@@ -1,13 +1,10 @@
 package ru.vtosters.lite.deviceinfo;
 
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.lite.utils.VersionReader;
 
-import static ru.vtosters.lite.deviceinfo.OEMDetector.hasMiuiIncrCode;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.isEMUI;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.isMIUI;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.isSamsung;
-import static ru.vtosters.lite.utils.About.getBuildNumber;
+import static ru.vtosters.lite.deviceinfo.OEMDetector.*;
 
 public class Device {
     private String boardName;
@@ -91,7 +88,8 @@ public class Device {
 
     public String toDeviceName() {
         return "Device information: "
-                + "commit='" + getBuildNumber()
+                + "commit='" + VersionReader.getVersionBuild()
+                + "', fullVersionInfo='" + VersionReader.getVersionFull()
                 + "', isMilkshake='" + ThemesUtils.isMilkshake()
                 + "', sdkVersion='" + this.sdkVersion
                 + "', productName='" + this.productName
@@ -108,7 +106,8 @@ public class Device {
 
     public String forLogging() {
         return "**" + AndroidUtils.getString("device_info") + ":** " + "\n\n"
-                + "- Commit: " + getBuildNumber() + "\n"
+                + "- Commit: " + VersionReader.getVersionBuild() + "\n"
+                + "- Full Version Information: " + VersionReader.getVersionFull() + "\n"
                 + "- Android SDK: " + this.sdkVersion + "\n"
                 + "- Product: " + this.productName + "\n"
                 + "- Device: " + this.deviceName + "\n"

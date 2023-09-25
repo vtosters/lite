@@ -212,6 +212,11 @@
     <public type="array" name="targetlang_value" id="0x7f030074" />
     <public type="array" name="undel_value" id="0x7f030075" />
     <public type="array" name="wallpaper_change_dialog" id="0x7f030076" />
+    <public type="array" name="accent_select_type" id="0x7f030077" />
+    <public type="array" name="compression" id="0x7f030078" />
+    <public type="array" name="compression_value" id="0x7f030079" />
+    <public type="array" name="theme_type_name" id="0x7f03007a" />
+    <public type="array" name="theme_type_name_checkbox" id="0x7f03007b" />
     <public type="attr" name="BMSB_error_text_color" id="0x7f040000" />
     <public type="attr" name="BuyMusicSubscriptionButtonStyle" id="0x7f040001" />
     <public type="attr" name="PIAlphaNormal" id="0x7f040002" />
@@ -2122,6 +2127,7 @@
     <public type="attr" name="zOrderOnTop" id="0x7f040773" />
     <public type="attr" name="im_ic_msgdl" id="0x7f040774" />
     <public type="attr" name="im_ic_msgreload" id="0x7f040775" />
+    <public type="attr" name="im_ic_stats" id="0x7f040776" />
     <public type="bool" name="abc_action_bar_embed_tabs" id="0x7f050000" />
     <public type="bool" name="abc_allow_stacked_button_bar" id="0x7f050001" />
     <public type="bool" name="abc_config_actionMenuItemAllCaps" id="0x7f050002" />
@@ -2138,6 +2144,7 @@
     <public type="bool" name="spb_default_progressiveStart_activated" id="0x7f05000d" />
     <public type="bool" name="spb_default_reversed" id="0x7f05000e" />
     <public type="bool" name="vk_is_tablet" id="0x7f05000f" />
+    <public type="bool" name="com_samsung_android_icon_container_has_icon_container" id="0x7f050010" />
     <public type="color" name="abc_background_cache_hint_selector_material_dark" id="0x7f060000" />
     <public type="color" name="abc_background_cache_hint_selector_material_light" id="0x7f060001" />
     <public type="color" name="abc_btn_colored_borderless_text_material" id="0x7f060002" />
@@ -2944,6 +2951,7 @@
     <public type="color" name="yellow_sunflower" id="0x7f060324" />
     <public type="color" name="iclauncher" id="0x7f060325" />
     <public type="color" name="abc_color_highlight_material" id="0x7f060004" />
+    <public type="color" name="alpha05" id="0x7f060326" />
     <public type="dimen" name="_post_side_padding" id="0x7f070000" />
     <public type="dimen" name="abc_action_bar_content_inset_material" id="0x7f070001" />
     <public type="dimen" name="abc_action_bar_content_inset_with_nav" id="0x7f070002" />
@@ -4944,10 +4952,29 @@
     <public type="drawable" name="ic_deepl_logo_icon" id="0x7f080bcb" />
     <public type="drawable" name="ic_google_translate_logo" id="0x7f080bcc" />
     <public type="drawable" name="ic_yandex_translate_icon" id="0x7f080bd1" />
-    <public type="drawable" name="microsoft" id="0x7f080bd2" />
+    <public type="drawable" name="$splash__0" id="0x7f080bd2" />
     <public type="drawable" name="roundmsg" id="0x7f080bd3" />
     <public type="drawable" name="tgs_entry_background" id="0x7f080bd4" />
     <public type="drawable" name="yandex" id="0x7f080bd7" />
+    <public type="drawable" name="$splash__1" id="0x7f080bd8" />
+    <public type="drawable" name="$splash__10" id="0x7f080bd9" />
+    <public type="drawable" name="$splash__11" id="0x7f080bda" />
+    <public type="drawable" name="$splash__12" id="0x7f080bdb" />
+    <public type="drawable" name="$splash__13" id="0x7f080bdc" />
+    <public type="drawable" name="$splash__14" id="0x7f080bdd" />
+    <public type="drawable" name="$splash__15" id="0x7f080bde" />
+    <public type="drawable" name="$splash__2" id="0x7f080bdf" />
+    <public type="drawable" name="$splash__3" id="0x7f080be0" />
+    <public type="drawable" name="$splash__4" id="0x7f080be1" />
+    <public type="drawable" name="$splash__5" id="0x7f080be2" />
+    <public type="drawable" name="$splash__6" id="0x7f080be3" />
+    <public type="drawable" name="$splash__7" id="0x7f080be4" />
+    <public type="drawable" name="$splash__8" id="0x7f080be5" />
+    <public type="drawable" name="$splash__9" id="0x7f080be6" />
+    <public type="drawable" name="checker_background" id="0x7f080be8" />
+    <public type="drawable" name="custom_thumb_selector" id="0x7f080be9" />
+    <public type="drawable" name="custom_track_selector" id="0x7f080bea" />
+    <public type="drawable" name="splash" id="0x7f080bec" />
     <public type="drawable" name="abc_control_background_material" id="0x7f080032" />
     <public type="drawable" name="ic_action_close" id="0x7f080322" />
     <public type="drawable" name="ic_camera_outline_28_new" id="0x7f0803a0" />
@@ -6745,6 +6772,9 @@
     <public type="drawable" name="ic_telegram_24" id="0x7f080bcf" />
     <public type="drawable" name="ic_telegram_outline_28" id="0x7f080bd0" />
     <public type="drawable" name="vtlogo" id="0x7f080bd6" />
+    <public type="drawable" name="bing" id="0x7f080be7" />
+    <public type="drawable" name="sauceNAO" id="0x7f080beb" />
+    <public type="drawable" name="tracemoe" id="0x7f080bed" />
     <public type="drawable" name="bg_music_play_button_white" id="0x7f08015e" />
     <public type="drawable" name="bg_poll_bg_thumb" id="0x7f080181" />
     <public type="drawable" name="bg_stickers_suggestions_left" id="0x7f0801ad" />
@@ -6867,10 +6897,6 @@
     <public type="font" name="vk_sans_text_light" id="0x7f09001a" />
     <public type="font" name="vk_sans_text_medium" id="0x7f09001b" />
     <public type="font" name="vk_sans_text_regular" id="0x7f09001c" />
-    <public name="color_preview" id="0x7f0a1021" type="id" />
-    <public name="color_name" id="0x7f0a1022" type="id" />
-    <public name="color_value" id="0x7f0a1023" type="id" />
-    <public name="color_preview_border" id="0x7f0a1024" type="id" />
     <public type="id" name="ALT" id="0x7f0a0000" />
     <public type="id" name="CIRCLE" id="0x7f0a0001" />
     <public type="id" name="CTRL" id="0x7f0a0002" />
@@ -11000,6 +11026,12 @@
     <public type="id" name="savedmsg" id="0x7f0a101e" />
     <public type="id" name="search_photo" id="0x7f0a101f" />
     <public type="id" name="text_hex_wrapper" id="0x7f0a1020" />
+    <public type="id" name="color_preview" id="0x7f0a1021" />
+    <public type="id" name="color_name" id="0x7f0a1022" />
+    <public type="id" name="color_value" id="0x7f0a1023" />
+    <public type="id" name="color_preview_border" id="0x7f0a1024" />
+    <public type="id" name="account_backup_view" id="0x7f0a1025" />
+    <public type="id" name="copy_image" id="0x7f0a1026" />
     <public type="integer" name="abc_config_activityDefaultDur" id="0x7f0b0000" />
     <public type="integer" name="abc_config_activityShortDur" id="0x7f0b0001" />
     <public type="integer" name="angle_rtl_180" id="0x7f0b0002" />
@@ -12811,6 +12843,7 @@
     <public type="layout" name="tgs_entry" id="0x7f0d06de" />
     <public type="layout" name="wppreview" id="0x7f0d06df" />
     <public type="layout" name="write_bar_i" id="0x7f0d06e0" />
+    <public type="layout" name="color_picker_item" id="0x7f0d06e1" />
     <public type="menu" name="add" id="0x7f0e0000" />
     <public type="menu" name="attach_item" id="0x7f0e0001" />
     <public type="menu" name="audio" id="0x7f0e0002" />
@@ -12923,6 +12956,30 @@
     <public type="mipmap" name="vt_changeable_foreground" id="0x7f0f0044" />
     <public type="mipmap" name="vt_launcher" id="0x7f0f0045" />
     <public type="mipmap" name="vt_party_foreground" id="0x7f0f0047" />
+    <public type="mipmap" name="ic_launcher_balloon_pink" id="0x7f0f0048" />
+    <public type="mipmap" name="ic_launcher_balloon_pink_background" id="0x7f0f0049" />
+    <public type="mipmap" name="ic_launcher_balloon_pink_foreground" id="0x7f0f004a" />
+    <public type="mipmap" name="ic_launcher_bubble_gum" id="0x7f0f004b" />
+    <public type="mipmap" name="ic_launcher_bubble_gum_background" id="0x7f0f004c" />
+    <public type="mipmap" name="ic_launcher_bubble_gum_foreground" id="0x7f0f004d" />
+    <public type="mipmap" name="ic_launcher_comics" id="0x7f0f004e" />
+    <public type="mipmap" name="ic_launcher_comics_background" id="0x7f0f004f" />
+    <public type="mipmap" name="ic_launcher_comics_foreground" id="0x7f0f0050" />
+    <public type="mipmap" name="ic_launcher_flowers" id="0x7f0f0051" />
+    <public type="mipmap" name="ic_launcher_flowers_background" id="0x7f0f0052" />
+    <public type="mipmap" name="ic_launcher_flowers_foreground" id="0x7f0f0053" />
+    <public type="mipmap" name="ic_launcher_metal_dark" id="0x7f0f0054" />
+    <public type="mipmap" name="ic_launcher_metal_dark_background" id="0x7f0f0055" />
+    <public type="mipmap" name="ic_launcher_metal_dark_foreground" id="0x7f0f0056" />
+    <public type="mipmap" name="ic_launcher_pin_blue" id="0x7f0f0057" />
+    <public type="mipmap" name="ic_launcher_pin_blue_background" id="0x7f0f0058" />
+    <public type="mipmap" name="ic_launcher_pin_blue_foreground" id="0x7f0f0059" />
+    <public type="mipmap" name="ic_launcher_rabbit" id="0x7f0f005a" />
+    <public type="mipmap" name="ic_launcher_rabbit_background" id="0x7f0f005b" />
+    <public type="mipmap" name="ic_launcher_rabbit_foreground" id="0x7f0f005c" />
+    <public type="mipmap" name="ic_launcher_shine" id="0x7f0f005d" />
+    <public type="mipmap" name="ic_launcher_shine_background" id="0x7f0f005e" />
+    <public type="mipmap" name="ic_launcher_shine_foreground" id="0x7f0f005f" />
     <public type="mipmap" name="vt_adaptive_launcher_foneground" id="0x7f0f0043" />
     <public type="mipmap" name="vt_launcher_round" id="0x7f0f0046" />
     <public type="mipmap" name="ic_logo_facebook_28" id="0x7f0f0003" />
@@ -19465,6 +19522,88 @@
     <public type="string" name="whitelisted_filters_groups_title" id="0x7f121838" />
     <public type="string" name="why_news_not_updated_summ" id="0x7f121839" />
     <public type="string" name="why_news_not_updated_title" id="0x7f12183a" />
+    <public type="string" name="accent_color_summ" id="0x7f12183b" />
+    <public type="string" name="accent_color_title" id="0x7f12183c" />
+    <public type="string" name="accents" id="0x7f12183d" />
+    <public type="string" name="accounts_saved_by_path" id="0x7f12183e" />
+    <public type="string" name="add_to_ads_stories_whitelist" id="0x7f12183f" />
+    <public type="string" name="amoledtheme_summ" id="0x7f121840" />
+    <public type="string" name="amoledtheme_title" id="0x7f121841" />
+    <public type="string" name="appLanguage" id="0x7f121842" />
+    <public type="string" name="app_open_by_default_settings" id="0x7f121843" />
+    <public type="string" name="applying_accent" id="0x7f121844" />
+    <public type="string" name="audio_deleted_from_cache" id="0x7f121845" />
+    <public type="string" name="blockminiapps_summ" id="0x7f121846" />
+    <public type="string" name="blockminiapps_title" id="0x7f121847" />
+    <public type="string" name="businessDisabler_title" id="0x7f121848" />
+    <public type="string" name="by_choice" id="0x7f121849" />
+    <public type="string" name="calls_not_available" id="0x7f12184a" />
+    <public type="string" name="cannot_write" id="0x7f12184b" />
+    <public type="string" name="change_accent_color" id="0x7f12184c" />
+    <public type="string" name="compression_types" id="0x7f12184d" />
+    <public type="string" name="compression_types_selection" id="0x7f12184e" />
+    <public type="string" name="copydebuginfo_summ" id="0x7f12184f" />
+    <public type="string" name="copydebuginfo_title" id="0x7f121850" />
+    <public type="string" name="copyownlink_summ" id="0x7f121851" />
+    <public type="string" name="copyownlink_title" id="0x7f121852" />
+    <public type="string" name="crash_service_name" id="0x7f121853" />
+    <public type="string" name="currentLanguage" id="0x7f121854" />
+    <public type="string" name="current_theme" id="0x7f121855" />
+    <public type="string" name="custom_links_warning" id="0x7f121856" />
+    <public type="string" name="data" id="0x7f121857" />
+    <public type="string" name="data_updated" id="0x7f121858" />
+    <public type="string" name="datasettings_title" id="0x7f121859" />
+    <public type="string" name="device_info" id="0x7f12185a" />
+    <public type="string" name="device_info_copied" id="0x7f12185b" />
+    <public type="string" name="dialogstats" id="0x7f12185c" />
+    <public type="string" name="disable_analytics" id="0x7f12185d" />
+    <public type="string" name="disable_analytics_summ" id="0x7f12185e" />
+    <public type="string" name="downloading_update" id="0x7f12185f" />
+    <public type="string" name="error_applying_accent" id="0x7f121860" />
+    <public type="string" name="error_no_text" id="0x7f121861" />
+    <public type="string" name="error_saving_file" id="0x7f121862" />
+    <public type="string" name="failed_to_get_text" id="0x7f121863" />
+    <public type="string" name="invalid_pack_link" id="0x7f121864" />
+    <public type="string" name="invalidate_theme_cache_title" id="0x7f121865" />
+    <public type="string" name="logColors_title" id="0x7f121866" />
+    <public type="string" name="maxquality_summ" id="0x7f121867" />
+    <public type="string" name="maxquality_title" id="0x7f121868" />
+    <public type="string" name="microgsett" id="0x7f121869" />
+    <public type="string" name="monettheme_summ" id="0x7f12186a" />
+    <public type="string" name="monettheme_title" id="0x7f12186b" />
+    <public type="string" name="newsfeed_notif_summ" id="0x7f12186c" />
+    <public type="string" name="newsfeed_notif_title" id="0x7f12186d" />
+    <public type="string" name="open_bot" id="0x7f12186e" />
+    <public type="string" name="promotedstickers_title" id="0x7f12186f" />
+    <public type="string" name="remove_encryption_key" id="0x7f121870" />
+    <public type="string" name="remove_from_ads_stories_whitelist" id="0x7f121871" />
+    <public type="string" name="reset_accounts" id="0x7f121872" />
+    <public type="string" name="reset_all_settings" id="0x7f121873" />
+    <public type="string" name="restore_accounts" id="0x7f121874" />
+    <public type="string" name="restore_settings" id="0x7f121875" />
+    <public type="string" name="save_accounts" id="0x7f121876" />
+    <public type="string" name="save_online_data" id="0x7f121877" />
+    <public type="string" name="select_color" id="0x7f121878" />
+    <public type="string" name="select_palette" id="0x7f121879" />
+    <public type="string" name="sources" id="0x7f12187a" />
+    <public type="string" name="storiesGroupsAdBlock" id="0x7f12187b" />
+    <public type="string" name="storiesGroupsAdBlocksummary" id="0x7f12187c" />
+    <public type="string" name="systemtheme" id="0x7f12187d" />
+    <public type="string" name="systemtheme_enabled" id="0x7f12187e" />
+    <public type="string" name="systemtheme_summ" id="0x7f12187f" />
+    <public type="string" name="updateverifdata_summ" id="0x7f121880" />
+    <public type="string" name="updateverifdata_title" id="0x7f121881" />
+    <public type="string" name="useCustomPrefsStyle_summ" id="0x7f121882" />
+    <public type="string" name="useCustomPrefsStyle_title" id="0x7f121883" />
+    <public type="string" name="useGenius_summ" id="0x7f121884" />
+    <public type="string" name="useGenius_title" id="0x7f121885" />
+    <public type="string" name="useNewColorEngine_summ" id="0x7f121886" />
+    <public type="string" name="useNewColorEngine_title" id="0x7f121887" />
+    <public type="string" name="useOldAppVer_summ" id="0x7f121888" />
+    <public type="string" name="useOldAppVer_title" id="0x7f121889" />
+    <public type="string" name="vkx_integration_enabled_info" id="0x7f12188a" />
+    <public type="string" name="whitelisted_ad_groups_stories_title" id="0x7f12188b" />
+    <public type="string" name="writebar_ios_title" id="0x7f12188c" />
     <public type="style" name="ActionBarGrayTheme" id="0x7f130000" />
     <public type="style" name="ActionBarProgress" id="0x7f130001" />
     <public type="style" name="ActionBarSpinner" id="0x7f130002" />
@@ -20606,6 +20745,24 @@
     <public type="style" name="Base.V26.Widget.AppCompat.Toolbar" id="0x7f1300a1" />
     <public type="style" name="Base.V28.Theme.AppCompat" id="0x7f1300a2" />
     <public type="style" name="Base.V28.Theme.AppCompat.Light" id="0x7f1300a3" />
+    <public type="style" name="Vk.Theme.VkApp.amoled_monet_generated" id="0x7f130475" />
+    <public type="style" name="Vk.Theme.VkApp.amoled_monet_old_generated" id="0x7f130476" />
+    <public type="style" name="Vk.Theme.VkApp.bright_light_monet_generated" id="0x7f130477" />
+    <public type="style" name="Vk.Theme.VkApp.client_dark_monet_generated" id="0x7f130478" />
+    <public type="style" name="Vk.Theme.VkApp.client_light_monet_generated" id="0x7f130479" />
+    <public type="style" name="Vk.Theme.VkApp.space_gray_monet_generated" id="0x7f13047a" />
+    <public type="style" name="VkAmoledMonetStyle" id="0x7f13047b" />
+    <public type="style" name="VkAmoledMonetTheme" id="0x7f13047c" />
+    <public type="style" name="VkDarkMonetStyle" id="0x7f13047d" />
+    <public type="style" name="VkDarkMonetTheme" id="0x7f13047e" />
+    <public type="style" name="VkLightMonetStyle" id="0x7f13047f" />
+    <public type="style" name="VkLightMonetTheme" id="0x7f130480" />
+    <public type="style" name="VkMilkAmoledMonetStyle" id="0x7f130481" />
+    <public type="style" name="VkMilkAmoledMonetTheme" id="0x7f130482" />
+    <public type="style" name="VkMilkDarkMonetStyle" id="0x7f130483" />
+    <public type="style" name="VkMilkDarkMonetTheme" id="0x7f130484" />
+    <public type="style" name="VkMilkLightMonetStyle" id="0x7f130485" />
+    <public type="style" name="VkMilkLightMonetTheme" id="0x7f130486" />
     <public type="xml" name="account_preferences" id="0x7f150000" />
     <public type="xml" name="authenticator" id="0x7f150001" />
     <public type="xml" name="contacts_custom_type" id="0x7f150002" />
@@ -20637,4 +20794,5 @@
     <public type="xml" name="preferences_proxy" id="0x7f15001c" />
     <public type="xml" name="preferences_tgs" id="0x7f15001d" />
     <public type="xml" name="preferences_themes" id="0x7f15001e" />
+    <public type="xml" name="locales_config" id="0x7f15001f" />
 </resources>

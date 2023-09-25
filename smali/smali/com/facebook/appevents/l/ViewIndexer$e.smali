@@ -137,7 +137,7 @@
 
     const/16 v3, 0xa
 
-    invoke-static {v3}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+    invoke-static {v3}, Lru/vtosters/hooks/other/Preferences;->compress(I)I
 
     move-result v3
 

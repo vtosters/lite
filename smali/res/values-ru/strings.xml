@@ -5405,7 +5405,7 @@
     <string name="newsfeedlistmanager_summ">Настройки списков новостей</string>
     <string name="newsfeedlistmanager_reset_title">Сбросить список новостей</string>
     <string name="where_is_cache_settings">Где настройки кеша?</string>
-    <string name="where_is_cache_settings_summ">Они переехали в настройки мода во вкладку Другое</string>
+    <string name="where_is_cache_settings_summ">Они переехали в настройки мода во вкладку Данные и память</string>
     <string name="gms_about">О GMS</string>
     <string name="gms_what_is_title">Что такое GMS?</string>
     <string name="gms_what_is_summ">GMS - Google Mobile Services, необходимый компонент для нормальной работы приложений. Все уведомления, вход в игры, Google Play и прочие функции устройства используют этот компонент</string>
@@ -5420,7 +5420,7 @@
     <string name="gms_download_microg">Скачать MicroG</string>
     <string name="gms_what_to_do_next">Что делать дальше?</string>
     <string name="gms_what_to_do_after_microg_title">Что делать после установки MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Войдите в свой Google аккаунт \n2. Разрешите VTLite получать уведомления\n3. Обновите регистрацию Firebase в настройках в разделе "Другое"</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Войдите в свой Google аккаунт в MicroG \n2. Переустановите приложение VTLite</string>
     <string name="donate">Помочь проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
     <string name="fulltime2">dd MMMM в HH:mm:ss</string>
@@ -5649,8 +5649,8 @@
     <string name="onlinefix_title">Обходить онлайн</string>
     <string name="globalUsersOnline_title">Глобальный обход онлайна</string>
     <string name="globalUsersOnline_summ">Может вызывать долгие загрузки разделов и большое потребление трафика \n\nНе рекомендуется включать данную функцию</string>    
-    <string name="savemsgsett_title">Сохранять настройки сообщений</string>
-    <string name="savemsgsett_summ">Сохранять положение тумблеров в настройках сообщений</string>
+    <string name="savemsgsett_title">Сохранять параметры отправки сообщений</string>
+    <string name="savemsgsett_summ">Сохранять выбранные параметры статуса исходящих сообщений как исчезновение сообщений и бесшумная отправка</string>
     <string name="screenshotdetect_title">Отключить детект скриншотов</string>
     <string name="screenshotdetect_summ">Отключить уведомление о том, что вы сделали скриншот</string>    
     <string name="hideDeviceInfo_title">Отключить отправку метрики</string>
@@ -6191,8 +6191,8 @@
     <string name="remove_from_ads_whitelist">Удалить из вайтлиста рекламы</string>
     <string name="add_to_ads_stories_whitelist">Добавить в вайтлист историй</string>
     <string name="remove_from_ads_stories_whitelist">Удалить из вайтлиста историй</string>
-    <string name="removed_from_whitelist_success">Группа удалена из вайтлиста</string>
-    <string name="added_to_whitelist_success">Группа добавлена в вайтлист</string>
+    <string name="removed_from_whitelist_success">Удалено из вайтлиста</string>
+    <string name="added_to_whitelist_success">Добавлено в вайтлист</string>
 
     <string name="whitelisted_ad_groups_title">Вайтлист рекламы</string>
     <string name="whitelisted_filters_groups_title">Вайтлист фильтров и источников</string>
@@ -6330,6 +6330,8 @@
     <string name="promotedstickers_title">Не получать промостикеры</string>
     <string name="useOldAppVer_title">Использовать старый дизайн</string>
     <string name="useOldAppVer_summ">Работает \"как есть\". Могут быть ошибки</string>
+    <string name="invertFilters">Инвертировать исключения</string>
+    <string name="invertFilters_summ">Добавленные в исключения группы будут фильтроваться</string>
 
     <string name="downloading_update">Скачивание обновления</string>
     <string name="sources">Источники</string>
@@ -6397,5 +6399,53 @@
     <string name="error_no_text">Ошибка получения текста, возможно текст не найден</string>
     <string name="applying_accent">Применение акцента</string>
     <string name="error_applying_accent">Ошибка при применении акцента</string>
+    <string name="logColors_title">Логгировать получение акцентов</string>
 
+    <string name="remove_encryption_key">Удалить ключ</string>
+    <string name="restore_accounts">Восстановить аккаунты</string>
+    <string name="save_accounts">Сохранить аккаунты</string>
+    <string name="reset_accounts">Сбросить все аккаунты</string>
+    <string name="accounts_saved_by_path">Аккаунты сохранены по пути</string>
+    <string name="error_saving_file">Ошибка при сохранении файла</string>
+
+    <string name="save_online_data">Сохранить данные об онлайне</string>
+
+    <string name="restore_settings">Восстановить настройки</string>
+    <string name="reset_all_settings">Сбросить все настройки</string>
+
+    <string name="disable_analytics">Отключить сбор данных</string>
+    <string name="disable_analytics_summ">Сбор данных о падениях приложения помогает нам улучшать приложение\n\nОтключение сбора логов падений заставит грустить бедных разработчиков</string>
+
+    <string name="systemtheme_enabled">Включена установка темы как на устройстве</string>
+    <string name="systemtheme">Системная тема</string>
+    <string name="systemtheme_summ">Использовать тему установленную на устройстве</string>
+
+    <string name="useGenius_summ">Получать тексты с сервиса Genius</string>
+    <string name="useGenius_title">Тексты с Genius</string>
+
+    <string name="datasettings_title">Данные и память</string>
+    <string name="invalidate_theme_cache_title">Инвалидация кэша темы</string>
+    <string name="invalidate_theme_cache_each_update_title">Очистка кэша темы после обновления для предотвращения проблем с акцентами</string>
+
+    <string name="useCustomPrefsStyle_title">Использовать новые переключатели</string>
+    <string name="useCustomPrefsStyle_summ">Более современный и стильный вид тумблеров в настройках</string>
+    <string name="useNewColorEngine_title">Использовать новый движок акцентов</string>
+    <string name="useNewColorEngine_summ">Может быть нестабильно</string>
+
+    <string name="data">Данные</string>
+
+    <string name="currentLanguage">Текущий язык:</string>
+    <string name="appLanguage">Язык приложения</string>
+
+    <string name="microgsett">Настройки MicroG</string>
+
+    <string name="compression_types">Способ компрессии фото</string>
+    <string name="compression_types_selection">Выберите способ компрессии</string>
+
+    <string name="clear_all_cache">Очистить весь кеш?</string>
+    <string name="cache_size">Размер приложения</string>
+    <string name="cache_size_summ">Вес кеша приложения</string>
+
+    <string name="invertcached_title">Инвертировать список</string>
+    <string name="invertcached_summ">Инвертировать список кешированных треков</string>
 </resources>

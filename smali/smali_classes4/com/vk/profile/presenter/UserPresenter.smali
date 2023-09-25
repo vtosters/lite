@@ -956,7 +956,7 @@
 
     #invoke-static {p0}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
 
-    invoke-static {p1, p2}, Lru/vtosters/lite/hooks/CallsHook;->forwardToVkOffApps(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-static {p1, p2}, Lru/vtosters/hooks/CallsHook;->forwardToVkOffApps(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     # .line 18
     # new-instance v7, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
@@ -1128,7 +1128,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v1
 

@@ -1,20 +1,17 @@
 package ru.vtosters.lite.ui.components;
 
-import static ru.vtosters.lite.ui.vkui.VBListBuilder.VBListItem;
-import static ru.vtosters.lite.ui.vkui.VBListBuilder.buildListOf;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-
 import android.app.Activity;
-
-import com.vk.core.preference.Preference;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
+import static ru.vtosters.lite.ui.vkui.VBListBuilder.VBListItem;
+import static ru.vtosters.lite.ui.vkui.VBListBuilder.buildListOf;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 public class NewsfeedListManager {
 

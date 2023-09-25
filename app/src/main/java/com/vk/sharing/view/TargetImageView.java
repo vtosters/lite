@@ -1,26 +1,13 @@
 package com.vk.sharing.view;
 
-import static b.h.z.f.roboto_medium;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapShader;
-import android.graphics.Canvas;
-import android.graphics.LinearGradient;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.RectF;
-import android.graphics.Shader;
-import android.graphics.Typeface;
+import android.graphics.*;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.AttributeSet;
-
 import androidx.annotation.UiThread;
 import androidx.core.content.ContextCompat;
-
 import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.view.DraweeHolder;
@@ -31,9 +18,12 @@ import com.vk.imageloader.view.VKMultiImageView;
 import com.vk.navigation.NavigatorKeys;
 import com.vtosters.lite.R;
 import com.vtosters.lite.a0;
-import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.hooks.other.Preferences;
 
 import java.util.Arrays;
+
+import static b.h.z.f.roboto_medium;
+import static ru.vtosters.hooks.other.ThemesUtils.getAccentColor;
 
 @UiThread
 public class TargetImageView extends VKMultiImageView {

@@ -591,7 +591,7 @@
 
     const/16 p3, 0x64
 
-    invoke-static {p3}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+    invoke-static {p3}, Lru/vtosters/hooks/other/Preferences;->compress(I)I
 
     move-result p3
 

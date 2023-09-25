@@ -1,10 +1,8 @@
 package ru.vtosters.lite.encryption.processors;
 
 import android.util.Base64;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import ru.vtosters.lite.encryption.base.IMProcessor;
 
 public class VTostersProcessor extends IMProcessor {

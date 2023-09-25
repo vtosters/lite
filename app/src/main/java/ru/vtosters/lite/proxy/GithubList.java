@@ -1,14 +1,13 @@
 package ru.vtosters.lite.proxy;
 
 import android.util.Log;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 public class GithubList {
     private static final OkHttpClient mClient = VtOkHttpClient.getInstance();

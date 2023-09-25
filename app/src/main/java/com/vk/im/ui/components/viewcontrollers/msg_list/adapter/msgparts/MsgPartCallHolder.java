@@ -21,7 +21,7 @@ import com.vk.im.ui.views.msg.MsgPartIconTwoRowView;
 import com.vtosters.lite.R;
 import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
-import ru.vtosters.lite.hooks.CallsHook;
+import ru.vtosters.hooks.CallsHook;
 
 public final class MsgPartCallHolder extends MsgPartHolderBase<AttachCall> {
     public static final a I = new a();

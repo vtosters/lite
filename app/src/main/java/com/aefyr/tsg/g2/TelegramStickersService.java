@@ -8,6 +8,7 @@ import android.util.Log;
 import com.aefyr.tsg.g2.sql.TelegramStickersDbHelper;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersPackInfo;
+import ru.vtosters.lite.ui.fragments.VTSettings;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 
 import java.io.File;
@@ -152,6 +153,7 @@ public class TelegramStickersService {
 
     private void notifyActivePacksListChanged() {
         getGlobalContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        getGlobalContext().sendBroadcast(new Intent(VTSettings.ACTION_INVALIDATE_TGS_COUNT));
         if (listeners.isEmpty())
             return;
 
@@ -222,7 +224,7 @@ public class TelegramStickersService {
         final TelegramStickersPack newPack = pack;
         final boolean isUpdate = update;
 
-        currentlyDownloading.add(id.toLowerCase());
+        currentlyDownloading.add(id);
         notificationsHelper.packStartedDownloading(newPack);
 
 

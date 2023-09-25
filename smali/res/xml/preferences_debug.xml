@@ -18,18 +18,6 @@
                 android:key="anim_rtrn_type"
                 android:title="@string/franimation"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="useGenius"
-                android:summary="Получать тексты с сервиса Genius"
-                android:title="Тексты с Genius"/>
-        <!-- <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="system"
-            android:dialogTitle="@string/debug_experimental_language_summary"
-            android:entries="@array/language"
-            android:entryValues="@array/lang_value"
-            android:key="lang_value"
-            android:title="@string/debug_experimental_language" /> -->
-        <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="useNewSettings"
                 android:title="@string/useNewSettings_title"/>
@@ -104,7 +92,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="logColors"
-                android:title="Логгировать получение акцентов"/>
+                android:title="@string/logColors_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="__dbg_webview"

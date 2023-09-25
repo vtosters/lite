@@ -1,16 +1,11 @@
 package ru.vtosters.lite.themes.utils;
 
 import android.content.res.ColorStateList;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.DrawableContainer;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.RippleDrawable;
-import android.graphics.drawable.StateListDrawable;
+import android.graphics.drawable.*;
 import android.os.Build;
 import android.widget.TextView;
-
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.ColorReferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VkUiThemer {
     public static void autoThemeVkuiButtons(TextView view) {

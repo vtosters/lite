@@ -1,8 +1,5 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
@@ -11,20 +8,21 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.vtosters.lite.R;
-
+import ru.vtosters.lite.themes.hooks.TextViewHook;
 import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.ItemMovingCallback;
 import ru.vtosters.lite.utils.LayoutUtils;
+
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 
 public class DockBarEditorFragment extends BaseToolbarFragment {
 
@@ -57,6 +55,8 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
             restartApplication();
         });
 
+        new TextViewHook().inject(save, 0, false);
+
         var saveParams = LayoutUtils.createLinear(0, -2);
         saveParams.weight = 1.0f;
         buttonsContainer.addView(save, saveParams);
@@ -82,6 +82,9 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
             holder.bindMovingItem(tab.iconID, tab.titleID);
         });
         adapter.setMinAndMaxCounts(DockBarEditorManager.MIN_SELECTED_TABS, DockBarEditorManager.MAX_SELECTED_TABS);
+        adapter.setExceptions(
+                DockBarEditorManager.getTabByTag("tab_profile"),
+                DockBarEditorManager.getTabByTag("")/*settings*/);
 
         var recyclerView = new RecyclerView(requireContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

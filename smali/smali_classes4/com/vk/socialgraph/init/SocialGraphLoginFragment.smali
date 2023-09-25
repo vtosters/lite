@@ -203,6 +203,10 @@
 
     const-string v0, "com.google"
 
+    invoke-static {v0}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     .line 2
     filled-new-array {v0}, [Ljava/lang/String;
 
@@ -384,6 +388,10 @@
     move-result-object v0
 
     const-string v1, "com.google"
+
+    invoke-static {v1}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/accounts/AccountManager;->getAccountsByType(Ljava/lang/String;)[Landroid/accounts/Account;
 

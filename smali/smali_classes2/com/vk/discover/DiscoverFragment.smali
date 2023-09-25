@@ -742,7 +742,13 @@
     if-eqz v0, :cond_0
 
     .line 50
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
+    # invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
+
+    invoke-static {p1, v0}, Lru/vtosters/hooks/NewsfeedHook;->samsungFixRem(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/discover/DiscoverItemDecorator;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
 
     .line 51
     :cond_0
@@ -810,7 +816,13 @@
     invoke-direct {v3, v4, v5, v1, v0}, Lcom/vk/discover/DiscoverItemDecorator;-><init>(Lcom/vk/discover/DiscoverAdapter;Landroid/content/res/Resources;IZ)V
 
     .line 55
-    invoke-virtual {p1, v3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
+    # invoke-virtual {p1, v3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
+
+    invoke-static {p1, v3}, Lru/vtosters/hooks/NewsfeedHook;->samsungFixAdd(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/discover/DiscoverItemDecorator;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
 
     .line 56
     iput-object v3, p0, Lcom/vk/discover/DiscoverFragment;->K:Lcom/vk/discover/DiscoverItemDecorator;

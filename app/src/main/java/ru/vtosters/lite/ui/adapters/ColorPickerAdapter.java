@@ -6,24 +6,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.vk.core.drawable.BorderDrawable;
 import com.vk.core.util.Screen;
 import com.vk.stories.view.StoryCircleImageView;
+import ru.vtosters.hooks.other.ThemesUtils;
+import ru.vtosters.lite.themes.items.VTLColor;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.List;
 
-import ru.vtosters.lite.themes.items.VTLColor;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
-
 public class ColorPickerAdapter extends RecyclerView.Adapter<ColorPickerAdapter.ColorPickerViewHolder> {
 
-    private List<VTLColor> mColors;
-    private OnColorSelectListener mSelectListener;
+    private final List<VTLColor> mColors;
+    private final OnColorSelectListener mSelectListener;
 
     public ColorPickerAdapter(List<VTLColor> colors, OnColorSelectListener selectListener) {
         this.mColors = colors;
@@ -48,12 +45,17 @@ public class ColorPickerAdapter extends RecyclerView.Adapter<ColorPickerAdapter.
         return mColors.size();
     }
 
+    public interface OnColorSelectListener {
+
+        void onColorSelected(ColorPickerAdapter adapter, VTLColor vtlcolor);
+    }
+
     public class ColorPickerViewHolder extends RecyclerView.ViewHolder {
-        private View mContainer;
-        private FrameLayout mColorPreviewBorder;
-        private StoryCircleImageView mColorPreview;
-        private TextView mColorName;
-        private TextView mColorValue;
+        private final View mContainer;
+        private final FrameLayout mColorPreviewBorder;
+        private final StoryCircleImageView mColorPreview;
+        private final TextView mColorName;
+        private final TextView mColorValue;
 
         public ColorPickerViewHolder(@NonNull View view) {
             super(view);
@@ -72,10 +74,5 @@ public class ColorPickerAdapter extends RecyclerView.Adapter<ColorPickerAdapter.
             mColorName.setText(item.resName);
             mColorValue.setText("#" + Integer.toHexString(item.color).toUpperCase());
         }
-    }
-
-    public interface OnColorSelectListener {
-
-        void onColorSelected(ColorPickerAdapter adapter, VTLColor vtlcolor);
     }
 }

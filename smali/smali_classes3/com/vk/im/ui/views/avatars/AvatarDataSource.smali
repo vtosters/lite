@@ -769,7 +769,7 @@
     .line 33
     sget-object v1, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->o:Landroid/graphics/Paint;
 
-    invoke-static {v0, p1, v1}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(FLandroid/graphics/Canvas;Landroid/graphics/Paint;)V
+    invoke-static {v0, p1, v1}, Lru/vtosters/hooks/PicRoundingHook;->inject(FLandroid/graphics/Canvas;Landroid/graphics/Paint;)V
 
     return-void
 .end method

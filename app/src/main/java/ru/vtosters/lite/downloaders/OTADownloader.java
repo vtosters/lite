@@ -8,16 +8,13 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Environment;
-
 import androidx.core.content.FileProvider;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-
-import java.io.File;
-
 import ru.vtosters.lite.ui.activities.APKInstallActivity;
 import ru.vtosters.lite.utils.AndroidUtils;
+
+import java.io.File;
 
 public class OTADownloader {
 

@@ -1,18 +1,17 @@
 package ru.vtosters.lite.deviceinfo;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.text.TextUtils;
+import ru.vtosters.lite.utils.ReflectionUtils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import ru.vtosters.lite.utils.ReflectionUtils;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class OEMDetector {
     private static Field semPlatformIntField;
@@ -25,8 +24,7 @@ public class OEMDetector {
         try {
             getPropMtd = ReflectionUtils.findMethod(Class.forName("android.os.SystemProperties"), "get", String.class);
             semPlatformIntField = ReflectionUtils.findField(Build.VERSION.class, "SEM_PLATFORM_INT");
-        } catch (NoSuchFieldException | ClassNotFoundException | NoSuchMethodException e) {
-            e.printStackTrace();
+        } catch (NoSuchFieldException | ClassNotFoundException | NoSuchMethodException ignored) {
         }
     }
 
@@ -58,7 +56,7 @@ public class OEMDetector {
     }
 
     public static boolean isOEM() {
-        return isMIUI() || isEMUI() || isFlyme() || isZenUI() || isSamsung() || isVivo();
+        return isMIUI() || isEMUI() || isFlyme() || isZenUI() || isSamsung() || isVivo() || isOneUi();
     }
 
     public static boolean isMIUI() {

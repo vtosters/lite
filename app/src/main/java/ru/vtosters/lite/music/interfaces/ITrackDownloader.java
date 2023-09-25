@@ -4,8 +4,6 @@ import com.vk.dto.music.MusicTrack;
 
 import java.io.File;
 
-import ru.vtosters.lite.music.Callback;
-
 /**
  * Interface for track downloaders
  */

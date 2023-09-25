@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
-
 import com.guardanis.applock.AppLock;
 import com.guardanis.applock.activities.UnlockActivity;
 import com.vk.core.fragments.FragmentImpl;

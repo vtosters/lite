@@ -1,13 +1,8 @@
 package ru.vtosters.lite.deviceinfo;
 
-import static ru.vtosters.lite.deviceinfo.OEMDetector.getEmuiVersionCode;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.getMiuiUiVersionCode;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.getMiuiUiVersionIncrementalCode;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.getMiuiUiVersionName;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.getOneUiMajorVersion;
-import static ru.vtosters.lite.deviceinfo.OEMDetector.getOneUiMinorVersion;
-
 import android.os.Build;
+
+import static ru.vtosters.lite.deviceinfo.OEMDetector.*;
 
 public class DeviceInfoCollector {
 

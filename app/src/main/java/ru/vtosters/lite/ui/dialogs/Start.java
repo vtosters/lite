@@ -6,18 +6,18 @@ import android.net.Uri;
 import android.os.Build;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
 public class Start {
     public static void alert(final Activity activity) {
         if (Build.VERSION.SDK_INT >= 23) {
             activity.requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
         }
-        if (getBoolValue("showAlert", true))
+        if (getBoolValue("showAlert", true) && AndroidUtils.isFirstInstall(activity))
             new VkAlertDialog.Builder(activity)
                     .setTitle(R.string.warning)
                     .setMessage(getWelcome())

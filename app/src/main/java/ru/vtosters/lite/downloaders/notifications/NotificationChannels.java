@@ -4,12 +4,9 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
-
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationManagerCompat;
-
 import com.vtosters.lite.R;
-
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class NotificationChannels {

@@ -1,11 +1,9 @@
 package ru.vtosters.lite.themes.hooks;
 
 import android.view.View;
-
 import com.pnikosis.materialishprogress.ProgressWheel;
-
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.ThemesCore;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ProgressWheelHook implements BaseHook {
     @Override

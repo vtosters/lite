@@ -1,14 +1,12 @@
 package ru.vtosters.lite.translators;
 
-import static ru.vtosters.lite.utils.Preferences.getPreferences;
-
 import androidx.annotation.NonNull;
 import androidx.collection.LruCache;
+import ru.vtosters.hooks.other.Preferences;
 
 import java.util.Locale;
 
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
+import static ru.vtosters.hooks.other.Preferences.getPreferences;
 
 public abstract class BaseTranslator {
 

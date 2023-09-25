@@ -479,7 +479,7 @@
     .line 18
     iget-object v0, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a:Landroid/content/Context;
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v0
 

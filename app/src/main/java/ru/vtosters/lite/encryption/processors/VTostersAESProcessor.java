@@ -1,24 +1,20 @@
 package ru.vtosters.lite.encryption.processors;
 
 import android.util.Base64;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
-import java.nio.charset.StandardCharsets;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.util.HashMap;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.encryption.base.IMProcessor;
 
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-
-import ru.vtosters.lite.encryption.base.IMProcessor;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
+import java.nio.charset.StandardCharsets;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
 
 public class VTostersAESProcessor extends IMProcessor {
     private final static String CIPHER_INSTANCE = "AES/CBC/PKCS7Padding";

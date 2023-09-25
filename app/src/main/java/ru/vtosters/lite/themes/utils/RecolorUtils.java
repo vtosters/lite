@@ -9,10 +9,10 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.widget.TextView;
 import com.vk.core.drawable.RecoloredDrawable;
-import ru.vtosters.lite.R;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.ColorReferences;
+import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class RecolorUtils {
     public static Drawable recolorDrawableToolbar(Drawable drawable) {
@@ -44,7 +44,7 @@ public class RecolorUtils {
     }
 
     public static int recolorHexColor(int i) {
-        if (!ThemesUtils.isCustomAccentEnabled()) return i;
+        if (!ThemesUtils.isMonetTheme() || !ThemesManager.canApplyCustomAccent()) return i;
         var accented = ColorReferences.isAccentedColor(i);
         var mutedaccented = ColorReferences.isMutedAccentedColor(i);
         return (accented || mutedaccented) ? (accented ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : i;
@@ -58,7 +58,7 @@ public class RecolorUtils {
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList themeCSL(Context context, int color) {
-        if (!ThemesUtils.isCustomAccentEnabled()) {
+        if (!ThemesUtils.isMonetTheme()) {
             if (Build.VERSION.SDK_INT >= 23) {
                 return context.getColorStateList(color);
             } else {
@@ -84,7 +84,7 @@ public class RecolorUtils {
     } // Recolor ColorStateList
 
     public static ColorStateList themeCSL(ColorStateList csl) {
-        if (!ThemesUtils.isCustomAccentEnabled()) return csl;
+        if (!ThemesUtils.isMonetTheme()) return csl;
 
         try {
             int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);

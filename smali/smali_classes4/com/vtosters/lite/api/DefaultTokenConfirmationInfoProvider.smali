@@ -31,20 +31,6 @@
         }
     .end annotation
 
-    .line 1
-    :try_start_0
-    sget-object v0, Lcom/vk/common/VKSafetyNet;->a:Lcom/vk/common/VKSafetyNet;
-
-    invoke-virtual {v0}, Lcom/vk/common/VKSafetyNet;->a()Lkotlin/Triple;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 2
-    :catch_0
     new-instance v0, Lkotlin/Triple;
 
     const/4 v1, 0x0
@@ -61,7 +47,6 @@
 
     invoke-direct {v0, v3, v1, v2}, Lkotlin/Triple;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :goto_0
     return-object v0
 .end method
 

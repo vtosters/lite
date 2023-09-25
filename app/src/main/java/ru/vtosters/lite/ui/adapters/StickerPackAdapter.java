@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.adapters;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,17 +25,18 @@ import com.vk.stickers.details.StickerDetailsAdapter;
 import com.vk.stickers.details.StickerDetailsView;
 import com.vtosters.lite.R;
 import org.json.JSONException;
-import ru.vtosters.lite.hooks.SwitchHook;
+import ru.vtosters.hooks.SwitchHook;
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.tgs.TGRoot;
 import ru.vtosters.lite.ui.components.IItemMovingListener;
+import ru.vtosters.lite.ui.fragments.VTSettings;
 
 import java.io.File;
 import java.util.ArrayList;
 
+import static ru.vtosters.hooks.other.ThemesUtils.*;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.ThemesUtils.*;
 
 public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.StickerPackViewHolder> implements IItemMovingListener {
     private static final TelegramStickersService sService = TelegramStickersService.getInstance(getGlobalContext());
@@ -138,7 +140,11 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             });
             mName.setText(pack.title);
             mSwitch.setChecked(pack.enabled);
-            mSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> sService.setPackEnabled(pack, isChecked, true));
+            mSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                sService.setPackEnabled(pack, isChecked, false);
+                buttonView.getContext().sendBroadcast(new Intent(VTSettings.ACTION_INVALIDATE_TGS_COUNT));
+            });
+
             mStickersCount.setText(pack.stickersCount + " " + mStickersCount.getContext().getString(R.string.stickerscount));
 
             SwitchHook.setSwitchCompatColors(mSwitch, mSwitch.getContext());

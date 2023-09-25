@@ -2086,6 +2086,10 @@
 
     const-string v2, "com.google"
 
+    invoke-static {v2}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
     invoke-direct {p2, v0, v2}, Landroid/accounts/Account;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
@@ -2384,6 +2388,10 @@
     .locals 1
 
     const-string v0, "com.google.android.gms"
+
+    invoke-static {v0}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

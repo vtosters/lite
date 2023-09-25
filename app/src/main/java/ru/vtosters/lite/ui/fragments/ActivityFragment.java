@@ -1,12 +1,10 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Preferences.offline;
-
 import android.os.Bundle;
-
 import androidx.preference.Preference;
-
 import com.vtosters.lite.R;
+
+import static ru.vtosters.hooks.other.Preferences.offline;
 
 public class ActivityFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override

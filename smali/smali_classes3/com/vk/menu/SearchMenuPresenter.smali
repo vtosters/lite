@@ -1319,7 +1319,7 @@
 
     invoke-interface {v0, v2, v1}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkpay()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->vkpay()Z
 
     move-result v0
 
@@ -1328,7 +1328,7 @@
     invoke-direct {p0}, Lcom/vk/menu/SearchMenuPresenter;->g()V
 
     :cond_1
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->miniapps()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->miniapps()Z
 
     move-result v0
 

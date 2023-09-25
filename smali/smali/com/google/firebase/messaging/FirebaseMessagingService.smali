@@ -193,6 +193,10 @@
 
     const-string v1, "com.google.android.c2dm.intent.RECEIVE"
 
+    invoke-static {v1}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     .line 2
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

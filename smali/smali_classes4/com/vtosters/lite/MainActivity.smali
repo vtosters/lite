@@ -111,7 +111,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lru/vtosters/lite/hooks/StartFragmentHook;->getStartFragment()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/hooks/StartFragmentHook;->getStartFragment()Ljava/lang/Class;
 
     move-result-object p2
 
@@ -343,7 +343,7 @@
     .line 1
     invoke-super {p0, p1}, Lcom/vk/navigation/NavigationDelegateActivity;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-static {p0}, Lru/vtosters/lite/ui/components/CrashReporter;->init(Landroid/app/Activity;)V
+    invoke-static {p0}, Lru/vtosters/lite/utils/CrashReporter;->init(Landroid/app/Activity;)V
 
     .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->isTaskRoot()Z
@@ -400,7 +400,7 @@
 
     .line 7
     :cond_0
-    invoke-static {p0}, Lru/vtosters/lite/hooks/MainActivityInjector;->inject(Landroid/app/Activity;)V
+    invoke-static {p0}, Lru/vtosters/hooks/MainActivityInjector;->inject(Landroid/app/Activity;)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -546,8 +546,6 @@
     invoke-virtual {p0, p1, v0}, Landroidx/fragment/app/FragmentActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     :goto_1
-    invoke-static {p0}, Lru/vtosters/lite/hooks/ui/SystemThemeChangerHook;->themeOnStart(Landroid/app/Activity;)V
-
     return-void
 .end method
 
@@ -621,7 +619,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lru/vtosters/lite/hooks/StartFragmentHook;->getStartFragment()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/hooks/StartFragmentHook;->getStartFragment()Ljava/lang/Class;
 
     move-result-object v1
 

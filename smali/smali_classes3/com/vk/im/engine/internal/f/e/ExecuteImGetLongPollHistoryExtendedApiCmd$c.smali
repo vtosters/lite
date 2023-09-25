@@ -167,7 +167,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/BusinessNotifHook;->hook(Z)Z
+    invoke-static {v0}, Lru/vtosters/hooks/BusinessNotifHook;->hook(Z)Z
 
     move-result v0
     

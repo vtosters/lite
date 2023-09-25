@@ -778,44 +778,44 @@
         }
     .end annotation
 
-    .line 2
-    invoke-static {}, Lcom/vk/dto/discover/DiscoverItem$Template;->values()[Lcom/vk/dto/discover/DiscoverItem$Template;
+    # .line 2
+    # invoke-static {}, Lcom/vk/dto/discover/DiscoverItem$Template;->values()[Lcom/vk/dto/discover/DiscoverItem$Template;
 
-    move-result-object v0
+    # move-result-object v0
 
-    .line 3
-    new-instance v1, Ljava/util/ArrayList;
+    # .line 3
+    # new-instance v1, Ljava/util/ArrayList;
 
-    array-length v2, v0
+    # array-length v2, v0
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+    # invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 4
-    array-length v2, v0
+    # .line 4
+    # array-length v2, v0
 
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    :goto_0
-    if-ge v4, v2, :cond_0
+    # :goto_0
+    # if-ge v4, v2, :cond_0
 
-    aget-object v5, v0, v4
+    # aget-object v5, v0, v4
 
-    .line 5
-    invoke-virtual {v5}, Lcom/vk/dto/discover/DiscoverItem$Template;->b()Ljava/lang/String;
+    # .line 5
+    # invoke-virtual {v5}, Lcom/vk/dto/discover/DiscoverItem$Template;->b()Ljava/lang/String;
 
-    move-result-object v5
+    # move-result-object v5
 
-    invoke-interface {v1, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    # invoke-interface {v1, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    add-int/lit8 v4, v4, 0x1
+    # add-int/lit8 v4, v4, 0x1
 
-    goto :goto_0
+    # goto :goto_0
 
-    :cond_0
+    # :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/feature/discover/DiscoverTemplates;->getTemplates()Ljava/util/ArrayList;
+    invoke-static {}, Lru/vtosters/hooks/DiscoverTemplates;->getTemplates()Ljava/util/ArrayList;
 
     move-result-object v1
 

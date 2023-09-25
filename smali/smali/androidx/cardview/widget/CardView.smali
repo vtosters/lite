@@ -235,7 +235,7 @@
 
     sget v1, Landroidx/cardview/R$color;->cardview_light_background:I
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/hooks/other/ThemesUtils;->getColor(I)I
 
     move-result p3
 
@@ -249,7 +249,7 @@
 
     sget v1, Landroidx/cardview/R$color;->cardview_dark_background:I
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(I)I
+    invoke-static {v1}, Lru/vtosters/hooks/other/ThemesUtils;->getColor(I)I
 
     move-result p3
 

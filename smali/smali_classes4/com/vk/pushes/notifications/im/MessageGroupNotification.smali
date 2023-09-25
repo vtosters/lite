@@ -164,7 +164,7 @@
     .line 6
     iget-object v1, p0, Lcom/vk/pushes/notifications/im/MessageGroupNotification;->d:Landroid/content/Context;
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v1
 

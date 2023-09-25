@@ -118,7 +118,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->dev()Z
 
     move-result v0
 
@@ -152,7 +152,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->dev()Z
 
     move-result v0
 
@@ -171,7 +171,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->dev()Z
 
     move-result v0
 

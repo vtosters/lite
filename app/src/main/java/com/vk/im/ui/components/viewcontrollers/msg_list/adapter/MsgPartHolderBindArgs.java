@@ -21,6 +21,7 @@ import com.vk.im.ui.q.h.VideoAutoPlayer;
 import com.vk.im.ui.views.span.OnSpanClickListener;
 import com.vk.im.ui.views.span.OnSpanLongPressListener;
 import com.vk.im.ui.views.sticker.StickerAnimationState;
+
 import java.util.List;
 
 @MainThread

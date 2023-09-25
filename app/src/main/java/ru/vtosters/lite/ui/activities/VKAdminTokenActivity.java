@@ -1,7 +1,5 @@
 package ru.vtosters.lite.ui.activities;
 
-import static ru.vtosters.lite.proxy.ProxyUtils.getOauth;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -10,15 +8,15 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import ru.vtosters.lite.utils.LayoutUtils;
 
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
 
-import ru.vtosters.lite.utils.LayoutUtils;
+import static ru.vtosters.lite.proxy.ProxyUtils.getOauth;
 
 public class VKAdminTokenActivity extends AppCompatActivity {
 

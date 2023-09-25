@@ -2,10 +2,8 @@ package ru.vtosters.lite.themes.hooks;
 
 import android.content.res.ColorStateList;
 import android.view.View;
-
 import com.vk.core.view.VKTabLayout;
-
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.hooks.other.ThemesUtils;
 
 
 public class TabLayoutHook implements BaseHook {

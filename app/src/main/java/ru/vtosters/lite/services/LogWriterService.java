@@ -1,9 +1,5 @@
 package ru.vtosters.lite.services;
 
-import static android.widget.Toast.LENGTH_SHORT;
-import static android.widget.Toast.makeText;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
 import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
@@ -11,10 +7,9 @@ import android.content.Intent;
 import android.os.Environment;
 import android.os.IBinder;
 import android.util.Log;
-
 import androidx.annotation.Nullable;
-
 import com.vtosters.lite.R;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -24,7 +19,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import ru.vtosters.lite.utils.AndroidUtils;
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class LogWriterService extends Service {
     public LogWriterService() {

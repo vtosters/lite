@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import android.app.Activity;
-
 import ru.vtosters.lite.themes.items.VTLPalette;
 import ru.vtosters.lite.ui.adapters.ColorPickerAdapter;
 

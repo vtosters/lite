@@ -233,7 +233,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->isMonetTheme()Z
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->isMonetTheme()Z
 
     move-result v0
 
@@ -257,7 +257,7 @@
 .method private final a(Landroid/view/ViewGroup;)Lcom/google/android/material/appbar/AppBarLayout;
     .locals 4
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->isMonetTheme()Z
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->isMonetTheme()Z
 
     move-result v0
 
@@ -625,7 +625,7 @@
 
     if-eq v0, p1, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->isMonetTheme()Z
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->isMonetTheme()Z
 
     move-result v0
 

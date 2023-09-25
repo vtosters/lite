@@ -75,6 +75,10 @@
 
     const-string v1, "content://com.google.android.gms.phenotype/"
 
+    invoke-static {v1}, Lru/vtosters/hooks/GmsHook;->replaceGMSPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     if-eqz v0, :cond_0
 
     invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;

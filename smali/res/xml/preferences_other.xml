@@ -14,27 +14,8 @@
                 android:summary="@string/firebasefixsum"
                 android:title="@string/firebasefix"/>
         <Preference
-                android:key="clearcache"
-                android:title="@string/clearcache_other_title"/>
-        <Preference
-                android:key="autoclearcache"
-                android:title="@string/autoclearcache"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtl_other_backups_title">
-        <Preference
-                android:key="saveonlines"
-                android:summary="@string/saveonlines_summ"
-                android:title="@string/saveonlines_title"/>
-        <Preference
-                android:key="deleteprefs"
-                android:summary="@string/other_reset_settings_summary"
-                android:title="@string/other_reset_settings"/>
-        <Preference
-                android:key="saveprefs"
-                android:title="@string/saveprefs_title"/>
-        <Preference
-                android:key="restoreprefs"
-                android:title="@string/restoreprefs_title"/>
+                android:key="microgsettings"
+                android:title="@string/microgsett"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference
@@ -90,10 +71,5 @@
         <Preference
                 android:key="vk_admin_token"
                 android:title="@string/vk_admin_token_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="analyticsDisabled"
-                android:summary="Сбор данных о падениях приложения помогает нам улучшать приложение\n\nОтключение сбора логов падений заставит грустить бедных разработчиков"
-                android:title="Отключить сбор данных"/>
     </PreferenceCategory>
 </PreferenceScreen>

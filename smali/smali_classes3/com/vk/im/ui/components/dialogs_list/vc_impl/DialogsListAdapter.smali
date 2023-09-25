@@ -277,7 +277,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Lcom/vk/im/engine/models/messages/Msg;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v2, v3}, Lru/vtosters/hooks/EncryptionMessagesHook;->decryptMessage(Lcom/vk/im/engine/models/messages/Msg;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v3
 

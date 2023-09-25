@@ -1,32 +1,26 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
-
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
-
 import androidx.preference.PreferenceCategory;
-
+import b.h.g.k.VKProgressDialog;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
-
-import b.h.g.k.VKProgressDialog;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.themes.palettes.PalettesManager;
+import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
 import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
-import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
@@ -46,15 +40,17 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("systememoji").setSummary(getGlobalContext().getString(R.string.systememojisum) + " \uD83D\uDE00\uD83D\uDE01\uD83E\uDD11\uD83E\uDD75\uD83D\uDC4D");
+        findPreference("systememoji").setSummary(AndroidUtils.getGlobalContext().getString(R.string.systememojisum) + " \uD83D\uDE00\uD83D\uDE01\uD83E\uDD11\uD83E\uDD75\uD83D\uDC4D");
 
         var invalidateThemeCache = findPreference("invalidate_theme_cache");
-        if (ThemesUtils.getReservedAccent() != Color.TRANSPARENT && Preferences.dev())
+        if (ThemesUtils.getReservedAccent() != Color.TRANSPARENT && Preferences.dev()) {
             invalidateThemeCache.setOnPreferenceClickListener(preference -> {
                 setAccentColor(ThemesUtils.getReservedAccent());
                 return true;
             });
-        else invalidateThemeCache.setVisible(false);
+        } else {
+            invalidateThemeCache.setVisible(false);
+        }
 
         var navBarPreference = findPreference("navbar");
         navBarPreference.setOnPreferenceClickListener(preference -> {
@@ -115,18 +111,21 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme());
 
-        var wp = findPreference("wallpapers");
-        wp.setIcon(recolorDrawable(getGlobalContext().getDrawable(R.drawable.ic_media_outline_28)));
-        wp.setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), WallpaperMenuFragment.class);
-
-            return true;
-        });
-
         findPreference("systememoji").setOnPreferenceClickListener(preference -> {
             restart();
             return true;
         });
+
+        var dockbarEditor = findPreference("dockbareditor");
+        dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
+        dockbarEditor.setOnPreferenceClickListener(preference -> {
+            NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
+            return true;
+        });
+
+        if (Preferences.vkme() || AndroidUtils.isTablet()) {
+            dockbarEditor.setVisible(false);
+        }
 
         if (AndroidUtils.isTablet()) {
             PreferenceCategory dockbarSettingsPreferenceCategory = (PreferenceCategory) findPreference("dockbarsett");
@@ -214,7 +213,7 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
                 ThemesManager.generateModApk(color);
                 requireActivity().runOnUiThread(this::restart);
             } catch (Throwable e) {
-                Log.e("ThemesFragment", e + "");
+                Log.e("ThemesFragment", e.getMessage());
                 ThemesManager.deleteModification();
                 requireActivity().runOnUiThread(() -> {
                     dialog.dismiss();

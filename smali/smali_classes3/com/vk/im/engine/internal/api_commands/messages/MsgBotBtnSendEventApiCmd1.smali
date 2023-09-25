@@ -106,7 +106,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->forceOffline()V
 
     return-object p1
 .end method

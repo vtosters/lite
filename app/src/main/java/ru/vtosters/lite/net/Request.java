@@ -1,15 +1,14 @@
 package ru.vtosters.lite.net;
 
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-
 import android.os.AsyncTask;
-
 import com.vk.core.network.Network;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 
 public class Request {
     public static void makeRequest(byte[] bArr, RequestCallback RequestCallback) {

@@ -17,17 +17,20 @@
 package com.google.devrel.gmscore.tools.apk.arsc;
 
 import androidx.annotation.Nullable;
+
 import java.nio.ByteBuffer;
 
-/** Represents the starting tag of a namespace in an XML document. */
+/**
+ * Represents the starting tag of a namespace in an XML document.
+ */
 public final class XmlNamespaceStartChunk extends XmlNamespaceChunk {
 
-  protected XmlNamespaceStartChunk(ByteBuffer buffer, @Nullable Chunk parent) {
-    super(buffer, parent);
-  }
+    protected XmlNamespaceStartChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+        super(buffer, parent);
+    }
 
-  @Override
-  protected Type getType() {
-    return Type.XML_START_NAMESPACE;
-  }
+    @Override
+    protected Type getType() {
+        return Type.XML_START_NAMESPACE;
+    }
 }

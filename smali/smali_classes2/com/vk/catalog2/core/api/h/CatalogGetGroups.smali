@@ -75,6 +75,10 @@
 
     const-string v1, "r.getJSONObject(ServerKeys.RESPONSE)"
 
+    invoke-static { p1 }, Lru/vtosters/hooks/GroupsCatalogInjector;->injectIntoGetGroups(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object p1
+
     invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/CatalogParser;->c(Lorg/json/JSONObject;)Lcom/vk/catalog2/core/api/dto/CatalogResponse;

@@ -1176,7 +1176,7 @@
 .method private final b(Lcom/vk/dto/stories/model/GetStoriesResponse;)V
     .locals 4
 
-    invoke-static {}, Lru/vtosters/lite/hooks/StoriesHook;->showstories()Z
+    invoke-static {}, Lru/vtosters/hooks/StoriesHook;->showstories()Z
 
     move-result v0
 

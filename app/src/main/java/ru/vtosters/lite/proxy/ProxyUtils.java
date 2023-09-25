@@ -1,27 +1,23 @@
 package ru.vtosters.lite.proxy;
 
-import static java.lang.System.clearProperty;
-import static ru.vtosters.lite.proxy.api.VikaMobile.getApiHost;
-import static ru.vtosters.lite.proxy.api.VikaMobile.getOauthHost;
-import static ru.vtosters.lite.proxy.api.VikaMobile.getStaticHost;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.util.ArrayMap;
 import android.util.Log;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.proxy.http.CustomHttp;
+import ru.vtosters.lite.proxy.https.CustomHttps;
+import ru.vtosters.lite.proxy.socks.CustomSocks;
+import ru.vtosters.lite.proxy.socks.Zaborona;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import ru.vtosters.lite.proxy.http.CustomHttp;
-import ru.vtosters.lite.proxy.https.CustomHttps;
-import ru.vtosters.lite.proxy.socks.CustomSocks;
-import ru.vtosters.lite.proxy.socks.Zaborona;
-import ru.vtosters.lite.utils.Preferences;
+import static java.lang.System.clearProperty;
+import static ru.vtosters.lite.proxy.api.VikaMobile.*;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class ProxyUtils {
     public static String getApi() {

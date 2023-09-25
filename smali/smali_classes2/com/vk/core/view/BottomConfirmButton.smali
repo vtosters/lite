@@ -217,7 +217,7 @@
     .line 15
     sget v5, Lb/h/z/m;->BottomConfirmButton_bcb_send_bg_color:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     # move-result v6
 
@@ -241,7 +241,7 @@
     .line 17
     sget v7, Lb/h/z/m;->BottomConfirmButton_bcb_cancel_bg_color:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v8
 

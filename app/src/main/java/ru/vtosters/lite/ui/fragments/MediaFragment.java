@@ -1,17 +1,5 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalled;
-import static ru.vtosters.lite.music.LastFMScrobbler.isLoggedIn;
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,39 +9,39 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-
 import androidx.preference.Preference;
-
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 import com.vtosters.lite.R;
-
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
+import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.LastFMScrobbler;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.SearchEngine;
+
+import java.util.Arrays;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
 
     public static void download(Context ctx) {
         final EditText input = new EditText(ctx);
-        input.setTextColor(getTextAttr());
+        input.setTextColor(ThemesUtils.getTextAttr());
         input.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
 
         var lp = new FrameLayout.LayoutParams(-1, -2);
@@ -91,7 +79,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        findPreference("maxquality").setEnabled(isEnableExternalOpening());
+        findPreference("maxquality").setEnabled(Preferences.isEnableExternalOpening());
         return super.onPreferenceTreeClick(preference);
     }
 
@@ -106,7 +94,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
         findPreference("lastfm_auth").setOnPreferenceClickListener(preference -> {
-            if (isLoggedIn()) {
+            if (LastFMScrobbler.isLoggedIn()) {
                 logout(getContext());
             } else {
                 lastfmAuth(getContext());
@@ -114,16 +102,16 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        if (isLoggedIn()) {
+        if (LastFMScrobbler.isLoggedIn()) {
             findPreference("lastfm_auth").setSummary(requireContext().getString(R.string.lastfm_authorized_as) + " " + LastFMScrobbler.getUserName());
         } else {
             findPreference("lastfm_enabled").setEnabled(false);
         }
 
-        findPreference("cached_tracks").setSummary(String.format(requireContext().getString(R.string.cached_tracks_counter), CacheDatabaseDelegate.getTrackCount()));
+        findPreference("cached_tracks").setSummary(String.format(requireContext().getString(R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
         findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
-            if (CacheDatabaseDelegate.getTrackCount() == 0) {
-                sendToast(requireContext().getString(R.string.no_cache_error));
+            if (MusicCacheImpl.isEmpty()) {
+                AndroidUtils.sendToast(requireContext().getString(R.string.no_cache_error));
             } else {
                 delcache(requireContext());
             }
@@ -135,43 +123,45 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        if (!isVkxInstalled()) {
+        findPreference("invertCachedTracks").setVisible(!MusicCacheImpl.isEmpty());
+
+        if (!LibVKXClient.isVkxInstalled()) {
             findPreference("vkx_sett").setVisible(false);
         }
 
-        findPreference("musicdefcatalog").setVisible(!getBoolValue("useOldAppVer", false));
+        findPreference("musicdefcatalog").setVisible(!Preferences.getBoolValue("useOldAppVer", false));
         findPreference("useOldAppVer").setOnPreferenceClickListener(preference -> {
-            restartApplicationWithTimer();
+            LifecycleUtils.restartApplicationWithTimer();
             return true;
         });
 
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
-            var deficon = ThemesUtils.recolorDrawable(AndroidUtils.getResources().getDrawable(R.drawable.ic_picture_outline_28));
-            var choiceicon = ThemesUtils.recolorDrawable(AndroidUtils.getResources().getDrawable(R.drawable.link_outline_28));
+            var items = new ImagineArrayAdapter.ImagineArrayAdapterItem[SearchEngine.values().length + 1];
+            items[0] = new ImagineArrayAdapter.ImagineArrayAdapterItem(
+                    ThemesUtils.recolorDrawable(AndroidUtils.getResources().getDrawable(R.drawable.link_outline_28)),
+                    AndroidUtils.getString("by_choice"));
+            for (int i = 0; i < SearchEngine.values().length; ++i) {
+                var engine = SearchEngine.values()[i];
+                items[i + 1] = engine.mIconRes != R.drawable.ic_picture_outline_28
+                        ? new ImagineArrayAdapter.ImagineArrayAdapterItem(engine.mIconRes, engine.mTitle)
+                        : new ImagineArrayAdapter.ImagineArrayAdapterItem(
+                        ThemesUtils.recolorDrawable(AndroidUtils.getResources().getDrawable(R.drawable.ic_picture_outline_28)),
+                        engine.mTitle);
+            }
 
-            var items = Arrays.asList(
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(choiceicon, AndroidUtils.getString("by_choice")),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.yandex, "Yandex"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.google, "Google"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.microsoft, "Bing"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(deficon, "TraceMoe"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(deficon, "Ascii2d"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(deficon, "Saucenao")
-                    );
-
-            var adapter = new ImagineArrayAdapter(requireContext(), items);
-            adapter.setSelected(Preferences.getPreferences().getInt("search_engine", 0));
+            var adapter = new ImagineArrayAdapter(requireContext(), Arrays.asList(items));
+            adapter.setSelected(SearchEngine.getDefaultSearchEngine() + 1);
 
             new VkAlertDialog.Builder(getActivity())
-                    .setAdapter(adapter, (dialog, which) -> {
-                        Preferences.getPreferences().edit().putInt("search_engine", which).apply();
-                        dialog.cancel();
+                    .setAdapter(adapter, (di, i) -> {
+                        SearchEngine.setDefaultSearchEngine(i != 0 ? i - 1 : -1);
+                        di.cancel();
                     })
                     .show();
             return true;
         });
 
-        findPreference("maxquality").setEnabled(isEnableExternalOpening());
+        findPreference("maxquality").setEnabled(Preferences.isEnableExternalOpening());
     }
 
     private void lastfmAuth(Context ctx) {
@@ -180,19 +170,19 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         final EditText fn = new EditText(ctx);
         fn.setHint(R.string.lastfm_login);
-        fn.setTextColor(getTextAttr());
-        fn.setHintTextColor(getSTextAttr());
+        fn.setTextColor(ThemesUtils.getTextAttr());
+        fn.setHintTextColor(ThemesUtils.getSTextAttr());
         fn.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
-        margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
+        margin.setMargins(AndroidUtils.dp2px(20f), 0, AndroidUtils.dp2px(20f), 0);
         fn.setLayoutParams(margin);
 
         final EditText ln = new EditText(ctx);
         ln.setHint(R.string.lastfm_password);
-        ln.setTextColor(getTextAttr());
-        ln.setHintTextColor(getSTextAttr());
+        ln.setTextColor(ThemesUtils.getTextAttr());
+        ln.setHintTextColor(ThemesUtils.getSTextAttr());
         ln.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
         linearLayout.addView(ln);
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -227,7 +217,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setTitle(R.string.warning)
                 .setMessage(R.string.cached_tracks_remove_confirm)
                 .setPositiveButton(R.string.yes,
-                        (dialog, which) -> executor.submit(CacheDatabaseDelegate::clear))
+                        (dialog, which) -> executor.submit(MusicCacheImpl::clear))
                 .setNeutralButton(R.string.no,
                         (dialog, which) -> dialog.cancel())
                 .show();
@@ -235,7 +225,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
 
     private void dlaudio(Context ctx) {
         if (LibVKXClient.isIntegrationEnabled()) {
-            sendToast(AndroidUtils.getString("vkx_integration_enabled_info"));
+            AndroidUtils.sendToast(AndroidUtils.getString("vkx_integration_enabled_info"));
             return;
         }
 
@@ -252,32 +242,26 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
     }
 
     public void deleteVideoHistory() {
-        Thread thread = new Thread(() -> {
+        VTExecutors.getIoExecutor().execute(() -> {
+            var request = new Request.a()
+                    .b("https://" + ProxyUtils.getApi() + "/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + AccountManagerUtils.getUserToken() + "&v=5.119")
+                    .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
+                    .a();
+
             try {
-                var request = new Request.a()
-                        .b("https://" + getApi() + "/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + getUserToken() + "&v=5.119")
-                        .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
-                        .a();
+                var response = new JSONObject(new OkHttpClient().a(request).execute().a().g());
 
-                try {
-                    var response = new JSONObject(new OkHttpClient().a(request).execute().a().g());
-
-                    if (response.optInt("response") == 1) {
-                        requireActivity().runOnUiThread(() -> sendToast(requireContext().getString(R.string.video_history_cleaned)));
-                    } else {
-                        requireActivity().runOnUiThread(() -> sendToast(requireContext().getString(R.string.delete_video_history_error)));
-                    }
-
-                    Log.d("VideoHistory", response.toString());
-                } catch (IOException e) {
-                    e.printStackTrace();
+                if (response.optInt("response") == 1) {
+                    requireActivity().runOnUiThread(() -> AndroidUtils.sendToast(requireContext().getString(R.string.video_history_cleaned)));
+                } else {
+                    requireActivity().runOnUiThread(() -> AndroidUtils.sendToast(requireContext().getString(R.string.delete_video_history_error)));
                 }
+
+                Log.d("VideoHistory", response.toString());
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
-
-        thread.start();
     }
 
     private void deleteVideoHistoryDialog(Context context) {

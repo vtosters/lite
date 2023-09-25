@@ -3,9 +3,11 @@ package com.vk.im.ui.components.common;
 import com.vk.core.extensions.CollectionExt;
 import com.vk.im.engine.ImConfig;
 import com.vk.im.engine.ImEngine;
+import com.vk.im.engine.models.Member;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.utils.MsgPermissionHelper;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -34,6 +36,24 @@ public final class MsgActionHelper {
             CollectionExt.a(arrayList, MsgAction.UNPIN, MsgPermissionHelper.b.i(aVar));
             CollectionExt.a(arrayList, MsgAction.TRANSLATE, true);
             CollectionExt.a(arrayList, MsgAction.READTO, true);
+
+            boolean isAdmin = false;
+
+            try {
+                if (aVar.a().z1().L0().t1() == AccountManagerUtils.getUserId()) { // is owner
+                    isAdmin = true;
+                } else if (!aVar.a().z1().K1()) { // is you not kicked
+                    for (Member admins : aVar.a().z1().t1()) { // admin list
+                        if (admins.t1() == AccountManagerUtils.getUserId()) {
+                            isAdmin = true;
+                            break;
+                        }
+                    }
+                }
+            } catch (Exception ignored) {
+
+            }
+            CollectionExt.a(arrayList, MsgAction.KICK, isAdmin);
 
             return arrayList;
         }

@@ -119,16 +119,7 @@
 .method protected w()Ljava/lang/String;
     .locals 3
 
-    .line 1
-    invoke-static {}, Lcom/vk/core/preference/Preference;->a()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    const-string v1, "compressPhotos"
-
-    const/4 v2, 0x1
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {}, Lcom/vk/medianative/MediaImageEncoder;->needToCompress()Z
 
     move-result v0
 

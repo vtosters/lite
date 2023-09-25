@@ -11,7 +11,6 @@ import com.vk.api.sdk.exceptions.VKApiExecutionException;
 import com.vk.common.k.PodcastTimeCodeClickListener;
 import com.vk.common.links.LinkParser;
 import com.vk.core.util.ContextExtKt;
-import com.vk.dto.music.Artist;
 import com.vk.dto.music.MusicTrack;
 import com.vk.music.artists.chooser.MusicArtistSelector;
 import com.vk.music.common.MusicPlaybackLaunchContext;
@@ -24,6 +23,8 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.ViewUtils;
 import com.vtosters.lite.ui.MusicErrorViewHelper;
 import com.vtosters.lite.ui.holder.RecyclerHolder;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.music.Genius;
 
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -155,6 +156,14 @@ public class LyricsHolder extends RecyclerHolder<PlayerInfo> implements View.OnC
 
         @Override // com.vk.api.base.ApiCallback
         public void a(VKApiExecutionException vKApiExecutionException) {
+            if (Preferences.getBoolValue("useGenius", false)) {
+                var text = Genius.getTextMusic(a);
+                var lyrics = new AudioGetLyrics.a();
+                lyrics.a = text;
+                a(lyrics);
+                return;
+            }
+
             LyricsHolder.this.B.set(false);
             LyricsHolder.this.f18328f.a(vKApiExecutionException);
             LyricsHolder.this.f18328f.b(0);

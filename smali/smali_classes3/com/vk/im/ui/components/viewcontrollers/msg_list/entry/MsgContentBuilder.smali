@@ -302,7 +302,7 @@
     .line 39
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgContentBuilder;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;
 
-    invoke-static {p1}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;)Ljava/lang/String;
+    invoke-static {p1}, Lru/vtosters/hooks/EncryptionMessagesHook;->decryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -678,7 +678,7 @@
 
     move-result v3
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v3}, Lru/vtosters/hooks/EncryptionMessagesHook;->decryptMessage(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 

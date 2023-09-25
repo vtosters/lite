@@ -270,7 +270,7 @@
     aput v0, p1, v4
 
     .line 7
-    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getAccentColor()I
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getAccentColor()I
 
     move-result v0
 
@@ -754,7 +754,7 @@
     :goto_5
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    invoke-static {p0}, Lru/vtosters/lite/hooks/PollHook;->show(Lcom/vk/polls/ui/views/PollOptionView;)V
+    invoke-static {p0}, Lru/vtosters/hooks/PollHook;->show(Lcom/vk/polls/ui/views/PollOptionView;)V
 
     .line 18
     iget-object v0, p0, Lcom/vk/polls/ui/views/PollOptionView;->c:Landroid/widget/TextView;

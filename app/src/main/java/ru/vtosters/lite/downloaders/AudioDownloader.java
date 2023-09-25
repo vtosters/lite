@@ -1,21 +1,13 @@
 package ru.vtosters.lite.downloaders;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
-
 import android.os.Environment;
-
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
-
-import java.io.File;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
-import ru.vtosters.lite.music.cache.FileCacheImplementation;
+import ru.vtosters.hooks.music.MusicCacheFilesHook;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
 import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
 import ru.vtosters.lite.music.downloader.AudioGet;
@@ -25,6 +17,12 @@ import ru.vtosters.lite.music.notification.MusicNotificationBuilder;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
+
+import java.io.File;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 /**
  * Entrypoint for downloading audio
@@ -60,15 +58,15 @@ public class AudioDownloader {
     }
 
     public static void cacheTrack(MusicTrack track) {
-        var trackId = track.y1();
+        var trackId = LibVKXClient.asId(track);
 
-        if (CacheDatabaseDelegate.isCached(trackId)) {
-            CacheDatabaseDelegate.removeTrackFromCache(LibVKXClient.asId(track));
+        if (MusicCacheImpl.isCachedTrack(trackId)) {
+            MusicCacheImpl.removeTrack(trackId);
             AndroidUtils.sendToast(AndroidUtils.getString("audio_deleted_from_cache"));
             return;
         }
 
-        var trackFile = FileCacheImplementation.getTrackFile(trackId);
+        var trackFile = MusicCacheFilesHook.getTrackFile(trackId);
         if (!trackFile.exists())
             trackFile.getParentFile().mkdirs();
         executor.submit(() -> downloadM3U8(track, true));

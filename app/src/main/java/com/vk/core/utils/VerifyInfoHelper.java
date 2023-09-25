@@ -14,7 +14,7 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.dto.common.VerifyInfo;
 import com.vk.extensions.ViewExtKt;
 import com.vtosters.lite.R;
-import ru.vtosters.lite.utils.ThemesUtils;
+import ru.vtosters.hooks.other.ThemesUtils;
 
 
 public final class VerifyInfoHelper {

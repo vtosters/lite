@@ -59,6 +59,12 @@
 .method private final R4()V
     .locals 6
 
+    const-string v1, "ВКонтакте и так самая лучшая социальная сеть!!!!!!!!"
+
+    invoke-static {v1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
+
+    return-void
+
     .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -508,8 +514,6 @@
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
-
-    invoke-static {p2}, Lru/vtosters/lite/utils/About;->injectToToolBar(Landroid/view/View;)V
 
     check-cast p2, Landroidx/appcompat/widget/Toolbar;
 

@@ -716,7 +716,7 @@
 
     move-result-object v3
 
-    invoke-static {p1, v0, v2, v3}, Lru/vtosters/lite/music/hook/MusicBottomSheetHook;->injectOnClick(ILcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/dto/music/Playlist;)Z
+    invoke-static {p1, v0, v2, v3}, Lru/vtosters/hooks/music/MusicBottomSheetHook;->injectOnClick(ILcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/dto/music/Playlist;)Z
 
     move-result v3
 

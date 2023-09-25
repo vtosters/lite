@@ -126,7 +126,7 @@
 .method public static final a(I)Ljava/lang/String;
     .locals 6
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->shortinfo()Z
 
     move-result v5
 
@@ -312,7 +312,7 @@
 
     new-array p1, v2, [Ljava/lang/Object;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->shortinfo()Z
 
     move-result v5
 
@@ -392,7 +392,7 @@
 
     if-lt p0, v3, :cond_1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->shortinfo()Z
 
     move-result v5
 

@@ -740,7 +740,7 @@
 
     move/from16 v35, v4
 
-    const/16 v4, 0xa
+    const v4, 0x7fffffff
 
     move-object/from16 v36, v8
 
@@ -846,7 +846,7 @@
 
     invoke-virtual {v8, v4}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-static {v8, v4}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {v8, v4}, Lru/vtosters/hooks/other/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     .line 37
     :cond_3

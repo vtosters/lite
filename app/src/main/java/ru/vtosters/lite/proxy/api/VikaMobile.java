@@ -1,6 +1,6 @@
 package ru.vtosters.lite.proxy.api;
 
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
 public class VikaMobile {
     public static String getApiHost() {

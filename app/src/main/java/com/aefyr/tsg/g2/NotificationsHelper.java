@@ -5,24 +5,21 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
-
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationManagerCompat;
-
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-import ru.vtosters.lite.utils.AndroidUtils;
-
 /**
  * Created by Aefyr on 20.05.2018.
  */
 public class NotificationsHelper {
-//    private static final int NOTIFICATION_ID_BASE = 3921337;
+    //    private static final int NOTIFICATION_ID_BASE = 3921337;
     private static final String NOTIFICATION_CHANNEL_ID = "tgss_chan_v5";
     private static final int MAX_UPDATE_NOTIFICATIONS_PER_SECOND = 3;
     private static final int MIN_TIME_BETWEEN_UPDATE_NOTIFICATIONS = 1000 / MAX_UPDATE_NOTIFICATIONS_PER_SECOND;

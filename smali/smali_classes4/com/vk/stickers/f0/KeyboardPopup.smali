@@ -162,7 +162,7 @@
 
     move-result v4
 
-    invoke-static {v4}, Lru/vtosters/lite/utils/Preferences;->alteremoji(Z)Z
+    invoke-static {v4}, Lru/vtosters/hooks/other/Preferences;->alteremoji(Z)Z
 
     move-result v4
 
@@ -205,7 +205,7 @@
 
     move-result v5
 
-    invoke-static {v5}, Lru/vtosters/lite/utils/Preferences;->alteremoji(Z)Z
+    invoke-static {v5}, Lru/vtosters/hooks/other/Preferences;->alteremoji(Z)Z
 
     move-result v5
 
@@ -419,7 +419,7 @@
 
     move-result v4
 
-    invoke-static {v4}, Lru/vtosters/lite/utils/Preferences;->alteremoji(Z)Z
+    invoke-static {v4}, Lru/vtosters/hooks/other/Preferences;->alteremoji(Z)Z
 
     move-result v4
 

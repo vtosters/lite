@@ -14,9 +14,9 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ImageUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class PreferenceFragmentUtils {
 
@@ -54,8 +54,8 @@ public class PreferenceFragmentUtils {
             CharSequence[] entriesValue,
             Preference.OnPreferenceChangeListener listener
     ) {
-        var icon = iconRes > 0 
-                ? ImageUtils.setTint(screen.getContext(), ContextCompat.getDrawable(screen.getContext(), iconRes)) 
+        var icon = iconRes > 0
+                ? ImageUtils.setTint(screen.getContext(), ContextCompat.getDrawable(screen.getContext(), iconRes))
                 : null;
         var title = titleRes > 0
                 ? screen.getContext().getString(titleRes)
@@ -85,15 +85,15 @@ public class PreferenceFragmentUtils {
     }
 
     public static ListPreference addListPreference(
-        PreferenceScreen screen,
-        String key,
-        String def,
-        CharSequence title,
-        @Nullable Drawable icon,
-        CharSequence summary,
-        CharSequence[] entries,
-        CharSequence[] entriesValue,
-        Preference.OnPreferenceChangeListener listener
+            PreferenceScreen screen,
+            String key,
+            String def,
+            CharSequence title,
+            @Nullable Drawable icon,
+            CharSequence summary,
+            CharSequence[] entries,
+            CharSequence[] entriesValue,
+            Preference.OnPreferenceChangeListener listener
     ) {
         ListPreference preference = new ListPreference(screen.getContext());
         preference.setEntries(entries);
@@ -156,8 +156,8 @@ public class PreferenceFragmentUtils {
             boolean defValue,
             Preference.OnPreferenceChangeListener listener
     ) {
-        var icon = iconRes > 0 
-                ? ImageUtils.setTint(screen.getContext(), ContextCompat.getDrawable(screen.getContext(), iconRes)) 
+        var icon = iconRes > 0
+                ? ImageUtils.setTint(screen.getContext(), ContextCompat.getDrawable(screen.getContext(), iconRes))
                 : null;
         return addMaterialSwitchPreference(screen, key, title, summary, icon, defValue, listener);
     }
@@ -302,7 +302,7 @@ public class PreferenceFragmentUtils {
         return addPreference(screen, key, title, null, null, preference -> {
             LinearLayout linearLayout = new LinearLayout(screen.getContext());
 
-            final EditText editText = new EditText(screen.getContext());
+            EditText editText = new EditText(screen.getContext());
             editText.setText(PreferenceManager.getDefaultSharedPreferences(screen.getContext()).getString(key, ""));
             editText.setHint(title);
             editText.setTextColor(ThemesUtils.getTextAttr());

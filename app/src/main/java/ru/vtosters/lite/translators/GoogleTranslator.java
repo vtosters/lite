@@ -1,16 +1,13 @@
 package ru.vtosters.lite.translators;
 
 import android.text.TextUtils;
-
 import androidx.annotation.NonNull;
-
-import org.json.JSONObject;
-
-import java.net.URLEncoder;
-
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+
+import java.net.URLEncoder;
 
 public class GoogleTranslator extends BaseTranslator {
 
