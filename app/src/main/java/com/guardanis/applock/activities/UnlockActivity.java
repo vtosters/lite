@@ -13,7 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.guardanis.applock.views.UnlockViewController;
 
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
+
+import static ru.vtosters.hooks.other.ThemesUtils.getBackgroundContent;
+import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
+import static ru.vtosters.hooks.other.ThemesUtils.isDarkTheme;
 
 public class UnlockActivity extends AppCompatActivity implements UnlockViewController.Delegate {
 
@@ -26,8 +29,8 @@ public class UnlockActivity extends AppCompatActivity implements UnlockViewContr
         super.onCreate(savedInstance);
 
         setContentView(AndroidUtils.getIdentifier("applock__activity_unlock", "layout"));
-        findViewById(AndroidUtils.getIdentifier("applock__activity_unlock", "id")).setBackgroundColor(ThemesUtils.getBackgroundContent());
-        ((TextView) findViewById(AndroidUtils.getIdentifier("pin__description", "id"))).setTextColor(ThemesUtils.getTextAttr());
+        findViewById(AndroidUtils.getIdentifier("applock__activity_unlock", "id")).setBackgroundColor(getBackgroundContent());
+        ((TextView) findViewById(AndroidUtils.getIdentifier("pin__description", "id"))).setTextColor(getTextAttr());
 
         this.viewController = new UnlockViewController(this, findViewById(AndroidUtils.getIdentifier("pin__container", "id")));
         this.viewController.setAutoAuthorizationEnabled(false); // Disable auto authorization so fingerprint doesn't crash onResume
@@ -35,10 +38,10 @@ public class UnlockActivity extends AppCompatActivity implements UnlockViewContr
         this.viewController.setupRootFlow();
         this.viewController.setAutoAuthorizationEnabled(true);
 
-        this.getWindow().setStatusBarColor(ThemesUtils.getBackgroundContent());
-        this.getWindow().setNavigationBarColor(ThemesUtils.getBackgroundContent());
+        this.getWindow().setStatusBarColor(getBackgroundContent());
+        this.getWindow().setNavigationBarColor(getBackgroundContent());
 
-        if (!ThemesUtils.isDarkTheme()) {
+        if (!isDarkTheme()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 this.getWindow().getInsetsController().setSystemBarsAppearance(WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS, WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS);
             } else {
@@ -76,5 +79,10 @@ public class UnlockActivity extends AppCompatActivity implements UnlockViewContr
 
         setResult(Activity.RESULT_CANCELED);
         finish();
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
     }
 }

@@ -16,8 +16,8 @@ import android.widget.TextView;
 import java.util.WeakHashMap;
 
 import com.guardanis.applock.AppLock;
+import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class PINInputView extends LinearLayout implements TextWatcher {
 

@@ -17,7 +17,6 @@ import java.util.ArrayList;
 
 import ru.vtosters.lite.music.Genius;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 public class AudioGetLyrics extends ApiRequest<AudioGetLyrics.a> {
     private final MusicTrack musicTrack;

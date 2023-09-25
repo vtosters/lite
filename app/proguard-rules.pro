@@ -44,3 +44,4 @@
 -keep class com.vtosters.lite.** { *; }
 -keep class com.vk.** { *; }
 -keep class bruhcollective.itaysonlab.libvkx.client.** { *; }
+-keep class com.guardanis.applock.** { *; }

@@ -1,5 +1,8 @@
 package com.guardanis.applock.activities;
 
+import static ru.vtosters.hooks.other.ThemesUtils.getBackgroundContent;
+import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
+import static ru.vtosters.hooks.other.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 
 import android.app.Activity;
@@ -13,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.guardanis.applock.views.LockCreationViewController;
 
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class LockCreationActivity extends AppCompatActivity implements LockCreationViewController.Delegate {
 
@@ -24,17 +26,17 @@ public class LockCreationActivity extends AppCompatActivity implements LockCreat
         super.onCreate(savedInstance);
 
         setContentView(getIdentifier("applock__activity_lock_creation", "layout"));
-        findViewById(getIdentifier("applock__activity_lock_creation", "id")).setBackgroundColor(ThemesUtils.getBackgroundContent());
-        ((TextView) findViewById(getIdentifier("pin__description", "id"))).setTextColor(ThemesUtils.getTextAttr());
+        findViewById(getIdentifier("applock__activity_lock_creation", "id")).setBackgroundColor(getBackgroundContent());
+        ((TextView) findViewById(getIdentifier("pin__description", "id"))).setTextColor(getTextAttr());
 
         this.viewController = new LockCreationViewController(this, findViewById(getIdentifier("pin__container", "id")));
         this.viewController.setDelegate(this);
         this.viewController.setupRootFlow();
 
-        this.getWindow().setStatusBarColor(ThemesUtils.getBackgroundContent());
-        this.getWindow().setNavigationBarColor(ThemesUtils.getBackgroundContent());
+        this.getWindow().setStatusBarColor(getBackgroundContent());
+        this.getWindow().setNavigationBarColor(getBackgroundContent());
 
-        if (!ThemesUtils.isDarkTheme()) {
+        if (!isDarkTheme()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 this.getWindow().getInsetsController().setSystemBarsAppearance(WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS, WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS);
             } else {
@@ -47,5 +49,10 @@ public class LockCreationActivity extends AppCompatActivity implements LockCreat
     public void onLockCreated() {
         setResult(Activity.RESULT_OK);
         finish();
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
     }
 }
