@@ -6,8 +6,8 @@ import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
-import ru.vtosters.hooks.MusicCacheFilesHook;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.hooks.music.MusicCacheFilesHook;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
 import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
 import ru.vtosters.lite.music.downloader.AudioGet;
@@ -58,10 +58,10 @@ public class AudioDownloader {
     }
 
     public static void cacheTrack(MusicTrack track) {
-        var trackId = track.y1();
+        var trackId = LibVKXClient.asId(track);
 
-        if (CacheDatabaseDelegate.isCached(trackId)) {
-            CacheDatabaseDelegate.removeTrackFromCache(LibVKXClient.asId(track));
+        if (MusicCacheImpl.isCachedTrack(trackId)) {
+            MusicCacheImpl.removeTrack(trackId);
             AndroidUtils.sendToast(AndroidUtils.getString("audio_deleted_from_cache"));
             return;
         }

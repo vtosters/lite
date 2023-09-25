@@ -9,66 +9,62 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class TSMerger {
     /**
      * Merge multiple .ts files into one .ts file
      *
      * @param in Directory with .ts files
-     * @return True if success, else false
      */
-    public static boolean merge(File in, File out) {
-        var tsesList = in.listFiles();
+    public static void merge(File in, File out) {
+        File[] tsesList = in.listFiles();
 
         if (tsesList == null) {
-            return false;
+            return;
         }
 
-        var mergedByteArrayStream = new ByteArrayOutputStream();
+        ByteArrayOutputStream mergedByteArrayStream = new ByteArrayOutputStream();
 
         sortTsesList(tsesList);
 
-        for (var file : tsesList) {
+        for (File file : tsesList) {
             if (file.getName().endsWith(".ts")) {
                 try {
                     mergedByteArrayStream.write(IOUtils.readFully(file));
                 } catch (IOException e) {
-                    e.printStackTrace();
-                    return false;
+                    return;
                 }
             }
         }
 
-        return writeOutputFile(out, mergedByteArrayStream);
+        writeOutputFile(out, mergedByteArrayStream);
     }
 
     private static void sortTsesList(File[] tsesList) {
-        Arrays.sort(tsesList, (ts1, ts2) -> {
-            String ts1Name = ts1.getName();
-            String ts2Name = ts2.getName();
-            int i1 = Integer.parseInt(ts1Name.substring(0, ts1Name.indexOf('.', 1)));
-            int i2 = Integer.parseInt(ts2Name.substring(0, ts2Name.indexOf('.', 1)));
-            return Integer.compare(i1, i2);
-        });
+        Arrays.sort(tsesList, Comparator.comparingInt(TSMerger::getFileIndex));
     }
 
-    private static boolean writeOutputFile(File out, ByteArrayOutputStream mergedByteArrayStream) {
+    private static int getFileIndex(File file) {
+        String fileName = file.getName();
+        int dotIndex = fileName.indexOf('.', 1);
+        return Integer.parseInt(fileName.substring(0, dotIndex));
+    }
+
+    private static void writeOutputFile(File out, ByteArrayOutputStream mergedByteArrayStream) {
+        byte[] bytes = mergedByteArrayStream.toByteArray();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             try {
-                Files.write(out.toPath(), mergedByteArrayStream.toByteArray());
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
+                Files.write(out.toPath(), bytes);
+            } catch (IOException ignored) {
+                // ignored
             }
         } else {
             try (FileOutputStream fos = new FileOutputStream(out)) {
-                fos.write(mergedByteArrayStream.toByteArray());
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
+                fos.write(bytes);
+            } catch (IOException ignored) {
+                // ignored
             }
         }
-
-        return true;
     }
 }

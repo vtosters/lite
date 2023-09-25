@@ -2,45 +2,42 @@ package ru.vtosters.lite.music.downloader;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.dto.music.MusicTrack;
-import ru.vtosters.lite.music.cache.FileCacheImplementation;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import ru.vtosters.lite.utils.IOUtils;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.io.IOException;
 import java.net.URL;
 
 public class ThumbnailDownloader {
 
-    public static void downloadThumbnails(MusicTrack track)
-            throws IOException {
-        var obj = track.J();
-        var trackId = LibVKXClient.asId(track);
-
-        if (!obj.has("album")) return;
-        var album = obj.optJSONObject("album");
-
-        if (!album.has("thumb")) return;
-        var thumb = album.optJSONObject("thumb");
-
-        if (thumb.has("sizes")) {
-            var sizes = thumb.optJSONArray("sizes");
-            for (int i = 0; i < sizes.length(); i++) {
-                var size = sizes.optJSONObject(i);
-                var width = size.optInt("width");
-                var src = size.optString("src");
-                downloadThumbnail(src, width, trackId);
+    public static void downloadThumbnails(MusicTrack track) throws IOException {
+        JSONObject json = track.J();
+        JSONObject album = json.optJSONObject("album");
+        if (album == null) return;
+        JSONObject thumb = album.optJSONObject("thumb");
+        if (thumb == null) return;
+        JSONArray sizes = thumb.optJSONArray("sizes");
+        String trackId = LibVKXClient.asId(track);
+        if (sizes == null) {
+            JSONArray names = thumb.names();
+            if (names == null) return;
+            for (int i = 0; i < names.length(); ++i) {
+                String name = names.optString(i);
+                downloadThumbnail(thumb.optString(name), Integer.parseInt(name.substring(6)), trackId);
             }
         } else {
-            var names = thumb.names();
-            for (int i = 0; i < names.length(); i++) {
-                var name = names.optString(i);
-                downloadThumbnail(thumb.optString(name), Integer.parseInt(name.substring(6)), trackId);
+            for (int i = 0; i < sizes.length(); ++i) {
+                JSONObject size = sizes.optJSONObject(i);
+                int width = size.optInt("width");
+                String src = size.optString("src");
+                downloadThumbnail(src, width, trackId);
             }
         }
     }
 
-    private static void downloadThumbnail(String url, int res, String trackId)
-            throws IOException {
-        var data = IOUtils.readFully(new URL(url).openStream());
-        IOUtils.writeToFile(FileCacheImplementation.getTrackThumbnail(trackId, res), data);
+    private static void downloadThumbnail(String url, int res, String trackId) throws IOException {
+        IOUtils.writeToFile(MusicCacheStorageUtils.getTrackThumb(trackId, res), IOUtils.readFully(new URL(url).openStream()));
     }
 }

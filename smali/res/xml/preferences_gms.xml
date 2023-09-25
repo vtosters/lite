@@ -28,11 +28,8 @@
         </Preference>
         <Preference
                 android:persistent="false"
-                android:title="@string/gms_download_microg">
-            <intent
-                    android:action="android.intent.action.VIEW"
-                    android:data="https://microg.org/download.html"/>
-        </Preference>
+                android:key="microg"
+                android:title="@string/gms_download_microg"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/gms_what_to_do_next">
         <Preference

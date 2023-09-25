@@ -5,7 +5,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
-import ru.vtosters.lite.music.Callback;
+import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class MusicCallbackBuilder {

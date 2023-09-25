@@ -24,7 +24,7 @@ import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.LastFMScrobbler;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -108,9 +108,9 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             findPreference("lastfm_enabled").setEnabled(false);
         }
 
-        findPreference("cached_tracks").setSummary(String.format(requireContext().getString(R.string.cached_tracks_counter), CacheDatabaseDelegate.getTrackCount()));
+        findPreference("cached_tracks").setSummary(String.format(requireContext().getString(R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
         findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
-            if (CacheDatabaseDelegate.getTrackCount() == 0) {
+            if (MusicCacheImpl.isEmpty()) {
                 AndroidUtils.sendToast(requireContext().getString(R.string.no_cache_error));
             } else {
                 delcache(requireContext());
@@ -123,7 +123,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("invertCachedTracks").setVisible(CacheDatabaseDelegate.hasTracks());
+        findPreference("invertCachedTracks").setVisible(!MusicCacheImpl.isEmpty());
 
         if (!LibVKXClient.isVkxInstalled()) {
             findPreference("vkx_sett").setVisible(false);
@@ -217,7 +217,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setTitle(R.string.warning)
                 .setMessage(R.string.cached_tracks_remove_confirm)
                 .setPositiveButton(R.string.yes,
-                        (dialog, which) -> executor.submit(CacheDatabaseDelegate::clear))
+                        (dialog, which) -> executor.submit(MusicCacheImpl::clear))
                 .setNeutralButton(R.string.no,
                         (dialog, which) -> dialog.cancel())
                 .show();

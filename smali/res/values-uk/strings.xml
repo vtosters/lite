@@ -5332,7 +5332,7 @@
     <string name="newsfeedlistmanager_summ">Налаштування списків новин</string>
     <string name="newsfeedlistmanager_reset_title">Скинути список новин</string>
     <string name="where_is_cache_settings">Де налаштування кеша?</string>
-    <string name="where_is_cache_settings_summ">Вони переїхали в налаштування мода у вкладку Інше</string>
+    <string name="where_is_cache_settings_summ">"Вони переїхали в налаштування мода у вкладку Дані та пам'ять"</string>
     <string name="gms_about">Про GMS</string>
     <string name="gms_what_is_title">Що таке GMS?</string>
     <string name="gms_what_is_summ">GMS - Google Mobile Services, необхідний компонент для нормальної роботи додатків. Всі повідомлення, вхід в ігри, Google Play та інші функції пристрою використовують цей компонент</string>
@@ -5347,7 +5347,7 @@
     <string name="gms_download_microg">Завантажити MicroG</string>
     <string name="gms_what_to_do_next">Що робити далі?</string>
     <string name="gms_what_to_do_after_microg_title">Що робити після встановлення MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Увійдіть до свого облікового запису Google \n2. Дозвольте VTLite отримувати повідомлення\n3. Оновіть реєстрацію Firebase у налаштуваннях у розділі "Інше"</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Увійдіть до свого облікового запису Google \n2. Перевстановіть додаток VTLite"</string>
     <string name="donate">Допомогти проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
     <string name="fulltime2">dd MMMM в HH:mm:ss</string>
@@ -6317,7 +6317,7 @@
     <string name="useGenius_summ">Отримувати тексти з сервісу Genius</string>
     <string name="useGenius_title">Тексти з Genius</string>
 
-    <string name="datasettings_title">Налаштування даних додатку</string>
+    <string name="datasettings_title">"Дані та пам'ять"</string>
     <string name="invalidate_theme_cache_title">Інвалідація кешу теми</string>
     <string name="invalidate_theme_cache_each_update_title">Очищення кешу теми після оновлення для запобігання проблем з акцентами</string>
 

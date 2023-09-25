@@ -2,7 +2,7 @@ package ru.vtosters.hooks;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.music.catalog.inject.CatalogJsonInjector;
+import ru.vtosters.hooks.music.injectors.CatalogJsonInjector;
 
 public class CatalogsHook {
     public static JSONObject injectCatalogGetAudio(JSONObject json) {

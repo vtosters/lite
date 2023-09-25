@@ -1362,13 +1362,13 @@
 
     .line 44
     :cond_0
-    invoke-static {}, Lru/vtosters/lite/music/cache/injectors/TracklistInjector;->eligibleForOfflineCaching()Z
+    invoke-static {}, Lru/vtosters/hooks/music/injectors/TracklistInjector;->eligibleForOfflineCaching()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {p0}, Lru/vtosters/lite/music/cache/injectors/ShuffleInjector;->shuffleTracks(Lcom/vk/music/model/PlayerModelImpl;)V
+    invoke-static {p0}, Lru/vtosters/hooks/music/injectors/ShuffleInjector;->shuffleTracks(Lcom/vk/music/model/PlayerModelImpl;)V
 
     return-void
 

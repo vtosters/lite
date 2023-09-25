@@ -466,7 +466,7 @@
     :cond_8
     iget-object v2, v0, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;->b:Lcom/vk/dto/music/Playlist;
 
-    invoke-static {v1, v2}, Lru/vtosters/lite/music/hook/MusicBottomSheetHook;->hook(Ljava/util/ArrayList;Lcom/vk/dto/music/Playlist;)Ljava/util/ArrayList;
+    invoke-static {v1, v2}, Lru/vtosters/hooks/music/MusicBottomSheetHook;->hook(Ljava/util/ArrayList;Lcom/vk/dto/music/Playlist;)Ljava/util/ArrayList;
 
     move-result-object v1
 

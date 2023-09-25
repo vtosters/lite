@@ -5405,7 +5405,7 @@
     <string name="newsfeedlistmanager_summ">Настройки списков новостей</string>
     <string name="newsfeedlistmanager_reset_title">Сбросить список новостей</string>
     <string name="where_is_cache_settings">Где настройки кеша?</string>
-    <string name="where_is_cache_settings_summ">Они переехали в настройки мода во вкладку Другое</string>
+    <string name="where_is_cache_settings_summ">Они переехали в настройки мода во вкладку Данные и память</string>
     <string name="gms_about">О GMS</string>
     <string name="gms_what_is_title">Что такое GMS?</string>
     <string name="gms_what_is_summ">GMS - Google Mobile Services, необходимый компонент для нормальной работы приложений. Все уведомления, вход в игры, Google Play и прочие функции устройства используют этот компонент</string>
@@ -5420,7 +5420,7 @@
     <string name="gms_download_microg">Скачать MicroG</string>
     <string name="gms_what_to_do_next">Что делать дальше?</string>
     <string name="gms_what_to_do_after_microg_title">Что делать после установки MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Войдите в свой Google аккаунт \n2. Разрешите VTLite получать уведомления\n3. Обновите регистрацию Firebase в настройках в разделе "Другое"</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Войдите в свой Google аккаунт в MicroG \n2. Переустановите приложение VTLite</string>
     <string name="donate">Помочь проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
     <string name="fulltime2">dd MMMM в HH:mm:ss</string>
@@ -6392,7 +6392,7 @@
     <string name="useGenius_summ">Получать тексты с сервиса Genius</string>
     <string name="useGenius_title">Тексты с Genius</string>
 
-    <string name="datasettings_title">Настройки данных приложения</string>
+    <string name="datasettings_title">Данные и память</string>
     <string name="invalidate_theme_cache_title">Инвалидация кэша темы</string>
     <string name="invalidate_theme_cache_each_update_title">Очистка кэша темы после обновления для предотвращения проблем с акцентами</string>
 

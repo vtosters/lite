@@ -2,11 +2,9 @@ package ru.vtosters.lite.themes.loaders;
 
 import android.annotation.SuppressLint;
 import android.content.res.AssetManager;
-import android.util.Log;
 import ru.vtosters.lite.utils.ReflectionUtils;
 
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 @SuppressLint("PrivateApi")
 public class AssetManagerHelper {

@@ -6045,7 +6045,7 @@
     <string name="newsfeedlistmanager_summ">Наладкі спісаў навін</string>
     <string name="newsfeedlistmanager_reset_title">Скінуць спіс навін</string>
     <string name="where_is_cache_settings">Дзе налады кэша?</string>
-    <string name="where_is_cache_settings_summ">Яны пераехалі ў налады мода ва ўкладку Іншае</string>
+    <string name="where_is_cache_settings_summ">Яны пераехалі ў налады мода ва ўкладку Дадзеныя і памяць</string>
     <string name="gms_about">Пра GMS</string>
     <string name="gms_what_is_title">Што такое GMS?</string>
     <string name="gms_what_is_summ">GMS - Google Mobile Services, неабходны кампанент для нармальнай працы прыкладанняў.
@@ -6066,9 +6066,7 @@
     <string name="gms_download_microg">Спампаваць MicroG</string>
     <string name="gms_what_to_do_next">Што рабіць далей?</string>
     <string name="gms_what_to_do_after_microg_title">Што рабіць пасля ўстаноўкі MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Увайдзіце ў свой Google акаўнт \n2. Дазвольце VTLite атрымліваць
-        апавяшчэнні \n3. Абнавіце рэгістрацыю Firebase у наладах у раздзеле "Іншае"
-    </string>
+    <string name="gms_what_to_do_after_microg_summ">1. Увайдзіце ў свой Google акаўнт \n2. Пераўсталюеце прыкладанне VTLite</string>
     <string name="donate">Дапамагчы праекту</string>
     <string name="fulltime">dd MMMM yyyy у HH:mm:ss</string>
     <string name="fulltime2">dd MMMM у HH:mm:ss</string>
@@ -7010,7 +7008,7 @@
     <string name="useGenius_summ">Атрымліваць тэксты з сэрвісу Genius</string>
     <string name="useGenius_title">Тэксты з Genius</string>
 
-    <string name="datasettings_title">Налады дадзеных прыкладання</string>
+    <string name="datasettings_title">Дадзеныя і памяць</string>
     <string name="invalidate_theme_cache_title">Інвалідацыя кэша тэмы</string>
     <string name="invalidate_theme_cache_each_update_title">Ачыстка кэша тэмы пасля абнаўлення для прадухілення праблем з акцэнтамі</string>
 

@@ -7,8 +7,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
-import ru.vtosters.lite.music.cache.FileCacheImplementation;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -22,7 +22,7 @@ public class TracklistHelper {
     }
 
     public static List<MusicTrack> getTracks() {
-        List<MusicTrack> tracks = CacheDatabaseDelegate.getTracks();
+        List<MusicTrack> tracks = MusicCacheImpl.getAllTracks();
 
         boolean doNotinvertOrder = Preferences.getBoolValue("invertCachedTracks", false);
 
@@ -35,11 +35,11 @@ public class TracklistHelper {
 
 
     public static List<MusicTrack> getTracks(String id) {
-        return CacheDatabaseDelegate.getTracksByAlbum(id);
+        return MusicCacheImpl.getAlbumById(id);
     }
 
     public static List<MusicTrack> getTracksOne(String id) {
-        return CacheDatabaseDelegate.getTracksByAlbumOne(id);
+        return MusicCacheImpl.getFirstAlbumTrack(id);
     }
 
     public static JSONArray tracksToIds(List<MusicTrack> tracks) {
@@ -56,7 +56,7 @@ public class TracklistHelper {
         var arr = new JSONArray();
         for (MusicTrack track : tracks) {
             var json = track.J();
-            var folder = FileCacheImplementation.getThumbnailsFolder(LibVKXClient.asId(track));
+            var folder = MusicCacheStorageUtils.getThumbDirById(LibVKXClient.asId(track));
             try {
                 addCachedThumbnails(json, folder);
             } catch (JSONException | MalformedURLException e) {
@@ -71,7 +71,7 @@ public class TracklistHelper {
         List<MusicTrack> tracks = new ArrayList<>();
         for (MusicTrack track : list) {
             var json = track.J();
-            var folder = FileCacheImplementation.getThumbnailsFolder(LibVKXClient.asId(track));
+            var folder = MusicCacheStorageUtils.getThumbDirById(LibVKXClient.asId(track));
             try {
                 addCachedThumbnails(json, folder);
             } catch (JSONException | MalformedURLException e) {

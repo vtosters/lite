@@ -239,7 +239,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {p1}, Lru/vtosters/lite/music/cache/injectors/PlaylistInjector;->injectGetPlaylist(Lcom/vk/api/audio/AudioGetPlaylist;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lru/vtosters/hooks/music/injectors/PlaylistInjector;->injectGetPlaylist(Lcom/vk/api/audio/AudioGetPlaylist;)Lio/reactivex/Observable;
 
     move-result-object v2
 

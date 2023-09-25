@@ -59,6 +59,12 @@
 .method private final R4()V
     .locals 6
 
+    const-string v1, "ВКонтакте и так самая лучшая социальная сеть!!!!!!!!"
+
+    invoke-static {v1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
+
+    return-void
+
     .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 

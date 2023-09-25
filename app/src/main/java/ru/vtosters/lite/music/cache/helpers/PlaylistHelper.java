@@ -1,14 +1,15 @@
 package ru.vtosters.lite.music.cache.helpers;
 
+import android.net.Uri;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
-import ru.vtosters.lite.music.cache.FileCacheImplementation;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,7 +73,7 @@ public class PlaylistHelper {
 
     public static List<Playlist> getAlbumPlaylists() {
         List<Playlist> list = new ArrayList<>();
-        for (var track : CacheDatabaseDelegate.getTracksAsPlaylist()) {
+        for (var track : MusicCacheImpl.getPlaylist()) {
             var albumLink = track.I;
             var thumb = albumLink.u1();
             list.add(createAlbum(

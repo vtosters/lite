@@ -6,11 +6,12 @@ import android.content.Context;
 import android.os.Build;
 import com.google.firebase.iid.FirebaseInstanceIdReceiver;
 import com.google.firebase.iid.FirebaseInstanceIdReceiver2;
+import com.google.firebase.iid.FirebaseInstanceIdReceiver3;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class GmsHook {
-    private static final boolean needToSpoof = !isGmsInstalled() && isFakeGmsInstalled();
+    private static final boolean needToSpoof = !isGmsInstalled() && (isFakeGmsInstalled() || isFakeGms2Installed());
 
     public static boolean isGmsInstalled() {
         try {
@@ -30,8 +31,17 @@ public class GmsHook {
         }
     } // Microg Google Market Services check
 
+    public static boolean isFakeGms2Installed() {
+        try {
+            AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("app.revanced.android.gms", 0);
+            return true;
+        } catch (Exception unused) {
+            return false;
+        }
+    } // Microg Google Market Services check
+
     public static boolean isAnyServicesInstalled() {
-        return isGmsInstalled() || isFakeGmsInstalled();
+        return isGmsInstalled() || isFakeGmsInstalled() || isFakeGms2Installed();
     }
 
     public static void fixGapps() {
@@ -45,7 +55,7 @@ public class GmsHook {
     } // Music channels fix
 
     public static String replaceGMSPackage(String str) {
-        return needToSpoof ? str.replaceAll("com.google", "com.mgoogle") : str;
+        return needToSpoof ? str.replaceAll("com.google", (isFakeGms2Installed() ? "app.revanced" : "com.mgoogle")) : str;
     }
 
     public static String getFirebaseInstanceIdReceiver() {
@@ -53,6 +63,6 @@ public class GmsHook {
     }
 
     public static Class getFirebaseInstanceIdReceiverClass() {
-        return needToSpoof ? FirebaseInstanceIdReceiver2.class : FirebaseInstanceIdReceiver.class;
+        return needToSpoof ? (isFakeGms2Installed() ? FirebaseInstanceIdReceiver3.class : FirebaseInstanceIdReceiver2.class) : FirebaseInstanceIdReceiver.class;
     }
 }
