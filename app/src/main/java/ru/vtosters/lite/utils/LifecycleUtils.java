@@ -47,7 +47,7 @@ public class LifecycleUtils {
             public void onActivityCreated(Activity activity, Bundle bundle) {
                 activities.add(activity);
 
-                if (AppLock.isUnlockRequired(activity)) {
+                if (AppLock.isUnlockRequired(activity) && activity.getClass() != MainActivity.class) {
                     var intent = new Intent(activity, UnlockActivity.class);
                     activity.startActivity(intent);
                 }
@@ -61,7 +61,7 @@ public class LifecycleUtils {
     }
 
     public static Activity getCurrentActivity() {
-        return activities.size() > 0 ? activities.get(activities.size() - 1) : new MainActivity();
+        return !activities.isEmpty() ? activities.get(activities.size() - 1) : new MainActivity();
     }
 
     public static void restartApplication() {
