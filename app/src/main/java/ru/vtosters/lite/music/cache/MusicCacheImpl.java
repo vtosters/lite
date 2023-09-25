@@ -5,9 +5,11 @@ import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import com.vk.dto.music.MusicTrack;
+import com.vk.dto.music.Playlist;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MusicCacheImpl {
@@ -44,6 +46,26 @@ public class MusicCacheImpl {
 
     public static List<MusicTrack> getPlaylist() {
         return MusicCacheDbDelegate.getPlaylist(AndroidUtils.getGlobalContext());
+    }
+
+    public static List<MusicTrack> getPlaylistSongs(String playlist_id, String owner_id) {
+        return null; // get songs from playlist
+    }
+
+    public static Playlist getPlaylist(String playlist_id, String owner_id) {
+        return getPlaylist(""); // get playlist from db
+    }
+
+    public static List<Playlist> getPlaylists()  {
+        return new ArrayList<>(); // get all cached playlists
+    }
+
+    public static Playlist getPlaylist(String query) {
+        return null; // get playlist from db
+    }
+
+    public static boolean hasPlaylist() {
+        return false; // has playlists or not
     }
 
     public static long getTracksCount() {

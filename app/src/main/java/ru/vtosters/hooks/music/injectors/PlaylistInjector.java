@@ -34,7 +34,7 @@ public class PlaylistInjector {
 
     public static Observable<AudioGetPlaylist.c> injectGetPlaylist(AudioGetPlaylist audioGetPlaylist) {
         try {
-            if (!CacheDatabaseDelegate.hasTracks())
+            if (MusicCacheImpl.isEmpty())
                 return null;
             var requestArgs = audioGetPlaylist.b();
 
@@ -83,8 +83,8 @@ public class PlaylistInjector {
                     response.c = (ArrayList<MusicTrack>) TracklistHelper.getMyCachedMusicTracks();
                     response.b = PlaylistHelper.createCachedPlaylistMetadata();
                 } else {
-                    response.c = (ArrayList<MusicTrack>) CacheDatabaseDelegate.getPlaylistSongs(requestArgs.get("id"), requestArgs.get("owner_id"));
-                    response.b = CacheDatabaseDelegate.getPlaylist(requestArgs.get("id"), requestArgs.get("owner_id"));
+                    response.c = (ArrayList<MusicTrack>) MusicCacheImpl.getPlaylistSongs(requestArgs.get("id"), requestArgs.get("owner_id"));
+                    response.b = MusicCacheImpl.getPlaylist(requestArgs.get("id"), requestArgs.get("owner_id"));
                 }
 
                 observableEmitter.b(response);

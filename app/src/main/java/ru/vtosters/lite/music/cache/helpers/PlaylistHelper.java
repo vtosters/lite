@@ -1,6 +1,5 @@
 package ru.vtosters.lite.music.cache.helpers;
 
-import android.net.Uri;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
 import org.json.JSONArray;
@@ -22,7 +21,6 @@ public class PlaylistHelper {
         try {
             return new Playlist(getCachedSongsPlaylist());
         } catch (JSONException e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -50,8 +48,8 @@ public class PlaylistHelper {
             if (!photo.isEmpty())
                 jPhoto.put("height", 600)
                         .put("width", 600)
-                        .putOpt("photo_300", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackThumbnail(trackId, 300)))
-                        .putOpt("photo_600", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackThumbnail(trackId, 600)));
+                        .putOpt("photo_300", MusicCacheStorageUtils.getTrackThumb(trackId, 300))
+                        .putOpt("photo_600", MusicCacheStorageUtils.getTrackThumb(trackId, 600));
             return new JSONObject()
                     .put("id", -2)
                     .put("owner_id", albumId)
@@ -66,7 +64,6 @@ public class PlaylistHelper {
                     .putOpt("photo", jPhoto)
                     .put("count", 0);
         } catch (JSONException e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -95,7 +92,7 @@ public class PlaylistHelper {
                 jsonArray.put(getCachedSongsPlaylist());
             }
 
-            for (var playlist : CacheDatabaseDelegate.getPlaylists()) {
+            for (var playlist : MusicCacheImpl.getPlaylists()) {
                 jsonArray.put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, playlist.F.J()));
             }
         } catch (JSONException e) {
@@ -165,7 +162,7 @@ public class PlaylistHelper {
             arr.put(getUserId() + "_-1");
         }
 
-        for (var playlist : CacheDatabaseDelegate.getPlaylists()) {
+        for (var playlist : MusicCacheImpl.getPlaylists()) {
             arr.put(playlist.b + "_" + playlist.a);
         }
 

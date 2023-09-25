@@ -240,7 +240,7 @@ public class TracklistInjector {
 
         var blocks = new JSONArray();
 
-        if (CacheDatabaseDelegate.hasPlaylist()) {
+        if (MusicCacheImpl.hasPlaylist()) {
             blocks.put(getCatalogHeader())
                     .put(getCatalogPlaylist())
                     .put(getCatalogSeparator());
