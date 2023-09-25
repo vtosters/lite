@@ -23,7 +23,7 @@ public class InstallGMSFragment extends TrackedMaterialPreferenceToolbarFragment
                             requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/microg/GmsCore/releases")));
                 }
                 dismiss();
-            }).show();;
+            }).show();
 
             return true;
         });

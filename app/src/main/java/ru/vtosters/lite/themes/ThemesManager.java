@@ -3,7 +3,6 @@ package ru.vtosters.lite.themes;
 import android.app.Application;
 import android.content.Context;
 import android.graphics.Color;
-import android.util.Log;
 import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceFile;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;

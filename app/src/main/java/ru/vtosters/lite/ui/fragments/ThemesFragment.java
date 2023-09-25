@@ -13,7 +13,6 @@ import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
-import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.themes.palettes.PalettesManager;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;

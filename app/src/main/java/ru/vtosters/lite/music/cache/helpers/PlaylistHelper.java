@@ -7,8 +7,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,8 +45,8 @@ public class PlaylistHelper {
             if (!photo.isEmpty())
                 jPhoto.put("height", 600)
                         .put("width", 600)
-                        .putOpt("photo_300",Uri.fromFile(MusicCacheStorageUtils.getTrackThumb(trackId,300)).toString())
-                        .putOpt("photo_600",Uri.fromFile(MusicCacheStorageUtils.getTrackThumb(trackId,600)).toString());
+                        .putOpt("photo_300", Uri.fromFile(MusicCacheStorageUtils.getTrackThumb(trackId, 300)).toString())
+                        .putOpt("photo_600", Uri.fromFile(MusicCacheStorageUtils.getTrackThumb(trackId, 600)).toString());
             var obj = new JSONObject()
                     .put("id", -2)
                     .put("owner_id", albumId)

@@ -6,9 +6,11 @@ import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import java.io.File;
 
 public class MusicCacheFilesHook {
-    public static File getTrackFile(String trackId)
-    { return MusicCacheStorageUtils.getTrackFile(trackId); }
+    public static File getTrackFile(String trackId) {
+        return MusicCacheStorageUtils.getTrackFile(trackId);
+    }
 
-    public static boolean isTrackExist(String trackId)
-    { return MusicCacheImpl.isCachedTrack(trackId); }
+    public static boolean isTrackExist(String trackId) {
+        return MusicCacheImpl.isCachedTrack(trackId);
+    }
 }

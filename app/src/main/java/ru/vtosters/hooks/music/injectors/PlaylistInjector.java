@@ -25,11 +25,13 @@ public class PlaylistInjector {
     public final static String CHANNEL_NAME = "VTCH";
     private static final ExecutorService executor = Executors.newCachedThreadPool();
 
-    public static void injectDownloadPlaylist(Playlist playlist)
-    { executor.submit(() -> AudioDownloader.cachePlaylist(playlist)); }
+    public static void injectDownloadPlaylist(Playlist playlist) {
+        executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
+    }
 
-    public static boolean eligibleForOfflineCaching()
-    { return !MusicCacheImpl.isEmpty(); }
+    public static boolean eligibleForOfflineCaching() {
+        return !MusicCacheImpl.isEmpty();
+    }
 
     public static Observable<AudioGetPlaylist.c> injectGetPlaylist(AudioGetPlaylist audioGetPlaylist) {
         try {

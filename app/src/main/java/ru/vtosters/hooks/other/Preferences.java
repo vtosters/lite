@@ -292,12 +292,12 @@ public class Preferences {
     }
 
     public static boolean isNewBuild() {
-        if(Preferences.getBoolValue("invalidate_theme_cache_each_update",true))
+        if (Preferences.getBoolValue("invalidate_theme_cache_each_update", true))
             try {
                 return AndroidUtils.getGlobalContext()
-                                   .getPackageManager()
-                                   .getPackageInfo(AndroidUtils.getPackageName(), 0)
-                                   .lastUpdateTime != getPreferences().getLong("setupTime", 0L);
+                        .getPackageManager()
+                        .getPackageInfo(AndroidUtils.getPackageName(), 0)
+                        .lastUpdateTime != getPreferences().getLong("setupTime", 0L);
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }

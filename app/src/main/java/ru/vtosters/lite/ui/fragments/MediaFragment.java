@@ -108,7 +108,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             findPreference("lastfm_enabled").setEnabled(false);
         }
 
-        findPreference("cached_tracks").setSummary(String.format(requireContext().getString(R.string.cached_tracks_counter),MusicCacheImpl.getTracksCount()));
+        findPreference("cached_tracks").setSummary(String.format(requireContext().getString(R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
         findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
             if (MusicCacheImpl.isEmpty()) {
                 AndroidUtils.sendToast(requireContext().getString(R.string.no_cache_error));

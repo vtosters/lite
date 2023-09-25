@@ -6,82 +6,80 @@ import ru.vtosters.lite.music.cache.db.MusicCacheDb;
 
 import java.util.List;
 
-public class MusicCacheDbDelegate
-{
-    static synchronized private MusicCacheDb connectToDb(final Context context)
-    {
-        synchronized(MusicCacheDb.class)
-        { return new MusicCacheDb(context); }
-    }
-
-    static public void addTrack(final Context context,
-                                final String trackId,
-                                final String albumId,
-                                final String title,
-                                final String subtitle,
-                                final String artist,
-                                final String albumTitle,
-                                final boolean explicit,
-                                final int duration,
-                                final boolean hasArtwork)
-    {
-        try(final var db=connectToDb(context))
-        {
-            db.addTrack(
-                trackId,
-                albumId,
-                title,
-                subtitle,
-                artist,
-                albumTitle,
-                explicit,
-                duration,
-                hasArtwork);
+public class MusicCacheDbDelegate {
+    static synchronized private MusicCacheDb connectToDb(Context context) {
+        synchronized (MusicCacheDb.class) {
+            return new MusicCacheDb(context);
         }
     }
 
-    static public void removeTrack(final Context context,final String trackId)
-    {
-        try(final var db=connectToDb(context))
-        { db.deleteTrack(trackId); }
+    public static void addTrack(Context context,
+                                String trackId,
+                                String albumId,
+                                String title,
+                                String subtitle,
+                                String artist,
+                                String albumTitle,
+                                boolean explicit,
+                                int duration,
+                                boolean hasArtwork) {
+        try (var db = connectToDb(context)) {
+            db.addTrack(
+                    trackId,
+                    albumId,
+                    title,
+                    subtitle,
+                    artist,
+                    albumTitle,
+                    explicit,
+                    duration,
+                    hasArtwork);
+        }
     }
 
-    static public List< MusicTrack > getAllTracks(final Context context)
-    {
-        try(final var db=connectToDb(context))
-        { return db.getAllTracks(); }
+    public static void removeTrack(Context context, String trackId) {
+        try (var db = connectToDb(context)) {
+            db.deleteTrack(trackId);
+        }
     }
 
-    static public List< MusicTrack > getAlbumById(final Context context,final String albumId)
-    {
-        try(final var db=connectToDb(context))
-        { return db.getAlbum(albumId); }
+    public static List<MusicTrack> getAllTracks(Context context) {
+        try (var db = connectToDb(context)) {
+            return db.getAllTracks();
+        }
     }
 
-    static public List< MusicTrack > getFirstAlbumTrack(final Context context,final String albumId)
-    {
-        try(final var db=connectToDb(context))
-        { return db.getFirstAlbumTrack(albumId); }
+    public static List<MusicTrack> getAlbumById(Context context, String albumId) {
+        try (var db = connectToDb(context)) {
+            return db.getAlbum(albumId);
+        }
     }
 
-    static public List< MusicTrack > getPlaylist(final Context context)
-    {
-        try(final var db=connectToDb(context))
-        { return db.getPlaylist(); }
+    public static List<MusicTrack> getFirstAlbumTrack(Context context, String albumId) {
+        try (var db = connectToDb(context)) {
+            return db.getFirstAlbumTrack(albumId);
+        }
     }
 
-    static public long getTracksCount(final Context context)
-    {
-        try(final var db=connectToDb(context))
-        { return db.getTracksCount(); }
+    public static List<MusicTrack> getPlaylist(Context context) {
+        try (var db = connectToDb(context)) {
+            return db.getPlaylist();
+        }
     }
 
-    static public boolean isCachedTrack(final Context context,final String trackId)
-    {
-        try(final var db=connectToDb(context))
-        { return db.isCachedTrack(trackId); }
+    public static long getTracksCount(Context context) {
+        try (var db = connectToDb(context)) {
+            return db.getTracksCount();
+        }
     }
 
-    static public void drop(final Context context)
-    { context.deleteDatabase(MusicCacheDb.Constants.DB_NAME); }
+    public static boolean isCachedTrack(Context context, String trackId) {
+        try (var db = connectToDb(context)) {
+            return db.isCachedTrack(trackId);
+        }
+    }
+
+    public static void drop(Context context) {
+        context.deleteDatabase(MusicCacheDb.Constants.DB_NAME);
+    }
 }

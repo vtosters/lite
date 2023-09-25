@@ -5,8 +5,7 @@ import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 
-public class VKXUtils
-{
+public class VKXUtils {
     public static boolean isVkxCached(int playlist_id, int owner_id) {
         return LibVKXClient.getInstance().runOnServiceSync(new LibVKXClientImpl.LibVKXActionGeneric<>() {
             @Override

@@ -9,8 +9,8 @@ import com.vk.music.common.MusicPlaybackLaunchContext;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.utils.music.VKXUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.music.VKXUtils;
 
 import java.util.ArrayList;
 
@@ -19,22 +19,18 @@ import static ru.vtosters.hooks.other.Preferences.milkshake;
 import static ru.vtosters.lite.utils.NetworkUtils.isNetworkConnected;
 
 public class MusicBottomSheetHook {
-    public static ArrayList<MusicAction> hook(final ArrayList<MusicAction> actions,final MusicTrack musicTrack)
-    {
+    public static ArrayList<MusicAction> hook(final ArrayList<MusicAction> actions, final MusicTrack musicTrack) {
         if (musicTrack.F1()) return actions;
-        final var trackId=asId(musicTrack);
-        if (isVkxInstalled())actions.add(getPlayInVKXAction());
-        if (isIntegrationEnabled())
-        {
-            if(VKXUtils.isVkxCached(trackId))actions.add(getRemoveCacheTrackVkxAction());
-            else if(isNetworkConnected())actions.add(addToCacheTrackVkxAction());
+        final var trackId = asId(musicTrack);
+        if (isVkxInstalled()) actions.add(getPlayInVKXAction());
+        if (isIntegrationEnabled()) {
+            if (VKXUtils.isVkxCached(trackId)) actions.add(getRemoveCacheTrackVkxAction());
+            else if (isNetworkConnected()) actions.add(addToCacheTrackVkxAction());
+        } else {
+            if (MusicCacheImpl.isCachedTrack(trackId)) actions.add(getRemoveCacheTrackAction());
+            else if (isNetworkConnected()) actions.add(addToCacheTrackAction());
         }
-        else
-        {
-            if(MusicCacheImpl.isCachedTrack(trackId))actions.add(getRemoveCacheTrackAction());
-            else if(isNetworkConnected())actions.add(addToCacheTrackAction());
-        }
-        if (isNetworkConnected())actions.add(downloadAsMp3Action());
+        if (isNetworkConnected()) actions.add(downloadAsMp3Action());
         return actions;
     }
 

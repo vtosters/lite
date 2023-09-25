@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Environment;
 import android.util.Log;
 import com.vk.usersstore.contentprovider.a.UsersDbHelper;
 import com.vtosters.lite.auth.VKAuth;
@@ -76,7 +75,7 @@ public class VKAccountDB {
         var dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
         var file = new File(dir, "saved_accounts_" + dateFormat.format(new Date()) + ".vtl");
 
-        try (InputStream inputStream = new FileInputStream(db.getPath())){
+        try (InputStream inputStream = new FileInputStream(db.getPath())) {
             dir.mkdirs();
 
             FileOutputStream outputStream = new FileOutputStream(file);
