@@ -5347,7 +5347,7 @@
     <string name="gms_download_microg">Завантажити MicroG</string>
     <string name="gms_what_to_do_next">Що робити далі?</string>
     <string name="gms_what_to_do_after_microg_title">Що робити після встановлення MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Увійдіть до свого облікового запису Google \n2. Перевстановіть додаток VTLite"</string>
+    <string name="gms_what_to_do_after_microg_summ">"1. Увійдіть у свій обліковий запис Google у налаштуваннях MicroG\n2. Увімкніть реєстрацію пристрою\n3. Увімкніть Хмарний обмін повідомленнями\n4. Перевстановіть VTLite\n5. Дозвольте йому приймати повідомлення"</string>
     <string name="donate">Допомогти проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
     <string name="fulltime2">dd MMMM в HH:mm:ss</string>

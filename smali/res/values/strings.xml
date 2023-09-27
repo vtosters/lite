@@ -5554,7 +5554,7 @@ Filters are not case-sensitive!"</string>
     <string name="gms_download_microg">Download MicroG</string>
     <string name="gms_what_to_do_next">What to do next?</string>
     <string name="gms_what_to_do_after_microg_title">What to do after installing MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Log in to your Google account \n2. Reinstall VTLite application</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Log in to your Google account in the MicroG settings\n2. Enable device registration\n3. Enable cloud messaging\n4. Reinstall VTLite\n5. Allow him to receive notifications</string>
     <string name="donate">Donate</string>
     <string name="fulltime">dd MMMM yyyy HH:mm:ss</string>
     <string name="fulltime2">dd MMMM HH:mm:ss</string>

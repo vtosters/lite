@@ -5420,7 +5420,7 @@
     <string name="gms_download_microg">Скачать MicroG</string>
     <string name="gms_what_to_do_next">Что делать дальше?</string>
     <string name="gms_what_to_do_after_microg_title">Что делать после установки MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Войдите в свой Google аккаунт в MicroG \n2. Переустановите приложение VTLite</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Войдите в свой Google аккаунт в настройках MicroG \n2. Включите регистрацию устройства \n3. Включите облачный обмен сообщениями \n4. Переустановите VTLite \n5. Разрешите ему принимать уведомления</string>
     <string name="donate">Помочь проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
     <string name="fulltime2">dd MMMM в HH:mm:ss</string>
