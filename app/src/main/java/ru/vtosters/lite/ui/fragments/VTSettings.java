@@ -108,7 +108,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         PowerManager manager = (PowerManager) requireActivity().getSystemService(Context.POWER_SERVICE);
         boolean isLinksUnverified = AndroidUtils.isLinksUnverified(requireActivity());
         boolean isDozingAvailable = Build.VERSION.SDK_INT >= 23 && !manager.isIgnoringBatteryOptimizations(AndroidUtils.getPackageName());
-        boolean areNotificationsDisabled = !AndroidUtils.areNotificationsEnabled();
+        boolean areNotificationsDisabled = !AndroidUtils.areNotificationsEnabled() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O;
         boolean isGMSNotInstalled = !GmsHook.isAnyServicesInstalled();
 
         if (AccountManagerUtils.isLogin()) {
