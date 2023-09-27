@@ -34,43 +34,15 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"");
-    private static final Pattern FOAF_REGEX_LAST_SEEN = Pattern.compile("<ya:lastLoggedIn dc:date=\"(.*)(((\\+|-)\\d\\d):(\\d\\d))\"");
     private static final String API_VKNEXT = "https://api.vtosters.app/v1/getBypassedOnlineInfo?json=1&ids=";
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
-
-    public static long getLastSeen(long origtime, int id) throws ParseException {
-        var request = new okhttp3.Request.a()
-                .b(getLink(id))
-                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
-
-        String response = null;
-
-        try {
-            response = client.a(request).execute().a().g();
-        } catch (IOException e) {
-            Log.e("FoafBase", e.getMessage());
-        }
-
-        Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(response);
-
-        if (!matcher.find()) {
-            return origtime;
-        }
-
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US);
-        sdf.setTimeZone(TimeZone.getTimeZone("Europe/Moscow"));
-        Date date = sdf.parse(Objects.requireNonNull(matcher.group(1)));
-        sdf.setTimeZone(TimeZone.getDefault());
-        return sdf.parse(sdf.format(date)).getTime() / 1000;
-    }
-
 
     public static JSONObject getBypassedOnlineInfo(int id) throws JSONException {
         var request = new okhttp3.Request.a()
                 .b(API_VKNEXT + id)
                 .a();
 
-        String response = null;
+        String response;
 
         var dummy = new JSONObject();
         dummy.put("last_seen", 0);
@@ -86,7 +58,6 @@ public class FoafBase {
     }
 
     public static JSONObject getBypassedOnlineInfo(String ids) {
-
         var request = new okhttp3.Request.a()
                 .b(API_VKNEXT + ids)
                 .a();
@@ -135,7 +106,15 @@ public class FoafBase {
             progressDialog.cancel();
             Matcher matcher = FOAF_REGEX.matcher(str);
             matcher.find();
-            String normalHumanDate = getNormalHumanDate(Objects.requireNonNull(matcher.group(1)));
+
+            String m = matcher.group(1);
+
+            if (m == null) {
+                LifecycleUtils.getCurrentActivity().runOnUiThread(() -> makeText(getGlobalContext(), context.getString(R.string.foaferr), LENGTH_SHORT).show());
+                return;
+            }
+
+            String normalHumanDate = getNormalHumanDate(m);
 
             LifecycleUtils.getCurrentActivity().runOnUiThread(() -> new VkAlertDialog.Builder(context)
                     .setTitle(R.string.addinf)
@@ -147,17 +126,14 @@ public class FoafBase {
                     .show());
         } catch (Exception e) {
             LifecycleUtils.getCurrentActivity().runOnUiThread(() -> makeText(getGlobalContext(), context.getString(R.string.foaferr), LENGTH_SHORT).show());
-            e.printStackTrace();
         }
     }
 
     private static long daysPassedFromFoafDate(String str) {
         try {
-            @SuppressLint("SimpleDateFormat")
             Date parse = new SimpleDateFormat("yyyy-MM-dd").parse(str.split(" ")[1]);
             return TimeUnit.DAYS.convert(new Date().getTime() - parse.getTime(), TimeUnit.MILLISECONDS);
         } catch (ParseException e) {
-            e.printStackTrace();
             return -1;
         }
     }
