@@ -142,18 +142,20 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 });
             });
 
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    requireContext().getString(R.string.vtssfs),
-                    getSSFSsumm(),
-                    R.drawable.ic_link_circle_outline_28,
-                    preference -> {
-                        VKUIwrapper.setLink(Utils.getVKUILink());
-                        NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
-                        return false;
-                    }
-            );
+            if (Preferences.hasSpecialVerif()) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        requireContext().getString(R.string.vtssfs),
+                        getSSFSsumm(),
+                        R.drawable.ic_link_circle_outline_28,
+                        preference -> {
+                            VKUIwrapper.setLink(Utils.getVKUILink());
+                            NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
+                            return false;
+                        }
+                );
+            }
         }
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.appearance_theme_use_system);
@@ -648,20 +650,6 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                     return false;
                 }
         );
-
-        if (!Preferences.hasVerification() && !Preferences.getBoolValue("dialogrecomm", false)) {
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    "Помочь проекту",
-                    "За донат можно получить приятные бонусы на аккаунт",
-                    R.drawable.ic_money_circle_outline_28,
-                    preference -> {
-                        requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://vtosters.app/donate")));
-                        return false;
-                    }
-            );
-        }
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),

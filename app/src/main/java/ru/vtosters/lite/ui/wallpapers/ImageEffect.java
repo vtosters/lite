@@ -11,8 +11,7 @@ import java.nio.ByteBuffer;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 enum ImageEffects {
-    Blur(true,
-            AndroidUtils.getArray(R.array.filter_types),
+    Blur(AndroidUtils.getArray(R.array.filter_types),
             new String[]{"disabled", "low", "med", "high"},
             getGlobalContext().getString(R.string.filter_blur)
     ) {
@@ -40,8 +39,7 @@ enum ImageEffects {
             };
         }
     },
-    Dim(true,
-            AndroidUtils.getArray(R.array.filter_dim_types),
+    Dim(AndroidUtils.getArray(R.array.filter_dim_types),
             new String[]{"disabled", "dim_black", "dim_white"},
             getGlobalContext().getString(R.string.filter_dim)) {
         @Override
@@ -66,8 +64,7 @@ enum ImageEffects {
             };
         }
     },
-    Mosaic(true,
-            AndroidUtils.getArray(R.array.filter_types),
+    Mosaic(AndroidUtils.getArray(R.array.filter_types),
             new String[]{"disabled", "low", "med", "high"},
             getGlobalContext().getString(R.string.filter_mosaic)) {
         @Override
@@ -94,7 +91,7 @@ enum ImageEffects {
             };
         }
     },
-    Monochrome(false, null, null,
+    Monochrome(null, null,
             getGlobalContext().getString(R.string.filter_monochrome)) {
         @Override
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
@@ -103,7 +100,7 @@ enum ImageEffects {
             }
         }
     },
-    Invert(false, null, null,
+    Invert(null, null,
             getGlobalContext().getString(R.string.filter_invert_colors)) {
         @Override
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
@@ -112,7 +109,7 @@ enum ImageEffects {
             }
         }
     },
-    Sepia(false, null, null,
+    Sepia(null, null,
             getGlobalContext().getString(R.string.filter_sepia)) {
         @Override
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
@@ -121,7 +118,7 @@ enum ImageEffects {
             }
         }
     },
-    Emboss(false, null, null,
+    Emboss(null, null,
             getGlobalContext().getString(R.string.filter_emboss)) {
         @Override
         public String getSummary() {
@@ -135,7 +132,7 @@ enum ImageEffects {
             }
         }
     },
-    Engrave(false, null, null,
+    Engrave(null, null,
             getGlobalContext().getString(R.string.filter_engrave)) {
         @Override
         public String getSummary() {
@@ -149,7 +146,7 @@ enum ImageEffects {
             }
         }
     },
-    Flea(false, null, null,
+    Flea(null, null,
             getGlobalContext().getString(R.string.filter_flea)) {
         @Override
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
@@ -158,7 +155,7 @@ enum ImageEffects {
             }
         }
     },
-    Snow(false, null, null,
+    Snow(null, null,
             getGlobalContext().getString(R.string.filter_snow)) {
         @Override
         public void applyEffect(ByteBuffer bitmap, int height, int width) {
@@ -168,15 +165,13 @@ enum ImageEffects {
         }
     };
 
-    private final boolean free;
     private final String title;
     @Nullable
     private final String[] entryValues;
     @Nullable
     private final String[] entries;
 
-    ImageEffects(boolean free, @Nullable String[] entries, @Nullable String[] entryValues, String title) {
-        this.free = free;
+    ImageEffects(@Nullable String[] entries, @Nullable String[] entryValues, String title) {
         this.entries = entries;
         this.entryValues = entryValues;
         this.title = title;
@@ -205,10 +200,6 @@ enum ImageEffects {
 
     public Boolean isList() {
         return entryValues != null && entryValues.length > 0;
-    }
-
-    public boolean isFree() {
-        return free;
     }
 
     @Nullable

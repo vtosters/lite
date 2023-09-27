@@ -26,20 +26,20 @@ public class ProfileButtons {
                 newItem = orig.getJSONArray("buttons");
             }
 
-            if (!VTVerifications.haveDonateButton() && id == AccountManagerUtils.getUserId()) {
-                var map = new HashMap<>();
-                map.put("20", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/donate_icon/20.png");
-                map.put("40", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/donate_icon/40.png");
-                map.put("80", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/donate_icon/80.png");
-
-                newItem.put(generateJsonObject(
-                        AndroidUtils.getString(com.vtosters.lite.R.string.donate_to_vtl),
-                        "https://vk.com/vtosters_official",
-                        "2D81E0",
-                        "open_url",
-                        map
-                ));
-            }
+//            if (!VTVerifications.haveDonateButton() && id == AccountManagerUtils.getUserId()) {
+//                var map = new HashMap<>();
+//                map.put("20", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/donate_icon/20.png");
+//                map.put("40", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/donate_icon/40.png");
+//                map.put("80", "https://raw.githubusercontent.com/vtosters/lite/main/.github/images/donate_icon/80.png");
+//
+//                newItem.put(generateJsonObject(
+//                        AndroidUtils.getString(com.vtosters.lite.R.string.donate_to_vtl),
+//                        "https://vk.com/vtosters_official",
+//                        "2D81E0",
+//                        "open_url",
+//                        map
+//                ));
+//            }
 
             if (!orig.has("type") && AccountManagerUtils.isVKTester()) {
                 var map = new HashMap<>();
