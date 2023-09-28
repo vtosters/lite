@@ -9,6 +9,7 @@ import com.aefyr.tsg.g2.stickersgrabber.util.Flag;
 import com.aefyr.tsg.g2.stickersgrabber.util.GoalCounter;
 import okhttp3.*;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
@@ -29,12 +30,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TelegramStickersGrabber {
     private static final String TAG = "TSG";
     public static String REAL_TG_IP = null;
-    public static String PROXY_IP = null;
-    public static int PROXY_PORT = -1;
-    public static String PROXY_USER = null;
-    public static String PROXY_PASS = null;
-    public static boolean HAS_PASS = false;
-    public static boolean USE_PROXY = false;
     private static String BOT_API_BASE_URL;
     private static String GET_STICKER_SET_URL;
     private static String GET_FILE_URL;
@@ -51,6 +46,14 @@ public class TelegramStickersGrabber {
     private static final int MAX_RETRIES = 5;
     private static final int STICKER_QUALITY = 100;
     private static final String STICKER_FILE_NAME_FORMAT = "%03d.png";
+    private static final String STICKERS_KEY = "stickers";
+    private static final String FILE_ID_KEY = "file_id";
+    private static final String EMOJI_KEY = "emoji";
+    private static final String IS_ANIMATED_KEY = "is_animated";
+    private static final String IS_VIDEO_KEY = "is_video";
+    private static final String THUMB_KEY = "thumb";
+    private static final String NAME_KEY = "name";
+    private static final String TITLE_KEY = "title";
 
     public TelegramStickersGrabber(String botApiKey) {
         this.botApiKey = botApiKey;
@@ -229,9 +232,12 @@ public class TelegramStickersGrabber {
         }
     }
 
+
+
     private void getPackInfo(String packName, File packFolder, String installedVersion, PackDownloadListener listener) {
+        String getStickerSetUrl = String.format(GET_STICKER_SET_URL, botApiKey, packName);
         Request packInfoRequest = new Request.a()
-                .b(String.format(GET_STICKER_SET_URL, botApiKey, packName))
+                .b(getStickerSetUrl)
                 .a();
         sClient.a(packInfoRequest).a(new Callback() {
             @Override
@@ -251,44 +257,24 @@ public class TelegramStickersGrabber {
                 }
 
                 try (ResponseBody responseBody = response.a()) {
-                    JSONObject jPackInfo = new JSONObject(responseBody.g()).getJSONObject("result");
-                    String packVersion = new String(sha256.digest(jPackInfo.toString().getBytes(StandardCharsets.UTF_8)));
+                    JSONObject packInfoResponse = new JSONObject(responseBody.g()).getJSONObject("result");
+                    String packVersion = new String(sha256.digest(packInfoResponse.toString().getBytes(StandardCharsets.UTF_8)));
 
                     if (packVersion.equals(installedVersion)) {
                         listener.onPackDownloaded(null, false);
                         return;
                     }
 
-                    JSONArray jStickers = jPackInfo.getJSONArray("stickers");
+                    JSONArray stickersArray = packInfoResponse.getJSONArray(STICKERS_KEY);
 
-                    if (jStickers.length() == 0) {
+                    if (stickersArray.length() == 0) {
                         listener.onPackDownloadError(new TSGException("No stickers in pack"));
                         return;
                     }
 
-                    ArrayList<Sticker> stickers = new ArrayList<>(jStickers.length());
-                    Log.d(TAG, String.format("Parsing stickers in pack %s", packName));
+                    ArrayList<Sticker> stickers = parseStickers(stickersArray);
 
-                    for (int i = 0; i < jStickers.length(); i++) {
-                        JSONObject jSticker = jStickers.getJSONObject(i);
-                        boolean isAnimated = jSticker.optBoolean("is_animated");
-                        boolean isVideo = jSticker.optBoolean("is_video");
-                        String fileId = jSticker.getString("file_id");
-                        String emoji = jSticker.getString("emoji");
-
-                        if (isAnimated || isVideo) {
-                            if (jSticker.has("thumb")) {
-                                fileId = jSticker.getJSONObject("thumb").getString("file_id");
-                            } else {
-                                listener.onPackDownloadError(new TSGException("Animated and video stickerpacks without thumbs are not supported!"));
-                                return;
-                            }
-                        }
-
-                        stickers.add(new Sticker(fileId, emoji));
-                    }
-
-                    StickerSet set = new StickerSet(jPackInfo.getString("name"), jPackInfo.getString("title"), packVersion, stickers);
+                    StickerSet set = new StickerSet(packInfoResponse.getString(NAME_KEY), packInfoResponse.getString(TITLE_KEY), packVersion, stickers);
 
                     if (!packFolder.exists() && !packFolder.mkdirs()) {
                         // Handle the folder creation failure case
@@ -308,6 +294,30 @@ public class TelegramStickersGrabber {
                 }
             }
         });
+    }
+
+    private ArrayList<Sticker> parseStickers(JSONArray stickersArray) throws JSONException, TSGException {
+        ArrayList<Sticker> stickers = new ArrayList<>(stickersArray.length());
+
+        for (int i = 0; i < stickersArray.length(); i++) {
+            JSONObject stickerObject = stickersArray.getJSONObject(i);
+            boolean isAnimated = stickerObject.optBoolean(IS_ANIMATED_KEY);
+            boolean isVideo = stickerObject.optBoolean(IS_VIDEO_KEY);
+            String fileId = stickerObject.getString(FILE_ID_KEY);
+            String emoji = stickerObject.getString(EMOJI_KEY);
+
+            if (isAnimated || isVideo) {
+                if (stickerObject.has(THUMB_KEY)) {
+                    fileId = stickerObject.getJSONObject(THUMB_KEY).getString(FILE_ID_KEY);
+                } else {
+                    throw new TSGException("Animated and video stickerpacks without thumbs are not supported!");
+                }
+            }
+
+            stickers.add(new Sticker(fileId, emoji));
+        }
+
+        return stickers;
     }
 
     private void runOnUiThread(Runnable r) {
