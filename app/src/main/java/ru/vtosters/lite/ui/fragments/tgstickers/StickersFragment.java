@@ -122,8 +122,7 @@ public class StickersFragment extends BaseToolbarFragment {
 
     private void addTgsPack() {
         initGrabber();
-        Runnable lambda = () ->
-        {
+        Runnable lambda = () -> {
             var container = new LinearLayout(requireContext());
 
             var input = new EditText(requireContext());

@@ -28,6 +28,18 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class TelegramStickersGrabber {
     private static final String TAG = "TSG";
+    private static final OkHttpClient sClient = VtOkHttpClient.getInstance();
+    private static final int MAX_RETRIES = 5;
+    private static final int STICKER_QUALITY = 100;
+    private static final String STICKER_FILE_NAME_FORMAT = "%03d.png";
+    private static final String STICKERS_KEY = "stickers";
+    private static final String FILE_ID_KEY = "file_id";
+    private static final String EMOJI_KEY = "emoji";
+    private static final String IS_ANIMATED_KEY = "is_animated";
+    private static final String IS_VIDEO_KEY = "is_video";
+    private static final String THUMB_KEY = "thumb";
+    private static final String NAME_KEY = "name";
+    private static final String TITLE_KEY = "title";
     public static String REAL_TG_IP = null;
     private static String BOT_API_BASE_URL;
     private static String GET_STICKER_SET_URL;
@@ -41,18 +53,6 @@ public class TelegramStickersGrabber {
     private final MessageDigest sha256;
     private final Handler uiThreadHandler;
     private String botApiKey;
-    private static final OkHttpClient sClient = VtOkHttpClient.getInstance();
-    private static final int MAX_RETRIES = 5;
-    private static final int STICKER_QUALITY = 100;
-    private static final String STICKER_FILE_NAME_FORMAT = "%03d.png";
-    private static final String STICKERS_KEY = "stickers";
-    private static final String FILE_ID_KEY = "file_id";
-    private static final String EMOJI_KEY = "emoji";
-    private static final String IS_ANIMATED_KEY = "is_animated";
-    private static final String IS_VIDEO_KEY = "is_video";
-    private static final String THUMB_KEY = "thumb";
-    private static final String NAME_KEY = "name";
-    private static final String TITLE_KEY = "title";
 
     public TelegramStickersGrabber(String botApiKey) {
         this.botApiKey = botApiKey;

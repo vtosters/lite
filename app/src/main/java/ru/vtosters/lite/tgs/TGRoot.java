@@ -2,11 +2,9 @@ package ru.vtosters.lite.tgs;
 
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.vk.dto.stickers.StickerStockItem;
-import com.vtosters.lite.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.Stack;
 

@@ -26,19 +26,13 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 public class TelegramStickersService {
     private static final String TAG = "TGStickersService";
     private static TelegramStickersService instance;
-
-    private final Context c;
-
     private final ArrayList<TelegramStickersPack> packs;
     private final ArrayList<TelegramStickersPack> activePacks;
     private final ArrayList<TelegramStickersPack> inactivePacks;
     private final ArrayList<StickersEventsListener> listeners;
     private final HashSet<String> currentlyDownloading;
-
     private final Handler uiThreadHandler;
-
     private final TelegramStickersGrabber grabber;
-
     private final TelegramStickersDbHelper dbHelper;
     private final ArrayList<Runnable> queuedTasks;
     private final ThreadPoolExecutor executor;
@@ -48,16 +42,14 @@ public class TelegramStickersService {
     private TelegramStickersService(Context context) {
         instance = this;
 
-        this.c = context.getApplicationContext();
-
         listeners = new ArrayList<>();
         currentlyDownloading = new HashSet<>();
         uiThreadHandler = new Handler(Looper.getMainLooper());
         grabber = new TelegramStickersGrabber(null);
-        dbHelper = new TelegramStickersDbHelper(c);
+        dbHelper = new TelegramStickersDbHelper(context);
         queuedTasks = new ArrayList<>();
         executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
-        notificationsHelper = new NotificationsHelper(c);
+        notificationsHelper = new NotificationsHelper(context);
 
         packs = new ArrayList<>();
         activePacks = new ArrayList<>();
@@ -178,10 +170,6 @@ public class TelegramStickersService {
 
     public ArrayList<TelegramStickersPack> getInactivePacksListReference() {
         return inactivePacks;
-    }
-
-    public boolean isDoneLoading() {
-        return ready;
     }
 
     public void requestPackDownload(String id, File packFolder) {
@@ -327,7 +315,6 @@ public class TelegramStickersService {
         boolean d = dbHelper.deletePack(pack);
         Log.d(TAG, "Delete from DB=" + d);
 
-
         int index = packs.indexOf(pack);
         packs.remove(index);
         notifyPackRemoved(pack, index);
@@ -390,6 +377,4 @@ public class TelegramStickersService {
 
         void onInactivePacksListChanged();
     }
-
-
 }
