@@ -172,9 +172,6 @@ public class StickersFragment extends BaseToolbarFragment {
     }
 
     private void initGrabber() {
-        if (TGPref.getTGConnectMethod() == TYPE_DIRECT) {
-            TelegramStickersGrabber.USE_PROXY = false;
-        }
         TelegramStickersGrabber.updateURLs();
     }
 
