@@ -21,7 +21,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -105,8 +104,6 @@ public class TelegramStickersGrabber {
             }
         });
     }
-
-
 
     private void getPack(StickerSet set, File packFolder, TelegramStickersPackInfo packInfo, PackDownloadListener listener) {
         GoalCounter downloadedStickers = new GoalCounter(set.stickers.size(), () -> {
@@ -231,8 +228,6 @@ public class TelegramStickersGrabber {
             stickerImage.recycle();
         }
     }
-
-
 
     private void getPackInfo(String packName, File packFolder, String installedVersion, PackDownloadListener listener) {
         String getStickerSetUrl = String.format(GET_STICKER_SET_URL, botApiKey, packName);

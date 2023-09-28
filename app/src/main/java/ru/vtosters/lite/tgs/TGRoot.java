@@ -15,14 +15,6 @@ public class TGRoot {
     public static final int X = 976820000;
     public final static Stack<Integer> pendingStickers = new Stack<>();
 
-    public static String getSummary() {
-        return switch (TGPref.getTGConnectMethod()) {
-            case 0 -> AndroidUtils.getString(R.string.ctypedirect);
-            case 2 -> AndroidUtils.getString(R.string.ctypesocks);
-            default -> AndroidUtils.getString(R.string.ctypedisabled);
-        };
-    }
-
     public static StickerStockItem toStickerPack(TelegramStickersPack p) throws JSONException {
         JSONArray arr = new JSONArray();
 
