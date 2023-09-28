@@ -5580,7 +5580,7 @@ Does not affect vk.cc links"</string>
     <string name="BGStickerssum">You need to clear the application cache after toggling this option</string>
     <string name="addinf">Additional information</string>
     <string name="copyid">Copy ID</string>
-    <string name="vtssfs">VT Features</string>
+    <string name="vtssfs">Server features</string>
     <string name="vticon">App Icon</string>
     <string name="vticonbtn">Use original icon</string>
     <string name="vticonsummary">The original name and icon of VK</string>

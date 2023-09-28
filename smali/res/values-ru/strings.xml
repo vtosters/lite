@@ -5446,7 +5446,7 @@
     <string name="BGStickerssum">Для включения/отключения вам необходимо очистить кеш приложения</string>
     <string name="addinf">Дополнительная информация</string>
     <string name="copyid">Скопировать айди</string>
-    <string name="vtssfs">VT Функции</string>
+    <string name="vtssfs">Серверные функции</string>
     <string name="vticon">Иконка приложения</string>
     <string name="vticonbtn">Использовать оригинальную иконку</string>
     <string name="vticonsummary">Использование оригинального названия и иконки приложения как у официального клиента ВК</string>

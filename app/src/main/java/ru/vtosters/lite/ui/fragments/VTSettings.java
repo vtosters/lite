@@ -147,7 +147,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         getPreferenceScreen(),
                         "",
                         requireContext().getString(R.string.vtssfs),
-                        getSSFSsumm(),
+                        "",
                         R.drawable.ic_link_circle_outline_28,
                         preference -> {
                             VKUIwrapper.setLink(Utils.getVKUILink());
