@@ -80,24 +80,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.vtlfilters));
 
-        if (!Preferences.hasVerification() && !Preferences.getBoolValue("dialogrecomm", false)) {
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    requireContext().getString(R.string.filters_warning),
-                    requireContext().getString(R.string.icons_warning_info),
-                    0,
-                    preference -> {
-                        requireContext().startActivity(
-                                new Intent(Intent.ACTION_VIEW)
-                                        .setData(Uri.parse("https://vtosters.app/donate/"))
-                        );
-                        return false;
-                    });
-        }
-
         Arrays.stream(ImageEffects.values())
-                .filter(imageEffects -> imageEffects.isFree() || Preferences.hasVerification())
                 .forEach(it -> {
                     if (it.isList()) {
                         var pref = PreferenceFragmentUtils.addListPreference(

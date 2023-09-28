@@ -17,6 +17,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
+
 public class UsersList {
     private static final String TAG = "UsersList";
     private static final List<Integer> descriptionsList = new ArrayList<>();
@@ -25,7 +27,7 @@ public class UsersList {
     public static void getUsersList() {
         var prefs = AndroidUtils.getGlobalContext().getSharedPreferences("vt_another_data", 0);
 
-        if ((!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) && prefs.contains("ids")) {
+        if ((!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) && prefs.contains("ids") || getBoolValue("serverFeaturesDisable", false)) {
             return;
         }
 

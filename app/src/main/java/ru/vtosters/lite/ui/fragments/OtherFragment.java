@@ -16,6 +16,8 @@ import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.utils.*;
 
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
+
 public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
 
@@ -109,6 +111,10 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             AndroidUtils.sendToast(AndroidUtils.getString("data_updated"));
             return true;
         });
+
+        findPreference("VT_Verification").setVisible(!getBoolValue("serverFeaturesDisable", false));
+        findPreference("VT_Fire").setVisible(!getBoolValue("serverFeaturesDisable", false));
+        findPreference("updateverifdata").setVisible(!getBoolValue("serverFeaturesDisable", false));
 
         var vkAdminTokenPref = findPreference("vk_admin_token");
         vkAdminTokenPref.setVisible(Preferences.getPreferences().getBoolean("new_music_downloading_way", false));

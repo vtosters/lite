@@ -12,10 +12,8 @@ import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
-import static ru.vtosters.hooks.other.Preferences.hasVerification;
 
 public class VTVerifications {
     public static final List<Integer> sVerifications = new ArrayList<>();
@@ -33,7 +31,7 @@ public class VTVerifications {
             return;
         }
 
-        if ((!NetworkUtils.isNetworkConnected() && NetworkUtils.isInternetSlow() || getBoolValue("isRoamingState", false)) && prefs.contains("ids")) {
+        if ((!NetworkUtils.isNetworkConnected() && NetworkUtils.isInternetSlow() || getBoolValue("isRoamingState", false)) && prefs.contains("ids") || getBoolValue("serverFeaturesDisable", false)) {
             parseJson(prefs.getString("ids", "[]"));
             Log.d("VTVerifications", "load from memory. Roaming or Network issues");
             isLoaded = true;
@@ -129,7 +127,7 @@ public class VTVerifications {
             return -id;
     }
 
-    public static boolean haveDonateButton() {
-        return hasVerification() || new Random().nextInt(6) != 1;
-    }
+//    public static boolean haveDonateButton() {
+//        return hasVerification() || new Random().nextInt(6) != 1;
+//    }
 }
