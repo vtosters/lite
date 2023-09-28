@@ -20,7 +20,7 @@ public class VerificationsHook {
             return true;
         }
 
-        if (!getBoolValue("VT_Verification", true)) {
+        if (!getBoolValue("VT_Verification", true) || getBoolValue("serverFeaturesDisable", false)) {
             return false;
         }
 
@@ -32,7 +32,7 @@ public class VerificationsHook {
             return true;
         }
 
-        if (!getBoolValue("VT_Fire", true)) {
+        if (!getBoolValue("VT_Fire", true) || getBoolValue("serverFeaturesDisable", false)) {
             return false;
         }
 
@@ -40,10 +40,6 @@ public class VerificationsHook {
     }
 
     public static boolean hasDeveloper(JSONObject jSONObject) {
-        if (!getBoolValue("VT_Dev", true)) {
-            return false;
-        }
-
         return VTVerifications.isDeveloper(VTVerifications.getId(jSONObject));
     }
 

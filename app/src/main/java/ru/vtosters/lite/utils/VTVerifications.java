@@ -31,7 +31,7 @@ public class VTVerifications {
             return;
         }
 
-        if ((!NetworkUtils.isNetworkConnected() && NetworkUtils.isInternetSlow() || getBoolValue("isRoamingState", false)) && prefs.contains("ids")) {
+        if ((!NetworkUtils.isNetworkConnected() && NetworkUtils.isInternetSlow() || getBoolValue("isRoamingState", false)) && prefs.contains("ids") || getBoolValue("serverFeaturesDisable", false)) {
             parseJson(prefs.getString("ids", "[]"));
             Log.d("VTVerifications", "load from memory. Roaming or Network issues");
             isLoaded = true;
