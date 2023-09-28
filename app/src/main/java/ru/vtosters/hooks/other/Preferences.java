@@ -288,7 +288,7 @@ public class Preferences {
 
     @SuppressWarnings("ConstantConditions")
     public static boolean checkupdates() {
-        return !getBoolValue("isRoamingState", false) && isValidSignature() && BuildConfig.BUILD_TYPE.equals("release");
+        return !getBoolValue("isRoamingState", false) && isValidSignature() && BuildConfig.BUILD_TYPE.equals("release") && getBoolValue("autoupdates", true);
     }
 
     public static boolean isNewBuild() {

@@ -689,6 +689,19 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         return false;
                     }
             );
+
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "autoupdates",
+                    "Автоматическое обновление",
+                    "Получать уведомление о выходе новой версии приложения",
+                    R.drawable.ic_history_outline_28,
+                    true,
+                    (preference, o) -> {
+                        Preferences.getPreferences().edit().putBoolean("autoupdates", (boolean) o).apply();
+                        return true;
+                    }
+            );
         }
     }
 
