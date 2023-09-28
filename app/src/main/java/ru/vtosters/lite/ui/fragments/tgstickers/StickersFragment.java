@@ -172,23 +172,8 @@ public class StickersFragment extends BaseToolbarFragment {
     }
 
     private void initGrabber() {
-        switch (TGPref.getTGConnectMethod()) {
-            case TYPE_DIRECT -> {
-                TelegramStickersGrabber.USE_PROXY = false;
-                mGrabber.resetProxy();
-            }
-            case TYPE_SOCKS -> {
-                if (TGPref.getTGProxyIP() == null) break;
-                TelegramStickersGrabber.USE_PROXY = true;
-                TelegramStickersGrabber.PROXY_IP = TGPref.getTGProxyIP();
-                TelegramStickersGrabber.PROXY_PORT = TGPref.getTGProxyPort();
-                if (TGPref.isTGProxyPassEnabled()) {
-                    TelegramStickersGrabber.HAS_PASS = true;
-                    TelegramStickersGrabber.PROXY_USER = TGPref.getTGProxyUser();
-                    TelegramStickersGrabber.PROXY_PASS = TGPref.getTGProxyPass();
-                }
-                mGrabber.enableProxy();
-            }
+        if (TGPref.getTGConnectMethod() == TYPE_DIRECT) {
+            TelegramStickersGrabber.USE_PROXY = false;
         }
         TelegramStickersGrabber.updateURLs();
     }

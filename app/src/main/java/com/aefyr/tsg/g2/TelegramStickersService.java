@@ -192,16 +192,16 @@ public class TelegramStickersService {
         return ready;
     }
 
-    public boolean requestPackDownload(final String id, File packFolder) {
+    public void requestPackDownload(final String id, File packFolder) {
         if (currentlyDownloading.contains(id)) {
             Log.e(TAG, String.format("Got request to download pack %s which is already downloading", id));
-            return false;
+            return;
         }
 
         if (!ready) {
             final File folder = packFolder;
             queuedTasks.add(() -> requestPackDownload(id, folder));
-            return true;
+            return;
         }
 
         TelegramStickersPack pack = new TelegramStickersPack(id);
@@ -227,12 +227,9 @@ public class TelegramStickersService {
         currentlyDownloading.add(id);
         notificationsHelper.packStartedDownloading(newPack);
 
-
-        grabber.enableProxy();
         grabber.grabPack(id, packFolder, pack.version, new TelegramStickersGrabber.PackDownloadListener() {
             @Override
             public void onPackDownloaded(TelegramStickersPackInfo packInfo, boolean newVersionFound) {
-
                 runOnUiThread(() -> {
                     newPack.state = TelegramStickersPack.DOWNLOADED;
                     notifyPackChanged(newPack, packs.indexOf(newPack));
@@ -296,7 +293,6 @@ public class TelegramStickersService {
             }
         });
 
-        return true;
     }
 
     public void setPackEnabled(final TelegramStickersPack pack, final boolean enabled, final boolean notify) {

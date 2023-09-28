@@ -7,22 +7,19 @@ import android.os.Looper;
 import android.util.Log;
 import com.aefyr.tsg.g2.stickersgrabber.util.Flag;
 import com.aefyr.tsg.g2.stickersgrabber.util.GoalCounter;
+import okhttp3.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import ru.vtosters.lite.net.*;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.PasswordAuthentication;
-import java.net.Proxy;
-import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -36,7 +33,6 @@ public class TelegramStickersGrabber {
     public static int PROXY_PORT = -1;
     public static String PROXY_USER = null;
     public static String PROXY_PASS = null;
-    public static boolean PROXY_SOCKS = true;
     public static boolean HAS_PASS = false;
     public static boolean USE_PROXY = false;
     private static String BOT_API_BASE_URL;
@@ -50,12 +46,14 @@ public class TelegramStickersGrabber {
 
     private final MessageDigest sha256;
     private final Handler uiThreadHandler;
-    private String botApiKey = "";
-    private NetClient httpClient;
+    private String botApiKey;
+    private static final OkHttpClient sClient = VtOkHttpClient.getInstance();
+    private static final int MAX_RETRIES = 5;
+    private static final int STICKER_QUALITY = 100;
+    private static final String STICKER_FILE_NAME_FORMAT = "%03d.png";
 
     public TelegramStickersGrabber(String botApiKey) {
         this.botApiKey = botApiKey;
-        httpClient = new NetClient.Builder().connectTimeout(5, TimeUnit.SECONDS).build();
         uiThreadHandler = new Handler(Looper.getMainLooper());
         try {
             sha256 = MessageDigest.getInstance("SHA-256");
@@ -69,81 +67,12 @@ public class TelegramStickersGrabber {
     public static void updateURLs() {
         BOT_API_BASE_FILE_URL = "https://api.telegram.org/file/bot%s/%s";
 
-
         BOT_API_BASE_URL = REAL_TG_IP != null ? "https://" + REAL_TG_IP + "/bot%s/" : "https://api.telegram.org/bot%s/";
         GET_STICKER_SET_URL = BOT_API_BASE_URL + "getStickerSet?name=%s";
         GET_FILE_URL = BOT_API_BASE_URL + "getFile?file_id=%s";
     }
 
-    public static boolean isTelegramBlocked() {
-        NetClient client = new NetClient.Builder().connectTimeout(5, TimeUnit.SECONDS).build();
-        try {
-            if (PROXY_IP != null) {
-                Socket socket = new Socket(PROXY_IP, PROXY_PORT);
-                Proxy proxy = new Proxy(Proxy.Type.SOCKS, socket.getRemoteSocketAddress());
-                NetClient.Builder b = new NetClient.Builder().proxy(proxy);
-                if (PROXY_USER != null) {
-                    b = b.proxyAuthenticator(new PasswordAuthentication(PROXY_USER, PROXY_PASS.toCharArray()));
-                }
-                client = b.build();
-                socket.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        NetRequest req = new NetRequest.Builder().url(REAL_TG_IP != null ? "https://" + REAL_TG_IP + "/test/" : "https://api.telegram.org/test/").build();
-        try {
-            NetResponse res = client.newCall(req).execute();
-            String s = res.getDataString();
-
-            if (!s.equals("{\"ok\":false,\"error_code\":404,\"description\":\"Not Found\"}"))
-                return true;
-        } catch (Exception e) {
-            return true;
-        }
-        return false;
-    }
-
-    public void resetProxy() {
-        httpClient = new NetClient.Builder().connectTimeout(5, TimeUnit.SECONDS).build();
-    }
-
-    public void enableProxy() {
-        Thread kostil = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    if (PROXY_IP != null) {
-                        Socket socket = new Socket(PROXY_IP, PROXY_PORT);
-                        Proxy proxy = new Proxy(Proxy.Type.SOCKS, socket.getRemoteSocketAddress());
-                        NetClient.Builder b = httpClient.newBuilder().proxy(proxy);
-
-                        if (PROXY_USER != null) {
-                            httpClient = b.proxyAuthenticator(new PasswordAuthentication(PROXY_USER, PROXY_PASS.toCharArray())).build();
-                        }
-
-                        httpClient = b.build();
-                        socket.close();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-
-        kostil.start();
-        try {
-            kostil.join();
-            Log.d(TAG, "Proxy set");
-        } catch (InterruptedException e) {
-            Log.e(TAG, "Unable to set proxy:");
-            e.printStackTrace();
-
-        }
-    }
-
-    public void grabPack(String id, File packFolder, String installedVersion, final PackDownloadListener listener) {
+    public void grabPack(String id, File packFolder, String installedVersion, PackDownloadListener listener) {
         getPackInfo(id, packFolder, installedVersion, listener);
     }
 
@@ -151,45 +80,178 @@ public class TelegramStickersGrabber {
         botApiKey = key;
     }
 
-    public void checkKey(final KeyCheckListener listener) {
+    public void checkKey(KeyCheckListener listener) {
         Log.d(TAG, "Checking key: " + botApiKey);
-        NetRequest request = new NetRequest.Builder().get().url(String.format(BOT_API_BASE_URL + "getMe", botApiKey)).build();
-        httpClient.newCall(request).enqueue(new NetCallback() {
+        // Create a request object with the URL and bot API key
+        Request request = new Request.a()
+                .b(String.format(BOT_API_BASE_URL + "getMe", botApiKey))
+                .a();
+        // Create a new call object and enqueue it to run asynchronously
+        sClient.a(request).a(new Callback() {
             @Override
-            public void onFailure(NetCall call, IOException e) {
-                e.printStackTrace();
+            public void a(Call call, IOException e) {
+                // Handle the failure case
+                Log.d(TAG, e.getMessage());
                 runOnUiThread(listener::onNetError);
             }
 
             @Override
-            public void onResponse(NetCall call, final NetResponse response) throws IOException {
-                runOnUiThread(() -> listener.onKeyChecked(response.code() == 200));
+            public void a(Call call, Response response) {
+                Log.d(TAG, response.toString());
+                runOnUiThread(() -> listener.onKeyChecked(response.h()));
             }
         });
     }
 
-    private void getPackInfo(final String packName, final File packFolder, final String installedVersion, final PackDownloadListener listener) {
-        NetRequest packInfoRequest = new NetRequest.Builder().get().url(String.format(GET_STICKER_SET_URL, botApiKey, packName)).build();
-        httpClient.newCall(packInfoRequest).enqueue(new NetCallback() {
+
+
+    private void getPack(StickerSet set, File packFolder, TelegramStickersPackInfo packInfo, PackDownloadListener listener) {
+        GoalCounter downloadedStickers = new GoalCounter(set.stickers.size(), () -> {
+            Log.d(TAG, String.format("Pack %s has been downloaded to %s", set.id, packFolder.getAbsolutePath()));
+            listener.onPackDownloaded(packInfo, true);
+        });
+        Flag deathFlag = new Flag();
+
+        for (int i = 0; i < set.stickers.size(); i++) {
+            Sticker sticker = set.stickers.get(i);
+            String getFileUrl = String.format(GET_FILE_URL, botApiKey, sticker.fileId);
+            Request fileInfoRequest = new Request.a()
+                    .b(getFileUrl)
+                    .a();
+
+            int stickerIndex = i + 1;
+
+            sClient.a(fileInfoRequest).a(new Callback() {
+                @Override
+                public void a(Call call, IOException e) {
+                    handleFailure(deathFlag, listener, e);
+                }
+
+                @Override
+                public void a(Call call, Response response) {
+                    if (deathFlag.up())
+                        return;
+
+                    if (!response.h()) {
+                        retryRequest(call, fileInfoRequest, this);
+                        return;
+                    }
+
+                    try (ResponseBody responseBody = response.a()) {
+                        JSONObject fileInfoResponse = new JSONObject(responseBody.g()).getJSONObject("result");
+                        String filePath = fileInfoResponse.getString("file_path");
+
+                        if (botApiKey == null) botApiKey = "";
+
+                        String fileDownloadUrl = String.format(BOT_API_BASE_FILE_URL, botApiKey, filePath);
+                        Request fileDownloadRequest = new Request.a()
+                                .b(fileDownloadUrl)
+                                .a();
+
+                        sClient.a(fileDownloadRequest).a(new Callback() {
+                            @Override
+                            public void a(Call call, IOException e) {
+                                handleFailure(deathFlag, listener, e);
+                            }
+
+                            @Override
+                            public void a(Call call, Response response) throws IOException {
+                                if (deathFlag.up())
+                                    return;
+
+                                if (!response.h()) {
+                                    retryRequest(call, fileDownloadRequest, this);
+                                    return;
+                                }
+
+                                try (ResponseBody responseBody = response.a()) {
+                                    if (responseBody == null) {
+                                        handleFailure(deathFlag, listener, new TSGException("Response body for a sticker is null :/"));
+                                        return;
+                                    }
+
+                                    InputStream stickerInputStream = responseBody.a();
+                                    Bitmap stickerImage = BitmapFactory.decodeStream(stickerInputStream);
+
+                                    if (stickerImage == null) {
+                                        handleFailure(deathFlag, listener, new TSGException("Unable to decode sticker image"));
+                                        return;
+                                    }
+
+                                    File stickerFile = new File(packFolder, String.format(STICKER_FILE_NAME_FORMAT, stickerIndex));
+
+                                    try {
+                                        saveStickerImage(stickerImage, stickerFile);
+                                    } catch (TSGException e) {
+                                        throw new RuntimeException(e);
+                                    }
+
+                                    listener.onStickerDownloaded(set.name, stickerFile, sticker.emoji, stickerIndex,
+                                            downloadedStickers.value() + 1, set.stickers.size());
+                                    downloadedStickers.increase();
+                                }
+                            }
+                        });
+                    } catch (Exception e) {
+                        handleFailure(deathFlag, listener, e);
+                    }
+                }
+            });
+        }
+    }
+
+    private void handleFailure(Flag deathFlag, PackDownloadListener listener, Exception e) {
+        if (deathFlag.up())
+            return;
+
+        deathFlag.raise();
+        listener.onPackDownloadError(e);
+    }
+
+    private void retryRequest(Call call, Request request, Callback callback) {
+        AtomicInteger retryCount = new AtomicInteger();
+        retryCount.incrementAndGet();
+
+        if (retryCount.get() > MAX_RETRIES) {
+            callback.a(call, new IOException());
+        } else {
+            sClient.a(request).a(callback);
+        }
+    }
+
+    private void saveStickerImage(Bitmap stickerImage, File stickerFile) throws IOException, TSGException {
+        try (FileOutputStream fileOutputStream = new FileOutputStream(stickerFile)) {
+            if (!stickerImage.compress(Bitmap.CompressFormat.PNG, STICKER_QUALITY, fileOutputStream)) {
+                throw new TSGException("Unable to compress sticker to a png file at path: " + stickerFile.getAbsolutePath());
+            }
+        } finally {
+            stickerImage.recycle();
+        }
+    }
+
+    private void getPackInfo(String packName, File packFolder, String installedVersion, PackDownloadListener listener) {
+        Request packInfoRequest = new Request.a()
+                .b(String.format(GET_STICKER_SET_URL, botApiKey, packName))
+                .a();
+        sClient.a(packInfoRequest).a(new Callback() {
             @Override
-            public void onFailure(NetCall call, IOException e) {
+            public void a(Call call, IOException e) {
+                Log.d(TAG, e.getMessage());
                 listener.onPackDownloadError(e);
             }
 
             @Override
-            public void onResponse(NetCall call, NetResponse response) {
-                if (!response.isSuccessful()) {
-                    if (response.getData() != null)
-                        listener.onPackDownloadError(new TSGException(response.getDataString() + "\nURL: " + call.request().url()));
-                    else
-                        listener.onPackDownloadError(new TSGException("Unknown Exception, no response body"));
+            public void a(Call call, Response response) throws IOException {
+                Log.d(TAG, response.toString());
 
+                if (!response.h()) {
+                    String errorMessage = response.a() != null ? response.a().g() + "\nURL: " + call.m0().g() : "Unknown Exception, no response body";
+                    listener.onPackDownloadError(new TSGException(errorMessage));
                     return;
                 }
 
-                StickerSet set;
-                try {
-                    JSONObject jPackInfo = new JSONObject(response.getDataString()).getJSONObject("result");
+                try (ResponseBody responseBody = response.a()) {
+                    JSONObject jPackInfo = new JSONObject(responseBody.g()).getJSONObject("result");
                     String packVersion = new String(sha256.digest(jPackInfo.toString().getBytes(StandardCharsets.UTF_8)));
 
                     if (packVersion.equals(installedVersion)) {
@@ -205,210 +267,47 @@ public class TelegramStickersGrabber {
                     }
 
                     ArrayList<Sticker> stickers = new ArrayList<>(jStickers.length());
-
                     Log.d(TAG, String.format("Parsing stickers in pack %s", packName));
 
                     for (int i = 0; i < jStickers.length(); i++) {
                         JSONObject jSticker = jStickers.getJSONObject(i);
-                        if (jSticker.optBoolean("is_animated") || jSticker.optBoolean("is_video")) {
+                        boolean isAnimated = jSticker.optBoolean("is_animated");
+                        boolean isVideo = jSticker.optBoolean("is_video");
+                        String fileId = jSticker.getString("file_id");
+                        String emoji = jSticker.getString("emoji");
+
+                        if (isAnimated || isVideo) {
                             if (jSticker.has("thumb")) {
-                                stickers.add(new Sticker(jSticker.getJSONObject("thumb").getString("file_id"), jSticker.getString("emoji")));
+                                fileId = jSticker.getJSONObject("thumb").getString("file_id");
                             } else {
                                 listener.onPackDownloadError(new TSGException("Animated and video stickerpacks without thumbs are not supported!"));
                                 return;
                             }
-                        } else {
-                            stickers.add(new Sticker(jSticker.getString("file_id"), jSticker.getString("emoji")));
                         }
+
+                        stickers.add(new Sticker(fileId, emoji));
                     }
 
-                    set = new StickerSet(jPackInfo.getString("name"), jPackInfo.getString("title"), packVersion, stickers);
+                    StickerSet set = new StickerSet(jPackInfo.getString("name"), jPackInfo.getString("title"), packVersion, stickers);
+
+                    if (!packFolder.exists() && !packFolder.mkdirs()) {
+                        // Handle the folder creation failure case
+                        listener.onPackDownloadError(new IOException("Can't create folder for the pack!"));
+                        return;
+                    }
+
+                    Log.d(TAG, String.format("Got info for pack %s, now downloading stickers to %s", packName, packFolder.getAbsolutePath()));
+
+                    TelegramStickersPackInfo packInfo = new TelegramStickersPackInfo(packName, set.name, set.stickers.size(), set.version);
+
+                    listener.onGotPackInfo(packInfo);
+
+                    getPack(set, packFolder, packInfo, listener);
                 } catch (Exception e) {
                     listener.onPackDownloadError(e);
-                    return;
                 }
-
-                if (!packFolder.exists() && !packFolder.mkdirs()) {
-                    listener.onPackDownloadError(new IOException("Can't create folder for the pack!"));
-                    return;
-                }
-
-                Log.d(TAG, String.format("Got info for pack %s, now downloading stickers to %s", packName, packFolder.getAbsolutePath()));
-
-                TelegramStickersPackInfo packInfo = new TelegramStickersPackInfo(packName, set.name, set.stickers.size(), set.version);
-                listener.onGotPackInfo(packInfo);
-                getPack(set, packFolder, packInfo, listener);
             }
         });
-    }
-
-    private void getPack(final StickerSet set, final File packFolder, final TelegramStickersPackInfo packInfo, final PackDownloadListener listener) {
-        final GoalCounter downloadedStickers = new GoalCounter(set.stickers.size(), () -> {
-            Log.d(TAG, String.format("Pack %s has been downloaded to %s", set.id, packFolder.getAbsolutePath()));
-
-            listener.onPackDownloaded(packInfo, true);
-        });
-        final Flag deathFlag = new Flag();
-
-        AtomicInteger retryed = new AtomicInteger();
-        for (int i = 0; i < set.stickers.size(); i++) {
-            final Sticker sticker = set.stickers.get(i);
-            NetRequest fileInfoRequest = new NetRequest.Builder().get().url(String.format(GET_FILE_URL, botApiKey, sticker.fileId)).build();
-
-            final int stickerIndex = i + 1;
-
-            AtomicBoolean sync = new AtomicBoolean();
-            httpClient.newCall(fileInfoRequest).enqueue(new NetCallback() {
-                @Override
-                public void onFailure(NetCall call, IOException e) {
-                    if (deathFlag.up())
-                        return;
-
-                    deathFlag.raise();
-                    listener.onPackDownloadError(e);
-
-                    sync.set(true);
-                }
-
-                @Override
-                public void onResponse(NetCall call, NetResponse response) throws IOException {
-                    if (deathFlag.up())
-                        return;
-
-                    if (response.code() != 200) {
-                        retryed.incrementAndGet();
-
-                        if (retryed.get() > 5)
-                            onFailure(call, new IOException());
-                        else httpClient.newCall(fileInfoRequest)
-                                .enqueue(this);
-
-                        return;
-                    }
-
-                    String filePath;
-                    try {
-                        JSONObject jFileInfo = new JSONObject(response.getDataString()).getJSONObject("result");
-                        filePath = jFileInfo.getString("file_path");
-                    } catch (Exception e) {
-                        deathFlag.raise();
-                        listener.onPackDownloadError(e);
-                        sync.set(true);
-                        return;
-                    }
-
-                    if (botApiKey == null) botApiKey = "";
-
-                    NetRequest fileDownloadRequest = new NetRequest.Builder().get().url(String.format(BOT_API_BASE_FILE_URL, botApiKey, filePath)).build();
-
-                    httpClient.newCall(fileDownloadRequest).enqueue(new NetCallback() {
-                        @Override
-                        public void onFailure(NetCall call, IOException e) {
-                            if (deathFlag.up())
-                                return;
-
-                            deathFlag.raise();
-                            listener.onPackDownloadError(e);
-
-                            sync.set(true);
-                        }
-
-                        @Override
-                        public void onResponse(NetCall call, NetResponse response) throws IOException {
-                            if (deathFlag.up())
-                                return;
-
-                            if (response.code() != 200) {
-                                retryed.incrementAndGet();
-
-                                if (retryed.get() > 5)
-                                    onFailure(call, new IOException());
-                                else httpClient.newCall(fileDownloadRequest)
-                                        .enqueue(this);
-
-                                return;
-                            }
-
-                            if (response.getData() == null) {
-                                deathFlag.raise();
-                                listener.onPackDownloadError(new TSGException("Response body for a sticker is null :/"));
-                                sync.set(true);
-                                return;
-                            }
-
-                            InputStream stickerInputStream = response.getDataStream();
-
-                            Bitmap stickerImage = BitmapFactory.decodeStream(stickerInputStream);
-
-                            try {
-                                stickerInputStream.close();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-
-                                deathFlag.raise();
-                                listener.onPackDownloadError(e);
-                                sync.set(true);
-                                return;
-                            }
-
-                            if (stickerImage == null) {
-                                deathFlag.raise();
-                                listener.onPackDownloadError(new TSGException("Unable to decode sticker image"));
-                                sync.set(true);
-                                return;
-                            }
-
-                            File stickerFile = new File(packFolder, String.format("%03d.png", stickerIndex));
-
-                            FileOutputStream fileOutputStream;
-                            try {
-                                fileOutputStream = new FileOutputStream(stickerFile);
-                            } catch (Exception e) {
-                                e.printStackTrace();
-
-                                deathFlag.raise();
-                                listener.onPackDownloadError(e);
-                                sync.set(true);
-                                return;
-                            }
-
-                            if (!stickerImage.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream)) {
-                                stickerImage.recycle();
-                                deathFlag.raise();
-                                listener.onPackDownloadError(new TSGException("Unable to compress sticker to a png file at path: " + stickerFile.getAbsolutePath()));
-                                sync.set(true);
-                                return;
-                            }
-
-                            stickerImage.recycle();
-
-                            try {
-                                fileOutputStream.close();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-
-                                deathFlag.raise();
-                                listener.onPackDownloadError(e);
-                                sync.set(true);
-                                return;
-                            }
-
-
-                            listener.onStickerDownloaded(set.name, stickerFile, sticker.emoji, stickerIndex, downloadedStickers.value() + 1, set.stickers.size());
-                            downloadedStickers.increase();
-
-                            sync.set(true);
-                        }
-                    });
-                }
-            });
-
-            while (!sync.get())
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e1) {
-                }
-        }
     }
 
     private void runOnUiThread(Runnable r) {
@@ -431,7 +330,7 @@ public class TelegramStickersGrabber {
         void onNetError();
     }
 
-    public class TSGException extends Exception {
+    public static class TSGException extends Exception {
         private static final long serialVersionUID = 7866915509988422944L;
 
         private TSGException(String message) {
@@ -439,7 +338,7 @@ public class TelegramStickersGrabber {
         }
     }
 
-    private class StickerSet {
+    private static class StickerSet {
         String id;
         String name;
         String version;
@@ -453,7 +352,7 @@ public class TelegramStickersGrabber {
         }
     }
 
-    private class Sticker {
+    private static class Sticker {
         String emoji;
         String fileId;
 
