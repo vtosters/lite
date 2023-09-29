@@ -1,13 +1,10 @@
 package ru.vtosters.lite.foaf;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.core.network.Network;
 import com.vtosters.lite.R;
-import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,13 +12,9 @@ import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.net.Request;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
-import java.util.Objects;
-import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
