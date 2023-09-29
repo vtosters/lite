@@ -69,7 +69,7 @@ public class TelegramStickersGrabber {
     public static void updateURLs() {
         BOT_API_BASE_FILE_URL = "https://api.telegram.org/file/bot%s/%s";
 
-        BOT_API_BASE_URL = REAL_TG_IP != null ? "https://" + REAL_TG_IP + "/bot%s/" : "https://api.telegram.org/bot%s/";
+        BOT_API_BASE_URL = "https://api.telegram.org/bot%s/";
         GET_STICKER_SET_URL = BOT_API_BASE_URL + "getStickerSet?name=%s";
         GET_FILE_URL = BOT_API_BASE_URL + "getFile?file_id=%s";
     }
