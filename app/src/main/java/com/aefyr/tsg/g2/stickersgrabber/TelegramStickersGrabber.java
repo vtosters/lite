@@ -29,7 +29,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TelegramStickersGrabber {
     private static final String TAG = "TSG";
     private static final OkHttpClient sClient = VtOkHttpClient.getInstance();
-    private static final int MAX_RETRIES = 5;
+    private static final int MAX_RETRIES = 2;
+    private static final AtomicInteger retryCount = new AtomicInteger();
     private static final int STICKER_QUALITY = 100;
     private static final String STICKER_FILE_NAME_FORMAT = "%03d.png";
     private static final String STICKERS_KEY = "stickers";
@@ -40,7 +41,6 @@ public class TelegramStickersGrabber {
     private static final String THUMB_KEY = "thumb";
     private static final String NAME_KEY = "name";
     private static final String TITLE_KEY = "title";
-    public static String REAL_TG_IP = null;
     private static String BOT_API_BASE_URL;
     private static String GET_STICKER_SET_URL;
     private static String GET_FILE_URL;
@@ -110,6 +110,7 @@ public class TelegramStickersGrabber {
             Log.d(TAG, String.format("Pack %s has been downloaded to %s", set.id, packFolder.getAbsolutePath()));
             listener.onPackDownloaded(packInfo, true);
         });
+
         Flag deathFlag = new Flag();
 
         for (int i = 0; i < set.stickers.size(); i++) {
@@ -124,7 +125,7 @@ public class TelegramStickersGrabber {
             sClient.a(fileInfoRequest).a(new Callback() {
                 @Override
                 public void a(Call call, IOException e) {
-                    handleFailure(deathFlag, listener, e);
+                    handleFailure(deathFlag, listener, e, downloadedStickers, call, fileInfoRequest, this);
                 }
 
                 @Override
@@ -151,11 +152,11 @@ public class TelegramStickersGrabber {
                         sClient.a(fileDownloadRequest).a(new Callback() {
                             @Override
                             public void a(Call call, IOException e) {
-                                handleFailure(deathFlag, listener, e);
+                                handleFailure(deathFlag, listener, e, downloadedStickers, call, fileDownloadRequest, this);
                             }
 
                             @Override
-                            public void a(Call call, Response response) throws IOException {
+                            public void a(Call call, Response response) {
                                 if (deathFlag.up())
                                     return;
 
@@ -166,7 +167,7 @@ public class TelegramStickersGrabber {
 
                                 try (ResponseBody responseBody = response.a()) {
                                     if (responseBody == null) {
-                                        handleFailure(deathFlag, listener, new TSGException("Response body for a sticker is null :/"));
+                                        handleFailure(deathFlag, listener, new TSGException("Response body for a sticker is null :/"), downloadedStickers, call, fileDownloadRequest, this);
                                         return;
                                     }
 
@@ -174,7 +175,7 @@ public class TelegramStickersGrabber {
                                     Bitmap stickerImage = BitmapFactory.decodeStream(stickerInputStream);
 
                                     if (stickerImage == null) {
-                                        handleFailure(deathFlag, listener, new TSGException("Unable to decode sticker image"));
+                                        handleFailure(deathFlag, listener, new TSGException("Unable to decode sticker image"), downloadedStickers, call, fileDownloadRequest, this);
                                         return;
                                     }
 
@@ -193,39 +194,48 @@ public class TelegramStickersGrabber {
                             }
                         });
                     } catch (Exception e) {
-                        handleFailure(deathFlag, listener, e);
+                        handleFailure(deathFlag, listener, e, downloadedStickers, call, fileInfoRequest, this);
                     }
                 }
             });
         }
     }
 
-    private void handleFailure(Flag deathFlag, PackDownloadListener listener, Exception e) {
-        if (deathFlag.up())
+    private void handleFailure(Flag deathFlag, PackDownloadListener listener, Exception e, GoalCounter downloadedStickers, Call call, Request request, Callback callback) {
+        if ((e instanceof IOException || e instanceof TSGException) && retryCount.get() > MAX_RETRIES) {
+            Log.e(TAG, "Unable to download sticker: " + e.getMessage());
+            downloadedStickers.increase();
             return;
+        } else if (retryCount.get() < MAX_RETRIES) {
+            retryRequest(call, request, callback);
+            return;
+        }
+
+        if (deathFlag.up()) {
+            return;
+        }
 
         deathFlag.raise();
         listener.onPackDownloadError(e);
     }
 
     private void retryRequest(Call call, Request request, Callback callback) {
-        AtomicInteger retryCount = new AtomicInteger();
         retryCount.incrementAndGet();
 
         if (retryCount.get() > MAX_RETRIES) {
+            Log.e(TAG, "retryRequest: max retries");
             callback.a(call, new IOException());
         } else {
+            Log.e(TAG, "retryRequest");
             sClient.a(request).a(callback);
         }
     }
 
-    private void saveStickerImage(Bitmap stickerImage, File stickerFile) throws IOException, TSGException {
-        try (FileOutputStream fileOutputStream = new FileOutputStream(stickerFile)) {
-            if (!stickerImage.compress(Bitmap.CompressFormat.PNG, STICKER_QUALITY, fileOutputStream)) {
-                throw new TSGException("Unable to compress sticker to a png file at path: " + stickerFile.getAbsolutePath());
-            }
-        } finally {
-            stickerImage.recycle();
+    private void saveStickerImage(Bitmap image, File file) throws TSGException {
+        try (FileOutputStream fos = new FileOutputStream(file)) {
+            image.compress(Bitmap.CompressFormat.PNG, 100, fos);
+        } catch (IOException e) {
+            throw new TSGException("Unable to save sticker image");
         }
     }
 
@@ -336,8 +346,6 @@ public class TelegramStickersGrabber {
     }
 
     public static class TSGException extends Exception {
-        private static final long serialVersionUID = 7866915509988422944L;
-
         private TSGException(String message) {
             super(message);
         }
