@@ -12,13 +12,14 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationManagerCompat;
-import com.vk.core.util.Screen;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
+import ru.vtosters.hooks.other.Preferences;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -32,6 +33,12 @@ import java.util.Random;
 
 public class AndroidUtils {
     private static final String ALLOWED_CHARACTERS = "0123456789qwertyuiopasdfghjklzxcvbnm";
+    public enum ScreenSize {
+        small,
+        normal,
+        large,
+        xlarge
+    }
 
     public static boolean isDebuggable() {
         return 0 != (AndroidUtils.getGlobalContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE);
@@ -44,7 +51,8 @@ public class AndroidUtils {
     }
 
     public static boolean isTablet() {
-        return Screen.l(getGlobalContext());
+        String string = getGlobalContext().getResources().getString(b.h.g.d.screen_size);
+        return TextUtils.equals(string, ScreenSize.large.name()) || TextUtils.equals(string, ScreenSize.xlarge.name());
     }
 
     @NonNull

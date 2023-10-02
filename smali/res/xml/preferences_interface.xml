@@ -96,6 +96,11 @@
                 android:title="@string/pollresults_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
+                android:key="disableForceTabletMode"
+                android:summary="Отключает интерфейс для планшетов и возвращает докбар"
+                android:title="Отключить режим планшета"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
                 android:key="friendsblock"
                 android:summary="@string/friendsblock_summ"
                 android:title="@string/friendsblock_title"/>

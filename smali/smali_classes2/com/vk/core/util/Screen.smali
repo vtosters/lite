@@ -1088,31 +1088,10 @@
         .end annotation
     .end param
 
-    .line 1
-    invoke-static {p0}, Lcom/vk/core/util/Screen;->f(Landroid/content/Context;)Lcom/vk/core/util/Screen$ScreenSize;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    invoke-static {}, Lru/vtosters/hooks/TabletHook;->hook()Z
 
     move-result p0
 
-    sget-object v0, Lcom/vk/core/util/Screen$ScreenSize;->normal:Lcom/vk/core/util/Screen$ScreenSize;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    if-le p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
     return p0
 .end method
 
