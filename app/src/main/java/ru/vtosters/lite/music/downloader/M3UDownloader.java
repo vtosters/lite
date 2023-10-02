@@ -48,25 +48,23 @@ public class M3UDownloader
         var resultMp3 = getResultMp3File(outDir, cache, track);
         try {
             CompletableFuture.allOf(createFutures(baseUri, segments, progress, callback, track))
-                    .thenRun(() ->
-                    {
-                        if (cache)
+                    .thenRun(() -> {
+                        if (cache) {
                             try {
                                 ThumbnailDownloader.downloadThumbnails(track);
                             } catch (IOException e) {
                                 throw new RuntimeException("Failed to download thumbs", e);
                             }
+                        }
                     })
-                    .thenRun(() ->
-                    {
+                    .thenRun(() -> {
                         try {
                             TSMerger.merge(getTsesDir(track), resultTs);
                         } catch (Throwable e) {
                             throw new RuntimeException("Failed to merge ts files", e);
                         }
                     })
-                    .thenRun(() ->
-                    {
+                    .thenRun(() -> {
                         try {
                             FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track);
                         } catch (Throwable e) {
@@ -74,12 +72,18 @@ public class M3UDownloader
                         }
                     })
                     .thenRun(() -> callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / segments.size())))
-                    .thenRun(() -> MusicCacheImpl.addTrack(track))
+                    .thenRun(() -> {
+                        if (cache) {
+                            MusicCacheImpl.addTrack(track);
+                        }
+                    })
                     .whenComplete((unused, tr) -> {
                         if (tr != null) {
                             IOUtils.deleteRecursive(MusicCacheStorageUtils.getTrackDirById(track.y1()));
                             callback.onFailure();
-                        } else callback.onSuccess();
+                        } else {
+                            callback.onSuccess();
+                        }
                         IOUtils.deleteRecursive(getTsesDir(track));
                     })
                     .join();
