@@ -5640,7 +5640,7 @@
     <string name="friendsblock_title">Скрыть друзей</string>
     <string name="friendsblock_summ">Скрыть блок рекомендаций друзей в друзьях</string>
     <string name="onlineformatter_title">Расширенный онлайн</string>
-    <string name="onlineformatter_summ">Показывать с какого приложения/клиента человек в онлайне</string>
+    <string name="onlineformatter_summ">Показывать с какого приложения/клиента человек в онлайне\n\nНапример: Онлайн с помощью Kate Mobile</string>
     <string name="voices_vtl">Голосовые сообщения</string>
     <string name="disable_voice_listening_summ">Функция позволяет не отправлять статус прослушивания голосовых сообщений человека вами</string>
     <string name="listen_v_title">Отключить статус прослушивания</string>

@@ -5774,7 +5774,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="friendsblock_title">Hide friends</string>
     <string name="friendsblock_summ">Hide the block of recommendations of friends in friends section</string>
     <string name="onlineformatter_title">Extended online indicator</string>
-    <string name="onlineformatter_summ">Show what app/device a person is online from</string>
+    <string name="onlineformatter_summ">Show what app/device a person is online from\n\nFor example: Online using Kate Mobile</string>
     <string name="voices_vtl">Voice messages</string>
     <string name="disable_voice_listening_summ">The function allows you not to send the status of listening to the person\'s voice messages by you</string>
     <string name="listen_v_title">Disable listening status</string>

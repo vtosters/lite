@@ -6311,7 +6311,7 @@
     <string name="friendsblock_title">Схаваць сяброў</string>
     <string name="friendsblock_summ">Схаваць блок рэкамендацый сяброў у сябрах</string>
     <string name="onlineformatter_title">Пашыраны анлайн</string>
-    <string name="onlineformatter_summ">Паказваць з якога прыкладання/кліента чалавек у анлайне</string>
+    <string name="onlineformatter_summ">Паказваць з якога прыкладання/кліента чалавек у анлайне\n\nНапрыклад: Онлайн З дапамогай Kate Mobile</string>
     <string name="voices_vtl">Галасавыя паведамленні</string>
     <string name="disable_voice_listening_summ">Функцыя дазваляе не адпраўляць статут праслухоўвання галасавых
         паведамленняў чалавека вамі
