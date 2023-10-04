@@ -91,8 +91,8 @@ task testClasses {
 }
 
 dependencies {
-    implementation 'com.microsoft.appcenter:appcenter-analytics:5.0.1'
-    implementation 'com.microsoft.appcenter:appcenter-crashes:5.0.1'
+    implementation 'com.microsoft.appcenter:appcenter-analytics:5.0.2'
+    implementation 'com.microsoft.appcenter:appcenter-crashes:5.0.2'
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
     implementation 'net.sourceforge.streamsupport:streamsupport-minifuture:1.7.4'
     implementation 'com.google.guava:guava:23.3-android'
