@@ -5,6 +5,7 @@ import com.vtosters.lite.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
@@ -115,14 +116,20 @@ public class OnlineFormatterHook {
         return AndroidUtils.getString(R.string.custom_online) + " " + appname;
     }
 
-    public static JSONObject onlineHook(JSONObject json) throws ParseException, IOException, JSONException {
-        if (getBoolValue("onlinefix", false)) JsonInjectors.setOnlineInfo(json);
+    public static JSONObject onlineHook(JSONObject json) {
+        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return json;
+
+        try {
+            JsonInjectors.setOnlineInfo(json);
+        } catch (JSONException e) {
+            Log.e("onlineHook", e.getMessage());
+        }
 
         return json;
     }
 
-    public static JSONArray onlineHookList(JSONArray jsonArr) throws ParseException, IOException, JSONException {
-        if (!getBoolValue("onlinefix", false)) return jsonArr;
+    public static JSONArray onlineHookList(JSONArray jsonArr) {
+        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return jsonArr;
 
         try {
             JsonInjectors.setOnlineInfoUsers(jsonArr);
@@ -134,7 +141,7 @@ public class OnlineFormatterHook {
     }
 
     public static JSONObject onlineHookProfiles(JSONObject json) {
-        if (!getBoolValue("onlinefix", false)) return json;
+        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return json;
 
         try {
             JsonInjectors.setOnlineInfoUsers(json.optJSONArray("profiles"));
@@ -146,7 +153,7 @@ public class OnlineFormatterHook {
     }
 
     public static JSONObject onlineHookItems(JSONObject json) {
-        if (!getBoolValue("onlinefix", false)) return json;
+        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return json;
 
         try {
             JsonInjectors.setOnlineInfoUsers(json.optJSONArray("items"));
@@ -157,8 +164,8 @@ public class OnlineFormatterHook {
         return json;
     }
 
-    public static JSONObject onlineHookRequestsAndRecommendations(JSONObject json) throws ParseException, IOException, JSONException {
-        if (!getBoolValue("onlinefix", false)) return json;
+    public static JSONObject onlineHookRequestsAndRecommendations(JSONObject json) {
+        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return json;
 
         try {
             JsonInjectors.setOnlineInfoUsers(json.optJSONObject("read_requests").optJSONArray("items"));

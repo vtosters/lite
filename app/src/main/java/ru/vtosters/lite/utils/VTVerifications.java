@@ -7,6 +7,7 @@ import okhttp3.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 
 import java.io.IOException;
@@ -31,7 +32,7 @@ public class VTVerifications {
             return;
         }
 
-        if ((!NetworkUtils.isNetworkConnected() && NetworkUtils.isInternetSlow() || getBoolValue("isRoamingState", false)) && prefs.contains("ids") || getBoolValue("serverFeaturesDisable", false)) {
+        if ((!NetworkUtils.isNetworkConnected() && NetworkUtils.isInternetSlow() || getBoolValue("isRoamingState", false)) && prefs.contains("ids") || Preferences.serverFeaturesDisable()) {
             parseJson(prefs.getString("ids", "[]"));
             Log.d("VTVerifications", "load from memory. Roaming or Network issues");
             isLoaded = true;

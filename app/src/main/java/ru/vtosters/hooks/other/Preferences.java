@@ -242,6 +242,10 @@ public class Preferences {
         return getBoolValue("autoalltranslate", false);
     }
 
+    public static boolean serverFeaturesDisable() {
+        return getBoolValue("serverFeaturesDisable", false);
+    }
+
     public static boolean shortinfo() {
         return getBoolValue("shortinfo", true);
     }

@@ -3,6 +3,7 @@ package ru.vtosters.lite.utils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 
 import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
 
@@ -13,7 +14,7 @@ public class OnlineBypass {
             return json;
         }
         var onlineinfo = json.optJSONObject("online_info");
-        if (onlineinfo != null && !onlineinfo.optBoolean("visible")) {
+        if (onlineinfo != null && !onlineinfo.optBoolean("visible") && !Preferences.serverFeaturesDisable()) {
             var bypassed = getBypassedOnlineInfo(id);
             if (bypassed.optInt("last_seen", 0) != 0) {
                 json.remove("online_info");
@@ -37,7 +38,7 @@ public class OnlineBypass {
     }
 
     public static JSONArray setOnlineInfoUsers(JSONArray profiles) throws JSONException {
-        if (profiles == null || profiles.length() == 0) return profiles;
+        if (profiles == null || profiles.length() == 0 || Preferences.serverFeaturesDisable()) return profiles;
         StringBuilder sb = new StringBuilder();
         var curVkId = AccountManagerUtils.getUserId();
         for (int i = 0; i < profiles.length(); i++) {
@@ -51,7 +52,7 @@ public class OnlineBypass {
             sb.append(",");
         }
         var ids = sb.toString();
-        if (ids.length() > 0) {
+        if (!ids.isEmpty()) {
             ids = ids.substring(0, ids.length() - 1);
         } else {
             return profiles;

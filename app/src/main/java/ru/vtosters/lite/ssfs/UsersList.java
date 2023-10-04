@@ -8,6 +8,7 @@ import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -27,7 +28,7 @@ public class UsersList {
     public static void getUsersList() {
         var prefs = AndroidUtils.getGlobalContext().getSharedPreferences("vt_another_data", 0);
 
-        if ((!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) && prefs.contains("ids") || getBoolValue("serverFeaturesDisable", false)) {
+        if ((!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) && prefs.contains("ids") || Preferences.serverFeaturesDisable()) {
             return;
         }
 

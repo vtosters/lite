@@ -112,9 +112,9 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("VT_Verification").setVisible(!getBoolValue("serverFeaturesDisable", false));
-        findPreference("VT_Fire").setVisible(!getBoolValue("serverFeaturesDisable", false));
-        findPreference("updateverifdata").setVisible(!getBoolValue("serverFeaturesDisable", false));
+        findPreference("VT_Verification").setVisible(!Preferences.serverFeaturesDisable());
+        findPreference("VT_Fire").setVisible(!Preferences.serverFeaturesDisable());
+        findPreference("updateverifdata").setVisible(!Preferences.serverFeaturesDisable());
 
         var vkAdminTokenPref = findPreference("vk_admin_token");
         vkAdminTokenPref.setVisible(Preferences.getPreferences().getBoolean("new_music_downloading_way", false));
