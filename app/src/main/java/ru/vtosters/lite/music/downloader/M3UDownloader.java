@@ -136,7 +136,7 @@ public class M3UDownloader
     }
 
     public static String getTitle(MusicTrack track) {
-        return track.f + (!TextUtils.isEmpty(track.g) ? +'(' + track.g + ')' : null);
+        return track.f + (!TextUtils.isEmpty(track.g) ? +'(' + track.g + ')' : "");
     }
 
     static File getTsesDir(MusicTrack track) {
