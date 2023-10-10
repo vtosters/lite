@@ -1,6 +1,7 @@
 package ru.vtosters.lite.music.cache;
 
 import android.os.RemoteException;
+import android.text.TextUtils;
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
@@ -17,7 +18,7 @@ public class MusicCacheImpl {
                 track.y1(),
                 track.I != null ? track.I.getId() + "" : "-1",
                 track.f,
-                track.g,
+                !TextUtils.isEmpty(track.g) ? track.g : "",
                 track.C,
                 track.I != null ? track.I.getTitle() : "",
                 track.K,
