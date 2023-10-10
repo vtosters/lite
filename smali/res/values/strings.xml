@@ -5615,7 +5615,7 @@ Warning! It can cause long downloads of user lists if there are a lot of users i
     <string name="ctypesocks">Socks</string>
     <string name="dnr">Do not read</string>
     <string name="dns">Disable status of viewing</string>
-    <string name="dnw">Do not write</string>
+    <string name="dnw">Do not type</string>
     <string name="docknumbers">Counters in dockbar</string>
     <string name="docknumberssum">"Disabling doesn't work in the tablet interface"</string>
     <string name="dockbar_tab_titles">Show dockbar item titles</string>
