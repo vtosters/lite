@@ -3,6 +3,7 @@ package ru.vtosters.lite.music.converter.ts;
 import com.arthenica.ffmpegkit.FFmpegKit;
 import com.vk.dto.music.Artist;
 import com.vk.dto.music.MusicTrack;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.downloader.M3UDownloader;
 import ru.vtosters.lite.utils.IOUtils;
 
@@ -25,12 +26,16 @@ public class FFMpeg {
                 + " -loglevel error"
                 + " -hide_banner"
                 + " -write_id3v2 1"
-                + " -metadata title=\"" + IOUtils.getValidFileName(M3UDownloader.getTitle(track)) + '"'
-                + " -metadata artist=\"" + normalizeMetadata(track.L.stream().map(Artist::w1).collect(Collectors.joining(", "))) + '"'
-                + " -metadata album=\"" + normalizeMetadata(track.I.getTitle()) + '"'
+                + setMetadata(track)
                 + " -c copy \"" + out + '"';
         var ses = FFmpegKit.execute(cmd);
         if (ses.getReturnCode().isValueCancel()) throw new RuntimeException(ses.getLogsAsString());
+    }
+
+    private static String setMetadata(MusicTrack track) {
+        return Preferences.getBoolValue("setMetaData", false) ? "" : " -metadata title=\"" + IOUtils.getValidFileName(M3UDownloader.getTitle(track)) + '"'
+                + " -metadata artist=\"" + normalizeMetadata(track.L.stream().map(Artist::w1).collect(Collectors.joining(", "))) + '"'
+                + " -metadata album=\"" + normalizeMetadata(track.I.getTitle()) + '"';
     }
 
     private static String normalizeMetadata(String in) {
