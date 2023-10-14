@@ -33,9 +33,9 @@ public class FFMpeg {
     }
 
     private static String setMetadata(MusicTrack track) {
-        return Preferences.getBoolValue("setMetaData", false) ? "" : " -metadata title=\"" + IOUtils.getValidFileName(M3UDownloader.getTitle(track)) + '"'
+        return Preferences.getBoolValue("setMetaData", false) ? " -metadata title=\"" + IOUtils.getValidFileName(M3UDownloader.getTitle(track)) + '"'
                 + " -metadata artist=\"" + normalizeMetadata(track.L.stream().map(Artist::w1).collect(Collectors.joining(", "))) + '"'
-                + " -metadata album=\"" + normalizeMetadata(track.I.getTitle()) + '"';
+                + " -metadata album=\"" + normalizeMetadata(track.I.getTitle()) + '"' : "";
     }
 
     private static String normalizeMetadata(String in) {
