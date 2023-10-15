@@ -218,7 +218,7 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
                 requireActivity().runOnUiThread(() -> {
                     dialog.dismiss();
                     new VkAlertDialog.Builder(requireContext())
-                            .setTitle(AndroidUtils.getString("error"))
+                            .setTitle(AndroidUtils.getString(R.string.error))
                             .setMessage(AndroidUtils.getString("error_applying_accent") + ":\n" + e)
                             .setPositiveButton("OK", null)
                             .show();

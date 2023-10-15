@@ -686,4 +686,15 @@
     <color name="yellow_light">#ffffd54f</color>
     <color name="yellow_sunflower">#fffece00</color>
     <color name="iclauncher">#fffcfcfc</color>
+
+    <color name="applock__activity_background">#FAFAFA</color>
+    <color name="applock__description_text">#7F8C8D</color>
+
+    <color name="applock__item_background">#3C9ADF</color>
+    <color name="applock__item_text">#FAFAFA</color>
+
+    <color name="applock__create_choose_option_bg">#00FFFFFF</color>
+    <color name="applock__create_choose_option_bg_pressed">#11000000</color>
+
+    <color name="applock__action_settings">#95A5A6</color>
 </resources>

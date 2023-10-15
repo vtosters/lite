@@ -10262,4 +10262,47 @@
         <item name="android:shadowDy">-1.0</item>
         <item name="android:shadowRadius">0.25</item>
     </style>
+
+    <style name="applock__content_parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/applock__content_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/applock__content_padding_vertical</item>
+        <item name="android:paddingRight">@dimen/applock__content_padding_horizontal</item>
+        <item name="android:paddingBottom">@dimen/applock__content_padding_vertical</item>
+    </style>
+
+    <style name="applock__description">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">These is some kind of instructions you should follow.</item>
+        <item name="android:textColor">?text_primary</item>
+        <item name="android:textSize">@dimen/applock__description_text</item>
+    </style>
+
+    <style name="applock__input_pin_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/applock__item_size</item>
+        <item name="android:layout_marginTop">@dimen/applock__item_margin_top</item>
+    </style>
+
+    <style name="applock__input_fingerprint_view">
+        <item name="android:layout_width">@dimen/applock__fingerprint_scan_image_size</item>
+        <item name="android:layout_height">@dimen/applock__fingerprint_scan_image_size</item>
+        <item name="android:layout_marginTop">@dimen/applock__fingerprint_scan_image_margin_top</item>
+    </style>
+
+    <style name="applock__action_settings">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/applock__action_settings_margin_top</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/applock__action_settings_padding</item>
+        <item name="android:text">@string/applock__action_settings</item>
+        <item name="android:textColor">?text_primary</item>
+        <item name="android:textSize">@dimen/applock__action_settings</item>
+    </style>
 </resources>

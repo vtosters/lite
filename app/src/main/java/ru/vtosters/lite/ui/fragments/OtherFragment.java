@@ -4,6 +4,11 @@ import android.app.Activity;
 import android.content.*;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import androidx.appcompat.view.ContextThemeWrapper;
+
+import com.guardanis.applock.AppLock;
+import com.guardanis.applock.activities.LockCreationActivity;
 import com.vk.auth.api.VKAccount;
 import com.vk.core.util.ToastUtils;
 import com.vk.pushes.PushSubscriber;
@@ -71,6 +76,22 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
                 startActivity(intent);
             } catch (Exception e) {
                 e.printStackTrace();
+            }
+            return true;
+        });
+
+        findPreference("pin_setup").setOnPreferenceClickListener(preference -> {
+            var intent = new Intent(this.getActivity(), LockCreationActivity.class);
+            startActivityForResult(intent, AppLock.REQUEST_CODE_LOCK_CREATION);
+            return true;
+        });
+
+        findPreference("pin_reset").setOnPreferenceClickListener(preference -> {
+            if (AppLock.isEnrolled(requireContext())) {
+                AppLock.getInstance(requireContext()).invalidateEnrollments();
+                AndroidUtils.sendToast(AndroidUtils.getString("pin_reset"));
+            } else {
+                AndroidUtils.sendToast(AndroidUtils.getString("pin_not_set"));
             }
             return true;
         });

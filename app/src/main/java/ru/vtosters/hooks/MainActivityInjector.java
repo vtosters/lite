@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Build;
 import b.h.g.k.VKProgressDialog;
 import com.aefyr.tsg.g2.TelegramStickersService;
+import com.guardanis.applock.AppLock;
+import com.guardanis.applock.activities.UnlockActivity;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
@@ -63,6 +65,13 @@ public class MainActivityInjector {
         // VKIDProtection.alert(activity);
         //needs to show selected tgs pack count in settings after cold launch
         TelegramStickersService.getInstance(activity);
+    }
+
+    public static void applock(Activity activity) {
+        if (AppLock.isUnlockRequired(activity)) {
+            var intent = new Intent(activity, UnlockActivity.class);
+            activity.startActivity(intent);
+        }
     }
 
     private static void updateBinsAndTmpArchive(Activity activity) {

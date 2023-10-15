@@ -1,16 +1,22 @@
 package com.vk.api.audio;
 
 import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
+
 import com.vk.api.base.ApiRequest;
 import com.vk.dto.music.MusicTrack;
 import com.vk.log.L;
+
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.Genius;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.ArrayList;
+
+import ru.vtosters.lite.music.Genius;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class AudioGetLyrics extends ApiRequest<AudioGetLyrics.a> {
     private final MusicTrack musicTrack;

@@ -2,6 +2,7 @@ package ru.vtosters.lite.ui;
 
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
+import android.text.InputType;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -308,6 +309,52 @@ public class PreferenceFragmentUtils {
             editText.setHintTextColor(ThemesUtils.getSTextAttr());
 
             editText.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
+
+            linearLayout.addView(editText);
+            editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+            ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());
+            margin.setMargins(AndroidUtils.dp2px(20f), 0, AndroidUtils.dp2px(20f), 0);
+            editText.setLayoutParams(margin);
+
+            new VkAlertDialog.Builder(screen.getContext())
+                    .setTitle(title)
+                    .setView(linearLayout)
+                    .setPositiveButton("OK", (dialog, which) -> {
+                        boolean change = editTextPrefChangeListener.onChanged(preference, editText.getText().toString());
+                        if (!change)
+                            return;
+
+                        PreferenceManager.getDefaultSharedPreferences(screen.getContext())
+                                .edit()
+                                .putString(key, editText.getText().toString())
+                                .apply();
+                    })
+                    .show();
+
+            return false;
+        });
+    }
+
+    public static Preference addEditTextValPreference(
+            PreferenceScreen screen,
+            String key,
+            CharSequence title,
+            CharSequence defval,
+            onPreferenceTextValueChangeListener editTextPrefChangeListener
+    ) {
+        return addPreference(screen, key, title, null, null, preference -> {
+            LinearLayout linearLayout = new LinearLayout(screen.getContext());
+
+            final EditText editText = new EditText(screen.getContext());
+            editText.setText(PreferenceManager.getDefaultSharedPreferences(screen.getContext()).getString(key, ""));
+            editText.setHint(title);
+            editText.setTextColor(ThemesUtils.getTextAttr());
+            editText.setHintTextColor(ThemesUtils.getSTextAttr());
+            editText.setText(defval);
+
+            editText.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
+            editText.setInputType(InputType.TYPE_CLASS_NUMBER);
+            editText.setTransformationMethod(null);
 
             linearLayout.addView(editText);
             editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;

@@ -2,10 +2,13 @@ package ru.vtosters.hooks.other;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.StrictMode;
+import com.guardanis.applock.AppLock;
+import com.guardanis.applock.activities.UnlockActivity;
 import com.vk.medianative.MediaImageEncoder;
 import com.vk.medianative.MediaNative;
 import com.vtosters.lite.data.Users;
@@ -33,7 +36,15 @@ public class Preferences {
         VTVerifications.load(application);
         LifecycleUtils.registerActivities(application);
 
+        if (AppLock.isEnrolled(AndroidUtils.getGlobalContext())) {
+            AppLock.setAuthenticationRequired(AndroidUtils.getGlobalContext());
+        }
+        
         AnalyticsHelper.start(application);
+        
+        if (AppLock.isEnrolled(AndroidUtils.getGlobalContext())) {
+            AppLock.setAuthenticationRequired(AndroidUtils.getGlobalContext());
+        }
     } // VK Init
 
     public static String getBuildName() {

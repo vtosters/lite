@@ -2511,4 +2511,8 @@
     <attr name="im_ic_msgreload" format="reference" />
     <attr name="im_ic_msgdl" format="reference" />
     <attr name="im_ic_stats" format="reference" />
+    <declare-styleable name="PINInputView">
+        <attr name="pinTextColor" format="reference|color"/>
+        <attr name="pinBackgroundColor" format="reference|color"/>
+    </declare-styleable>
 </resources>

@@ -3919,6 +3919,10 @@
     <item name="download_mp3" type="id" />
     <item name="remove_from_cache_vkx" type="id" />
     <item name="add_to_cache_vkx" type="id" />
+    <item name="pin__description" type="id" />
+    <item name="pin__action_settings" type="id" />
+    <item name="pin__input_view" type="id" />
+    <item name="pin__container" type="id"/>
     <item name="account_backup_view" type="id" />
     <item name="copy_image" type="id" />
 </resources>

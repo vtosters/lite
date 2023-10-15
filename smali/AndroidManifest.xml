@@ -16,6 +16,7 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
@@ -196,6 +197,14 @@
         <activity
             android:name="ru.vtosters.lite.ui.activities.VKAdminTokenActivity"
             android:launchMode="singleTop">
+        </activity>
+        <activity
+                android:name="com.guardanis.applock.activities.LockCreationActivity"
+                android:launchMode="singleTop">
+        </activity>
+        <activity
+                android:name="com.guardanis.applock.activities.UnlockActivity"
+                android:launchMode="singleTop">
         </activity>
         <activity
             android:name="com.vtosters.lite.MainActivity"

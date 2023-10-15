@@ -2140,6 +2140,8 @@ public final class R {
         public static final int im_ic_msgdl = 0x7f040774; // 2130970484
         public static final int im_ic_msgreload = 0x7f040775; // 2130970485
         public static final int im_ic_stats = 0x7f040776; // 2130970486
+        public static final int pinBackgroundColor = 0x7f040777; // 2130970487
+        public static final int pinTextColor = 0x7f040778; // 2130970488
     }
 
     public static final class bool {
@@ -2160,6 +2162,9 @@ public final class R {
         public static final int spb_default_reversed = 0x7f05000e; // 2131034126
         public static final int vk_is_tablet = 0x7f05000f; // 2131034127
         public static final int com_samsung_android_icon_container_has_icon_container = 0x7f050010; // 2131034128
+        public static final int applock__fingerprint_service_enabled = 0x7f050011; // 2131034129
+        public static final int applock__item_password_chars_enabled = 0x7f050012; // 2131034130
+        public static final int applock__unlock_activity_return_allowed = 0x7f050013; // 2131034131
     }
 
     public static final class color {
@@ -2968,6 +2973,13 @@ public final class R {
         public static final int yellow_light = 0x7f060323; // 2131100451
         public static final int yellow_sunflower = 0x7f060324; // 2131100452
         public static final int iclauncher = 0x7f060325; // 2131100453
+        public static final int applock__action_settings = 0x7f060327; // 2131100455
+        public static final int applock__activity_background = 0x7f060328; // 2131100456
+        public static final int applock__create_choose_option_bg = 0x7f060329; // 2131100457
+        public static final int applock__create_choose_option_bg_pressed = 0x7f06032a; // 2131100458
+        public static final int applock__description_text = 0x7f06032b; // 2131100459
+        public static final int applock__item_background = 0x7f06032c; // 2131100460
+        public static final int applock__item_text = 0x7f06032d; // 2131100461
         public static final int abc_color_highlight_material = 0x7f060004; // 2131099652
         public static final int alpha05 = 0x7f060326; // 2131100454
     }
@@ -3821,6 +3833,21 @@ public final class R {
         public static final int wrap_content = 0x7f07035b; // 2131166043
         public static final int year_label_height = 0x7f07035c; // 2131166044
         public static final int year_label_text_size = 0x7f07035d; // 2131166045
+        public static final int applock__action_settings = 0x7f07035e; // 2131166046
+        public static final int applock__action_settings_margin_top = 0x7f07035f; // 2131166047
+        public static final int applock__action_settings_padding = 0x7f070360; // 2131166048
+        public static final int applock__activity_padding = 0x7f070361; // 2131166049
+        public static final int applock__chooser_image_size = 0x7f070362; // 2131166050
+        public static final int applock__chooser_parent_padding_vertical = 0x7f070363; // 2131166051
+        public static final int applock__chooser_text_padding_top = 0x7f070364; // 2131166052
+        public static final int applock__content_padding_horizontal = 0x7f070365; // 2131166053
+        public static final int applock__content_padding_vertical = 0x7f070366; // 2131166054
+        public static final int applock__description_padding_bottom = 0x7f070367; // 2131166055
+        public static final int applock__description_text = 0x7f070368; // 2131166056
+        public static final int applock__fingerprint_scan_image_margin_top = 0x7f070369; // 2131166057
+        public static final int applock__fingerprint_scan_image_size = 0x7f07036a; // 2131166058
+        public static final int applock__item_margin_top = 0x7f07036b; // 2131166059
+        public static final int applock__item_size = 0x7f07036c; // 2131166060
         public static final int vkim_article_blocked_bottom_margin = 0x7f070329; // 2131165993
         public static final int vkim_article_blocked_ic_margin = 0x7f07032a; // 2131165994
         public static final int vkim_article_blocked_ic_size = 0x7f07032b; // 2131165995
@@ -4999,6 +5026,9 @@ public final class R {
         public static final int custom_thumb_selector = 0x7f080be9; // 2131233769
         public static final int custom_track_selector = 0x7f080bea; // 2131233770
         public static final int splash = 0x7f080bec; // 2131233772
+        public static final int applock__chooser_option_bg = 0x7f080bee; // 2131233774
+        public static final int applock__fingerprint = 0x7f080bef; // 2131233775
+        public static final int applock__pin = 0x7f080bf0; // 2131233776
         public static final int abc_control_background_material = 0x7f080032; // 2131230770
         public static final int ic_action_close = 0x7f080322; // 2131231522
         public static final int ic_camera_outline_28_new = 0x7f0803a0; // 2131231648
@@ -11062,6 +11092,12 @@ public final class R {
         public static final int color_preview_border = 0x7f0a1024; // 2131365924
         public static final int account_backup_view = 0x7f0a1025; // 2131365925
         public static final int copy_image = 0x7f0a1026; // 2131365926
+        public static final int applock__activity_lock_creation = 0x7f0a1027; // 2131365927
+        public static final int applock__activity_unlock = 0x7f0a1028; // 2131365928
+        public static final int pin__action_settings = 0x7f0a1029; // 2131365929
+        public static final int pin__container = 0x7f0a102a; // 2131365930
+        public static final int pin__description = 0x7f0a102b; // 2131365931
+        public static final int pin__input_view = 0x7f0a102c; // 2131365932
     }
 
     public static final class integer {
@@ -11108,6 +11144,10 @@ public final class R {
         public static final int status_bar_notification_info_maxnum = 0x7f0b002b; // 2131427371
         public static final int vkim_activity_animation_duration = 0x7f0b002c; // 2131427372
         public static final int vkim_playing_drawable_rect_count = 0x7f0b002d; // 2131427373
+        public static final int applock__activity_lock_reenable_minutes = 0x7f0b002e; // 2131427374
+        public static final int applock__failure_retry_delay = 0x7f0b002f; // 2131427375
+        public static final int applock__input_pin_item_count = 0x7f0b0030; // 2131427376
+        public static final int applock__max_retry_count = 0x7f0b0031; // 2131427377
         public static final int emoji_size_in_sprite = 0x7f0b0012; // 2131427346
         public static final int s1dip = 0x7f0b0027; // 2131427367
         public static final int s2dip = 0x7f0b0028; // 2131427368
@@ -12883,6 +12923,11 @@ public final class R {
         public static final int wppreview = 0x7f0d06df; // 2131560159
         public static final int write_bar_i = 0x7f0d06e0; // 2131560160
         public static final int color_picker_item = 0x7f0d06e1; // 2131560161
+        public static final int applock__activity_lock_creation = 0x7f0d06e2; // 2131560162
+        public static final int applock__activity_unlock = 0x7f0d06e3; // 2131560163
+        public static final int applock__fake_edit_text = 0x7f0d06e4; // 2131560164
+        public static final int applock__lock_creation = 0x7f0d06e5; // 2131560165
+        public static final int applock__unlock = 0x7f0d06e6; // 2131560166
     }
 
     public static final class menu {
@@ -19658,12 +19703,43 @@ public final class R {
         public static final int vkx_integration_enabled_info = 0x7f12188a; // 2131892362
         public static final int whitelisted_ad_groups_stories_title = 0x7f12188b; // 2131892363
         public static final int writebar_ios_title = 0x7f12188c; // 2131892364
-        public static final int cache_size = 0x7f12188d; // 2131892365
-        public static final int cache_size_summ = 0x7f12188e; // 2131892366
-        public static final int clear_all_cache = 0x7f12188f; // 2131892367
-        public static final int invalidate_theme_cache_each_update_title = 0x7f121890; // 2131892368
-        public static final int invertFilters = 0x7f121891; // 2131892369
-        public static final int invertFilters_summ = 0x7f121892; // 2131892370
+        public static final int applock__action_settings = 0x7f12188d; // 2131892365
+        public static final int applock__create_chooser_option_fingerprint = 0x7f12188e; // 2131892366
+        public static final int applock__create_chooser_option_pin = 0x7f12188f; // 2131892367
+        public static final int applock__description_chooser = 0x7f121890; // 2131892368
+        public static final int applock__description_confirm = 0x7f121891; // 2131892369
+        public static final int applock__description_create_fingerprint = 0x7f121892; // 2131892370
+        public static final int applock__description_create_fingerprint_paused = 0x7f121893; // 2131892371
+        public static final int applock__description_create_pin = 0x7f121894; // 2131892372
+        public static final int applock__description_create_pin_reattempt = 0x7f121895; // 2131892373
+        public static final int applock__description_unlock_fingerprint = 0x7f121896; // 2131892374
+        public static final int applock__description_unlock_fingerprint_help = 0x7f121897; // 2131892375
+        public static final int applock__description_unlock_pin = 0x7f121898; // 2131892376
+        public static final int applock__empty_item_min_size_percent = 0x7f121899; // 2131892377
+        public static final int applock__fingerprint_alias = 0x7f12189a; // 2131892378
+        public static final int applock__fingerprint_error_hardware = 0x7f12189b; // 2131892379
+        public static final int applock__fingerprint_error_none = 0x7f12189c; // 2131892380
+        public static final int applock__fingerprint_error_not_enrolled = 0x7f12189d; // 2131892381
+        public static final int applock__fingerprint_error_permission = 0x7f12189e; // 2131892382
+        public static final int applock__fingerprint_error_permission_multiple = 0x7f12189f; // 2131892383
+        public static final int applock__fingerprint_error_unknown = 0x7f1218a0; // 2131892384
+        public static final int applock__fingerprint_error_unrecognized = 0x7f1218a1; // 2131892385
+        public static final int applock__password_char = 0x7f1218a2; // 2131892386
+        public static final int applock__toast_unlock_required = 0x7f1218a3; // 2131892387
+        public static final int applock__unlock_error_insufficient_selection = 0x7f1218a4; // 2131892388
+        public static final int applock__unlock_error_match_failed = 0x7f1218a5; // 2131892389
+        public static final int applock__unlock_error_no_matching_pin_found = 0x7f1218a6; // 2131892390
+        public static final int applock__unlock_error_retry_limit_exceeded = 0x7f1218a7; // 2131892391
+        public static final int cache_size = 0x7f1218a8; // 2131892392
+        public static final int cache_size_summ = 0x7f1218a9; // 2131892393
+        public static final int clear_all_cache = 0x7f1218aa; // 2131892394
+        public static final int invalidate_theme_cache_each_update_title = 0x7f1218ab; // 2131892395
+        public static final int invertFilters = 0x7f1218ac; // 2131892396
+        public static final int invertFilters_summ = 0x7f1218ad; // 2131892397
+        public static final int invertcached_summ = 0x7f1218ae; // 2131892398
+        public static final int invertcached_title = 0x7f1218af; // 2131892399
+        public static final int pin_not_set = 0x7f1218b0; // 2131892400
+        public static final int pin_reset = 0x7f1218b1; // 2131892401
     }
 
     public static final class style {
@@ -20799,6 +20875,11 @@ public final class R {
         public static final int VkAmoledTheme = 0x7f130472; // 2131952754
         public static final int VkMilkAmoledStyle = 0x7f130473; // 2131952755
         public static final int VkMilkAmoledTheme = 0x7f130474; // 2131952756
+        public static final int applock__action_settings = 0x7f130487; // 2131952775
+        public static final int applock__content_parent = 0x7f130488; // 2131952776
+        public static final int applock__description = 0x7f130489; // 2131952777
+        public static final int applock__input_fingerprint_view = 0x7f13048a; // 2131952778
+        public static final int applock__input_pin_view = 0x7f13048b; // 2131952779
         public static final int Base_V23_Theme_AppCompat = 0x7f13009d; // 2131951773
         public static final int Base_V23_Theme_AppCompat_Light = 0x7f13009e; // 2131951774
         public static final int Platform_V25_AppCompat = 0x7f13017f; // 2131951999

@@ -43,4 +43,9 @@
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <integer name="vkim_activity_animation_duration">200</integer>
     <integer name="vkim_playing_drawable_rect_count">4</integer>
+
+    <integer name="applock__input_pin_item_count">4</integer>
+    <integer name="applock__max_retry_count">5</integer>
+    <integer name="applock__failure_retry_delay">5</integer>
+    <integer name="applock__activity_lock_reenable_minutes">1440</integer>
 </resources>
