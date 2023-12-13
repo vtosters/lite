@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.graphics.RectF;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.Pair;
 import android.util.SparseArray;
 import com.vk.api.base.utils.ApiUtils;
 import com.vk.core.network.Network;
@@ -13,6 +12,7 @@ import com.vk.core.util.Screen;
 import com.vk.dto.common.data.VKList;
 import com.vk.dto.gift.GiftItem;
 import com.vk.dto.group.Group;
+import com.vk.dto.newsfeed.entries.ProfilesRecommendations;
 import com.vk.dto.photo.Photo;
 import com.vk.dto.user.UserProfile;
 import com.vk.dto.user.deactivation.UserDeactivation;
@@ -33,6 +33,7 @@ import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -482,10 +483,20 @@ public class GetFullUserProfile extends GetFullProfile<ExtendedUserProfile> {
         }
 
         extendedUserProfile.u1 = onlineHook.getBoolean("all_photos_are_hidden");
-//        JSONObject optJSONObject4 = onlineHook.optJSONObject("friends_recommendations");
-//        if (optJSONObject4 != null) {
-//            extendedUserProfile.J = ProfilesRecommendations.b(optJSONObject4);
-//        }
+        JSONObject optJSONObject4 = onlineHook.optJSONObject("friends_recommendations");
+        if (optJSONObject4 != null) {
+            extendedUserProfile.J = getFriendsRecomms(optJSONObject4);
+        }
+    }
+
+    public ProfilesRecommendations getFriendsRecomms(JSONObject json) {
+        try {
+            Method method = ProfilesRecommendations.class.getDeclaredMethod("b", JSONObject.class);
+            return (ProfilesRecommendations) method.invoke(null, json);
+        } catch (Exception e) {
+            Log.d(this.getClass().getSimpleName(), e.toString());
+            return null;
+        }
     }
 
     public GetFullProfile.a a(JSONObject jSONObject) {
