@@ -6555,4 +6555,33 @@ May look like a fake leaving the online"</string>
 
     <string name="invertcached_title">Invert list</string>
     <string name="invertcached_summ">Invert cached track list</string>
+
+    <string name="sett_recommendations">Recommendations</string>
+    <string name="sett_nogms_summ">Missing these services causes background notifications to break and application components to have problems working</string>
+    <string name="sett_missing_links">There is no links selected to be opened by the application</string>
+    <string name="sett_missing_links_summ">This will prevent external links from being opened by this app to open them\n\nIn some cases it is necessary to disable the opening of links to official VKontakte applications</string>
+    <string name="sett_battery">Turn off power management</string>
+    <string name="sett_battery_summ1">Battery savings prevents background messages, notifications and music from functioning properly</string>
+    <string name="sett_battery_summ2">\n\nFor Xiaomi devices, you need to manually enable Autorun to this application in the system settings</string>
+    <string name="sett_notifs">Turn on notifications</string>
+    <string name="sett_notifs_summ">Without notifications enabled, you won\'t be able to receive messages and many others things</string>
+    <string name="sett_chats">Our chats</string>
+    <string name="sett_chats_summ">Live chats to discuss modification and more</string>
+    <string name="sett_community">Our communities</string>
+    <string name="sett_community_summ">Latest information about updates and more</string>
+    <string name="sett_autoupdates">Autoupdate</string>
+    <string name="sett_autoupdates_summ">Receive notification when a new version of the application is released</string>
+    <string name="update_latest">You have the latest version of the app installed</string>
+    <string name="update_err">Error checking for updates</string>
+    <string name="serverFeaturesDisable">Disable all server processing</string>
+    <string name="serverFeaturesDisable_summ">Disables verifications and all additional functions related to receiving data from the VTosters server</string>
+
+    <string name="tgs_token_missing">Token is missing</string>
+    <string name="tgs_token_reset_dialog">Reset the bot token?</string>
+    <string name="tgs_token_reset">The bot token has been reset</string>
+    <string name="tgs_token_reset_menu">Reset the bot token</string>
+
+    <string name="microg_dialog1">Reduced MicroG (ReVanced)</string>
+    <string name="microg_dialog2">Alternate MicroG (ReVanced)</string>
+    <string name="microg_dialog3">Full MicroG (GMS Replacement)</string>
 </resources>

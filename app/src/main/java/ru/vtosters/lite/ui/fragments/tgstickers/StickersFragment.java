@@ -55,15 +55,15 @@ public class StickersFragment extends BaseToolbarFragment {
     };
 
     private static void resetToken(Context ctx) {
-        if (TGPref.getTGBotKey() == null) AndroidUtils.sendToast("Токен отсутствует");
+        if (TGPref.getTGBotKey() == null) AndroidUtils.sendToast(AndroidUtils.getString("tgs_token_missing"));
         new VkAlertDialog.Builder(ctx)
-                .setTitle("Сбросить токен бота?")
+                .setTitle(AndroidUtils.getString("tgs_token_reset_dialog"))
                 .setNegativeButton(R.string.cancel, (dialog, which) -> {
                     dialog.cancel();
                 })
                 .setPositiveButton(R.string.ok, (dialog, which) -> {
                     TGPref.setTGBotKey(null);
-                    AndroidUtils.sendToast("Токен бота сброшен");
+                    AndroidUtils.sendToast(AndroidUtils.getString("tgs_token_reset"));
                 })
                 .show();
     }
@@ -75,7 +75,7 @@ public class StickersFragment extends BaseToolbarFragment {
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         menu.add(0, 1, 0, "")
                 .setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.ic_refresh_outline_28)))
-                .setTitle("Сбросить токен бота")
+                .setTitle(AndroidUtils.getString("tgs_token_reset_menu"))
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         super.onCreateMenu(menu);
     }

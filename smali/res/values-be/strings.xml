@@ -7034,4 +7034,34 @@
 
     <string name="invertcached_title">Інвертаваць cпіс</string>
     <string name="invertcached_summ">Інвертаваць cпіс кэшаваных трэкаў</string>
+
+    <string name="sett_recommendations">Рэкамендацыі</string>
+    <string name="sett_nogms_summ">Адсутнасць гэтых сэрвісаў прыводзіць да паломкі фонавых апавяшчэнняў і праблемах працы кампанентаў прыкладання</string>
+    <string name="sett_missing_links">Не абраныя спасылкі для адкрыцця дадаткам</string>
+    <string name="sett_missing_links_summ">Гэта перашкодзіць адкрыццю знешніх спасылак для іх адкрыцця з дапамогай гэтага прыкладання\n\nБ некаторых выпадках неабходна адключыць адкрыццё спасылак афіцыйным прыкладанням ВКонтакте</string>
+    <string name="sett_battery">Адключыце эканомію батарэі</string>
+    <string name="sett_battery_summ1">Эканомія батарэі перашкаджае атрыманню фонавых паведамленняў, апавяшчэнняў і працы музыкі</string>
+    <string name="sett_battery_summ2">\n\nДля прылад Xiaomi неабходна ўручную ўключыць у наладах сістэмы пункт Аўтазапуск дадзеным дадаткам</string>
+    <string name="sett_notifs">Уключыце апавяшчэння</string>
+    <string name="sett_notifs_summ">Без уключаных апавяшчэнняў не атрымаецца атрымліваць паведамленні і многае іншае</string>
+    <string name="sett_chats">Нашы чаты</string>
+    <string name="sett_chats_summ">Актыўныя чаты па абмеркаванні мадыфікацыі і шмат чаму іншаму</string>
+    <string name="sett_community">Наша група</string>
+    <string name="sett_community_summ">Самая свежая інфармацыя аб абнаўленнях і не толькі</string>
+    <string name="sett_autoupdates">Аўтаматычнае абнаўленне</string>
+    <string name="sett_autoupdates_summ">Атрымліваць апавяшчэнне аб выхадзе новай версіі прыкладання</string>
+
+    <string name="update_latest">У вас ўстаноўлена АПОШНЯЯ версія прыкладання</string>
+    <string name="update_err">Памылка праверкі абнаўлення</string>
+    <string name="serverFeaturesDisable">Адключыць усю працу з серверам</string>
+    <string name="serverFeaturesDisable_summ">Адключае верыфікацыі і ўсе дадатковыя функцыі звязаныя з атрыманнем дадзеных з сервера ВТостерс</string>
+
+    <string name="tgs_token_missing">Токен адсутнічае</string>
+    <string name="tgs_token_reset_dialog">Скінуць токен бота?</string>
+    <string name="tgs_token_reset">Токен бота скінуты</string>
+    <string name="tgs_token_reset_menu">Скінуць токен бота</string>
+
+    <string name="microg_dialog1">Паменшаны MicroG (ReVanced)</string>
+    <string name="microg_dialog2">Альтэрнатыўны MicroG (ReVanced)</string>
+    <string name="microg_dialog3">Паўнавартасны MicroG (Замена GMS)</string>
 </resources>

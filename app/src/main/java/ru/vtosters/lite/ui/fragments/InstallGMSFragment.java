@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class InstallGMSFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
@@ -13,7 +14,7 @@ public class InstallGMSFragment extends TrackedMaterialPreferenceToolbarFragment
         addPreferencesFromResource(R.xml.preferences_gms);
 
         findPreference("microg").setOnPreferenceClickListener((preference) -> {
-            String[] items = {"Уменьшенный MicroG (ReVanced)", "Альтернативный MicroG (ReVanced)", "Полноценный MicroG (Замена GMS)"};
+            String[] items = {AndroidUtils.getString("microg_dialog1"), AndroidUtils.getString("microg_dialog2"), AndroidUtils.getString("microg_dialog3")};
 
             new VkAlertDialog.Builder(requireActivity()).setItems(items, (dialog, which) -> {
                 switch (which) {

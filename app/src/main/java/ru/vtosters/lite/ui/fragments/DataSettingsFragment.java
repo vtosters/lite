@@ -304,8 +304,8 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         PreferenceFragmentUtils.addMaterialSwitchPreference(
                 getPreferenceScreen(),
                 "serverFeaturesDisable",
-                "Отключить всю работу с сервером",
-                "Отключает галочки и все дополнительные функции связанные с получением данных с сервера ВТостерс",
+                AndroidUtils.getString("serverFeaturesDisable"),
+                AndroidUtils.getString("serverFeaturesDisable_summ"),
                 null,
                 false,
                 (preference, o) -> {
