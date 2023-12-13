@@ -3,30 +3,42 @@ package com.vtosters.lite.api.execute;
 import android.annotation.SuppressLint;
 import android.graphics.RectF;
 import android.text.TextUtils;
+import android.util.Log;
+import android.util.Pair;
 import android.util.SparseArray;
 import com.vk.api.base.utils.ApiUtils;
+import com.vk.core.network.Network;
 import com.vk.core.util.AppContextHolder;
 import com.vk.core.util.Screen;
 import com.vk.dto.common.data.VKList;
 import com.vk.dto.gift.GiftItem;
 import com.vk.dto.group.Group;
-import com.vk.dto.newsfeed.entries.ProfilesRecommendations;
 import com.vk.dto.photo.Photo;
 import com.vk.dto.user.UserProfile;
 import com.vk.dto.user.deactivation.UserDeactivation;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.utils.Utils;
+import okhttp3.Headers;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.OnlineFormatterHook;
 import ru.vtosters.hooks.RenameHook;
 import ru.vtosters.hooks.ssfs.ProfileHook;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.proxy.ProxyUtils;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GetFullUserProfile extends GetFullProfile<ExtendedUserProfile> {
+    private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
+
     public GetFullUserProfile(int i, String str, String str2) {
         super(i, "execute.getFullProfileNewNew");
         i = i == 0 ? VKAccountManager.d().D0() : i;
@@ -43,6 +55,45 @@ public class GetFullUserProfile extends GetFullProfile<ExtendedUserProfile> {
         }
         c("access_keys", str);
     }
+
+    public JSONArray getCitiesNames(String ids) {
+        var request = new Request.a()
+                .b("https://" + ProxyUtils.getApi() + "/method/" + "database.getCitiesById"
+                        + "?v=5.119"
+                        + "&city_ids="
+                        + ids
+                        + "&access_token="
+                        + AccountManagerUtils.getUserToken())
+                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
+
+        try {
+            return new JSONObject(mClient.a(request).execute().a().g()).getJSONArray("response");
+        } catch (JSONException | IOException e) {
+            Log.d(this.getClass().getSimpleName(), e.toString());
+        }
+
+        return new JSONArray();
+    }
+
+    public JSONArray getCountriesNames(String ids) {
+        var request = new Request.a()
+                .b("https://" + ProxyUtils.getApi() + "/method/" + "database.getCountriesById"
+                        + "?v=5.119"
+                        + "&country_ids="
+                        + ids
+                        + "&access_token="
+                        + AccountManagerUtils.getUserToken())
+                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
+
+        try {
+            return new JSONObject(mClient.a(request).execute().a().g()).getJSONArray("response");
+        } catch (JSONException | IOException e) {
+            Log.d(this.getClass().getSimpleName(), e.toString());
+        }
+
+        return new JSONArray();
+    }
+
 
     protected ExtendedUserProfile o() {
         return new ExtendedUserProfile();
@@ -87,11 +138,52 @@ public class GetFullUserProfile extends GetFullProfile<ExtendedUserProfile> {
             extendedUserProfile.l = new RectF((float) d10, (float) d11, (float) (d10 + (((d6 - d5) / 100.0d) * d8)), (float) (d11 + (((jSONObject2.getDouble("y2") - d7) / 100.0d) * d9)));
         }
 
-        SparseArray sparseArray = new SparseArray();
-        JSONArray jSONArray = onlineHook.getJSONArray("cities");
-        for (int i2 = 0; i2 < jSONArray.length(); i2++) {
-            JSONObject jSONObject4 = jSONArray.getJSONObject(i2);
-            sparseArray.put(jSONObject4.getInt("id"), jSONObject4.getString("title"));
+        SparseArray<String> sparseArray = new SparseArray<>();
+        SparseArray<String> sparseArray2 = new SparseArray<>();
+
+        if (onlineHook.has("cities") && onlineHook.getJSONArray("cities").length() > 0) {
+            List<String> cityNames = new ArrayList<>();
+
+            JSONArray cities = onlineHook.getJSONArray("cities");
+
+            for (int i21 = 0; i21 < cities.length(); i21++) {
+                cityNames.add(cities.getString(i21));
+            }
+
+            JSONArray citiesNamesJSONArray = getCitiesNames(String.join(", ", cityNames));
+
+            Log.d(this.getClass().getSimpleName(), citiesNamesJSONArray.toString());
+
+            for (int i22 = 0; i22 < citiesNamesJSONArray.length(); i22++) {
+                JSONObject cityJSONObject = citiesNamesJSONArray.getJSONObject(i22);
+                int cityid = cityJSONObject.getInt("id");
+                String cityTitle = cityJSONObject.getString("title");
+                sparseArray.put(cityid, cityTitle);
+            }
+
+            extendedUserProfile.i0 = sparseArray.get(cities.getInt(0));
+        }
+
+        if (onlineHook.has("countries") && onlineHook.getJSONArray("countries").length() > 0) {
+            JSONArray countries = onlineHook.getJSONArray("countries");
+            List<String> countryList = new ArrayList<>();
+
+            for (int i23 = 0; i23 < countries.length(); i23++) {
+                countryList.add(countries.getString(i23));
+            }
+
+            JSONArray countryInfo = getCountriesNames(String.join(", ", countryList));
+
+            Log.d(this.getClass().getSimpleName(), countryInfo.toString());
+
+            for (int i24 = 0; i24 < countryInfo.length(); i24++) {
+                JSONObject country = countryInfo.getJSONObject(i24);
+                int countryid = country.getInt("id");
+                String countryTitle = country.getString("title");
+                sparseArray2.put(countryid, countryTitle);
+            }
+
+            extendedUserProfile.j0 = sparseArray2.get(countries.getInt(0));
         }
 
         extendedUserProfile.U = onlineHook.getInt("can_write_private_message") == 1;
@@ -134,11 +226,6 @@ public class GetFullUserProfile extends GetFullProfile<ExtendedUserProfile> {
 
         String optString = onlineHook.optString("last_name_acc", extendedUserProfile.a.e);
         extendedUserProfile.i = optString;
-        
-        if (onlineHook.has("city") && onlineHook.has("country")) {
-            extendedUserProfile.i0 = onlineHook.getJSONObject("city").getString("title");
-            extendedUserProfile.j0 = onlineHook.getJSONObject("country").getString("title");
-        }
 
         if (onlineHook.has("mobile_phone") && !onlineHook.getString("mobile_phone").isEmpty()) {
             extendedUserProfile.l0 = onlineHook.getString("mobile_phone");
@@ -178,7 +265,7 @@ public class GetFullUserProfile extends GetFullProfile<ExtendedUserProfile> {
             for (int i4 = 0; i4 < optJSONArray.length(); i4++) {
                 ExtendedUserProfile.f fVar = new ExtendedUserProfile.f();
                 JSONObject jSONObject6 = optJSONArray.getJSONObject(i4);
-                fVar.c = (String) sparseArray.get(jSONObject6.optInt(optString));
+                fVar.c = sparseArray.get(jSONObject6.optInt(optString));
                 fVar.a = jSONObject6.optString("name", "???");
                 fVar.g = jSONObject6.optInt("year_from");
                 fVar.f = jSONObject6.optInt("year_to");
