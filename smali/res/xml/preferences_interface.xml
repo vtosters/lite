@@ -38,7 +38,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacenewsfeed">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
+                android:defaultValue="true"
                 android:key="stories"
                 android:summary="@string/showstoriessum"
                 android:title="@string/showstories"/>

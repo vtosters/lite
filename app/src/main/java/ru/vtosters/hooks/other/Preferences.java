@@ -271,7 +271,7 @@ public class Preferences {
     }
 
     public static boolean stories() {
-        return getBoolValue("stories", false);
+        return getBoolValue("stories", true);
     }
 
     public static boolean swipe() {
