@@ -6,6 +6,7 @@ import com.vk.dto.music.MusicTrack;
 import com.vtosters.lite.R;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,8 +23,8 @@ public class Genius {
 
     public static String getTextMusic(MusicTrack musictrack) {
         var uid = musictrack.y1();
-        var artist = musictrack.C;
-        var title = musictrack.f;
+        var artist = removeExtras(musictrack.C);
+        var title = removeExtras(musictrack.f);
         var duration = musictrack.h;
 
         if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(artist) || TextUtils.isEmpty(title) || duration == 0) {
@@ -41,7 +42,7 @@ public class Genius {
         }
 
         Request request = new Request.a()
-                .b(URL + "/search/multi?q=" + URLEncoder.encode(artist + " " + track) + "&from_background=0")
+                .b(URL + "/search/songs?q=" + URLEncoder.encode(artist + " " + track) + "&from_background=0" + "&page=1")
                 .a("User-Agent", "Genius/5.14.0 (Android; Android 13; Google Pixel 4 XL)")
                 .a("Authorization", KEY)
                 .a("x-genius-app-background-request", "0")
@@ -50,8 +51,8 @@ public class Genius {
                 .a("Content-Type", "application/x-www-form-urlencoded")
                 .b()
                 .a();
-        try {
-            String payload = client.a(request).execute().a().g();
+        try (Response resp = client.a(request).execute()) {
+            String payload = resp.a().g();
             JSONArray sections = new JSONObject(payload).getJSONObject("response").getJSONArray("sections");
 
             for (int i = 0; i < sections.length(); i++) {
@@ -70,11 +71,17 @@ public class Genius {
                     }
                 }
             }
-
             return AndroidUtils.getString("error_no_text");
         } catch (JSONException | IOException e) {
             return AndroidUtils.getString("error_no_text") + "\n\n" + AndroidUtils.getString(R.string.error) + ": \n" + e.getMessage();
         }
+    }
+
+    public static String removeExtras(String title) {
+        return title
+                .replaceAll("[\\[\\]]", "(")
+                .replaceAll("[()]", "")
+                .trim();
     }
 
     private static String getText(String track) {
