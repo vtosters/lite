@@ -156,6 +156,7 @@
         android:resizeableActivity="true"
         android:roundIcon="@mipmap/vt_launcher_round"
         android:supportsRtl="true"
+        android:hasFragileUserData="true"
         android:appCategory="social"
         android:theme="@style/VkLightStyle">
         <meta-data
