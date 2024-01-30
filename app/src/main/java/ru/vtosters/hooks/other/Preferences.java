@@ -177,6 +177,10 @@ public class Preferences {
         return getBoolValue("miniapps", true);
     }
 
+    public static boolean disableForceTrafficSaver() {
+        return getBoolValue("disableForceTrafficSaver", false);
+    }
+
     public static boolean savemsgsett() {
         return getBoolValue("savemsgsett", false);
     }

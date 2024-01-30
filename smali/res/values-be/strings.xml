@@ -7064,4 +7064,7 @@
     <string name="microg_dialog1">Паменшаны MicroG (ReVanced)</string>
     <string name="microg_dialog2">Альтэрнатыўны MicroG (ReVanced)</string>
     <string name="microg_dialog3">Паўнавартасны MicroG (Замена GMS)</string>
+
+    <string name="disable_roaming_state">Адключыць эканомію трафіку</string>
+    <string name="disable_roaming_state_submit">Адключыць прымусовую функцыю эканоміі трафіку</string>
 </resources>

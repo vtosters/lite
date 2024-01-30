@@ -6372,4 +6372,7 @@
     <string name="microg_dialog1">Зменшений MicroG (ReVanced)</string>
     <string name="microg_dialog2">Альтернативний MicroG (ReVanced)</string>
     <string name="microg_dialog3">Повноцінний MicroG (Заміна GMS)</string>
+
+    <string name="disable_roaming_state">Відключення примусової економії трафіку</string>
+    <string name="disable_roaming_state_submit">Вимкніть примусову функцію економії трафіку</string>
 </resources>

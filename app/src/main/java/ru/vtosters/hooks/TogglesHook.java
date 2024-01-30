@@ -25,6 +25,7 @@ public class TogglesHook {
                     postsredesign();
             case FEATURE_IMAGE_QUALITY_UPGRADE -> MediaImageEncoder.needToSkipCompression();
             case FEATURE_MENU_GAMES_CAROUSEL -> miniapps();
+            case FEATURE_TRAFFIC_SAVER -> !disableForceTrafficSaver();
             default -> true;
         };
     }

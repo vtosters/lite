@@ -6584,4 +6584,7 @@ May look like a fake leaving the online"</string>
     <string name="microg_dialog1">Reduced MicroG (ReVanced)</string>
     <string name="microg_dialog2">Alternate MicroG (ReVanced)</string>
     <string name="microg_dialog3">Full MicroG (GMS Replacement)</string>
+
+    <string name="disable_roaming_state">Disable force traffic saver</string>
+    <string name="disable_roaming_state_submit">Disable forcing traffic saver feature</string>
 </resources>

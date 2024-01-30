@@ -287,6 +287,20 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), AndroidUtils.getString("sett_other"));
 
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "disableForceTrafficSaver",
+                AndroidUtils.getString("disable_roaming_state"),
+                AndroidUtils.getString("disable_roaming_state_submit"),
+                null,
+                false,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("disableForceTrafficSaver", (boolean) o).apply();
+                    LifecycleUtils.restartApplicationWithTimer();
+                    return true;
+                }
+        );
+
         if (!Preferences.serverFeaturesDisable()) {
             PreferenceFragmentUtils.addMaterialSwitchPreference(
                     getPreferenceScreen(),
