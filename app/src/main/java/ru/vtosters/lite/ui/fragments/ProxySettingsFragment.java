@@ -13,14 +13,14 @@ public class ProxySettingsFragment extends TrackedMaterialPreferenceToolbarFragm
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(R.xml.preferences_proxy);
-        findPreference("random_proxy").setOnPreferenceClickListener(preference -> {
-            try {
-                setupNewProxy();
-            } catch (IOException e) {
-                sendToast(requireContext().getString(R.string.get_proxy_error));
-            }
-            return true;
-        });
+//        findPreference("random_proxy").setOnPreferenceClickListener(preference -> {
+//            try {
+//                setupNewProxy();
+//            } catch (IOException e) {
+//                sendToast(requireContext().getString(R.string.get_proxy_error));
+//            }
+//            return true;
+//        });
     }
 
     @Override

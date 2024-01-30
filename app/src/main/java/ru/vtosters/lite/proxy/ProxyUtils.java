@@ -71,7 +71,8 @@ public class ProxyUtils {
     }
 
     public static Boolean isRandomProxyEnabled() {
-        return Preferences.getString("proxy").equals("randomproxy");
+//        return Preferences.getString("proxy").equals("randomproxy");
+        return false;
     }
 
     public static Boolean isApiProxyEnabled() {
@@ -129,11 +130,11 @@ public class ProxyUtils {
         return list.contains(":"); // proxy format: ip:port
     }
 
-    public static void setProxy() throws IOException {
+    public static void setProxy() {
         if (!isAnyProxyEnabled()) return;
         switch (Preferences.getString("proxy")) {
             case "zaborona" -> Zaborona.loadProxy();
-            case "randomproxy" -> RandomProxy.loadProxy();
+//            case "randomproxy" -> RandomProxy.loadProxy();
             case "socks" -> CustomSocks.loadProxy();
             case "http" -> CustomHttp.loadProxy();
             case "https" -> CustomHttps.loadProxy();

@@ -16,10 +16,10 @@
                 android:entryValues="@array/proxy_value"
                 android:key="proxy"
                 android:title="@string/useproxy"/>
-        <Preference
-                android:key="random_proxy"
-                android:summary="@string/proxy_setup_summ"
-                android:title="@string/proxy_setup_title"/>
+<!--        <Preference-->
+<!--                android:key="random_proxy"-->
+<!--                android:summary="@string/proxy_setup_summ"-->
+<!--                android:title="@string/proxy_setup_title"/>-->
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyadvsettings">
         <EditTextPreference

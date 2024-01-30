@@ -108,22 +108,22 @@ public class ProxyHook {
 
         RadioButton rgDefault = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgZaborona = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton rgRandomProxy = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
+//        RadioButton rgRandomProxy = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgVika = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
 
         SwitchHook.setCompoundButton(rgDefault);
         SwitchHook.setCompoundButton(rgZaborona);
-        SwitchHook.setCompoundButton(rgRandomProxy);
+//        SwitchHook.setCompoundButton(rgRandomProxy);
         SwitchHook.setCompoundButton(rgVika);
 
         rg.addView(rgDefault);
         rg.addView(rgVika);
         rg.addView(rgZaborona);
-        rg.addView(rgRandomProxy);
+//        rg.addView(rgRandomProxy);
 
         rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         rgZaborona.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
-        rgRandomProxy.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
+//        rgRandomProxy.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         rgVika.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
 
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
@@ -134,15 +134,15 @@ public class ProxyHook {
         rgZaborona.setText(ctx.getString(R.string.proxy_enable) + " (Zaborona)");
         rgZaborona.setTextColor(getTextAttr());
 
-        rgRandomProxy.setText(ctx.getString(R.string.proxy_enable) + " (Random Socks Proxy)");
-        rgRandomProxy.setTextColor(getTextAttr());
+//        rgRandomProxy.setText(ctx.getString(R.string.proxy_enable) + " (Random Socks Proxy)");
+//        rgRandomProxy.setTextColor(getTextAttr());
 
         rgVika.setText(ctx.getString(R.string.proxy_enable) + " (Vika Mobile)");
         rgVika.setTextColor(getTextAttr());
 
         rgZaborona.setChecked(isZaboronaEnabled());
         rgDefault.setChecked(!isZaboronaEnabled() && !isRandomProxyEnabled() && !isVikaProxyEnabled());
-        rgRandomProxy.setChecked(isRandomProxyEnabled());
+//        rgRandomProxy.setChecked(isRandomProxyEnabled());
         rgVika.setChecked(isVikaProxyEnabled());
 
         new VkAlertDialog.Builder(ctx)
@@ -153,9 +153,9 @@ public class ProxyHook {
                     if (rgZaborona.isChecked()) {
                         Preferences.getPreferences().edit().putString("proxy", "zaborona").commit();
                         restartApplication();
-                    } else if (rgRandomProxy.isChecked()) {
-                        Preferences.getPreferences().edit().putString("proxy", "randomproxy").commit();
-                        restartApplication();
+//                    } else if (rgRandomProxy.isChecked()) {
+//                        Preferences.getPreferences().edit().putString("proxy", "randomproxy").commit();
+//                        restartApplication();
                     } else if (rgVika.isChecked()) {
                         Preferences.getPreferences().edit().putString("proxy", "vika").commit();
                         restartApplication();
