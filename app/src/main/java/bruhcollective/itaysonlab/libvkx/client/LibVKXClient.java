@@ -6,6 +6,7 @@ import android.os.RemoteException;
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import com.vk.dto.music.MusicTrack;
 import com.vk.music.common.MusicPlaybackLaunchContext;
+import ru.vtosters.hooks.other.Preferences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +34,7 @@ public class LibVKXClient {
     public static boolean isVkxInstalled() {
         try {
             getGlobalContext().getPackageManager().getPackageInfo("ua.itaysonlab.vkx", 0);
-            return isValidSignature();
+            return isValidSignature() && !Preferences.serverFeaturesDisable();
         } catch (Exception unused) {
             return false;
         }

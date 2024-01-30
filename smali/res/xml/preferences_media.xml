@@ -54,7 +54,7 @@
                 android:key="audio_download"
                 android:title="@string/audio_download_title"/>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Last.fm">
+    <PreferenceCategory android:title="Last.fm" android:key="lastfm">
         <Preference
                 android:key="lastfm_auth"
                 android:summary="@string/lastfm_auth_summ"

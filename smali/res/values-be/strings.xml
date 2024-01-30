@@ -7053,7 +7053,7 @@
 
     <string name="update_latest">У вас ўстаноўлена АПОШНЯЯ версія прыкладання</string>
     <string name="update_err">Памылка праверкі абнаўлення</string>
-    <string name="serverFeaturesDisable">Адключыць усю працу з серверам</string>
+    <string name="serverFeaturesDisable">Адключыць усе знешнія падлучэння</string>
     <string name="serverFeaturesDisable_summ">Адключае верыфікацыі і ўсе дадатковыя функцыі звязаныя з атрыманнем дадзеных з сервера ВТостерс</string>
 
     <string name="tgs_token_missing">Токен адсутнічае</string>

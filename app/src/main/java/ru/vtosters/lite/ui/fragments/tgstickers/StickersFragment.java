@@ -22,6 +22,7 @@ import com.aefyr.tsg.g2.TelegramStickersService;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
@@ -70,13 +71,15 @@ public class StickersFragment extends BaseToolbarFragment {
 
     @Override
     protected void onCreateMenu(Menu menu) {
-        menu.add(0, 0, 0, "")
-                .setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.ic_add_outline_28)))
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        menu.add(0, 1, 0, "")
-                .setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.ic_refresh_outline_28)))
-                .setTitle(AndroidUtils.getString("tgs_token_reset_menu"))
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        if (!Preferences.serverFeaturesDisable()) {
+            menu.add(0, 0, 0, "")
+                    .setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.ic_add_outline_28)))
+                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+            menu.add(0, 1, 0, "")
+                    .setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.ic_refresh_outline_28)))
+                    .setTitle(AndroidUtils.getString("tgs_token_reset_menu"))
+                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        }
         super.onCreateMenu(menu);
     }
 

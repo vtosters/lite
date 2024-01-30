@@ -6361,7 +6361,7 @@
 
     <string name="update_latest">Вас встановлена остання версія програми</string>
     <string name="update_err">Помилка перевірки оновлення</string>
-    <string name="serverFeaturesDisable">Відключити всю роботу з сервером</string>
+    <string name="serverFeaturesDisable">Відключити всі зовнішні підключення</string>
     <string name="serverFeaturesDisable_summ">Відключає галочки і всі додаткові функції, пов\'язані з отриманням даних з сервера ВТостерс</string>
 
     <string name="tgs_token_missing">Токен відсутній</string>

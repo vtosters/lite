@@ -6573,7 +6573,7 @@ May look like a fake leaving the online"</string>
     <string name="sett_autoupdates_summ">Receive notification when a new version of the application is released</string>
     <string name="update_latest">You have the latest version of the app installed</string>
     <string name="update_err">Error checking for updates</string>
-    <string name="serverFeaturesDisable">Disable all server processing</string>
+    <string name="serverFeaturesDisable">Disable all external connections</string>
     <string name="serverFeaturesDisable_summ">Disables verifications and all additional functions related to receiving data from the VTosters server</string>
 
     <string name="tgs_token_missing">Token is missing</string>

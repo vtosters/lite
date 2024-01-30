@@ -6436,8 +6436,8 @@
 
     <string name="update_latest">У вас установлена последняя версия приложения</string>
     <string name="update_err">Ошибка проверки обновления</string>
-    <string name="serverFeaturesDisable">Отключить всю работу с сервером</string>
-    <string name="serverFeaturesDisable_summ">Отключает галочки и все дополнительные функции связанные с получением данных с сервера ВТостерс</string>
+    <string name="serverFeaturesDisable">Отключить все внешние подключения</string>
+    <string name="serverFeaturesDisable_summ">Отключает галочки и все дополнительные функции связанные с получением данных с сервера ВТостерс.\n\nАктульно для тех у кого безлимитный интернет на ВКонтакте</string>
 
     <string name="tgs_token_missing">Токен отсутствует</string>
     <string name="tgs_token_reset_dialog">Сбросить токен бота?</string>

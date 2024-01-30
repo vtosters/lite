@@ -108,6 +108,8 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             findPreference("lastfm_enabled").setEnabled(false);
         }
 
+        findPreference("lastfm").setVisible(!Preferences.serverFeaturesDisable());
+
         findPreference("cached_tracks").setSummary(String.format(requireContext().getString(R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
         findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
             if (MusicCacheImpl.isEmpty()) {
@@ -117,6 +119,8 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             }
             return true;
         });
+
+        findPreference("useGenius").setVisible(!Preferences.serverFeaturesDisable());
 
         findPreference("audio_download").setOnPreferenceClickListener(preference -> {
             dlaudio(requireContext());

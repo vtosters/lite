@@ -287,19 +287,21 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), AndroidUtils.getString("sett_other"));
 
-        PreferenceFragmentUtils.addMaterialSwitchPreference(
-                getPreferenceScreen(),
-                "analyticsDisabled",
-                AndroidUtils.getString("disable_analytics"),
-                AndroidUtils.getString("disable_analytics_summ"),
-                null,
-                false,
-                (preference, o) -> {
-                    Preferences.getPreferences().edit().putBoolean("analyticsDisabled", (boolean) o).apply();
-                    LifecycleUtils.restartApplicationWithTimer();
-                    return true;
-                }
-        );
+        if (!Preferences.serverFeaturesDisable()) {
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "analyticsDisabled",
+                    AndroidUtils.getString("disable_analytics"),
+                    AndroidUtils.getString("disable_analytics_summ"),
+                    null,
+                    false,
+                    (preference, o) -> {
+                        Preferences.getPreferences().edit().putBoolean("analyticsDisabled", (boolean) o).apply();
+                        LifecycleUtils.restartApplicationWithTimer();
+                        return true;
+                    }
+            );
+        }
 
         PreferenceFragmentUtils.addMaterialSwitchPreference(
                 getPreferenceScreen(),
