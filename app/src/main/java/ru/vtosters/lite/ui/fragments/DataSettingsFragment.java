@@ -330,8 +330,6 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                     return true;
                 }
         );
-
-        findPreference("analyticsDisabled").setVisible(Preferences.isValidSignature());
     }
 
     private void updateCacheSize() {
