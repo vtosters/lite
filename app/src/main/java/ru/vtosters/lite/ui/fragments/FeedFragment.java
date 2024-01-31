@@ -11,9 +11,12 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.ui.SummaryListPreference;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
+import ru.vtosters.lite.utils.newsfeed.Filters;
 import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
+import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
+import ru.vtosters.lite.utils.newsfeed.UpdatableFilters;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
@@ -72,6 +75,19 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("whitelisted_ad_groups").setOnPreferenceClickListener(preference -> {
             remdialog("whitelisted_ad_groups", getContext());
+            return true;
+        });
+
+        findPreference("getlists").setOnPreferenceClickListener(preference -> {
+            ArrayList<Filters> lists = UpdatableFilters.getLists();
+
+            StringBuilder str = new StringBuilder().append("Filters ids: ");
+
+            for (var filter : lists) {
+                str.append(filter.getId()).append(", ");
+            }
+
+            sendToast(str.toString());
             return true;
         });
 

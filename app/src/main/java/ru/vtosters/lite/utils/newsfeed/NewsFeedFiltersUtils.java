@@ -1,4 +1,4 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.utils.newsfeed;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 
 import java.io.IOException;
 import java.util.*;

@@ -24,7 +24,7 @@ import ru.vtosters.lite.utils.VTVerifications;
 
 import static ru.vtosters.hooks.other.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
+import static ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils.setupFilters;
 
 public class MainActivityInjector {
     public static void inject(Activity activity) {
