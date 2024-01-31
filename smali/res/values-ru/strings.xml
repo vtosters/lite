@@ -5373,7 +5373,7 @@
     <string name="vtldgadssummary">Посты с пометкой рекламы</string>
 
     <string name="storiesGroupsAdBlock">Отключить рекламу историй групп</string>
-    <string name="storiesGroupsAdBlocksummary">Блокировать истории с ссылками\n\nМогут быть ложные срабатывания</string>
+    <string name="storiesGroupsAdBlocksummary">Блокировать истории с ссылками на сторонние источники\n\nМогут быть ложные срабатывания</string>
    
     <string name="vtldca">Отключить карусель рекламы</string>
     <string name="vtldas">Отключить рекламу в историях</string>
