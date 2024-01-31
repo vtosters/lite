@@ -21,7 +21,7 @@ import static ru.vtosters.lite.ui.dialogs.MessageSettings.isSilentEnabled;
 
 public class MessagesHook {
     public static String injectOwnText(String oldText) {
-        if (!autotranslate() && !Preferences.serverFeaturesDisable() || TextUtils.isEmpty(oldText))
+        if (!autotranslate() || Preferences.serverFeaturesDisable() || TextUtils.isEmpty(oldText))
             return oldText;
         var instance = BaseTranslator.getInstance();
 
@@ -29,7 +29,7 @@ public class MessagesHook {
     }
 
     public static String injectOwnTextAll(String oldText) {
-        if (!autoalltranslate() && !Preferences.serverFeaturesDisable() || TextUtils.isEmpty(oldText)) {
+        if (!autoalltranslate() || Preferences.serverFeaturesDisable() || TextUtils.isEmpty(oldText)) {
             return oldText;
         }
         var instance = BaseTranslator.getInstance();
