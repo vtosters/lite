@@ -17,7 +17,7 @@ import java.util.List;
 
 public class PostService {
     private static final OkHttpClient client = new OkHttpClient();
-    private static final String apiPath = ApiUtils.getURL() + "posts";
+    private static final String apiPath = ApiUtils.getURL() + "/posts";
 
     public static List<Post> getPosts(Long date) {
         String getFromDate;
@@ -78,10 +78,7 @@ public class PostService {
                 if (encoding != null && encoding.equals("gzip")) {
                     // Decompress the response body and extract the first element as a list of post IDs
                     return new ArrayList<>(Collections.singleton(GzipDecompressor.decompress(response.a().b())));
-                }
-
-                // Handle uncompressed responses
-                else {
+                } else {
                     // Extract the first element as a list of post IDs
                     return new ArrayList<>(Collections.singleton(response.a().g()));
                 }
