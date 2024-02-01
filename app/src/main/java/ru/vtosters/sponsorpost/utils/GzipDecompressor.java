@@ -22,7 +22,7 @@ public class GzipDecompressor {
                 outputStream.write(buffer, 0, bytesRead);
             }
 
-            return outputStream.toString(StandardCharsets.UTF_8);
+            return outputStream.toString();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
