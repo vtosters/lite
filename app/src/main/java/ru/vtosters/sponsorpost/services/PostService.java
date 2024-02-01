@@ -59,6 +59,47 @@ public class PostService {
         }
     }
 
+    public static boolean isPostAd(long ownerId, long postId) {
+        // Checks if a specified post is an advertisement
+
+        // Merge into one post info
+        String post = ownerId + "_" + postId;
+
+        // Construct the API request URL
+        String requestUrl = apiPath + "/isPostAdvert?post=" + post;
+
+        // Create a GET request to the API endpoint
+        Request request = new Request.a()
+                .b(requestUrl)
+                .a("Content-Type", "application/json")
+                .a("Accept-Encoding", "gzip")
+                .a();
+
+        try (Response response = client.a(request).execute()) {
+            // Check if the response is successful
+            if (response.h()) {
+                // Determine the response encoding
+                String encoding = response.a("Content-Encoding");
+                String resp;
+
+                if (encoding != null && encoding.equals("gzip")) {
+                    // Decompress the response body
+                    resp = GzipDecompressor.decompress(response.a().b());
+                } else {
+                    // Retrieve the response body directly
+                    resp = response.a().g();
+                }
+
+                // Extract the boolean value indicating whether the post is an ad
+                return Boolean.parseBoolean(resp);
+            } else {
+                // Handle error response
+                throw new RuntimeException("Failed to check post for ad status: " + response.l());
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public static List<String> getAllPostsIds() {
         // Create a GET request for retrieving all post IDs
