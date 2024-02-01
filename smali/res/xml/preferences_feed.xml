@@ -12,11 +12,11 @@
                 android:summary="@string/vtldgadssummary"
                 android:title="@string/vtldgads"/>
         <Preference
+                android:key="sponsorpost"
+                android:title="Настройки SponsorPost"/>
+        <Preference
                 android:key="whitelisted_ad_groups"
                 android:title="@string/whitelisted_ad_groups_title"/>
-        <Preference
-                android:key="getlists"
-                android:title="Получить рекламные фильтры (тест)"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/stories">
         <com.vtosters.lite.ui.MaterialSwitchPreference

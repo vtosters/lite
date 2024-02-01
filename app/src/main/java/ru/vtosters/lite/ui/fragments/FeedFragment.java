@@ -13,11 +13,7 @@ import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
 import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
-import ru.vtosters.sponsorpost.data.Filter;
-import ru.vtosters.sponsorpost.services.FilterService;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
@@ -35,6 +31,12 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
             NavigatorUtils.switchFragment(requireContext(), NewsfeedSettingsFragment.class);
             return true;
         });
+
+        findPreference("sponsorpost").setOnPreferenceClickListener(preference -> {
+            NavigatorUtils.switchFragment(requireContext(), SponsorPostFragment.class);
+            return true;
+        });
+
         findPreference("cringecopyright").setEnabled(!Preferences.copyright_post());
 
         var findPreference = (SummaryListPreference) findPreference("newsfeed_order");
@@ -76,19 +78,6 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("whitelisted_ad_groups").setOnPreferenceClickListener(preference -> {
             remdialog("whitelisted_ad_groups", getContext());
-            return true;
-        });
-
-        findPreference("getlists").setOnPreferenceClickListener(preference -> {
-            List<Filter> lists = FilterService.getFilters();
-
-            StringBuilder str = new StringBuilder().append("Filters ids: ");
-
-            for (var filter : lists) {
-                str.append(filter.getId()).append(", ");
-            }
-
-            sendToast(str.toString());
             return true;
         });
 
