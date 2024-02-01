@@ -11,12 +11,13 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.ui.SummaryListPreference;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
-import ru.vtosters.lite.utils.newsfeed.Filters;
 import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
-import ru.vtosters.lite.utils.newsfeed.UpdatableFilters;
+import ru.vtosters.sponsorpost.data.Filter;
+import ru.vtosters.sponsorpost.services.FilterService;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
@@ -79,7 +80,7 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
         });
 
         findPreference("getlists").setOnPreferenceClickListener(preference -> {
-            ArrayList<Filters> lists = UpdatableFilters.getLists();
+            List<Filter> lists = FilterService.getFilters();
 
             StringBuilder str = new StringBuilder().append("Filters ids: ");
 
