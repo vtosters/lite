@@ -235,7 +235,7 @@
             android:key="others"
             android:title="@string/debug_other">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
+                android:defaultValue="true"
                 android:key="__dbg_no_ads"
                 android:title="@string/debug_no_ads_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
