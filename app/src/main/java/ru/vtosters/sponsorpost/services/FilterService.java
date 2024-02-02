@@ -14,6 +14,7 @@ import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FilterService {
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
@@ -24,7 +25,9 @@ public class FilterService {
         // Construct the API request URL
         String requestUrl = ApiUtils.getURL() + "/lists/get";
 
-        if (ids != null && !ids.isEmpty()) requestUrl = requestUrl + "?ids=" + ids; // for filters updates
+        if (ids != null && !ids.isEmpty()) requestUrl = requestUrl + "?ids=" + ids.stream()
+                .map(Object::toString)
+                .collect(Collectors.joining(","));; // for filters updates
 
         // Create a GET request to the API endpoint
         Request request = new Request.a()

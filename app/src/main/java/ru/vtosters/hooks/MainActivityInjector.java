@@ -21,6 +21,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.VTVerifications;
+import ru.vtosters.sponsorpost.utils.Updates;
 
 import static ru.vtosters.hooks.other.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
@@ -29,6 +30,7 @@ import static ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils.setupFilters;
 public class MainActivityInjector {
     public static void inject(Activity activity) {
         SystemThemeChangerHook.themeOnStart(activity);
+
         UsersList.getUsersList();
         VTVerifications.load(activity);
 
@@ -36,6 +38,8 @@ public class MainActivityInjector {
 
         VTExecutors.getSlowTasksScheduler().a(() -> {
             getInstance().autoCleaningCache();
+            Updates.updateFilters();
+            Updates.updatePosts();
         }); // slowTasksScheduler
 
         setupFilters();

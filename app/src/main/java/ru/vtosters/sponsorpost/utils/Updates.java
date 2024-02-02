@@ -1,5 +1,6 @@
 package ru.vtosters.sponsorpost.utils;
 
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.data.Post;
 import ru.vtosters.sponsorpost.services.FilterService;
@@ -10,7 +11,13 @@ import java.util.List;
 
 public class Updates {
     public static void updateFilters() {
-        List<Filter> filters = FilterService.getFilters(FiltersPreferences.getAllFilterIds());
+        List<Integer> savedFilterIds = FiltersPreferences.getAllFilterIds();
+
+        if (savedFilterIds.isEmpty() || Preferences.serverFeaturesDisable()) {
+            return;
+        }
+
+        List<Filter> filters = FilterService.getFilters(savedFilterIds);
 
         if (!filters.isEmpty()) {
             FiltersPreferences.clearAll();
@@ -24,6 +31,10 @@ public class Updates {
     public static void updatePosts() {
         long neededPosts = LocalDate.now().minusWeeks(1).toEpochDay();
 
+        if (!PostsPreferences.isEnabled() || Preferences.serverFeaturesDisable()) {
+            return;
+        }
+        
         List<Post> posts = PostService.getPosts(neededPosts);
 
         if (!posts.isEmpty()) {

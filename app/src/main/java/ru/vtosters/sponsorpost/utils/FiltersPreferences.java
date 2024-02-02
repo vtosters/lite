@@ -63,8 +63,9 @@ public class FiltersPreferences {
 
         for (Map.Entry<String, ?> entry : allFilters.entrySet()) {
             String key = entry.getKey();
+            String[] parts = key.split(":");
             if (key.startsWith("filter")) {
-                int id = Integer.parseInt(key.split("_")[1]);
+                int id = Integer.parseInt(parts[1]);
                 String title = preferences.getString(getPrefKey(id, PREF_KEY_TITLE), "");
                 String summary = preferences.getString(getPrefKey(id, PREF_KEY_SUMMARY), "");
                 String version = preferences.getString(getPrefKey(id, PREF_KEY_VERSION), "");
@@ -78,7 +79,7 @@ public class FiltersPreferences {
     }
 
     private static String getPrefKey(int id, String key) {
-        return "filter" + id + "_" + key;
+        return "filter:" + id + ":" + key;
     }
 
     public static void deleteFilter(int id) {
@@ -97,8 +98,9 @@ public class FiltersPreferences {
 
         for (Map.Entry<String, ?> entry : allFilters.entrySet()) {
             String key = entry.getKey();
+            String[] parts = key.split(":");
             if (key.startsWith("filter")) {
-                filterIds.add(Integer.parseInt(key.split("_")[1]));
+                filterIds.add(Integer.parseInt(parts[1]));
             }
         }
 
