@@ -20,16 +20,12 @@ public class PostsPreferences {
         return AndroidUtils.getGlobalContext().getSharedPreferences("ru.vtosters.sponsorpost.posts.prefs", Context.MODE_PRIVATE);
     }
 
-    public static void clearAll() {
-        preferences.edit().clear().apply();
-    }
-
     public static boolean isEnabled() {
         return preferences.getBoolean("sponsorpost", true);
     }
 
-    public static void setEnabled(boolean staatus) {
-        preferences.edit().putBoolean("sponsorpost", staatus).apply();
+    public static void setEnabled(boolean status) {
+        preferences.edit().putBoolean("sponsorpost", status).apply();
     }
 
     public static void savePosts(List<Post> posts) {

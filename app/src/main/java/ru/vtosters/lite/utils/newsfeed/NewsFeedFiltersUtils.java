@@ -68,11 +68,15 @@ public class NewsFeedFiltersUtils {
                 }
 
                 for (String filter : list) {
-                    if (copyrightName != null && copyrightName.contains(filter)) return true;
+                    if (copyrightName != null && copyrightName.contains(filter) && !filter.isEmpty()) {
+                        return true;
+                    }
                 }
 
                 for (String filter : list) {
-                    if (copyrightLink != null && copyrightLink.contains(filter)) return true;
+                    if (copyrightLink != null && copyrightLink.contains(filter) && !filter.isEmpty()) {
+                        return true;
+                    }
                 }
             }
         }
@@ -147,7 +151,7 @@ public class NewsFeedFiltersUtils {
 
             if (jsonObject.optString("template").contains("ads") || jsonObject.has("ads")) {
                 if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + (post != null ? post.optInt("post_id") : 0) + " from discover, Reason: ads");
+                    Log.d("NewsfeedAdBlockV2", "Removed post " + (post != null ? getPostId(post) : 0) + " from discover, Reason: ads");
                 return false;
             }
 
@@ -161,56 +165,56 @@ public class NewsFeedFiltersUtils {
                     || type.endsWith("playlists")
                     || type.endsWith("groups")))) {
                 if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + (post != null ? post.optInt("post_id") : 0) + " from discover, Reason: authorsrecomm");
+                    Log.d("NewsfeedAdBlockV2", "Removed post " + (post != null ? getPostId(post) : 0) + " from discover, Reason: authorsrecomm");
                 return false;
             }
 
             if (postsrecomm() && (type.equals("inline_user_rec") || type.equals("live_recommended"))) {
                 if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + (post != null ? post.optInt("post_id") : 0) + " from discover, Reason: postsrecomm");
+                    Log.d("NewsfeedAdBlockV2", "Removed post " + (post != null ? getPostId(post) : 0) + " from discover, Reason: postsrecomm");
                 return false;
             }
 
             if (friendsrecomm() && (type.equals("user_rec") || type.equals("friends_recomm"))) {
                 if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + (post != null ? post.optInt("post_id") : 0) + " from discover, Reason: friendsrecomm");
+                    Log.d("NewsfeedAdBlockV2", "Removed post " + (post != null ? getPostId(post) : 0) + " from discover, Reason: friendsrecomm");
                 return false;
             }
 
             if (adsgroup() && (post != null ? post.optInt("marked_as_ads") : 0) == 1 && !isWhitelistedAd(post)) {
                 if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: marked_as_ads is true");
+                    Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(post) + " from discover, Reason: marked_as_ads is true");
                 return false;
             }
 
             if (post != null) {
-                if (PostsPreferences.isPostAd(getOwnerId(post), post.optInt("post_id")) && !isWhitelistedFilters(post)) {
+                if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !isWhitelistedFilters(post)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: sponsorpost");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(post) + " from discover, Reason: sponsorpost");
                     return false;
                 }
 
                 if (sponsorFilters(post.optString("text")) && !isWhitelistedFilters(post)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: sponsorpost filter");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(post) + " from discover, Reason: sponsorpost filter");
                     return false;
                 }
 
                 if (checkCopyright(post)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: copyright filters");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(post) + " from discover, Reason: copyright filters");
                     return false;
                 }
 
                 if (checkCaption(post)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: caption filters");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(post) + " from discover, Reason: caption filters");
                     return false;
                 }
 
                 if (NewsFeedFiltersUtils.injectFiltersReposts(post) && !isWhitelistedFilters(post)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: repost ad");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(post) + " from discover, Reason: repost ad");
                     return false;
                 }
             }
@@ -226,7 +230,7 @@ public class NewsFeedFiltersUtils {
 
         if (!filters.isEmpty()) {
             for (String adword : filters) {
-                if (textInLowerCase.contains(adword)) {
+                if (textInLowerCase.contains(adword) && !adword.isEmpty()) {
                     if (dev())
                         Log.d("NewsfeedAdBlockV2", text);
                     return true;
@@ -272,7 +276,7 @@ public class NewsFeedFiltersUtils {
                 || type.equals("html5_ad")
                 || type.equals("ads_easy_promote")) {
             if (dev())
-                Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: ads");
+                Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: ads");
             return true;
         }
 
@@ -282,7 +286,7 @@ public class NewsFeedFiltersUtils {
                 || type.equals("app_slider")
                 || type.equals("tags_suggestions")) {
             if (dev())
-                Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: promo");
+                Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: promo");
             return true;
         }
 
@@ -299,6 +303,16 @@ public class NewsFeedFiltersUtils {
         return id;
     }
 
+    private static int getPostId(JSONObject post) {
+        int id = post.optInt("post_id");
+
+        if (id == 0) {
+            id = post.optInt("id");
+        }
+
+        return id;
+    }
+    
     public static Boolean isWhitelistedFilters(JSONObject list) {
         var id = String.valueOf(getOwnerId(list));
 
@@ -392,62 +406,62 @@ public class NewsFeedFiltersUtils {
                         || type.endsWith("playlists")
                         || type.endsWith("groups")))) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: authorsrecomm");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: authorsrecomm");
                     continue;
                 }
 
                 if (postsrecomm() && (type.equals("inline_user_rec") || type.equals("live_recommended"))) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: postsrecomm");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: postsrecomm");
                     continue;
                 }
 
                 if (friendsrecomm() && (type.equals("user_rec") || type.equals("friends_recomm"))) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: friendsrecomm");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: friendsrecomm");
                     continue;
                 }
 
                 if (adsgroup() && list.optInt("marked_as_ads") == 1 && !isWhitelistedAd(list)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: marked_as_ads is true");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: marked_as_ads is true");
                     continue;
                 }
 
-                if (PostsPreferences.isPostAd(getOwnerId(list), list.optInt("post_id")) && !isWhitelistedFilters(list)) {
+                if (PostsPreferences.isPostAd(getOwnerId(list), getPostId(list)) && !isWhitelistedFilters(list)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: text filters");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: text filters");
                     continue;
                 }
 
                 if (sponsorFilters(list.optString("text")) && !isWhitelistedFilters(list)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: text filters");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: text filters");
                     continue;
                 }
 
                 if (checkCopyright(list)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: copyright filters");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: copyright filters");
                     continue;
                 }
 
                 if (checkCaption(list)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: caption filters");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: caption filters");
                     continue;
                 }
 
                 if (hasMiniAppAds(list) && !isWhitelistedFilters(list)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: MiniApp filters");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: MiniApp filters");
                     continue;
                 }
 
                 try {
                     if (NewsFeedFiltersUtils.injectFiltersReposts(list) && !isWhitelistedFilters(list)) {
                         if (dev())
-                            Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: repost ad");
+                            Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(list) + " from feed, Reason: repost ad");
                         continue;
                     }
                 } catch (Exception ex) {
