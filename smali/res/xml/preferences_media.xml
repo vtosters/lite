@@ -30,6 +30,11 @@
                 android:title="@string/autocache_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
+                android:key="dldir"
+                android:summary="Использовать папку Downloads вместо Music для скачивания музыки в MP3"
+                android:title="Альтернативная папка для скачивания"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
                 android:key="useGenius"
                 android:summary="@string/useGenius_summ"
                 android:title="@string/useGenius_title"/>

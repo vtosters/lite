@@ -5507,7 +5507,7 @@ with video"</string>
     <string name="vtldgadssummary">Posts with ads mark</string>
 
     <string name="storiesGroupsAdBlock">Disable ads of group stories</string>
-    <string name="storiesGroupsAdBlocksummary">Block stories that have a link\n\nFalse positives may occur</string>
+    <string name="storiesGroupsAdBlocksummary">Block stories that have a external link\n\nFalse positives may occur</string>
 
     <string name="vtldca">Disable ad carousel</string>
     <string name="vtldas">Disable ads in stories</string>

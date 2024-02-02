@@ -7,6 +7,7 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.music.MusicCacheFilesHook;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
 import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
@@ -32,13 +33,14 @@ import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 public class AudioDownloader {
     public static final ExecutorService executor = Executors.newCachedThreadPool();
+    public static final String dlpath = Preferences.getBoolValue("dldir", false) ? Environment.DIRECTORY_DOWNLOADS : Environment.DIRECTORY_MUSIC;
 
     public static void downloadPlaylist(Playlist playlist) {
         var tracks = PlaylistConverter.getPlaylist(playlist);
 
         var playlistName = IOUtils.getValidFileName(playlist.g);
 
-        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var musicPath = Environment.getExternalStoragePublicDirectory(dlpath).getAbsolutePath();
         var downloadPath = musicPath + File.separator + playlistName;
 
         var notificationId = playlistName.hashCode();
@@ -104,7 +106,7 @@ public class AudioDownloader {
 
         var playlistName = "Audios of " + AccountManagerUtils.getUserId();
 
-        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var musicPath = Environment.getExternalStoragePublicDirectory(dlpath).getAbsolutePath();
         var downloadPath = musicPath + File.separator + playlistName;
 
         PlaylistDownloader.downloadPlaylist(
@@ -121,7 +123,7 @@ public class AudioDownloader {
             return;
         }
 
-        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var musicPath = Environment.getExternalStoragePublicDirectory(dlpath).getAbsolutePath();
         var tempId = track.d;
         var downloadPath = musicPath + File.separator;
         var notification = MusicNotificationBuilder.buildDownloadNotification(track, tempId);
