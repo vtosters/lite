@@ -80,7 +80,7 @@ public class FilterService {
     }
 
     public static Set<String> stringToSet(String input) {
-        String[] words = input.split("\\W+");
+        String[] words = input.split("\n");
 
         Set<String> set = new HashSet<>();
 
