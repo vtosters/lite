@@ -13,7 +13,9 @@ import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class FilterService {
@@ -60,6 +62,33 @@ public class FilterService {
         } catch (IOException | JSONException e) {
             throw new RuntimeException(e);
         }
+    }
+    public static Set<String> downloadFilter(String link) {
+        Request request = new Request.a()
+                .b(link)
+                .a();
+
+        try (Response response = client.a(request).execute()) {
+            if (response.h()) {
+                return stringToSet(response.a().g());
+            } else {
+                throw new RuntimeException("Failed to download filter: " + response.l());
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static Set<String> stringToSet(String input) {
+        String[] words = input.split("\\W+");
+
+        Set<String> set = new HashSet<>();
+
+        for (String word : words) {
+            set.add(word.toLowerCase());
+        }
+
+        return set;
     }
 
     private static List<Filter> parseJSON(JSONArray jsonArray) throws JSONException {

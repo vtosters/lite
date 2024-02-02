@@ -285,10 +285,13 @@ public class NewsFeedFiltersUtils {
 
     public static boolean sponsorFilters(String text) {
         String textInLowerCase = text.toLowerCase();
-        List<Filter> filters = FiltersPreferences.getAllFilters();
 
-        for (Filter filter : filters) {
-            // add filter words check
+        for (String adword : FiltersPreferences.getFiltersLists()) {
+            if (textInLowerCase.contains(adword)) {
+                if (dev())
+                    Log.d("NewsfeedAdBlockV2", text);
+                return true;
+            }
         }
 
         return false;
