@@ -16,7 +16,7 @@ public class PostsPreferences {
         preferences = getPreferences();
     }
 
-    public static SharedPreferences getPreferences() {
+    private static SharedPreferences getPreferences() {
         return AndroidUtils.getGlobalContext().getSharedPreferences("ru.vtosters.sponsorpost.posts.prefs", Context.MODE_PRIVATE);
     }
 
