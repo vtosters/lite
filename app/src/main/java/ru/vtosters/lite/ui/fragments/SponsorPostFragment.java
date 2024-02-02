@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.WindowInsetsController;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.utils.NetworkUtils;
 import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.services.FilterService;
+import ru.vtosters.sponsorpost.utils.FiltersPreferences;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
 import java.util.List;
@@ -48,7 +50,13 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Фильтры постов");
 
-        List<Filter> lists = FilterService.getFilters(null);
+        List<Filter> lists;
+
+        if (NetworkUtils.isNetworkConnected()) {
+            lists = FilterService.getFilters(null);
+        } else {
+            lists = FiltersPreferences.getAllDownloadedFilters();
+        }
 
         for (var list : lists) {
             PreferenceFragmentUtils.addMaterialSwitchPreference(

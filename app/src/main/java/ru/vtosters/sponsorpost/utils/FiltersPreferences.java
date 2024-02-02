@@ -63,6 +63,12 @@ public class FiltersPreferences {
                 .collect(Collectors.toSet());
     }
 
+    public static List<Filter> getAllDownloadedFilters() {
+        return getAllFilterIds().stream()
+                .map(FiltersPreferences::getFilter)
+                .collect(Collectors.toList());
+    }
+
     public static Filter getFilter(int id) {
         int filterId = preferences.getInt(getPrefKey(id, PREF_KEY_ID), -1);
 
