@@ -52,29 +52,40 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
 
         List<Filter> lists;
 
-        if (NetworkUtils.isNetworkConnected()) {
-            lists = FilterService.getFilters(null);
-        } else {
+        if (!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) {
             lists = FiltersPreferences.getAllDownloadedFilters();
+        } else {
+            lists = FilterService.getFilters(null);
         }
 
-        for (var list : lists) {
-            PreferenceFragmentUtils.addMaterialSwitchPreference(
+        if (lists.isEmpty()) {
+            PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",
-                    list.getTitle(),
-                    list.getSummary(),
+                    "У вас не скачаны фильтры",
+                    "Подключитесь к интернету и попробуйте войти ещё раз",
                     null,
-                    getSavedKeyValue(list.getId()),
-                    (preference, o) -> {
-                        if ((boolean) o) {
-                            saveFilter(list);
-                        } else {
-                            deleteFilter(list.getId());
-                        }
-                        return true;
-                    }
+                    null
             );
+        } else {
+            for (var list : lists) {
+                PreferenceFragmentUtils.addMaterialSwitchPreference(
+                        getPreferenceScreen(),
+                        "",
+                        list.getTitle(),
+                        list.getSummary(),
+                        null,
+                        getSavedKeyValue(list.getId()),
+                        (preference, o) -> {
+                            if ((boolean) o) {
+                                saveFilter(list);
+                            } else {
+                                deleteFilter(list.getId());
+                            }
+                            return true;
+                        }
+                );
+            }
         }
     }
 }
