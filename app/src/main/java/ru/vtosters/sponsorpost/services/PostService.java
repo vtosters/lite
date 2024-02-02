@@ -72,7 +72,6 @@ public class PostService {
         Request request = new Request.a()
                 .b(requestUrl)
                 .a("Content-Type", "application/json")
-                .a("Accept-Encoding", "gzip")
                 .a();
 
         try (Response response = client.a(request).execute()) {
