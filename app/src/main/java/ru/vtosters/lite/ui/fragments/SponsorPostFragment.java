@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -86,6 +88,18 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                         }
                 );
             }
+
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Исходники фильтров",
+                    "Посмотреть исходники фильтров и их содержимое\n\nЕсли вы хотите помочь - вы можете предложить свои идеи для фильтров тут!",
+                    null,
+                    preference -> {
+                        requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/vtosters/adlists")));
+                        return false;
+                    }
+            );
         }
     }
 }
