@@ -25,7 +25,6 @@ import ru.vtosters.sponsorpost.utils.Updates;
 
 import static ru.vtosters.hooks.other.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
-import static ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils.setupFilters;
 
 public class MainActivityInjector {
     public static void inject(Activity activity) {
@@ -41,8 +40,6 @@ public class MainActivityInjector {
             Updates.updateFilters();
             Updates.updatePosts();
         }); // slowTasksScheduler
-
-        setupFilters();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannels.createChannels();

@@ -11,7 +11,6 @@ import ru.vtosters.lite.proxy.https.CustomHttps;
 import ru.vtosters.lite.proxy.socks.CustomSocks;
 import ru.vtosters.lite.proxy.socks.Zaborona;
 
-import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 

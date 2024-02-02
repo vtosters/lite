@@ -29,7 +29,8 @@ public class FilterService {
 
         if (ids != null && !ids.isEmpty()) requestUrl = requestUrl + "?ids=" + ids.stream()
                 .map(Object::toString)
-                .collect(Collectors.joining(","));; // for filters updates
+                .collect(Collectors.joining(","));
+        // for filters updates
 
         // Create a GET request to the API endpoint
         Request request = new Request.a()
@@ -63,6 +64,7 @@ public class FilterService {
             throw new RuntimeException(e);
         }
     }
+
     public static Set<String> downloadFilter(String link) {
         Request request = new Request.a()
                 .b(link)

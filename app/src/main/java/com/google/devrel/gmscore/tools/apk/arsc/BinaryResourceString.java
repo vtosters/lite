@@ -31,24 +31,6 @@ import static java.nio.charset.StandardCharsets.UTF_8;
  */
 public final class BinaryResourceString {
 
-    /**
-     * Type of {@link BinaryResourceString} to encode / decode.
-     */
-    public enum Type {
-        UTF8(UTF_8),
-        UTF16(UTF_16LE);
-
-        private final Charset charset;
-
-        Type(Charset charset) {
-            this.charset = charset;
-        }
-
-        public Charset charset() {
-            return charset;
-        }
-    }
-
     private BinaryResourceString() {
     } // Private constructor
 
@@ -165,5 +147,23 @@ public final class BinaryResourceString {
             length = ((length & 0x7FFF) << 16) | (buffer.getShort(offset + 2) & 0xFFFF);
         }
         return length;
+    }
+
+    /**
+     * Type of {@link BinaryResourceString} to encode / decode.
+     */
+    public enum Type {
+        UTF8(UTF_8),
+        UTF16(UTF_16LE);
+
+        private final Charset charset;
+
+        Type(Charset charset) {
+            this.charset = charset;
+        }
+
+        public Charset charset() {
+            return charset;
+        }
     }
 }

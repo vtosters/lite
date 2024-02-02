@@ -81,6 +81,7 @@ public class LibVKXClient {
         lambdaplay(list, musicTrack, iLibVkxService, null);
     }
 
-    public static String asId(MusicTrack musicTrack)
-    { return musicTrack.y1(); }
+    public static String asId(MusicTrack musicTrack) {
+        return musicTrack.y1();
+    }
 }

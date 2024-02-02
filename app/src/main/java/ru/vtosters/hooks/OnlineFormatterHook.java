@@ -8,9 +8,6 @@ import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 
-import java.io.IOException;
-import java.text.ParseException;
-
 import static ru.vtosters.hooks.other.Preferences.*;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;

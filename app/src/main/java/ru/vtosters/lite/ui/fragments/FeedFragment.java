@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
-import androidx.preference.Preference;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.newsfeed.NewsfeedSettingsFragment;
 import com.vk.newsfeed.controllers.NewsfeedController;
@@ -12,7 +11,6 @@ import com.vtosters.lite.ui.SummaryListPreference;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
 import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 
 import java.util.Objects;
 
@@ -37,7 +35,9 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("cringecopyright").setEnabled(!Preferences.copyright_post());
+        findPreference("spamfilters").setSummary(count(Preferences.getString("spamfilters")));
+        findPreference("sourcenamefilter").setSummary(count(Preferences.getString("sourcenamefilter")));
+        findPreference("linkfilter").setSummary(count(Preferences.getString("linkfilter")));
 
         var findPreference = (SummaryListPreference) findPreference("newsfeed_order");
         findPreference.setValue(NewsfeedController.e.k() ? "top" : "recent");
@@ -45,25 +45,6 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
             NewsfeedController.e.a(0);
             NewsfeedController.e.a((Boolean) Objects.equals(o, "top"));
             NewsfeedController.e.b(true);
-            return true;
-        });
-
-        findPreference("spamfilters").setSummary(count(Preferences.getString("spamfilters")));
-        findPreference("sourcenamefilter").setSummary(count(Preferences.getString("sourcenamefilter")));
-        findPreference("linkfilter").setSummary(count(Preferences.getString("linkfilter")));
-
-        findPreference("spamfilters").setOnPreferenceClickListener(preference -> {
-            NewsFeedFiltersUtils.setupFilters();
-            return true;
-        });
-
-        findPreference("sourcenamefilter").setOnPreferenceClickListener(preference -> {
-            NewsFeedFiltersUtils.setupFilters();
-            return true;
-        });
-
-        findPreference("linkfilter").setOnPreferenceClickListener(preference -> {
-            NewsFeedFiltersUtils.setupFilters();
             return true;
         });
 
@@ -123,7 +104,6 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setPositiveButton(requireContext().getString(R.string.yes), (dialogInterface, i) -> {
                     Preferences.getPreferences().edit().remove(key).apply();
                     sendToast(requireContext().getString(R.string.elements_deleted_success));
-                    NewsFeedFiltersUtils.setupFilters();
                 })
                 .setNegativeButton(requireContext().getString(R.string.cancel),
                         (dialogInterface, i) -> dialogInterface.dismiss())
@@ -146,14 +126,6 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
         } else {
             return String.format(requireContext().getString(R.string.feed_elements_count), count);
         }
-    }
-
-
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        findPreference("cringecopyright").setEnabled(!Preferences.copyright_post());
-        NewsFeedFiltersUtils.setupFilters();
-        return super.onPreferenceTreeClick(preference);
     }
 
     @Override

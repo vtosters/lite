@@ -16,8 +16,6 @@ import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ui.fragments.VTSettings;
 import ru.vtosters.lite.utils.*;
-import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
-import ru.vtosters.sponsorpost.utils.Updates;
 
 import java.security.NoSuchAlgorithmException;
 
@@ -31,7 +29,6 @@ public class Preferences {
 
         GmsHook.fixGapps();
         ProxyUtils.setProxy();
-        NewsFeedFiltersUtils.setupFilters();
         VTVerifications.load(application);
         LifecycleUtils.registerActivities(application);
 

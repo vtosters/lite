@@ -4,9 +4,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.utils.FriendsCatalogUtils;
-import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 import ru.vtosters.lite.utils.OnlineBypass;
 import ru.vtosters.lite.utils.SuperAppUtils;
+import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 
 import java.io.IOException;
 import java.text.ParseException;

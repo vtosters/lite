@@ -2,13 +2,14 @@ package ru.vtosters.sponsorpost.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.services.FilterService;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class FiltersPreferences {

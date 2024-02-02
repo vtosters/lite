@@ -34,7 +34,7 @@ public class Updates {
         if (!PostsPreferences.isEnabled() || Preferences.serverFeaturesDisable()) {
             return;
         }
-        
+
         List<Post> posts = PostService.getPosts(neededPosts);
 
         if (!posts.isEmpty()) {

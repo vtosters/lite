@@ -32,6 +32,78 @@ import java.util.Objects;
 public class BinaryResourceValue implements SerializableResource {
 
     /**
+     * The serialized size in bytes of a {@link BinaryResourceValue}.
+     */
+    public static final int SIZE = 8;
+    public int size;
+    public Type type;
+    public int data;
+    public BinaryResourceValue(int size, Type type, int data) {
+        this.size = size;
+        this.type = type;
+        this.data = data;
+    }
+
+    public static BinaryResourceValue create(ByteBuffer buffer) {
+        int size = (buffer.getShort() & 0xFFFF);
+        buffer.get();  // Unused
+        Type type = Type.fromCode(buffer.get());
+        int data = buffer.getInt();
+        return new BinaryResourceValue(size, type, data);
+    }
+
+    /**
+     * The length in bytes of this value.
+     */
+    public int size() {
+        return size;
+    }
+
+    /**
+     * The raw data type of this value.
+     */
+    public Type type() {
+        return type;
+    }
+
+    /**
+     * The actual 4-byte value; interpretation of the value depends on {@code dataType}.
+     */
+    public int data() {
+        return data;
+    }
+
+    @Override
+    public byte[] toByteArray() {
+        return toByteArray(false);
+    }
+
+    @Override
+    public byte[] toByteArray(boolean shrink) {
+        ByteBuffer buffer = ByteBuffer.allocate(SIZE).order(ByteOrder.LITTLE_ENDIAN);
+        buffer.putShort((short) size());
+        buffer.put((byte) 0);  // Unused
+        buffer.put(type().code());
+        buffer.putInt(data());
+        return buffer.array();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BinaryResourceValue that = (BinaryResourceValue) o;
+        return size == that.size &&
+                data == that.data &&
+                type == that.type;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(size, type, data);
+    }
+
+    /**
      * Resource type codes.
      */
     public enum Type {
@@ -100,8 +172,6 @@ public class BinaryResourceValue implements SerializableResource {
          */
         INT_COLOR_RGB4(0x1f);
 
-        private final byte code;
-
         private static final Map<Byte, Type> FROM_BYTE;
 
         static {
@@ -112,90 +182,18 @@ public class BinaryResourceValue implements SerializableResource {
             FROM_BYTE = builder.build();
         }
 
+        private final byte code;
+
         Type(int code) {
             this.code = UnsignedBytes.checkedCast(code);
-        }
-
-        public byte code() {
-            return code;
         }
 
         public static Type fromCode(byte code) {
             return Preconditions.checkNotNull(FROM_BYTE.get(code), "Unknown resource type: %s", code);
         }
-    }
 
-    /**
-     * The serialized size in bytes of a {@link BinaryResourceValue}.
-     */
-    public static final int SIZE = 8;
-
-    public int size;
-    public Type type;
-    public int data;
-
-    public static BinaryResourceValue create(ByteBuffer buffer) {
-        int size = (buffer.getShort() & 0xFFFF);
-        buffer.get();  // Unused
-        Type type = Type.fromCode(buffer.get());
-        int data = buffer.getInt();
-        return new BinaryResourceValue(size, type, data);
-    }
-
-    public BinaryResourceValue(int size, Type type, int data) {
-        this.size = size;
-        this.type = type;
-        this.data = data;
-    }
-
-    /**
-     * The length in bytes of this value.
-     */
-    public int size() {
-        return size;
-    }
-
-    /**
-     * The raw data type of this value.
-     */
-    public Type type() {
-        return type;
-    }
-
-    /**
-     * The actual 4-byte value; interpretation of the value depends on {@code dataType}.
-     */
-    public int data() {
-        return data;
-    }
-
-    @Override
-    public byte[] toByteArray() {
-        return toByteArray(false);
-    }
-
-    @Override
-    public byte[] toByteArray(boolean shrink) {
-        ByteBuffer buffer = ByteBuffer.allocate(SIZE).order(ByteOrder.LITTLE_ENDIAN);
-        buffer.putShort((short) size());
-        buffer.put((byte) 0);  // Unused
-        buffer.put(type().code());
-        buffer.putInt(data());
-        return buffer.array();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        BinaryResourceValue that = (BinaryResourceValue) o;
-        return size == that.size &&
-                data == that.data &&
-                type == that.type;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(size, type, data);
+        public byte code() {
+            return code;
+        }
     }
 }

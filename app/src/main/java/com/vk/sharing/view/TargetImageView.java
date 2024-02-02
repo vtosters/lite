@@ -30,14 +30,14 @@ public class TargetImageView extends VKMultiImageView {
     private static final int I = Screen.a(2);
     private final int B;
     private final int C;
+    private final RectF f21629d;
+    private final Paint f21630e;
+    private final RectF g;
+    private final Paint h;
     private Drawable D;
     private String[] F;
     private int G;
-    private final RectF f21629d;
-    private final Paint f21630e;
     private Canvas f21631f;
-    private final RectF g;
-    private final Paint h;
 
     public TargetImageView(Context context, Drawable d) {
         this(context, null, 0, 6);
@@ -49,6 +49,43 @@ public class TargetImageView extends VKMultiImageView {
 
     public TargetImageView(Context context, AttributeSet attributeSet, int i, int i2) {
         this(context, (i2 & 2) != 0 ? null : attributeSet, (i2 & 4) != 0 ? 0 : i);
+    }
+
+    public TargetImageView(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        this.f21629d = new RectF();
+        Paint paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setDither(true);
+        paint.setFilterBitmap(true);
+        this.f21630e = paint;
+        this.g = new RectF();
+        Paint paint2 = new Paint();
+        paint2.setAntiAlias(true);
+        paint2.setStrokeWidth(I);
+        paint2.setStyle(Paint.Style.STROKE);
+        this.h = paint2;
+        this.B = getAccentColor();
+        this.C = this.B;
+        Drawable c2 = ContextExtKt.c(context, R.drawable.ic_check_circle_composite_24_full);
+        if (c2 != null) {
+            this.D = c2;
+            this.F = new String[4];
+            int i2 = I * 2;
+            setPadding(i2, i2, i2, i2);
+            if (attributeSet != null) {
+                TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, a0.TargetImageView);
+                setSelected(obtainStyledAttributes.getBoolean(0, false));
+                obtainStyledAttributes.recycle();
+            }
+            Drawable drawable = ContextCompat.getDrawable(context, R.drawable.user_placeholder);
+            for (int i3 = 0; i3 <= 3; i3++) {
+                a();
+                DraweeHolder<GenericDraweeHierarchy> a3 = this.a.a(i3);
+                a3.b().e(drawable);
+            }
+            setScaleType(ScalingUtils.b.o);
+        }
     }
 
     private void e() {
@@ -250,42 +287,5 @@ public class TargetImageView extends VKMultiImageView {
         Drawable drawable = this.D;
         drawable.setBounds(i - drawable.getIntrinsicWidth(), i2 - this.D.getIntrinsicHeight(), i, i2);
         f();
-    }
-
-    public TargetImageView(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        this.f21629d = new RectF();
-        Paint paint = new Paint();
-        paint.setAntiAlias(true);
-        paint.setDither(true);
-        paint.setFilterBitmap(true);
-        this.f21630e = paint;
-        this.g = new RectF();
-        Paint paint2 = new Paint();
-        paint2.setAntiAlias(true);
-        paint2.setStrokeWidth(I);
-        paint2.setStyle(Paint.Style.STROKE);
-        this.h = paint2;
-        this.B = getAccentColor();
-        this.C = this.B;
-        Drawable c2 = ContextExtKt.c(context, R.drawable.ic_check_circle_composite_24_full);
-        if (c2 != null) {
-            this.D = c2;
-            this.F = new String[4];
-            int i2 = I * 2;
-            setPadding(i2, i2, i2, i2);
-            if (attributeSet != null) {
-                TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, a0.TargetImageView);
-                setSelected(obtainStyledAttributes.getBoolean(0, false));
-                obtainStyledAttributes.recycle();
-            }
-            Drawable drawable = ContextCompat.getDrawable(context, R.drawable.user_placeholder);
-            for (int i3 = 0; i3 <= 3; i3++) {
-                a();
-                DraweeHolder<GenericDraweeHierarchy> a3 = this.a.a(i3);
-                a3.b().e(drawable);
-            }
-            setScaleType(ScalingUtils.b.o);
-        }
     }
 }

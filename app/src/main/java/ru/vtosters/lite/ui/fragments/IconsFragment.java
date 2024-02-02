@@ -2,9 +2,7 @@ package ru.vtosters.lite.ui.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.widget.RadioButton;

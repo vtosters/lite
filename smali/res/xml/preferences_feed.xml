@@ -64,31 +64,6 @@
                 android:defaultValue=""
                 android:key="spamfilters"
                 android:title="@string/vtlownfilter"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="default_ad_list"
-                android:summary="@string/vtlsfiltersummary"
-                android:title="@string/vtlsfilter"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="shortlinkfilter"
-                android:summary="@string/vtlsfiltershortsummary"
-                android:title="@string/vtlsfiltershort"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="refsfilter"
-                android:summary="@string/vtlsfilterrefssummary"
-                android:title="@string/vtlsfilterrefs"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="shitposting"
-                android:summary="@string/shitpostingsummary"
-                android:title="@string/shitposting"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="cringerepost"
-                android:summary="@string/cringerepost_summ"
-                android:title="@string/cringerepost_title"/>
         <Preference
                 android:key="whitelisted_filters_groups"
                 android:title="@string/whitelisted_filters_groups_title"/>
@@ -114,9 +89,9 @@
                 android:title="@string/vtllinkfilter"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
-                android:key="cringecopyright"
-                android:summary="@string/cringecopyright_summ"
-                android:title="@string/cringecopyright_title"/>
+                android:key="cringerepost"
+                android:summary="@string/cringerepost_summ"
+                android:title="@string/cringerepost_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="copyright_post"

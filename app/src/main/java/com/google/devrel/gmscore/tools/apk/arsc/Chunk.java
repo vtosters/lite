@@ -36,90 +36,108 @@ import java.util.Map;
 public abstract class Chunk implements SerializableResource {
 
     /**
-     * Types of chunks that can exist.
-     */
-    public enum Type {
-        NULL(0x0000),
-        STRING_POOL(0x0001),
-        TABLE(0x0002),
-        XML(0x0003),
-        XML_START_NAMESPACE(0x0100),
-        XML_END_NAMESPACE(0x0101),
-        XML_START_ELEMENT(0x0102),
-        XML_END_ELEMENT(0x0103),
-        XML_CDATA(0x0104),
-        XML_RESOURCE_MAP(0x0180),
-        TABLE_PACKAGE(0x0200),
-        TABLE_TYPE(0x0201),
-        TABLE_TYPE_SPEC(0x0202),
-        TABLE_LIBRARY(0x0203);
-
-        private final short code;
-
-        private static final Map<Short, Type> FROM_SHORT;
-
-        static {
-            Builder<Short, Type> builder = ImmutableMap.builder();
-            for (Type type : values()) {
-                builder.put(type.code(), type);
-            }
-            FROM_SHORT = builder.build();
-        }
-
-        Type(int code) {
-            this.code = Shorts.checkedCast(code);
-        }
-
-        public short code() {
-            return code;
-        }
-
-        public static Type fromCode(short code) {
-            return Preconditions.checkNotNull(FROM_SHORT.get(code), "Unknown chunk type: %s", code);
-        }
-    }
-
-    /**
      * The byte boundary to pad chunks on.
      */
     public static final int PAD_BOUNDARY = 4;
-
     /**
      * The number of bytes in every chunk that describes chunk type, header size, and chunk size.
      */
     public static final int METADATA_SIZE = 8;
-
     /**
      * The offset in bytes, from the start of the chunk, where the chunk size can be found.
      */
     private static final int CHUNK_SIZE_OFFSET = 4;
-
+    /**
+     * Size of the chunk header in bytes.
+     */
+    protected final int headerSize;
+    /**
+     * headerSize + dataSize. The total size of this chunk.
+     */
+    protected final int chunkSize;
+    /**
+     * Offset of this chunk from the start of the file.
+     */
+    protected final int offset;
     /**
      * The parent to this chunk, if any.
      */
     @Nullable
     private final Chunk parent;
 
-    /**
-     * Size of the chunk header in bytes.
-     */
-    protected final int headerSize;
-
-    /**
-     * headerSize + dataSize. The total size of this chunk.
-     */
-    protected final int chunkSize;
-
-    /**
-     * Offset of this chunk from the start of the file.
-     */
-    protected final int offset;
-
     protected Chunk(ByteBuffer buffer, @Nullable Chunk parent) {
         this.parent = parent;
         offset = buffer.position() - 2;
         headerSize = (buffer.getShort() & 0xFFFF);
         chunkSize = buffer.getInt();
+    }
+
+    /**
+     * Creates a new chunk whose contents start at {@code buffer}'s current position.
+     *
+     * @param buffer A buffer positioned at the start of a chunk.
+     * @return new chunk
+     */
+    public static Chunk newInstance(ByteBuffer buffer) {
+        return newInstance(buffer, null);
+    }
+
+    /**
+     * Creates a new chunk whose contents start at {@code buffer}'s current position.
+     *
+     * @param buffer A buffer positioned at the start of a chunk.
+     * @param parent The parent to this chunk (or null if there's no parent).
+     * @return new chunk
+     */
+    public static Chunk newInstance(ByteBuffer buffer, @Nullable Chunk parent) {
+        Chunk result;
+        Type type = Type.fromCode(buffer.getShort());
+        switch (type) {
+            case STRING_POOL:
+                result = new StringPoolChunk(buffer, parent);
+                break;
+            case TABLE:
+                result = new ResourceTableChunk(buffer, parent);
+                break;
+            case XML:
+                result = new XmlChunk(buffer, parent);
+                break;
+            case XML_START_NAMESPACE:
+                result = new XmlNamespaceStartChunk(buffer, parent);
+                break;
+            case XML_END_NAMESPACE:
+                result = new XmlNamespaceEndChunk(buffer, parent);
+                break;
+            case XML_START_ELEMENT:
+                result = new XmlStartElementChunk(buffer, parent);
+                break;
+            case XML_END_ELEMENT:
+                result = new XmlEndElementChunk(buffer, parent);
+                break;
+            case XML_CDATA:
+                result = new XmlCdataChunk(buffer, parent);
+                break;
+            case XML_RESOURCE_MAP:
+                result = new XmlResourceMapChunk(buffer, parent);
+                break;
+            case TABLE_PACKAGE:
+                result = new PackageChunk(buffer, parent);
+                break;
+            case TABLE_TYPE:
+                result = new TypeChunk(buffer, parent);
+                break;
+            case TABLE_TYPE_SPEC:
+                result = new TypeSpecChunk(buffer, parent);
+                break;
+            case TABLE_LIBRARY:
+                result = new LibraryChunk(buffer, parent);
+                break;
+            default:
+                result = new UnknownChunk(buffer, parent);
+        }
+        result.init(buffer);
+        result.seekToEndOfChunk(buffer);
+        return result;
     }
 
     /**
@@ -256,70 +274,46 @@ public abstract class Chunk implements SerializableResource {
     }
 
     /**
-     * Creates a new chunk whose contents start at {@code buffer}'s current position.
-     *
-     * @param buffer A buffer positioned at the start of a chunk.
-     * @return new chunk
+     * Types of chunks that can exist.
      */
-    public static Chunk newInstance(ByteBuffer buffer) {
-        return newInstance(buffer, null);
-    }
+    public enum Type {
+        NULL(0x0000),
+        STRING_POOL(0x0001),
+        TABLE(0x0002),
+        XML(0x0003),
+        XML_START_NAMESPACE(0x0100),
+        XML_END_NAMESPACE(0x0101),
+        XML_START_ELEMENT(0x0102),
+        XML_END_ELEMENT(0x0103),
+        XML_CDATA(0x0104),
+        XML_RESOURCE_MAP(0x0180),
+        TABLE_PACKAGE(0x0200),
+        TABLE_TYPE(0x0201),
+        TABLE_TYPE_SPEC(0x0202),
+        TABLE_LIBRARY(0x0203);
 
-    /**
-     * Creates a new chunk whose contents start at {@code buffer}'s current position.
-     *
-     * @param buffer A buffer positioned at the start of a chunk.
-     * @param parent The parent to this chunk (or null if there's no parent).
-     * @return new chunk
-     */
-    public static Chunk newInstance(ByteBuffer buffer, @Nullable Chunk parent) {
-        Chunk result;
-        Type type = Type.fromCode(buffer.getShort());
-        switch (type) {
-            case STRING_POOL:
-                result = new StringPoolChunk(buffer, parent);
-                break;
-            case TABLE:
-                result = new ResourceTableChunk(buffer, parent);
-                break;
-            case XML:
-                result = new XmlChunk(buffer, parent);
-                break;
-            case XML_START_NAMESPACE:
-                result = new XmlNamespaceStartChunk(buffer, parent);
-                break;
-            case XML_END_NAMESPACE:
-                result = new XmlNamespaceEndChunk(buffer, parent);
-                break;
-            case XML_START_ELEMENT:
-                result = new XmlStartElementChunk(buffer, parent);
-                break;
-            case XML_END_ELEMENT:
-                result = new XmlEndElementChunk(buffer, parent);
-                break;
-            case XML_CDATA:
-                result = new XmlCdataChunk(buffer, parent);
-                break;
-            case XML_RESOURCE_MAP:
-                result = new XmlResourceMapChunk(buffer, parent);
-                break;
-            case TABLE_PACKAGE:
-                result = new PackageChunk(buffer, parent);
-                break;
-            case TABLE_TYPE:
-                result = new TypeChunk(buffer, parent);
-                break;
-            case TABLE_TYPE_SPEC:
-                result = new TypeSpecChunk(buffer, parent);
-                break;
-            case TABLE_LIBRARY:
-                result = new LibraryChunk(buffer, parent);
-                break;
-            default:
-                result = new UnknownChunk(buffer, parent);
+        private static final Map<Short, Type> FROM_SHORT;
+
+        static {
+            Builder<Short, Type> builder = ImmutableMap.builder();
+            for (Type type : values()) {
+                builder.put(type.code(), type);
+            }
+            FROM_SHORT = builder.build();
         }
-        result.init(buffer);
-        result.seekToEndOfChunk(buffer);
-        return result;
+
+        private final short code;
+
+        Type(int code) {
+            this.code = Shorts.checkedCast(code);
+        }
+
+        public static Type fromCode(short code) {
+            return Preconditions.checkNotNull(FROM_SHORT.get(code), "Unknown chunk type: %s", code);
+        }
+
+        public short code() {
+            return code;
+        }
     }
 }

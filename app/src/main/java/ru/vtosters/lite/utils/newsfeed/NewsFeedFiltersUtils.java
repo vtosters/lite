@@ -7,54 +7,21 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AccountManagerUtils;
-import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.utils.FiltersPreferences;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
-import java.io.IOException;
 import java.util.*;
 
 import static ru.vtosters.hooks.other.Preferences.*;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class NewsFeedFiltersUtils {
-    public static List<String> mFilters = new ArrayList<>();
-    public static List<String> mFiltersNames = new ArrayList<>();
-    public static List<String> mFiltersLinks = new ArrayList<>();
+    private static final Set<String> filters = new HashSet<>();
 
-    public static void setupFilters() {
-        getFilter("refsfilter", "Referals.txt", mFilters);
-        getFilter("shortlinkfilter", "LinkShorter.txt", mFilters);
-        getFilter("default_ad_list", "StandartFilter.txt", mFilters);
-        getFilter("shitposting", "IDontWantToReadIt.txt", mFilters);
-        getFilter("cringecopyright", "CopyrightAds.txt", mFiltersLinks);
-
-        setCustomFilters(mFilters, getString("spamfilters"));
-        setCustomFilters(mFiltersNames, getString("sourcenamefilter"));
-        setCustomFilters(mFiltersLinks, getString("linkfilter"));
-    }
-
-    // Get needed filter list from assets
-    public static void getFilter(String boolname, String filename, List<String> list) {
-        if (getBoolValue(boolname, false)) {
-            try (Scanner scanner = new Scanner(getGlobalContext().getAssets().open(filename))) {
-                while (scanner.hasNextLine()) {
-                    addNonEmptyLineToList(scanner.nextLine(), list);
-                }
-            } catch (IOException e) {
-                Log.d("NewsFeedFiltersUtils", e.getMessage());
-            }
-        }
-    }
-
-    private static void addNonEmptyLineToList(String line, List<String> list) {
-        if (!line.isEmpty()) {
-            list.add(line.toLowerCase());
-        }
-    }
-
-    public static void setCustomFilters(List<String> list, String filters) {
-        if (!filters.isEmpty()) list.addAll(Arrays.asList(filters.toLowerCase().split(", ")));
+    static {
+        filters.addAll(FiltersPreferences.getFiltersLists());
+        filters.addAll(Arrays.asList(getString("spamfilters").toLowerCase().split(", ")));
+        filters.addAll(Arrays.asList(getString("sourcenamefilter").toLowerCase().split(", ")));
+        filters.addAll(Arrays.asList(getString("linkfilter").toLowerCase().split(", ")));
     }
 
     public static boolean injectFiltersReposts(JSONObject obj) {
@@ -65,24 +32,14 @@ public class NewsFeedFiltersUtils {
                     var item = copyHistoryNode.optJSONObject(i);
                     var text = item.optString("text");
 
-                    if (isBadNews(text)) {
+                    if (sponsorFilters(text)) {
                         if (dev())
-                            Log.d("RepostFilter", "Fetched repost ad (isBadNews), owner id " + item.optString("owner_id") + ", text: " + text);
+                            Log.d("RepostFilter", "Fetched repost ad (sponsorFilters), owner id " + item.optString("owner_id") + ", text: " + text);
                         return true;
                     } else if (isAds(item, item.optString("post_type"))) {
                         if (dev())
                             Log.d("RepostFilter", "Fetched repost ad (ads), owner id " + item.optString("owner_id") + ", text: " + text);
                         return true;
-                    }
-
-                    if (mFiltersLinks != null && getBoolValue("cringerepost", false)) {
-                        for (String filter : mFiltersLinks) {
-                            if (text.contains(filter)) {
-                                if (dev())
-                                    Log.d("RepostFilter", "Fetched repost ad, owner id " + item.optString("owner_id") + ", text: " + text);
-                                return true;
-                            }
-                        }
                     }
                 }
             }
@@ -98,38 +55,19 @@ public class NewsFeedFiltersUtils {
             JSONObject copyright = json.optJSONObject("copyright");
             String copyrightName = null;
             String copyrightLink = null;
+            Set<String> list = filters;
 
             if (copyright != null) {
                 copyrightName = copyright.getString("name").toLowerCase();
                 copyrightLink = copyright.getString("link").toLowerCase();
             }
 
-            if (mFiltersNames != null) {
-                for (String filter : mFiltersNames) {
-                    if (copyrightName != null && copyrightName.contains(filter)) return true;
-                }
+            for (String filter : list) {
+                if (copyrightName != null && copyrightName.contains(filter)) return true;
             }
 
-            if (mFiltersLinks != null) {
-                for (String filter : mFiltersLinks) {
-                    if (copyrightLink != null && copyrightLink.contains(filter)) return true;
-                }
-            }
-        }
-
-        return false;
-    }
-
-    public static boolean isBadNews(String text) {
-        var textInLowerCase = text.toLowerCase();
-
-        if (mFilters != null) {
-            for (String filter : mFilters) {
-                if (textInLowerCase.contains(filter)) {
-                    if (dev())
-                        Log.d("NewsfeedAdBlockV2", text);
-                    return true;
-                }
+            for (String filter : list) {
+                if (copyrightLink != null && copyrightLink.contains(filter)) return true;
             }
         }
 
@@ -252,29 +190,23 @@ public class NewsFeedFiltersUtils {
                     return false;
                 }
 
-//                if (isBadNews(post.optString("text")) && !isWhitelistedFilters(post)) {
-//                    if (dev())
-//                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: text filters");
-//                    return false;
-//                }
-//
-//                if (checkCopyright(post)) {
-//                    if (dev())
-//                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: copyright filters");
-//                    return false;
-//                }
-//
-//                if (checkCaption(post)) {
-//                    if (dev())
-//                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: caption filters");
-//                    return false;
-//                }
-//
-//                if (NewsFeedFiltersUtils.injectFiltersReposts(post) && !isWhitelistedFilters(post)) {
-//                    if (dev())
-//                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: repost ad");
-//                    return false;
-//                }
+                if (checkCopyright(post)) {
+                    if (dev())
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: copyright filters");
+                    return false;
+                }
+
+                if (checkCaption(post)) {
+                    if (dev())
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: caption filters");
+                    return false;
+                }
+
+                if (NewsFeedFiltersUtils.injectFiltersReposts(post) && !isWhitelistedFilters(post)) {
+                    if (dev())
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: repost ad");
+                    return false;
+                }
             }
         } catch (Exception e) {
             Log.d("NewsfeedAdBlockV2", "discover: " + e.getMessage());
@@ -286,7 +218,7 @@ public class NewsFeedFiltersUtils {
     public static boolean sponsorFilters(String text) {
         String textInLowerCase = text.toLowerCase();
 
-        for (String adword : FiltersPreferences.getFiltersLists()) {
+        for (String adword : filters) {
             if (textInLowerCase.contains(adword)) {
                 if (dev())
                     Log.d("NewsfeedAdBlockV2", text);
@@ -474,7 +406,13 @@ public class NewsFeedFiltersUtils {
                     continue;
                 }
 
-                if (isBadNews(list.optString("text")) && !isWhitelistedFilters(list)) {
+                if (PostsPreferences.isPostAd(getOwnerId(list), list.optInt("post_id")) && !isWhitelistedFilters(list)) {
+                    if (dev())
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: text filters");
+                    continue;
+                }
+
+                if (sponsorFilters(list.optString("text")) && !isWhitelistedFilters(list)) {
                     if (dev())
                         Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: text filters");
                     continue;

@@ -382,7 +382,7 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
                 return;
             }
 
-            pipelineDraweeControllerBuilder.a((Supplier<DataSource<CloseableReference<CloseableImage>>>) () -> StoryCircleImageView.this.a(list));
+            pipelineDraweeControllerBuilder.a(() -> StoryCircleImageView.this.a(list));
             return;
         }
         pipelineDraweeControllerBuilder.b(null);

@@ -52,18 +52,16 @@ public final class TypeChunk extends Chunk {
      * The offset (from {@code offset}) in the original buffer where {@code entries} start.
      */
     private final int entriesStart;
-
+    /**
+     * A sparse list of resource entries defined by this chunk.
+     */
+    private final Map<Integer, Entry> entries = new TreeMap<>();
     /**
      * The resource configuration that these resource entries correspond to.
      */
     private BinaryResourceConfiguration configuration;
 
-    /**
-     * A sparse list of resource entries defined by this chunk.
-     */
-    private final Map<Integer, Entry> entries = new TreeMap<>();
-
-    protected TypeChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    TypeChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
         id = UnsignedBytes.toInt(buffer.get());
         buffer.position(buffer.position() + 3);  // Skip 3 bytes for packing
@@ -176,13 +174,13 @@ public final class TypeChunk extends Chunk {
         }
     }
 
-    protected String getString(int index) {
+    private String getString(int index) {
         ResourceTableChunk resourceTable = getResourceTableChunk();
         Preconditions.checkNotNull(resourceTable, "%s has no resource table.", getClass());
         return resourceTable.getStringPool().getString(index);
     }
 
-    protected String getKeyName(int index) {
+    private String getKeyName(int index) {
         PackageChunk packageChunk = getPackageChunk();
         Preconditions.checkNotNull(packageChunk, "%s has no parent package.", getClass());
         StringPoolChunk keyPool = packageChunk.getKeyStringPool();
@@ -190,7 +188,7 @@ public final class TypeChunk extends Chunk {
         return keyPool.getString(index);
     }
 
-    protected void updateKey(int index, String value) {
+    private void updateKey(int index, String value) {
         PackageChunk packageChunk = getPackageChunk();
         Preconditions.checkNotNull(packageChunk, "%s has no parent package.", getClass());
         StringPoolChunk keyPool = packageChunk.getKeyStringPool();
@@ -293,10 +291,10 @@ public final class TypeChunk extends Chunk {
         private final int headerSize;
         private final int flags;
         private final int keyIndex;
-        private BinaryResourceValue value;
-        private Map<Integer, BinaryResourceValue> values;
         private final int parentEntry;
         private final TypeChunk parent;
+        private BinaryResourceValue value;
+        private final Map<Integer, BinaryResourceValue> values;
 
         private Entry(int headerSize,
                       int flags,
@@ -312,6 +310,52 @@ public final class TypeChunk extends Chunk {
             this.values = values;
             this.parentEntry = parentEntry;
             this.parent = parent;
+        }
+
+        /**
+         * Creates a new {@link Entry} whose contents start at the 0-based position in
+         * {@code buffer} given by a 4-byte value read from {@code buffer} and then added to
+         * {@code baseOffset}. If the value read from {@code buffer} is equal to {@link #NO_ENTRY}, then
+         * null is returned as there is no resource at that position.
+         *
+         * <p>Otherwise, this position is parsed and returned as an {@link Entry}.
+         *
+         * @param buffer     A buffer positioned at an offset to an {@link Entry}.
+         * @param baseOffset Offset that must be added to the value at {@code buffer}'s position.
+         * @param parent     The {@link TypeChunk} that this resource entry belongs to.
+         * @return New {@link Entry} or null if there is no resource at this location.
+         */
+        @Nullable
+        public static Entry create(ByteBuffer buffer, int baseOffset, TypeChunk parent) {
+            int offset = buffer.getInt();
+            if (offset == NO_ENTRY) {
+                return null;
+            }
+            int position = buffer.position();
+            buffer.position(baseOffset + offset);  // Set buffer position to resource entry start
+            Entry result = newInstance(buffer, parent);
+            buffer.position(position);  // Restore buffer position
+            return result;
+        }
+
+        @Nullable
+        private static Entry newInstance(ByteBuffer buffer, TypeChunk parent) {
+            int headerSize = buffer.getShort() & 0xFFFF;
+            int flags = buffer.getShort() & 0xFFFF;
+            int keyIndex = buffer.getInt();
+            BinaryResourceValue value = null;
+            Map<Integer, BinaryResourceValue> values = new LinkedHashMap<>();
+            int parentEntry = 0;
+            if ((flags & FLAG_COMPLEX) != 0) {
+                parentEntry = buffer.getInt();
+                int valueCount = buffer.getInt();
+                for (int i = 0; i < valueCount; ++i) {
+                    values.put(buffer.getInt(), BinaryResourceValue.create(buffer));
+                }
+            } else {
+                value = BinaryResourceValue.create(buffer);
+            }
+            return new Entry(headerSize, flags, keyIndex, value, values, parentEntry, parent);
         }
 
         /**
@@ -420,52 +464,6 @@ public final class TypeChunk extends Chunk {
          */
         public final boolean isComplex() {
             return (flags() & FLAG_COMPLEX) != 0;
-        }
-
-        /**
-         * Creates a new {@link Entry} whose contents start at the 0-based position in
-         * {@code buffer} given by a 4-byte value read from {@code buffer} and then added to
-         * {@code baseOffset}. If the value read from {@code buffer} is equal to {@link #NO_ENTRY}, then
-         * null is returned as there is no resource at that position.
-         *
-         * <p>Otherwise, this position is parsed and returned as an {@link Entry}.
-         *
-         * @param buffer     A buffer positioned at an offset to an {@link Entry}.
-         * @param baseOffset Offset that must be added to the value at {@code buffer}'s position.
-         * @param parent     The {@link TypeChunk} that this resource entry belongs to.
-         * @return New {@link Entry} or null if there is no resource at this location.
-         */
-        @Nullable
-        public static Entry create(ByteBuffer buffer, int baseOffset, TypeChunk parent) {
-            int offset = buffer.getInt();
-            if (offset == NO_ENTRY) {
-                return null;
-            }
-            int position = buffer.position();
-            buffer.position(baseOffset + offset);  // Set buffer position to resource entry start
-            Entry result = newInstance(buffer, parent);
-            buffer.position(position);  // Restore buffer position
-            return result;
-        }
-
-        @Nullable
-        private static Entry newInstance(ByteBuffer buffer, TypeChunk parent) {
-            int headerSize = buffer.getShort() & 0xFFFF;
-            int flags = buffer.getShort() & 0xFFFF;
-            int keyIndex = buffer.getInt();
-            BinaryResourceValue value = null;
-            Map<Integer, BinaryResourceValue> values = new LinkedHashMap<>();
-            int parentEntry = 0;
-            if ((flags & FLAG_COMPLEX) != 0) {
-                parentEntry = buffer.getInt();
-                int valueCount = buffer.getInt();
-                for (int i = 0; i < valueCount; ++i) {
-                    values.put(buffer.getInt(), BinaryResourceValue.create(buffer));
-                }
-            } else {
-                value = BinaryResourceValue.create(buffer);
-            }
-            return new Entry(headerSize, flags, keyIndex, value, values, parentEntry, parent);
         }
 
         @Override
