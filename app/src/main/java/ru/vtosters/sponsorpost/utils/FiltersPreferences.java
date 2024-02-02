@@ -2,12 +2,14 @@ package ru.vtosters.sponsorpost.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.services.FilterService;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class FiltersPreferences {
     private static final String PREF_KEY_ID = "id";
@@ -55,16 +57,9 @@ public class FiltersPreferences {
     }
 
     public static Set<String> getFiltersLists() {
-        List<Integer> ids = getAllFilterIds();
-        Set<String> result = new HashSet<>();
-
-        for (int id : ids) {
-            Set<String> list = preferences.getStringSet(getPrefKey(id, PREF_KEY_LIST), new HashSet<>());
-
-            result.addAll(list);
-        }
-
-        return result;
+        return getAllFilterIds().stream()
+                .flatMap(id -> preferences.getStringSet(getPrefKey(id, PREF_KEY_LIST), new HashSet<>()).stream())
+                .collect(Collectors.toSet());
     }
 
     public static Filter getFilter(int id) {
@@ -79,27 +74,6 @@ public class FiltersPreferences {
         String version = preferences.getString(getPrefKey(id, PREF_KEY_VERSION), "");
         String link = preferences.getString(getPrefKey(id, PREF_KEY_LINK), "");
         return new Filter(filterId, title, summary, version, link);
-    }
-
-    public static List<Filter> getAllFilters() {
-        Map<String, ?> allFilters = preferences.getAll();
-        List<Filter> filters = new ArrayList<>();
-
-        for (Map.Entry<String, ?> entry : allFilters.entrySet()) {
-            String key = entry.getKey();
-            String[] parts = key.split(":");
-            if (key.startsWith("filter")) {
-                int id = Integer.parseInt(parts[1]);
-                String title = preferences.getString(getPrefKey(id, PREF_KEY_TITLE), "");
-                String summary = preferences.getString(getPrefKey(id, PREF_KEY_SUMMARY), "");
-                String version = preferences.getString(getPrefKey(id, PREF_KEY_VERSION), "");
-                String link = preferences.getString(getPrefKey(id, PREF_KEY_LINK), "");
-
-                filters.add(new Filter(id, title, summary, version, link));
-            }
-        }
-
-        return filters;
     }
 
     private static String getPrefKey(int id, String key) {
@@ -118,17 +92,9 @@ public class FiltersPreferences {
     }
 
     public static List<Integer> getAllFilterIds() {
-        Map<String, ?> allFilters = preferences.getAll();
-        List<Integer> filterIds = new ArrayList<>();
-
-        for (Map.Entry<String, ?> entry : allFilters.entrySet()) {
-            String key = entry.getKey();
-            String[] parts = key.split(":");
-            if (key.startsWith("filter")) {
-                filterIds.add(Integer.parseInt(parts[1]));
-            }
-        }
-
-        return filterIds;
+        return preferences.getAll().entrySet().stream()
+                .filter(entry -> entry.getKey().matches("filter:.*:id"))
+                .map(entry -> (Integer) entry.getValue())
+                .collect(Collectors.toList());
     }
 }
