@@ -7,6 +7,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.sponsorpost.data.Filter;
+import ru.vtosters.sponsorpost.utils.FiltersPreferences;
+import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
 import java.io.IOException;
 import java.util.*;
@@ -237,35 +240,58 @@ public class NewsFeedFiltersUtils {
             }
 
             if (post != null) {
-                if (isBadNews(post.optString("text")) && !isWhitelistedFilters(post)) {
+                if (PostsPreferences.isPostAd(getOwnerId(post), post.optInt("post_id")) && !isWhitelistedFilters(post)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: text filters");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: sponsorpost");
                     return false;
                 }
 
-                if (checkCopyright(post)) {
+                if (sponsorFilters(post.optString("text")) && !isWhitelistedFilters(post)) {
                     if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: copyright filters");
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: sponsorpost filter");
                     return false;
                 }
 
-                if (checkCaption(post)) {
-                    if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: caption filters");
-                    return false;
-                }
-
-                if (NewsFeedFiltersUtils.injectFiltersReposts(post) && !isWhitelistedFilters(post)) {
-                    if (dev())
-                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: repost ad");
-                    return false;
-                }
+//                if (isBadNews(post.optString("text")) && !isWhitelistedFilters(post)) {
+//                    if (dev())
+//                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: text filters");
+//                    return false;
+//                }
+//
+//                if (checkCopyright(post)) {
+//                    if (dev())
+//                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: copyright filters");
+//                    return false;
+//                }
+//
+//                if (checkCaption(post)) {
+//                    if (dev())
+//                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: caption filters");
+//                    return false;
+//                }
+//
+//                if (NewsFeedFiltersUtils.injectFiltersReposts(post) && !isWhitelistedFilters(post)) {
+//                    if (dev())
+//                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: repost ad");
+//                    return false;
+//                }
             }
         } catch (Exception e) {
             Log.d("NewsfeedAdBlockV2", "discover: " + e.getMessage());
         }
 
         return true;
+    }
+
+    public static boolean sponsorFilters(String text) {
+        String textInLowerCase = text.toLowerCase();
+        List<Filter> filters = FiltersPreferences.getAllFilters();
+
+        for (Filter filter : filters) {
+            // add filter words check
+        }
+
+        return false;
     }
 
     public static void parseStoriesItem(JSONObject item) throws JSONException {
@@ -320,12 +346,18 @@ public class NewsFeedFiltersUtils {
         return false;
     }
 
-    public static Boolean isWhitelistedFilters(JSONObject list) {
-        var id = String.valueOf(list.optInt("owner_id"));
+    private static int getOwnerId(JSONObject post) {
+        int id = post.optInt("owner_id");
 
-        if (id.equals("0")) {
-            id = String.valueOf(list.optInt("source_id"));
+        if (id == 0) {
+            id = post.optInt("source_id");
         }
+
+        return id;
+    }
+
+    public static Boolean isWhitelistedFilters(JSONObject list) {
+        var id = String.valueOf(getOwnerId(list));
 
         if (id.equals("-189659924") || id.equals(String.valueOf(AccountManagerUtils.getUserId()))) {
             return true;
@@ -340,11 +372,7 @@ public class NewsFeedFiltersUtils {
     }
 
     public static Boolean isWhitelistedAd(JSONObject list) {
-        var id = String.valueOf(list.optInt("owner_id"));
-
-        if (id.equals("0")) {
-            id = String.valueOf(list.optInt("source_id"));
-        }
+        var id = String.valueOf(getOwnerId(list));
 
         var whitelist = Preferences.getPreferences().getStringSet(
                 "whitelisted_ad_groups",
