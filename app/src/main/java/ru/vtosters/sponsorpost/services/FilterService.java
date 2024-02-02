@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.utils.ApiUtils;
+import ru.vtosters.sponsorpost.utils.FiltersPreferences;
 import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
@@ -57,8 +58,11 @@ public class FilterService {
                 // Parse the response body as a JSONArray and extract filter objects
                 return parseJSON(new JSONArray(resp));
             } else {
-                // Handle error response
-                throw new RuntimeException("Failed to get filters: " + response.l());
+                if (!FiltersPreferences.getAllFilterIds().isEmpty()) {
+                    return FiltersPreferences.getAllDownloadedFilters(); // check for offline server to get local filters
+                } else {
+                    throw new RuntimeException("Failed to get filters: " + response.l());
+                }
             }
         } catch (IOException | JSONException e) {
             throw new RuntimeException(e);
