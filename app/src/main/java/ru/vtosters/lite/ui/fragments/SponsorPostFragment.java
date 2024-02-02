@@ -73,7 +73,7 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                         getPreferenceScreen(),
                         "",
                         list.getTitle(),
-                        list.getSummary(),
+                        list.getSummary() + "\n\n" + "Версия фильтра: v" + list.getVersion(),
                         null,
                         getSavedKeyValue(list.getId()),
                         (preference, o) -> {
