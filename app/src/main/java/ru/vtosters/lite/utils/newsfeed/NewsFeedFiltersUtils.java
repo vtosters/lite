@@ -19,9 +19,13 @@ public class NewsFeedFiltersUtils {
 
     static {
         filters.addAll(FiltersPreferences.getFiltersLists());
-        filters.addAll(Arrays.asList(getString("spamfilters").toLowerCase().split(", ")));
-        filters.addAll(Arrays.asList(getString("sourcenamefilter").toLowerCase().split(", ")));
-        filters.addAll(Arrays.asList(getString("linkfilter").toLowerCase().split(", ")));
+        setCustomFilters("spamfilters");
+        setCustomFilters("sourcenamefilter");
+        setCustomFilters("linkfilter");
+    }
+
+    public static void setCustomFilters(String list) {
+        if (!filters.isEmpty()) filters.addAll(Arrays.asList(getString(list).toLowerCase().split(", ")));
     }
 
     public static boolean injectFiltersReposts(JSONObject obj) {
@@ -57,17 +61,19 @@ public class NewsFeedFiltersUtils {
             String copyrightLink = null;
             Set<String> list = filters;
 
-            if (copyright != null) {
-                copyrightName = copyright.getString("name").toLowerCase();
-                copyrightLink = copyright.getString("link").toLowerCase();
-            }
+            if (!filters.isEmpty()) {
+                if (copyright != null) {
+                    copyrightName = copyright.getString("name").toLowerCase();
+                    copyrightLink = copyright.getString("link").toLowerCase();
+                }
 
-            for (String filter : list) {
-                if (copyrightName != null && copyrightName.contains(filter)) return true;
-            }
+                for (String filter : list) {
+                    if (copyrightName != null && copyrightName.contains(filter)) return true;
+                }
 
-            for (String filter : list) {
-                if (copyrightLink != null && copyrightLink.contains(filter)) return true;
+                for (String filter : list) {
+                    if (copyrightLink != null && copyrightLink.contains(filter)) return true;
+                }
             }
         }
 
@@ -218,11 +224,13 @@ public class NewsFeedFiltersUtils {
     public static boolean sponsorFilters(String text) {
         String textInLowerCase = text.toLowerCase();
 
-        for (String adword : filters) {
-            if (textInLowerCase.contains(adword)) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", text);
-                return true;
+        if (!filters.isEmpty()) {
+            for (String adword : filters) {
+                if (textInLowerCase.contains(adword)) {
+                    if (dev())
+                        Log.d("NewsfeedAdBlockV2", text);
+                    return true;
+                }
             }
         }
 
