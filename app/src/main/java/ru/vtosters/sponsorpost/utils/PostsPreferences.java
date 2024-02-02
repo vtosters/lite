@@ -46,6 +46,6 @@ public class PostsPreferences {
     }
 
     public static boolean isPostAd(long ownerId, long postId) {
-        return preferences.getStringSet("posts", null).contains(ownerId + "_" + postId);
+        return isEnabled() && preferences.getStringSet("posts", null).contains(ownerId + "_" + postId);
     }
 }
