@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class Preferences {
+public class FiltersPreferences {
     private static final String PREF_KEY_ID = "id";
     private static final String PREF_KEY_TITLE = "title";
     private static final String PREF_KEY_SUMMARY = "summary";
@@ -22,7 +22,7 @@ public class Preferences {
     }
 
     private static SharedPreferences getPreferences() {
-        return AndroidUtils.getGlobalContext().getSharedPreferences("ru.vtosters.sponsorpost.prefs", Context.MODE_PRIVATE);
+        return AndroidUtils.getGlobalContext().getSharedPreferences("ru.vtosters.sponsorpost.filters.prefs", Context.MODE_PRIVATE);
     }
 
     public static void clearAll() {

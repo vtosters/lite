@@ -4,15 +4,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowInsetsController;
-import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.services.FilterService;
+import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
 import java.util.List;
 
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+import static ru.vtosters.sponsorpost.utils.FiltersPreferences.*;
 
 public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
@@ -39,9 +39,9 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                 "Фильтр постов",
                 "Получать списки рекламных постов, которые не блокируются рекламными фильтрами",
                 null,
-                true,
+                PostsPreferences.isEnabled(),
                 (preference, o) -> {
-                    Preferences.getPreferences().edit().putBoolean("sponsorpost", (boolean) o).apply();
+                    PostsPreferences.setEnabled((boolean) o);
                     return true;
                 }
         );
@@ -57,12 +57,12 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                     list.getTitle(),
                     list.getSummary(),
                     null,
-                    ru.vtosters.sponsorpost.utils.Preferences.getSavedKeyValue(list.getId()),
+                    getSavedKeyValue(list.getId()),
                     (preference, o) -> {
                         if ((boolean) o) {
-                            ru.vtosters.sponsorpost.utils.Preferences.saveFilter(list);
+                            saveFilter(list);
                         } else {
-                            ru.vtosters.sponsorpost.utils.Preferences.deleteFilter(list.getId());
+                            deleteFilter(list.getId());
                         }
                         return true;
                     }

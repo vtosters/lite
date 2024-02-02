@@ -3,7 +3,6 @@ package ru.vtosters.sponsorpost.utils;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.zip.GZIPInputStream;
 
 public class GzipDecompressor {
