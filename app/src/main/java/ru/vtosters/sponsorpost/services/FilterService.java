@@ -18,7 +18,7 @@ import java.util.List;
 public class FilterService {
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
 
-    public static List<Filter> getFilters(List<Long> ids) {
+    public static List<Filter> getFilters(List<Integer> ids) {
         // Retrieves a list of filters
 
         // Construct the API request URL

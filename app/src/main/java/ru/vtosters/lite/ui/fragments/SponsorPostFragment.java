@@ -53,15 +53,17 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
         for (var list : lists) {
             PreferenceFragmentUtils.addMaterialSwitchPreference(
                     getPreferenceScreen(),
-                    "filter_" + list.getId(),
+                    "",
                     list.getTitle(),
                     list.getSummary(),
                     null,
-                    false,
+                    ru.vtosters.sponsorpost.utils.Preferences.getSavedKeyValue(list.getId()),
                     (preference, o) -> {
-                        sendToast("Тест фильтра " + list.getTitle() + " под номером " + list.getId());
-
-                        Preferences.getPreferences().edit().putBoolean("filter_" + list.getId(), (boolean) o).apply();
+                        if ((boolean) o) {
+                            ru.vtosters.sponsorpost.utils.Preferences.saveFilter(list);
+                        } else {
+                            ru.vtosters.sponsorpost.utils.Preferences.deleteFilter(list.getId());
+                        }
                         return true;
                     }
             );
