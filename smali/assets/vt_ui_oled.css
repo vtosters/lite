@@ -63,7 +63,6 @@ body.article_body.article_dark {
     --overlay_status_background: #000000 !important;
     --header_background: #000000 !important;
     --header_alternate_background: #000000 !important;
-    --header_alternate_background: #000000 !important;
     --vkui--color_header_background: #000000 !important;
     --separator_alternate: #000000 !important;
     --segmented_control_bar_background: #000000 !important;
@@ -83,7 +82,6 @@ body.article_body.article_dark {
     --field_background: #121212 !important;
     --im_bubble_incoming: #121212 !important;
     --input_border: #121212 !important;
-    --vkui--color_write_bar_input_background: #121212 !important;
     --modal_card_background: #121212 !important;
     --separator_common: #121212 !important;
     --vkui--color_separator_primary: #121212 !important;
@@ -105,4 +103,7 @@ body.article_body.article_dark {
     --vkui--color_search_field_background: #212121 !important;
     --selection_off_icon: #212121 !important;
     --panel_tab_active_background: #212121 !important;
+    --color_background_modal: #000000 !important;
+    --color_field_background: #212121 !important;
+    --vkui--color_field_background: #212121 !important;
 }

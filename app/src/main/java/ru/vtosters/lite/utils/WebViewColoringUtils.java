@@ -24,6 +24,8 @@ public class WebViewColoringUtils {
                     .replace("%button_primary_background%", hex(getColorFromAttr(com.vtosters.lite.R.attr.button_primary_background)))
                     .replace("%button_outline_foreground%", hex(getColorFromAttr(com.vtosters.lite.R.attr.button_outline_foreground)))
                     .replace("%button_outline_border%", hex(getColorFromAttr(com.vtosters.lite.R.attr.button_outline_border)))
+                    .replace("%field_background%", hex(getColorFromAttr(com.vtosters.lite.R.attr.field_background)))
+                    .replace("%field_border%", hex(getColorFromAttr(com.vtosters.lite.R.attr.field_border)))
                     .replace("%text_primary%", hex(getTextAttr()));
         } catch (IOException e) {
             return "";
