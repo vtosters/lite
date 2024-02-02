@@ -18,11 +18,13 @@ import java.util.List;
 public class FilterService {
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
 
-    public static List<Filter> getFilters() {
+    public static List<Filter> getFilters(List<Long> ids) {
         // Retrieves a list of filters
 
         // Construct the API request URL
         String requestUrl = ApiUtils.getURL() + "/lists/get";
+
+        if (ids != null && !ids.isEmpty()) requestUrl = requestUrl + "?ids=" + ids; // for filters updates
 
         // Create a GET request to the API endpoint
         Request request = new Request.a()

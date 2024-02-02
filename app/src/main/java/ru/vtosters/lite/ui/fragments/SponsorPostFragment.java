@@ -48,7 +48,7 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Фильтры постов");
 
-        List<Filter> lists = FilterService.getFilters();
+        List<Filter> lists = FilterService.getFilters(null);
 
         for (var list : lists) {
             PreferenceFragmentUtils.addMaterialSwitchPreference(
