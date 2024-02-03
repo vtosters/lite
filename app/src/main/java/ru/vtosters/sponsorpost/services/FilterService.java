@@ -14,7 +14,7 @@ import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -86,15 +86,9 @@ public class FilterService {
     }
 
     public static Set<String> stringToSet(String input) {
-        String[] words = input.split("\n");
-
-        Set<String> set = new HashSet<>();
-
-        for (String word : words) {
-            set.add(word.toLowerCase());
-        }
-
-        return set;
+        return Arrays.stream(input.split("\n"))
+                .map(String::toLowerCase)
+                .collect(Collectors.toSet());
     }
 
     private static List<Filter> parseJSON(JSONArray jsonArray) throws JSONException {

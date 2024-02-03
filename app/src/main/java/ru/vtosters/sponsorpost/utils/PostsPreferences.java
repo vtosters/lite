@@ -8,6 +8,7 @@ import ru.vtosters.sponsorpost.data.Post;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class PostsPreferences {
     private static final SharedPreferences preferences;
@@ -29,19 +30,22 @@ public class PostsPreferences {
     }
 
     public static void savePosts(List<Post> posts) {
-        SharedPreferences.Editor editor = preferences.edit();
-        Set<String> stringSet = new HashSet<>();
+        Set<String> stringSet = posts.stream()
+                .map(post -> post.getOwnerId() + "_" + post.getPostId())
+                .collect(Collectors.toSet());
 
-        for (Post post : posts) {
-            stringSet.add(post.getOwnerId() + "_" + post.getPostId());
-        }
-
-        editor.putStringSet("posts", stringSet);
-
-        editor.apply();
+        preferences.edit()
+                .putStringSet("posts", stringSet)
+                .apply();
     }
 
     public static boolean isPostAd(long ownerId, long postId) {
-        return isEnabled() && preferences.getStringSet("posts", null).contains(ownerId + "_" + postId);
+        Set<String> hasPost = preferences.getStringSet("posts", new HashSet<>());
+
+        if (!hasPost.isEmpty() && isEnabled()) {
+            return hasPost.contains(ownerId + "_" + postId);
+        } else {
+            return false;
+        }
     }
 }

@@ -7,9 +7,9 @@ import ru.vtosters.sponsorpost.data.Post;
 import ru.vtosters.sponsorpost.services.FilterService;
 import ru.vtosters.sponsorpost.services.PostService;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 public class Updates {
     public static void updateFilters() {
@@ -52,16 +52,15 @@ public class Updates {
     }
 
     public static void updatePosts() {
-        long neededPosts = LocalDate.now().minusWeeks(1).toEpochDay();
+        long currentTime = System.currentTimeMillis();
+        long weekAgo = currentTime - TimeUnit.DAYS.toMillis(7);
 
-        if (!PostsPreferences.isEnabled() || Preferences.serverFeaturesDisable() || !NetworkUtils.isNetworkConnected()) {
-            return;
-        }
+        if (PostsPreferences.isEnabled() && !Preferences.serverFeaturesDisable() && NetworkUtils.isNetworkConnected()) {
+            List<Post> posts = PostService.getPosts(weekAgo);
 
-        List<Post> posts = PostService.getPosts(neededPosts);
-
-        if (!posts.isEmpty()) {
-            PostsPreferences.savePosts(posts);
+            if (!posts.isEmpty()) {
+                PostsPreferences.savePosts(posts);
+            }
         }
     }
 }

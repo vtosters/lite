@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.services.FilterService;
 
@@ -47,14 +48,18 @@ public class FiltersPreferences {
         editor.putString(getPrefKey(filter.getId(), PREF_KEY_LINK), filter.getLink());
         editor.apply();
 
-        VTExecutors.getSlowTasksScheduler().a(() -> downloadFilter(filter));
+        VTExecutors.getSlowTasksScheduler().a(() -> {
+            downloadFilter(filter);
+            NewsFeedFiltersUtils.updateFilters();
+        });
     }
 
     public static void downloadFilter(Filter filter) {
         Set<String> list = FilterService.downloadFilter(filter.getLink());
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putStringSet(getPrefKey(filter.getId(), PREF_KEY_LIST), list);
-        editor.apply();
+
+        preferences.edit()
+                .putStringSet("filter:" + filter.getId() + ":" + PREF_KEY_LIST, list)
+                .apply();
     }
 
     public static Set<String> getFiltersLists() {
@@ -89,13 +94,14 @@ public class FiltersPreferences {
 
     public static void deleteFilter(int id) {
         SharedPreferences.Editor editor = preferences.edit();
-        editor.remove(getPrefKey(id, PREF_KEY_ID));
-        editor.remove(getPrefKey(id, PREF_KEY_TITLE));
-        editor.remove(getPrefKey(id, PREF_KEY_SUMMARY));
-        editor.remove(getPrefKey(id, PREF_KEY_VERSION));
-        editor.remove(getPrefKey(id, PREF_KEY_LINK));
-        editor.remove(getPrefKey(id, PREF_KEY_LIST));
+
+        preferences.getAll().keySet().stream()
+                .filter(key -> key.startsWith("filter:" + id + ":"))
+                .forEach(editor::remove);
+
         editor.apply();
+
+        NewsFeedFiltersUtils.updateFilters();
     }
 
     public static List<Integer> getAllFilterIds() {

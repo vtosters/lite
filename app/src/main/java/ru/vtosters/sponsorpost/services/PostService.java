@@ -214,7 +214,6 @@ public class PostService {
         }
     }
 
-
     private static List<Long> parseJSONIds(JSONArray jsonArray) throws JSONException {
         List<Long> ids = new ArrayList<>();
 

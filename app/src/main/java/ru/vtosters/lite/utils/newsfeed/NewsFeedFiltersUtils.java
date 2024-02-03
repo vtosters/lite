@@ -5,7 +5,6 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.sponsorpost.utils.FiltersPreferences;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
@@ -15,17 +14,22 @@ import java.util.*;
 import static ru.vtosters.hooks.other.Preferences.*;
 
 public class NewsFeedFiltersUtils {
+    private static final String[] CUSTOM_FILTERS = {"spamfilters", "sourcenamefilter", "linkfilter"};
     private static final Set<String> filters = new HashSet<>();
 
     static {
-        filters.addAll(FiltersPreferences.getFiltersLists());
-        setCustomFilters("spamfilters");
-        setCustomFilters("sourcenamefilter");
-        setCustomFilters("linkfilter");
+        updateFilters();
     }
 
-    public static void setCustomFilters(String list) {
-        if (!filters.isEmpty()) filters.addAll(Arrays.asList(getString(list).toLowerCase().split(", ")));
+    public static void updateFilters() {
+        filters.clear();
+
+        filters.addAll(FiltersPreferences.getFiltersLists());
+
+        for (String customFilter : CUSTOM_FILTERS) {
+            List<String> lists = List.of(getString(customFilter).toLowerCase().split("\\s*,\\s*"));
+            filters.addAll(lists);
+        }
     }
 
     public static boolean injectFiltersReposts(JSONObject obj) {
@@ -61,7 +65,7 @@ public class NewsFeedFiltersUtils {
             String copyrightLink = null;
             Set<String> list = filters;
 
-            if (!filters.isEmpty()) {
+            if (filters != null && !filters.isEmpty()) {
                 if (copyright != null) {
                     copyrightName = copyright.getString("name").toLowerCase();
                     copyrightLink = copyright.getString("link").toLowerCase();
@@ -108,8 +112,8 @@ public class NewsFeedFiltersUtils {
     }
 
     public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
-        var selectedItems = Preferences.getPreferences().getString("news_feed_selected_items", "");
-        var filtersSet = Preferences.getPreferences().getStringSet("news_feed_items_set", null);
+        var selectedItems = getPreferences().getString("news_feed_selected_items", "");
+        var filtersSet = getPreferences().getStringSet("news_feed_items_set", null);
         var mutableFiltersSet = new LinkedHashSet<String>();
         if (filtersSet != null)
             mutableFiltersSet.addAll(filtersSet);
@@ -137,7 +141,7 @@ public class NewsFeedFiltersUtils {
             Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
         }
 
-        Preferences.getPreferences().edit().putStringSet("news_feed_items_set", mutableFiltersSet).apply();
+        getPreferences().edit().putStringSet("news_feed_items_set", mutableFiltersSet).apply();
 
         return items;
     }
@@ -228,7 +232,7 @@ public class NewsFeedFiltersUtils {
     public static boolean sponsorFilters(String text) {
         String textInLowerCase = text.toLowerCase();
 
-        if (!filters.isEmpty()) {
+        if (filters != null && !filters.isEmpty()) {
             for (String adword : filters) {
                 if (textInLowerCase.contains(adword) && !adword.isEmpty()) {
                     if (dev())
@@ -294,25 +298,13 @@ public class NewsFeedFiltersUtils {
     }
 
     private static int getOwnerId(JSONObject post) {
-        int id = post.optInt("owner_id");
-
-        if (id == 0) {
-            id = post.optInt("source_id");
-        }
-
-        return id;
+        return post.optInt("owner_id") != 0 ? post.optInt("owner_id") : post.optInt("source_id");
     }
 
     private static int getPostId(JSONObject post) {
-        int id = post.optInt("post_id");
-
-        if (id == 0) {
-            id = post.optInt("id");
-        }
-
-        return id;
+        return post.optInt("post_id") != 0 ? post.optInt("post_id") : post.optInt("id");
     }
-    
+
     public static Boolean isWhitelistedFilters(JSONObject list) {
         var id = String.valueOf(getOwnerId(list));
 
@@ -320,18 +312,18 @@ public class NewsFeedFiltersUtils {
             return true;
         }
 
-        var whitelist = Preferences.getPreferences().getStringSet(
+        var whitelist = getPreferences().getStringSet(
                 "whitelisted_filters_groups",
                 Collections.emptySet()
         );
 
-        return Preferences.getBoolValue("invertFilters", false) != whitelist.contains(id);
+        return getBoolValue("invertFilters", false) != whitelist.contains(id);
     }
 
     public static Boolean isWhitelistedAd(JSONObject list) {
         var id = String.valueOf(getOwnerId(list));
 
-        var whitelist = Preferences.getPreferences().getStringSet(
+        var whitelist = getPreferences().getStringSet(
                 "whitelisted_ad_groups",
                 Collections.emptySet()
         );
@@ -342,7 +334,7 @@ public class NewsFeedFiltersUtils {
     public static Boolean isWhitelistedAdStories(JSONObject list) {
         var id = String.valueOf(list.optInt("owner_id"));
 
-        var whitelist = Preferences.getPreferences().getStringSet(
+        var whitelist = getPreferences().getStringSet(
                 "whitelisted_stories_ad",
                 Collections.emptySet()
         );
