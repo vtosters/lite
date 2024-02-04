@@ -60,7 +60,7 @@ public class PostsPreferences {
     public static boolean isPostAd(long ownerId, long postId) {
         Set<String> hasPost = preferences.getStringSet("posts", new HashSet<>());
 
-        if (!hasPost.isEmpty() && isEnabled()) {
+        if (!hasPost.isEmpty() && isEnabled() && isGroupAd(ownerId)) {
             return hasPost.contains(ownerId + "_" + postId);
         } else {
             return false;
