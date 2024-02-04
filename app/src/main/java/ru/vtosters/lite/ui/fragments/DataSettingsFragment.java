@@ -66,14 +66,6 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         requireActivity().getWindow().setStatusBarColor(ThemesUtils.getBackgroundContent());
         requireActivity().getWindow().setNavigationBarColor(ThemesUtils.getBackgroundContent());
 
-        if (!ThemesUtils.isDarkTheme()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                requireActivity().getWindow().getInsetsController().setSystemBarsAppearance(WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS, WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS);
-            } else {
-                requireActivity().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR & View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-            }
-        }
-
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), AndroidUtils.getString("data"));
 
         PreferenceFragmentUtils.addPreference(

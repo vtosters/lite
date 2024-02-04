@@ -27,14 +27,6 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
         requireActivity().getWindow().setStatusBarColor(ThemesUtils.getBackgroundContent());
         requireActivity().getWindow().setNavigationBarColor(ThemesUtils.getBackgroundContent());
 
-        if (!ThemesUtils.isDarkTheme()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                requireActivity().getWindow().getInsetsController().setSystemBarsAppearance(WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS, WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS);
-            } else {
-                requireActivity().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR & View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-            }
-        }
-
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Sponsor Post");
 
         PreferenceFragmentUtils.addMaterialSwitchPreference(
@@ -50,56 +42,59 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                 }
         );
 
-        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Фильтры постов");
+        requireActivity().runOnUiThread(() -> {
+                    PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Фильтры постов");
 
-        List<Filter> lists;
+                    List<Filter> lists;
 
-        if (!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) {
-            lists = FiltersPreferences.getAllDownloadedFilters();
-        } else {
-            lists = FilterService.getFilters(null);
-        }
-
-        if (lists.isEmpty()) {
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    "У вас не скачаны фильтры",
-                    "Подключитесь к интернету и попробуйте войти ещё раз",
-                    null,
-                    null
-            );
-        } else {
-            for (var list : lists) {
-                PreferenceFragmentUtils.addMaterialSwitchPreference(
-                        getPreferenceScreen(),
-                        "",
-                        list.getTitle(),
-                        list.getSummary() + "\n\n" + "Версия фильтра: v" + list.getVersion(),
-                        null,
-                        getSavedKeyValue(list.getId()),
-                        (preference, o) -> {
-                            if ((boolean) o) {
-                                saveFilter(list);
-                            } else {
-                                deleteFilter(list.getId());
-                            }
-                            return true;
-                        }
-                );
-            }
-
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    "Исходники фильтров",
-                    "Посмотреть исходники фильтров и их содержимое\n\nЕсли вы хотите помочь - вы можете предложить свои идеи для фильтров тут!",
-                    null,
-                    preference -> {
-                        requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/vtosters/adlists")));
-                        return false;
+                    if (!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) {
+                        lists = FiltersPreferences.getAllDownloadedFilters();
+                    } else {
+                        lists = FilterService.getFilters(null);
                     }
-            );
-        }
+
+                    if (lists.isEmpty()) {
+                        PreferenceFragmentUtils.addPreference(
+                                getPreferenceScreen(),
+                                "",
+                                "У вас не скачаны фильтры",
+                                "Подключитесь к интернету и попробуйте войти ещё раз",
+                                null,
+                                null
+                        );
+                    } else {
+                        for (var list : lists) {
+                            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                                    getPreferenceScreen(),
+                                    "",
+                                    list.getTitle(),
+                                    list.getSummary() + "\n\n" + "Версия фильтра: v" + list.getVersion(),
+                                    null,
+                                    getSavedKeyValue(list.getId()),
+                                    (preference, o) -> {
+                                        if ((boolean) o) {
+                                            saveFilter(list);
+                                        } else {
+                                            deleteFilter(list.getId());
+                                        }
+                                        return true;
+                                    }
+                            );
+                        }
+
+                        PreferenceFragmentUtils.addPreference(
+                                getPreferenceScreen(),
+                                "",
+                                "Исходники фильтров",
+                                "Посмотреть исходники фильтров и их содержимое\n\nЕсли вы хотите помочь - вы можете предложить свои идеи для фильтров тут!",
+                                null,
+                                preference -> {
+                                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/vtosters/adlists")));
+                                    return false;
+                                }
+                        );
+                    }
+                }
+        );
     }
 }
