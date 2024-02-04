@@ -65,7 +65,11 @@ public class FilterService {
                 }
             }
         } catch (IOException | JSONException e) {
-            throw new RuntimeException(e);
+            if (!FiltersPreferences.getAllFilterIds().isEmpty()) {
+                return FiltersPreferences.getAllDownloadedFilters(); // check for offline server to get local filters
+            } else {
+                throw new RuntimeException(e);
+            }
         }
     }
 
