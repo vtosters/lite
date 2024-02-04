@@ -57,9 +57,14 @@ public class Updates {
 
         if (PostsPreferences.isEnabled() && !Preferences.serverFeaturesDisable() && NetworkUtils.isNetworkConnected()) {
             List<Post> posts = PostService.getPosts(weekAgo);
+            List<Long> groupIds = PostService.getOwnersIds();
 
             if (!posts.isEmpty()) {
                 PostsPreferences.savePosts(posts);
+            }
+
+            if (!groupIds.isEmpty()) {
+                PostsPreferences.saveGroupsIds(groupIds);
             }
         }
     }

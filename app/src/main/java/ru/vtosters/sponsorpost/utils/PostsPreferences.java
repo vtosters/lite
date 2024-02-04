@@ -39,6 +39,14 @@ public class PostsPreferences {
                 .apply();
     }
 
+    public static void saveGroupsIds(List<Long> ids) {
+        Set<String> stringSet = ids.stream().map(String::valueOf).collect(Collectors.toSet());
+
+        preferences.edit()
+                .putStringSet("groupIds", stringSet)
+                .apply();
+    }
+
     public static boolean isPostAd(long ownerId, long postId) {
         Set<String> hasPost = preferences.getStringSet("posts", new HashSet<>());
 
