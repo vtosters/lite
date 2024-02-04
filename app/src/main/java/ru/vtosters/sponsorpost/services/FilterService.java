@@ -5,7 +5,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.utils.ApiUtils;
@@ -13,11 +12,11 @@ import ru.vtosters.sponsorpost.utils.FiltersPreferences;
 import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class FilterService {
     private static final OkHttpClient client = VtOkHttpClient.getInstance();
@@ -96,20 +95,14 @@ public class FilterService {
     }
 
     private static List<Filter> parseJSON(JSONArray jsonArray) throws JSONException {
-        List<Filter> filters = new ArrayList<>();
-
-        for (int i = 0; i < jsonArray.length(); i++) {
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
-            Filter filter = new Filter(
-                    jsonObject.getInt("id"),
-                    jsonObject.getString("title"),
-                    jsonObject.getString("summary"),
-                    jsonObject.getString("version"),
-                    jsonObject.getString("link")
-            );
-            filters.add(filter);
-        }
-
-        return filters;
+        return IntStream.range(0, jsonArray.length())
+                .mapToObj(i -> {
+                    try {
+                        return new Filter(jsonArray.getJSONObject(i));
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
+                    }
+                })
+                .collect(Collectors.toList());
     }
 }

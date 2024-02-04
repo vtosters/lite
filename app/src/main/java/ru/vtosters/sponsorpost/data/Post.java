@@ -1,5 +1,8 @@
 package ru.vtosters.sponsorpost.data;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Post {
     long postId;
     long ownerId;
@@ -11,6 +14,15 @@ public class Post {
         this.ownerId = ownerId;
         this.postDate = postDate;
         this.postAdded = postAdded;
+    }
+
+    public Post(JSONObject jsonObject) throws NullPointerException, JSONException {
+        this(
+                jsonObject.getLong("postId"),
+                jsonObject.getLong("ownerId"),
+                jsonObject.getLong("postDate"),
+                jsonObject.getLong("postAdded")
+        );
     }
 
     public long getPostId() {

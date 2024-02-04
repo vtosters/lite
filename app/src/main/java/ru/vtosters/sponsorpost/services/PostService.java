@@ -5,7 +5,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 import ru.vtosters.sponsorpost.data.Post;
 import ru.vtosters.sponsorpost.utils.ApiUtils;
 import ru.vtosters.sponsorpost.utils.GzipDecompressor;
@@ -14,6 +13,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class PostService {
     private static final OkHttpClient client = new OkHttpClient();
@@ -214,30 +215,27 @@ public class PostService {
         }
     }
 
-    private static List<Long> parseJSONIds(JSONArray jsonArray) throws JSONException {
-        List<Long> ids = new ArrayList<>();
-
-        for (int i = 0; i < jsonArray.length(); i++) {
-            ids.add(jsonArray.getLong(i));
-        }
-
-        return ids;
+    private static List<Long> parseJSONIds(JSONArray jsonArray) {
+        return IntStream.range(0, jsonArray.length())
+                .mapToObj(index -> {
+                    try {
+                        return jsonArray.getLong(index);
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
+                    }
+                })
+                .collect(Collectors.toList());
     }
 
     private static List<Post> parseJSONPosts(JSONArray jsonArray) throws JSONException {
-        List<Post> posts = new ArrayList<>();
-
-        for (int i = 0; i < jsonArray.length(); i++) {
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
-            Post post = new Post(
-                    jsonObject.getLong("postId"),
-                    jsonObject.getLong("ownerId"),
-                    jsonObject.getLong("postDate"),
-                    jsonObject.getLong("postAdded")
-            );
-            posts.add(post);
-        }
-
-        return posts;
+        return IntStream.range(0, jsonArray.length())
+                .mapToObj(i -> {
+                    try {
+                        return new Post(jsonArray.getJSONObject(i));
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
+                    }
+                })
+                .collect(Collectors.toList());
     }
 }

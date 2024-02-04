@@ -85,6 +85,7 @@ public class FiltersPreferences {
         String summary = preferences.getString(getPrefKey(id, PREF_KEY_SUMMARY), "");
         String version = preferences.getString(getPrefKey(id, PREF_KEY_VERSION), "");
         String link = preferences.getString(getPrefKey(id, PREF_KEY_LINK), "");
+
         return new Filter(filterId, title, summary, version, link);
     }
 

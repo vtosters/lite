@@ -1,5 +1,8 @@
 package ru.vtosters.sponsorpost.data;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Filter {
     int id;
     String title;
@@ -13,6 +16,16 @@ public class Filter {
         this.summary = summary;
         this.version = version;
         this.link = link;
+    }
+
+    public Filter(JSONObject jsonObject) throws NullPointerException, JSONException {
+        this(
+                jsonObject.getInt("id"),
+                jsonObject.getString("title"),
+                jsonObject.getString("summary"),
+                jsonObject.getString("version"),
+                jsonObject.getString("link")
+        );
     }
 
     public int getId() {
