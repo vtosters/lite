@@ -39,6 +39,16 @@ public class PostsPreferences {
                 .apply();
     }
 
+    public static void saveGroupSpecifiedPosts(List<Post> posts, Long ownerId) {
+        Set<String> stringSet = posts.stream()
+                .map(post -> post.getOwnerId() + "_" + post.getPostId())
+                .collect(Collectors.toSet());
+
+        preferences.edit()
+                .putStringSet("posts_" + ownerId, stringSet)
+                .apply();
+    }
+
     public static void saveGroupsIds(List<Long> ids) {
         Set<String> stringSet = ids.stream().map(String::valueOf).collect(Collectors.toSet());
 
