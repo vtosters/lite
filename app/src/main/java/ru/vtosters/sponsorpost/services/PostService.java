@@ -175,11 +175,11 @@ public class PostService {
         }
     }
 
-    public static List<Long> getOwnersIds() {
+    public static List<Long> getOwnerIds() {
         // Retrieves a list of owner IDs with ad posts
 
         // Construct the API request URL
-        String requestUrl = apiPath + "/getOwnersIds";
+        String requestUrl = apiPath + "/getOwnerIds";
 
         // Create a GET request to the API endpoint
         Request request = new Request.a()
