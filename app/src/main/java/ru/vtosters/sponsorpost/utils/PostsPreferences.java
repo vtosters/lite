@@ -47,6 +47,16 @@ public class PostsPreferences {
                 .apply();
     }
 
+    public static boolean isGroupAd(long ownerId) {
+        Set<String> isGroupAd = preferences.getStringSet("groupIds", new HashSet<>());
+
+        if (!isGroupAd.isEmpty() && isEnabled()) {
+            return isGroupAd.contains(Long.toString(ownerId));
+        } else {
+            return false;
+        }
+    }
+
     public static boolean isPostAd(long ownerId, long postId) {
         Set<String> hasPost = preferences.getStringSet("posts", new HashSet<>());
 
