@@ -4,7 +4,7 @@ import com.vk.core.concurrent.VkExecutors;
 import io.reactivex.Scheduler;
 
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
 
 public class VTExecutors {
     public static ExecutorService getMusicDownloadExecutor() {
@@ -32,7 +32,20 @@ public class VTExecutors {
         }
 
         private static class LazyHolder {
-            public static final ExecutorService INSTANCE = Executors.newSingleThreadExecutor();
+
+            private static final int PARALLELISM = clamp(
+                    (Runtime.getRuntime().availableProcessors() >> 1) - 1,
+                    1, 7);
+
+            private static final ExecutorService INSTANCE =
+                    new ForkJoinPool(PARALLELISM,
+                            ForkJoinPool.defaultForkJoinWorkerThreadFactory,
+                            (t, e) -> {},
+                            /* FIFO */ true);
+
+            private static int clamp(int value, int min, int max) {
+                return Math.min(max, Math.max(value, min));
+            }
         }
     }
 }

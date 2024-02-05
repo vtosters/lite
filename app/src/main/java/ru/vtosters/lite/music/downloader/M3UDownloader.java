@@ -7,28 +7,43 @@ import com.google.android.exoplayer2.source.hls.playlist.e;
 import com.google.android.exoplayer2.source.hls.playlist.f;
 import com.google.android.exoplayer2.source.hls.playlist.f.a;
 import com.vk.dto.music.MusicTrack;
-import java8.util.concurrent.CompletableFuture;
-import java8.util.concurrent.CompletionException;
+
+
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.converter.ts.FFMpeg;
-import ru.vtosters.lite.music.converter.ts.TSMerger;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
+import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.File;
 import java.io.IOException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class M3UDownloader
         implements ITrackDownloader {
+
+    private static final Cipher CIPHER;
+
+    static {
+        try {
+            CIPHER = Cipher.getInstance("AES/CBC/PKCS7Padding");
+        } catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
+            throw new ExceptionInInitializerError(e);
+        }
+    }
+
     public static M3UDownloader getInstance() {
         return Holder.INSTANCE;
     }
@@ -47,93 +62,76 @@ public class M3UDownloader
         var resultTs = getResultTsFile(track);
         var resultMp3 = getResultMp3File(outDir, cache, track);
         try {
-            CompletableFuture.allOf(createFutures(baseUri, segments, progress, callback, track))
-                    .thenRun(() -> {
-                        if (cache) {
-                            try {
-                                ThumbnailDownloader.downloadThumbnails(track);
-                            } catch (IOException e) {
-                                throw new RuntimeException("Failed to download thumbs", e);
-                            }
-                        }
-                    })
-                    .thenRun(() -> {
-                        try {
-                            TSMerger.merge(getTsesDir(track), resultTs);
-                        } catch (Throwable e) {
-                            throw new RuntimeException("Failed to merge ts files", e);
-                        }
-                    })
-                    .thenRun(() -> {
-                        try {
-                            FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track);
-                        } catch (Throwable e) {
-                            throw new RuntimeException("FFmpeg error", e);
-                        }
-                    })
-                    .thenRun(() -> callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / segments.size())))
-                    .thenRun(() -> {
-                        if (cache) {
-                            MusicCacheImpl.addTrack(track);
-                        }
-                    })
-                    .whenComplete((unused, tr) -> {
-                        if (tr != null) {
-                            IOUtils.deleteRecursive(MusicCacheStorageUtils.getTrackDirById(track.y1()));
-                            callback.onFailure();
-                        } else {
-                            callback.onSuccess();
-                        }
-                        IOUtils.deleteRecursive(getTsesDir(track));
-                    })
-                    .join();
-        } catch (CompletionException e) {
+
+            byte[] buff = downloadTs(baseUri, segments, progress, callback);
+
+            IOUtils.writeToFile(resultTs, buff);
+
+            if (cache) {
+                try {
+                    ThumbnailDownloader.downloadThumbnails(track);
+                } catch (IOException e) {
+                    throw new RuntimeException("Failed to download thumbs", e);
+                }
+            }
+            try {
+                FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track);
+            } catch (Throwable e) {
+                throw new RuntimeException("FFmpeg error", e);
+            }
+            callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / segments.size()));
+            if (cache) {
+                try {
+                    MusicCacheImpl.addTrack(track);
+                    callback.onSuccess();
+                } catch (Exception e) {
+                    callback.onFailure();
+                }
+            }
+        } catch (InvalidAlgorithmParameterException |
+                 InvalidKeyException |
+                 IllegalBlockSizeException |
+                 BadPaddingException e) {
             Log.e("M3UDownloader", "Failed to download track", e.getCause());
+        } finally {
+            resultTs.delete();
         }
     }
 
-    @SuppressWarnings("rawtypes")
-    static CompletableFuture[] createFutures(
-            String baseUri,
-            List<a> segments,
-            AtomicInteger progress,
-            Callback callback,
-            MusicTrack track) {
-        var futures = new CompletableFuture[segments.size()];
-        for (var i = 0; i < segments.size(); ++i) {
-            var segment = segments.get(i);
-            var filename = i + ".ts";
-            futures[i] = CompletableFuture.runAsync(() -> processSegment(baseUri, segment, filename, progress, segments.size(), callback, track));
-        }
-        return futures;
-    }
+    private static byte[]
+    downloadTs(String baseUri, List<a> segments,
+               AtomicInteger progress, Callback callback
+    ) throws IOException, InvalidAlgorithmParameterException,
+            InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
+        byte[] total = new byte[0];
 
-    private static void processSegment(
-            String baseUri,
-            a segment,
-            String filename,
-            AtomicInteger progress,
-            int size,
-            Callback callback,
-            MusicTrack track) {
-        try {
+        int size = segments.size();
+        for (var segment : segments) {
             var buff = IOUtils.readFully(IOUtils.openStream(baseUri + segment.a/*url*/));
             if (!TextUtils.isEmpty(segment.g)) {
-                var cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
                 var cipherKey = new SecretKeySpec(IOUtils.readFully(IOUtils.openStream(segment.g)), "AES");
                 var cipherBytes = segment.h.getBytes();
-                //if IV doesn't pass, it must be created manually and filled with zeros
-                if (cipherBytes.length != 16) Arrays.fill((cipherBytes = new byte[16]), (byte) 0x0);
+                //if IV doesn't pass, it must be created manually
+                if (cipherBytes.length != 16)
+                    cipherBytes = new byte[16];
+
                 var cipherIv = new IvParameterSpec(cipherBytes);
-                cipher.init(Cipher.DECRYPT_MODE, cipherKey, cipherIv);
-                buff = cipher.doFinal(buff);
+                CIPHER.init(Cipher.DECRYPT_MODE, cipherKey, cipherIv);
+                buff = CIPHER.doFinal(buff);
             }
-            IOUtils.writeToFile(new File(getTsesDir(track), filename), buff);
-            callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / size));
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+
+            // copy on write
+            final int len = total.length, n = buff.length;
+            byte[] newBytes = Arrays.copyOf(total, len + n);
+            System.arraycopy(buff, 0, newBytes, len, n);
+            total = newBytes;
+
+            callback.onProgress(10 +
+                    Math.round(80.0f * progress.addAndGet(1) / size));
         }
+        return total;
     }
+
 
     public static String getTitle(MusicTrack track) {
         return track.f + (!TextUtils.isEmpty(track.g) ? + '(' + track.g + ')' : "");
