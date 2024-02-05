@@ -78,6 +78,8 @@ public class M3UDownloader
                 } catch (Exception e) {
                     callback.onFailure();
                 }
+            } else {
+                callback.onSuccess();
             }
         } catch (InvalidAlgorithmParameterException | InvalidKeyException |
                  IllegalBlockSizeException |
