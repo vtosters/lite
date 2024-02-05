@@ -13,6 +13,7 @@ import ru.vtosters.lite.ui.components.NewsfeedListManager;
 import ru.vtosters.lite.utils.NavigatorUtils;
 
 import java.util.Objects;
+import java.util.Set;
 
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
@@ -39,7 +40,7 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
         findPreference("sourcenamefilter").setSummary(count(Preferences.getString("sourcenamefilter")));
         findPreference("linkfilter").setSummary(count(Preferences.getString("linkfilter")));
 
-        var findPreference = (SummaryListPreference) findPreference("newsfeed_order");
+        SummaryListPreference findPreference = (SummaryListPreference) findPreference("newsfeed_order");
         findPreference.setValue(NewsfeedController.e.k() ? "top" : "recent");
         findPreference.setOnPreferenceChangeListener((preference, o) -> {
             NewsfeedController.e.a(0);
@@ -72,7 +73,7 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        var str = Preferences.getPreferences().getString("news_feed_selected_items", "");
+        String str = Preferences.getPreferences().getString("news_feed_selected_items", "");
         findPreference("newsfeedlistmanager").setSummary(
                 String.format(requireContext().getString(R.string.feed_hidden), (!TextUtils.isEmpty(str) ? str.split(",").length : 0))
         );
@@ -82,12 +83,17 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
+        boolean unlockCustomLists = Preferences.getBoolValue("unlockCustomLists", false);
+
+        findPreference("newsfeedlistmanager").setVisible(unlockCustomLists);
+        findPreference("newsfeedlistmanager_reset").setVisible(unlockCustomLists);
+
         findPreference("feedcache").setVisible(!Preferences.getString("newsupdate").equals("no_update"));
     }
 
     private String count(String text) {
         // count comma separated words in string
-        var count = text.split(", ").length;
+        int count = text.split(", ").length;
 
         if (count < 1 || text.isEmpty()) {
             return requireContext().getString(R.string.feed_no_elements);
@@ -111,15 +117,16 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
     }
 
     private String countSet(String key) {
-        var set = Preferences.getPreferences().getStringSet(key, null);
+        Set<String> set = Preferences.getPreferences().getStringSet(key, null);
         StringBuilder str = new StringBuilder();
+
         if (set != null) {
             for (var s : set) {
                 str.append(s).append(", ");
             }
         }
 
-        var count = str.toString().split(", ").length;
+        int count = str.toString().split(", ").length;
 
         if (count < 1 || (str.length() == 0)) {
             return requireContext().getString(R.string.feed_no_elements);

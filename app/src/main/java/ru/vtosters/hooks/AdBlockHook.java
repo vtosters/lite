@@ -16,6 +16,6 @@ public class AdBlockHook {
     }
 
     public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
-        return NewsFeedFiltersUtils.storiesads(json, isDeleteFix);
+        return NewsFeedFiltersUtils.storiesAds(json, isDeleteFix);
     }
 }

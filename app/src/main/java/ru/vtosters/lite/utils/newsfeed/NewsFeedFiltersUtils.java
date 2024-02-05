@@ -18,6 +18,7 @@ import static ru.vtosters.hooks.other.Preferences.*;
 
 public class NewsFeedFiltersUtils {
     private static final String[] CUSTOM_FILTERS = {"spamfilters", "sourcenamefilter", "linkfilter"};
+    private static final String[] EXCLUDED_ITEMS = {"kpop", "foryou", "qazaqstan", "podcasts"};
     private static final Set<String> filters = new HashSet<>();
 
     static {
@@ -100,39 +101,45 @@ public class NewsFeedFiltersUtils {
         return false;
     }
 
-    public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
-        var selectedItems = getPreferences().getString("news_feed_selected_items", "");
-        var filtersSet = getPreferences().getStringSet("news_feed_items_set", null);
-        var mutableFiltersSet = new LinkedHashSet<String>();
-        if (filtersSet != null)
+    public static JSONArray setNewsfeedLists(JSONArray items) throws JSONException {
+        String selectedItems = getPreferences().getString("news_feed_selected_items", "");
+        Set<String> filtersSet = getPreferences().getStringSet("news_feed_items_set", null);
+        LinkedHashSet<String> mutableFiltersSet = new LinkedHashSet<>();
+
+        if (filtersSet != null) {
             mutableFiltersSet.addAll(filtersSet);
+        }
 
         for (int i = 0; i < items.length(); i++) {
-            var item = items.optJSONObject(i);
-            if (item == null) continue;
+            JSONObject item = items.optJSONObject(i);
 
-            var id = item.optString("id");
-            var title = item.optString("title");
-
-            if (TextUtils.isEmpty(id) || TextUtils.isEmpty(title)
-                    // these items not working
-                    || id.equals("kpop") || id.equals("foryou")
-                    || id.equals("qazaqstan") || id.equals("podcasts"))
+            if (item == null) {
                 continue;
+            }
+
+            String id = item.optString("id");
+            String title = item.optString("title");
+
+            if (TextUtils.isEmpty(id) || TextUtils.isEmpty(title) || isExcluded(id)) {
+                continue;
+            }
 
             mutableFiltersSet.add(id + "|" + title);
 
-            var hide = selectedItems.contains(id);
+            boolean hide = selectedItems.contains(id);
 
             Log.d("NewsfeedList", "Added list " + id + " to feed");
-            item.put("is_hidden", hide)
-                    .put("is_unavailable", hide);
-            Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
+
+            item.put("is_hidden", hide).put("is_unavailable", hide);
         }
 
         getPreferences().edit().putStringSet("news_feed_items_set", mutableFiltersSet).apply();
 
         return items;
+    }
+
+    private static boolean isExcluded(String id) {
+        return Arrays.asList(EXCLUDED_ITEMS).contains(id);
     }
 
     public static Boolean discoverAdBlock(JSONObject jsonObject) {
@@ -144,7 +151,7 @@ public class NewsFeedFiltersUtils {
             boolean hasAds = jsonObject.optString("template").contains("ads");
             boolean hasInfo = jsonObject.optString("template").contains("info");
 
-            if (hasAds || hasInfo) {
+            if (hasAds || hasInfo || post == null) {
                 Log.d("NewsfeedAdBlockV2", "Removed " + (hasAds ? "ads" : "info") + " template in discover");
                 return false;
             }
@@ -261,9 +268,7 @@ public class NewsFeedFiltersUtils {
     }
 
     private static void logRemovedPost(JSONObject json, String source, String reason) {
-        if (dev()) {
-            Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(json) + ", owner: " + getOwnerId(json) + " from " + source + ", Reason: " + reason);
-        }
+        Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(json) + ", owner: " + getOwnerId(json) + " from " + source + ", Reason: " + reason);
     }
 
     public static boolean sponsorFilters(String text) {
@@ -299,19 +304,18 @@ public class NewsFeedFiltersUtils {
             JSONObject story = stories.optJSONObject(j);
 
             if (!story.optBoolean("is_ads") && !story.optBoolean("is_promo")) {
-                if (isStoryNotAd(story)) {
+                if (checkStoriesButtonLinks(story)) {
                     newStories.put(story);
                 }
             } else {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Fetched stories ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
+                Log.d("NewsfeedAdBlockV2", "Fetched stories ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
             }
         }
 
         item.put("stories", newStories);
     }
 
-    private static Boolean isStoryNotAd(JSONObject json) {
+    private static Boolean checkStoriesButtonLinks(JSONObject json) {
         return !getBoolValue("storiesGroupsAdBlock", false) || (json.has("link") ? isWhitelistedAdStories(json) : true);
     }
 
@@ -343,13 +347,13 @@ public class NewsFeedFiltersUtils {
     }
 
     public static Boolean isWhitelistedFilters(JSONObject list) {
-        var id = String.valueOf(getOwnerId(list));
+        String id = String.valueOf(getOwnerId(list));
 
         if (id.equals("-189659924") || id.equals(String.valueOf(AccountManagerUtils.getUserId()))) {
             return true;
         }
 
-        var whitelist = getPreferences().getStringSet(
+        Set<String> whitelist = getPreferences().getStringSet(
                 "whitelisted_filters_groups",
                 Collections.emptySet()
         );
@@ -358,9 +362,9 @@ public class NewsFeedFiltersUtils {
     }
 
     public static Boolean isWhitelistedAd(JSONObject list) {
-        var id = String.valueOf(getOwnerId(list));
+        String id = String.valueOf(getOwnerId(list));
 
-        var whitelist = getPreferences().getStringSet(
+        Set<String> whitelist = getPreferences().getStringSet(
                 "whitelisted_ad_groups",
                 Collections.emptySet()
         );
@@ -369,9 +373,9 @@ public class NewsFeedFiltersUtils {
     }
 
     public static Boolean isWhitelistedAdStories(JSONObject list) {
-        var id = String.valueOf(getOwnerId(list));
+        String id = String.valueOf(getOwnerId(list));
 
-        var whitelist = getPreferences().getStringSet(
+        Set<String> whitelist = getPreferences().getStringSet(
                 "whitelisted_stories_ad",
                 Collections.emptySet()
         );
@@ -381,6 +385,7 @@ public class NewsFeedFiltersUtils {
 
     public static Boolean hasMiniAppAds(JSONObject list) {
         JSONArray attachments = list.optJSONArray("attachments");
+
         if (attachments != null && getBoolValue("blockminiapps", false)) {
             return IntStream.range(0, attachments.length())
                     .mapToObj(attachments::optJSONObject)
@@ -390,40 +395,47 @@ public class NewsFeedFiltersUtils {
         return false;
     }
 
-    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
+    public static JSONObject storiesAds(JSONObject json, boolean isDeleteFix) {
         if (!adsstories()) {
             return json;
         }
 
         if (json.has("ads")) {
-            JSONObject ad = json.optJSONObject("ads");
             if (isDeleteFix) {
-                if (ad != null) {
-                    ad.optJSONObject("settings")
-                            .put("stories_interval", 0)
-                            .put("authors_interval", 0)
-                            .put("time_interval", 0)
-                            .put("stories_init", 0)
-                            .put("authors_init", 0)
-                            .put("time_init", 0);
+                try {
+                    resetAdsSettings(json.getJSONObject("ads"));
+                    Log.d("NewsfeedAdBlockV2", "Set stories ads settings at zero values");
+                } catch (JSONException e) {
+                    e.getStackTrace();
                 }
-                if (dev()) Log.d("NewsfeedAdBlockV2", "Set stories ads settings at zero values");
             } else {
                 json.remove("ads");
-                if (dev()) Log.d("NewsfeedAdBlockV2", "Removed stories ads block");
+                Log.d("NewsfeedAdBlockV2", "Removed stories ads block");
             }
         }
 
-        JSONArray items = json.optJSONArray("items");
-        if (items != null) {
-            for (int i = 0; i < items.length(); i++) {
-                JSONObject item = items.optJSONObject(i);
-                if (item != null) {
-                    parseStoriesItem(item);
-                }
-            }
+        try {
+            parseItemsStories(json.getJSONArray("items"));
+        } catch (JSONException e) {
+            e.getStackTrace();
         }
 
         return json;
+    }
+
+    private static void parseItemsStories(JSONArray items) throws JSONException {
+        for (int i = 0; i < items.length(); i++) {
+            parseStoriesItem(items.getJSONObject(i));
+        }
+    }
+
+    public static void resetAdsSettings(JSONObject ad) throws JSONException {
+        ad.getJSONObject("settings")
+                .put("stories_interval", 0)
+                .put("authors_interval", 0)
+                .put("time_interval", 0)
+                .put("stories_init", 0)
+                .put("authors_init", 0)
+                .put("time_init", 0);
     }
 }

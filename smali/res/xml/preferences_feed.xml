@@ -100,9 +100,9 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfeedwork">
         <Preference
-                android:key="officialnewssett"
-                android:summary="@string/officialnewssett_summary"
-                android:title="@string/officialnewssett"/>
+                android:enabled="false"
+                android:summary="@string/why_news_not_updated_summ"
+                android:title="@string/why_news_not_updated_title"/>
         <com.vtosters.lite.ui.SummaryListPreference
                 android:defaultValue="order"
                 android:dialogTitle="@string/newsfeed_settings_order"
@@ -111,10 +111,10 @@
                 android:key="newsfeed_order"
                 android:textColor="?text_secondary"
                 android:title="@string/newsfeed_settings_order"/>
-<!--        <Preference-->
-<!--                android:enabled="false"-->
-<!--                android:summary="@string/why_news_not_updated_summ"-->
-<!--                android:title="@string/why_news_not_updated_title"/>-->
+        <Preference
+                android:key="officialnewssett"
+                android:summary="@string/officialnewssett_summary"
+                android:title="@string/officialnewssett"/>
         <com.vtosters.lite.ui.SummaryListPreference
                 android:defaultValue="default"
                 android:dialogTitle="@string/feed_other_update_dialog_title"
@@ -122,6 +122,11 @@
                 android:entryValues="@array/newsupdate"
                 android:key="newsupdate"
                 android:title="@string/feed_other_update"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="unlockCustomLists"
+                android:summary="Разблокировать новостные списки как футбол или региональные новости в списке новостей"
+                android:title="Новостные списки"/>
         <Preference
                 android:key="newsfeedlistmanager"
                 android:summary="@string/newsfeedlistmanager_summ"
@@ -129,11 +134,6 @@
         <Preference
                 android:key="newsfeedlistmanager_reset"
                 android:title="@string/newsfeedlistmanager_reset_title"/>
-<!--        <com.vtosters.lite.ui.MaterialSwitchPreference-->
-<!--                android:defaultValue="false"-->
-<!--                android:key="force_disable_psm"-->
-<!--                android:summary="@string/force_disable_psm_summ"-->
-<!--                android:title="@string/force_disable_psm_title"/>-->
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="feedcache"
