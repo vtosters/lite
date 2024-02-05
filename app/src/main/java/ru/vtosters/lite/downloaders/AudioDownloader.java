@@ -32,7 +32,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getString;
  */
 
 public class AudioDownloader {
-    public static final ExecutorService executor = Executors.newCachedThreadPool();
     public static final String dlpath = Preferences.getBoolValue("dldir", false) ? Environment.DIRECTORY_DOWNLOADS : Environment.DIRECTORY_MUSIC;
 
     public static void downloadPlaylist(Playlist playlist) {
@@ -71,7 +70,7 @@ public class AudioDownloader {
         var trackFile = MusicCacheFilesHook.getTrackFile(trackId);
         if (!trackFile.exists())
             trackFile.getParentFile().mkdirs();
-        executor.submit(() -> downloadM3U8(track, true));
+        downloadM3U8(track, true);
     }
 
     public static void cachePlaylist(Playlist playlist) {
