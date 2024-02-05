@@ -3,6 +3,7 @@ package ru.vtosters.lite.music.downloader;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.google.android.exoplayer2.source.hls.playlist.e;
 import com.google.android.exoplayer2.source.hls.playlist.f;
 import com.google.android.exoplayer2.source.hls.playlist.f.a;
@@ -22,8 +23,10 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+
 import java.io.File;
 import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -31,20 +34,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class M3UDownloader
-        implements ITrackDownloader {
-
-
+public class M3UDownloader implements ITrackDownloader {
     public static M3UDownloader getInstance() {
         return Holder.INSTANCE;
     }
 
-    static void parse(
-            File outDir,
-            Callback callback,
-            MusicTrack track,
-            boolean cache)
-            throws IOException {
+    static void parse(File outDir, Callback callback, MusicTrack track, boolean cache) throws IOException {
         var parser = new com.google.android.exoplayer2.source.hls.playlist.h(e.a(track.D));
         var baseUri = track.D.substring(0, track.D.lastIndexOf("/") + 1);
         var segments = ((f) parser.a(Uri.parse(baseUri), IOUtils.openStream(track.D))).o;
@@ -53,7 +48,6 @@ public class M3UDownloader
         var resultTs = getResultTsFile(track);
         var resultMp3 = getResultMp3File(outDir, cache, track);
         try {
-
             byte[] buff = downloadTs(baseUri, segments, progress, callback);
 
             IOUtils.writeToFile(resultTs, buff);
@@ -81,21 +75,14 @@ public class M3UDownloader
             } else {
                 callback.onSuccess();
             }
-        } catch (InvalidAlgorithmParameterException | InvalidKeyException |
-                 IllegalBlockSizeException |
-                 BadPaddingException | NoSuchPaddingException |
-                 NoSuchAlgorithmException e) {
+        } catch (GeneralSecurityException e) {
             Log.e("M3UDownloader", "Failed to download track", e.getCause());
         } finally {
             resultTs.delete();
         }
     }
 
-    private static byte[]
-    downloadTs(String baseUri, List<a> segments,
-               AtomicInteger progress, Callback callback
-    ) throws IOException, InvalidAlgorithmParameterException,
-            InvalidKeyException, IllegalBlockSizeException, BadPaddingException, NoSuchPaddingException, NoSuchAlgorithmException {
+    private static byte[] downloadTs(String baseUri, List<a> segments, AtomicInteger progress, Callback callback) throws IOException, InvalidAlgorithmParameterException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, NoSuchPaddingException, NoSuchAlgorithmException {
         byte[] total = new byte[0];
 
         int size = segments.size();
@@ -107,8 +94,7 @@ public class M3UDownloader
                 var cipherKey = new SecretKeySpec(IOUtils.readFully(IOUtils.openStream(segment.g)), "AES");
                 var cipherBytes = segment.h.getBytes();
                 //if IV doesn't pass, it must be created manually
-                if (cipherBytes.length != 16)
-                    cipherBytes = new byte[16];
+                if (cipherBytes.length != 16) cipherBytes = new byte[16];
                 var cipherIv = new IvParameterSpec(cipherBytes);
                 cipher.init(Cipher.DECRYPT_MODE, cipherKey, cipherIv);
                 buff = cipher.doFinal(buff);
@@ -120,15 +106,14 @@ public class M3UDownloader
             System.arraycopy(buff, 0, newBytes, len, n);
             total = newBytes;
 
-            callback.onProgress(10 +
-                    Math.round(80.0f * progress.addAndGet(1) / size));
+            callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / size));
         }
         return total;
     }
 
 
     public static String getTitle(MusicTrack track) {
-        return track.f + (!TextUtils.isEmpty(track.g) ? + '(' + track.g + ')' : "");
+        return track.f + (!TextUtils.isEmpty(track.g) ? '(' + track.g + ')' : "");
     }
 
     static File getTsesDir(MusicTrack track) {
@@ -147,11 +132,7 @@ public class M3UDownloader
     }
 
     @Override
-    public void downloadTrack(
-            MusicTrack track,
-            File outDir,
-            Callback callback,
-            boolean cache) {
+    public void downloadTrack(MusicTrack track, File outDir, Callback callback, boolean cache) {
         if (track.D.isEmpty()) {
             Log.d("TrackDownloader", "link error: " + track.y1() + ", title: " + M3UDownloader.getTitle(track));
             callback.onFailure();
@@ -161,7 +142,7 @@ public class M3UDownloader
             parse(outDir, callback, track, cache);
         } catch (IOException e) {
             callback.onFailure();
-            Log.e("M3UDownloader", e + "");
+            Log.e("M3UDownloader", String.valueOf(e));
             throw new RuntimeException(e);
         }
     }
