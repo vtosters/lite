@@ -34,15 +34,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class M3UDownloader
         implements ITrackDownloader {
 
-    private static final Cipher CIPHER;
-
-    static {
-        try {
-            CIPHER = Cipher.getInstance("AES/CBC/PKCS7Padding");
-        } catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
-            throw new ExceptionInInitializerError(e);
-        }
-    }
 
     public static M3UDownloader getInstance() {
         return Holder.INSTANCE;
@@ -88,10 +79,10 @@ public class M3UDownloader
                     callback.onFailure();
                 }
             }
-        } catch (InvalidAlgorithmParameterException |
-                 InvalidKeyException |
+        } catch (InvalidAlgorithmParameterException | InvalidKeyException |
                  IllegalBlockSizeException |
-                 BadPaddingException e) {
+                 BadPaddingException | NoSuchPaddingException |
+                 NoSuchAlgorithmException e) {
             Log.e("M3UDownloader", "Failed to download track", e.getCause());
         } finally {
             resultTs.delete();
@@ -102,7 +93,7 @@ public class M3UDownloader
     downloadTs(String baseUri, List<a> segments,
                AtomicInteger progress, Callback callback
     ) throws IOException, InvalidAlgorithmParameterException,
-            InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
+            InvalidKeyException, IllegalBlockSizeException, BadPaddingException, NoSuchPaddingException, NoSuchAlgorithmException {
         byte[] total = new byte[0];
 
         int size = segments.size();
@@ -115,9 +106,11 @@ public class M3UDownloader
                 if (cipherBytes.length != 16)
                     cipherBytes = new byte[16];
 
+                Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
+
                 var cipherIv = new IvParameterSpec(cipherBytes);
-                CIPHER.init(Cipher.DECRYPT_MODE, cipherKey, cipherIv);
-                buff = CIPHER.doFinal(buff);
+                cipher.init(Cipher.DECRYPT_MODE, cipherKey, cipherIv);
+                buff = cipher.doFinal(buff);
             }
 
             // copy on write
