@@ -97,6 +97,8 @@ public class M3UDownloader
         byte[] total = new byte[0];
 
         int size = segments.size();
+        Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
+
         for (var segment : segments) {
             var buff = IOUtils.readFully(IOUtils.openStream(baseUri + segment.a/*url*/));
             if (!TextUtils.isEmpty(segment.g)) {
@@ -105,9 +107,6 @@ public class M3UDownloader
                 //if IV doesn't pass, it must be created manually
                 if (cipherBytes.length != 16)
                     cipherBytes = new byte[16];
-
-                Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
-
                 var cipherIv = new IvParameterSpec(cipherBytes);
                 cipher.init(Cipher.DECRYPT_MODE, cipherKey, cipherIv);
                 buff = cipher.doFinal(buff);
