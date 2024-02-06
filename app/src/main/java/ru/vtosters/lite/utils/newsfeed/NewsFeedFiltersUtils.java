@@ -72,7 +72,7 @@ public class NewsFeedFiltersUtils {
                 if (copyRight != null) {
                     String name = copyRight.getString("name").toLowerCase();
                     String link = copyRight.getString("link").toLowerCase();
-                    return list.stream().anyMatch(filter -> name.contains(filter) || link.contains(filter));
+                    return list.stream().anyMatch(filter -> name.contains(filter.toLowerCase()) || link.contains(filter.toLowerCase()));
                 }
             }
         }
@@ -279,7 +279,7 @@ public class NewsFeedFiltersUtils {
 
         if (!list.isEmpty()) {
             return list.stream().anyMatch(adword -> {
-                if (textInLowerCase.contains(adword)) {
+                if (textInLowerCase.contains(adword.toLowerCase())) {
                     if (dev()) {
                         Log.d("NewsfeedAdBlockV2", text);
                         Log.d("NewsfeedAdBlockV2", "Block word: " + adword);
