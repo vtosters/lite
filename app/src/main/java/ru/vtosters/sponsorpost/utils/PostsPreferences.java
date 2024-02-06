@@ -2,6 +2,7 @@ package ru.vtosters.sponsorpost.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.sponsorpost.data.Post;
 
@@ -57,6 +58,19 @@ public class PostsPreferences {
                 .apply();
     }
 
+    public static void saveAdPostInfo(long ownerId, long postId) {
+        Set<String> currentStringSet = preferences.getStringSet("posts", new HashSet<>());
+        Set<String> newStringSet = new HashSet<>(currentStringSet);
+
+        newStringSet.add(ownerId + "_" + postId);
+
+        Log.d("SponsorPost", ownerId + "_" + postId);
+
+        preferences.edit()
+                .putStringSet("posts", newStringSet)
+                .apply();
+    }
+
     public static boolean isGroupAd(long ownerId) {
         Set<String> isGroupAd = preferences.getStringSet("groupIds", new HashSet<>());
 
@@ -68,10 +82,10 @@ public class PostsPreferences {
     }
 
     public static boolean isPostAd(long ownerId, long postId) {
-        Set<String> hasPost = preferences.getStringSet("posts", new HashSet<>());
-        Set<String> hasSpecifiedGroupPosts = preferences.getStringSet(ownerId + "_posts", new HashSet<>());
-
         if (isEnabled() && isGroupAd(ownerId)) {
+            Set<String> hasSpecifiedGroupPosts = preferences.getStringSet(ownerId + "_posts", new HashSet<>());
+            Set<String> hasPost = preferences.getStringSet("posts", new HashSet<>());
+
             return hasPost.contains(ownerId + "_" + postId) || hasSpecifiedGroupPosts.contains(ownerId + "_" + postId);
         } else {
             return false;

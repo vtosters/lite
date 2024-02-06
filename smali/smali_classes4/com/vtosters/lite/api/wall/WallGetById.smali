@@ -23,6 +23,8 @@
     .line 1
     invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
+    invoke-static {p1}, Lru/vtosters/hooks/NewsfeedHook;->takeOwnerIdPostIdSponsorPost([Ljava/lang/String;)V
+
     const-string v0, ","
 
     .line 2

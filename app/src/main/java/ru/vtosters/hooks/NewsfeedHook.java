@@ -20,6 +20,7 @@ import java.util.List;
 import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.hooks.other.Preferences.*;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 public class NewsfeedHook {
     public static long getUpdateNewsfeed(boolean refresh_timeout) {
@@ -101,6 +102,27 @@ public class NewsfeedHook {
             VTExecutors.getIoScheduler().a(() -> {
                 List<Long> postIds = PostService.getPostIdsByOwnerId((long) ownerid, 0L);
                 PostsPreferences.saveGroupSpecifiedPosts(postIds, (long) ownerid);
+            });
+        }
+    }
+
+    public static void takeOwnerIdPostIdSponsorPost(String[] strArr) {
+        long ownerid = Long.parseLong(strArr[0].split("_")[0]);
+        long postId = Long.parseLong(strArr[0].split("_")[1]);
+
+        if (PostsPreferences.isPostAd(ownerid, postId)) {
+            sendToast("Этот пост помечен как рекламный");
+            return;
+        }
+
+        if (NetworkUtils.isNetworkConnected() && PostsPreferences.isEnabled() && !Preferences.serverFeaturesDisable() && PostsPreferences.isGroupAd(ownerid)) {
+            VTExecutors.getIoScheduler().a(() -> {
+                boolean postIds = PostService.isPostAd(ownerid, postId);
+
+                if (postIds) {
+                    PostsPreferences.saveAdPostInfo(ownerid, postId);
+                    sendToast("Этот пост помечен как рекламный");
+                }
             });
         }
     }
