@@ -39,13 +39,13 @@ public class PostsPreferences {
                 .apply();
     }
 
-    public static void saveGroupSpecifiedPosts(List<Post> posts, Long ownerId) {
-        Set<String> stringSet = posts.stream()
-                .map(post -> post.getOwnerId() + "_" + post.getPostId())
+    public static void saveGroupSpecifiedPosts(List<Long> postsIds, Long ownerId) {
+        Set<String> stringSet = postsIds.stream()
+                .map(post -> ownerId + "_" + post)
                 .collect(Collectors.toSet());
 
         preferences.edit()
-                .putStringSet("posts_" + ownerId, stringSet)
+                .putStringSet(ownerId + "_posts", stringSet)
                 .apply();
     }
 
@@ -69,9 +69,10 @@ public class PostsPreferences {
 
     public static boolean isPostAd(long ownerId, long postId) {
         Set<String> hasPost = preferences.getStringSet("posts", new HashSet<>());
+        Set<String> hasSpecifiedGroupPosts = preferences.getStringSet(ownerId + "_posts", new HashSet<>());
 
-        if (!hasPost.isEmpty() && isEnabled() && isGroupAd(ownerId)) {
-            return hasPost.contains(ownerId + "_" + postId);
+        if (isEnabled() && isGroupAd(ownerId)) {
+            return hasPost.contains(ownerId + "_" + postId) || hasSpecifiedGroupPosts.contains(ownerId + "_" + postId);
         } else {
             return false;
         }

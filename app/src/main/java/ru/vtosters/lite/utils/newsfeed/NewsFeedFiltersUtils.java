@@ -216,7 +216,7 @@ public class NewsFeedFiltersUtils {
             return false;
         }
 
-        if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !isWhitelistedFilters(post)) {
+        if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !isWhitelistedAd(post)) {
             logRemovedPost(post, source, "sponsorpost");
             return false;
         }

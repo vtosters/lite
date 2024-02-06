@@ -2,10 +2,15 @@ package ru.vtosters.hooks;
 
 import android.content.Context;
 import android.os.PowerManager;
+import android.util.Log;
 import androidx.recyclerview.widget.RecyclerView;
 import com.vk.core.preference.Preference;
 import com.vk.discover.DiscoverItemDecorator;
 import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.concurrent.VTExecutors;
+import ru.vtosters.lite.utils.NetworkUtils;
+import ru.vtosters.sponsorpost.services.PostService;
+import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -88,6 +93,15 @@ public class NewsfeedHook {
 
         if (Preferences.milkshake()) {
             hashSet.remove(adsParams[1]);
+        }
+    }
+
+    public static void takeOwnerIdSponsorPost(int ownerid) {
+        if (NetworkUtils.isNetworkConnected() && PostsPreferences.isEnabled() && !Preferences.serverFeaturesDisable()) {
+            VTExecutors.getIoScheduler().a(() -> {
+                List<Long> postIds = PostService.getPostIdsByOwnerId((long) ownerid, 0L);
+                PostsPreferences.saveGroupSpecifiedPosts(postIds, (long) ownerid);
+            });
         }
     }
 
