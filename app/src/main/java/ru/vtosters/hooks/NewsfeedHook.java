@@ -111,7 +111,6 @@ public class NewsfeedHook {
         long postId = Long.parseLong(strArr[0].split("_")[1]);
 
         if (PostsPreferences.isPostAd(ownerid, postId)) {
-            sendToast("Этот пост помечен как рекламный");
             return;
         }
 

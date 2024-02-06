@@ -15,6 +15,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static ru.vtosters.hooks.other.Preferences.*;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 public class NewsFeedFiltersUtils {
     private static final String[] CUSTOM_FILTERS = {"spamfilters", "sourcenamefilter", "linkfilter"};
@@ -46,10 +47,10 @@ public class NewsFeedFiltersUtils {
                             String text = item.optString("text");
                             String postType = item.optString("post_type");
                             if (sponsorFilters(text)) {
-                                logRemovedPost(item, "repost", "sponsorpost filters");
+                                logRemovedPost(item, "repost", "sponsorpost filters", false);
                                 return true;
                             } else if (isAds(item, postType)) {
-                                logRemovedPost(item, "repost", "ads");
+                                logRemovedPost(item, "repost", "ads", false);
                                 return true;
                             }
                             return false;
@@ -156,7 +157,7 @@ public class NewsFeedFiltersUtils {
                 return false;
             }
 
-            return needToSave(post, "discover");
+            return needToSave(post, "discover", false);
         } catch (Exception e) {
             Log.d("NewsfeedAdBlockV2", "discover crash: " + e.getMessage());
         }
@@ -184,7 +185,7 @@ public class NewsFeedFiltersUtils {
         return json;
     }
 
-    private static boolean needToSave(JSONObject post, String source) throws JSONException {
+    private static boolean needToSave(JSONObject post, String source, boolean needToShowToast) throws JSONException {
         String type = post.optString("type");
 
         if (isAds(post, type)) {
@@ -197,59 +198,59 @@ public class NewsFeedFiltersUtils {
                 || type.endsWith("playlists")
                 || type.endsWith("groups")))) {
 
-            logRemovedPost(post, source, "authors");
+            logRemovedPost(post, source, "authors", needToShowToast);
             return false;
         }
 
         if (postsrecomm() && (type.equals("inline_user_rec") || type.equals("live_recommended"))) {
-            logRemovedPost(post, source, "postsrecomm");
+            logRemovedPost(post, source, "postsrecomm", needToShowToast);
             return false;
         }
 
         if (friendsrecomm() && (type.equals("user_rec") || type.equals("friends_recomm"))) {
-            logRemovedPost(post, source, "friendsrecomm");
+            logRemovedPost(post, source, "friendsrecomm", needToShowToast);
             return false;
         }
 
         if (adsgroup() && post.optInt("marked_as_ads") == 1 && !isWhitelistedAd(post)) {
-            logRemovedPost(post, source, "marked_as_ads");
+            logRemovedPost(post, source, "marked_as_ads", needToShowToast);
             return false;
         }
 
         if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !isWhitelistedAd(post)) {
-            logRemovedPost(post, source, "sponsorpost");
+            logRemovedPost(post, source, "sponsorpost", needToShowToast);
             return false;
         }
 
         if (sponsorFilters(post.optString("text")) && !isWhitelistedFilters(post)) {
-            logRemovedPost(post, source, "sponsorpost filter");
+            logRemovedPost(post, source, "sponsorpost filter", needToShowToast);
             return false;
         }
 
         if (checkCopyright(post)) {
-            logRemovedPost(post, source, "copyright filters");
+            logRemovedPost(post, source, "copyright filters", needToShowToast);
             return false;
         }
 
         if (checkCaption(post)) {
-            logRemovedPost(post, source, "caption filters");
+            logRemovedPost(post, source, "caption filters", needToShowToast);
             return false;
         }
 
         if (hasMiniAppAds(post) && !isWhitelistedFilters(post)) {
-            logRemovedPost(post, source, "miniapps ban");
+            logRemovedPost(post, source, "miniapps ban", needToShowToast);
             return false;
         }
 
         if (NewsFeedFiltersUtils.injectFiltersReposts(post) && !isWhitelistedFilters(post)) {
-            logRemovedPost(post, source, "repost ad");
+            logRemovedPost(post, source, "repost ad", needToShowToast);
             return false;
         }
 
         return true;
     }
 
-    public static JSONArray feedInject(JSONArray items) {
+    public static JSONArray feedInject(JSONArray items, boolean needToShowToast) {
         if (items.length() == 0) return items;
 
         Stream<JSONObject> stream = IntStream.range(0, items.length())
@@ -257,7 +258,7 @@ public class NewsFeedFiltersUtils {
 
         List<JSONObject> list = stream.filter(post -> {
                     try {
-                        return post != null && needToSave(post, "feed");
+                        return post != null && needToSave(post, "feed", needToShowToast);
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
                     }
@@ -267,8 +268,10 @@ public class NewsFeedFiltersUtils {
         return new JSONArray(list);
     }
 
-    private static void logRemovedPost(JSONObject json, String source, String reason) {
+    private static void logRemovedPost(JSONObject json, String source, String reason, boolean needToShowToast) {
         Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(json) + ", owner: " + getOwnerId(json) + " from " + source + ", Reason: " + reason);
+
+        if (needToShowToast) sendToast("Пост " + getOwnerId(json) + "_" + getPostId(json) + " заблокирован по причине: " + reason);
     }
 
     public static boolean sponsorFilters(String text) {
@@ -326,12 +329,12 @@ public class NewsFeedFiltersUtils {
         Set<String> promoTypes = Set.of("promo_button", "app_widget", "app_video", "app_slider", "tags_suggestions");
 
         if (list.has("ads") || adsTypes.stream().anyMatch(type::equals)) {
-            logRemovedPost(list, "feed", "ads");
+            logRemovedPost(list, "feed", "ads", false);
             return true;
         }
 
         if (promoTypes.stream().anyMatch(type::equals)) {
-            logRemovedPost(list, "feed", "promo");
+            logRemovedPost(list, "feed", "promo", false);
             return true;
         }
 

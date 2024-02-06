@@ -77,7 +77,7 @@
         }
     .end annotation
 
-    invoke-static {p2}, Lru/vtosters/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    invoke-static {p2}, Lru/vtosters/hooks/AdBlockHook;->wallGetById(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
     move-result-object p2
 

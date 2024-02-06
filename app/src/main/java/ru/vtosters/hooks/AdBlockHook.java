@@ -11,11 +11,15 @@ public class AdBlockHook {
     }
 
     public static JSONArray feedInject(JSONArray items) {
-        return NewsFeedFiltersUtils.feedInject(items);
+        return NewsFeedFiltersUtils.feedInject(items, false);
 
     }
 
-    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
+    public static JSONArray wallGetById(JSONArray items) {
+        return NewsFeedFiltersUtils.feedInject(items, true);
+    }
+
+    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) {
         return NewsFeedFiltersUtils.storiesAds(json, isDeleteFix);
     }
 }
