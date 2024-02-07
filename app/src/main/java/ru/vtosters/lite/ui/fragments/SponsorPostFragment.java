@@ -26,6 +26,15 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
         requireActivity().getWindow().setStatusBarColor(ThemesUtils.getBackgroundContent());
         requireActivity().getWindow().setNavigationBarColor(ThemesUtils.getBackgroundContent());
 
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "Что такое SponsorPost?",
+                "Функция SponsorPost предназначена для получения рекламных списков постов с сервера и актуальных списков слов и выражений для блокировки рекламных постов во ВКонтакте, которые не отмечены как рекламные.\n\nЭти фильтры и посты собираются людьми, что позволяет эффективно и своевременно выявлять и блокировать нежелательный контент в ленте пользователей. \uD83D\uDEAB\uD83D\uDCDD",
+                null,
+                null
+        );
+
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Sponsor Post");
 
         if (Preferences.serverFeaturesDisable()) {
@@ -53,7 +62,7 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
         }
 
         requireActivity().runOnUiThread(() -> {
-                    PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Фильтры постов");
+                    PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Sponsor Post Фильтры");
 
                     List<Filter> lists;
 
