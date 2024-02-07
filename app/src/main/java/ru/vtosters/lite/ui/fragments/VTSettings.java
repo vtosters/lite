@@ -71,13 +71,6 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         return AndroidUtils.getString(strRes) + ": " + AndroidUtils.getString(R.string.vtlsettdisabled);
     }
 
-    public static String getSSFSsumm() {
-        if (Preferences.hasSpecialVerif())
-            return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifyes);
-
-        return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifno);
-    }
-
     public static String getTGSsumm() {
         return AndroidUtils.getString(R.string.vtltgssumm) + ": " + TelegramStickersService.getInstance(AndroidUtils.getGlobalContext()).getActivePacksListReference().size();
     }

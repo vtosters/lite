@@ -37,16 +37,15 @@ import java.util.Map;
 public final class ResourceTableChunk extends ChunkWithChunks {
 
     /**
+     * The packages contained in this resource table.
+     */
+    private final Map<String, PackageChunk> packages = new HashMap<>();
+    /**
      * A string pool containing all string resource values in the entire resource table.
      */
     private StringPoolChunk stringPool;
 
-    /**
-     * The packages contained in this resource table.
-     */
-    private final Map<String, PackageChunk> packages = new HashMap<>();
-
-    protected ResourceTableChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    ResourceTableChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
         // packageCount. We ignore this, because we already know how many chunks we have.
         Preconditions.checkState(buffer.getInt() >= 1, "ResourceTableChunk package count was < 1.");

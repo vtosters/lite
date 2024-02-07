@@ -1,7 +1,6 @@
 package ru.vtosters.lite.net;
 
 import android.util.Base64;
-import android.util.Log;
 
 import java.io.*;
 import java.net.*;

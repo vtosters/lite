@@ -23,6 +23,8 @@
     .line 1
     invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
+    invoke-static {p1}, Lru/vtosters/hooks/NewsfeedHook;->takeOwnerIdPostIdSponsorPost([Ljava/lang/String;)V
+
     const-string v0, ","
 
     .line 2
@@ -75,7 +77,7 @@
         }
     .end annotation
 
-    invoke-static {p2}, Lru/vtosters/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    invoke-static {p2}, Lru/vtosters/hooks/AdBlockHook;->wallGetById(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
     move-result-object p2
 

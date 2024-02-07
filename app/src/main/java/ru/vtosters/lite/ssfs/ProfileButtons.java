@@ -7,7 +7,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.VTVerifications;
 
 import java.util.HashMap;
 

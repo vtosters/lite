@@ -29,7 +29,6 @@ public class Preferences {
 
         GmsHook.fixGapps();
         ProxyUtils.setProxy();
-        NewsFeedFiltersUtils.setupFilters();
         VTVerifications.load(application);
         LifecycleUtils.registerActivities(application);
 
