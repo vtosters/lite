@@ -3,10 +3,11 @@ package ru.vtosters.hooks;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.FriendsCatalogUtils;
-import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
 import ru.vtosters.lite.utils.OnlineBypass;
 import ru.vtosters.lite.utils.SuperAppUtils;
+import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -30,7 +31,7 @@ public class JsonInjectors {
     }
 
     public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
-        return NewsFeedFiltersUtils.newsfeedlist(items);
+        return Preferences.getBoolValue("unlockCustomLists", false) ? NewsFeedFiltersUtils.setNewsfeedLists(items) : items;
     }
 
     public static JSONObject friends(JSONObject json) throws JSONException, ParseException, IOException {

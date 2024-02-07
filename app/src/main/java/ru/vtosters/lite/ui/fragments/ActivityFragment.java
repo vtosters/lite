@@ -5,7 +5,6 @@ import androidx.preference.Preference;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
 
-import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.hooks.other.Preferences.offline;
 
 public class ActivityFragment extends TrackedMaterialPreferenceToolbarFragment {

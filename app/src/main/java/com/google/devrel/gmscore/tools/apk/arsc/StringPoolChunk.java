@@ -89,7 +89,7 @@ public final class StringPoolChunk extends Chunk {
      */
     private boolean isOriginalDeduped = false;
 
-    protected StringPoolChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    StringPoolChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
         stringCount = buffer.getInt();
         styleCount = buffer.getInt();
@@ -310,6 +310,10 @@ public final class StringPoolChunk extends Chunk {
         static final int RES_STRING_POOL_SPAN_END = 0xFFFFFFFF;
         private final List<StringPoolSpan> spans;
 
+        private StringPoolStyle(List<StringPoolSpan> spans) {
+            this.spans = spans;
+        }
+
         static StringPoolStyle create(ByteBuffer buffer, int offset, StringPoolChunk parent) {
             Builder<StringPoolSpan> spans = ImmutableList.builder();
             int nameIndex = buffer.getInt(offset);
@@ -319,10 +323,6 @@ public final class StringPoolChunk extends Chunk {
                 nameIndex = buffer.getInt(offset);
             }
             return new StringPoolStyle(spans.build());
-        }
-
-        private StringPoolStyle(List<StringPoolSpan> spans) {
-            this.spans = spans;
         }
 
         @Override
@@ -384,18 +384,18 @@ public final class StringPoolChunk extends Chunk {
         private final int stop;
         private final StringPoolChunk parent;
 
-        static StringPoolSpan create(ByteBuffer buffer, int offset, StringPoolChunk parent) {
-            int nameIndex = buffer.getInt(offset);
-            int start = buffer.getInt(offset + 4);
-            int stop = buffer.getInt(offset + 8);
-            return new StringPoolSpan(nameIndex, start, stop, parent);
-        }
-
         private StringPoolSpan(int nameIndex, int start, int stop, StringPoolChunk parent) {
             this.nameIndex = nameIndex;
             this.start = start;
             this.stop = stop;
             this.parent = parent;
+        }
+
+        static StringPoolSpan create(ByteBuffer buffer, int offset, StringPoolChunk parent) {
+            int nameIndex = buffer.getInt(offset);
+            int start = buffer.getInt(offset + 4);
+            int stop = buffer.getInt(offset + 8);
+            return new StringPoolSpan(nameIndex, start, stop, parent);
         }
 
         @Override

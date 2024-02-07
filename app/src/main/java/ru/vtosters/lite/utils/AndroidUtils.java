@@ -19,7 +19,6 @@ import androidx.annotation.StringRes;
 import androidx.core.app.NotificationManagerCompat;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
-import ru.vtosters.hooks.other.Preferences;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -33,12 +32,6 @@ import java.util.Random;
 
 public class AndroidUtils {
     private static final String ALLOWED_CHARACTERS = "0123456789qwertyuiopasdfghjklzxcvbnm";
-    public enum ScreenSize {
-        small,
-        normal,
-        large,
-        xlarge
-    }
 
     public static boolean isDebuggable() {
         return 0 != (AndroidUtils.getGlobalContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE);
@@ -223,5 +216,12 @@ public class AndroidUtils {
 
     public static String upString(String s) {
         return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
+    }
+
+    public enum ScreenSize {
+        small,
+        normal,
+        large,
+        xlarge
     }
 }

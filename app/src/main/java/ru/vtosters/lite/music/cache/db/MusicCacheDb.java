@@ -95,6 +95,7 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
         }
         return null;
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Constants.CREATE_QUERY);
@@ -104,11 +105,11 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < newVersion) {
             List<MusicTrack> tracks = getTracksWithCursor(db.query(Constants.TABLE_NAME, null, null, null, null, null, null));
-            
+
             db.execSQL(Constants.DROP_QUERY);
-            
+
             onCreate(db);
-            
+
             for (MusicTrack track : tracks) {
                 ContentValues vals = new ContentValues();
                 vals.put(Constants.COLUMN_TRACK_ID, track.y1());
@@ -136,9 +137,9 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
         vals.put(Constants.COLUMN_EXPLICIT, Boolean.compare(explicit, true));
         vals.put(Constants.COLUMN_DURATION, duration);
         vals.put(Constants.COLUMN_HAS_ARTWORK, Boolean.compare(hasArtwork, true));
-        
+
         long row = getWritableDatabase().insert(Constants.TABLE_NAME, null, vals);
-        
+
         if (AndroidUtils.isDebuggable()) Log.d("MusicCacheDb", "addTrack(): " + row);
     }
 

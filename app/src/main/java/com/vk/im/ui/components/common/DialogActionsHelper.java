@@ -19,7 +19,7 @@ import java.util.List;
 public final class DialogActionsHelper {
     public static final DialogActionsHelper a = new DialogActionsHelper();
 
-    public final List<DialogAction> a(ImConfig imConfig, Dialog dialog, ProfilesSimpleInfo profilesSimpleInfo) {
+    public List<DialogAction> a(ImConfig imConfig, Dialog dialog, ProfilesSimpleInfo profilesSimpleInfo) {
         if (dialog != null && profilesSimpleInfo != null) {
             long b2 = TimeProvider.f.b();
             ChatSettings z1 = dialog.z1();
@@ -84,7 +84,7 @@ public final class DialogActionsHelper {
         return new ArrayList<>();
     }
 
-    public final List<DialogAction> a(Dialog dialog, ProfilesSimpleInfo profilesSimpleInfo) {
+    public List<DialogAction> a(Dialog dialog, ProfilesSimpleInfo profilesSimpleInfo) {
         long b2 = TimeProvider.f.b();
         Profile profile = profilesSimpleInfo.get(dialog.getId());
 
@@ -138,7 +138,7 @@ public final class DialogActionsHelper {
         return arrayList;
     }
 
-    public final boolean a(Dialog dialog) {
+    public boolean a(Dialog dialog) {
         if (dialog.V1() || !dialog.y1()) {
             return false;
         }

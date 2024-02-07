@@ -41,6 +41,8 @@
     .line 21
     invoke-virtual {p0, p5, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
+    invoke-static {p1}, Lru/vtosters/hooks/NewsfeedHook;->takeOwnerIdSponsorPost(I)V
+
     const-string p1, "offset"
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
@@ -96,6 +98,8 @@
 
     .line 4
     invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
+
+    invoke-static {p1}, Lru/vtosters/hooks/NewsfeedHook;->takeOwnerIdSponsorPost(I)V
 
     .line 5
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z

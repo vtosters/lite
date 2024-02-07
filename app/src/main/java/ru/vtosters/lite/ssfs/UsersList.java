@@ -18,8 +18,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.vtosters.hooks.other.Preferences.getBoolValue;
-
 public class UsersList {
     private static final String TAG = "UsersList";
     private static final List<Integer> descriptionsList = new ArrayList<>();
