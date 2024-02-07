@@ -15,7 +15,7 @@ public class Updates {
     public static void updateFilters() {
         List<Integer> savedFilterIds = FiltersPreferences.getAllFilterIds();
 
-        if (savedFilterIds.isEmpty() && NetworkUtils.isNetworkConnected()) {
+        if (savedFilterIds.isEmpty() || !NetworkUtils.isNetworkConnected()) {
             return;
         }
 
