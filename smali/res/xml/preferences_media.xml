@@ -51,9 +51,9 @@
                 android:key="musicdefcatalog"
                 android:title="@string/musicdefcatalog_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
+                android:defaultValue="true"
                 android:key="setMetaData"
-                android:summary="Сохранять id3v2 теги для песен для MP3 (Экспериментально)"
+                android:summary="Сохранять id3v2 теги для песен для MP3"
                 android:title="Сохранять метадату песен"/>
         <Preference
                 android:key="audio_download"
