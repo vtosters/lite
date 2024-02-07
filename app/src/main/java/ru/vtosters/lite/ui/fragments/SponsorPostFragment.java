@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
@@ -10,6 +11,7 @@ import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.services.FilterService;
 import ru.vtosters.sponsorpost.utils.FiltersPreferences;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
+import ru.vtosters.sponsorpost.utils.Updates;
 
 import java.util.List;
 
@@ -26,18 +28,29 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Sponsor Post");
 
-        PreferenceFragmentUtils.addMaterialSwitchPreference(
-                getPreferenceScreen(),
-                "sponsorpost",
-                "Фильтр постов",
-                "Получать списки рекламных постов, которые не блокируются рекламными фильтрами",
-                null,
-                PostsPreferences.isEnabled(),
-                (preference, o) -> {
-                    PostsPreferences.setEnabled((boolean) o);
-                    return true;
-                }
-        );
+        if (Preferences.serverFeaturesDisable()) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Фильтр постов отключен",
+                    "Функция отключена в связи с тем что вы отключили сторонние подключения к серверам",
+                    null,
+                    null
+            );
+        } else {
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "sponsorpost",
+                    "Фильтр постов",
+                    "Получать списки рекламных постов в группах и ленте, которые не блокируются рекламными фильтрами",
+                    null,
+                    PostsPreferences.isEnabled(),
+                    (preference, o) -> {
+                        PostsPreferences.setEnabled((boolean) o);
+                        return true;
+                    }
+            );
+        }
 
         requireActivity().runOnUiThread(() -> {
                     PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Фильтры постов");
@@ -60,6 +73,16 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                                 null
                         );
                     } else {
+                        if (Preferences.serverFeaturesDisable()) {
+                            PreferenceFragmentUtils.addPreference(
+                                    getPreferenceScreen(),
+                                    "",
+                                    "Отключены внешние подключения",
+                                    "Фильтры будут обновляться только при заходе в этот раздел, автоматические обновления списков фильтров и самих фильтров на запуске приложения отключены",
+                                    null,
+                                    null
+                            );
+                        }
                         for (var list : lists) {
                             PreferenceFragmentUtils.addMaterialSwitchPreference(
                                     getPreferenceScreen(),
@@ -90,6 +113,8 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                                     return false;
                                 }
                         );
+
+                        Updates.updateFilters();
                     }
                 }
         );

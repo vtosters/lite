@@ -37,8 +37,11 @@ public class MainActivityInjector {
 
         VTExecutors.getSlowTasksScheduler().a(() -> {
             getInstance().autoCleaningCache();
-            Updates.updateFilters();
-            Updates.updatePosts();
+
+            if (!Preferences.serverFeaturesDisable()) {
+                Updates.updateFilters();
+                Updates.updatePosts();
+            }
         }); // slowTasksScheduler
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

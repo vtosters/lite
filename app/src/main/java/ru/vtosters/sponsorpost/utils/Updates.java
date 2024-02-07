@@ -15,7 +15,7 @@ public class Updates {
     public static void updateFilters() {
         List<Integer> savedFilterIds = FiltersPreferences.getAllFilterIds();
 
-        if (savedFilterIds.isEmpty() || Preferences.serverFeaturesDisable()) {
+        if (savedFilterIds.isEmpty() && NetworkUtils.isNetworkConnected()) {
             return;
         }
 
@@ -55,7 +55,7 @@ public class Updates {
         long currentTime = System.currentTimeMillis();
         long weekAgo = currentTime - TimeUnit.DAYS.toMillis(7);
 
-        if (PostsPreferences.isEnabled() && !Preferences.serverFeaturesDisable() && NetworkUtils.isNetworkConnected()) {
+        if (PostsPreferences.isEnabled() && NetworkUtils.isNetworkConnected()) {
             List<Post> posts = PostService.getPosts(weekAgo);
             List<Long> groupIds = PostService.getOwnerIds();
 
