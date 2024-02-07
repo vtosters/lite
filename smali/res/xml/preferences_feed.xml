@@ -14,6 +14,10 @@
         <Preference
                 android:key="whitelisted_ad_groups"
                 android:title="@string/whitelisted_ad_groups_title"/>
+        <Preference
+                android:key="sponsorpost"
+                android:summary="Sponsor Post - современный и эффективный способ блокировки рекламы от команды ВТостерс"
+                android:title="Настройки Sponsor Post"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/stories">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -53,10 +57,6 @@
                 android:title="@string/vtlrecommendmark"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfilters">
-        <Preference
-                android:key="sponsorpost"
-                android:summary="SponsorPost - современный и эффективный способ блокировки рекламы от команды ВТостерс"
-                android:title="Настройки SponsorPost"/>
         <Preference
                 android:enabled="false"
                 android:summary="@string/vtlhtmfsummary"

@@ -128,4 +128,9 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                 }
         );
     }
+
+    @Override
+    public int T4() {
+        return com.vtosters.lite.R.string.vtlfeed;
+    }
 }
