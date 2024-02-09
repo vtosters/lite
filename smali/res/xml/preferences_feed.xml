@@ -100,10 +100,6 @@
                 android:title="@string/feed_ads_sources"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfeedwork">
-        <Preference
-                android:enabled="false"
-                android:summary="@string/why_news_not_updated_summ"
-                android:title="@string/why_news_not_updated_title"/>
         <com.vtosters.lite.ui.SummaryListPreference
                 android:defaultValue="order"
                 android:dialogTitle="@string/newsfeed_settings_order"
@@ -113,9 +109,9 @@
                 android:textColor="?text_secondary"
                 android:title="@string/newsfeed_settings_order"/>
         <Preference
-                android:key="officialnewssett"
-                android:summary="@string/officialnewssett_summary"
-                android:title="@string/officialnewssett"/>
+                android:enabled="false"
+                android:summary="@string/why_news_not_updated_summ"
+                android:title="@string/why_news_not_updated_title"/>
         <com.vtosters.lite.ui.SummaryListPreference
                 android:defaultValue="default"
                 android:dialogTitle="@string/feed_other_update_dialog_title"

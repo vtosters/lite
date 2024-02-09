@@ -65,9 +65,10 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                     PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Sponsor Post Фильтры");
 
                     List<Filter> lists;
+                    List<Filter> downloaded = FiltersPreferences.getAllDownloadedFilters();
 
                     if (!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) {
-                        lists = FiltersPreferences.getAllDownloadedFilters();
+                        lists = downloaded;
                     } else {
                         lists = FilterService.getFilters(null);
                     }
@@ -108,6 +109,17 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                                         }
                                         return true;
                                     }
+                            );
+                        }
+
+                        if (!downloaded.isEmpty()) {
+                            PreferenceFragmentUtils.addPreference(
+                                    getPreferenceScreen(),
+                                    "",
+                                    "Количество правил",
+                                    "Используется " + FiltersPreferences.getFiltersLists().size() + " правил для фильтрации ленты",
+                                    null,
+                                    null
                             );
                         }
 

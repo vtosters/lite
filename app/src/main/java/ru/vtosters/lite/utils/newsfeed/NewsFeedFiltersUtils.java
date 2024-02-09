@@ -383,7 +383,7 @@ public class NewsFeedFiltersUtils {
                 Collections.emptySet()
         );
 
-        return whitelist.contains(id);
+        return getBoolValue("invertFilters", false) != whitelist.contains(id);
     }
 
     public static Boolean hasMiniAppAds(JSONObject list) {

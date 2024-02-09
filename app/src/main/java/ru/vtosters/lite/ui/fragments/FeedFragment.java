@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.newsfeed.NewsfeedSettingsFragment;
 import com.vk.newsfeed.controllers.NewsfeedController;
 import com.vtosters.lite.R;
 import com.vtosters.lite.ui.SummaryListPreference;
@@ -26,11 +25,6 @@ public class FeedFragment extends TrackedMaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        findPreference("officialnewssett").setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), NewsfeedSettingsFragment.class);
-            return true;
-        });
-
         findPreference("sponsorpost").setOnPreferenceClickListener(preference -> {
             NavigatorUtils.switchFragment(requireContext(), SponsorPostFragment.class);
             return true;
