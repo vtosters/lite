@@ -32,23 +32,22 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class M3UDownloader implements ITrackDownloader {
     public static M3UDownloader getInstance() {
         return Holder.INSTANCE;
     }
 
-    static void parse(File outDir, Callback callback, MusicTrack track, boolean cache) throws IOException {
+    private static void parse(File outDir, Callback callback, MusicTrack track, boolean cache) throws IOException {
         var parser = new com.google.android.exoplayer2.source.hls.playlist.h(e.a(track.D));
         var baseUri = track.D.substring(0, track.D.lastIndexOf("/") + 1);
         var segments = ((f) parser.a(Uri.parse(baseUri), IOUtils.openStream(track.D))).o;
-        var progress = new AtomicInteger();
+
         callback.onProgress(5);
         var resultTs = getResultTsFile(track);
         var resultMp3 = getResultMp3File(outDir, cache, track);
         try {
-            byte[] buff = downloadTs(baseUri, segments, progress, callback);
+            byte[] buff = downloadTs(baseUri, segments, callback);
 
             IOUtils.writeToFile(resultTs, buff);
 
@@ -64,16 +63,14 @@ public class M3UDownloader implements ITrackDownloader {
             } catch (Throwable e) {
                 throw new RuntimeException("FFmpeg error", e);
             }
-            callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / segments.size()));
+            int sz = segments.size();
+            callback.onProgress(10 + Math.round(80.0F * (sz + 1F) / sz));
             if (cache) {
                 try {
                     MusicCacheImpl.addTrack(track);
-                    callback.onSuccess();
                 } catch (Exception e) {
-                    callback.onFailure();
+                    throw new RuntimeException(e);
                 }
-            } else {
-                callback.onSuccess();
             }
         } catch (GeneralSecurityException e) {
             Log.e("M3UDownloader", "Failed to download track", e.getCause());
@@ -82,12 +79,13 @@ public class M3UDownloader implements ITrackDownloader {
         }
     }
 
-    private static byte[] downloadTs(String baseUri, List<a> segments, AtomicInteger progress, Callback callback) throws IOException, InvalidAlgorithmParameterException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, NoSuchPaddingException, NoSuchAlgorithmException {
+    private static byte[] downloadTs(String baseUri, List<a> segments, Callback callback) throws IOException, InvalidAlgorithmParameterException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, NoSuchPaddingException, NoSuchAlgorithmException {
         byte[] total = new byte[0];
 
         int size = segments.size();
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
 
+        int progress = 0;
         for (var segment : segments) {
             var buff = IOUtils.readFully(IOUtils.openStream(baseUri + segment.a/*url*/));
             if (!TextUtils.isEmpty(segment.g)) {
@@ -106,7 +104,7 @@ public class M3UDownloader implements ITrackDownloader {
             System.arraycopy(buff, 0, newBytes, len, n);
             total = newBytes;
 
-            callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / size));
+            callback.onProgress(10 + Math.round(80.0F * (++progress) / size));
         }
         return total;
     }
@@ -140,6 +138,7 @@ public class M3UDownloader implements ITrackDownloader {
         }
         try {
             parse(outDir, callback, track, cache);
+            callback.onSuccess();
         } catch (IOException e) {
             callback.onFailure();
             Log.e("M3UDownloader", String.valueOf(e));
