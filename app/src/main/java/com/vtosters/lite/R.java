@@ -13025,7 +13025,7 @@ public final class R {
         public static final int ic_launcher_shine = 0x7f0f005d; // 2131689565
         public static final int ic_launcher_shine_background = 0x7f0f005e; // 2131689566
         public static final int ic_launcher_shine_foreground = 0x7f0f005f; // 2131689567
-        public static final int vt_adaptive_launcher_foneground = 0x7f0f0043; // 2131689539
+        public static final int vt_adaptive_launcher_foreground = 0x7f0f0043; // 2131689539
         public static final int vt_launcher_round = 0x7f0f0046; // 2131689542
         public static final int ic_logo_facebook_28 = 0x7f0f0003; // 2131689475
         public static final int ic_logo_google_28 = 0x7f0f0004; // 2131689476
