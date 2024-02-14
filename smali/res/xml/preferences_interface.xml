@@ -96,6 +96,10 @@
                 android:title="@string/pollresults_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
+                android:key="disablevideoscovers"
+                android:title="Отключить видео обложки групп"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
                 android:key="disableForceTabletMode"
                 android:summary="Отключает интерфейс для планшетов и возвращает докбар"
                 android:title="Отключить режим планшета"/>
