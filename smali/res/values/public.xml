@@ -12980,7 +12980,7 @@
     <public type="mipmap" name="ic_launcher_shine" id="0x7f0f005d" />
     <public type="mipmap" name="ic_launcher_shine_background" id="0x7f0f005e" />
     <public type="mipmap" name="ic_launcher_shine_foreground" id="0x7f0f005f" />
-    <public type="mipmap" name="vt_adaptive_launcher_foneground" id="0x7f0f0043" />
+    <public type="mipmap" name="vt_adaptive_launcher_foreground" id="0x7f0f0043" />
     <public type="mipmap" name="vt_launcher_round" id="0x7f0f0046" />
     <public type="mipmap" name="ic_logo_facebook_28" id="0x7f0f0003" />
     <public type="mipmap" name="ic_logo_google_28" id="0x7f0f0004" />
