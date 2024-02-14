@@ -129,10 +129,6 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("invertCachedTracks").setVisible(!MusicCacheImpl.isEmpty());
 
-        if (!LibVKXClient.isVkxInstalled()) {
-            findPreference("vkx_sett").setVisible(false);
-        }
-
         findPreference("musicdefcatalog").setVisible(!Preferences.getBoolValue("useOldAppVer", false));
         findPreference("useOldAppVer").setOnPreferenceClickListener(preference -> {
             LifecycleUtils.restartApplicationWithTimer();
