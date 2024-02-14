@@ -32,7 +32,7 @@ public class SuperAppUtils {
                 for (String superApp : superApps) {
                     if (type.equals(superApp))
                         if (superApp.equals("menu")) { // superapp menu fix
-                            String menuitems = "groups,audios,stickers,podcasts,shopping,lives,videos,games,vk_calls,vk_pay,ads_easy_promote,classifieds,events";
+                            String menuitems = "groups,audios,stickers,podcasts,shopping,lives,videos,games,vk_calls,vk_pay,ads_easy_promote,classifieds"; // ,events
                             JSONObject menuItem = new JSONObject();
                             JSONArray menuItems = new JSONArray();
 
