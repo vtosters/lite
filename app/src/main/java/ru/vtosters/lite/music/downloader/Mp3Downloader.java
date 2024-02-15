@@ -24,7 +24,7 @@ public final class Mp3Downloader implements ITrackDownloader {
     }
 
     @Override
-    public void downloadTrack(MusicTrack track, Callback callback) {
+    public void download(MusicTrack track, Callback callback) {
         String uri = track.D;
         if (Objects.requireNonNull(uri).isEmpty()) {
             String msg = "link error: " +
@@ -48,7 +48,7 @@ public final class Mp3Downloader implements ITrackDownloader {
                 callback.onProgress(100);
                 callback.onSuccess();
             } else
-                callback.onFailure();
+                callback.onFailure(new RuntimeException(session.getLogsAsString()));
             }, log -> callback.onProgress(Math.min(100, progress.incrementAndGet())),
                 statistics -> {}
         );

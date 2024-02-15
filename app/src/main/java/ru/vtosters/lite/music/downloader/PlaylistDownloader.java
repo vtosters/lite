@@ -59,8 +59,8 @@ public class PlaylistDownloader {
         }
 
         @Override
-        public void onFailure() {
-            origin.onFailure();
+        public void onFailure(Throwable e) {
+            origin.onFailure(e);
         }
 
         @Override public void onSizeReceived(long size, long header) {}

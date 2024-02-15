@@ -24,7 +24,7 @@ public final class TrackDownloader {
             else
                 Log.e("TrackDownloader", "Directory creation failed");
         }
-        new Mp3Downloader(outDir).downloadTrack(track, callback);
+        new Mp3Downloader(outDir).download(track, callback);
     }
 
     public static void
@@ -36,6 +36,6 @@ public final class TrackDownloader {
 
         new CachedDownloader(
                 new Mp3Downloader(path)
-        ).downloadTrack(track, callback);
+        ).download(track, callback);
     }
 }

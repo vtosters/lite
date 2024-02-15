@@ -12,5 +12,5 @@ public interface ITrackDownloader {
      * @param track    Music track
      * @param callback Callback to call when download status changes
      */
-    void downloadTrack(MusicTrack track, Callback callback);
+    void download(MusicTrack track, Callback callback);
 }

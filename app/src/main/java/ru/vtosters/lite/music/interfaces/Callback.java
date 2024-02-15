@@ -7,7 +7,7 @@ public interface Callback {
 
     void onSuccess();
 
-    void onFailure();
+    void onFailure(Throwable e);
 
     void onSizeReceived(long size, long header);
 
@@ -33,9 +33,9 @@ public interface Callback {
         }
 
         @Override
-        public void onFailure() {
-            completeExceptionally(new RuntimeException("callback failed"));
-            origin.onFailure();
+        public void onFailure(Throwable e) {
+            completeExceptionally(e);
+            origin.onFailure(e);
         }
 
         @Override

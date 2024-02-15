@@ -1,9 +1,12 @@
 package ru.vtosters.lite.music.callback;
 
 import android.util.Log;
+
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+
 import com.vtosters.lite.R;
+
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -40,12 +43,12 @@ public class MusicCallbackBuilder {
                 } catch (UnsatisfiedLinkError e) {
                     Log.e("AudioDownloader", "native libs");
                     Log.e("AudioDownloader", e.getMessage());
-                    onFailure();
+                    onFailure(e);
                 }
             }
 
             @Override
-            public void onFailure() {
+            public void onFailure(Throwable e) {
                 notification.setContentText(AndroidUtils.getString(R.string.load_audio_error)).setProgress(0, 0, false);
                 notificationManager.notify(notificationId, notification.build());
             }
@@ -77,7 +80,7 @@ public class MusicCallbackBuilder {
             }
 
             @Override
-            public void onFailure() {
+            public void onFailure(Throwable e) {
                 notification.setContentText(AndroidUtils.getString(R.string.load_audio_error)).setProgress(0, 0, false);
                 notificationManager.notify(notificationId, notification.build());
             }
