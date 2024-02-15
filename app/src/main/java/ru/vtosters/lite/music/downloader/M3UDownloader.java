@@ -10,7 +10,7 @@ import com.vk.dto.music.MusicTrack;
 import java8.util.concurrent.CompletableFuture;
 import java8.util.concurrent.CompletionException;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.music.converter.ts.FFMpeg;
+import ru.vtosters.lite.music.converter.ts.MpegDemuxer;
 import ru.vtosters.lite.music.converter.ts.TSMerger;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
@@ -66,7 +66,7 @@ public class M3UDownloader
                     })
                     .thenRun(() -> {
                         try {
-                            FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track);
+                            MpegDemuxer.convert(resultTs, resultMp3.getAbsolutePath(), track);
                         } catch (Throwable e) {
                             throw new RuntimeException("FFmpeg error", e);
                         }
