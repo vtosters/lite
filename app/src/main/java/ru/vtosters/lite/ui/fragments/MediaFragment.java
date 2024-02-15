@@ -9,15 +9,21 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+
 import androidx.preference.Preference;
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 import com.vtosters.lite.R;
+
+import org.json.JSONObject;
+
+import java.util.Arrays;
+
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
@@ -32,13 +38,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.SearchEngine;
 
-import java.util.Arrays;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
-    private static final ExecutorService executor = Executors.newCachedThreadPool();
-
     public static void download(Context ctx) {
         final EditText input = new EditText(ctx);
         input.setTextColor(ThemesUtils.getTextAttr());
@@ -221,7 +221,9 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setTitle(R.string.warning)
                 .setMessage(R.string.cached_tracks_remove_confirm)
                 .setPositiveButton(R.string.yes,
-                        (dialog, which) -> executor.submit(MusicCacheImpl::clear))
+                        (dialog, which) -> VTExecutors
+                                .getIoExecutor()
+                                .execute(MusicCacheImpl::clear))
                 .setNeutralButton(R.string.no,
                         (dialog, which) -> dialog.cancel())
                 .show();
@@ -237,10 +239,12 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setTitle(R.string.download_method)
                 .setMessage(R.string.download_method_desc)
                 .setPositiveButton(R.string.download_method_cache, (dialog, which) -> {
-                    executor.submit(AudioDownloader::cacheAllAudios);
+                    VTExecutors
+                            .getIoExecutor()
+                            .execute(AudioDownloader::cacheAllAudios);
                 })
                 .setNegativeButton(R.string.download_method_mp3, (dialog, which) -> {
-                    executor.submit(AudioDownloader::downloadAllAudios);
+                    AudioDownloader.downloadAllAudios();
                 })
                 .show();
     }

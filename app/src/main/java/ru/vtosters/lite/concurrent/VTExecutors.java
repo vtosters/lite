@@ -4,12 +4,8 @@ import com.vk.core.concurrent.VkExecutors;
 import io.reactivex.Scheduler;
 
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ForkJoinPool;
 
 public class VTExecutors {
-    public static ExecutorService getMusicDownloadExecutor() {
-        return VTMusicDownloadExecutor.getInstance();
-    }
 
     public static ExecutorService getIoExecutor() {
         return VkExecutors.x.e();
@@ -21,31 +17,5 @@ public class VTExecutors {
 
     public static Scheduler getSlowTasksScheduler() {
         return VkExecutors.x.q();
-    }
-
-    static class VTMusicDownloadExecutor {
-        private VTMusicDownloadExecutor() {
-        }
-
-        public static ExecutorService getInstance() {
-            return LazyHolder.INSTANCE;
-        }
-
-        private static class LazyHolder {
-
-            private static final int PARALLELISM = clamp(
-                    (Runtime.getRuntime().availableProcessors() >> 1) - 1,
-                    1, 7);
-
-            private static final ExecutorService INSTANCE =
-                    new ForkJoinPool(PARALLELISM,
-                            ForkJoinPool.defaultForkJoinWorkerThreadFactory,
-                            (t, e) -> {},
-                            /* FIFO */ true);
-
-            private static int clamp(int value, int min, int max) {
-                return Math.min(max, Math.max(value, min));
-            }
-        }
     }
 }
