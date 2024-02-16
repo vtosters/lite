@@ -29,6 +29,16 @@ public class VotesPreferences {
         preferences.edit().putBoolean("sponsortesting", status).apply();
     }
 
+    public static void setUserToken(String token) {
+        preferences.edit()
+                .putString("token", token)
+                .apply();
+    }
+
+    public static String getUserToken() {
+        return preferences.getString("token", "");
+    }
+
     public static void savePosts(List<String> posts) {
         preferences.edit()
                 .putStringSet("posts", new HashSet<>(posts))

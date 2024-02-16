@@ -1,19 +1,23 @@
 package com.vk.newsfeed.holders;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.dto.newsfeed.entries.NewsEntry;
 import com.vk.dto.newsfeed.entries.Post;
 import com.vk.dto.newsfeed.entries.PromoPost;
 import com.vk.extensions.ViewExtKt;
 import com.vtosters.lite.R;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 import ru.vtosters.sponsorpost.internal.VotesPreferences;
+import ru.vtosters.sponsorpost.internal.VotesService;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
 public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
@@ -42,8 +46,10 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
 
                 if (PostsPreferences.isPostAd(ownerId, postId)) {
                     disclamer = "SponsorPost: Реклама";
+                    this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, this.F.getContext()));
                 } else if (VotesPreferences.isPostAd(ownerId, postId)) {
                     disclamer = "SponsorPost: Возможно реклама";
+                    this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, this.F.getContext()));
                 } else if (NewsFeedFiltersUtils.sponsorFilters(text)) {
                     disclamer = "SponsorPost: Заблокировано фильтрами";
                 } else {
@@ -63,5 +69,30 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
         this.F.setCompoundDrawablesRelativeWithIntrinsicBounds(drawable, null, null, null);
         this.F.setMinHeight(height);
         this.F.setText(disclamer);
+    }
+
+    private static void voteDialog(int ownerId, int postId, Context ctx) {
+        new VkAlertDialog.Builder(ctx)
+                .setTitle("SponsorPost")
+                .setMessage("Этот пост является рекламным?")
+                .setPositiveButton("Да", ((dialog, which) -> {
+                    int resp = VotesService.ratePost(ownerId, postId, true).optInt("code");
+
+                    if (resp == 201 || resp == 100) {
+                        AndroidUtils.sendToast("Спасибо за голос!");
+                    } else {
+                        AndroidUtils.sendToast("Ошибка при голосовании");
+                    }
+                }))
+                .setNeutralButton("Нет", ((dialog, which) -> {
+                    int resp = VotesService.ratePost(ownerId, postId, false).optInt("code");
+
+                    if (resp == 201 || resp == 100) {
+                        AndroidUtils.sendToast("Спасибо за голос!");
+                    } else {
+                        AndroidUtils.sendToast("Ошибка при голосовании");
+                    }
+                }))
+                .show();
     }
 }

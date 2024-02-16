@@ -1,5 +1,6 @@
 package ru.vtosters.sponsorpost.internal;
 
+import android.util.Log;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -20,6 +21,7 @@ import java.util.stream.IntStream;
 public class VotesService {
     private static final OkHttpClient client = new OkHttpClient();
     private static final String apiPath = ApiUtils.getURL() + "/votes";
+    private static final String userPath = ApiUtils.getURL() + "/users";
 
     public static Map<String, List<String>> getPosts(Long date) {
         String getFromDate = date > 0 ? ("&date=" + date) : "";
@@ -115,22 +117,19 @@ public class VotesService {
         }
     }
 
-    public static JSONObject ratePost(Long ownerId, Long postId, boolean reportToServer) {
-        String requestUrl = apiPath + (reportToServer ? "/dislike" : "/like") + "?ownerId=" + ownerId + "&postId=" + postId;
+    public static JSONObject ratePost(int ownerId, int postId, boolean isAd) {
+        String token = VotesPreferences.getUserToken() == null || VotesPreferences.getUserToken().isEmpty() ? getVoteToken() : VotesPreferences.getUserToken();
+        String requestUrl = apiPath + (isAd ? "/dislike" : "/like") + "?ownerId=" + ownerId + "&postId=" + postId + "&token=" + token;
         Request request = new Request.a()
                 .b(requestUrl)
                 .a("Content-Type", "application/json")
                 .a();
         try (Response response = client.a(request).execute()) {
-            if (response.h()) {
-                String encoding = response.a("Content-Encoding");
-                if (encoding != null && encoding.equals("gzip")) {
-                    return new JSONObject(GzipDecompressor.decompress(response.a().b()));
-                } else {
-                    return new JSONObject(response.a().g());
-                }
+            String encoding = response.a("Content-Encoding");
+            if (encoding != null && encoding.equals("gzip")) {
+                return new JSONObject(GzipDecompressor.decompress(response.a().b()));
             } else {
-                throw new RuntimeException("Failed to get vote token: " + response.l());
+                return new JSONObject(response.a().g());
             }
         } catch (IOException | JSONException e) {
             throw new RuntimeException(e);
@@ -138,7 +137,7 @@ public class VotesService {
     }
 
     public static String getVoteToken() {
-        String requestUrl = apiPath + "/getUserToken" + "?private_key=" + Native.pkey();
+        String requestUrl = userPath + "/getUserToken" + "?private_key=" + Native.pkey();
         Request request = new Request.a()
                 .b(requestUrl)
                 .a("Content-Type", "application/json")
@@ -146,16 +145,16 @@ public class VotesService {
                 .a("Signature", Native.sig())
                 .a();
         try (Response response = client.a(request).execute()) {
-            if (response.h()) {
-                String encoding = response.a("Content-Encoding");
-                if (encoding != null && encoding.equals("gzip")) {
-                    return new JSONObject(GzipDecompressor.decompress(response.a().b())).getString("token");
-                } else {
-                    return new JSONObject(response.a().g()).getString("token");
-                }
+            String encoding = response.a("Content-Encoding");
+            String userToken;
+            if (encoding != null && encoding.equals("gzip")) {
+                userToken = new JSONObject(GzipDecompressor.decompress(response.a().b())).getString("token");
+                VotesPreferences.setUserToken(userToken);
             } else {
-                throw new RuntimeException("Failed to get vote token: " + response.l());
+                userToken = new JSONObject(response.a().g()).getString("token");
+                VotesPreferences.setUserToken(userToken);
             }
+            return userToken;
         } catch (IOException | JSONException e) {
             throw new RuntimeException(e);
         }
