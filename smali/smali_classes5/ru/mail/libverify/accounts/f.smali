@@ -277,7 +277,7 @@
 
     iput-object v2, v1, Lru/mail/libverify/accounts/e;->m:Ljava/lang/String;
 
-    invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->isNetworkRoaming()Z
+    invoke-static {p0}, Lru/vtosters/hooks/NewsfeedHook;->isNetworkRoaming(Landroid/telephony/TelephonyManager;)Z
 
     move-result v2
 

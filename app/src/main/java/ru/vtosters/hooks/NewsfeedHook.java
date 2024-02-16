@@ -1,7 +1,9 @@
 package ru.vtosters.hooks;
 
 import android.content.Context;
+import android.net.NetworkInfo;
 import android.os.PowerManager;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import androidx.recyclerview.widget.RecyclerView;
 import com.vk.core.preference.Preference;
@@ -131,5 +133,13 @@ public class NewsfeedHook {
 
 //        return !getBoolValue("force_disable_psm", false) && pw.isPowerSaveMode();
         return false;
+    }
+
+    public static boolean isRoaming(NetworkInfo networkInfo) {
+        return !Preferences.disableForceTrafficSaver() && networkInfo.isRoaming();
+    }
+
+    public static boolean isNetworkRoaming(TelephonyManager telephonyManager) {
+        return !Preferences.disableForceTrafficSaver() && telephonyManager.isNetworkRoaming();
     }
 }
