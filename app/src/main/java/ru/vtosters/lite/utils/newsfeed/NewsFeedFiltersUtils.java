@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.sponsorpost.internal.VotesPreferences;
 import ru.vtosters.sponsorpost.utils.FiltersPreferences;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
@@ -212,19 +213,37 @@ public class NewsFeedFiltersUtils {
             return false;
         }
 
-        if (adsgroup() && post.optInt("marked_as_ads") == 1 && !isWhitelistedAd(post)) {
+        if (adsgroup() && post.optInt("marked_as_ads") == 1 && !post.optBoolean("sponsorpost") && !post.optBoolean("sponsorpost_filters") && !isWhitelistedAd(post)) {
             logRemovedPost(post, source, "marked_as_ads", needToShowToast);
             return false;
         }
 
-        if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !isWhitelistedAd(post)) {
+        if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !post.optBoolean("sponsorpost_filters") && !isWhitelistedAd(post)) {
             logRemovedPost(post, source, "sponsorpost", needToShowToast);
-            return false;
+
+            if (PostsPreferences.isEnabledMarking()) {
+                post.putOpt("marked_as_ads", 1);
+                post.putOpt("sponsorpost", true);
+            } else {
+                return false;
+            }
         }
 
-        if (sponsorFilters(post.optString("text")) && !isWhitelistedFilters(post)) {
+        if (VotesPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !post.optBoolean("sponsorpost_filters") && !isWhitelistedAd(post)) {
+            logRemovedPost(post, source, "sponsorpost vote base", needToShowToast);
+            post.putOpt("marked_as_ads", 1);
+            post.putOpt("sponsorpost", true);
+        }
+
+        if (sponsorFilters(post.optString("text")) && !post.optBoolean("sponsorpost") && !post.optBoolean("sponsorpost_filters") && !isWhitelistedFilters(post)) {
             logRemovedPost(post, source, "sponsorpost filter", needToShowToast);
-            return false;
+
+            if (FiltersPreferences.isEnabledMarking()) {
+                post.putOpt("marked_as_ads", 1);
+                post.putOpt("sponsorpost_filters", true);
+            } else {
+                return false;
+            }
         }
 
         if (checkCopyright(post)) {

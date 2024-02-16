@@ -31,6 +31,14 @@ public class FiltersPreferences {
         return AndroidUtils.getGlobalContext().getSharedPreferences("ru.vtosters.sponsorpost.filters.prefs", Context.MODE_PRIVATE);
     }
 
+    public static boolean isEnabledMarking() {
+        return preferences.getBoolean("sponsorpost_filters_marking", false);
+    }
+
+    public static void setEnabledMarking(boolean status) {
+        preferences.edit().putBoolean("sponsorpost_filters_marking", status).apply();
+    }
+
     public static void clearAll() {
         preferences.edit().clear().apply();
     }

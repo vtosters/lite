@@ -137,7 +137,7 @@ public class PostService {
         // Retrieve post IDs for a specific owner and date
         // If date is positive, get posts older than the specified date
         // Otherwise, get all posts for the owner
-        String getFromDate = date > 0 ? ("?date=" + date) : "";
+        String getFromDate = date > 0 ? ("&date=" + date) : "";
 
         // Construct the API request URL
         String requestUrl = apiPath + "/getPostIdsByOwnerId" + "?ownerId=" + ownerId + getFromDate;

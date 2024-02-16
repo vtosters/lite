@@ -6,8 +6,10 @@ import android.os.Bundle;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 import ru.vtosters.sponsorpost.data.Filter;
+import ru.vtosters.sponsorpost.internal.VotesPreferences;
 import ru.vtosters.sponsorpost.services.FilterService;
 import ru.vtosters.sponsorpost.utils.FiltersPreferences;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
@@ -49,7 +51,7 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
         } else {
             PreferenceFragmentUtils.addMaterialSwitchPreference(
                     getPreferenceScreen(),
-                    "sponsorpost",
+                    "",
                     "Фильтр постов",
                     "Получать списки рекламных постов в группах и ленте, которые не блокируются рекламными фильтрами",
                     null,
@@ -57,6 +59,47 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                     (preference, o) -> {
                         PostsPreferences.setEnabled((boolean) o);
                         return true;
+                    }
+            );
+
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Не скрывать посты",
+                    "Помечать посты рекламной пометкой, но не скрывать их полностью",
+                    null,
+                    PostsPreferences.isEnabledMarking(),
+                    (preference, o) -> {
+                        PostsPreferences.setEnabledMarking((boolean) o);
+                        return true;
+                    }
+            );
+
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Предварительные списки",
+                    "Получать дополнительно более свежие списки которые ещё не попали в основной список. Нужно для активного голосования для блокировки постов. Возможно много ошибок!",
+                    null,
+                    VotesPreferences.isEnabled(),
+                    (preference, o) -> {
+                        VotesPreferences.setEnabled((boolean) o);
+                        return true;
+                    }
+            ).setEnabled(PostsPreferences.isEnabled());
+
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Обновить списки постов",
+                    null,
+                    null,
+                    preference -> {
+                        this.requireActivity().runOnUiThread(() -> {
+                            Updates.updatePosts();
+                            AndroidUtils.sendToast("Обновлено");
+                        });
+                        return false;
                     }
             );
         }
@@ -122,6 +165,19 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                                     null
                             );
                         }
+
+                        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                                getPreferenceScreen(),
+                                "",
+                                "Не блокировать посты",
+                                "Помечать посты заблокированные фильтрами",
+                                null,
+                                FiltersPreferences.isEnabledMarking(),
+                                (preference, o) -> {
+                                    FiltersPreferences.setEnabledMarking((boolean) o);
+                                    return true;
+                                }
+                        );
 
                         PreferenceFragmentUtils.addPreference(
                                 getPreferenceScreen(),
