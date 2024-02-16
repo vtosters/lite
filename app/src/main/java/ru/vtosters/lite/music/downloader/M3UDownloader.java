@@ -72,7 +72,7 @@ public class M3UDownloader
                         try {
                             MpegDemuxer.convert(resultTs, resultMp3.getAbsolutePath(), track);
                         } catch (Throwable e) {
-                            throw new RuntimeException("FFmpeg error", e);
+                            throw new RuntimeException("MpegDemuxer error", e);
                         }
                     })
                     .thenRun(() -> callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / segments.size())))
