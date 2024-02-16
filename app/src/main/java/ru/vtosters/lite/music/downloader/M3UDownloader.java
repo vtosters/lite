@@ -6,9 +6,13 @@ import android.util.Log;
 import com.google.android.exoplayer2.source.hls.playlist.e;
 import com.google.android.exoplayer2.source.hls.playlist.f;
 import com.google.android.exoplayer2.source.hls.playlist.f.a;
+import com.mpatric.mp3agic.InvalidDataException;
+import com.mpatric.mp3agic.Mp3File;
+import com.mpatric.mp3agic.UnsupportedTagException;
 import com.vk.dto.music.MusicTrack;
 import java8.util.concurrent.CompletableFuture;
 import java8.util.concurrent.CompletionException;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.converter.ts.MpegDemuxer;
 import ru.vtosters.lite.music.converter.ts.TSMerger;
@@ -72,6 +76,11 @@ public class M3UDownloader
                         }
                     })
                     .thenRun(() -> callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / segments.size())))
+                    .thenRun(() -> {
+                        if (Preferences.getBoolValue("setMetaData", true)) {
+                            ID3Tagger.tag(resultMp3, track);
+                        }
+                    })
                     .thenRun(() -> {
                         if (cache) {
                             MusicCacheImpl.addTrack(track);

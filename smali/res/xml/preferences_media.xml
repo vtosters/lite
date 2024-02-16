@@ -56,6 +56,9 @@
                 android:summary="Сохранять id3v2 теги для песен для MP3"
                 android:title="Сохранять метадату песен"/>
         <Preference
+                android:key="metadataSeparator"
+                android:title="Разделитель для id3v2 тегов"/>
+        <Preference
                 android:key="audio_download"
                 android:title="@string/audio_download_title"/>
     </PreferenceCategory>
