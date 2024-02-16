@@ -4,6 +4,8 @@ import android.util.Log;
 
 import com.vk.dto.music.MusicTrack;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -17,10 +19,11 @@ public class MpegDemuxer {
         int desiredPid = 256;
 
         var buffer = new byte[packetSize];
+        var packet = ByteBuffer.wrap(buffer).order(ByteOrder.BIG_ENDIAN);
 
-        try (var fis = new FileInputStream(in); var fos = new FileOutputStream(out)) {
+        try (var fis = new BufferedInputStream(new FileInputStream(in)); var fos = new BufferedOutputStream(new FileOutputStream(out))) {
             while (fis.read(buffer) != -1) {
-                var packet = ByteBuffer.wrap(buffer).order(ByteOrder.BIG_ENDIAN);
+                packet.clear();
 
                 int firstByte = packet.get() & 0xFF;
                 int secondByte = packet.get() & 0xFF;
@@ -65,7 +68,6 @@ public class MpegDemuxer {
                     }
 
                     fos.write(packet.array(), packet.position(), packetSize - packet.position());
-                    packet.clear();
                 }
             }
         }
