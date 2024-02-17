@@ -85,17 +85,17 @@ public class NewsfeedHook {
     }
 
     public static void adsParams(HashSet<String> hashSet) {
-        String[] adsParams = {"ads_disabled", "ads_app_slider", "ads_site_slider", "ads_app", "ads_site", "ads_post", "ads_app_video", "ads_post_pretty_cards", "ads_post_snippet_video"};
+        String[] adsParams = {"ads_app_slider", "ads_site_slider", "ads_app", "ads_site", "ads_post", "ads_app_video", "ads_post_pretty_cards", "ads_post_snippet_video"};
+        String noAdParam = "ads_disabled";
 
         if (ads()) {
-            hashSet.add(adsParams[0]);
-            hashSet.add(adsParams[1]);
+            hashSet.add(noAdParam);
+
+            if (!Preferences.milkshake()) {
+                hashSet.add(adsParams[0]);
+            }
         } else {
             Collections.addAll(hashSet, adsParams);
-        }
-
-        if (Preferences.milkshake()) {
-            hashSet.remove(adsParams[1]);
         }
     }
 
