@@ -74,7 +74,7 @@ public class VkUiThemer {
             }
         } catch (Exception e) {
             // This must go wrong, so we ignore any exceptions that may occur
-            e.printStackTrace(); // REMOVE THIS!
+            e.fillInStackTrace(); // REMOVE THIS!
         }
     }
 }

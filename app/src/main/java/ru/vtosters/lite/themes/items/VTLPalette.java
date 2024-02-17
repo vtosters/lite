@@ -1,11 +1,13 @@
 package ru.vtosters.lite.themes.items;
 
 import android.graphics.Color;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class VTLPalette {
     public String id;
@@ -25,29 +27,38 @@ public class VTLPalette {
     }
 
     public static VTLPalette fromJson(JSONObject json) throws JSONException {
-        var palette = new VTLPalette()
+        VTLPalette palette = new VTLPalette()
                 .setId(json.optString("palette_id"))
                 .setName(json.optString("name"))
                 .setAuthor(json.optString("author"));
-        var paletteNode = json.getJSONArray("palette");
-        for (int i = 0; i < paletteNode.length(); i++) {
-            var colorNode = paletteNode.getJSONObject(i);
-            var name = colorNode.getString("name");
-            if (colorNode.has("colors")) {
-                var colorsNode = colorNode.getJSONArray("colors");
-                for (int j = 0; j < colorsNode.length(); j++) {
-                    var subColorNode = colorsNode.getJSONObject(j);
-                    var index = subColorNode.getString("index");
-                    var subColor = subColorNode.getString("color");
-                    if (!subColor.startsWith("#")) subColor = "#" + subColor;
-                    palette.setColor(name + " " + index, Color.parseColor(subColor));
-                }
-            } else {
-                var color = colorNode.getString("color");
-                if (!color.startsWith("#")) color = "#" + color;
-                palette.setColor(name, Color.parseColor(color));
-            }
-        }
+        JSONArray paletteNode = json.getJSONArray("palette");
+        IntStream.range(0, paletteNode.length())
+                .mapToObj(paletteNode::optJSONObject)
+                .forEach(colorNode -> {
+                    String name = colorNode.optString("name");
+                    if (colorNode.has("colors")) {
+                        JSONArray colorsNode;
+                        try {
+                            colorsNode = colorNode.getJSONArray("colors");
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
+                        IntStream.range(0, colorsNode.length())
+                                .mapToObj(colorsNode::optJSONObject)
+                                .forEach(subColorNode -> {
+                                    String index = subColorNode.optString("index");
+                                    String subColor = subColorNode.optString("color");
+                                    if (!subColor.startsWith("#")) subColor = "#" + subColor;
+                                    palette.setColor(name + " " + index, Color.parseColor(subColor));
+                                });
+                    } else {
+                        String color = colorNode.optString("color");
+                        if (!color.startsWith("#")) {
+                            color = "#" + color;
+                        }
+                        palette.setColor(name, Color.parseColor(color));
+                    }
+                });
         return palette;
     }
 
@@ -79,15 +90,15 @@ public class VTLPalette {
         return this;
     }
 
-    public VTLPalette setColor(String name, int color) {
+    public void setColor(String name, int color) {
         this.colors.add(new VTLColor(name, 0, color));
-        return this;
     }
 
     public int getColor(String name) {
-        for (var item : colors)
-            if (name.equals(item.resName))
-                return item.color;
-        return -1;
+        return colors.stream()
+                .filter(item -> name.equals(item.resName))
+                .map(item -> item.color)
+                .findFirst()
+                .orElse(-1);
     }
 }

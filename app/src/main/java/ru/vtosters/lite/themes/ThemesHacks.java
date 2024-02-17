@@ -46,7 +46,7 @@ public class ThemesHacks {
     // Фиксит селектор (все/свои/архив) в профиле
     public static void fixProfileSelector(View view) {
         if (!ThemesUtils.isMilkshake()) return;
-        var id = view.getId();
+        int id = view.getId();
 
         if (id == R.id.profile_wall_owner_posts || id == R.id.profile_wall_all_posts || id == R.id.profile_wall_archived_posts) {
             StateListDrawable states = (StateListDrawable) ((LayerDrawable) view.getBackground()).getDrawable(0);
