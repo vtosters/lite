@@ -35,7 +35,6 @@ public class VTLResources extends Resources {
 
     public VTLResources(Context context, Resources parent) {
         super(parent.getAssets(), parent.getDisplayMetrics(), parent.getConfiguration());
-        //        Log.d(TAG, "VTLResources: init");
     }
 
     private static boolean isAttrThemeable(int attrID) {
@@ -55,25 +54,28 @@ public class VTLResources extends Resources {
     @Override
     public TypedArray obtainAttributes(AttributeSet set, int[] attrs) {
         TypedArray typedArray = super.obtainAttributes(set, attrs);
-        int[] data = getArrayData(typedArray);
-        IntStream.range(0, attrs.length).forEach(i -> {
-            try {
-                int attrID = attrs[i];
-                if (attributesToTheme.contains(attrID)) {
-                    int type = data[i * 6];
-                    int cnt = data[(i * 6) + 1];
 
-                    if (type == TypedValue.TYPE_ATTRIBUTE && isAttrThemeable(cnt)) {
-                        data[i * 6] = TypedValue.TYPE_INT_COLOR_RGB8;
-                        data[(i * 6) + 1] = ThemesUtils.getAccentColor();
-                        data[(i * 6) + 2] = 0; // clear reference content
+        if (ThemesUtils.isMonetTheme()) {
+            int[] data = getArrayData(typedArray);
+            IntStream.range(0, attrs.length).forEach(i -> {
+                try {
+                    int attrID = attrs[i];
+                    if (attributesToTheme.contains(attrID)) {
+                        int type = data[i * 6];
+                        int cnt = data[(i * 6) + 1];
+
+                        if (type == TypedValue.TYPE_ATTRIBUTE && isAttrThemeable(cnt)) {
+                            data[i * 6] = TypedValue.TYPE_INT_COLOR_RGB8;
+                            data[(i * 6) + 1] = ThemesUtils.getAccentColor();
+                            data[(i * 6) + 2] = 0; // clear reference content
+                        }
                     }
+                } catch (Exception e) {
+                    Log.e(TAG, "TAVzlom failed! (obtainAttributes)");
+                    e.fillInStackTrace();
                 }
-            } catch (Exception e) {
-                Log.e(TAG, "TAVzlom failed! (obtainAttributes)");
-                e.fillInStackTrace();
-            }
-        });
+            });
+        }
         return typedArray;
     }
 
@@ -85,7 +87,7 @@ public class VTLResources extends Resources {
     }
 
     private void fixDropdown(int id, Drawable drawable) {
-        if (id == com.vtosters.lite.R.drawable.newsfeed_tab_dropdown_16) {
+        if (id == com.vtosters.lite.R.drawable.newsfeed_tab_dropdown_16 && ThemesUtils.isMonetTheme()) {
             ThemesHacks.fixDropdown(drawable);
         }
     }

@@ -15,16 +15,6 @@ import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class RecolorUtils {
-    public static Drawable recolorDrawableToolbar(Drawable drawable) {
-        if (drawable == null) return null;
-
-        return new RecoloredDrawable(drawable, ThemesUtils.getHeaderText());
-    } // Recolor toolbar drawable to accent color
-
-    public static Drawable recolorDrawableInt(int drawable) {
-        return recolorDrawable(drawable, ThemesUtils.getAccentColor());
-    } // Get res drawable via id and coloring to accent
-
     public static Drawable recolorDrawable(int drawable, int color) {
         return new RecoloredDrawable(AndroidUtils.getResources().getDrawable(drawable), color);
     } // Get res drawable via id and coloring to accent
@@ -34,19 +24,19 @@ public class RecolorUtils {
     }
 
     public static int getColor(TypedArray ta, int index, int defval) {
-        return recolorHexColor(ta.getColor(index, defval));
+        return ThemesUtils.isMonetTheme() ? ta.getColor(index, defval) : recolorHexColor(ta.getColor(index, defval));
     }
 
     public static void recolorTextView(TextView tw) {
-        if (ColorReferences.isAccentedColor(tw.getTextColors())) {
+        if (ColorReferences.isAccentedColor(tw.getTextColors()) && ThemesUtils.isMonetTheme()) {
             tw.setTextColor(ThemesUtils.getAccentColor());
         }
     }
 
     public static int recolorHexColor(int i) {
         if (!ThemesUtils.isMonetTheme() || !ThemesManager.canApplyCustomAccent()) return i;
-        var accented = ColorReferences.isAccentedColor(i);
-        var mutedaccented = ColorReferences.isMutedAccentedColor(i);
+        boolean accented = ColorReferences.isAccentedColor(i);
+        boolean mutedaccented = ColorReferences.isMutedAccentedColor(i);
         return (accented || mutedaccented) ? (accented ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : i;
     }
 
