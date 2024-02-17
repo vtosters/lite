@@ -70,19 +70,22 @@ public class VKAccountDB {
             LifecycleUtils.getCurrentActivity().requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
         }
 
-        var db = getDatabase().getReadableDatabase();
-        var dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
-        var dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
-        var file = new File(dir, "saved_accounts_" + dateFormat.format(new Date()) + ".vtl");
+        SQLiteDatabase db = getDatabase().getReadableDatabase();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
+        File dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
+        File file = new File(dir, "saved_accounts_" + dateFormat.format(new Date()) + ".vtl");
 
         try (InputStream inputStream = new FileInputStream(db.getPath())) {
-            dir.mkdirs();
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
 
             FileOutputStream outputStream = new FileOutputStream(file);
             byte[] buff = new byte[1024];
             int read;
-            while ((read = inputStream.read(buff, 0, buff.length)) > 0)
+            while ((read = inputStream.read(buff, 0, buff.length)) > 0) {
                 outputStream.write(buff, 0, read);
+            }
             inputStream.close();
             outputStream.close();
 
