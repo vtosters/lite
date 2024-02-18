@@ -3,18 +3,56 @@ package ru.vtosters.lite.themes.utils;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.util.SparseArray;
+import android.util.TypedValue;
 import android.widget.TextView;
+import androidx.annotation.ColorRes;
+import androidx.annotation.NonNull;
+import androidx.core.content.res.ColorStateListInflaterCompat;
 import com.vk.core.drawable.RecoloredDrawable;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.themes.ColorReferences;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.utils.AndroidUtils;
 
+import java.util.WeakHashMap;
+
 public class RecolorUtils {
+    private static final ThreadLocal<TypedValue> TL_TYPED_VALUE = new ThreadLocal<>();
+    private static final WeakHashMap<Context, SparseArray<ColorStateListCacheEntry>> sColorStateCaches = new WeakHashMap<>(0);
+    private static final Object sColorStateCacheLock = new Object();
+
+    private static void addColorStateListToCache(@NonNull Context context, @ColorRes int i, @NonNull ColorStateList colorStateList) {
+        synchronized (sColorStateCacheLock) {
+            SparseArray<ColorStateListCacheEntry> sparseArray = sColorStateCaches.get(context);
+            if (sparseArray == null) {
+                sparseArray = new SparseArray<>();
+                sColorStateCaches.put(context, sparseArray);
+            }
+            sparseArray.append(i, new ColorStateListCacheEntry(colorStateList, context.getResources().getConfiguration()));
+        }
+    }
+
+    private static ColorStateList getCachedColorStateList(@NonNull Context context, @ColorRes int i) {
+        ColorStateListCacheEntry colorStateListCacheEntry;
+        synchronized (sColorStateCacheLock) {
+            SparseArray<ColorStateListCacheEntry> sparseArray = sColorStateCaches.get(context);
+            if (sparseArray != null && sparseArray.size() > 0 && (colorStateListCacheEntry = sparseArray.get(i)) != null) {
+                if (colorStateListCacheEntry.configuration.equals(context.getResources().getConfiguration())) {
+                    return colorStateListCacheEntry.value;
+                }
+                sparseArray.remove(i);
+            }
+            return null;
+        }
+    }
+
     public static Drawable recolorDrawable(int drawable, int color) {
         return new RecoloredDrawable(AndroidUtils.getResources().getDrawable(drawable), color);
     } // Get res drawable via id and coloring to accent
@@ -46,9 +84,51 @@ public class RecolorUtils {
         return ColorStateList.valueOf(ThemesUtils.getAccentColor());
     } // Recolor ColorStateList to accent color
 
+    @SuppressLint("RestrictedApi")
+    private static ColorStateList inflateColorStateList(Context context, int i) {
+        if (isColorInt(context, i)) {
+            return null;
+        }
+        Resources resources = context.getResources();
+        try {
+            return ColorStateListInflaterCompat.createFromXml(resources, resources.getXml(i), context.getTheme());
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    private static boolean isColorInt(@NonNull Context context, @ColorRes int i) {
+        Resources resources = context.getResources();
+        TypedValue typedValue = getTypedValue();
+        resources.getValue(i, typedValue, true);
+        int i2 = typedValue.type;
+        return i2 >= 28 && i2 <= 31;
+    }
+
+    private static TypedValue getTypedValue() {
+        TypedValue typedValue = TL_TYPED_VALUE.get();
+        if (typedValue == null) {
+            TypedValue typedValue2 = new TypedValue();
+            TL_TYPED_VALUE.set(typedValue2);
+            return typedValue2;
+        }
+        return typedValue;
+    }
+
     @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList themeCSL(Context context, int color) {
-        if (!ThemesUtils.isMonetTheme()) {
+        if (!ThemesUtils.isMonetTheme() || Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
+            ColorStateList cachedColorStateList = getCachedColorStateList(context, color);
+            if (cachedColorStateList != null) {
+                return cachedColorStateList;
+            }
+
+            ColorStateList inflateColorStateList = inflateColorStateList(context, color);
+            if (inflateColorStateList != null) {
+                addColorStateListToCache(context, color, inflateColorStateList);
+                return inflateColorStateList;
+            }
+
             if (Build.VERSION.SDK_INT >= 23) {
                 return context.getColorStateList(color);
             } else {
@@ -62,15 +142,7 @@ public class RecolorUtils {
             return ColorStateList.valueOf(ThemesUtils.getMutedAccentColor());
         }
 
-        ColorStateList csl;
-
-        if (Build.VERSION.SDK_INT >= 23) {
-            csl = context.getColorStateList(color);
-        } else {
-            csl = context.getResources().getColorStateList(color);
-        }
-
-        return themeCSL(csl);
+        return themeCSL(context.getColorStateList(color));
     } // Recolor ColorStateList
 
     public static ColorStateList themeCSL(ColorStateList csl) {
@@ -108,6 +180,16 @@ public class RecolorUtils {
         } catch (Exception e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    static class ColorStateListCacheEntry {
+        final Configuration configuration;
+        final ColorStateList value;
+
+        ColorStateListCacheEntry(@NonNull ColorStateList colorStateList, @NonNull Configuration configuration) {
+            this.value = colorStateList;
+            this.configuration = configuration;
         }
     }
 }

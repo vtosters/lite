@@ -247,7 +247,6 @@ public class ThemesUtils {
     }
 
     public static int getDarkThemeRes() {
-        if (isMonetTheme()) {
         if (isMonetTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             if (isAmoledTheme()) {
                 return getIdentifier(isMilkshake() ? "VkMilkAmoledMonetStyle" : "VkAmoledMonetStyle", "style");

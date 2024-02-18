@@ -44,7 +44,11 @@ public class ThemesHacks {
     }
 
     public static int getColors(Context context, int color) {
-        return Build.VERSION.SDK_INT > 23 ? context.getColor(color) : context.getResources().getColor(color);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return context.getColor(color);
+        } else {
+            return context.getResources().getColor(color);
+        }
     }
 
     // Фиксит селектор (все/свои/архив) в профиле
