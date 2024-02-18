@@ -61,7 +61,7 @@ public class ThemesUtils {
             activity = LifecycleUtils.getCurrentActivity();
         }
         VKThemeHelper.theme(theme, activity, fl);
-        if (isMonetTheme() || ThemesManager.canApplyCustomAccent()) ThemesCore.clear();
+        if (needToColoring() || ThemesManager.canApplyCustomAccent()) ThemesCore.clear();
         if (restartActivity) activity.recreate();
         ThemeTracker.a();
         WebViewColoringUtils.isLoaded = false;
@@ -73,8 +73,12 @@ public class ThemesUtils {
         return VKThemeHelper.r();
     }
 
+    public static boolean needToColoring() {
+        return isMonetTheme() || Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1; // android 5.1 fix
+    }
+
     public static boolean isMonetTheme() {
-        return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S || Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1; // android 5.1 fix
+        return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
     }
 
     public static boolean isAmoledTheme() {
@@ -247,7 +251,7 @@ public class ThemesUtils {
     }
 
     public static int getDarkThemeRes() {
-        if (isMonetTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        if (isMonetTheme()) {
             if (isAmoledTheme()) {
                 return getIdentifier(isMilkshake() ? "VkMilkAmoledMonetStyle" : "VkAmoledMonetStyle", "style");
             } else {
@@ -263,7 +267,7 @@ public class ThemesUtils {
     } // Return needed res theme
 
     public static int getLightThemeRes() {
-        if (isMonetTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        if (isMonetTheme()) {
             return getIdentifier(isMilkshake() ? "VkMilkLightMonetStyle" : "VkLightMonetStyle", "style");
         } else {
             return isMilkshake() ? R.style.VkMilkLightStyle : R.style.VkLightStyle;
@@ -300,7 +304,7 @@ public class ThemesUtils {
     } // Recolor drawable to accent color
 
     public static Drawable recolorToolbarDrawable(Drawable drawable) {
-        if (!ThemesUtils.isMonetTheme()) return drawable;
+        if (!ThemesUtils.needToColoring()) return drawable;
         if (drawable == null) return null;
         return new RecoloredDrawable(drawable, (ThemesUtils.isMilkshake() && !ThemesUtils.isDarkTheme()) ? ThemesUtils.getAccentColor() : ThemesUtils.getHeaderText());
     }
@@ -322,7 +326,7 @@ public class ThemesUtils {
     }
 
     public static int fixSeparator(float f) {
-        if (isMonetTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        if (isMonetTheme()) {
             return 0;
         } else {
             return (int) Math.floor(f * Resources.getSystem().getDisplayMetrics().density);

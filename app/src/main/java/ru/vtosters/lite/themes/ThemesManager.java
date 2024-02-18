@@ -121,7 +121,7 @@ public class ThemesManager {
             initPaths(app);
             validateModApk();
 
-            if (!Preferences.isNewBuild() && !ThemesUtils.isMonetTheme() && canApplyCustomAccent()) {
+            if (!Preferences.isNewBuild() && !ThemesUtils.needToColoring() && canApplyCustomAccent()) {
                 ResourcesLoader.init(app);
                 ResourcesLoader.load(app, modApk.getAbsolutePath(), false);
             }

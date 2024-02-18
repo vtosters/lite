@@ -62,17 +62,17 @@ public class RecolorUtils {
     }
 
     public static int getColor(TypedArray ta, int index, int defval) {
-        return ThemesUtils.isMonetTheme() ? ta.getColor(index, defval) : recolorHexColor(ta.getColor(index, defval));
+        return ThemesUtils.needToColoring() ? ta.getColor(index, defval) : recolorHexColor(ta.getColor(index, defval));
     }
 
     public static void recolorTextView(TextView tw) {
-        if (ColorReferences.isAccentedColor(tw.getTextColors()) && ThemesUtils.isMonetTheme()) {
+        if (ColorReferences.isAccentedColor(tw.getTextColors()) && ThemesUtils.needToColoring()) {
             tw.setTextColor(ThemesUtils.getAccentColor());
         }
     }
 
     public static int recolorHexColor(int i) {
-        if (!ThemesUtils.isMonetTheme() || !ThemesManager.canApplyCustomAccent()) return i;
+        if (!ThemesUtils.needToColoring() || !ThemesManager.canApplyCustomAccent()) return i;
         boolean accented = ColorReferences.isAccentedColor(i);
         boolean mutedaccented = ColorReferences.isMutedAccentedColor(i);
         return (accented || mutedaccented) ? (accented ? ThemesUtils.getAccentColor() : ThemesUtils.getMutedAccentColor()) : i;
@@ -117,7 +117,7 @@ public class RecolorUtils {
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList themeCSL(Context context, int color) {
-        if (!ThemesUtils.isMonetTheme() || Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
+        if (!ThemesUtils.needToColoring() || Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
             ColorStateList cachedColorStateList = getCachedColorStateList(context, color);
             if (cachedColorStateList != null) {
                 return cachedColorStateList;
@@ -146,7 +146,7 @@ public class RecolorUtils {
     } // Recolor ColorStateList
 
     public static ColorStateList themeCSL(ColorStateList csl) {
-        if (!ThemesUtils.isMonetTheme()) return csl;
+        if (!ThemesUtils.needToColoring()) return csl;
 
         try {
             int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);

@@ -23,7 +23,7 @@ public class ViewInjector {
     }
 
     public static View inject(View view, int i, boolean z) {
-        if (ThemesUtils.isMonetTheme()) {
+        if (ThemesUtils.needToColoring()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 hooks.forEach(hook -> hook.inject(view, i, z));
             } else {
