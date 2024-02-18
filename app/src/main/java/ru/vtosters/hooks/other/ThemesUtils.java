@@ -74,7 +74,7 @@ public class ThemesUtils {
     }
 
     public static boolean isMonetTheme() {
-        return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
+        return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S || Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1; // android 5.1 fix
     }
 
     public static boolean isAmoledTheme() {
@@ -248,6 +248,7 @@ public class ThemesUtils {
 
     public static int getDarkThemeRes() {
         if (isMonetTheme()) {
+        if (isMonetTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             if (isAmoledTheme()) {
                 return getIdentifier(isMilkshake() ? "VkMilkAmoledMonetStyle" : "VkAmoledMonetStyle", "style");
             } else {
@@ -263,7 +264,7 @@ public class ThemesUtils {
     } // Return needed res theme
 
     public static int getLightThemeRes() {
-        if (isMonetTheme()) {
+        if (isMonetTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             return getIdentifier(isMilkshake() ? "VkMilkLightMonetStyle" : "VkLightMonetStyle", "style");
         } else {
             return isMilkshake() ? R.style.VkMilkLightStyle : R.style.VkLightStyle;
@@ -322,7 +323,7 @@ public class ThemesUtils {
     }
 
     public static int fixSeparator(float f) {
-        if (isMonetTheme()) {
+        if (isMonetTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             return 0;
         } else {
             return (int) Math.floor(f * Resources.getSystem().getDisplayMetrics().density);
