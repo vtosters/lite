@@ -49,6 +49,7 @@ import com.vk.im.ui.views.msg.bubble.MsgBubbleView;
 import com.vk.im.ui.views.sticker.StickerAnimationState;
 import kotlin.Unit;
 import kotlin.jvm.b.Functions;
+import ru.vtosters.lite.themes.ThemesHacks;
 
 public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
     public static final int h0 = Screen.a(124);
@@ -133,7 +134,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         this.h = itemView.findViewById(com.vk.im.ui.h.status_space);
         this.P = itemView.findViewById(com.vk.im.ui.h.bomb);
         this.B = vhBase;
-        this.H = new ColorDrawable(context.getResources().getColor(com.vk.im.ui.d.msg_search_selection));
+        this.H = new ColorDrawable(ThemesHacks.getColors(context, com.vk.im.ui.d.msg_search_selection));
         this.I = ContextExtKt.b(context, com.vk.im.ui.e.msg_bubble_max_width);
         this.J = ContextExtKt.b(context, com.vk.im.ui.e.msg_reply_max_width);
         this.K = ContextExtKt.b(context, com.vk.im.ui.e.msg_sticker_max_width);
@@ -150,48 +151,38 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         var6.right = var7.rightMargin;
         var6.top = var7.topMargin;
         var6.bottom = var7.bottomMargin;
-        ViewExtKt.b(this.c, new View.OnClickListener() {
-            public void onClick(View var1) {
-                if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
-                    VhMsg.this.c0.a(VhMsg.this.d0.getFrom());
-                }
-
+        ViewExtKt.b(this.c, var1 -> {
+            if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
+                VhMsg.this.c0.a(VhMsg.this.d0.getFrom());
             }
-        });
-        this.c.setOnLongClickListener(new View.OnLongClickListener() {
-            public boolean onLongClick(View var1) {
-                if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
-                    VhMsg.this.c0.a(VhMsg.this.d0.getFrom());
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        });
-        ViewExtKt.b(this.g, new View.OnClickListener() {
-            public void onClick(View var1) {
-                if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
-                    VhMsg.this.c0.a(VhMsg.this.d0);
-                }
 
-            }
         });
-        ViewExtKt.b(this.itemView, new View.OnClickListener() {
-            public void onClick(View var1) {
-                if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
-                    VhMsg.this.c0.a(VhMsg.this.d0.getLocalId());
-                }
-
-            }
-        });
-        this.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-            public boolean onLongClick(View var1) {
-                if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
-                    VhMsg.this.c0.b(VhMsg.this.d0.getLocalId());
-                }
-
+        this.c.setOnLongClickListener(var1 -> {
+            if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
+                VhMsg.this.c0.a(VhMsg.this.d0.getFrom());
                 return true;
+            } else {
+                return false;
             }
+        });
+        ViewExtKt.b(this.g, var1 -> {
+            if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
+                VhMsg.this.c0.a(VhMsg.this.d0);
+            }
+
+        });
+        ViewExtKt.b(this.itemView, (View.OnClickListener) var1 -> {
+            if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
+                VhMsg.this.c0.a(VhMsg.this.d0.getLocalId());
+            }
+
+        });
+        this.itemView.setOnLongClickListener((View.OnLongClickListener) var1 -> {
+            if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
+                VhMsg.this.c0.b(VhMsg.this.d0.getLocalId());
+            }
+
+            return true;
         });
         this.R = ContextExtKt.i(context, com.vk.im.ui.c.im_msg_part_corner_radius_small);
         this.S = ContextExtKt.i(context, com.vk.im.ui.c.im_msg_part_corner_radius_big);

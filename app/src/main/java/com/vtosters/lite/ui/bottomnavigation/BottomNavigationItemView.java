@@ -69,10 +69,10 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         this.mIcon.getLayoutParams().height = V.a(28.0F);
 
         this.mSmallLabel = this.findViewById(R.id.smallLabel);
-        mSmallLabel.setTextColor(getCSTDock());
+        mSmallLabel.setTextColor(getCSTDock(this.getContext()));
 
         this.mLargeLabel = this.findViewById(R.id.largeLabel);
-        mLargeLabel.setTextColor(getCSTDock());
+        mLargeLabel.setTextColor(getCSTDock(this.getContext()));
 
         LayoutInflater.from(this.getContext()).inflate(R.layout.navigation_bottom_counter, this, true);
         this.mCounterContainer = this.findViewById(R.id.counter_container);
