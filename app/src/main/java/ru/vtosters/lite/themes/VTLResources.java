@@ -55,7 +55,7 @@ public class VTLResources extends Resources {
     public TypedArray obtainAttributes(AttributeSet set, int[] attrs) {
         TypedArray typedArray = super.obtainAttributes(set, attrs);
 
-        if (ThemesUtils.needToColoring()) {
+        if (ThemesUtils.isMonetTheme()) {
             int[] data = getArrayData(typedArray);
             IntStream.range(0, attrs.length).forEach(i -> {
                 try {
@@ -87,7 +87,7 @@ public class VTLResources extends Resources {
     }
 
     private void fixDropdown(int id, Drawable drawable) {
-        if (id == com.vtosters.lite.R.drawable.newsfeed_tab_dropdown_16 && ThemesUtils.needToColoring()) {
+        if (id == com.vtosters.lite.R.drawable.newsfeed_tab_dropdown_16 && ThemesUtils.isMonetTheme()) {
             ThemesHacks.fixDropdown(drawable);
         }
     }

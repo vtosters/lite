@@ -49,7 +49,7 @@ public class MainActivityInjector {
         }
 
         if (Preferences.isNewBuild()
-                && !ThemesUtils.needToColoring()
+                && !ThemesUtils.isMonetTheme()
                 && ThemesManager.canApplyCustomAccent()) {
             Preferences.updateBuildNumber();
             updateBinsAndTmpArchive(activity);

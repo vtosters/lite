@@ -2,7 +2,6 @@ package ru.vtosters.lite.themes;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Build;
 import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
@@ -174,7 +173,7 @@ public class ThemesCore {
             }
         }
 
-        if (ThemesUtils.needToColoring() || ThemesManager.canApplyCustomAccent()) {
+        if (ThemesUtils.isMonetTheme() || ThemesManager.canApplyCustomAccent()) {
             if (isCachedAccents()) {
                 boolean isDark = ThemesUtils.isDarkTheme();
                 boolean isMilkshake = ThemesUtils.isMilkshake();

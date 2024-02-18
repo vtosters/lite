@@ -61,7 +61,7 @@ public class ThemesUtils {
             activity = LifecycleUtils.getCurrentActivity();
         }
         VKThemeHelper.theme(theme, activity, fl);
-        if (needToColoring() || ThemesManager.canApplyCustomAccent()) ThemesCore.clear();
+        if (isMonetTheme() || ThemesManager.canApplyCustomAccent()) ThemesCore.clear();
         if (restartActivity) activity.recreate();
         ThemeTracker.a();
         WebViewColoringUtils.isLoaded = false;
@@ -73,12 +73,8 @@ public class ThemesUtils {
         return VKThemeHelper.r();
     }
 
-    public static boolean needToColoring() {
-        return isMonetTheme() || Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1; // android 5.1 fix
-    }
-
     public static boolean isMonetTheme() {
-        return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
+        return getBoolValue("monettheme", false);
     }
 
     public static boolean isAmoledTheme() {
@@ -304,7 +300,7 @@ public class ThemesUtils {
     } // Recolor drawable to accent color
 
     public static Drawable recolorToolbarDrawable(Drawable drawable) {
-        if (!ThemesUtils.needToColoring()) return drawable;
+        if (!ThemesUtils.isMonetTheme()) return drawable;
         if (drawable == null) return null;
         return new RecoloredDrawable(drawable, (ThemesUtils.isMilkshake() && !ThemesUtils.isDarkTheme()) ? ThemesUtils.getAccentColor() : ThemesUtils.getHeaderText());
     }
