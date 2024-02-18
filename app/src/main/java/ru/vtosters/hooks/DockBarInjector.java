@@ -65,7 +65,7 @@ public class DockBarInjector {
         for (DockBarTab tab : sManager.getSelectedTabs()) {
             MenuItem add = menu.add(0, tab.id, 0, tab.titleID);
 
-            add.setIcon(new RecoloredDrawable(getResources().getDrawable(tab.iconID), getCSTDock()));
+            add.setIcon(new RecoloredDrawable(getResources().getDrawable(tab.iconID), getCSTDock(navigationView.getContext())));
             add.setTitle(getGlobalContext().getString(tab.titleID));
             add.setCheckable(true);
         }
@@ -76,7 +76,7 @@ public class DockBarInjector {
                 item.setStaticMode(true);
                 item.setIconsMode(false);
                 item.setShiftingMode(false);
-                item.setTextColor(getCSTDock());
+                item.setTextColor(getCSTDock(item.getContext()));
             }
         }
     }

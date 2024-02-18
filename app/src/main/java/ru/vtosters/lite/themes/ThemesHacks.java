@@ -31,15 +31,19 @@ public class ThemesHacks {
                 }
             }
 
-            if (ThemesCore.isCachedAccents() && ColorReferences.isAccentedColor(context.getResources().getColor(color))) {
+            if (ThemesCore.isCachedAccents() && ColorReferences.isAccentedColor(getColors(context, color))) {
                 return ThemesUtils.getAccentColor();
             }
 
-            if (ThemesCore.isCachedAccents() && ColorReferences.isMutedAccentedColor(context.getResources().getColor(color))) {
+            if (ThemesCore.isCachedAccents() && ColorReferences.isMutedAccentedColor(getColors(context, color))) {
                 return ThemesUtils.getMutedAccentColor();
             }
         }
 
+        return getColors(context, color);
+    }
+
+    public static int getColors(Context context, int color) {
         return Build.VERSION.SDK_INT > 23 ? context.getColor(color) : context.getResources().getColor(color);
     }
 
