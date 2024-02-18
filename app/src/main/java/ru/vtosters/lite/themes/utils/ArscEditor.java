@@ -1,39 +1,37 @@
 package ru.vtosters.lite.themes.utils;
 
 import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceFile;
-import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceValue;
+import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceIdentifier;
 import com.google.devrel.gmscore.tools.apk.arsc.ResourceTableChunk;
 
-import java.util.AbstractMap;
-import java.util.Arrays;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class ArscEditor {
 
-    public static void changeColors(BinaryResourceFile arsc, int[] colorIds, int color) {
-        arsc.getChunks().stream()
-                .filter(chunk -> chunk instanceof ResourceTableChunk)
-                .map(chunk -> (ResourceTableChunk) chunk)
-                .flatMap(resTableChunk -> resTableChunk.getPackages().stream())
-                .flatMap(packageChunk -> packageChunk.getTypeChunks("color").stream()
-                        .map(typeChunk -> new AbstractMap.SimpleEntry<>(packageChunk, typeChunk)))
-                .forEach(entry -> entry.getValue().getEntries().entrySet().stream()
-                        .filter(e -> !e.getValue().isComplex())
-                        .filter(e -> isColorResourceValue(e.getValue().value()))
-                        .forEach(e -> {
-                            BinaryResourceValue binValue = e.getValue().value();
-                            int resId = entry.getKey().getId() << 24 | entry.getValue().getId() << 16 | e.getKey();
-                            if (Arrays.stream(colorIds).anyMatch(colorId -> resId == colorId)) {
-                                if (binValue != null) {
-                                    binValue.data = color;
-                                }
-                            }
-                        }));
-    }
+    public static void changeColors(final BinaryResourceFile arsc, final int[] colorResIds, final int color) {
+        for (var chunk : arsc.getChunks()) {
+            if (!(chunk instanceof ResourceTableChunk)) continue;
 
-    private static boolean isColorResourceValue(BinaryResourceValue value) {
-        return value.type == BinaryResourceValue.Type.INT_COLOR_ARGB8
-                || value.type == BinaryResourceValue.Type.INT_COLOR_RGB8
-                || value.type == BinaryResourceValue.Type.INT_COLOR_ARGB4
-                || value.type == BinaryResourceValue.Type.INT_COLOR_RGB4;
+            final var resTableChunk = (ResourceTableChunk) chunk;
+            final var pacChunk = resTableChunk.getPackage(AndroidUtils.getPackageName());
+            if (pacChunk == null) continue;
+
+            for (var typeChunk : pacChunk.getTypeChunks("color"))
+                for (var resId : colorResIds) {
+                    final var binResId = BinaryResourceIdentifier.create(resId);
+
+                    final var pacId = pacChunk.getId();
+                    final var typeId = typeChunk.getId();
+                    if (pacId != binResId.packageId()
+                            || typeId != binResId.typeId())
+                        continue;
+
+                    final var entry = typeChunk.getEntries().getOrDefault(binResId.entryId(), null);
+                    if (entry == null || entry.isComplex()) continue;
+
+                    final var binResVal = entry.value();
+                    binResVal.data = color;
+                }
+        }
     }
 }
