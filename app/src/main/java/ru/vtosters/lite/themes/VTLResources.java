@@ -1,6 +1,5 @@
 package ru.vtosters.lite.themes;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -8,35 +7,30 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
-
 import androidx.annotation.Nullable;
-
-import java.lang.reflect.Field;
-import java.util.Arrays;
-import java.util.List;
-
 import ru.vtosters.hooks.other.ThemesUtils;
 
-@SuppressLint("DiscouragedPrivateApi")
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.IntStream;
+
 public class VTLResources extends Resources {
     private static final String TAG = "VTLResources";
-    private static final List<Integer> attributesToTheme =
-        Arrays.asList(
-            0x1010121,
-            android.R.attr.backgroundTint,
-            0x10101a5
-        );
-    private static final int STYLE_NUM_ENTRIES = 6;
-
-    private static Field typedArrayDataFld = null;
+    private static final List<Integer> attributesToTheme = new ArrayList<>();
+    private static Field typedArrayField;
 
     static {
         try {
-            typedArrayDataFld = TypedArray.class.getDeclaredField("mData");
-            typedArrayDataFld.setAccessible(true);
-        } catch (final NoSuchFieldException e) {
+            typedArrayField = TypedArray.class.getDeclaredField("mData");
+            typedArrayField.setAccessible(true);
+        } catch (NoSuchFieldException e) {
             e.printStackTrace();
         }
+
+        attributesToTheme.add(16843041);
+        attributesToTheme.add(android.R.attr.backgroundTint);
+        attributesToTheme.add(16843173);
     }
 
     public VTLResources(Context context, Resources parent) {
@@ -47,42 +41,42 @@ public class VTLResources extends Resources {
         return !ThemesUtils.isDarkTheme() && attrID == com.vtosters.lite.R.attr.button_primary_background;
     }
 
-    private static int[] getArrayData(final TypedArray ta) {
-        if (typedArrayDataFld != null)
-            try {
-                return (int[]) typedArrayDataFld.get(ta);
-            } catch (final IllegalAccessException e) {
-                Log.e(TAG, "getArrayData: ", e);
-                e.fillInStackTrace();
-            }
-        return null;
+    private static int[] getArrayData(TypedArray arr) {
+        try {
+            return (int[]) typedArrayField.get(arr);
+        } catch (IllegalAccessException e) {
+            Log.e(TAG, "getArrayData: ", e);
+            e.fillInStackTrace();
+            return new int[0];
+        }
     }
 
     @Override
     public TypedArray obtainAttributes(AttributeSet set, int[] attrs) {
-        final var ta = super.obtainAttributes(set, attrs);
+        TypedArray typedArray = super.obtainAttributes(set, attrs);
+
         if (ThemesUtils.isMonetTheme()) {
-            final var mData = getArrayData(ta);
-            if (mData != null)
-                for (var i = 0; i < attrs.length; ++i) {
-                    final var attr = attrs[i];
-                    if (attributesToTheme.contains(attr)) continue;
+            int[] data = getArrayData(typedArray);
+            IntStream.range(0, attrs.length).forEach(i -> {
+                try {
+                    int attrID = attrs[i];
+                    if (attributesToTheme.contains(attrID)) {
+                        int type = data[i * 6];
+                        int cnt = data[(i * 6) + 1];
 
-                    final var index = i * STYLE_NUM_ENTRIES;
-                    final var typeIndex = index;
-                    final var dataIndex = index + 1;
-                    final var resourceIdIndex = index + 2;
-
-                    if(mData[typeIndex] == TypedValue.TYPE_ATTRIBUTE
-                        || isAttrThemeable(mData[dataIndex]))
-                        continue;
-
-                    mData[typeIndex] = TypedValue.TYPE_INT_COLOR_ARGB8;
-                    mData[dataIndex] = ThemesUtils.getAccentColor();
-                    mData[resourceIdIndex] = 0;
+                        if (type == TypedValue.TYPE_ATTRIBUTE && isAttrThemeable(cnt)) {
+                            data[i * 6] = TypedValue.TYPE_INT_COLOR_RGB8;
+                            data[(i * 6) + 1] = ThemesUtils.getAccentColor();
+                            data[(i * 6) + 2] = 0; // clear reference content
+                        }
+                    }
+                } catch (Exception e) {
+                    Log.e(TAG, "TAVzlom failed! (obtainAttributes)");
+                    e.fillInStackTrace();
                 }
+            });
         }
-        return ta;
+        return typedArray;
     }
 
     @Override
