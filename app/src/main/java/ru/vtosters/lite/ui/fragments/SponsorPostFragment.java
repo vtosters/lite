@@ -229,6 +229,20 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                     }
                 }
         );
+
+        if (Preferences.dev()) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Сбросить токен пользователя",
+                    null,
+                    null,
+                    preference -> {
+                        VotesPreferences.remUserToken();
+                        return false;
+                    }
+            );
+        }
     }
 
     @Override

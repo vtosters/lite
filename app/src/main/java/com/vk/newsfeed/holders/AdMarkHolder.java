@@ -42,14 +42,15 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
                 drawable = VKThemeHelper.a(R.drawable.marked_as_ads, R.attr.icon_tertiary);
                 int ownerId = post.b();
                 int postId = post.P1();
+                int date = post.K();
                 String text = post.getText();
 
                 if (PostsPreferences.isPostAd(ownerId, postId)) {
                     disclamer = "SponsorPost: Реклама";
-                    this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, this.F.getContext()));
+                    this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, date, this.F.getContext()));
                 } else if (VotesPreferences.isPostAd(ownerId, postId)) {
                     disclamer = "SponsorPost: Возможно реклама";
-                    this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, this.F.getContext()));
+                    this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, date, this.F.getContext()));
                 } else if (NewsFeedFiltersUtils.sponsorFilters(text)) {
                     disclamer = "SponsorPost: Заблокировано фильтрами";
                 } else {
@@ -71,12 +72,12 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
         this.F.setText(disclamer);
     }
 
-    public static void voteDialog(int ownerId, int postId, Context ctx) {
+    public static void voteDialog(int ownerId, int postId, int date, Context ctx) {
         new VkAlertDialog.Builder(ctx)
                 .setTitle("SponsorPost")
                 .setMessage("Этот пост является рекламным?")
                 .setPositiveButton("Да", ((dialog, which) -> {
-                    int resp = VotesService.ratePost(ownerId, postId, true).optInt("code");
+                    int resp = VotesService.ratePost(ownerId, postId, date, true).optInt("code");
 
                     if (resp == 201 || resp == 100) {
                         AndroidUtils.sendToast("Спасибо за голос!");
@@ -85,7 +86,7 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
                     }
                 }))
                 .setNeutralButton("Нет", ((dialog, which) -> {
-                    int resp = VotesService.ratePost(ownerId, postId, false).optInt("code");
+                    int resp = VotesService.ratePost(ownerId, postId, date, false).optInt("code");
 
                     if (resp == 201 || resp == 100) {
                         AndroidUtils.sendToast("Спасибо за голос!");

@@ -26,8 +26,9 @@ public class PostsMenuHook {
             Post post = (Post) newsEntry;
             int ownerId = post.b();
             int postId = post.P1();
+            int date = post.K();
 
-            AdMarkHolder.voteDialog(ownerId, postId, context);
+            AdMarkHolder.voteDialog(ownerId, postId, date, context);
         } else {
             Log.d("PostsMenuHook", "unsupported instance");
         }

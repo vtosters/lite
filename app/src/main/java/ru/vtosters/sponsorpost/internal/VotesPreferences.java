@@ -35,6 +35,12 @@ public class VotesPreferences {
                 .apply();
     }
 
+    public static void remUserToken() {
+        preferences.edit()
+                .remove("token")
+                .apply();
+    }
+
     public static String getUserToken() {
         return preferences.getString("token", "");
     }
