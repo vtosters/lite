@@ -37,6 +37,40 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                 null
         );
 
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Статистика блокировок");
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "SponsorPost",
+                "Заблокировано " + PostsPreferences.getNumBlockedPosts() + " постов",
+                null,
+                null
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "SponsorPost фильтры",
+                "Заблокировано " + FiltersPreferences.getNumBlockedPosts() + " постов",
+                null,
+                null
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "Сброс статистики",
+                null,
+                null,
+                preference -> {
+                    FiltersPreferences.dropNumBlockedPosts();
+                    PostsPreferences.dropNumBlockedPosts();
+                    AndroidUtils.sendToast("Статистика сброшена");
+                    return false;
+                }
+        );
+
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Sponsor Post");
 
         if (Preferences.serverFeaturesDisable()) {

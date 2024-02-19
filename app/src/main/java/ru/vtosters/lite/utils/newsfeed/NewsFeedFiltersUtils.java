@@ -213,34 +213,33 @@ public class NewsFeedFiltersUtils {
             return false;
         }
 
-        if (adsgroup() && post.optInt("marked_as_ads") == 1 && !post.optBoolean("sponsorpost") && !post.optBoolean("sponsorpost_filters") && !isWhitelistedAd(post)) {
+        if (adsgroup() && post.optInt("marked_as_ads") == 1 && !post.optBoolean("sponsorpost") && !isWhitelistedAd(post)) {
             logRemovedPost(post, source, "marked_as_ads", needToShowToast);
             return false;
         }
 
-        if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !post.optBoolean("sponsorpost_filters") && !isWhitelistedAd(post)) {
+        if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !isWhitelistedAd(post)) {
             logRemovedPost(post, source, "sponsorpost", needToShowToast);
+            PostsPreferences.incrementNumBlockedPosts();
 
             if (PostsPreferences.isEnabledMarking()) {
-                post.putOpt("marked_as_ads", 1);
-                post.putOpt("sponsorpost", true);
+                addSponsorPostMark(post);
             } else {
                 return false;
             }
         }
 
-        if (VotesPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !post.optBoolean("sponsorpost_filters") && !isWhitelistedAd(post)) {
+        if (VotesPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !isWhitelistedAd(post)) {
             logRemovedPost(post, source, "sponsorpost vote base", needToShowToast);
-            post.putOpt("marked_as_ads", 1);
-            post.putOpt("sponsorpost", true);
+            addSponsorPostMark(post);
         }
 
-        if (sponsorFilters(post.optString("text")) && !post.optBoolean("sponsorpost") && !post.optBoolean("sponsorpost_filters") && !isWhitelistedFilters(post)) {
+        if (sponsorFilters(post.optString("text")) && !post.optBoolean("sponsorpost") && !isWhitelistedFilters(post)) {
             logRemovedPost(post, source, "sponsorpost filter", needToShowToast);
+            FiltersPreferences.incrementNumBlockedPosts();
 
             if (FiltersPreferences.isEnabledMarking()) {
-                post.putOpt("marked_as_ads", 1);
-                post.putOpt("sponsorpost_filters", true);
+                addSponsorPostMark(post);
             } else {
                 return false;
             }
@@ -248,6 +247,7 @@ public class NewsFeedFiltersUtils {
 
         if (checkCopyright(post)) {
             logRemovedPost(post, source, "copyright filters", needToShowToast);
+            FiltersPreferences.incrementNumBlockedPosts();
             return false;
         }
 
@@ -267,6 +267,11 @@ public class NewsFeedFiltersUtils {
         }
 
         return true;
+    }
+
+    private static void addSponsorPostMark(JSONObject post) throws JSONException {
+        post.putOpt("marked_as_ads", 1);
+        post.putOpt("sponsorpost", true);
     }
 
     public static JSONArray feedInject(JSONArray items, boolean needToShowToast) {
@@ -314,7 +319,6 @@ public class NewsFeedFiltersUtils {
 
         return false;
     }
-
 
     public static void parseStoriesItem(JSONObject item) throws JSONException {
         JSONArray stories = item.optJSONArray("stories");

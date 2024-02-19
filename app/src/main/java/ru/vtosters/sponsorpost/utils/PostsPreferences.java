@@ -95,6 +95,18 @@ public class PostsPreferences {
         }
     }
 
+    public static int getNumBlockedPosts() {
+        return preferences.getInt("numBlockedPosts", 0);
+    }
+
+    public static void incrementNumBlockedPosts() {
+        preferences.edit().putInt("numBlockedPosts", getNumBlockedPosts() + 1).apply();
+    }
+
+    public static void dropNumBlockedPosts() {
+        preferences.edit().putInt("numBlockedPosts", 0).apply();
+    }
+
     public static boolean isPostAd(long ownerId, long postId) {
         if (isEnabled() && isGroupAd(ownerId)) {
             Set<String> hasSpecifiedGroupPosts = preferences.getStringSet(ownerId + "_posts", new HashSet<>());
