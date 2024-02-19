@@ -2,6 +2,7 @@ package ru.vtosters.sponsorpost.utils;
 
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.NetworkUtils;
+import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.data.Post;
 import ru.vtosters.sponsorpost.services.FilterService;
@@ -23,7 +24,7 @@ public class Updates {
         List<Filter> localFilters = FiltersPreferences.getAllDownloadedFilters();
 
         if (!filters.isEmpty()) {
-            FiltersPreferences.clearAll(); // removes deleted filters from server
+            FiltersPreferences.clearAllCachedLists(); // removes deleted filters from server and cache
 
             for (Filter filter : filters) {
                 Filter localFilter = findLocalFilterById(localFilters, filter.getId());
@@ -39,6 +40,8 @@ public class Updates {
                     }
                 }
             }
+
+            NewsFeedFiltersUtils.updateFilters();
         }
     }
 
