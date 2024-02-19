@@ -3803,7 +3803,7 @@
 
     if-eqz v3, :cond_20
 
-    invoke-static {p1, v4}, Lru/vtosters/hooks/PostsMenuHook;->injectButtons(ILcom/vk/dto/newsfeed/entries/NewsEntry;)V
+    invoke-static {p1, v4, v0}, Lru/vtosters/hooks/PostsMenuHook;->injectButtons(ILcom/vk/dto/newsfeed/entries/NewsEntry;Landroid/content/Context;)V
 
     goto/16 :goto_5
 

@@ -1,18 +1,36 @@
 package ru.vtosters.hooks;
 
+import android.content.Context;
+import android.util.Log;
 import com.vk.dto.newsfeed.entries.NewsEntry;
+import com.vk.dto.newsfeed.entries.Post;
 import com.vk.newsfeed.NewsEntryActionsAdapter;
-import ru.vtosters.lite.utils.AndroidUtils;
+import com.vk.newsfeed.holders.AdMarkHolder;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 
 public class PostsMenuHook {
     private static final int id = 200;
 
     public static void injectList(NewsEntryActionsAdapter actionsAdapter, NewsEntry newsEntry) {
-        actionsAdapter.a(id, "SponsorPost");
+        if (newsEntry instanceof Post) {
+            int ownerId = ((Post) newsEntry).b();
+
+            if (ownerId != AccountManagerUtils.getUserId()) {
+                actionsAdapter.a(id, "SponsorPost");
+            }
+        }
     }
 
-    public static void injectButtons(int i, NewsEntry newsEntry) {
-        AndroidUtils.sendToast("SponsorPost");
+    public static void injectButtons(int i, NewsEntry newsEntry, Context context) {
+        if (newsEntry instanceof Post) {
+            Post post = (Post) newsEntry;
+            int ownerId = post.b();
+            int postId = post.P1();
+
+            AdMarkHolder.voteDialog(ownerId, postId, context);
+        } else {
+            Log.d("PostsMenuHook", "unsupported instance");
+        }
     }
 
     public static boolean isCustomButton(int i) {

@@ -71,7 +71,7 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
         this.F.setText(disclamer);
     }
 
-    private static void voteDialog(int ownerId, int postId, Context ctx) {
+    public static void voteDialog(int ownerId, int postId, Context ctx) {
         new VkAlertDialog.Builder(ctx)
                 .setTitle("SponsorPost")
                 .setMessage("Этот пост является рекламным?")

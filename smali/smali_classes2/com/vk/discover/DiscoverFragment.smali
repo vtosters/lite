@@ -897,7 +897,7 @@
 
     if-eqz v2, :cond_99
 
-    invoke-static {p1, p2}, Lru/vtosters/hooks/PostsMenuHook;->injectButtons(ILcom/vk/dto/newsfeed/entries/NewsEntry;)V
+    invoke-static {p1, p2, v0}, Lru/vtosters/hooks/PostsMenuHook;->injectButtons(ILcom/vk/dto/newsfeed/entries/NewsEntry;Landroid/content/Context;)V
 
     return-void
 
