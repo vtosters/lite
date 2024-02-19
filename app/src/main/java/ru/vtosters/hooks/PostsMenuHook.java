@@ -7,6 +7,7 @@ import com.vk.dto.newsfeed.entries.Post;
 import com.vk.newsfeed.NewsEntryActionsAdapter;
 import com.vk.newsfeed.holders.AdMarkHolder;
 import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
 public class PostsMenuHook {
     private static final int id = 200;
@@ -15,7 +16,7 @@ public class PostsMenuHook {
         if (newsEntry instanceof Post) {
             int ownerId = ((Post) newsEntry).b();
 
-            if (ownerId != AccountManagerUtils.getUserId()) {
+            if (ownerId != AccountManagerUtils.getUserId() && PostsPreferences.isEnabled()) {
                 actionsAdapter.a(id, "SponsorPost");
             }
         }

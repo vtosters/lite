@@ -107,7 +107,7 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                         PostsPreferences.setEnabledMarking((boolean) o);
                         return true;
                     }
-            );
+            ).setEnabled(PostsPreferences.isEnabled());
 
             PreferenceFragmentUtils.addMaterialSwitchPreference(
                     getPreferenceScreen(),
