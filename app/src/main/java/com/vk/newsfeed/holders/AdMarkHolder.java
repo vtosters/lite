@@ -81,7 +81,7 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
                     if (resp == 201 || resp == 100) {
                         AndroidUtils.sendToast("Спасибо за голос!");
                     } else {
-                        AndroidUtils.sendToast("Ошибка при голосовании");
+                        AndroidUtils.sendToast("Ваш голос уже учтен");
                     }
                 }))
                 .setNeutralButton("Нет", ((dialog, which) -> {
@@ -90,7 +90,7 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
                     if (resp == 201 || resp == 100) {
                         AndroidUtils.sendToast("Спасибо за голос!");
                     } else {
-                        AndroidUtils.sendToast("Ошибка при голосовании");
+                        AndroidUtils.sendToast("Ваш голос уже учтен");
                     }
                 }))
                 .show();
