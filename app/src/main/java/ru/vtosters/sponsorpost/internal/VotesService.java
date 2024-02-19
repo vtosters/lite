@@ -53,7 +53,7 @@ public class VotesService {
         JSONArray prodBase = object.getJSONArray(PROD_KEY);
         JSONArray testBase = object.getJSONArray(VOTE_KEY);
 
-        if (prodBase.length() == 0 || testBase.length() == 0) {
+        if (prodBase.length() == 0 && testBase.length() == 0) {
             return Collections.emptyMap();
         }
 
