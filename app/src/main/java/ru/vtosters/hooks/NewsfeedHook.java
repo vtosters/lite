@@ -1,7 +1,9 @@
 package ru.vtosters.hooks;
 
 import android.content.Context;
+import android.net.NetworkInfo;
 import android.os.PowerManager;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import androidx.recyclerview.widget.RecyclerView;
 import com.vk.core.preference.Preference;
@@ -82,17 +84,17 @@ public class NewsfeedHook {
     }
 
     public static void adsParams(HashSet<String> hashSet) {
-        String[] adsParams = {"ads_disabled", "ads_app_slider", "ads_site_slider", "ads_app", "ads_site", "ads_post", "ads_app_video", "ads_post_pretty_cards", "ads_post_snippet_video"};
+        String[] adsParams = {"ads_app_slider", "ads_site_slider", "ads_app", "ads_site", "ads_post", "ads_app_video", "ads_post_pretty_cards", "ads_post_snippet_video"};
+        String noAdParam = "ads_disabled";
 
         if (ads()) {
-            hashSet.add(adsParams[0]);
-            hashSet.add(adsParams[1]);
+            hashSet.add(noAdParam);
+
+            if (!Preferences.milkshake()) {
+                hashSet.add(adsParams[0]);
+            }
         } else {
             Collections.addAll(hashSet, adsParams);
-        }
-
-        if (Preferences.milkshake()) {
-            hashSet.remove(adsParams[1]);
         }
     }
 
@@ -149,5 +151,13 @@ public class NewsfeedHook {
 
 //        return !getBoolValue("force_disable_psm", false) && pw.isPowerSaveMode();
         return false;
+    }
+
+    public static boolean isRoaming(NetworkInfo networkInfo) {
+        return !Preferences.disableForceTrafficSaver() && networkInfo.isRoaming();
+    }
+
+    public static boolean isNetworkRoaming(TelephonyManager telephonyManager) {
+        return !Preferences.disableForceTrafficSaver() && telephonyManager.isNetworkRoaming();
     }
 }

@@ -39,8 +39,14 @@ public class FiltersPreferences {
         preferences.edit().putBoolean("sponsorpost_filters_marking", status).apply();
     }
 
-    public static void clearAll() {
-        preferences.edit().clear().apply();
+    public static void clearAllCachedLists() {
+        SharedPreferences.Editor editor = preferences.edit();
+
+        preferences.getAll().keySet().stream()
+                .filter(key -> key.endsWith(":" + PREF_KEY_LIST))
+                .forEach(editor::remove);
+
+        editor.apply();
     }
 
     public static boolean getSavedKeyValue(int id) {

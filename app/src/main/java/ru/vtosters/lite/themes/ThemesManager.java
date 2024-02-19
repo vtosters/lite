@@ -3,6 +3,7 @@ package ru.vtosters.lite.themes;
 import android.app.Application;
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import com.google.devrel.gmscore.tools.apk.arsc.BinaryResourceFile;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
@@ -12,6 +13,8 @@ import ru.vtosters.lite.themes.utils.ArscEditor;
 import ru.vtosters.lite.utils.IOUtils;
 
 import java.io.*;
+import java.util.Arrays;
+import java.util.Enumeration;
 import java.util.zip.CRC32;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -123,7 +126,7 @@ public class ThemesManager {
                 ResourcesLoader.load(app, modApk.getAbsolutePath(), false);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            //
         }
     }
 
@@ -152,59 +155,70 @@ public class ThemesManager {
     }
 
     public static void generateModApk(int accentColor) throws Throwable {
-        try (var apk = new ZipFile(baseApkPath)) {
-            var arscEntry = apk.getEntry("resources.arsc");
-            var arscBis = new BufferedInputStream(apk.getInputStream(arscEntry));
-            var arsc = BinaryResourceFile.fromInputStream(arscBis);
+        try (ZipFile apk = new ZipFile(baseApkPath);
+             ZipOutputStream zos = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(modApk)))) {
+
+            ZipEntry arscEntry = apk.getEntry("resources.arsc");
+            BufferedInputStream arscBis = new BufferedInputStream(apk.getInputStream(arscEntry));
+            BinaryResourceFile arsc = BinaryResourceFile.fromInputStream(arscBis);
             ArscEditor.changeColors(arsc, ACCENT_COLORS, accentColor);
 
-            try (var zos = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(modApk)))) {
-                var arscBuff = arsc.toByteArray();
-                var newArscEntry = new ZipEntry("resources.arsc");
+            byte[] arscBuff = arsc.toByteArray();
+            ZipEntry newArscEntry = new ZipEntry("resources.arsc");
 
-                var crc = new CRC32();
-                crc.update(arscBuff);
+            CRC32 crc = new CRC32();
+            crc.update(arscBuff);
 
-                newArscEntry.setSize(arscBuff.length);
-                newArscEntry.setMethod(ZipEntry.STORED);
-                newArscEntry.setCrc(crc.getValue());
+            newArscEntry.setSize(arscBuff.length);
+            newArscEntry.setMethod(ZipEntry.STORED);
+            newArscEntry.setCrc(crc.getValue());
 
-                zos.putNextEntry(newArscEntry);
-                zos.write(arscBuff);
-                zos.closeEntry();
+            zos.putNextEntry(newArscEntry);
+            zos.write(arscBuff);
+            zos.closeEntry();
 
-                var entries = apk.entries();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                apk.stream()
+                        .filter(entry -> entry.getName().startsWith("res/") || entry.getName().startsWith("assets/") && !entry.getName().equals("resources.arsc"))
+                        .forEach(entry -> {
+                            try {
+                                String name = entry.getName();
+                                workWithApk(zos, name, apk.getInputStream(entry), entry.getSize(), entry.getCrc());
+                            } catch (IOException e) {
+                                e.fillInStackTrace();
+                            }
+                        });
+            } else {
+                Enumeration<? extends ZipEntry> entries = apk.entries();
                 while (entries.hasMoreElements()) {
-                    var entry = entries.nextElement();
-                    var name = entry.getName();
-
-                    if (!name.startsWith("res/") && !name.startsWith("assets/") || name.equals("resources.arsc"))
-                        continue;
-
-                    var doNotCompress = false;
-                    for (var suffix : DO_NOT_COMPRESS) {
-                        if (name.endsWith(suffix)) {
-                            doNotCompress = true;
-                            break;
-                        }
+                    ZipEntry entry = entries.nextElement();
+                    String name = entry.getName();
+                    if (name.startsWith("res/") || name.startsWith("assets/") && !name.equals("resources.arsc")) {
+                        workWithApk(zos, name, apk.getInputStream(entry), entry.getSize(), entry.getCrc());
                     }
-
-                    var entryBis = new BufferedInputStream(apk.getInputStream(entry));
-                    var newEntry = new ZipEntry(name);
-
-                    if (doNotCompress) {
-                        newEntry.setMethod(ZipEntry.STORED);
-                        newEntry.setSize(entry.getSize());
-                        newEntry.setCrc(entry.getCrc());
-                    } else newEntry.setMethod(ZipEntry.DEFLATED);
-
-                    zos.putNextEntry(newEntry);
-                    IOUtils.copy(entryBis, zos);
-                    entryBis.close();
-                    zos.closeEntry();
                 }
             }
         }
+    }
+
+    private static void workWithApk(ZipOutputStream zos, String name, InputStream inputStream, long size, long crc) throws IOException {
+        boolean doNotCompress = Arrays.stream(DO_NOT_COMPRESS).anyMatch(name::endsWith);
+
+        BufferedInputStream entryBis = new BufferedInputStream(inputStream);
+        ZipEntry newEntry = new ZipEntry(name);
+
+        if (doNotCompress) {
+            newEntry.setMethod(ZipEntry.STORED);
+            newEntry.setSize(size);
+            newEntry.setCrc(crc);
+        } else {
+            newEntry.setMethod(ZipEntry.DEFLATED);
+        }
+
+        zos.putNextEntry(newEntry);
+        IOUtils.copy(entryBis, zos);
+        entryBis.close();
+        zos.closeEntry();
     }
 
     public static void deleteModification() {

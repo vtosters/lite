@@ -4055,7 +4055,7 @@
     iget-object v1, p0, Lvigo/sdk/Vigo;->tm:Landroid/telephony/TelephonyManager;
 
     .line 13
-    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->isNetworkRoaming()Z
+    invoke-static {v1}, Lru/vtosters/hooks/NewsfeedHook;->isNetworkRoaming(Landroid/telephony/TelephonyManager;)Z
 
     move-result v1
 

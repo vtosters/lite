@@ -163,7 +163,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isRoaming()Z
+    invoke-static {v0}, Lru/vtosters/hooks/NewsfeedHook;->isRoaming(Landroid/net/NetworkInfo;)Z
 
     move-result v0
 
@@ -187,7 +187,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->isNetworkRoaming()Z
+    invoke-static {v0}, Lru/vtosters/hooks/NewsfeedHook;->isNetworkRoaming(Landroid/telephony/TelephonyManager;)Z
 
     move-result v0
 

@@ -109,7 +109,7 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         newsfeedNotificationsPreference.setVisible(Preferences.milkshake());
 
-        findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme());
+        findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M);
 
         findPreference("systememoji").setOnPreferenceClickListener(preference -> {
             restart();
