@@ -43,7 +43,7 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                 getPreferenceScreen(),
                 "",
                 "SponsorPost",
-                "Заблокировано " + PostsPreferences.getNumBlockedPosts() + " поста",
+                "Заблокировано постов: " + PostsPreferences.getNumBlockedPosts(),
                 null,
                 null
         );
@@ -52,7 +52,7 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                 getPreferenceScreen(),
                 "",
                 "SponsorPost фильтры",
-                "Заблокировано " + FiltersPreferences.getNumBlockedPosts() + " поста",
+                "Заблокировано постов: " + FiltersPreferences.getNumBlockedPosts(),
                 null,
                 null
         );
