@@ -87,7 +87,7 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                     getPreferenceScreen(),
                     "",
                     "Фильтр постов",
-                    "Получать списки рекламных постов в группах и ленте, которые не блокируются рекламными фильтрами",
+                    "Получать списки рекламных постов в группах и ленте, которые не блокируются рекламными фильтрами\n\nРекомендуется использовать совместно со Стандартным фильтром",
                     null,
                     PostsPreferences.isEnabled(),
                     (preference, o) -> {
