@@ -136,6 +136,18 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                         return false;
                     }
             );
+
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Телеграм чат",
+                    "Помогите улучшить качество блокировки постов в нашем телеграм чате\n\nДля перехода в чат вам необходима последняя версия Telegram",
+                    null,
+                    preference -> {
+                        requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://t.me/vtosterschat/3559729")));
+                        return false;
+                    }
+            );
         }
 
         requireActivity().runOnUiThread(() -> {
@@ -210,6 +222,18 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                                 (preference, o) -> {
                                     FiltersPreferences.setEnabledMarking((boolean) o);
                                     return true;
+                                }
+                        );
+
+                        PreferenceFragmentUtils.addPreference(
+                                getPreferenceScreen(),
+                                "",
+                                "Телеграм чат",
+                                "Помогите улучшить качество фильтров обсудив работу в нашем телеграм чате\n\nДля перехода в чат вам необходима последняя версия Telegram",
+                                null,
+                                preference -> {
+                                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://t.me/vtosterschat/3559732")));
+                                    return false;
                                 }
                         );
 
