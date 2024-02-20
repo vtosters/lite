@@ -98,12 +98,14 @@ public class VTVerifications {
         if (jsonIds == null || jsonIds.length() == 0)
             return;
 
-        IntStream.range(0, jsonIds.length())
-                .map(jsonIds::optInt)
-                .filter(Objects::nonNull)
-                .forEach(member::add);
+        for (int i = 0; i < jsonIds.length(); i++) {
+            try {
+                member.add(jsonIds.getInt(i));
+            } catch (JSONException e) {
+                e.fillInStackTrace();
+            }
+        }
     }
-
 
     public static boolean isPrometheus(int id) {
         return sPrometheuses.contains(id);
