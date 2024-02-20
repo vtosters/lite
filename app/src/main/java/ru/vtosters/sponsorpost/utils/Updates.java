@@ -75,11 +75,11 @@ public class Updates {
                     VotesPreferences.saveGroupsIds(groupIds.get("vote"));
                 }
             } else {
-                List<Post> posts = PostService.getPosts(weekAgo);
+                List<String> posts = PostService.getAllPostsIds(weekAgo);
                 List<Long> groupIds = PostService.getOwnerIds();
 
                 if (!posts.isEmpty()) {
-                    PostsPreferences.savePosts(posts);
+                    PostsPreferences.savePostsStr(posts);
                 }
 
                 if (!groupIds.isEmpty()) {

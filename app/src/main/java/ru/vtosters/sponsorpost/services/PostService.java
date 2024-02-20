@@ -101,10 +101,19 @@ public class PostService {
         }
     }
 
-    public static List<String> getAllPostsIds() {
+    public static List<String> getAllPostsIds(Long date) {
+        String getFromDate;
+        // Get posts older than the specified date (if positive) or all posts (if zero or negative or empty)
+        if (date > 0) {
+            getFromDate = ("?date=" + date);
+        } else {
+            // No date parameter for retrieving all posts
+            getFromDate = "";
+        }
+
         // Create a GET request for retrieving all post IDs
         Request request = new Request.a()
-                .b(apiPath + "/getAllPostIds")
+                .b(apiPath + "/getAllPostIds" + getFromDate)
                 .a("Content-Type", "application/json")
                 .a("Accept-Encoding", "gzip")
                 .a();
