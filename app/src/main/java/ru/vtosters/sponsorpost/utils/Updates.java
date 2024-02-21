@@ -62,7 +62,7 @@ public class Updates {
 
         if (PostsPreferences.isEnabled() && NetworkUtils.isNetworkConnected()) {
             if (VotesPreferences.isEnabled()) {
-                Map<String, List<String>> posts = VotesService.getPosts(weekAgo);
+                Map<String, List<String>> posts = VotesService.getPosts(weekAgo / 1000);
                 Map<String, List<String>> groupIds = VotesService.getOwnerIds();
 
                 if (!posts.isEmpty()) {
@@ -75,7 +75,7 @@ public class Updates {
                     VotesPreferences.saveGroupsIds(groupIds.get("vote"));
                 }
             } else {
-                List<String> posts = PostService.getAllPostsIds(weekAgo);
+                List<String> posts = PostService.getAllPostsIds(weekAgo / 1000);
                 List<Long> groupIds = PostService.getOwnerIds();
 
                 if (!posts.isEmpty()) {
