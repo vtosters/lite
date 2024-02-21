@@ -43,8 +43,8 @@ public class VTVerifications {
 
         Request request = new Request.a()
                 .b("https://vtosters.app/vktoaster/getGalo4kiBatch")
-                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8", "Accept-Encoding", "gzip"))
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"types\":[0,228,404]}"))
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         sClient.a(request).a(new Callback() {
