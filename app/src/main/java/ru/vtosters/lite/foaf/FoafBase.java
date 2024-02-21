@@ -13,6 +13,7 @@ import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -36,13 +37,14 @@ public class FoafBase {
     public static JSONObject getBypassedOnlineInfo(int id) throws JSONException {
         Request request = new Request.a()
                 .b(API_VKNEXT + id)
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         JSONObject dummy = new JSONObject();
         dummy.put("last_seen", 0);
 
         try (Response response = client.a(request).execute()) {
-            JSONObject online_info = new JSONObject(response.a().g()).getJSONObject("response").optJSONObject(Integer.toString(id));
+            JSONObject online_info = new JSONObject(GzipDecompressor.decompressResponse(response)).getJSONObject("response").optJSONObject(Integer.toString(id));
             return online_info == null ? dummy : online_info;
         } catch (Exception e) {
             Log.e("GetBypassedOnlineInfo", e.getMessage());
@@ -53,12 +55,13 @@ public class FoafBase {
     public static JSONObject getBypassedOnlineInfo(String ids) {
         Request request = new Request.a()
                 .b(API_VKNEXT + ids)
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         JSONObject dummy = new JSONObject();
 
         try (Response response = client.a(request).execute()) {
-            JSONObject online_info = new JSONObject(response.a().g()).getJSONObject("response").optJSONObject("response");
+            JSONObject online_info = new JSONObject(GzipDecompressor.decompressResponse(response)).getJSONObject("response").optJSONObject("response");
             return online_info == null ? dummy : online_info;
         } catch (Exception e) {
             Log.e("GetBypassedOnlineInfo1", e.getMessage());
