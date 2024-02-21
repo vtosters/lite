@@ -122,21 +122,23 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                     }
             ).setEnabled(PostsPreferences.isEnabled());
 
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    "Обновить списки постов",
-                    null,
-                    null,
-                    preference -> {
-                        this.requireActivity().runOnUiThread(() -> {
-                            Updates.updatePosts();
-                            AndroidUtils.sendToast("Обновлено");
-                        });
-                        return false;
-                    }
-            );
-
+            if (NetworkUtils.isNetworkConnected()) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        "Обновить списки постов",
+                        null,
+                        null,
+                        preference -> {
+                            this.requireActivity().runOnUiThread(() -> {
+                                Updates.updatePosts();
+                                AndroidUtils.sendToast("Обновлено");
+                            });
+                            return false;
+                        }
+                );
+            }
+            
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",
