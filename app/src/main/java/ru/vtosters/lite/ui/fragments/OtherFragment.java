@@ -105,6 +105,7 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("updateverifdata").setOnPreferenceClickListener(preference -> {
             UsersList.getUsersList();
+            VTVerifications.isLoaded = false;
             VTVerifications.load(requireContext());
             AndroidUtils.sendToast(AndroidUtils.getString("data_updated"));
             return true;
