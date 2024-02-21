@@ -5,6 +5,7 @@ import okhttp3.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 
@@ -25,6 +26,7 @@ public class OTAUtils {
     public void loadData(boolean isManualCheck) {
         Request release = new Request.a()
                 .b(LATEST_RELEASE_URL)
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         mClient.a(release).a(new Callback() {
@@ -47,11 +49,21 @@ public class OTAUtils {
     }
 
     void setData(Response response, boolean isManualCheck) throws IOException, JSONException {
-        mReleaseJson = new JSONObject(response.a().g());
+        String encoding = response.a("Content-Encoding");
+        String payload;
+
+        if (encoding != null && encoding.equals("gzip")) {
+            payload = GzipDecompressor.decompress(response.a().b());
+        } else {
+            payload = response.a().g();
+        }
+
+        mReleaseJson = new JSONObject(payload);
 
         String tag = mReleaseJson.getString("tag_name");
         Request commit = new Request.a()
                 .b(String.format(LATEST_RELEASE_COMMIT_URL, tag))
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         mClient.a(commit).a(new Callback() {
@@ -64,7 +76,14 @@ public class OTAUtils {
             @Override
             public void a(Call call, Response response) throws IOException {
                 try {
-                    mCommitJson = new JSONObject(response.a().g());
+                    String payload;
+
+                    if (encoding != null && encoding.equals("gzip")) {
+                        payload = GzipDecompressor.decompress(response.a().b());
+                    } else {
+                        payload = response.a().g();
+                    }
+                    mCommitJson = new JSONObject(payload);
                     mCommitSHA = mCommitJson.getJSONObject("object").getString("sha");
                     if (isNewVersion())
                         mListener.onUpdateApplied(isManualCheck);
