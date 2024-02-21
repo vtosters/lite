@@ -33,12 +33,7 @@ public class VotesService {
                 .a();
         try (Response response = client.a(request).execute()) {
             if (response.h()) {
-                String encoding = response.a("Content-Encoding");
-                if (encoding != null && encoding.equals("gzip")) {
-                    return parseJSON(new JSONObject(GzipDecompressor.decompress(response.a().b())));
-                } else {
-                    return parseJSON(new JSONObject(response.a().g()));
-                }
+                return parseJSON(new JSONObject(GzipDecompressor.decompressResponse(response)));
             } else {
                 throw new RuntimeException("Failed to get posts: " + response.l());
             }
@@ -81,12 +76,7 @@ public class VotesService {
                 .a();
         try (Response response = client.a(request).execute()) {
             if (response.h()) {
-                String encoding = response.a("Content-Encoding");
-                if (encoding != null && encoding.equals("gzip")) {
-                    return parseJSON(new JSONObject(GzipDecompressor.decompress(response.a().b())));
-                } else {
-                    return parseJSON(new JSONObject(response.a().g()));
-                }
+                return parseJSON(new JSONObject(GzipDecompressor.decompressResponse(response)));
             } else {
                 throw new RuntimeException("Failed to get postIdsByOwnerId: " + response.l());
             }
@@ -104,12 +94,7 @@ public class VotesService {
                 .a();
         try (Response response = client.a(request).execute()) {
             if (response.h()) {
-                String encoding = response.a("Content-Encoding");
-                if (encoding != null && encoding.equals("gzip")) {
-                    return parseJSON(new JSONObject(GzipDecompressor.decompress(response.a().b())));
-                } else {
-                    return parseJSON(new JSONObject(response.a().g()));
-                }
+                return parseJSON(new JSONObject(GzipDecompressor.decompressResponse(response)));
             } else {
                 throw new RuntimeException("Failed to get ownersIds: " + response.l());
             }
@@ -126,12 +111,7 @@ public class VotesService {
                 .a("Content-Type", "application/json")
                 .a();
         try (Response response = client.a(request).execute()) {
-            String encoding = response.a("Content-Encoding");
-            if (encoding != null && encoding.equals("gzip")) {
-                return new JSONObject(GzipDecompressor.decompress(response.a().b()));
-            } else {
-                return new JSONObject(response.a().g());
-            }
+            return new JSONObject(GzipDecompressor.decompressResponse(response));
         } catch (IOException | JSONException e) {
             throw new RuntimeException(e);
         }
@@ -146,15 +126,8 @@ public class VotesService {
                 .a("Signature", Native.sig())
                 .a();
         try (Response response = client.a(request).execute()) {
-            String encoding = response.a("Content-Encoding");
-            String userToken;
-            if (encoding != null && encoding.equals("gzip")) {
-                userToken = new JSONObject(GzipDecompressor.decompress(response.a().b())).getString("token");
-                VotesPreferences.setUserToken(userToken);
-            } else {
-                userToken = new JSONObject(response.a().g()).getString("token");
-                VotesPreferences.setUserToken(userToken);
-            }
+            String userToken = new JSONObject(GzipDecompressor.decompressResponse(response)).getString("token");
+            VotesPreferences.setUserToken(userToken);
             return userToken;
         } catch (IOException | JSONException e) {
             throw new RuntimeException(e);
@@ -169,14 +142,7 @@ public class VotesService {
                 .a();
         try (Response response = client.a(request).execute()) {
             if (response.h()) {
-                String encoding = response.a("Content-Encoding");
-                String resp;
-                if (encoding != null && encoding.equals("gzip")) {
-                    resp = GzipDecompressor.decompress(response.a().b());
-                } else {
-                    resp = response.a().g();
-                }
-                return Boolean.parseBoolean(resp);
+                return Boolean.parseBoolean(GzipDecompressor.decompressResponse(response));
             } else {
                 throw new RuntimeException("Failed to check post for ad status: " + response.l());
             }

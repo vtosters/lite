@@ -48,17 +48,8 @@ public class OTAUtils {
         });
     }
 
-    void setData(Response response, boolean isManualCheck) throws IOException, JSONException {
-        String encoding = response.a("Content-Encoding");
-        String payload;
-
-        if (encoding != null && encoding.equals("gzip")) {
-            payload = GzipDecompressor.decompress(response.a().b());
-        } else {
-            payload = response.a().g();
-        }
-
-        mReleaseJson = new JSONObject(payload);
+    void setData(Response response, boolean isManualCheck) throws JSONException, IOException {
+        mReleaseJson = new JSONObject(GzipDecompressor.decompressResponse(response));
 
         String tag = mReleaseJson.getString("tag_name");
         Request commit = new Request.a()
@@ -74,22 +65,15 @@ public class OTAUtils {
             }
 
             @Override
-            public void a(Call call, Response response) throws IOException {
+            public void a(Call call, Response response) {
                 try {
-                    String payload;
-
-                    if (encoding != null && encoding.equals("gzip")) {
-                        payload = GzipDecompressor.decompress(response.a().b());
-                    } else {
-                        payload = response.a().g();
-                    }
-                    mCommitJson = new JSONObject(payload);
+                    mCommitJson = new JSONObject(GzipDecompressor.decompressResponse(response));
                     mCommitSHA = mCommitJson.getJSONObject("object").getString("sha");
                     if (isNewVersion())
                         mListener.onUpdateApplied(isManualCheck);
                     else
                         mListener.onUpdateLatest(isManualCheck);
-                } catch (NullPointerException | JSONException e) {
+                } catch (NullPointerException | JSONException | IOException e) {
                     e.printStackTrace();
                     mListener.onUpdateError();
                 }

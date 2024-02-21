@@ -3,6 +3,7 @@ package ru.vtosters.lite.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
+import com.vk.core.network.Network;
 import com.vk.navigation.NavigatorKeys;
 import okhttp3.*;
 import org.json.JSONArray;
@@ -15,8 +16,6 @@ import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.stream.IntStream;
 
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
@@ -44,24 +43,15 @@ public class VTVerifications {
 
         Request request = new Request.a()
                 .b("https://vtosters.app/vktoaster/getGalo4kiBatch")
+                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8", "Accept-Encoding", "gzip"))
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"types\":[0,228,404]}"))
-                .a("Accept-Encoding", "gzip")
                 .a();
 
         sClient.a(request).a(new Callback() {
             @Override
             public void a(Call call, Response response) {
                 try {
-                    String encoding = response.a("Content-Encoding");
-                    String payload;
-
-                    if (encoding != null && encoding.equals("gzip")) {
-                        payload = GzipDecompressor.decompress(response.a().b());
-                    } else {
-                        // Retrieve the response body directly
-                        payload = response.a().g();
-                    }
-
+                    String payload = GzipDecompressor.decompressResponse(response);
                     parseJson(payload);
                     prefs.edit()
                             .putString("ids", payload)

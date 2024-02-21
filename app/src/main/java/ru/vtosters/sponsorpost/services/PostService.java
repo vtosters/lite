@@ -39,17 +39,7 @@ public class PostService {
         try (Response response = client.a(request).execute()) {
             // Check if the response is successful
             if (response.h()) {
-                // Determine the response encoding
-                String encoding = response.a("Content-Encoding");
-
-                // Handle GZIP-compressed responses
-                if (encoding != null && encoding.equals("gzip")) {
-                    // Decompress the response body and parse JSON data
-                    return parseJSONPosts(new JSONArray(GzipDecompressor.decompress(response.a().b())));
-                } else {
-                    // Parse JSON data from the response body
-                    return parseJSONPosts(new JSONArray(response.a().g()));
-                }
+                return parseJSONPosts(new JSONArray(GzipDecompressor.decompressResponse(response)));
             } else {
                 // Handle error response
                 throw new RuntimeException("Failed to get posts: " + response.l());
@@ -78,20 +68,7 @@ public class PostService {
         try (Response response = client.a(request).execute()) {
             // Check if the response is successful
             if (response.h()) {
-                // Determine the response encoding
-                String encoding = response.a("Content-Encoding");
-                String resp;
-
-                if (encoding != null && encoding.equals("gzip")) {
-                    // Decompress the response body
-                    resp = GzipDecompressor.decompress(response.a().b());
-                } else {
-                    // Retrieve the response body directly
-                    resp = response.a().g();
-                }
-
-                // Extract the boolean value indicating whether the post is an ad
-                return Boolean.parseBoolean(resp);
+                return Boolean.parseBoolean(GzipDecompressor.decompressResponse(response));
             } else {
                 // Handle error response
                 throw new RuntimeException("Failed to check post for ad status: " + response.l());
@@ -121,17 +98,7 @@ public class PostService {
         try (Response response = client.a(request).execute()) {
             // Check if the response is successful
             if (response.h()) {
-                // Determine the response encoding
-                String encoding = response.a("Content-Encoding");
-
-                // Handle GZIP-compressed responses
-                if (encoding != null && encoding.equals("gzip")) {
-                    // Decompress the response body and extract the first element as a list of post IDs
-                    return new ArrayList<>(Collections.singleton(GzipDecompressor.decompress(response.a().b())));
-                } else {
-                    // Extract the first element as a list of post IDs
-                    return new ArrayList<>(Collections.singleton(response.a().g()));
-                }
+                return new ArrayList<>(Collections.singleton(GzipDecompressor.decompressResponse(response)));
             } else {
                 // Handle error response
                 throw new RuntimeException("Failed to get posts IDs: " + response.l());
@@ -161,20 +128,7 @@ public class PostService {
         try (Response response = client.a(request).execute()) {
             // Check if the response is successful
             if (response.h()) {
-                // Determine the response encoding
-                String encoding = response.a("Content-Encoding");
-                String resp;
-
-                if (encoding != null && encoding.equals("gzip")) {
-                    // Decompress the response body
-                    resp = GzipDecompressor.decompress(response.a().b());
-                } else {
-                    // Retrieve the response body directly
-                    resp = response.a().g();
-                }
-
-                // Parse the response body as a JSONArray and extract post IDs
-                return parseJSONIds(new JSONArray(resp));
+                return parseJSONIds(new JSONArray(GzipDecompressor.decompressResponse(response)));
             } else {
                 // Handle error response
                 throw new RuntimeException("Failed to get postIdsByOwnerId: " + response.l());
@@ -201,20 +155,7 @@ public class PostService {
         try (Response response = client.a(request).execute()) {
             // Check if the response is successful
             if (response.h()) {
-                // Determine the response encoding
-                String encoding = response.a("Content-Encoding");
-                String resp;
-
-                if (encoding != null && encoding.equals("gzip")) {
-                    // Decompress the response body
-                    resp = GzipDecompressor.decompress(response.a().b());
-                } else {
-                    // Retrieve the response body directly
-                    resp = response.a().g();
-                }
-
-                // Parse the response body as a JSONArray and extract owner IDs
-                return parseJSONIds(new JSONArray(resp));
+                return parseJSONIds(new JSONArray(GzipDecompressor.decompressResponse(response)));
             } else {
                 // Handle error response
                 throw new RuntimeException("Failed to get ownersIds: " + response.l());

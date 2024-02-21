@@ -18,6 +18,7 @@ import ru.vtosters.lite.downloaders.messages.items.MiniUser;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -104,6 +105,7 @@ public class MessagesDownloader {
                 AccountManagerUtils.getUserToken());
         var req = new Request.a()
                 .b(url)
+                .a("Accept-Encoding", "gzip")
                 .a();
         VtOkHttpClient.getInstance().a(req).a(new Callback() {
             @Override
@@ -114,7 +116,7 @@ public class MessagesDownloader {
             @Override
             public void a(Call call, Response response) {
                 try {
-                    JSONObject obj = new JSONObject(response.a().g()).getJSONObject("response");
+                    JSONObject obj = new JSONObject(GzipDecompressor.decompressResponse(response)).getJSONObject("response");
 
                     SparseArray<MiniUser> users = new SparseArray<>();
                     parseUsers(users, obj.optJSONArray("profiles"), false);
