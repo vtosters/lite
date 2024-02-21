@@ -10,6 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,13 +45,23 @@ public class VTVerifications {
         Request request = new Request.a()
                 .b("https://vtosters.app/vktoaster/getGalo4kiBatch")
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"types\":[0,228,404]}"))
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         sClient.a(request).a(new Callback() {
             @Override
             public void a(Call call, Response response) {
                 try {
-                    String payload = response.a().g();
+                    String encoding = response.a("Content-Encoding");
+                    String payload;
+
+                    if (encoding != null && encoding.equals("gzip")) {
+                        payload = GzipDecompressor.decompress(response.a().b());
+                    } else {
+                        // Retrieve the response body directly
+                        payload = response.a().g();
+                    }
+
                     parseJson(payload);
                     prefs.edit()
                             .putString("ids", payload)
