@@ -53,6 +53,7 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
                     this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, date, this.F.getContext()));
                 } else if (NewsFeedFiltersUtils.sponsorFilters(text)) {
                     disclamer = "SponsorPost: Заблокировано фильтрами";
+                    this.F.setOnClickListener(listener -> AndroidUtils.sendToast("Заблокировано по выражению: " + NewsFeedFiltersUtils.sponsorFiltersBanWord(text)));
                 } else {
                     disclamer = m(R.string.sponsored_post_in_group);
                 }

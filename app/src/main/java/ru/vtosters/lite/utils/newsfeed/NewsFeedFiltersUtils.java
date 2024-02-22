@@ -300,25 +300,28 @@ public class NewsFeedFiltersUtils {
 
     public static boolean sponsorFilters(String text) {
         String textInLowerCase = text.toLowerCase();
-        Set<String> list = filters.stream()
-                .filter(adword -> !adword.isEmpty())
-                .collect(Collectors.toSet());
-
-        if (!list.isEmpty()) {
-            return list.stream().anyMatch(adword -> {
-                if (textInLowerCase.contains(adword.toLowerCase())) {
+        return filters.stream()
+                .map(String::toLowerCase)
+                .filter(adword -> !adword.isEmpty() && textInLowerCase.contains(adword))
+                .peek(adword -> {
                     if (dev()) {
                         Log.d("NewsfeedAdBlockV2", text);
                         Log.d("NewsfeedAdBlockV2", "Block word: " + adword);
                     }
-                    return true;
-                }
-                return false;
-            });
-        }
-
-        return false;
+                })
+                .findAny()
+                .isPresent();
     }
+
+    public static String sponsorFiltersBanWord(String text) {
+        String textInLowerCase = text.toLowerCase();
+        return filters.stream()
+                .map(String::toLowerCase)
+                .filter(adword -> !adword.isEmpty() && textInLowerCase.contains(adword))
+                .findAny()
+                .orElse(null);
+    }
+
 
     public static void parseStoriesItem(JSONObject item) throws JSONException {
         JSONArray stories = item.optJSONArray("stories");
