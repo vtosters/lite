@@ -598,9 +598,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/network/proxy/ProxyHost;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-static {}, Lru/vtosters/hooks/VKProxy;->isProxyEnabled()Z
 
     move-result v0
 

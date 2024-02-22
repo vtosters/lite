@@ -622,7 +622,9 @@
 
     .line 12
     :cond_1
-    const p1, 0x0
+    invoke-static {}, Lru/vtosters/hooks/VKProxy;->isProxyEnabled()Z
+
+    move-result p1
 
     if-eqz p1, :cond_2
 

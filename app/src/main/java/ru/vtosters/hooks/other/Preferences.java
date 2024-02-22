@@ -11,6 +11,7 @@ import com.vk.medianative.MediaNative;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 import ru.vtosters.hooks.GmsHook;
+import ru.vtosters.hooks.VKProxy;
 import ru.vtosters.hooks.VerificationsHook;
 import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.proxy.ProxyUtils;
@@ -33,6 +34,7 @@ public class Preferences {
         LifecycleUtils.registerActivities(application);
 
         AnalyticsHelper.start(application);
+        VKProxy.load();
     } // VK Init
 
     public static String getBuildName() {

@@ -1162,7 +1162,10 @@
     :try_start_0
     iput-object p1, p0, Lcom/vk/core/network/proxy/NetworkProxy;->c:Lcom/vk/core/network/proxy/NetworkProxy$c;
 
-    const p1, 0x0
+    .line 7
+    invoke-static {}, Lru/vtosters/hooks/VKProxy;->isProxyEnabled()Z
+
+    move-result p1
 
     if-eqz p1, :cond_1
 

@@ -14,6 +14,10 @@ import android.widget.Toast;
 import androidx.appcompat.view.ContextThemeWrapper;
 import b.h.g.m.FileUtils;
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vk.core.network.Network;
+import com.vk.core.network.proxy.NetworkProxy;
+import com.vk.core.network.proxy.ProxyHost;
+import com.vk.core.preference.Preference;
 import com.vk.im.engine.ImEngine1;
 import com.vk.im.engine.ImEngineExt;
 import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
@@ -22,8 +26,10 @@ import com.vk.imageloader.VKImageLoader;
 import com.vk.media.player.cache.AutoPlayCacheHolder;
 import com.vk.mediastore.MediaStorage;
 import com.vk.stickers.Stickers;
+import com.vtosters.lite.NetworkProxyPreferences;
 import com.vtosters.lite.im.ImEngineProvider;
 import ru.vtosters.hooks.SwitchHook;
+import ru.vtosters.hooks.VKProxy;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
@@ -275,6 +281,32 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         );
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), AndroidUtils.getString("sett_other"));
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "",
+                "Use Proxy Server",
+                null,
+                null,
+                VKProxy.isProxyEnabled(),
+                (preference, o) -> {
+                    VKProxy.setProxyStatus((Boolean) o);
+                    VKProxy.load();
+
+                    if ((Boolean) o) {
+                        Preference.b("NetworkProxy", "proxy_enabled_cookie", true);
+                        Preference.b("NetworkProxy", "proxy_user_state", true);
+                        Network.l.b().a(true);
+                        new ProxyHost().a(true);
+                    } else {
+                        Preference.b("NetworkProxy", "proxy_enabled_cookie", false);
+                        Preference.b("NetworkProxy", "proxy_user_state", false);
+                        Network.l.b().a(false);
+                        new ProxyHost().a(false);
+                    }
+                    return true;
+                }
+        );
 
         PreferenceFragmentUtils.addMaterialSwitchPreference(
                 getPreferenceScreen(),
