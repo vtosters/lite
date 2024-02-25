@@ -21,6 +21,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set up NDK
+      - uses: actions/checkout@v3
+      - uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r25c
+          link-to-sdk: true
+
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
