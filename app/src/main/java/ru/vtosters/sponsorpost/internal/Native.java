@@ -1,15 +1,18 @@
 package ru.vtosters.sponsorpost.internal;
 
+import androidx.annotation.Nullable;
+
 public class Native {
-    public static String sig() {
-        return null;
+    static {
+        System.loadLibrary("sponsorpost");
     }
 
-    public static String time() {
-        return null;
-    }
+    @Nullable
+    public static native String sig();
 
-    public static String pkey() {
-        return null;
-    }
+    @Nullable
+    public static native String time();
+
+    @Nullable
+    public static native String pkey();
 }
