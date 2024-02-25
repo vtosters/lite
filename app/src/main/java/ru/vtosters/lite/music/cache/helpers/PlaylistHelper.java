@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.downloader.M3UDownloader;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
@@ -33,7 +34,7 @@ public class PlaylistHelper {
         return createAlbum(
                 thumb != null ? thumb.h(600) : "",
                 albumLink.getTitle(),
-                track.C,
+                M3UDownloader.getArtists(track),
                 track.y1(),
                 albumLink.getId()
         );
@@ -75,7 +76,7 @@ public class PlaylistHelper {
             list.add(createAlbum(
                     thumb != null ? thumb.h(600) : "",
                     albumLink.getTitle(),
-                    track.C,
+                    M3UDownloader.getArtists(track),
                     track.y1(),
                     albumLink.getId()
             ));

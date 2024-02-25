@@ -6,6 +6,7 @@ import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import com.vk.dto.music.MusicTrack;
+import ru.vtosters.lite.music.downloader.M3UDownloader;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
@@ -19,7 +20,7 @@ public class MusicCacheImpl {
                 track.I != null ? track.I.getId() + "" : "-1",
                 track.f,
                 !TextUtils.isEmpty(track.g) ? track.g : "",
-                track.C,
+                M3UDownloader.getArtists(track),
                 track.I != null ? track.I.getTitle() : "",
                 track.K,
                 track.h,

@@ -6,6 +6,7 @@ import android.util.Log;
 import com.google.android.exoplayer2.source.hls.playlist.e;
 import com.google.android.exoplayer2.source.hls.playlist.f;
 import com.google.android.exoplayer2.source.hls.playlist.f.a;
+import com.vk.dto.music.Artist;
 import com.vk.dto.music.MusicTrack;
 import java8.util.concurrent.CompletableFuture;
 import java8.util.concurrent.CompletionException;
@@ -26,6 +27,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 public class M3UDownloader
         implements ITrackDownloader {
@@ -151,7 +153,7 @@ public class M3UDownloader
     }
 
     static File getResultMp3File(File outDir, boolean cache, MusicTrack track) {
-        return new File(outDir, IOUtils.getValidFileName((cache ? "track" : track.C + " - " + getTitle(track)) + ".mp3"));
+        return new File(outDir, IOUtils.getValidFileName((cache ? "track" : getArtists(track) + " - " + getTitle(track)) + ".mp3"));
     }
 
     @Override
@@ -177,5 +179,15 @@ public class M3UDownloader
     // Initialization-on-demand
     private static class Holder {
         private static final M3UDownloader INSTANCE = new M3UDownloader();
+    }
+
+    public static String getArtists(MusicTrack track) {
+        return (track.L == null || track.I == null
+                ? normalizeMetadata(track.C)
+                : normalizeMetadata(track.L.stream().map(Artist::w1).collect(Collectors.joining(", "))));
+    }
+
+    private static String normalizeMetadata(String in) {
+        return in.replaceAll("[\\\\/:*?\"<>|]", "");
     }
 }

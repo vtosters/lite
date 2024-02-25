@@ -14,6 +14,7 @@ import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.downloader.M3UDownloader;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
@@ -32,7 +33,7 @@ public class LastFMScrobbler {
 
     public static void grabMusicTrack(MusicTrack musictrack) {
         var uid = musictrack.y1();
-        var artist = musictrack.C;
+        var artist = M3UDownloader.getArtists(musictrack);
         var title = musictrack.f;
         var duration = musictrack.h;
         var track_id = musictrack.d;
