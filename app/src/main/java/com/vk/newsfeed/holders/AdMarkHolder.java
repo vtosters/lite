@@ -14,6 +14,7 @@ import com.vk.dto.newsfeed.entries.Post;
 import com.vk.dto.newsfeed.entries.PromoPost;
 import com.vk.extensions.ViewExtKt;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 import ru.vtosters.sponsorpost.internal.VotesPreferences;
@@ -47,10 +48,14 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
 
                 if (PostsPreferences.isPostAd(ownerId, postId)) {
                     disclamer = "SponsorPost: Реклама";
-                    this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, date, this.F.getContext()));
+                    if (Preferences.isValidSignature()) {
+                        this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, date, this.F.getContext()));
+                    }
                 } else if (VotesPreferences.isPostAd(ownerId, postId)) {
                     disclamer = "SponsorPost: Возможно реклама";
-                    this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, date, this.F.getContext()));
+                    if (Preferences.isValidSignature()) {
+                        this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, date, this.F.getContext()));
+                    }
                 } else if (NewsFeedFiltersUtils.sponsorFilters(text)) {
                     disclamer = "SponsorPost: Заблокировано фильтрами";
                     this.F.setOnClickListener(listener -> AndroidUtils.sendToast("Заблокировано по выражению: " + NewsFeedFiltersUtils.sponsorFiltersBanWord(text)));
