@@ -186,7 +186,7 @@ public class NewsFeedFiltersUtils {
         return json;
     }
 
-    private static boolean needToSave(JSONObject post, String source, boolean needToShowToast) throws JSONException {
+    private static boolean needToSave(JSONObject post, String source, boolean needToNotifyBlock) throws JSONException {
         String type = post.optString("type");
 
         if (isAds(post, type)) {
@@ -199,71 +199,71 @@ public class NewsFeedFiltersUtils {
                 || type.endsWith("playlists")
                 || type.endsWith("groups")))) {
 
-            logRemovedPost(post, source, "authors", needToShowToast);
+            logRemovedPost(post, source, "authors", needToNotifyBlock);
             return false;
         }
 
         if (postsrecomm() && (type.equals("inline_user_rec") || type.equals("live_recommended"))) {
-            logRemovedPost(post, source, "postsrecomm", needToShowToast);
+            logRemovedPost(post, source, "postsrecomm", needToNotifyBlock);
             return false;
         }
 
         if (friendsrecomm() && (type.equals("user_rec") || type.equals("friends_recomm"))) {
-            logRemovedPost(post, source, "friendsrecomm", needToShowToast);
+            logRemovedPost(post, source, "friendsrecomm", needToNotifyBlock);
             return false;
         }
 
         if (adsgroup() && post.optInt("marked_as_ads") == 1 && !post.optBoolean("sponsorpost") && !isWhitelistedAd(post)) {
-            logRemovedPost(post, source, "marked_as_ads", needToShowToast);
-            return false;
+            logRemovedPost(post, source, "marked_as_ads", needToNotifyBlock);
+            return needToNotifyBlock;
         }
 
         if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !isWhitelistedAd(post)) {
-            logRemovedPost(post, source, "sponsorpost", needToShowToast);
+            logRemovedPost(post, source, "sponsorpost", needToNotifyBlock);
             PostsPreferences.incrementNumBlockedPosts();
 
             if (PostsPreferences.isEnabledMarking()) {
                 addSponsorPostMark(post);
             } else {
-                return false;
+                return needToNotifyBlock;
             }
         }
 
         if (VotesPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !isWhitelistedAd(post)) {
-            logRemovedPost(post, source, "sponsorpost vote base", needToShowToast);
+            logRemovedPost(post, source, "sponsorpost vote base", needToNotifyBlock);
             addSponsorPostMark(post);
         }
 
         if (sponsorFilters(post.optString("text")) && !post.optBoolean("sponsorpost") && !isWhitelistedFilters(post)) {
-            logRemovedPost(post, source, "sponsorpost filter", needToShowToast);
+            logRemovedPost(post, source, "sponsorpost filter", needToNotifyBlock);
             FiltersPreferences.incrementNumBlockedPosts();
 
             if (FiltersPreferences.isEnabledMarking()) {
                 addSponsorPostMark(post);
             } else {
-                return false;
+                return needToNotifyBlock;
             }
         }
 
         if (checkCopyright(post)) {
-            logRemovedPost(post, source, "copyright filters", needToShowToast);
+            logRemovedPost(post, source, "copyright filters", needToNotifyBlock);
             FiltersPreferences.incrementNumBlockedPosts();
-            return false;
+            return needToNotifyBlock;
         }
 
         if (checkCaption(post)) {
-            logRemovedPost(post, source, "caption filters", needToShowToast);
-            return false;
+            logRemovedPost(post, source, "caption filters", needToNotifyBlock);
+            return needToNotifyBlock;
         }
 
         if (hasMiniAppAds(post) && !isWhitelistedFilters(post)) {
-            logRemovedPost(post, source, "miniapps ban", needToShowToast);
-            return false;
+            logRemovedPost(post, source, "miniapps ban", needToNotifyBlock);
+            return needToNotifyBlock;
         }
 
         if (NewsFeedFiltersUtils.injectFiltersReposts(post) && !isWhitelistedFilters(post)) {
-            logRemovedPost(post, source, "repost ad", needToShowToast);
-            return false;
+            logRemovedPost(post, source, "repost ad", needToNotifyBlock);
+            return needToNotifyBlock;
         }
 
         return true;
