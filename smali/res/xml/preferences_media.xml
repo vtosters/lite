@@ -14,62 +14,6 @@
                 android:key="compression"
                 android:title="@string/compression_types"/>
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtl_music_settings">
-        <Preference
-                android:key="cached_tracks"
-                android:title="@string/cached_tracks_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="invertCachedTracks"
-                android:summary="@string/invertcached_summ"
-                android:title="@string/invertcached_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="autocache"
-                android:summary="@string/autocache_summ"
-                android:title="@string/autocache_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="dldir"
-                android:summary="Использовать папку Downloads вместо Music для скачивания музыки в MP3"
-                android:title="Альтернативная папка для скачивания"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="useGenius"
-                android:summary="@string/useGenius_summ"
-                android:title="@string/useGenius_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="useOldAppVer"
-                android:summary="@string/useOldAppVer_summ"
-                android:title="@string/useOldAppVer_title"/>
-        <com.vtosters.lite.ui.SummaryListPreference
-                android:defaultValue="default"
-                android:dialogTitle="@string/musicdefcatalog_dialogTitle"
-                android:entries="@array/musicdefcatalog_value"
-                android:entryValues="@array/musicdefcatalog"
-                android:key="musicdefcatalog"
-                android:title="@string/musicdefcatalog_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="true"
-                android:key="setMetaData"
-                android:summary="Сохранять id3v2 теги для песен для MP3"
-                android:title="Сохранять метадату песен"/>
-        <Preference
-                android:key="audio_download"
-                android:title="@string/audio_download_title"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="Last.fm" android:key="lastfm">
-        <Preference
-                android:key="lastfm_auth"
-                android:summary="@string/lastfm_auth_summ"
-                android:title="@string/lastfm_auth_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="lastfm_enabled"
-                android:summary="@string/lastfm_enabled_summ"
-                android:title="@string/lastfm_enabled_title"/>
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_video_settings">
         <Preference
                 android:key="download_video"
@@ -98,22 +42,5 @@
         <Preference
                 android:key="select_photo_search_engine"
                 android:title="@string/photo_search_engine_title"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vkx_title" android:key="vkx_sett">
-        <Preference
-                android:enabled="false"
-                android:summary="@string/vkx_why_summary"
-                android:title="@string/vkx_why"/>
-        <Preference
-                android:persistent="false"
-                android:title="@string/vkx_download">
-            <intent
-                    android:action="android.intent.action.VIEW"
-                    android:data="https://vkx.app"/>
-        </Preference>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="libvkx_integration"
-                android:title="@string/vkx_integration"/>
     </PreferenceCategory>
 </PreferenceScreen>

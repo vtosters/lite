@@ -469,6 +469,18 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
+                requireContext().getString(R.string.music),
+                getValAsString(R.string.useGenius_title, Preferences.getBoolValue("useGenius", false)),
+                R.drawable.ic_music_outline_28,
+                preference -> {
+                    NavigatorUtils.switchFragment(requireContext(), MusicFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
                 requireContext().getString(R.string.vtlmessages),
                 AndroidUtils.isTablet()
                         ? getValAsString(R.string.autotranslate_title, Preferences.autotranslate())
