@@ -5,12 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import androidx.preference.Preference;
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 import com.vtosters.lite.R;
@@ -21,10 +18,7 @@ import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
-import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.downloaders.VideoDownloader;
-import ru.vtosters.lite.music.LastFMScrobbler;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -37,8 +31,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
-    private static final ExecutorService executor = Executors.newCachedThreadPool();
-
     public static void download(Context ctx) {
         final EditText input = new EditText(ctx);
         input.setTextColor(ThemesUtils.getTextAttr());
@@ -93,47 +85,6 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
             deleteVideoHistoryDialog(requireContext());
             return true;
         });
-        findPreference("lastfm_auth").setOnPreferenceClickListener(preference -> {
-            if (LastFMScrobbler.isLoggedIn()) {
-                logout(getContext());
-            } else {
-                lastfmAuth(getContext());
-            }
-            return true;
-        });
-
-        if (LastFMScrobbler.isLoggedIn()) {
-            findPreference("lastfm_auth").setSummary(requireContext().getString(R.string.lastfm_authorized_as) + " " + LastFMScrobbler.getUserName());
-        } else {
-            findPreference("lastfm_enabled").setEnabled(false);
-        }
-
-        findPreference("lastfm").setVisible(!Preferences.serverFeaturesDisable());
-
-        findPreference("cached_tracks").setSummary(String.format(requireContext().getString(R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
-        findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
-            if (MusicCacheImpl.isEmpty()) {
-                AndroidUtils.sendToast(requireContext().getString(R.string.no_cache_error));
-            } else {
-                delcache(requireContext());
-            }
-            return true;
-        });
-
-        findPreference("useGenius").setVisible(!Preferences.serverFeaturesDisable());
-
-        findPreference("audio_download").setOnPreferenceClickListener(preference -> {
-            dlaudio(requireContext());
-            return true;
-        });
-
-        findPreference("invertCachedTracks").setVisible(!MusicCacheImpl.isEmpty());
-
-        findPreference("musicdefcatalog").setVisible(!Preferences.getBoolValue("useOldAppVer", false));
-        findPreference("useOldAppVer").setOnPreferenceClickListener(preference -> {
-            LifecycleUtils.restartApplicationWithTimer();
-            return true;
-        });
 
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
             var items = new ImagineArrayAdapter.ImagineArrayAdapterItem[SearchEngine.values().length + 1];
@@ -162,83 +113,6 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
         });
 
         findPreference("maxquality").setEnabled(Preferences.isEnableExternalOpening());
-    }
-
-    private void lastfmAuth(Context ctx) {
-        LinearLayout linearLayout = new LinearLayout(ctx);
-        linearLayout.setOrientation(LinearLayout.VERTICAL);
-
-        final EditText fn = new EditText(ctx);
-        fn.setHint(R.string.lastfm_login);
-        fn.setTextColor(ThemesUtils.getTextAttr());
-        fn.setHintTextColor(ThemesUtils.getSTextAttr());
-        fn.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
-        linearLayout.addView(fn);
-        fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
-        ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
-        margin.setMargins(AndroidUtils.dp2px(20f), 0, AndroidUtils.dp2px(20f), 0);
-        fn.setLayoutParams(margin);
-
-        final EditText ln = new EditText(ctx);
-        ln.setHint(R.string.lastfm_password);
-        ln.setTextColor(ThemesUtils.getTextAttr());
-        ln.setHintTextColor(ThemesUtils.getSTextAttr());
-        ln.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
-        linearLayout.addView(ln);
-        ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
-        ln.setLayoutParams(margin);
-
-        new VkAlertDialog.Builder(ctx)
-                .setTitle(R.string.lastfm_enter_credentials)
-                .setPositiveButton(R.string.lastfm_enter,
-                        (dialog, which) -> {
-                            String login = fn.getText().toString();
-                            String pass = ln.getText().toString();
-                            LastFMScrobbler.authenticate(login, pass);
-                        }
-                )
-                .setView(linearLayout)
-                .show();
-    }
-
-    private void logout(Context ctx) {
-        new VkAlertDialog.Builder(ctx)
-                .setTitle(R.string.lastfm_logout_title)
-                .setMessage(R.string.lastfm_logout_confirm)
-                .setPositiveButton(R.string.vkim_yes,
-                        (dialog, which) -> LastFMScrobbler.logout())
-                .setNeutralButton(R.string.vkim_no,
-                        (dialog, which) -> dialog.cancel())
-                .show();
-    }
-
-    private void delcache(Context ctx) {
-        new VkAlertDialog.Builder(ctx)
-                .setTitle(R.string.warning)
-                .setMessage(R.string.cached_tracks_remove_confirm)
-                .setPositiveButton(R.string.yes,
-                        (dialog, which) -> executor.submit(MusicCacheImpl::clear))
-                .setNeutralButton(R.string.no,
-                        (dialog, which) -> dialog.cancel())
-                .show();
-    }
-
-    private void dlaudio(Context ctx) {
-        if (LibVKXClient.isIntegrationEnabled()) {
-            AndroidUtils.sendToast(AndroidUtils.getString("vkx_integration_enabled_info"));
-            return;
-        }
-
-        new VkAlertDialog.Builder(ctx)
-                .setTitle(R.string.download_method)
-                .setMessage(R.string.download_method_desc)
-                .setPositiveButton(R.string.download_method_cache, (dialog, which) -> {
-                    executor.submit(AudioDownloader::cacheAllAudios);
-                })
-                .setNegativeButton(R.string.download_method_mp3, (dialog, which) -> {
-                    executor.submit(AudioDownloader::downloadAllAudios);
-                })
-                .show();
     }
 
     public void deleteVideoHistory() {
