@@ -222,26 +222,29 @@ public class NewsFeedFiltersUtils {
             logRemovedPost(post, source, "sponsorpost", needToNotifyBlock);
             PostsPreferences.incrementNumBlockedPosts();
 
-            if (PostsPreferences.isEnabledMarking()) {
+            if (PostsPreferences.isEnabledMarking() || needToNotifyBlock) {
                 addSponsorPostMark(post);
+                return true;
             } else {
-                return needToNotifyBlock;
+                return false;
             }
         }
 
         if (VotesPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !isWhitelistedAd(post)) {
             logRemovedPost(post, source, "sponsorpost vote base", needToNotifyBlock);
             addSponsorPostMark(post);
+            return true;
         }
 
         if (sponsorFilters(post.optString("text")) && !post.optBoolean("sponsorpost") && !isWhitelistedFilters(post)) {
             logRemovedPost(post, source, "sponsorpost filter", needToNotifyBlock);
             FiltersPreferences.incrementNumBlockedPosts();
 
-            if (FiltersPreferences.isEnabledMarking()) {
+            if (FiltersPreferences.isEnabledMarking() || needToNotifyBlock) {
                 addSponsorPostMark(post);
+                return true;
             } else {
-                return needToNotifyBlock;
+                return false;
             }
         }
 
