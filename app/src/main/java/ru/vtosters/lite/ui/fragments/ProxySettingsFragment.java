@@ -1,21 +1,30 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.os.Bundle;
+import com.vk.core.preference.Preference;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.VKProxy;
+import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 
 public class ProxySettingsFragment extends TrackedMaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(R.xml.preferences_proxy);
-//        findPreference("random_proxy").setOnPreferenceClickListener(preference -> {
-//            try {
-//                setupNewProxy();
-//            } catch (IOException e) {
-//                sendToast(requireContext().getString(R.string.get_proxy_error));
-//            }
-//            return true;
-//        });
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "",
+                "Use VK Proxy Server",
+                null,
+                null,
+                VKProxy.isProxyEnabled(),
+                (preference, o) -> {
+                    VKProxy.setProxyStatus((Boolean) o);
+                    VKProxy.load();
+                    return true;
+                }
+        );
     }
 
     @Override

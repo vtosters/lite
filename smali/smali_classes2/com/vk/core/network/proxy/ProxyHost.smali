@@ -382,6 +382,8 @@
 
     if-eqz p1, :cond_0
 
+    const/4 v3, 0x1
+
     goto :goto_0
 
     :cond_0
@@ -598,7 +600,9 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lru/vtosters/hooks/VKProxy;->isProxyEnabled()Z
+    iget-object v0, p0, Lcom/vk/core/network/proxy/ProxyHost;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
 
@@ -685,9 +689,13 @@
 .method public i()V
     .locals 3
 
-    const-string v1, ""
+    invoke-static {}, Lru/vtosters/hooks/VKProxy;->getConfigNetworkProxy()Z
 
-    const-string v0, ""
+    move-result-object v1
+
+    invoke-static {}, Lru/vtosters/hooks/VKProxy;->getConfigNetworkProxyCerts()Z
+
+    move-result-object v0
 
     .line 3
     iget-object v2, p0, Lcom/vk/core/network/proxy/ProxyHost;->d:Lcom/vk/core/network/proxy/ProxySettings;

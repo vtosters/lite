@@ -52,6 +52,11 @@
         }
     .end annotation
 
+    .line 1
+    iget-object v0, p0, Lcom/vk/core/network/proxy/ProxyHost$a;->a:Lcom/vk/core/network/proxy/ProxyHost;
+
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/ProxyHost;->i()V
+
     return-void
 .end method
 

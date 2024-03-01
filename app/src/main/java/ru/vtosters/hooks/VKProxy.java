@@ -12,23 +12,38 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
 
 public class VKProxy {
     private static final OkHttpClient sClient = VtOkHttpClient.getInstance();
+    private static String nwProxy = Preferences.getPreferences().getString("configNetworkProxy", "");
+    private static String nwProxyCerts = Preferences.getPreferences().getString("configNetworkProxyCerts", "");
 
     public static boolean isProxyEnabled() {
-        return Preferences.getBoolValue("isVKProxyEnabled", false);
+        return Preferences.getBoolValue("useProxyServer", false);
     }
 
     public static void setProxyStatus(boolean status) {
-        Preferences.getPreferences().edit().putBoolean("isVKProxyEnabled", status).apply();
+        Preferences.getPreferences().edit().putBoolean("useProxyServer", status).apply();
+    }
+
+    public static String getConfigNetworkProxy() {
+        if (nwProxyCerts.isEmpty()) {
+            load();
+        }
+        return nwProxy;
+    }
+
+    public static String getConfigNetworkProxyCerts() {
+        if (nwProxyCerts.isEmpty()) {
+            load();
+        }
+        return nwProxyCerts;
     }
 
     public static void load() {
-        if (!isProxyEnabled()) return;
-
         Request request = new Request.a()
                 .b("https://firebaseremoteconfig.googleapis.com/v1/projects/api-project-841415684880/namespaces/firebase:fetch")
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"appId\":\"1:841415684880:android:632f429381141121\",\"appInstanceId\":\"RB855168585SG\"}\n"))
@@ -51,7 +66,6 @@ public class VKProxy {
             @Override
             public void a(Call call, Response response) throws IOException {
                 String payload = response.a().g();
-                Log.d("VKProxy", payload);
 
                 try {
                     JSONObject jsonObject = new JSONObject(payload).getJSONObject("entries");
@@ -64,11 +78,12 @@ public class VKProxy {
                     new ProxySettings().c(configNetworkProxy);
                     new ProxySettings().b(configNetworkProxyCerts);
 
-                    Preference.b("NetworkProxy", "proxy_enabled_cookie", true);
-                    Preference.b("NetworkProxy", "proxy_user_state", true);
-                    Network.l.b().a(true);
-                    new ProxyHost().a(true);
-                    new NetworkProxyPreferences().a(NetworkProxy.Reason.PROXY_ENABLED_SERVER);
+                    Preferences.getPreferences().edit().putString("configNetworkProxy", configNetworkProxy).putString("configNetworkProxyCerts", configNetworkProxyCerts).apply();
+
+                    nwProxy = configNetworkProxy;
+                    nwProxyCerts = configNetworkProxyCerts;
+
+                    AndroidUtils.sendToast("Инициализированы прокси");
                 } catch (JSONException e) {
                     throw new RuntimeException(e);
                 }

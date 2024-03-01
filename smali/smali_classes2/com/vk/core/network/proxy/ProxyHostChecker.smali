@@ -31,7 +31,17 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lru/vtosters/hooks/VKProxy;->isProxyEnabled()Z
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+
+    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "__dbg_proxy_enable"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
