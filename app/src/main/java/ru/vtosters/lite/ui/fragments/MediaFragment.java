@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -23,16 +22,13 @@ import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.SearchEngine;
 
 import java.util.Arrays;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
     public static void download(Context ctx) {
-        final EditText input = new EditText(ctx);
+        EditText input = new EditText(ctx);
         input.setTextColor(ThemesUtils.getTextAttr());
         input.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
 
@@ -56,26 +52,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(R.xml.preferences_media);
-        prefs();
-    }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        prefs();
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        findPreference("maxquality").setEnabled(Preferences.isEnableExternalOpening());
-        return super.onPreferenceTreeClick(preference);
-    }
-
-    private void prefs() {
         findPreference("download_video").setOnPreferenceClickListener(preference -> {
             download(requireContext());
 
@@ -113,6 +90,12 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
         });
 
         findPreference("maxquality").setEnabled(Preferences.isEnableExternalOpening());
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        findPreference("maxquality").setEnabled(Preferences.isEnableExternalOpening());
+        return super.onPreferenceTreeClick(preference);
     }
 
     public void deleteVideoHistory() {
