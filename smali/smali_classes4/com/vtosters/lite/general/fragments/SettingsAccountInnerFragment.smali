@@ -431,9 +431,6 @@
 .end method
 
 .method private p0(I)V
-
-    return-void
-
     .locals 5
 
     const/4 v0, 0x2
@@ -907,6 +904,27 @@
     new-instance v0, Lcom/vtosters/lite/general/fragments/SettingsAccountInnerFragment$j;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/general/fragments/SettingsAccountInnerFragment$j;-><init>(Lcom/vtosters/lite/general/fragments/SettingsAccountInnerFragment;)V
+
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
+
+    const-string p1, "sync"
+
+    .line 18
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    .line 19
+    invoke-static {}, Lcom/vk/contacts/ContactsSyncUtils;->b()I
+
+    move-result v0
+
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/general/fragments/SettingsAccountInnerFragment;->p0(I)V
+
+    .line 20
+    new-instance v0, Lcom/vtosters/lite/general/fragments/SettingsAccountInnerFragment$k;
+
+    invoke-direct {v0, p0}, Lcom/vtosters/lite/general/fragments/SettingsAccountInnerFragment$k;-><init>(Lcom/vtosters/lite/general/fragments/SettingsAccountInnerFragment;)V
 
     invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
