@@ -16,6 +16,11 @@
                 android:entryValues="@array/proxy_value"
                 android:key="proxy"
                 android:title="@string/useproxy"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="vkproxy"
+                android:summary="Нестабилен"
+                android:title="Встроенный прокси"/>
 <!--        <Preference-->
 <!--                android:key="random_proxy"-->
 <!--                android:summary="@string/proxy_setup_summ"-->
