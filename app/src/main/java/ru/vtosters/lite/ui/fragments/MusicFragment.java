@@ -145,6 +145,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                         } else {
                             lastfmAuth(getContext());
                         }
+                        updateLastFmPref();
                         return true;
                     }
             );
@@ -224,21 +225,6 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
         getPreferenceScreen().addPreference(list);
     }
 
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        return super.onPreferenceTreeClick(preference);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (LastFMScrobbler.isLoggedIn() && !Preferences.serverFeaturesDisable()) {
-            findPreference("lastfm_auth").setSummary(getString(com.vtosters.lite.R.string.lastfm_authorized_as) + " " + LastFMScrobbler.getUserName());
-            findPreference("lastfm_enabled").setEnabled(true);
-        }
-    }
-
-
     private void lastfmAuth(Context ctx) {
         LinearLayout linearLayout = new LinearLayout(ctx);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
@@ -274,6 +260,16 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 )
                 .setView(linearLayout)
                 .show();
+    }
+
+    public void updateLastFmPref() {
+        if (LastFMScrobbler.isLoggedIn()) {
+            findPreference("lastfm_auth").setSummary(getString(com.vtosters.lite.R.string.lastfm_authorized_as) + " " + LastFMScrobbler.getUserName());
+            findPreference("lastfm_enabled").setEnabled(true);
+        } else {
+            findPreference("lastfm_auth").setSummary(getString(com.vtosters.lite.R.string.lastfm_auth_summ));
+            findPreference("lastfm_enabled").setEnabled(false);
+        }
     }
 
     private void logout(Context ctx) {

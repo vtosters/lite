@@ -344,6 +344,13 @@
 .method private final a(Landroid/app/Application;)V
     .locals 1
 
+    .line 25
+    new-instance v0, Lcom/vtosters/lite/NetworkProxyPreferences;
+
+    invoke-direct {v0}, Lcom/vtosters/lite/NetworkProxyPreferences;-><init>()V
+
+    invoke-static {p1, v0}, Lb/h/q/d/FirebaseHelper;->a(Landroid/content/Context;Ljava/lang/Runnable;)Lb/h/q/d/FirebaseHelper;
+
     return-void
 .end method
 

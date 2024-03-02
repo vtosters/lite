@@ -52,6 +52,19 @@
         }
     .end annotation
 
+    .line 1
+    sget-object p1, Lb/h/q/d/FirebaseHelper;->c:Lb/h/q/d/FirebaseHelper;
+
+    invoke-virtual {p1}, Lb/h/q/d/FirebaseHelper;->a()Lb/h/q/d/Firebase;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/vk/core/network/proxy/ProxyHost$a$a;
+
+    invoke-direct {v0, p0}, Lcom/vk/core/network/proxy/ProxyHost$a$a;-><init>(Lcom/vk/core/network/proxy/ProxyHost$a;)V
+
+    invoke-virtual {p1, v0}, Lb/h/q/d/Firebase;->a(Ljava/lang/Runnable;)V
+
     return-void
 .end method
 

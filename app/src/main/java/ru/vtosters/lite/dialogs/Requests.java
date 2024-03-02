@@ -6,7 +6,6 @@ import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.utils.ImDialogsUtils;
 import okhttp3.Headers;
-import okhttp3.OkHttpClient;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.net.Request;
@@ -15,21 +14,49 @@ import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
+import java.io.IOException;
+
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
+
 public class Requests {
     public static void hookRead(Dialog dialog) {
-        Request.makeRequest("https://" + ProxyUtils.getApi() + "/method/messages.markAsRead?start_message_id=" + dialog.F1() + "&peer_id=" + dialog.getId() + "&v=5.119&access_token=" + AccountManagerUtils.getUserToken(), response -> {
-        });
+        okhttp3.Request req = new okhttp3.Request.a()
+                .b("https://" + ProxyUtils.getApi() + "/method/messages.markAsRead?start_message_id=" + dialog.F1() + "&peer_id=" + dialog.getId() + "&v=5.119&access_token=" + AccountManagerUtils.getUserToken())
+                .a();
+
+        try {
+            Network.b(CLIENT_API).a(req).execute().close();;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void hookReadStartMsgTo(Msg dialog) {
-        Request.makeRequest("https://" + ProxyUtils.getApi() + "/method/messages.markAsRead?start_message_id=" + dialog.C1() + "&peer_id=" + dialog.v1() + "&v=5.119&access_token=" + AccountManagerUtils.getUserToken(), response -> {
-        });
+        okhttp3.Request req = new okhttp3.Request.a()
+                .b("https://" + ProxyUtils.getApi() + "/method/messages.markAsRead?start_message_id=" + dialog.C1() + "&peer_id=" + dialog.v1() + "&v=5.119&access_token=" + AccountManagerUtils.getUserToken())
+                .a();
+
+        try {
+            Network.b(CLIENT_API).a(req).execute().close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void hookKick(Msg dialog) {
         if (dialog.getFrom().t1() == AccountManagerUtils.getUserId()) return;
-        Request.makeRequest("https://" + ProxyUtils.getApi() + "/method/messages.removeChatUser?member_id=" + dialog.getFrom().t1() + "&chat_id=" + ImDialogsUtils.c(dialog.v1()) + "&v=5.119&access_token=" + AccountManagerUtils.getUserToken(), response -> {
-        });
+
+        okhttp3.Request req = new okhttp3.Request.a()
+                .b("https://" + ProxyUtils.getApi() + "/method/messages.removeChatUser?member_id=" + dialog.getFrom().t1() + "&chat_id=" + ImDialogsUtils.c(dialog.v1()) + "&v=5.119&access_token=" + AccountManagerUtils.getUserToken())
+                .a();
+
+        try {
+            Network.b(CLIENT_API).a(req).execute().close();;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void hookDialogInfo(Dialog dialog) {
@@ -51,7 +78,7 @@ public class Requests {
                         .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
                         .a();
 
-                new OkHttpClient().a(request).execute().a().g();
+                Network.b(CLIENT_API).a(request).execute().a().g();
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -12,7 +11,6 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 import com.vtosters.lite.R;
 import okhttp3.Headers;
-import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
@@ -23,16 +21,15 @@ import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.SearchEngine;
 
 import java.util.Arrays;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
 
 public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
     public static void download(Context ctx) {
-        final EditText input = new EditText(ctx);
+        EditText input = new EditText(ctx);
         input.setTextColor(ThemesUtils.getTextAttr());
         input.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
 
@@ -56,26 +53,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(R.xml.preferences_media);
-        prefs();
-    }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        prefs();
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        findPreference("maxquality").setEnabled(Preferences.isEnableExternalOpening());
-        return super.onPreferenceTreeClick(preference);
-    }
-
-    private void prefs() {
         findPreference("download_video").setOnPreferenceClickListener(preference -> {
             download(requireContext());
 
@@ -115,6 +93,12 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
         findPreference("maxquality").setEnabled(Preferences.isEnableExternalOpening());
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        findPreference("maxquality").setEnabled(Preferences.isEnableExternalOpening());
+        return super.onPreferenceTreeClick(preference);
+    }
+
     public void deleteVideoHistory() {
         VTExecutors.getIoExecutor().execute(() -> {
             var request = new Request.a()
@@ -123,7 +107,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
                     .a();
 
             try {
-                var response = new JSONObject(new OkHttpClient().a(request).execute().a().g());
+                var response = new JSONObject(Network.b(CLIENT_API).a(request).execute().a().g());
 
                 if (response.optInt("response") == 1) {
                     requireActivity().runOnUiThread(() -> AndroidUtils.sendToast(requireContext().getString(R.string.video_history_cleaned)));

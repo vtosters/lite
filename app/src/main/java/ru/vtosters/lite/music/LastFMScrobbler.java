@@ -84,11 +84,11 @@ public class LastFMScrobbler {
         params.put("sk", getSessionKey());
         params.put("artist[0]", artist);
         params.put("track[0]", title);
-        if (!TextUtils.isEmpty(album))
+        if (!TextUtils.isEmpty(album)) {
             params.put("album[0]", album);
+        }
         params.put("duration[0]", String.valueOf(duration));
         params.put("timestamp[0]", String.valueOf(System.currentTimeMillis() / 1000));
-
 
         fetch(params, new Callback() {
             @Override
@@ -151,8 +151,9 @@ public class LastFMScrobbler {
         params.put("format", "json");
 
         var reqBodyBuilder = new FormBody.a(StandardCharsets.UTF_8);
-        for (var entry : params.entrySet())
+        for (var entry : params.entrySet()) {
             reqBodyBuilder.a(entry.getKey(), entry.getValue());
+        }
 
         var req = new Request.a()
                 .b(URL)
@@ -165,6 +166,7 @@ public class LastFMScrobbler {
     public static void fetchSession(JSONObject json) throws JSONException {
         if (!json.has("session")) {
             Log.d("Scrobbler", "Auth failed - no session");
+            AndroidUtils.sendToast("Ошибка входа");
             return;
         }
 
@@ -177,6 +179,8 @@ public class LastFMScrobbler {
                 .putString("sessionKey", key)
                 .putBoolean("lastfm_enabled", true)
                 .apply();
+
+        AndroidUtils.sendToast("Успешный вход");
 
         Log.d("Scrobbler", "Auth success as " + name + ", key " + key);
     }

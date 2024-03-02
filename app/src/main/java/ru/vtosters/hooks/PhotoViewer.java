@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.core.content.FileProvider;
 import com.vk.core.dialogs.actionspopup.ActionsPopup;
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vk.core.network.Network;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.AttachmentWithMedia;
 import com.vk.dto.common.ImageSize;
@@ -90,7 +91,7 @@ public class PhotoViewer {
         var req = new Request.a()
                 .b(getImageUrlFromAttachment(attachment))
                 .a();
-        client.a(req).a(new Callback() {
+        Network.b(Network.ClientType.CLIENT_API).a(req).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
                 e.printStackTrace();
@@ -100,7 +101,7 @@ public class PhotoViewer {
             public void a(Call call, Response response)
                     throws IOException {
                 var tmpImage = new File(AndroidUtils.getGlobalContext().getExternalCacheDir(), attachment.getId() + ".jpg");
-                try (var resp = client.a(req).execute();
+                try (var resp = Network.b(Network.ClientType.CLIENT_IMAGE_LOADER).a(req).execute();
                      var sink = Okio.a(Okio.b(tmpImage))) {
                     sink.a(resp.a().f());
                     var manager = (ClipboardManager) AndroidUtils.getGlobalContext().getSystemService(Context.CLIPBOARD_SERVICE);

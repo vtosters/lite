@@ -42,6 +42,7 @@ import ru.vtosters.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
+import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ssfs.Utils;
 import ru.vtosters.lite.themes.utils.RecolorUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
@@ -77,9 +78,13 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
 
     public static String getProxysumm() {
         String type = Preferences.getString("proxy");
+        boolean isVKProxy = ProxyUtils.isVKProxyEnabled();
 
-        if (type.equals("noproxy") || type.isEmpty())
+        if (isVKProxy) {
+            type = "Встроенный";
+        } else if (type.equals("noproxy") || type.isEmpty()) {
             type = AndroidUtils.getString(R.string.vtlsettdisabled);
+        }
 
         return AndroidUtils.getString(R.string.vtlproxysumm) + ": " + type;
     }

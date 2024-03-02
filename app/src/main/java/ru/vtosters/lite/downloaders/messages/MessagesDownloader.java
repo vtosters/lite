@@ -3,6 +3,7 @@ package ru.vtosters.lite.downloaders.messages;
 import android.util.Log;
 import android.util.SparseArray;
 import androidx.annotation.Nullable;
+import com.vk.core.network.Network;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
 import okhttp3.Call;
@@ -12,7 +13,6 @@ import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.downloaders.messages.items.MiniMsg;
 import ru.vtosters.lite.downloaders.messages.items.MiniUser;
 import ru.vtosters.lite.proxy.ProxyUtils;
@@ -28,6 +28,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
 
 public class MessagesDownloader {
     private static final int[] VIDEO_QUALITIES = {144, 240, 360, 480, 720, 1080, 1440, 2160};
@@ -107,7 +109,7 @@ public class MessagesDownloader {
                 .b(url)
                 .a("Accept-Encoding", "gzip")
                 .a();
-        VtOkHttpClient.getInstance().a(req).a(new Callback() {
+        Network.b(CLIENT_API).a(req).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
                 Log.d("MessagesDownloader", e.getMessage());
