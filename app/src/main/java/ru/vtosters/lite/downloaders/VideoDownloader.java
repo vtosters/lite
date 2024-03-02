@@ -23,6 +23,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -168,6 +169,7 @@ public class VideoDownloader {
 
             var req = new Request.a()
                     .b("https://" + getApi() + "/method/stories.getById?stories=" + storyId + "&v=5.99&access_token=" + getUserToken())
+                    .a("Accept-Encoding", "gzip")
                     .a();
             
             Network.b(CLIENT_API).a(req).a(new Callback() {
@@ -183,7 +185,7 @@ public class VideoDownloader {
                     progressDialog.cancel();
 
                     try {
-                        JSONObject mainJson = new JSONObject(response.a().g());
+                        JSONObject mainJson = new JSONObject(GzipDecompressor.decompressResponse(response));
                         JSONObject responseJson = mainJson.getJSONObject("response").optJSONArray("items").optJSONObject(0);
                         StoryEntry story = new StoryEntry(responseJson);
                         StoryDownloader.downloadStory(story);
@@ -211,6 +213,7 @@ public class VideoDownloader {
 
         var req = new Request.a()
                 .b("https://" + getApi() + "/method/video.get?owner_id=" + ownerId + "&videos=" + videoId + "&v=5.99&access_token=" + getUserToken())
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         Network.b(CLIENT_API).a(req).a(new Callback() {
@@ -225,7 +228,7 @@ public class VideoDownloader {
                 progressDialog.cancel();
 
                 try {
-                    JSONObject mainJson = new JSONObject(response.a().g());
+                    JSONObject mainJson = new JSONObject(GzipDecompressor.decompressResponse(response));
                     JSONObject responseJson = mainJson.getJSONObject("response");
                     JSONArray itemsJson = responseJson.getJSONArray("items");
 

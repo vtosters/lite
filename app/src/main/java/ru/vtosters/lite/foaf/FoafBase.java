@@ -1,9 +1,11 @@
 package ru.vtosters.lite.foaf;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vk.core.network.Network;
 import com.vtosters.lite.R;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -26,6 +28,8 @@ import java.time.temporal.ChronoUnit;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"");
@@ -68,9 +72,9 @@ public class FoafBase {
         }
     }
 
+    @SuppressLint("DefaultLocale")
     private static String getLink(int i) {
-        String prefix = (ProxyUtils.isAnyProxyEnabled() || ProxyUtils.isVKProxyEnabled()) ? "https://" + (ProxyUtils.isVKProxyEnabled() ? VikaMobile.getApiHost() : ProxyUtils.getApi()) + "/_/vk.com/foaf.php?id=" : "https://vk.com/foaf.php?id=";
-        return prefix + i;
+        return ProxyUtils.isAnyProxyEnabled() ? String.format("https://%s/_/vk.com/foaf.php?id=%d", ProxyUtils.getApi(), i) : String.format("https://vk.com/foaf.php?id=%d", i);
     }
 
     public static void loadAndShow(Context context, int i) {
@@ -81,12 +85,13 @@ public class FoafBase {
 
         Request request = new Request.a()
                 .b(getLink(i))
+                .a("Accept-Encoding", "gzip")
                 .a();
 
-        try (Response response = client.a(request).execute()) {
+        try (Response response = Network.b(CLIENT_API).a(request).execute()) {
             LifecycleUtils.getCurrentActivity().runOnUiThread(() -> {
                 try {
-                    showFoafInfo(progressDialog, context, i, response.a().g());
+                    showFoafInfo(progressDialog, context, i, GzipDecompressor.decompressResponse(response));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -122,6 +127,7 @@ public class FoafBase {
         }
     }
 
+    @SuppressLint("DefaultLocale")
     private static void showFoafDialog(Context context, int i, String normalHumanDate, long daysPassed) {
         String message = String.format("%s %d%s %s%s %d", context.getString(R.string.foafid), i, context.getString(R.string.foafregdate), normalHumanDate, context.getString(R.string.foafdate), daysPassed);
         new VkAlertDialog.Builder(context)

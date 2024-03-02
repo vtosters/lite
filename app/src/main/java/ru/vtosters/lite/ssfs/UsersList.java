@@ -13,6 +13,7 @@ import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class UsersList {
 
         Request request = new Request.a()
                 .b(Utils.getDomain() + "/api/getUsersWithServiceDescriptionsAndBanners")
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         VtOkHttpClient.getInstance().a(request).a(new Callback() {
@@ -43,7 +45,7 @@ public class UsersList {
             @Override
             public void a(Call call, Response response) {
                 try {
-                    parseJson(new JSONObject(response.a().g()).getJSONObject("response"));
+                    parseJson(new JSONObject(GzipDecompressor.decompressResponse(response)).getJSONObject("response"));
                 } catch (JSONException | IOException e) {
                     e.printStackTrace();
                 }
