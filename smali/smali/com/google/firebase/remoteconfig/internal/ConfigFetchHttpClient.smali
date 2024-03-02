@@ -357,11 +357,7 @@
     .line 33
     :catch_0
     :cond_0
-    iget-object p1, p0, Lcom/google/firebase/remoteconfig/internal/ConfigFetchHttpClient;->a:Landroid/content/Context;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object p1
+    const-string p1, "com.vkontakte.android"
 
     const-string p2, "packageName"
 
@@ -406,53 +402,57 @@
         }
     .end annotation
 
-    .line 43
-    new-instance v0, Ljava/io/BufferedReader;
+    invoke-static {p1}, Lru/vtosters/hooks/FirebaseGzipSupport;->getJsonObjectFromConnection(Ljava/net/URLConnection;)Lorg/json/JSONObject;
 
-    new-instance v1, Ljava/io/InputStreamReader;
+    move-result-object v0
 
-    .line 44
-    invoke-virtual {p1}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
+    # .line 43
+    # new-instance v0, Ljava/io/BufferedReader;
 
-    move-result-object p1
+    # new-instance v1, Ljava/io/InputStreamReader;
 
-    const-string v2, "utf-8"
+    # .line 44
+    # invoke-virtual {p1}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
-    invoke-direct {v1, p1, v2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
+    # move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    # const-string v2, "utf-8"
 
-    .line 45
-    new-instance p1, Ljava/lang/StringBuilder;
+    # invoke-direct {v1, p1, v2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    # invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 46
-    :goto_0
-    invoke-virtual {v0}, Ljava/io/BufferedReader;->read()I
+    # .line 45
+    # new-instance p1, Ljava/lang/StringBuilder;
 
-    move-result v1
+    # invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v2, -0x1
+    # .line 46
+    # :goto_0
+    # invoke-virtual {v0}, Ljava/io/BufferedReader;->read()I
 
-    if-eq v1, v2, :cond_0
+    # move-result v1
 
-    int-to-char v1, v1
+    # const/4 v2, -0x1
 
-    .line 47
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    # if-eq v1, v2, :cond_0
 
-    goto :goto_0
+    # int-to-char v1, v1
 
-    .line 48
-    :cond_0
-    new-instance v0, Lorg/json/JSONObject;
+    # .line 47
+    # invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    # goto :goto_0
 
-    move-result-object p1
+    # .line 48
+    # :cond_0
+    # new-instance v0, Lorg/json/JSONObject;
 
-    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    # invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    # move-result-object p1
+
+    # invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -467,13 +467,6 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
-    iget-object v0, p0, Lcom/google/firebase/remoteconfig/internal/ConfigFetchHttpClient;->a:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
     const-string v0, "com.vkontakte.android"
 
     const-string v1, "X-Android-Package"
@@ -481,10 +474,6 @@
     invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
-    invoke-direct {p0}, Lcom/google/firebase/remoteconfig/internal/ConfigFetchHttpClient;->b()Ljava/lang/String;
-
-    move-result-object v0
-
     const-string v0, "C8EAB7342DA62B4A229E1BFDEB27B029DD6788A1"
 
     const-string v1, "X-Android-Cert"
@@ -505,9 +494,19 @@
     .line 17
     invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "Accept"
+    .line 17
+    const-string v0, "gzip"
+
+    const-string v1, "Accept-Encoding"
 
     .line 18
+    invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "application/json"
+
+    const-string v1, "Accept"
+
+    .line 19
     invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -723,11 +722,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/google/firebase/remoteconfig/internal/ConfigFetchHttpClient;->a:Landroid/content/Context;
-
-    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
+    const-string v3, "com.vkontakte.android"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -763,11 +758,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/google/firebase/remoteconfig/internal/ConfigFetchHttpClient;->a:Landroid/content/Context;
-
-    invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v4
+    const-string v4, "com.vkontakte.android"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
