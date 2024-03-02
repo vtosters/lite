@@ -101,7 +101,7 @@ public class PhotoViewer {
             public void a(Call call, Response response)
                     throws IOException {
                 var tmpImage = new File(AndroidUtils.getGlobalContext().getExternalCacheDir(), attachment.getId() + ".jpg");
-                try (var resp =  Network.b(Network.ClientType.CLIENT_IMAGE_LOADER).a(req).execute();
+                try (var resp = Network.b(Network.ClientType.CLIENT_IMAGE_LOADER).a(req).execute();
                      var sink = Okio.a(Okio.b(tmpImage))) {
                     sink.a(resp.a().f());
                     var manager = (ClipboardManager) AndroidUtils.getGlobalContext().getSystemService(Context.CLIPBOARD_SERVICE);

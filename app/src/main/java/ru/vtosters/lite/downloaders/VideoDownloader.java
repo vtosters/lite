@@ -106,7 +106,7 @@ public class VideoDownloader {
 
                             MediaScannerConnection.scanFile(finalContext, new String[]{outputFile.toString()}, null, null);
 
-                            AndroidUtils.sendToast("Файл скачан в Downloads/VKVideo");
+                            AndroidUtils.sendToast("Файл скачан в Movies/VKVideo");
                         } catch (IOException e) {
                             e.fillInStackTrace();
                         }
