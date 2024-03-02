@@ -1,9 +1,8 @@
 package ru.vtosters.lite.downloaders;
 
-import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.net.Uri;
+import android.media.MediaScannerConnection;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.view.View;
@@ -18,16 +17,17 @@ import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.VideoFile;
 import com.vk.dto.stories.model.StoryEntry;
 import com.vtosters.lite.R;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.Request;
-import okhttp3.Response;
+import okhttp3.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,15 +71,47 @@ public class VideoDownloader {
 
         new VkAlertDialog.Builder(finalContext)
                 .setAdapter(adapter, (dialog, which) -> {
-                    try {
-                        var url = urls.get(which);
-                        var request = new DownloadManager.Request(Uri.parse(url))
-                                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                                .setTitle(videoFile.toString())
-                                .setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
-                        request.allowScanningByMediaScanner();
-                        ((DownloadManager) finalContext.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
-                    } catch (Throwable ignored) {
+                    String url = urls.get(which);
+
+                    OkHttpClient client = Network.b(Network.ClientType.CLIENT_IMAGE_LOADER);;
+                    Request request = new Request.a()
+                            .b(url)
+                            .a();
+
+                    try (Response response = client.a(request).execute()) {
+                        if (!response.h()) {
+                            throw new IOException("Unexpected code " + response);
+                        }
+
+                        ResponseBody responseBody = response.a();
+
+                        File outputDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES), "/VKVideo/");
+
+                        if (!outputDir.exists()) {
+                            outputDir.mkdirs();
+                        }
+
+                        File outputFile = new File(outputDir, videoFile + ".mp4");
+
+                        try (InputStream inputStream = responseBody.a();
+                             FileOutputStream outputStream = new FileOutputStream(outputFile)) {
+
+                            byte[] buffer = new byte[4096];
+                            int bytesRead;
+
+                            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                                outputStream.write(buffer, 0, bytesRead);
+                            }
+                            outputStream.flush();
+
+                            MediaScannerConnection.scanFile(finalContext, new String[]{outputFile.toString()}, null, null);
+
+                            AndroidUtils.sendToast("Файл скачан в Downloads/VKVideo");
+                        } catch (IOException e) {
+                            e.fillInStackTrace();
+                        }
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
                     }
                 })
                 .show();

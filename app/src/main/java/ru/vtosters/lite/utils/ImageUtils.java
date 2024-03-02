@@ -6,31 +6,46 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
+import com.vk.core.network.Network;
+import okhttp3.Request;
+import okhttp3.Response;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 
-import java.net.URL;
+import java.io.IOException;
 
 public class ImageUtils {
 
     // must be called asynchronously
     public static Drawable getDrawableFromUrl(String url, int placeholderRes, boolean rounded, boolean scaled) {
         if (NetworkUtils.isNetworkConnected() && !NetworkUtils.isInternetSlow()) {
-            try {
-                var bmp = BitmapFactory.decodeStream(new URL(url).openStream());
+            Bitmap bmp = downloadBitmap(url);
 
-                if (bmp != null) {
-                    if (rounded) bmp = getBitmapClippedCircle(bmp);
-                    if (scaled)
-                        bmp = Bitmap.createScaledBitmap(bmp, AndroidUtils.dp2px(256), AndroidUtils.dp2px(256), true);
-
-                    return new BitmapDrawable(AndroidUtils.getResources(), bmp);
+            if (bmp != null) {
+                if (rounded) {
+                    bmp = getBitmapClippedCircle(bmp);
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+
+                if (scaled) {
+                    bmp = Bitmap.createScaledBitmap(bmp, AndroidUtils.dp2px(256), AndroidUtils.dp2px(256), true);
+                }
+
+                return new BitmapDrawable(AndroidUtils.getResources(), bmp);
             }
         }
         return placeholderRes > 0 ? ContextCompat.getDrawable(AndroidUtils.getGlobalContext(), placeholderRes) : null;
+    }
+
+    public static Bitmap downloadBitmap(String url) {
+        Request request = new Request.a()
+                .b(url)
+                .a();
+
+        try (Response resp = Network.b(Network.ClientType.CLIENT_IMAGE_LOADER).a(request).execute()) {
+            return BitmapFactory.decodeStream(resp.a().a());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static Bitmap scaleCenterCrop(Bitmap source, int newHeight, int newWidth) {
