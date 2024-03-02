@@ -2061,9 +2061,6 @@
             android:directBootAware="true"
             android:exported="false">
             <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
