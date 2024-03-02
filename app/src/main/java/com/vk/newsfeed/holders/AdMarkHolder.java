@@ -17,6 +17,7 @@ import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
+import ru.vtosters.sponsorpost.internal.Native;
 import ru.vtosters.sponsorpost.internal.VotesPreferences;
 import ru.vtosters.sponsorpost.internal.VotesService;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
@@ -48,12 +49,12 @@ public final class AdMarkHolder extends BaseNewsEntryHolder<NewsEntry> {
 
                 if (PostsPreferences.isPostAd(ownerId, postId)) {
                     disclamer = "SponsorPost: Реклама";
-                    if (Preferences.isValidSignature()) {
+                    if (Preferences.isValidSignature() && Native.canVote()) {
                         this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, date, this.F.getContext()));
                     }
                 } else if (VotesPreferences.isPostAd(ownerId, postId)) {
                     disclamer = "SponsorPost: Возможно реклама";
-                    if (Preferences.isValidSignature()) {
+                    if (Preferences.isValidSignature() && Native.canVote()) {
                         this.F.setOnClickListener(listener -> voteDialog(ownerId, postId, date, this.F.getContext()));
                     }
                 } else if (NewsFeedFiltersUtils.sponsorFilters(text)) {

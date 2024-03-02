@@ -3,8 +3,10 @@ package ru.vtosters.sponsorpost.internal;
 import androidx.annotation.Nullable;
 
 public class Native {
-    static {
-        System.loadLibrary("sponsorpost");
+    public static boolean canVote;
+
+    public static boolean canVote() {
+        return canVote;
     }
 
     @Nullable

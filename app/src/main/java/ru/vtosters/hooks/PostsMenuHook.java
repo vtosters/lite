@@ -8,13 +8,14 @@ import com.vk.newsfeed.NewsEntryActionsAdapter;
 import com.vk.newsfeed.holders.AdMarkHolder;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.sponsorpost.internal.Native;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
 public class PostsMenuHook {
     private static final int id = 200;
 
     public static void injectList(NewsEntryActionsAdapter actionsAdapter, NewsEntry newsEntry) {
-        if (newsEntry instanceof Post && Preferences.isValidSignature()) {
+        if (newsEntry instanceof Post && Preferences.isValidSignature() && Native.canVote()) {
             int ownerId = ((Post) newsEntry).b();
 
             if (ownerId != AccountManagerUtils.getUserId() && PostsPreferences.isEnabled()) {
