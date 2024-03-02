@@ -297,6 +297,26 @@
 
     .line 28
     :cond_b
+    invoke-static {}, Lcom/google/firebase/c;->i()Lcom/google/firebase/c;
+
+    move-result-object p1
+
+    const-class v1, Lcom/google/firebase/analytics/a/a;
+
+    invoke-virtual {p1, v1}, Lcom/google/firebase/c;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/firebase/analytics/a/a;
+
+    if-eqz p1, :cond_c
+
+    const-string v1, "fcm"
+
+    .line 29
+    invoke-interface {p1, v1, p0, v0}, Lcom/google/firebase/analytics/a/a;->a(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_c
     return-void
 .end method
 
@@ -314,6 +334,105 @@
 .method public static c(Landroid/content/Intent;)V
     .locals 6
 
+    if-eqz p0, :cond_1
+
+    const-string v0, "google.c.a.tc"
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "1"
+
+    .line 2
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    const-string v2, "FirebaseMessaging"
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    invoke-static {}, Lcom/google/firebase/c;->i()Lcom/google/firebase/c;
+
+    move-result-object v0
+
+    const-class v3, Lcom/google/firebase/analytics/a/a;
+
+    invoke-virtual {v0, v3}, Lcom/google/firebase/c;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/firebase/analytics/a/a;
+
+    .line 4
+    invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v1
+
+    if-eqz v0, :cond_1
+
+    const-string v1, "google.c.a.c_id"
+
+    .line 5
+    invoke-virtual {p0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "fcm"
+
+    const-string v3, "_ln"
+
+    .line 6
+    invoke-interface {v0, v2, v3, v1}, Lcom/google/firebase/analytics/a/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 7
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    const-string v4, "source"
+
+    const-string v5, "Firebase"
+
+    .line 8
+    invoke-virtual {v3, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v4, "medium"
+
+    const-string v5, "notification"
+
+    .line 9
+    invoke-virtual {v3, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v4, "campaign"
+
+    .line 10
+    invoke-virtual {v3, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "_cmp"
+
+    .line 11
+    invoke-interface {v0, v2, v1, v3}, Lcom/google/firebase/analytics/a/a;->a(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    goto :goto_0
+
+    .line 12
+    :cond_0
+    invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    :cond_1
+    :goto_0
+    const-string v0, "_no"
+
+    .line 13
+    invoke-static {v0, p0}, Lcom/google/firebase/messaging/b;->a(Ljava/lang/String;Landroid/content/Intent;)V
 
     return-void
 .end method

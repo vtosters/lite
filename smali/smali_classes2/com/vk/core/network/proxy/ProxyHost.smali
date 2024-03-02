@@ -687,9 +687,27 @@
 .method public i()V
     .locals 3
 
-    const-string v1, ""
+    .line 1
+    sget-object v0, Lb/h/q/d/FirebaseHelper;->c:Lb/h/q/d/FirebaseHelper;
 
-    const-string v0, ""
+    invoke-virtual {v0}, Lb/h/q/d/FirebaseHelper;->a()Lb/h/q/d/Firebase;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lb/h/q/d/Firebase;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 2
+    sget-object v1, Lb/h/q/d/FirebaseHelper;->c:Lb/h/q/d/FirebaseHelper;
+
+    invoke-virtual {v1}, Lb/h/q/d/FirebaseHelper;->a()Lb/h/q/d/Firebase;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lb/h/q/d/Firebase;->c()Ljava/lang/String;
+
+    move-result-object v1
 
     .line 3
     iget-object v2, p0, Lcom/vk/core/network/proxy/ProxyHost;->d:Lcom/vk/core/network/proxy/ProxySettings;

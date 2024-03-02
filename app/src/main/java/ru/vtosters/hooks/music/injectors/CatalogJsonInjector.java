@@ -5,19 +5,18 @@ import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.core.network.Network;
 import com.vk.core.util.DeviceIdProvider;
 import okhttp3.Headers;
-import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
 
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
 import static ru.vtosters.hooks.DateHook.getLocale;
 import static ru.vtosters.hooks.GroupsCatalogInjector.injectIntoCatalog;
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
@@ -26,8 +25,6 @@ import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 
 public class CatalogJsonInjector {
-    private static final OkHttpClient mClient = VtOkHttpClient.getInstance();
-
     public static JSONObject music(JSONObject json) throws JSONException {
         var catalog = json.optJSONObject("catalog");
         var oldItems = catalog != null ? catalog.optJSONArray("sections") : null;
@@ -265,7 +262,7 @@ public class CatalogJsonInjector {
                         + AccountManagerUtils.getUserToken())
                 .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
         try {
-            var json = new JSONObject(mClient.a(request).execute().a().g()).getJSONObject("response");
+            var json = new JSONObject(Network.b(CLIENT_API).a(request).execute().a().g()).getJSONObject("response");
             var catalogarr = json.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
 
             var title = catalogarr.optString("title");

@@ -2,54 +2,58 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/group_info">
         <Preference
-                android:key="phone"
-                android:layout="@layout/preference_with_value"
-                android:persistent="false"
-                android:title="@string/phone_number"/>
+            android:key="phone"
+            android:layout="@layout/preference_with_value"
+            android:persistent="false"
+            android:title="@string/phone_number" />
         <Preference
-                android:key="email"
-                android:layout="@layout/preference_with_value"
-                android:persistent="false"
-                android:title="@string/email"/>
+            android:key="email"
+            android:layout="@layout/preference_with_value"
+            android:persistent="false"
+            android:title="@string/email" />
         <Preference
-                android:key="changePassword"
-                android:layout="@layout/preference_with_value"
-                android:persistent="false"
-                android:title="@string/change_password"/>
+            android:key="changePassword"
+            android:layout="@layout/preference_with_value"
+            android:persistent="false"
+            android:title="@string/change_password" />
         <Preference
-                android:key="domain"
-                android:layout="@layout/preference_with_value"
-                android:persistent="false"
-                android:title="@string/page_address"/>
+            android:key="domain"
+            android:layout="@layout/preference_with_value"
+            android:persistent="false"
+            android:title="@string/page_address" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/sett_posts">
         <com.vtosters.lite.ui.SummaryListPreference
-                android:entries="@array/sett_posts_default_items"
-                android:entryValues="@array/on_off"
-                android:key="onlyMyPosts"
-                android:layout="@layout/preference_with_value"
-                android:title="@string/sett_posts_default"/>
+            android:entries="@array/sett_posts_default_items"
+            android:entryValues="@array/on_off"
+            android:key="onlyMyPosts"
+            android:layout="@layout/preference_with_value"
+            android:title="@string/sett_posts_default" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:key="enableComments"
-                android:persistent="false"
-                android:title="@string/sett_enable_comments"/>
+            android:key="enableComments"
+            android:persistent="false"
+            android:title="@string/sett_enable_comments" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/community_comments_settings_block_title">
         <Preference
-                android:key="community_comments"
-                android:summary=""
-                android:title="@string/community_comments_settings_title_new"/>
+            android:key="community_comments"
+            android:summary=""
+            android:title="@string/community_comments_settings_title_new" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/account_settings_comments">
         <Preference
-                android:key="comment_order"
-                android:summary=""
-                android:title="@string/account_settings_comment_order"/>
+            android:key="comment_order"
+            android:summary=""
+            android:title="@string/account_settings_comment_order" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/sett_other">
         <Preference
-                android:key="newsBanned"
-                android:summary="@string/sett_news_banned_summary"
-                android:title="@string/sett_news_banned"/>
+            android:key="sync"
+            android:summary=""
+            android:title="@string/sett_sync" />
+        <Preference
+            android:key="newsBanned"
+            android:summary="@string/sett_news_banned_summary"
+            android:title="@string/sett_news_banned" />
     </PreferenceCategory>
 </PreferenceScreen>

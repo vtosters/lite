@@ -11,6 +11,8 @@ import okhttp3.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.proxy.ProxyUtils;
+import ru.vtosters.lite.proxy.api.VikaMobile;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
@@ -23,9 +25,6 @@ import java.time.temporal.ChronoUnit;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
-import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"");
@@ -67,7 +66,7 @@ public class FoafBase {
     }
 
     private static String getLink(int i) {
-        String prefix = isAnyProxyEnabled() ? "https://" + getApi() + "/_/vk.com/foaf.php?id=" : "https://vk.com/foaf.php?id=";
+        String prefix = (ProxyUtils.isAnyProxyEnabled() || ProxyUtils.isVKProxyEnabled()) ? "https://" + (ProxyUtils.isVKProxyEnabled() ? VikaMobile.getApiHost() : ProxyUtils.getApi()) + "/_/vk.com/foaf.php?id=" : "https://vk.com/foaf.php?id=";
         return prefix + i;
     }
 

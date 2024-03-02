@@ -6,7 +6,6 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import java8.util.concurrent.CompletableFuture;
 import okhttp3.Headers;
-import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,6 +18,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
 import static ru.vtosters.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 
@@ -55,7 +55,7 @@ public class PlaylistConverter {
         try {
             var response = CompletableFuture.supplyAsync(() -> {
                         try {
-                            return new OkHttpClient().a(request).execute().a().g();
+                            return Network.b(CLIENT_API).a(request).execute().a().g();
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }

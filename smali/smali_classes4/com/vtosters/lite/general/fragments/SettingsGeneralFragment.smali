@@ -989,6 +989,36 @@
 
     invoke-virtual {v0, p1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
+    # const-string p1, "useProxyServer"
+
+    # .line 9
+    # invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    # move-result-object p1
+
+    # check-cast p1, Landroidx/preference/SwitchPreference;
+
+    # .line 10
+    # sget-object v0, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
+
+    # invoke-virtual {v0}, Lcom/vk/core/network/Network;->b()Lcom/vk/core/network/proxy/NetworkProxy;
+
+    # move-result-object v0
+
+    # .line 11
+    # invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->d()Z
+
+    # move-result v2
+
+    # invoke-virtual {p1, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    # .line 12
+    # new-instance v2, Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment$b;
+
+    # invoke-direct {v2, p0, v0, p1}, Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment$b;-><init>(Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment;Lcom/vk/core/network/proxy/NetworkProxy;Landroidx/preference/SwitchPreference;)V
+
+    # invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+
     const-string p1, "isRoamingState"
 
     .line 13

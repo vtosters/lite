@@ -14,7 +14,6 @@ import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.ui.fragments.MusicFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;

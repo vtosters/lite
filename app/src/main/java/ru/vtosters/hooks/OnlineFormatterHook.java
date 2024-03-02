@@ -1,13 +1,22 @@
 package ru.vtosters.hooks;
 
 import android.util.Log;
+import com.vk.core.network.Network;
 import com.vtosters.lite.R;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.proxy.ProxyUtils;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
+import java.io.IOException;
+
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
 import static ru.vtosters.hooks.other.Preferences.*;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
@@ -85,22 +94,34 @@ public class OnlineFormatterHook {
 
         if (appname != null) return appname;
 
-        makeRequest("https://" + getApi() + "/method/apps.get?app_id=" + appid + "&v=5.99&access_token=" + getUserToken(),
-                response -> {
-                    try {
-                        JSONObject mainJson = new JSONObject(response);
-                        JSONObject responseJson = mainJson.getJSONObject("response");
-                        JSONArray itemsJson = responseJson.getJSONArray("items");
+        okhttp3.Request req = new okhttp3.Request.a()
+                .b("https://" + getApi() + "/method/apps.get?app_id=" + appid + "&v=5.99&access_token=" + getUserToken())
+                .a();
 
-                        AppName = itemsJson.getJSONObject(0).optString("title", "");
+        Network.b(CLIENT_API).a(req).a(new Callback() {
+            @Override
+            public void a(Call call, IOException e) {
+                e.fillInStackTrace();
+            }
 
-                        prefs.edit().putString(String.valueOf(appid), AppName).apply();
+            @Override
+            public void a(Call call, Response response) throws IOException {
+                try {
+                    JSONObject mainJson = new JSONObject(response.a().g());
+                    JSONObject responseJson = mainJson.getJSONObject("response");
+                    JSONArray itemsJson = responseJson.getJSONArray("items");
 
-                        if (dev()) sendToast("AppName: " + AppName + " for appid: " + appid);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                });
+                    AppName = itemsJson.getJSONObject(0).optString("title", "");
+
+                    prefs.edit().putString(String.valueOf(appid), AppName).apply();
+
+                    if (dev()) sendToast("AppName: " + AppName + " for appid: " + appid);
+                } catch (JSONException e) {
+                    e.fillInStackTrace();
+                }
+            }
+        });
+
 
         return AppName;
     }

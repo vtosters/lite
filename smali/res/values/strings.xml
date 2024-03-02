@@ -1308,11 +1308,11 @@ and organize it with the help of tags"</string>
     <string name="goods_picker_text_no_goods">Add products to favorites, and attach them to photos, videos and stories!</string>
     <string name="goods_picker_title_no_goods">Product list empty</string>
     <string name="goods_picker_title_photo">Tag product</string>
-    <string name="google_api_key">AIzaSyBf1M4--c04jJtKSWI2w5DgUTst1_V20D4</string>
+    <string name="google_api_key">AIzaSyCL17U2Q5i1NVwIcXgMOZMidSRFHyGYgwM</string>
     <string name="google_app_id">1:841415684880:android:632f429381141121</string>
     <string name="google_assistant_verification_channel_name">Assistant verifier</string>
     <string name="google_assistant_verification_notification_title">Google Assistant sending message</string>
-    <string name="google_crash_reporting_api_key">AIzaSyBf1M4--c04jJtKSWI2w5DgUTst1_V20D4</string>
+    <string name="google_crash_reporting_api_key"></string>
     <string name="google_storage_bucket">api-project-841415684880.appspot.com</string>
     <string name="group">Community</string>
     <string name="group_accept_member">Accept</string>
