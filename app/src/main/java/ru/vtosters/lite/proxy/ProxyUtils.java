@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.ArrayMap;
 import android.util.Log;
+import com.vk.core.network.Network;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.proxy.http.CustomHttp;
 import ru.vtosters.lite.proxy.https.CustomHttps;
@@ -62,7 +63,7 @@ public class ProxyUtils {
     }
 
     public static Boolean isAnyProxyEnabled() {
-        return isApiProxyEnabled() || isVikaProxyEnabled();
+        return (isApiProxyEnabled() || isVikaProxyEnabled()) && !isVKProxyEnabled();
     }
 
     public static Boolean isZaboronaEnabled() {
@@ -70,7 +71,7 @@ public class ProxyUtils {
     }
 
     public static Boolean isVKProxyEnabled() {
-        return Preferences.getBoolValue("vkproxy", false);
+        return Network.l.b().d();
     }
 
     public static Boolean isApiProxyEnabled() {
