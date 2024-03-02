@@ -21,9 +21,9 @@ public class VKIDProtection {
                 .setNeutralButton(R.string.vkiddisable, (dialogInterface, i) -> {
                     Preferences.getPreferences().edit().putBoolean("showAlertVkId", false).apply();
                     VKUIwrapper.setLink(
-                            (ProxyUtils.isAnyProxyEnabled() || ProxyUtils.isVKProxyEnabled())
+                            ProxyUtils.isAnyProxyEnabled()
                                     ? "https://id.vk.com/account"
-                                    : "https://" + (ProxyUtils.isVKProxyEnabled() ? VikaMobile.getApiHost() : ProxyUtils.getApi()) + "/_/id.vk.com/account");
+                                    : "https://" + ProxyUtils.getApi() + "/_/id.vk.com/account");
                     NavigatorUtils.switchFragment(activity, VKUIwrapper.class);
                 })
                 .show();
