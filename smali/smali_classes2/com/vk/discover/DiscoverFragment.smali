@@ -891,6 +891,17 @@
 
     if-eqz v0, :cond_a
 
+    invoke-static {p1}, Lru/vtosters/hooks/PostsMenuHook;->isCustomButton(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_99
+
+    invoke-static {p1, p2, v0}, Lru/vtosters/hooks/PostsMenuHook;->injectButtons(ILcom/vk/dto/newsfeed/entries/NewsEntry;Landroid/content/Context;)V
+
+    return-void
+
+    :cond_99
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v2

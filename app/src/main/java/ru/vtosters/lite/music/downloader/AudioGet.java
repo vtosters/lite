@@ -7,9 +7,11 @@ import com.vk.dto.music.MusicTrack;
 import java8.util.concurrent.CompletableFuture;
 import okhttp3.Headers;
 import okhttp3.Request;
+import okhttp3.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,12 +46,13 @@ public class AudioGet {
 
         var request = new Request.a()
                 .b(requestUrl)
+                .a("Accept-Encoding", "gzip")
                 .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
 
         try {
             var response = CompletableFuture.supplyAsync(() -> {
-                        try {
-                            return Network.b(CLIENT_API).a(request).execute().a().g();
+                        try (Response resp = Network.b(CLIENT_API).a(request).execute()) {
+                            return GzipDecompressor.decompressResponse(resp);
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }

@@ -42,20 +42,7 @@ public class FilterService {
         try (Response response = client.a(request).execute()) {
             // Check if the response is successful
             if (response.h()) {
-                // Determine the response encoding
-                String encoding = response.a("Content-Encoding");
-                String resp;
-
-                if (encoding != null && encoding.equals("gzip")) {
-                    // Decompress the response body
-                    resp = GzipDecompressor.decompress(response.a().b());
-                } else {
-                    // Retrieve the response body directly
-                    resp = response.a().g();
-                }
-
-                // Parse the response body as a JSONArray and extract filter objects
-                return parseJSON(new JSONArray(resp));
+                return parseJSON(new JSONArray(GzipDecompressor.decompressResponse(response)));
             } else {
                 if (!FiltersPreferences.getAllFilterIds().isEmpty()) {
                     return FiltersPreferences.getAllDownloadedFilters(); // check for offline server to get local filters
@@ -75,11 +62,12 @@ public class FilterService {
     public static Set<String> downloadFilter(String link) {
         Request request = new Request.a()
                 .b(link)
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         try (Response response = client.a(request).execute()) {
             if (response.h()) {
-                return stringToSet(response.a().g());
+                return stringToSet(GzipDecompressor.decompressResponse(response));
             } else {
                 throw new RuntimeException("Failed to download filter: " + response.l());
             }

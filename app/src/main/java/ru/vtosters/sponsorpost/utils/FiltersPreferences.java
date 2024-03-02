@@ -31,6 +31,26 @@ public class FiltersPreferences {
         return AndroidUtils.getGlobalContext().getSharedPreferences("ru.vtosters.sponsorpost.filters.prefs", Context.MODE_PRIVATE);
     }
 
+    public static boolean isEnabledMarking() {
+        return preferences.getBoolean("sponsorpost_filters_marking", false);
+    }
+
+    public static void setEnabledMarking(boolean status) {
+        preferences.edit().putBoolean("sponsorpost_filters_marking", status).apply();
+    }
+
+    public static int getNumBlockedPosts() {
+        return preferences.getInt("numBlockedPosts", 0);
+    }
+
+    public static void incrementNumBlockedPosts() {
+        preferences.edit().putInt("numBlockedPosts", getNumBlockedPosts() + 1).apply();
+    }
+
+    public static void dropNumBlockedPosts() {
+        preferences.edit().putInt("numBlockedPosts", 0).apply();
+    }
+
     public static void clearAllCachedLists() {
         SharedPreferences.Editor editor = preferences.edit();
 

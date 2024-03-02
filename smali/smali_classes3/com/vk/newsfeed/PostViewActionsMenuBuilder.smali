@@ -1367,6 +1367,10 @@
     invoke-virtual {v1, v2, v3, v4}, Lcom/vk/newsfeed/NewsEntryActionsAdapter;->b(III)V
 
     :cond_35
+    iget-object v2, v0, Lcom/vk/newsfeed/PostViewActionsMenuBuilder;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+
+    invoke-static {v1, v2}, Lru/vtosters/hooks/PostsMenuHook;->injectList(Lcom/vk/newsfeed/NewsEntryActionsAdapter;Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
+
     return-object v17
 .end method
 

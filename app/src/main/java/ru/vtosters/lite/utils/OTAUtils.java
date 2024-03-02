@@ -5,6 +5,7 @@ import okhttp3.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 
@@ -25,6 +26,7 @@ public class OTAUtils {
     public void loadData(boolean isManualCheck) {
         Request release = new Request.a()
                 .b(LATEST_RELEASE_URL)
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         mClient.a(release).a(new Callback() {
@@ -46,12 +48,13 @@ public class OTAUtils {
         });
     }
 
-    void setData(Response response, boolean isManualCheck) throws IOException, JSONException {
-        mReleaseJson = new JSONObject(response.a().g());
+    void setData(Response response, boolean isManualCheck) throws JSONException, IOException {
+        mReleaseJson = new JSONObject(GzipDecompressor.decompressResponse(response));
 
         String tag = mReleaseJson.getString("tag_name");
         Request commit = new Request.a()
                 .b(String.format(LATEST_RELEASE_COMMIT_URL, tag))
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         mClient.a(commit).a(new Callback() {
@@ -62,15 +65,15 @@ public class OTAUtils {
             }
 
             @Override
-            public void a(Call call, Response response) throws IOException {
+            public void a(Call call, Response response) {
                 try {
-                    mCommitJson = new JSONObject(response.a().g());
+                    mCommitJson = new JSONObject(GzipDecompressor.decompressResponse(response));
                     mCommitSHA = mCommitJson.getJSONObject("object").getString("sha");
                     if (isNewVersion())
                         mListener.onUpdateApplied(isManualCheck);
                     else
                         mListener.onUpdateLatest(isManualCheck);
-                } catch (NullPointerException | JSONException e) {
+                } catch (NullPointerException | JSONException | IOException e) {
                     e.printStackTrace();
                     mListener.onUpdateError();
                 }

@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.sponsorpost.internal.VotesPreferences;
 import ru.vtosters.sponsorpost.utils.FiltersPreferences;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
@@ -185,7 +186,7 @@ public class NewsFeedFiltersUtils {
         return json;
     }
 
-    private static boolean needToSave(JSONObject post, String source, boolean needToShowToast) throws JSONException {
+    private static boolean needToSave(JSONObject post, String source, boolean needToNotifyBlock) throws JSONException {
         String type = post.optString("type");
 
         if (isAds(post, type)) {
@@ -198,56 +199,82 @@ public class NewsFeedFiltersUtils {
                 || type.endsWith("playlists")
                 || type.endsWith("groups")))) {
 
-            logRemovedPost(post, source, "authors", needToShowToast);
+            logRemovedPost(post, source, "authors", needToNotifyBlock);
             return false;
         }
 
         if (postsrecomm() && (type.equals("inline_user_rec") || type.equals("live_recommended"))) {
-            logRemovedPost(post, source, "postsrecomm", needToShowToast);
+            logRemovedPost(post, source, "postsrecomm", needToNotifyBlock);
             return false;
         }
 
         if (friendsrecomm() && (type.equals("user_rec") || type.equals("friends_recomm"))) {
-            logRemovedPost(post, source, "friendsrecomm", needToShowToast);
+            logRemovedPost(post, source, "friendsrecomm", needToNotifyBlock);
             return false;
         }
 
-        if (adsgroup() && post.optInt("marked_as_ads") == 1 && !isWhitelistedAd(post)) {
-            logRemovedPost(post, source, "marked_as_ads", needToShowToast);
-            return false;
+        if (adsgroup() && post.optInt("marked_as_ads") == 1 && !post.optBoolean("sponsorpost") && !isWhitelistedAd(post)) {
+            logRemovedPost(post, source, "marked_as_ads", needToNotifyBlock);
+            return needToNotifyBlock;
         }
 
-        if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !isWhitelistedAd(post)) {
-            logRemovedPost(post, source, "sponsorpost", needToShowToast);
-            return false;
+        if (PostsPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !isWhitelistedAd(post)) {
+            logRemovedPost(post, source, "sponsorpost", needToNotifyBlock);
+            PostsPreferences.incrementNumBlockedPosts();
+
+            if (PostsPreferences.isEnabledMarking() || needToNotifyBlock) {
+                addSponsorPostMark(post);
+                return true;
+            } else {
+                return false;
+            }
         }
 
-        if (sponsorFilters(post.optString("text")) && !isWhitelistedFilters(post)) {
-            logRemovedPost(post, source, "sponsorpost filter", needToShowToast);
-            return false;
+        if (VotesPreferences.isPostAd(getOwnerId(post), getPostId(post)) && !post.optBoolean("sponsorpost") && !isWhitelistedAd(post)) {
+            logRemovedPost(post, source, "sponsorpost vote base", needToNotifyBlock);
+            addSponsorPostMark(post);
+            return true;
+        }
+
+        if (sponsorFilters(post.optString("text")) && !post.optBoolean("sponsorpost") && !isWhitelistedFilters(post)) {
+            logRemovedPost(post, source, "sponsorpost filter", needToNotifyBlock);
+            FiltersPreferences.incrementNumBlockedPosts();
+
+            if (FiltersPreferences.isEnabledMarking() || needToNotifyBlock) {
+                addSponsorPostMark(post);
+                return true;
+            } else {
+                return false;
+            }
         }
 
         if (checkCopyright(post)) {
-            logRemovedPost(post, source, "copyright filters", needToShowToast);
-            return false;
+            logRemovedPost(post, source, "copyright filters", needToNotifyBlock);
+            FiltersPreferences.incrementNumBlockedPosts();
+            return needToNotifyBlock;
         }
 
         if (checkCaption(post)) {
-            logRemovedPost(post, source, "caption filters", needToShowToast);
-            return false;
+            logRemovedPost(post, source, "caption filters", needToNotifyBlock);
+            return needToNotifyBlock;
         }
 
         if (hasMiniAppAds(post) && !isWhitelistedFilters(post)) {
-            logRemovedPost(post, source, "miniapps ban", needToShowToast);
-            return false;
+            logRemovedPost(post, source, "miniapps ban", needToNotifyBlock);
+            return needToNotifyBlock;
         }
 
         if (NewsFeedFiltersUtils.injectFiltersReposts(post) && !isWhitelistedFilters(post)) {
-            logRemovedPost(post, source, "repost ad", needToShowToast);
-            return false;
+            logRemovedPost(post, source, "repost ad", needToNotifyBlock);
+            return needToNotifyBlock;
         }
 
         return true;
+    }
+
+    private static void addSponsorPostMark(JSONObject post) throws JSONException {
+        post.putOpt("marked_as_ads", 1);
+        post.putOpt("sponsorpost", true);
     }
 
     public static JSONArray feedInject(JSONArray items, boolean needToShowToast) {
@@ -276,24 +303,26 @@ public class NewsFeedFiltersUtils {
 
     public static boolean sponsorFilters(String text) {
         String textInLowerCase = text.toLowerCase();
-        Set<String> list = filters.stream()
-                .filter(adword -> !adword.isEmpty())
-                .collect(Collectors.toSet());
-
-        if (!list.isEmpty()) {
-            return list.stream().anyMatch(adword -> {
-                if (textInLowerCase.contains(adword.toLowerCase())) {
+        return filters.stream()
+                .map(String::toLowerCase)
+                .filter(adword -> !adword.isEmpty() && textInLowerCase.contains(adword))
+                .peek(adword -> {
                     if (dev()) {
                         Log.d("NewsfeedAdBlockV2", text);
                         Log.d("NewsfeedAdBlockV2", "Block word: " + adword);
                     }
-                    return true;
-                }
-                return false;
-            });
-        }
+                })
+                .findAny()
+                .isPresent();
+    }
 
-        return false;
+    public static String sponsorFiltersBanWord(String text) {
+        String textInLowerCase = text.toLowerCase();
+        return filters.stream()
+                .map(String::toLowerCase)
+                .filter(adword -> !adword.isEmpty() && textInLowerCase.contains(adword))
+                .findAny()
+                .orElse(null);
     }
 
 

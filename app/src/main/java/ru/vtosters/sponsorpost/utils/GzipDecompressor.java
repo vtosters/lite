@@ -1,5 +1,8 @@
 package ru.vtosters.sponsorpost.utils;
 
+import android.util.Log;
+import okhttp3.Response;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -24,6 +27,19 @@ public class GzipDecompressor {
             return outputStream.toString();
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public static String decompressResponse(Response response) throws IOException {
+        String encoding = response.a("Content-Encoding");
+        if (encoding != null && encoding.equals("gzip")) {
+            // Decompress the response body
+            Log.d("GZIP", "true, link " + response.o().g());
+            return GzipDecompressor.decompress(response.a().b());
+        } else {
+            // Retrieve the response body directly
+            Log.d("GZIP", "false, link " + response.o().g());
+            return response.a().g();
         }
     }
 }

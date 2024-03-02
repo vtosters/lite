@@ -311,6 +311,10 @@ public class Preferences {
         return false;
     }
 
+    public static String getId() {
+        return String.valueOf(AccountManagerUtils.getUserId());
+    }
+
     public static void updateBuildNumber() {
         try {
             getPreferences().edit().putLong("setupTime", AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo(AndroidUtils.getPackageName(), 0).lastUpdateTime).apply();

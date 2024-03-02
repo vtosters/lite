@@ -6,8 +6,10 @@ import android.os.Bundle;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 import ru.vtosters.sponsorpost.data.Filter;
+import ru.vtosters.sponsorpost.internal.VotesPreferences;
 import ru.vtosters.sponsorpost.services.FilterService;
 import ru.vtosters.sponsorpost.utils.FiltersPreferences;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
@@ -35,6 +37,40 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                 null
         );
 
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Статистика блокировок");
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "SponsorPost",
+                "Заблокировано постов: " + PostsPreferences.getNumBlockedPosts(),
+                null,
+                null
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "SponsorPost фильтры",
+                "Заблокировано постов: " + FiltersPreferences.getNumBlockedPosts(),
+                null,
+                null
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
+                "Сброс статистики",
+                null,
+                null,
+                preference -> {
+                    FiltersPreferences.dropNumBlockedPosts();
+                    PostsPreferences.dropNumBlockedPosts();
+                    AndroidUtils.sendToast("Статистика сброшена");
+                    return false;
+                }
+        );
+
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Sponsor Post");
 
         if (Preferences.serverFeaturesDisable()) {
@@ -49,14 +85,69 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
         } else {
             PreferenceFragmentUtils.addMaterialSwitchPreference(
                     getPreferenceScreen(),
-                    "sponsorpost",
+                    "",
                     "Фильтр постов",
-                    "Получать списки рекламных постов в группах и ленте, которые не блокируются рекламными фильтрами",
+                    "Получать списки рекламных постов в группах и ленте, которые не блокируются рекламными фильтрами\n\nРекомендуется использовать совместно со Стандартным фильтром",
                     null,
                     PostsPreferences.isEnabled(),
                     (preference, o) -> {
                         PostsPreferences.setEnabled((boolean) o);
                         return true;
+                    }
+            );
+
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Не скрывать посты",
+                    "Помечать посты рекламной пометкой, но не скрывать их полностью",
+                    null,
+                    PostsPreferences.isEnabledMarking(),
+                    (preference, o) -> {
+                        PostsPreferences.setEnabledMarking((boolean) o);
+                        return true;
+                    }
+            ).setEnabled(PostsPreferences.isEnabled());
+
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Предварительные списки",
+                    "Получать дополнительно более свежие списки которые ещё не попали в основной список. Нужно для активного голосования для блокировки постов. Возможно много ошибок!",
+                    null,
+                    VotesPreferences.isEnabled(),
+                    (preference, o) -> {
+                        VotesPreferences.setEnabled((boolean) o);
+                        return true;
+                    }
+            ).setEnabled(PostsPreferences.isEnabled());
+
+            if (NetworkUtils.isNetworkConnected()) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        "Обновить списки постов",
+                        null,
+                        null,
+                        preference -> {
+                            this.requireActivity().runOnUiThread(() -> {
+                                Updates.updatePosts();
+                                AndroidUtils.sendToast("Обновлено");
+                            });
+                            return false;
+                        }
+                );
+            }
+            
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Телеграм чат",
+                    "Помогите улучшить качество блокировки постов в нашем телеграм чате\n\nДля перехода в чат вам необходима последняя версия Telegram",
+                    null,
+                    preference -> {
+                        requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://t.me/vtosterschat/3559729")));
+                        return false;
                     }
             );
         }
@@ -123,6 +214,31 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                             );
                         }
 
+                        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                                getPreferenceScreen(),
+                                "",
+                                "Не блокировать посты",
+                                "Помечать посты заблокированные фильтрами",
+                                null,
+                                FiltersPreferences.isEnabledMarking(),
+                                (preference, o) -> {
+                                    FiltersPreferences.setEnabledMarking((boolean) o);
+                                    return true;
+                                }
+                        );
+
+                        PreferenceFragmentUtils.addPreference(
+                                getPreferenceScreen(),
+                                "",
+                                "Телеграм чат",
+                                "Помогите улучшить качество фильтров обсудив работу в нашем телеграм чате\n\nДля перехода в чат вам необходима последняя версия Telegram",
+                                null,
+                                preference -> {
+                                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://t.me/vtosterschat/3559732")));
+                                    return false;
+                                }
+                        );
+
                         PreferenceFragmentUtils.addPreference(
                                 getPreferenceScreen(),
                                 "",
@@ -139,6 +255,20 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                     }
                 }
         );
+
+        if (Preferences.dev()) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    "Сбросить токен пользователя",
+                    null,
+                    null,
+                    preference -> {
+                        VotesPreferences.remUserToken();
+                        return false;
+                    }
+            );
+        }
     }
 
     @Override

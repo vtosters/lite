@@ -1,14 +1,16 @@
 package ru.vtosters.sponsorpost.utils;
 
-import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.NetworkUtils;
 import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 import ru.vtosters.sponsorpost.data.Filter;
 import ru.vtosters.sponsorpost.data.Post;
+import ru.vtosters.sponsorpost.internal.VotesPreferences;
+import ru.vtosters.sponsorpost.internal.VotesService;
 import ru.vtosters.sponsorpost.services.FilterService;
 import ru.vtosters.sponsorpost.services.PostService;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -59,15 +61,30 @@ public class Updates {
         long weekAgo = currentTime - TimeUnit.DAYS.toMillis(7);
 
         if (PostsPreferences.isEnabled() && NetworkUtils.isNetworkConnected()) {
-            List<Post> posts = PostService.getPosts(weekAgo);
-            List<Long> groupIds = PostService.getOwnerIds();
+            if (VotesPreferences.isEnabled()) {
+                Map<String, List<String>> posts = VotesService.getPosts(weekAgo / 1000);
+                Map<String, List<String>> groupIds = VotesService.getOwnerIds();
 
-            if (!posts.isEmpty()) {
-                PostsPreferences.savePosts(posts);
-            }
+                if (!posts.isEmpty()) {
+                    PostsPreferences.savePostsStr(posts.get("prod"));
+                    VotesPreferences.savePosts(posts.get("vote"));
+                }
 
-            if (!groupIds.isEmpty()) {
-                PostsPreferences.saveGroupsIds(groupIds);
+                if (!groupIds.isEmpty()) {
+                    PostsPreferences.saveGroupsIds(groupIds.get("prod"));
+                    VotesPreferences.saveGroupsIds(groupIds.get("vote"));
+                }
+            } else {
+                List<String> posts = PostService.getAllPostsIds(weekAgo / 1000);
+                List<Long> groupIds = PostService.getOwnerIds();
+
+                if (!posts.isEmpty()) {
+                    PostsPreferences.savePostsStr(posts);
+                }
+
+                if (!groupIds.isEmpty()) {
+                    PostsPreferences.saveGroupsIds(groupIds);
+                }
             }
         }
     }

@@ -11,13 +11,12 @@ import com.vk.discover.DiscoverItemDecorator;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.utils.NetworkUtils;
+import ru.vtosters.sponsorpost.internal.VotesPreferences;
+import ru.vtosters.sponsorpost.internal.VotesService;
 import ru.vtosters.sponsorpost.services.PostService;
 import ru.vtosters.sponsorpost.utils.PostsPreferences;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.hooks.other.Preferences.*;
@@ -102,8 +101,16 @@ public class NewsfeedHook {
     public static void takeOwnerIdSponsorPost(int ownerid) {
         if (NetworkUtils.isNetworkConnected() && PostsPreferences.isEnabled() && !Preferences.serverFeaturesDisable()) {
             VTExecutors.getIoScheduler().a(() -> {
-                List<Long> postIds = PostService.getPostIdsByOwnerId((long) ownerid, 0L);
-                PostsPreferences.saveGroupSpecifiedPosts(postIds, (long) ownerid);
+                if (PostsPreferences.isGroupAd(ownerid) || VotesPreferences.isGroupAd(ownerid)) {
+                    if (VotesPreferences.isEnabled()) {
+                        Map<String, List<String>> postIds = VotesService.getPostIdsByOwnerId((long) ownerid, 0L);
+                        VotesPreferences.saveGroupSpecifiedPosts(postIds.get("vote"), (long) ownerid);
+                        PostsPreferences.saveGroupSpecifiedPosts(postIds.get("prod"), (long) ownerid);
+                    } else {
+                        List<Long> postIds = PostService.getPostIdsByOwnerId((long) ownerid, 0L);
+                        PostsPreferences.saveGroupSpecifiedPosts(postIds, (long) ownerid);
+                    }
+                }
             });
         }
     }
@@ -112,17 +119,28 @@ public class NewsfeedHook {
         long ownerid = Long.parseLong(strArr[0].split("_")[0]);
         long postId = Long.parseLong(strArr[0].split("_")[1]);
 
-        if (PostsPreferences.isPostAd(ownerid, postId)) {
+        if (PostsPreferences.isPostAd(ownerid, postId) || VotesPreferences.isPostAd(ownerid, postId)) {
             return;
         }
 
-        if (NetworkUtils.isNetworkConnected() && PostsPreferences.isEnabled() && !Preferences.serverFeaturesDisable() && PostsPreferences.isGroupAd(ownerid)) {
+        if (NetworkUtils.isNetworkConnected() && PostsPreferences.isEnabled() && !Preferences.serverFeaturesDisable()) {
             VTExecutors.getIoScheduler().a(() -> {
-                boolean postIds = PostService.isPostAd(ownerid, postId);
+                if (VotesPreferences.isEnabled()) {
+                    boolean postIds = VotesService.isPostAd(ownerid, postId);
 
-                if (postIds) {
-                    PostsPreferences.saveAdPostInfo(ownerid, postId);
-                    sendToast("Этот пост помечен как рекламный");
+                    if (postIds) {
+                        VotesPreferences.saveAdPostInfo(ownerid, postId);
+                    }
+                } else {
+                    boolean postIds = PostService.isPostAd(ownerid, postId);
+
+                    if (postIds) {
+                        PostsPreferences.saveAdPostInfo(ownerid, postId);
+
+                        if (!PostsPreferences.isEnabledMarking()) {
+                            sendToast("Этот пост помечен как рекламный");
+                        }
+                    }
                 }
             });
         }

@@ -3,6 +3,7 @@ package ru.vtosters.lite.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
+import com.vk.core.network.Network;
 import com.vk.navigation.NavigatorKeys;
 import okhttp3.*;
 import org.json.JSONArray;
@@ -10,12 +11,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.stream.IntStream;
 
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
@@ -44,13 +44,14 @@ public class VTVerifications {
         Request request = new Request.a()
                 .b("https://vtosters.app/vktoaster/getGalo4kiBatch")
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"types\":[0,228,404]}"))
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         sClient.a(request).a(new Callback() {
             @Override
             public void a(Call call, Response response) {
                 try {
-                    String payload = response.a().g();
+                    String payload = GzipDecompressor.decompressResponse(response);
                     parseJson(payload);
                     prefs.edit()
                             .putString("ids", payload)

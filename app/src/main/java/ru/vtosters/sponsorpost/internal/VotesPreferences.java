@@ -1,17 +1,16 @@
-package ru.vtosters.sponsorpost.utils;
+package ru.vtosters.sponsorpost.internal;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.sponsorpost.data.Post;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class PostsPreferences {
+public class VotesPreferences {
     private static final SharedPreferences preferences;
 
     static {
@@ -19,56 +18,52 @@ public class PostsPreferences {
     }
 
     private static SharedPreferences getPreferences() {
-        return AndroidUtils.getGlobalContext().getSharedPreferences("ru.vtosters.sponsorpost.posts.prefs", Context.MODE_PRIVATE);
+        return AndroidUtils.getGlobalContext().getSharedPreferences("ru.vtosters.sponsorpost.votes.prefs", Context.MODE_PRIVATE);
     }
 
     public static boolean isEnabled() {
-        return preferences.getBoolean("sponsorpost", true);
+        return preferences.getBoolean("sponsortesting", false);
     }
 
     public static void setEnabled(boolean status) {
-        preferences.edit().putBoolean("sponsorpost", status).apply();
+        preferences.edit().putBoolean("sponsortesting", status).apply();
     }
 
-    public static boolean isEnabledMarking() {
-        return preferences.getBoolean("sponsorpost_marking", false);
-    }
-
-    public static void setEnabledMarking(boolean status) {
-        preferences.edit().putBoolean("sponsorpost_marking", status).apply();
-    }
-
-    public static void savePosts(List<Post> posts) {
-        Set<String> stringSet = posts.stream()
-                .map(post -> post.getOwnerId() + "_" + post.getPostId())
-                .collect(Collectors.toSet());
-
+    public static void setUserToken(String token) {
         preferences.edit()
-                .putStringSet("posts", stringSet)
+                .putString("token", token)
                 .apply();
     }
 
-    public static void savePostsStr(List<String> posts) {
+    public static void remUserToken() {
+        preferences.edit()
+                .remove("token")
+                .apply();
+    }
+
+    public static String getUserToken() {
+        return preferences.getString("token", "");
+    }
+
+    public static void savePosts(List<String> posts) {
         preferences.edit()
                 .putStringSet("posts", new HashSet<>(posts))
                 .apply();
     }
 
-    public static void saveGroupSpecifiedPosts(List<?> postsIds, Long ownerId) {
+    public static void saveGroupsIds(List<String> ids) {
+        preferences.edit()
+                .putStringSet("groupIds", new HashSet<>(ids))
+                .apply();
+    }
+
+    public static void saveGroupSpecifiedPosts(List<String> postsIds, Long ownerId) {
         Set<String> stringSet = postsIds.stream()
                 .map(post -> ownerId + "_" + post)
                 .collect(Collectors.toSet());
 
         preferences.edit()
                 .putStringSet(ownerId + "_posts", stringSet)
-                .apply();
-    }
-
-    public static void saveGroupsIds(List<?> ids) {
-        Set<String> stringSet = ids.stream().map(String::valueOf).collect(Collectors.toSet());
-
-        preferences.edit()
-                .putStringSet("groupIds", stringSet)
                 .apply();
     }
 
@@ -93,18 +88,6 @@ public class PostsPreferences {
         } else {
             return false;
         }
-    }
-
-    public static int getNumBlockedPosts() {
-        return preferences.getInt("numBlockedPosts", 0);
-    }
-
-    public static void incrementNumBlockedPosts() {
-        preferences.edit().putInt("numBlockedPosts", getNumBlockedPosts() + 1).apply();
-    }
-
-    public static void dropNumBlockedPosts() {
-        preferences.edit().putInt("numBlockedPosts", 0).apply();
     }
 
     public static boolean isPostAd(long ownerId, long postId) {
