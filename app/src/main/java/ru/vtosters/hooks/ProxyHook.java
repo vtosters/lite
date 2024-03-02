@@ -34,7 +34,11 @@ public class ProxyHook {
         String proxyoauth = getProxyHost("proxyoauth");
         String proxystatic = getProxyHost("proxystatic");
 
-        if (!isAnyProxyEnabled() || link.isEmpty() || areProxyHostsEmpty(proxyapi, proxyoauth, proxystatic)) {
+        if (isVKProxyEnabled()) {
+            proxystatic = VikaMobile.getOauthHost();
+            oauth = VikaMobile.getStaticHost();
+            proxyapi = vkapi;
+        } else if (!isAnyProxyEnabled() || areProxyHostsEmpty(proxyapi, proxyoauth, proxystatic)) {
             return link;
         }
 
