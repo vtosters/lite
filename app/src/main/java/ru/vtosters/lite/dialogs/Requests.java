@@ -6,7 +6,6 @@ import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.utils.ImDialogsUtils;
 import okhttp3.Headers;
-import okhttp3.OkHttpClient;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.net.Request;
@@ -14,6 +13,8 @@ import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
+
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
 
 public class Requests {
     public static void hookRead(Dialog dialog) {
@@ -51,7 +52,7 @@ public class Requests {
                         .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
                         .a();
 
-                new OkHttpClient().a(request).execute().a().g();
+                Network.b(CLIENT_API).a(request).execute().a().g();
             } catch (Exception e) {
                 e.printStackTrace();
             }

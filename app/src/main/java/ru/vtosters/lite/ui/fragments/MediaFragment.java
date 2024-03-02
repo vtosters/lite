@@ -11,7 +11,6 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 import com.vtosters.lite.R;
 import okhttp3.Headers;
-import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
@@ -25,6 +24,8 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.SearchEngine;
 
 import java.util.Arrays;
+
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
 
 public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
     public static void download(Context ctx) {
@@ -106,7 +107,7 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
                     .a();
 
             try {
-                var response = new JSONObject(new OkHttpClient().a(request).execute().a().g());
+                var response = new JSONObject(Network.b(CLIENT_API).a(request).execute().a().g());
 
                 if (response.optInt("response") == 1) {
                     requireActivity().runOnUiThread(() -> AndroidUtils.sendToast(requireContext().getString(R.string.video_history_cleaned)));
