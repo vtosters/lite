@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.preference.Preference;
@@ -17,13 +18,15 @@ public class ProxySettingsFragment extends TrackedMaterialPreferenceToolbarFragm
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(R.xml.preferences_proxy);
+        initComponents();
+    }
 
+    private void initComponents() {
         NetworkProxy networkProxy = Network.l.b();
         boolean isEnabled = networkProxy.d();
-
         SwitchPreference switchPreference = (SwitchPreference) findPreference("vkproxy");
         switchPreference.setChecked(isEnabled);
-        switchPreference.setOnPreferenceChangeListener(new yay(networkProxy, switchPreference));
+        switchPreference.setOnPreferenceChangeListener(new ProxyChangeListener(networkProxy, switchPreference));
     }
 
     @Override
@@ -32,70 +35,88 @@ public class ProxySettingsFragment extends TrackedMaterialPreferenceToolbarFragm
     }
 }
 
-class yay implements Preference.OnPreferenceChangeListener {
-    NetworkProxy a;
+class ProxyChangeListener implements Preference.OnPreferenceChangeListener {
 
-    SwitchPreference f24210b;
+    private final NetworkProxy networkProxy;
+    private final SwitchPreference switchPreference;
 
-    class a implements DialogInterface.OnDismissListener {
-        a() {
-        }
+    ProxyChangeListener(NetworkProxy networkProxy, SwitchPreference switchPreference) {
+        this.networkProxy = networkProxy;
+        this.switchPreference = switchPreference;
+    }
 
-        @Override // android.content.DialogInterface.OnDismissListener
-        public void onDismiss(DialogInterface dialogInterface) {
-            yay bVar = yay.this;
-            bVar.f24210b.setChecked(bVar.a.d());
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object obj) {
+        handleProxyChange(preference, (Boolean) obj);
+        return false;
+    }
+
+    private void handleProxyChange(Preference preference, Boolean isEnabled) {
+        if (!networkProxy.d() && isEnabled) {
+            enableProxy(preference);
+        } else {
+            disableProxy();
         }
     }
 
-    private class C0461b extends NetworkProxyPreferences {
+    private void enableProxy(Preference preference) {
+        networkProxy.a(true);
+        VKProgressDialog vKProgressDialog = createProgressDialog(preference.getContext());
+        networkProxy.a((NetworkProxy.c) new ProxyPreferences(vKProgressDialog));
+    }
 
-        VKProgressDialog f24212e;
+    private void disableProxy() {
+        Network.l.b().a(false);
+        switchPreference.setChecked(networkProxy.d());
+    }
 
-        C0461b(VKProgressDialog vKProgressDialog) {
-            this.f24212e = vKProgressDialog;
+    private VKProgressDialog createProgressDialog(Context context) {
+        VKProgressDialog vKProgressDialog = new VKProgressDialog(context);
+        vKProgressDialog.setMessage(context.getString(R.string.loading));
+        vKProgressDialog.setOnDismissListener(new OnDismissListener());
+        ViewUtils.b(vKProgressDialog);
+        return vKProgressDialog;
+    }
+
+    private class OnDismissListener implements DialogInterface.OnDismissListener {
+        @Override
+        public void onDismiss(DialogInterface dialogInterface) {
+            switchPreference.setChecked(networkProxy.d());
+        }
+    }
+
+    private class ProxyPreferences extends NetworkProxyPreferences {
+        private final VKProgressDialog progressDialog;
+
+        ProxyPreferences(VKProgressDialog vKProgressDialog) {
+            this.progressDialog = vKProgressDialog;
         }
 
-        @Override // com.vtosters.lite.NetworkProxyPreferences
+        @Override
         public void b(NetworkProxy.Reason reason) {
             super.b(reason);
-            ViewUtils.a(this.f24212e);
-            yay bVar = yay.this;
-            bVar.f24210b.setChecked(bVar.a.d());
+            dismissProgressDialog();
+            switchPreference.setChecked(networkProxy.d());
+            showToast(reason);
+        }
+
+        @Override
+        public void e() {
+            super.e();
+            dismissProgressDialog();
+            switchPreference.setChecked(networkProxy.d());
+        }
+
+        private void dismissProgressDialog() {
+            ViewUtils.a(progressDialog);
+        }
+
+        private void showToast(NetworkProxy.Reason reason) {
             if (reason == NetworkProxy.Reason.PROXY_NOT_AVAILABLE) {
                 ToastUtils.a(R.string.sett_proxy_not_available);
             } else {
                 ToastUtils.a(R.string.sett_no_proxy);
             }
         }
-
-        @Override // com.vtosters.lite.NetworkProxyPreferences
-        public void e() {
-            super.e();
-            ViewUtils.a(this.f24212e);
-            yay bVar = yay.this;
-            bVar.f24210b.setChecked(bVar.a.d());
-        }
-    }
-
-    yay(NetworkProxy networkProxy, SwitchPreference switchPreference) {
-        this.a = networkProxy;
-        this.f24210b = switchPreference;
-    }
-
-    @Override // androidx.preference.Preference.OnPreferenceChangeListener
-    public boolean onPreferenceChange(Preference preference, Object obj) {
-        if (!this.a.d() && (Boolean) obj) {
-            this.a.a(true);
-            VKProgressDialog vKProgressDialog = new VKProgressDialog(preference.getContext());
-            vKProgressDialog.setMessage(preference.getContext().getString(R.string.loading));
-            vKProgressDialog.setOnDismissListener(new a());
-            ViewUtils.b(vKProgressDialog);
-            this.a.a((NetworkProxy.c) new C0461b(vKProgressDialog));
-        } else {
-            Network.l.b().a(false);
-            this.f24210b.setChecked(this.a.d());
-        }
-        return false;
     }
 }

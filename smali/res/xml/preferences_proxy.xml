@@ -19,12 +19,8 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="vkproxy"
-                android:summary="Нестабилен"
-                android:title="Встроенный прокси"/>
-<!--        <Preference-->
-<!--                android:key="random_proxy"-->
-<!--                android:summary="@string/proxy_setup_summ"-->
-<!--                android:title="@string/proxy_setup_title"/>-->
+                android:summary="Рекомендуется"
+                android:title="Использовать ВК прокси"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyadvsettings">
         <EditTextPreference
