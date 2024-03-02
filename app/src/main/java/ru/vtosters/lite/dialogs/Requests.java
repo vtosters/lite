@@ -27,7 +27,7 @@ public class Requests {
                 .a();
 
         try {
-            Network.b(CLIENT_API).a(req).execute();
+            Network.b(CLIENT_API).a(req).execute().close();;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -39,7 +39,7 @@ public class Requests {
                 .a();
 
         try {
-            Network.b(CLIENT_API).a(req).execute();
+            Network.b(CLIENT_API).a(req).execute().close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -53,7 +53,7 @@ public class Requests {
                 .a();
 
         try {
-            Network.b(CLIENT_API).a(req).execute();
+            Network.b(CLIENT_API).a(req).execute().close();;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
