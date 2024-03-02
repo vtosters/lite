@@ -5,6 +5,7 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.proxy.ProxyUtils;
+import ru.vtosters.lite.proxy.api.VikaMobile;
 import ru.vtosters.lite.ui.fragments.VKUIwrapper;
 import ru.vtosters.lite.utils.NavigatorUtils;
 
@@ -20,9 +21,9 @@ public class VKIDProtection {
                 .setNeutralButton(R.string.vkiddisable, (dialogInterface, i) -> {
                     Preferences.getPreferences().edit().putBoolean("showAlertVkId", false).apply();
                     VKUIwrapper.setLink(
-                            ProxyUtils.isAnyProxyEnabled()
+                            (ProxyUtils.isAnyProxyEnabled() || ProxyUtils.isVKProxyEnabled())
                                     ? "https://id.vk.com/account"
-                                    : "https://" + ProxyUtils.getApi() + "/_/id.vk.com/account");
+                                    : "https://" + (ProxyUtils.isVKProxyEnabled() ? VikaMobile.getApiHost() : ProxyUtils.getApi()) + "/_/id.vk.com/account");
                     NavigatorUtils.switchFragment(activity, VKUIwrapper.class);
                 })
                 .show();

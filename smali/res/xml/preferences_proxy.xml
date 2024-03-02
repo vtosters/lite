@@ -19,7 +19,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="vkproxy"
-                android:summary="Рекомендуется"
+                android:summary="Нестабилен, может не работать у вашего оператора/провайдера.\nМожет не работать музыка и другие компоненты приложения"
                 android:title="Использовать ВК прокси"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyadvsettings">

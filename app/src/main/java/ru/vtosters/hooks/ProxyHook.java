@@ -26,26 +26,15 @@ import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 
 public class ProxyHook {
     public static String linkReplacer(String link) {
-        var vkapi = "api.vk.com";
-        var oauth = "oauth.vk.com";
-        var vkstatic = "static.vk.com";
+        String vkapi = "api.vk.com";
+        String oauth = "oauth.vk.com";
+        String vkstatic = "static.vk.com";
 
-        var proxyapi = getString("proxyapi");
-        var proxyoauth = getString("proxyoauth");
-        var proxystatic = getString("proxystatic");
+        String proxyapi = getProxyHost("proxyapi");
+        String proxyoauth = getProxyHost("proxyoauth");
+        String proxystatic = getProxyHost("proxystatic");
 
-        if (isVikaProxyEnabled()) {
-            proxyapi = VikaMobile.getApiHost();
-            proxyoauth = VikaMobile.getOauthHost();
-            proxystatic = VikaMobile.getStaticHost();
-        }
-
-        if (!isAnyProxyEnabled() || link.isEmpty()) {
-            return link;
-        }
-
-        if (proxyapi.isEmpty() || proxyoauth.isEmpty() || proxystatic.isEmpty()) {
-            Log.d("VTLite", "Proxy is not set" + " " + proxyapi + " " + proxyoauth + " " + proxystatic);
+        if (!isAnyProxyEnabled() || link.isEmpty() || areProxyHostsEmpty(proxyapi, proxyoauth, proxystatic)) {
             return link;
         }
 
@@ -62,6 +51,29 @@ public class ProxyHook {
         }
 
         return link;
+    }
+
+    private static String getProxyHost(String hostType) {
+        if (isVikaProxyEnabled()) {
+            return switch (hostType) {
+                case "proxyapi" -> VikaMobile.getApiHost();
+                case "proxyoauth" -> VikaMobile.getOauthHost();
+                case "proxystatic" -> VikaMobile.getStaticHost();
+                default -> "";
+            };
+        } else {
+            return "";
+        }
+    }
+
+    private static boolean areProxyHostsEmpty(String... hosts) {
+        for (String host : hosts) {
+            if (host.isEmpty()) {
+                Log.d("VTLite", "Proxy is not set: " + host);
+                return true;
+            }
+        }
+        return false;
     }
 
     public static String staticFix(String str) {

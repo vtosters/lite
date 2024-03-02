@@ -51,11 +51,11 @@ public class ProxyUtils {
     public static String getStatic() {
         var staticapi = Preferences.getString("proxystatic");
 
-        if (isVikaProxyEnabled()) {
+        if (isVikaProxyEnabled() || ProxyUtils.isVKProxyEnabled()) {
             staticapi = getStaticHost();
         }
 
-        if (isAnyProxyEnabled() & !staticapi.isEmpty()) {
+        if ((ProxyUtils.isAnyProxyEnabled() || ProxyUtils.isVKProxyEnabled()) & !staticapi.isEmpty()) {
             return staticapi;
         }
 
