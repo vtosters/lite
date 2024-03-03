@@ -116,17 +116,6 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        var dockbarEditor = findPreference("dockbareditor");
-        dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
-        dockbarEditor.setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
-            return true;
-        });
-
-        if (Preferences.vkme() || AndroidUtils.isTablet()) {
-            dockbarEditor.setVisible(false);
-        }
-
         if (AndroidUtils.isTablet()) {
             PreferenceCategory dockbarSettingsPreferenceCategory = (PreferenceCategory) findPreference("dockbarsett");
             dockbarSettingsPreferenceCategory.setVisible(false);

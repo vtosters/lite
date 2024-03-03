@@ -46,6 +46,7 @@ import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ssfs.Utils;
 import ru.vtosters.lite.themes.utils.RecolorUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.*;
@@ -532,6 +533,20 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                     return false;
                 }
         );
+
+        if (!Preferences.vkme() && !AndroidUtils.isTablet()) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.dockbar_editor),
+                    requireContext().getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size(),
+                    R.drawable.ic_pin_outline_28,
+                    preference -> {
+                        NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
+                        return false;
+                    }
+            );
+        }
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
