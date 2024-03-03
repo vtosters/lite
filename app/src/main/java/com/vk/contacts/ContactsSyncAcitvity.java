@@ -86,9 +86,9 @@ public class ContactsSyncAcitvity extends VKActivity implements View.OnClickList
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(this);
         builder.setTitle(R.string.sett_sync);
         builder.setView(this.J);
+        builder.setCancelable(false);
         builder.setPositiveButton(R.string.save, ContactsSyncAcitvity.this::a);
         builder.setNegativeButton(R.string.cancel, ContactsSyncAcitvity.this::b);
-        builder.create().setOnCancelListener(ContactsSyncAcitvity.this::a);
         builder.show();
     }
 
