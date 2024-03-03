@@ -303,7 +303,7 @@
     goto :goto_0
 
     :cond_0
-    const-string p1, "vnd.android.cursor.dir/vnd.com.vkontakte.android.providers.im.state"
+    const-string p1, "vnd.android.cursor.dir/vnd.com.vtosters.lite.providers.im.state"
 
     :goto_0
     return-object p1

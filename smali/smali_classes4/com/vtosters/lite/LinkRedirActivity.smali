@@ -526,7 +526,7 @@
 
     move-result-object v0
 
-    const-string v1, "vnd.android.cursor.item/vnd.com.vkontakte.android.profile"
+    const-string v1, "vnd.android.cursor.item/vnd.com.vtosters.lite.profile"
 
     .line 28
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -548,7 +548,7 @@
     goto :goto_0
 
     :cond_6
-    const-string v1, "vnd.android.cursor.item/vnd.com.vkontakte.android.sendmsg"
+    const-string v1, "vnd.android.cursor.item/vnd.com.vtosters.lite.sendmsg"
 
     .line 31
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -582,7 +582,7 @@
     goto :goto_0
 
     :cond_7
-    const-string v1, "vnd.android.cursor.item/vnd.com.vkontakte.android.voipcall"
+    const-string v1, "vnd.android.cursor.item/vnd.com.vtosters.lite.voipcall"
 
     .line 34
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

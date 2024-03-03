@@ -598,7 +598,7 @@
     :sswitch_2
     move/from16 v27, v14
 
-    const-string v14, "vnd.android.cursor.item/vnd.com.vkontakte.android.sendmsg"
+    const-string v14, "vnd.android.cursor.item/vnd.com.vtosters.lite.sendmsg"
 
     invoke-virtual {v0, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -613,7 +613,7 @@
     :sswitch_3
     move/from16 v27, v14
 
-    const-string v14, "vnd.android.cursor.item/vnd.com.vkontakte.android.voipcall"
+    const-string v14, "vnd.android.cursor.item/vnd.com.vtosters.lite.voipcall"
 
     invoke-virtual {v0, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1619,7 +1619,7 @@
     .line 92
     invoke-virtual {v1, v6, v15}, Landroid/content/ContentProviderOperation$Builder;->withValueBackReference(Ljava/lang/String;I)Landroid/content/ContentProviderOperation$Builder;
 
-    const-string v3, "vnd.android.cursor.item/vnd.com.vkontakte.android.profile"
+    const-string v3, "vnd.android.cursor.item/vnd.com.vtosters.lite.profile"
 
     .line 93
     invoke-virtual {v1, v13, v3}, Landroid/content/ContentProviderOperation$Builder;->withValue(Ljava/lang/String;Ljava/lang/Object;)Landroid/content/ContentProviderOperation$Builder;
@@ -1702,7 +1702,7 @@
     invoke-virtual {v1, v6, v3}, Landroid/content/ContentProviderOperation$Builder;->withValue(Ljava/lang/String;Ljava/lang/Object;)Landroid/content/ContentProviderOperation$Builder;
 
     :goto_14
-    const-string v3, "vnd.android.cursor.item/vnd.com.vkontakte.android.sendmsg"
+    const-string v3, "vnd.android.cursor.item/vnd.com.vtosters.lite.sendmsg"
 
     .line 102
     invoke-virtual {v1, v13, v3}, Landroid/content/ContentProviderOperation$Builder;->withValue(Ljava/lang/String;Ljava/lang/Object;)Landroid/content/ContentProviderOperation$Builder;
@@ -1789,7 +1789,7 @@
     invoke-virtual {v1, v6, v3}, Landroid/content/ContentProviderOperation$Builder;->withValue(Ljava/lang/String;Ljava/lang/Object;)Landroid/content/ContentProviderOperation$Builder;
 
     :goto_15
-    const-string v3, "vnd.android.cursor.item/vnd.com.vkontakte.android.voipcall"
+    const-string v3, "vnd.android.cursor.item/vnd.com.vtosters.lite.voipcall"
 
     .line 112
     invoke-virtual {v1, v13, v3}, Landroid/content/ContentProviderOperation$Builder;->withValue(Ljava/lang/String;Ljava/lang/Object;)Landroid/content/ContentProviderOperation$Builder;
@@ -1865,7 +1865,7 @@
     invoke-virtual {v1, v6, v3}, Landroid/content/ContentProviderOperation$Builder;->withValue(Ljava/lang/String;Ljava/lang/Object;)Landroid/content/ContentProviderOperation$Builder;
 
     :goto_16
-    const-string v3, "vnd.android.cursor.item/vnd.com.vkontakte.android.assistant.sendmsg"
+    const-string v3, "vnd.android.cursor.item/vnd.com.vtosters.lite.assistant.sendmsg"
 
     .line 121
     invoke-virtual {v1, v13, v3}, Landroid/content/ContentProviderOperation$Builder;->withValue(Ljava/lang/String;Ljava/lang/Object;)Landroid/content/ContentProviderOperation$Builder;
@@ -2811,7 +2811,7 @@
     .line 41
     iput-boolean v4, v1, Landroid/content/SyncResult;->fullSyncRequested:Z
 
-    const-string v0, "com.vkontakte.android.EXTRA_FORCE_KEY"
+    const-string v0, "com.vtosters.lite.EXTRA_FORCE_KEY"
 
     move-object/from16 v6, p2
 

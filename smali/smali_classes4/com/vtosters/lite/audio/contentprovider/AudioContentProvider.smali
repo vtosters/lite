@@ -348,12 +348,12 @@
     return-object p1
 
     :cond_0
-    const-string p1, "vnd.android.cursor.item/vnd.com.vkontakte.android.providers.audio.cache"
+    const-string p1, "vnd.android.cursor.item/vnd.com.vtosters.lite.providers.audio.cache"
 
     return-object p1
 
     :cond_1
-    const-string p1, "vnd.android.cursor.dir/vnd.com.vkontakte.android.providers.audio.cache"
+    const-string p1, "vnd.android.cursor.dir/vnd.com.vtosters.lite.providers.audio.cache"
 
     return-object p1
 .end method
