@@ -10,7 +10,6 @@ import android.util.Log;
 import androidx.annotation.Keep;
 import androidx.annotation.Nullable;
 import com.facebook.soloader.SoLoader;
-import ru.vtosters.sponsorpost.internal.Native;
 
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
@@ -275,7 +274,6 @@ public final class MediaNative {
             SoLoader.init(context2, false);
             NativeLibLoader.loadLibrary("gnustl_shared");
             NativeLibLoader.loadLibrary("vkchronicle");
-            Native.canVote = NativeLibLoader.loadLibrary("sponsorpost");
             loadVKMediaLibs();
             f17443d.notifyAll();
         }

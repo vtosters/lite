@@ -6,6 +6,7 @@ import android.os.Build;
 import b.h.g.k.VKProgressDialog;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vk.medianative.NativeLibLoader;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
@@ -21,6 +22,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.NavigatorUtils;
 import ru.vtosters.lite.utils.VTVerifications;
+import ru.vtosters.sponsorpost.internal.Native;
 import ru.vtosters.sponsorpost.utils.Updates;
 
 import static ru.vtosters.hooks.other.Preferences.checkupdates;
@@ -67,6 +69,7 @@ public class MainActivityInjector {
         // VKIDProtection.alert(activity);
         //needs to show selected tgs pack count in settings after cold launch
         TelegramStickersService.getInstance(activity);
+        Native.canVote = NativeLibLoader.loadLibrary("sponsorpost");
     }
 
     private static void updateBinsAndTmpArchive(Activity activity) {
