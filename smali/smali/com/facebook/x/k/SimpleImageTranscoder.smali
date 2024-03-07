@@ -344,10 +344,6 @@
 
     move-object/from16 v9, p2
 
-    invoke-static {v3}, Lru/vtosters/hooks/other/Preferences;->compress(I)I
-
-    move-result v3
-
     invoke-virtual {v6, v0, v3, v9}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     .line 14
