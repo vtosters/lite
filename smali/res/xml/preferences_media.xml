@@ -3,16 +3,14 @@
     <PreferenceCategory android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
+                android:key="compressPhotos"
+                android:summary="@string/sett_compress_photo_summ"
+                android:title="@string/sett_compress_photos" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
                 android:key="compressVideos"
                 android:summary="@string/sett_compress_video_summ"
                 android:title="@string/sett_compress_videos"/>
-        <com.vtosters.lite.ui.SummaryListPreference
-                android:defaultValue="jpeg"
-                android:dialogTitle="@string/compression_types_selection"
-                android:entries="@array/compression_value"
-                android:entryValues="@array/compression"
-                android:key="compression"
-                android:title="@string/compression_types"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_video_settings">
         <Preference

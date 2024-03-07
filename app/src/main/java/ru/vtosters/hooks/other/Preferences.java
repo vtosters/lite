@@ -356,7 +356,6 @@ public class Preferences {
     }
 
     public static int compress(int origquality) {
-        if (MediaImageEncoder.needToSkipCompression()) return 100;
-        return origquality;
+        return MediaImageEncoder.needToSkipCompression() ? 100 : origquality;
     }
 }

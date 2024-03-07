@@ -24,10 +24,6 @@ public class MediaImageEncoder {
         return compressBitmap(bitmap, file, CompressFormat.JPEG, quality);
     }
 
-    private static boolean compressBitmapLossless(Bitmap bitmap, File file) {
-        return compressBitmap(bitmap, file, CompressFormat.PNG, 100);
-    }
-
     private static boolean compressBitmapNative(Bitmap bitmap, File file, int quality) {
         if (MediaNative.isX86() || MediaNative.isAsus() || Build.VERSION.SDK_INT < 24) {
             Log.e(MediaImageEncoder.class.getSimpleName(), "JPEG turbo not supported on this device!");
@@ -37,7 +33,7 @@ public class MediaImageEncoder {
         byte[] jpegData = MediaNative.compressBitmapJpeg(bitmap, quality);
 
         if (jpegData == null) {
-            return false;
+            return compressBitmapJpeg(bitmap, file, quality);
         }
 
         try (FileOutputStream fileOutputStream = new FileOutputStream(file)) {
@@ -51,41 +47,27 @@ public class MediaImageEncoder {
 
     public static boolean encodePicture(Bitmap bitmap, File file, int quality) {
         if (bitmap != null && !bitmap.isRecycled() && bitmap.getWidth() * bitmap.getHeight() != 0) {
-            switch (Preferences.getPreferences().getString("compression", "jpeg")) {
-                case "skip" -> {
-                    return compressBitmapLossless(bitmap, file);
-                }
-                case "jpeg" -> {
-                    return compressBitmapJpeg(bitmap, file, quality);
-                }
-                case "native" -> {
-                    return compressBitmapNative(bitmap, file, quality);
-                }
-            }
+            return compressBitmapNative(bitmap, file, quality);
+        } else {
+            return false;
         }
-
-        return false;
     }
 
     public static boolean needToSkipCompression() {
-        return Preferences.getPreferences().getString("compression", "jpeg").equals("skip");
-    }
-
-    public static boolean needToCompress() {
-        return !needToSkipCompression();
+        return !Preferences.getPreferences().getBoolean("compressPhotos", true);
     }
 
     public static boolean encodeJpeg(Bitmap bitmap, File file) {
-        return encodePicture(bitmap, file, 90);
+        return encodePicture(bitmap, file, Preferences.compress(90));
     }
 
     public static boolean encodeJpegWithoutCompression(Bitmap bitmap, File file) {
-        return encodePicture(bitmap, file, 95);
+        return encodePicture(bitmap, file, 100);
     }
 
     public static boolean encodeJpeg(Bitmap bitmap, File file, int quality) {
         if (bitmap != null && !bitmap.isRecycled() && bitmap.getWidth() * bitmap.getHeight() != 0) {
-            return needToCompress() ? compressBitmapNative(bitmap, file, quality) : compressBitmapJpeg(bitmap, file, quality);
+            return compressBitmapNative(bitmap, file, quality);
         } else {
             return false;
         }
