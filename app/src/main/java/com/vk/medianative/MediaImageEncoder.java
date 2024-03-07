@@ -24,6 +24,10 @@ public class MediaImageEncoder {
         return compressBitmap(bitmap, file, CompressFormat.JPEG, quality);
     }
 
+    public static boolean needToCompress() {
+        return Preferences.getPreferences().getBoolean("compressPhotos", true);
+    }
+
     private static boolean compressBitmapNative(Bitmap bitmap, File file, int quality) {
         if (MediaNative.isX86() || MediaNative.isAsus() || Build.VERSION.SDK_INT < 24) {
             Log.e(MediaImageEncoder.class.getSimpleName(), "JPEG turbo not supported on this device!");
@@ -53,12 +57,8 @@ public class MediaImageEncoder {
         }
     }
 
-    public static boolean needToSkipCompression() {
-        return !Preferences.getPreferences().getBoolean("compressPhotos", true);
-    }
-
     public static boolean encodeJpeg(Bitmap bitmap, File file) {
-        return encodePicture(bitmap, file, Preferences.compress(90));
+        return encodePicture(bitmap, file, Preferences.compress(85));
     }
 
     public static boolean encodeJpegWithoutCompression(Bitmap bitmap, File file) {
@@ -66,10 +66,6 @@ public class MediaImageEncoder {
     }
 
     public static boolean encodeJpeg(Bitmap bitmap, File file, int quality) {
-        if (bitmap != null && !bitmap.isRecycled() && bitmap.getWidth() * bitmap.getHeight() != 0) {
-            return compressBitmapNative(bitmap, file, quality);
-        } else {
-            return false;
-        }
+        return encodePicture(bitmap, file, Preferences.compress(85));
     }
 }

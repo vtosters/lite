@@ -464,7 +464,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 getPreferenceScreen(),
                 "",
                 requireContext().getString(R.string.vtlmedia),
-                getValAsString(R.string.sett_compress_photos, MediaImageEncoder.needToSkipCompression()),
+                getValAsString(R.string.sett_compress_photos, MediaImageEncoder.needToCompress()),
                 R.drawable.ic_media_outline_28,
                 preference -> {
                     NavigatorUtils.switchFragment(requireContext(), MediaFragment.class);

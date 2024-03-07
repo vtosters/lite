@@ -23,7 +23,7 @@ public class TogglesHook {
             case FEATURE_MILKSHAKE_FORCE_DISABLED, FEATURE_MILKSHAKE_ACTIVATION_DISABLED -> !milkshake();
             case AB_NEWS_VIDEO_LAYOUT_TEXT, FEATURE_COMPACT_REPOST, EXPERIMENT_NEWS_VIDEO_LAYOUT_TEXT ->
                     postsredesign();
-            case FEATURE_IMAGE_QUALITY_UPGRADE -> MediaImageEncoder.needToSkipCompression();
+            case FEATURE_IMAGE_QUALITY_UPGRADE -> !MediaImageEncoder.needToCompress();
             case FEATURE_MENU_GAMES_CAROUSEL -> miniapps();
             case FEATURE_TRAFFIC_SAVER -> !disableForceTrafficSaver();
             default -> true;
