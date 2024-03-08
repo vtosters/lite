@@ -1,8 +1,11 @@
 package ru.vtosters.lite.downloaders;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.media.MediaScannerConnection;
+import android.os.Build;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.core.app.NotificationCompat;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.dialogs.bottomsheet.MenuBottomSheetAction;
 import com.vk.core.network.Network;
@@ -40,6 +44,9 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 public class VideoDownloader {
     public static int DOWNLOAD_ID = 0;
     public static int OPEN_EXTERNAL_LINK_ID = 1;
+    public static String channelId = "video_download_channel";
+    public static String channelName = "Video Download Channel";
+    public static int notificationId = 1;
 
     public static void addAction(List<MenuBottomSheetAction> actions, int... ints) {
         actions.add(new MenuBottomSheetAction(ints[0], ints[1], ints[2], ints[3]));
@@ -74,6 +81,25 @@ public class VideoDownloader {
                 .setAdapter(adapter, (dialog, which) -> {
                     String url = urls.get(which);
 
+                    NotificationManager notificationManager = (NotificationManager) AndroidUtils.getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        NotificationChannel notificationChannel = new NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_LOW);
+                        notificationManager.createNotificationChannel(notificationChannel);
+                    }
+
+                    String notificationTitle = "Загрузка видео";
+                    String[][] notificationText = {{"Загрузка началась"}};
+
+                    NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), channelId)
+                            .setSmallIcon(R.drawable.ic_download_24)
+                            .setContentTitle(notificationTitle)
+                            .setContentText(notificationText[0][0])
+                            .setProgress(0, 0, true)
+                            .setOngoing(true);
+
+                    notificationManager.notify(notificationId, notificationBuilder.build());
+
                     OkHttpClient client = Network.b(Network.ClientType.CLIENT_IMAGE_LOADER);;
                     Request request = new Request.a()
                             .b(url)
@@ -101,15 +127,34 @@ public class VideoDownloader {
                                  FileOutputStream outputStream = new FileOutputStream(outputFile)) {
                                 byte[] buffer = new byte[4096];
                                 int bytesRead;
+                                long totalBytesRead = 0;
+                                long fileSize = responseBody.d();
 
                                 while ((bytesRead = inputStream.read(buffer)) != -1) {
                                     outputStream.write(buffer, 0, bytesRead);
+                                    totalBytesRead += bytesRead;
+                                    int progress = (int) ((totalBytesRead * 100) / fileSize);
+                                    notificationText[0][0] = "Загружено " + progress + "%";
+
+                                    notificationBuilder.setProgress(100, progress, false)
+                                            .setContentText(notificationText[0][0]);
+
+                                    notificationManager.notify(notificationId, notificationBuilder.build());
                                 }
+
                                 outputStream.flush();
 
                                 MediaScannerConnection.scanFile(finalContext, new String[]{outputFile.toString()}, null, null);
 
-                                AndroidUtils.sendToast("Файл скачан в Movies/VKVideo");
+                                notificationManager.cancel(notificationId);
+
+                                String successMessage = "Файл успешно скачан";
+
+                                notificationBuilder.setContentText(successMessage)
+                                        .setProgress(0, 0, false)
+                                        .setOngoing(false);
+
+                                notificationManager.notify(notificationId, notificationBuilder.build());
                             } catch (IOException e) {
                                 e.fillInStackTrace();
                             }
