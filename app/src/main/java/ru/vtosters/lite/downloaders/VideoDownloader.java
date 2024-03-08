@@ -79,41 +79,42 @@ public class VideoDownloader {
                             .b(url)
                             .a();
 
-                    try (Response response = client.a(request).execute()) {
-                        if (!response.h()) {
-                            throw new IOException("Unexpected code " + response);
-                        }
-
-                        ResponseBody responseBody = response.a();
-
-                        File outputDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES), "/VKVideo/");
-
-                        if (!outputDir.exists()) {
-                            outputDir.mkdirs();
-                        }
-
-                        File outputFile = new File(outputDir, videoFile + ".mp4");
-
-                        try (InputStream inputStream = responseBody.a();
-                             FileOutputStream outputStream = new FileOutputStream(outputFile)) {
-
-                            byte[] buffer = new byte[4096];
-                            int bytesRead;
-
-                            while ((bytesRead = inputStream.read(buffer)) != -1) {
-                                outputStream.write(buffer, 0, bytesRead);
-                            }
-                            outputStream.flush();
-
-                            MediaScannerConnection.scanFile(finalContext, new String[]{outputFile.toString()}, null, null);
-
-                            AndroidUtils.sendToast("Файл скачан в Movies/VKVideo");
-                        } catch (IOException e) {
+                    client.a(request).a(new Callback() {
+                        @Override
+                        public void a(Call call, IOException e) {
                             e.fillInStackTrace();
                         }
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
+
+                        @Override
+                        public void a(Call call, Response response) {
+                            ResponseBody responseBody = response.a();
+
+                            File outputDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES), "/VKVideo/");
+
+                            if (!outputDir.exists()) {
+                                outputDir.mkdirs();
+                            }
+
+                            File outputFile = new File(outputDir, videoFile + ".mp4");
+
+                            try (InputStream inputStream = responseBody.a();
+                                 FileOutputStream outputStream = new FileOutputStream(outputFile)) {
+                                byte[] buffer = new byte[4096];
+                                int bytesRead;
+
+                                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                                    outputStream.write(buffer, 0, bytesRead);
+                                }
+                                outputStream.flush();
+
+                                MediaScannerConnection.scanFile(finalContext, new String[]{outputFile.toString()}, null, null);
+
+                                AndroidUtils.sendToast("Файл скачан в Movies/VKVideo");
+                            } catch (IOException e) {
+                                e.fillInStackTrace();
+                            }
+                        }
+                    });
                 })
                 .show();
     }

@@ -5,10 +5,7 @@ import android.os.Environment;
 import com.vk.core.network.Network;
 import com.vk.dto.common.ImageSize;
 import com.vk.dto.stories.model.StoryEntry;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import okhttp3.ResponseBody;
+import okhttp3.*;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.File;
@@ -41,45 +38,43 @@ public class StoryDownloader {
                 .b(url)
                 .a();
 
-        try (Response response = client.a(request).execute()) {
-            if (!response.h()) {
-                throw new IOException("Unexpected code " + response);
-            }
-
-            ResponseBody responseBody = response.a();
-
-            if (responseBody == null) {
-                throw new IOException("No response body");
-            }
-
-            String fileName = "photo" + story.E.a + ".jpg";
-            File outputDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "/Stories/");
-
-            if (!outputDir.exists()) {
-                outputDir.mkdirs();
-            }
-
-            File outputFile = new File(outputDir, fileName);
-
-            try (InputStream inputStream = responseBody.a();
-                 FileOutputStream outputStream = new FileOutputStream(outputFile)) {
-
-                byte[] buffer = new byte[4096];
-                int bytesRead;
-
-                while ((bytesRead = inputStream.read(buffer)) != -1) {
-                    outputStream.write(buffer, 0, bytesRead);
-                }
-                outputStream.flush();
-
-                MediaScannerConnection.scanFile(AndroidUtils.getGlobalContext(), new String[]{outputFile.toString()}, null, null);
-
-                AndroidUtils.sendToast("Файл скачан в Pictures/Stories");
-            } catch (IOException e) {
+        client.a(request).a(new Callback() {
+            @Override
+            public void a(Call call, IOException e) {
                 e.fillInStackTrace();
             }
-        } catch (IOException e) {
-            e.fillInStackTrace();
-        }
+
+            @Override
+            public void a(Call call, Response response) {
+                ResponseBody responseBody = response.a();
+
+                String fileName = "photo" + story.E.a + ".jpg";
+                File outputDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "/Stories/");
+
+                if (!outputDir.exists()) {
+                    outputDir.mkdirs();
+                }
+
+                File outputFile = new File(outputDir, fileName);
+
+                try (InputStream inputStream = responseBody.a();
+                     FileOutputStream outputStream = new FileOutputStream(outputFile)) {
+
+                    byte[] buffer = new byte[4096];
+                    int bytesRead;
+
+                    while ((bytesRead = inputStream.read(buffer)) != -1) {
+                        outputStream.write(buffer, 0, bytesRead);
+                    }
+                    outputStream.flush();
+
+                    MediaScannerConnection.scanFile(AndroidUtils.getGlobalContext(), new String[]{outputFile.toString()}, null, null);
+
+                    AndroidUtils.sendToast("Файл скачан в Pictures/Stories");
+                } catch (IOException e) {
+                    e.fillInStackTrace();
+                }
+            }
+        });
     }
 }
