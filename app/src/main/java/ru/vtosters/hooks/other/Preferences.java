@@ -358,4 +358,12 @@ public class Preferences {
     public static int compress(int origquality) {
         return MediaImageEncoder.needToCompress() ? origquality : 100;
     }
+
+    public static String metadataSeparator() {
+        return getPreferences().getString("metadata_separator", "; ");
+    }
+
+    public static void setMetadataSeparator(String separator) {
+        getPreferences().edit().putString("metadata_separator", separator).apply();
+    }
 }

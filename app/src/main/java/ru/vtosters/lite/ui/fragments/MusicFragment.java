@@ -103,18 +103,6 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        PreferenceFragmentUtils.addMaterialSwitchPreference(
-                getPreferenceScreen(),
-                "setMetaData",
-                "Сохранять метадату песен",
-                "Сохранять id3v2 теги для песен для MP3",
-                null,
-                true,
-                (preference, o) -> {
-                    Preferences.getPreferences().edit().putBoolean("setMetaData", (boolean) o).apply();
-                    return true;
-                }
-        );
 
         if (!Preferences.serverFeaturesDisable()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Интеграция Genius");

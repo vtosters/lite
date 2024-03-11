@@ -11,6 +11,72 @@
                 android:key="compressVideos"
                 android:summary="@string/sett_compress_video_summ"
                 android:title="@string/sett_compress_videos"/>
+        <com.vtosters.lite.ui.SummaryListPreference
+                android:defaultValue="jpeg"
+                android:dialogTitle="@string/compression_types_selection"
+                android:entries="@array/compression_value"
+                android:entryValues="@array/compression"
+                android:key="compression"
+                android:title="@string/compression_types"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtl_music_settings">
+        <Preference
+                android:key="cached_tracks"
+                android:title="@string/cached_tracks_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="invertCachedTracks"
+                android:summary="@string/invertcached_summ"
+                android:title="@string/invertcached_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="autocache"
+                android:summary="@string/autocache_summ"
+                android:title="@string/autocache_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="dldir"
+                android:summary="Использовать папку Downloads вместо Music для скачивания музыки в MP3"
+                android:title="Альтернативная папка для скачивания"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="useGenius"
+                android:summary="@string/useGenius_summ"
+                android:title="@string/useGenius_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="useOldAppVer"
+                android:summary="@string/useOldAppVer_summ"
+                android:title="@string/useOldAppVer_title"/>
+        <com.vtosters.lite.ui.SummaryListPreference
+                android:defaultValue="default"
+                android:dialogTitle="@string/musicdefcatalog_dialogTitle"
+                android:entries="@array/musicdefcatalog_value"
+                android:entryValues="@array/musicdefcatalog"
+                android:key="musicdefcatalog"
+                android:title="@string/musicdefcatalog_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="setMetaData"
+                android:summary="Сохранять id3v2 теги для песен для MP3"
+                android:title="Сохранять метадату песен"/>
+        <Preference
+                android:key="metadataSeparator"
+                android:title="Разделитель для id3v2 тегов"/>
+        <Preference
+                android:key="audio_download"
+                android:title="@string/audio_download_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Last.fm" android:key="lastfm">
+        <Preference
+                android:key="lastfm_auth"
+                android:summary="@string/lastfm_auth_summ"
+                android:title="@string/lastfm_auth_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="lastfm_enabled"
+                android:summary="@string/lastfm_enabled_summ"
+                android:title="@string/lastfm_enabled_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_video_settings">
         <Preference

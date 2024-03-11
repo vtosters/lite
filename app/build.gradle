@@ -78,7 +78,7 @@ android {
         targetCompatibility JavaVersion.VERSION_14
     }
     namespace 'ru.vtosters.lite'
-    ndkVersion '25.2.9519653'
+    ndkVersion '26.1.10909125'
     buildFeatures {
         aidl true
     }
@@ -96,6 +96,8 @@ dependencies {
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
     implementation 'net.sourceforge.streamsupport:streamsupport-minifuture:1.7.4'
     implementation 'com.google.guava:guava:32.0.0-android'
+
+    implementation 'com.mpatric:mp3agic:0.9.1'
 
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])

@@ -4,8 +4,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+
 import androidx.preference.Preference;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
@@ -91,6 +94,41 @@ public class MediaFragment extends TrackedMaterialPreferenceToolbarFragment {
         });
 
         findPreference("maxquality").setEnabled(Preferences.isEnableExternalOpening());
+
+        findPreference("metadataSeparator").setOnPreferenceClickListener(preference -> {
+            LinearLayout linearLayout = new LinearLayout(requireContext());
+            linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+
+            EditText separator = new EditText(requireContext());
+            separator.setHint("По-умолчанию: ; с пробелом");
+            separator.setTextColor(ThemesUtils.getTextAttr());
+            separator.setHintTextColor(ThemesUtils.getSTextAttr());
+            separator.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
+            separator.setText(Preferences.metadataSeparator());
+            linearLayout.addView(separator);
+            separator.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+            ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) separator.getLayoutParams());
+            margin.setMargins(AndroidUtils.dp2px(20f), 0, AndroidUtils.dp2px(20f), 0);
+            separator.setLayoutParams(margin);
+
+
+            var t = new VkAlertDialog.Builder(requireContext())
+                    .setTitle("Разделитель")
+                    .setView(linearLayout)
+                    .setPositiveButton("Сохранить", (dialog, which) -> {
+                        if (separator.getText().toString().isEmpty()) {
+                            AndroidUtils.sendToast("Разделитель не может быть пустым");
+                            return;
+                        }
+                        Preferences.setMetadataSeparator(separator.getText().toString());
+                    })
+                    .setNegativeButton("Отмена", (dialog, which) -> dialog.cancel())
+                    .show();
+
+
+            return true;
+        });
     }
 
     @Override
