@@ -92,7 +92,7 @@ public class VideoDownloader {
                     String notificationText = "Загрузка началась";
 
                     NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), channelId)
-                            .setSmallIcon(R.drawable.ic_download_24)
+                            .setSmallIcon(android.R.drawable.stat_sys_download)
                             .setContentTitle(notificationTitle)
                             .setContentText(notificationText)
                             .setProgress(0, 0, true)
@@ -151,6 +151,8 @@ public class VideoDownloader {
 
                                 notificationBuilder.setContentText(successMessage)
                                         .setProgress(0, 0, false)
+                                        .setContentTitle(notificationTitle)
+                                        .setSmallIcon(android.R.drawable.stat_sys_download_done)
                                         .setOngoing(false);
 
                                 notificationManager.notify(notificationId, notificationBuilder.build());
