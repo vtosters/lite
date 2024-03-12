@@ -89,12 +89,12 @@ public class VideoDownloader {
                     }
 
                     String notificationTitle = "Загрузка видео";
-                    String[][] notificationText = {{"Загрузка началась"}};
+                    String notificationText = "Загрузка началась";
 
                     NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), channelId)
                             .setSmallIcon(R.drawable.ic_download_24)
                             .setContentTitle(notificationTitle)
-                            .setContentText(notificationText[0][0])
+                            .setContentText(notificationText)
                             .setProgress(0, 0, true)
                             .setOngoing(true);
 
@@ -134,10 +134,9 @@ public class VideoDownloader {
                                     outputStream.write(buffer, 0, bytesRead);
                                     totalBytesRead += bytesRead;
                                     int progress = (int) ((totalBytesRead * 100) / fileSize);
-                                    notificationText[0][0] = "Загружено " + progress + "%";
 
                                     notificationBuilder.setProgress(100, progress, false)
-                                            .setContentText(notificationText[0][0]);
+                                            .setContentText("Загружено " + progress + "%");
 
                                     notificationManager.notify(notificationId, notificationBuilder.build());
                                 }
