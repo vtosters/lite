@@ -103,6 +103,57 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "setMetaData",
+                "Сохранять метадату песен",
+                "Сохранять id3v2 теги для песен для MP3",
+                null,
+                true,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("setMetaData", (boolean) o).apply();
+                    return true;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "metadataSeparator",
+                "Разделитель для id3v2 тегов",
+                null,
+                null,
+                preference -> {
+                    LinearLayout linearLayout = new LinearLayout(requireContext());
+                    linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+                    EditText separator = new EditText(requireContext());
+                    separator.setHint("По-умолчанию: ; с пробелом");
+                    separator.setTextColor(ThemesUtils.getTextAttr());
+                    separator.setHintTextColor(ThemesUtils.getSTextAttr());
+                    separator.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
+                    separator.setText(Preferences.metadataSeparator());
+                    linearLayout.addView(separator);
+                    separator.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+                    ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) separator.getLayoutParams());
+                    margin.setMargins(AndroidUtils.dp2px(20f), 0, AndroidUtils.dp2px(20f), 0);
+                    separator.setLayoutParams(margin);
+
+                    new VkAlertDialog.Builder(requireContext())
+                            .setTitle("Разделитель")
+                            .setView(linearLayout)
+                            .setPositiveButton("Сохранить", (dialog, which) -> {
+                                if (separator.getText().toString().isEmpty()) {
+                                    AndroidUtils.sendToast("Разделитель не может быть пустым");
+                                    return;
+                                }
+                                Preferences.setMetadataSeparator(separator.getText().toString());
+                            })
+                            .setNegativeButton("Отмена", (dialog, which) -> dialog.cancel())
+                            .show();
+
+                    return true;
+                }
+        );
 
         if (!Preferences.serverFeaturesDisable()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Интеграция Genius");
