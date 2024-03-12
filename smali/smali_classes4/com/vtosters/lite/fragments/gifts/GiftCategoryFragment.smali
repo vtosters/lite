@@ -424,7 +424,7 @@
 
     iget v7, p0, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->G0:I
 
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
+    invoke-static {}, Lru/vtosters/hooks/GiftsFix;->getBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -816,7 +816,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
+    invoke-static {}, Lru/vtosters/hooks/GiftsFix;->getBundle()Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -943,7 +943,7 @@
     iput p1, p0, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->E0:I
 
     .line 7
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
+    invoke-static {}, Lru/vtosters/hooks/GiftsFix;->getBundle()Landroid/os/Bundle;
 
     move-result-object p1
 
