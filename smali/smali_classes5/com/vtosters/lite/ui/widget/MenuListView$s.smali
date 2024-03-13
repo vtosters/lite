@@ -384,11 +384,21 @@
     .line 3
     iget-object v3, p0, Lcom/vtosters/lite/ui/widget/MenuListView$s;->e:Landroid/widget/TextView;
 
+    if-nez v3, :cond_10
+
+    return-void
+
+    :cond_10
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/ui/widget/MenuListView$s;->c:Landroid/widget/TextView;
 
+    if-nez v0, :cond_11
+
+    return-void
+
+    :cond_11
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 5

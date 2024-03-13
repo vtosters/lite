@@ -31,6 +31,7 @@ import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.WebViewColoringUtils;
 
@@ -341,7 +342,7 @@ public class ThemesUtils {
     }
 
     public static int getColor(int i) {
-        return ThemesHacks.getHackedColor(LifecycleUtils.getCurrentActivity(), i);
+        return ThemesHacks.getHackedColor(getGlobalContext(), i);
     } // Android Support color injector + accent color checker
 
     public static int getAlertStyle() {

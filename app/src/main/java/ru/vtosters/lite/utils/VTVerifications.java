@@ -96,14 +96,15 @@ public class VTVerifications {
     }
 
     private static void processIds(JSONArray jsonIds, List<Integer> member) {
-        if (jsonIds == null || jsonIds.length() == 0)
+        if (jsonIds == null || jsonIds.length() == 0) {
             return;
+        }
 
         for (int i = 0; i < jsonIds.length(); i++) {
-            try {
-                member.add(jsonIds.getInt(i));
-            } catch (JSONException e) {
-                e.fillInStackTrace();
+            int id = jsonIds.optInt(i);
+
+            if (id != 0) {
+                member.add(id);
             }
         }
     }
