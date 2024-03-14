@@ -18,10 +18,7 @@ import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.dialogs.Start;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.NavigatorUtils;
-import ru.vtosters.lite.utils.VTVerifications;
+import ru.vtosters.lite.utils.*;
 import ru.vtosters.sponsorpost.internal.Native;
 import ru.vtosters.sponsorpost.utils.Updates;
 
@@ -69,7 +66,9 @@ public class MainActivityInjector {
         // VKIDProtection.alert(activity);
         //needs to show selected tgs pack count in settings after cold launch
         TelegramStickersService.getInstance(activity);
-        Native.canVote = NativeLibLoader.loadLibrary("sponsorpost");
+        if (AccountManagerUtils.isLogin()) {
+            Native.canVote = NativeLibLoader.loadLibrary("sponsorpost");
+        }
     }
 
     private static void updateBinsAndTmpArchive(Activity activity) {
