@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.StrictMode;
+
+import com.vk.core.util.AppContextHolder;
 import com.vk.medianative.MediaImageEncoder;
 import com.vk.medianative.MediaNative;
 import com.vtosters.lite.data.Users;
@@ -22,6 +24,7 @@ import java.security.NoSuchAlgorithmException;
 public class Preferences {
 
     public static void init(Application application) throws Exception {
+        AppContextHolder.a = application.getApplicationContext();
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy); // fix profiles hide hook
 
