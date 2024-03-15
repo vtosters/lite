@@ -17,6 +17,8 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationManagerCompat;
+
+import com.vk.core.util.AppContextHolder;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
 
@@ -50,14 +52,8 @@ public class AndroidUtils {
 
     @NonNull
     public static Context getGlobalContext() {
-        try {
-            Method getInitialApplicationMtd = ReflectionUtils.findMethod(Class.forName("android.app.AppGlobals"), "getInitialApplication");
-            return (Context) getInitialApplicationMtd.invoke(null);
-        } catch (Exception e) {
-            Log.d("GlobalContext", "Error while fetching context via refl");
-        }
-        return LifecycleUtils.getCurrentActivity();
-    } // Getting the global context through reflection to use context on application initialization
+        return AppContextHolder.a;
+    } // Getting the global context to use context on application initialization
 
     public static Resources getResources() {
         return getGlobalContext().getResources();
