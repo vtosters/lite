@@ -118,6 +118,10 @@
 
     .line 7
     :cond_1
+    const-string v1, "com.vtosters.lite"
+
+    invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
     invoke-static {v0}, Lkotlin/collections/l;->e(Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object p1

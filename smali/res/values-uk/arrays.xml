@@ -592,7 +592,7 @@
         <item>Без проксі</item>
         <item>zaborona.help</item>
         <item>VikaMobile</item>
-        <item>Випадковий проксі</item>
+<!--        <item>Випадковий проксі</item>-->
         <item>Сторонній проксі для API</item>
         <item>Сторонній HTTP</item>
         <item>Сторонній HTTPS</item>

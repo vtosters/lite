@@ -22,27 +22,23 @@ import com.aefyr.tsg.g2.TelegramStickersService;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
 import ru.vtosters.lite.ui.components.StickerTouchHelperCallback;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.NavigatorUtils;
 
 import java.io.File;
 
 public class StickersFragment extends BaseToolbarFragment {
-    public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
-
-    final static int TYPE_DIRECT = 0;
-    final static int TYPE_SOCKS = 2;
-
+    public static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
     TelegramStickersGrabber mGrabber;
     StickerPackAdapter mAdapter;
     boolean movePending = false;
     int from, to;
-    final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+    BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @SuppressLint("NotifyDataSetChanged")
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -59,14 +55,31 @@ public class StickersFragment extends BaseToolbarFragment {
         }
     };
 
+    private static void resetToken(Context ctx) {
+        if (TGPref.getTGBotKey() == null) AndroidUtils.sendToast(AndroidUtils.getString("tgs_token_missing"));
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(AndroidUtils.getString("tgs_token_reset_dialog"))
+                .setNegativeButton(R.string.cancel, (dialog, which) -> {
+                    dialog.cancel();
+                })
+                .setPositiveButton(R.string.ok, (dialog, which) -> {
+                    TGPref.setTGBotKey(null);
+                    AndroidUtils.sendToast(AndroidUtils.getString("tgs_token_reset"));
+                })
+                .show();
+    }
+
     @Override
     protected void onCreateMenu(Menu menu) {
-        menu.add(0, 0, 0, "")
-                .setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.ic_add_outline_28)))
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        menu.add(0, 1, 0, "")
-                .setIcon(R.drawable.ic_settings_outline_28)
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        if (!Preferences.serverFeaturesDisable()) {
+            menu.add(0, 0, 0, "")
+                    .setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.ic_add_outline_28)))
+                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+            menu.add(0, 1, 0, "")
+                    .setIcon(ThemesUtils.recolorDrawable(requireContext().getDrawable(R.drawable.ic_refresh_outline_28)))
+                    .setTitle(AndroidUtils.getString("tgs_token_reset_menu"))
+                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        }
         super.onCreateMenu(menu);
     }
 
@@ -74,14 +87,9 @@ public class StickersFragment extends BaseToolbarFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case 0 -> addTgsPack();
-            case 1 -> openMenu(null);
+            case 1 -> resetToken(requireContext());
         }
         return true;
-    }
-
-    private void openMenu(String toast) {
-        if (toast != null) Toast.makeText(requireContext(), toast, Toast.LENGTH_SHORT).show();
-        NavigatorUtils.switchFragment(requireContext(), StickersPreferencesFragment.class);
     }
 
     @Override
@@ -96,14 +104,14 @@ public class StickersFragment extends BaseToolbarFragment {
     public View onCreateContent(@NonNull LayoutInflater inflater, @Nullable Bundle bundle) {
         setTitle(R.string.vtltgs);
 
-        final var container = new FrameLayout(requireContext());
-        final var recycler = new RecyclerView(requireContext());
+        var container = new FrameLayout(requireContext());
+        var recycler = new RecyclerView(requireContext());
 
         mAdapter = new StickerPackAdapter();
         recycler.setAdapter(mAdapter);
 
-        final var callback = new StickerTouchHelperCallback(mAdapter);
-        final var touchHelper = new ItemTouchHelper(callback);
+        var callback = new StickerTouchHelperCallback(mAdapter);
+        var touchHelper = new ItemTouchHelper(callback);
         touchHelper.attachToRecyclerView(recycler);
 
         recycler.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
@@ -124,80 +132,50 @@ public class StickersFragment extends BaseToolbarFragment {
     }
 
     private void addTgsPack() {
-        final var method = TGPref.getTGConnectMethod();
-        if (method != -1) {
-            initGrabber();
-            switch (method) {
-                case TYPE_SOCKS -> {
-                    if (TGPref.getTGProxyIP() == null) openMenu(requireContext().getString(R.string.stickersproxy1));
-                }
-                case TYPE_DIRECT -> {
-                    initGrabber();
-                    final Runnable lambda = () ->
+        initGrabber();
+        Runnable lambda = () -> {
+            var container = new LinearLayout(requireContext());
+
+            var input = new EditText(requireContext());
+            var inputLP = new ViewGroup.MarginLayoutParams(-1, -2);
+            inputLP.setMargins(
+                    AndroidUtils.dp2px(24.f),
+                    0,
+                    AndroidUtils.dp2px(24.f),
+                    0);
+            container.addView(input, inputLP);
+
+            new VkAlertDialog.Builder(requireContext())
+                    .setTitle(R.string.stickershelp1)
+                    //  .setMessage(R.string.stickershelp2)
+                    .setView(container)
+                    .setPositiveButton(android.R.string.ok, (dialog, which) ->
                     {
-                        final var container = new LinearLayout(requireContext());
+                        var packId = input.getText().toString();
+                        if (packId.startsWith("https://"))
+                            packId = packId.substring(packId.lastIndexOf('/') + 1);
+                        TelegramStickersService.getInstance(requireContext())
+                                .requestPackDownload(
+                                        packId,
+                                        new File(requireContext().getFilesDir(), "VT-Stickers/" + packId));
+                    })
+                    .setNeutralButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
+                    .show();
+        };
 
-                        final var input = new EditText(requireContext());
-                        final var inputLP = new ViewGroup.MarginLayoutParams(-1, -2);
-                        inputLP.setMargins(
-                                AndroidUtils.dp2px(24.f),
-                                0,
-                                AndroidUtils.dp2px(24.f),
-                                0);
-                        container.addView(input, inputLP);
-
-                        new VkAlertDialog.Builder(requireContext())
-                                .setTitle(R.string.stickershelp1)
-                                //  .setMessage(R.string.stickershelp2)
-                                .setView(container)
-                                .setPositiveButton(android.R.string.ok, (dialog, which) ->
-                                {
-                                    var packId = input.getText().toString();
-                                    if (packId.startsWith("https://"))
-                                        packId = packId.substring(packId.lastIndexOf('/') + 1);
-                                    TelegramStickersService.getInstance(requireContext())
-                                            .requestPackDownload(
-                                                    packId,
-                                                    new File(requireContext().getFilesDir(), "VT-Stickers/" + packId));
-                                })
-                                .setNeutralButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
-                                .show();
-                    };
-
-                    if (TGPref.getTGBotKey() == null) enterBotKey(() -> checkApiKey(lambda));
-                    else checkApiKey(lambda);
-                }
-            }
-        } else openMenu(requireContext().getString(R.string.stickersconnection));
+        if (TGPref.getTGBotKey() == null) enterBotKey(() -> checkApiKey(lambda));
+        else checkApiKey(lambda);
     }
 
     private void initGrabber() {
-        switch (TGPref.getTGConnectMethod()) {
-            case TYPE_DIRECT -> {
-                TelegramStickersGrabber.USE_PROXY = false;
-                mGrabber.resetProxy();
-            }
-            case TYPE_SOCKS -> {
-                if (TGPref.getTGProxyIP() == null) break;
-                TelegramStickersGrabber.USE_PROXY = true;
-                TelegramStickersGrabber.PROXY_IP = TGPref.getTGProxyIP();
-                TelegramStickersGrabber.PROXY_PORT = TGPref.getTGProxyPort();
-                if (TGPref.isTGProxyPassEnabled()) {
-                    TelegramStickersGrabber.HAS_PASS = true;
-                    TelegramStickersGrabber.PROXY_USER = TGPref.getTGProxyUser();
-                    TelegramStickersGrabber.PROXY_PASS = TGPref.getTGProxyPass();
-                }
-                mGrabber.enableProxy();
-            }
-        }
         TelegramStickersGrabber.updateURLs();
     }
 
     private void enterBotKey(Runnable callback) {
-        final var container = new LinearLayout(requireContext());
+        var container = new LinearLayout(requireContext());
 
-        final var input = new EditText(requireContext());
-        final var inputLP = new ViewGroup.MarginLayoutParams(-1, -2);
+        var input = new EditText(requireContext());
+        var inputLP = new ViewGroup.MarginLayoutParams(-1, -2);
         inputLP.setMargins(
                 AndroidUtils.dp2px(24.f),
                 0,
@@ -222,7 +200,7 @@ public class StickersFragment extends BaseToolbarFragment {
                                         .setMessage(requireContext().getString(R.string.stickersapi9) +
                                                 requireContext().getString(R.string.stickersapi10))
                                         .setNeutralButton(AndroidUtils.getString("open_bot"), (dl, i) -> {
-                                            final var intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/botfather"))
+                                            var intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/botfather"))
                                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                             requireActivity().startActivity(intent);
                                         })
@@ -235,7 +213,7 @@ public class StickersFragment extends BaseToolbarFragment {
     private void checkApiKey(Runnable callback) {
         mGrabber.setBotApiKey(TGPref.getTGBotKey());
 
-        final var dialog = new ProgressDialog(requireContext());
+        var dialog = new ProgressDialog(requireContext());
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         dialog.setMessage(requireContext().getString(R.string.stickersapi1));
         dialog.show();

@@ -49,6 +49,7 @@ import com.vk.im.ui.views.msg.bubble.MsgBubbleView;
 import com.vk.im.ui.views.sticker.StickerAnimationState;
 import kotlin.Unit;
 import kotlin.jvm.b.Functions;
+import ru.vtosters.lite.themes.ThemesHacks;
 
 public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
     public static final int h0 = Screen.a(124);
@@ -56,46 +57,6 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
     private static final int[][] j0;
     private static final int[][] k0;
     private static final int[][] l0;
-    private final MsgPartHolderBase B;
-    private final MsgPartHolderBindArgs C = new MsgPartHolderBindArgs();
-    private final Rect D = new Rect();
-    private final Rect E = new Rect();
-    private final Rect F = new Rect();
-    private final Rect G = new Rect();
-    private ColorDrawable H;
-    private final int I;
-    private final int J;
-    private final int K;
-    private final int L;
-    private final int M;
-    private Drawable N;
-    private Drawable O;
-    private BombView P;
-    private BombView.d Q;
-    private int R;
-    private int S;
-    private final DisplayNameFormatter T = new DisplayNameFormatter();
-    private final StringBuilder U = new StringBuilder();
-    private final StringBuilder V = new StringBuilder();
-    private final String W;
-    private final String X;
-    private final String Y;
-    private boolean Z;
-    private BubbleColors a0;
-    private final FluidHorizontalLayout b;
-    @ColorInt
-    private int b0;
-    private final AvatarView c;
-    private MsgListAdapterCallback c0;
-    private final Space d;
-    private Msg d0;
-    private final MsgBubbleView e;
-    private Dialog e0;
-    private final MsgStatusView f;
-    private int f0;
-    private final ImageView g;
-    private h g0 = new h();
-    private final Space h;
 
     static {
         int[] var0 = new int[]{0, 0, 0, 0};
@@ -119,20 +80,61 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         l0 = new int[][]{var0, {4, 4, 0, 0, 0, 2, 8, 0}, var1, var2, {4, 0, 0, 0, 0, 2, 8, 0}, {0, 0, 0, 0, 0, 2, 8, 0}, {4, 4, 0, 0, 0, 2, 8, 0}, {0, 0, 0, 0, 0, 0, 0, 0}};
     }
 
+    private final MsgPartHolderBase B;
+    private final MsgPartHolderBindArgs C = new MsgPartHolderBindArgs();
+    private final Rect D = new Rect();
+    private final Rect E = new Rect();
+    private final Rect F = new Rect();
+    private final Rect G = new Rect();
+    private final int I;
+    private final int J;
+    private final int K;
+    private final int L;
+    private final int M;
+    private final DisplayNameFormatter T = new DisplayNameFormatter();
+    private final StringBuilder U = new StringBuilder();
+    private final StringBuilder V = new StringBuilder();
+    private final String W;
+    private final String X;
+    private final String Y;
+    private final FluidHorizontalLayout b;
+    private final AvatarView c;
+    private final Space d;
+    private final MsgBubbleView e;
+    private final MsgStatusView f;
+    private final ImageView g;
+    private final Space h;
+    private final ColorDrawable H;
+    private Drawable N;
+    private Drawable O;
+    private final BombView P;
+    private final BombView.d Q;
+    private final int R;
+    private final int S;
+    private boolean Z;
+    private BubbleColors a0;
+    @ColorInt
+    private int b0;
+    private MsgListAdapterCallback c0;
+    private Msg d0;
+    private Dialog e0;
+    private int f0;
+    private final h g0 = new h();
+
     public VhMsg(View itemView, MsgPartHolderBase vhBase) {
         super(itemView);
         Context context = itemView.getContext();
         LayoutInflater var4 = LayoutInflater.from(context);
         this.b = (FluidHorizontalLayout) itemView;
-        this.c = (AvatarView) itemView.findViewById(com.vk.im.ui.h.avatar);
-        this.d = (Space) itemView.findViewById(com.vk.im.ui.h.avatar_space);
-        this.e = (MsgBubbleView) itemView.findViewById(com.vk.im.ui.h.bubble);
-        this.f = (MsgStatusView) itemView.findViewById(com.vk.im.ui.h.status);
-        this.g = (ImageView) itemView.findViewById(com.vk.im.ui.h.vkim_channel_share);
-        this.h = (Space) itemView.findViewById(com.vk.im.ui.h.status_space);
-        this.P = (BombView) itemView.findViewById(com.vk.im.ui.h.bomb);
+        this.c = itemView.findViewById(com.vk.im.ui.h.avatar);
+        this.d = itemView.findViewById(com.vk.im.ui.h.avatar_space);
+        this.e = itemView.findViewById(com.vk.im.ui.h.bubble);
+        this.f = itemView.findViewById(com.vk.im.ui.h.status);
+        this.g = itemView.findViewById(com.vk.im.ui.h.vkim_channel_share);
+        this.h = itemView.findViewById(com.vk.im.ui.h.status_space);
+        this.P = itemView.findViewById(com.vk.im.ui.h.bomb);
         this.B = vhBase;
-        this.H = new ColorDrawable(context.getResources().getColor(com.vk.im.ui.d.msg_search_selection));
+        this.H = new ColorDrawable(ThemesHacks.getColors(context, com.vk.im.ui.d.msg_search_selection));
         this.I = ContextExtKt.b(context, com.vk.im.ui.e.msg_bubble_max_width);
         this.J = ContextExtKt.b(context, com.vk.im.ui.e.msg_reply_max_width);
         this.K = ContextExtKt.b(context, com.vk.im.ui.e.msg_sticker_max_width);
@@ -149,48 +151,38 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         var6.right = var7.rightMargin;
         var6.top = var7.topMargin;
         var6.bottom = var7.bottomMargin;
-        ViewExtKt.b(this.c, new View.OnClickListener() {
-            public void onClick(View var1) {
-                if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
-                    VhMsg.this.c0.a(VhMsg.this.d0.getFrom());
-                }
-
+        ViewExtKt.b(this.c, var1 -> {
+            if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
+                VhMsg.this.c0.a(VhMsg.this.d0.getFrom());
             }
-        });
-        this.c.setOnLongClickListener(new View.OnLongClickListener() {
-            public boolean onLongClick(View var1) {
-                if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
-                    VhMsg.this.c0.a(VhMsg.this.d0.getFrom());
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        });
-        ViewExtKt.b(this.g, new View.OnClickListener() {
-            public void onClick(View var1) {
-                if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
-                    VhMsg.this.c0.a(VhMsg.this.d0);
-                }
 
-            }
         });
-        ViewExtKt.b(this.itemView, new View.OnClickListener() {
-            public void onClick(View var1) {
-                if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
-                    VhMsg.this.c0.a(VhMsg.this.d0.getLocalId());
-                }
-
-            }
-        });
-        this.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-            public boolean onLongClick(View var1) {
-                if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
-                    VhMsg.this.c0.b(VhMsg.this.d0.getLocalId());
-                }
-
+        this.c.setOnLongClickListener(var1 -> {
+            if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
+                VhMsg.this.c0.a(VhMsg.this.d0.getFrom());
                 return true;
+            } else {
+                return false;
             }
+        });
+        ViewExtKt.b(this.g, var1 -> {
+            if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
+                VhMsg.this.c0.a(VhMsg.this.d0);
+            }
+
+        });
+        ViewExtKt.b(this.itemView, (View.OnClickListener) var1 -> {
+            if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
+                VhMsg.this.c0.a(VhMsg.this.d0.getLocalId());
+            }
+
+        });
+        this.itemView.setOnLongClickListener((View.OnLongClickListener) var1 -> {
+            if (VhMsg.this.c0 != null && VhMsg.this.d0 != null) {
+                VhMsg.this.c0.b(VhMsg.this.d0.getLocalId());
+            }
+
+            return true;
         });
         this.R = ContextExtKt.i(context, com.vk.im.ui.c.im_msg_part_corner_radius_small);
         this.S = ContextExtKt.i(context, com.vk.im.ui.c.im_msg_part_corner_radius_big);
@@ -201,6 +193,10 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
                 VhMsg.this.p(var1);
             }
         };
+    }
+
+    public static VhMsg a(LayoutInflater var0, ViewGroup var1, MsgPartHolderBase var2) {
+        return new VhMsg(var0.inflate(j.vkim_msg_list_item_msg_from_user, var1, false), var2);
     }
 
     private int a(Style var1, Style var2, boolean var3) {
@@ -283,18 +279,13 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
                 case 103:
                     return VhMsg.Style.EMPTY;
                 default:
-                    StringBuilder var3 = new StringBuilder();
-                    var3.append("Unknown viewType: ");
-                    var3.append(var1);
-                    throw new IllegalArgumentException(var3.toString());
+                    String var3 = "Unknown viewType: " +
+                            var1;
+                    throw new IllegalArgumentException(var3);
             }
         }
 
         return VhMsg.Style.TWO_LINE;
-    }
-
-    public static VhMsg a(LayoutInflater var0, ViewGroup var1, MsgPartHolderBase var2) {
-        return new VhMsg(var0.inflate(j.vkim_msg_list_item_msg_from_user, var1, false), var2);
     }
 
     private void a(VhBindArgs args, Rect rect) {
@@ -411,11 +402,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
                     Msg var10 = var5.c;
                     var9 = var6;
                     if (var10 != null) {
-                        if (var10.v1() == args.g.t1()) {
-                            var9 = true;
-                        } else {
-                            var9 = false;
-                        }
+                        var9 = var10.v1() == args.g.t1();
 
                         if (var10.O1()) {
                             int var12 = var10.d().ordinal();
@@ -433,11 +420,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
                                     b = args.I();
                                 }
                             } else {
-                                if (var10.C1() <= args.i) {
-                                    var6 = true;
-                                } else {
-                                    var6 = false;
-                                }
+                                var6 = var10.C1() <= args.i;
 
                                 if (!var6 && !var9) {
                                     var11 = MsgStatus.UNREAD;
@@ -575,18 +558,14 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         partArgs.o = args.n;
         partArgs.s = args.v();
         partArgs.t = args.q;
-        partArgs.u = var4.b() ^ true;
+        partArgs.u = !var4.b();
         boolean var5;
-        if (var3.i > 0) {
-            var5 = true;
-        } else {
-            var5 = false;
-        }
+        var5 = var3.i > 0;
 
         partArgs.v = var5;
         partArgs.w = args.k;
         partArgs.x = args.l;
-        partArgs.y = this.Z ^ true;
+        partArgs.y = !this.Z;
         partArgs.z = args.s;
         partArgs.A = args.t;
         partArgs.l = this.b0;
@@ -671,7 +650,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
     private void f(VhBindArgs args) {
         Msg var2 = args.b.c;
         if (var2 != null) {
-            this.P.setStateListener((BombView.d) null);
+            this.P.setStateListener(null);
             if (var2.M1() && !var2.E1()) {
                 this.P.setVisibility(View.GONE);
             } else {
@@ -810,24 +789,12 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         this.e.setFwdPadding(this.D);
         this.e.setContentPadding(this.E);
         boolean var7;
-        if (args.b.a == 83) {
-            var7 = true;
-        } else {
-            var7 = false;
-        }
+        var7 = args.b.a == 83;
 
         boolean var5;
-        if (args.a.a == 83) {
-            var5 = true;
-        } else {
-            var5 = false;
-        }
+        var5 = args.a.a == 83;
 
-        if (!args.F() || !var7 && !var5) {
-            var5 = true;
-        } else {
-            var5 = false;
-        }
+        var5 = !args.F() || !var7 && !var5;
 
         MsgBubbleView var8 = this.e;
         boolean var6 = var4;
@@ -904,18 +871,10 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
             return false;
         } else {
             boolean var5;
-            if (var2.a == 50) {
-                var5 = true;
-            } else {
-                var5 = false;
-            }
+            var5 = var2.a == 50;
 
             boolean var6;
-            if (!args.z() && var2.i == 0) {
-                var6 = true;
-            } else {
-                var6 = false;
-            }
+            var6 = !args.z() && var2.i == 0;
 
             if (var5 || var6 || args.y() || args.x()) {
                 var4 = true;
@@ -934,11 +893,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
 
     private boolean u(int var1) {
         boolean var2;
-        if (var1 != 2 && var1 != 3) {
-            var2 = false;
-        } else {
-            var2 = true;
-        }
+        var2 = var1 == 2 || var1 == 3;
 
         return var2;
     }
@@ -960,9 +915,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
             Msg var1 = this.d0;
             if (var1 != null) {
                 Dialog var2 = this.e0;
-                if (var2 != null && MsgPermissionHelper.b.a(var2, var1)) {
-                    return true;
-                }
+                return var2 != null && MsgPermissionHelper.b.a(var2, var1);
             }
         }
         return false;
@@ -997,11 +950,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
 
     public void a(VhBindArgs args) {
         boolean var2;
-        if (VKThemeHelper.l() == VKTheme.VKAPP_LIGHT) {
-            var2 = true;
-        } else {
-            var2 = false;
-        }
+        var2 = VKThemeHelper.l() == VKTheme.VKAPP_LIGHT;
 
         this.Z = var2;
         AdapterEntry var3 = args.b;
@@ -1062,11 +1011,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
 
     public boolean f0() {
         boolean var1;
-        if (this.f0 == 100) {
-            var1 = true;
-        } else {
-            var1 = false;
-        }
+        var1 = this.f0 == 100;
 
         return var1;
     }
@@ -1083,7 +1028,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         this.B.c(var1);
     }
 
-    private static enum Style {
+    private enum Style {
         BUTTON(6),
         EMPTY(7),
         FWD_SENDER(4),
@@ -1095,14 +1040,14 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
 
         public final int index;
 
-        private Style(int var3) {
+        Style(int var3) {
             this.index = var3;
         }
     }
 
     private class h implements Functions<Unit> {
-        private int a;
-        private Runnable b;
+        private final int a;
+        private final Runnable b;
 
         private h() {
             this.a = Screen.a(12);

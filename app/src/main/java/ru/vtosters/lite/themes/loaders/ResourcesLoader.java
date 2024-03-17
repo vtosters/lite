@@ -171,8 +171,6 @@ public class ResourcesLoader {
                 implAssets.set(resourceImpl, sAssetManager);
             }
 
-            clearPreloadTypedArrayIssue(resources);
-
             resources.updateConfiguration(resources.getConfiguration(), resources.getDisplayMetrics());
         }
 
@@ -232,33 +230,6 @@ public class ResourcesLoader {
         } catch (Throwable thr) {
             thr.printStackTrace();
             storedPatchedResModifiedTime = 0L;
-        }
-    }
-
-    /**
-     * Why must I do these?
-     * Resource has mTypedArrayPool field, which just like Message Poll to reduce gc
-     * MiuiResource change TypedArray to MiuiTypedArray, but it get string block from offset instead of assetManager
-     */
-    private static void clearPreloadTypedArrayIssue(Resources resources) {
-        // Perform this trick not only in Miui system since we can't predict if any other
-        // manufacturer would do the same modification to Android.
-        // if (!isMiuiSystem) {
-        //     return;
-        // }
-        Log.w("ResourcesLoader", "try to clear typedArray cache!");
-        // Clear typedArray cache.
-        try {
-            Field typedArrayPoolField = ReflectionUtils.findField(Resources.class, "mTypedArrayPool");
-            Object origTypedArrayPool = typedArrayPoolField.get(resources);
-            Method acquireMethod = ReflectionUtils.findMethod(origTypedArrayPool, "acquire");
-            while (true) {
-                if (acquireMethod.invoke(origTypedArrayPool) == null) {
-                    break;
-                }
-            }
-        } catch (Throwable ignored) {
-            Log.e("ResourcesLoader", "clearPreloadTypedArrayIssue failed, ignore error: " + ignored);
         }
     }
 

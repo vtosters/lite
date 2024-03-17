@@ -2,6 +2,7 @@ package ru.vtosters.hooks.other;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -30,6 +31,7 @@ import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.lite.utils.WebViewColoringUtils;
 
@@ -73,7 +75,7 @@ public class ThemesUtils {
     }
 
     public static boolean isMonetTheme() {
-        return getBoolValue("monettheme", false) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
+        return getBoolValue("monettheme", false);
     }
 
     public static boolean isAmoledTheme() {
@@ -391,14 +393,14 @@ public class ThemesUtils {
         return vkme() ? R.dimen.app_minimumsize_h : Default;
     }
 
-    public static ColorStateList getCSTDock() {
+    public static ColorStateList getCSTDock(Context ctx) {
         return new ColorStateList(
                 new int[][]{
                         new int[]{android.R.attr.state_checked},
                         new int[]{-android.R.attr.state_checked}
                 },
                 new int[]{
-                        dockbar_accent() ? getAccentColor() : (isDarkTheme() ? getResources().getColor(R.color.white) : getResources().getColor(R.color.gray_700)),
+                        dockbar_accent() ? getAccentColor() : (isDarkTheme() ? ThemesHacks.getColors(ctx, R.color.white) : ThemesHacks.getColors(ctx, R.color.gray_700)),
                         getColorFromAttr(R.attr.tabbar_inactive_icon)
                 }
         );

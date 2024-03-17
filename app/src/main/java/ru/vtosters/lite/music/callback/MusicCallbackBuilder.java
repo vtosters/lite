@@ -74,6 +74,7 @@ public class MusicCallbackBuilder {
             public void onSuccess() {
                 notification.setContentText(AndroidUtils.getString(R.string.player_download_finished));
                 notification.setProgress(0, 0, false);
+                notification.setSmallIcon(android.R.drawable.stat_sys_download_done);
             }
 
             @Override

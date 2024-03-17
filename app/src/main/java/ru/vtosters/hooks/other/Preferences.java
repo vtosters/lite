@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.StrictMode;
+
+import com.vk.core.util.AppContextHolder;
 import com.vk.medianative.MediaImageEncoder;
 import com.vk.medianative.MediaNative;
 import com.vtosters.lite.data.Users;
@@ -22,14 +24,14 @@ import java.security.NoSuchAlgorithmException;
 public class Preferences {
 
     public static void init(Application application) throws Exception {
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        AppContextHolder.a = application.getApplicationContext();
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitNetwork().build();
         StrictMode.setThreadPolicy(policy); // fix profiles hide hook
 
         MediaNative.init(application);
 
         GmsHook.fixGapps();
         ProxyUtils.setProxy();
-        NewsFeedFiltersUtils.setupFilters();
         VTVerifications.load(application);
         LifecycleUtils.registerActivities(application);
 
@@ -177,6 +179,10 @@ public class Preferences {
         return getBoolValue("miniapps", true);
     }
 
+    public static boolean disableForceTrafficSaver() {
+        return getBoolValue("disableForceTrafficSaver", false);
+    }
+
     public static boolean savemsgsett() {
         return getBoolValue("savemsgsett", false);
     }
@@ -242,6 +248,10 @@ public class Preferences {
         return getBoolValue("autoalltranslate", false);
     }
 
+    public static boolean serverFeaturesDisable() {
+        return getBoolValue("serverFeaturesDisable", false);
+    }
+
     public static boolean shortinfo() {
         return getBoolValue("shortinfo", true);
     }
@@ -263,7 +273,7 @@ public class Preferences {
     }
 
     public static boolean stories() {
-        return getBoolValue("stories", false);
+        return getBoolValue("stories", true);
     }
 
     public static boolean swipe() {
@@ -288,7 +298,7 @@ public class Preferences {
 
     @SuppressWarnings("ConstantConditions")
     public static boolean checkupdates() {
-        return !getBoolValue("isRoamingState", false) && isValidSignature() && BuildConfig.BUILD_TYPE.equals("release");
+        return !getBoolValue("isRoamingState", false) && isValidSignature() && BuildConfig.BUILD_TYPE.equals("release") && getBoolValue("autoupdates", true) && !serverFeaturesDisable();
     }
 
     public static boolean isNewBuild() {
@@ -302,6 +312,10 @@ public class Preferences {
                 e.printStackTrace();
             }
         return false;
+    }
+
+    public static String getId() {
+        return String.valueOf(AccountManagerUtils.getUserId());
     }
 
     public static void updateBuildNumber() {
@@ -345,7 +359,14 @@ public class Preferences {
     }
 
     public static int compress(int origquality) {
-        if (MediaImageEncoder.needToSkipCompression()) return 100;
-        return origquality;
+        return MediaImageEncoder.needToCompress() ? origquality : 100;
+    }
+
+    public static String metadataSeparator() {
+        return getPreferences().getString("metadata_separator", "; ");
+    }
+
+    public static void setMetadataSeparator(String separator) {
+        getPreferences().edit().putString("metadata_separator", separator).apply();
     }
 }

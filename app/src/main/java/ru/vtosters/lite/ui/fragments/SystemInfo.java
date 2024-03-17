@@ -87,7 +87,7 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
             AndroidUtils.sendToast(requireContext().getString(R.string.copied_to_clipboard));
             return false;
         });
-        
+
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "Valid Signature", "Value: " + isValidSignature, 0, null);
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isTablet", "Value: " + isTablet, 0, null);

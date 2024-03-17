@@ -622,7 +622,11 @@
 
     .line 12
     :cond_1
-    const p1, 0x0
+    sget-object p1, Lb/h/q/d/FirebaseHelper;->c:Lb/h/q/d/FirebaseHelper;
+
+    invoke-virtual {p1}, Lb/h/q/d/FirebaseHelper;->b()Z
+
+    move-result p1
 
     if-eqz p1, :cond_2
 

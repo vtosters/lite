@@ -36,37 +36,37 @@ public final class CommunityBorderedImageView extends BorderedCircleImageView im
 
     public CommunityBorderedImageView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.g0 = VKThemeHelper.d((int) R.attr.accent);
-        this.h0 = ContextExtKt.a(context, (int) R.color.gray_200);
+        this.g0 = VKThemeHelper.d(R.attr.accent);
+        this.h0 = ContextExtKt.a(context, R.color.gray_200);
         this.i0 = new PorterDuffColorFilter(this.g0, PorterDuff.Mode.SRC_IN);
         this.j0 = new PorterDuffColorFilter(this.h0, PorterDuff.Mode.SRC_IN);
     }
 
-    public final void c(int unread, int read) { // get unread and read resid
+    public void c(int unread, int read) { // get unread and read resid
         this.unread = unread;
         this.read = read;
         this.T = BitmapFactory.decodeResource(getResources(), this.unread);
     }
 
-    public final int getPrimaryColor() {
+    public int getPrimaryColor() {
         return this.g0;
     }
 
-    public final void setPrimaryColor(int i) {
+    public void setPrimaryColor(int i) {
         this.g0 = i;
         this.i0 = new PorterDuffColorFilter(i, PorterDuff.Mode.SRC_IN);
     }
 
-    public final int getWasViewedColor() {
+    public int getWasViewedColor() {
         return this.h0;
     }
 
-    public final void setWasViewedColor(int i) {
+    public void setWasViewedColor(int i) {
         this.h0 = i;
         this.j0 = new PorterDuffColorFilter(i, PorterDuff.Mode.SRC_IN);
     }
 
-    public final void o() {
+    public void o() {
         this.f0 = false;
         l();
     }
@@ -79,7 +79,7 @@ public final class CommunityBorderedImageView extends BorderedCircleImageView im
         }
     }
 
-    public final void setStoryContainer(StoriesContainer storiesContainer) {
+    public void setStoryContainer(StoriesContainer storiesContainer) {
         if (storiesContainer.L1()) {
             this.f0 = true;
             m();

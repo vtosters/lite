@@ -13,6 +13,7 @@ import com.vk.dto.music.AlbumLink;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Thumb;
 import org.json.JSONObject;
+import ru.vtosters.lite.music.downloader.M3UDownloader;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
@@ -95,6 +96,7 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
         }
         return null;
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Constants.CREATE_QUERY);
@@ -104,18 +106,18 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < newVersion) {
             List<MusicTrack> tracks = getTracksWithCursor(db.query(Constants.TABLE_NAME, null, null, null, null, null, null));
-            
+
             db.execSQL(Constants.DROP_QUERY);
-            
+
             onCreate(db);
-            
+
             for (MusicTrack track : tracks) {
                 ContentValues vals = new ContentValues();
                 vals.put(Constants.COLUMN_TRACK_ID, track.y1());
                 vals.put(Constants.COLUMN_ALBUM_ID, track.I != null ? track.I.getId() + "" : "-1");
                 vals.put(Constants.COLUMN_TITLE, track.f);
                 vals.put(Constants.COLUMN_SUBTITLE, track.g);
-                vals.put(Constants.COLUMN_ARTIST, track.C);
+                vals.put(Constants.COLUMN_ARTIST, M3UDownloader.getArtists(track));
                 vals.put(Constants.COLUMN_ALBUM_TITLE, track.I != null ? track.I.getTitle() : "");
                 vals.put(Constants.COLUMN_EXPLICIT, Boolean.compare(track.K, true));
                 vals.put(Constants.COLUMN_DURATION, track.h);
@@ -136,9 +138,9 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
         vals.put(Constants.COLUMN_EXPLICIT, Boolean.compare(explicit, true));
         vals.put(Constants.COLUMN_DURATION, duration);
         vals.put(Constants.COLUMN_HAS_ARTWORK, Boolean.compare(hasArtwork, true));
-        
+
         long row = getWritableDatabase().insert(Constants.TABLE_NAME, null, vals);
-        
+
         if (AndroidUtils.isDebuggable()) Log.d("MusicCacheDb", "addTrack(): " + row);
     }
 

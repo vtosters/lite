@@ -21,6 +21,13 @@ public final class VerifyInfoHelper {
     public static final VerifyInfoHelper h;
     public static int devIcon = R.drawable.ic_favorite_16;
 
+    static {
+        h = new VerifyInfoHelper();
+    }
+
+    private VerifyInfoHelper() {
+    }
+
     public static Integer enumSwitchMapping(VerifyInfoHelper.ColorTheme color) {
         return switch (color) {
             case normal -> 1;
@@ -30,18 +37,47 @@ public final class VerifyInfoHelper {
         };
     }
 
-    public enum ColorTheme {
-        white,
-        normal,
-        light,
-        ultraLight
+    public static Drawable b(VerifyInfoHelper verifyInfoHelper, boolean z, boolean z2, boolean dev, Context context, ColorTheme colorTheme, int i, Object obj) {
+        if ((i & 8) != 0) {
+            colorTheme = ColorTheme.normal;
+        }
+        return verifyInfoHelper.b(z, z2, dev, context, colorTheme);
     }
 
-    static {
-        h = new VerifyInfoHelper();
+    public static Drawable b(VerifyInfoHelper verifyInfoHelper, VerifyInfo verifyInfo, Context context, ColorTheme colorTheme, int i, Object obj) {
+        return b(verifyInfoHelper, verifyInfo.u1(), verifyInfo.t1(), verifyInfo.dev(), context, colorTheme, i, obj);
     }
 
-    private VerifyInfoHelper() {
+    public static Drawable b(VerifyInfoHelper verifyInfoHelper, boolean z, boolean z2, Context context, ColorTheme colorTheme, int i, Object obj) {
+        return b(verifyInfoHelper, z, z2, false, context, colorTheme, i, obj);
+    }
+
+    public static Drawable a(VerifyInfoHelper verifyInfoHelper, VerifyInfo verifyInfo, Context context, ColorTheme colorTheme, int i, Object obj) {
+        if ((i & 4) != 0) {
+            colorTheme = ColorTheme.normal;
+        }
+        return verifyInfoHelper.b(verifyInfo, context, colorTheme);
+    }
+
+    public static Drawable a(VerifyInfoHelper verifyInfoHelper, boolean z, boolean z2, boolean dev, Context context, ColorTheme colorTheme, int i, Object obj) {
+        if ((i & 8) != 0) {
+            colorTheme = ColorTheme.normal;
+        }
+        return verifyInfoHelper.a(z, z2, dev, context, colorTheme);
+    }
+
+    public static Drawable a(VerifyInfoHelper verifyInfoHelper, boolean z, boolean z2, Context context, ColorTheme colorTheme, int i, Object obj) {
+        return a(verifyInfoHelper, z, z2, false, context, colorTheme, i, obj);
+    }
+
+    public static void a(VerifyInfoHelper verifyInfoHelper, TextView textView, VerifyInfo verifyInfo, boolean z, ColorTheme colorTheme, int i, Object obj) {
+        if ((i & 4) != 0) {
+            z = false;
+        }
+        if ((i & 8) != 0) {
+            colorTheme = ColorTheme.normal;
+        }
+        verifyInfoHelper.a(textView, verifyInfo, z, colorTheme);
     }
 
     private int a() {
@@ -89,7 +125,6 @@ public final class VerifyInfoHelper {
         return b(this, z, z2, false, context, null, 8, null);
     }
 
-
     public int b(ColorTheme colorTheme) {
         return a(colorTheme);
     }
@@ -103,7 +138,6 @@ public final class VerifyInfoHelper {
             default -> 0;
         };
     }
-
 
     public Drawable b(Context context, VerifyInfo verifyInfo) {
         if (verifyInfo.dev()) {
@@ -121,21 +155,6 @@ public final class VerifyInfoHelper {
 
     public Drawable b(VerifyInfo verifyInfo, Context context, ColorTheme colorTheme) {
         return b(verifyInfo.u1(), verifyInfo.t1(), verifyInfo.dev(), context, colorTheme);
-    }
-
-    public static Drawable b(VerifyInfoHelper verifyInfoHelper, boolean z, boolean z2, boolean dev, Context context, ColorTheme colorTheme, int i, Object obj) {
-        if ((i & 8) != 0) {
-            colorTheme = ColorTheme.normal;
-        }
-        return verifyInfoHelper.b(z, z2, dev, context, colorTheme);
-    }
-
-    public static Drawable b(VerifyInfoHelper verifyInfoHelper, VerifyInfo verifyInfo, Context context, ColorTheme colorTheme, int i, Object obj) {
-        return b(verifyInfoHelper, verifyInfo.u1(), verifyInfo.t1(), verifyInfo.dev(), context, colorTheme, i, obj);
-    }
-
-    public static Drawable b(VerifyInfoHelper verifyInfoHelper, boolean z, boolean z2, Context context, ColorTheme colorTheme, int i, Object obj) {
-        return b(verifyInfoHelper, z, z2, false, context, colorTheme, i, obj);
     }
 
     public Drawable a(Context context, VerifyInfo verifyInfo) {
@@ -181,26 +200,8 @@ public final class VerifyInfoHelper {
         return new RecoloredDrawable(ContextCompat.getDrawable(context, i), c2);
     }
 
-    public static Drawable a(VerifyInfoHelper verifyInfoHelper, VerifyInfo verifyInfo, Context context, ColorTheme colorTheme, int i, Object obj) {
-        if ((i & 4) != 0) {
-            colorTheme = ColorTheme.normal;
-        }
-        return verifyInfoHelper.b(verifyInfo, context, colorTheme);
-    }
-
     public Drawable a(VerifyInfo verifyInfo, Context context, ColorTheme colorTheme) {
         return a(verifyInfo.u1(), verifyInfo.t1(), verifyInfo.dev(), context, colorTheme);
-    }
-
-    public static Drawable a(VerifyInfoHelper verifyInfoHelper, boolean z, boolean z2, boolean dev, Context context, ColorTheme colorTheme, int i, Object obj) {
-        if ((i & 8) != 0) {
-            colorTheme = ColorTheme.normal;
-        }
-        return verifyInfoHelper.a(z, z2, dev, context, colorTheme);
-    }
-
-    public static Drawable a(VerifyInfoHelper verifyInfoHelper, boolean z, boolean z2, Context context, ColorTheme colorTheme, int i, Object obj) {
-        return a(verifyInfoHelper, z, z2, false, context, colorTheme, i, obj);
     }
 
     public Drawable a(boolean z, boolean z2, Context context, ColorTheme colorTheme) {
@@ -230,16 +231,6 @@ public final class VerifyInfoHelper {
         return new RecoloredDrawable(ContextCompat.getDrawable(context, i), c2);
     }
 
-    public static void a(VerifyInfoHelper verifyInfoHelper, TextView textView, VerifyInfo verifyInfo, boolean z, ColorTheme colorTheme, int i, Object obj) {
-        if ((i & 4) != 0) {
-            z = false;
-        }
-        if ((i & 8) != 0) {
-            colorTheme = ColorTheme.normal;
-        }
-        verifyInfoHelper.a(textView, verifyInfo, z, colorTheme);
-    }
-
     public void a(TextView textView, VerifyInfo verifyInfo, boolean z, ColorTheme colorTheme) {
         Drawable drawable;
         Context context = textView.getContext();
@@ -266,5 +257,12 @@ public final class VerifyInfoHelper {
             return;
         }
         ViewExtKt.p(imageView);
+    }
+
+    public enum ColorTheme {
+        white,
+        normal,
+        light,
+        ultraLight
     }
 }

@@ -87,27 +87,27 @@
     return-void
 
     :cond_1
-    iget-object v1, p0, Lru/mail/libverify/api/d;->d:Ljava/util/concurrent/Future;
+    # iget-object v1, p0, Lru/mail/libverify/api/d;->d:Ljava/util/concurrent/Future;
 
-    if-nez v1, :cond_2
+    # if-nez v1, :cond_2
 
-    iget-object v1, p0, Lru/mail/libverify/api/d;->a:Lru/mail/libverify/api/g;
+    # iget-object v1, p0, Lru/mail/libverify/api/d;->a:Lru/mail/libverify/api/g;
 
-    invoke-interface {v1}, Lru/mail/libverify/api/g;->d()Ljava/util/concurrent/ExecutorService;
+    # invoke-interface {v1}, Lru/mail/libverify/api/g;->d()Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v1
+    # move-result-object v1
 
-    new-instance v2, Lru/mail/libverify/api/d$1;
+    # new-instance v2, Lru/mail/libverify/api/d$1;
 
-    invoke-direct {v2, p0, v0}, Lru/mail/libverify/api/d$1;-><init>(Lru/mail/libverify/api/d;Ljava/lang/String;)V
+    # invoke-direct {v2, p0, v0}, Lru/mail/libverify/api/d$1;-><init>(Lru/mail/libverify/api/d;Ljava/lang/String;)V
 
-    invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    # invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    move-result-object v0
+    # move-result-object v0
 
-    iput-object v0, p0, Lru/mail/libverify/api/d;->d:Ljava/util/concurrent/Future;
+    # iput-object v0, p0, Lru/mail/libverify/api/d;->d:Ljava/util/concurrent/Future;
 
-    :cond_2
+    # :cond_2
     return-void
 .end method
 

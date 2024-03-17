@@ -24,7 +24,10 @@ public class ProfileHook {
 
         if (UsersList.hasDescription(userID)) {
             try {
-                extendedUserProfile.z2 = Handler.getDescription(userID);
+                String description = Handler.getDescription(userID);
+                if (!TextUtils.isEmpty(description)) {
+                    extendedUserProfile.z2 = description;
+                }
             } catch (NullPointerException e) {
                 Log.e(TAG, "null \"profiles\" node\n" + e);
             }

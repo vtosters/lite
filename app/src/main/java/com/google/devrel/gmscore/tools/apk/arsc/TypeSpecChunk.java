@@ -39,7 +39,7 @@ public final class TypeSpecChunk extends Chunk {
      */
     private final int[] resources;
 
-    protected TypeSpecChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    TypeSpecChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
         id = UnsignedBytes.toInt(buffer.get());
         buffer.position(buffer.position() + 3);  // Skip 3 bytes for packing

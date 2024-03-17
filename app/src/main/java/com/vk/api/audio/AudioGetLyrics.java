@@ -25,7 +25,7 @@ public class AudioGetLyrics extends ApiRequest<AudioGetLyrics.a> {
     public a a(@NonNull JSONObject jSONObject) {
         var aVar = new a();
 
-        if (Preferences.getBoolValue("useGenius", false)) {
+        if (Preferences.getBoolValue("useGenius", false) && !Preferences.serverFeaturesDisable()) {
             aVar.a = Genius.getTextMusic(musicTrack);
             return aVar;
         }

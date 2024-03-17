@@ -171,6 +171,8 @@
 
     .line 12
     :catch_0
+    return-void
+
     new-instance p1, Lru/mail/voip2/Voip2$VoipException;
 
     const-string p2, "Native library not loaded!"

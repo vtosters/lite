@@ -61,6 +61,8 @@
 .method private final a(Lcom/vk/dto/music/CurrentAccountInformation;)V
     .locals 2
 
+    return-void
+
     .line 19
     invoke-virtual {p1}, Lcom/vk/dto/music/CurrentAccountInformation;->a()Z
 

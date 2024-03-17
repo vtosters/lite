@@ -51,64 +51,66 @@
         }
     .end annotation
 
-    .line 1
-    new-instance v0, Landroid/os/Bundle;
+    invoke-static {p1, p2, p3, p4, p5}, Lru/vtosters/hooks/GiftsFix;->openGiftCategoryFragment(Landroid/app/Activity;Ljava/util/ArrayList;Lcom/vk/dto/gift/GiftCategory;ILjava/lang/String;)V
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    # .line 1
+    # new-instance v0, Landroid/os/Bundle;
 
-    const-string v1, "uids"
+    # invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 2
-    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+    # const-string v1, "uids"
 
-    const-string p2, "data"
+    # .line 2
+    # invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 3
-    invoke-virtual {v0, p2, p3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    # const-string p2, "data"
 
-    const-string p2, "balance"
+    # .line 3
+    # invoke-virtual {v0, p2, p3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 4
-    invoke-virtual {v0, p2, p4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    # const-string p2, "balance"
 
-    const-string p2, "ref"
+    # .line 4
+    # invoke-virtual {v0, p2, p4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 5
-    invoke-virtual {v0, p2, p5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    # const-string p2, "ref"
 
-    .line 6
-    instance-of p2, p1, Lcom/vtosters/lite/TabletDialogActivity;
+    # .line 5
+    # invoke-virtual {v0, p2, p5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz p2, :cond_0
+    # .line 6
+    # instance-of p2, p1, Lcom/vtosters/lite/TabletDialogActivity;
 
-    .line 7
-    check-cast p1, Lcom/vtosters/lite/TabletDialogActivity;
+    # if-eqz p2, :cond_0
 
-    const-class p2, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;
+    # .line 7
+    # check-cast p1, Lcom/vtosters/lite/TabletDialogActivity;
 
-    invoke-virtual {p1, p2, v0}, Lcom/vtosters/lite/TabletDialogActivity;->c(Ljava/lang/Class;Landroid/os/Bundle;)V
+    # const-class p2, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;
 
-    goto :goto_0
+    # invoke-virtual {p1, p2, v0}, Lcom/vtosters/lite/TabletDialogActivity;->c(Ljava/lang/Class;Landroid/os/Bundle;)V
 
-    .line 8
-    :cond_0
-    new-instance p2, Lcom/vk/navigation/Navigator;
+    # goto :goto_0
 
-    const-class p3, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;
+    # .line 8
+    # :cond_0
+    # new-instance p2, Lcom/vk/navigation/Navigator;
 
-    invoke-direct {p2, p3, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    # const-class p3, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;
 
-    .line 9
-    new-instance p3, Lcom/vtosters/lite/TabletDialogActivity$b;
+    # invoke-direct {p2, p3, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
-    invoke-direct {p3}, Lcom/vtosters/lite/TabletDialogActivity$b;-><init>()V
+    # .line 9
+    # new-instance p3, Lcom/vtosters/lite/TabletDialogActivity$b;
 
-    .line 10
-    invoke-static {p2, p3}, Lcom/vk/extensions/NavigatorExt;->a(Lcom/vk/navigation/Navigator;Lcom/vk/navigation/Navigator$a;)Lcom/vk/navigation/Navigator;
+    # invoke-direct {p3}, Lcom/vtosters/lite/TabletDialogActivity$b;-><init>()V
 
-    .line 11
-    invoke-virtual {p2, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    # .line 10
+    # invoke-static {p2, p3}, Lcom/vk/extensions/NavigatorExt;->a(Lcom/vk/navigation/Navigator;Lcom/vk/navigation/Navigator$a;)Lcom/vk/navigation/Navigator;
 
-    :goto_0
+    # .line 11
+    # invoke-virtual {p2, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+
+    # :goto_0
     return-void
 .end method

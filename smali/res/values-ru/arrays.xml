@@ -592,7 +592,7 @@
         <item>Без прокси</item>
         <item>zaborona.help</item>
         <item>VikaMobile</item>
-        <item>Рандомный прокси</item>
+<!--        <item>Рандомный прокси</item>-->
         <item>Сторонний прокси для API</item>
         <item>Сторонний HTTP</item>
         <item>Сторонний HTTPS</item>

@@ -1536,6 +1536,10 @@
     invoke-virtual {v0, v1, v2}, Lcom/vk/newsfeed/NewsEntryActionsAdapter;->a(ILjava/lang/CharSequence;)V
 
     :cond_26
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;->e:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+
+    invoke-static {v0, v1}, Lru/vtosters/hooks/PostsMenuHook;->injectList(Lcom/vk/newsfeed/NewsEntryActionsAdapter;Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
+
     return-object p1
 .end method
 

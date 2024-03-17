@@ -38,6 +38,8 @@ public class MessagesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("autotranslate").setEnabled(!Preferences.autoalltranslate());
 
+        findPreference("translators").setVisible(!Preferences.serverFeaturesDisable());
+
         findPreference("lang_service").setOnPreferenceClickListener(preference -> {
             List<ImagineArrayAdapter.ImagineArrayAdapterItem> items = Arrays.asList(
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(R.drawable.ic_yandex_translate_icon, "Yandex Translate"),

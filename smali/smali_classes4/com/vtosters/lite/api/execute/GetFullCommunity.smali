@@ -1754,6 +1754,12 @@
 
     if-eqz v2, :cond_32
 
+    invoke-static {}, Lru/vtosters/hooks/GroupCoverHook;->needToDisableCovers()Z
+
+    move-result v4
+
+    if-nez v4, :cond_32
+
     const-string v2, "live_covers"
 
     .line 153

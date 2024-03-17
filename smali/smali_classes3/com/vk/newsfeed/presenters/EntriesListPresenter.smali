@@ -2860,7 +2860,17 @@
 
     invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 76
+    invoke-static {p2}, Lru/vtosters/hooks/PostsMenuHook;->isCustomButton(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_20
+
+    invoke-static {p2, p3, v2}, Lru/vtosters/hooks/PostsMenuHook;->injectButtons(ILcom/vk/dto/newsfeed/entries/NewsEntry;Landroid/content/Context;)V
+
+    goto/16 :goto_1
+
+    :cond_20
     invoke-interface {p0}, Lcom/vk/newsfeed/contracts/EntriesListContract;->v0()Ljava/lang/String;
 
     move-result-object v3

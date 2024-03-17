@@ -1419,7 +1419,7 @@
 
     check-cast p0, Landroid/telephony/TelephonyManager;
 
-    invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->isNetworkRoaming()Z
+    invoke-static {p0}, Lru/vtosters/hooks/NewsfeedHook;->isNetworkRoaming(Landroid/telephony/TelephonyManager;)Z
 
     move-result p0
 

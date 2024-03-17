@@ -14,6 +14,10 @@
         <Preference
                 android:key="whitelisted_ad_groups"
                 android:title="@string/whitelisted_ad_groups_title"/>
+        <Preference
+                android:key="sponsorpost"
+                android:summary="Sponsor Post - современный и эффективный способ блокировки рекламы от команды ВТостерс"
+                android:title="Настройки Sponsor Post"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/stories">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -61,31 +65,6 @@
                 android:defaultValue=""
                 android:key="spamfilters"
                 android:title="@string/vtlownfilter"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="default_ad_list"
-                android:summary="@string/vtlsfiltersummary"
-                android:title="@string/vtlsfilter"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="shortlinkfilter"
-                android:summary="@string/vtlsfiltershortsummary"
-                android:title="@string/vtlsfiltershort"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="refsfilter"
-                android:summary="@string/vtlsfilterrefssummary"
-                android:title="@string/vtlsfilterrefs"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="shitposting"
-                android:summary="@string/shitpostingsummary"
-                android:title="@string/shitposting"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="cringerepost"
-                android:summary="@string/cringerepost_summ"
-                android:title="@string/cringerepost_title"/>
         <Preference
                 android:key="whitelisted_filters_groups"
                 android:title="@string/whitelisted_filters_groups_title"/>
@@ -111,9 +90,9 @@
                 android:title="@string/vtllinkfilter"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
-                android:key="cringecopyright"
-                android:summary="@string/cringecopyright_summ"
-                android:title="@string/cringecopyright_title"/>
+                android:key="cringerepost"
+                android:summary="@string/cringerepost_summ"
+                android:title="@string/cringerepost_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="copyright_post"
@@ -121,10 +100,6 @@
                 android:title="@string/feed_ads_sources"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfeedwork">
-        <Preference
-                android:key="officialnewssett"
-                android:summary="@string/officialnewssett_summary"
-                android:title="@string/officialnewssett"/>
         <com.vtosters.lite.ui.SummaryListPreference
                 android:defaultValue="order"
                 android:dialogTitle="@string/newsfeed_settings_order"
@@ -133,10 +108,10 @@
                 android:key="newsfeed_order"
                 android:textColor="?text_secondary"
                 android:title="@string/newsfeed_settings_order"/>
-<!--        <Preference-->
-<!--                android:enabled="false"-->
-<!--                android:summary="@string/why_news_not_updated_summ"-->
-<!--                android:title="@string/why_news_not_updated_title"/>-->
+        <Preference
+                android:enabled="false"
+                android:summary="@string/why_news_not_updated_summ"
+                android:title="@string/why_news_not_updated_title"/>
         <com.vtosters.lite.ui.SummaryListPreference
                 android:defaultValue="default"
                 android:dialogTitle="@string/feed_other_update_dialog_title"
@@ -144,6 +119,11 @@
                 android:entryValues="@array/newsupdate"
                 android:key="newsupdate"
                 android:title="@string/feed_other_update"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="unlockCustomLists"
+                android:summary="Разблокировать новостные списки как футбол или региональные новости в списке новостей"
+                android:title="Новостные списки"/>
         <Preference
                 android:key="newsfeedlistmanager"
                 android:summary="@string/newsfeedlistmanager_summ"
@@ -151,11 +131,6 @@
         <Preference
                 android:key="newsfeedlistmanager_reset"
                 android:title="@string/newsfeedlistmanager_reset_title"/>
-<!--        <com.vtosters.lite.ui.MaterialSwitchPreference-->
-<!--                android:defaultValue="false"-->
-<!--                android:key="force_disable_psm"-->
-<!--                android:summary="@string/force_disable_psm_summ"-->
-<!--                android:title="@string/force_disable_psm_title"/>-->
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="feedcache"

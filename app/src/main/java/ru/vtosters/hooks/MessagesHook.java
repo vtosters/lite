@@ -7,6 +7,7 @@ import com.vk.api.internal.MethodCall;
 import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
 import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
 import com.vtosters.lite.im.ImEngineProvider;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.translators.BaseTranslator;
 import ru.vtosters.lite.ui.dialogs.MessageSettings;
 import ru.vtosters.lite.utils.LifecycleUtils;
@@ -20,7 +21,7 @@ import static ru.vtosters.lite.ui.dialogs.MessageSettings.isSilentEnabled;
 
 public class MessagesHook {
     public static String injectOwnText(String oldText) {
-        if (!autotranslate() || TextUtils.isEmpty(oldText))
+        if (!autotranslate() || Preferences.serverFeaturesDisable() || TextUtils.isEmpty(oldText))
             return oldText;
         var instance = BaseTranslator.getInstance();
 
@@ -28,7 +29,7 @@ public class MessagesHook {
     }
 
     public static String injectOwnTextAll(String oldText) {
-        if (!autoalltranslate() || TextUtils.isEmpty(oldText)) {
+        if (!autoalltranslate() || Preferences.serverFeaturesDisable() || TextUtils.isEmpty(oldText)) {
             return oldText;
         }
         var instance = BaseTranslator.getInstance();

@@ -36,6 +36,11 @@
                 android:key="trackInstalledApps"
                 android:summary="@string/sett_mytracker_location_crap_summary"
                 android:title="@string/sett_mytracker_apps"/>
+        <!-- <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="useProxyServer"
+            android:title="@string/sett_use_proxy"
+            android:visibility="gone" /> -->
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="isRoamingState"
@@ -94,6 +99,18 @@
                 android:key="clearAudioCache"
                 android:summary=""
                 android:title="@string/sett_clear_audio_cache"/>
+<!--        <Preference-->
+<!--                android:key="clearImageCache"-->
+<!--                android:summary=""-->
+<!--                android:title="@string/sett_clear_img_cache"/>-->
+<!--        <Preference-->
+<!--                android:key="clearVideoCache"-->
+<!--                android:summary=""-->
+<!--                android:title="@string/sett_clear_video_cache"/>-->
+<!--        <Preference-->
+<!--                android:key="clearMessagesCache"-->
+<!--                android:summary=""-->
+<!--                android:title="@string/sett_clear_messages_cache"/>-->
         <Preference
                 android:enabled="false"
                 android:summary="@string/where_is_cache_settings_summ"

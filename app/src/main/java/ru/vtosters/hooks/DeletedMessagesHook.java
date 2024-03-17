@@ -12,12 +12,12 @@ import com.vk.im.engine.models.messages.NestedMsg;
 import com.vk.libsqliteext.CustomSqliteExtensionsKt;
 import io.requery.android.database.sqlite.SQLiteDatabase;
 import io.requery.android.database.sqlite.SQLiteOpenHelper;
+import ru.vtosters.hooks.other.Preferences;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
-import static ru.vtosters.hooks.other.Preferences.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class DeletedMessagesHook {
@@ -69,7 +69,7 @@ public class DeletedMessagesHook {
     }
 
     private static String getPrefixUndelete() {
-        var prefs = getString("undeletemsg_prefix_value");
+        var prefs = Preferences.getPreferences().getString("undeletemsg_prefix_value", "🗑");
 
         if (prefs.isEmpty()) {
             return "\uD83D\uDDD1 ";
@@ -78,7 +78,7 @@ public class DeletedMessagesHook {
         return prefs + " ";
     }
 
-    public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) throws NoSuchFieldException, IllegalAccessException {
+    public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) {
         var cursor = getMessageFromDatabaseById(msgDeleteLpTask.d);
         if (cursor == null) return;
 

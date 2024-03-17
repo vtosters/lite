@@ -736,7 +736,7 @@
         <item>No proxy</item>
         <item>zaborona.help</item>
         <item>VikaMobile</item>
-        <item>Random proxy</item>
+<!--        <item>Random proxy</item>-->
         <item>Custom API proxy</item>
         <item>Custom HTTP</item>
         <item>Custom HTTPS</item>
@@ -746,7 +746,7 @@
         <item>noproxy</item>
         <item>zaborona</item>
         <item>vika</item>
-        <item>randomproxy</item>
+<!--        <item>randomproxy</item>-->
         <item>apiproxy</item>
         <item>http</item>
         <item>https</item>

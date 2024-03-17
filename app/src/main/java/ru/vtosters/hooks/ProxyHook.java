@@ -26,26 +26,15 @@ import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 
 public class ProxyHook {
     public static String linkReplacer(String link) {
-        var vkapi = "api.vk.com";
-        var oauth = "oauth.vk.com";
-        var vkstatic = "static.vk.com";
+        String vkapi = "api.vk.com";
+        String oauth = "oauth.vk.com";
+        String vkstatic = "static.vk.com";
 
-        var proxyapi = getString("proxyapi");
-        var proxyoauth = getString("proxyoauth");
-        var proxystatic = getString("proxystatic");
+        String proxyapi = getProxyHost("proxyapi");
+        String proxyoauth = getProxyHost("proxyoauth");
+        String proxystatic = getProxyHost("proxystatic");
 
-        if (isVikaProxyEnabled()) {
-            proxyapi = VikaMobile.getApiHost();
-            proxyoauth = VikaMobile.getOauthHost();
-            proxystatic = VikaMobile.getStaticHost();
-        }
-
-        if (!isAnyProxyEnabled() || link.isEmpty()) {
-            return link;
-        }
-
-        if (proxyapi.isEmpty() || proxyoauth.isEmpty() || proxystatic.isEmpty()) {
-            Log.d("VTLite", "Proxy is not set" + " " + proxyapi + " " + proxyoauth + " " + proxystatic);
+        if (!isAnyProxyEnabled() || link.isEmpty() || areProxyHostsEmpty(proxyapi, proxyoauth, proxystatic)) {
             return link;
         }
 
@@ -62,6 +51,29 @@ public class ProxyHook {
         }
 
         return link;
+    }
+
+    private static String getProxyHost(String hostType) {
+        if (isVikaProxyEnabled()) {
+            return switch (hostType) {
+                case "proxyapi" -> VikaMobile.getApiHost();
+                case "proxyoauth" -> VikaMobile.getOauthHost();
+                case "proxystatic" -> VikaMobile.getStaticHost();
+                default -> "";
+            };
+        } else {
+            return "";
+        }
+    }
+
+    private static boolean areProxyHostsEmpty(String... hosts) {
+        for (String host : hosts) {
+            if (host.isEmpty()) {
+                Log.d("VTLite", "Proxy is not set: " + host);
+                return true;
+            }
+        }
+        return false;
     }
 
     public static String staticFix(String str) {
@@ -108,22 +120,18 @@ public class ProxyHook {
 
         RadioButton rgDefault = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgZaborona = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton rgRandomProxy = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgVika = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
 
         SwitchHook.setCompoundButton(rgDefault);
         SwitchHook.setCompoundButton(rgZaborona);
-        SwitchHook.setCompoundButton(rgRandomProxy);
         SwitchHook.setCompoundButton(rgVika);
 
         rg.addView(rgDefault);
         rg.addView(rgVika);
         rg.addView(rgZaborona);
-        rg.addView(rgRandomProxy);
 
         rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         rgZaborona.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
-        rgRandomProxy.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         rgVika.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
 
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
@@ -134,27 +142,20 @@ public class ProxyHook {
         rgZaborona.setText(ctx.getString(R.string.proxy_enable) + " (Zaborona)");
         rgZaborona.setTextColor(getTextAttr());
 
-        rgRandomProxy.setText(ctx.getString(R.string.proxy_enable) + " (Random Socks Proxy)");
-        rgRandomProxy.setTextColor(getTextAttr());
-
         rgVika.setText(ctx.getString(R.string.proxy_enable) + " (Vika Mobile)");
         rgVika.setTextColor(getTextAttr());
 
         rgZaborona.setChecked(isZaboronaEnabled());
-        rgDefault.setChecked(!isZaboronaEnabled() && !isRandomProxyEnabled() && !isVikaProxyEnabled());
-        rgRandomProxy.setChecked(isRandomProxyEnabled());
+        rgDefault.setChecked(!isZaboronaEnabled() && !isVikaProxyEnabled());
         rgVika.setChecked(isVikaProxyEnabled());
 
         new VkAlertDialog.Builder(ctx)
                 .setTitle(ctx.getString(R.string.vtlproxy))
-                .setMessage(ctx.getString(R.string.proxy_warning))
+                .setMessage(ctx.getString(R.string.proxy_warning) + "\n\nТак же можно включить встроенный прокси от ВКонтакте перейдя в настройки прокси")
                 .setView(rg)
                 .setPositiveButton(ctx.getString(R.string.vtl_confirm), ((dialog, which) -> { // Применить
                     if (rgZaborona.isChecked()) {
                         Preferences.getPreferences().edit().putString("proxy", "zaborona").commit();
-                        restartApplication();
-                    } else if (rgRandomProxy.isChecked()) {
-                        Preferences.getPreferences().edit().putString("proxy", "randomproxy").commit();
                         restartApplication();
                     } else if (rgVika.isChecked()) {
                         Preferences.getPreferences().edit().putString("proxy", "vika").commit();

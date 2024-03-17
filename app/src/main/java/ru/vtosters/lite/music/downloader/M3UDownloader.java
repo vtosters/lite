@@ -6,11 +6,13 @@ import android.util.Log;
 import com.google.android.exoplayer2.source.hls.playlist.e;
 import com.google.android.exoplayer2.source.hls.playlist.f;
 import com.google.android.exoplayer2.source.hls.playlist.f.a;
+import com.vk.dto.music.Artist;
 import com.vk.dto.music.MusicTrack;
 import java8.util.concurrent.CompletableFuture;
 import java8.util.concurrent.CompletionException;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.music.converter.ts.FFMpeg;
+import ru.vtosters.lite.music.converter.ts.MpegDemuxer;
 import ru.vtosters.lite.music.converter.ts.TSMerger;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
@@ -26,6 +28,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 public class M3UDownloader
         implements ITrackDownloader {
@@ -48,38 +51,47 @@ public class M3UDownloader
         var resultMp3 = getResultMp3File(outDir, cache, track);
         try {
             CompletableFuture.allOf(createFutures(baseUri, segments, progress, callback, track))
-                    .thenRun(() ->
-                    {
-                        if (cache)
+                    .thenRun(() -> {
+                        if (cache) {
                             try {
                                 ThumbnailDownloader.downloadThumbnails(track);
                             } catch (IOException e) {
                                 throw new RuntimeException("Failed to download thumbs", e);
                             }
+                        }
                     })
-                    .thenRun(() ->
-                    {
+                    .thenRun(() -> {
                         try {
                             TSMerger.merge(getTsesDir(track), resultTs);
                         } catch (Throwable e) {
                             throw new RuntimeException("Failed to merge ts files", e);
                         }
                     })
-                    .thenRun(() ->
-                    {
+                    .thenRun(() -> {
                         try {
-                            FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track);
+                            MpegDemuxer.convert(resultTs, resultMp3.getAbsolutePath(), track);
                         } catch (Throwable e) {
-                            throw new RuntimeException("FFmpeg error", e);
+                            throw new RuntimeException("MpegDemuxer error", e);
                         }
                     })
                     .thenRun(() -> callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / segments.size())))
-                    .thenRun(() -> MusicCacheImpl.addTrack(track))
+                    .thenRun(() -> {
+                        if (Preferences.getBoolValue("setMetaData", true)) {
+                            ID3Tagger.tag(resultMp3, track);
+                        }
+                    })
+                    .thenRun(() -> {
+                        if (cache) {
+                            MusicCacheImpl.addTrack(track);
+                        }
+                    })
                     .whenComplete((unused, tr) -> {
                         if (tr != null) {
                             IOUtils.deleteRecursive(MusicCacheStorageUtils.getTrackDirById(track.y1()));
                             callback.onFailure();
-                        } else callback.onSuccess();
+                        } else {
+                            callback.onSuccess();
+                        }
                         IOUtils.deleteRecursive(getTsesDir(track));
                     })
                     .join();
@@ -132,7 +144,7 @@ public class M3UDownloader
     }
 
     public static String getTitle(MusicTrack track) {
-        return track.f + (!TextUtils.isEmpty(track.g) ? +'(' + track.g + ')' : null);
+        return track.f + (!TextUtils.isEmpty(track.g) ? +'(' + track.g + ')' : "");
     }
 
     static File getTsesDir(MusicTrack track) {
@@ -147,7 +159,7 @@ public class M3UDownloader
     }
 
     static File getResultMp3File(File outDir, boolean cache, MusicTrack track) {
-        return new File(outDir, IOUtils.getValidFileName((cache ? "track" : track.C + " - " + getTitle(track)) + ".mp3"));
+        return new File(outDir, IOUtils.getValidFileName((cache ? "track" : getArtists(track) + " - " + getTitle(track)) + ".mp3"));
     }
 
     @Override
@@ -173,5 +185,15 @@ public class M3UDownloader
     // Initialization-on-demand
     private static class Holder {
         private static final M3UDownloader INSTANCE = new M3UDownloader();
+    }
+
+    public static String getArtists(MusicTrack track) {
+        return (track.L == null || track.I == null
+                ? normalizeMetadata(track.C)
+                : normalizeMetadata(track.L.stream().map(Artist::w1).collect(Collectors.joining(", "))));
+    }
+
+    private static String normalizeMetadata(String in) {
+        return in.replaceAll("[\\\\/:*?\"<>|]", "");
     }
 }

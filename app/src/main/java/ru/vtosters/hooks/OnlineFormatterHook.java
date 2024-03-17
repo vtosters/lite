@@ -1,15 +1,22 @@
 package ru.vtosters.hooks;
 
 import android.util.Log;
+import com.vk.core.network.Network;
 import com.vtosters.lite.R;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.proxy.ProxyUtils;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
-import java.text.ParseException;
 
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
 import static ru.vtosters.hooks.other.Preferences.*;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
@@ -87,22 +94,34 @@ public class OnlineFormatterHook {
 
         if (appname != null) return appname;
 
-        makeRequest("https://" + getApi() + "/method/apps.get?app_id=" + appid + "&v=5.99&access_token=" + getUserToken(),
-                response -> {
-                    try {
-                        JSONObject mainJson = new JSONObject(response);
-                        JSONObject responseJson = mainJson.getJSONObject("response");
-                        JSONArray itemsJson = responseJson.getJSONArray("items");
+        okhttp3.Request req = new okhttp3.Request.a()
+                .b("https://" + getApi() + "/method/apps.get?app_id=" + appid + "&v=5.99&access_token=" + getUserToken())
+                .a();
 
-                        AppName = itemsJson.getJSONObject(0).optString("title", "");
+        Network.b(CLIENT_API).a(req).a(new Callback() {
+            @Override
+            public void a(Call call, IOException e) {
+                e.fillInStackTrace();
+            }
 
-                        prefs.edit().putString(String.valueOf(appid), AppName).apply();
+            @Override
+            public void a(Call call, Response response) throws IOException {
+                try {
+                    JSONObject mainJson = new JSONObject(response.a().g());
+                    JSONObject responseJson = mainJson.getJSONObject("response");
+                    JSONArray itemsJson = responseJson.getJSONArray("items");
 
-                        if (dev()) sendToast("AppName: " + AppName + " for appid: " + appid);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                });
+                    AppName = itemsJson.getJSONObject(0).optString("title", "");
+
+                    prefs.edit().putString(String.valueOf(appid), AppName).apply();
+
+                    if (dev()) sendToast("AppName: " + AppName + " for appid: " + appid);
+                } catch (JSONException e) {
+                    e.fillInStackTrace();
+                }
+            }
+        });
+
 
         return AppName;
     }
@@ -115,14 +134,20 @@ public class OnlineFormatterHook {
         return AndroidUtils.getString(R.string.custom_online) + " " + appname;
     }
 
-    public static JSONObject onlineHook(JSONObject json) throws ParseException, IOException, JSONException {
-        if (getBoolValue("onlinefix", false)) JsonInjectors.setOnlineInfo(json);
+    public static JSONObject onlineHook(JSONObject json) {
+        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return json;
+
+        try {
+            JsonInjectors.setOnlineInfo(json);
+        } catch (JSONException e) {
+            Log.e("onlineHook", e.getMessage());
+        }
 
         return json;
     }
 
-    public static JSONArray onlineHookList(JSONArray jsonArr) throws ParseException, IOException, JSONException {
-        if (!getBoolValue("onlinefix", false)) return jsonArr;
+    public static JSONArray onlineHookList(JSONArray jsonArr) {
+        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return jsonArr;
 
         try {
             JsonInjectors.setOnlineInfoUsers(jsonArr);
@@ -134,7 +159,7 @@ public class OnlineFormatterHook {
     }
 
     public static JSONObject onlineHookProfiles(JSONObject json) {
-        if (!getBoolValue("onlinefix", false)) return json;
+        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return json;
 
         try {
             JsonInjectors.setOnlineInfoUsers(json.optJSONArray("profiles"));
@@ -146,7 +171,7 @@ public class OnlineFormatterHook {
     }
 
     public static JSONObject onlineHookItems(JSONObject json) {
-        if (!getBoolValue("onlinefix", false)) return json;
+        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return json;
 
         try {
             JsonInjectors.setOnlineInfoUsers(json.optJSONArray("items"));
@@ -157,8 +182,8 @@ public class OnlineFormatterHook {
         return json;
     }
 
-    public static JSONObject onlineHookRequestsAndRecommendations(JSONObject json) throws ParseException, IOException, JSONException {
-        if (!getBoolValue("onlinefix", false)) return json;
+    public static JSONObject onlineHookRequestsAndRecommendations(JSONObject json) {
+        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return json;
 
         try {
             JsonInjectors.setOnlineInfoUsers(json.optJSONObject("read_requests").optJSONArray("items"));

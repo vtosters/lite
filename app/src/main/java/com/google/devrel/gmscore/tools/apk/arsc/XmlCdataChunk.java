@@ -37,7 +37,7 @@ public final class XmlCdataChunk extends XmlNodeChunk {
      */
     private final BinaryResourceValue binaryResourceValue;
 
-    protected XmlCdataChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    XmlCdataChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
         rawValue = buffer.getInt();
         binaryResourceValue = BinaryResourceValue.create(buffer);

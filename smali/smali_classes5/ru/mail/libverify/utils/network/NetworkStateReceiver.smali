@@ -441,7 +441,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isRoaming()Z
+    invoke-static {v0}, Lru/vtosters/hooks/NewsfeedHook;->isRoaming(Landroid/net/NetworkInfo;)Z
 
     move-result v0
 

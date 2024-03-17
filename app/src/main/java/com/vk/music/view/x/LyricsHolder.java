@@ -156,7 +156,7 @@ public class LyricsHolder extends RecyclerHolder<PlayerInfo> implements View.OnC
 
         @Override // com.vk.api.base.ApiCallback
         public void a(VKApiExecutionException vKApiExecutionException) {
-            if (Preferences.getBoolValue("useGenius", false)) {
+            if (Preferences.getBoolValue("useGenius", false) && !Preferences.serverFeaturesDisable()) {
                 var text = Genius.getTextMusic(a);
                 var lyrics = new AudioGetLyrics.a();
                 lyrics.a = text;

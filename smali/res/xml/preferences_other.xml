@@ -11,24 +11,11 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference
-                android:enabled="false"
-                android:summary="@string/vtverifyinfosum"
-                android:title="@string/vtverifyinfo"/>
-        <Preference
-                android:persistent="false"
-                android:summary="vtosters.app/donate"
-                android:title="@string/getvtverify">
-            <intent
-                    android:action="android.intent.action.VIEW"
-                    android:data="https://vtosters.app/donate"/>
-        </Preference>
-        <Preference
                 android:key="updateverifdata"
                 android:summary="@string/updateverifdata_summ"
                 android:title="@string/updateverifdata_title"/>
         <Preference
                 android:key="copyownlink"
-                android:summary="@string/copyownlink_summ"
                 android:title="@string/copyownlink_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"

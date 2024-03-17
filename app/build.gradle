@@ -20,9 +20,9 @@ cargo {
 def smaliFolder = projectDir.toPath().resolve("../smali").normalize()
 def scriptsFolder = projectDir.toPath().resolve("../scripts").normalize()
 //you can add own folders with decompiled smali code
-def dexes=smaliFolder.toFile()
-            .listFiles( { f -> f.isDirectory() && f.name.startsWith("smali") } as FileFilter)
-            .size()
+def dexes = smaliFolder.toFile()
+        .listFiles({ f -> f.isDirectory() && f.name.startsWith("smali") } as FileFilter)
+        .size()
 
 versionFile {
     file = projectDir.toPath().resolve("src/main/assets/version.properties").toFile()
@@ -91,11 +91,13 @@ task testClasses {
 }
 
 dependencies {
-    implementation 'com.microsoft.appcenter:appcenter-analytics:5.0.1'
-    implementation 'com.microsoft.appcenter:appcenter-crashes:5.0.1'
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
+    implementation 'com.microsoft.appcenter:appcenter-analytics:5.0.4'
+    implementation 'com.microsoft.appcenter:appcenter-crashes:5.0.4'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
     implementation 'net.sourceforge.streamsupport:streamsupport-minifuture:1.7.4'
-    implementation 'com.google.guava:guava:23.3-android'
+    implementation 'com.google.guava:guava:32.0.0-android'
+
+    implementation 'com.mpatric:mp3agic:0.9.1'
 
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
@@ -105,38 +107,35 @@ task generateBuildTasks() {
     android.applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def buildType = output.name.toString().capitalize()
-            if(buildType=="Base")return
+            if (buildType == "Base") return
             task "exportDex$buildType"() {
                 dependsOn('assemble' + buildType)
                 doLast {
                     try {
-                        def suffix=buildType.toLowerCase()
-                        String apkPath=projectDir.getAbsolutePath()+"/build/outputs/apk/$suffix/app-$suffix"
-                        def apk=new File(apkPath+"-unsigned.apk")
-                        if(!apk.exists())apk=new File(apkPath+".apk")
-                        def zip=new ZipFile(apk)
-                        def entries=zip.entries()
-                        def dexCounter=dexes
-                        while(entries.hasMoreElements())
-                        {
-                            def entry=entries.nextElement()
-                            String filename
-                            if(entry.name.matches("^classes(?:(?=\\d)2|)\\.dex\$"))filename="classes${++dexCounter}.dex"
-                            else if(entry.name=="assets/version.properties")filename="version.properties"
-                            else continue
-                            println("Exporting "+entry.name)
-                            def tmpFile=new File(projectDir,filename)
-                            def is=zip.getInputStream(entry)
-                            def fos=new FileOutputStream(tmpFile)
-                            def buff=new byte[0x800]
-                            int len
-                            while((len=is.read(buff))>0)fos.write(buff,0,len)
-                            is.close()
-                            fos.close()
-                        }
+                        def suffix = buildType.toLowerCase()
+                        String apkPath = projectDir.getAbsolutePath() + "/build/outputs/apk/$suffix/app-$suffix"
+                        def apk = new File(apkPath + "-unsigned.apk")
+                        if (!apk.exists()) apk = new File(apkPath + ".apk")
+                        def zip = new ZipFile(apk)
+                        def dexCounter = dexes
+                        zip.stream()
+                                .filter(entry -> entry.name.matches("^classes(?:(?=\\d)2|)\\.dex\$") || entry.name == "assets/version.properties")
+                                .forEach(entry -> {
+                                    String filename
+                                    if (entry.name.matches("^classes(?:(?=\\d)2|)\\.dex\$")) filename = "classes${++dexCounter}.dex"
+                                    else filename = "version.properties"
+                                    println("Exporting " + entry.name)
+                                    def tmpFile = new File(projectDir, filename)
+                                    try (def is = zip.getInputStream(entry); def fos = new FileOutputStream(tmpFile)) {
+                                        def buff = new byte[0x800]
+                                        int len
+                                        while ((len = is.read(buff)) > 0) fos.write(buff, 0, len)
+                                    }
+                                });
                     } catch (Exception e) {
                         e.printStackTrace()
                     }
+
                 }
             }
             task "prepareDexForMerge$buildType"(type: Copy) {
@@ -152,19 +151,19 @@ task generateBuildTasks() {
                     include 'version.properties'
                     into 'assets'
                 }
-                from('../native-effects/target/aarch64-linux-android/release'){
+                from('../native-effects/target/aarch64-linux-android/release') {
                     include 'libnative_effects.so'
                     into 'lib/arm64-v8a'
                 }
-                from('../native-effects/target/armv7-linux-androideabi/release'){
+                from('../native-effects/target/armv7-linux-androideabi/release') {
                     include 'libnative_effects.so'
                     into 'lib/armeabi-v7a'
                 }
             }
-            task "cleanTemporaryFiles$buildType"(type:Delete)
+            task "cleanTemporaryFiles$buildType"(type: Delete)
             {
-                delete fileTree(dir:projectDir,include:["*.dex","version.properties"])
-                delete fileTree(dir:smaliFolder,include:['*.dex',"assets/version.properties"])
+                delete fileTree(dir: projectDir, include: ["*.dex", "version.properties"])
+                delete fileTree(dir: smaliFolder, include: ['*.dex', "assets/version.properties"])
             }
             task "buildVTL$buildType"(type: Exec) {
                 dependsOn('prepareDexForMerge' + buildType)

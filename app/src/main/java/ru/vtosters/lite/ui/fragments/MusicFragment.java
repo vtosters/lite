@@ -1,0 +1,358 @@
+package ru.vtosters.lite.ui.fragments;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import androidx.preference.Preference;
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.ui.SummaryListPreference;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.hooks.other.ThemesUtils;
+import ru.vtosters.lite.downloaders.AudioDownloader;
+import ru.vtosters.lite.music.LastFMScrobbler;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
+    private static final ExecutorService executor = Executors.newCachedThreadPool();
+
+    @Override
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        addPreferencesFromResource(com.vtosters.lite.R.xml.empty);
+
+        requireActivity().getWindow().setStatusBarColor(ThemesUtils.getBackgroundContent());
+        requireActivity().getWindow().setNavigationBarColor(ThemesUtils.getBackgroundContent());
+
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Офлайн прослушивание");
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "cached_tracks",
+                getString(com.vtosters.lite.R.string.cached_tracks_title),
+                String.format(requireContext().getString(com.vtosters.lite.R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()),
+                null,
+                preference -> {
+                    if (MusicCacheImpl.isEmpty()) {
+                        AndroidUtils.sendToast(requireContext().getString(com.vtosters.lite.R.string.no_cache_error));
+                    } else {
+                        delcache(requireContext());
+                    }
+                    return true;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "audio_download",
+                getString(com.vtosters.lite.R.string.audio_download_title),
+                null,
+                null,
+                preference -> {
+                    dlaudio(requireContext());
+                    return true;
+                }
+        );
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "invertCachedTracks",
+                getString(com.vtosters.lite.R.string.invertcached_title),
+                getString(com.vtosters.lite.R.string.invertcached_summ),
+                null,
+                false,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("invertCachedTracks", (boolean) o).apply();
+                    return true;
+                }
+        ).setEnabled(!MusicCacheImpl.isEmpty());
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "autocache",
+                getString(com.vtosters.lite.R.string.autocache_title),
+                getString(com.vtosters.lite.R.string.autocache_summ),
+                null,
+                false,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("autocache", (boolean) o).apply();
+                    return true;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Скачивание аудио в MP3");
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "dldir",
+                "Альтернативная папка для скачивания",
+                "Использовать папку Downloads вместо Music для скачивания музыки в MP3",
+                null,
+                false,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("dldir", (boolean) o).apply();
+                    return true;
+                }
+        );
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "setMetaData",
+                "Сохранять метадату песен",
+                "Сохранять id3v2 теги для песен для MP3",
+                null,
+                true,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("setMetaData", (boolean) o).apply();
+                    return true;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "metadataSeparator",
+                "Разделитель для id3v2 тегов",
+                null,
+                null,
+                preference -> {
+                    LinearLayout linearLayout = new LinearLayout(requireContext());
+                    linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+                    EditText separator = new EditText(requireContext());
+                    separator.setHint("По-умолчанию: ; с пробелом");
+                    separator.setTextColor(ThemesUtils.getTextAttr());
+                    separator.setHintTextColor(ThemesUtils.getSTextAttr());
+                    separator.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
+                    separator.setText(Preferences.metadataSeparator());
+                    linearLayout.addView(separator);
+                    separator.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+                    ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) separator.getLayoutParams());
+                    margin.setMargins(AndroidUtils.dp2px(20f), 0, AndroidUtils.dp2px(20f), 0);
+                    separator.setLayoutParams(margin);
+
+                    new VkAlertDialog.Builder(requireContext())
+                            .setTitle("Разделитель")
+                            .setView(linearLayout)
+                            .setPositiveButton("Сохранить", (dialog, which) -> {
+                                if (separator.getText().toString().isEmpty()) {
+                                    AndroidUtils.sendToast("Разделитель не может быть пустым");
+                                    return;
+                                }
+                                Preferences.setMetadataSeparator(separator.getText().toString());
+                            })
+                            .setNegativeButton("Отмена", (dialog, which) -> dialog.cancel())
+                            .show();
+
+                    return true;
+                }
+        );
+
+        if (!Preferences.serverFeaturesDisable()) {
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Интеграция Genius");
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "useGenius",
+                    getString(com.vtosters.lite.R.string.useGenius_title),
+                    getString(com.vtosters.lite.R.string.useGenius_summ),
+                    null,
+                    false,
+                    (preference, o) -> {
+                        Preferences.getPreferences().edit().putBoolean("useGenius", (boolean) o).apply();
+                        return true;
+                    }
+            );
+
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Интеграция Last.fm");
+
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "lastfm_auth",
+                    getString(com.vtosters.lite.R.string.lastfm_auth_title),
+                    getString(com.vtosters.lite.R.string.lastfm_auth_summ),
+                    null,
+                    preference -> {
+                        if (LastFMScrobbler.isLoggedIn()) {
+                            logout(getContext());
+                        } else {
+                            lastfmAuth(getContext());
+                        }
+                        updateLastFmPref();
+                        return true;
+                    }
+            );
+
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "lastfm_enabled",
+                    AndroidUtils.getString("lastfm_enabled_title"),
+                    AndroidUtils.getString("lastfm_enabled_summ"),
+                    null,
+                    false,
+                    (preference, o) -> {
+                        Preferences.getPreferences().edit().putBoolean("lastfm_enabled", (boolean) o).apply();
+                        return true;
+                    }
+            ).setEnabled(LastFMScrobbler.isLoggedIn());
+
+            if (LastFMScrobbler.isLoggedIn()) {
+                findPreference("lastfm_auth").setSummary(getString(com.vtosters.lite.R.string.lastfm_authorized_as) + " " + LastFMScrobbler.getUserName());
+            }
+
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Интеграция VK X");
+
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    getString(com.vtosters.lite.R.string.vkx_why),
+                    getString(com.vtosters.lite.R.string.vkx_why_summary),
+                    null,
+                    null
+            );
+
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "libvkx_integration",
+                    getString(com.vtosters.lite.R.string.vkx_integration),
+                    null,
+                    null,
+                    false,
+                    (preference, o) -> {
+                        Preferences.getPreferences().edit().putBoolean("libvkx_integration", (boolean) o).apply();
+                        return true;
+                    }
+            );
+
+            if (!LibVKXClient.isVkxInstalled()) {
+                findPreference("libvkx_integration").setSummary("У вас не установлен VKX. Интеграция работать не будет");
+                findPreference("libvkx_integration").setEnabled(false);
+            }
+        }
+
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Прочее");
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "useOldAppVer",
+                getString(com.vtosters.lite.R.string.useOldAppVer_title),
+                "Включите если вас не устраивают новые рекомендации и вас интересует только свое аудио",
+                null,
+                false,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("useOldAppVer", (boolean) o).apply();
+                    LifecycleUtils.restartApplicationWithTimer();
+                    return true;
+                }
+        );
+
+        SummaryListPreference list = new SummaryListPreference(getPreferenceScreen().getContext());
+        list.setTitle(com.vtosters.lite.R.string.musicdefcatalog_title);
+        list.setKey("musicdefcatalog");
+        list.setEntryValues(com.vtosters.lite.R.array.musicdefcatalog);
+        list.setEntries(com.vtosters.lite.R.array.musicdefcatalog_value);
+        list.setDialogTitle(com.vtosters.lite.R.string.musicdefcatalog_dialogTitle);
+        list.setDefaultValue("default");
+        list.setVisible(!Preferences.getBoolValue("useOldAppVer", false));
+
+        getPreferenceScreen().addPreference(list);
+    }
+
+    private void lastfmAuth(Context ctx) {
+        LinearLayout linearLayout = new LinearLayout(ctx);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+        EditText fn = new EditText(ctx);
+        fn.setHint(com.vtosters.lite.R.string.lastfm_login);
+        fn.setTextColor(ThemesUtils.getTextAttr());
+        fn.setHintTextColor(ThemesUtils.getSTextAttr());
+        fn.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
+        linearLayout.addView(fn);
+        fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+        ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
+        margin.setMargins(AndroidUtils.dp2px(20f), 0, AndroidUtils.dp2px(20f), 0);
+        fn.setLayoutParams(margin);
+
+        EditText ln = new EditText(ctx);
+        ln.setHint(com.vtosters.lite.R.string.lastfm_password);
+        ln.setTextColor(ThemesUtils.getTextAttr());
+        ln.setHintTextColor(ThemesUtils.getSTextAttr());
+        ln.setBackgroundTintList(ThemesUtils.getAccenedColorStateList());
+        linearLayout.addView(ln);
+        ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+        ln.setLayoutParams(margin);
+
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(com.vtosters.lite.R.string.lastfm_enter_credentials)
+                .setPositiveButton(com.vtosters.lite.R.string.lastfm_enter,
+                        (dialog, which) -> {
+                            String login = fn.getText().toString();
+                            String pass = ln.getText().toString();
+                            LastFMScrobbler.authenticate(login, pass);
+                        }
+                )
+                .setView(linearLayout)
+                .show();
+    }
+
+    public void updateLastFmPref() {
+        if (LastFMScrobbler.isLoggedIn()) {
+            findPreference("lastfm_auth").setSummary(getString(com.vtosters.lite.R.string.lastfm_authorized_as) + " " + LastFMScrobbler.getUserName());
+            findPreference("lastfm_enabled").setEnabled(true);
+        } else {
+            findPreference("lastfm_auth").setSummary(getString(com.vtosters.lite.R.string.lastfm_auth_summ));
+            findPreference("lastfm_enabled").setEnabled(false);
+        }
+    }
+
+    private void logout(Context ctx) {
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(com.vtosters.lite.R.string.lastfm_logout_title)
+                .setMessage(com.vtosters.lite.R.string.lastfm_logout_confirm)
+                .setPositiveButton(com.vtosters.lite.R.string.vkim_yes,
+                        (dialog, which) -> LastFMScrobbler.logout())
+                .setNeutralButton(com.vtosters.lite.R.string.vkim_no,
+                        (dialog, which) -> dialog.cancel())
+                .show();
+    }
+
+    private void delcache(Context ctx) {
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(com.vtosters.lite.R.string.warning)
+                .setMessage(com.vtosters.lite.R.string.cached_tracks_remove_confirm)
+                .setPositiveButton(com.vtosters.lite.R.string.yes,
+                        (dialog, which) -> executor.submit(MusicCacheImpl::clear))
+                .setNeutralButton(com.vtosters.lite.R.string.no,
+                        (dialog, which) -> dialog.cancel())
+                .show();
+    }
+
+    private void dlaudio(Context ctx) {
+        if (LibVKXClient.isIntegrationEnabled()) {
+            AndroidUtils.sendToast(AndroidUtils.getString("vkx_integration_enabled_info"));
+            return;
+        }
+
+        new VkAlertDialog.Builder(ctx)
+                .setTitle(com.vtosters.lite.R.string.download_method)
+                .setMessage(com.vtosters.lite.R.string.download_method_desc)
+                .setPositiveButton(com.vtosters.lite.R.string.download_method_cache, (dialog, which) -> {
+                    executor.submit(AudioDownloader::cacheAllAudios);
+                })
+                .setNegativeButton(com.vtosters.lite.R.string.download_method_mp3, (dialog, which) -> {
+                    executor.submit(AudioDownloader::downloadAllAudios);
+                })
+                .show();
+    }
+
+    @Override
+    public int T4() {
+        return com.vtosters.lite.R.string.vtl_music_settings;
+    }
+}

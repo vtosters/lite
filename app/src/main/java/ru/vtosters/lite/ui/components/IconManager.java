@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui.components;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.util.Log;
-import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.Arrays;
@@ -39,11 +38,11 @@ public class IconManager {
     );
 
     public static List<String> icons() {
-        return Preferences.hasVerification() && Preferences.isValidSignature() ? sIconsPlusNames : sIconsNames; // delete later sdk check
+        return sIconsPlusNames; // delete later sdk check
     }
 
     public static List<String> iconsValues() {
-        return Preferences.hasVerification() && Preferences.isValidSignature() ? sIconsPlus : sIcons; // delete later sdk check
+        return sIconsPlus; // delete later sdk check
     }
 
     public static void switchComponent(String icon, String appName) {
@@ -55,7 +54,7 @@ public class IconManager {
 
         Log.d("IconManager", "iconSwitcher: icon = " + icon + ", appname = " + appName);
 
-        List<String> iconsList = (Preferences.hasVerification() && Preferences.isValidSignature()) ? sIconsPlus : sIcons;
+        List<String> iconsList = sIconsPlus;
         List<String> labelsList = sLabels;
 
         // check if icon is exist

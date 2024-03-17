@@ -49,6 +49,12 @@ public class BinaryResourceIdentifier {
     private final int typeId;
     private final int entryId;
 
+    private BinaryResourceIdentifier(int packageId, int typeId, int entryId) {
+        this.packageId = packageId;
+        this.typeId = typeId;
+        this.entryId = entryId;
+    }
+
     /**
      * Returns a {@link BinaryResourceIdentifier} from a {@code resourceId} of the form 0xpptteeee.
      */
@@ -67,12 +73,6 @@ public class BinaryResourceIdentifier {
         Preconditions.checkState((typeId & 0xFF) == typeId, "typeId must be <= 0xFF.");
         Preconditions.checkState((entryId & 0xFFFF) == entryId, "entryId must be <= 0xFFFF.");
         return new BinaryResourceIdentifier(packageId, typeId, entryId);
-    }
-
-    private BinaryResourceIdentifier(int packageId, int typeId, int entryId) {
-        this.packageId = packageId;
-        this.typeId = typeId;
-        this.entryId = entryId;
     }
 
     /**

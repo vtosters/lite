@@ -12,11 +12,13 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationManagerCompat;
-import com.vk.core.util.Screen;
+
+import com.vk.core.util.AppContextHolder;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
 
@@ -44,19 +46,14 @@ public class AndroidUtils {
     }
 
     public static boolean isTablet() {
-        return Screen.l(getGlobalContext());
+        String string = getGlobalContext().getResources().getString(b.h.g.d.screen_size);
+        return TextUtils.equals(string, ScreenSize.large.name()) || TextUtils.equals(string, ScreenSize.xlarge.name());
     }
 
     @NonNull
     public static Context getGlobalContext() {
-        try {
-            Method getInitialApplicationMtd = ReflectionUtils.findMethod(Class.forName("android.app.AppGlobals"), "getInitialApplication");
-            return (Context) getInitialApplicationMtd.invoke(null);
-        } catch (Exception e) {
-            Log.d("GlobalContext", "Error while fetching context via refl");
-        }
-        return LifecycleUtils.getCurrentActivity();
-    } // Getting the global context through reflection to use context on application initialization
+        return AppContextHolder.a;
+    } // Getting the global context to use context on application initialization
 
     public static Resources getResources() {
         return getGlobalContext().getResources();
@@ -215,5 +212,12 @@ public class AndroidUtils {
 
     public static String upString(String s) {
         return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
+    }
+
+    public enum ScreenSize {
+        small,
+        normal,
+        large,
+        xlarge
     }
 }

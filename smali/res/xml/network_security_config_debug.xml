@@ -2,7 +2,6 @@
 <network-security-config>
     <debug-overrides>
         <trust-anchors>
-            <!-- Trust user added CAs while debuggable only -->
             <certificates src="user"/>
             <certificates src="system"/>
         </trust-anchors>
@@ -13,18 +12,14 @@
         </trust-anchors>
     </base-config>
     <domain-config>
-        <!-- Make sure your URL Server here -->
         <domain includeSubdomains="true">vk.com</domain>
         <trust-anchors>
-            <certificates src="user"/>
             <certificates src="system"/>
         </trust-anchors>
     </domain-config>
     <domain-config>
-        <!-- Make sure your URL Server here -->
         <domain includeSubdomains="true">api.vk.com</domain>
         <trust-anchors>
-            <certificates src="user"/>
             <certificates src="system"/>
         </trust-anchors>
     </domain-config>

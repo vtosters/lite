@@ -104,6 +104,25 @@ public final class StickerDetailsAdapter extends RecyclerView.Adapter<RecyclerVi
         }
     }
 
+    private static final class d extends RecyclerView.ViewHolder {
+        private final VKStickerImageView mImage;
+
+        public d(ViewGroup viewGroup) {
+            super(new VKStickerImageView(viewGroup.getContext()));
+            this.mImage = (VKStickerImageView) itemView;
+            this.mImage.setAspectRatio(1.0f);
+            this.mImage.setClickable(true);
+            this.mImage.getHierarchy().a().setVisible(true, true);
+            this.mImage.getHierarchy().a(0);
+            this.mImage.setContentDescription(this.mImage.getContext().getString(R.string.stickers_accessibility_sticker));
+        }
+
+        public void a(StickerItem stickerItem) {
+            this.mImage.a(stickerItem.h(Screen.a(80)));
+            this.mImage.setTag(R.id.id, stickerItem.getId());
+        }
+    }
+
     private final class c extends RecyclerView.ViewHolder {
         private final VKImageView mImageBg;
         private final VKImageView mPackImage;
@@ -147,25 +166,6 @@ public final class StickerDetailsAdapter extends RecyclerView.Adapter<RecyclerVi
             ViewExtKt.p(this.mPackSubtitle);
 
             this.mDescription.setText(stickerStockItem.C1());
-        }
-    }
-
-    private static final class d extends RecyclerView.ViewHolder {
-        private final VKStickerImageView mImage;
-
-        public d(ViewGroup viewGroup) {
-            super(new VKStickerImageView(viewGroup.getContext()));
-            this.mImage = (VKStickerImageView) itemView;
-            this.mImage.setAspectRatio(1.0f);
-            this.mImage.setClickable(true);
-            this.mImage.getHierarchy().a().setVisible(true, true);
-            this.mImage.getHierarchy().a(0);
-            this.mImage.setContentDescription(this.mImage.getContext().getString(R.string.stickers_accessibility_sticker));
-        }
-
-        public void a(StickerItem stickerItem) {
-            this.mImage.a(stickerItem.h(Screen.a(80)));
-            this.mImage.setTag(R.id.id, stickerItem.getId());
         }
     }
 }
