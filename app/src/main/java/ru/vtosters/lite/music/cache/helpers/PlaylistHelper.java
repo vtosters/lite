@@ -1,20 +1,23 @@
 package ru.vtosters.lite.music.cache.helpers;
 
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
+
 import android.net.Uri;
+
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.music.downloader.M3UDownloader;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
+import ru.vtosters.lite.utils.music.MusicTrackUtils;
 
 public class PlaylistHelper {
 
@@ -34,7 +37,7 @@ public class PlaylistHelper {
         return createAlbum(
                 thumb != null ? thumb.h(600) : "",
                 albumLink.getTitle(),
-                M3UDownloader.getArtists(track),
+                MusicTrackUtils.getArtists(track),
                 track.y1(),
                 albumLink.getId()
         );
@@ -76,7 +79,7 @@ public class PlaylistHelper {
             list.add(createAlbum(
                     thumb != null ? thumb.h(600) : "",
                     albumLink.getTitle(),
-                    M3UDownloader.getArtists(track),
+                    MusicTrackUtils.getArtists(track),
                     track.y1(),
                     albumLink.getId()
             ));

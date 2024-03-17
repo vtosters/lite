@@ -20,6 +20,7 @@ public class ID3Tagger {
     public static void tag(File file, MusicTrack track) {
         try {
             // https://github.com/mpatric/mp3agic/issues/69#issuecomment-57897874
+            // TODO: get rid of file duplication
             var oldFile = new File(file.getAbsolutePath().replace(".mp3", "_old.mp3"));
             if (!file.renameTo(oldFile)) {
                 Log.e("ID3Tagger", "Failed to rename file");
@@ -38,7 +39,7 @@ public class ID3Tagger {
                     id3v2Tag.setAlbum(track.I.getTitle());
                 }
 
-                id3v2Tag.setTitle(M3UDownloader.getTitle(track));
+                id3v2Tag.setTitle(Mp3Downloader.getTitle(track));
 
                 mp3File.setId3v2Tag(id3v2Tag);
                 mp3File.save(file.getAbsolutePath());

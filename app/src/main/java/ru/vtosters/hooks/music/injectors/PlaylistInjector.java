@@ -18,15 +18,12 @@ import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class PlaylistInjector {
     public final static String CHANNEL_NAME = "VTCH";
-    private static final ExecutorService executor = Executors.newCachedThreadPool();
 
     public static void injectDownloadPlaylist(Playlist playlist) {
-        executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
+        AudioDownloader.cachePlaylist(playlist);
     }
 
     public static boolean eligibleForOfflineCaching() {

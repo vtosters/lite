@@ -3,19 +3,14 @@ package ru.vtosters.lite.music;
 import android.os.RemoteException;
 import android.text.TextUtils;
 import android.util.Log;
+
 import androidx.annotation.Nullable;
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+
 import com.vk.dto.music.MusicTrack;
 import com.vtosters.lite.R;
-import okhttp3.*;
+
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
-import ru.vtosters.lite.downloaders.AudioDownloader;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.music.downloader.M3UDownloader;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -23,6 +18,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.downloaders.AudioDownloader;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.music.MusicTrackUtils;
 
 public class LastFMScrobbler {
     private static final String KEY = "5965d63402414776c54c266db0211746";
@@ -33,7 +42,7 @@ public class LastFMScrobbler {
 
     public static void grabMusicTrack(MusicTrack musictrack) {
         var uid = musictrack.y1();
-        var artist = M3UDownloader.getArtists(musictrack);
+        var artist = MusicTrackUtils.getArtists(musictrack);
         var title = musictrack.f;
         var duration = musictrack.h;
         var track_id = musictrack.d;
