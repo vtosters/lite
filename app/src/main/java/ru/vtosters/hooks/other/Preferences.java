@@ -25,7 +25,7 @@ public class Preferences {
 
     public static void init(Application application) throws Exception {
         AppContextHolder.a = application.getApplicationContext();
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitNetwork().build();
         StrictMode.setThreadPolicy(policy); // fix profiles hide hook
 
         MediaNative.init(application);
