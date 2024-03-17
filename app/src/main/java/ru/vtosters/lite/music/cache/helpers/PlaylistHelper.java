@@ -1,5 +1,7 @@
 package ru.vtosters.lite.music.cache.helpers;
 
+import android.util.Log;
+import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
 import org.json.JSONArray;
@@ -26,65 +28,6 @@ public class PlaylistHelper {
         }
     }
 
-    public static Playlist createCachedPlaylistMetadata(String id) {
-        var track = TracklistHelper.getTracksOne(id).get(0);
-        var albumLink = track.I;
-        var thumb = albumLink.u1();
-        return createAlbum(
-                thumb != null ? thumb.h(600) : "",
-                albumLink.getTitle(),
-                M3UDownloader.getArtists(track),
-                track.y1(),
-                albumLink.getId()
-        );
-    }
-
-    public static Playlist createAlbum(String photo, String title, String artist, String trackId, int albumId) {
-        return new Playlist(createAlbumJson(photo, title, artist, trackId, albumId));
-    }
-
-    public static JSONObject createAlbumJson(String photo, String title, String artist, String trackId, int albumId) {
-        try {
-            var jPhoto = new JSONObject();
-            if (!photo.isEmpty())
-                jPhoto.put("height", 600)
-                        .put("width", 600)
-                        .putOpt("photo_300", MusicCacheStorageUtils.getTrackThumb(trackId, 300))
-                        .putOpt("photo_600", MusicCacheStorageUtils.getTrackThumb(trackId, 600));
-            return new JSONObject()
-                    .put("id", -2)
-                    .put("owner_id", albumId)
-                    .put("type", 1)
-                    .put("album_type", "main_only")
-                    .put("title", title)
-                    .put("description", albumId + "/ " + AndroidUtils.getString(R.string.cached_album_warning))
-                    .put("main_artists", new JSONArray()
-                            .put(new JSONObject().put("name", artist)
-                                    .put("id", "-1")
-                                    .put("domain", "-1")))
-                    .putOpt("photo", jPhoto)
-                    .put("count", 0);
-        } catch (JSONException e) {
-            return null;
-        }
-    }
-
-    public static List<Playlist> getAlbumPlaylists() {
-        List<Playlist> list = new ArrayList<>();
-        for (var track : MusicCacheImpl.getPlaylist()) {
-            var albumLink = track.I;
-            var thumb = albumLink.u1();
-            list.add(createAlbum(
-                    thumb != null ? thumb.h(600) : "",
-                    albumLink.getTitle(),
-                    M3UDownloader.getArtists(track),
-                    track.y1(),
-                    albumLink.getId()
-            ));
-        }
-        return list;
-    }
-
     public static JSONArray addCachedPlaylists(JSONArray jsonArray, Boolean noPlaylists) {
         try {
             if (noPlaylists) {
@@ -94,10 +37,16 @@ public class PlaylistHelper {
             }
 
             for (var playlist : MusicCacheImpl.getPlaylists()) {
-                jsonArray.put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, playlist.F.J()));
+                if (noPlaylists) {
+                    jsonArray.put(new JSONArray().put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, getThumb(playlist))));
+                } else {
+                    jsonArray.put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, getThumb(playlist)));
+                }
+
+                Log.d("PlaylistHelper", "Playlist cache added: " + playlist.a + " " + playlist.b + " " + playlist.C + " " + playlist.g + " " + playlist.B + " " + playlist.F.J());
             }
         } catch (JSONException e) {
-            e.printStackTrace();
+            e.fillInStackTrace();
         }
         return jsonArray;
     }
@@ -164,7 +113,7 @@ public class PlaylistHelper {
         }
 
         for (var playlist : MusicCacheImpl.getPlaylists()) {
-            arr.put(playlist.b + "_" + playlist.a);
+            arr.put(playlist.v1());
         }
 
         return arr;
@@ -196,5 +145,13 @@ public class PlaylistHelper {
                 .put("data_type", "none")
                 .put("layout", new JSONObject()
                         .put("name", "separator"));
+    }
+
+    private static JSONObject getThumb(Playlist playlist) {
+        try {
+            return playlist.F.J();
+        } catch (Exception e) {
+            return new JSONObject();
+        }
     }
 }

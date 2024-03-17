@@ -18,6 +18,7 @@ import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -70,7 +71,7 @@ public class PlaylistInjector {
 
                             response.c = tracks;
                         } catch (RemoteException | JSONException e) {
-                            e.printStackTrace();
+                            e.fillInStackTrace();
                             response.c = new ArrayList<>();
                         }
                         observableEmitter.b(response);
@@ -79,18 +80,20 @@ public class PlaylistInjector {
                     return;
                 }
 
-                if (isVirtualPlaylist) {
-                    response.c = (ArrayList<MusicTrack>) TracklistHelper.getMyCachedMusicTracks();
+                response.c = (ArrayList<MusicTrack>) MusicCacheImpl.getPlaylistSongs(ownerId, id);
+
+                Log.d("Playlist", "Open playlist " + ownerId + "_" + id);
+
+                if (Objects.equals(id, "-1")) {
                     response.b = PlaylistHelper.createCachedPlaylistMetadata();
                 } else {
-                    response.c = (ArrayList<MusicTrack>) MusicCacheImpl.getPlaylistSongs(requestArgs.get("id"), requestArgs.get("owner_id"));
-                    response.b = MusicCacheImpl.getPlaylist(requestArgs.get("id"), requestArgs.get("owner_id"));
+                    response.b = MusicCacheImpl.getPlaylist(id, ownerId);
                 }
 
                 observableEmitter.b(response);
             });
         } catch (Exception e) {
-            e.printStackTrace();
+            e.fillInStackTrace();
         }
         return null;
     }

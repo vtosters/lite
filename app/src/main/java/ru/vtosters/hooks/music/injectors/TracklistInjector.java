@@ -12,6 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -61,7 +62,9 @@ public class TracklistInjector {
                 if (MusicCacheImpl.isEmpty()) {
                     observableEmitter.b(parser.c(getEmptyCatalog()));
                 } else {
-                    observableEmitter.b(parser.c(createVirtualCatalog(TracklistHelper.getTracks())));
+                    observableEmitter.b(parser.c(createVirtualCatalog(
+                            PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(),
+                            AccountManagerUtils.getUserId() + "_-1"))));
                 }
             }
         });

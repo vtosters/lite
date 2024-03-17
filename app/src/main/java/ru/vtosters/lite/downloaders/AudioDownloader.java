@@ -1,6 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
 import android.os.Environment;
+import android.util.Log;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
@@ -9,6 +10,7 @@ import com.vtosters.lite.R;
 import ru.vtosters.hooks.music.MusicCacheFilesHook;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
 import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
 import ru.vtosters.lite.music.downloader.AudioGet;
@@ -80,9 +82,14 @@ public class AudioDownloader {
         var notificationId = playlist.g.hashCode();
         var notification = MusicNotificationBuilder.buildPlaylistDownloadNotification(playlist.g, notificationId);
 
+        PlaylistCacheDbDelegate.addPlaylist(AndroidUtils.getGlobalContext(), playlist);
+
+        Log.d("Playlist", "adding to cache " + playlist.a);
+
         PlaylistDownloader.cachePlaylist(
                 tracks,
-                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
+                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId),
+                playlist.v1()
         );
     }
 
@@ -94,7 +101,8 @@ public class AudioDownloader {
 
         PlaylistDownloader.cachePlaylist(
                 tracks,
-                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
+                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId),
+                AccountManagerUtils.getUserId() + "_-1"
         );
     }
 
@@ -130,6 +138,7 @@ public class AudioDownloader {
 
         if (cache) {
             TrackDownloader.cacheTrack(track, MusicCallbackBuilder.buildOneTrackCallback(tempId, notification));
+            PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1", track.y1()); // TODO Move to download success
         } else {
             TrackDownloader.downloadTrack(track, downloadPath, MusicCallbackBuilder.buildOneTrackCallback(tempId, notification));
         }

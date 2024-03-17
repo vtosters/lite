@@ -2,7 +2,9 @@ package ru.vtosters.lite.music.downloader;
 
 import android.util.Log;
 import com.vk.dto.music.MusicTrack;
+import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.interfaces.Callback;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.File;
 import java.util.List;
@@ -37,7 +39,7 @@ public class PlaylistDownloader {
             });
     }
 
-    public static void cachePlaylist(List<MusicTrack> playlist, Callback callback) {
+    public static void cachePlaylist(List<MusicTrack> playlist, Callback callback, String playlistId) {
         var downloadedTracks = new AtomicInteger();
         for (var musicTrack : playlist)
             TrackDownloader.cacheTrack(musicTrack, new Callback() {
@@ -48,6 +50,7 @@ public class PlaylistDownloader {
                 @Override
                 public void onSuccess() {
                     callback.onProgress(downloadedTracks.incrementAndGet());
+                    PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), playlistId, musicTrack.y1());
                 }
 
                 @Override

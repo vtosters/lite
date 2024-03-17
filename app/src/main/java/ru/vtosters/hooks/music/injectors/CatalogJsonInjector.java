@@ -94,7 +94,6 @@ public class CatalogJsonInjector {
 
             PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"), noPlaylists);
 
-
             if (!useOldAppVer && !noPlaylists) {
                 var newBlocks = new JSONArray();
 
@@ -117,12 +116,15 @@ public class CatalogJsonInjector {
 
                     if (type.equals("music_playlists") && j.has("playlists_ids")) {
                         var newarr = new JSONArray();
-                        var playlists_ids = j.optJSONArray("playlists_ids");
+                        var playlists_ids = j.getJSONArray("playlists_ids");
+                        var savedPlaylists = PlaylistHelper.getCachedPlaylistsIds();
 
-                        newarr.put(getUserId() + "_-1");
+                        for (int n = 0; n < savedPlaylists.length(); n++) {
+                            newarr.put(savedPlaylists.getString(n));
+                        }
 
                         for (int n = 0; n < playlists_ids.length(); n++) {
-                            newarr.put(playlists_ids.optString(n));
+                            newarr.put(playlists_ids.getString(n));
                         }
 
                         Log.d("catalogInjector", "added to pl ids");

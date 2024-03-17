@@ -9,6 +9,7 @@ import com.vk.music.common.MusicPlaybackLaunchContext;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.VKXUtils;
 
@@ -19,18 +20,29 @@ import static ru.vtosters.hooks.other.Preferences.milkshake;
 import static ru.vtosters.lite.utils.NetworkUtils.isNetworkConnected;
 
 public class MusicBottomSheetHook {
-    public static ArrayList<MusicAction> hook(final ArrayList<MusicAction> actions, final MusicTrack musicTrack) {
+    public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
         if (musicTrack.F1()) return actions;
-        final var trackId = asId(musicTrack);
+
+        String trackId = asId(musicTrack);
+
         if (isVkxInstalled()) actions.add(getPlayInVKXAction());
+
         if (isIntegrationEnabled()) {
-            if (VKXUtils.isVkxCached(trackId)) actions.add(getRemoveCacheTrackVkxAction());
-            else if (isNetworkConnected()) actions.add(addToCacheTrackVkxAction());
+            if (VKXUtils.isVkxCached(trackId)) {
+                actions.add(getRemoveCacheTrackVkxAction());
+            } else if (isNetworkConnected()) {
+                actions.add(addToCacheTrackVkxAction());
+            }
         } else {
-            if (MusicCacheImpl.isCachedTrack(trackId)) actions.add(getRemoveCacheTrackAction());
-            else if (isNetworkConnected()) actions.add(addToCacheTrackAction());
+            if (MusicCacheImpl.isCachedTrack(trackId)) {
+                actions.add(getRemoveCacheTrackAction());
+            } else if (isNetworkConnected()) {
+                actions.add(addToCacheTrackAction());
+            }
         }
+
         if (isNetworkConnected()) actions.add(downloadAsMp3Action());
+
         return actions;
     }
 
@@ -72,8 +84,12 @@ public class MusicBottomSheetHook {
             } else if (isNetworkConnected()) {
                 actions.add(addToCacheTrackVkxAction());
             }
-        } else if (isNetworkConnected()) {
-            actions.add(addToCacheTrackAction());
+        } else {
+            if (PlaylistCacheDbDelegate.isCachedPlaylist(AndroidUtils.getGlobalContext(), playlist.v1())) {
+                actions.add(getRemoveCacheTrackAction());
+            } else if (isNetworkConnected()) {
+                actions.add(addToCacheTrackAction());
+            }
         }
 
         if (isNetworkConnected()) actions.add(downloadAsMp3Action());
@@ -134,20 +150,24 @@ public class MusicBottomSheetHook {
     }
 
     public static boolean injectOnClick(int actionId, Playlist playlist) { // playlist inj
-        if (actionId == R.id.play_in_vkx)
+        if (actionId == R.id.play_in_vkx) {
             return tryPlayInVKX(null, null, playlist);
-
-        if (actionId == R.id.add_to_cache) {
+        }
+        
+        if (actionId == R.id.remove_from_cache) {
+            PlaylistCacheDbDelegate.deletePlaylist(AndroidUtils.getGlobalContext(), playlist.v1());
+            return true;
+        } else if (actionId == R.id.add_to_cache) {
             AudioDownloader.cachePlaylist(playlist);
             return true;
         }
-
+        
         if (actionId == R.id.remove_from_cache_vkx) {
             getInstance().runOnService(service -> {
                 try {
                     service.deletePlaylistFromCache(playlist.a, playlist.b);
                 } catch (RemoteException e) {
-                    e.printStackTrace();
+                    e.fillInStackTrace();
                 }
             });
             return true;
@@ -156,7 +176,7 @@ public class MusicBottomSheetHook {
                 try {
                     service.addPlaylistToCache(playlist.a, playlist.b, (playlist.Q != null) ? playlist.Q : "");
                 } catch (RemoteException e) {
-                    e.printStackTrace();
+                    e.fillInStackTrace();
                 }
             });
             return true;
@@ -168,7 +188,7 @@ public class MusicBottomSheetHook {
                     try {
                         service.downloadPlaylist(playlist.a, playlist.b, (playlist.Q != null) ? playlist.Q : "");
                     } catch (RemoteException e) {
-                        e.printStackTrace();
+                        e.fillInStackTrace();
                     }
                 });
             } else {

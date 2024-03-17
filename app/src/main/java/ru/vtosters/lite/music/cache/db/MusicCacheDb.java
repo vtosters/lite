@@ -166,16 +166,19 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
         return DatabaseUtils.queryNumEntries(getReadableDatabase(), Constants.TABLE_NAME);
     }
 
+    public MusicTrack getTrackById(String trackId) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.query(Constants.TABLE_NAME, null, Constants.COLUMN_TRACK_ID + " = ?", new String[]{trackId}, null, null, null);
+        MusicTrack track = null;
+        if (cursor.moveToFirst()) {
+            track = fromCursor(cursor);
+        }
+        cursor.close();
+        return track;
+    }
+
     public List<MusicTrack> getAllTracks() {
         return getTracksWithCursor(getReadableDatabase().query(Constants.TABLE_NAME, null, null, null, null, null, null));
-    }
-
-    public List<MusicTrack> getAlbum(String albumId) {
-        return getAlbumTracks(albumId, null);
-    }
-
-    public List<MusicTrack> getFirstAlbumTrack(String albumId) {
-        return getAlbumTracks(albumId, "0,1");
     }
 
     private List<MusicTrack> getAlbumTracks(String albumId, @Nullable String limit) {
