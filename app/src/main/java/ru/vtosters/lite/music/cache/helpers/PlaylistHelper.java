@@ -37,7 +37,7 @@ public class PlaylistHelper {
                     jsonArray.put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, getThumb(playlist), playlist.O));
                 }
 
-                Log.d("PlaylistHelper", "Playlist cache added: " + playlist.a + " " + playlist.b + " " + playlist.C + " " + playlist.g + " " + playlist.B + " " + playlist.F.J());
+                Log.d("PlaylistHelper", "Playlist cache added: " + playlist.a + " " + playlist.b + " " + playlist.C + " " + playlist.g + " " + playlist.B);
             }
         } catch (JSONException e) {
             e.fillInStackTrace();
@@ -46,7 +46,7 @@ public class PlaylistHelper {
     }
 
     public static JSONObject generatePlaylist(int id, int owner_id, boolean is_explicit, String title, String description, JSONObject photo, int count) throws JSONException {
-        return new JSONObject()
+        JSONObject playlist = new JSONObject()
                 .put("id", id)
                 .put("owner_id", owner_id)
                 .put("type", 0)
@@ -62,10 +62,15 @@ public class PlaylistHelper {
                 .put("create_time", 0)
                 .put("update_time", 0)
                 .put("subtitle", "")
-                .put("photo", photo)
                 .put("meta", new JSONObject()
                         .put("view", "compact"))
                 .put("count", count);
+
+        if (photo != null) {
+            playlist.put("photo", photo);
+        }
+
+        return playlist;
     }
 
     public static JSONObject getCachedSongsPlaylist() throws JSONException {
@@ -143,9 +148,11 @@ public class PlaylistHelper {
 
     private static JSONObject getThumb(Playlist playlist) {
         try {
+            Log.d("Playlist", "thumb is not null");
             return playlist.F.J();
         } catch (Exception e) {
-            return new JSONObject();
+            Log.d("Playlist", "thumb is null");
+            return null;
         }
     }
 }

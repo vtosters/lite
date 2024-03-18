@@ -34,13 +34,23 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
 
     private static Playlist fromCursor(Cursor cur) throws JSONException {
         @SuppressLint("Range")
+        String photoString = cur.getString(cur.getColumnIndex(Constants.COLUMN_PHOTO));
+        JSONObject photo = null;
+
+        try {
+            photo = new JSONObject(photoString);
+        } catch (JSONException e) {
+            // ok and
+        }
+
+        @SuppressLint("Range")
         JSONObject playlist = PlaylistHelper.generatePlaylist(
                 cur.getInt(cur.getColumnIndex(Constants.COLUMN_ID)),
                 cur.getInt(cur.getColumnIndex(Constants.COLUMN_OWNER_ID)),
                 Boolean.parseBoolean(cur.getString(cur.getColumnIndex(Constants.COLUMN_IS_EXPLICIT))),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_TITLE)),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_DESCRIPTION)),
-                new JSONObject(cur.getString(cur.getColumnIndex(Constants.COLUMN_PHOTO))),
+                photo,
                 0);
 
         Log.d("Playlist", "generated " + Playlist.U.a(playlist).v1());
