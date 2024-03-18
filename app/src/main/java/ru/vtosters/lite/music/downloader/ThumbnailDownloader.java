@@ -17,7 +17,7 @@ import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 public final class ThumbnailDownloader implements ITrackDownloader {
 
     @Override
-    public void download(MusicTrack track, Callback callback) {
+    public void download(MusicTrack track, Callback callback, String playlistId) {
         JSONObject json = track.J();
         JSONObject album = json.optJSONObject("album");
         if (album == null) return;

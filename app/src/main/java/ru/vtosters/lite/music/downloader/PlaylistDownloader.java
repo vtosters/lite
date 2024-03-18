@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import java8.util.concurrent.CompletableFuture;
-import ru.vtosters.lite.music.interfaces.Callback;
 
 public class PlaylistDownloader {
     public static CompletableFuture<Void>
@@ -38,10 +37,8 @@ public class PlaylistDownloader {
         return CompletableFuture.allOf(playlist
                 .stream()
                 .map(x -> {
-                    Callback.CompletableFutureCallback d = new
-                            Callback.CompletableFutureCallback(delegate);
-                    TrackDownloader.cacheTrack(x, d);
-                    PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), playlistId, x.y1());
+                    Callback.CompletableFutureCallback d = new Callback.CompletableFutureCallback(delegate);
+                    TrackDownloader.cacheTrack(x, d, playlistId);
                     return d;
                 })
                 .toArray(CompletableFuture[]::new));

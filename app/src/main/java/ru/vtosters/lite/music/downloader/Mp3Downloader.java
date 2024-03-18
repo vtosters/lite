@@ -34,7 +34,7 @@ public final class Mp3Downloader implements ITrackDownloader {
     }
 
     @Override
-    public void download(MusicTrack track, Callback callback) {
+    public void download(MusicTrack track, Callback callback, String playlistId) {
         String uri = track.D;
         if (Objects.requireNonNull(uri).isEmpty()) {
             String msg = "link error: " + track.y1() + ", title: " + Mp3Downloader.getTitle(track);

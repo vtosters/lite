@@ -21,25 +21,24 @@ public final class TrackDownloader {
     public static void downloadTrack(MusicTrack track, String path, Callback callback) {
         File outDir = new File(path);
         if (!outDir.exists()) {
-            if (outDir.mkdir())
+            if (outDir.mkdir()) {
                 Log.v("TrackDownloader", "Directory created");
-            else
+            } else {
                 Log.e("TrackDownloader", "Directory creation failed");
+            }
         }
-        var outputFile = new File(outDir, IOUtils.getValidFileName(
-                MusicTrackUtils.getArtists(track) + " - " + Mp3Downloader.getTitle(track)) + ".mp3");
+        File outputFile = new File(outDir, IOUtils.getValidFileName(MusicTrackUtils.getArtists(track) + " - " + Mp3Downloader.getTitle(track)) + ".mp3");
 
-        VTExecutors.getMusicDownloadExecutor().submit(() -> new Mp3Downloader(outputFile).download(track, callback));
+        VTExecutors.getMusicDownloadExecutor().submit(() -> new Mp3Downloader(outputFile).download(track, callback, null));
     }
 
-    public static void cacheTrack(MusicTrack track, Callback callback) {
-        if (MusicCacheImpl.isCachedTrack(LibVKXClient.asId(track)))
+    public static void cacheTrack(MusicTrack track, Callback callback, String playlistId) {
+        if (MusicCacheImpl.isCachedTrack(LibVKXClient.asId(track))) {
             return;
-        var outputFile = MusicCacheStorageUtils
-                .getTrackFile(LibVKXClient.asId(track));
+        }
 
-        VTExecutors.getMusicDownloadExecutor().submit(() -> new CachedDownloader(
-                new Mp3Downloader(outputFile)
-        ).download(track, callback));
+        File outputFile = MusicCacheStorageUtils.getTrackFile(LibVKXClient.asId(track));
+
+        VTExecutors.getMusicDownloadExecutor().submit(() -> new CachedDownloader(new Mp3Downloader(outputFile)).download(track, callback, playlistId));
     }
 }
