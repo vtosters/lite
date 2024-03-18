@@ -12,6 +12,7 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
@@ -93,25 +94,31 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         // Delete the playlist
         deletePlaylist(id, ownerId);
 
-        // Delete each track, but only if it's not in any other playlists
+        // Delete each track from the playlist_tracks table
         for (MusicTrack track : tracks) {
             String trackId = track.y1();
-            if (!isTrackInAnyOtherPlaylist(trackId)) {
-                MusicCacheStorageUtils.removeTrackDirById(trackId);
+            removeTrackFromPlaylist(playlistId, trackId);
+
+            if (!isTrackInAnyOtherPlaylist(trackId, playlistId)) {
+                MusicCacheImpl.removeTrack(trackId);
+                Log.d("Playlist", "removed " + trackId);
             }
         }
+
+        // Delete all entries from the playlist_tracks table for this playlist
+        db.delete(Constants.TABLE_PLAYLIST_TRACKS, Constants.COLUMN_PLAYLIST_ID + " = ?", new String[]{playlistId});
     }
 
-    private boolean isTrackInAnyOtherPlaylist(String trackId) {
+    private boolean isTrackInAnyOtherPlaylist(String trackId, String playlistId) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(
                 Constants.TABLE_PLAYLIST_TRACKS,
                 null,
-                Constants.COLUMN_TRACK_ID + " = ?",
-                new String[]{trackId},
+                Constants.COLUMN_TRACK_ID + " = ? AND " + Constants.COLUMN_PLAYLIST_ID + " != ?",
+                new String[]{trackId, playlistId},
                 null, null, null
         );
-        boolean exists = cursor.getCount() > 1;
+        boolean exists = cursor.getCount() > 0;
         cursor.close();
         return exists;
     }
