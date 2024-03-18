@@ -94,6 +94,7 @@ public class MusicCacheImpl {
 
     public static void clear() {
         MusicCacheDbDelegate.drop(AndroidUtils.getGlobalContext());
+        PlaylistCacheDbDelegate.drop(AndroidUtils.getGlobalContext());
         MusicCacheStorageUtils.clear();
     }
 }

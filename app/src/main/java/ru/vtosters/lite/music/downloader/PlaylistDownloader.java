@@ -3,9 +3,7 @@ package ru.vtosters.lite.music.downloader;
 import android.util.Log;
 
 import com.vk.dto.music.MusicTrack;
-import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.interfaces.Callback;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.File;
 import java.util.List;
@@ -14,14 +12,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java8.util.concurrent.CompletableFuture;
 
 public class PlaylistDownloader {
-    public static CompletableFuture<Void>
-    downloadPlaylist(List<MusicTrack> playlist, String playlistName, String path, Callback callback) {
+    public static void downloadPlaylist(List<MusicTrack> playlist, String playlistName, String path, Callback callback) {
         var outDir = new File(path);
         if (!outDir.exists())
             if (outDir.mkdirs()) Log.v("PlaylistDownloader", "Directory created");
             else Log.e("PlaylistDownloader", "Directory creation failed");
         Callback delegate = new ProgressCallback(callback);
-        return CompletableFuture.allOf(playlist
+        CompletableFuture.allOf(playlist
                 .stream()
                 .map(x -> {
                     Callback.CompletableFutureCallback d = new
@@ -32,9 +29,9 @@ public class PlaylistDownloader {
                 .toArray(CompletableFuture[]::new));
     }
 
-    public static CompletableFuture<Void> cachePlaylist(List<MusicTrack> playlist, Callback callback, String playlistId) {
+    public static void cachePlaylist(List<MusicTrack> playlist, Callback callback, String playlistId) {
         Callback delegate = new ProgressCallback(callback);
-        return CompletableFuture.allOf(playlist
+        CompletableFuture.allOf(playlist
                 .stream()
                 .map(x -> {
                     Callback.CompletableFutureCallback d = new Callback.CompletableFutureCallback(delegate);

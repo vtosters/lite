@@ -21,13 +21,9 @@ public class PlaylistCacheDbDelegate {
         }
     }
 
-    public static void deletePlaylist(Context context, String id) {
+    public static void deletePlaylist(Context context, String playlistId) {
         try (var db = connectToDb(context)) {
-            String[] parts = id.split("_");
-            int playlistId = Integer.parseInt(parts[1]);
-            int ownerId = Integer.parseInt(parts[0]);
-
-            db.deletePlaylist(playlistId, ownerId);
+            db.deletePlaylistWithTracks(playlistId);
         }
     }
 

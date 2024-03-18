@@ -14,6 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -65,7 +66,7 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         getWritableDatabase().insert(Constants.TABLE_NAME, null, values);
     }
 
-    public void deletePlaylist(int id, int ownerId) {
+    private void deletePlaylist(int id, int ownerId) {
         getWritableDatabase().delete(Constants.TABLE_NAME, Constants.COLUMN_ID + " = ? AND " + Constants.COLUMN_OWNER_ID + " = ?", new String[]{String.valueOf(id), String.valueOf(ownerId)});
     }
 
@@ -78,6 +79,41 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
 
     public long getPlaylistsCount() {
         return DatabaseUtils.queryNumEntries(getReadableDatabase(), Constants.TABLE_NAME);
+    }
+
+    public void deletePlaylistWithTracks(String playlistId) {
+        SQLiteDatabase db = getWritableDatabase();
+        String[] parts = playlistId.split("_");
+        int id = Integer.parseInt(parts[1]);
+        int ownerId = Integer.parseInt(parts[0]);
+
+        // Get all tracks in the playlist
+        List<MusicTrack> tracks = getTracksInPlaylist(playlistId);
+
+        // Delete the playlist
+        deletePlaylist(id, ownerId);
+
+        // Delete each track, but only if it's not in any other playlists
+        for (MusicTrack track : tracks) {
+            String trackId = track.y1();
+            if (!isTrackInAnyOtherPlaylist(trackId)) {
+                MusicCacheStorageUtils.removeTrackDirById(trackId);
+            }
+        }
+    }
+
+    private boolean isTrackInAnyOtherPlaylist(String trackId) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.query(
+                Constants.TABLE_PLAYLIST_TRACKS,
+                null,
+                Constants.COLUMN_TRACK_ID + " = ?",
+                new String[]{trackId},
+                null, null, null
+        );
+        boolean exists = cursor.getCount() > 1;
+        cursor.close();
+        return exists;
     }
 
     public List<Playlist> getAllPlaylists() {
