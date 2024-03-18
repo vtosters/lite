@@ -15,7 +15,6 @@ import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -41,8 +40,8 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
                 Boolean.parseBoolean(cur.getString(cur.getColumnIndex(Constants.COLUMN_IS_EXPLICIT))),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_TITLE)),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_DESCRIPTION)),
-                new JSONObject(cur.getString(cur.getColumnIndex(Constants.COLUMN_PHOTO)))
-        );
+                new JSONObject(cur.getString(cur.getColumnIndex(Constants.COLUMN_PHOTO))),
+                0);
 
         Log.d("Playlist", "generated " + Playlist.U.a(playlist).v1());
 
