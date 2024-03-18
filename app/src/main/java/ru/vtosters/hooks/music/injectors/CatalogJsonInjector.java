@@ -19,6 +19,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import static com.vk.core.network.Network.ClientType.CLIENT_API;
 import static ru.vtosters.hooks.DateHook.getLocale;
@@ -85,6 +86,7 @@ public class CatalogJsonInjector {
             var blocks = section.getJSONArray("blocks");
 
             fixDailyMix(blocks);
+            removeUnsupportedLayouts(blocks);
 
             if (!isUsersCatalog || MusicCacheImpl.isEmpty() || LibVKXClient.isIntegrationEnabled()) {
                 return; // early return if not users catalog or no tracks or integration enabled
@@ -210,6 +212,14 @@ public class CatalogJsonInjector {
         for (int i = 0; i < blocks.length(); i++) {
             var block = blocks.optJSONObject(i);
             var layout = block.optJSONObject("layout");
+            var data_type = block.optString("data_type");
+
+            if (Objects.equals(data_type, "music_recommended_playlists")) {
+                blocks.remove(i);
+                blocks.remove(i - 1);
+                blocks.remove(i - 2);
+            }
+
             if (layout != null) {
                 var name = layout.optString("name");
                 if (name.equals("header_extended")) {
