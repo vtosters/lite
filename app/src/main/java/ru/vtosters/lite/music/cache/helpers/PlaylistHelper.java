@@ -7,11 +7,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
-
-import static ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate.generatePhotoJSON;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
+import ru.vtosters.lite.utils.music.PlaylistUtils;
 
 public class PlaylistHelper {
 
@@ -33,9 +32,9 @@ public class PlaylistHelper {
 
             for (Playlist playlist : MusicCacheImpl.getPlaylists()) {
                 if (noPlaylists) {
-                    jsonArray.put(new JSONArray().put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, generatePhotoJSON(playlist), playlist.O)));
+                    jsonArray.put(new JSONArray().put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, PlaylistUtils.getThumb(playlist), playlist.O)));
                 } else {
-                    jsonArray.put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, generatePhotoJSON(playlist), playlist.O));
+                    jsonArray.put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, PlaylistUtils.getThumb(playlist), playlist.O));
                 }
 
                 Log.d("PlaylistHelper", "Playlist cache added: " + playlist.a + " " + playlist.b + " " + playlist.C + " " + playlist.g + " " + playlist.B);
@@ -77,7 +76,7 @@ public class PlaylistHelper {
     public static JSONObject getCachedSongsPlaylist() throws JSONException {
         return new JSONObject()
                 .put("id", -1)
-                .put("owner_id", getUserId())
+                .put("owner_id", AccountManagerUtils.getUserId())
                 .put("type", 0)
                 .put("album_type", "playlist")
                 .put("title", AndroidUtils.getString(R.string.cached_tracks_title))
@@ -109,7 +108,7 @@ public class PlaylistHelper {
         JSONArray arr = new JSONArray();
 
         if (NetworkUtils.isNetworkConnected() && !MusicCacheImpl.getAllOwnTracks().isEmpty()) {
-            arr.put(getUserId() + "_-1");
+            arr.put(AccountManagerUtils.getUserId() + "_-1");
         }
 
         for (var playlist : MusicCacheImpl.getPlaylists()) {
@@ -126,7 +125,7 @@ public class PlaylistHelper {
                 .put("layout", new JSONObject()
                         .put("name", "large_slider")
                         .put("is_editable", 0)
-                        .put("owner_id", getUserId()))
+                        .put("owner_id", AccountManagerUtils.getUserId()))
                 .put("playlists_ids", getCachedPlaylistsIds());
     }
 
