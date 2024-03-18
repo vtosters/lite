@@ -24,6 +24,8 @@ import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.MusicTrackUtils;
@@ -127,6 +129,8 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
                 vals.put(Constants.COLUMN_DURATION, track.h);
                 vals.put(Constants.COLUMN_HAS_ARTWORK, track.I != null && track.I.u1() != null);
                 db.insert(Constants.TABLE_NAME, null, vals);
+
+                PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1", track.y1());
             }
         }
     }
@@ -223,7 +227,7 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
 
     @Retention(RetentionPolicy.SOURCE)
     public @interface Constants {
-        int DV_VERSION = 0x2;
+        int DV_VERSION = 0x3;
         String DB_NAME = "vt_lite_cache.db";
         String TABLE_NAME = "tracks";
         //columns
