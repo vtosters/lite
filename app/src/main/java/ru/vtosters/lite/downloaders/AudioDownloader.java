@@ -7,6 +7,8 @@ import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
+
+import java8.util.concurrent.CompletableFuture;
 import ru.vtosters.hooks.music.MusicCacheFilesHook;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
@@ -22,8 +24,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 
 import java.io.File;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.Objects;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
@@ -34,10 +35,9 @@ import static ru.vtosters.lite.utils.AndroidUtils.getString;
  */
 
 public class AudioDownloader {
-    public static final ExecutorService executor = Executors.newCachedThreadPool();
     public static final String dlpath = Preferences.getBoolValue("dldir", false) ? Environment.DIRECTORY_DOWNLOADS : Environment.DIRECTORY_MUSIC;
 
-    public static void downloadPlaylist(Playlist playlist) {
+    public static CompletableFuture<Void> downloadPlaylist(Playlist playlist) {
         var tracks = PlaylistConverter.getPlaylist(playlist);
 
         var playlistName = IOUtils.getValidFileName(playlist.g);
@@ -48,7 +48,7 @@ public class AudioDownloader {
         var notificationId = playlistName.hashCode();
         var notification = MusicNotificationBuilder.buildPlaylistDownloadNotification(playlistName, notificationId);
 
-        PlaylistDownloader.downloadPlaylist(
+        return PlaylistDownloader.downloadPlaylist(
                 tracks,
                 IOUtils.getValidFileName(playlist.g),
                 downloadPath,
@@ -67,16 +67,15 @@ public class AudioDownloader {
         if (MusicCacheImpl.isCachedTrack(trackId)) {
             MusicCacheImpl.removeTrack(trackId);
             AndroidUtils.sendToast(AndroidUtils.getString("audio_deleted_from_cache"));
-            return;
+        } else {
+            var trackFile = MusicCacheFilesHook.getTrackFile(trackId);
+            if (!trackFile.exists())
+                trackFile.getParentFile().mkdirs();
+            downloadM3U8(track, true);
         }
-
-        var trackFile = MusicCacheFilesHook.getTrackFile(trackId);
-        if (!trackFile.exists())
-            trackFile.getParentFile().mkdirs();
-        executor.submit(() -> downloadM3U8(track, true));
     }
 
-    public static void cachePlaylist(Playlist playlist) {
+    public static CompletableFuture<Void> cachePlaylist(Playlist playlist) {
         var tracks = PlaylistConverter.getPlaylist(playlist);
 
         var notificationId = playlist.g.hashCode();
@@ -86,7 +85,7 @@ public class AudioDownloader {
 
         Log.d("Playlist", "adding to cache " + playlist.a);
 
-        PlaylistDownloader.cachePlaylist(
+        return PlaylistDownloader.cachePlaylist(
                 tracks,
                 MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId),
                 playlist.v1()
@@ -125,22 +124,23 @@ public class AudioDownloader {
         );
     }
 
-    private static void downloadM3U8(MusicTrack track, boolean cache) {
-        if (track.D == null) {
+    private static void
+    downloadM3U8(MusicTrack track, boolean cache) {
+        Objects.requireNonNull(track.D, () -> {
             ToastUtils.a(getString(R.string.link_audio_error));
-            return;
-        }
-
+            return "link must not be null";
+        });
         var musicPath = Environment.getExternalStoragePublicDirectory(dlpath).getAbsolutePath();
         var tempId = track.d;
         var downloadPath = musicPath + File.separator;
         var notification = MusicNotificationBuilder.buildDownloadNotification(track, tempId);
 
+        var cb = MusicCallbackBuilder.buildOneTrackCallback(tempId, notification);
         if (cache) {
-            TrackDownloader.cacheTrack(track, MusicCallbackBuilder.buildOneTrackCallback(tempId, notification));
+            TrackDownloader.cacheTrack(track, cb);
             PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1", track.y1()); // TODO Move to download success
         } else {
-            TrackDownloader.downloadTrack(track, downloadPath, MusicCallbackBuilder.buildOneTrackCallback(tempId, notification));
+            TrackDownloader.downloadTrack(track, downloadPath, cb);
         }
     }
 }

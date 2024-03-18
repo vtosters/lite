@@ -1,16 +1,16 @@
 package ru.vtosters.lite.music.cache.delegate;
 
 import android.content.Context;
+
 import com.vk.dto.music.MusicTrack;
-import ru.vtosters.lite.music.cache.db.MusicCacheDb;
 
 import java.util.List;
 
+import ru.vtosters.lite.music.cache.db.MusicCacheDb;
+
 public class MusicCacheDbDelegate {
-    static synchronized private MusicCacheDb connectToDb(Context context) {
-        synchronized (MusicCacheDb.class) {
-            return new MusicCacheDb(context);
-        }
+    private static MusicCacheDb connectToDb(Context context) {
+        return new MusicCacheDb(context);
     }
 
     public static void addTrack(Context context,

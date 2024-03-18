@@ -2,26 +2,30 @@ package ru.vtosters.lite.music.converter.ts;
 
 import android.util.Log;
 
-import com.vk.dto.music.MusicTrack;
-
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
+import java.io.ByteArrayInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
 public class MpegDemuxer {
-    public static void convert(File in, String out, MusicTrack track) throws IOException {
+    public static void convert(byte[] inBytes, String out) throws IOException {
+        try (InputStream inStream = new ByteArrayInputStream(inBytes)) {
+            convert(inStream, out);
+        }
+    }
+
+    public static void convert(InputStream in, String out) throws IOException {
         int packetSize = 188;
         int desiredPid = 256;
 
         var buffer = new byte[packetSize];
         var packet = ByteBuffer.wrap(buffer).order(ByteOrder.BIG_ENDIAN);
 
-        try (var fis = new BufferedInputStream(new FileInputStream(in)); var fos = new BufferedOutputStream(new FileOutputStream(out))) {
+        try (var fis = new BufferedInputStream(in); var fos = new BufferedOutputStream(new FileOutputStream(out))) {
             while (fis.read(buffer) != -1) {
                 packet.clear();
 

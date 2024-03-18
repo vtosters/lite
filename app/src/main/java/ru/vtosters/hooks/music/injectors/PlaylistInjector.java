@@ -24,9 +24,10 @@ import java.util.concurrent.Executors;
 
 public class PlaylistInjector {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
+    public final static String CHANNEL_NAME = "VTCH";
 
     public static void injectDownloadPlaylist(Playlist playlist) {
-        executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
+        AudioDownloader.cachePlaylist(playlist);
     }
 
     public static boolean eligibleForOfflineCaching() {

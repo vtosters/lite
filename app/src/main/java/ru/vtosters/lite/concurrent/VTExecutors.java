@@ -1,10 +1,11 @@
 package ru.vtosters.lite.concurrent;
 
 import com.vk.core.concurrent.VkExecutors;
-import io.reactivex.Scheduler;
 
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
+
+import io.reactivex.Scheduler;
 
 public class VTExecutors {
     public static ExecutorService getMusicDownloadExecutor() {
@@ -32,7 +33,21 @@ public class VTExecutors {
         }
 
         private static class LazyHolder {
-            public static final ExecutorService INSTANCE = Executors.newSingleThreadExecutor();
+            private static final int MIN_PARALLELISM = 1;
+            private static final int MAX_PARALLELISM = 7;
+            private static final int PARALLELISM = clamp(
+                    (Runtime.getRuntime().availableProcessors() >> 1) - 1
+            );
+
+            private static final ExecutorService INSTANCE =
+                    new ForkJoinPool(PARALLELISM,
+                            ForkJoinPool.defaultForkJoinWorkerThreadFactory,
+                            (t, e) -> {},
+                            /* FIFO */ true);
+
+            private static int clamp(int value) {
+                return Math.min(LazyHolder.MAX_PARALLELISM, Math.max(value, LazyHolder.MIN_PARALLELISM));
+            }
         }
     }
 }

@@ -8,14 +8,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.util.Log;
+
 import androidx.annotation.Nullable;
+
 import com.vk.dto.music.AlbumLink;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Thumb;
+
 import org.json.JSONObject;
-import ru.vtosters.lite.music.downloader.M3UDownloader;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.io.File;
 import java.lang.annotation.Retention;
@@ -23,6 +23,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
+
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
+import ru.vtosters.lite.utils.music.MusicTrackUtils;
 
 /**
  * <p class="note"><strong>Note:</strong> the {@link AutoCloseable} interface was
@@ -117,7 +121,7 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
                 vals.put(Constants.COLUMN_ALBUM_ID, track.I != null ? track.I.getId() + "" : "-1");
                 vals.put(Constants.COLUMN_TITLE, track.f);
                 vals.put(Constants.COLUMN_SUBTITLE, track.g);
-                vals.put(Constants.COLUMN_ARTIST, M3UDownloader.getArtists(track));
+                vals.put(Constants.COLUMN_ARTIST, MusicTrackUtils.getArtists(track));
                 vals.put(Constants.COLUMN_ALBUM_TITLE, track.I != null ? track.I.getTitle() : "");
                 vals.put(Constants.COLUMN_EXPLICIT, Boolean.compare(track.K, true));
                 vals.put(Constants.COLUMN_DURATION, track.h);

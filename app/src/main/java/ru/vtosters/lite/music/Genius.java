@@ -2,21 +2,24 @@ package ru.vtosters.lite.music;
 
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.vk.dto.music.MusicTrack;
 import com.vtosters.lite.R;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
-import ru.vtosters.lite.music.downloader.M3UDownloader;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.net.URLEncoder;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.music.MusicTrackUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 public class Genius {
     private static final String KEY = "Bearer ZTejoT_ojOEasIkT9WrMBhBQOz6eYKK5QULCMECmOhvwqjRZ6WbpamFe3geHnvp3";
@@ -25,7 +28,7 @@ public class Genius {
 
     public static String getTextMusic(MusicTrack musictrack) {
         String uid = musictrack.y1();
-        String artist = removeExtras(M3UDownloader.getArtists(musictrack));
+        String artist = removeExtras(MusicTrackUtils.getArtists(musictrack));
         String title = removeExtras(musictrack.f);
         int duration = musictrack.h;
 
