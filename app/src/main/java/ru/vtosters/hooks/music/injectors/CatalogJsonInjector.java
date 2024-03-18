@@ -209,26 +209,32 @@ public class CatalogJsonInjector {
     }
 
     private static void removeUnsupportedLayouts(JSONArray blocks) throws JSONException {
-        for (int i = 0; i < blocks.length(); i++) {
-            var block = blocks.optJSONObject(i);
-            var layout = block.optJSONObject("layout");
-            var data_type = block.optString("data_type");
+        for (int i = blocks.length() - 1; i >= 0; i--) {
+            JSONObject block = blocks.optJSONObject(i);
+            JSONObject layout = block.optJSONObject("layout");
+            String data_type = block.optString("data_type");
 
-            if (Objects.equals(data_type, "music_recommended_playlists")) {
+            if (Objects.equals(data_type, "music_recommended_playlists") || Objects.equals(data_type, "radiostations")) {
+                blocks.remove(i); // block
+                if (i - 1 >= 0) blocks.remove(i - 1); // text
+                if (i - 2 >= 0) blocks.remove(i - 2); // divider
+                continue; // Skip to the next iteration after removing
+            }
+
+            if (layout == null) continue; // Skip to the next iteration if layout is null
+
+            String name = layout.optString("name");
+            if (!name.equals("header_extended")) {
+                continue; // Skip to the next iteration if not header_extended
+            }
+
+            if (layout.has("top_title")) {
                 blocks.remove(i);
-                blocks.remove(i - 1);
-                blocks.remove(i - 2);
             }
-
-            if (layout != null) {
-                var name = layout.optString("name");
-                if (name.equals("header_extended")) {
-                    if (layout.has("top_title")) blocks.remove(i);
-                    layout.put("name", "header");
-                }
-            }
+            layout.put("name", "header");
         }
     }
+
 
     private static void setDefaultAudioPage(JSONArray jsonArray, JSONObject catalog) throws JSONException {
         for (int i = 0; i < jsonArray.length(); i++) {
