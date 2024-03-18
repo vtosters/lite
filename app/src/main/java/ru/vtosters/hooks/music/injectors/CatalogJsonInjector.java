@@ -267,7 +267,9 @@ public class CatalogJsonInjector {
                         + "&access_token="
                         + AccountManagerUtils.getUserToken())
                 .a("Accept-Encoding", "gzip")
-                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
+                .a("User-Agent", Network.l.c().a())
+                .a("Content-Type", "application/x-www-form-urlencoded; charset=utf-8")
+                .a();
         try (Response resp = Network.b(CLIENT_API).a(request).execute()) {
             var json = new JSONObject(GzipDecompressor.decompressResponse(resp)).getJSONObject("response");
             var catalogarr = json.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
