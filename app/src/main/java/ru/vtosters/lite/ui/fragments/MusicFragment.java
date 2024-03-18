@@ -1,29 +1,33 @@
 package ru.vtosters.lite.ui.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import androidx.preference.Preference;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vk.dto.music.Playlist;
 import com.vtosters.lite.ui.SummaryListPreference;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.LastFMScrobbler;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
 
+    @SuppressLint("DefaultLocale")
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -49,6 +53,20 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                     return true;
                 }
         );
+
+        if (MusicCacheImpl.hasPlaylist()) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "cached_playlists",
+                    "Кешированные плейлисты",
+                    String.format("Скачано плейлистов: %d", MusicCacheImpl.getPlaylists().size()),
+                    null,
+                    preference -> {
+                        cachedPlaylistsDialog(requireContext());
+                        return true;
+                    }
+            );
+        }
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
@@ -320,6 +338,26 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setNeutralButton(com.vtosters.lite.R.string.vkim_no,
                         (dialog, which) -> dialog.cancel())
                 .show();
+    }
+
+    private static void cachedPlaylistsDialog(Context ctx) {
+        List<Playlist> playlists = PlaylistCacheDbDelegate.getAllPlaylists(ctx);
+        String[] playlistNames = new String[playlists.size()];
+
+        for (int i = 0; i < playlists.size(); i++) {
+            playlistNames[i] = playlists.get(i).g; // Assuming Playlist class has a getTitle() method
+        }
+
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx);
+        builder.setTitle("Скачанные плейлисты");
+        builder.setItems(playlistNames, (dialog, which) -> {
+            Playlist selectedPlaylist = playlists.get(which);
+            String playlistId = selectedPlaylist.v1();
+            PlaylistCacheDbDelegate.deletePlaylist(ctx, playlistId);
+            AndroidUtils.sendToast("Плейлист удален");
+        });
+
+        builder.show();
     }
 
     private void delcache(Context ctx) {
