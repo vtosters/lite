@@ -33,7 +33,7 @@ public class PlaylistDownloader {
                 .toArray(CompletableFuture[]::new));
     }
 
-    public static CompletableFuture<Void> cachePlaylist(List<MusicTrack> playlist, Callback callback) {
+    public static CompletableFuture<Void> cachePlaylist(List<MusicTrack> playlist, Callback callback, String playlistId) {
         Callback delegate = new ProgressCallback(callback);
         return CompletableFuture.allOf(playlist
                 .stream()
@@ -41,7 +41,7 @@ public class PlaylistDownloader {
                     Callback.CompletableFutureCallback d = new
                             Callback.CompletableFutureCallback(delegate);
                     TrackDownloader.cacheTrack(x, d);
-                    PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), playlistId, musicTrack.y1());
+                    PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), playlistId, x.y1());
                     return d;
                 })
                 .toArray(CompletableFuture[]::new));

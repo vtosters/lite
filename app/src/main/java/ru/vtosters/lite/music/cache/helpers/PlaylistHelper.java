@@ -1,29 +1,20 @@
 package ru.vtosters.lite.music.cache.helpers;
 
 import android.util.Log;
-import com.vk.dto.music.MusicTrack;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
-
-import android.net.Uri;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.music.downloader.M3UDownloader;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
+import ru.vtosters.lite.utils.music.MusicTrackUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
-import ru.vtosters.lite.utils.music.MusicTrackUtils;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 
 public class PlaylistHelper {
 
@@ -35,20 +26,7 @@ public class PlaylistHelper {
         }
     }
 
-    public static Playlist createCachedPlaylistMetadata(String id) {
-        var track = TracklistHelper.getTracksOne(id).get(0);
-        var albumLink = track.I;
-        var thumb = albumLink.u1();
-        return createAlbum(
-                thumb != null ? thumb.h(600) : "",
-                albumLink.getTitle(),
-                MusicTrackUtils.getArtists(track),
-                track.y1(),
-                albumLink.getId()
-        );
-    }
-
-    public static Playlist createAlbum(String photo, String title, String artist, String trackId, int albumId) {
+    public static JSONArray addCachedPlaylists(JSONArray jsonArray, Boolean noPlaylists) {
         try {
             if (noPlaylists) {
                 jsonArray.put(new JSONArray().put(getCachedSongsPlaylist()));
@@ -92,22 +70,6 @@ public class PlaylistHelper {
                 .put("meta", new JSONObject()
                         .put("view", "compact"))
                 .put("count", 0);
-    }
-
-    public static List<Playlist> getAlbumPlaylists() {
-        List<Playlist> list = new ArrayList<>();
-        for (var track : MusicCacheImpl.getPlaylist()) {
-            var albumLink = track.I;
-            var thumb = albumLink.u1();
-            list.add(createAlbum(
-                    thumb != null ? thumb.h(600) : "",
-                    albumLink.getTitle(),
-                    MusicTrackUtils.getArtists(track),
-                    track.y1(),
-                    albumLink.getId()
-            ));
-        }
-        return list;
     }
 
     public static JSONObject getCachedSongsPlaylist() throws JSONException {
