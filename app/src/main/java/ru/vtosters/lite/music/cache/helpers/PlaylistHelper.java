@@ -10,6 +10,7 @@ import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 
+import static ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate.generatePhotoJSON;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 
 public class PlaylistHelper {
@@ -32,9 +33,9 @@ public class PlaylistHelper {
 
             for (Playlist playlist : MusicCacheImpl.getPlaylists()) {
                 if (noPlaylists) {
-                    jsonArray.put(new JSONArray().put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, getThumb(playlist), playlist.O)));
+                    jsonArray.put(new JSONArray().put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, generatePhotoJSON(playlist), playlist.O)));
                 } else {
-                    jsonArray.put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, getThumb(playlist), playlist.O));
+                    jsonArray.put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, generatePhotoJSON(playlist), playlist.O));
                 }
 
                 Log.d("PlaylistHelper", "Playlist cache added: " + playlist.a + " " + playlist.b + " " + playlist.C + " " + playlist.g + " " + playlist.B);
@@ -129,13 +130,13 @@ public class PlaylistHelper {
                 .put("playlists_ids", getCachedPlaylistsIds());
     }
 
-    public static JSONObject getCatalogHeader() throws JSONException {
+    public static JSONObject getCatalogHeader(String text) throws JSONException {
         return new JSONObject()
                 .put("id", "cache")
                 .put("data_type", "none")
                 .put("layout", new JSONObject()
                         .put("name", "header")
-                        .put("title", AndroidUtils.getString(R.string.cached_tracks_title)));
+                        .put("title", text));
     }
 
     public static JSONObject getCatalogSeparator() throws JSONException {
@@ -144,15 +145,5 @@ public class PlaylistHelper {
                 .put("data_type", "none")
                 .put("layout", new JSONObject()
                         .put("name", "separator"));
-    }
-
-    private static JSONObject getThumb(Playlist playlist) {
-        try {
-            Log.d("Playlist", "thumb is not null");
-            return playlist.F.J();
-        } catch (Exception e) {
-            Log.d("Playlist", "thumb is null");
-            return null;
-        }
     }
 }

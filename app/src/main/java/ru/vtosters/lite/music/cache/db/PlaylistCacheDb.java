@@ -15,11 +15,14 @@ import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
+
+import static ru.vtosters.lite.utils.music.MusicCacheStorageUtils.*;
 
 public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
     public PlaylistCacheDb(Context context) {
@@ -107,6 +110,7 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         for (MusicTrack track : tracks) {
             String trackId = track.y1();
             removeTrackFromPlaylist(playlistId, trackId);
+            removePlaylistThumb(playlistId);
 
             if (!isTrackInAnyOtherPlaylist(trackId, playlistId)) {
                 MusicCacheImpl.removeTrack(trackId);

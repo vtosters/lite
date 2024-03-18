@@ -3,6 +3,7 @@ package ru.vtosters.lite.music.downloader;
 import android.util.Log;
 
 import com.vk.dto.music.MusicTrack;
+import com.vk.dto.music.Playlist;
 import ru.vtosters.lite.music.interfaces.Callback;
 
 import java.io.File;
@@ -29,7 +30,7 @@ public class PlaylistDownloader {
                 .toArray(CompletableFuture[]::new));
     }
 
-    public static void cachePlaylist(List<MusicTrack> playlist, Callback callback, String playlistId) {
+    public static void cachePlaylist(List<MusicTrack> playlist, Callback callback, Playlist playlistId) {
         Callback delegate = new ProgressCallback(callback);
         CompletableFuture.allOf(playlist
                 .stream()

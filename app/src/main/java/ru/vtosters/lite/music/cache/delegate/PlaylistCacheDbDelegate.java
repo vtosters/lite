@@ -1,11 +1,15 @@
 package ru.vtosters.lite.music.cache.delegate;
 
 import android.content.Context;
+import android.net.Uri;
 import android.util.Log;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
+import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.db.PlaylistCacheDb;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
+import ru.vtosters.lite.utils.music.PlaylistUtils;
 
 import java.util.List;
 
@@ -18,8 +22,38 @@ public class PlaylistCacheDbDelegate {
 
     public static void addPlaylist(Context context, Playlist playlist) {
         try (var db = connectToDb(context)) {
-            db.addPlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, getThumb(playlist));
+            db.addPlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, generatePhotoJSON(playlist));
         }
+    }
+
+    public static JSONObject generatePhotoJSON(Playlist playlist) {
+        if (PlaylistUtils.getThumb(playlist) != null) {
+            JSONObject photo = new JSONObject();
+            String playlistId = playlist.v1();
+            try {
+                photo.put("height", 300);
+                photo.put("width", 300);
+
+                addPhotoSizeToJSON(photo, playlistId, 600, "photo_600");
+                addPhotoSizeToJSON(photo, playlistId, 34, "photo_34");
+                addPhotoSizeToJSON(photo, playlistId, 1200, "photo_1200");
+                addPhotoSizeToJSON(photo, playlistId, 68, "photo_68");
+                addPhotoSizeToJSON(photo, playlistId, 135, "photo_135");
+                addPhotoSizeToJSON(photo, playlistId, 300, "photo_300");
+                addPhotoSizeToJSON(photo, playlistId, 270, "photo_270");
+
+                return photo;
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            return null;
+        }
+    }
+
+    private static void addPhotoSizeToJSON(JSONObject photo, String playlistId, int size, String key) throws JSONException {
+        photo.put(key, Uri.fromFile(MusicCacheStorageUtils.getPlaylistThumb(playlistId, size)).toString());
+        Log.d("Playlist", "thumb link " + Uri.fromFile(MusicCacheStorageUtils.getPlaylistThumb(playlistId, size)).toString());
     }
 
     public static void deletePlaylist(Context context, String playlistId) {
@@ -80,15 +114,5 @@ public class PlaylistCacheDbDelegate {
 
     public static void drop(Context context) {
         context.deleteDatabase(PlaylistCacheDb.Constants.DB_NAME);
-    }
-
-    private static JSONObject getThumb(Playlist playlist) {
-        try {
-            Log.d("Playlist", "thumb is not null");
-            return playlist.F.J();
-        } catch (Exception e) {
-            Log.d("Playlist", "thumb is null");
-            return null;
-        }
     }
 }

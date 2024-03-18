@@ -2,6 +2,7 @@ package ru.vtosters.lite.music.downloader;
 
 import com.vk.dto.music.MusicTrack;
 
+import com.vk.dto.music.Playlist;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.interfaces.Callback;
@@ -17,7 +18,7 @@ public final class CachedDownloader implements ITrackDownloader {
     }
 
     @Override
-    public void download(MusicTrack track, Callback callback, String playlistId) {
+    public void download(MusicTrack track, Callback callback, Playlist playlist) {
         origin.download(track, new Callback() {
             @Override
             public void onProgress(int progress) {
@@ -26,7 +27,7 @@ public final class CachedDownloader implements ITrackDownloader {
 
             @Override
             public void onSuccess() {
-                new ThumbnailDownloader().download(track, new Callback() {
+                new ThumbnailTrackDownloader().download(track, new Callback() {
                     @Override public void onProgress(int progress) {
 
                     }
@@ -45,7 +46,7 @@ public final class CachedDownloader implements ITrackDownloader {
                     }
                 }, null);
 
-                PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), playlistId, track.y1());
+                PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), playlist.v1(), track.y1());
                 MusicCacheImpl.addTrack(track);
                 callback.onSuccess();
             }
@@ -59,6 +60,6 @@ public final class CachedDownloader implements ITrackDownloader {
             public void onSizeReceived(long size, long header) {
                 callback.onSizeReceived(size, header);
             }
-        }, playlistId);
+        }, playlist);
     }
 }

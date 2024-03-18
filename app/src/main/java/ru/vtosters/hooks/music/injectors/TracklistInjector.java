@@ -197,7 +197,7 @@ public class TracklistInjector {
         JSONArray newBlocks = new JSONArray();
 
         newBlocks
-                .put(PlaylistHelper.getCatalogHeader())
+                .put(PlaylistHelper.getCatalogHeader(AndroidUtils.getString(R.string.cached_tracks_title)))
                 .put(PlaylistHelper.getCatalogPlaylist())
                 .put(PlaylistHelper.getCatalogSeparator());
 
@@ -244,13 +244,16 @@ public class TracklistInjector {
         var blocks = new JSONArray();
 
         if (MusicCacheImpl.hasPlaylist()) {
-            blocks.put(getCatalogHeader())
-                    .put(getCatalogPlaylist())
-                    .put(getCatalogSeparator());
+            blocks.put(getCatalogHeader("Кешированные плейлисты"))
+                    .put(getCatalogPlaylist());
         }
 
-        blocks.put(getShuffleButton())
-                .put(audiosBlock);
+        if (!MusicCacheImpl.getAllOwnTracks().isEmpty()) {
+            if (MusicCacheImpl.hasPlaylist()) blocks.put(getCatalogSeparator());
+            blocks.put(getCatalogHeader(AndroidUtils.getString(R.string.cached_tracks_title)))
+                    .put(getShuffleButton())
+                    .put(audiosBlock);
+        }
 
         var randomId = getRandomId();
 

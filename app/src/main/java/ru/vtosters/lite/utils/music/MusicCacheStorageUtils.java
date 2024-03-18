@@ -32,6 +32,14 @@ public class MusicCacheStorageUtils {
         return new File(getThumbDirById(trackId), "thumb_" + factor + ".png");
     }
 
+    public static File getPlaylistThumb(String playlistId, int factor) {
+        return new File(getThumbDirById(playlistId), "thumb_playlist_" + factor + ".png");
+    }
+
+    public static void removePlaylistThumb(String playlistId) {
+        IOUtils.deleteRecursive(getThumbDirById(playlistId));
+    }
+
     public static void removeTrackDirById(String trackId) {
         IOUtils.deleteRecursive(getTrackDirById(trackId));
     }

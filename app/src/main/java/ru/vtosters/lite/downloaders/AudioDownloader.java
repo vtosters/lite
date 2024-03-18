@@ -9,20 +9,24 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
 
+import org.json.JSONObject;
 import ru.vtosters.hooks.music.MusicCacheFilesHook;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
+import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
 import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
 import ru.vtosters.lite.music.downloader.AudioGet;
 import ru.vtosters.lite.music.downloader.PlaylistDownloader;
+import ru.vtosters.lite.music.downloader.ThumbnailPlaylistDownloader;
 import ru.vtosters.lite.music.downloader.TrackDownloader;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.notification.MusicNotificationBuilder;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
+import ru.vtosters.lite.utils.music.PlaylistUtils;
 
 import java.io.File;
 import java.util.List;
@@ -84,14 +88,42 @@ public class AudioDownloader {
         int notificationId = playlist.g.hashCode();
         NotificationCompat.Builder notification = MusicNotificationBuilder.buildPlaylistDownloadNotification(playlist.g, notificationId);
 
-        PlaylistCacheDbDelegate.addPlaylist(AndroidUtils.getGlobalContext(), playlist);
+        JSONObject thumbs = PlaylistUtils.getThumb(playlist);
 
-        Log.d("Playlist", "adding to cache " + playlist.a);
+        if (thumbs != null) {
+            new ThumbnailPlaylistDownloader().download(null, new Callback() {
+                @Override
+                public void onProgress(int progress) {
+
+                }
+
+                @Override
+                public void onSuccess() {
+                    PlaylistCacheDbDelegate.addPlaylist(AndroidUtils.getGlobalContext(), playlist);
+
+                    Log.d("Playlist", "adding to cache with thumbs " + playlist.v1());
+                }
+
+                @Override
+                public void onFailure(Throwable e) {
+                    throw new RuntimeException(e);
+                }
+
+                @Override
+                public void onSizeReceived(long size, long header) {
+
+                }
+            }, playlist);
+        } else {
+            PlaylistCacheDbDelegate.addPlaylist(AndroidUtils.getGlobalContext(), playlist);
+
+            Log.d("Playlist", "adding to cache without thumbs " + playlist.a);
+        }
 
         PlaylistDownloader.cachePlaylist(
                 tracks,
                 MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId),
-                playlist.v1()
+                playlist
         );
     }
 
@@ -108,7 +140,7 @@ public class AudioDownloader {
         PlaylistDownloader.cachePlaylist(
                 tracks,
                 MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId),
-                AccountManagerUtils.getUserId() + "_-1"
+                PlaylistHelper.createCachedPlaylistMetadata()
         );
     }
 
@@ -147,7 +179,7 @@ public class AudioDownloader {
 
         Callback cb = MusicCallbackBuilder.buildOneTrackCallback(tempId, notification);
         if (cache) {
-            TrackDownloader.cacheTrack(track, cb, AccountManagerUtils.getUserId() + "_-1");
+            TrackDownloader.cacheTrack(track, cb, PlaylistHelper.createCachedPlaylistMetadata());
         } else {
             TrackDownloader.downloadTrack(track, downloadPath, cb);
         }

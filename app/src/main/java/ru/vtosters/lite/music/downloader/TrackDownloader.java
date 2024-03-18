@@ -7,6 +7,7 @@ import com.vk.dto.music.MusicTrack;
 import java.io.File;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+import com.vk.dto.music.Playlist;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.interfaces.Callback;
@@ -32,13 +33,13 @@ public final class TrackDownloader {
         VTExecutors.getMusicDownloadExecutor().submit(() -> new Mp3Downloader(outputFile).download(track, callback, null));
     }
 
-    public static void cacheTrack(MusicTrack track, Callback callback, String playlistId) {
+    public static void cacheTrack(MusicTrack track, Callback callback, Playlist playlist) {
         if (MusicCacheImpl.isCachedTrack(LibVKXClient.asId(track))) {
             return;
         }
 
         File outputFile = MusicCacheStorageUtils.getTrackFile(LibVKXClient.asId(track));
 
-        VTExecutors.getMusicDownloadExecutor().submit(() -> new CachedDownloader(new Mp3Downloader(outputFile)).download(track, callback, playlistId));
+        VTExecutors.getMusicDownloadExecutor().submit(() -> new CachedDownloader(new Mp3Downloader(outputFile)).download(track, callback, playlist));
     }
 }

@@ -11,7 +11,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -59,7 +58,7 @@ public class CatalogJsonInjector {
                     var newBlocks = new JSONArray();
 
                     newBlocks
-                            .put(getCatalogHeader())
+                            .put(getCatalogHeader("Кешированные плейлисты"))
                             .put(getCatalogPlaylist())
                             .put(getCatalogSeparator());
 
@@ -100,7 +99,7 @@ public class CatalogJsonInjector {
                 var newBlocks = new JSONArray();
 
                 newBlocks
-                        .put(getCatalogHeader())
+                        .put(getCatalogHeader("Кешированные плейлисты"))
                         .put(getCatalogPlaylist())
                         .put(getCatalogSeparator());
 
