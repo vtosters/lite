@@ -11,28 +11,36 @@ public class MusicCacheStorageUtils {
     }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
-    public static File getTrackDirById(final String trackId) {
-        final var res = new File(getCacheStorageDir(), trackId);
+    public static File getTrackDirById(String trackId) {
+        File res = new File(getCacheStorageDir(), trackId);
         res.mkdirs();
         return res;
     }
 
-    public static File getTrackFile(final String trackId) {
+    public static File getTrackFile(String trackId) {
         return new File(getTrackDirById(trackId), "track.mp3");
     }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
-    public static File getThumbDirById(final String trackId) {
-        final var res = new File(getTrackDirById(trackId), "thumbs");
+    public static File getThumbDirById(String trackId) {
+        File res = new File(getTrackDirById(trackId), "thumbs");
         res.mkdirs();
         return res;
     }
 
-    public static File getTrackThumb(final String trackId, final int factor) {
+    public static File getTrackThumb(String trackId, int factor) {
         return new File(getThumbDirById(trackId), "thumb_" + factor + ".png");
     }
 
-    public static void removeTrackDirById(final String trackId) {
+    public static File getPlaylistThumb(String playlistId, int factor) {
+        return new File(getThumbDirById(playlistId), "thumb_playlist_" + factor + ".png");
+    }
+
+    public static void removePlaylistThumb(String playlistId) {
+        IOUtils.deleteRecursive(getThumbDirById(playlistId));
+    }
+
+    public static void removeTrackDirById(String trackId) {
         IOUtils.deleteRecursive(getTrackDirById(trackId));
     }
 

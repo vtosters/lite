@@ -11,6 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -51,19 +52,13 @@ public class CatalogJsonInjector {
             if (!MusicCacheImpl.isEmpty() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
                 var noPlaylists = !json.has("playlists");
 
-                if (noPlaylists) {
-                    json.put("playlists", new JSONArray().put(getPlaylist()));
-                    Log.d("catalogInjector", "added new pl");
-                } else {
-                    json.optJSONArray("playlists").put(getPlaylist());
-                    Log.d("catalogInjector", "added to exist pl");
-                }
+                PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"), noPlaylists);
 
                 if (!useOldAppVer || noPlaylists) {
                     var newBlocks = new JSONArray();
 
                     newBlocks
-                            .put(getCatalogHeader())
+                            .put(getCatalogHeader("Кешированные плейлисты"))
                             .put(getCatalogPlaylist())
                             .put(getCatalogSeparator());
 
@@ -98,23 +93,13 @@ public class CatalogJsonInjector {
 
             var noPlaylists = !json.has("playlists");
 
-            if (noPlaylists) {
-                json.put("playlists", new JSONArray().put(getPlaylist()));
-                Log.d("catalogInjector", "added new pl");
-            } else {
-                try {
-                    json.optJSONArray("playlists").put(getPlaylist());
-                    Log.d("catalogInjector", "added to exist pl");
-                } catch (Exception e) {
-                    Log.d("catalogInjector", e.toString());
-                }
-            }
+            PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"), noPlaylists);
 
             if (!useOldAppVer && !noPlaylists) {
                 var newBlocks = new JSONArray();
 
                 newBlocks
-                        .put(getCatalogHeader())
+                        .put(getCatalogHeader("Кешированные плейлисты"))
                         .put(getCatalogPlaylist())
                         .put(getCatalogSeparator());
 
@@ -132,12 +117,15 @@ public class CatalogJsonInjector {
 
                     if (type.equals("music_playlists") && j.has("playlists_ids")) {
                         var newarr = new JSONArray();
-                        var playlists_ids = j.optJSONArray("playlists_ids");
+                        var playlists_ids = j.getJSONArray("playlists_ids");
+                        var savedPlaylists = PlaylistHelper.getCachedPlaylistsIds();
 
-                        newarr.put(getUserId() + "_-1");
+                        for (int n = 0; n < savedPlaylists.length(); n++) {
+                            newarr.put(savedPlaylists.getString(n));
+                        }
 
                         for (int n = 0; n < playlists_ids.length(); n++) {
-                            newarr.put(playlists_ids.optString(n));
+                            newarr.put(playlists_ids.getString(n));
                         }
 
                         Log.d("catalogInjector", "added to pl ids");
@@ -220,26 +208,32 @@ public class CatalogJsonInjector {
     }
 
     private static void removeUnsupportedLayouts(JSONArray blocks) throws JSONException {
-        for (int i = 0; i < blocks.length(); i++) {
-            var block = blocks.optJSONObject(i);
-            var layout = block.optJSONObject("layout");
-            var data_type = block.optString("data_type");
+        for (int i = blocks.length() - 1; i >= 0; i--) {
+            JSONObject block = blocks.optJSONObject(i);
+            JSONObject layout = block.optJSONObject("layout");
+            String data_type = block.optString("data_type");
 
-            if (Objects.equals(data_type, "music_recommended_playlists")) {
+            if (Objects.equals(data_type, "music_recommended_playlists") || Objects.equals(data_type, "radiostations")) {
+                blocks.remove(i); // block
+                if (i - 1 >= 0) blocks.remove(i - 1); // text
+                if (i - 2 >= 0) blocks.remove(i - 2); // divider
+                continue; // Skip to the next iteration after removing
+            }
+
+            if (layout == null) continue; // Skip to the next iteration if layout is null
+
+            String name = layout.optString("name");
+            if (!name.equals("header_extended")) {
+                continue; // Skip to the next iteration if not header_extended
+            }
+
+            if (layout.has("top_title")) {
                 blocks.remove(i);
-                blocks.remove(i - 1);
-                blocks.remove(i - 2);
             }
-
-            if (layout != null) {
-                var name = layout.optString("name");
-                if (name.equals("header_extended")) {
-                    if (layout.has("top_title")) blocks.remove(i);
-                    layout.put("name", "header");
-                }
-            }
+            layout.put("name", "header");
         }
     }
+
 
     private static void setDefaultAudioPage(JSONArray jsonArray, JSONObject catalog) throws JSONException {
         for (int i = 0; i < jsonArray.length(); i++) {
@@ -273,7 +267,9 @@ public class CatalogJsonInjector {
                         + "&access_token="
                         + AccountManagerUtils.getUserToken())
                 .a("Accept-Encoding", "gzip")
-                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
+                .a("User-Agent", Network.l.c().a())
+                .a("Content-Type", "application/x-www-form-urlencoded; charset=utf-8")
+                .a();
         try (Response resp = Network.b(CLIENT_API).a(request).execute()) {
             var json = new JSONObject(GzipDecompressor.decompressResponse(resp)).getJSONObject("response");
             var catalogarr = json.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);

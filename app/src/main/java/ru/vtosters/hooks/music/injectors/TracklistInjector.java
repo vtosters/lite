@@ -12,6 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -21,6 +22,8 @@ import ru.vtosters.lite.utils.NetworkUtils;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 
 public class TracklistInjector {
 
@@ -59,7 +62,9 @@ public class TracklistInjector {
                 if (MusicCacheImpl.isEmpty()) {
                     observableEmitter.b(parser.c(getEmptyCatalog()));
                 } else {
-                    observableEmitter.b(parser.c(createVirtualCatalog(TracklistHelper.getTracks())));
+                    observableEmitter.b(parser.c(createVirtualCatalog(
+                            PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(),
+                            AccountManagerUtils.getUserId() + "_-1"))));
                 }
             }
         });
@@ -162,16 +167,12 @@ public class TracklistInjector {
                 boolean noPlaylists = hasNoPlaylists(blocks);
 
                 if (noPlaylists) {
-                    catalogNode.put("playlists", new JSONArray().put(PlaylistHelper.getPlaylist()));
+                    PlaylistHelper.addCachedPlaylists(catalogNode.optJSONArray("playlists"), true);
 
-                    JSONArray newBlocks = createNewBlocks(blocks);
-
-                    Log.d("catalogInjector", "added cache catalog playlist");
-
-                    firstSection.put("blocks", newBlocks);
+                    firstSection.put("blocks", createNewBlocks(blocks));
                 } else {
                     try {
-                        catalogNode.optJSONArray("playlists").put(PlaylistHelper.getPlaylist());
+                        PlaylistHelper.addCachedPlaylists(catalogNode.optJSONArray("playlists"), false);
 
                         updatePlaylistsIds(blocks);
                     } catch (Exception e) {
@@ -188,7 +189,7 @@ public class TracklistInjector {
         return firstSection.getString("url").equals("https://vk.com/audios" + AccountManagerUtils.getUserId() + "?section=all");
     }
 
-    private static boolean hasNoPlaylists(JSONArray blocks) throws JSONException {
+    private static boolean hasNoPlaylists(JSONArray blocks) {
         return blocks.optJSONObject(0).optJSONArray("buttons").optJSONObject(0).optJSONObject("action").optString("type").equals("create_playlist");
     }
 
@@ -196,13 +197,14 @@ public class TracklistInjector {
         JSONArray newBlocks = new JSONArray();
 
         newBlocks
-                .put(PlaylistHelper.getCatalogHeader())
+                .put(PlaylistHelper.getCatalogHeader(AndroidUtils.getString(R.string.cached_tracks_title)))
                 .put(PlaylistHelper.getCatalogPlaylist())
                 .put(PlaylistHelper.getCatalogSeparator());
 
         for (int i = 0; i < blocks.length(); i++) {
             newBlocks.put(blocks.optJSONObject(i));
         }
+
         return newBlocks;
     }
 
@@ -212,16 +214,15 @@ public class TracklistInjector {
             String type = j.optString("data_type");
 
             if (type.equals("music_playlists") && j.has("playlists_ids")) {
-                JSONArray newarr = new JSONArray();
+                JSONArray newarr = PlaylistHelper.getCachedPlaylistsIds();
                 JSONArray playlists_ids = j.optJSONArray("playlists_ids");
-
-                newarr.put(AccountManagerUtils.getUserId() + "_-1");
 
                 for (int n = 0; n < playlists_ids.length(); n++) {
                     newarr.put(playlists_ids.optString(n));
                 }
 
                 j.put("playlists_ids", newarr);
+
                 break;
             }
         }
@@ -240,7 +241,19 @@ public class TracklistInjector {
 
         audiosBlock.put("layout", layout);
 
-        var blocks = new JSONArray().put(getShuffleButton()).put(audiosBlock);
+        var blocks = new JSONArray();
+
+        if (MusicCacheImpl.hasPlaylist()) {
+            blocks.put(getCatalogHeader("Кешированные плейлисты"))
+                    .put(getCatalogPlaylist());
+        }
+
+        if (!MusicCacheImpl.getAllOwnTracks().isEmpty()) {
+            if (MusicCacheImpl.hasPlaylist()) blocks.put(getCatalogSeparator());
+            blocks.put(getCatalogHeader(AndroidUtils.getString(R.string.cached_tracks_title)))
+                    .put(getShuffleButton())
+                    .put(audiosBlock);
+        }
 
         var randomId = getRandomId();
 
@@ -259,6 +272,7 @@ public class TracklistInjector {
 
         return new JSONObject()
                 .put("catalog", catalog)
+                .put("playlists", addCachedPlaylists(new JSONArray(), false))
                 .put("audios", TracklistHelper.tracksToJsons(tracks));
     }
 

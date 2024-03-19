@@ -20,6 +20,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
+import com.vk.dto.music.Playlist;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.converter.ts.MpegDemuxer;
 import ru.vtosters.lite.music.interfaces.Callback;
@@ -34,7 +35,7 @@ public final class Mp3Downloader implements ITrackDownloader {
     }
 
     @Override
-    public void download(MusicTrack track, Callback callback) {
+    public void download(MusicTrack track, Callback callback, Playlist playlist) {
         String uri = track.D;
         if (Objects.requireNonNull(uri).isEmpty()) {
             String msg = "link error: " + track.y1() + ", title: " + Mp3Downloader.getTitle(track);

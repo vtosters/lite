@@ -47,8 +47,9 @@ public class AudioGet {
         var request = new Request.a()
                 .b(requestUrl)
                 .a("Accept-Encoding", "gzip")
-                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
-
+                .a("User-Agent", Network.l.c().a())
+                .a("Content-Type", "application/x-www-form-urlencoded; charset=utf-8")
+                .a();
         try {
             var response = CompletableFuture.supplyAsync(() -> {
                         try (Response resp = Network.b(CLIENT_API).a(request).execute()) {

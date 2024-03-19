@@ -1,96 +1,82 @@
 package ru.vtosters.lite.music.cache.helpers;
 
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
-
-import android.net.Uri;
-
+import android.util.Log;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
-import ru.vtosters.lite.utils.music.MusicTrackUtils;
+import ru.vtosters.lite.utils.NetworkUtils;
+import ru.vtosters.lite.utils.music.PlaylistUtils;
 
 public class PlaylistHelper {
 
     public static Playlist createCachedPlaylistMetadata() {
         try {
-            return new Playlist(getPlaylist());
+            return new Playlist(getCachedSongsPlaylist());
         } catch (JSONException e) {
-            e.printStackTrace();
             return null;
         }
     }
 
-    public static Playlist createCachedPlaylistMetadata(String id) {
-        var track = TracklistHelper.getTracksOne(id).get(0);
-        var albumLink = track.I;
-        var thumb = albumLink.u1();
-        return createAlbum(
-                thumb != null ? thumb.h(600) : "",
-                albumLink.getTitle(),
-                MusicTrackUtils.getArtists(track),
-                track.y1(),
-                albumLink.getId()
-        );
-    }
-
-    public static Playlist createAlbum(String photo, String title, String artist, String trackId, int albumId) {
+    public static JSONArray addCachedPlaylists(JSONArray jsonArray, Boolean noPlaylists) {
         try {
-            var jPhoto = new JSONObject();
-            if (!photo.isEmpty())
-                jPhoto.put("height", 600)
-                        .put("width", 600)
-                        .putOpt("photo_300", Uri.fromFile(MusicCacheStorageUtils.getTrackThumb(trackId, 300)).toString())
-                        .putOpt("photo_600", Uri.fromFile(MusicCacheStorageUtils.getTrackThumb(trackId, 600)).toString());
-            var obj = new JSONObject()
-                    .put("id", -2)
-                    .put("owner_id", albumId)
-                    .put("type", 1)
-                    .put("album_type", "main_only")
-                    .put("title", title)
-                    .put("description", albumId + "/ " + AndroidUtils.getString(R.string.cached_album_warning))
-                    .put("main_artists", new JSONArray()
-                            .put(new JSONObject().put("name", artist)
-                                    .put("id", "-1")
-                                    .put("domain", "-1")))
-                    .putOpt("photo", jPhoto)
-                    .put("count", 0);
-            return new Playlist(obj);
+            if (noPlaylists) {
+                jsonArray.put(new JSONArray().put(getCachedSongsPlaylist()));
+            } else {
+                jsonArray.put(getCachedSongsPlaylist());
+            }
+
+            for (Playlist playlist : MusicCacheImpl.getPlaylists()) {
+                if (noPlaylists) {
+                    jsonArray.put(new JSONArray().put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, PlaylistUtils.getThumb(playlist), playlist.O)));
+                } else {
+                    jsonArray.put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, PlaylistUtils.getThumb(playlist), playlist.O));
+                }
+
+                Log.d("PlaylistHelper", "Playlist cache added: " + playlist.a + " " + playlist.b + " " + playlist.C + " " + playlist.g + " " + playlist.B);
+            }
         } catch (JSONException e) {
-            e.printStackTrace();
-            return null;
+            e.fillInStackTrace();
         }
+        return jsonArray;
     }
 
-    public static List<Playlist> getAlbumPlaylists() {
-        List<Playlist> list = new ArrayList<>();
-        for (var track : MusicCacheImpl.getPlaylist()) {
-            var albumLink = track.I;
-            var thumb = albumLink.u1();
-            list.add(createAlbum(
-                    thumb != null ? thumb.h(600) : "",
-                    albumLink.getTitle(),
-                    MusicTrackUtils.getArtists(track),
-                    track.y1(),
-                    albumLink.getId()
-            ));
+    public static JSONObject generatePlaylist(int id, int owner_id, boolean is_explicit, String title, String description, JSONObject photo, int count) throws JSONException {
+        JSONObject playlist = new JSONObject()
+                .put("id", id)
+                .put("owner_id", owner_id)
+                .put("type", 0)
+                .put("album_type", "playlist")
+                .put("is_explicit", is_explicit)
+                .put("title", title)
+                .put("description", description)
+                .put("access_key", "cache")
+                .put("genres", new JSONArray())
+                .put("is_following", false)
+                .put("followers", 0)
+                .put("plays", 0)
+                .put("create_time", 0)
+                .put("update_time", 0)
+                .put("subtitle", "")
+                .put("meta", new JSONObject()
+                        .put("view", "compact"))
+                .put("count", count);
+
+        if (photo != null) {
+            playlist.put("photo", photo);
         }
-        return list;
+
+        return playlist;
     }
 
-    public static JSONObject getPlaylist() throws JSONException {
+    public static JSONObject getCachedSongsPlaylist() throws JSONException {
         return new JSONObject()
                 .put("id", -1)
-                .put("owner_id", getUserId())
+                .put("owner_id", AccountManagerUtils.getUserId())
                 .put("type", 0)
                 .put("album_type", "playlist")
                 .put("title", AndroidUtils.getString(R.string.cached_tracks_title))
@@ -115,7 +101,21 @@ public class PlaylistHelper {
                         .put("height", 600))
                 .put("meta", new JSONObject()
                         .put("view", "compact"))
-                .put("count", 0);
+                .put("count", MusicCacheImpl.getAllOwnTracks().size());
+    }
+
+    public static JSONArray getCachedPlaylistsIds() {
+        JSONArray arr = new JSONArray();
+
+        if (NetworkUtils.isNetworkConnected() && !MusicCacheImpl.getAllOwnTracks().isEmpty()) {
+            arr.put(AccountManagerUtils.getUserId() + "_-1");
+        }
+
+        for (var playlist : MusicCacheImpl.getPlaylists()) {
+            arr.put(playlist.v1());
+        }
+
+        return arr;
     }
 
     public static JSONObject getCatalogPlaylist() throws JSONException {
@@ -125,18 +125,17 @@ public class PlaylistHelper {
                 .put("layout", new JSONObject()
                         .put("name", "large_slider")
                         .put("is_editable", 0)
-                        .put("owner_id", getUserId()))
-                .put("playlists_ids", new JSONArray()
-                        .put(getUserId() + "_-1"));
+                        .put("owner_id", AccountManagerUtils.getUserId()))
+                .put("playlists_ids", getCachedPlaylistsIds());
     }
 
-    public static JSONObject getCatalogHeader() throws JSONException {
+    public static JSONObject getCatalogHeader(String text) throws JSONException {
         return new JSONObject()
                 .put("id", "cache")
                 .put("data_type", "none")
                 .put("layout", new JSONObject()
                         .put("name", "header")
-                        .put("title", AndroidUtils.getString(R.string.cached_tracks_title)));
+                        .put("title", text));
     }
 
     public static JSONObject getCatalogSeparator() throws JSONException {

@@ -1,4 +1,4 @@
-package ru.vtosters.lite.music.cache;
+package ru.vtosters.lite.music.cache.delegate;
 
 import android.content.Context;
 
@@ -43,27 +43,9 @@ public class MusicCacheDbDelegate {
         }
     }
 
-    public static List<MusicTrack> getAllTracks(Context context) {
+    public static MusicTrack getTrackById(Context context, String trackId) {
         try (var db = connectToDb(context)) {
-            return db.getAllTracks();
-        }
-    }
-
-    public static List<MusicTrack> getAlbumById(Context context, String albumId) {
-        try (var db = connectToDb(context)) {
-            return db.getAlbum(albumId);
-        }
-    }
-
-    public static List<MusicTrack> getFirstAlbumTrack(Context context, String albumId) {
-        try (var db = connectToDb(context)) {
-            return db.getFirstAlbumTrack(albumId);
-        }
-    }
-
-    public static List<MusicTrack> getPlaylist(Context context) {
-        try (var db = connectToDb(context)) {
-            return db.getPlaylist();
+            return db.getTrackById(trackId);
         }
     }
 
