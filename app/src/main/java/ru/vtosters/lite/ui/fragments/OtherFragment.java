@@ -92,8 +92,8 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("batchmessages").setOnPreferenceClickListener(preference -> {
-            LifecycleUtils.restartApplication();
+        findPreference("batchmessages").setOnPreferenceChangeListener((preference, o) -> {
+            LifecycleUtils.restartApplicationWithTimer();
             return true;
         });
 
