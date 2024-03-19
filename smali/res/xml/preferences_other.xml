@@ -8,6 +8,11 @@
         <Preference
                 android:key="microgsettings"
                 android:title="@string/microgsett"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="batchmessages"
+                android:summary="Поможет исправить показ онлайна в чатах, но возможны проблемы с загрузкой сообщений в целом"
+                android:title="Альтернативная загрузка сообщений"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference

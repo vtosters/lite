@@ -92,6 +92,11 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("batchmessages").setOnPreferenceClickListener(preference -> {
+            LifecycleUtils.restartApplication();
+            return true;
+        });
+
         findPreference("copyownlink").setOnPreferenceClickListener(preference -> {
             copyText("https://vk.com/id" + AccountManagerUtils.getUserId());
             ToastUtils.a(requireContext().getString(R.string.link_copied));
