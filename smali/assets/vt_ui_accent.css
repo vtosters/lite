@@ -75,6 +75,7 @@
     --header_tint: %header_text% !important;
     --header_tint_alternate: %header_text% !important;
     --vkui--color_icon_accent_themed: %header_text% !important;
+    --vkui--color_text_accent_themed: %header_text% !important;
 }
 
 
@@ -139,6 +140,7 @@
     --header_tint: %header_text% !important;
     --header_tint_alternate: %header_text% !important;
     --vkui--color_icon_accent_themed: %header_text% !important;
+    --vkui--color_text_accent_themed: %header_text% !important;
     --color_field_border: %field_border% !important;
     --vkui--color_field_border: %field_border% !important;
     --color_field_background: %field_background% !important;
