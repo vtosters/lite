@@ -1196,7 +1196,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->theme:Lcom/vk/im/engine/models/dialogs/DialogTheme;
+    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getDialogTheme()Lcom/vk/im/engine/models/dialogs/DialogTheme;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -9,7 +9,6 @@ import static ru.vtosters.hooks.other.ThemesUtils.*;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class WebViewColoringUtils {
-    public static boolean isLoaded = false;
     public static String loadedCSS = "";
     public static String loadedCSSAmoled = "";
 
@@ -53,7 +52,6 @@ public class WebViewColoringUtils {
     public static void load() {
         loadedCSS = readCSS("vt_ui_accent.css");
         loadedCSSAmoled = readCSS("vt_ui_oled.css");
-        isLoaded = true;
     }
 
     public static void inject(WebView webView, String str) {

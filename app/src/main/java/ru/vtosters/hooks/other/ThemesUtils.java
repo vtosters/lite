@@ -24,6 +24,8 @@ import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.ui.themes.MilkshakeHelper;
 import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
+import com.vk.im.engine.models.dialogs.DialogTheme;
+import com.vk.im.ui.themes.DefaultThemeProvider;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
@@ -31,9 +33,7 @@ import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.WebViewColoringUtils;
 
 import java.lang.reflect.Field;
 
@@ -45,7 +45,7 @@ public class ThemesUtils {
         try {
             setTheme(theme, LifecycleUtils.getCurrentActivity(), restartActivity);
         } catch (Exception e) {
-            e.printStackTrace();
+            e.fillInStackTrace();
         }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
@@ -62,12 +62,25 @@ public class ThemesUtils {
             activity = LifecycleUtils.getCurrentActivity();
         }
         VKThemeHelper.theme(theme, activity, fl);
-        if (isMonetTheme() || ThemesManager.canApplyCustomAccent()) ThemesCore.clear();
-        if (restartActivity) activity.recreate();
+        if (isMonetTheme() || ThemesManager.canApplyCustomAccent()) {
+            ThemesCore.clear();
+            ThemesCore.init();
+            DialogTheme.d.a(new DefaultThemeProvider(VKThemeHelper.k).b()); // reset dialog attrs cache
+        }
         ThemeTracker.a();
-        WebViewColoringUtils.isLoaded = false;
+        if (restartActivity) {
+            activity.recreate();
+        }
         new WebView(activity).clearCache(true);
         WebCachePreloader.e();
+    }
+
+    public static DialogTheme getDialogTheme() {
+        if (isMonetTheme()) {
+            return new DefaultThemeProvider(VKThemeHelper.k).b(); // get directly from theme cuz monet issue
+        } else {
+            return DialogTheme.d.a(); // get cached theme
+        }
     }
 
     public static boolean isDarkTheme() {
