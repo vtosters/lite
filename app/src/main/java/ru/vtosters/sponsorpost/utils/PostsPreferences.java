@@ -3,6 +3,7 @@ package ru.vtosters.sponsorpost.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.sponsorpost.data.Post;
 
@@ -23,7 +24,7 @@ public class PostsPreferences {
     }
 
     public static boolean isEnabled() {
-        return preferences.getBoolean("sponsorpost", true);
+        return preferences.getBoolean("sponsorpost", true) && !Preferences.serverFeaturesDisable();
     }
 
     public static void setEnabled(boolean status) {

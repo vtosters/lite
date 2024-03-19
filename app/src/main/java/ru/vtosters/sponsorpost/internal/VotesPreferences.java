@@ -3,6 +3,7 @@ package ru.vtosters.sponsorpost.internal;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.HashSet;
@@ -22,7 +23,7 @@ public class VotesPreferences {
     }
 
     public static boolean isEnabled() {
-        return preferences.getBoolean("sponsortesting", false);
+        return preferences.getBoolean("sponsortesting", false) && !Preferences.serverFeaturesDisable();
     }
 
     public static void setEnabled(boolean status) {

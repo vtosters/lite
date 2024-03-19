@@ -66,7 +66,8 @@ public class MainActivityInjector {
         // VKIDProtection.alert(activity);
         //needs to show selected tgs pack count in settings after cold launch
         TelegramStickersService.getInstance(activity);
-        if (AccountManagerUtils.isLogin()) {
+
+        if (AccountManagerUtils.isLogin() && !Preferences.serverFeaturesDisable() && Preferences.isValidSignature()) {
             Native.canVote = NativeLibLoader.loadLibrary("sponsorpost");
         }
     }
@@ -82,7 +83,7 @@ public class MainActivityInjector {
                 ThemesManager.generateModApk(ThemesUtils.getReservedAccent());
                 activity.runOnUiThread(LifecycleUtils::restartApplication);
             } catch (Throwable e) {
-                e.printStackTrace();
+                e.fillInStackTrace();
                 activity.runOnUiThread(() -> {
                     dialog.cancel();
                     new VkAlertDialog.Builder(activity)
