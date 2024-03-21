@@ -9,24 +9,24 @@ import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
 
 public class OnlineBypass {
     public static JSONObject setOnlineInfo(JSONObject json) throws JSONException {
-        var id = json.optInt("id");
+        int id = json.optInt("id");
         if (id == AccountManagerUtils.getUserId()) {
             return json;
         }
-        var onlineinfo = json.optJSONObject("online_info");
+        JSONObject onlineinfo = json.optJSONObject("online_info");
         if (onlineinfo != null && !onlineinfo.optBoolean("visible") && !Preferences.serverFeaturesDisable()) {
             var bypassed = getBypassedOnlineInfo(id);
             if (bypassed.optInt("last_seen", 0) != 0) {
                 json.remove("online_info");
 
-                var online_info = new JSONObject()
+                JSONObject online_info = new JSONObject()
                         .put("visible", true)
                         .put("last_seen", bypassed.optInt("last_seen"))
                         .put("is_online", bypassed.optBoolean("is_online"))
                         .put("app_id", bypassed.optInt("app_id"))
                         .put("is_mobile", bypassed.optBoolean("is_mobile"));
 
-                var last_seen = new JSONObject()
+                JSONObject last_seen = new JSONObject()
                         .put("platform", bypassed.optInt("platform"))
                         .put("time", bypassed.optInt("last_seen"));
 

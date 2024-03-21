@@ -60,6 +60,10 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Lru/vtosters/hooks/OnlineFormatterHook;->onlineHookProfiles(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object p1
+    
     const-string v0, "JSONObject(response).getJSONObject(\"response\")"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
@@ -75,6 +79,10 @@
     .locals 24
 
     move-object/from16 v0, p1
+
+    invoke-static {v0}, Lru/vtosters/hooks/OnlineFormatterHook;->onlineHookProfiles(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object v0
 
     .line 3
     new-instance v1, Lcom/vk/im/engine/models/ProfilesSimpleInfo;
