@@ -164,6 +164,10 @@
 
     invoke-static {v0}, Lru/vtosters/hooks/RenameHook;->injectIntoJson(Lorg/json/JSONObject;)V
 
+    invoke-static {v0}, Lru/vtosters/hooks/OnlineFormatterHook;->onlineHook(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
     const-string v2, ""
 
     .line 1
