@@ -9,24 +9,24 @@ import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
 
 public class OnlineBypass {
     public static JSONObject setOnlineInfo(JSONObject json) throws JSONException {
-        var id = json.optInt("id");
+        int id = json.optInt("id");
         if (id == AccountManagerUtils.getUserId()) {
             return json;
         }
-        var onlineinfo = json.optJSONObject("online_info");
+        JSONObject onlineinfo = json.optJSONObject("online_info");
         if (onlineinfo != null && !onlineinfo.optBoolean("visible") && !Preferences.serverFeaturesDisable()) {
             var bypassed = getBypassedOnlineInfo(id);
             if (bypassed.optInt("last_seen", 0) != 0) {
                 json.remove("online_info");
 
-                var online_info = new JSONObject()
+                JSONObject online_info = new JSONObject()
                         .put("visible", true)
                         .put("last_seen", bypassed.optInt("last_seen"))
                         .put("is_online", bypassed.optBoolean("is_online"))
                         .put("app_id", bypassed.optInt("app_id"))
                         .put("is_mobile", bypassed.optBoolean("is_mobile"));
 
-                var last_seen = new JSONObject()
+                JSONObject last_seen = new JSONObject()
                         .put("platform", bypassed.optInt("platform"))
                         .put("time", bypassed.optInt("last_seen"));
 
@@ -37,51 +37,95 @@ public class OnlineBypass {
         return json;
     }
 
-    public static JSONArray setOnlineInfoUsers(JSONArray profiles) throws JSONException {
-        if (profiles == null || profiles.length() == 0 || Preferences.serverFeaturesDisable()) return profiles;
+    public static JSONArray setOnlineInfoUsers(JSONArray profiles) {
+        if (shouldReturnProfiles(profiles)) return profiles;
+
         StringBuilder sb = new StringBuilder();
-        var curVkId = AccountManagerUtils.getUserId();
+        int curVkId = AccountManagerUtils.getUserId();
+
         for (int i = 0; i < profiles.length(); i++) {
-            JSONObject profile = profiles.getJSONObject(i);
+            JSONObject profile = getProfile(profiles, i);
             int id = profile.optInt("id", -1);
             JSONObject onlinfo = profile.optJSONObject("online_info");
-            if (id == curVkId || id < 0 || onlinfo == null || onlinfo.optBoolean("visible")) {
-                continue;
-            }
-            sb.append(id);
-            sb.append(",");
+
+            if (shouldSkipProfile(id, curVkId, onlinfo)) continue;
+
+            sb.append(id).append(",");
         }
-        var ids = sb.toString();
-        if (!ids.isEmpty()) {
-            ids = ids.substring(0, ids.length() - 1);
-        } else {
-            return profiles;
-        }
+
+        String ids = prepareIds(sb);
+        if (ids.isEmpty()) return profiles;
 
         JSONObject bypassedObj = getBypassedOnlineInfo(ids);
         for (int i = 0; i < profiles.length(); i++) {
-            JSONObject profile = profiles.getJSONObject(i);
+            JSONObject profile = getProfile(profiles, i);
             int id = profile.optInt("id");
             JSONObject bypassed = bypassedObj.optJSONObject(Integer.toString(id));
-            if (bypassed == null) {
-                continue;
-            }
-            profile.remove("online_info");
 
-            var online_info = new JSONObject()
+            if (bypassed == null) continue;
+
+            JSONObject online_info = createOnlineInfo(bypassed);
+            JSONObject last_seen = createLastSeen(bypassed);
+
+            updateProfile(profile, online_info, last_seen);
+        }
+
+        return profiles;
+    }
+
+    private static boolean shouldReturnProfiles(JSONArray profiles) {
+        return profiles == null || profiles.length() == 0 || Preferences.serverFeaturesDisable();
+    }
+
+    private static JSONObject getProfile(JSONArray profiles, int i) {
+        try {
+            return profiles.getJSONObject(i);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static boolean shouldSkipProfile(int id, int curVkId, JSONObject onlinfo) {
+        return id == curVkId || id < 0 || onlinfo == null || onlinfo.optBoolean("visible");
+    }
+
+    private static String prepareIds(StringBuilder sb) {
+        String ids = sb.toString();
+        if (!ids.isEmpty()) {
+            ids = ids.substring(0, ids.length() - 1);
+        }
+        return ids;
+    }
+
+    private static JSONObject createOnlineInfo(JSONObject bypassed) {
+        try {
+            return new JSONObject()
                     .put("visible", true)
                     .put("last_seen", bypassed.optInt("last_seen"))
                     .put("is_online", bypassed.optBoolean("is_online"))
                     .put("app_id", bypassed.optInt("app_id"))
                     .put("is_mobile", bypassed.optBoolean("is_mobile"));
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-            var last_seen = new JSONObject()
+    private static JSONObject createLastSeen(JSONObject bypassed) {
+        try {
+            return new JSONObject()
                     .put("platform", bypassed.optInt("platform"))
                     .put("time", bypassed.optInt("last_seen"));
-
-            profile.put("last_seen", last_seen).put("online_info", online_info);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
         }
+    }
 
-        return profiles;
+    private static void updateProfile(JSONObject profile, JSONObject online_info, JSONObject last_seen) {
+        try {
+            profile.remove("online_info");
+            profile.put("last_seen", last_seen).put("online_info", online_info);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -1,7 +1,10 @@
 package ru.vtosters.hooks;
 
 import android.util.Log;
+import android.util.SparseArray;
 import com.vk.core.network.Network;
+import com.vk.im.engine.internal.api_parsers.UserApiParser;
+import com.vk.im.engine.models.users.User;
 import com.vtosters.lite.R;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -10,8 +13,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.proxy.ProxyUtils;
-import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
@@ -146,16 +147,36 @@ public class OnlineFormatterHook {
         return json;
     }
 
-    public static JSONArray onlineHookList(JSONArray jsonArr) {
-        if (!getBoolValue("onlinefix", false) || Preferences.serverFeaturesDisable()) return jsonArr;
-
+    public static SparseArray<User> onlineHookList(String str) {
+        JSONArray jSONArray;
         try {
-            JsonInjectors.setOnlineInfoUsers(jsonArr);
-        } catch (Exception e) {
-            Log.e("onlineHookProfiles", e.getMessage());
+            jSONArray = new JSONObject(str).getJSONArray("response");
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+        SparseArray<User> sparseArray = new SparseArray<>(jSONArray.length());
+        int length = jSONArray.length();
+
+        if (getBoolValue("onlinefix", false) || !Preferences.serverFeaturesDisable()) {
+            try {
+                jSONArray = JsonInjectors.setOnlineInfoUsers(jSONArray);
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
         }
 
-        return jsonArr;
+        for (int i = 0; i < length; i++) {
+            JSONObject jSONObject;
+            try {
+                jSONObject = jSONArray.getJSONObject(i);
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+            User b = UserApiParser.b(jSONObject);
+            sparseArray.put(b.getId(), b);
+        }
+
+        return sparseArray;
     }
 
     public static JSONObject onlineHookProfiles(JSONObject json) {
@@ -188,19 +209,19 @@ public class OnlineFormatterHook {
         try {
             JsonInjectors.setOnlineInfoUsers(json.optJSONObject("read_requests").optJSONArray("items"));
         } catch (Exception e) {
-            Log.e("onlineHookItems", e.getMessage());
+            Log.e("onlineHookItemsRec", e.getMessage());
         }
 
         try {
             JsonInjectors.setOnlineInfoUsers(json.optJSONObject("recommendations").optJSONArray("items"));
         } catch (Exception e) {
-            Log.e("onlineHookItems", e.getMessage());
+            Log.e("onlineHookItemsRec", e.getMessage());
         }
 
         try {
             JsonInjectors.setOnlineInfoUsers(json.optJSONArray("profiles"));
         } catch (Exception e) {
-            Log.e("onlineHookItems", e.getMessage());
+            Log.e("onlineHookItemsRec", e.getMessage());
         }
 
         return json;
