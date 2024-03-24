@@ -169,22 +169,22 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
         jsonObject.put("reason", e(musicPlaybackParams));
         jsonObject.put("start_time", musicPlaybackParams.i());
         jsonObject.put("playback_started_at", musicPlaybackParams.d());
-        jsonObject.put(NavigatorKeys.l0, musicPlaybackParams.j());
+        jsonObject.put("state", musicPlaybackParams.m());
+        jsonObject.put("track_code", musicPlaybackParams.j());
 
         if (!Objects.equals("music_start_playback", str)) {
             jsonObject.put("duration", musicPlaybackParams.a());
         }
 
         int repeatType = h.$EnumSwitchMapping$0[musicPlaybackParams.b().ordinal()];
-        if (repeatType == 1) {
-            jsonObject.put("repeat", "one");
-        } else if (repeatType == 2) {
-            jsonObject.put("repeat", "all");
+        switch (repeatType) {
+            case 1 -> jsonObject.put("repeat", "one");
+            case 2 -> jsonObject.put("repeat", "all");
         }
 
-        jsonObject.put(NavigatorKeys.t0, musicPlaybackParams.m());
         MusicPlaybackLaunchContext h = musicPlaybackParams.h();
-        jsonObject.put(NavigatorKeys.V, h.v0());
+
+        jsonObject.put("source", h.v0());
 
         if (h.v1()) {
             jsonObject.put("playlist_id", h.u1());

@@ -27,7 +27,7 @@ public class Metrics {
 
     private static void request(JSONObject event) throws JSONException {
         Request req = new Request.a()
-                .b("https://" + getApi() + "/method/stats.trackEvents?events=" + new JSONArray().put(event) + "&v=5.99&access_token=" + getUserToken())
+                .b("https://" + getApi() + "/method/stats.trackEvents?events=" + new JSONArray().put(event) + "&v=5.186&access_token=" + getUserToken())
                 .a();
 
         Network.b(CLIENT_API).a(req).a(new Callback() {
