@@ -40,31 +40,33 @@
 .method public a(Lorg/json/JSONObject;)Lcom/vk/dto/music/CurrentAccountInformation;
     .locals 1
 
-    const-string v0, "response"
+    # const-string v0, "response"
 
-    .line 2
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    # .line 2
+    # invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    move-result-object p1
+    # move-result-object p1
 
-    const-string v0, "has_music_subscription"
+    # const-string v0, "has_music_subscription"
 
-    .line 3
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
+    # .line 3
+    # invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
-    move-result p1
+    # move-result p1
 
+    # const/4 v0, 0x1
+
+    # if-ne p1, v0, :cond_0
+
+    # goto :goto_0
+
+    # :cond_0
+    # const/4 v0, 0x1
+
+    # .line 4
+    # :goto_0
     const/4 v0, 0x1
 
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 4
-    :goto_0
     new-instance p1, Lcom/vk/dto/music/CurrentAccountInformation;
 
     invoke-direct {p1, v0}, Lcom/vk/dto/music/CurrentAccountInformation;-><init>(Z)V

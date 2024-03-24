@@ -292,6 +292,10 @@ public class Preferences {
         return getBoolValue("vkme_notifs", false);
     }
 
+    public static boolean sendMusicMetrics() {
+        return getBoolValue("sendMusicMetrics", true);
+    }
+
     public static boolean screenshotdetect() {
         return getBoolValue("screenshotdetect", true);
     }
