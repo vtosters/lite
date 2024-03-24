@@ -167,7 +167,8 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
         if (str.equals("music_stop_playback")) {
             event.put("e", str);
             event.put("audio_id", musicPlaybackParams.c());
-            event.put("start_time", "0");
+            event.put("duration", musicPlaybackParams.a());
+            event.put("start_time", musicPlaybackParams.i());
             event.put("shuffle", "false");
             event.put("reason", "new");
             event.put("state", "app");
@@ -176,7 +177,7 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
         } else {
             event.put("e", str);
             event.put("audio_id", musicPlaybackParams.c());
-            event.put("start_time", "0");
+            event.put("start_time", musicPlaybackParams.i());
             event.put("shuffle", "false");
             event.put("reason", "auto");
             event.put("state", "app");
