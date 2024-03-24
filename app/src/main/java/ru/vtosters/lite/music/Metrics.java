@@ -17,7 +17,7 @@ import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 
 public class Metrics {
-    public static void sendMetrics(JSONObject event) {
+    public static void sendMetrics(String event) {
         try {
             request(event);
         } catch (JSONException e) {
@@ -25,9 +25,9 @@ public class Metrics {
         }
     }
 
-    private static void request(JSONObject event) throws JSONException {
+    private static void request(String event) throws JSONException {
         Request req = new Request.a()
-                .b("https://" + getApi() + "/method/stats.trackEvents?events=" + new JSONArray().put(event) + "&v=5.186&access_token=" + getUserToken())
+                .b("https://" + getApi() + "/method/execute?code=" + event + "&v=5.186&access_token=" + getUserToken())
                 .a();
 
         Network.b(CLIENT_API).a(req).a(new Callback() {

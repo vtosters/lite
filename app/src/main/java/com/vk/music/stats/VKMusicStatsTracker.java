@@ -50,11 +50,7 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
         c.a(a(musicPlaybackParams, "music_start_playback"));
 
         if (Preferences.sendMusicMetrics()) {
-            try {
-                makeMetricsRequest(musicPlaybackParams, "music_start_playback");
-            } catch (JSONException e) {
-                throw new RuntimeException(e);
-            }
+            makeMetricsRequest(musicPlaybackParams, "music_start_playback");
         }
     }
 
@@ -128,11 +124,7 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
         c.a(a(musicPlaybackParams, "music_stop_playback"));
 
         if (Preferences.sendMusicMetrics()) {
-            try {
-                makeMetricsRequest(musicPlaybackParams, "music_stop_playback");
-            } catch (JSONException e) {
-                throw new RuntimeException(e);
-            }
+            makeMetricsRequest(musicPlaybackParams, "music_stop_playback");
         }
     }
 
@@ -159,51 +151,63 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
         c.a(invoke);
     }
 
-    private void makeMetricsRequest(MusicPlaybackParams musicPlaybackParams, String str) throws JSONException {
-        JSONObject jsonObject = new JSONObject();
+    private void makeMetricsRequest(MusicPlaybackParams musicPlaybackParams, String str) {
+        StringBuilder builder = new StringBuilder();
 
-        jsonObject.put("event_name", str);
-        jsonObject.put("audio_id", musicPlaybackParams.c());
-        jsonObject.put("uuid", UUID.randomUUID().hashCode());
-        jsonObject.put("shuffle", musicPlaybackParams.l());
-        jsonObject.put("reason", e(musicPlaybackParams));
-        jsonObject.put("start_time", musicPlaybackParams.i());
-        jsonObject.put("playback_started_at", musicPlaybackParams.d());
-        jsonObject.put("state", musicPlaybackParams.m());
-        jsonObject.put("track_code", musicPlaybackParams.j());
+        builder.append("API.stats.trackEvents({events:");
+        builder.append("\"[{");
+        builder.append("\"event_name\":\"").append(str).append("\",");
+        builder.append("\"audio_id\":\"").append(musicPlaybackParams.c()).append("\",");
+        builder.append("\"uuid\":\"").append(UUID.randomUUID().hashCode()).append("\",");
+        builder.append("\"shuffle\":\"").append(musicPlaybackParams.l()).append("\",");
+        builder.append("\"reason\":\"").append(e(musicPlaybackParams)).append("\",");
+        builder.append("\"start_time\":\"").append(musicPlaybackParams.i()).append("\",");
+        builder.append("\"playback_started_at\":\"").append(musicPlaybackParams.d()).append("\",");
+        builder.append("\"state\":\"").append(musicPlaybackParams.m()).append("\",");
+        builder.append("\"track_code\":\"").append(musicPlaybackParams.j()).append("\",");
 
         if (!Objects.equals("music_start_playback", str)) {
-            jsonObject.put("duration", musicPlaybackParams.a());
+            builder.append("\"duration\":\"").append(musicPlaybackParams.a()).append("\",");
         }
 
         int repeatType = h.$EnumSwitchMapping$0[musicPlaybackParams.b().ordinal()];
         switch (repeatType) {
-            case 1 -> jsonObject.put("repeat", "one");
-            case 2 -> jsonObject.put("repeat", "all");
+            case 1 -> builder.append("\"repeat\":\"one\",");
+            case 2 -> builder.append("\"repeat\":\"all\",");
         }
 
         MusicPlaybackLaunchContext h = musicPlaybackParams.h();
 
-        jsonObject.put("source", h.v0());
+        builder.append("\"source\":\"").append(h.v0()).append("\",");
 
         if (h.v1()) {
-            jsonObject.put("playlist_id", h.u1());
+            builder.append("\"playlist_id\":\"").append(h.u1()).append("\",");
         }
 
         if (h.i(4) || h.i(8)) {
-            jsonObject.put("expanded", h.i(4));
+            builder.append("\"expanded\":\"").append(h.i(4)).append("\",");
         }
 
         if (StringExt.a((CharSequence) musicPlaybackParams.e())) {
-            jsonObject.put("prev_audio_id", musicPlaybackParams.e());
+            builder.append("\"prev_audio_id\":\"").append(musicPlaybackParams.e()).append("\",");
         }
 
         if (StringExt.a((CharSequence) musicPlaybackParams.f())) {
-            jsonObject.put("prev_playlist_id", musicPlaybackParams.f());
+            builder.append("\"prev_playlist_id\":\"").append(musicPlaybackParams.f()).append("\",");
         }
 
-        Metrics.sendMetrics(jsonObject);
+        if (builder.charAt(builder.length() - 1) == ',') {
+            builder.setCharAt(builder.length() - 1, '}');
+        } else {
+            builder.append('}');
+        }
+
+        builder.append("]\"");
+        builder.append("});");
+
+        Metrics.sendMetrics(builder.toString());
     }
+
 
     private Analytics.l a(MusicPlaybackParams musicPlaybackParams, String str) {
         Analytics.l invoke = this.b.invoke(str);
