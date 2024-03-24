@@ -49,7 +49,7 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
     public void b(MusicPlaybackParams musicPlaybackParams) {
         c.a(a(musicPlaybackParams, "music_start_playback"));
 
-        if (Preferences.getBoolValue("sendMusicMetrics", true)) {
+        if (Preferences.sendMusicMetrics()) {
             try {
                 makeMetricsRequest(musicPlaybackParams, "music_start_playback");
             } catch (JSONException e) {
@@ -127,7 +127,7 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
     public void a(MusicPlaybackParams musicPlaybackParams) {
         c.a(a(musicPlaybackParams, "music_stop_playback"));
 
-        if (Preferences.getBoolValue("sendMusicMetrics", true)) {
+        if (Preferences.sendMusicMetrics()) {
             try {
                 makeMetricsRequest(musicPlaybackParams, "music_stop_playback");
             } catch (JSONException e) {
