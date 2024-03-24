@@ -53,7 +53,11 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
         c.a(a(musicPlaybackParams, "music_start_playback"));
 
         if (Preferences.sendMusicMetrics()) {
-            makeMetricsRequest(musicPlaybackParams, "music_start_playback");
+            try {
+                makeMetricsRequest(musicPlaybackParams, "music_start_playback");
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
@@ -127,7 +131,11 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
         c.a(a(musicPlaybackParams, "music_stop_playback"));
 
         if (Preferences.sendMusicMetrics()) {
-            makeMetricsRequest(musicPlaybackParams, "music_stop_playback");
+            try {
+                makeMetricsRequest(musicPlaybackParams, "music_stop_playback");
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
@@ -154,60 +162,86 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
         c.a(invoke);
     }
 
-    private void makeMetricsRequest(MusicPlaybackParams musicPlaybackParams, String str) {
-        JSONObject eventObject = new JSONObject();
+    private void makeMetricsRequest(MusicPlaybackParams musicPlaybackParams, String str) throws JSONException {
+        MusicPlaybackLaunchContext h = musicPlaybackParams.h();
+
         JSONArray eventsArray = new JSONArray();
 
-        try {
-            eventObject.put("event_name", str);
-            eventObject.put("audio_id", musicPlaybackParams.c());
-            eventObject.put("uuid", UUID.randomUUID().hashCode());
-            eventObject.put("shuffle", musicPlaybackParams.l());
-            eventObject.put("reason", e(musicPlaybackParams));
-            eventObject.put("start_time", musicPlaybackParams.i());
-            eventObject.put("playback_started_at", musicPlaybackParams.d());
-            eventObject.put("state", musicPlaybackParams.m());
-            eventObject.put("track_code", musicPlaybackParams.j());
+        JSONObject event1 = new JSONObject();
+        event1.put("e", "audio_player");
+        event1.put("state", "app");
+        event1.put("prev_state", "background");
 
-            if (!Objects.equals("music_start_playback", str)) {
-                eventObject.put("duration", musicPlaybackParams.a());
-            }
-
-            int repeatType = h.$EnumSwitchMapping$0[musicPlaybackParams.b().ordinal()];
-            switch (repeatType) {
-                case 1 -> eventObject.put("repeat", "one");
-                case 2 -> eventObject.put("repeat", "all");
-            }
-
-            MusicPlaybackLaunchContext h = musicPlaybackParams.h();
-
-            eventObject.put("source", h.v0());
-
-            if (h.v1()) {
-                eventObject.put("playlist_id", h.u1());
-            }
-
-            if (h.i(4) || h.i(8)) {
-                eventObject.put("expanded", h.i(4));
-            }
-
-            if (StringExt.a((CharSequence) musicPlaybackParams.e())) {
-                eventObject.put("prev_audio_id", musicPlaybackParams.e());
-            }
-
-            if (StringExt.a((CharSequence) musicPlaybackParams.f())) {
-                eventObject.put("prev_playlist_id", musicPlaybackParams.f());
-            }
-
-            eventsArray.put(eventObject);
-
-            String builder = String.format("API.stats.trackEvents(%s);", new JSONObject().put("events", eventsArray));
-
-            Metrics.trackEvents(builder);
-            Metrics.sendStartEvent(musicPlaybackParams.c(), DeviceIdProvider.d(AndroidUtils.getGlobalContext()));
-        } catch (JSONException e) {
-            e.fillInStackTrace();
+        if (!Objects.equals("music_start_playback", str)) {
+            event1.put("duration", musicPlaybackParams.a());
         }
+
+        eventsArray.put(event1);
+
+        JSONObject event2 = new JSONObject();
+        event2.put("e", "audio_ad");
+        event2.put("event", "requested");
+        event2.put("section", h.v1());
+        eventsArray.put(event2);
+
+        JSONObject event3 = new JSONObject();
+        event3.put("e", str);
+        event2.put("audio_id", musicPlaybackParams.c());
+        event3.put("uuid", UUID.randomUUID().hashCode());
+        event3.put("shuffle", musicPlaybackParams.l());
+        event3.put("reason", e(musicPlaybackParams));
+        event3.put("start_time", musicPlaybackParams.i());
+        event3.put("playback_started_at", musicPlaybackParams.d());
+        event3.put("streaming_type", "online");
+        event3.put("state", musicPlaybackParams.m());
+        event3.put("track_code", musicPlaybackParams.j());
+
+        if (!Objects.equals("music_start_playback", str)) {
+            event3.put("duration", musicPlaybackParams.a());
+        }
+
+        int repeatType = com.vk.music.stats.h.$EnumSwitchMapping$0[musicPlaybackParams.b().ordinal()];
+        switch (repeatType) {
+            case 1 -> event3.put("repeat", "one");
+            case 2 -> event3.put("repeat", "all");
+        }
+
+        event3.put("source", h.v0());
+
+        if (h.v1()) {
+            event3.put("playlist_id", h.u1());
+        }
+
+        if (h.i(4) || h.i(8)) {
+            event3.put("expanded", h.i(4));
+        }
+
+        if (StringExt.a((CharSequence) musicPlaybackParams.e())) {
+            event3.put("prev_audio_id", musicPlaybackParams.e());
+        }
+
+        if (StringExt.a((CharSequence) musicPlaybackParams.f())) {
+            event3.put("prev_playlist_id", musicPlaybackParams.f());
+        }
+
+        eventsArray.put(event3);
+
+        JSONObject event4 = new JSONObject();
+        event4.put("e", "audio_ad");
+        event4.put("event", "not_received");
+        event4.put("section", h.v1());
+        eventsArray.put(event4);
+
+        JSONObject event5 = new JSONObject();
+        event5.put("e", "audio_player");
+        event5.put("state", "fullscreen");
+        event5.put("prev_state", "app");
+        eventsArray.put(event5);
+
+        String builder = String.format("API.stats.trackEvents(%s);", new JSONObject().put("events", eventsArray));
+
+        Metrics.trackEvents(builder);
+        Metrics.sendStartEvent(musicPlaybackParams.c(), DeviceIdProvider.d(AndroidUtils.getGlobalContext()));
     }
 
     private Analytics.l a(MusicPlaybackParams musicPlaybackParams, String str) {

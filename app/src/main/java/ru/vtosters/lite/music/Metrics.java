@@ -2,7 +2,9 @@ package ru.vtosters.lite.music;
 
 import android.util.Log;
 import com.vk.core.network.Network;
+import com.vk.core.util.DeviceIdProvider;
 import okhttp3.*;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -50,7 +52,7 @@ public class Metrics {
 
     private static void trackEventsRequest(String event) throws UnsupportedEncodingException {
         Request req = new Request.a()
-                .b("https://" + getApi() + "/method/execute?v=5.186&access_token=" + getUserToken())
+                .b("https://" + getApi() + "/method/execute?v=5.186&access_token=" + getUserToken() + "&device_id=" + DeviceIdProvider.d(AndroidUtils.getGlobalContext()))
                 .a(RequestBody.a(MediaType.a("application/x-www-form-urlencoded"), URLEncoder.encode(event, "UTF-8")))
                 .a();
 
