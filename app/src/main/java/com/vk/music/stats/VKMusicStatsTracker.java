@@ -241,7 +241,7 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
         String builder = String.format("API.stats.trackEvents(%s);", new JSONObject().put("events", eventsArray));
 
         Metrics.trackEvents(builder);
-        Metrics.sendStartEvent(musicPlaybackParams.c(), DeviceIdProvider.d(AndroidUtils.getGlobalContext()));
+//        Metrics.sendStartEvent(musicPlaybackParams.c(), DeviceIdProvider.d(AndroidUtils.getGlobalContext()));
     }
 
     private Analytics.l a(MusicPlaybackParams musicPlaybackParams, String str) {

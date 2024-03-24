@@ -46,6 +46,10 @@ public class CatalogJsonInjector {
 
                 fetchCatalogId("https://vk.com/audio?section=albums", oldItems);
 
+                if (Preferences.sendMusicMetrics()) {
+                    fetchCatalogId("https://vk.com/audio?section=recent", oldItems);
+                }
+
                 setDefaultAudioPage(oldItems, catalog);
             }
 
