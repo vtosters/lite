@@ -173,6 +173,20 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Рекомендации музыки");
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "sendMusicMetrics",
+                "Отправлять статистику",
+                "Статистика прослушиваний необходима для работы рекомендаций музыки\n\nЕсли вас не интересуют рекомендации - смело отключайте данную функцию",
+                null,
+                true,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("sendMusicMetrics", (boolean) o).apply();
+                    return true;
+                }
+        );
+
         if (!Preferences.serverFeaturesDisable()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Интеграция Genius");
             PreferenceFragmentUtils.addMaterialSwitchPreference(
