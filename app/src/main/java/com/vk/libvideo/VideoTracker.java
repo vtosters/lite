@@ -14,6 +14,7 @@ import com.vk.statistic.Statistic;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.Metrics;
 
 import java.util.Locale;
@@ -313,10 +314,12 @@ public class VideoTracker {
         bundle.putLong("ts", System.currentTimeMillis());
         StatisticsBridge1.a().a(str, bundle);
 
-        try {
-            sendMetrics(str);
-        } catch (JSONException e) {
-            throw new RuntimeException(e);
+        if (Preferences.getBoolValue("sendVideoMetrics", true)) {
+            try {
+                sendMetrics(str);
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
@@ -325,27 +328,15 @@ public class VideoTracker {
 
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("e", event);
-        jsonObject.put("video_id", this.a.a + "_" + this.a.b);
-        jsonObject.put("position", this.f15642f);
-        jsonObject.put("ts", System.currentTimeMillis());
         jsonObject.put("source", this.f15639c);
         jsonObject.put("ref", this.f15639c);
-        jsonObject.put("event", "player_close");
-        jsonObject.put("stall_duration", "0");
-        jsonObject.put("bandwidth", "0");
-        jsonObject.put("stall_count", "0");
-
-        if (!TextUtils.isEmpty(this.a.l0)) {
-            jsonObject.put("track_code", this.a.l0);
-        }
-
-        if (!TextUtils.isEmpty(this.f15640d)) {
-            jsonObject.put("context", this.f15640d);
-        }
+        jsonObject.put("video_id", this.a.a + "_" + this.a.b);
+        jsonObject.put("position", "start");
+        jsonObject.put("position_sec", 0);
+        jsonObject.put("cur_quality", "auto");
 
         arr.put(jsonObject);
 
-        Log.d("VideoTracker", event);
         Log.d("VideoTracker", arr.toString());
 
         Metrics.trackEvents(arr.toString());

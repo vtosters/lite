@@ -31,6 +31,11 @@
                 android:key="__dbg_disable_video_feed"
                 android:summary="@string/interfacevideorecsum"
                 android:title="@string/interfacevideorec"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="sendVideoMetrics"
+                android:summary="Статистика прослушиваний необходима для работы рекомендаций и истории видео"
+                android:title="Отправлять статистику"/>
         <Preference
                 android:key="clearvideohistory"
                 android:summary="@string/clearvideohistory_summ"

@@ -178,7 +178,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 getPreferenceScreen(),
                 "sendMusicMetrics",
                 "Отправлять статистику",
-                "Статистика прослушиваний необходима для работы рекомендаций и истории прослушивания музыки\n\nЕсли вас не интересуют рекомендации - смело отключайте данную функцию",
+                "Статистика прослушиваний необходима для работы рекомендаций и истории прослушивания музыки",
                 null,
                 true,
                 (preference, o) -> {
