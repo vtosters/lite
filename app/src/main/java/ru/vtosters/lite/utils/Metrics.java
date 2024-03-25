@@ -25,7 +25,9 @@ public class Metrics {
     private static JSONArray events = new JSONArray();
 
     public static void trackEvents(JSONObject object) {
-        if (shouldSaveUserTraffic()) {
+        if (!NetworkUtils.isNetworkConnected()) {
+            events.put(object);
+        } else if (shouldSaveUserTraffic() || events.length() > 0) {
             trackEventList(object);
         } else {
             trackEventsImmediately(object);
