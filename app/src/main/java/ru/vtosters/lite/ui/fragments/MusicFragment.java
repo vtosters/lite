@@ -117,6 +117,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 false,
                 (preference, o) -> {
                     Preferences.getPreferences().edit().putBoolean("dldir", (boolean) o).apply();
+                    LifecycleUtils.restartApplicationWithTimer();
                     return true;
                 }
         );
