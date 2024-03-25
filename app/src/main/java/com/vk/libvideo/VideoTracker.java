@@ -15,7 +15,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.music.Metrics;
+import ru.vtosters.lite.utils.Metrics;
 
 import java.util.Locale;
 import java.util.Objects;
@@ -324,8 +324,6 @@ public class VideoTracker {
     }
 
     public void sendMetrics(String event) throws JSONException {
-        JSONArray arr = new JSONArray();
-
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("e", event);
         jsonObject.put("source", this.f15639c);
@@ -335,10 +333,6 @@ public class VideoTracker {
         jsonObject.put("position_sec", 0);
         jsonObject.put("cur_quality", "auto");
 
-        arr.put(jsonObject);
-
-        Log.d("VideoTracker", arr.toString());
-
-        Metrics.trackEvents(arr.toString());
+        Metrics.trackEvents(jsonObject);
     }
 }
