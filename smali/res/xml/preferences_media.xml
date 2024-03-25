@@ -34,7 +34,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="sendVideoMetrics"
-                android:summary="Статистика прослушиваний необходима для работы рекомендаций и истории видео"
+                android:summary="Статистика необходима для работы рекомендаций и истории видео"
                 android:title="Отправлять статистику"/>
         <Preference
                 android:key="clearvideohistory"
