@@ -186,36 +186,36 @@ public class VideoTracker {
             a("start", i2);
             c("video_start");
         }
-        if (this.a.d > 0) {
-            if (a(this.f15642f, i, 3)) {
-                a("3s", i2);
-                c("video_play_3s");
-            }
-            if (a(this.f15642f, i, 10)) {
-                a("10s", i2);
-                c("video_play_10s");
-            }
-            if (a(this.f15642f, i, this.g)) {
-                a("25", i2);
-                c("video_play_25");
-            }
-            if (a(this.f15642f, i, this.h)) {
-                a("50", i2);
-                c("video_play_50");
-            }
-            if (a(this.f15642f, i, this.i)) {
-                a("75", i2);
-                c("video_play_75");
-            }
-            if (a(this.f15642f, i, this.j)) {
-                a("95", i2);
-                c("video_play_95");
-            }
-            if (a(this.f15642f, i, this.k)) {
-                a("100", i2);
-                c("video_play_100");
-            }
-        }
+//        if (this.a.d > 0) {
+//            if (a(this.f15642f, i, 3)) {
+//                a("3s", i2);
+//                c("video_play_3s");
+//            }
+//            if (a(this.f15642f, i, 10)) {
+//                a("10s", i2);
+//                c("video_play_10s");
+//            }
+//            if (a(this.f15642f, i, this.g)) {
+//                a("25", i2);
+//                c("video_play_25");
+//            }
+//            if (a(this.f15642f, i, this.h)) {
+//                a("50", i2);
+//                c("video_play_50");
+//            }
+//            if (a(this.f15642f, i, this.i)) {
+//                a("75", i2);
+//                c("video_play_75");
+//            }
+//            if (a(this.f15642f, i, this.j)) {
+//                a("95", i2);
+//                c("video_play_95");
+//            }
+//            if (a(this.f15642f, i, this.k)) {
+//                a("100", i2);
+//                c("video_play_100");
+//            }
+//        }
         this.f15642f = i;
     }
 
@@ -314,7 +314,7 @@ public class VideoTracker {
         bundle.putLong("ts", System.currentTimeMillis());
         StatisticsBridge1.a().a(str, bundle);
 
-        if (Preferences.getBoolValue("sendVideoMetrics", true)) {
+        if (Preferences.getBoolValue("sendVideoMetrics", true) && str.equals("video_play")) {
             try {
                 sendMetrics(str);
             } catch (JSONException e) {
