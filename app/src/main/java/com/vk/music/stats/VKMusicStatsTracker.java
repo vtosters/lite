@@ -15,7 +15,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.music.Metrics;
+import ru.vtosters.lite.utils.Metrics;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -161,7 +161,6 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
     }
 
     private void makeMetricsRequest(MusicPlaybackParams musicPlaybackParams, String str) throws JSONException {
-        JSONArray events = new JSONArray();
         JSONObject event = new JSONObject();
 
         if (str.equals("music_stop_playback")) {
@@ -173,7 +172,6 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
             event.put("reason", "new");
             event.put("state", "app");
             event.put("duration", musicPlaybackParams.a());
-            events.put(event);
         } else {
             event.put("e", str);
             event.put("audio_id", musicPlaybackParams.c());
@@ -185,11 +183,9 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
             if (StringExt.a((CharSequence) musicPlaybackParams.e())) {
                 event.put("prev_audio_id", musicPlaybackParams.e());
             }
-
-            events.put(event);
         }
 
-        Metrics.trackEvents(events.toString());
+        Metrics.trackEvents(event);
     }
 
     private Analytics.l a(MusicPlaybackParams musicPlaybackParams, String str) {
