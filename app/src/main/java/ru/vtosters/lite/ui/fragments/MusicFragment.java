@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -100,7 +101,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 getPreferenceScreen(),
                 "autocache_params",
                 getString(com.vtosters.lite.R.string.autocache_title),
-                getString(com.vtosters.lite.R.string.autocache_summ),
+                getAutocacheSumm(),
                 null,
                 preference -> {
                     List<ImagineArrayAdapter.ImagineArrayAdapterItem> items = Arrays.asList(
@@ -348,6 +349,15 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 )
                 .setView(linearLayout)
                 .show();
+    }
+
+    private static String getAutocacheSumm() {
+        int autocache = Preferences.autocache();
+        return switch (autocache) {
+            case 1 -> "Только для своих";
+            case 2 -> "Кешировать всё";
+            default -> "Отключено";
+        };
     }
 
     public void updateLastFmPref() {
