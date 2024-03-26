@@ -3,10 +3,12 @@ package ru.vtosters.lite.ui.fragments;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.dto.music.Playlist;
@@ -25,6 +27,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 
 public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
@@ -104,7 +108,14 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 preference -> {
                     List<String> items = Arrays.asList("Не кешировать", "Только свои", "Все");
 
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, items);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, items) {
+                        @Override
+                        public View getView(int position, View convertView, ViewGroup parent) {
+                            TextView textView = (TextView) super.getView(position, convertView, parent);
+                            textView.setTextColor(getTextAttr());
+                            return textView;
+                        }
+                    };
 
                     int selectedItem = Preferences.getPreferences().getInt("autocaching", 0);
                     if (selectedItem >= 0 && selectedItem < items.size()) {
