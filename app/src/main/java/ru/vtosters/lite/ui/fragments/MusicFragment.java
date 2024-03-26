@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui.fragments;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -19,7 +18,6 @@ import ru.vtosters.lite.music.LastFMScrobbler;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
-import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
@@ -104,21 +102,24 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 getAutocacheSumm(),
                 null,
                 preference -> {
-                    List<ImagineArrayAdapter.ImagineArrayAdapterItem> items = Arrays.asList(
-                            new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "Не кешировать"),
-                            new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "Только свои"),
-                            new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "Все")
-                    );
+                    List<String> items = Arrays.asList("Не кешировать", "Только свои", "Все");
 
-                    ImagineArrayAdapter adapter = new ImagineArrayAdapter(requireContext(), items);
-                    adapter.setSelected(Preferences.getPreferences().getInt("autocaching", 0));
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, items);
+
+                    int selectedItem = Preferences.getPreferences().getInt("autocaching", 0);
+                    if (selectedItem >= 0 && selectedItem < items.size()) {
+                        adapter.getItem(selectedItem);
+                    }
 
                     new VkAlertDialog.Builder(getActivity())
                             .setAdapter(adapter, (dialog, which) -> {
+                                adapter.getItem(which);
                                 Preferences.getPreferences().edit().putInt("autocaching", which).apply();
+                                findPreference("autocache_params").setSummary(getAutocacheSumm());
                                 dialog.cancel();
                             })
                             .show();
+
                     return true;
                 }
         );
@@ -183,6 +184,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                                     return;
                                 }
                                 Preferences.setMetadataSeparator(separator.getText().toString());
+                                findPreference("metadataSeparator").setSummary(separator.getText().toString());
                             })
                             .setNegativeButton("Отмена", (dialog, which) -> dialog.cancel())
                             .show();
@@ -381,7 +383,8 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .show();
     }
 
-    private static void cachedPlaylistsDialog(Context ctx) {
+    @SuppressLint("DefaultLocale")
+    private void cachedPlaylistsDialog(Context ctx) {
         List<Playlist> playlists = PlaylistCacheDbDelegate.getAllPlaylists(ctx);
         String[] playlistNames = new String[playlists.size()];
 
@@ -396,6 +399,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
             String playlistId = selectedPlaylist.v1();
             PlaylistCacheDbDelegate.deletePlaylist(ctx, playlistId);
             AndroidUtils.sendToast("Плейлист удален");
+            findPreference("cached_playlists").setSummary(String.format("Скачано плейлистов: %d", MusicCacheImpl.getPlaylists().size()));
         });
 
         builder.show();
@@ -405,10 +409,11 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
         new VkAlertDialog.Builder(ctx)
                 .setTitle(com.vtosters.lite.R.string.warning)
                 .setMessage(com.vtosters.lite.R.string.cached_tracks_remove_confirm)
-                .setPositiveButton(com.vtosters.lite.R.string.yes,
-                        (dialog, which) -> executor.submit(MusicCacheImpl::clear))
-                .setNeutralButton(com.vtosters.lite.R.string.no,
-                        (dialog, which) -> dialog.cancel())
+                .setPositiveButton(com.vtosters.lite.R.string.yes, (dialog, which) -> {
+                    executor.submit(MusicCacheImpl::clear);
+                    findPreference("cached_tracks").setSummary(String.format(requireContext().getString(com.vtosters.lite.R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
+                })
+                .setNeutralButton(com.vtosters.lite.R.string.no, (dialog, which) -> dialog.cancel())
                 .show();
     }
 
