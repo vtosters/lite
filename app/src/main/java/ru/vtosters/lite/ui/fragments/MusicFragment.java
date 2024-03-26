@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
@@ -17,9 +18,11 @@ import ru.vtosters.lite.music.LastFMScrobbler;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -93,15 +96,28 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 }
         ).setEnabled(!MusicCacheImpl.isEmpty());
 
-        PreferenceFragmentUtils.addMaterialSwitchPreference(
+        PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
-                "autocache",
+                "autocache_params",
                 getString(com.vtosters.lite.R.string.autocache_title),
                 getString(com.vtosters.lite.R.string.autocache_summ),
                 null,
-                false,
-                (preference, o) -> {
-                    Preferences.getPreferences().edit().putBoolean("autocache", (boolean) o).apply();
+                preference -> {
+                    List<ImagineArrayAdapter.ImagineArrayAdapterItem> items = Arrays.asList(
+                            new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "Не кешировать"),
+                            new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "Только свои"),
+                            new ImagineArrayAdapter.ImagineArrayAdapterItem(null, "Все")
+                    );
+
+                    ImagineArrayAdapter adapter = new ImagineArrayAdapter(requireContext(), items);
+                    adapter.setSelected(Preferences.getPreferences().getInt("autocaching", 0));
+
+                    new VkAlertDialog.Builder(getActivity())
+                            .setAdapter(adapter, (dialog, which) -> {
+                                Preferences.getPreferences().edit().putInt("autocaching", which).apply();
+                                dialog.cancel();
+                            })
+                            .show();
                     return true;
                 }
         );

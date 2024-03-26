@@ -30,6 +30,7 @@ import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicTrackUtils;
 
@@ -50,13 +51,14 @@ public class LastFMScrobbler {
         var access_key = !TextUtils.isEmpty(musictrack.J) ? musictrack.J : "";
         var album_id = musictrack.I;
         var album = album_id != null ? album_id.getTitle() : null;
+        var isOwnTrack = musictrack.e == AccountManagerUtils.getUserId();
 
         if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(artist) || TextUtils.isEmpty(title) || duration == 0) {
             Log.d("Scrobbler", "grabTrackInfo: " + "Empty track, info: " + artist + " - " + title + " - " + duration + " - " + uid);
             return;
         }
 
-        if (Preferences.autocache() && !MusicCacheImpl.isCachedTrack(uid)) {
+        if (needToCache(isOwnTrack) && !MusicCacheImpl.isCachedTrack(uid)) {
             if (LibVKXClient.isIntegrationEnabled()) {
                 LibVKXClient.getInstance().runOnService(service -> {
                     try {
@@ -71,6 +73,12 @@ public class LastFMScrobbler {
         }
 
         scrobbleTrack(duration, artist, title, uid, album);
+    }
+
+    private static boolean needToCache(boolean isOwnTrack) {
+        int autocache = Preferences.autocache();
+
+        return autocache == 2 || (autocache == 1 && isOwnTrack);
     }
 
     public static void scrobbleTrack(

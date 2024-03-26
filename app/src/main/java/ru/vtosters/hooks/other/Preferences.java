@@ -100,8 +100,8 @@ public class Preferences {
         return getBoolValue("vkme", false);
     }
 
-    public static boolean autocache() {
-        return getBoolValue("autocache", false);
+    public static int autocache() {
+        return Preferences.getPreferences().getInt("autocaching", 0);
     }
 
     public static boolean adsstories() {
