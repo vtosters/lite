@@ -11,7 +11,6 @@ import com.vk.music.stats.i.MusicPlaybackParams;
 import com.vk.navigation.NavigatorKeys;
 import com.vtosters.lite.data.Analytics;
 import kotlin.jvm.b.Functions2;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
@@ -185,7 +184,7 @@ public final class VKMusicStatsTracker implements MusicStatsTracker {
             }
         }
 
-        Metrics.trackEvents(event);
+        Metrics.trackEvents(event, true);
     }
 
     private Analytics.l a(MusicPlaybackParams musicPlaybackParams, String str) {

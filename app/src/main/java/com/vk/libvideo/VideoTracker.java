@@ -2,7 +2,6 @@ package com.vk.libvideo;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
@@ -11,7 +10,6 @@ import com.vk.dto.common.VideoFile;
 import com.vk.media.player.PlayerTypes;
 import com.vk.navigation.NavigatorKeys;
 import com.vk.statistic.Statistic;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
@@ -333,6 +331,6 @@ public class VideoTracker {
         jsonObject.put("position_sec", 0);
         jsonObject.put("cur_quality", "auto");
 
-        Metrics.trackEvents(jsonObject);
+        Metrics.trackEvents(jsonObject, false);
     }
 }
