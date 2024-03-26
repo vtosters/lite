@@ -24,13 +24,25 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 public class Metrics {
     private static JSONArray events = new JSONArray();
 
-    public static void trackEvents(JSONObject object) {
-        if (!NetworkUtils.isNetworkConnected()) {
-            events.put(object);
-        } else if (shouldSaveUserTraffic() || events.length() > 0) {
-            trackEventList(object);
+    public static void trackEvents(JSONObject object, boolean isMusic) {
+        if (NetworkUtils.isNetworkConnected()) {
+            handleNetworkConnected(object, isMusic);
         } else {
+            handleNetworkDisconnected(object, isMusic);
+        }
+    }
+
+    private static void handleNetworkConnected(JSONObject object, boolean isMusic) {
+        if (isMusic || shouldSaveUserTraffic() || events.length() > 0) {
             trackEventsImmediately(object);
+        } else {
+            trackEventList(object);
+        }
+    }
+
+    private static void handleNetworkDisconnected(JSONObject object, boolean isMusic) {
+        if (!isMusic) {
+            events.put(object);
         }
     }
 

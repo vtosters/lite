@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
@@ -20,6 +21,7 @@ import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -93,15 +95,31 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 }
         ).setEnabled(!MusicCacheImpl.isEmpty());
 
-        PreferenceFragmentUtils.addMaterialSwitchPreference(
+        PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
-                "autocache",
+                "autocache_params",
                 getString(com.vtosters.lite.R.string.autocache_title),
-                getString(com.vtosters.lite.R.string.autocache_summ),
+                getAutocacheSumm(),
                 null,
-                false,
-                (preference, o) -> {
-                    Preferences.getPreferences().edit().putBoolean("autocache", (boolean) o).apply();
+                preference -> {
+                    List<String> items = Arrays.asList("Не кешировать", "Только свои", "Все");
+
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, items);
+
+                    int selectedItem = Preferences.getPreferences().getInt("autocaching", 0);
+                    if (selectedItem >= 0 && selectedItem < items.size()) {
+                        adapter.getItem(selectedItem);
+                    }
+
+                    new VkAlertDialog.Builder(getActivity())
+                            .setAdapter(adapter, (dialog, which) -> {
+                                adapter.getItem(which);
+                                Preferences.getPreferences().edit().putInt("autocaching", which).apply();
+                                findPreference("autocache_params").setSummary(getAutocacheSumm());
+                                dialog.cancel();
+                            })
+                            .show();
+
                     return true;
                 }
         );
@@ -166,6 +184,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                                     return;
                                 }
                                 Preferences.setMetadataSeparator(separator.getText().toString());
+                                findPreference("metadataSeparator").setSummary(separator.getText().toString());
                             })
                             .setNegativeButton("Отмена", (dialog, which) -> dialog.cancel())
                             .show();
@@ -334,6 +353,15 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .show();
     }
 
+    private static String getAutocacheSumm() {
+        int autocache = Preferences.autocache();
+        return switch (autocache) {
+            case 1 -> "Только для своих";
+            case 2 -> "Кешировать всё";
+            default -> "Отключено";
+        };
+    }
+
     public void updateLastFmPref() {
         if (LastFMScrobbler.isLoggedIn()) {
             findPreference("lastfm_auth").setSummary(getString(com.vtosters.lite.R.string.lastfm_authorized_as) + " " + LastFMScrobbler.getUserName());
@@ -355,7 +383,8 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .show();
     }
 
-    private static void cachedPlaylistsDialog(Context ctx) {
+    @SuppressLint("DefaultLocale")
+    private void cachedPlaylistsDialog(Context ctx) {
         List<Playlist> playlists = PlaylistCacheDbDelegate.getAllPlaylists(ctx);
         String[] playlistNames = new String[playlists.size()];
 
@@ -370,6 +399,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
             String playlistId = selectedPlaylist.v1();
             PlaylistCacheDbDelegate.deletePlaylist(ctx, playlistId);
             AndroidUtils.sendToast("Плейлист удален");
+            findPreference("cached_playlists").setSummary(String.format("Скачано плейлистов: %d", MusicCacheImpl.getPlaylists().size()));
         });
 
         builder.show();
@@ -379,10 +409,11 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
         new VkAlertDialog.Builder(ctx)
                 .setTitle(com.vtosters.lite.R.string.warning)
                 .setMessage(com.vtosters.lite.R.string.cached_tracks_remove_confirm)
-                .setPositiveButton(com.vtosters.lite.R.string.yes,
-                        (dialog, which) -> executor.submit(MusicCacheImpl::clear))
-                .setNeutralButton(com.vtosters.lite.R.string.no,
-                        (dialog, which) -> dialog.cancel())
+                .setPositiveButton(com.vtosters.lite.R.string.yes, (dialog, which) -> {
+                    executor.submit(MusicCacheImpl::clear);
+                    findPreference("cached_tracks").setSummary(String.format(requireContext().getString(com.vtosters.lite.R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
+                })
+                .setNeutralButton(com.vtosters.lite.R.string.no, (dialog, which) -> dialog.cancel())
                 .show();
     }
 
