@@ -61,6 +61,18 @@ public class FiltersPreferences {
         editor.apply();
     }
 
+    public static void forceUpdateFilters() {
+        SharedPreferences.Editor editor = preferences.edit();
+
+        preferences.getAll().keySet().stream()
+                .filter(key -> key.endsWith(":" + PREF_KEY_VERSION))
+                .forEach(key -> editor.putString(key, "0"));
+
+        editor.apply();
+
+        Updates.updateFilters();
+    }
+
     public static boolean getSavedKeyValue(int id) {
         return getFilter(id) != null;
     }
