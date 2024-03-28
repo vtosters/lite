@@ -15,6 +15,7 @@ import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,8 +37,10 @@ public class PlaylistInjector {
 
     public static Observable<AudioGetPlaylist.c> injectGetPlaylist(AudioGetPlaylist audioGetPlaylist) {
         try {
-            if (MusicCacheImpl.isEmpty())
+            if (MusicCacheImpl.isEmpty()) {
                 return null;
+            }
+            
             var requestArgs = audioGetPlaylist.b();
 
             var id = requestArgs.get("id");
@@ -45,9 +48,11 @@ public class PlaylistInjector {
             var accessKey = requestArgs.get("access_key");
             boolean isVirtualPlaylist = accessKey != null && (accessKey.equals("cache"));
             boolean isAlbumVirtualPlaylist = accessKey != null && (accessKey.equals("cacheAlbum"));
+            boolean isOwnCachePlaylist = Objects.equals(ownerId, String.valueOf(AccountManagerUtils.getUserId())) && Objects.equals(id, "-1");
 
-            if (TextUtils.isEmpty(id) || (!isVirtualPlaylist && !isAlbumVirtualPlaylist))
+            if (TextUtils.isEmpty(id) || (!isVirtualPlaylist && !isAlbumVirtualPlaylist)) {
                 return null;
+            }
 
             return Observable.a((ObservableOnSubscribe<AudioGetPlaylist.c>) observableEmitter -> {
                 AudioGetPlaylist.c response = new AudioGetPlaylist.c();
@@ -81,13 +86,11 @@ public class PlaylistInjector {
                     return;
                 }
 
-                response.c = (ArrayList<MusicTrack>) MusicCacheImpl.getPlaylistSongs(ownerId, id);
-
-                Log.d("Playlist", "Open playlist " + ownerId + "_" + id);
-
-                if (Objects.equals(id, "-1")) {
+                if (isOwnCachePlaylist) {
+                    response.c = (ArrayList<MusicTrack>) TracklistHelper.getMyCachedMusicTracks();
                     response.b = PlaylistHelper.createCachedPlaylistMetadata();
                 } else {
+                    response.c = (ArrayList<MusicTrack>) MusicCacheImpl.getPlaylistSongs(ownerId, id);
                     response.b = MusicCacheImpl.getPlaylist(id, ownerId);
                 }
 

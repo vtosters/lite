@@ -42,7 +42,7 @@ public class TracklistInjector {
                             Log.d("TracklistInjector", "Using vkx cache catalog");
                             observableEmitter.b(parser.c(new JSONObject(service.getCacheCatalog())));
                         } catch (Exception e) {
-                            e.printStackTrace();
+                            e.fillInStackTrace();
                             List<MusicTrack> tracks = new ArrayList<>();
                             List<String> cache = service.getCache();
 
@@ -55,16 +55,14 @@ public class TracklistInjector {
                             observableEmitter.b(parser.c(createVirtualCatalog(tracks)));
                         }
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        e.fillInStackTrace();
                     }
                 });
             } else {
                 if (MusicCacheImpl.isEmpty()) {
                     observableEmitter.b(parser.c(getEmptyCatalog()));
                 } else {
-                    observableEmitter.b(parser.c(createVirtualCatalog(
-                            PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(),
-                            AccountManagerUtils.getUserId() + "_-1"))));
+                    observableEmitter.b(parser.c(createVirtualCatalog(TracklistHelper.getMyCachedMusicTracks())));
                 }
             }
         });
