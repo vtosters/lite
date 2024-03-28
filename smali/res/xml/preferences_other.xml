@@ -8,11 +8,18 @@
         <Preference
                 android:key="microgsettings"
                 android:title="@string/microgsett"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Экспериментальные функции">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="batchmessages"
                 android:summary="Поможет исправить скорость загрузки сообщений, но работает нестабильно"
                 android:title="Альтернативная загрузка сообщений"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="unstableNameChanger"
+                android:title="Редактор имен"
+                android:summary="Редактор имен групп и профилей людей\n\nПри проблемах с работой сообщений лучше отключить данную функцию"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference
