@@ -7,17 +7,14 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.util.List;
 import ru.vtosters.lite.music.cache.db.PlaylistCacheDb;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.PlaylistUtils;
 
-import java.util.List;
-
 public class PlaylistCacheDbDelegate {
-    static synchronized private PlaylistCacheDb connectToDb(Context context) {
-        synchronized (PlaylistCacheDb.class) {
-            return new PlaylistCacheDb(context);
-        }
+    private static PlaylistCacheDb connectToDb(Context context) {
+        return new PlaylistCacheDb(context);
     }
 
     public static void addPlaylist(Context context, Playlist playlist) {
