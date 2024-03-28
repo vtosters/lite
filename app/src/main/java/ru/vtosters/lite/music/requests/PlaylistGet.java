@@ -1,33 +1,32 @@
-package ru.vtosters.lite.music.converter.playlist;
-
-import com.vk.core.network.Network;
-import com.vk.core.util.DeviceIdProvider;
-import com.vk.dto.music.MusicTrack;
-import com.vk.dto.music.Playlist;
-import java8.util.concurrent.CompletableFuture;
-import okhttp3.Headers;
-import okhttp3.Request;
-import okhttp3.Response;
-import org.json.JSONException;
-import org.json.JSONObject;
-import ru.vtosters.lite.utils.AccountManagerUtils;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.sponsorpost.utils.GzipDecompressor;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.stream.Collectors;
+package ru.vtosters.lite.music.requests;
 
 import static com.vk.core.network.Network.ClientType.CLIENT_API;
 import static ru.vtosters.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 
+import com.vk.core.network.Network;
+import com.vk.core.util.DeviceIdProvider;
+import com.vk.dto.music.MusicTrack;
+import com.vk.dto.music.Playlist;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import okhttp3.Request;
+import okhttp3.Response;
+import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
+
 /**
  * stuff for converting playlists DTO
  */
-public class PlaylistConverter {
+public class PlaylistGet {
     public static List<MusicTrack> getPlaylist(Playlist oldPlaylist) {
         var tracks = requestPlaylist(0, oldPlaylist.b, oldPlaylist.Q, oldPlaylist.a);
         return tracks.stream().filter(track -> !track.D.isEmpty()).collect(Collectors.toList());
@@ -57,32 +56,26 @@ public class PlaylistConverter {
                 .a("Content-Type", "application/x-www-form-urlencoded; charset=utf-8")
                 .a();
 
-        try {
-            var response = CompletableFuture.supplyAsync(() -> {
-                try (Response resp = Network.b(CLIENT_API).a(request).execute()) {
-                    return GzipDecompressor.decompressResponse(resp);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }).get();
+        try (Response resp = Network.b(CLIENT_API).a(request).execute()) {
+            var response = GzipDecompressor.decompressResponse(resp);
             var jsonObj = new JSONObject(response);
             if (!jsonObj.has("response"))
-                return null;
+                return List.of();
             var playlist = new JSONObject(response).getJSONObject("response").getJSONArray("audios");
-            var tracks = new ArrayList<MusicTrack>();
-            for (int i = 0; i < playlist.length(); i++) {
+            var n = playlist.length();
+            var tracks = new ArrayList<MusicTrack>(n);
+            for (int i = 0; i < n; i++) {
                 var track = new MusicTrack(playlist.getJSONObject(i));
                 tracks.add(track);
             }
 
-            if (tracks.size() == audioCount) {
+            if (n == audioCount) {
                 tracks.addAll(requestPlaylist(offset + audioCount, ownerId, accessKey, id));
             }
 
             return tracks;
-        } catch (JSONException | ExecutionException | InterruptedException e) {
-            e.printStackTrace();
+        } catch (JSONException | IOException e) {
+            throw new RuntimeException(e);
         }
-        return null;
     }
 }
