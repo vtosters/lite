@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 
 public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
@@ -217,6 +218,19 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                     return true;
                 }
         );
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "playStatsCatalog",
+                "Список истории прослушиваний",
+                "Показывать вкладку истории прослушиваний в музыкальном разделе\n\nОтключение ускорит открытие музыкального раздела при медленном интернете",
+                null,
+                true,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("playStatsCatalog", (boolean) o).apply();
+                    return true;
+                }
+        ).setVisible(Preferences.sendMusicMetrics() && !getBoolValue("useOldAppVer", false));
 
         if (!Preferences.serverFeaturesDisable()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Интеграция Genius");
