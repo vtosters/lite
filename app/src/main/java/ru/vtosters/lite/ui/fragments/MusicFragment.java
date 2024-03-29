@@ -225,7 +225,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 "Список истории прослушиваний",
                 "Показывать вкладку истории прослушиваний в музыкальном разделе\n\nОтключение ускорит открытие музыкального раздела при медленном интернете",
                 null,
-                true,
+                false,
                 (preference, o) -> {
                     Preferences.getPreferences().edit().putBoolean("playStatsCatalog", (boolean) o).apply();
                     return true;
@@ -339,6 +339,19 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
         list.setVisible(!Preferences.getBoolValue("useOldAppVer", false));
 
         getPreferenceScreen().addPreference(list);
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "playlistsCatalogs",
+                "Списки плейлистов",
+                "Показывать вкладку плейлистов и альбомов прослушиваний в музыкальном разделе\n\nОтключение ускорит открытие музыкального раздела при медленном интернете",
+                null,
+                true,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("playStatsCatalog", (boolean) o).apply();
+                    return true;
+                }
+        ).setVisible(!getBoolValue("useOldAppVer", false));
     }
 
     private void lastfmAuth(Context ctx) {
