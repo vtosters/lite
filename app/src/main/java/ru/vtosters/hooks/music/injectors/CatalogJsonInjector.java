@@ -48,7 +48,7 @@ public class CatalogJsonInjector {
                     fetchCatalogId("https://vk.com/audio?section=albums", oldItems);
                 }
 
-                if (Preferences.sendMusicMetrics() && Preferences.getBoolValue("playStatsCatalog", false)) {
+                if (Preferences.sendMusicMetrics() && Preferences.getBoolValue("playStatCatalog", false)) {
                     fetchCatalogId("https://vk.com/audio?section=recent", oldItems);
                 }
 

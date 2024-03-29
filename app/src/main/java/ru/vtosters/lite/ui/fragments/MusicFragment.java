@@ -221,13 +221,13 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         PreferenceFragmentUtils.addMaterialSwitchPreference(
                 getPreferenceScreen(),
-                "playStatsCatalog",
+                "playStatCatalog",
                 "Список истории прослушиваний",
                 "Показывать вкладку истории прослушиваний в музыкальном разделе\n\nОтключение ускорит открытие музыкального раздела при медленном интернете",
                 null,
                 false,
                 (preference, o) -> {
-                    Preferences.getPreferences().edit().putBoolean("playStatsCatalog", (boolean) o).apply();
+                    Preferences.getPreferences().edit().putBoolean("playStatCatalog", (boolean) o).apply();
                     return true;
                 }
         ).setVisible(Preferences.sendMusicMetrics() && !getBoolValue("useOldAppVer", false));
@@ -348,7 +348,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 null,
                 true,
                 (preference, o) -> {
-                    Preferences.getPreferences().edit().putBoolean("playStatsCatalog", (boolean) o).apply();
+                    Preferences.getPreferences().edit().putBoolean("playlistsCatalogs", (boolean) o).apply();
                     return true;
                 }
         ).setVisible(!getBoolValue("useOldAppVer", false));
