@@ -13,6 +13,8 @@ import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.VersionReader;
 
+import static ru.vtosters.hooks.GmsHook.isSpoofPackageInstalled;
+
 public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
 
     @Override
@@ -46,11 +48,11 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
         boolean isZenUI = OEMDetector.isZenUI();
         boolean isEMUI = OEMDetector.isEMUI();
         boolean hasMiuiIncrCode = OEMDetector.hasMiuiIncrCode();
+        boolean isHyperOS = OEMDetector.isHyperOs();
 
         boolean hasGMS = GmsHook.isGmsInstalled();
-        boolean hasVancedMicroG = GmsHook.isFakeGmsInstalled();
-        boolean hasReVancedMicroG = GmsHook.isFakeGms2Installed();
-        String GMSPackageName = hasGMS ? "com.google.android.gms" : hasVancedMicroG ? "com.mgoogle.android.gms" : hasReVancedMicroG ? "app.revanced.android.gms" : "no gms or microg";
+        boolean hasVancedMicroG = GmsHook.isAnyServicesInstalled();
+        String GMSPackageName = hasGMS ? "com.google.android.gms" : hasVancedMicroG ? GmsHook.getCurrentGms() + ".android.gms" : "no gms or microg";
 
         boolean isValidSignature = Preferences.isValidSignature();
         boolean isTablet = AndroidUtils.isTablet();
@@ -104,9 +106,7 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isInstalledGoogleGMS", "Value: " + hasGMS, 0, null);
 
-        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isInstalledVancedMicroG", "Value: " + hasVancedMicroG, 0, null);
-
-        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isInstalledReVancedMicroG", "Value: " + hasReVancedMicroG, 0, null);
+        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isInstalledMicroG", "Value: " + hasVancedMicroG, 0, null);
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "Product Name", productName, 0, preference -> {
             ((ClipboardManager) requireActivity().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", productName));
@@ -193,6 +193,8 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isOneUi", "Value: " + isOneUi, 0, null);
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isMiui", "Value: " + isMiui, 0, null);
+
+        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isHyperOS", "Value: " + isHyperOS, 0, null);
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isEMUI", "Value: " + isEMUI, 0, null);
 
