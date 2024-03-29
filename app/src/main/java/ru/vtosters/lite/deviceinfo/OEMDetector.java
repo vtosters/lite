@@ -70,8 +70,8 @@ public class OEMDetector {
 
     public static boolean isHyperOs() {
         try {
-            int prop = Integer.parseInt(getSystemProperty("ro.system.build.version.release_or_codename"));
-            return prop >= 14 && isMIUI();
+            int miuiVer = Integer.parseInt(getMiuiUiVersionCode()); // cuz hyperos gives 816 and etc
+            return miuiVer > 14 && isMIUI();
         } catch (Exception unused) {
             return false;
         }
