@@ -14,10 +14,12 @@ import com.vtosters.lite.api.ExtendedCommunityProfile;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import kotlin.Unit;
 import kotlin.jvm.b.Functions;
+import ru.vtosters.hooks.RenameHook;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.foaf.FoafBase;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.RenameTool;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -66,10 +68,12 @@ public class MenuBuilder {
                 return Unit.a;
             });
 
-//            addItem(builder, AndroidUtils.getString(R.string.menu_change_name), () -> {
-//                RenameTool.createDialog(eup, ctx);
-//                return Unit.a;
-//            });
+            if (RenameHook.isEnabled()) {
+                addItem(builder, AndroidUtils.getString(R.string.menu_change_name), () -> {
+                    RenameTool.createDialog(eup, ctx);
+                    return Unit.a;
+                });
+            }
 
             addItem(builder, AndroidUtils.getString(isPageWhitelistedFilter ? R.string.remove_from_filter_whitelist : R.string.add_to_filter_whitelist), () -> {
                 setWhitelistedFilter(eup, !isPageWhitelistedFilter);
@@ -83,7 +87,7 @@ public class MenuBuilder {
                 return Unit.a;
             });
         } catch (IllegalAccessException | InvocationTargetException e) {
-            e.printStackTrace();
+            e.fillInStackTrace();
         }
     }
 
@@ -100,10 +104,12 @@ public class MenuBuilder {
                 return Unit.a;
             });
 
-//            addItem(builder, AndroidUtils.getString(R.string.menu_change_name), () -> {
-//                RenameTool.createDialogGroup(ecp, ctx);
-//                return Unit.a;
-//            });
+            if (RenameHook.isEnabled()) {
+                addItem(builder, AndroidUtils.getString(R.string.menu_change_name), () -> {
+                    RenameTool.createDialogGroup(ecp, ctx);
+                    return Unit.a;
+                });
+            }
 
             addItem(builder, AndroidUtils.getString(isPageWhitelistedFilter ? R.string.remove_from_filter_whitelist : R.string.add_to_filter_whitelist), () -> {
                 setWhitelistedFilter(ecp, !isPageWhitelistedFilter);
@@ -123,7 +129,7 @@ public class MenuBuilder {
                 return Unit.a;
             });
         } catch (IllegalAccessException | InvocationTargetException e) {
-            e.printStackTrace();
+            e.fillInStackTrace();
         }
     }
 
