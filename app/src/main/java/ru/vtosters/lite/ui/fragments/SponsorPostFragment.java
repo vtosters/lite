@@ -227,6 +227,23 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                                 }
                         );
 
+                        if (NetworkUtils.isNetworkConnected()) {
+                            PreferenceFragmentUtils.addPreference(
+                                    getPreferenceScreen(),
+                                    "",
+                                    "Обновить списки фильтров",
+                                    null,
+                                    null,
+                                    preference -> {
+                                        this.requireActivity().runOnUiThread(() -> {
+                                            FiltersPreferences.forceUpdateFilters();
+                                            AndroidUtils.sendToast("Обновлено");
+                                        });
+                                        return false;
+                                    }
+                            );
+                        }
+
                         PreferenceFragmentUtils.addPreference(
                                 getPreferenceScreen(),
                                 "",

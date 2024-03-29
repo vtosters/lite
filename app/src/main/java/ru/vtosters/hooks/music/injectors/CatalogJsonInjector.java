@@ -42,11 +42,13 @@ public class CatalogJsonInjector {
 
                 removeUnsupportedLayouts(blocks);
 
-                fetchCatalogId("https://vk.com/audio?section=my_playlists", oldItems);
+                if (Preferences.getBoolValue("playlistsCatalogs", true)) {
+                    fetchCatalogId("https://vk.com/audio?section=my_playlists", oldItems);
 
-                fetchCatalogId("https://vk.com/audio?section=albums", oldItems);
+                    fetchCatalogId("https://vk.com/audio?section=albums", oldItems);
+                }
 
-                if (Preferences.sendMusicMetrics() && Preferences.getBoolValue("playStatsCatalog", true)) {
+                if (Preferences.sendMusicMetrics() && Preferences.getBoolValue("playStatsCatalog", false)) {
                     fetchCatalogId("https://vk.com/audio?section=recent", oldItems);
                 }
 
