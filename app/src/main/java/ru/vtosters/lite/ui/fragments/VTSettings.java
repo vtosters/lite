@@ -108,7 +108,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         boolean isLinksUnverified = AndroidUtils.isLinksUnverified(requireActivity());
         boolean isDozingAvailable = Build.VERSION.SDK_INT >= 23 && !manager.isIgnoringBatteryOptimizations(AndroidUtils.getPackageName());
         boolean areNotificationsDisabled = !AndroidUtils.areNotificationsEnabled() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O;
-        boolean isGMSNotInstalled = !GmsHook.isAnyServicesInstalled();
+        boolean isGMSNotInstalled = !GmsHook.isAnyServicesInstalled() && !GmsHook.isGmsInstalled();
 
         if (AccountManagerUtils.isLogin()) {
             Preference accountSwitcher = PreferenceFragmentUtils.addPreference(
@@ -584,7 +584,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        if (Build.VERSION.SDK_INT >= 33 && !OEMDetector.isMIUI()) {
+        if (Build.VERSION.SDK_INT >= 33 && (!OEMDetector.isMIUI() || OEMDetector.isHyperOs())) {
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",

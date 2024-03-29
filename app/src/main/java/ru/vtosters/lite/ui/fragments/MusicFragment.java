@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 
 public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
@@ -218,6 +219,19 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "playStatCatalog",
+                "Список истории прослушиваний",
+                "Показывать вкладку истории прослушиваний в музыкальном разделе\n\nОтключение ускорит открытие музыкального раздела при медленном интернете",
+                null,
+                false,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("playStatCatalog", (boolean) o).apply();
+                    return true;
+                }
+        ).setVisible(Preferences.sendMusicMetrics() && !getBoolValue("useOldAppVer", false));
+
         if (!Preferences.serverFeaturesDisable()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Интеграция Genius");
             PreferenceFragmentUtils.addMaterialSwitchPreference(
@@ -325,6 +339,19 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
         list.setVisible(!Preferences.getBoolValue("useOldAppVer", false));
 
         getPreferenceScreen().addPreference(list);
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "playlistsCatalogs",
+                "Списки плейлистов",
+                "Показывать вкладку плейлистов и альбомов прослушиваний в музыкальном разделе\n\nОтключение ускорит открытие музыкального раздела при медленном интернете",
+                null,
+                true,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("playlistsCatalogs", (boolean) o).apply();
+                    return true;
+                }
+        ).setVisible(!getBoolValue("useOldAppVer", false));
     }
 
     private void lastfmAuth(Context ctx) {

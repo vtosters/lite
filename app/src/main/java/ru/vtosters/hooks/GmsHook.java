@@ -11,37 +11,37 @@ import com.vtosters.lite.R;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class GmsHook {
-    private static final boolean needToSpoof = !isGmsInstalled() && (isFakeGmsInstalled() || isFakeGms2Installed());
+    private static final String[] spoofPackages = {"com.mgoogle", "app.revanced"};
+    private static final String currentGms;
+
+    static {
+        currentGms = getSpoofPackagePrefix();
+    }
+
+    private static boolean isPackageInstalled(String packageName) {
+        try {
+            AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo(packageName, 0);
+            return true;
+        } catch (Exception unused) {
+            return false;
+        }
+    }
 
     public static boolean isGmsInstalled() {
-        try {
-            AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("com.google.android.gms", 0);
-            return true;
-        } catch (Exception unused) {
-            return false;
-        }
-    } // Google Market Services check
+        return isPackageInstalled("com.google.android.gms");
+    }
 
-    public static boolean isFakeGmsInstalled() {
-        try {
-            AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("com.mgoogle.android.gms", 0);
-            return true;
-        } catch (Exception unused) {
-            return false;
-        }
-    } // Microg Google Market Services check
-
-    public static boolean isFakeGms2Installed() {
-        try {
-            AndroidUtils.getGlobalContext().getPackageManager().getPackageInfo("app.revanced.android.gms", 0);
-            return true;
-        } catch (Exception unused) {
-            return false;
-        }
-    } // Microg Google Market Services check
+    public static boolean isSpoofPackageInstalled(String packageName) {
+        return isPackageInstalled(packageName + ".android.gms");
+    }
 
     public static boolean isAnyServicesInstalled() {
-        return isGmsInstalled() || isFakeGmsInstalled() || isFakeGms2Installed();
+        for (String packageName : spoofPackages) {
+            if (isSpoofPackageInstalled(packageName)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void fixGapps() {
@@ -52,10 +52,10 @@ public class GmsHook {
                 notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", AndroidUtils.getResources().getString(R.string.audio_message_play_error), NotificationManager.IMPORTANCE_LOW));
             }
         }
-    } // Music channels fix
+    }
 
     public static String replaceGMSPackage(String str) {
-        return needToSpoof ? str.replaceAll("com.google", (isFakeGms2Installed() ? "app.revanced" : "com.mgoogle")) : str;
+        return shouldSpoof() ? str.replaceAll("com.google", currentGms) : str;
     }
 
     public static String getFirebaseInstanceIdReceiver() {
@@ -63,6 +63,37 @@ public class GmsHook {
     }
 
     public static Class getFirebaseInstanceIdReceiverClass() {
-        return needToSpoof ? (isFakeGms2Installed() ? FirebaseInstanceIdReceiver3.class : FirebaseInstanceIdReceiver2.class) : FirebaseInstanceIdReceiver.class;
+        return getSpoofFirebaseInstanceIdReceiverClass();
+    }
+
+    public static String getCurrentGms() {
+        return currentGms;
+    }
+
+    private static boolean shouldSpoof() {
+        return !isGmsInstalled() && (isSpoofPackageInstalled("com.mgoogle") || isSpoofPackageInstalled("app.revanced"));
+    }
+
+    private static String getSpoofPackagePrefix() {
+        for (String packageName : spoofPackages) {
+            if (isSpoofPackageInstalled(packageName)) {
+                return packageName;
+            }
+        }
+        return "com.google";
+    }
+
+    private static Class getSpoofFirebaseInstanceIdReceiverClass() {
+        switch (currentGms) {
+            case "com.mgoogle" -> {
+                return FirebaseInstanceIdReceiver2.class;
+            }
+            case "app.revanced" -> {
+                return FirebaseInstanceIdReceiver3.class;
+            }
+            default -> {
+                return FirebaseInstanceIdReceiver.class;
+            }
+        }
     }
 }

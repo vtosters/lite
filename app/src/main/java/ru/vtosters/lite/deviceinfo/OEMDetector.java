@@ -56,7 +56,7 @@ public class OEMDetector {
     }
 
     public static boolean isOEM() {
-        return isMIUI() || isEMUI() || isFlyme() || isZenUI() || isSamsung() || isVivo() || isOneUi();
+        return isMIUI() || isEMUI() || isFlyme() || isZenUI() || isSamsung() || isVivo() || isOneUi() || isHyperOs();
     }
 
     public static boolean isMIUI() {
@@ -65,6 +65,15 @@ public class OEMDetector {
             return true;
         } catch (Exception unused) {
             return detectMiuiV2();
+        }
+    }
+
+    public static boolean isHyperOs() {
+        try {
+            int miuiVer = Integer.parseInt(getMiuiUiVersionCode()); // cuz hyperos gives 816 and etc
+            return miuiVer > 14 && isMIUI();
+        } catch (Exception unused) {
+            return false;
         }
     }
 
@@ -124,7 +133,6 @@ public class OEMDetector {
         try {
             return (String) getPropMtd.invoke(null, prop);
         } catch (Throwable e) {
-            e.printStackTrace();
             return null;
         }
     }

@@ -60,12 +60,12 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("microgsettings").setVisible(GmsHook.isFakeGmsInstalled() && !GmsHook.isGmsInstalled());
+        findPreference("microgsettings").setVisible(GmsHook.isAnyServicesInstalled() && !GmsHook.isGmsInstalled());
 
         findPreference("microgsettings").setOnPreferenceClickListener(preference -> {
             try {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.setComponent(new ComponentName((GmsHook.isFakeGms2Installed() ? "app.revanced.android.gms" : "com.mgoogle.android.gms"), "org.microg.gms.ui.SettingsActivity"));
+                intent.setComponent(new ComponentName(GmsHook.getCurrentGms() + ".android.gms", "org.microg.gms.ui.SettingsActivity"));
                 startActivity(intent);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -78,6 +78,17 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
 
             Toast.makeText(requireContext(), requireContext().getString(R.string.copybtn), Toast.LENGTH_SHORT).show();
             ToastUtils.a(requireContext().getString(R.string.tokenwarning));
+            return true;
+        });
+
+        findPreference("unstableNameChangerDrop").setOnPreferenceClickListener(preference -> {
+            RenameTool.clearDatabase();
+            LifecycleUtils.restartApplicationWithTimer();
+            return true;
+        });
+
+        findPreference("unstableNameChanger").setOnPreferenceChangeListener((preference, o) -> {
+            LifecycleUtils.restartApplicationWithTimer();
             return true;
         });
 

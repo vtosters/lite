@@ -1,5 +1,6 @@
 package ru.vtosters.sponsorpost.utils;
 
+import android.util.Log;
 import ru.vtosters.lite.utils.NetworkUtils;
 import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 import ru.vtosters.sponsorpost.data.Filter;
@@ -31,14 +32,17 @@ public class Updates {
             for (Filter filter : filters) {
                 Filter localFilter = findLocalFilterById(localFilters, filter.getId());
                 if (localFilter == null) {
+                    Log.d("Updates", "local filter is not exist, adding new: " + filter.getId());
                     FiltersPreferences.saveFilter(filter);
                 } else {
                     String remoteVersion = filter.getVersion();
                     String localVersion = localFilter.getVersion();
                     if (Objects.equals(remoteVersion, localVersion)) {
-                        FiltersPreferences.saveFilter(filter);
-                    } else {
+                        Log.d("Updates", "saved local filter: " + localFilter.getId());
                         FiltersPreferences.saveFilter(localFilter);
+                    } else {
+                        Log.d("Updates", "saved remote filter: " + filter.getId());
+                        FiltersPreferences.saveFilter(filter);
                     }
                 }
             }

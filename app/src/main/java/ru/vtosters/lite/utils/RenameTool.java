@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -12,15 +13,15 @@ import android.widget.LinearLayout;
 import androidx.core.util.Pair;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.dto.user.UserProfile;
-import com.vk.im.engine.models.users.User;
 import com.vtosters.lite.R;
 import com.vtosters.lite.api.ExtendedCommunityProfile;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import ru.vtosters.hooks.other.ThemesUtils;
 
-import java.lang.reflect.Field;
+import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.util.function.BiConsumer;
 
 import static ru.vtosters.hooks.other.ThemesUtils.getSTextAttr;
 import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
@@ -47,69 +48,40 @@ public class RenameTool {
         return helperInstance;
     }
 
-    public static String getCurrentModifiedUser() {
-        Cursor rawQuery = getHelper().getReadableDatabase().rawQuery(String.format("SELECT * FROM %s WHERE %s=%s", TABLE_NAME, COLUMN_VKID, AccountManagerUtils.getUserId()), new String[0]);
-        if (rawQuery.moveToFirst()) {
-            try {
-                String decode = URLDecoder.decode(rawQuery.getString(rawQuery.getColumnIndexOrThrow(COLUMN_FIRSTNAME)), "UTF-8");
-                return decode + " " + URLDecoder.decode(rawQuery.getString(rawQuery.getColumnIndexOrThrow(COLUMN_LASTNAME)), "UTF-8");
-            } catch (java.io.UnsupportedEncodingException | java.lang.IllegalArgumentException e) {
-                e.printStackTrace();
-            } finally {
-                rawQuery.close();
-            }
-        } else rawQuery.close();
-        return null;
-    }
-
-    // Reload all values from DB
     public static void reloadDB() {
         renamedGroups.clear();
         renamedUsers.clear();
         updateRequested = false;
 
-        try (Cursor cursor = getHelper().getReadableDatabase().rawQuery(String.format("SELECT * FROM %s", TABLE_NAME), new String[0])) {
-            while (cursor.moveToNext()) {
-                String firstName = URLDecoder.decode(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_FIRSTNAME)), "UTF-8");
-                String lastName = URLDecoder.decode(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_LASTNAME)), "UTF-8");
-                int vkID = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_VKID));
-                renamedUsers.put(vkID, new Pair<>(firstName, lastName));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        loadData(TABLE_NAME, (cursor, vkID) -> {
+            String firstName = decode(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_FIRSTNAME)));
+            String lastName = decode(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_LASTNAME)));
+            renamedUsers.put(vkID, new Pair<>(firstName, lastName));
+        });
 
-        try (Cursor cursor = getHelper().getReadableDatabase().rawQuery(String.format("SELECT * FROM %s", TABLE_NAME_GROUP), new String[0])) {
+        loadData(TABLE_NAME_GROUP, (cursor, vkID) -> {
+            String name = decode(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NAME)));
+            renamedGroups.put(vkID, name);
+        });
+    }
+
+    // Generic method to load data from the database
+    private static void loadData(String tableName, BiConsumer<Cursor, Integer> consumer) {
+        try (Cursor cursor = getHelper().getReadableDatabase().rawQuery("SELECT * FROM " + tableName, null)) {
             while (cursor.moveToNext()) {
-                String name = URLDecoder.decode(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NAME)), "UTF-8");
                 int vkID = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_VKID));
-                renamedGroups.put(vkID, name);
+                consumer.accept(cursor, vkID);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException("Failed to load data from " + tableName, e);
         }
     }
 
-    public static void injectIntoChat(User u) {
-        int id = u.getId();
-        if (updateRequested) {
-            reloadDB();
-        }
-
-        Pair<String, String> user = renamedUsers.get(id);
-        if (user == null) return;
-
-        setObject(u, "I", user.first);
-        setObject(u, "J", user.second);
-    }
-
-    public static void setObject(User instance, String name, Object obj) {
+    private static String decode(String value) {
         try {
-            Field f = User.class.getDeclaredField(name);
-            f.setAccessible(true);
-            f.set(instance, obj);
-        } catch (Exception e) {
-            e.printStackTrace();
+            return URLDecoder.decode(value, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException("UTF-8 encoding not supported", e);
         }
     }
 
@@ -117,7 +89,7 @@ public class RenameTool {
         LinearLayout linearLayout = new LinearLayout(ctx);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
-        final EditText fn = new EditText(ctx);
+        EditText fn = new EditText(ctx);
         fn.setHint(R.string.vk_auth_sign_up_first_name);
         fn.setTextColor(getTextAttr());
         fn.setHintTextColor(getSTextAttr());
@@ -128,7 +100,7 @@ public class RenameTool {
         margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
         fn.setLayoutParams(margin);
 
-        final EditText ln = new EditText(ctx);
+        EditText ln = new EditText(ctx);
         ln.setHint(R.string.vk_auth_sign_up_last_name);
         ln.setTextColor(getTextAttr());
         ln.setHintTextColor(getSTextAttr());
@@ -137,69 +109,93 @@ public class RenameTool {
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ln.setLayoutParams(margin);
 
-        final UserProfile profile = AccountManagerUtils.fromEup(eup);
+        UserProfile profile = AccountManagerUtils.fromEup(eup);
         fn.setText(AccountManagerUtils.getUserFirstName(profile));
         ln.setText(AccountManagerUtils.getUserLastName(profile));
 
         int id = AccountManagerUtils.getUserID(profile);
 
-        var builder = new VkAlertDialog.Builder(ctx)
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx)
                 .setTitle(R.string.rename_title)
                 .setMessage(R.string.rename_message)
                 .setView(linearLayout)
-                .setPositiveButton("OK", (dialog, which) -> {
-                    String firstName = fn.getText().toString();
-                    String lastName = ln.getText().toString();
-                    SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
-                    try {
-                        if (isChangedName(id)) {
-                            writableDatabase.execSQL(
-                                    String.format("UPDATE %s SET %s='%s', %s='%s' WHERE %s='%s'",
-                                            TABLE_NAME,
-                                            COLUMN_FIRSTNAME, URLEncoder.encode(firstName, "UTF-8"),
-                                            COLUMN_LASTNAME, URLEncoder.encode(lastName, "UTF-8"),
-                                            COLUMN_VKID, id));
-                        } else {
-                            writableDatabase.execSQL(
-                                    String.format("INSERT INTO %s (%s, %s, %s) VALUES (%s, '%s', '%s')",
-                                            TABLE_NAME,
-                                            COLUMN_VKID, COLUMN_FIRSTNAME, COLUMN_LASTNAME,
-                                            id, URLEncoder.encode(firstName, "UTF-8"), URLEncoder.encode(lastName, "UTF-8")));
-                        }
-                        updateRequested = true;
-                        if (id == AccountManagerUtils.getUserId()) {
-                            ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
-                        }
-                        ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
+                .setPositiveButton("OK", (dialog, which) -> updateName(ctx, fn.getText().toString(), ln.getText().toString(), id));
 
-                        sendToast(ctx.getString(R.string.rename_success));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        sendToast(ctx.getString(R.string.rename_error));
-                    }
-                });
-        if (isChangedName(id))
-            builder.setNeutralButton(R.string.rename_reset, (dialog, which) -> {
-                getHelper().getWritableDatabase().execSQL(
-                        String.format(
-                                "DELETE FROM %s WHERE %s='%s'",
-                                TABLE_NAME,
-                                COLUMN_VKID, id));
-                if (id == AccountManagerUtils.getUserId()) {
-                    ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
-                }
-                updateRequested = true;
-                ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
-                sendToast(ctx.getString(R.string.rename_remove_from_bd_success));
-            });
+        if (isChangedName(id)) {
+            builder.setNeutralButton(R.string.rename_reset, (dialog, which) -> deleteUser(ctx, id));
+        }
+
         builder.show();
+    }
+
+    public static void deleteUser(Context ctx, int id) {
+        SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
+
+        writableDatabase.delete(TABLE_NAME, COLUMN_VKID + "=?", new String[]{String.valueOf(id)});
+
+        updateRequested = true;
+        notifyUser(ctx, id);
+
+        sendToast(ctx.getString(R.string.rename_remove_from_bd_success));
+    }
+
+    public static void clearDatabase() {
+        SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
+
+        writableDatabase.delete(TABLE_NAME, null, null);
+        writableDatabase.delete(TABLE_NAME_GROUP, null, null);
+
+        renamedGroups.clear();
+        renamedUsers.clear();
+        updateRequested = true;
+    }
+
+    public static void updateName(Context ctx, String firstName, String lastName, int id) {
+        SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
+
+        try {
+            ContentValues values = new ContentValues();
+            values.put(COLUMN_FIRSTNAME, encode(firstName));
+            values.put(COLUMN_LASTNAME, encode(lastName));
+
+            if (isChangedName(id)) {
+                // Update existing record
+                writableDatabase.update(TABLE_NAME, values, COLUMN_VKID + "=?", new String[]{String.valueOf(id)});
+            } else {
+                // Insert new record
+                values.put(COLUMN_VKID, id);
+                writableDatabase.insert(TABLE_NAME, null, values);
+            }
+
+            updateRequested = true;
+            notifyUser(ctx, id);
+
+            sendToast(ctx.getString(R.string.rename_success));
+        } catch (Exception e) {
+            throw new RuntimeException("Database operation failed", e);
+        }
+    }
+
+    private static String encode(String value) {
+        try {
+            return URLEncoder.encode(value, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException("UTF-8 encoding not supported", e);
+        }
+    }
+
+    private static void notifyUser(Context ctx, int id) {
+        if (id == AccountManagerUtils.getUserId()) {
+            ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
+        }
+        ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
     }
 
     public static void createDialogGroup(ExtendedCommunityProfile eup, final Context ctx) {
         LinearLayout linearLayout = new LinearLayout(ctx);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
-        final EditText fn = new EditText(ctx);
+        EditText fn = new EditText(ctx);
         fn.setHint(R.string.vk_auth_sign_up_first_name);
         fn.setHintTextColor(getSTextAttr());
         fn.setTextColor(getTextAttr());
@@ -210,50 +206,59 @@ public class RenameTool {
         margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
         fn.setLayoutParams(margin);
 
-        final UserProfile profile = AccountManagerUtils.fromEup(eup);
+        UserProfile profile = AccountManagerUtils.fromEup(eup);
         fn.setText(AccountManagerUtils.getGroupName(profile));
 
         int fid = AccountManagerUtils.getUserID(profile);
+
         if (fid < 0) fid = -fid;
 
-        final int id = fid;
+        int id = fid;
 
-        var builder = new VkAlertDialog.Builder(ctx)
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx)
                 .setTitle(R.string.rename_title)
                 .setMessage(R.string.rename_message)
                 .setView(linearLayout)
-                .setPositiveButton("OK", (dialog, which) -> {
-                    String firstName = fn.getText().toString();
-                    SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
-                    try {
-                        if (isChangedNameGroup(id)) {
-                            writableDatabase.execSQL(
-                                    String.format(
-                                            "UPDATE %s SET %s='%s' WHERE %s='%s'",
-                                            TABLE_NAME_GROUP,
-                                            COLUMN_NAME, URLEncoder.encode(firstName, "UTF-8"),
-                                            COLUMN_VKID, id));
-                        } else {
-                            writableDatabase.execSQL(
-                                    String.format(
-                                            "INSERT INTO %s (%s, %s) VALUES (%s, '%s')",
-                                            TABLE_NAME_GROUP,
-                                            COLUMN_VKID, COLUMN_NAME,
-                                            id, URLEncoder.encode(firstName, "UTF-8")));
-                        }
-                        updateRequested = true;
-                        sendToast(AndroidUtils.getString(R.string.rename_group_success));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                });
-        if (isChangedNameGroup(id))
-            builder.setNeutralButton(R.string.rename_reset, (dialog, which) -> {
-                getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME_GROUP, COLUMN_VKID, id));
-                updateRequested = true;
-                sendToast(ctx.getString(R.string.rename_remove_group_from_bd_success));
-            });
+                .setPositiveButton("OK", (dialog, which) -> updateGroupName(ctx, fn.getText().toString(), id));
+
+        if (isChangedNameGroup(id)) {
+            builder.setNeutralButton(R.string.rename_reset, (dialog, which) -> deleteGroupName(ctx, id));
+        }
+
         builder.show();
+    }
+
+    public static void deleteGroupName(Context ctx, int id) {
+        SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
+
+        writableDatabase.delete(TABLE_NAME_GROUP, COLUMN_VKID + "=?", new String[]{String.valueOf(id)});
+
+        updateRequested = true;
+
+        sendToast(ctx.getString(R.string.rename_remove_group_from_bd_success));
+    }
+
+    public static void updateGroupName(Context ctx, String groupName, int id) {
+        SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
+
+        try {
+            ContentValues values = new ContentValues();
+            values.put(COLUMN_NAME, encode(groupName));
+
+            if (isChangedNameGroup(id)) {
+                // Update existing record
+                writableDatabase.update(TABLE_NAME_GROUP, values, COLUMN_VKID + "=?", new String[]{String.valueOf(id)});
+            } else {
+                // Insert new record
+                values.put(COLUMN_VKID, id);
+                writableDatabase.insert(TABLE_NAME_GROUP, null, values);
+            }
+
+            updateRequested = true;
+            sendToast(AndroidUtils.getString(R.string.rename_group_success));
+        } catch (Exception e) {
+            throw new RuntimeException("Database operation failed", e);
+        }
     }
 
     public static boolean isChangedName(int uid) {
@@ -262,10 +267,6 @@ public class RenameTool {
 
     public static boolean isChangedNameGroup(int uid) {
         return renamedGroups.get(uid) != null;
-    }
-
-    public static boolean isIdInList(UserProfile profile) {
-        return true;
     }
 
     private static class DbHelper extends SQLiteOpenHelper {

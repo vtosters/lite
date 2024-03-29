@@ -10,7 +10,7 @@ import ru.vtosters.lite.utils.NavigatorUtils;
 
 public class InstallGMS {
     public static void alert(final Activity activity) {
-        if (!GmsHook.isAnyServicesInstalled() && Preferences.getBoolValue("showAlertGms", true)) {
+        if (!GmsHook.isAnyServicesInstalled() && !GmsHook.isGmsInstalled() && Preferences.getBoolValue("showAlertGms", true)) {
             new VkAlertDialog.Builder(activity)
                     .setTitle(activity.getString(R.string.warning))
                     .setMessage(activity.getString(R.string.gmsissuesumm))
