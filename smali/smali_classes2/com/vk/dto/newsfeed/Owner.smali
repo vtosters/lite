@@ -390,6 +390,8 @@
 .method public static final b(Lorg/json/JSONObject;)Lcom/vk/dto/newsfeed/Owner;
     .locals 1
 
+    invoke-static {p0}, Lru/vtosters/hooks/RenameHook;->injectIntoJsonGroup(Lorg/json/JSONObject;)V
+
     sget-object v0, Lcom/vk/dto/newsfeed/Owner;->h:Lcom/vk/dto/newsfeed/Owner$b;
 
     invoke-virtual {v0, p0}, Lcom/vk/dto/newsfeed/Owner$b;->b(Lorg/json/JSONObject;)Lcom/vk/dto/newsfeed/Owner;
@@ -401,6 +403,8 @@
 
 .method public static final c(Lorg/json/JSONObject;)Lcom/vk/dto/newsfeed/Owner;
     .locals 1
+
+    invoke-static {p0}, Lru/vtosters/hooks/RenameHook;->injectIntoJson(Lorg/json/JSONObject;)V
 
     sget-object v0, Lcom/vk/dto/newsfeed/Owner;->h:Lcom/vk/dto/newsfeed/Owner$b;
 
