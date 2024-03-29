@@ -20,6 +20,9 @@
                 android:key="unstableNameChanger"
                 android:title="Редактор имен"
                 android:summary="Редактор имен групп и профилей людей\n\nПри проблемах с работой сообщений лучше отключить данную функцию"/>
+        <Preference
+                android:key="unstableNameChangerDrop"
+                android:title="Сбросить информацию о переименованиях"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference

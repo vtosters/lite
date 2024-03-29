@@ -139,6 +139,17 @@ public class RenameTool {
         sendToast(ctx.getString(R.string.rename_remove_from_bd_success));
     }
 
+    public static void clearDatabase() {
+        SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
+
+        writableDatabase.delete(TABLE_NAME, null, null);
+        writableDatabase.delete(TABLE_NAME_GROUP, null, null);
+
+        renamedGroups.clear();
+        renamedUsers.clear();
+        updateRequested = true;
+    }
+
     public static void updateName(Context ctx, String firstName, String lastName, int id) {
         SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
 

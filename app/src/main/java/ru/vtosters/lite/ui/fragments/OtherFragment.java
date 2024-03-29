@@ -81,6 +81,17 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("unstableNameChangerDrop").setOnPreferenceClickListener(preference -> {
+            RenameTool.clearDatabase();
+            LifecycleUtils.restartApplicationWithTimer();
+            return true;
+        });
+
+        findPreference("unstableNameChanger").setOnPreferenceChangeListener((preference, o) -> {
+            LifecycleUtils.restartApplicationWithTimer();
+            return true;
+        });
+
         findPreference("copydebuginfo").setOnPreferenceClickListener(preference -> {
             copyText(new DeviceInfoCollector().collect().forLogging());
             Toast.makeText(requireContext(), AndroidUtils.getString("device_info_copied"), Toast.LENGTH_SHORT).show();
