@@ -20,6 +20,7 @@ import ru.vtosters.lite.music.LastFMScrobbler;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
@@ -55,7 +56,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                     if (MusicCacheImpl.isEmpty()) {
                         AndroidUtils.sendToast(requireContext().getString(com.vtosters.lite.R.string.no_cache_error));
                     } else {
-                        delcache(requireContext());
+                        delcache(requireContext(), false);
                     }
                     return true;
                 }
@@ -70,6 +71,18 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                     null,
                     preference -> {
                         cachedPlaylistsDialog(requireContext());
+                        return true;
+                    }
+            );
+
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "cached_playlists",
+                    "Удалить все скачанные плейлисты",
+                    null,
+                    null,
+                    preference -> {
+                        delcache(requireContext(), true);
                         return true;
                     }
             );
@@ -443,12 +456,18 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
         builder.show();
     }
 
-    private void delcache(Context ctx) {
+    private void delcache(Context ctx, boolean isPlaylists) {
         new VkAlertDialog.Builder(ctx)
                 .setTitle(com.vtosters.lite.R.string.warning)
                 .setMessage(com.vtosters.lite.R.string.cached_tracks_remove_confirm)
                 .setPositiveButton(com.vtosters.lite.R.string.yes, (dialog, which) -> {
-                    executor.submit(MusicCacheImpl::clear);
+                    executor.submit(() -> {
+                        if (isPlaylists) {
+                            PlaylistCacheDbDelegate.removeAllPlaylists(ctx);
+                        } else {
+                            PlaylistCacheDbDelegate.deletePlaylist(ctx, AccountManagerUtils.getUserId() + "_-1");
+                        }
+                    });
                     findPreference("cached_tracks").setSummary(String.format(requireContext().getString(com.vtosters.lite.R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
                 })
                 .setNeutralButton(com.vtosters.lite.R.string.no, (dialog, which) -> dialog.cancel())

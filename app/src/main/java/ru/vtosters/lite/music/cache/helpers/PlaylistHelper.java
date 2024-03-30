@@ -112,8 +112,8 @@ public class PlaylistHelper {
             arr.put(AccountManagerUtils.getUserId() + "_-1");
         }
 
-        for (var playlist : MusicCacheImpl.getPlaylists()) {
-            arr.put(playlist.v1());
+        for (String playlist : PlaylistCacheDbDelegate.getAllPlaylistIds(AndroidUtils.getGlobalContext())) {
+            arr.put(playlist);
         }
 
         return arr;

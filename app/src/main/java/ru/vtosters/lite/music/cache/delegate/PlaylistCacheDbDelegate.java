@@ -74,6 +74,19 @@ public class PlaylistCacheDbDelegate {
         }
     }
 
+    public static void removeAllPlaylists(Context context) {
+        List<String> playlistIds = getAllPlaylistIds(context);
+        for (String playlistId : playlistIds) {
+            deletePlaylist(context, playlistId);
+        }
+    }
+
+    public static List<String> getAllPlaylistIds(Context context) {
+        try (var db = connectToDb(context)) {
+            return db.getAllPlaylistIds();
+        }
+    }
+
     public static boolean isCachedPlaylist(Context context, String id) {
         try (var db = connectToDb(context)) {
             String[] parts = id.split("_");

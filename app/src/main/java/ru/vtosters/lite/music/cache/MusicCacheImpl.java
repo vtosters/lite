@@ -59,7 +59,7 @@ public class MusicCacheImpl {
     }
 
     public static boolean hasPlaylist() {
-        return PlaylistCacheDbDelegate.getPlaylistsCount(AndroidUtils.getGlobalContext()) != 0; // has playlists or not
+        return !PlaylistCacheDbDelegate.isPlaylistsDbEmpty(AndroidUtils.getGlobalContext()); // has playlists or not
     }
 
     public static long getTracksCount() {
@@ -89,7 +89,7 @@ public class MusicCacheImpl {
     }
 
     public static boolean isEmpty() {
-        return !LibVKXClient.isIntegrationEnabled() && getTracksCount() == 0L && PlaylistCacheDbDelegate.isPlaylistsDbEmpty(AndroidUtils.getGlobalContext());
+        return !LibVKXClient.isIntegrationEnabled() && MusicCacheDbDelegate.isEmpty(AndroidUtils.getGlobalContext());
     }
 
     public static void clear() {

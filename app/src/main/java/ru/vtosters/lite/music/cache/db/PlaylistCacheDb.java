@@ -184,6 +184,26 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         return count;
     }
 
+    public List<String> getAllPlaylistIds() {
+        SQLiteDatabase db = getReadableDatabase();
+        List<String> playlistIds = new ArrayList<>();
+        Cursor cursor = db.query(
+                Constants.TABLE_NAME,
+                new String[]{Constants.COLUMN_ID, Constants.COLUMN_OWNER_ID},
+                null, null, null, null, null
+        );
+
+        if (cursor.moveToFirst()) {
+            do {
+                String playlistId = cursor.getString(cursor.getColumnIndexOrThrow(Constants.COLUMN_OWNER_ID)) + "_" + cursor.getString(cursor.getColumnIndexOrThrow(Constants.COLUMN_ID));
+                playlistIds.add(playlistId);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        return playlistIds;
+    }
+
     public boolean isPlaylistsDbEmpty() {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT EXISTS(SELECT 1 FROM " + Constants.TABLE_NAME + " LIMIT 1)", null);
