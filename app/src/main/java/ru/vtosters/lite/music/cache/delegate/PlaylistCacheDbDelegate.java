@@ -62,6 +62,31 @@ public class PlaylistCacheDbDelegate {
         }
     }
 
+    public static long getTracksCountInPlaylist(Context context, String playlistId) {
+        try (var db = connectToDb(context)) {
+            return db.getTracksCountInPlaylist(playlistId);
+        }
+    }
+
+    public static boolean isPlaylistsDbEmpty(Context context) {
+        try (var db = connectToDb(context)) {
+            return db.isPlaylistsDbEmpty();
+        }
+    }
+
+    public static void removeAllPlaylists(Context context) {
+        List<String> playlistIds = getAllPlaylistIds(context);
+        for (String playlistId : playlistIds) {
+            deletePlaylist(context, playlistId);
+        }
+    }
+
+    public static List<String> getAllPlaylistIds(Context context) {
+        try (var db = connectToDb(context)) {
+            return db.getAllPlaylistIds();
+        }
+    }
+
     public static boolean isCachedPlaylist(Context context, String id) {
         try (var db = connectToDb(context)) {
             String[] parts = id.split("_");
@@ -109,6 +134,12 @@ public class PlaylistCacheDbDelegate {
     public static List<MusicTrack> getTracksInPlaylist(Context context, String playlistId) {
         try (var db = connectToDb(context)) {
             return db.getTracksInPlaylist(playlistId);
+        }
+    }
+
+    public static boolean isPlaylistEmpty(Context context, String playlistId) {
+        try (var db = connectToDb(context)) {
+            return db.isPlaylistEmpty(playlistId);
         }
     }
 

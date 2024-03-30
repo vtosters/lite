@@ -59,12 +59,12 @@ public class MusicCacheImpl {
     }
 
     public static boolean hasPlaylist() {
-        return PlaylistCacheDbDelegate.getPlaylistsCount(AndroidUtils.getGlobalContext()) != 0; // has playlists or not
+        return !PlaylistCacheDbDelegate.isPlaylistsDbEmpty(AndroidUtils.getGlobalContext()); // has playlists or not
     }
 
     public static long getTracksCount() {
         return !LibVKXClient.isIntegrationEnabled()
-                ? MusicCacheDbDelegate.getTracksCount(AndroidUtils.getGlobalContext())
+                ? PlaylistCacheDbDelegate.getTracksCountInPlaylist(AndroidUtils.getGlobalContext(),AccountManagerUtils.getUserId() + "_-1")
                 : LibVKXClient.getInstance().runOnServiceSync(
                 new LibVKXClientImpl.LibVKXActionGeneric<Long>() {
                     @Override
@@ -89,7 +89,7 @@ public class MusicCacheImpl {
     }
 
     public static boolean isEmpty() {
-        return !LibVKXClient.isIntegrationEnabled() && getTracksCount() == 0L;
+        return !LibVKXClient.isIntegrationEnabled() && MusicCacheDbDelegate.isEmpty(AndroidUtils.getGlobalContext());
     }
 
     public static void clear() {
