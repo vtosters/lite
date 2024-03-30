@@ -55,6 +55,12 @@ public class MusicCacheDbDelegate {
         }
     }
 
+    public static boolean isEmpty(Context context) {
+        try (var db = connectToDb(context)) {
+            return db.isDatabaseEmpty();
+        }
+    }
+
     public static boolean isCachedTrack(Context context, String trackId) {
         try (var db = connectToDb(context)) {
             return db.isCachedTrack(trackId);

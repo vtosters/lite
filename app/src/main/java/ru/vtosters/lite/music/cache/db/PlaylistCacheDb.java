@@ -53,8 +53,7 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
                 Boolean.parseBoolean(cur.getString(cur.getColumnIndex(Constants.COLUMN_IS_EXPLICIT))),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_TITLE)),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_DESCRIPTION)),
-                photo,
-                0);
+                photo);
 
         Log.d("Playlist", "generated " + Playlist.U.a(playlist).v1());
 
@@ -170,6 +169,30 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         return playlists;
     }
 
+    public long getTracksCountInPlaylist(String playlistId) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.query(
+                Constants.TABLE_PLAYLIST_TRACKS,
+                new String[]{Constants.COLUMN_TRACK_ID},
+                Constants.COLUMN_PLAYLIST_ID + " = ?",
+                new String[]{playlistId},
+                null, null, null
+        );
+
+        long count = cursor.getCount();
+        cursor.close();
+        return count;
+    }
+
+    public boolean isPlaylistsDbEmpty() {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT EXISTS(SELECT 1 FROM " + Constants.TABLE_NAME + " LIMIT 1)", null);
+        cursor.moveToFirst();
+        boolean isEmpty = cursor.getInt(0) == 0;
+        cursor.close();
+        return isEmpty;
+    }
+
     public void addTrackToPlaylist(String playlistId, String trackId) {
         ContentValues values = new ContentValues();
         values.put(Constants.COLUMN_PLAYLIST_ID, playlistId);
@@ -179,6 +202,15 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
 
     public void removeTrackFromPlaylist(String playlistId, String trackId) {
         getWritableDatabase().delete(Constants.TABLE_PLAYLIST_TRACKS, Constants.COLUMN_PLAYLIST_ID + " = ? AND " + Constants.COLUMN_TRACK_ID + " = ?", new String[]{playlistId, trackId});
+    }
+
+    public boolean isPlaylistEmpty(String playlistId) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT EXISTS(SELECT 1 FROM " + Constants.TABLE_PLAYLIST_TRACKS + " WHERE " + Constants.COLUMN_PLAYLIST_ID + " = ? LIMIT 1)", new String[]{playlistId});
+        cursor.moveToFirst();
+        boolean isEmpty = cursor.getInt(0) == 0;
+        cursor.close();
+        return isEmpty;
     }
 
     public List<MusicTrack> getTracksInPlaylist(String playlistId) {

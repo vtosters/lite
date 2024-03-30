@@ -64,7 +64,7 @@ public class MusicCacheImpl {
 
     public static long getTracksCount() {
         return !LibVKXClient.isIntegrationEnabled()
-                ? MusicCacheDbDelegate.getTracksCount(AndroidUtils.getGlobalContext())
+                ? PlaylistCacheDbDelegate.getTracksCountInPlaylist(AndroidUtils.getGlobalContext(),AccountManagerUtils.getUserId() + "_-1")
                 : LibVKXClient.getInstance().runOnServiceSync(
                 new LibVKXClientImpl.LibVKXActionGeneric<Long>() {
                     @Override
@@ -89,7 +89,7 @@ public class MusicCacheImpl {
     }
 
     public static boolean isEmpty() {
-        return !LibVKXClient.isIntegrationEnabled() && getTracksCount() == 0L;
+        return !LibVKXClient.isIntegrationEnabled() && getTracksCount() == 0L && PlaylistCacheDbDelegate.isPlaylistsDbEmpty(AndroidUtils.getGlobalContext());
     }
 
     public static void clear() {
