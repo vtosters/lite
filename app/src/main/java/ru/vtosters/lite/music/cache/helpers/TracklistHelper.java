@@ -28,7 +28,7 @@ public class TracklistHelper {
 
         boolean doNotinvertOrder = Preferences.getBoolValue("invertCachedTracks", false);
 
-        if (!doNotinvertOrder) {
+        if (doNotinvertOrder) {
             Collections.reverse(tracks);
         }
 
