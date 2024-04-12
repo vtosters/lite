@@ -165,12 +165,12 @@ public class TracklistInjector {
                 boolean noPlaylists = hasNoPlaylists(blocks);
 
                 if (noPlaylists) {
-                    PlaylistHelper.addCachedPlaylists(catalogNode.optJSONArray("playlists"), true);
+                    PlaylistHelper.addCachedPlaylists(new JSONArray());
 
                     firstSection.put("blocks", createNewBlocks(blocks));
                 } else {
                     try {
-                        PlaylistHelper.addCachedPlaylists(catalogNode.optJSONArray("playlists"), false);
+                        PlaylistHelper.addCachedPlaylists(catalogNode.optJSONArray("playlists"));
 
                         updatePlaylistsIds(blocks);
                     } catch (Exception e) {
@@ -270,7 +270,7 @@ public class TracklistInjector {
 
         return new JSONObject()
                 .put("catalog", catalog)
-                .put("playlists", addCachedPlaylists(new JSONArray(), false))
+                .put("playlists", addCachedPlaylists(new JSONArray()))
                 .put("audios", TracklistHelper.tracksToJsons(tracks));
     }
 

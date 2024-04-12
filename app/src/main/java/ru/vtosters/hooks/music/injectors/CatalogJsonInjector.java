@@ -4,7 +4,6 @@ import android.util.Log;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.core.network.Network;
 import com.vk.core.util.DeviceIdProvider;
-import okhttp3.Headers;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.json.JSONArray;
@@ -58,7 +57,11 @@ public class CatalogJsonInjector {
             if (!MusicCacheImpl.isEmpty() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
                 var noPlaylists = !json.has("playlists");
 
-                PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"), noPlaylists);
+                if (noPlaylists) {
+                    PlaylistHelper.addCachedPlaylists(new JSONArray());
+                } else {
+                    PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"));
+                }
 
                 if (!useOldAppVer || noPlaylists) {
                     var newBlocks = new JSONArray();
@@ -99,7 +102,11 @@ public class CatalogJsonInjector {
 
             var noPlaylists = !json.has("playlists");
 
-            PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"), noPlaylists);
+            if (noPlaylists) {
+                PlaylistHelper.addCachedPlaylists(new JSONArray());
+            } else {
+                PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"));
+            }
 
             if (!useOldAppVer && !noPlaylists) {
                 var newBlocks = new JSONArray();

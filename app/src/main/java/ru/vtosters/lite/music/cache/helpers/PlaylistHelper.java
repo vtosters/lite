@@ -23,12 +23,8 @@ public class PlaylistHelper {
         }
     }
 
-    public static JSONArray addCachedPlaylists(JSONArray jsonArray, Boolean noPlaylists) {
+    public static JSONArray addCachedPlaylists(JSONArray jsonArray) {
         try {
-            if (noPlaylists) {
-                jsonArray.put(new JSONArray());
-            }
-
             if (!PlaylistCacheDbDelegate.isPlaylistEmpty(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1")) {
                 jsonArray.put(getCachedSongsPlaylist());
             }
