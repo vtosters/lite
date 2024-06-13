@@ -285,7 +285,8 @@
 
     const-string p1, "func_v"
 
-    const/16 v0, 0x15
+#upgrade func_v to 0x16 to fix issue related with outdated gettings of post topics
+    const/16 v0, 0x16
 
     .line 9
     invoke-virtual {p0, p1, v0}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
@@ -384,6 +385,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+
 
     const/4 v0, 0x0
 
@@ -503,18 +505,22 @@
 
     iput-object v1, v3, Lcom/vtosters/lite/api/execute/GetWallInfo$a;->e:Lcom/vk/auth/api/AccountPhoneVerify;
 
-    const-string v1, "post_topics"
+    invoke-static {v3}, Lru/vtosters/hooks/PostTopicsHook;->hook(Lcom/vtosters/lite/api/execute/GetWallInfo$a;)V
 
-    .line 17
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+#    const-string v1, "post_topics"
 
-    move-result-object v1
+#    .line 17
+#    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    invoke-static {v1}, Lcom/vk/dto/newsfeed/PostTopic;->a(Lorg/json/JSONArray;)Ljava/util/List;
+#    move-result-object v1
 
-    move-result-object v1
+#    invoke-static {v1}, Lcom/vk/dto/newsfeed/PostTopic;->a(Lorg/json/JSONArray;)Ljava/util/List;
 
-    iput-object v1, v3, Lcom/vtosters/lite/api/execute/GetWallInfo$a;->f:Ljava/util/List;
+#    move-result-object v1
+
+#   iput-object v1, v3, Lcom/vtosters/lite/api/execute/GetWallInfo$a;->f:Ljava/util/List;
+
+
 
     const-string v1, "special_events"
 
