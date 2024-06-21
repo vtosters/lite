@@ -220,10 +220,14 @@ public class CatalogJsonInjector {
         }
     }
 
-    private static void removeUnsupportedLayouts(JSONArray blocks) throws JSONException {
+    private static void removeUnsupportedLayouts(JSONArray blocks) {
         for (int i = blocks.length() - 1; i >= 0; i--) {
             JSONObject block = blocks.optJSONObject(i);
+            if (block == null) continue;
+
             JSONObject layout = block.optJSONObject("layout");
+            if (layout == null) continue;
+
             String data_type = block.optString("data_type");
 
             if (Objects.equals(data_type, "music_recommended_playlists") || Objects.equals(data_type, "radiostations")) {
@@ -233,8 +237,6 @@ public class CatalogJsonInjector {
                 continue; // Skip to the next iteration after removing
             }
 
-            if (layout == null) continue; // Skip to the next iteration if layout is null
-
             String name = layout.optString("name");
             if (!name.equals("header_extended")) {
                 continue; // Skip to the next iteration if not header_extended
@@ -243,10 +245,13 @@ public class CatalogJsonInjector {
             if (layout.has("top_title")) {
                 blocks.remove(i);
             }
-            layout.put("name", "header");
+            try {
+                layout.put("name", "header");
+            } catch (JSONException e) {
+                e.fillInStackTrace();
+            }
         }
     }
-
 
     private static void setDefaultAudioPage(JSONArray jsonArray, JSONObject catalog) throws JSONException {
         for (int i = 0; i < jsonArray.length(); i++) {
