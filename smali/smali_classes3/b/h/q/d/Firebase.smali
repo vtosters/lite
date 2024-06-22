@@ -194,6 +194,8 @@
 
     move-result v0
 
+    const v0, 0x0
+
     if-eqz v0, :cond_2
 
     const/4 v0, 0x1

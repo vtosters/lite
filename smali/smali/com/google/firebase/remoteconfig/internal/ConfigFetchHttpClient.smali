@@ -474,7 +474,7 @@
     invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
-    const-string v0, "C8EAB7342DA62B4A229E1BFDEB27B029DD6788A1"
+    const-string v0, "48761EEF50EE53AFC4CC9C5F10E6BDE7F8F5B82F"
 
     const-string v1, "X-Android-Cert"
 

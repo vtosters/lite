@@ -4,7 +4,6 @@ import android.util.Log;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.core.network.Network;
 import com.vk.core.util.DeviceIdProvider;
-import okhttp3.Headers;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.json.JSONArray;
@@ -58,7 +57,11 @@ public class CatalogJsonInjector {
             if (!MusicCacheImpl.isEmpty() && !LibVKXClient.isIntegrationEnabled()) { // inj in playlist list
                 var noPlaylists = !json.has("playlists");
 
-                PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"), noPlaylists);
+                if (noPlaylists) {
+                    PlaylistHelper.addCachedPlaylists(new JSONArray());
+                } else {
+                    PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"));
+                }
 
                 if (!useOldAppVer || noPlaylists) {
                     var newBlocks = new JSONArray();
@@ -99,7 +102,11 @@ public class CatalogJsonInjector {
 
             var noPlaylists = !json.has("playlists");
 
-            PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"), noPlaylists);
+            if (noPlaylists) {
+                PlaylistHelper.addCachedPlaylists(new JSONArray());
+            } else {
+                PlaylistHelper.addCachedPlaylists(json.optJSONArray("playlists"));
+            }
 
             if (!useOldAppVer && !noPlaylists) {
                 var newBlocks = new JSONArray();
@@ -213,10 +220,14 @@ public class CatalogJsonInjector {
         }
     }
 
-    private static void removeUnsupportedLayouts(JSONArray blocks) throws JSONException {
+    private static void removeUnsupportedLayouts(JSONArray blocks) {
         for (int i = blocks.length() - 1; i >= 0; i--) {
             JSONObject block = blocks.optJSONObject(i);
+            if (block == null) continue;
+
             JSONObject layout = block.optJSONObject("layout");
+            if (layout == null) continue;
+
             String data_type = block.optString("data_type");
 
             if (Objects.equals(data_type, "music_recommended_playlists") || Objects.equals(data_type, "radiostations")) {
@@ -226,8 +237,6 @@ public class CatalogJsonInjector {
                 continue; // Skip to the next iteration after removing
             }
 
-            if (layout == null) continue; // Skip to the next iteration if layout is null
-
             String name = layout.optString("name");
             if (!name.equals("header_extended")) {
                 continue; // Skip to the next iteration if not header_extended
@@ -236,10 +245,13 @@ public class CatalogJsonInjector {
             if (layout.has("top_title")) {
                 blocks.remove(i);
             }
-            layout.put("name", "header");
+            try {
+                layout.put("name", "header");
+            } catch (JSONException e) {
+                e.fillInStackTrace();
+            }
         }
     }
-
 
     private static void setDefaultAudioPage(JSONArray jsonArray, JSONObject catalog) throws JSONException {
         for (int i = 0; i < jsonArray.length(); i++) {

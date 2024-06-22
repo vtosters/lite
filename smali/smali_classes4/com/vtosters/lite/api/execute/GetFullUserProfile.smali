@@ -39,7 +39,7 @@
     .line 3
     invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
-    const/16 v0, 0xb
+    const/16 v0, 0x17
 
     const-string v1, "func_v"
 
@@ -476,89 +476,89 @@
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
-    const-string v4, "cities"
+    # const-string v4, "cities"
 
-    .line 20
-    invoke-virtual {v1, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    # .line 20
+    # invoke-virtual {v1, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    move-result-object v4
+    # move-result-object v4
 
-    const/4 v9, 0x0
+    # const/4 v9, 0x0
 
-    .line 21
-    :goto_3
-    invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
+    # .line 21
+    # :goto_3
+    # invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
-    move-result v10
+    # move-result v10
 
     const-string v11, "title"
 
-    if-ge v9, v10, :cond_4
+    # if-ge v9, v10, :cond_4
 
-    .line 22
-    invoke-virtual {v4, v9}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+    # .line 22
+    # invoke-virtual {v4, v9}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
-    move-result-object v10
+    # move-result-object v10
 
-    .line 23
-    invoke-virtual {v10, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    # .line 23
+    # invoke-virtual {v10, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
-    move-result v12
+    # move-result v12
 
-    invoke-virtual {v10, v11}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    # invoke-virtual {v10, v11}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v10
+    # move-result-object v10
 
-    invoke-virtual {v2, v12, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    # invoke-virtual {v2, v12, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    add-int/lit8 v9, v9, 0x1
+    # add-int/lit8 v9, v9, 0x1
 
-    goto :goto_3
+    # goto :goto_3
 
-    .line 24
-    :cond_4
-    new-instance v4, Landroid/util/SparseArray;
+    # .line 24
+    # :cond_4
+    # new-instance v4, Landroid/util/SparseArray;
 
-    invoke-direct {v4}, Landroid/util/SparseArray;-><init>()V
+    # invoke-direct {v4}, Landroid/util/SparseArray;-><init>()V
 
-    const-string v9, "cities"
+    # const-string v9, "cities"
 
-    .line 25
-    invoke-virtual {v1, v9}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    # .line 25
+    # invoke-virtual {v1, v9}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    move-result-object v9
+    # move-result-object v9
 
-    const/4 v10, 0x0
+    # const/4 v10, 0x0
 
-    .line 26
-    :goto_4
-    invoke-virtual {v9}, Lorg/json/JSONArray;->length()I
+    # .line 26
+    # :goto_4
+    # invoke-virtual {v9}, Lorg/json/JSONArray;->length()I
 
-    move-result v12
+    # move-result v12
 
-    if-ge v10, v12, :cond_5
+    # if-ge v10, v12, :cond_5
 
-    .line 27
-    invoke-virtual {v9, v10}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+    # .line 27
+    # invoke-virtual {v9, v10}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
-    move-result-object v12
+    # move-result-object v12
 
-    .line 28
-    invoke-virtual {v12, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    # .line 28
+    # invoke-virtual {v12, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
-    move-result v13
+    # move-result v13
 
-    invoke-virtual {v12, v11}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    # invoke-virtual {v12, v11}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v12
+    # move-result-object v12
 
-    invoke-virtual {v4, v13, v12}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    # invoke-virtual {v4, v13, v12}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    add-int/lit8 v10, v10, 0x1
+    # add-int/lit8 v10, v10, 0x1
 
-    goto :goto_4
+    # goto :goto_4
 
-    :cond_5
+    # :cond_5
     const-string v4, "can_write_private_message"
 
     .line 29
