@@ -52,11 +52,6 @@ public class MusicCallbackBuilder {
                 notification.setContentText(AndroidUtils.getString(R.string.load_audio_error)).setProgress(0, 0, false);
                 notificationManager.notify(notificationId, notification.build());
             }
-
-            @Override
-            public void onSizeReceived(long size, long header) {
-
-            }
         };
     }
 
@@ -84,11 +79,6 @@ public class MusicCallbackBuilder {
             public void onFailure(Throwable e) {
                 notification.setContentText(AndroidUtils.getString(R.string.load_audio_error)).setProgress(0, 0, false);
                 notificationManager.notify(notificationId, notification.build());
-            }
-
-            @Override
-            public void onSizeReceived(long size, long header) {
-
             }
         };
     }

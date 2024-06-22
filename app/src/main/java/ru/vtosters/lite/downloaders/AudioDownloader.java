@@ -16,8 +16,8 @@ import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
-import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
-import ru.vtosters.lite.music.downloader.AudioGet;
+import ru.vtosters.lite.music.requests.PlaylistGet;
+import ru.vtosters.lite.music.requests.AudioGet;
 import ru.vtosters.lite.music.downloader.PlaylistDownloader;
 import ru.vtosters.lite.music.downloader.ThumbnailPlaylistDownloader;
 import ru.vtosters.lite.music.downloader.TrackDownloader;
@@ -44,7 +44,7 @@ public class AudioDownloader {
     public static final String dlpath = Preferences.getBoolValue("dldir", false) ? Environment.DIRECTORY_DOWNLOADS : Environment.DIRECTORY_MUSIC;
 
     public static void downloadPlaylist(Playlist playlist) {
-        List<MusicTrack> tracks = PlaylistConverter.getPlaylist(playlist);
+        List<MusicTrack> tracks = PlaylistGet.getPlaylist(playlist);
 
         String playlistName = IOUtils.getValidFileName(playlist.g);
 
@@ -83,7 +83,7 @@ public class AudioDownloader {
     }
 
     public static void cachePlaylist(Playlist playlist) {
-        List<MusicTrack> tracks = PlaylistConverter.getPlaylist(playlist);
+        List<MusicTrack> tracks = PlaylistGet.getPlaylist(playlist);
 
         int notificationId = playlist.g.hashCode();
         NotificationCompat.Builder notification = MusicNotificationBuilder.buildPlaylistDownloadNotification(playlist.g, notificationId);
@@ -91,7 +91,7 @@ public class AudioDownloader {
         JSONObject thumbs = PlaylistUtils.getThumb(playlist);
 
         if (thumbs != null) {
-            new ThumbnailPlaylistDownloader().download(null, new Callback() {
+            new ThumbnailPlaylistDownloader(new Callback() {
                 @Override
                 public void onProgress(int progress) {
 
@@ -108,12 +108,7 @@ public class AudioDownloader {
                 public void onFailure(Throwable e) {
                     throw new RuntimeException(e);
                 }
-
-                @Override
-                public void onSizeReceived(long size, long header) {
-
-                }
-            }, playlist);
+            }).download(playlist);
         } else {
             PlaylistCacheDbDelegate.addPlaylist(AndroidUtils.getGlobalContext(), playlist);
 
