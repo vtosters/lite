@@ -569,7 +569,7 @@
 
     move-result-object v4
 
-    if-eqz p2, :cond_4
+    # if-eqz p2, :cond_4
 
     .line 15
     new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$b;
@@ -583,38 +583,38 @@
     goto :goto_3
 
     .line 16
-    :cond_4
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->f:Landroid/content/Context;
+    # :cond_4
+    # iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->f:Landroid/content/Context;
 
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    # invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v2
+    # move-result-object v2
 
     .line 17
-    sget v3, Lcom/vk/im/ui/l;->vkim_popup_msg_delete_submit_desc:I
+    # sget v3, Lcom/vk/im/ui/l;->vkim_popup_msg_delete_submit_desc:I
 
-    const/4 v5, 0x1
+    # const/4 v5, 0x1
 
-    new-array v5, v5, [Ljava/lang/Object;
+    # new-array v5, v5, [Ljava/lang/Object;
 
     .line 18
-    invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    # invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    # move-result-object v6
 
-    aput-object v6, v5, v20
+    # aput-object v6, v5, v20
 
     .line 19
-    invoke-virtual {v2, v3, v1, v5}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+    # invoke-virtual {v2, v3, v1, v5}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    # move-result-object v1
 
-    const-string v2, "context.resources.getQua\u2026      msgCount, msgCount)"
+    # const-string v2, "context.resources.getQua\u2026      msgCount, msgCount)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    # invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
-    invoke-virtual {v4, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+    # invoke-virtual {v4, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     .line 21
     :goto_3
