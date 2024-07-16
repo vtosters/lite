@@ -98,7 +98,7 @@ public class PlaylistInjector {
 
             if (isOwnCachePlaylist) {
                 response.c = (ArrayList<MusicTrack>) TracklistHelper
-                        .getMyCachedMusicTracks(offset, count);
+                        .getMyCachedMusicTracks();
                 response.b = PlaylistHelper.createCachedPlaylistMetadata();
             } else {
                 response.c = new ArrayList<>(MusicCacheImpl

@@ -53,7 +53,7 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
                 Boolean.parseBoolean(cur.getString(cur.getColumnIndex(Constants.COLUMN_IS_EXPLICIT))),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_TITLE)),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_DESCRIPTION)),
-                getTracksCountInPlaylist(id + "_" + owner),
+                getTracksCountInPlaylist(owner + "_" + id),
                 photo);
 
         Log.d("Playlist", "generated " + Playlist.U.a(playlist).v1());
