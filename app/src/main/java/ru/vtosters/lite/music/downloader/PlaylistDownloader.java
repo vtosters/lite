@@ -20,8 +20,8 @@ public class PlaylistDownloader {
             else Log.e("PlaylistDownloader", "Directory creation failed");
         Callback delegate = new ProgressCallback(callback);
 
-        playlist.forEach(track -> {
-            VTExecutors.getMusicDownloadExecutor().execute(() -> {
+        VTExecutors.getMusicDownloadExecutor().execute(() -> {
+            playlist.forEach(track -> {
                 TrackDownloader.downloadTrack(track, path, delegate);
             });
         });
@@ -30,8 +30,8 @@ public class PlaylistDownloader {
     public static void cachePlaylist(List<MusicTrack> playlist, Callback callback, Playlist playlistId) {
         Callback delegate = new ProgressCallback(callback);
 
-        playlist.forEach(track -> {
-            VTExecutors.getMusicDownloadExecutor().execute(() -> {
+        VTExecutors.getMusicDownloadExecutor().execute(() -> {
+            playlist.forEach(track -> {
                 TrackDownloader.cacheTrack(track, delegate, playlistId);
             });
         });

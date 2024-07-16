@@ -25,7 +25,7 @@ public class TracklistHelper {
 
 
     public static List<MusicTrack> getTracks() {
-        List<MusicTrack> tracks = MusicCacheImpl.getAllOwnTracks(offset, count);
+        List<MusicTrack> tracks = MusicCacheImpl.getAllOwnTracks();
 
         boolean doNotinvertOrder = Preferences.getBoolValue("invertCachedTracks", false);
 

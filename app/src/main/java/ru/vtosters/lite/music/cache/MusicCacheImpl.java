@@ -38,9 +38,9 @@ public class MusicCacheImpl {
         MusicCacheStorageUtils.removeTrackDirById(trackId);
     }
 
-    public static List<MusicTrack> getAllOwnTracks(int offset, int count) {
+    public static List<MusicTrack> getAllOwnTracks() {
         return PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(),
-                AccountManagerUtils.getUserId() + "_-1", offset, count);
+                AccountManagerUtils.getUserId() + "_-1");
     }
 
     public static List<MusicTrack> getPlaylistSongs(String owner_id, String playlist_id) {
