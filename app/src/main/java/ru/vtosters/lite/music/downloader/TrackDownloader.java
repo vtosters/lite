@@ -30,7 +30,7 @@ public final class TrackDownloader {
         }
         File outputFile = new File(outDir, IOUtils.getValidFileName(MusicTrackUtils.getArtists(track) + " - " + Mp3Downloader.getTitle(track)) + ".mp3");
 
-        VTExecutors.getMusicDownloadExecutor().submit(() -> new Mp3Downloader(outputFile).download(track, callback, null));
+        new Mp3Downloader(outputFile).download(track, callback, null);
     }
 
     public static void cacheTrack(MusicTrack track, Callback callback, Playlist playlist) {
@@ -40,6 +40,6 @@ public final class TrackDownloader {
 
         File outputFile = MusicCacheStorageUtils.getTrackFile(LibVKXClient.asId(track));
 
-        VTExecutors.getMusicDownloadExecutor().submit(() -> new CachedDownloader(new Mp3Downloader(outputFile)).download(track, callback, playlist));
+        new CachedDownloader(new Mp3Downloader(outputFile)).download(track, callback, playlist);
     }
 }

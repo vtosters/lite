@@ -26,14 +26,11 @@ import ru.vtosters.lite.utils.LifecycleUtils;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 
 public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
-    private static final ExecutorService executor = Executors.newCachedThreadPool();
 
     @SuppressLint("DefaultLocale")
     @Override
@@ -461,13 +458,11 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setTitle(com.vtosters.lite.R.string.warning)
                 .setMessage(com.vtosters.lite.R.string.cached_tracks_remove_confirm)
                 .setPositiveButton(com.vtosters.lite.R.string.yes, (dialog, which) -> {
-                    executor.submit(() -> {
-                        if (isPlaylists) {
-                            PlaylistCacheDbDelegate.removeAllPlaylists(ctx);
-                        } else {
-                            PlaylistCacheDbDelegate.deletePlaylist(ctx, AccountManagerUtils.getUserId() + "_-1");
-                        }
-                    });
+                    if (isPlaylists) {
+                        PlaylistCacheDbDelegate.removeAllPlaylists(ctx);
+                    } else {
+                        PlaylistCacheDbDelegate.deletePlaylist(ctx, AccountManagerUtils.getUserId() + "_-1");
+                    }
                     findPreference("cached_tracks").setSummary(String.format(requireContext().getString(com.vtosters.lite.R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
                 })
                 .setNeutralButton(com.vtosters.lite.R.string.no, (dialog, which) -> dialog.cancel())
@@ -484,10 +479,10 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setTitle(com.vtosters.lite.R.string.download_method)
                 .setMessage(com.vtosters.lite.R.string.download_method_desc)
                 .setPositiveButton(com.vtosters.lite.R.string.download_method_cache, (dialog, which) -> {
-                    executor.submit(AudioDownloader::cacheAllAudios);
+                    AudioDownloader.cacheAllAudios();
                 })
                 .setNegativeButton(com.vtosters.lite.R.string.download_method_mp3, (dialog, which) -> {
-                    executor.submit(AudioDownloader::downloadAllAudios);
+                    AudioDownloader.downloadAllAudios();
                 })
                 .show();
     }

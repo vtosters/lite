@@ -14,10 +14,8 @@ import ru.vtosters.lite.utils.music.PlaylistUtils;
 import java.util.List;
 
 public class PlaylistCacheDbDelegate {
-    static synchronized private PlaylistCacheDb connectToDb(Context context) {
-        synchronized (PlaylistCacheDb.class) {
-            return new PlaylistCacheDb(context);
-        }
+    private static PlaylistCacheDb connectToDb(Context context) {
+        return new PlaylistCacheDb(context);
     }
 
     public static void addPlaylist(Context context, Playlist playlist) {
@@ -134,6 +132,12 @@ public class PlaylistCacheDbDelegate {
     public static List<MusicTrack> getTracksInPlaylist(Context context, String playlistId) {
         try (var db = connectToDb(context)) {
             return db.getTracksInPlaylist(playlistId);
+        }
+    }
+    public static List<MusicTrack>
+    getTracksInPlaylist(Context context, String playlistId, int offset, int count) {
+        try (var db = connectToDb(context)) {
+            return db.getTracksInPlaylist(playlistId, offset, count);
         }
     }
 

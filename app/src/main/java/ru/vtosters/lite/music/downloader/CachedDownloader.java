@@ -33,7 +33,7 @@ public final class CachedDownloader implements ITrackDownloader {
                     }
 
                     @Override public void onSuccess() {
-                        
+
                     }
 
                     @Override
@@ -41,9 +41,6 @@ public final class CachedDownloader implements ITrackDownloader {
                         callback.onFailure(e);
                     }
 
-                    @Override public void onSizeReceived(long size, long header) {
-
-                    }
                 }, null);
 
                 PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), playlist.v1(), track.y1());
@@ -56,10 +53,6 @@ public final class CachedDownloader implements ITrackDownloader {
                 callback.onFailure(e);
             }
 
-            @Override
-            public void onSizeReceived(long size, long header) {
-                callback.onSizeReceived(size, header);
-            }
         }, playlist);
     }
 }

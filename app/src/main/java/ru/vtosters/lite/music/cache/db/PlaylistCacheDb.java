@@ -15,7 +15,6 @@ import org.json.JSONObject;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -34,8 +33,8 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         db.execSQL(Constants.CREATE_QUERY);
         db.execSQL(Constants.CREATE_PLAYLIST_TRACKS_QUERY);
     }
-
-    private static Playlist fromCursor(Cursor cur) throws JSONException {
+    @SuppressLint("Range")
+    private Playlist fromCursor(Cursor cur) throws JSONException {
         @SuppressLint("Range")
         String photoString = cur.getString(cur.getColumnIndex(Constants.COLUMN_PHOTO));
         JSONObject photo = null;
@@ -46,13 +45,15 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
             // ok and
         }
 
-        @SuppressLint("Range")
+        int id = cur.getInt(cur.getColumnIndex(Constants.COLUMN_ID));
+        int owner = cur.getInt(cur.getColumnIndex(Constants.COLUMN_OWNER_ID));
         JSONObject playlist = PlaylistHelper.generatePlaylist(
-                cur.getInt(cur.getColumnIndex(Constants.COLUMN_ID)),
-                cur.getInt(cur.getColumnIndex(Constants.COLUMN_OWNER_ID)),
+                id,
+                owner,
                 Boolean.parseBoolean(cur.getString(cur.getColumnIndex(Constants.COLUMN_IS_EXPLICIT))),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_TITLE)),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_DESCRIPTION)),
+                getTracksCountInPlaylist(id + "_" + owner),
                 photo);
 
         Log.d("Playlist", "generated " + Playlist.U.a(playlist).v1());
@@ -144,7 +145,9 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
 
     public Playlist getPlaylistById(int id, int ownerId) {
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.query(Constants.TABLE_NAME, null, Constants.COLUMN_ID + " = ? AND " + Constants.COLUMN_OWNER_ID + " = ?", new String[]{String.valueOf(id), String.valueOf(ownerId)}, null, null, null);
+        Cursor cursor = db.query(Constants.TABLE_NAME, null, Constants.COLUMN_ID + " = ? AND " + Constants.COLUMN_OWNER_ID + " = ?",
+                new String[]{String.valueOf(id),
+                        String.valueOf(ownerId)}, null, null, null);
         Playlist playlist = null;
         if (cursor.moveToFirst()) {
             try {
@@ -169,7 +172,7 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         return playlists;
     }
 
-    public long getTracksCountInPlaylist(String playlistId) {
+    public int getTracksCountInPlaylist(String playlistId) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(
                 Constants.TABLE_PLAYLIST_TRACKS,
@@ -179,7 +182,7 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
                 null, null, null
         );
 
-        long count = cursor.getCount();
+        int count = cursor.getCount();
         cursor.close();
         return count;
     }
@@ -232,18 +235,22 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         cursor.close();
         return isEmpty;
     }
-
     public List<MusicTrack> getTracksInPlaylist(String playlistId) {
+        return getTracksInPlaylist(playlistId, 0, Integer.MAX_VALUE);
+    }
+
+    public List<MusicTrack> getTracksInPlaylist(String playlistId, int offset, int count) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(
                 Constants.TABLE_PLAYLIST_TRACKS,
                 new String[]{Constants.COLUMN_TRACK_ID},
                 Constants.COLUMN_PLAYLIST_ID + " = ?",
                 new String[]{playlistId},
-                null, null, null
+                null, null, null,
+                offset + "," + count
         );
 
-        List<MusicTrack> tracks = new ArrayList<>();
+        List<MusicTrack> tracks = new ArrayList<>(cursor.getCount());
         while (cursor.moveToNext()) {
             @SuppressLint("Range")
             String trackId = cursor.getString(cursor.getColumnIndex(Constants.COLUMN_TRACK_ID));
@@ -298,7 +305,8 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
 
         String CREATE_PLAYLIST_TRACKS_QUERY = "create table " + TABLE_PLAYLIST_TRACKS + "("
                 + COLUMN_PLAYLIST_ID + " TEXT not null,"
-                + COLUMN_TRACK_ID + " TEXT not null"
+                + COLUMN_TRACK_ID + " TEXT not null,"
+                + "PRIMARY KEY ("+COLUMN_PLAYLIST_ID+", "+COLUMN_TRACK_ID+")"
                 + ")";
 
         String DROP_QUERY = "drop table if exists " + TABLE_NAME;

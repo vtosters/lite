@@ -12,6 +12,7 @@ import com.vtosters.lite.R;
 import org.json.JSONObject;
 import ru.vtosters.hooks.music.MusicCacheFilesHook;
 import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
@@ -31,6 +32,7 @@ import ru.vtosters.lite.utils.music.PlaylistUtils;
 import java.io.File;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.Future;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
@@ -109,10 +111,6 @@ public class AudioDownloader {
                     throw new RuntimeException(e);
                 }
 
-                @Override
-                public void onSizeReceived(long size, long header) {
-
-                }
             }, playlist);
         } else {
             PlaylistCacheDbDelegate.addPlaylist(AndroidUtils.getGlobalContext(), playlist);
@@ -167,7 +165,7 @@ public class AudioDownloader {
         );
     }
 
-    private static void downloadM3U8(MusicTrack track, boolean cache) {
+    private static Future<?> downloadM3U8(MusicTrack track, boolean cache) {
         Objects.requireNonNull(track.D, () -> {
             ToastUtils.a(getString(R.string.link_audio_error));
             return "link must not be null";
@@ -178,10 +176,13 @@ public class AudioDownloader {
         NotificationCompat.Builder notification = MusicNotificationBuilder.buildDownloadNotification(track, tempId);
 
         Callback cb = MusicCallbackBuilder.buildOneTrackCallback(tempId, notification);
-        if (cache) {
-            TrackDownloader.cacheTrack(track, cb, PlaylistHelper.createCachedPlaylistMetadata());
-        } else {
-            TrackDownloader.downloadTrack(track, downloadPath, cb);
-        }
+
+        return VTExecutors.getMusicDownloadExecutor().submit(() -> {
+            if (cache) {
+                TrackDownloader.cacheTrack(track, cb, PlaylistHelper.createCachedPlaylistMetadata());
+            } else {
+                TrackDownloader.downloadTrack(track, downloadPath, cb);
+            }
+        });
     }
 }

@@ -221,6 +221,7 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
                 Constants.COLUMN_ID + " desc"));
     }
 
+
     private List<MusicTrack> getTracksWithCursor(Cursor cur) {
         List<MusicTrack> res = new ArrayList<>();
         if (cur != null && cur.moveToFirst()) {

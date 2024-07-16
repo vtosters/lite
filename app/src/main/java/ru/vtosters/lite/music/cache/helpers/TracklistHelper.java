@@ -20,11 +20,14 @@ import java.util.List;
 
 public class TracklistHelper {
     public static List<MusicTrack> getMyCachedMusicTracks() {
-        return getTracksWithThumbnails(TracklistHelper.getTracks());
+        return getTracksWithThumbnails(TracklistHelper.getTracks(0, Integer.MAX_VALUE));
+    }
+    public static List<MusicTrack> getMyCachedMusicTracks(int offset, int count) {
+        return getTracksWithThumbnails(TracklistHelper.getTracks(offset, count));
     }
 
-    public static List<MusicTrack> getTracks() {
-        List<MusicTrack> tracks = MusicCacheImpl.getAllOwnTracks();
+    public static List<MusicTrack> getTracks(int offset, int count) {
+        List<MusicTrack> tracks = MusicCacheImpl.getAllOwnTracks(offset, count);
 
         boolean doNotinvertOrder = Preferences.getBoolValue("invertCachedTracks", false);
 

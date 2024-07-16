@@ -38,13 +38,25 @@ public class MusicCacheImpl {
         MusicCacheStorageUtils.removeTrackDirById(trackId);
     }
 
-    public static List<MusicTrack> getAllOwnTracks() {
-        return PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1");
+    public static List<MusicTrack> getAllOwnTracks(int offset, int count) {
+        return PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(),
+                AccountManagerUtils.getUserId() + "_-1", offset, count);
     }
 
     public static List<MusicTrack> getPlaylistSongs(String owner_id, String playlist_id) {
-        return PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(), owner_id + "_" + playlist_id); // get songs from playlist
+        return PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(),
+                owner_id + "_" + playlist_id); // get songs from playlist
     }
+
+    public static List<MusicTrack> getPlaylistSongs(String owner_id,
+                                                    String playlist_id,
+                                                    int offset, int count) {
+        return PlaylistCacheDbDelegate
+                .getTracksInPlaylist(AndroidUtils.getGlobalContext(),
+                        owner_id + "_" + playlist_id,
+                        offset, count); // get songs from playlist
+    }
+
 
     public static Playlist getPlaylist(String playlist_id, String owner_id) {
         return getPlaylistById(owner_id + "_" + playlist_id); // get playlist from db
