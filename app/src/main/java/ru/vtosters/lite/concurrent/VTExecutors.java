@@ -33,7 +33,7 @@ class VTMusicDownloadExecutor {
     private VTMusicDownloadExecutor() {
         int minParallelism = 1;
         int maxParallelism = 7;
-        int parallelism = clamp((Runtime.getRuntime().availableProcessors() >> 1) - 1, minParallelism, maxParallelism);
+        int parallelism = clamp((Runtime.getRuntime().availableProcessors() >> 1), minParallelism, maxParallelism);
 
         // Creates a ForkJoinPool with the calculated parallelism, using the default ForkJoinWorkerThreadFactory,
         // and a FIFO (First-In-First-Out) execution policy

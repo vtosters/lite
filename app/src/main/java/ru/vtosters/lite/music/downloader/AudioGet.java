@@ -1,31 +1,34 @@
 package ru.vtosters.lite.music.downloader;
 
-import android.util.Log;
-import com.vk.core.network.Network;
-import com.vk.core.util.DeviceIdProvider;
-import com.vk.dto.music.MusicTrack;
-import okhttp3.Request;
-import okhttp3.Response;
-import org.json.JSONException;
-import org.json.JSONObject;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.sponsorpost.utils.GzipDecompressor;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import static com.vk.core.network.Network.ClientType.CLIENT_API;
 import static ru.vtosters.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 
+import android.util.Log;
+
+import com.vk.core.network.Network;
+import com.vk.core.util.DeviceIdProvider;
+import com.vk.dto.music.MusicTrack;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import okhttp3.Request;
+import okhttp3.Response;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
+
 public class AudioGet {
     public static List<MusicTrack> getAudios() {
         var tracks = requestAudios(0);
-        return tracks != null ? tracks.stream().filter(track -> !track.D.isEmpty()).collect(Collectors.toList()) : null;
+        return tracks.stream().filter(track -> !track.D.isEmpty()).collect(Collectors.toList());
     }
 
     private static List<MusicTrack> requestAudios(int offset) {
@@ -52,7 +55,7 @@ public class AudioGet {
             var response = GzipDecompressor.decompressResponse(resp);
             var jsonObj = new JSONObject(response);
             if (!jsonObj.has("response"))
-                return null;
+                return List.of();
             Log.d("AudioGet", jsonObj.toString());
             var audios = new JSONObject(response).getJSONObject("response").getJSONArray("items");
             var tracks = new ArrayList<MusicTrack>();

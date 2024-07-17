@@ -8,7 +8,6 @@ import com.google.android.exoplayer2.source.hls.playlist.e;
 import com.google.android.exoplayer2.source.hls.playlist.f;
 import com.google.android.exoplayer2.source.hls.playlist.f.a;
 import com.vk.dto.music.MusicTrack;
-import com.vk.dto.music.Playlist;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,18 +24,20 @@ import javax.crypto.spec.SecretKeySpec;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.converter.ts.MpegDemuxer;
 import ru.vtosters.lite.music.interfaces.Callback;
-import ru.vtosters.lite.music.interfaces.ITrackDownloader;
+import ru.vtosters.lite.music.interfaces.IDownloader;
 import ru.vtosters.lite.utils.IOUtils;
 
-public final class Mp3Downloader implements ITrackDownloader {
+public final class Mp3Downloader implements IDownloader<MusicTrack> {
     private final File outputFile;
+    private final Callback callback;
 
-    public Mp3Downloader(File outputFile) {
+    public Mp3Downloader(File outputFile, Callback callback) {
         this.outputFile = outputFile;
+        this.callback = callback;
     }
 
     @Override
-    public void download(MusicTrack track, Callback callback, Playlist playlist) {
+    public void download(MusicTrack track) {
         String uri = track.D;
 
         if (Objects.requireNonNull(uri).isEmpty()) {
@@ -44,22 +45,15 @@ public final class Mp3Downloader implements ITrackDownloader {
             Log.d("Mp3Downloader", msg);
             throw new RuntimeException(msg);
         }
-
-        if (Objects.requireNonNull(uri).contains("master.m3u8?siren=1")) {
-            try {
+        try {
+            if (uri.contains("master.m3u8?siren=1")) {
                 String content = IOUtils.readAllLines(new URL(uri).openStream());
                 String replacement = content.split("\n")[2].trim();
                 uri = uri.replace("master.m3u8?siren=1", replacement);
-            } catch (IOException e) {
-                callback.onFailure(e);
-                return;
             }
-        }
+            var tsParser = new com.google.android.exoplayer2.source.hls.playlist.h(e.a(uri));
+            var baseUri = uri.substring(0, uri.lastIndexOf("/") + 1);
 
-        var tsParser = new com.google.android.exoplayer2.source.hls.playlist.h(e.a(uri));
-        var baseUri = uri.substring(0, uri.lastIndexOf("/") + 1);
-
-        try {
             var segments = ((f) tsParser.a(Uri.parse(baseUri), IOUtils.openStream(uri))).o;
 
             byte[] buff = getMergedTs(baseUri, segments, callback);

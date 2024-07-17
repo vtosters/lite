@@ -5,12 +5,12 @@ import android.util.Log;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 
-import ru.vtosters.lite.concurrent.VTExecutors;
-import ru.vtosters.lite.music.interfaces.Callback;
-
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import ru.vtosters.lite.concurrent.VTExecutors;
+import ru.vtosters.lite.music.interfaces.Callback;
 
 public class PlaylistDownloader {
     public static void downloadPlaylist(List<MusicTrack> playlist, String playlistName, String path, Callback callback) {
@@ -20,21 +20,13 @@ public class PlaylistDownloader {
             else Log.e("PlaylistDownloader", "Directory creation failed");
         Callback delegate = new ProgressCallback(callback);
 
-        VTExecutors.getMusicDownloadExecutor().execute(() -> {
-            playlist.forEach(track -> {
-                TrackDownloader.downloadTrack(track, path, delegate);
-            });
-        });
+        playlist.forEach(track -> TrackDownloader.downloadTrack(track, path, delegate));
     }
 
     public static void cachePlaylist(List<MusicTrack> playlist, Callback callback, Playlist playlistId) {
         Callback delegate = new ProgressCallback(callback);
 
-        VTExecutors.getMusicDownloadExecutor().execute(() -> {
-            playlist.forEach(track -> {
-                TrackDownloader.cacheTrack(track, delegate, playlistId);
-            });
-        });
+        playlist.forEach(track -> TrackDownloader.cacheTrack(track, delegate, playlistId));
     }
 
     public static final class ProgressCallback implements Callback {

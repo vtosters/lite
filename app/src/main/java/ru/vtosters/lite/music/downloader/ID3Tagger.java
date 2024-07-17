@@ -7,8 +7,8 @@ import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.Mp3File;
 import com.mpatric.mp3agic.NotSupportedException;
 import com.mpatric.mp3agic.UnsupportedTagException;
-import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Artist;
+import com.vk.dto.music.MusicTrack;
 
 import java.io.File;
 import java.io.IOException;
