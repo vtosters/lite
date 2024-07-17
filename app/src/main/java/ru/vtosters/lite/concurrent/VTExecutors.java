@@ -9,7 +9,7 @@ import io.reactivex.Scheduler;
 
 public class VTExecutors {
     public static ExecutorService getMusicDownloadExecutor() {
-        return VTMusicDownloadExecutor.getInstance();
+        return VTMusicDownloadExecutor.getInstance().getExecutorService();
     }
 
     public static ExecutorService getIoExecutor() {
@@ -23,31 +23,38 @@ public class VTExecutors {
     public static Scheduler getSlowTasksScheduler() {
         return VkExecutors.x.q();
     }
+}
 
-    static class VTMusicDownloadExecutor {
-        private VTMusicDownloadExecutor() {
-        }
+class VTMusicDownloadExecutor {
+    private static final VTMusicDownloadExecutor INSTANCE = new VTMusicDownloadExecutor();
 
-        public static ExecutorService getInstance() {
-            return LazyHolder.INSTANCE;
-        }
+    private final ExecutorService executorService;
 
-        private static class LazyHolder {
-            private static final int MIN_PARALLELISM = 1;
-            private static final int MAX_PARALLELISM = 7;
-            private static final int PARALLELISM = clamp(
-                    (Runtime.getRuntime().availableProcessors() >> 1) - 1
-            );
+    private VTMusicDownloadExecutor() {
+        int minParallelism = 1;
+        int maxParallelism = 7;
+        int parallelism = clamp((Runtime.getRuntime().availableProcessors() >> 1) - 1, minParallelism, maxParallelism);
 
-            private static final ExecutorService INSTANCE =
-                    new ForkJoinPool(PARALLELISM,
-                            ForkJoinPool.defaultForkJoinWorkerThreadFactory,
-                            (t, e) -> {},
-                            /* FIFO */ true);
+        // Creates a ForkJoinPool with the calculated parallelism, using the default ForkJoinWorkerThreadFactory,
+        // and a FIFO (First-In-First-Out) execution policy
+        this.executorService = new ForkJoinPool(parallelism,
+                ForkJoinPool.defaultForkJoinWorkerThreadFactory,
+                (t, e) -> {},
+                true);
+    }
 
-            private static int clamp(int value) {
-                return Math.min(LazyHolder.MAX_PARALLELISM, Math.max(value, LazyHolder.MIN_PARALLELISM));
-            }
-        }
+    // Returns the singleton instance of VTMusicDownloadExecutor
+    public static VTMusicDownloadExecutor getInstance() {
+        return INSTANCE;
+    }
+
+    // Returns the ExecutorService provided by this class
+    public ExecutorService getExecutorService() {
+        return executorService;
+    }
+
+    // Clamps a value between a minimum and maximum value
+    private int clamp(int value, int min, int max) {
+        return Math.min(max, Math.max(value, min));
     }
 }

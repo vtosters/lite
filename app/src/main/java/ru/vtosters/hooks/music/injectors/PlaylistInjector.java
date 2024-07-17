@@ -13,6 +13,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
@@ -27,89 +28,101 @@ import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 
 public class PlaylistInjector {
-    public final static String CHANNEL_NAME = "VTCH";
-
     public static void injectDownloadPlaylist(Playlist playlist) {
         AudioDownloader.cachePlaylist(playlist);
     }
 
     public static boolean eligibleForOfflineCaching() {
-        return !MusicCacheImpl.isEmpty();
+        return !isCacheEmpty();
     }
 
-    public static Observable<AudioGetPlaylist.c>
-    injectGetPlaylist(AudioGetPlaylist audioGetPlaylist) {
-        if (MusicCacheImpl.isEmpty()) {
-            return null;
-        }
+    private static boolean isCacheEmpty() {
+        return MusicCacheImpl.isEmpty();
+    }
 
-        var requestArgs = audioGetPlaylist.b();
+    private static boolean isVirtualPlaylist(String accessKey) {
+        return accessKey != null && (accessKey.equals("cache") || accessKey.equals("cacheAlbum"));
+    }
 
-        var id = requestArgs.get("id");
-        var ownerId = requestArgs.get("owner_id");
-        var accessKey = requestArgs.get("access_key");
-        boolean isVirtualPlaylist = accessKey != null && (accessKey.equals("cache"));
-        boolean isAlbumVirtualPlaylist = accessKey != null && (accessKey.equals("cacheAlbum"));
-        boolean isOwnCachePlaylist = Objects.equals(ownerId, String.valueOf(AccountManagerUtils.getUserId())) && Objects.equals(id, "-1");
+    private static boolean isAlbumVirtualPlaylist(String accessKey) {
+        return accessKey != null && accessKey.equals("cacheAlbum");
+    }
 
-        if (TextUtils.isEmpty(id) || (!isVirtualPlaylist && !isAlbumVirtualPlaylist)) {
-            return null;
-        }
+    private static boolean isOwnCachePlaylist(String ownerId, String id) {
+        return Objects.equals(ownerId, String.valueOf(AccountManagerUtils.getUserId())) && Objects.equals(id, "-1");
+    }
 
-        int count = Integer.parseInt(Objects.requireNonNullElse(
-                requestArgs.get("audio_count"),
-                Integer.toString(Integer.MAX_VALUE)));
-        int offset = Integer.parseInt(Objects.requireNonNullElse(
-                requestArgs.get("audio_offset"),
-                "0")
-        );
+    private static int[] getCountAndOffset(Map<String, String> requestArgs) {
+        int count = Integer.parseInt(Objects.requireNonNullElse(requestArgs.get("audio_count"), Integer.toString(Integer.MAX_VALUE)));
+        int offset = Integer.parseInt(Objects.requireNonNullElse(requestArgs.get("audio_offset"), "0"));
+        return new int[]{count, offset};
+    }
 
-        if (LibVKXClient.isIntegrationEnabled()) {
-            return Observable.a((ObservableOnSubscribe<AudioGetPlaylist.c>) emitter -> LibVKXClient.getInstance().runOnService((service) -> {
-                AudioGetPlaylist.c response = new AudioGetPlaylist.c();
-                try {
-                    List<String> cache;
-                    ArrayList<MusicTrack> tracks = new ArrayList<>();
+    private static Observable<AudioGetPlaylist.c> handleLibVKXClient(String id, String ownerId, boolean isAlbumVirtualPlaylist) {
+        return Observable.a((ObservableOnSubscribe<AudioGetPlaylist.c>) emitter -> LibVKXClient.getInstance().runOnService((service) -> {
+            AudioGetPlaylist.c response = new AudioGetPlaylist.c();
+            try {
+                List<String> cache;
+                ArrayList<MusicTrack> tracks = new ArrayList<>();
 
-                    if (isAlbumVirtualPlaylist) {
-                        response.b = new Playlist(new JSONObject(service.getPlaylistDefJson(id, ownerId)));
-                        cache = service.getTracksInPlaylist(id, ownerId);
-                    } else {
-                        response.b = PlaylistHelper.createCachedPlaylistMetadata();
-                        cache = service.getCache();
-                    }
-
-                    for (String json : cache) {
-                        tracks.add(new MusicTrack(new JSONObject(json)));
-                    }
-
-                    response.c = tracks;
-                } catch (RemoteException | JSONException e) {
-                    e.fillInStackTrace();
-                    response.c = new ArrayList<>();
+                if (isAlbumVirtualPlaylist) {
+                    response.b = new Playlist(new JSONObject(service.getPlaylistDefJson(id, ownerId)));
+                    cache = service.getTracksInPlaylist(id, ownerId);
+                } else {
+                    response.b = PlaylistHelper.createCachedPlaylistMetadata();
+                    cache = service.getCache();
                 }
-                emitter.b(response);
-                emitter.b();
-            }));
-        }
 
+                for (String json : cache) {
+                    tracks.add(new MusicTrack(new JSONObject(json)));
+                }
+
+                response.c = tracks;
+            } catch (RemoteException | JSONException e) {
+                e.fillInStackTrace();
+                response.c = new ArrayList<>();
+            }
+            emitter.b(response);
+            emitter.b();
+        }));
+    }
+
+    private static Observable<AudioGetPlaylist.c> handleMusicCacheImpl(String id, String ownerId, int offset, int count, boolean isOwnCachePlaylist) {
         return Observable.c(() -> {
             AudioGetPlaylist.c response = new AudioGetPlaylist.c();
 
             if (isOwnCachePlaylist) {
-                response.c = (ArrayList<MusicTrack>) TracklistHelper
-                        .getMyCachedMusicTracks();
+                response.c = (ArrayList<MusicTrack>) TracklistHelper.getMyCachedMusicTracks();
                 response.b = PlaylistHelper.createCachedPlaylistMetadata();
             } else {
-                response.c = new ArrayList<>(MusicCacheImpl
-                        .getPlaylistSongs(
-                                ownerId, id,
-                                offset, count
-                        ));
+                response.c = new ArrayList<>(MusicCacheImpl.getPlaylistSongs(ownerId, id, offset, count));
                 response.b = MusicCacheImpl.getPlaylist(id, ownerId);
             }
             return response;
         }).b(VkExecutors.x.m()).a(AndroidSchedulers.a());
     }
 
+    // Main method to inject the playlist
+    public static Observable<AudioGetPlaylist.c> injectGetPlaylist(AudioGetPlaylist audioGetPlaylist) {
+        if (isCacheEmpty()) {
+            return null;
+        }
+
+        Map<String, String> requestArgs = audioGetPlaylist.b();
+        String id = requestArgs.get("id");
+        String ownerId = requestArgs.get("owner_id");
+        String accessKey = requestArgs.get("access_key");
+
+        if (TextUtils.isEmpty(id) || !isVirtualPlaylist(accessKey)) {
+            return null;
+        }
+
+        int[] countAndOffset = getCountAndOffset(requestArgs);
+
+        if (LibVKXClient.isIntegrationEnabled()) {
+            return handleLibVKXClient(id, ownerId, isAlbumVirtualPlaylist(accessKey));
+        }
+
+        return handleMusicCacheImpl(id, ownerId, countAndOffset[1], countAndOffset[0], isOwnCachePlaylist(ownerId, id));
+    }
 }
