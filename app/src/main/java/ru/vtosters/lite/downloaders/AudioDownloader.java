@@ -185,6 +185,6 @@ public class AudioDownloader {
     }
 
     private static void submitTask(Runnable task) {
-        VTExecutors.getMusicDownloadExecutor().submit(task);
+        VTExecutors.getMusicDownloadExecutor().execute(task);
     }
 }
