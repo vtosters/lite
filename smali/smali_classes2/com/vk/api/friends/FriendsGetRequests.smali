@@ -173,21 +173,25 @@
 
     invoke-direct {v10, v9}, Lcom/vk/dto/user/UserProfile;-><init>(Lorg/json/JSONObject;)V
 
-    const-string v11, "country"
+    # const-string v11, "country"
 
-    .line 15
-    invoke-virtual {v9, v11, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+    # .line 15
+    # invoke-virtual {v9, v11, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
-    move-result v12
+    # move-result v12
+
+    const v12, 0x0
 
     iput v12, v10, Lcom/vk/dto/user/UserProfile;->G:I
 
-    const-string v12, "city"
+    # const-string v12, "city"
 
-    .line 16
-    invoke-virtual {v9, v12, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+    # .line 16
+    # invoke-virtual {v9, v12, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
-    move-result v13
+    # move-result v13
+
+    const v13, 0x0
 
     iput v13, v10, Lcom/vk/dto/user/UserProfile;->F:I
 
