@@ -246,7 +246,8 @@ public class TracklistInjector {
                     .put(getCatalogPlaylist());
         }
 
-        if (!PlaylistCacheDbDelegate.isPlaylistEmpty(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1")) {
+        if (!PlaylistCacheDbDelegate.isPlaylistEmpty(AndroidUtils.getGlobalContext(),
+                AccountManagerUtils.getUserId(), -1)) {
             if (MusicCacheImpl.hasPlaylist()) blocks.put(getCatalogSeparator());
             blocks.put(getCatalogHeader(AndroidUtils.getString(R.string.cached_tracks_title)))
                     .put(getShuffleButton())

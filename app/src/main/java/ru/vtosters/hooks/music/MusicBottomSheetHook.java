@@ -85,7 +85,7 @@ public class MusicBottomSheetHook {
                 actions.add(addToCacheTrackVkxAction());
             }
         } else {
-            if (PlaylistCacheDbDelegate.isCachedPlaylist(AndroidUtils.getGlobalContext(), playlist.v1())) {
+            if (PlaylistCacheDbDelegate.isCachedPlaylist(AndroidUtils.getGlobalContext(), playlist.b, playlist.a)) {
                 actions.add(getRemoveCacheTrackAction());
             } else if (isNetworkConnected()) {
                 actions.add(addToCacheTrackAction());

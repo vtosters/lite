@@ -22,15 +22,7 @@ public class MusicCacheImpl {
     public static void addTrack(MusicTrack track) {
         MusicCacheDbDelegate.addTrack(
                 AndroidUtils.getGlobalContext(),
-                track.y1(),
-                track.I != null ? track.I.getId() + "" : "-1",
-                track.f,
-                !TextUtils.isEmpty(track.g) ? track.g : "",
-                MusicTrackUtils.getArtists(track),
-                track.I != null ? track.I.getTitle() : "",
-                track.K,
-                track.h,
-                track.I != null && track.I.u1() != null);
+                track);
     }
 
     public static void removeTrack(String trackId) {
@@ -40,13 +32,9 @@ public class MusicCacheImpl {
 
     public static List<MusicTrack> getAllOwnTracks() {
         return PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(),
-                AccountManagerUtils.getUserId() + "_-1");
+                AccountManagerUtils.getUserId(), -1);
     }
 
-    public static List<MusicTrack> getPlaylistSongs(String owner_id, String playlist_id) {
-        return PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(),
-                owner_id + "_" + playlist_id); // get songs from playlist
-    }
 
     public static List<MusicTrack> getPlaylistSongs(String owner_id,
                                                     String playlist_id,
@@ -76,7 +64,9 @@ public class MusicCacheImpl {
 
     public static long getTracksCount() {
         return !LibVKXClient.isIntegrationEnabled()
-                ? PlaylistCacheDbDelegate.getTracksCountInPlaylist(AndroidUtils.getGlobalContext(),AccountManagerUtils.getUserId() + "_-1")
+                ? PlaylistCacheDbDelegate.getTracksCountInPlaylist(
+                        AndroidUtils.getGlobalContext(),
+                AccountManagerUtils.getUserId(), -1)
                 : LibVKXClient.getInstance().runOnServiceSync(
                 new LibVKXClientImpl.LibVKXActionGeneric<Long>() {
                     @Override

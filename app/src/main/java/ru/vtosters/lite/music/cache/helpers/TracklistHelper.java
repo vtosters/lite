@@ -17,6 +17,7 @@ import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 public class TracklistHelper {
     public static List<MusicTrack> getTracks() {
@@ -69,7 +70,7 @@ public class TracklistHelper {
         }
     }
 
-    public static MusicTrack getTrack(String id) {
+    public static Optional<MusicTrack> getTrack(String id) {
         return MusicCacheDbDelegate.getTrackById(AndroidUtils.getGlobalContext(), id);
     }
 

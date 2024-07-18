@@ -38,7 +38,7 @@ public final class CachedDownloader implements IDownloader<MusicTrack> {
                     new ThumbnailTrackDownloader().download(track);
                     PlaylistCacheDbDelegate
                             .addTrackToPlaylist(AndroidUtils.getGlobalContext(),
-                                    playlist.v1(), track.y1());
+                                    playlist.b, playlist.a, track.y1());
                     MusicCacheImpl.addTrack(track);
                     callback.onSuccess();
                 } catch (IOException e) {

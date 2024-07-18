@@ -3,7 +3,7 @@ package ru.vtosters.lite.concurrent;
 import com.vk.core.concurrent.VkExecutors;
 
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.Executors;
 
 import io.reactivex.Scheduler;
 
@@ -31,16 +31,8 @@ class VTMusicDownloadExecutor {
     private final ExecutorService executorService;
 
     private VTMusicDownloadExecutor() {
-        int minParallelism = 1;
-        int maxParallelism = 7;
-        int parallelism = clamp((Runtime.getRuntime().availableProcessors() >> 1), minParallelism, maxParallelism);
-
-        // Creates a ForkJoinPool with the calculated parallelism, using the default ForkJoinWorkerThreadFactory,
-        // and a FIFO (First-In-First-Out) execution policy
-        this.executorService = new ForkJoinPool(parallelism,
-                ForkJoinPool.defaultForkJoinWorkerThreadFactory,
-                (t, e) -> {},
-                true);
+        // todo: CoroutineDispatcher
+        this.executorService = Executors.newCachedThreadPool();
     }
 
     // Returns the singleton instance of VTMusicDownloadExecutor
@@ -51,10 +43,5 @@ class VTMusicDownloadExecutor {
     // Returns the ExecutorService provided by this class
     public ExecutorService getExecutorService() {
         return executorService;
-    }
-
-    // Clamps a value between a minimum and maximum value
-    private int clamp(int value, int min, int max) {
-        return Math.min(max, Math.max(value, min));
     }
 }

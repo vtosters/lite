@@ -25,7 +25,8 @@ public class PlaylistHelper {
 
     public static JSONArray addCachedPlaylists(JSONArray jsonArray) {
         try {
-            if (!PlaylistCacheDbDelegate.isPlaylistEmpty(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1")) {
+            if (!PlaylistCacheDbDelegate.isPlaylistEmpty(AndroidUtils.getGlobalContext(),
+                    AccountManagerUtils.getUserId(),  -1)) {
                 jsonArray.put(getCachedSongsPlaylist());
             }
 
@@ -110,7 +111,9 @@ public class PlaylistHelper {
     public static JSONArray getCachedPlaylistsIds() {
         JSONArray arr = new JSONArray();
 
-        if (NetworkUtils.isNetworkConnected() && !PlaylistCacheDbDelegate.isPlaylistEmpty(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1")) {
+        if (NetworkUtils.isNetworkConnected() &&
+                !PlaylistCacheDbDelegate.isPlaylistEmpty(AndroidUtils.getGlobalContext(),
+                        AccountManagerUtils.getUserId(), -1)) {
             arr.put(AccountManagerUtils.getUserId() + "_-1");
         }
 

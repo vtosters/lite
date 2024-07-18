@@ -1,74 +1,45 @@
 package ru.vtosters.lite.music.cache.delegate;
 
 import android.content.Context;
-import android.net.Uri;
-import android.util.Log;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
-import org.json.JSONException;
-import org.json.JSONObject;
-import ru.vtosters.lite.music.cache.db.PlaylistCacheDb;
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
-import ru.vtosters.lite.utils.music.PlaylistUtils;
+
+import ru.vtosters.lite.music.cache.db.SqlPlaylists;
+import ru.vtosters.lite.music.interfaces.IPlaylist;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+@SuppressWarnings("forRemoval")
 public class PlaylistCacheDbDelegate {
-    private static PlaylistCacheDb connectToDb(Context context) {
-        return new PlaylistCacheDb(context);
+    private static SqlPlaylists connectToDb(Context context) {
+        return new SqlPlaylists(context);
     }
 
     public static void addPlaylist(Context context, Playlist playlist) {
         try (var db = connectToDb(context)) {
-            db.addPlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, generatePhotoJSON(playlist));
+            db.addPlaylist(playlist);
         }
-    }
-
-    public static JSONObject generatePhotoJSON(Playlist playlist) {
-        if (PlaylistUtils.getThumb(playlist) != null) {
-            JSONObject photo = new JSONObject();
-            String playlistId = playlist.v1();
-            try {
-                photo.put("height", 300);
-                photo.put("width", 300);
-
-                addPhotoSizeToJSON(photo, playlistId, 600, "photo_600");
-                addPhotoSizeToJSON(photo, playlistId, 34, "photo_34");
-                addPhotoSizeToJSON(photo, playlistId, 1200, "photo_1200");
-                addPhotoSizeToJSON(photo, playlistId, 68, "photo_68");
-                addPhotoSizeToJSON(photo, playlistId, 135, "photo_135");
-                addPhotoSizeToJSON(photo, playlistId, 300, "photo_300");
-                addPhotoSizeToJSON(photo, playlistId, 270, "photo_270");
-
-                return photo;
-            } catch (JSONException e) {
-                throw new RuntimeException(e);
-            }
-        } else {
-            return null;
-        }
-    }
-
-    private static void addPhotoSizeToJSON(JSONObject photo, String playlistId, int size, String key) throws JSONException {
-        photo.put(key, Uri.fromFile(MusicCacheStorageUtils.getPlaylistThumb(playlistId, size)).toString());
-        Log.d("Playlist", "thumb link " + Uri.fromFile(MusicCacheStorageUtils.getPlaylistThumb(playlistId, size)).toString());
     }
 
     public static void deletePlaylist(Context context, String playlistId) {
         try (var db = connectToDb(context)) {
-            db.deletePlaylistWithTracks(playlistId);
+            String[] split = playlistId.split("_");
+            int ownerId = Integer.parseInt(split[0]);
+            int id = Integer.parseInt(split[1]);
+            db.deletePlaylist(ownerId, id);
         }
     }
 
-    public static long getTracksCountInPlaylist(Context context, String playlistId) {
+    public static long getTracksCountInPlaylist(Context context, int ownerId, int id) {
         try (var db = connectToDb(context)) {
-            return db.getTracksCountInPlaylist(playlistId);
+            return db.playlist(ownerId, id).map(IPlaylist::count).orElse(0);
         }
     }
 
     public static boolean isPlaylistsDbEmpty(Context context) {
         try (var db = connectToDb(context)) {
-            return db.isPlaylistsDbEmpty();
+            return db.isEmpty();
         }
     }
 
@@ -81,73 +52,90 @@ public class PlaylistCacheDbDelegate {
 
     public static List<String> getAllPlaylistIds(Context context) {
         try (var db = connectToDb(context)) {
-            return db.getAllPlaylistIds();
+            return db.playlists()
+                    .stream()
+                    .map(x -> x.ownerId() + "_" + x.id())
+                    .collect(Collectors.toList());
         }
     }
 
-    public static boolean isCachedPlaylist(Context context, String id) {
+    public static boolean isCachedPlaylist(Context context, int ownerId, int id) {
         try (var db = connectToDb(context)) {
-            String[] parts = id.split("_");
-            int playlistId = Integer.parseInt(parts[1]);
-            int ownerId = Integer.parseInt(parts[0]);
-
-            return db.isCachedPlaylist(playlistId, ownerId);
+            return db.playlist(ownerId, id).isPresent();
         }
     }
 
-    public static long getPlaylistsCount(Context context) {
-        try (var db = connectToDb(context)) {
-            return db.getPlaylistsCount();
-        }
-    }
 
     public static List<Playlist> getAllPlaylists(Context context) {
         try (var db = connectToDb(context)) {
-            return db.getAllPlaylists();
+            return db.playlists()
+                    .stream()
+                    .map(IPlaylist::toPlaylist)
+                    .collect(Collectors.toList());
         }
     }
 
     public static Playlist getPlaylistById(Context context, String playlistId) {
         try (var db = connectToDb(context)) {
-            String[] parts = playlistId.split("_");
-            int id = Integer.parseInt(parts[1]);
-            int ownerId = Integer.parseInt(parts[0]);
+            String[] split = playlistId.split("_");
+            int ownerId = Integer.parseInt(split[0]);
+            int id = Integer.parseInt(split[1]);
 
-            return db.getPlaylistById(id, ownerId);
+            return db.playlist(ownerId, id)
+                    .map(IPlaylist::toPlaylist)
+                    .orElse(null);
         }
     }
 
-    public static void addTrackToPlaylist(Context context, String playlistId, String trackId) {
+    public static void addTrackToPlaylist(Context context,
+                                          int ownerId, int id,
+                                          String trackId) {
         try (var db = connectToDb(context)) {
-            db.addTrackToPlaylist(playlistId, trackId);
+            db.playlist(ownerId, id).ifPresent(p -> p.addTrack(trackId));
         }
     }
 
-    public static void removeTrackFromPlaylist(Context context, String playlistId, String trackId) {
+    public static void removeTrackFromPlaylist(Context context, String playlistId,
+                                               String trackId) {
         try (var db = connectToDb(context)) {
-            db.removeTrackFromPlaylist(playlistId, trackId);
+            String[] split = playlistId.split("_");
+            int ownerId = Integer.parseInt(split[0]);
+            int id = Integer.parseInt(split[1]);
+
+            db.playlist(ownerId, id).ifPresent(p -> p.removeTrack(trackId));
         }
     }
 
-    public static List<MusicTrack> getTracksInPlaylist(Context context, String playlistId) {
+    public static List<MusicTrack> getTracksInPlaylist(Context context, int ownerId, int id) {
         try (var db = connectToDb(context)) {
-            return db.getTracksInPlaylist(playlistId);
+
+            return db.playlist(ownerId, id)
+                    .map(IPlaylist::tracks)
+                    .orElse(List.of());
         }
     }
     public static List<MusicTrack>
     getTracksInPlaylist(Context context, String playlistId, int offset, int count) {
         try (var db = connectToDb(context)) {
-            return db.getTracksInPlaylist(playlistId, offset, count);
+            String[] split = playlistId.split("_");
+            int ownerId = Integer.parseInt(split[0]);
+            int id = Integer.parseInt(split[1]);
+
+            return db.playlist(ownerId, id)
+                    .map(e -> e.tracks(offset, count))
+                    .orElse(List.of());
         }
     }
 
-    public static boolean isPlaylistEmpty(Context context, String playlistId) {
+    public static boolean isPlaylistEmpty(Context context, int ownerId, int id) {
         try (var db = connectToDb(context)) {
-            return db.isPlaylistEmpty(playlistId);
+            return db.playlist(ownerId, id)
+                    .map(IPlaylist::isEmpty)
+                    .orElse(true);
         }
     }
 
     public static void drop(Context context) {
-        context.deleteDatabase(PlaylistCacheDb.Constants.DB_NAME);
+        context.deleteDatabase(SqlPlaylists.Constants.DB_NAME);
     }
 }

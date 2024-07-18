@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.vk.dto.music.MusicTrack;
 
-import java.util.List;
+import java.util.Optional;
 
 import ru.vtosters.lite.music.cache.db.MusicCacheDb;
 
@@ -13,27 +13,9 @@ public class MusicCacheDbDelegate {
         return new MusicCacheDb(context);
     }
 
-    public static void addTrack(Context context,
-                                String trackId,
-                                String albumId,
-                                String title,
-                                String subtitle,
-                                String artist,
-                                String albumTitle,
-                                boolean explicit,
-                                int duration,
-                                boolean hasArtwork) {
+    public static void addTrack(Context context, MusicTrack track) {
         try (var db = connectToDb(context)) {
-            db.addTrack(
-                    trackId,
-                    albumId,
-                    title,
-                    subtitle,
-                    artist,
-                    albumTitle,
-                    explicit,
-                    duration,
-                    hasArtwork);
+            db.addTrack(track);
         }
     }
 
@@ -43,15 +25,9 @@ public class MusicCacheDbDelegate {
         }
     }
 
-    public static MusicTrack getTrackById(Context context, String trackId) {
+    public static Optional<MusicTrack> getTrackById(Context context, String trackId) {
         try (var db = connectToDb(context)) {
             return db.getTrackById(trackId);
-        }
-    }
-
-    public static long getTracksCount(Context context) {
-        try (var db = connectToDb(context)) {
-            return db.getTracksCount();
         }
     }
 
