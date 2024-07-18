@@ -2,7 +2,7 @@ package ru.vtosters.lite.music.cache.db;
 
 
 public interface Constants {
-    int DV_VERSION = 3;
+    int DV_VERSION = 4;
     String DB_NAME = "vt_lite_cache_playlists.db";
 
     // tables

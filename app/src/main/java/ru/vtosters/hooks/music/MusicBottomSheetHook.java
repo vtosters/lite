@@ -155,7 +155,7 @@ public class MusicBottomSheetHook {
         }
 
         if (actionId == R.id.remove_from_cache) {
-            PlaylistCacheDbDelegate.deletePlaylist(playlist.v1());
+            PlaylistCacheDbDelegate.deletePlaylist(playlist.a, playlist.b);
             return true;
         } else if (actionId == R.id.add_to_cache) {
             AudioDownloader.cachePlaylist(playlist);

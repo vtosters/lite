@@ -42,7 +42,7 @@ public final class SqlPlaylists implements IPlaylists {
                                 Integer.toString(ownerId),
                                 Integer.toString(id)
                         },
-                        null, null, null)) {
+                        null, null, null, "1")) {
             return cur.moveToFirst()
                     ? Optional.of(
                             new SqlPlaylist(
@@ -133,8 +133,7 @@ public final class SqlPlaylists implements IPlaylists {
     }
 
 
-
-    public static JSONObject generatePhotoJSON(Playlist playlist) {
+    private static JSONObject generatePhotoJSON(Playlist playlist) {
         if (PlaylistUtils.getThumb(playlist) != null) {
             JSONObject photo = new JSONObject();
             String playlistId = playlist.v1();

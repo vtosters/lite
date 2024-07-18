@@ -443,9 +443,8 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx);
         builder.setTitle("Скачанные плейлисты");
         builder.setItems(playlistNames, (dialog, which) -> {
-            Playlist selectedPlaylist = playlists.get(which);
-            String playlistId = selectedPlaylist.v1();
-            PlaylistCacheDbDelegate.deletePlaylist(playlistId);
+            Playlist playlist = playlists.get(which);
+            PlaylistCacheDbDelegate.deletePlaylist(playlist.a, playlist.b);
             AndroidUtils.sendToast("Плейлист удален");
             findPreference("cached_playlists").setSummary(String.format("Скачано плейлистов: %d", MusicCacheImpl.getPlaylists().size()));
         });
@@ -461,7 +460,9 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                     if (isPlaylists) {
                         PlaylistCacheDbDelegate.removeAllPlaylists();
                     } else {
-                        PlaylistCacheDbDelegate.deletePlaylist(AccountManagerUtils.getUserId() + "_-1");
+                        PlaylistCacheDbDelegate.deletePlaylist(
+                                AccountManagerUtils.getUserId(),
+                                -1);
                     }
                     findPreference("cached_tracks").setSummary(String.format(requireContext().getString(com.vtosters.lite.R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
                 })

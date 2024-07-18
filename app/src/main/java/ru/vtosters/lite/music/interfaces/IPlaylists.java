@@ -21,10 +21,13 @@ public interface IPlaylists {
     List<IPlaylist> playlists();
 
 
+    default void deleteAll() {
+        playlists().forEach(x -> deletePlaylist(x.ownerId(), x.id()));
+    }
+
     default boolean isEmpty() {
         return playlists().isEmpty();
     }
-
 
 
     default Optional<IPlaylist> playlist(int ownerId, int id) {

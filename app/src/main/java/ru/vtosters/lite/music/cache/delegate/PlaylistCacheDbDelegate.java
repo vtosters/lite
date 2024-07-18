@@ -23,16 +23,15 @@ public class PlaylistCacheDbDelegate {
         }
     }
 
-    public static void deletePlaylist(String playlistId) {
+
+    public static void deletePlaylist(int id, int ownerId) {
 
         try (Database db = new Database()) {
-            String[] split = playlistId.split("_");
-            int ownerId = Integer.parseInt(split[0]);
-            int id = Integer.parseInt(split[1]);
             new SqlPlaylists(db).deletePlaylist(ownerId, id);
         }
 
     }
+
 
     public static long getTracksCountInPlaylist(int ownerId, int id) {
         try (Database db = new Database()) {
@@ -49,9 +48,8 @@ public class PlaylistCacheDbDelegate {
     }
 
     public static void removeAllPlaylists() {
-        List<String> playlistIds = getAllPlaylistIds();
-        for (String playlistId : playlistIds) {
-            deletePlaylist(playlistId);
+        try (Database db = new Database()) {
+            new SqlPlaylists(db).deleteAll();
         }
     }
 
