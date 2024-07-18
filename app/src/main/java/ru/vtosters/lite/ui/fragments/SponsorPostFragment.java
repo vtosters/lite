@@ -138,7 +138,7 @@ public class SponsorPostFragment extends TrackedMaterialPreferenceToolbarFragmen
                         }
                 );
             }
-            
+
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",

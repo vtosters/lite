@@ -1,22 +1,15 @@
 package ru.vtosters.lite.music.cache.db;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.util.Log;
-
-import androidx.annotation.Nullable;
 
 import com.vk.dto.music.Playlist;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -26,38 +19,22 @@ import java.util.Optional;
 
 import ru.vtosters.lite.music.interfaces.IPlaylist;
 import ru.vtosters.lite.music.interfaces.IPlaylists;
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.PlaylistUtils;
 
-public final class SqlPlaylists extends SQLiteOpenHelper
-        implements IPlaylists, AutoCloseable {
+public final class SqlPlaylists implements IPlaylists {
 
+    private final Database database;
 
-    public SqlPlaylists() {
-        this(AndroidUtils.getGlobalContext());
+    public SqlPlaylists(Database database) {
+        this.database = database;
     }
 
-    public SqlPlaylists(@Nullable Context context) {
-        super(context, Constants.DB_NAME, null, Constants.DV_VERSION);
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Constants.CREATE_PLAYLISTS_TABLE);
-        db.execSQL(Constants.CREATE_PLAYLIST_TRACKS);
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(Constants.DROP_QUERY);
-        onCreate(db);
-    }
 
     @Override
     public Optional<IPlaylist> playlist(int ownerId, int id) {
-        try (Cursor cur = getReadableDatabase()
-                .query(Constants.PLAYLISTS,
+        try (Cursor cur = database.getReadableDatabase()
+                .query(Constants.TABLE_PLAYLIST,
                         null,
                         Constants.OWNER_ID + " = ? AND " +
                                 Constants.PLAYLIST_ID + " = ?",
@@ -71,15 +48,15 @@ public final class SqlPlaylists extends SQLiteOpenHelper
                             new SqlPlaylist(
                                     ownerId,
                                     id,
-                                    this))
+                                    database))
                     : Optional.empty();
         }
     }
 
     @Override
     public Map<Integer, IPlaylist> playlists(int ownerId) {
-        try (Cursor cur = getReadableDatabase()
-                .query(Constants.PLAYLISTS,
+        try (Cursor cur = database.getReadableDatabase()
+                .query(Constants.TABLE_PLAYLIST,
                         new String[]{Constants.OWNER_ID, Constants.PLAYLIST_ID},
                         Constants.OWNER_ID + " = ?",
                         new String[]{Integer.toString(ownerId)},
@@ -91,7 +68,7 @@ public final class SqlPlaylists extends SQLiteOpenHelper
                 int own = cur.getInt(0);
                 int id = cur.getInt(1);
 
-                map.put(id, new SqlPlaylist(own, id, this));
+                map.put(id, new SqlPlaylist(own, id, database));
             }
             return Collections.unmodifiableMap(map);
         }
@@ -99,8 +76,8 @@ public final class SqlPlaylists extends SQLiteOpenHelper
 
     @Override
     public List<IPlaylist> playlists() {
-        try (Cursor cur = getReadableDatabase()
-                .query(Constants.PLAYLISTS,
+        try (Cursor cur = database.getReadableDatabase()
+                .query(Constants.TABLE_PLAYLIST,
                         new String[]{Constants.OWNER_ID, Constants.PLAYLIST_ID},
                         null,
                         null,
@@ -112,7 +89,7 @@ public final class SqlPlaylists extends SQLiteOpenHelper
                 int ownerId = cur.getInt(0);
                 int id = cur.getInt(1);
 
-                list.add(new SqlPlaylist(ownerId, id, this));
+                list.add(new SqlPlaylist(ownerId, id, database));
             }
             return Collections.unmodifiableList(list);
         }
@@ -124,17 +101,17 @@ public final class SqlPlaylists extends SQLiteOpenHelper
         ContentValues values = new ContentValues();
         values.put(Constants.OWNER_ID, playlist.b);
         values.put(Constants.PLAYLIST_ID, playlist.a);
-        values.put(Constants.COLUMN_IS_EXPLICIT, playlist.C);
-        values.put(Constants.COLUMN_TITLE, playlist.g);
-        values.put(Constants.COLUMN_DESCRIPTION, playlist.B);
-        values.put(Constants.COLUMN_PHOTO, String.valueOf(generatePhotoJSON(playlist)));
+        values.put(Constants.PLAYLIST_IS_EXPLICIT, playlist.C);
+        values.put(Constants.PLAYLIST_TITLE, playlist.g);
+        values.put(Constants.PLAYLIST_DESCRIPTION, playlist.B);
+        values.put(Constants.PLAYLIST_PHOTO, String.valueOf(generatePhotoJSON(playlist)));
 
-        getWritableDatabase().insert(Constants.PLAYLISTS, null, values);
+        database.getWritableDatabase().insert(Constants.TABLE_PLAYLIST, null, values);
     }
 
     @Override
     public void deletePlaylist(int ownerId, int id) {
-        getWritableDatabase().delete(Constants.PLAYLISTS,
+        database.getWritableDatabase().delete(Constants.TABLE_PLAYLIST,
                 Constants.OWNER_ID + " = ? AND " +
                         Constants.PLAYLIST_ID + " = ?",
                 new String[]{
@@ -145,8 +122,8 @@ public final class SqlPlaylists extends SQLiteOpenHelper
 
     @Override
     public boolean isEmpty() {
-        try (Cursor cur = getReadableDatabase()
-                .query(Constants.PLAYLISTS,
+        try (Cursor cur = database.getReadableDatabase()
+                .query(Constants.TABLE_PLAYLIST,
                         null,
                         null,
                         null,
@@ -191,48 +168,5 @@ public final class SqlPlaylists extends SQLiteOpenHelper
         Log.d("Playlist", "thumb link " +
                 Uri.fromFile(MusicCacheStorageUtils.getPlaylistThumb(playlistId, size)
                 ).toString());
-    }
-    @Retention(RetentionPolicy.SOURCE)
-    public @interface Constants {
-        int DV_VERSION = 0x2;
-        String DB_NAME = "vt_lite_cache_playlists.db";
-        String PLAYLISTS = "playlists";
-
-        //columns
-        String PLAYLIST_ID = "id";
-        String OWNER_ID = "owner_id";
-        String COLUMN_IS_EXPLICIT = "is_explicit";
-        String COLUMN_TITLE = "title";
-        String COLUMN_DESCRIPTION = "description";
-        String COLUMN_PHOTO = "photo";
-
-        // tracks
-        String PLAYLIST_TRACKS = "playlist_tracks";
-        String TRACK_ID = "track_id";
-
-        //queries
-        String CREATE_PLAYLISTS_TABLE = "CREATE TABLE " + PLAYLISTS
-                + "("
-                + OWNER_ID + " INTEGER NOT NULL,"
-                + PLAYLIST_ID + " INTEGER NOT NULL,"
-                + COLUMN_IS_EXPLICIT + " TEXT NOT NULL,"
-                + COLUMN_TITLE + " TEXT NOT NULL,"
-                + COLUMN_DESCRIPTION + " TEXT NOT NULL,"
-                + COLUMN_PHOTO + " TEXT NOT NULL,"
-                + "PRIMARY KEY ("+ PLAYLIST_ID +", "+ OWNER_ID +")"
-                + ")";
-
-        String CREATE_PLAYLIST_TRACKS = "CREATE TABLE " + PLAYLIST_TRACKS + "("
-                + OWNER_ID + " INTEGER NOT NULL,"
-                + PLAYLIST_ID + " INTEGER NOT NULL,"
-                + TRACK_ID + " TEXT NOT NULL,"
-
-                + "PRIMARY KEY ("+ OWNER_ID +", "+ PLAYLIST_ID +", "+ TRACK_ID +"),"
-                + "FOREIGN KEY ("+ OWNER_ID +", "+ PLAYLIST_ID +") "
-                + "REFERENCES "+ PLAYLISTS +"("+ OWNER_ID +", "+ PLAYLIST_ID +") "
-                + "ON DELETE CASCADE"
-                + ")";
-
-        String DROP_QUERY = "DROP TABLE IF EXISTS " + PLAYLISTS;
     }
 }

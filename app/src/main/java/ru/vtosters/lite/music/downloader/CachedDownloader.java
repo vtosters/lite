@@ -6,10 +6,12 @@ import java.io.File;
 import java.io.IOException;
 
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.db.Database;
+import ru.vtosters.lite.music.cache.db.MusicCacheDb;
+import ru.vtosters.lite.music.cache.db.SqlPlaylists;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.interfaces.IDownloader;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public final class CachedDownloader implements IDownloader<MusicTrack> {
     private final File to;
@@ -34,12 +36,12 @@ public final class CachedDownloader implements IDownloader<MusicTrack> {
 
             @Override
             public void onSuccess() {
-                try {
+                try (Database database = new Database()) {
                     new ThumbnailTrackDownloader().download(track);
-                    PlaylistCacheDbDelegate
-                            .addTrackToPlaylist(AndroidUtils.getGlobalContext(),
-                                    playlist.b, playlist.a, track.y1());
-                    MusicCacheImpl.addTrack(track);
+                    new MusicCacheDb(database).addTrack(track);
+                    new SqlPlaylists(database)
+                            .playlist(playlist.b, playlist.a)
+                            .ifPresent(playlist -> playlist.addTrack(track.y1()));
                     callback.onSuccess();
                 } catch (IOException e) {
                     callback.onFailure(e);

@@ -433,7 +433,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
 
     @SuppressLint("DefaultLocale")
     private void cachedPlaylistsDialog(Context ctx) {
-        List<Playlist> playlists = PlaylistCacheDbDelegate.getAllPlaylists(ctx);
+        List<Playlist> playlists = PlaylistCacheDbDelegate.getAllPlaylists();
         String[] playlistNames = new String[playlists.size()];
 
         for (int i = 0; i < playlists.size(); i++) {
@@ -445,7 +445,7 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
         builder.setItems(playlistNames, (dialog, which) -> {
             Playlist selectedPlaylist = playlists.get(which);
             String playlistId = selectedPlaylist.v1();
-            PlaylistCacheDbDelegate.deletePlaylist(ctx, playlistId);
+            PlaylistCacheDbDelegate.deletePlaylist(playlistId);
             AndroidUtils.sendToast("Плейлист удален");
             findPreference("cached_playlists").setSummary(String.format("Скачано плейлистов: %d", MusicCacheImpl.getPlaylists().size()));
         });
@@ -459,9 +459,9 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setMessage(com.vtosters.lite.R.string.cached_tracks_remove_confirm)
                 .setPositiveButton(com.vtosters.lite.R.string.yes, (dialog, which) -> {
                     if (isPlaylists) {
-                        PlaylistCacheDbDelegate.removeAllPlaylists(ctx);
+                        PlaylistCacheDbDelegate.removeAllPlaylists();
                     } else {
-                        PlaylistCacheDbDelegate.deletePlaylist(ctx, AccountManagerUtils.getUserId() + "_-1");
+                        PlaylistCacheDbDelegate.deletePlaylist(AccountManagerUtils.getUserId() + "_-1");
                     }
                     findPreference("cached_tracks").setSummary(String.format(requireContext().getString(com.vtosters.lite.R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
                 })

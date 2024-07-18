@@ -8,7 +8,7 @@ import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class RoundingSeekbarDialog {
     private static final String[] roundOptions = {
-        "Круглые", "Закругленные", "Квадратные"
+            "Круглые", "Закругленные", "Квадратные"
     };
 
     public static void dialog(Context context) {

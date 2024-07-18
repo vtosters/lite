@@ -152,7 +152,7 @@ public class AudioDownloader {
 
                 @Override
                 public void onSuccess() {
-                    PlaylistCacheDbDelegate.addPlaylist(AndroidUtils.getGlobalContext(), playlist);
+                    PlaylistCacheDbDelegate.addPlaylist(playlist);
                     Log.d("Playlist", "adding to cache with thumbs " + playlist.v1());
                 }
 
@@ -162,7 +162,7 @@ public class AudioDownloader {
                 }
             }).download(playlist);
         } else {
-            PlaylistCacheDbDelegate.addPlaylist(AndroidUtils.getGlobalContext(), playlist);
+            PlaylistCacheDbDelegate.addPlaylist(playlist);
             Log.d("Playlist", "adding to cache without thumbs " + playlist.a);
         }
 

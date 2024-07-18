@@ -246,7 +246,7 @@ public class TracklistInjector {
                     .put(getCatalogPlaylist());
         }
 
-        if (!PlaylistCacheDbDelegate.isPlaylistEmpty(AndroidUtils.getGlobalContext(),
+        if (!PlaylistCacheDbDelegate.isPlaylistEmpty(
                 AccountManagerUtils.getUserId(), -1)) {
             if (MusicCacheImpl.hasPlaylist()) blocks.put(getCatalogSeparator());
             blocks.put(getCatalogHeader(AndroidUtils.getString(R.string.cached_tracks_title)))

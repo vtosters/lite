@@ -86,7 +86,7 @@ public class PlaylistInjector {
         }));
     }
 
-    private static Observable<AudioGetPlaylist.c> handleMusicCacheImpl(String id, String ownerId, int offset, int count, boolean isOwnCachePlaylist) {
+    private static Observable<AudioGetPlaylist.c> handleMusicCacheImpl(int id, int ownerId, int offset, int count, boolean isOwnCachePlaylist) {
         return Observable.c(() -> {
             AudioGetPlaylist.c response = new AudioGetPlaylist.c();
 
@@ -122,6 +122,11 @@ public class PlaylistInjector {
             return handleLibVKXClient(id, ownerId, isAlbumVirtualPlaylist(accessKey));
         }
 
-        return handleMusicCacheImpl(id, ownerId, countAndOffset[1], countAndOffset[0], isOwnCachePlaylist(ownerId, id));
+        return handleMusicCacheImpl(Integer.parseInt(id),
+                Integer.parseInt(ownerId),
+                countAndOffset[1],
+                countAndOffset[0],
+                isOwnCachePlaylist(ownerId, id)
+        );
     }
 }

@@ -85,7 +85,7 @@ public class MusicBottomSheetHook {
                 actions.add(addToCacheTrackVkxAction());
             }
         } else {
-            if (PlaylistCacheDbDelegate.isCachedPlaylist(AndroidUtils.getGlobalContext(), playlist.b, playlist.a)) {
+            if (PlaylistCacheDbDelegate.isCachedPlaylist(playlist.b, playlist.a)) {
                 actions.add(getRemoveCacheTrackAction());
             } else if (isNetworkConnected()) {
                 actions.add(addToCacheTrackAction());
@@ -153,15 +153,15 @@ public class MusicBottomSheetHook {
         if (actionId == R.id.play_in_vkx) {
             return tryPlayInVKX(null, null, playlist);
         }
-        
+
         if (actionId == R.id.remove_from_cache) {
-            PlaylistCacheDbDelegate.deletePlaylist(AndroidUtils.getGlobalContext(), playlist.v1());
+            PlaylistCacheDbDelegate.deletePlaylist(playlist.v1());
             return true;
         } else if (actionId == R.id.add_to_cache) {
             AudioDownloader.cachePlaylist(playlist);
             return true;
         }
-        
+
         if (actionId == R.id.remove_from_cache_vkx) {
             getInstance().runOnService(service -> {
                 try {
