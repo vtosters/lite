@@ -33,37 +33,36 @@ public final class Database extends SQLiteOpenHelper implements AutoCloseable {
     @Override
     public void onUpgrade(SQLiteDatabase db, int prev, int current) {
         if (prev < current) {
-            migrateMusics(db);
-            migratePlaylists(db);
+            migrateMusics();
+            migratePlaylists();
         }
     }
 
-    private void migrateMusics(SQLiteDatabase db) {
+    private void migrateMusics() {
         try (OldMusicCacheDb old = new OldMusicCacheDb(AndroidUtils.getGlobalContext())) {
             MusicCacheDb musics = new MusicCacheDb(this);
 
+            SQLiteDatabase write = old.getWritableDatabase();
             List<MusicTrack> tracks = old.getAllTracks();
 
-            old.getWritableDatabase().execSQL(OldMusicCacheDb.Constants.DROP_QUERY);
-            db.execSQL(Constants.CREATE_TABLE_MUSICS);
+            write.execSQL(OldMusicCacheDb.Constants.DROP_QUERY);
 
             tracks.forEach(musics::addTrack);
         }
     }
 
-    private void migratePlaylists(SQLiteDatabase db) {
+    private void migratePlaylists() {
         try (OldPlaylistCacheDb old = new OldPlaylistCacheDb(AndroidUtils.getGlobalContext())) {
             Map<Playlist, List<MusicTrack>> map = new HashMap<>();
+
+            SQLiteDatabase write = old.getWritableDatabase();
 
             old.getAllPlaylists().forEach(playlist -> {
                 map.put(playlist, old.getTracksInPlaylist(playlist.v1()));
             });
-            old.getWritableDatabase().execSQL(OldMusicCacheDb.Constants.DROP_QUERY);
+            write.execSQL(OldPlaylistCacheDb.Constants.DROP_QUERY);
 
             SqlPlaylists playlists = new SqlPlaylists(this);
-
-            db.execSQL(Constants.CREATE_TABLE_PLAYLISTS);
-            db.execSQL(Constants.CREATE_TABLE_PLAYLIST_TRACKS);
 
             map.forEach((playlist, tracks) -> {
                 playlists.addPlaylist(playlist);
