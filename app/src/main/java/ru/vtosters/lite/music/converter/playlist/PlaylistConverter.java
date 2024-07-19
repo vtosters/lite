@@ -1,27 +1,25 @@
 package ru.vtosters.lite.music.converter.playlist;
 
-import static com.vk.core.network.Network.ClientType.CLIENT_API;
-import static ru.vtosters.hooks.DateHook.getLocale;
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
-
 import com.vk.core.network.Network;
 import com.vk.core.util.DeviceIdProvider;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
-
+import okhttp3.Request;
+import okhttp3.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import okhttp3.Request;
-import okhttp3.Response;
-import ru.vtosters.lite.utils.AccountManagerUtils;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.sponsorpost.utils.GzipDecompressor;
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
+import static ru.vtosters.hooks.DateHook.getLocale;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 
 /**
  * stuff for converting playlists DTO

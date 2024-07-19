@@ -23,6 +23,7 @@ public class RoundingSeekbarDialog {
                 })
                 .show();
     }
+
     private static int getRoundingValue(int selectedOption) {
         int val = 0;
 

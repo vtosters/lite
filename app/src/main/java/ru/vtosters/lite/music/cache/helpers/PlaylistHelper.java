@@ -1,14 +1,11 @@
 package ru.vtosters.lite.music.cache.helpers;
 
 import android.util.Log;
-
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -29,7 +26,7 @@ public class PlaylistHelper {
     public static JSONArray addCachedPlaylists(JSONArray jsonArray) {
         try {
             if (!PlaylistCacheDbDelegate.isPlaylistEmpty(
-                    AccountManagerUtils.getUserId(),  -1)) {
+                    AccountManagerUtils.getUserId(), -1)) {
                 jsonArray.put(getCachedSongsPlaylist());
             }
 

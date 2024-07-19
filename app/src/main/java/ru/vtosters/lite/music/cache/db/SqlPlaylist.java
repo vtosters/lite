@@ -1,27 +1,23 @@
 package ru.vtosters.lite.music.cache.db;
 
-import static java.lang.Boolean.parseBoolean;
-
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
-
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.music.interfaces.IPlaylist;
 
-public final class SqlPlaylist implements IPlaylist {
+import java.util.ArrayList;
+import java.util.List;
 
+import static java.lang.Boolean.parseBoolean;
+
+public final class SqlPlaylist implements IPlaylist {
     private final int ownerId, id;
     private final Database sqlite;
 
@@ -146,13 +142,16 @@ public final class SqlPlaylist implements IPlaylist {
             Log.d("Playlist", "generated " + result.v1());
             return result;
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            Log.d("Playlist", e.toString());
         }
+
+        return null;
     }
 
     private String selection() {
         return Constants.OWNER_ID + " = ? AND " + Constants.PLAYLIST_ID + " = ?";
     }
+
     private String[] compositeKey() {
         return new String[]{
                 Integer.toString(ownerId),

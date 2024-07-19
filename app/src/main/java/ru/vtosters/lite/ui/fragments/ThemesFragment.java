@@ -15,7 +15,6 @@ import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.themes.palettes.PalettesManager;
-import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.PalettesBottomSheetDialog;
 import ru.vtosters.lite.ui.views.rarepebble.ColorPickerView;
 import ru.vtosters.lite.utils.AndroidUtils;

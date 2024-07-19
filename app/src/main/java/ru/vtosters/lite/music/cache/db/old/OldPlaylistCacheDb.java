@@ -10,7 +10,6 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 
@@ -24,12 +23,6 @@ import java.util.List;
 public class OldPlaylistCacheDb extends SQLiteOpenHelper {
     public OldPlaylistCacheDb(Context context) {
         super(context, Constants.DB_NAME, null, Constants.DV_VERSION);
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Constants.CREATE_QUERY);
-        db.execSQL(Constants.CREATE_PLAYLIST_TRACKS_QUERY);
     }
 
     private static Playlist fromCursor(Cursor cur) throws JSONException {
@@ -53,6 +46,12 @@ public class OldPlaylistCacheDb extends SQLiteOpenHelper {
     }
 
     @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL(Constants.CREATE_QUERY);
+        db.execSQL(Constants.CREATE_PLAYLIST_TRACKS_QUERY);
+    }
+
+    @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(Constants.DROP_QUERY);
         onCreate(db);
@@ -65,14 +64,13 @@ public class OldPlaylistCacheDb extends SQLiteOpenHelper {
         return playlists;
     }
 
-
     private List<Playlist> getPlaylistsWithCursor(Cursor cur) {
         List<Playlist> playlists = new ArrayList<>();
         while (cur.moveToNext()) {
             try {
                 playlists.add(fromCursor(cur));
             } catch (JSONException e) {
-                throw new RuntimeException(e);
+                Log.d("Playlist", "could not parse playlist");
             }
         }
         return playlists;

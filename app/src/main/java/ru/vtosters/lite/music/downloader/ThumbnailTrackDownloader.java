@@ -1,20 +1,24 @@
 package ru.vtosters.lite.music.downloader;
 
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.dto.music.MusicTrack;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.net.URL;
-
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import ru.vtosters.lite.music.interfaces.IDownloader;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
+import java.io.IOException;
+import java.net.URL;
+
 public final class ThumbnailTrackDownloader
         implements IDownloader<MusicTrack> {
+
+    private static void downloadThumbnail(String url, int res, String trackId)
+            throws IOException {
+        IOUtils.writeToFile(MusicCacheStorageUtils.getTrackThumb(trackId, res),
+                IOUtils.readFully(new URL(url).openStream()));
+    }
 
     @Override
     public void download(MusicTrack track) throws IOException {
@@ -40,10 +44,5 @@ public final class ThumbnailTrackDownloader
                 downloadThumbnail(src, width, trackId);
             }
         }
-    }
-    private static void downloadThumbnail(String url, int res, String trackId)
-            throws IOException {
-        IOUtils.writeToFile(MusicCacheStorageUtils.getTrackThumb(trackId, res),
-                IOUtils.readFully(new URL(url).openStream()));
     }
 }

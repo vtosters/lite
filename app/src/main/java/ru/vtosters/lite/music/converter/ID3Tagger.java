@@ -1,21 +1,14 @@
-package ru.vtosters.lite.music.converter;
+package ru.vtosters.lite.music.downloader;
 
 import android.util.Log;
-
-import com.mpatric.mp3agic.ID3v23Tag;
-import com.mpatric.mp3agic.InvalidDataException;
-import com.mpatric.mp3agic.Mp3File;
-import com.mpatric.mp3agic.NotSupportedException;
-import com.mpatric.mp3agic.UnsupportedTagException;
+import com.mpatric.mp3agic.*;
 import com.vk.dto.music.Artist;
 import com.vk.dto.music.MusicTrack;
+import ru.vtosters.hooks.other.Preferences;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.stream.Collectors;
-
-import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.music.downloader.Mp3Downloader;
 
 public class ID3Tagger {
     public static void tag(File file, MusicTrack track) {

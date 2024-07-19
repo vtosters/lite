@@ -1,19 +1,13 @@
 package ru.vtosters.lite.music.cache;
 
-import ru.vtosters.lite.music.cache.db.Constants;
-
 import android.content.Context;
 import android.os.RemoteException;
-
-import com.vk.dto.music.MusicTrack;
-import com.vk.dto.music.Playlist;
-
-import java.util.List;
-import java.util.Optional;
-
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
+import com.vk.dto.music.MusicTrack;
+import com.vk.dto.music.Playlist;
+import ru.vtosters.lite.music.cache.db.Constants;
 import ru.vtosters.lite.music.cache.db.Database;
 import ru.vtosters.lite.music.cache.db.MusicCacheDb;
 import ru.vtosters.lite.music.cache.db.SqlPlaylists;
@@ -23,6 +17,9 @@ import ru.vtosters.lite.music.interfaces.IPlaylists;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
+
+import java.util.List;
+import java.util.Optional;
 
 @SuppressWarnings("forRemoval")
 public class MusicCacheImpl {
@@ -68,7 +65,7 @@ public class MusicCacheImpl {
     }
 
 
-    public static List<Playlist> getPlaylists()  {
+    public static List<Playlist> getPlaylists() {
         return PlaylistCacheDbDelegate.getAllPlaylists();
     }
 

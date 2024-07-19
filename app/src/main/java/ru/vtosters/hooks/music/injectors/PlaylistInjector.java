@@ -2,29 +2,26 @@ package ru.vtosters.hooks.music.injectors;
 
 import android.os.RemoteException;
 import android.text.TextUtils;
-
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.api.audio.AudioGetPlaylist;
 import com.vk.core.concurrent.VkExecutors;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.schedulers.AndroidSchedulers;
+import org.json.JSONException;
+import org.json.JSONObject;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 public class PlaylistInjector {
     public static void injectDownloadPlaylist(Playlist playlist) {
