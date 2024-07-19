@@ -1,22 +1,21 @@
 package ru.vtosters.lite.music.downloader;
 
 import android.util.Log;
-
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
-
-import java.io.File;
-
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.MusicTrackUtils;
 
+import java.io.File;
+
 public final class TrackDownloader {
 
-    private TrackDownloader() { }
+    private TrackDownloader() {
+    }
 
     public static void downloadTrack(MusicTrack track, String path, Callback callback) {
         File outDir = new File(path);

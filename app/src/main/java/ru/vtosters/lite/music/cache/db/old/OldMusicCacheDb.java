@@ -5,12 +5,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
-
 import com.vk.dto.music.AlbumLink;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Thumb;
-
 import org.json.JSONObject;
+import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.io.File;
 import java.lang.annotation.Retention;
@@ -18,8 +17,6 @@ import java.lang.annotation.RetentionPolicy;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
-
-import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 /**
  * <p class="note"><strong>Note:</strong> the {@link AutoCloseable} interface was
@@ -104,7 +101,6 @@ public class OldMusicCacheDb extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
-
 
     public List<MusicTrack> getAllTracks() {
         return getTracksWithCursor(getReadableDatabase().query(Constants.TABLE_NAME, null, null, null, null, null, null));

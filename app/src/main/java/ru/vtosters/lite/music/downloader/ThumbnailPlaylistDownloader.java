@@ -1,22 +1,19 @@
 package ru.vtosters.lite.music.downloader;
 
 import android.util.Log;
-
 import com.vk.dto.music.Playlist;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.List;
-
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.interfaces.IDownloader;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.PlaylistUtils;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
 
 
 public class ThumbnailPlaylistDownloader implements IDownloader<Playlist> {
@@ -28,6 +25,10 @@ public class ThumbnailPlaylistDownloader implements IDownloader<Playlist> {
 
     public ThumbnailPlaylistDownloader(Callback callback) {
         this.callback = callback;
+    }
+
+    private static void downloadThumbnailPlaylist(String url, int res, String playlistId) throws IOException {
+        IOUtils.writeToFile(MusicCacheStorageUtils.getPlaylistThumb(playlistId, res), IOUtils.readFully(new URL(url).openStream()));
     }
 
     @Override
@@ -60,9 +61,5 @@ public class ThumbnailPlaylistDownloader implements IDownloader<Playlist> {
             callback.onFailure(e);
             throw new RuntimeException(e);
         }
-    }
-
-    private static void downloadThumbnailPlaylist(String url, int res, String playlistId) throws IOException {
-        IOUtils.writeToFile(MusicCacheStorageUtils.getPlaylistThumb(playlistId, res), IOUtils.readFully(new URL(url).openStream()));
     }
 }

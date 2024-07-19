@@ -1,11 +1,10 @@
 package ru.vtosters.lite.concurrent;
 
 import com.vk.core.concurrent.VkExecutors;
+import io.reactivex.Scheduler;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-import io.reactivex.Scheduler;
 
 public class VTExecutors {
     public static ExecutorService getMusicDownloadExecutor() {

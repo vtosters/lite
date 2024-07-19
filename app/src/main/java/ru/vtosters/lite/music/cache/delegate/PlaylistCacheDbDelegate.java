@@ -1,17 +1,14 @@
 package ru.vtosters.lite.music.cache.delegate;
 
-import ru.vtosters.lite.music.cache.db.Constants;
-
 import android.content.Context;
-
 import com.vk.dto.music.Playlist;
-
-import java.util.List;
-import java.util.stream.Collectors;
-
+import ru.vtosters.lite.music.cache.db.Constants;
 import ru.vtosters.lite.music.cache.db.Database;
 import ru.vtosters.lite.music.cache.db.SqlPlaylists;
 import ru.vtosters.lite.music.interfaces.IPlaylist;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @SuppressWarnings("forRemoval")
 public class PlaylistCacheDbDelegate {

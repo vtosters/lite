@@ -4,23 +4,15 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
 import android.util.Log;
-
 import com.vk.dto.music.Playlist;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
 import ru.vtosters.lite.music.interfaces.IPlaylist;
 import ru.vtosters.lite.music.interfaces.IPlaylists;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.PlaylistUtils;
+
+import java.util.*;
 
 public final class SqlPlaylists implements IPlaylists {
 
@@ -30,6 +22,42 @@ public final class SqlPlaylists implements IPlaylists {
         this.database = database;
     }
 
+    private static JSONObject generatePhotoJSON(Playlist playlist) {
+        if (PlaylistUtils.getThumb(playlist) != null) {
+            JSONObject photo = new JSONObject();
+            String playlistId = playlist.v1();
+            try {
+                photo.put("height", 300);
+                photo.put("width", 300);
+
+                addPhotoSizeToJSON(photo, playlistId, 600, "photo_600");
+                addPhotoSizeToJSON(photo, playlistId, 34, "photo_34");
+                addPhotoSizeToJSON(photo, playlistId, 1200, "photo_1200");
+                addPhotoSizeToJSON(photo, playlistId, 68, "photo_68");
+                addPhotoSizeToJSON(photo, playlistId, 135, "photo_135");
+                addPhotoSizeToJSON(photo, playlistId, 300, "photo_300");
+                addPhotoSizeToJSON(photo, playlistId, 270, "photo_270");
+
+                return photo;
+            } catch (JSONException e) {
+                Log.d("SqlPlaylists", e.toString());
+            }
+        } else {
+            return null;
+        }
+        return null;
+    }
+
+    private static void addPhotoSizeToJSON(JSONObject photo,
+                                           String playlistId,
+                                           int size, String key) throws JSONException {
+        photo.put(key, Uri.fromFile(
+                MusicCacheStorageUtils.getPlaylistThumb(playlistId, size)
+        ).toString());
+        Log.d("Playlist", "thumb link " +
+                Uri.fromFile(MusicCacheStorageUtils.getPlaylistThumb(playlistId, size)
+                ).toString());
+    }
 
     @Override
     public Optional<IPlaylist> playlist(int ownerId, int id) {
@@ -45,10 +73,10 @@ public final class SqlPlaylists implements IPlaylists {
                         null, null, null, "1")) {
             return cur.moveToFirst()
                     ? Optional.of(
-                            new SqlPlaylist(
-                                    ownerId,
-                                    id,
-                                    database))
+                    new SqlPlaylist(
+                            ownerId,
+                            id,
+                            database))
                     : Optional.empty();
         }
     }
@@ -95,7 +123,6 @@ public final class SqlPlaylists implements IPlaylists {
         }
     }
 
-
     @Override
     public void addPlaylist(Playlist playlist) {
         ContentValues values = new ContentValues();
@@ -130,42 +157,5 @@ public final class SqlPlaylists implements IPlaylists {
                         null, null, null)) {
             return !cur.moveToFirst();
         }
-    }
-
-
-    private static JSONObject generatePhotoJSON(Playlist playlist) {
-        if (PlaylistUtils.getThumb(playlist) != null) {
-            JSONObject photo = new JSONObject();
-            String playlistId = playlist.v1();
-            try {
-                photo.put("height", 300);
-                photo.put("width", 300);
-
-                addPhotoSizeToJSON(photo, playlistId, 600, "photo_600");
-                addPhotoSizeToJSON(photo, playlistId, 34, "photo_34");
-                addPhotoSizeToJSON(photo, playlistId, 1200, "photo_1200");
-                addPhotoSizeToJSON(photo, playlistId, 68, "photo_68");
-                addPhotoSizeToJSON(photo, playlistId, 135, "photo_135");
-                addPhotoSizeToJSON(photo, playlistId, 300, "photo_300");
-                addPhotoSizeToJSON(photo, playlistId, 270, "photo_270");
-
-                return photo;
-            } catch (JSONException e) {
-                throw new RuntimeException(e);
-            }
-        } else {
-            return null;
-        }
-    }
-
-    private static void addPhotoSizeToJSON(JSONObject photo,
-                                           String playlistId,
-                                           int size, String key) throws JSONException {
-        photo.put(key, Uri.fromFile(
-                MusicCacheStorageUtils.getPlaylistThumb(playlistId, size)
-        ).toString());
-        Log.d("Playlist", "thumb link " +
-                Uri.fromFile(MusicCacheStorageUtils.getPlaylistThumb(playlistId, size)
-                ).toString());
     }
 }

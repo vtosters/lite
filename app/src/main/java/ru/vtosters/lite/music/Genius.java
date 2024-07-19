@@ -2,24 +2,21 @@ package ru.vtosters.lite.music;
 
 import android.text.TextUtils;
 import android.util.Log;
-
 import com.vk.dto.music.MusicTrack;
 import com.vtosters.lite.R;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.net.URLEncoder;
-
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicTrackUtils;
 import ru.vtosters.sponsorpost.utils.GzipDecompressor;
+
+import java.io.IOException;
+import java.net.URLEncoder;
 
 public class Genius {
     private static final String KEY = "Bearer ZTejoT_ojOEasIkT9WrMBhBQOz6eYKK5QULCMECmOhvwqjRZ6WbpamFe3geHnvp3";

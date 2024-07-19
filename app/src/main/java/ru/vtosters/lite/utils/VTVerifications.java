@@ -3,7 +3,6 @@ package ru.vtosters.lite.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
-import com.vk.core.network.Network;
 import com.vk.navigation.NavigatorKeys;
 import okhttp3.*;
 import org.json.JSONArray;

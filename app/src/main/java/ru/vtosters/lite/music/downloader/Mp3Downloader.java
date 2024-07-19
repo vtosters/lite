@@ -3,12 +3,19 @@ package ru.vtosters.lite.music.downloader;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
-
 import com.google.android.exoplayer2.source.hls.playlist.e;
 import com.google.android.exoplayer2.source.hls.playlist.f;
 import com.google.android.exoplayer2.source.hls.playlist.f.a;
 import com.vk.dto.music.MusicTrack;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.music.converter.ts.MpegDemuxer;
+import ru.vtosters.lite.music.interfaces.Callback;
+import ru.vtosters.lite.music.interfaces.IDownloader;
+import ru.vtosters.lite.utils.IOUtils;
 
+import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -17,16 +24,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-import javax.crypto.Cipher;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
-
-import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.music.converter.ts.MpegDemuxer;
-import ru.vtosters.lite.music.interfaces.Callback;
-import ru.vtosters.lite.music.interfaces.IDownloader;
-import ru.vtosters.lite.utils.IOUtils;
-
 public final class Mp3Downloader implements IDownloader<MusicTrack> {
     private final File outputFile;
     private final Callback callback;
@@ -34,39 +31,6 @@ public final class Mp3Downloader implements IDownloader<MusicTrack> {
     public Mp3Downloader(File outputFile, Callback callback) {
         this.outputFile = outputFile;
         this.callback = callback;
-    }
-
-    @Override
-    public void download(MusicTrack track) {
-        String uri = track.D;
-
-        if (Objects.requireNonNull(uri).isEmpty()) {
-            String msg = "link error: " + track.y1() + ", title: " + Mp3Downloader.getTitle(track);
-            Log.d("Mp3Downloader", msg);
-            throw new RuntimeException(msg);
-        }
-        try {
-            if (uri.contains("master.m3u8?siren=1")) {
-                String content = IOUtils.readAllLines(new URL(uri).openStream());
-                String replacement = content.split("\n")[2].trim();
-                uri = uri.replace("master.m3u8?siren=1", replacement);
-            }
-            var tsParser = new com.google.android.exoplayer2.source.hls.playlist.h(e.a(uri));
-            var baseUri = uri.substring(0, uri.lastIndexOf("/") + 1);
-
-            var segments = ((f) tsParser.a(Uri.parse(baseUri), IOUtils.openStream(uri))).o;
-
-            byte[] buff = getMergedTs(baseUri, segments, callback);
-            MpegDemuxer.convert(buff, outputFile.getAbsolutePath());
-
-            if (Preferences.getBoolValue("setMetaData", false)) {
-                ID3Tagger.tag(outputFile, track);
-            }
-
-            callback.onSuccess();
-        } catch (IOException | GeneralSecurityException e) {
-            callback.onFailure(e);
-        }
     }
 
     private static byte[] getMergedTs(String baseUri, List<a> segments, Callback callback) throws IOException, GeneralSecurityException {
@@ -101,5 +65,38 @@ public final class Mp3Downloader implements IDownloader<MusicTrack> {
 
     static String getTitle(MusicTrack track) {
         return track.f + (!TextUtils.isEmpty(track.g) ? '(' + track.g + ')' : "");
+    }
+
+    @Override
+    public void download(MusicTrack track) {
+        String uri = track.D;
+
+        if (Objects.requireNonNull(uri).isEmpty()) {
+            String msg = "link error: " + track.y1() + ", title: " + Mp3Downloader.getTitle(track);
+            Log.d("Mp3Downloader", msg);
+            throw new RuntimeException(msg);
+        }
+        try {
+            if (uri.contains("master.m3u8?siren=1")) {
+                String content = IOUtils.readAllLines(new URL(uri).openStream());
+                String replacement = content.split("\n")[2].trim();
+                uri = uri.replace("master.m3u8?siren=1", replacement);
+            }
+            var tsParser = new com.google.android.exoplayer2.source.hls.playlist.h(e.a(uri));
+            var baseUri = uri.substring(0, uri.lastIndexOf("/") + 1);
+
+            var segments = ((f) tsParser.a(Uri.parse(baseUri), IOUtils.openStream(uri))).o;
+
+            byte[] buff = getMergedTs(baseUri, segments, callback);
+            MpegDemuxer.convert(buff, outputFile.getAbsolutePath());
+
+            if (Preferences.getBoolValue("setMetaData", false)) {
+                ID3Tagger.tag(outputFile, track);
+            }
+
+            callback.onSuccess();
+        } catch (IOException | GeneralSecurityException e) {
+            callback.onFailure(e);
+        }
     }
 }

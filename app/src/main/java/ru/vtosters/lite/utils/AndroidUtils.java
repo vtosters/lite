@@ -17,7 +17,6 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationManagerCompat;
-
 import com.vk.core.util.AppContextHolder;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
@@ -26,7 +25,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Method;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;

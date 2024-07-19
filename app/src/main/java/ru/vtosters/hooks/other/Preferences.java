@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.StrictMode;
-
 import com.vk.core.util.AppContextHolder;
 import com.vk.medianative.MediaImageEncoder;
 import com.vk.medianative.MediaNative;

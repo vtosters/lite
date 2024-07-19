@@ -1,17 +1,15 @@
 package ru.vtosters.lite.music.downloader;
+
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
-
-import java.io.File;
-import java.io.IOException;
-
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.db.Database;
 import ru.vtosters.lite.music.cache.db.MusicCacheDb;
 import ru.vtosters.lite.music.cache.db.SqlPlaylists;
-import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.interfaces.IDownloader;
+
+import java.io.File;
+import java.io.IOException;
 
 public final class CachedDownloader implements IDownloader<MusicTrack> {
     private final File to;

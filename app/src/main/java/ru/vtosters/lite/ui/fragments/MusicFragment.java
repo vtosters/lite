@@ -32,6 +32,15 @@ import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 
 public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
 
+    private static String getAutocacheSumm() {
+        int autocache = Preferences.autocache();
+        return switch (autocache) {
+            case 1 -> "Только для своих";
+            case 2 -> "Кешировать всё";
+            default -> "Отключено";
+        };
+    }
+
     @SuppressLint("DefaultLocale")
     @Override
     public void onCreate(Bundle bundle) {
@@ -399,15 +408,6 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 )
                 .setView(linearLayout)
                 .show();
-    }
-
-    private static String getAutocacheSumm() {
-        int autocache = Preferences.autocache();
-        return switch (autocache) {
-            case 1 -> "Только для своих";
-            case 2 -> "Кешировать всё";
-            default -> "Отключено";
-        };
     }
 
     public void updateLastFmPref() {

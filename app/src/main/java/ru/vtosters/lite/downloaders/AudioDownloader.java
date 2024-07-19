@@ -8,7 +8,6 @@ import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vtosters.lite.R;
-
 import org.json.JSONObject;
 import ru.vtosters.hooks.music.MusicCacheFilesHook;
 import ru.vtosters.hooks.other.Preferences;
