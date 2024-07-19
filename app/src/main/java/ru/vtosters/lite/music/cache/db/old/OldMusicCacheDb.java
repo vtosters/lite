@@ -107,28 +107,23 @@ public class OldMusicCacheDb extends SQLiteOpenHelper {
 
 
     public List<MusicTrack> getAllTracks() {
-        return getTracksWithCursor(getReadableDatabase().query(Constants.TABLE_NAME, null, null, null, null, null, null));
+        Cursor cursor = getReadableDatabase()
+                .query(Constants.TABLE_NAME,
+                        null, null,
+                        null,
+                        null, null, null);
+        return getTracksWithCursor(cursor);
     }
 
-    public List<MusicTrack> getPlaylist() {
-        return getTracksWithCursor(getWritableDatabase().query(
-                Constants.TABLE_NAME,
-                null,
-                Constants.COLUMN_ALBUM_ID + " > -1",
-                null,
-                Constants.COLUMN_ALBUM_ID,
-                "count(*) > 1",
-                Constants.COLUMN_ID + " desc"));
-    }
 
     private List<MusicTrack> getTracksWithCursor(Cursor cur) {
         List<MusicTrack> res = new ArrayList<>();
-        if (cur != null && cur.moveToFirst()) {
+        if (cur != null) {
             try (cur) {
-                do {
+                while (cur.moveToNext()) {
                     MusicTrack track = fromCursor(cur);
                     if (track != null) res.add(track);
-                } while (cur.moveToNext());
+                }
             }
         }
         return res;

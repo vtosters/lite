@@ -58,13 +58,14 @@ public class AudioGet {
                 return List.of();
             Log.d("AudioGet", jsonObj.toString());
             var audios = new JSONObject(response).getJSONObject("response").getJSONArray("items");
-            var tracks = new ArrayList<MusicTrack>();
-            for (int i = 0; i < audios.length(); i++) {
+            var n = audios.length();
+            var tracks = new ArrayList<MusicTrack>(n);
+            for (int i = 0; i < n; i++) {
                 var track = new MusicTrack(audios.getJSONObject(i));
                 tracks.add(track);
             }
 
-            if (tracks.size() == audioCount) {
+            if (n == audioCount) {
                 tracks.addAll(requestAudios(offset + audioCount));
             }
 

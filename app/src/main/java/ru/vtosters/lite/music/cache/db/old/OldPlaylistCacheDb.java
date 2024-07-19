@@ -35,13 +35,7 @@ public class OldPlaylistCacheDb extends SQLiteOpenHelper {
     private static Playlist fromCursor(Cursor cur) throws JSONException {
         @SuppressLint("Range")
         String photoString = cur.getString(cur.getColumnIndex(Constants.COLUMN_PHOTO));
-        JSONObject photo = null;
-
-        try {
-            photo = new JSONObject(photoString);
-        } catch (JSONException e) {
-            // ok and
-        }
+        JSONObject photo = new JSONObject(photoString);
 
         @SuppressLint("Range")
         JSONObject playlist = PlaylistHelper.generatePlaylist(

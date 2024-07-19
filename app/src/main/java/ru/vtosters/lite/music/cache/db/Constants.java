@@ -62,7 +62,8 @@ public interface Constants {
             + "ON DELETE CASCADE,"
 
             + "FOREIGN KEY (" + TRACK_ID + ") "
-            + "REFERENCES " + TABLE_MUSICS + "(" + TRACK_ID + ")"
+            + "REFERENCES " + TABLE_MUSICS + "(" + TRACK_ID + ") "
+            + "ON DELETE CASCADE"
             + ")";
 
     String DROP_MUSICS = "DROP TABLE IF EXISTS " + TABLE_MUSICS;

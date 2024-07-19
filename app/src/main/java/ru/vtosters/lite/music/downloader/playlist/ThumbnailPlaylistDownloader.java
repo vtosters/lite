@@ -1,4 +1,4 @@
-package ru.vtosters.lite.music.downloader;
+package ru.vtosters.lite.music.downloader.playlist;
 
 import android.util.Log;
 

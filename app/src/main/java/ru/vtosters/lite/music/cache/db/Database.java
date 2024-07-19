@@ -17,7 +17,7 @@ import ru.vtosters.lite.music.cache.db.old.OldMusicCacheDb;
 import ru.vtosters.lite.music.cache.db.old.OldPlaylistCacheDb;
 import ru.vtosters.lite.utils.AndroidUtils;
 
-public final class Database extends SQLiteOpenHelper implements AutoCloseable {
+public final class Database extends SQLiteOpenHelper {
 
 
     public Database() {
@@ -25,8 +25,7 @@ public final class Database extends SQLiteOpenHelper implements AutoCloseable {
     }
 
     public Database(@Nullable Context context) {
-        super(context, Constants.DB_NAME,
-                null, Constants.DV_VERSION);
+        super(context, Constants.DB_NAME, null, Constants.DV_VERSION);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -39,44 +38,40 @@ public final class Database extends SQLiteOpenHelper implements AutoCloseable {
     public void onUpgrade(SQLiteDatabase db, int prev, int current) {
         if (prev < current) {
 
-            migrateMusics(db);
+            migrateMusics();
 
-            migratePlaylists(db);
+            migratePlaylists();
 
         }
     }
-    private void migrateMusics(SQLiteDatabase db) {
+    private void migrateMusics() {
 
         try (OldMusicCacheDb old = new OldMusicCacheDb(AndroidUtils.getGlobalContext())) {
             MusicCacheDb musics = new MusicCacheDb(this);
 
+            SQLiteDatabase write = old.getWritableDatabase(); // ensure table
+
             List<MusicTrack> tracks = old.getAllTracks();
 
-            old.getWritableDatabase().execSQL(OldMusicCacheDb.Constants.DROP_QUERY);
-            db.execSQL(Constants.CREATE_TABLE_MUSICS);
+            write.execSQL(OldMusicCacheDb.Constants.DROP_QUERY);
 
             tracks.forEach(musics::addTrack);
-
-
         }
 
     }
-    private void migratePlaylists(SQLiteDatabase db) {
+    private void migratePlaylists() {
 
         try (OldPlaylistCacheDb old = new OldPlaylistCacheDb(AndroidUtils.getGlobalContext())) {
-
+            SQLiteDatabase write = old.getWritableDatabase(); // ensure table
 
             Map<Playlist, List<MusicTrack>> map = new HashMap<>();
 
             old.getAllPlaylists().forEach(playlist -> {
                 map.put(playlist, old.getTracksInPlaylist(playlist.v1()));
             });
-            old.getWritableDatabase().execSQL(OldMusicCacheDb.Constants.DROP_QUERY);
+            write.execSQL(OldPlaylistCacheDb.Constants.DROP_QUERY);
 
             SqlPlaylists playlists = new SqlPlaylists(this);
-
-            db.execSQL(Constants.CREATE_TABLE_PLAYLISTS);
-            db.execSQL(Constants.CREATE_TABLE_PLAYLIST_TRACKS);
 
             map.forEach((playlist, tracks) -> {
 

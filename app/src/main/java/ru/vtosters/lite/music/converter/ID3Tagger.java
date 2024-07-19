@@ -1,4 +1,4 @@
-package ru.vtosters.lite.music.downloader;
+package ru.vtosters.lite.music.converter;
 
 import android.util.Log;
 
@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.stream.Collectors;
 
 import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.music.downloader.Mp3Downloader;
 
 public class ID3Tagger {
     public static void tag(File file, MusicTrack track) {

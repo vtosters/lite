@@ -22,6 +22,7 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.music.converter.ID3Tagger;
 import ru.vtosters.lite.music.converter.ts.MpegDemuxer;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.interfaces.IDownloader;
@@ -99,7 +100,7 @@ public final class Mp3Downloader implements IDownloader<MusicTrack> {
         return total;
     }
 
-    static String getTitle(MusicTrack track) {
+    public static String getTitle(MusicTrack track) {
         return track.f + (!TextUtils.isEmpty(track.g) ? '(' + track.g + ')' : "");
     }
 }
