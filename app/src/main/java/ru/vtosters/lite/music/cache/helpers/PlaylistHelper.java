@@ -25,9 +25,8 @@ public class PlaylistHelper {
 
     public static JSONArray addCachedPlaylists(JSONArray jsonArray) {
         try {
-            if (!PlaylistCacheDbDelegate.isPlaylistEmpty(
-                    AccountManagerUtils.getUserId(), -1)) {
-                jsonArray.put(getCachedSongsPlaylist());
+            if (!PlaylistCacheDbDelegate.isPlaylistEmpty(AccountManagerUtils.getUserId(), -1)) {
+                jsonArray.put(getCachedSongsPlaylist()); // TODO remove or do something
             }
 
             if (MusicCacheImpl.hasPlaylist()) {

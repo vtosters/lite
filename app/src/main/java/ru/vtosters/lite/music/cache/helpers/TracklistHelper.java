@@ -22,9 +22,7 @@ import java.util.Optional;
 
 public class TracklistHelper {
     public static List<MusicTrack> getTracks() {
-        Playlist playlist = MusicCacheImpl
-                .getPlaylist(AccountManagerUtils.getUserId(), -1);
-
+        Playlist playlist = MusicCacheImpl.getPlaylist(AccountManagerUtils.getUserId(), -1);
 
         if (playlist != null) {
             List<MusicTrack> tracks = playlist.R;
@@ -32,8 +30,10 @@ public class TracklistHelper {
                 Collections.reverse(tracks);
             }
             return tracks;
+        } else {
+            Log.d("TracklistHelper", "Playlist with music is null");
+            return Collections.emptyList();
         }
-        return List.of();
     }
 
     public static List<MusicTrack> getMyCachedMusicTracks() {
