@@ -4,10 +4,13 @@ import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import org.json.JSONObject;
+
+import ru.vtosters.lite.music.cache.DatabaseAccess;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.music.interfaces.IPlaylist;
@@ -19,9 +22,9 @@ import static java.lang.Boolean.parseBoolean;
 
 public final class SqlPlaylist implements IPlaylist {
     private final int ownerId, id;
-    private final Database sqlite;
+    private final DatabaseAccess sqlite;
 
-    public SqlPlaylist(int ownerId, int id, Database sqlite) {
+    public SqlPlaylist(int ownerId, int id, DatabaseAccess sqlite) {
         this.ownerId = ownerId;
         this.id = id;
         this.sqlite = sqlite;
@@ -41,6 +44,7 @@ public final class SqlPlaylist implements IPlaylist {
     public void addTrack(String trackId) {
         ContentValues values = new ContentValues();
 
+        System.clearProperty(ownerId + " " + id);
         values.put(Constants.OWNER_ID, ownerId);
         values.put(Constants.PLAYLIST_ID, id);
         values.put(Constants.TRACK_ID, trackId);
@@ -53,20 +57,18 @@ public final class SqlPlaylist implements IPlaylist {
 
     @Override
     public void removeTrack(String trackId) {
-        sqlite.getWritableDatabase()
-                .delete(Constants.TABLE_PLAYLIST_TRACKS,
-                        selection() + " AND " + Constants.TRACK_ID + " = ?",
-                        new String[]{
-                                Integer.toString(id),
-                                Integer.toString(ownerId),
-                                trackId,
-                        });
+        sqlite.getReadableDatabase().delete(Constants.TABLE_PLAYLIST_TRACKS,
+                selection() + " AND " + Constants.TRACK_ID + " = ?",
+                new String[]{
+                        Integer.toString(id),
+                        Integer.toString(ownerId),
+                        trackId,
+                });
     }
 
     @Override
     public List<MusicTrack> tracks(int offset, int count) {
-        SQLiteDatabase db = sqlite.getReadableDatabase();
-        try (Cursor cursor = db.query(
+        try (Cursor cursor = sqlite.getReadableDatabase().query(
                 Constants.TABLE_PLAYLIST_TRACKS,
                 new String[]{Constants.TRACK_ID},
                 selection(), compositeKey(),
@@ -88,19 +90,17 @@ public final class SqlPlaylist implements IPlaylist {
 
     @Override
     public int count() {
-        try (Cursor cursor = sqlite.getReadableDatabase()
-                .query(Constants.TABLE_PLAYLIST_TRACKS,
-                        new String[]{"COUNT(*)"},
-                        selection(), compositeKey(),
-                        null, null, null)) {
+        try (Cursor cursor = sqlite.getReadableDatabase().query(Constants.TABLE_PLAYLIST_TRACKS,
+                new String[]{"COUNT(*)"},
+                selection(), compositeKey(),
+                null, null, null)) {
             return cursor.moveToFirst() ? cursor.getInt(0) : 0;
         }
     }
 
     @Override
     public boolean isEmpty() {
-        SQLiteDatabase db = sqlite.getReadableDatabase();
-        try (Cursor cursor = db.query(
+        try (Cursor cursor = sqlite.getReadableDatabase().query(
                 Constants.TABLE_PLAYLIST_TRACKS,
                 null,
                 selection(), compositeKey(),
@@ -113,16 +113,15 @@ public final class SqlPlaylist implements IPlaylist {
     @Override
     @SuppressLint("Range")
     public Playlist toPlaylist() {
-        try (Cursor cur = sqlite.getReadableDatabase()
-                .query(Constants.TABLE_PLAYLIST,
-                        new String[]{
-                                Constants.PLAYLIST_IS_EXPLICIT,
-                                Constants.PLAYLIST_TITLE,
-                                Constants.PLAYLIST_DESCRIPTION,
-                                Constants.PLAYLIST_PHOTO,
-                        },
-                        selection(), compositeKey(),
-                        null, null, null)) {
+        try (Cursor cur = sqlite.getReadableDatabase().query(Constants.TABLE_PLAYLIST,
+                new String[]{
+                        Constants.PLAYLIST_IS_EXPLICIT,
+                        Constants.PLAYLIST_TITLE,
+                        Constants.PLAYLIST_DESCRIPTION,
+                        Constants.PLAYLIST_PHOTO,
+                },
+                selection(), compositeKey(),
+                null, null, null)) {
             if (!cur.moveToFirst()) {
                 throw new IllegalStateException();
             }

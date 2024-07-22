@@ -19,7 +19,7 @@ public class PlaylistHelper {
         try {
             return new Playlist(getCachedSongsPlaylist());
         } catch (JSONException e) {
-            return null;
+            throw new RuntimeException(e);
         }
     }
 
@@ -110,12 +110,6 @@ public class PlaylistHelper {
 
     public static JSONArray getCachedPlaylistsIds() {
         JSONArray arr = new JSONArray();
-
-        if (NetworkUtils.isNetworkConnected() &&
-                !PlaylistCacheDbDelegate.isPlaylistEmpty(
-                        AccountManagerUtils.getUserId(), -1)) {
-            arr.put(AccountManagerUtils.getUserId() + "_-1");
-        }
 
         for (String playlist : PlaylistCacheDbDelegate.getAllPlaylistIds()) {
             arr.put(playlist);

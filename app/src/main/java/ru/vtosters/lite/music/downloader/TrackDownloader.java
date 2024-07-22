@@ -5,7 +5,9 @@ import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.db.Database;
 import ru.vtosters.lite.music.interfaces.Callback;
+import ru.vtosters.lite.music.interfaces.IPlaylist;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.MusicTrackUtils;
@@ -34,7 +36,7 @@ public final class TrackDownloader {
         ).download(track);
     }
 
-    public static void cacheTrack(MusicTrack track, Callback callback, Playlist playlist) {
+    public static void cacheTrack(MusicTrack track, Callback callback, IPlaylist playlist) {
         if (MusicCacheImpl.isCachedTrack(LibVKXClient.asId(track))) {
             return;
         }

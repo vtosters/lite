@@ -1,6 +1,7 @@
 package ru.vtosters.lite.music.cache;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.RemoteException;
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
@@ -24,7 +25,8 @@ import java.util.Optional;
 @SuppressWarnings("forRemoval")
 public class MusicCacheImpl {
 
-    private static final Database connection = new Database();
+    private static final Database connection =
+            new Database();
 
     private static final MusicCacheDb musics = new MusicCacheDb(connection);
     private static final IPlaylists playlists = new SqlPlaylists(connection);
@@ -33,13 +35,6 @@ public class MusicCacheImpl {
     public static void removeTrack(String trackId) {
         musics.deleteTrack(trackId);
         MusicCacheStorageUtils.removeTrackDirById(trackId);
-    }
-
-    public static List<MusicTrack> getAllOwnTracks() {
-        return playlists
-                .playlist(AccountManagerUtils.getUserId(), -1)
-                .map(IPlaylist::tracks)
-                .orElse(List.of());
     }
 
 

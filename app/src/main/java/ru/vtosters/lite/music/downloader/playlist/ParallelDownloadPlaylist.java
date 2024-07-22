@@ -1,5 +1,7 @@
 package ru.vtosters.lite.music.downloader.playlist;
 
+import android.database.sqlite.SQLiteDatabase;
+
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 

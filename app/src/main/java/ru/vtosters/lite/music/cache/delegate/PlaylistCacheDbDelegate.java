@@ -1,6 +1,7 @@
 package ru.vtosters.lite.music.cache.delegate;
 
 import android.content.Context;
+
 import com.vk.dto.music.Playlist;
 import ru.vtosters.lite.music.cache.db.Constants;
 import ru.vtosters.lite.music.cache.db.Database;
@@ -13,76 +14,59 @@ import java.util.stream.Collectors;
 @SuppressWarnings("forRemoval")
 public class PlaylistCacheDbDelegate {
 
+    public static final Database connection = new Database();
 
-    public static void addPlaylist(Playlist playlist) {
-        try (Database db = new Database()) {
-            new SqlPlaylists(db).addPlaylist(playlist);
-        }
+    public static IPlaylist getOrCreatePlaylist(Playlist playlist) {
+        return new SqlPlaylists(connection).insertIfAbsent(playlist);
     }
 
 
     public static void deletePlaylist(int id, int ownerId) {
-
-        try (Database db = new Database()) {
-            new SqlPlaylists(db).deletePlaylist(ownerId, id);
-        }
+        new SqlPlaylists(connection).deletePlaylist(ownerId, id);
 
     }
 
 
     public static long getTracksCountInPlaylist(int ownerId, int id) {
-        try (Database db = new Database()) {
-            return new SqlPlaylists(db).playlist(ownerId, id)
-                    .map(IPlaylist::count)
-                    .orElse(0);
-        }
+
+        return new SqlPlaylists(connection).playlist(ownerId, id)
+                .map(IPlaylist::count)
+                .orElse(0);
     }
 
     public static boolean isPlaylistsDbEmpty() {
-        try (Database db = new Database()) {
-            return new SqlPlaylists(db).isEmpty();
-        }
+        return new SqlPlaylists(connection).isEmpty();
     }
 
     public static void removeAllPlaylists() {
-        try (Database db = new Database()) {
-            new SqlPlaylists(db).deleteAll();
-        }
+        new SqlPlaylists(connection).deleteAll();
     }
 
     public static List<String> getAllPlaylistIds() {
-        try (Database db = new Database()) {
-            return new SqlPlaylists(db).playlists()
-                    .stream()
-                    .map(x -> x.ownerId() + "_" + x.id())
-                    .collect(Collectors.toList());
-        }
+        return new SqlPlaylists(connection).playlists()
+                .stream()
+                .map(x -> x.ownerId() + "_" + x.id())
+                .collect(Collectors.toList());
     }
 
     public static boolean isCachedPlaylist(int ownerId, int id) {
-        try (Database db = new Database()) {
-            return new SqlPlaylists(db).playlist(ownerId, id).isPresent();
-        }
+        return new SqlPlaylists(connection).playlist(ownerId, id).isPresent();
 
     }
 
 
     public static List<Playlist> getAllPlaylists() {
-        try (Database db = new Database()) {
-            return new SqlPlaylists(db).playlists()
-                    .stream()
-                    .map(IPlaylist::toPlaylist)
-                    .collect(Collectors.toList());
-        }
+        return new SqlPlaylists(connection).playlists()
+                .stream()
+                .map(IPlaylist::toPlaylist)
+                .collect(Collectors.toList());
 
     }
 
     public static boolean isPlaylistEmpty(int ownerId, int id) {
-        try (Database db = new Database()) {
-            return new SqlPlaylists(db).playlist(ownerId, id)
-                    .map(IPlaylist::isEmpty)
-                    .orElse(true);
-        }
+        return new SqlPlaylists(connection).playlist(ownerId, id)
+                .map(IPlaylist::isEmpty)
+                .orElse(true);
     }
 
     public static void drop(Context context) {

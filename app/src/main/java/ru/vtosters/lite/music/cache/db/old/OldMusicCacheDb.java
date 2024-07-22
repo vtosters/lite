@@ -1,6 +1,5 @@
 package ru.vtosters.lite.music.cache.db.old;
 
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -9,6 +8,9 @@ import com.vk.dto.music.AlbumLink;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Thumb;
 import org.json.JSONObject;
+import ru.vtosters.lite.music.cache.db.Database;
+import ru.vtosters.lite.music.cache.db.MusicCacheDb;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.io.File;
@@ -17,6 +19,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * <p class="note"><strong>Note:</strong> the {@link AutoCloseable} interface was
@@ -24,9 +27,14 @@ import java.util.List;
  */
 @SuppressWarnings("forRemoval")
 public class OldMusicCacheDb extends SQLiteOpenHelper {
-    public OldMusicCacheDb(Context context) {
-        super(context, Constants.DB_NAME, null, Constants.DV_VERSION);
+
+
+
+    public OldMusicCacheDb() {
+        super(AndroidUtils.getGlobalContext(),
+                Constants.DB_NAME, null, Constants.DV_VERSION);
     }
+
 
     private static MusicTrack fromCursor(Cursor cur) {
         try {
@@ -92,15 +100,14 @@ public class OldMusicCacheDb extends SQLiteOpenHelper {
         return null;
     }
 
-    @Override
+
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Constants.CREATE_QUERY);
     }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+    public void onDelete() {
+        getWritableDatabase().execSQL(Constants.DROP_QUERY);
     }
+
 
     public List<MusicTrack> getAllTracks() {
         Cursor cursor = getReadableDatabase()
@@ -125,9 +132,15 @@ public class OldMusicCacheDb extends SQLiteOpenHelper {
         return res;
     }
 
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+    }
+
     @Retention(RetentionPolicy.SOURCE)
-    public @interface Constants {
-        int DV_VERSION = 0x3;
+    private @interface Constants {
+        int DV_VERSION = 0x4;
         String DB_NAME = "vt_lite_cache.db";
         String TABLE_NAME = "tracks";
         //columns

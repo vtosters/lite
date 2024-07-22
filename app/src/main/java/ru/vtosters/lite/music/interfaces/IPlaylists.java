@@ -30,6 +30,14 @@ public interface IPlaylists {
     }
 
 
+    default IPlaylist insertIfAbsent(Playlist playlist) {
+
+        return playlist(playlist.b, playlist.a).orElseGet(() -> {
+            addPlaylist(playlist);
+
+            return insertIfAbsent(playlist);
+        });
+    }
     default Optional<IPlaylist> playlist(int ownerId, int id) {
         return Optional.ofNullable(playlists(ownerId).get(id));
     }

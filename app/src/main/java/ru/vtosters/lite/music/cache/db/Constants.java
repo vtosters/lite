@@ -55,8 +55,6 @@ public interface Constants {
             + PLAYLIST_ID + " INTEGER NOT NULL,"
             + TRACK_ID + " TEXT NOT NULL,"
 
-            + "PRIMARY KEY (" + OWNER_ID + ", " + PLAYLIST_ID + ", " + TRACK_ID + "),"
-
             + "FOREIGN KEY (" + OWNER_ID + ", " + PLAYLIST_ID + ") "
             + "REFERENCES " + TABLE_PLAYLIST + "(" + OWNER_ID + ", " + PLAYLIST_ID + ") "
             + "ON DELETE CASCADE,"

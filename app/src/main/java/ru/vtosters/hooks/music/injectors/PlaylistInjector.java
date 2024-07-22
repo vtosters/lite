@@ -45,7 +45,8 @@ public class PlaylistInjector {
     }
 
     private static boolean isOwnCachePlaylist(String ownerId, String id) {
-        return Objects.equals(ownerId, String.valueOf(AccountManagerUtils.getUserId())) && Objects.equals(id, "-1");
+        return Objects.equals(ownerId, String.valueOf(AccountManagerUtils.getUserId()))
+                && Objects.equals(id, "-1");
     }
 
     private static int[] getCountAndOffset(Map<String, String> requestArgs) {
@@ -87,11 +88,11 @@ public class PlaylistInjector {
         return Observable.c(() -> {
             AudioGetPlaylist.c response = new AudioGetPlaylist.c();
 
+            response.c = new ArrayList<>(MusicCacheImpl.getPlaylistSongs(ownerId, id, offset, count));
+
             if (isOwnCachePlaylist) {
-                response.c = (ArrayList<MusicTrack>) TracklistHelper.getMyCachedMusicTracks();
                 response.b = PlaylistHelper.createCachedPlaylistMetadata();
             } else {
-                response.c = new ArrayList<>(MusicCacheImpl.getPlaylistSongs(ownerId, id, offset, count));
                 response.b = MusicCacheImpl.getPlaylist(id, ownerId);
             }
             return response;

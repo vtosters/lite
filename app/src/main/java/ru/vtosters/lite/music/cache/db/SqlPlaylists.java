@@ -2,11 +2,15 @@ package ru.vtosters.lite.music.cache.db;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.util.Log;
 import com.vk.dto.music.Playlist;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import ru.vtosters.lite.music.cache.DatabaseAccess;
 import ru.vtosters.lite.music.interfaces.IPlaylist;
 import ru.vtosters.lite.music.interfaces.IPlaylists;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
@@ -16,9 +20,9 @@ import java.util.*;
 
 public final class SqlPlaylists implements IPlaylists {
 
-    private final Database database;
+    private final DatabaseAccess database;
 
-    public SqlPlaylists(Database database) {
+    public SqlPlaylists(DatabaseAccess database) {
         this.database = database;
     }
 
@@ -125,6 +129,7 @@ public final class SqlPlaylists implements IPlaylists {
 
     @Override
     public void addPlaylist(Playlist playlist) {
+        System.out.println("CREATE PLAYLIST!!!! " + playlist.b + " " + playlist.a);
         ContentValues values = new ContentValues();
         values.put(Constants.OWNER_ID, playlist.b);
         values.put(Constants.PLAYLIST_ID, playlist.a);
@@ -133,7 +138,11 @@ public final class SqlPlaylists implements IPlaylists {
         values.put(Constants.PLAYLIST_DESCRIPTION, playlist.B);
         values.put(Constants.PLAYLIST_PHOTO, String.valueOf(generatePhotoJSON(playlist)));
 
-        database.getWritableDatabase().insert(Constants.TABLE_PLAYLIST, null, values);
+        try {
+            database.getWritableDatabase().insert(
+                    Constants.TABLE_PLAYLIST, null, values);
+            // todo:
+        } catch (Exception ignored) { }
     }
 
     @Override

@@ -10,6 +10,8 @@ import com.vk.dto.music.AlbumLink;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Thumb;
 import org.json.JSONObject;
+
+import ru.vtosters.lite.music.cache.DatabaseAccess;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.MusicTrackUtils;
@@ -24,9 +26,9 @@ import java.util.Optional;
  */
 
 public class MusicCacheDb {
-    private final SQLiteOpenHelper sqlite;
+    private final DatabaseAccess sqlite;
 
-    public MusicCacheDb(SQLiteOpenHelper sqlite) {
+    public MusicCacheDb(DatabaseAccess sqlite) {
         this.sqlite = sqlite;
     }
 
@@ -119,8 +121,7 @@ public class MusicCacheDb {
     }
 
     public Optional<MusicTrack> getTrackById(String trackId) {
-        SQLiteDatabase db = sqlite.getReadableDatabase();
-        try (Cursor cursor = db.query(Constants.TABLE_MUSICS,
+        try (Cursor cursor = sqlite.getReadableDatabase().query(Constants.TABLE_MUSICS,
                 null,
                 Constants.TRACK_ID + " = ?",
                 new String[]{trackId},
@@ -134,35 +135,13 @@ public class MusicCacheDb {
 
     public boolean isDatabaseEmpty() {
         SQLiteDatabase db = sqlite.getReadableDatabase();
-        if (db == null) {
-            return true; // or throw an exception, depending on your use case
+
+        try (Cursor cursor = db.query(
+                Constants.TABLE_MUSICS,
+                null, null,
+                null, null,
+                null, null)) {
+            return cursor == null || !cursor.moveToNext();
         }
-
-        Cursor cursor = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name=?", new String[]{Constants.TABLE_MUSICS});
-
-        if (cursor == null || !cursor.moveToFirst()) {
-            db.close();
-            Log.d("MusicCacheDb", "Database is empty and can be null");
-            return true; // Table does not exist, so the database is considered empty
-        }
-
-        cursor.close();
-
-        cursor = db.rawQuery("SELECT EXISTS(SELECT 1 FROM " + Constants.TABLE_MUSICS + " LIMIT 1)", null);
-
-        if (cursor == null) {
-            db.close();
-            Log.d("MusicCacheDb", "Database is empty");
-            return true; // or throw an exception, depending on your use case
-        }
-
-        boolean isEmpty = true;
-        if (cursor.moveToFirst()) {
-            isEmpty = cursor.getInt(0) == 0;
-        }
-
-        cursor.close();
-        db.close();
-        return isEmpty;
     }
 }

@@ -16,24 +16,31 @@ import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @SuppressWarnings("forRemoval")
-public class OldPlaylistCacheDb extends SQLiteOpenHelper {
-    public OldPlaylistCacheDb(Context context) {
-        super(context, Constants.DB_NAME, null, Constants.DV_VERSION);
-    }
+public class OldPlaylistCacheDb {
 
-    private static Playlist fromCursor(Cursor cur) throws JSONException {
-        @SuppressLint("Range")
+    private final SQLiteDatabase database;
+
+    public OldPlaylistCacheDb(SQLiteDatabase database) {
+        this.database = database;
+    }
+    @SuppressLint("Range")
+    private Playlist fromCursor(Cursor cur) throws JSONException {
         String photoString = cur.getString(cur.getColumnIndex(Constants.COLUMN_PHOTO));
         JSONObject photo = new JSONObject(photoString);
 
-        @SuppressLint("Range")
+        int id = cur.getInt(cur.getColumnIndex(Constants.COLUMN_ID));
+        int ownerId = cur.getInt(cur.getColumnIndex(Constants.COLUMN_OWNER_ID));
+
+
         JSONObject playlist = PlaylistHelper.generatePlaylist(
-                cur.getInt(cur.getColumnIndex(Constants.COLUMN_ID)),
-                cur.getInt(cur.getColumnIndex(Constants.COLUMN_OWNER_ID)),
+                id,
+                ownerId,
                 Boolean.parseBoolean(cur.getString(cur.getColumnIndex(Constants.COLUMN_IS_EXPLICIT))),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_TITLE)),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_DESCRIPTION)),
@@ -45,41 +52,49 @@ public class OldPlaylistCacheDb extends SQLiteOpenHelper {
         return Playlist.U.a(playlist);
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Constants.CREATE_QUERY);
-        db.execSQL(Constants.CREATE_PLAYLIST_TRACKS_QUERY);
-    }
 
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(Constants.DROP_QUERY);
-        onCreate(db);
+    public void onDelete() {
+        database.execSQL(Constants.DROP_QUERY);
+        database.execSQL(Constants.DROP_QUERY_TRACKS);
     }
 
     public List<Playlist> getAllPlaylists() {
-        Cursor cursor = getReadableDatabase().query(Constants.TABLE_NAME, null, null, null, null, null, null);
-        List<Playlist> playlists = getPlaylistsWithCursor(cursor);
-        cursor.close();
-        return playlists;
+        Cursor cursor = database.query(Constants.TABLE_NAME,
+                null, null, null,
+                null, null, null);
+        return getPlaylistsWithCursor(cursor);
     }
 
     private List<Playlist> getPlaylistsWithCursor(Cursor cur) {
         List<Playlist> playlists = new ArrayList<>();
-        while (cur.moveToNext()) {
-            try {
-                playlists.add(fromCursor(cur));
-            } catch (JSONException e) {
-                Log.d("Playlist", "could not parse playlist");
+        if (cur != null) {
+            while (cur.moveToNext()) {
+                try {
+                    playlists.add(fromCursor(cur));
+                } catch (JSONException e) {
+                    Log.d("Playlist", "could not parse playlist");
+                }
             }
+            cur.close();
         }
         return playlists;
     }
 
+    public Map<Playlist, List<String>>
+    playlistListMap() {
+        Map<Playlist, List<String>> playlists = new HashMap<>();
+        getAllPlaylists().forEach(playlist -> {
 
-    public List<MusicTrack> getTracksInPlaylist(String playlistId) {
-        SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.query(
+            List<String> tracksIds = getTracksInPlaylist(playlist.v1());
+
+            playlists.put(playlist, tracksIds);
+        });
+        return playlists;
+
+    }
+
+    public List<String> getTracksInPlaylist(String playlistId) {
+        Cursor cursor = database.query(
                 Constants.TABLE_PLAYLIST_TRACKS,
                 new String[]{Constants.COLUMN_TRACK_ID},
                 Constants.COLUMN_PLAYLIST_ID + " = ?",
@@ -87,26 +102,25 @@ public class OldPlaylistCacheDb extends SQLiteOpenHelper {
                 null, null, null
         );
 
-        List<MusicTrack> tracks = new ArrayList<>();
-        while (cursor.moveToNext()) {
-            @SuppressLint("Range")
-            String trackId = cursor.getString(cursor.getColumnIndex(Constants.COLUMN_TRACK_ID));
-            TracklistHelper.getTrack(trackId).ifPresent(tracks::add);
+        List<String> tracks = new ArrayList<>();
+        if (cursor != null) {
+            try (cursor) {
+                while (cursor.moveToNext()) {
+                    @SuppressLint("Range")
+                    String trackId = cursor.getString(
+                            cursor.getColumnIndex(Constants.COLUMN_TRACK_ID));
+                    tracks.add(trackId);
 
+                }
+            }
         }
-
-        cursor.close();
         return tracks;
     }
 
-    @Override
-    public void onConfigure(SQLiteDatabase db) {
-        super.onConfigure(db);
-        db.setForeignKeyConstraintsEnabled(true);
-    }
+
 
     @Retention(RetentionPolicy.SOURCE)
-    public @interface Constants {
+    private @interface Constants {
         int DV_VERSION = 0x2;
         String DB_NAME = "vt_lite_cache_playlists.db";
         String TABLE_NAME = "playlists";
@@ -141,5 +155,6 @@ public class OldPlaylistCacheDb extends SQLiteOpenHelper {
                 + ")";
 
         String DROP_QUERY = "drop table if exists " + TABLE_NAME;
+        String DROP_QUERY_TRACKS = "drop table if exists " + TABLE_PLAYLIST_TRACKS;
     }
 }

@@ -53,7 +53,7 @@ public class AudioDownloader {
             int notificationId = playlistName.hashCode();
             NotificationCompat.Builder notification = MusicNotificationBuilder.buildPlaylistDownloadNotification(playlistName, notificationId);
 
-            downloadPlaylist(tracks, playlistName, downloadPath, notification, notificationId);
+            downloadPlaylist(tracks, downloadPath, notification, notificationId);
         });
     }
 
@@ -107,7 +107,7 @@ public class AudioDownloader {
             String downloadPath = getDownloadPath(playlistName);
 
             if (!tracks.isEmpty()) {
-                downloadPlaylist(tracks, playlistName, downloadPath, notification, notificationId);
+                downloadPlaylist(tracks, downloadPath, notification, notificationId);
             }
         });
     }
@@ -124,17 +124,18 @@ public class AudioDownloader {
             Callback cb = MusicCallbackBuilder.buildOneTrackCallback(tempId, notification);
 
             if (cache) {
-                TrackDownloader.cacheTrack(track, cb, PlaylistHelper.createCachedPlaylistMetadata());
+                Playlist playlist = PlaylistHelper.createCachedPlaylistMetadata();
+                TrackDownloader.cacheTrack(track, cb,
+                        PlaylistCacheDbDelegate.getOrCreatePlaylist(playlist));
             } else {
                 TrackDownloader.downloadTrack(track, downloadPath, cb);
             }
         });
     }
 
-    private static void downloadPlaylist(List<MusicTrack> tracks, String playlistName, String downloadPath, NotificationCompat.Builder notification, int notificationId) {
+    private static void downloadPlaylist(List<MusicTrack> tracks, String downloadPath, NotificationCompat.Builder notification, int notificationId) {
         PlaylistDownloader.downloadPlaylist(
                 tracks,
-                playlistName,
                 downloadPath,
                 MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
         );
@@ -151,7 +152,7 @@ public class AudioDownloader {
 
                 @Override
                 public void onSuccess() {
-                    PlaylistCacheDbDelegate.addPlaylist(playlist);
+                    PlaylistCacheDbDelegate.getOrCreatePlaylist(playlist);
                     Log.d("Playlist", "adding to cache with thumbs " + playlist.v1());
                 }
 
@@ -161,7 +162,7 @@ public class AudioDownloader {
                 }
             }).download(playlist);
         } else {
-            PlaylistCacheDbDelegate.addPlaylist(playlist);
+            PlaylistCacheDbDelegate.getOrCreatePlaylist(playlist);
             Log.d("Playlist", "adding to cache without thumbs " + playlist.a);
         }
 

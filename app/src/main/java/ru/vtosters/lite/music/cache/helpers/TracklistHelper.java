@@ -3,11 +3,14 @@ package ru.vtosters.lite.music.cache.helpers;
 import android.util.Log;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.dto.music.MusicTrack;
+import com.vk.dto.music.Playlist;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.io.File;
@@ -19,17 +22,22 @@ import java.util.Optional;
 
 public class TracklistHelper {
     public static List<MusicTrack> getTracks() {
-        List<MusicTrack> tracks = MusicCacheImpl.getAllOwnTracks();
+        Playlist playlist = MusicCacheImpl
+                .getPlaylist(AccountManagerUtils.getUserId(), -1);
 
-        if (!Preferences.getBoolValue("invertCachedTracks", false)) {
-            Collections.reverse(tracks);
+
+        if (playlist != null) {
+            List<MusicTrack> tracks = playlist.R;
+            if (!Preferences.getBoolValue("invertCachedTracks", false)) {
+                Collections.reverse(tracks);
+            }
+            return tracks;
         }
-
-        return tracks;
+        return List.of();
     }
 
     public static List<MusicTrack> getMyCachedMusicTracks() {
-        return getTracksWithThumbnails(getTracks());
+        return getTracks();
     }
 
     public static List<MusicTrack> getTracksWithThumbnails(List<MusicTrack> tracks) {
