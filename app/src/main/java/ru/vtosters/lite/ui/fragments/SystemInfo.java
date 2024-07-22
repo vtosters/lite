@@ -6,11 +6,14 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import com.vtosters.lite.R;
+import ru.vtosters.hooks.GmsHook;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.VersionReader;
+
+import static ru.vtosters.hooks.GmsHook.isSpoofPackageInstalled;
 
 public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
 
@@ -45,6 +48,11 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
         boolean isZenUI = OEMDetector.isZenUI();
         boolean isEMUI = OEMDetector.isEMUI();
         boolean hasMiuiIncrCode = OEMDetector.hasMiuiIncrCode();
+        boolean isHyperOS = OEMDetector.isHyperOs();
+
+        boolean hasGMS = GmsHook.isGmsInstalled();
+        boolean hasVancedMicroG = GmsHook.isAnyServicesInstalled();
+        String GMSPackageName = hasGMS ? "com.google.android.gms" : hasVancedMicroG ? GmsHook.getCurrentGms() + ".android.gms" : "no gms or microg";
 
         boolean isValidSignature = Preferences.isValidSignature();
         boolean isTablet = AndroidUtils.isTablet();
@@ -76,6 +84,12 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
             return false;
         });
 
+        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "Google Market Services package", GMSPackageName, 0, preference -> {
+            ((ClipboardManager) requireActivity().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", GMSPackageName));
+            AndroidUtils.sendToast(requireContext().getString(R.string.copied_to_clipboard));
+            return false;
+        });
+
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "Valid Signature", "Value: " + isValidSignature, 0, null);
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isTablet", "Value: " + isTablet, 0, null);
@@ -89,6 +103,10 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
             AndroidUtils.sendToast(requireContext().getString(R.string.copied_to_clipboard));
             return false;
         });
+
+        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isInstalledGoogleGMS", "Value: " + hasGMS, 0, null);
+
+        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isInstalledMicroG", "Value: " + hasVancedMicroG, 0, null);
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "Product Name", productName, 0, preference -> {
             ((ClipboardManager) requireActivity().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", productName));
@@ -175,6 +193,8 @@ public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isOneUi", "Value: " + isOneUi, 0, null);
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isMiui", "Value: " + isMiui, 0, null);
+
+        PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isHyperOS", "Value: " + isHyperOS, 0, null);
 
         PreferenceFragmentUtils.addPreference(getPreferenceScreen(), "", "isEMUI", "Value: " + isEMUI, 0, null);
 

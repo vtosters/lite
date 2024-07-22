@@ -1,8 +1,8 @@
 package ru.vtosters.lite.themes.palettes;
 
+import android.content.res.AssetManager;
 import android.os.Build;
 import android.os.Environment;
-import android.util.Log;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,8 +15,7 @@ import ru.vtosters.lite.utils.LifecycleUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
@@ -51,7 +50,7 @@ public class PalettesManager {
             return;
         }
 
-        var palettes = PALETTES_DIR.listFiles((dir, name) -> name.endsWith(".json"));
+        File[] palettes = PALETTES_DIR.listFiles((dir, name) -> name.endsWith(".json"));
         if (palettes == null || palettes.length == 0)
             copyPaletteFromAssets();
         parsePalettes();
@@ -59,45 +58,49 @@ public class PalettesManager {
 
     private void copyPaletteFromAssets() {
         try {
-            var manager = AndroidUtils.getGlobalContext().getAssets();
-            var assets = manager.list(ASSETS_DIR);
-            if (assets == null || assets.length == 0) return;
-            for (var asset : assets) {
-                try {
-                    IOUtils.copy(manager.open(ASSETS_DIR + asset), new File(PALETTES_DIR, asset));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+            AssetManager manager = getGlobalContext().getAssets();
+            Arrays.stream(manager.list(ASSETS_DIR))
+                    .filter(Objects::nonNull)
+                    .forEach(asset -> {
+                        try {
+                            IOUtils.copy(manager.open(ASSETS_DIR + asset), new File(PALETTES_DIR, asset));
+                        } catch (IOException e) {
+                            e.fillInStackTrace();
+                        }
+                    });
         } catch (IOException e) {
-            e.printStackTrace();
+            e.fillInStackTrace();
         }
     }
 
     private void parsePalettes() {
-        var arr = PALETTES_DIR.listFiles((dir, name) -> name.endsWith(".json"));
-
-        if (arr == null || arr.length == 0) {
-            Log.d("PalettesManager", "arr.length null");
-            return;
-        }
-
-        for (var file : arr) {
-            try {
-                var json = new JSONObject(IOUtils.readAllLines(file));
-                mPalettes.add(VTLPalette.fromJson(json));
-            } catch (IOException | JSONException e) {
-                e.printStackTrace();
-            }
-        }
+        Optional.ofNullable(PALETTES_DIR.listFiles((dir, name) -> name.endsWith(".json")))
+                .ifPresent(arr -> Arrays.stream(arr)
+                        .map(file -> {
+                            try {
+                                return new JSONObject(IOUtils.readAllLines(file));
+                            } catch (IOException | JSONException e) {
+                                e.printStackTrace();
+                                return null;
+                            }
+                        })
+                        .filter(Objects::nonNull)
+                        .map(json -> {
+                            try {
+                                return json != null ? VTLPalette.fromJson(json) : null;
+                            } catch (JSONException e) {
+                                throw new RuntimeException(e);
+                            }
+                        })
+                        .forEach(mPalettes::add));
     }
 
     @Nullable
     public VTLPalette getPalette(String id) {
-        for (var palette : mPalettes)
-            if (id.equals(palette.id))
-                return palette;
-        return null;
+        return mPalettes.stream()
+                .filter(palette -> id.equals(palette.id))
+                .findFirst()
+                .orElse(null);
     }
 
     @NonNull

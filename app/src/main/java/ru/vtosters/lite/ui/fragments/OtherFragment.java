@@ -60,12 +60,12 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("microgsettings").setVisible(GmsHook.isFakeGmsInstalled() && !GmsHook.isGmsInstalled());
+        findPreference("microgsettings").setVisible(GmsHook.isAnyServicesInstalled() && !GmsHook.isGmsInstalled());
 
         findPreference("microgsettings").setOnPreferenceClickListener(preference -> {
             try {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.setComponent(new ComponentName("com.mgoogle.android.gms", "org.microg.gms.ui.SettingsActivity"));
+                intent.setComponent(new ComponentName(GmsHook.getCurrentGms() + ".android.gms", "org.microg.gms.ui.SettingsActivity"));
                 startActivity(intent);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -81,6 +81,17 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("unstableNameChangerDrop").setOnPreferenceClickListener(preference -> {
+            RenameTool.clearDatabase();
+            LifecycleUtils.restartApplicationWithTimer();
+            return true;
+        });
+
+        findPreference("unstableNameChanger").setOnPreferenceChangeListener((preference, o) -> {
+            LifecycleUtils.restartApplicationWithTimer();
+            return true;
+        });
+
         findPreference("copydebuginfo").setOnPreferenceClickListener(preference -> {
             copyText(new DeviceInfoCollector().collect().forLogging());
             Toast.makeText(requireContext(), AndroidUtils.getString("device_info_copied"), Toast.LENGTH_SHORT).show();
@@ -89,6 +100,11 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         findPreference("applicationrestart").setOnPreferenceClickListener(preference -> {
             LifecycleUtils.restartApplication();
+            return true;
+        });
+
+        findPreference("batchmessages").setOnPreferenceChangeListener((preference, o) -> {
+            LifecycleUtils.restartApplicationWithTimer();
             return true;
         });
 
@@ -103,14 +119,17 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("dialogrecomm").setVisible(!Preferences.hasVerification());
-
         findPreference("updateverifdata").setOnPreferenceClickListener(preference -> {
             UsersList.getUsersList();
+            VTVerifications.isLoaded = false;
             VTVerifications.load(requireContext());
             AndroidUtils.sendToast(AndroidUtils.getString("data_updated"));
             return true;
         });
+
+        findPreference("VT_Verification").setVisible(!Preferences.serverFeaturesDisable());
+        findPreference("VT_Fire").setVisible(!Preferences.serverFeaturesDisable());
+        findPreference("updateverifdata").setVisible(!Preferences.serverFeaturesDisable());
 
         var vkAdminTokenPref = findPreference("vk_admin_token");
         vkAdminTokenPref.setVisible(Preferences.getPreferences().getBoolean("new_music_downloading_way", false));

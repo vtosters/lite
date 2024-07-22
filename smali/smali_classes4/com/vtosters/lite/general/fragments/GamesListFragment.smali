@@ -186,7 +186,7 @@
     return-object p1
 .end method
 
-.method protected c5()Ljava/lang/String;
+.method public c5()Ljava/lang/String;
     .locals 3
     .annotation build Landroidx/annotation/NonNull;
     .end annotation

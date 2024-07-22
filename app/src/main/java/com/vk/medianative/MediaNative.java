@@ -248,7 +248,6 @@ public final class MediaNative {
         if (isMediaLoaded) {
             return;
         }
-        NativeLibLoader.loadLibrary("ffmpeg");
         isMediaLoaded = NativeLibLoader.loadLibrary("vkmedia");
         isMediaLoaded = NativeLibLoader.loadLibrary("vkmediaencoder");
     }

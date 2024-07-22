@@ -35,16 +35,16 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
     private final View mCounterContainer;
     private final TextView mCounter;
     private final View mDot;
+    private final int mMargin;
+    private final float mSmallScale;
+    private final ImageView mIcon;
+    private final ImageView mActionIcon;
     private int mItemPos;
     private MenuItemImpl mItemData;
     private ColorStateList mColorStateList;
-    private final int mMargin;
-    private final float mSmallScale;
     private boolean mShiftingModeEnabled;
     private boolean mIconsModeEnabled;
     private boolean mStaticModeEnabled;
-    private final ImageView mIcon;
-    private final ImageView mActionIcon;
 
     public BottomNavigationItemView(@NonNull Context context) {
         this(context, null);
@@ -69,10 +69,10 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         this.mIcon.getLayoutParams().height = V.a(28.0F);
 
         this.mSmallLabel = this.findViewById(R.id.smallLabel);
-        mSmallLabel.setTextColor(getCSTDock());
+        mSmallLabel.setTextColor(getCSTDock(this.getContext()));
 
         this.mLargeLabel = this.findViewById(R.id.largeLabel);
-        mLargeLabel.setTextColor(getCSTDock());
+        mLargeLabel.setTextColor(getCSTDock(this.getContext()));
 
         LayoutInflater.from(this.getContext()).inflate(R.layout.navigation_bottom_counter, this, true);
         this.mCounterContainer = this.findViewById(R.id.counter_container);
@@ -99,6 +99,10 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
 
     public int getItemPosition() {
         return this.mItemPos;
+    }
+
+    public void setItemPosition(int pos) {
+        this.mItemPos = pos;
     }
 
     @SuppressLint("RestrictedApi")
@@ -308,10 +312,6 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
 
     public void setItemBackground(int resId) {
         ViewCompat.setBackground(this, resId != 0 ? ContextCompat.getDrawable(this.getContext(), resId) : null);
-    }
-
-    public void setItemPosition(int pos) {
-        this.mItemPos = pos;
     }
 
     public void setShiftingMode(boolean var1) {

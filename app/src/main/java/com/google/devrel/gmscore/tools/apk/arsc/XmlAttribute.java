@@ -36,6 +36,18 @@ public class XmlAttribute implements SerializableResource {
     private final BinaryResourceValue typedValue;
     private final XmlNodeChunk parent;
 
+    private XmlAttribute(int namespaceIndex,
+                         int nameIndex,
+                         int rawValueIndex,
+                         BinaryResourceValue typedValue,
+                         XmlNodeChunk parent) {
+        this.namespaceIndex = namespaceIndex;
+        this.nameIndex = nameIndex;
+        this.rawValueIndex = rawValueIndex;
+        this.typedValue = typedValue;
+        this.parent = parent;
+    }
+
     /**
      * Creates a new {@link XmlAttribute} based on the bytes at the current {@code buffer} position.
      *
@@ -48,18 +60,6 @@ public class XmlAttribute implements SerializableResource {
         int rawValue = buffer.getInt();
         BinaryResourceValue typedValue = BinaryResourceValue.create(buffer);
         return new XmlAttribute(namespace, name, rawValue, typedValue, parent);
-    }
-
-    private XmlAttribute(int namespaceIndex,
-                         int nameIndex,
-                         int rawValueIndex,
-                         BinaryResourceValue typedValue,
-                         XmlNodeChunk parent) {
-        this.namespaceIndex = namespaceIndex;
-        this.nameIndex = nameIndex;
-        this.rawValueIndex = rawValueIndex;
-        this.typedValue = typedValue;
-        this.parent = parent;
     }
 
     /**

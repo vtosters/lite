@@ -6,11 +6,12 @@ import com.vk.core.util.DeviceIdProvider;
 import com.vk.dto.music.MusicTrack;
 import java8.util.concurrent.CompletableFuture;
 import okhttp3.Headers;
-import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
+import static com.vk.core.network.Network.ClientType.CLIENT_API;
 import static ru.vtosters.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
@@ -44,12 +46,14 @@ public class AudioGet {
 
         var request = new Request.a()
                 .b(requestUrl)
-                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
-
+                .a("Accept-Encoding", "gzip")
+                .a("User-Agent", Network.l.c().a())
+                .a("Content-Type", "application/x-www-form-urlencoded; charset=utf-8")
+                .a();
         try {
             var response = CompletableFuture.supplyAsync(() -> {
-                        try {
-                            return new OkHttpClient().a(request).execute().a().g();
+                        try (Response resp = Network.b(CLIENT_API).a(request).execute()) {
+                            return GzipDecompressor.decompressResponse(resp);
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }

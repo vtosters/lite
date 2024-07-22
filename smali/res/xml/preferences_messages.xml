@@ -30,7 +30,7 @@
                 android:key="wbios"
                 android:title="@string/writebar_ios_title"/>
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/translator_title">
+    <PreferenceCategory android:title="@string/translator_title" android:key="translators">
         <com.vtosters.lite.ui.SummaryListPreference
                 android:defaultValue="system"
                 android:dialogTitle="@string/translator_choose_language"

@@ -15,7 +15,7 @@ public class Utils {
                 "&vt_dark=" + (ThemesUtils.isDarkTheme() ? "1" : "0") +
                 "&vt_amoled=" + (ThemesUtils.isAmoledTheme() && ThemesUtils.isDarkTheme() ? "1" : "0") +
                 "&secret=" + AccountManagerUtils.getUserSecret() +
-                "&proxy=" + (ProxyUtils.isAnyProxyEnabled() ? "1" : "0") +
+                "&proxy=" + ((ProxyUtils.isAnyProxyEnabled() || ProxyUtils.isVKProxyEnabled()) ? "1" : "0") +
                 "&lang=" + DateHook.getLocale() +
                 "&vt=1" +
                 "&useragent=" + Base64Utils.encodeValue(Base64Utils.encode(Network.l.c().a())) +

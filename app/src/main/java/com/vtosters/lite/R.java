@@ -13025,7 +13025,7 @@ public final class R {
         public static final int ic_launcher_shine = 0x7f0f005d; // 2131689565
         public static final int ic_launcher_shine_background = 0x7f0f005e; // 2131689566
         public static final int ic_launcher_shine_foreground = 0x7f0f005f; // 2131689567
-        public static final int vt_adaptive_launcher_foneground = 0x7f0f0043; // 2131689539
+        public static final int vt_adaptive_launcher_foreground = 0x7f0f0043; // 2131689539
         public static final int vt_launcher_round = 0x7f0f0046; // 2131689542
         public static final int ic_logo_facebook_28 = 0x7f0f0003; // 2131689475
         public static final int ic_logo_google_28 = 0x7f0f0004; // 2131689476
@@ -19661,9 +19661,39 @@ public final class R {
         public static final int cache_size = 0x7f12188d; // 2131892365
         public static final int cache_size_summ = 0x7f12188e; // 2131892366
         public static final int clear_all_cache = 0x7f12188f; // 2131892367
-        public static final int invalidate_theme_cache_each_update_title = 0x7f121890; // 2131892368
-        public static final int invertFilters = 0x7f121891; // 2131892369
-        public static final int invertFilters_summ = 0x7f121892; // 2131892370
+        public static final int disable_roaming_state = 0x7f121890; // 2131892368
+        public static final int disable_roaming_state_submit = 0x7f121891; // 2131892369
+        public static final int invalidate_theme_cache_each_update_title = 0x7f121892; // 2131892370
+        public static final int invertFilters = 0x7f121893; // 2131892371
+        public static final int invertFilters_summ = 0x7f121894; // 2131892372
+        public static final int invertcached_summ = 0x7f121895; // 2131892373
+        public static final int invertcached_title = 0x7f121896; // 2131892374
+        public static final int microg_dialog1 = 0x7f121897; // 2131892375
+        public static final int microg_dialog2 = 0x7f121898; // 2131892376
+        public static final int microg_dialog3 = 0x7f121899; // 2131892377
+        public static final int serverFeaturesDisable = 0x7f12189a; // 2131892378
+        public static final int serverFeaturesDisable_summ = 0x7f12189b; // 2131892379
+        public static final int sett_autoupdates = 0x7f12189c; // 2131892380
+        public static final int sett_autoupdates_summ = 0x7f12189d; // 2131892381
+        public static final int sett_battery = 0x7f12189e; // 2131892382
+        public static final int sett_battery_summ1 = 0x7f12189f; // 2131892383
+        public static final int sett_battery_summ2 = 0x7f1218a0; // 2131892384
+        public static final int sett_chats = 0x7f1218a1; // 2131892385
+        public static final int sett_chats_summ = 0x7f1218a2; // 2131892386
+        public static final int sett_community = 0x7f1218a3; // 2131892387
+        public static final int sett_community_summ = 0x7f1218a4; // 2131892388
+        public static final int sett_missing_links = 0x7f1218a5; // 2131892389
+        public static final int sett_missing_links_summ = 0x7f1218a6; // 2131892390
+        public static final int sett_nogms_summ = 0x7f1218a7; // 2131892391
+        public static final int sett_notifs = 0x7f1218a8; // 2131892392
+        public static final int sett_notifs_summ = 0x7f1218a9; // 2131892393
+        public static final int sett_recommendations = 0x7f1218aa; // 2131892394
+        public static final int tgs_token_missing = 0x7f1218ab; // 2131892395
+        public static final int tgs_token_reset = 0x7f1218ac; // 2131892396
+        public static final int tgs_token_reset_dialog = 0x7f1218ad; // 2131892397
+        public static final int tgs_token_reset_menu = 0x7f1218ae; // 2131892398
+        public static final int update_err = 0x7f1218af; // 2131892399
+        public static final int update_latest = 0x7f1218b0; // 2131892400
     }
 
     public static final class style {

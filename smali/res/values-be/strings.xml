@@ -5981,6 +5981,7 @@
     <string name="any_bank_card">Карта любога банка</string>
     <string name="current_place_number">Нумар бягучага месца</string>
     <string name="eight_friends">Гуляе 8 Вашых сяброў</string>
+    
     <string name="vtlfeed">Стужка</string>
     <string name="vtlinterface">Інтэрфейс</string>
     <string name="vtlmedia">Медыякантэнт</string>
@@ -6066,9 +6067,7 @@
     <string name="gms_download_microg">Спампаваць MicroG</string>
     <string name="gms_what_to_do_next">Што рабіць далей?</string>
     <string name="gms_what_to_do_after_microg_title">Што рабіць пасля ўстаноўкі MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Увайдзіце ў свой Google акаўнт \n2. Дазвольце VTLite атрымліваць
-        апавяшчэнні \n3. Абнавіце рэгістрацыю Firebase у наладах у раздзеле "Іншае"
-    </string>
+    <string name="gms_what_to_do_after_microg_summ">1. Увайдзіце ў свой Google рахунак на наладах MicroG\n2. Уключыце рэгістрацыю прылады\n3. Уключыце воблачны абмен паведамленнямі\n4. Пераўсталюеце VTLite\n5. Дазвольце яму прымаць паведамлення</string>
     <string name="donate">Дапамагчы праекту</string>
     <string name="fulltime">dd MMMM yyyy у HH:mm:ss</string>
     <string name="fulltime2">dd MMMM у HH:mm:ss</string>
@@ -6098,7 +6097,7 @@
     <string name="BGStickerssum">Для ўключэння/адключэння вам неабходна ачысціць кэш прыкладання</string>
     <string name="addinf">дадатковая інфармацыя</string>
     <string name="copyid">Скапіяваць ID</string>
-    <string name="vtssfs">VT Функцыі</string>
+    <string name="vtssfs">Серверныя функцыі</string>
     <string name="vticon">Іконка дадатку</string>
     <string name="vticonbtn">Выкарыстоўваць арыгінальную іконку</string>
     <string name="vticonsummary">Выкарыстанне арыгінальнай назвы і іконкі дадатку як у афіцыйнага кліента VK</string>
@@ -6312,7 +6311,7 @@
     <string name="friendsblock_title">Схаваць сяброў</string>
     <string name="friendsblock_summ">Схаваць блок рэкамендацый сяброў у сябрах</string>
     <string name="onlineformatter_title">Пашыраны анлайн</string>
-    <string name="onlineformatter_summ">Паказваць з якога прыкладання/кліента чалавек у анлайне</string>
+    <string name="onlineformatter_summ">Паказваць з якога прыкладання/кліента чалавек у анлайне\n\nНапрыклад: Онлайн З дапамогай Kate Mobile</string>
     <string name="voices_vtl">Галасавыя паведамленні</string>
     <string name="disable_voice_listening_summ">Функцыя дазваляе не адпраўляць статут праслухоўвання галасавых
         паведамленняў чалавека вамі
@@ -7035,4 +7034,37 @@
 
     <string name="invertcached_title">Інвертаваць cпіс</string>
     <string name="invertcached_summ">Інвертаваць cпіс кэшаваных трэкаў</string>
+
+    <string name="sett_recommendations">Рэкамендацыі</string>
+    <string name="sett_nogms_summ">Адсутнасць гэтых сэрвісаў прыводзіць да паломкі фонавых апавяшчэнняў і праблемах працы кампанентаў прыкладання</string>
+    <string name="sett_missing_links">Не абраныя спасылкі для адкрыцця дадаткам</string>
+    <string name="sett_missing_links_summ">Гэта перашкодзіць адкрыццю знешніх спасылак для іх адкрыцця з дапамогай гэтага прыкладання\n\nБ некаторых выпадках неабходна адключыць адкрыццё спасылак афіцыйным прыкладанням ВКонтакте</string>
+    <string name="sett_battery">Адключыце эканомію батарэі</string>
+    <string name="sett_battery_summ1">Эканомія батарэі перашкаджае атрыманню фонавых паведамленняў, апавяшчэнняў і працы музыкі</string>
+    <string name="sett_battery_summ2">\n\nДля прылад Xiaomi неабходна ўручную ўключыць у наладах сістэмы пункт Аўтазапуск дадзеным дадаткам</string>
+    <string name="sett_notifs">Уключыце апавяшчэння</string>
+    <string name="sett_notifs_summ">Без уключаных апавяшчэнняў не атрымаецца атрымліваць паведамленні і многае іншае</string>
+    <string name="sett_chats">Нашы чаты</string>
+    <string name="sett_chats_summ">Актыўныя чаты па абмеркаванні мадыфікацыі і шмат чаму іншаму</string>
+    <string name="sett_community">Наша група</string>
+    <string name="sett_community_summ">Самая свежая інфармацыя аб абнаўленнях і не толькі</string>
+    <string name="sett_autoupdates">Аўтаматычнае абнаўленне</string>
+    <string name="sett_autoupdates_summ">Атрымліваць апавяшчэнне аб выхадзе новай версіі прыкладання</string>
+
+    <string name="update_latest">У вас ўстаноўлена АПОШНЯЯ версія прыкладання</string>
+    <string name="update_err">Памылка праверкі абнаўлення</string>
+    <string name="serverFeaturesDisable">Адключыць усе знешнія падлучэння</string>
+    <string name="serverFeaturesDisable_summ">Адключае верыфікацыі і ўсе дадатковыя функцыі звязаныя з атрыманнем дадзеных з сервера ВТостерс</string>
+
+    <string name="tgs_token_missing">Токен адсутнічае</string>
+    <string name="tgs_token_reset_dialog">Скінуць токен бота?</string>
+    <string name="tgs_token_reset">Токен бота скінуты</string>
+    <string name="tgs_token_reset_menu">Скінуць токен бота</string>
+
+    <string name="microg_dialog1">Паменшаны MicroG (ReVanced)</string>
+    <string name="microg_dialog2">Альтэрнатыўны MicroG (ReVanced)</string>
+    <string name="microg_dialog3">Паўнавартасны MicroG (Замена GMS)</string>
+
+    <string name="disable_roaming_state">Адключыць эканомію трафіку</string>
+    <string name="disable_roaming_state_submit">Адключыць прымусовую функцыю эканоміі трафіку</string>
 </resources>

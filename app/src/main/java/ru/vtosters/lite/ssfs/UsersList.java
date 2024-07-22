@@ -8,10 +8,12 @@ import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
+import ru.vtosters.sponsorpost.utils.GzipDecompressor;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,12 +27,13 @@ public class UsersList {
     public static void getUsersList() {
         var prefs = AndroidUtils.getGlobalContext().getSharedPreferences("vt_another_data", 0);
 
-        if ((!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) && prefs.contains("ids")) {
+        if ((!NetworkUtils.isNetworkConnected() || NetworkUtils.isInternetSlow()) && prefs.contains("ids") || Preferences.serverFeaturesDisable()) {
             return;
         }
 
         Request request = new Request.a()
                 .b(Utils.getDomain() + "/api/getUsersWithServiceDescriptionsAndBanners")
+                .a("Accept-Encoding", "gzip")
                 .a();
 
         VtOkHttpClient.getInstance().a(request).a(new Callback() {
@@ -42,7 +45,7 @@ public class UsersList {
             @Override
             public void a(Call call, Response response) {
                 try {
-                    parseJson(new JSONObject(response.a().g()).getJSONObject("response"));
+                    parseJson(new JSONObject(GzipDecompressor.decompressResponse(response)).getJSONObject("response"));
                 } catch (JSONException | IOException e) {
                     e.printStackTrace();
                 }

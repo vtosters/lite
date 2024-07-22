@@ -26,19 +26,13 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 public class TelegramStickersService {
     private static final String TAG = "TGStickersService";
     private static TelegramStickersService instance;
-
-    private final Context c;
-
     private final ArrayList<TelegramStickersPack> packs;
     private final ArrayList<TelegramStickersPack> activePacks;
     private final ArrayList<TelegramStickersPack> inactivePacks;
     private final ArrayList<StickersEventsListener> listeners;
     private final HashSet<String> currentlyDownloading;
-
     private final Handler uiThreadHandler;
-
     private final TelegramStickersGrabber grabber;
-
     private final TelegramStickersDbHelper dbHelper;
     private final ArrayList<Runnable> queuedTasks;
     private final ThreadPoolExecutor executor;
@@ -48,16 +42,14 @@ public class TelegramStickersService {
     private TelegramStickersService(Context context) {
         instance = this;
 
-        this.c = context.getApplicationContext();
-
         listeners = new ArrayList<>();
         currentlyDownloading = new HashSet<>();
         uiThreadHandler = new Handler(Looper.getMainLooper());
         grabber = new TelegramStickersGrabber(null);
-        dbHelper = new TelegramStickersDbHelper(c);
+        dbHelper = new TelegramStickersDbHelper(context);
         queuedTasks = new ArrayList<>();
         executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
-        notificationsHelper = new NotificationsHelper(c);
+        notificationsHelper = new NotificationsHelper(context);
 
         packs = new ArrayList<>();
         activePacks = new ArrayList<>();
@@ -70,11 +62,11 @@ public class TelegramStickersService {
         return instance == null ? new TelegramStickersService(c) : instance;
     }
 
-    private void updatePacks(final boolean notify) {
+    private void updatePacks(boolean notify) {
         packs.clear();
         dbHelper.getAllPacks(new TelegramStickersDbHelper.PacksLoadingListener() {
             @Override
-            public void onPackLoaded(final TelegramStickersPack pack) {
+            public void onPackLoaded(TelegramStickersPack pack) {
                 runOnUiThread(() -> {
                     packs.add(pack);
 
@@ -101,14 +93,6 @@ public class TelegramStickersService {
                     queuedTasks.remove(0).run();
             }
         });
-    }
-
-    public void addStickersEventsListener(StickersEventsListener listener) {
-        listeners.add(listener);
-    }
-
-    public void removeStickersEventsListener(StickersEventsListener listener) {
-        listeners.remove(listener);
     }
 
     private void notifyPackAdded(TelegramStickersPack pack, int atIndex) {
@@ -188,20 +172,16 @@ public class TelegramStickersService {
         return inactivePacks;
     }
 
-    public boolean isDoneLoading() {
-        return ready;
-    }
-
-    public boolean requestPackDownload(final String id, File packFolder) {
+    public void requestPackDownload(String id, File packFolder) {
         if (currentlyDownloading.contains(id)) {
             Log.e(TAG, String.format("Got request to download pack %s which is already downloading", id));
-            return false;
+            return;
         }
 
         if (!ready) {
-            final File folder = packFolder;
+            File folder = packFolder;
             queuedTasks.add(() -> requestPackDownload(id, folder));
-            return true;
+            return;
         }
 
         TelegramStickersPack pack = new TelegramStickersPack(id);
@@ -221,85 +201,86 @@ public class TelegramStickersService {
             notifyPackAdded(pack, packs.size() - 1);
         }
 
-        final TelegramStickersPack newPack = pack;
-        final boolean isUpdate = update;
+        TelegramStickersPack newPack = pack;
+        boolean isUpdate = update;
 
         currentlyDownloading.add(id);
         notificationsHelper.packStartedDownloading(newPack);
 
-
-        grabber.enableProxy();
-        grabber.grabPack(id, packFolder, pack.version, new TelegramStickersGrabber.PackDownloadListener() {
-            @Override
-            public void onPackDownloaded(TelegramStickersPackInfo packInfo, boolean newVersionFound) {
-
-                runOnUiThread(() -> {
-                    newPack.state = TelegramStickersPack.DOWNLOADED;
-                    notifyPackChanged(newPack, packs.indexOf(newPack));
-                    currentlyDownloading.remove(newPack.id);
-                    syncPack(newPack);
-
-                    if (isUpdate) {
-                        if (newPack.enabled)
-                            notifyActivePacksListChanged();
-                    } else {
-                        activePacks.add(newPack);
-                        notifyActivePacksListChanged();
-                    }
-                });
-                notificationsHelper.packDoneDownloading(newPack, true, isUpdate, null);
-            }
-
-            @Override
-            public void onPackDownloadError(final Exception e) {
-                runOnUiThread(() -> {
-                    Log.e(TAG, "Error while downloading pack " + newPack.id);
-                    e.printStackTrace();
-
-                    if (!isUpdate) {
-                        int index = packs.indexOf(newPack);
-                        packs.remove(index);
-                        notifyPackRemoved(newPack, index);
-                    } else {
+        // try-catch block to handle possible timeout exception
+        try {
+            grabber.grabPack(id, packFolder, pack.version, new TelegramStickersGrabber.PackDownloadListener() {
+                @Override
+                public void onPackDownloaded(TelegramStickersPackInfo packInfo, boolean newVersionFound) {
+                    runOnUiThread(() -> {
                         newPack.state = TelegramStickersPack.DOWNLOADED;
                         notifyPackChanged(newPack, packs.indexOf(newPack));
-                    }
+                        currentlyDownloading.remove(newPack.id);
+                        syncPack(newPack);
 
-                    notifyPackDownloadError(newPack, e);
-                    currentlyDownloading.remove(newPack.id);
-                });
-                notificationsHelper.packDoneDownloading(newPack, false, isUpdate, e);
-            }
+                        if (isUpdate) {
+                            if (newPack.enabled)
+                                notifyActivePacksListChanged();
+                        } else {
+                            activePacks.add(newPack);
+                            notifyActivePacksListChanged();
+                        }
+                    });
+                    notificationsHelper.packDoneDownloading(newPack, true, isUpdate, null);
+                }
 
-            @Override
-            public void onGotPackInfo(final TelegramStickersPackInfo packInfo) {
-                runOnUiThread(() -> {
-                    newPack.title = packInfo.title;
-                    newPack.stickersCount = packInfo.stickersCount;
-                    newPack.version = packInfo.version;
-                    notifyPackChanged(newPack, packs.indexOf(newPack));
-                });
+                @Override
+                public void onPackDownloadError(Exception e) {
+                    runOnUiThread(() -> {
+                        Log.e(TAG, "Error while downloading pack " + newPack.id);
+                        e.printStackTrace();
 
-                notificationsHelper.packDownloadUpdated(newPack, 0);
-            }
+                        if (!isUpdate) {
+                            int index = packs.indexOf(newPack);
+                            packs.remove(index);
+                            notifyPackRemoved(newPack, index);
+                        } else {
+                            newPack.state = TelegramStickersPack.DOWNLOADED;
+                            notifyPackChanged(newPack, packs.indexOf(newPack));
+                        }
 
-            @Override
-            public void onStickerDownloaded(String pack, File sticker, String boundEmoji, int stickerIndex, int downloadedStickersCount, int totalStickersCount) {
-                stickerIndex--;
+                        notifyPackDownloadError(newPack, e);
+                        currentlyDownloading.remove(newPack.id);
+                    });
+                    notificationsHelper.packDoneDownloading(newPack, false, isUpdate, e);
+                }
 
-                List<Integer> list = newPack.emojis.get(boundEmoji);
-                if (list == null) list = new ArrayList<>();
-                list.add(stickerIndex);
-                newPack.emojis.put(boundEmoji, list);
+                @Override
+                public void onGotPackInfo(TelegramStickersPackInfo packInfo) {
+                    runOnUiThread(() -> {
+                        newPack.title = packInfo.title;
+                        newPack.stickersCount = packInfo.stickersCount;
+                        newPack.version = packInfo.version;
+                        notifyPackChanged(newPack, packs.indexOf(newPack));
+                    });
 
-                notificationsHelper.packDownloadUpdated(newPack, downloadedStickersCount);
-            }
-        });
+                    notificationsHelper.packDownloadUpdated(newPack, 0);
+                }
 
-        return true;
+                @Override
+                public void onStickerDownloaded(String pack, File sticker, String boundEmoji, int stickerIndex, int downloadedStickersCount, int totalStickersCount) {
+                    stickerIndex--;
+
+                    List<Integer> list = newPack.emojis.get(boundEmoji);
+                    if (list == null) list = new ArrayList<>();
+                    list.add(stickerIndex);
+                    newPack.emojis.put(boundEmoji, list);
+
+                    notificationsHelper.packDownloadUpdated(newPack, downloadedStickersCount);
+                }
+            });
+        } catch (Exception e) {
+            // handle other possible exceptions
+            e.printStackTrace();
+        }
     }
 
-    public void setPackEnabled(final TelegramStickersPack pack, final boolean enabled, final boolean notify) {
+    public void setPackEnabled(TelegramStickersPack pack, boolean enabled, boolean notify) {
         if (!ready) {
             queuedTasks.add(() -> setPackEnabled(pack, enabled, notify));
             return;
@@ -325,7 +306,7 @@ public class TelegramStickersService {
         }
     }
 
-    public void deletePack(final TelegramStickersPack pack) {
+    public void deletePack(TelegramStickersPack pack) {
         if (!ready) {
             queuedTasks.add(() -> deletePack(pack));
             return;
@@ -333,7 +314,6 @@ public class TelegramStickersService {
 
         boolean d = dbHelper.deletePack(pack);
         Log.d(TAG, "Delete from DB=" + d);
-
 
         int index = packs.indexOf(pack);
         packs.remove(index);
@@ -355,7 +335,7 @@ public class TelegramStickersService {
         uiThreadHandler.post(r);
     }
 
-    private void syncPack(final TelegramStickersPack pack) {
+    private void syncPack(TelegramStickersPack pack) {
         if (!ready) {
             queuedTasks.add(() -> syncPack(pack));
             return;
@@ -397,6 +377,4 @@ public class TelegramStickersService {
 
         void onInactivePacksListChanged();
     }
-
-
 }

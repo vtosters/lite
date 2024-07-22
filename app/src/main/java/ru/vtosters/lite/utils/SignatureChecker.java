@@ -1,13 +1,14 @@
 package ru.vtosters.lite.utils;
 
-import android.annotation.SuppressLint;
 import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.content.pm.SigningInfo;
+import android.os.Build;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import static android.content.pm.PackageManager.GET_SIGNATURES;
 import static android.content.pm.PackageManager.NameNotFoundException;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPackageName;
@@ -36,11 +37,29 @@ public class SignatureChecker {
     }
 
     public static boolean validateAppSignature() throws NameNotFoundException, NoSuchAlgorithmException {
-        @SuppressLint("PackageManagerGetSignatures") PackageInfo packageInfo = getGlobalContext().getPackageManager().getPackageInfo(getPackageName(), GET_SIGNATURES);
-        for (Signature signature : packageInfo.signatures) {
-            String sha1 = getSHA1(signature.toByteArray());
-            return Base64Utils.decode(APP_SIGNATURE).equals(sha1);
+        String appSignature = Base64Utils.decode(APP_SIGNATURE);
+        PackageManager pm = getGlobalContext().getPackageManager();
+        if (Build.VERSION.SDK_INT >= 28) {
+            PackageInfo packageInfo = pm.getPackageInfo(getPackageName(), PackageManager.GET_SIGNING_CERTIFICATES);
+            SigningInfo signingInfo = packageInfo.signingInfo;
+            if (signingInfo.hasMultipleSigners() || signingInfo.hasPastSigningCertificates()) {
+                return false;
+            } else {
+                byte[] signatureBytes = signingInfo.getSigningCertificateHistory()[0].toByteArray();
+                String sha1 = getSHA1(signatureBytes);
+                return appSignature.equals(sha1);
+            }
+        } else {
+            PackageInfo packageInfo = pm.getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+            Signature[] signatures = packageInfo.signatures;
+            for (Signature signature : signatures) {
+                byte[] signatureBytes = signature.toByteArray();
+                String sha1 = getSHA1(signatureBytes);
+                if (appSignature.equals(sha1)) {
+                    return true;
+                }
+            }
+            return false;
         }
-        return false;
-    } // Sig check to detect actions builds and etc
+    }
 }

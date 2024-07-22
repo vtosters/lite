@@ -1,9 +1,9 @@
 package ru.vtosters.lite.utils;
 
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.verify.domain.DomainVerificationManager;
@@ -12,14 +12,15 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
-import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.core.util.Screen;
+import androidx.core.app.NotificationManagerCompat;
+
+import com.vk.core.util.AppContextHolder;
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.WebViewFragment;
-import ru.vtosters.hooks.other.Preferences;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -30,8 +31,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 import java.util.Random;
-
-import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 
 public class AndroidUtils {
     private static final String ALLOWED_CHARACTERS = "0123456789qwertyuiopasdfghjklzxcvbnm";
@@ -47,19 +46,14 @@ public class AndroidUtils {
     }
 
     public static boolean isTablet() {
-        return Screen.l(getGlobalContext());
+        String string = getGlobalContext().getResources().getString(b.h.g.d.screen_size);
+        return TextUtils.equals(string, ScreenSize.large.name()) || TextUtils.equals(string, ScreenSize.xlarge.name());
     }
 
     @NonNull
     public static Context getGlobalContext() {
-        try {
-            Method getInitialApplicationMtd = ReflectionUtils.findMethod(Class.forName("android.app.AppGlobals"), "getInitialApplication");
-            return (Context) getInitialApplicationMtd.invoke(null);
-        } catch (Exception e) {
-            Log.d("GlobalContext", "Error while fetching context via refl");
-        }
-        return LifecycleUtils.getCurrentActivity();
-    } // Getting the global context through reflection to use context on application initialization
+        return AppContextHolder.a;
+    } // Getting the global context to use context on application initialization
 
     public static Resources getResources() {
         return getGlobalContext().getResources();
@@ -124,8 +118,8 @@ public class AndroidUtils {
         new WebViewFragment.g(url).l().m().h().j().a(activity);
     }
 
-    public static void checkLinksVerified(Activity activity) {
-        if (Build.VERSION.SDK_INT < 31) return;
+    public static boolean isLinksUnverified(Activity activity) {
+        if (Build.VERSION.SDK_INT < 31) return false;
 
         DomainVerificationManager manager = activity.getSystemService(DomainVerificationManager.class);
         DomainVerificationUserState userState;
@@ -133,7 +127,7 @@ public class AndroidUtils {
         try {
             userState = manager.getDomainVerificationUserState(getPackageName());
         } catch (PackageManager.NameNotFoundException ignore) {
-            return;
+            return false;
         }
 
         boolean hasUnverified = false;
@@ -145,32 +139,7 @@ public class AndroidUtils {
             hasUnverified = stateValue != null && stateValue != DomainVerificationUserState.DOMAIN_STATE_VERIFIED && stateValue != DomainVerificationUserState.DOMAIN_STATE_SELECTED;
         }
 
-        if (hasUnverified) {
-            if (getBoolValue("showUnverifDialog", true)) {
-                new VkAlertDialog.Builder(activity)
-                        .setTitle(com.vtosters.lite.R.string.warning)
-                        .setMessage(AndroidUtils.getString("app_open_by_default_settings"))
-                        .setCancelable(false)
-                        .setPositiveButton(com.vtosters.lite.R.string.social_graph_skip,
-                                (dialogInterface, i) -> Preferences.getPreferences().edit().putBoolean("showUnverifDialog", false).apply()
-                        )
-                        .setNeutralButton(com.vtosters.lite.R.string.open_settings,
-                                (dialogInterface, i) -> {
-                                    try {
-                                        Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:" + getPackageName()));
-                                        activity.startActivity(intent);
-                                    } catch (Throwable t1) {
-                                        try {
-                                            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()));
-                                            activity.startActivity(intent);
-                                        } catch (Throwable ignored) {
-                                        }
-                                    }
-                                }
-                        )
-                        .show();
-            }
-        }
+        return hasUnverified;
     }
 
     public static String MD5(String s) {
@@ -190,6 +159,15 @@ public class AndroidUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static boolean areNotificationsEnabled() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager manager = (NotificationManager) getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE);
+            return manager.areNotificationsEnabled();
+        } else {
+            return NotificationManagerCompat.from(getGlobalContext()).areNotificationsEnabled();
+        }
     }
 
     private static String getRandomString(int sizeOfRandomString) {
@@ -234,5 +212,12 @@ public class AndroidUtils {
 
     public static String upString(String s) {
         return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
+    }
+
+    public enum ScreenSize {
+        small,
+        normal,
+        large,
+        xlarge
     }
 }

@@ -8,6 +8,7 @@ import android.os.Build;
 import android.text.TextUtils;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.dto.common.VideoFile;
+import ru.vtosters.lite.downloaders.VideoDownloader;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -77,40 +78,7 @@ public class ExternalLinkParser {
      * this.D = var66.optString("mp4_2160");
      */
     public static boolean parseVKVideo(VideoFile videoFile, List<String> qualities, List<String> urls) {
-        if (!TextUtils.isEmpty(videoFile.D)) {
-            qualities.add("2160p");
-            urls.add(videoFile.D);
-        }
-
-        if (!TextUtils.isEmpty(videoFile.C)) {
-            qualities.add("1440p");
-            urls.add(videoFile.C);
-        }
-
-        if (!TextUtils.isEmpty(videoFile.B)) {
-            qualities.add("1080p");
-            urls.add(videoFile.B);
-        }
-
-        if (!TextUtils.isEmpty(videoFile.h)) {
-            qualities.add("720p");
-            urls.add(videoFile.h);
-        }
-
-        if (!TextUtils.isEmpty(videoFile.g)) {
-            qualities.add("480p");
-            urls.add(videoFile.g);
-        }
-
-        if (!TextUtils.isEmpty(videoFile.f)) {
-            qualities.add("360p");
-            urls.add(videoFile.f);
-        }
-
-        if (!TextUtils.isEmpty(videoFile.e)) {
-            qualities.add("240p");
-            urls.add(videoFile.e);
-        }
+        VideoDownloader.addVideos(videoFile, qualities, urls);
 
         return qualities.size() > 0;
     }

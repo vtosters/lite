@@ -2,11 +2,9 @@ package ru.vtosters.lite.tgs;
 
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.vk.dto.stickers.StickerStockItem;
-import com.vtosters.lite.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.util.Stack;
 
@@ -14,14 +12,6 @@ public class TGRoot {
     public static final int N = 76820000;
     public static final int X = 976820000;
     public final static Stack<Integer> pendingStickers = new Stack<>();
-
-    public static String getSummary() {
-        return switch (TGPref.getTGConnectMethod()) {
-            case 0 -> AndroidUtils.getString(R.string.ctypedirect);
-            case 2 -> AndroidUtils.getString(R.string.ctypesocks);
-            default -> AndroidUtils.getString(R.string.ctypedisabled);
-        };
-    }
 
     public static StickerStockItem toStickerPack(TelegramStickersPack p) throws JSONException {
         JSONArray arr = new JSONArray();

@@ -3,19 +3,14 @@ package ru.vtosters.lite.music;
 import android.os.RemoteException;
 import android.text.TextUtils;
 import android.util.Log;
+
 import androidx.annotation.Nullable;
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+
 import com.vk.dto.music.MusicTrack;
 import com.vtosters.lite.R;
-import okhttp3.Callback;
-import okhttp3.*;
+
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.di.singleton.VtOkHttpClient;
-import ru.vtosters.lite.downloaders.AudioDownloader;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -23,6 +18,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import ru.vtosters.hooks.other.Preferences;
+import ru.vtosters.lite.di.singleton.VtOkHttpClient;
+import ru.vtosters.lite.downloaders.AudioDownloader;
+import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.music.MusicTrackUtils;
 
 public class LastFMScrobbler {
     private static final String KEY = "5965d63402414776c54c266db0211746";
@@ -33,7 +43,7 @@ public class LastFMScrobbler {
 
     public static void grabMusicTrack(MusicTrack musictrack) {
         var uid = musictrack.y1();
-        var artist = musictrack.C;
+        var artist = MusicTrackUtils.getArtists(musictrack);
         var title = musictrack.f;
         var duration = musictrack.h;
         var track_id = musictrack.d;
@@ -41,13 +51,14 @@ public class LastFMScrobbler {
         var access_key = !TextUtils.isEmpty(musictrack.J) ? musictrack.J : "";
         var album_id = musictrack.I;
         var album = album_id != null ? album_id.getTitle() : null;
+        var isOwnTrack = musictrack.e == AccountManagerUtils.getUserId();
 
         if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(artist) || TextUtils.isEmpty(title) || duration == 0) {
             Log.d("Scrobbler", "grabTrackInfo: " + "Empty track, info: " + artist + " - " + title + " - " + duration + " - " + uid);
             return;
         }
 
-        if (Preferences.autocache() && !CacheDatabaseDelegate.isCached(uid)) {
+        if (needToCache(isOwnTrack) && !MusicCacheImpl.isCachedTrack(uid)) {
             if (LibVKXClient.isIntegrationEnabled()) {
                 LibVKXClient.getInstance().runOnService(service -> {
                     try {
@@ -62,6 +73,12 @@ public class LastFMScrobbler {
         }
 
         scrobbleTrack(duration, artist, title, uid, album);
+    }
+
+    private static boolean needToCache(boolean isOwnTrack) {
+        int autocache = Preferences.autocache();
+
+        return autocache == 2 || (autocache == 1 && isOwnTrack);
     }
 
     public static void scrobbleTrack(
@@ -84,11 +101,11 @@ public class LastFMScrobbler {
         params.put("sk", getSessionKey());
         params.put("artist[0]", artist);
         params.put("track[0]", title);
-        if (!TextUtils.isEmpty(album))
+        if (!TextUtils.isEmpty(album)) {
             params.put("album[0]", album);
+        }
         params.put("duration[0]", String.valueOf(duration));
         params.put("timestamp[0]", String.valueOf(System.currentTimeMillis() / 1000));
-
 
         fetch(params, new Callback() {
             @Override
@@ -151,8 +168,9 @@ public class LastFMScrobbler {
         params.put("format", "json");
 
         var reqBodyBuilder = new FormBody.a(StandardCharsets.UTF_8);
-        for (var entry : params.entrySet())
+        for (var entry : params.entrySet()) {
             reqBodyBuilder.a(entry.getKey(), entry.getValue());
+        }
 
         var req = new Request.a()
                 .b(URL)
@@ -165,6 +183,7 @@ public class LastFMScrobbler {
     public static void fetchSession(JSONObject json) throws JSONException {
         if (!json.has("session")) {
             Log.d("Scrobbler", "Auth failed - no session");
+            AndroidUtils.sendToast("Ошибка входа");
             return;
         }
 
@@ -177,6 +196,8 @@ public class LastFMScrobbler {
                 .putString("sessionKey", key)
                 .putBoolean("lastfm_enabled", true)
                 .apply();
+
+        AndroidUtils.sendToast("Успешный вход");
 
         Log.d("Scrobbler", "Auth success as " + name + ", key " + key);
     }

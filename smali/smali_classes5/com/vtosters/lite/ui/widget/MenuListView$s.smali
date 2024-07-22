@@ -384,14 +384,18 @@
     .line 3
     iget-object v3, p0, Lcom/vtosters/lite/ui/widget/MenuListView$s;->e:Landroid/widget/TextView;
 
+    if-eqz v3, :cond_10
+
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 4
+    :cond_10
     iget-object v0, p0, Lcom/vtosters/lite/ui/widget/MenuListView$s;->c:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_11
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 5
+    :cond_11
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;

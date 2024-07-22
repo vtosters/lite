@@ -235,7 +235,7 @@
             android:key="others"
             android:title="@string/debug_other">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
+                android:defaultValue="true"
                 android:key="__dbg_no_ads"
                 android:title="@string/debug_no_ads_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -243,7 +243,7 @@
                 android:key="__dbg_proxy_enable"
                 android:title="@string/debug_proxy_enable_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="true"
+                android:defaultValue="false"
                 android:key="__dbg_use_libverify_for_auth"
                 android:title="@string/debug_use_libverify_for_auth_title"/>
     </PreferenceCategory>

@@ -35,7 +35,7 @@
 
     const-string v0, "func_v"
 
-    const/16 v1, 0x1b
+    const/16 v1, 0x25
 
     .line 3
     invoke-virtual {p0, v0, v1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
@@ -1753,6 +1753,12 @@
     move-result v2
 
     if-eqz v2, :cond_32
+
+    invoke-static {}, Lru/vtosters/hooks/GroupCoverHook;->needToDisableCovers()Z
+
+    move-result v4
+
+    if-nez v4, :cond_32
 
     const-string v2, "live_covers"
 

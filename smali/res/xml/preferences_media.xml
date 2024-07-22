@@ -3,62 +3,14 @@
     <PreferenceCategory android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
+                android:key="compressPhotos"
+                android:summary="@string/sett_compress_photo_summ"
+                android:title="@string/sett_compress_photos" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
                 android:key="compressVideos"
                 android:summary="@string/sett_compress_video_summ"
                 android:title="@string/sett_compress_videos"/>
-        <com.vtosters.lite.ui.SummaryListPreference
-                android:defaultValue="jpeg"
-                android:dialogTitle="@string/compression_types_selection"
-                android:entries="@array/compression_value"
-                android:entryValues="@array/compression"
-                android:key="compression"
-                android:title="@string/compression_types"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtl_music_settings">
-        <Preference
-                android:key="cached_tracks"
-                android:title="@string/cached_tracks_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="invertCachedTracks"
-                android:summary="@string/invertcached_summ"
-                android:title="@string/invertcached_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="autocache"
-                android:summary="@string/autocache_summ"
-                android:title="@string/autocache_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="useGenius"
-                android:summary="@string/useGenius_summ"
-                android:title="@string/useGenius_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="useOldAppVer"
-                android:summary="@string/useOldAppVer_summ"
-                android:title="@string/useOldAppVer_title"/>
-        <com.vtosters.lite.ui.SummaryListPreference
-                android:defaultValue="default"
-                android:dialogTitle="@string/musicdefcatalog_dialogTitle"
-                android:entries="@array/musicdefcatalog_value"
-                android:entryValues="@array/musicdefcatalog"
-                android:key="musicdefcatalog"
-                android:title="@string/musicdefcatalog_title"/>
-        <Preference
-                android:key="audio_download"
-                android:title="@string/audio_download_title"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="Last.fm">
-        <Preference
-                android:key="lastfm_auth"
-                android:summary="@string/lastfm_auth_summ"
-                android:title="@string/lastfm_auth_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="lastfm_enabled"
-                android:summary="@string/lastfm_enabled_summ"
-                android:title="@string/lastfm_enabled_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_video_settings">
         <Preference
@@ -79,6 +31,11 @@
                 android:key="__dbg_disable_video_feed"
                 android:summary="@string/interfacevideorecsum"
                 android:title="@string/interfacevideorec"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="sendVideoMetrics"
+                android:summary="Статистика необходима для работы рекомендаций и истории видео"
+                android:title="Отправлять статистику"/>
         <Preference
                 android:key="clearvideohistory"
                 android:summary="@string/clearvideohistory_summ"
@@ -88,22 +45,5 @@
         <Preference
                 android:key="select_photo_search_engine"
                 android:title="@string/photo_search_engine_title"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vkx_title" android:key="vkx_sett">
-        <Preference
-                android:enabled="false"
-                android:summary="@string/vkx_why_summary"
-                android:title="@string/vkx_why"/>
-        <Preference
-                android:persistent="false"
-                android:title="@string/vkx_download">
-            <intent
-                    android:action="android.intent.action.VIEW"
-                    android:data="https://vkx.app"/>
-        </Preference>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
-                android:key="libvkx_integration"
-                android:title="@string/vkx_integration"/>
     </PreferenceCategory>
 </PreferenceScreen>

@@ -5,11 +5,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.TypedValue;
-import android.view.View;
-import android.view.WindowInsetsController;
 import android.webkit.WebView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -66,14 +63,6 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
         requireActivity().getWindow().setStatusBarColor(ThemesUtils.getBackgroundContent());
         requireActivity().getWindow().setNavigationBarColor(ThemesUtils.getBackgroundContent());
 
-        if (!ThemesUtils.isDarkTheme()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                requireActivity().getWindow().getInsetsController().setSystemBarsAppearance(WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS, WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS);
-            } else {
-                requireActivity().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR & View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-            }
-        }
-
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), AndroidUtils.getString("data"));
 
         PreferenceFragmentUtils.addPreference(
@@ -93,6 +82,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                                 FileUtils.l();
                                 AutoPlayCacheHolder.d.a();
                                 MediaStorage.a();
+                                IOUtils.deleteRecursive(AndroidUtils.getGlobalContext().getCacheDir());
                                 updateCacheSize();
                             })
                             .setNegativeButton(requireContext().getString(com.vtosters.lite.R.string.cancel), (dialogInterface, i) -> dialogInterface.dismiss())
@@ -125,6 +115,7 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
                                         ImEngineExt.a(ImEngine1.a());
                                         AutoPlayCacheHolder.d.a();
                                         MediaStorage.a();
+                                        IOUtils.deleteRecursive(AndroidUtils.getGlobalContext().getCacheDir());
                                     }
                                     case 1 -> {
                                         SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
@@ -287,19 +278,47 @@ public class DataSettingsFragment extends TrackedMaterialPreferenceToolbarFragme
 
         PreferenceFragmentUtils.addMaterialSwitchPreference(
                 getPreferenceScreen(),
-                "analyticsDisabled",
-                AndroidUtils.getString("disable_analytics"),
-                AndroidUtils.getString("disable_analytics_summ"),
+                "disableForceTrafficSaver",
+                AndroidUtils.getString("disable_roaming_state"),
+                AndroidUtils.getString("disable_roaming_state_submit"),
                 null,
                 false,
                 (preference, o) -> {
-                    Preferences.getPreferences().edit().putBoolean("analyticsDisabled", (boolean) o).apply();
+                    Preferences.getPreferences().edit().putBoolean("disableForceTrafficSaver", (boolean) o).apply();
                     LifecycleUtils.restartApplicationWithTimer();
                     return true;
                 }
         );
 
-        findPreference("analyticsDisabled").setVisible(Preferences.isValidSignature());
+        if (!Preferences.serverFeaturesDisable()) {
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "analyticsDisabled",
+                    AndroidUtils.getString("disable_analytics"),
+                    AndroidUtils.getString("disable_analytics_summ"),
+                    null,
+                    false,
+                    (preference, o) -> {
+                        Preferences.getPreferences().edit().putBoolean("analyticsDisabled", (boolean) o).apply();
+                        LifecycleUtils.restartApplicationWithTimer();
+                        return true;
+                    }
+            );
+        }
+
+        PreferenceFragmentUtils.addMaterialSwitchPreference(
+                getPreferenceScreen(),
+                "serverFeaturesDisable",
+                AndroidUtils.getString("serverFeaturesDisable"),
+                AndroidUtils.getString("serverFeaturesDisable_summ"),
+                null,
+                false,
+                (preference, o) -> {
+                    Preferences.getPreferences().edit().putBoolean("serverFeaturesDisable", (boolean) o).apply();
+                    LifecycleUtils.restartApplicationWithTimer();
+                    return true;
+                }
+        );
     }
 
     private void updateCacheSize() {

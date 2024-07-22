@@ -67,6 +67,13 @@ public class InterfaceFragment extends TrackedMaterialPreferenceToolbarFragment 
             findPreference("showmenu").setVisible(false);
         }
 
+        var tablet = findPreference("disableForceTabletMode");
+        tablet.setVisible(AndroidUtils.isTablet());
+        tablet.setOnPreferenceClickListener(preference -> {
+            LifecycleUtils.restartApplicationWithTimer();
+            return true;
+        });
+
         findPreference("customrounding").setOnPreferenceClickListener(preference -> {
             RoundingSeekbarDialog.dialog(getContext());
             return true;

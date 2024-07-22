@@ -1,9 +1,7 @@
 package ru.vtosters.lite.music.interfaces;
 
 import com.vk.dto.music.MusicTrack;
-import ru.vtosters.lite.music.Callback;
-
-import java.io.File;
+import com.vk.dto.music.Playlist;
 
 /**
  * Interface for track downloaders
@@ -13,8 +11,8 @@ public interface ITrackDownloader {
      * Download track
      *
      * @param track    Music track
-     * @param outDir   Directory where to download the track
      * @param callback Callback to call when download status changes
+     * @param playlist
      */
-    void downloadTrack(MusicTrack track, File outDir, Callback callback, boolean cache);
+    void download(MusicTrack track, Callback callback, Playlist playlist);
 }

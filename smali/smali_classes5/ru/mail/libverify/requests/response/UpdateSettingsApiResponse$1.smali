@@ -423,6 +423,10 @@
 .method public useSafetyNet()Ljava/lang/Boolean;
     .locals 2
 
+    const/4 v0, 0x0
+
+    return-object v0
+    
     iget-object v0, p0, Lru/mail/libverify/requests/response/UpdateSettingsApiResponse$1;->a:Lru/mail/libverify/requests/response/UpdateSettingsApiResponse;
 
     invoke-static {v0}, Lru/mail/libverify/requests/response/UpdateSettingsApiResponse;->d(Lru/mail/libverify/requests/response/UpdateSettingsApiResponse;)Ljava/lang/Integer;

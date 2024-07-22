@@ -36,8 +36,8 @@ public class TelegramStickersPack extends CustomStickersPack {
     public HashMap<String, List<Integer>> emojis = new HashMap<>();
 
     public TelegramStickersPack(String id) {
-        this.id=this.title=id;
-        this.hash=id.hashCode();
+        this.id = this.title = id;
+        this.hash = id.hashCode();
     }
 
     public JSONObject encodeEmojis() throws JSONException {

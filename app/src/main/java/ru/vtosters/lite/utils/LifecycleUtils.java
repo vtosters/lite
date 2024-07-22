@@ -52,7 +52,7 @@ public class LifecycleUtils {
     }
 
     public static Activity getCurrentActivity() {
-        return activities.size() > 0 ? activities.get(activities.size() - 1) : new MainActivity();
+        return !activities.isEmpty() ? activities.get(activities.size() - 1) : new MainActivity();
     }
 
     public static void restartApplication() {

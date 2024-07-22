@@ -38,7 +38,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacenewsfeed">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
+                android:defaultValue="true"
                 android:key="stories"
                 android:summary="@string/showstoriessum"
                 android:title="@string/showstories"/>
@@ -94,6 +94,15 @@
                 android:key="pollresults"
                 android:summary="@string/pollresults_summ"
                 android:title="@string/pollresults_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="disablevideoscovers"
+                android:title="Отключить видео обложки групп"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="disableForceTabletMode"
+                android:summary="Отключает интерфейс для планшетов и возвращает докбар"
+                android:title="Отключить режим планшета"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="friendsblock"

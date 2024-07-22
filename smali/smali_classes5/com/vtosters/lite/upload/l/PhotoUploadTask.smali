@@ -119,13 +119,6 @@
 .method protected w()Ljava/lang/String;
     .locals 3
 
-    invoke-static {}, Lcom/vk/medianative/MediaImageEncoder;->needToCompress()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
     iget-object v0, p0, Lcom/vtosters/lite/upload/l/PhotoUploadTask;->l:Lcom/vtosters/lite/upload/UploadCompressStrategy;
 
     iget-object v1, p0, Lcom/vtosters/lite/upload/l/HTTPFileUploadTask;->f:Ljava/lang/String;
@@ -138,11 +131,5 @@
 
     move-result-object v0
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     return-object v0
 .end method

@@ -43,58 +43,48 @@ public final class PackageChunk extends ChunkWithChunks {
      * Offset in bytes, from the start of the chunk, where {@code keyStringsOffset} can be found.
      */
     private static final int KEY_OFFSET_OFFSET = 276;
-
-    /**
-     * The package id if this is a base package, or 0 if not a base package.
-     */
-    private int id;
-
-    /**
-     * The name of the package.
-     */
-    private String packageName;
-
     /**
      * The offset (from {@code offset}) in the original buffer where type strings start.
      */
     private final int typeStringsOffset;
-
     /**
      * The index into the type string pool of the last public type.
      */
     private final int lastPublicType;
-
     /**
      * An offset to the string pool that contains the key strings for this package.
      */
     private final int keyStringsOffset;
-
     /**
      * The index into the key string pool of the last public key.
      */
     private final int lastPublicKey;
-
     /**
      * An offset to the type ID(s). This is undocumented in the original code.
      */
     private final int typeIdOffset;
-
     /**
      * Contains a mapping of a type index to its {@link TypeSpecChunk}.
      */
     private final Map<Integer, TypeSpecChunk> typeSpecs = new HashMap<>();
-
     /**
      * Contains a mapping of a type index to all of the {@link TypeChunk} with that index.
      */
     private final Multimap<Integer, TypeChunk> types = ArrayListMultimap.create();
-
+    /**
+     * The package id if this is a base package, or 0 if not a base package.
+     */
+    private int id;
+    /**
+     * The name of the package.
+     */
+    private String packageName;
     /**
      * May contain a library chunk for mapping dynamic references to resolved references.
      */
     private Optional<LibraryChunk> libraryChunk = Optional.empty();
 
-    protected PackageChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    PackageChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
         id = buffer.getInt();
         packageName = PackageUtils.readPackageName(buffer, buffer.position());

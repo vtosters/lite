@@ -65,7 +65,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lru/vtosters/lite/music/cache/injectors/TracklistInjector;->eligibleForOfflineCaching()Z
+    invoke-static {}, Lru/vtosters/hooks/music/injectors/TracklistInjector;->eligibleForOfflineCaching()Z
 
     move-result v0
 
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/vtosters/lite/music/cache/injectors/TracklistInjector;->createOfflineRx(Lcom/vk/catalog2/core/CatalogParser;)Lio/reactivex/Observable;
+    invoke-static {v0}, Lru/vtosters/hooks/music/injectors/TracklistInjector;->createOfflineRx(Lcom/vk/catalog2/core/CatalogParser;)Lio/reactivex/Observable;
 
     move-result-object v0
 

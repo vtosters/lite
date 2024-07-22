@@ -92,7 +92,7 @@
                 android:key="listen_v"
                 android:title="@string/listen_v_title"/>
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vkme_online_vtl">
+    <PreferenceCategory android:title="@string/vkme_online_vtl" android:key="onlinefixcategory">
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="onlinefix"

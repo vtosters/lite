@@ -72,8 +72,9 @@ public class EncryptionMessagesHook {
     public static String decryptMessage(String msgBody, int peer) {
         try {
             for (IMProcessor processor : EncryptProvider.processors) {
-                if ((processor.isUsed() || !processor.isPublic()) && processor.isEncrypted(msgBody) && (processor.isPublic() || EncryptProvider.getKeyForProcessor(processor, peer) != null))
-                    return "\uD83D\uDD12 " + injectOwnTextAll(processor.decode(msgBody, EncryptProvider.getKeyForProcessor(processor, peer)));
+                if ((processor.isUsed() || !processor.isPublic()) && processor.isEncrypted(msgBody) && (processor.isPublic() || EncryptProvider.getKeyForProcessor(processor, peer) != null)) {
+                    return "\uD83D\uDD12 " + processor.getUIName() + ": " + injectOwnTextAll(processor.decode(msgBody, EncryptProvider.getKeyForProcessor(processor, peer)));
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -43,7 +43,7 @@ public class TextViewHook implements BaseHook {
     @SuppressLint("RestrictedApi")
     @Override
     public void inject(View view, int i, boolean z) {
-        if (view instanceof TextView) {
+        if (view instanceof TextView && ThemesUtils.isMonetTheme()) {
             var textView = (TextView) view;
 
             if (ColorReferences.isAccentedColor(textView.getCurrentTextColor())) {

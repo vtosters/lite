@@ -2,6 +2,7 @@ package ru.vtosters.hooks;
 
 import com.vk.dto.common.VerifyInfo;
 import org.json.JSONObject;
+import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.utils.VTVerifications;
 
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
@@ -20,7 +21,7 @@ public class VerificationsHook {
             return true;
         }
 
-        if (!getBoolValue("VT_Verification", true)) {
+        if (!getBoolValue("VT_Verification", true) || Preferences.serverFeaturesDisable()) {
             return false;
         }
 
@@ -32,7 +33,7 @@ public class VerificationsHook {
             return true;
         }
 
-        if (!getBoolValue("VT_Fire", true)) {
+        if (!getBoolValue("VT_Fire", true) || Preferences.serverFeaturesDisable()) {
             return false;
         }
 
@@ -40,10 +41,6 @@ public class VerificationsHook {
     }
 
     public static boolean hasDeveloper(JSONObject jSONObject) {
-        if (!getBoolValue("VT_Dev", true)) {
-            return false;
-        }
-
         return VTVerifications.isDeveloper(VTVerifications.getId(jSONObject));
     }
 

@@ -28,8 +28,7 @@ public class ThemesCore {
     private static int darken_color;
 
     static {
-        setExceptions();
-        setThemedColors(ThemesUtils.getAccentColor());
+        init();
     }
 
     public static void setExceptions() {
@@ -200,5 +199,10 @@ public class ThemesCore {
 
     public static boolean isCachedAccents() {
         return cachedAccents;
+    }
+
+    public static void init() {
+        setExceptions();
+        setThemedColors(ThemesUtils.getAccentColor());
     }
 }

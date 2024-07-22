@@ -354,6 +354,16 @@
 .method static a(Landroid/content/Context;Ljava/lang/String;)V
     .locals 11
 
+    const-string v0, "hideDeviceInfo"
+
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {v0, v1}, Lru/vtosters/hooks/other/Preferences;->getBoolValue(Ljava/lang/String;Ljava/lang/Boolean;)Z
+
+    move-result v0
+    
+    if-nez v0, :cond_1
+
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0

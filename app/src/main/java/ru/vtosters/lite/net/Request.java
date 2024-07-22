@@ -51,7 +51,7 @@ public class Request {
                 httpURLConnection.setRequestProperty("Content-Type", mIsVTostersRequest ? "Content-Type" : "application/x-www-form-urlencoded");
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
 
-                StringBuffer stringBuffer = new StringBuffer();
+                StringBuilder stringBuffer = new StringBuilder();
                 while (true) {
                     String readLine = bufferedReader.readLine();
                     if (readLine != null) {

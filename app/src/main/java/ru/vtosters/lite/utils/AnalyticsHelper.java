@@ -16,7 +16,7 @@ import ru.vtosters.lite.ui.fragments.TrackedMaterialPreferenceToolbarFragment;
 import java.util.HashMap;
 
 public class AnalyticsHelper {
-    private static final boolean analyticsDisabled = Preferences.getBoolValue("analyticsDisabled", false);
+    private static final boolean analyticsDisabled = Preferences.getBoolValue("analyticsDisabled", false) || Preferences.serverFeaturesDisable();
 
     private static final String key = BuildConfig.APPCENTER_KEY;
 

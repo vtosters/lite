@@ -1308,11 +1308,11 @@ and organize it with the help of tags"</string>
     <string name="goods_picker_text_no_goods">Add products to favorites, and attach them to photos, videos and stories!</string>
     <string name="goods_picker_title_no_goods">Product list empty</string>
     <string name="goods_picker_title_photo">Tag product</string>
-    <string name="google_api_key">AIzaSyBf1M4--c04jJtKSWI2w5DgUTst1_V20D4</string>
+    <string name="google_api_key">AIzaSyCL17U2Q5i1NVwIcXgMOZMidSRFHyGYgwM</string>
     <string name="google_app_id">1:841415684880:android:632f429381141121</string>
     <string name="google_assistant_verification_channel_name">Assistant verifier</string>
     <string name="google_assistant_verification_notification_title">Google Assistant sending message</string>
-    <string name="google_crash_reporting_api_key">AIzaSyBf1M4--c04jJtKSWI2w5DgUTst1_V20D4</string>
+    <string name="google_crash_reporting_api_key"></string>
     <string name="google_storage_bucket">api-project-841415684880.appspot.com</string>
     <string name="group">Community</string>
     <string name="group_accept_member">Accept</string>
@@ -5507,7 +5507,7 @@ with video"</string>
     <string name="vtldgadssummary">Posts with ads mark</string>
 
     <string name="storiesGroupsAdBlock">Disable ads of group stories</string>
-    <string name="storiesGroupsAdBlocksummary">Block stories that have a link\n\nFalse positives may occur</string>
+    <string name="storiesGroupsAdBlocksummary">Block stories that have a external link\n\nFalse positives may occur</string>
 
     <string name="vtldca">Disable ad carousel</string>
     <string name="vtldas">Disable ads in stories</string>
@@ -5554,7 +5554,7 @@ Filters are not case-sensitive!"</string>
     <string name="gms_download_microg">Download MicroG</string>
     <string name="gms_what_to_do_next">What to do next?</string>
     <string name="gms_what_to_do_after_microg_title">What to do after installing MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Log in to your Google account \n2. Allow VTLite to receive notifications\n3. Update Firebase registration in Other settings</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Log in to your Google account in the MicroG settings\n2. Enable device registration\n3. Enable cloud messaging\n4. Reinstall VTLite\n5. Allow him to receive notifications</string>
     <string name="donate">Donate</string>
     <string name="fulltime">dd MMMM yyyy HH:mm:ss</string>
     <string name="fulltime2">dd MMMM HH:mm:ss</string>
@@ -5580,7 +5580,7 @@ Does not affect vk.cc links"</string>
     <string name="BGStickerssum">You need to clear the application cache after toggling this option</string>
     <string name="addinf">Additional information</string>
     <string name="copyid">Copy ID</string>
-    <string name="vtssfs">VT Features</string>
+    <string name="vtssfs">Server features</string>
     <string name="vticon">App Icon</string>
     <string name="vticonbtn">Use original icon</string>
     <string name="vticonsummary">The original name and icon of VK</string>
@@ -5615,7 +5615,7 @@ Warning! It can cause long downloads of user lists if there are a lot of users i
     <string name="ctypesocks">Socks</string>
     <string name="dnr">Do not read</string>
     <string name="dns">Disable status of viewing</string>
-    <string name="dnw">Do not write</string>
+    <string name="dnw">Do not type</string>
     <string name="docknumbers">Counters in dockbar</string>
     <string name="docknumberssum">"Disabling doesn't work in the tablet interface"</string>
     <string name="dockbar_tab_titles">Show dockbar item titles</string>
@@ -5774,7 +5774,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="friendsblock_title">Hide friends</string>
     <string name="friendsblock_summ">Hide the block of recommendations of friends in friends section</string>
     <string name="onlineformatter_title">Extended online indicator</string>
-    <string name="onlineformatter_summ">Show what app/device a person is online from</string>
+    <string name="onlineformatter_summ">Show what app/device a person is online from\n\nFor example: Online using Kate Mobile</string>
     <string name="voices_vtl">Voice messages</string>
     <string name="disable_voice_listening_summ">The function allows you not to send the status of listening to the person\'s voice messages by you</string>
     <string name="listen_v_title">Disable listening status</string>
@@ -5879,7 +5879,7 @@ May look like a fake leaving the online"</string>
 
     <string name="activity_what_is_it">What is it?</string>
     <string name="activity_dnr_summary">Function lets you don\'t send read message status</string>
-    <string name="activity_dnw_summary">Function lets you don\'t send write message status</string>
+    <string name="activity_dnw_summary">Function lets you don\'t send type message status</string>
     <string name="activity_dns_summary">Function lets you don\'t send read stories status</string>
 
     <string name="activity_dnr_visual">Visually may not work correctly (locally read), but companion will see that it wasn\'t read.</string>
@@ -6555,4 +6555,36 @@ May look like a fake leaving the online"</string>
 
     <string name="invertcached_title">Invert list</string>
     <string name="invertcached_summ">Invert cached track list</string>
+
+    <string name="sett_recommendations">Recommendations</string>
+    <string name="sett_nogms_summ">Missing these services causes background notifications to break and application components to have problems working</string>
+    <string name="sett_missing_links">There is no links selected to be opened by the application</string>
+    <string name="sett_missing_links_summ">This will prevent external links from being opened by this app to open them\n\nIn some cases it is necessary to disable the opening of links to official VKontakte applications</string>
+    <string name="sett_battery">Turn off power management</string>
+    <string name="sett_battery_summ1">Battery savings prevents background messages, notifications and music from functioning properly</string>
+    <string name="sett_battery_summ2">\n\nFor Xiaomi devices, you need to manually enable Autorun to this application in the system settings</string>
+    <string name="sett_notifs">Turn on notifications</string>
+    <string name="sett_notifs_summ">Without notifications enabled, you won\'t be able to receive messages and many others things</string>
+    <string name="sett_chats">Our chats</string>
+    <string name="sett_chats_summ">Live chats to discuss modification and more</string>
+    <string name="sett_community">Our communities</string>
+    <string name="sett_community_summ">Latest information about updates and more</string>
+    <string name="sett_autoupdates">Autoupdate</string>
+    <string name="sett_autoupdates_summ">Receive notification when a new version of the application is released</string>
+    <string name="update_latest">You have the latest version of the app installed</string>
+    <string name="update_err">Error checking for updates</string>
+    <string name="serverFeaturesDisable">Disable all external connections</string>
+    <string name="serverFeaturesDisable_summ">Disables verifications and all additional functions related to receiving data from the VTosters server</string>
+
+    <string name="tgs_token_missing">Token is missing</string>
+    <string name="tgs_token_reset_dialog">Reset the bot token?</string>
+    <string name="tgs_token_reset">The bot token has been reset</string>
+    <string name="tgs_token_reset_menu">Reset the bot token</string>
+
+    <string name="microg_dialog1">Reduced MicroG (ReVanced)</string>
+    <string name="microg_dialog2">Alternate MicroG (ReVanced)</string>
+    <string name="microg_dialog3">Full MicroG (GMS Replacement)</string>
+
+    <string name="disable_roaming_state">Disable force traffic saver</string>
+    <string name="disable_roaming_state_submit">Disable forcing traffic saver feature</string>
 </resources>

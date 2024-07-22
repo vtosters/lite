@@ -83,8 +83,8 @@
     .locals 1
 
     .line 21
-    # ru.vtosters.lite.music.hook.MusicArtistSelectorHook.navigateToSearch(Context context, String artist)
-    invoke-static {p1, p2}, Lru/vtosters/lite/music/hook/MusicArtistSelectorHook;->navigateToSearch(Landroid/content/Context;Ljava/lang/String;)V
+    # ru.vtosters.hooks.music.MusicArtistSelectorHook.navigateToSearch(Context context, String artist)
+    invoke-static {p1, p2}, Lru/vtosters/hooks/music/MusicArtistSelectorHook;->navigateToSearch(Landroid/content/Context;Ljava/lang/String;)V
 
 #    new-instance v0, Lcom/vk/music/search/MusicSearchFragment$a;
 #

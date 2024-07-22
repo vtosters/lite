@@ -13,6 +13,7 @@ import ru.vtosters.hooks.other.ThemesUtils;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class VTLResources extends Resources {
     private static final String TAG = "VTLResources";
@@ -32,12 +33,8 @@ public class VTLResources extends Resources {
         attributesToTheme.add(16843173);
     }
 
-    private final Context context;
-
     public VTLResources(Context context, Resources parent) {
         super(parent.getAssets(), parent.getDisplayMetrics(), parent.getConfiguration());
-        this.context = context;
-//        Log.d(TAG, "VTLResources: init");
     }
 
     private static boolean isAttrThemeable(int attrID) {
@@ -49,42 +46,49 @@ public class VTLResources extends Resources {
             return (int[]) typedArrayField.get(arr);
         } catch (IllegalAccessException e) {
             Log.e(TAG, "getArrayData: ", e);
-            e.printStackTrace();
+            e.fillInStackTrace();
             return new int[0];
         }
     }
 
     @Override
     public TypedArray obtainAttributes(AttributeSet set, int[] attrs) {
-        var typedArray = super.obtainAttributes(set, attrs);
-        var data = getArrayData(typedArray);
-        for (int i = 0; i < attrs.length; i++) {
-            try {
-                int attrID = attrs[i];
-                if (attributesToTheme.contains(attrID)) {
-                    int type = data[i * 6];
-                    int cnt = data[(i * 6) + 1];
+        TypedArray typedArray = super.obtainAttributes(set, attrs);
 
-                    if (type == TypedValue.TYPE_ATTRIBUTE && isAttrThemeable(cnt)) {
-                        data[i * 6] = TypedValue.TYPE_INT_COLOR_RGB8;
-                        data[(i * 6) + 1] = ThemesUtils.getAccentColor();
-                        data[(i * 6) + 2] = 0; // clear reference content
+        if (ThemesUtils.isMonetTheme()) {
+            int[] data = getArrayData(typedArray);
+            IntStream.range(0, attrs.length).forEach(i -> {
+                try {
+                    int attrID = attrs[i];
+                    if (attributesToTheme.contains(attrID)) {
+                        int type = data[i * 6];
+                        int cnt = data[(i * 6) + 1];
+
+                        if (type == TypedValue.TYPE_ATTRIBUTE && isAttrThemeable(cnt)) {
+                            data[i * 6] = TypedValue.TYPE_INT_COLOR_RGB8;
+                            data[(i * 6) + 1] = ThemesUtils.getAccentColor();
+                            data[(i * 6) + 2] = 0; // clear reference content
+                        }
                     }
+                } catch (Exception e) {
+                    Log.e(TAG, "TAVzlom failed! (obtainAttributes)");
+                    e.fillInStackTrace();
                 }
-            } catch (Exception e) {
-                Log.e(TAG, "TAVzlom failed! (obtainAttributes)");
-                e.printStackTrace();
-            }
+            });
         }
         return typedArray;
     }
 
     @Override
     public Drawable getDrawable(int id, @Nullable Theme theme) throws NotFoundException {
-        var drawable = super.getDrawable(id, theme);
-        if (id == com.vtosters.lite.R.drawable.newsfeed_tab_dropdown_16) {
+        Drawable drawable = super.getDrawable(id, theme);
+        fixDropdown(id, drawable);
+        return drawable;
+    }
+
+    private void fixDropdown(int id, Drawable drawable) {
+        if (id == com.vtosters.lite.R.drawable.newsfeed_tab_dropdown_16 && ThemesUtils.isMonetTheme()) {
             ThemesHacks.fixDropdown(drawable);
         }
-        return drawable;
     }
 }

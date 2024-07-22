@@ -31,6 +31,148 @@ import static java.nio.charset.StandardCharsets.US_ASCII;
  * Describes a particular resource configuration.
  */
 public class BinaryResourceConfiguration implements SerializableResource {
+    /**
+     * The below constants are from android.content.res.Configuration.
+     */
+    private static final int DENSITY_DPI_UNDEFINED = 0;
+    private static final int DENSITY_DPI_LDPI = 120;
+    private static final int DENSITY_DPI_MDPI = 160;
+    private static final int DENSITY_DPI_TVDPI = 213;
+    private static final int DENSITY_DPI_HDPI = 240;
+    private static final int DENSITY_DPI_XHDPI = 320;
+    private static final int DENSITY_DPI_XXHDPI = 480;
+    private static final int DENSITY_DPI_XXXHDPI = 640;
+    private static final int DENSITY_DPI_ANY = 0xFFFE;
+    private static final int DENSITY_DPI_NONE = 0xFFFF;
+    private static final Map<Integer, String> DENSITY_DPI_VALUES =
+            ImmutableMap.<Integer, String>builder()
+                    .put(DENSITY_DPI_UNDEFINED, "")
+                    .put(DENSITY_DPI_LDPI, "ldpi")
+                    .put(DENSITY_DPI_MDPI, "mdpi")
+                    .put(DENSITY_DPI_TVDPI, "tvdpi")
+                    .put(DENSITY_DPI_HDPI, "hdpi")
+                    .put(DENSITY_DPI_XHDPI, "xhdpi")
+                    .put(DENSITY_DPI_XXHDPI, "xxhdpi")
+                    .put(DENSITY_DPI_XXXHDPI, "xxxhdpi")
+                    .put(DENSITY_DPI_ANY, "anydpi")
+                    .put(DENSITY_DPI_NONE, "nodpi")
+                    .build();
+    private static final int KEYBOARD_NOKEYS = 1;
+    private static final int KEYBOARD_QWERTY = 2;
+    private static final int KEYBOARD_12KEY = 3;
+    private static final Map<Integer, String> KEYBOARD_VALUES = ImmutableMap.of(
+            KEYBOARD_NOKEYS, "nokeys",
+            KEYBOARD_QWERTY, "qwerty",
+            KEYBOARD_12KEY, "12key");
+    private static final int KEYBOARDHIDDEN_MASK = 0x03;
+    private static final int KEYBOARDHIDDEN_NO = 1;
+    private static final int KEYBOARDHIDDEN_YES = 2;
+    private static final int KEYBOARDHIDDEN_SOFT = 3;
+    private static final Map<Integer, String> KEYBOARDHIDDEN_VALUES = ImmutableMap.of(
+            KEYBOARDHIDDEN_NO, "keysexposed",
+            KEYBOARDHIDDEN_YES, "keyshidden",
+            KEYBOARDHIDDEN_SOFT, "keyssoft");
+    private static final int NAVIGATION_NONAV = 1;
+    private static final int NAVIGATION_DPAD = 2;
+    private static final int NAVIGATION_TRACKBALL = 3;
+    private static final int NAVIGATION_WHEEL = 4;
+    private static final Map<Integer, String> NAVIGATION_VALUES = ImmutableMap.of(
+            NAVIGATION_NONAV, "nonav",
+            NAVIGATION_DPAD, "dpad",
+            NAVIGATION_TRACKBALL, "trackball",
+            NAVIGATION_WHEEL, "wheel");
+    private static final int NAVIGATIONHIDDEN_MASK = 0x0C;
+    private static final int NAVIGATIONHIDDEN_NO = 0x04;
+    private static final int NAVIGATIONHIDDEN_YES = 0x08;
+    private static final Map<Integer, String> NAVIGATIONHIDDEN_VALUES = ImmutableMap.of(
+            NAVIGATIONHIDDEN_NO, "navexposed",
+            NAVIGATIONHIDDEN_YES, "navhidden");
+    private static final int ORIENTATION_PORTRAIT = 0x01;
+    private static final int ORIENTATION_LANDSCAPE = 0x02;
+    private static final Map<Integer, String> ORIENTATION_VALUES = ImmutableMap.of(
+            ORIENTATION_PORTRAIT, "port",
+            ORIENTATION_LANDSCAPE, "land");
+    private static final int SCREENLAYOUT_LAYOUTDIR_MASK = 0xC0;
+    private static final int SCREENLAYOUT_LAYOUTDIR_LTR = 0x40;
+    private static final int SCREENLAYOUT_LAYOUTDIR_RTL = 0x80;
+    private static final Map<Integer, String> SCREENLAYOUT_LAYOUTDIR_VALUES = ImmutableMap.of(
+            SCREENLAYOUT_LAYOUTDIR_LTR, "ldltr",
+            SCREENLAYOUT_LAYOUTDIR_RTL, "ldrtl");
+    private static final int SCREENLAYOUT_LONG_MASK = 0x30;
+    private static final int SCREENLAYOUT_LONG_NO = 0x10;
+    private static final int SCREENLAYOUT_LONG_YES = 0x20;
+    private static final Map<Integer, String> SCREENLAYOUT_LONG_VALUES = ImmutableMap.of(
+            SCREENLAYOUT_LONG_NO, "notlong",
+            SCREENLAYOUT_LONG_YES, "long");
+    private static final int SCREENLAYOUT_ROUND_MASK = 0x03;
+    private static final int SCREENLAYOUT_ROUND_NO = 0x01;
+    private static final int SCREENLAYOUT_ROUND_YES = 0x02;
+    private static final Map<Integer, String> SCREENLAYOUT_ROUND_VALUES = ImmutableMap.of(
+            SCREENLAYOUT_ROUND_NO, "notround",
+            SCREENLAYOUT_ROUND_YES, "round");
+    private static final int SCREENLAYOUT_SIZE_MASK = 0x0F;
+    private static final int SCREENLAYOUT_SIZE_SMALL = 0x01;
+    private static final int SCREENLAYOUT_SIZE_NORMAL = 0x02;
+    private static final int SCREENLAYOUT_SIZE_LARGE = 0x03;
+    private static final int SCREENLAYOUT_SIZE_XLARGE = 0x04;
+    private static final Map<Integer, String> SCREENLAYOUT_SIZE_VALUES = ImmutableMap.of(
+            SCREENLAYOUT_SIZE_SMALL, "small",
+            SCREENLAYOUT_SIZE_NORMAL, "normal",
+            SCREENLAYOUT_SIZE_LARGE, "large",
+            SCREENLAYOUT_SIZE_XLARGE, "xlarge");
+    private static final int TOUCHSCREEN_NOTOUCH = 1;
+    private static final int TOUCHSCREEN_FINGER = 3;
+    private static final Map<Integer, String> TOUCHSCREEN_VALUES = ImmutableMap.of(
+            TOUCHSCREEN_NOTOUCH, "notouch",
+            TOUCHSCREEN_FINGER, "finger");
+    private static final int UI_MODE_NIGHT_MASK = 0x30;
+    private static final int UI_MODE_NIGHT_NO = 0x10;
+    private static final int UI_MODE_NIGHT_YES = 0x20;
+    private static final Map<Integer, String> UI_MODE_NIGHT_VALUES = ImmutableMap.of(
+            UI_MODE_NIGHT_NO, "notnight",
+            UI_MODE_NIGHT_YES, "night");
+    private static final int UI_MODE_TYPE_MASK = 0x0F;
+    private static final int UI_MODE_TYPE_DESK = 0x02;
+    private static final int UI_MODE_TYPE_CAR = 0x03;
+    private static final int UI_MODE_TYPE_TELEVISION = 0x04;
+    private static final int UI_MODE_TYPE_APPLIANCE = 0x05;
+    private static final int UI_MODE_TYPE_WATCH = 0x06;
+    private static final int UI_MODE_TYPE_VR_HEADSET = 0x07;
+    // start - miui
+    private static final int UI_MODE_TYPE_GODZILLAUI = 0x0b;
+    private static final int UI_MODE_TYPE_SMALLUI = 0x0c;
+    private static final int UI_MODE_TYPE_MEDIUMUI = 0x0d;
+    private static final int UI_MODE_TYPE_LARGEUI = 0x0e;
+    private static final int UI_MODE_TYPE_HUGEUI = 0x0f;
+    private static final Map<Integer, String> UI_MODE_TYPE_VALUES =
+            ImmutableMap.<Integer, String>builder()
+                    .put(UI_MODE_TYPE_DESK, "desk")
+                    .put(UI_MODE_TYPE_CAR, "car")
+                    .put(UI_MODE_TYPE_TELEVISION, "television")
+                    .put(UI_MODE_TYPE_APPLIANCE, "appliance")
+                    .put(UI_MODE_TYPE_WATCH, "watch")
+                    .put(UI_MODE_TYPE_VR_HEADSET, "vrheadset")
+                    .put(UI_MODE_TYPE_GODZILLAUI, "godzillaui")
+                    .put(UI_MODE_TYPE_SMALLUI, "smallui")
+                    .put(UI_MODE_TYPE_MEDIUMUI, "mediumui")
+                    .put(UI_MODE_TYPE_LARGEUI, "largeui")
+                    .put(UI_MODE_TYPE_HUGEUI, "hugeui").build();
+    /**
+     * The minimum size in bytes that this configuration must be to contain screen config info.
+     */
+    private static final int SCREEN_CONFIG_MIN_SIZE = 32;
+    /**
+     * The minimum size in bytes that this configuration must be to contain screen dp info.
+     */
+    private static final int SCREEN_DP_MIN_SIZE = 36;
+    /**
+     * The minimum size in bytes that this configuration must be to contain locale info.
+     */
+    private static final int LOCALE_MIN_SIZE = 48;
+    /**
+     * The minimum size in bytes that this config must be to contain the screenConfig extension.
+     */
+    private static final int SCREEN_CONFIG_EXTENSION_MIN_SIZE = 52;
     private final int size;
     private final int mcc;
     private final int mnc;
@@ -53,8 +195,59 @@ public class BinaryResourceConfiguration implements SerializableResource {
     private final int screenHeightDp;
     private final byte[] localeScript;
     private final byte[] localeVariant;
+    // end - miui
     private final int screenLayout2;
     private final byte[] unknown;
+
+    private BinaryResourceConfiguration(int size,
+                                        int mcc,
+                                        int mnc,
+                                        byte[] language,
+                                        byte[] region,
+                                        int orientation,
+                                        int touchscreen,
+                                        int density,
+                                        int keyboard,
+                                        int navigation,
+                                        int inputFlags,
+                                        int screenWidth,
+                                        int screenHeight,
+                                        int sdkVersion,
+                                        int minorVersion,
+                                        int screenLayout,
+                                        int uiMode,
+                                        int smallestScreenWidthDp,
+                                        int screenWidthDp,
+                                        int screenHeightDp,
+                                        byte[] localeScript,
+                                        byte[] localeVariant,
+                                        int screenLayout2,
+                                        byte[] unknown) {
+        this.size = size;
+        this.mcc = mcc;
+        this.mnc = mnc;
+        this.language = language;
+        this.region = region;
+        this.orientation = orientation;
+        this.touchscreen = touchscreen;
+        this.density = density;
+        this.keyboard = keyboard;
+        this.navigation = navigation;
+        this.inputFlags = inputFlags;
+        this.screenWidth = screenWidth;
+        this.screenHeight = screenHeight;
+        this.sdkVersion = sdkVersion;
+        this.minorVersion = minorVersion;
+        this.screenLayout = screenLayout;
+        this.uiMode = uiMode;
+        this.smallestScreenWidthDp = smallestScreenWidthDp;
+        this.screenWidthDp = screenWidthDp;
+        this.screenHeightDp = screenHeightDp;
+        this.localeScript = localeScript;
+        this.localeVariant = localeVariant;
+        this.screenLayout2 = screenLayout2;
+        this.unknown = unknown;
+    }
 
     static BinaryResourceConfiguration create(ByteBuffer buffer) {
         int startPosition = buffer.position();  // The starting buffer position to calculate bytes read.
@@ -120,245 +313,6 @@ public class BinaryResourceConfiguration implements SerializableResource {
                 sdkVersion, minorVersion, screenLayout, uiMode, smallestScreenWidthDp, screenWidthDp,
                 screenHeightDp, localeScript, localeVariant, screenLayout2, unknown);
     }
-
-    private BinaryResourceConfiguration(int size,
-                                        int mcc,
-                                        int mnc,
-                                        byte[] language,
-                                        byte[] region,
-                                        int orientation,
-                                        int touchscreen,
-                                        int density,
-                                        int keyboard,
-                                        int navigation,
-                                        int inputFlags,
-                                        int screenWidth,
-                                        int screenHeight,
-                                        int sdkVersion,
-                                        int minorVersion,
-                                        int screenLayout,
-                                        int uiMode,
-                                        int smallestScreenWidthDp,
-                                        int screenWidthDp,
-                                        int screenHeightDp,
-                                        byte[] localeScript,
-                                        byte[] localeVariant,
-                                        int screenLayout2,
-                                        byte[] unknown) {
-        this.size = size;
-        this.mcc = mcc;
-        this.mnc = mnc;
-        this.language = language;
-        this.region = region;
-        this.orientation = orientation;
-        this.touchscreen = touchscreen;
-        this.density = density;
-        this.keyboard = keyboard;
-        this.navigation = navigation;
-        this.inputFlags = inputFlags;
-        this.screenWidth = screenWidth;
-        this.screenHeight = screenHeight;
-        this.sdkVersion = sdkVersion;
-        this.minorVersion = minorVersion;
-        this.screenLayout = screenLayout;
-        this.uiMode = uiMode;
-        this.smallestScreenWidthDp = smallestScreenWidthDp;
-        this.screenWidthDp = screenWidthDp;
-        this.screenHeightDp = screenHeightDp;
-        this.localeScript = localeScript;
-        this.localeVariant = localeVariant;
-        this.screenLayout2 = screenLayout2;
-        this.unknown = unknown;
-    }
-
-    /**
-     * The different types of configs that can be present in a {@link BinaryResourceConfiguration}.
-     */
-    public enum Type {
-        MCC,
-        MNC,
-        LANGUAGE_STRING,
-        REGION_STRING,
-        SCREEN_LAYOUT_DIRECTION,
-        SMALLEST_SCREEN_WIDTH_DP,
-        SCREEN_WIDTH_DP,
-        SCREEN_HEIGHT_DP,
-        SCREEN_LAYOUT_SIZE,
-        SCREEN_LAYOUT_LONG,
-        SCREEN_LAYOUT_ROUND,
-        ORIENTATION,
-        UI_MODE_TYPE,
-        UI_MODE_NIGHT,
-        DENSITY_DPI,
-        TOUCHSCREEN,
-        KEYBOARD_HIDDEN,
-        KEYBOARD,
-        NAVIGATION_HIDDEN,
-        NAVIGATION,
-        SDK_VERSION
-    }
-
-    /**
-     * The below constants are from android.content.res.Configuration.
-     */
-    private static final int DENSITY_DPI_UNDEFINED = 0;
-    private static final int DENSITY_DPI_LDPI = 120;
-    private static final int DENSITY_DPI_MDPI = 160;
-    private static final int DENSITY_DPI_TVDPI = 213;
-    private static final int DENSITY_DPI_HDPI = 240;
-    private static final int DENSITY_DPI_XHDPI = 320;
-    private static final int DENSITY_DPI_XXHDPI = 480;
-    private static final int DENSITY_DPI_XXXHDPI = 640;
-    private static final int DENSITY_DPI_ANY = 0xFFFE;
-    private static final int DENSITY_DPI_NONE = 0xFFFF;
-    private static final Map<Integer, String> DENSITY_DPI_VALUES =
-            ImmutableMap.<Integer, String>builder()
-                    .put(DENSITY_DPI_UNDEFINED, "")
-                    .put(DENSITY_DPI_LDPI, "ldpi")
-                    .put(DENSITY_DPI_MDPI, "mdpi")
-                    .put(DENSITY_DPI_TVDPI, "tvdpi")
-                    .put(DENSITY_DPI_HDPI, "hdpi")
-                    .put(DENSITY_DPI_XHDPI, "xhdpi")
-                    .put(DENSITY_DPI_XXHDPI, "xxhdpi")
-                    .put(DENSITY_DPI_XXXHDPI, "xxxhdpi")
-                    .put(DENSITY_DPI_ANY, "anydpi")
-                    .put(DENSITY_DPI_NONE, "nodpi")
-                    .build();
-
-    private static final int KEYBOARD_NOKEYS = 1;
-    private static final int KEYBOARD_QWERTY = 2;
-    private static final int KEYBOARD_12KEY = 3;
-    private static final Map<Integer, String> KEYBOARD_VALUES = ImmutableMap.of(
-            KEYBOARD_NOKEYS, "nokeys",
-            KEYBOARD_QWERTY, "qwerty",
-            KEYBOARD_12KEY, "12key");
-
-    private static final int KEYBOARDHIDDEN_MASK = 0x03;
-    private static final int KEYBOARDHIDDEN_NO = 1;
-    private static final int KEYBOARDHIDDEN_YES = 2;
-    private static final int KEYBOARDHIDDEN_SOFT = 3;
-    private static final Map<Integer, String> KEYBOARDHIDDEN_VALUES = ImmutableMap.of(
-            KEYBOARDHIDDEN_NO, "keysexposed",
-            KEYBOARDHIDDEN_YES, "keyshidden",
-            KEYBOARDHIDDEN_SOFT, "keyssoft");
-
-    private static final int NAVIGATION_NONAV = 1;
-    private static final int NAVIGATION_DPAD = 2;
-    private static final int NAVIGATION_TRACKBALL = 3;
-    private static final int NAVIGATION_WHEEL = 4;
-    private static final Map<Integer, String> NAVIGATION_VALUES = ImmutableMap.of(
-            NAVIGATION_NONAV, "nonav",
-            NAVIGATION_DPAD, "dpad",
-            NAVIGATION_TRACKBALL, "trackball",
-            NAVIGATION_WHEEL, "wheel");
-
-    private static final int NAVIGATIONHIDDEN_MASK = 0x0C;
-    private static final int NAVIGATIONHIDDEN_NO = 0x04;
-    private static final int NAVIGATIONHIDDEN_YES = 0x08;
-    private static final Map<Integer, String> NAVIGATIONHIDDEN_VALUES = ImmutableMap.of(
-            NAVIGATIONHIDDEN_NO, "navexposed",
-            NAVIGATIONHIDDEN_YES, "navhidden");
-
-    private static final int ORIENTATION_PORTRAIT = 0x01;
-    private static final int ORIENTATION_LANDSCAPE = 0x02;
-    private static final Map<Integer, String> ORIENTATION_VALUES = ImmutableMap.of(
-            ORIENTATION_PORTRAIT, "port",
-            ORIENTATION_LANDSCAPE, "land");
-
-    private static final int SCREENLAYOUT_LAYOUTDIR_MASK = 0xC0;
-    private static final int SCREENLAYOUT_LAYOUTDIR_LTR = 0x40;
-    private static final int SCREENLAYOUT_LAYOUTDIR_RTL = 0x80;
-    private static final Map<Integer, String> SCREENLAYOUT_LAYOUTDIR_VALUES = ImmutableMap.of(
-            SCREENLAYOUT_LAYOUTDIR_LTR, "ldltr",
-            SCREENLAYOUT_LAYOUTDIR_RTL, "ldrtl");
-
-    private static final int SCREENLAYOUT_LONG_MASK = 0x30;
-    private static final int SCREENLAYOUT_LONG_NO = 0x10;
-    private static final int SCREENLAYOUT_LONG_YES = 0x20;
-    private static final Map<Integer, String> SCREENLAYOUT_LONG_VALUES = ImmutableMap.of(
-            SCREENLAYOUT_LONG_NO, "notlong",
-            SCREENLAYOUT_LONG_YES, "long");
-
-    private static final int SCREENLAYOUT_ROUND_MASK = 0x03;
-    private static final int SCREENLAYOUT_ROUND_NO = 0x01;
-    private static final int SCREENLAYOUT_ROUND_YES = 0x02;
-    private static final Map<Integer, String> SCREENLAYOUT_ROUND_VALUES = ImmutableMap.of(
-            SCREENLAYOUT_ROUND_NO, "notround",
-            SCREENLAYOUT_ROUND_YES, "round");
-
-    private static final int SCREENLAYOUT_SIZE_MASK = 0x0F;
-    private static final int SCREENLAYOUT_SIZE_SMALL = 0x01;
-    private static final int SCREENLAYOUT_SIZE_NORMAL = 0x02;
-    private static final int SCREENLAYOUT_SIZE_LARGE = 0x03;
-    private static final int SCREENLAYOUT_SIZE_XLARGE = 0x04;
-    private static final Map<Integer, String> SCREENLAYOUT_SIZE_VALUES = ImmutableMap.of(
-            SCREENLAYOUT_SIZE_SMALL, "small",
-            SCREENLAYOUT_SIZE_NORMAL, "normal",
-            SCREENLAYOUT_SIZE_LARGE, "large",
-            SCREENLAYOUT_SIZE_XLARGE, "xlarge");
-
-    private static final int TOUCHSCREEN_NOTOUCH = 1;
-    private static final int TOUCHSCREEN_FINGER = 3;
-    private static final Map<Integer, String> TOUCHSCREEN_VALUES = ImmutableMap.of(
-            TOUCHSCREEN_NOTOUCH, "notouch",
-            TOUCHSCREEN_FINGER, "finger");
-
-    private static final int UI_MODE_NIGHT_MASK = 0x30;
-    private static final int UI_MODE_NIGHT_NO = 0x10;
-    private static final int UI_MODE_NIGHT_YES = 0x20;
-    private static final Map<Integer, String> UI_MODE_NIGHT_VALUES = ImmutableMap.of(
-            UI_MODE_NIGHT_NO, "notnight",
-            UI_MODE_NIGHT_YES, "night");
-
-    private static final int UI_MODE_TYPE_MASK = 0x0F;
-    private static final int UI_MODE_TYPE_DESK = 0x02;
-    private static final int UI_MODE_TYPE_CAR = 0x03;
-    private static final int UI_MODE_TYPE_TELEVISION = 0x04;
-    private static final int UI_MODE_TYPE_APPLIANCE = 0x05;
-    private static final int UI_MODE_TYPE_WATCH = 0x06;
-    private static final int UI_MODE_TYPE_VR_HEADSET = 0x07;
-
-    // start - miui
-    private static final int UI_MODE_TYPE_GODZILLAUI = 0x0b;
-    private static final int UI_MODE_TYPE_SMALLUI = 0x0c;
-    private static final int UI_MODE_TYPE_MEDIUMUI = 0x0d;
-    private static final int UI_MODE_TYPE_LARGEUI = 0x0e;
-    private static final int UI_MODE_TYPE_HUGEUI = 0x0f;
-    // end - miui
-
-    private static final Map<Integer, String> UI_MODE_TYPE_VALUES =
-            ImmutableMap.<Integer, String>builder()
-                    .put(UI_MODE_TYPE_DESK, "desk")
-                    .put(UI_MODE_TYPE_CAR, "car")
-                    .put(UI_MODE_TYPE_TELEVISION, "television")
-                    .put(UI_MODE_TYPE_APPLIANCE, "appliance")
-                    .put(UI_MODE_TYPE_WATCH, "watch")
-                    .put(UI_MODE_TYPE_VR_HEADSET, "vrheadset")
-                    .put(UI_MODE_TYPE_GODZILLAUI, "godzillaui")
-                    .put(UI_MODE_TYPE_SMALLUI, "smallui")
-                    .put(UI_MODE_TYPE_MEDIUMUI, "mediumui")
-                    .put(UI_MODE_TYPE_LARGEUI, "largeui")
-                    .put(UI_MODE_TYPE_HUGEUI, "hugeui").build();
-
-    /**
-     * The minimum size in bytes that this configuration must be to contain screen config info.
-     */
-    private static final int SCREEN_CONFIG_MIN_SIZE = 32;
-
-    /**
-     * The minimum size in bytes that this configuration must be to contain screen dp info.
-     */
-    private static final int SCREEN_DP_MIN_SIZE = 36;
-
-    /**
-     * The minimum size in bytes that this configuration must be to contain locale info.
-     */
-    private static final int LOCALE_MIN_SIZE = 48;
-
-    /**
-     * The minimum size in bytes that this config must be to contain the screenConfig extension.
-     */
-    private static final int SCREEN_CONFIG_EXTENSION_MIN_SIZE = 52;
 
     /**
      * The number of bytes that this resource configuration takes up.
@@ -708,7 +662,7 @@ public class BinaryResourceConfiguration implements SerializableResource {
         Map<Type, String> result = new LinkedHashMap<>();  // Preserve order for #toString().
         result.put(Type.MCC, mcc() != 0 ? "mcc" + mcc() : "");
         result.put(Type.MNC, mnc() != 0 ? "mnc" + mnc() : "");
-        result.put(Type.LANGUAGE_STRING, !languageString().isEmpty() ? "" + languageString() : "");
+        result.put(Type.LANGUAGE_STRING, !languageString().isEmpty() ? languageString() : "");
         result.put(Type.REGION_STRING, !regionString().isEmpty() ? "r" + regionString() : "");
         result.put(Type.SCREEN_LAYOUT_DIRECTION,
                 getOrDefault(SCREENLAYOUT_LAYOUTDIR_VALUES, screenLayoutDirection(), ""));
@@ -741,5 +695,32 @@ public class BinaryResourceConfiguration implements SerializableResource {
         // Null is not returned, even if the map contains a key whose value is null. This is intended.
         V value = map.get(key);
         return value != null ? value : defaultValue;
+    }
+
+    /**
+     * The different types of configs that can be present in a {@link BinaryResourceConfiguration}.
+     */
+    public enum Type {
+        MCC,
+        MNC,
+        LANGUAGE_STRING,
+        REGION_STRING,
+        SCREEN_LAYOUT_DIRECTION,
+        SMALLEST_SCREEN_WIDTH_DP,
+        SCREEN_WIDTH_DP,
+        SCREEN_HEIGHT_DP,
+        SCREEN_LAYOUT_SIZE,
+        SCREEN_LAYOUT_LONG,
+        SCREEN_LAYOUT_ROUND,
+        ORIENTATION,
+        UI_MODE_TYPE,
+        UI_MODE_NIGHT,
+        DENSITY_DPI,
+        TOUCHSCREEN,
+        KEYBOARD_HIDDEN,
+        KEYBOARD,
+        NAVIGATION_HIDDEN,
+        NAVIGATION,
+        SDK_VERSION
     }
 }

@@ -46,7 +46,7 @@ public final class MsgPartCallHolder extends MsgPartHolderBase<AttachCall> {
         this.G = new StringBuilder();
     }
 
-    private final void a(Msg var1) {
+    private void a(Msg var1) {
         this.G.setLength(0);
         MsgTimeFormatter var2 = this.F;
         Context var3 = this.C;
@@ -55,7 +55,7 @@ public final class MsgPartCallHolder extends MsgPartHolderBase<AttachCall> {
         this.H.setTimeText(this.G);
     }
 
-    private final void a(boolean var1) {
+    private void a(boolean var1) {
         MsgPartIconTwoRowView var2 = this.H;
         int var3;
         if (var1) {
@@ -67,7 +67,7 @@ public final class MsgPartCallHolder extends MsgPartHolderBase<AttachCall> {
         var2.setIcon(var3);
     }
 
-    private final void a(boolean var1, AttachCall var2) {
+    private void a(boolean var1, AttachCall var2) {
         boolean var3 = !var1;
         if (var2.h() == CallState.ERROR) {
             this.H.setSubtitleText(m.vkim_msg_list_call_error);

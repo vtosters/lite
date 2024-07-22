@@ -64,7 +64,7 @@ public class OTADialog extends ModalBottomSheetWrapper<OTADialog> implements OTA
     public void onUpdateLatest(boolean isManualCheck) {
         if (isManualCheck) {
             mActivity.runOnUiThread(() -> {
-                Toast.makeText(mActivity, "У вас установлена последняя версия приложения", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mActivity, AndroidUtils.getString("update_latest"), Toast.LENGTH_SHORT).show();
             });
         }
     }
@@ -72,7 +72,7 @@ public class OTADialog extends ModalBottomSheetWrapper<OTADialog> implements OTA
     @Override
     public void onUpdateError() {
         mActivity.runOnUiThread(() -> {
-            Toast.makeText(mActivity, "Ошибка проверки обновления", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mActivity, AndroidUtils.getString("update_err"), Toast.LENGTH_SHORT).show();
         });
     }
 }

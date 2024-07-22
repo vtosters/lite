@@ -47,9 +47,6 @@
     <PreferenceCategory
             android:key="dockbarsett"
             android:title="@string/vtl_settings_dockbar_title">
-        <Preference
-                android:key="dockbareditor"
-                android:title="@string/dockbar_editor"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="true"
                 android:key="dockbar_tab_titles"

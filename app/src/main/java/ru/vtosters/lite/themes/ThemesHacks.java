@@ -31,22 +31,30 @@ public class ThemesHacks {
                 }
             }
 
-            if (ThemesCore.isCachedAccents() && ColorReferences.isAccentedColor(context.getResources().getColor(color))) {
+            if (ThemesCore.isCachedAccents() && ColorReferences.isAccentedColor(getColors(context, color))) {
                 return ThemesUtils.getAccentColor();
             }
 
-            if (ThemesCore.isCachedAccents() && ColorReferences.isMutedAccentedColor(context.getResources().getColor(color))) {
+            if (ThemesCore.isCachedAccents() && ColorReferences.isMutedAccentedColor(getColors(context, color))) {
                 return ThemesUtils.getMutedAccentColor();
             }
         }
 
-        return Build.VERSION.SDK_INT > 23 ? context.getColor(color) : context.getResources().getColor(color);
+        return getColors(context, color);
+    }
+
+    public static int getColors(Context context, int color) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return context.getColor(color);
+        } else {
+            return context.getResources().getColor(color);
+        }
     }
 
     // Фиксит селектор (все/свои/архив) в профиле
     public static void fixProfileSelector(View view) {
         if (!ThemesUtils.isMilkshake()) return;
-        var id = view.getId();
+        int id = view.getId();
 
         if (id == R.id.profile_wall_owner_posts || id == R.id.profile_wall_all_posts || id == R.id.profile_wall_archived_posts) {
             StateListDrawable states = (StateListDrawable) ((LayerDrawable) view.getBackground()).getDrawable(0);

@@ -61,6 +61,8 @@
 .method private final a(Lcom/vk/dto/music/CurrentAccountInformation;)V
     .locals 2
 
+    return-void
+
     .line 19
     invoke-virtual {p1}, Lcom/vk/dto/music/CurrentAccountInformation;->a()Z
 
@@ -194,6 +196,21 @@
 .method public a(Lcom/vk/dto/music/MusicTrack;)V
     .locals 3
 
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->sendMusicMetrics()Z
+
+    move-result v1
+
+    if-nez v1, :cond_228
+
+    const/4 v0, 0x1
+
+    new-instance p1, Lcom/vk/dto/music/CurrentAccountInformation;
+
+    invoke-direct {p1, v0}, Lcom/vk/dto/music/CurrentAccountInformation;-><init>(Z)V
+    
+    return-void
+
+    :cond_228
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -222,41 +239,41 @@
 
     .line 14
     :cond_0
-    # new-instance v0, Lcom/vk/api/audio/AudioSendStartEvent;
+    new-instance v0, Lcom/vk/api/audio/AudioSendStartEvent;
 
-    # invoke-virtual {p1}, Lcom/vk/dto/music/MusicTrack;->y1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/music/MusicTrack;->y1()Ljava/lang/String;
 
-    # move-result-object p1
+    move-result-object p1
 
-    # sget-object v2, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
+    sget-object v2, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
 
-    # invoke-interface {v2}, Lcom/vk/api/base/ApiConfig$a;->O1()Ljava/lang/String;
+    invoke-interface {v2}, Lcom/vk/api/base/ApiConfig$a;->O1()Ljava/lang/String;
 
-    # move-result-object v2
+    move-result-object v2
 
-    # invoke-direct {v0, p1, v2}, Lcom/vk/api/audio/AudioSendStartEvent;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v2}, Lcom/vk/api/audio/AudioSendStartEvent;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    # const/4 p1, 0x0
+    const/4 p1, 0x0
 
-    # .line 15
-    # invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    .line 15
+    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
-    # move-result-object p1
+    move-result-object p1
 
-    # .line 16
-    # new-instance v0, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl$d;
+    .line 16
+    new-instance v0, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl$d;
 
-    # invoke-direct {v0, p0}, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl$d;-><init>(Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl;)V
+    invoke-direct {v0, p0}, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl$d;-><init>(Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl;)V
 
-    # .line 17
-    # sget-object v1, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl$e;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl$e;
+    .line 17
+    sget-object v1, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl$e;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl$e;
 
-    # .line 18
-    # invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    .line 18
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
-    # move-result-object p1
+    move-result-object p1
 
-    # iput-object p1, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl;->a:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl;->a:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

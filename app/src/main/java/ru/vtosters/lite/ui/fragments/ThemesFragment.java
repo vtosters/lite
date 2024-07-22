@@ -13,7 +13,6 @@ import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
-import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.themes.palettes.PalettesManager;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
@@ -110,23 +109,12 @@ public class ThemesFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         newsfeedNotificationsPreference.setVisible(Preferences.milkshake());
 
-        findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme());
+        findPreference("accentprefs").setVisible(!ThemesUtils.isMonetTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M);
 
         findPreference("systememoji").setOnPreferenceClickListener(preference -> {
             restart();
             return true;
         });
-
-        var dockbarEditor = findPreference("dockbareditor");
-        dockbarEditor.setSummary(AndroidUtils.getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size());
-        dockbarEditor.setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
-            return true;
-        });
-
-        if (Preferences.vkme() || AndroidUtils.isTablet()) {
-            dockbarEditor.setVisible(false);
-        }
 
         if (AndroidUtils.isTablet()) {
             PreferenceCategory dockbarSettingsPreferenceCategory = (PreferenceCategory) findPreference("dockbarsett");

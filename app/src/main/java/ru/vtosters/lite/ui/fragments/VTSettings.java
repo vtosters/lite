@@ -1,11 +1,16 @@
 package ru.vtosters.lite.ui.fragments;
 
 import android.annotation.SuppressLint;
-import android.content.*;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.provider.Settings;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
@@ -37,8 +42,11 @@ import ru.vtosters.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.BuildConfig;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
+import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ssfs.Utils;
+import ru.vtosters.lite.themes.utils.RecolorUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
+import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.*;
@@ -65,22 +73,19 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         return AndroidUtils.getString(strRes) + ": " + AndroidUtils.getString(R.string.vtlsettdisabled);
     }
 
-    public static String getSSFSsumm() {
-        if (Preferences.hasSpecialVerif())
-            return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifyes);
-
-        return AndroidUtils.getString(R.string.vtlssfssumm) + ": " + AndroidUtils.getString(R.string.vtlsettverifno);
-    }
-
     public static String getTGSsumm() {
         return AndroidUtils.getString(R.string.vtltgssumm) + ": " + TelegramStickersService.getInstance(AndroidUtils.getGlobalContext()).getActivePacksListReference().size();
     }
 
     public static String getProxysumm() {
         String type = Preferences.getString("proxy");
+        boolean isVKProxy = ProxyUtils.isVKProxyEnabled();
 
-        if (type.equals("noproxy") || type.isEmpty())
+        if (isVKProxy) {
+            type = "Встроенный";
+        } else if (type.equals("noproxy") || type.isEmpty()) {
             type = AndroidUtils.getString(R.string.vtlsettdisabled);
+        }
 
         return AndroidUtils.getString(R.string.vtlproxysumm) + ": " + type;
     }
@@ -99,7 +104,11 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
 
         this.addPreferencesFromResource(R.xml.empty);
 
-        AndroidUtils.checkLinksVerified(this.requireActivity());
+        PowerManager manager = (PowerManager) requireActivity().getSystemService(Context.POWER_SERVICE);
+        boolean isLinksUnverified = AndroidUtils.isLinksUnverified(requireActivity());
+        boolean isDozingAvailable = Build.VERSION.SDK_INT >= 23 && !manager.isIgnoringBatteryOptimizations(AndroidUtils.getPackageName());
+        boolean areNotificationsDisabled = !AndroidUtils.areNotificationsEnabled() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O;
+        boolean isGMSNotInstalled = !GmsHook.isAnyServicesInstalled() && !GmsHook.isGmsInstalled();
 
         if (AccountManagerUtils.isLogin()) {
             Preference accountSwitcher = PreferenceFragmentUtils.addPreference(
@@ -132,18 +141,20 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 });
             });
 
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    requireContext().getString(R.string.vtssfs),
-                    getSSFSsumm(),
-                    R.drawable.ic_link_circle_outline_28,
-                    preference -> {
-                        VKUIwrapper.setLink(Utils.getVKUILink());
-                        NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
-                        return false;
-                    }
-            );
+            if (Preferences.hasSpecialVerif()) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        requireContext().getString(R.string.vtssfs),
+                        "",
+                        R.drawable.ic_link_circle_outline_28,
+                        preference -> {
+                            VKUIwrapper.setLink(Utils.getVKUILink());
+                            NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
+                            return false;
+                        }
+                );
+            }
         }
 
         PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.appearance_theme_use_system);
@@ -183,20 +194,82 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
             );
         }
 
-        if (!GmsHook.isAnyServicesInstalled()) {
-            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), R.string.gmsname);
+        if ((isLinksUnverified || isDozingAvailable || areNotificationsDisabled || isGMSNotInstalled) && !Preferences.getBoolValue("dialogrecomm", false)) {
+            PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), AndroidUtils.getString("sett_recommendations"));
 
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    requireContext().getString(R.string.installgms),
-                    "",
-                    R.drawable.ic_about_outline_28,
-                    preference -> {
-                        NavigatorUtils.switchFragment(requireContext(), InstallGMSFragment.class);
-                        return false;
-                    }
-            );
+            if (isGMSNotInstalled) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        requireContext().getString(R.string.installgms),
+                        AndroidUtils.getString("sett_nogms_summ"),
+                        RecolorUtils.recolorDrawable(R.drawable.ic_logo_google_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            NavigatorUtils.switchFragment(requireContext(), InstallGMSFragment.class);
+                            return false;
+                        }
+                );
+            }
+
+            if (isLinksUnverified) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        AndroidUtils.getString("sett_missing_links"),
+                        AndroidUtils.getString("sett_missing_links_summ"),
+                        RecolorUtils.recolorDrawable(R.drawable.ic_linked_outline_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            try {
+                                Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:" + AndroidUtils.getPackageName()));
+                                requireActivity().startActivity(intent);
+                            } catch (Throwable t1) {
+                                try {
+                                    Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + AndroidUtils.getPackageName()));
+                                    requireActivity().startActivity(intent);
+                                } catch (Throwable ignored) {
+                                    // ignored
+                                }
+                            }
+                            return false;
+                        }
+                );
+            }
+
+            if (isDozingAvailable) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        AndroidUtils.getString("sett_battery"),
+                        AndroidUtils.getString("sett_battery_summ1") + (OEMDetector.isMIUI() ? AndroidUtils.getString("sett_battery_summ2") : ""),
+                        RecolorUtils.recolorDrawable(R.drawable.ic_filter_outline_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            @SuppressLint("BatteryLife")
+                            var intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+                                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                    .setData(Uri.parse("package:" + AndroidUtils.getPackageName()));
+                            requireActivity().startActivity(intent);
+                            return false;
+                        }
+                );
+            }
+
+            if (areNotificationsDisabled) {
+                PreferenceFragmentUtils.addPreference(
+                        getPreferenceScreen(),
+                        "",
+                        AndroidUtils.getString("sett_notifs"),
+                        AndroidUtils.getString("sett_notifs_summ"),
+                        RecolorUtils.recolorDrawable(R.drawable.ic_notifications_outline_28, ThemesUtils.getColor(R.color.red)),
+                        preference -> {
+                            @SuppressLint("BatteryLife")
+                            var intent = new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+                                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                    .putExtra(Settings.EXTRA_APP_PACKAGE, AndroidUtils.getPackageName());
+                            requireActivity().startActivity(intent);
+                            return false;
+                        }
+                );
+            }
         }
 
         if (Preferences.devmenu()) {
@@ -402,6 +475,18 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
+                requireContext().getString(R.string.music),
+                getValAsString(R.string.useGenius_title, Preferences.getBoolValue("useGenius", false)),
+                R.drawable.ic_music_outline_28,
+                preference -> {
+                    NavigatorUtils.switchFragment(requireContext(), MusicFragment.class);
+                    return false;
+                }
+        );
+
+        PreferenceFragmentUtils.addPreference(
+                getPreferenceScreen(),
+                "",
                 requireContext().getString(R.string.vtlmessages),
                 AndroidUtils.isTablet()
                         ? getValAsString(R.string.autotranslate_title, Preferences.autotranslate())
@@ -449,9 +534,23 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
+        if (!Preferences.vkme() && !AndroidUtils.isTablet()) {
+            PreferenceFragmentUtils.addPreference(
+                    getPreferenceScreen(),
+                    "",
+                    requireContext().getString(R.string.dockbar_editor),
+                    requireContext().getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size(),
+                    R.drawable.ic_pin_outline_28,
+                    preference -> {
+                        NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
+                        return false;
+                    }
+            );
+        }
+
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
-                "",
+                "currcache",
                 AndroidUtils.getString(R.string.datasettings_title),
                 getString(com.vtosters.lite.R.string.cache_size_summ) + ": " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())),
                 R.drawable.ic_document_outline_28,
@@ -485,7 +584,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        if (Build.VERSION.SDK_INT >= 33 && !OEMDetector.isMIUI()) {
+        if (Build.VERSION.SDK_INT >= 33 && (!OEMDetector.isMIUI() || OEMDetector.isHyperOs())) {
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "",
@@ -542,8 +641,8 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                "Наши чаты",
-                "Активные чаты по обсуждению модификации и многому другому",
+                AndroidUtils.getString("sett_chats"),
+                AndroidUtils.getString("sett_chats_summ"),
                 R.drawable.ic_message_outline_28,
                 preference -> {
                     var args = new Bundle();
@@ -561,8 +660,8 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
                 "",
-                "Наши сообщества",
-                "Самая свежая информация об обновлениях и не только!",
+                AndroidUtils.getString("sett_community"),
+                AndroidUtils.getString("sett_community_summ"),
                 R.drawable.users_3_outline_28,
                 preference -> {
                     var args = new Bundle();
@@ -601,7 +700,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        if (Preferences.isValidSignature() && !BuildConfig.BUILD_TYPE.equals("dev")) {
+        if (Preferences.isValidSignature() && !BuildConfig.BUILD_TYPE.equals("dev") && !Preferences.serverFeaturesDisable()) {
             PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), requireContext().getString(R.string.updates));
 
             PreferenceFragmentUtils.addPreference(
@@ -615,6 +714,19 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                         return false;
                     }
             );
+
+            PreferenceFragmentUtils.addMaterialSwitchPreference(
+                    getPreferenceScreen(),
+                    "autoupdates",
+                    AndroidUtils.getString("sett_autoupdates"),
+                    AndroidUtils.getString("sett_autoupdates_summ"),
+                    R.drawable.ic_history_outline_28,
+                    true,
+                    (preference, o) -> {
+                        Preferences.getPreferences().edit().putBoolean("autoupdates", (boolean) o).apply();
+                        return true;
+                    }
+            );
         }
     }
 
@@ -622,6 +734,16 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
     public void onDestroy() {
         requireContext().unregisterReceiver(mTgsReceiver);
         super.onDestroy();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateCacheSize();
+    }
+
+    private void updateCacheSize() {
+        findPreference("currcache").setSummary(getString(com.vtosters.lite.R.string.cache_size_summ) + ": " + CacheUtils.humanReadableByteCountBin(IOUtils.getDirSize(AndroidUtils.getGlobalContext().getCacheDir())));
     }
 
     @Override

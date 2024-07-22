@@ -8,6 +8,9 @@
 
 .vkuibright_light, [scheme=bright_light], body[scheme=bright_light], .vkui--vkBase--light, .vkui--vkIOS--light, .vkui--vkCom--light {
     --accent: %accent% !important;
+    --color_text_accent: %accent% !important;
+    --vkui--color_text_accent: %accent% !important;
+    --vkui--color_stroke_accent: %accent% !important;
     --vkui--color_icon_accent: %accent% !important;
     --action_sheet_action_foreground: %accent% !important;
     --attach_picker_tab_active_background: %accent% !important;
@@ -49,6 +52,8 @@
     --vkui--color_background_content: %background_content% !important;
     --background_page: %background_page% !important;
     --vkui--color_background: %background_page% !important;
+    --color_background_modal: %background_content% !important;
+    --vkui--color_background_modal: %background_content% !important;
     --content_tint_background: %content_tint_background% !important;
     --vkui--color_background_secondary: %content_tint_background% !important;
     --loader_background: %background_page% !important;
@@ -59,6 +64,10 @@
     --vkui--color_header_background_before_blur: %header_background% !important;
     --vkui--color_header_background_before_blur_alternate: %header_background% !important;
     --header_alternate_background: %header_background% !important;
+    --color_field_border: %field_border% !important;
+    --vkui--color_field_border: %field_border% !important;
+    --color_field_background: %field_background% !important;
+    --vkui--color_field_background: %field_background% !important;
 
     --header_text_alternate: %header_text% !important;
     --header_text: %header_text% !important;
@@ -66,12 +75,16 @@
     --header_tint: %header_text% !important;
     --header_tint_alternate: %header_text% !important;
     --vkui--color_icon_accent_themed: %header_text% !important;
+    --vkui--color_text_accent_themed: %header_text% !important;
 }
 
 
 
 .vkuispace_gray, [scheme=space_gray], body[scheme=space_gray], .vkui--vkBase--dark, .vkui--vkIOS--dark, .vkui--vkCom--dark {
     --accent: %accent% !important;
+    --color_text_accent: %accent% !important;
+    --vkui--color_text_accent: %accent% !important;
+    --vkui--color_stroke_accent: %accent% !important;
     --vkui--color_icon_accent: %accent% !important;
     --action_sheet_action_foreground: %accent% !important;
     --attach_picker_tab_active_background: %accent% !important;
@@ -112,6 +125,8 @@
     --vkui--color_background_content: %background_content% !important;
     --background_page: %background_page% !important;
     --vkui--color_background: %background_page% !important;
+    --color_background_modal: %background_content% !important;
+    --vkui--color_background_modal: %background_content% !important;
     --content_tint_background: %content_tint_background% !important;
     --vkui--color_background_secondary: %content_tint_background% !important;
     --loader_background: %background_page% !important;
@@ -125,6 +140,12 @@
     --header_tint: %header_text% !important;
     --header_tint_alternate: %header_text% !important;
     --vkui--color_icon_accent_themed: %header_text% !important;
+    --vkui--color_text_accent_themed: %header_text% !important;
+    --color_field_border: %field_border% !important;
+    --vkui--color_field_border: %field_border% !important;
+    --color_field_background: %field_background% !important;
+    --vkui--color_field_background: %field_background% !important;
+
     --header_text_alternate: %header_text% !important;
     --header_text: %header_text% !important;
     --header_text_secondary: %header_text% !important;

@@ -34,7 +34,7 @@ public final class UnknownChunk extends Chunk {
 
     private final byte[] payload;
 
-    protected UnknownChunk(ByteBuffer buffer, @Nullable Chunk parent) {
+    UnknownChunk(ByteBuffer buffer, @Nullable Chunk parent) {
         super(buffer, parent);
 
         type = Type.fromCode(buffer.getShort(offset));
