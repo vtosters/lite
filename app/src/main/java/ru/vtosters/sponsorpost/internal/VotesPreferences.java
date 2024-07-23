@@ -30,12 +30,6 @@ public class VotesPreferences {
         preferences.edit().putBoolean("sponsortesting", status).apply();
     }
 
-    public static void setUserToken(String token) {
-        preferences.edit()
-                .putString("token", token)
-                .apply();
-    }
-
     public static void remUserToken() {
         preferences.edit()
                 .remove("token")
@@ -44,6 +38,12 @@ public class VotesPreferences {
 
     public static String getUserToken() {
         return preferences.getString("token", "");
+    }
+
+    public static void setUserToken(String token) {
+        preferences.edit()
+                .putString("token", token)
+                .apply();
     }
 
     public static void savePosts(List<String> posts) {

@@ -1,70 +1,78 @@
 package ru.vtosters.lite.music.cache;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.RemoteException;
-import android.text.TextUtils;
-
-import com.vk.dto.music.MusicTrack;
-
-import java.util.List;
-
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
+import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
-import ru.vtosters.lite.music.cache.delegate.MusicCacheDbDelegate;
+import ru.vtosters.lite.music.cache.db.Constants;
+import ru.vtosters.lite.music.cache.db.Database;
+import ru.vtosters.lite.music.cache.db.MusicCacheDb;
+import ru.vtosters.lite.music.cache.db.SqlPlaylists;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
+import ru.vtosters.lite.music.interfaces.IPlaylist;
+import ru.vtosters.lite.music.interfaces.IPlaylists;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
-import ru.vtosters.lite.utils.music.MusicTrackUtils;
 
+import java.util.List;
+import java.util.Optional;
+
+@SuppressWarnings("forRemoval")
 public class MusicCacheImpl {
-    public static void addTrack(MusicTrack track) {
-        MusicCacheDbDelegate.addTrack(
-                AndroidUtils.getGlobalContext(),
-                track.y1(),
-                track.I != null ? track.I.getId() + "" : "-1",
-                track.f,
-                !TextUtils.isEmpty(track.g) ? track.g : "",
-                MusicTrackUtils.getArtists(track),
-                track.I != null ? track.I.getTitle() : "",
-                track.K,
-                track.h,
-                track.I != null && track.I.u1() != null);
-    }
+
+    private static final Database connection =
+            new Database();
+
+    private static final MusicCacheDb musics = new MusicCacheDb(connection);
+    private static final IPlaylists playlists = new SqlPlaylists(connection);
+
 
     public static void removeTrack(String trackId) {
-        MusicCacheDbDelegate.removeTrack(AndroidUtils.getGlobalContext(), trackId);
+        musics.deleteTrack(trackId);
         MusicCacheStorageUtils.removeTrackDirById(trackId);
     }
 
-    public static List<MusicTrack> getAllOwnTracks() {
-        return PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1");
+
+    public static List<MusicTrack>
+    getPlaylistSongs(int owner_id, int playlist_id,
+                     int offset, int count) {
+        return playlists
+                .playlist(owner_id, playlist_id)
+                .map(x -> x.tracks(offset, count))
+                .orElse(List.of());
     }
 
-    public static List<MusicTrack> getPlaylistSongs(String owner_id, String playlist_id) {
-        return PlaylistCacheDbDelegate.getTracksInPlaylist(AndroidUtils.getGlobalContext(), owner_id + "_" + playlist_id); // get songs from playlist
+
+    public static Playlist getPlaylist(int playlist_id, int owner_id) {
+        return playlists
+                .playlist(owner_id, playlist_id)
+                .map(IPlaylist::toPlaylist)
+                .orElse(null);
     }
 
-    public static Playlist getPlaylist(String playlist_id, String owner_id) {
-        return getPlaylistById(owner_id + "_" + playlist_id); // get playlist from db
+    public static Optional<MusicTrack> getTrackById(String trackId) {
+        return musics.getTrackById(trackId);
     }
 
-    public static List<Playlist> getPlaylists()  {
-        return PlaylistCacheDbDelegate.getAllPlaylists(AndroidUtils.getGlobalContext()); // get all cached playlists
+
+    public static List<Playlist> getPlaylists() {
+        return PlaylistCacheDbDelegate.getAllPlaylists();
     }
 
-    public static Playlist getPlaylistById(String query) {
-        return PlaylistCacheDbDelegate.getPlaylistById(AndroidUtils.getGlobalContext(), query); // get playlist from db
-    }
 
     public static boolean hasPlaylist() {
-        return !PlaylistCacheDbDelegate.isPlaylistsDbEmpty(AndroidUtils.getGlobalContext()); // has playlists or not
+        return !PlaylistCacheDbDelegate.isPlaylistsDbEmpty(); // has playlists or not
     }
 
     public static long getTracksCount() {
         return !LibVKXClient.isIntegrationEnabled()
-                ? PlaylistCacheDbDelegate.getTracksCountInPlaylist(AndroidUtils.getGlobalContext(),AccountManagerUtils.getUserId() + "_-1")
+                ? PlaylistCacheDbDelegate.getTracksCountInPlaylist(
+                AccountManagerUtils.getUserId(), -1)
                 : LibVKXClient.getInstance().runOnServiceSync(
                 new LibVKXClientImpl.LibVKXActionGeneric<Long>() {
                     @Override
@@ -85,16 +93,18 @@ public class MusicCacheImpl {
     }
 
     public static boolean isCachedTrack(String trackId) {
-        return MusicCacheDbDelegate.isCachedTrack(AndroidUtils.getGlobalContext(), trackId);
+        return MusicCacheImpl.getTrackById(trackId).isPresent();
     }
 
     public static boolean isEmpty() {
-        return !LibVKXClient.isIntegrationEnabled() && MusicCacheDbDelegate.isEmpty(AndroidUtils.getGlobalContext());
+        return !LibVKXClient.isIntegrationEnabled() && musics.isDatabaseEmpty();
     }
 
     public static void clear() {
-        MusicCacheDbDelegate.drop(AndroidUtils.getGlobalContext());
-        PlaylistCacheDbDelegate.drop(AndroidUtils.getGlobalContext());
+        Context context = AndroidUtils.getGlobalContext();
+
+        context.deleteDatabase(Constants.DB_NAME);
+
         MusicCacheStorageUtils.clear();
     }
 }

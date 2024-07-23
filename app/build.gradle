@@ -4,7 +4,7 @@ import java.util.zip.ZipFile
 
 plugins {
     id 'com.android.application'
-    id 'net.nemerosa.versioning' version '2.15.1'
+    id 'net.nemerosa.versioning' version '3.1.0'
     id 'org.mozilla.rust-android-gradle.rust-android'
 }
 
@@ -95,7 +95,7 @@ dependencies {
     implementation 'com.microsoft.appcenter:appcenter-crashes:5.0.4'
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
     implementation 'net.sourceforge.streamsupport:streamsupport-minifuture:1.7.4'
-    implementation 'com.google.guava:guava:32.0.0-android'
+    implementation 'com.google.guava:guava:33.2.1-android'
 
     implementation 'com.mpatric:mp3agic:0.9.1'
 

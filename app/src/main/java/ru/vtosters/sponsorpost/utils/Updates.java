@@ -4,7 +4,6 @@ import android.util.Log;
 import ru.vtosters.lite.utils.NetworkUtils;
 import ru.vtosters.lite.utils.newsfeed.NewsFeedFiltersUtils;
 import ru.vtosters.sponsorpost.data.Filter;
-import ru.vtosters.sponsorpost.data.Post;
 import ru.vtosters.sponsorpost.internal.VotesPreferences;
 import ru.vtosters.sponsorpost.internal.VotesService;
 import ru.vtosters.sponsorpost.services.FilterService;

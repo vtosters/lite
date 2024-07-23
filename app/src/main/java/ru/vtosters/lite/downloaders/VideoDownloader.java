@@ -100,7 +100,7 @@ public class VideoDownloader {
 
                     notificationManager.notify(notificationId, notificationBuilder.build());
 
-                    OkHttpClient client = Network.b(Network.ClientType.CLIENT_IMAGE_LOADER);;
+                    OkHttpClient client = Network.b(Network.ClientType.CLIENT_IMAGE_LOADER);
                     Request request = new Request.a()
                             .b(url)
                             .a();
@@ -218,7 +218,7 @@ public class VideoDownloader {
                     .b("https://" + getApi() + "/method/stories.getById?stories=" + storyId + "&v=5.99&access_token=" + getUserToken())
                     .a("Accept-Encoding", "gzip")
                     .a();
-            
+
             Network.b(CLIENT_API).a(req).a(new Callback() {
 
                 @Override
@@ -242,7 +242,7 @@ public class VideoDownloader {
                     }
                 }
             });
-            
+
             return;
         }
 

@@ -1,12 +1,9 @@
 package ru.vtosters.hooks;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import com.vk.dto.gift.GiftCategory;
-import com.vtosters.lite.TabletDialogActivity;
 import com.vtosters.lite.fragments.gifts.GiftCategoryFragment;
-import ru.vtosters.lite.ui.fragments.SuperAppEditorFragment;
 import ru.vtosters.lite.utils.NavigatorUtils;
 
 import java.util.ArrayList;

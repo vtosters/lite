@@ -8,7 +8,6 @@ import com.vk.im.engine.utils.ImDialogsUtils;
 import okhttp3.Headers;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.concurrent.VTExecutors;
-import ru.vtosters.lite.net.Request;
 import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -17,8 +16,6 @@ import ru.vtosters.lite.utils.LifecycleUtils;
 import java.io.IOException;
 
 import static com.vk.core.network.Network.ClientType.CLIENT_API;
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 
 public class Requests {
     public static void hookRead(Dialog dialog) {
@@ -27,7 +24,7 @@ public class Requests {
                 .a();
 
         try {
-            Network.b(CLIENT_API).a(req).execute().close();;
+            Network.b(CLIENT_API).a(req).execute().close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -53,7 +50,7 @@ public class Requests {
                 .a();
 
         try {
-            Network.b(CLIENT_API).a(req).execute().close();;
+            Network.b(CLIENT_API).a(req).execute().close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

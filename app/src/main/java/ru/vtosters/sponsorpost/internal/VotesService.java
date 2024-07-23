@@ -1,7 +1,6 @@
 package ru.vtosters.sponsorpost.internal;
 
 import android.net.Uri;
-import android.util.Log;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -105,7 +104,7 @@ public class VotesService {
 
     public static JSONObject ratePost(int ownerId, int postId, int date, boolean isAd) {
         String token = VotesPreferences.getUserToken() == null || VotesPreferences.getUserToken().isEmpty() ? getVoteToken() : VotesPreferences.getUserToken();
-        String requestUrl = apiPath + (isAd ? "/dislike" : "/like") + "?ownerId=" + ownerId + "&postId=" + postId+ "&postDate=" + date + "&token=" + Uri.encode(token);
+        String requestUrl = apiPath + (isAd ? "/dislike" : "/like") + "?ownerId=" + ownerId + "&postId=" + postId + "&postDate=" + date + "&token=" + Uri.encode(token);
         Request request = new Request.a()
                 .b(requestUrl)
                 .a("Content-Type", "application/json")
