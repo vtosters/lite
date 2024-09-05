@@ -5257,4 +5257,1131 @@ com vídeo"</string>
     <string name="yesterday_at">ontem às</string>
     <string name="your_balance">Seu saldo: </string>
     <string name="your_gender">Seu gênero:</string>
+
+    <!--    vtl -->
+    <!--    use "" fix ´ compile error-->
+    <!--    <item quantity="one">"%s comenta´rio"</item> -->
+
+    <string name="collection_item_hint_text">You can add items that you can share while streaming</string>
+    <string name="item_no_place_in_result_text">There is no place in the list</string>
+    <string name="watch_post_text">Watch post</string>
+    <string name="for_loading_from_network">to download from the network</string>
+    <string name="where_from_send">Where to withdraw</string>
+    <string name="where_to_send">Where to deposit</string>
+    <string name="any_bank_card">Card of any bank</string>
+    <string name="current_place_number">Current place number</string>
+    <string name="eight_friends">Your 8 friends are playing</string>
+
+    <string name="vtlfeed">Feed de notícias</string>
+    <string name="vtlinterface">Interface</string>
+    <string name="vtlmedia">Mídia</string>
+    <string name="vtlproxy">Proxy</string>
+    <string name="vtlother">Outros</string>
+    <string name="vtlactivity">Atividade</string>
+    <string name="vtltgs">Figurinos do Telegram</string>
+    <string name="vtlthemes">Temas</string>
+    <string name="vtlmessages">Mensagens</string>
+    <string name="vkconnect">ID VK</string>
+    <string name="bugs">Rastreador de bugs</string>
+    <string name="promocode">Ativar código promocional</string>
+    <string name="tgchannel">Canal do Telegram</string>
+    <string name="tgchat">Chat do Telegram</string>
+    <string name="vkgroup">Nosso Grupo VK</string>
+    <string name="vtfaq">Perguntas frequentes</string>
+    <string name="vtfaqsumm">Encontre respostas para todas as suas perguntas aqui</string>
+    <string name="vtsite">Nosso site</string>
+    <string name="installgms">Instalar Google Play Services</string>
+    <string name="gmsname">Google Play Services</string>
+    <string name="vtldads">Desativar anúncios</string>
+    <string name="vtldgads">Desativar anúncios em grupos</string>
+    <string name="vtldgadssummary">Publicações marcadas com propaganda</string>
+
+    <string name="storiesGroupsAdBlock">Desativar anúncios de histórias de grupos</string>
+    <string name="storiesGroupsAdBlocksummary">Bloquear histórias com links externos\n\nPode haver falsos positivos</string>
+
+    <string name="vtldca">Desativar carrossel de anúncios</string>
+    <string name="vtldas">Desativar anúncios nas histórias</string>
+    <string name="vtad">Anúncios</string>
+    <string name="vtlfilters">Filtros</string>
+    <string name="vtlhtmf">Como criar filtros?</string>
+    <string name="vtlhtmfsummary">"Formato do filtro: palavras ou frases separadas por vírgulas e espaços
+Exemplo: #patrocinado, Vale-presente grátis, #PROMO
+Os filtros não diferenciam maiúsculas e minúsculas!"</string>
+    <string name="vtlownfilter">Filtrar palavras e expressões</string>
+    <string name="vtllinkfilter">Filtro de link de origem</string>
+    <string name="vtlsourcenamefilter">Filtro de nome de origem</string>
+    <string name="vtlsfilter">Filtro Adblock padrão</string>
+    <string name="vtlsfiltersummary">Bloqueia posts com tags comuns, como #publi, #rp e assim por diante \n\nRecomendado</string>
+    <string name="vtlusevkui">Usar VKUI</string>
+    <string name="vtlawayphp">Desativar redirecionamento away.php</string>
+    <string name="vtlinterfacemsg">Interface de mensagens</string>
+    <string name="vtlcalls">Botão de chamadas</string>
+    <string name="vtlvoice">Gravação de mensagens de voz</string>
+    <string name="vtlvoicesummary">Ícone para gravar mensagens de voz no campo de entrada de mensagem</string>
+    <string name="vtlnavbar">Barra de navegação colorida</string>
+    <string name="cringecopyright_title">Posts com possível publicidade</string>
+    <string name="cringecopyright_summ">Bloqueia posts com uma fonte onde há um link para VK / Telegram (grupo, página ou posts) ou para outros recursos de publicidade possíveis \n\nRecomendado</string>
+    <string name="cringerepost_title">Republicações com links</string>
+    <string name="cringerepost_summ">Bloqueia posts com republicação dentro dos quais há um link para VK / Telegram</string>
+    <string name="why_news_not_updated_title">Por que as notícias não são atualizadas?</string>
+    <string name="why_news_not_updated_summ">Talvez você tenha o feed de Interessantes ativado \n\nSe quiser mudar o feed para o feed Temporário, você pode alterá-lo clicando no item acima</string>
+    <string name="newsfeedlistmanager_title">Lista de feed de notícias</string>
+    <string name="newsfeedlistmanager_summ">Configurações da lista de feed de notícias</string>
+    <string name="newsfeedlistmanager_reset_title">Redefinir lista de feed de notícias</string>
+    <string name="where_is_cache_settings">Onde estão as configurações de cache?</string>
+    <string name="where_is_cache_settings_summ">Elas foram movidas para as configurações do mod na guia Dados e armazenamento</string>
+    <string name="gms_about">Sobre o GMS</string>
+    <string name="gms_what_is_title">O que é o GMS?</string>
+    <string name="gms_what_is_summ">GMS - Google Mobile Services (Serviços Móveis do Google), um componente necessário para o funcionamento normal dos aplicativos. Todas as notificações, login em jogos, Google Play e outras funções do dispositivo usam este componente</string>
+    <string name="gms_why_need_title">Por que eu preciso do GMS para este aplicativo?</string>
+    <string name="gms_why_need_summ">O GMS é necessário para que as notificações funcionem, para que a música funcione e para muitos outros componentes do aplicativo</string>
+    <string name="gms_how_to_download">Como baixar?</string>
+    <string name="gms_what_to_do_then">O que fazer depois?</string>
+    <string name="gms_what_to_do_then_summ">Você precisa baixar o MicroG.</string>
+    <string name="gms_what_is_microg">O que é o MicroG?</string>
+    <string name="gms_what_is_microg_summ">É uma alternativa aberta aos serviços do GMS com a capacidade de instalá-lo em um dispositivo não GMS</string>
+    <string name="gms_microg_site">Site oficial do MicroG</string>
+    <string name="gms_download_microg">Baixar MicroG</string>
+    <string name="gms_what_to_do_next">O que fazer a seguir?</string>
+    <string name="gms_what_to_do_after_microg_title">O que fazer após instalar o MicroG?</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Faça login na sua conta do Google nas configurações do MicroG\n2. Habilitar registro do dispositivo\n3. Habilitar o serviço de nuvem de mensagens\n4. Reinstale o VTLite\n5. Permitir-lhe receber notificações</string>
+    <string name="donate">Doar</string>
+    <string name="fulltime">dd MMMM yyyy HH:mm:ss</string>
+    <string name="fulltime2">dd MMMM HH:mm:ss</string>
+    <string name="fulltime3">dd MMMM HH:mm</string>
+    <string name="vtlsfiltershort">Filtro de link curto</string>
+    <string name="vtlsfiltershortsummary">"Bloqueia posts contendo links curtos, como bit.ly ou cutt.ly
+Não afeta links vk.cc"</string>
+    <string name="vtlsfilterrefs">Filtro de links de referência</string>
+    <string name="vtlsfilterrefssummary">Bloqueia posts contendo links de referência, como ali.pub e assim por diante</string>
+    <string name="vtlrecommend">Recomendações</string>
+    <string name="vtlrecommendfriend">Desativar recomendações de amigos</string>
+    <string name="vtlrecommendauthor">Desativar recomendações de autores</string>
+    <string name="vtlrecommendfriendpost">Desativar postagens recomendadas</string>
+    <string name="BGStickers">Contornos dos stickers</string>
+    <string name="vtlrecommendmarksummary">Posts como Você pode estar interessado</string>
+    <string name="vtlfeedwork">Outros</string>
+    <string name="vtlfeedreload">Atualização automática do feed</string>
+    <string name="vtlfeedcache">Cache de posts do feed</string>
+    <string name="vtlrecommendmark">Desativar posts com marcação</string>
+    <string name="vtlmsgtails">Caudas das mensagens</string>
+    <string name="vtlmsgflat">Mensagens planas</string>
+    <string name="vtlupdmsg">Atualizar</string>
+    <string name="BGStickerssum">É necessário limpar o cache do aplicativo após ativar/desativar esta opção</string>
+    <string name="addinf">Informações adicionais</string>
+    <string name="copyid">Copiar ID</string>
+    <string name="vtssfs">Recursos do servidor</string>
+    <string name="vticon">Ícone do aplicativo</string>
+    <string name="vticonbtn">Usar ícone original</string>
+    <string name="vticonsummary">O nome e ícone original do VK</string>
+
+    <string name="copytokenbtn">Copiar token de acesso</string>
+    <string name="killappbtn">Encerrar processo do app</string>
+    <string name="experts">Especialistas</string>
+    <string name="DNT_OFF">Desativar Não Perturbe</string>
+    <string name="DNT_ON">Ativar Não Perturbe</string>
+    <string name="pinmsg">Fixar conversa</string>
+    <string name="unpinmsg">Desfixar conversa</string>
+    <string name="accounts">Contas</string>
+    <string name="act_bot">Para Bots/Grupos</string>
+    <string name="act_cnv">Para Conversas</string>
+    <string name="act_pm">Para Mensagens Privadas</string>
+    <string name="alteremoji">Menu alternativo de emojis</string>
+    <string name="alteremojisum">Seleção alternativa de emojis e figurinhas no menu compacto</string>
+    <string name="altnewsfeed">Design alternativo do feed de notícias</string>
+    <string name="altnewsfeedsum">Design com abas dinâmicas no feed</string>
+    <string name="applicationrestart">Reiniciar aplicativo</string>
+    <string name="benchapi">API de benchmark</string>
+    <string name="benchapisummary">Teste de velocidade de envio de solicitações. Função inútil para todos, exceto desenvolvedores do VKontakte</string>
+    <string name="cachecleaned">Cache limpo</string>
+    <string name="clearcache">Limpar todo o cache</string>
+    <string name="clearcachesum">Limpa o cache do aplicativo (exceto o cache do feed)</string>
+    <string name="convUsersOnline">Corrigir exibição online em conversas</string>
+    <string name="convUsersOnlinesum">"Corrigir a exibição de outros usuários online em conversas (necessário apenas se você ocultou o seu próprio status)
+
+Aviso! Pode causar downloads longos de listas de usuários se houver muitos usuários na conversa"</string>
+    <string name="copybtn">Copiado!</string>
+    <string name="ctypedirect">Direto</string>
+    <string name="ctypedisabled">Não definido</string>
+    <string name="ctypesocks">Socks</string>
+    <string name="dnr">Não Ler</string>
+    <string name="dns">Desativar status de visualização</string>
+    <string name="dnw">Não Escrever</string>
+    <string name="docknumbers">Contadores na barra de tarefas</string>
+    <string name="docknumberssum">Desativar não funciona na interface do tablet</string>
+    <string name="dockbar_tab_titles">Mostrar títulos dos itens da barra de tarefas</string>
+    <string name="superapp_editor_message">Para ativar/desativar um elemento imóvel, deslize-o para a direita ou esquerda</string>
+    <string name="fcmtokenfixed">Notificações restauradas!</string>
+    <string name="fcmtokenget">Token FCM recebido</string>
+    <string name="fcmtokenrem">Token FCM removido</string>
+    <string name="firebasefix">Atualizar registro do Firebase</string>
+    <string name="firebasefixsum">Correção para receber notificações após a instalação do GMS ou após a restauração do backup do aplicativo</string>
+    <string name="foafdate">"
+Dias desde a data de registro:"</string>
+    <string name="foaferr">Problemas ao carregar dados!</string>
+    <string name="foafid">ID do perfil:</string>
+    <string name="foafregdate">"
+Data de registro:"</string>
+    <string name="getvtverify">Obter verificação em seu perfil</string>
+    <string name="iconapplying">Aplicando alterações</string>
+    <string name="interfaceemoji">Emoji e figurinhas</string>
+    <string name="interfaceglobal">Recursos globais</string>
+    <string name="interfaceglobaldates">Arredondamento de data</string>
+    <string name="interfaceglobaldatessum">"Arredondamento de data de publicações e usuários
+
+01 Jan 1970 00:00:00 -> 1 Jan 00:00"</string>
+    <string name="interfaceglobalnum">Arredondar números</string>
+    <string name="interfaceglobalnumsum">"Arredondar o número de visualizações, comentários, curtidas e compartilhamentos
+
+10.000 -> 10k"</string>
+    <string name="interfaceglobalpost">Resumir publicações</string>
+    <string name="interfaceglobalpostsum">"Resumir o texto em publicações
+
+Ver tudo..."</string>
+    <string name="pollresults_title">Resultados da enquete</string>
+    <string name="pollresults_summ">Ver resultados em enquetes sem votar nelas</string>
+    <string name="vtl_downloads_title">Downloads</string>
+    <string name="current_download_folder">Pasta atual:</string>
+    <string name="folder_for_downloads">Pasta para downloads</string>
+    <string name="folder_for_photos">Pasta para fotos</string>
+    <string name="folder_for_videos">Pasta para vídeos</string>
+    <string name="folder_for_music">Pasta para música</string>
+    <string name="sett_compress_photo_summ">Desativar vai melhorar significativamente a qualidade das fotos enviadas</string>
+    <string name="sett_compress_video_summ">Desativar vai melhorar significativamente a qualidade dos vídeos enviados</string>
+    <string name="lastfm_auth_title">Conta</string>
+    <string name="auth_error_vtl">Falha no login</string>
+    <string name="lastfm_auth_summ">Você não está logado</string>
+    <string name="lastfm_logout_success">Saiu da conta com sucesso</string>
+    <string name="lastfm_enabled_title">Habilitar scrobbling</string>
+    <string name="lastfm_enabled_summ">Serviço útil para rastrear músicas</string>
+    <string name="lastfm_credentials_empty">Nome de usuário ou senha não definidos</string>
+    <string name="vtl_music_settings">Música</string>
+    <string name="musicdefcatalog_dialogTitle">Selecionar seção padrão</string>
+    <string name="musicdefcatalog_title">Seção padrão de música</string>
+    <string name="vtl_video_settings">Vídeo</string>
+    <string name="vtl_download_video_title">Baixar vídeo ou história</string>
+    <string name="videonewcatalog_title">Novo catálogo de vídeos</string>
+    <string name="videonewcatalog_summ">Novo catálogo de vídeos com conteúdo dinâmico</string>
+    <string name="clearvideohistory_title">Limpar histórico de vídeos</string>
+    <string name="clearvideohistory_summ">Limpar o histórico de vídeos removerá todos os vídeos do seu histórico de exibição e as recomendações baseadas neles</string>
+    <string name="vtl_photo_settings">Foto</string>
+    <string name="photo_search_engine_title">Selecionar um mecanismo de busca de fotos</string>
+    <string name="wallpapers_title">Plano de fundo nas Mensagens</string>
+    <string name="convBarRecomm_title">Ocultar recomendações</string>
+    <string name="convBarRecomm_summ">Ocultar a seção de recomendação de amigos em mensagens e outras dicas</string>
+    <string name="vk_messenger">VK Messenger</string>
+
+    <string name="translator_title">Tradutor</string>
+    <string name="translator_choose_language">Escolha um idioma</string>
+    <string name="translator_translate_language">Idioma de tradução</string>
+    <string name="translator_translate_service">Serviço de tradução</string>
+    <string name="autotranslate_title">Tradução automática</string>
+    <string name="autotranslate_summ">Traduzir automaticamente suas mensagens enviadas</string>
+    <string name="autoalltranslate_title">Traduzir tudo automaticamente</string>
+    <string name="autoalltranslate_summ">Traduzir automaticamente todas as mensagens\n\nPode haver problemas ao carregar mensagens</string>
+    <string name="clearcache_other_title">Limpar cache do aplicativo</string>
+    <string name="reset_folders_locations">Redefinir caminhos das pastas de download</string>
+    <string name="vk_admin_token_title">Token do VK Admin</string>
+    <string name="vtl_other_backups_title">Backups</string>
+    <string name="saveonlines_title">Salvar lista online</string>
+    <string name="saveonlines_summ">Salvar a lista de AppIds e seus nomes em um arquivo</string>
+    <string name="saveprefs_title">Salvar preferências</string>
+    <string name="restoreprefs_title">Restaurar preferências</string>
+    <string name="milkshake_title">Milkshake</string>
+    <string name="milkshake_summ">Redesign global do VK como nas novas versões</string>
+    <string name="vtl_settings_dockbar_title">Barra de tarefas</string>
+    <string name="dockbar_accent_title">Usar destaque para ícones</string>
+    <string name="iconmanager_title">Selecionar ícone do aplicativo</string>
+    <string name="iconmanager_summ">Grande variedade de ícones de aplicativos</string>
+    <string name="interfacenewsfeed">Feed de notícias</string>
+    <string name="interfacenewsfeedswipe">Câmera lateral nas notícias</string>
+    <string name="interfacenewsfeedswipesum">Funciona apenas com o design clássico do feed de notícias</string>
+    <string name="interfacestartfr">Fragmento inicial padrão</string>
+    <string name="interfacestartfrsum">Selecionar fragmento inicial</string>
+    <string name="interfacevideo">Vídeo</string>
+    <string name="interfacevideoext_short">Player externo</string>
+    <string name="interfacevideoext">Player de vídeo externo</string>
+    <string name="interfacevideoextsum">Usar um player de vídeo externo para reproduzir vídeos</string>
+    <string name="interfacevideorec">Desativar vídeos recomendados</string>
+    <string name="interfacevideorecsum">Desativar recomendações de vídeo na parte inferior do player de vídeo com recomendações de vídeo</string>
+    <string name="menucutter">Desativar encurtamento de menu</string>
+    <string name="menucuttersum">Remove o encurtamento de itens no menu da seção do aplicativo</string>
+    <string name="newacc">Adicionar nova conta</string>
+    <string name="newvideo">Novo catálogo de vídeos</string>
+    <string name="offline_vtl">Offline</string>
+    <string name="online_vtl">Online</string>
+
+    <string name="opencommit">Abrir commit</string>
+    <string name="otabranch">Selecionar branch de atualização</string>
+    <string name="otacheckonstart">Ativar verificação de atualizações na inicialização</string>
+    <string name="otacheckupd">Verificar atualizações</string>
+    <string name="otaerr">Verifique sua conexão com a internet e tente novamente</string>
+    <string name="otanoupd">Nenhuma atualização encontrada</string>
+    <string name="otaok">OK</string>
+    <string name="otaretry">Tentar novamente</string>
+    <string name="otaupd">Atualizar</string>
+    <string name="otaupdavalible">Atualização disponível!</string>
+    <string name="otaupdchanges">Registro de alterações</string>
+    <string name="privacy_vtl">Privacidade</string>
+    <string name="proxyadvsettings">Configurações avançadas de proxy</string>
+    <string name="proxyapi">Domínio da API</string>
+    <string name="proxydomain">Domínio</string>
+    <string name="proxydonate">Doar</string>
+    <string name="proxyhttp">Proxy HTTP</string>
+    <string name="proxyhttps">Proxy HTTPS</string>
+    <string name="proxyimpinfosum">"Não use proxy se o VK estiver disponível em seu país
+
+É necessário reiniciar o aplicativo para aplicar as configurações de proxy"</string>
+    <string name="proxyoauth">Domínio OAuth</string>
+    <string name="proxyowners">Proprietários do proxy</string>
+    <string name="proxyownersxtr">Site do xtrafrancyz</string>
+    <string name="proxyownersxtrsources">Fontes de servidores proxy</string>
+    <string name="proxyownerszbr">Site do zaborona</string>
+    <string name="proxyport">Porta</string>
+    <string name="proxysocks">Proxy Socks</string>
+    <string name="proxystatic">Domínio estático</string>
+    <string name="reportbug">Reportar bug</string>
+    <string name="autoclearcache">Limpeza automática do cache do app</string>
+    <string name="autoclearcachesumm">Tamanho do cache:</string>
+    <string name="autoclearcachedisabled">Não limpar cache</string>
+    <string name="reportbugsumm">Relatar bugs nos ajuda a corrigi-los</string>
+    <string name="restartapp">Por favor, reinicie o aplicativo</string>
+    <string name="savedmsg">Mensagens salvas</string>
+    <string name="selectacc">Selecionar conta</string>
+    <string name="shitposting">Notícias repetitivas</string>
+    <string name="shitpostingsummary">Filtro para limpar publicações com a Federação Russa e ações relacionadas na Ucrânia\n\nPode haver gatilhos incorretos</string>
+    <string name="showstories">Mostrar histórias</string>
+    <string name="showstoriessum">A seção de histórias na parte superior do feed</string>
+    <string name="whatsnew_summ">Seção de escrita de publicação no feed</string>
+    <string name="whatsnew_title">Mostrar a seção de publicação</string>
+    <string name="right_likes">Mostrar curtidas à direita da publicação</string>
+    <string name="customrounding_title">Tamanho do arredondamento da imagem</string>
+    <string name="postsredesign_title">Redesign de publicação de vídeo</string>
+    <string name="postsredesign_summ">O texto do vídeo será exibido abaixo do vídeo</string>
+    <string name="miniapps_title">Seção de MiniApps</string>
+    <string name="miniapps_summ">Mostrar MiniApps/Jogos no menu</string>
+    <string name="show_vkpay_title">Seção VK Pay</string>
+    <string name="show_vkpay_summ">Mostrar VK Pay no menu</string>
+    <string name="show_superapps_title">Superapps</string>
+    <string name="show_superapps_summ">Nova visualização do menu como nas novas versões do VK</string>
+    <string name="friendsblock_title">Ocultar amigos</string>
+    <string name="friendsblock_summ">Ocultar o bloco de recomendações de amigos na seção de amigos</string>
+    <string name="onlineformatter_title">Indicador online estendido</string>
+    <string name="onlineformatter_summ">Mostrar de qual aplicativo/dispositivo a pessoa está online\n\nPor exemplo: Online usando Kate Mobile</string>
+    <string name="voices_vtl">Mensagens de voz</string>
+    <string name="disable_voice_listening_summ">A função permite que você não envie o status de ouvir as mensagens de voz da pessoa por você</string>
+    <string name="listen_v_title">Desativar status de escuta</string>
+    <string name="vkme_online_vtl">Online oculto do VK Me</string>
+    <string name="onlinefix_summ">Mostrar usuários online em perfis se você tiver o modo de ocultar online do VK Messenger ativado</string>
+    <string name="onlinefix_title">Ignorar indicador online</string>
+    <string name="globalUsersOnline_title">Ignorar global online</string>
+    <string name="globalUsersOnline_summ">Pode causar carregamento lento da partição e alto consumo de tráfego \n\nNão é recomendado habilitar este recurso</string>
+    <string name="savemsgsett_title">Salvar parâmetros de envio de mensagem</string>
+    <string name="savemsgsett_summ">Salvar parâmetros de status de mensagem de saída selecionados, como desaparecimento de mensagem e envio silencioso</string>
+    <string name="screenshotdetect_title">Desativar detecção de captura de tela</string>
+    <string name="screenshotdetect_summ">Desativar a notificação de que você tirou uma captura de tela</string>
+    <string name="hideDeviceInfo_title">Desativar envio de métricas</string>
+    <string name="hideDeviceInfo_summ">Desativar o envio de informações sobre o dispositivo do usuário e sua localização</string>
+    <string name="podcastcatalog_title">Adicionar catálogo de podcasts</string>
+    <string name="useNewSettings_title">Usar novas configurações</string>
+    <string name="musicFixNew_title">Correção de música v2</string>
+    <string name="new_music_downloading_way_title">Nova forma de baixar músicas</string>
+    <string name="dialogrecomm">Desativar recomendações</string>
+    <string name="showvtfire">Mostrar verificações especiais</string>
+    <string name="showvtverify">Mostrar verificações</string>
+    <string name="sprefsctype">Tipo de conexão</string>
+    <string name="sprefsdelkey">Excluir a chave do bot do Telegram</string>
+    <string name="sprefsdelkey2">A chave foi excluída com sucesso</string>
+    <string name="sprefsnetwork">Rede</string>
+    <string name="sprefsstickers">Figurinha</string>
+    <string name="ssocks">Configurações Socks</string>
+    <string name="ssocksauth">Autorização</string>
+    <string name="ssockshost">Servidor</string>
+    <string name="ssockslogin">Login</string>
+    <string name="ssockspass">Senha</string>
+    <string name="ssocksport">Porta</string>
+    <string name="ssockswport">Porta inválida</string>
+    <string name="stickersapi1">Verificando chave da API</string>
+    <string name="stickersapi10">2. Copie o token do bot que o bot enviará para você e cole-o no aplicativo</string>
+    <string name="stickersapi2">Chave de API do Bot inválida</string>
+    <string name="stickersapi3">Erro ao verificar a chave!</string>
+    <string name="stickersapi4">Tentar novamente</string>
+    <string name="stickersapi5">Digite a chave API do TG Bot</string>
+    <string name="stickersapi6">Obtenha-o usando o bot @BotFather</string>
+    <string name="stickersapi7">Mais detalhes</string>
+    <string name="stickersapi8">Instruções para obter uma chave</string>
+    <string name="stickersapi9">"1. Crie um bot em @BotFather (Telegram)
+"</string>
+    <string name="stickersconnection">Escolha o método de conexão!</string>
+    <string name="stickerscount"> adesivos</string>
+    <string name="stickershelp1">Digite a URL ou o ID do pacote de adesivos</string>
+    <string name="stickershelp2">O link deve estar no formato https://t.me/addstickers/\"ID\"</string>
+    <string name="stickersproxy1">Configure o proxy IP!</string>
+    <string name="stories_vtl">Histórias</string>
+    <string name="systememoji">Usar emojis do sistema</string>
+    <string name="systememojisum">Seus emojis do sistema - </string>
+    <string name="tokenwarning">Não dê este token a ninguém se você não sabe o que fazer!</string>
+    <string name="useproxy">Variante de proxy</string>
+    <string name="useproxyinfo">Informações sobre o uso de um proxy</string>
+    <string name="useproxysum">Selecione a variante de proxy</string>
+    <string name="vkuiinj">Colorir páginas da web</string>
+    <string name="vtlawayphpsummary">Rastreamento do usuário para personalizar anúncios. Também verificando links para a lista negra do VKontakte e antivírus</string>
+    <string name="vtloffline">Não enviar online</string>
+    <string name="vtloffline2">Forçar offline</string>
+    <string name="vtloffline2summary">"Funciona apenas quando o envio do status offline está habilitado. Envia instantaneamente offline após o envio de mensagens e outros métodos de API que são enviados online
+
+Pode parecer uma saída falsa do online"</string>
+    <string name="vtlofflinesummary">Desativar o online permitirá que você fique offline</string>
+    <string name="vtsystem">Configurações internas</string>
+    <string name="vtverify">Verificações VTosters</string>
+    <string name="vtverifyinfo">O que são verificações VTosters?</string>
+    <string name="vtverifyinfosum">Esta é a nossa gratidão pelo apoio ao projeto</string>
+    <string name="vtlota">Atualizações</string>
+
+    <string name="feed_ads_regular_summary">Anúncios regulares no feed entre postagens</string>
+    <string name="feed_ads_carousel_summary">Anúncios com lista (de produtos)</string>
+    <string name="feed_ads_stories_summary">Anúncios em stories</string>
+    <string name="feed_ads_sources">Desativar postagens com fonte</string>
+    <string name="feed_ads_sources_summary">Com mais frequência, publica anúncios com a marca de fonte do anunciante</string>
+
+    <string name="feed_recommendations_friends_summary">Recomendar amigos em potencial</string>
+    <string name="feed_recommendations_authors_summary">Recomendar postagens de autores populares de amigos</string>
+    <string name="feed_recommendations_friends_reacted_summary">Recomendar postagens que seus amigos gostam</string>
+
+    <string name="feed_other_update">Atualização automática de notícias</string>
+    <string name="feed_other_update_dialog_title">Escolha o tipo de atualização</string>
+    <string name="feed_other_sort_comments">Classificar comentários</string>
+    <string name="feed_other_sort_comments_summary">Classificar comentários por mais recentes</string>
+    <string name="feed_other_cache_summary">Manter postagens em cache no feed</string>
+    <string name="officialnewssett">Configurações de notícias integradas</string>
+    <string name="officialnewssett_summary">Configurações de notícias integradas ao cliente</string>
+
+    <string name="appearance_theme_info">Informações úteis</string>
+    <string name="appearance_theme_info_summary">Para aplicar as alterações do tema, você deve alternar o tema</string>
+    <string name="appearance_theme_dialog_title">Escolha um tema</string>
+    <string name="appearance_theme_dark_theme">Tema escuro do aplicativo</string>
+    <string name="appearance_theme_light_theme">Tema claro do aplicativo</string>
+    <string name="appearance_theme_use_system">Tema do aplicativo</string>
+    <string name="appearance_theme_use_system_summary">Aplicar tema do sistema na inicialização do aplicativo</string>
+
+    <string name="appearance_other_color_navbar_summary">Se disponível sistemicamente</string>
+    <string name="appearance_other_color_webview_summary">Colorir páginas como VKID no tema do aplicativo</string>
+
+    <string name="interface_global_old_icons">Ícones antigos</string>
+    <string name="interface_global_old_icons_summary">Você deve redefinir a configuração para aplicar as alterações</string>
+
+    <string name="activity_what_is_it">O que é?</string>
+    <string name="activity_dnr_summary">A função permite que você não envie o status de leitura da mensagem</string>
+    <string name="activity_dnw_summary">A função permite que você não envie o status de digitação da mensagem</string>
+    <string name="activity_dns_summary">A função permite que você não envie o status de leitura de histórias</string>
+
+    <string name="activity_dnr_visual">Visualmente pode não funcionar corretamente (lido localmente), mas o acompanhante verá que não foi lido.</string>
+
+    <string name="activity_undel">Anti-excluir mensagens</string>
+    <string name="activity_undel_tag">Marca de mensagem excluída</string>
+    <string name="activity_undel_dial">Escolher marca de mensagem</string>
+    <string name="activity_undel_enable">Manter mensagens excluídas</string>
+    <string name="activity_undel_attachments">Pode não salvar anexos</string>
+
+    <string name="messages_interface_calls_summary">Ícone de chamada nas mensagens</string>
+    <string name="messages_interface_tails_summary">Pode não funcionar corretamente com anexos</string>
+    <string name="messages_other_choose_count">Escolher quantidade</string>
+    <string name="messages_other_download_first">Quantidade de mensagens baixadas</string>
+
+    <string name="vkx_title" translatable="false">VK X</string>
+    <string name="vkx_why">Por que?</string>
+    <string name="vkx_why_summary">A integração permite que você use os recursos do VK X diretamente no VTosters Lite\n\nAlém da reprodução, as faixas em cache também funcionarão no cliente</string>
+    <string name="vkx_download">Baixar VK X</string>
+    <string name="vkx_integration">Integração VK X</string>
+    <string name="vk_fix_music_other">Outro</string>
+    <string name="vk_fix_music">Corrigir a aba de música</string>
+    <string name="vk_fix_music_summary">Usar quando a aba de música não funciona (sem faixas/\'ouvir no app oficial VK\') ou não há componente GMS</string>
+
+    <string name="proxy_if">Se disponível</string>
+    <string name="proxy_login_title">Login</string>
+    <string name="proxy_password_title">Senha</string>
+
+    <string name="other_fix_app">Corrigir o aplicativo</string>
+    <string name="other_clear_stickers_cache">Limpar cache de adesivos</string>
+    <string name="other_clear_stickers_cache_summary">Corrigir o carregamento de adesivos quando eles estão completamente ausentes</string>
+    <string name="other_reset_settings">Redefinir configurações</string>
+    <string name="other_reset_settings_summary">Redefine as funções ativadas do VTLite para os padrões</string>
+    <string name="other_fix_dynamic_colors">Corrigir cores no Android 12+</string>
+
+    <string name="dockbar_editor">Editor da barra de tarefas</string>
+    <string name="superapp_editor">Editor SuperApp</string>
+    <string name="selected_items">Itens selecionados</string>
+    <string name="unselected_items">Itens desabilitados</string>
+
+    <string name="add_another_account">Adicionar nova conta</string>
+
+    <string name="checkforupdates">Verificar atualizações</string>
+
+    <string name="warning">Aviso!</string>
+    <string name="debug_warning_summary">Estas opções são apenas para testar este aplicativo. Se você é um usuário regular, por favor, não as use</string>
+    <string name="debug_show_settings_item">Mostrar menu de depuração</string>
+
+    <string name="debug_experimental">Experimental</string>
+    <string name="debug_experimental_usevkui">Edição de perfil?</string>
+    <string name="debug_experimental_page_stats">Estatísticas da página</string>
+    <string name="debug_experimental_page_stats_summary">Parece que o VK Devs parou de enviar informações</string>
+    <string name="debug_experimental_vk_sans_font">Fonte VK Sans</string>
+    <string name="debug_experimental_vk_me_mode">Modo de caixas de diálogo VK Me</string>
+    <string name="debug_experimental_libverify">Suporte a libverify</string>
+    <string name="debug_experimental_libverify_summary">Ativar pode corrigir login 2fa</string>
+    <string name="debug_experimental_opusmodule">Módulo Opus</string>
+    <string name="debug_experimental_language">Idioma do aplicativo</string>
+    <string name="debug_experimental_language_summary">Escolha o idioma do aplicativo</string>
+
+    <string name="debug_developer_functions">Opções do desenvolvedor</string>
+    <string name="debug_developer_mode">Modo do desenvolvedor</string>
+    <string name="debug_developer_mode_summary">Forçar conta de testador/desenvolvedor/funcionário e versão de depuração/implementação. Somente para depuração estendida</string>
+    <string name="debug_developer_force_ssl" translatable="false">Fixação SSL</string>
+    <string name="debug_developer_force_ssl_summary">Verificação de certificado HTTPS. Desativar permite espionar o tráfego do aplicativo</string>
+    <string name="debug_developer_dark_mode">Modo escuro</string>
+    <string name="debug_developer_is_music_restricted" translatable="false">isMusicRestricted</string>
+    <string name="debug_developer_is_music_restricted_summary">Restrição de música VK. Na verdade, não restringe nada, porque tudo é removido</string>
+    <string name="debug_developer_has_music_subscription" translatable="false">hasMusicSubscription</string>
+    <string name="debug_developer_has_music_subscription_summary">Assinatura de música</string>
+    <string name="debug_developer_old_about">Retornar tela antiga sobre</string>
+    <string name="debug_developer_ssfs_custom">Domínio SSFS</string>
+
+    <string name="debug_domains">Domínios</string>
+    <string name="debug_domains_editing">Edição de domínio</string>
+    <string name="debug_domains_editing_summary">Toda a lógica de edição de domínio foi movida para as configurações de proxy</string>
+    <string name="debug_domains_api">Domínio da API</string>
+    <string name="debug_domains_oauth">Domínio OAuth</string>
+    <string name="debug_domains_vkui_host" translatable="false">URI do host VK UI</string>
+    <string name="debug_domains_vkui_spa" translatable="false">URI VK UI SPA</string>
+    <string name="debug_domains_awayphp">Domínio away.php</string>
+
+    <string name="debug_logging">Registro</string>
+    <string name="debug_logging_file">Gravar logs em arquivo</string>
+    <string name="debug_logging_file_summary">Gravar logs do aplicativo. Funciona até a parada completa do aplicativo</string>
+    <string name="debug_logging_api">Registro da API</string>
+    <string name="debug_logging_api_summary">Registra API junto com registro principal</string>
+    <string name="debug_logging_api_errors">Mostrar erros de API</string>
+    <string name="debug_logging_api_errors_summary">Exibir erros de API como notificações</string>
+    <string name="debug_logging_webview">Depuração do WebView</string>
+    <string name="debug_logging_force_stats_sending">Enviar estatísticas imediatamente</string>
+    <string name="debug_logging_visualise_viewposttime">Visualização de view_post_time</string>
+    <string name="debug_logging_visualise_viewposttime_summary">Destacar postagens no evento view_post_time</string>
+    <string name="debug_logging_breakpoints">Permitir pontos de interrupção</string>
+    <string name="debug_logging_breakpoints_summary">Permitir pontos de interrupção de solicitação por meio de proxy (Charles)</string>
+    <string name="debug_logging_apply_spaces">Aplicar espaços</string>
+    <string name="debug_logging_apply_spaces_summary">Aplicar espaços para mensagens após o histórico do longpoll</string>
+    <string name="debug_logging_memleak">Ativar detecção de vazamento de memória</string>
+
+    <string name="debug_network">Rede</string>
+
+    <string name="debug_cache">Cache</string>
+    <string name="debug_cache_trusted_hash">Limpar hash 2FA</string>
+    <string name="debug_cache_webview">Limpar cache do WebView</string>
+    <string name="debug_cache_vkpay_token">Remover token VK Pay para pagamento QR</string>
+    <string name="debug_cache_stickers">Limpar cache de adesivos</string>
+    <string name="debug_cache_video">Limpar cache de vídeo</string>
+
+    <string name="debug_system">Sistema</string>
+    <string name="debug_system_language">Substituição de idioma</string>
+    <string name="debug_system_terminate">Encerrar o aplicativo</string>
+    <string name="debug_system_fcm">Atualizar registro do dispositivo Firebase</string>
+    <string name="debug_system_fcm_copy_token">Copiar token de push</string>
+    <string name="debug_system_google_now">Atualizar Google Now</string>
+
+    <string name="debug_clickable_sticker_border_title">Borda clicável do adesivo</string>
+    <string name="debug_create_sticker_border_title">Borda do adesivo na criação</string>
+
+    <string name="debug_tests">Testes</string>
+    <string name="debug_tests_bd">Notificação de teste BD</string>
+    <string name="debug_tests_validation">Testar erro need_validation</string>
+    <string name="debug_tests_captcha">Testar erro de captcha</string>
+    <string name="debug_tests_crash">Testar erro do sistema</string>
+    <string name="debug_tests_ads">Anúncio de teste</string>
+    <string name="debug_tests_pretty_cards">pretty_cards demo</string>
+    <string name="debug_tests_spa_uri">Testar uri VK UI</string>
+    <string name="debug_tests_spa">Testar VK UI</string>
+    <string name="debug_tests_tooltip">Testar dica de ferramenta</string>
+
+    <string name="debug_app_versions_list_title">Lista de versões do aplicativo</string>
+    <string name="debug_drop_bugtracker_token_title">Remover token do bugtracker</string>
+
+    <string name="debug_proxy">Proxy VK oficial</string>
+    <string name="debug_proxy_force">Forçar recursos de proxy VK</string>
+    <string name="debug_proxy_force_summary">Soluções VK para seu proxy</string>
+    <string name="debug_proxy_enable">Proxy</string>
+    <string name="debug_proxy_enable_summary">Não funcionará</string>
+
+    <string name="debug_other">Outros</string>
+    <string name="debug_no_ads_title">Desativar anúncios</string>
+    <string name="debug_proxy_enable_title">Proxy</string>
+    <string name="debug_use_libverify_for_auth_title">Usar libverify para autorização</string>
+
+    <string name="nine_votes">9 votos</string>
+
+    <string name="DNR_ON">Ativar Não Ler</string>
+    <string name="DNR_OFF">Desativar Não Ler</string>
+
+    <string name="vtl_crashed">Ocorreu um erro no VTLite!</string>
+    <string name="vtl_crash_upload">Enviar logs</string>
+    <string name="vtl_crash_save">Salvar em arquivo local</string>
+
+    <string name="batteryissuetitle">Desativar otimização da bateria!</string>
+    <string name="batteryissuesumm">Devido ao fato de você estar usando um firmware de terceiros da lista abaixo, as notificações podem chegar com atraso ou nem chegar. \nClique no botão \"Desativar otimização\" para corrigir esse problema. \n\nFirmware de terceiros em que são observados problemas com push:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience ou TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
+    <string name="batteryissuebtn1">Desativar otimização</string>
+    <string name="batteryissuebtn2">Ignorar</string>
+
+    <string name="gmsissuesumm">Não há um componente do Google Play Services (GMS) em seu dispositivo, o que é necessário para que o VTosters Lite funcione corretamente</string>
+    <string name="gmsissuebtn1">Continuar sem GMS</string>
+    <string name="gmsissuebtn2">Instalar GMS</string>
+
+    <string name="startsumm1">A modificação VTosters Lite não tem nada a ver com o Grupo VK! \nDistribuído totalmente gratuito! \nAo clicar em continuar, você concorda com a coleta de informações básicas sobre o dispositivo e que os desenvolvedores desta modificação não são responsáveis por sua conta</string>
+    <string name="startsumm2">\n\nÉ possível que o aplicativo não funcione corretamente devido ao fato de você provavelmente estar usando o shell da lista abaixo. Todos os problemas com a exibição e funcionamento do aplicativo estão relacionados apenas ao seu firmware e somente a ele. Todos os relatórios de bugs enviados devido a problemas neste firmware não são considerados pelos desenvolvedores e não serão corrigidos. \n\nAo pressionar o botão \"Continuar\", você concorda que possíveis bugs do aplicativo podem ocorrer devido às especificidades do seu firmware. Recomendamos usar firmware baseado em AOSP para máxima estabilidade. \n\nFirmware no qual há problemas com aplicativos:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience ou TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
+    <string name="startbtn1">Notícias</string>
+    <string name="startbtn2">Continuar</string>
+
+    <string name="videodownloaderr">Este vídeo não pode ser baixado</string>
+
+    <string name="roundedmsgs">Mensagens arredondadas</string>
+
+    <string name="dateformat">Selecione o tipo de exibição da data</string>
+
+    <string name="franimation">Animação de fragmento</string>
+    <string name="selectfranimation">Selecione a animação do fragmento</string>
+
+    <string name="vkme">Modo VK Messenger</string>
+    <string name="vkmesumm">Substituir o dock e alguns elementos por algo semelhante ao VK Messenger</string>
+
+    <string name="vtsettaccount">Conta</string>
+    <string name="vtsettdarktheme">Tema escuro</string>
+    <string name="vtsettaboutmod">Sobre a modificação</string>
+    <string name="vtsettmod">Configurações do Mod</string>
+
+    <string name="vtlsettenabled">Ativado</string>
+    <string name="vtlsettdisabled">Desativado</string>
+
+    <string name="vtlsettverifno">Não</string>
+    <string name="vtlsettverifyes">Sim</string>
+
+    <string name="vtlfeedsumm">Bloquear anúncios</string>
+    <string name="vtldocksumm">Elementos da Dockbar</string>
+    <string name="vtlmediasumm">Integração VKX</string>
+    <string name="vtlmsgsumm">Modo VK Messenger</string>
+    <string name="vtlactivitysumm">Modo offline</string>
+    <string name="vtlthemessumm">Colorir barra de navegação</string>
+    <string name="vtltgssumm">Pacotes ativados</string>
+    <string name="vtlinterfacesumm">Números arredondados</string>
+    <string name="vtlproxysumm">Tipo de proxy</string>
+    <string name="vtlothersumm">Mostrar verificações</string>
+    <string name="vtlmultiaccsumm">Contas disponíveis</string>
+    <string name="vtlhidesumm">Ocultar resumos de configurações</string>
+    <string name="vtllogout">Sair ou alterar conta</string>
+    <string name="vtlvksettings">Configurações VK</string>
+
+    <string name="vtlssfssumm">Ter acesso</string>
+    <string name="checkupdates">Atualizações automáticas</string>
+    <string name="updates">Atualizações</string>
+
+    <string name="vkme_notifs">Voltar para a guia de notificações na dock</string>
+    <string name="updateanddownload">Atualizar</string>
+    <string name="newversion">Nova versão</string>
+    <string name="changelog">Registro de alterações</string>
+    <string name="downloaderr">Erro no download</string>
+
+    <string name="download_mp3">Baixar como mp3</string>
+    <string name="remove_from_cache">Remover do cache</string>
+    <string name="add_to_cache">Adicionar ao cache</string>
+
+    <string name="remove_from_cache_vkx">Remover do cache do VK X</string>
+    <string name="add_to_cache_vkx">Adicionar ao cache do VK X</string>
+
+    <string name="play_in_vkx">Tocar a faixa no VK X</string>
+
+    <string name="thanksfordonate">Obrigado por apoiar o projeto!</string>
+    <string name="getdonate">Apoie o projeto com uma doação e ganhe recompensas</string>
+
+    <string name="wallpapers">Papéis de parede</string>
+
+    <string name="translator">Traduzir</string>
+    <string name="readto">Ler para</string>
+
+    <string name="vkiddisable">Desativar proteção</string>
+    <string name="vkidsumm">O VK começou a bloquear o uso de aplicativos de terceiros, portanto, para a operação estável de todas as partes do aplicativo, é necessário desativar a Proteção contra aplicativos suspeitos \n\nID VK -> Segurança e Login -> Proteção contra aplicativos suspeitos</string>
+
+    <string name="telegram_stickers_service">Serviço de adesivos do Telegram no VTLite</string>
+    <string name="telegram_stickers_downloading">: baixando</string>
+    <string name="telegram_stickers_updating">: atualização</string>
+    <string name="telegram_stickers_gettinginfo">Obtendo informações</string>
+    <string name="telegram_stickers_updated">atualizado com sucesso</string>
+    <string name="telegram_stickers_downloaded">baixado com sucesso</string>
+    <string name="telegram_stickers_error_update">: falha na atualização</string>
+    <string name="telegram_stickers_error_download">: falha no download</string>
+
+    <string name="lastfm_authorized_as">Você está autorizado como</string>
+    <string name="lastfm_login">Entrar</string>
+    <string name="lastfm_password">Senha</string>
+    <string name="lastfm_enter_credentials">Digite seu nome de usuário e senha</string>
+    <string name="lastfm_enter">Entrar</string>
+    <string name="lastfm_logout_title">Tem certeza?</string>
+    <string name="lastfm_logout_confirm">Tem certeza que deseja sair?</string>
+
+    <string name="video_history_cleaned">Histórico de vídeos limpo</string>
+
+    <string name="video_dl_enter_link">Inserir link do vídeo</string>
+
+    <string name="music_dl_title">Download de música</string>
+    <string name="music_dl_progress">Progresso do download de música</string>
+
+    <string name="ffmpegkit_copy">Copiando a biblioteca ffmpegkit</string>
+
+    <string name="logfile_error">Falha ao salvar o arquivo de log</string>
+    <string name="logfile_saved">O arquivo de log foi salvo</string>
+
+    <string name="menu_copy_id">Copiar ID</string>
+    <string name="menu_addon_info">Informação adicional</string>
+    <string name="menu_change_name">Mudar o nome</string>
+    <string name="menu_copied">Copiado!</string>
+
+    <string name="vtl_confirm">Aplicar</string>
+
+    <string name="pic_rounding_title">Selecione o tamanho do arredondamento dos cantos</string>
+    <string name="pic_rounding_info">Defina como 0 para desativar o arredondamento dos cantos</string>
+    <!-- Cancel - "cancel" -->
+
+    <string name="wallpapers_disabled">Desativado</string>
+    <string name="wallpapers_low">Baixo</string>
+    <string name="wallpapers_med">Médio</string>
+    <string name="wallpapers_high">Alto</string>
+    <string name="wallpapers_dim_black">Escuro</string>
+    <string name="wallpapers_dim_white">Clarear</string>
+
+    <string name="translator_reply">Responder:</string>
+    <string name="translator_no_text">Nenhum texto para traduzir</string>
+
+    <string name="pin_dialog">Caixa de diálogo com sucesso </string>
+    <string name="dialog_pinned">fixado(a)</string>
+    <string name="dialog_unpinned">desfixado(a)</string>
+
+    <string name="debug_menu_already_activated">Menu do desenvolvedor já ativado</string>
+    <string name="debug_menu_activated">Menu do desenvolvedor ativado</string>
+
+    <string name="vkme_mode_info">Algumas configurações foram ocultadas devido ao modo VK Messenger \n\nPara desativar o modo, vá para as configurações de Mensagens</string>
+
+    <string name="elements_hidden_count">Elementos ocultos</string>
+
+    <string name="donate_to_vtl">Ajude o projeto com uma doação e ganhe um bônus!</string>
+    <string name="tester_profile">Perfil do testador</string>
+    <string name="i_bought">Eu comprei </string>
+    <string name="i_created_poop">Eu criei um cocô</string>
+    <string name="no_data_error">Não obtive dados (9(9(</string>
+
+    <string name="token_saved">Token salvo com sucesso</string>
+    <string name="download_folders_reseted">Pastas de download redefinidas com sucesso</string>
+
+    <string name="cache_disabled">Não habilitado</string>
+    <string name="cache_100mb">Limpar cache de pelo menos 100 MB</string>
+    <string name="cache_500mb">Limpar cache de pelo menos 500 MB</string>
+    <string name="cache_1gb">Limpar cache de pelo menos 1 GB</string>
+    <string name="cache_2gb">Limpar cache de pelo menos 2 GB</string>
+    <string name="cache_5gb">Limpar cache de pelo menos 5 GB</string>
+    <string name="cache_clean_title">Limpeza de cache</string>
+    <string name="cache_select_size">Selecione a quantidade de cache para limpar</string>
+    <string name="select_which_clean">Selecione o que deseja limpar</string>
+    <string name="cache_cleaned">Cache limpo</string>
+
+    <string name="no_data_to_backup">Não há dados para backup</string>
+    <string name="select_backup">Escolha um backup</string>
+    <string name="backup_success">Configurações restauradas</string>
+    <string name="backup_error">Erro: Configurações não restauradas</string>
+
+    <string name="rename_title">Mudar nome</string>
+    <string name="rename_message">Esta é uma alteração local que só será visível neste cliente.</string>
+    <string name="rename_success">Usuário renomeado com sucesso!</string>
+    <string name="rename_error">Erro ao renomear usuário</string>
+    <string name="rename_reset">Redefinir</string>
+    <string name="rename_remove_from_bd_success">Usuário removido com sucesso do banco de dados!</string>
+    <string name="rename_group_success">Comunidade renomeada com sucesso!</string>
+    <string name="rename_remove_group_from_bd_success">Comunidade removida com sucesso do banco de dados!</string>
+
+    <string name="link_audio_error">Link de áudio não encontrado</string>
+    <string name="load_audio_error">Não foi possível carregar o áudio</string>
+    <string name="audio_downloading">Baixando áudio</string>
+
+    <string name="proxy_setup">Configurar proxy</string>
+    <string name="proxy_disable">Desativar</string>
+    <string name="proxy_enable">Ativar</string>
+    <string name="proxy_warning">Zaborona não está associado ao VTosters de forma alguma e não podemos garantir seu funcionamento e segurança</string>
+    <string name="proxy_settings">Configurações de proxy</string>
+
+    <string name="apk_install_error">Erro ao instalar atualização</string>
+
+    <string name="message_self_destruct_15sec">15 segundos</string>
+    <string name="message_self_destruct_1min">1 minuto</string>
+    <string name="message_self_destruct_5min">5 minutos</string>
+    <string name="message_self_destruct_1hour">1 hora</string>
+    <string name="message_self_destruct_24hours">24 horas</string>
+
+    <string name="silent_messages">Mensagens silenciosas</string>
+    <string name="message_send_settings_title">Configurações de envio</string>
+    <string name="silent_messages_time_select">Selecione o tempo para a mensagem desaparecer</string>
+
+    <string name="update_vk_admin_token">Atualizar token de administrador VK em Outras configurações</string>
+
+    <string name="backup_saved_in">Salvo no arquivo</string>
+    <string name="backup_save_error">Falha ao salvar arquivo</string>
+
+    <string name="newsfeed_list_update_feed">Atualize o feed para obter uma lista de itens disponíveis</string>
+    <string name="newsfeed_list_choose_to_hide">Escolha itens para ocultar</string>
+    <string name="newsfeed_list_update_feed_to_work">Atualize o feed para aplicar as alterações</string>
+    <string name="newsfeed_list_hidden_reseted">Itens ocultos redefinidos</string>
+
+    <string name="video_dl_stories_not_supported">Download de histórias não é suportado</string>
+    <string name="video_dl_wrong_link">Link inválido</string>
+    <string name="video_dl_progress">Processando vídeo</string>
+    <string name="video_dl_error">O vídeo não pode ser baixado</string>
+
+    <string name="superapp_menu">Menu do aplicativo</string>
+    <string name="superapp_miniapps">Widget MiniApps</string>
+    <string name="superapp_vkpay">VK Pay</string>
+    <string name="superapp_greeting">Saudação</string>
+    <string name="superapp_miniapps_promo">Promoção de MiniApps</string>
+    <string name="superapp_holiday">Aniversários de amigos</string>
+    <string name="superapp_weather">Clima</string>
+    <string name="superapp_sport">Eventos esportivos</string>
+    <string name="superapp_games">Jogos</string>
+    <string name="superapp_informer">Informativo</string>
+    <string name="superapp_food">Comida</string>
+    <string name="superapp_event">Eventos</string>
+    <string name="superapp_music">Música</string>
+    <string name="superapp_vk_run">VK Run</string>
+
+    <string name="feed_hidden">%1$d feeds ocultos</string>
+    <string name="feed_no_elements">Nenhum item adicionado</string>
+    <string name="feed_elements_count">%1$d itens adicionados</string>
+
+    <string name="app_name_select_title">Selecione o título do aplicativo</string>
+    <string name="icons_warning">Nem todos os recursos estão disponíveis!</string>
+    <string name="icons_warning_info">Para desbloquear, você precisa fazer uma doação de pelo menos 99 rublos</string>
+    <string name="icons_title">Ícones</string>
+    <string name="unavailable_icons">Ícones indisponíveis</string>
+    <string name="unavailable_icon_warning">O ícone só está disponível para proprietários verificados</string>
+
+    <string name="rounding_size">Tamanho do arredondamento: %1$ddp</string>
+
+    <string name="sferum_online">Sferum</string>
+    <string name="vk_calls_online">Chamadas VK</string>
+    <string name="vk_music_online">Música VK</string>
+    <string name="vk_clips_online">Clipes VK</string>
+    <string name="vk_video_online">Vídeo VK</string>
+    <string name="vk_mail_online">Correio VK</string>
+
+    <string name="wallpaper_select">Selecionar papel de parede</string>
+    <string name="wallpaper_from_gallery">da galeria</string>
+    <string name="wallpaper_remove">Remover papel de parede</string>
+    <string name="filters_warning">Nem todos os filtros estão disponíveis!</string>
+    <string name="filter_maybe_lag">O dispositivo pode ficar carregado</string>
+    <string name="filter_blur">Desfoque o fundo da mensagem</string>
+    <string name="filter_dim">Escurecendo a imagem</string>
+    <string name="filter_mosaic">Mosaico</string>
+    <string name="filter_monochrome">Fundo preto e branco</string>
+    <string name="filter_invert_colors">Inverter cores</string>
+    <string name="filter_sepia">Efeito sépia</string>
+    <string name="filter_emboss">Filtro de relevo</string>
+    <string name="filter_engrave">Filtro de gravação</string>
+    <string name="filter_flea">Filtro de pulgas</string>
+    <string name="filter_snow">Efeito neve</string>
+
+    <string name="encryption">Método de criptografia</string>
+    <string name="encryption_sett">Configurações de criptografia</string>
+    <string name="encryption_disable">Desativar criptografia</string>
+    <string name="encryption_settings_title">Configurações de criptografia</string>
+    <string name="encryption_public_algorithm_error">O algoritmo selecionado é público e não possui configurações!</string>
+    <string name="encryption_enter_key">Digite a chave de criptografia</string>
+    <string name="encryption_current_algorithm_title">Algoritmo usado: %1$s</string>
+
+    <string name="update_error">Falha na atualização</string>
+    <string name="update_error_text">Ocorreu um erro ao tentar baixar a nova versão do aplicativo.\nDeseja atualizar o aplicativo manualmente?</string>
+
+    <string name="photo_get_error">Falha ao obter o link da foto</string>
+
+    <string name="denial_of_responsibility_proxy">Aviso Legal</string>
+    <string name="denial_of_responsibility_proxy_summ">Os desenvolvedores do cliente VTLite não se responsabilizam pela segurança do uso de proxies de terceiros \n\nUse por sua conta e risco</string>
+
+    <string name="altervika_title">Domínio VikaMobile alternativo</string>
+
+    <string name="proxy_setup_title">Configurar proxy</string>
+    <string name="proxy_setup_summ">Obter um proxy de terceiros de listas de proxy suportadas</string>
+    <string name="proxy_setup_success">Proxy configurado, host:</string>
+
+    <string name="delete_elements_confirm">Tem certeza de que deseja excluir todos os elementos da lista?</string>
+    <string name="elements_deleted_success">Lista de elementos limpa com sucesso</string>
+    <string name="get_proxy_error">Ocorreu um erro ao obter o proxy</string>
+
+    <string name="add_to_filter_whitelist">Adicionar à lista de permissões de filtros</string>
+    <string name="remove_from_filter_whitelist">Remover da lista de permissões de filtros</string>
+    <string name="add_to_ads_stories_whitelist">Adicionar à lista de permissões de histórias</string>
+    <string name="remove_from_ads_stories_whitelist">Remover da lista de permissões de histórias</string>
+    <string name="add_to_ads_whitelist">Adicionar à lista de permissões de anúncios em histórias</string>
+    <string name="remove_from_ads_whitelist">Remover da lista de permissões de anúncios em histórias</string>
+    <string name="removed_from_whitelist_success">Removido da lista de permissões</string>
+    <string name="added_to_whitelist_success">Adicionado à lista de permissões</string>
+
+    <string name="whitelisted_ad_groups_title">Lista de permissões de anúncios</string>
+    <string name="whitelisted_filters_groups_title">Lista de permissões de filtros e direitos autorais</string>
+
+    <string name="whitelisted_ad_groups_stories_title">Lista de permissões de anúncios em histórias</string>
+
+    <string name="download_dl">Janela de download</string>
+    <string name="download_dl_error">Ocorreu um erro ao tentar baixar a janela</string>
+
+    <string name="dialogstats">Estatísticas da conversa</string>
+
+    <string name="saved_as">Salvo como</string>
+    <string name="settings_reset_confirm">Tem certeza de que deseja redefinir suas configurações?</string>
+    <string name="system_theme_warning">Você tem o tema do sistema ativado \nQuando você altera o tema, o tema do sistema será desativado \n\nTem certeza de que deseja desativá-lo?</string>
+
+    <string name="compress_wallpaper_title">Compactar papel de parede</string>
+    <string name="compress_wallpaper_summ">Acelera bastante a abertura de conversas</string>
+
+    <string name="from_lower">de</string>
+    <string name="chat_export_error">erro</string>
+
+    <string name="chat_export_title">Exportar do VTLite</string>
+    <string name="chat_export_header">Exportar histórico de conversas</string>
+    <string name="chat_export_avatar_update">Atualizou a foto da conversa</string>
+    <string name="chat_export_avatar_remove">Removeu a foto da conversa</string>
+    <string name="chat_export_chat_created">Criou uma conversa</string>
+    <string name="chat_export_name_changed">Alterou o nome da conversa</string>
+    <string name="chat_export_to">para</string>
+    <string name="chat_export_user_added">Adicionado</string>
+    <string name="chat_export_user_kicked">Expulso</string>
+    <string name="chat_export_type_group">grupo</string>
+    <string name="chat_export_type_user">usuário</string>
+    <string name="chat_export_msg_pinned">Mensagem fixada</string>
+    <string name="chat_export_msg_unpinned">Mensagem desfixada</string>
+    <string name="chat_export_join_by_link">Entrou em uma conversa por link</string>
+    <string name="chat_export_chat_screenshot">Fez uma captura de tela da conversa</string>
+
+    <string name="chat_export_type_photo">foto</string>
+    <string name="chat_export_type_doc">documento</string>
+    <string name="chat_export_type_link">link</string>
+    <string name="chat_export_type_wallpost">publicação na parede</string>
+    <string name="chat_export_type_audiomsg">mensagem de voz</string>
+    <string name="chat_export_type_audio">áudio</string>
+    <string name="chat_export_type_video">vídeo</string>
+    <string name="chat_export_type_wallreply">resposta de parede</string>
+    <string name="chat_export_type_story">história</string>
+    <string name="chat_export_type_podcast">podcast</string>
+    <string name="chat_export_type_miniapp">miniapp</string>
+    <string name="chat_export_type_playlist">playlist</string>
+    <string name="chat_export_poll_anon">anônimo</string>
+    <string name="chat_export_poll_publ">público</string>
+    <string name="chat_export_type_poll">enquete</string>
+    <string name="chat_export_type_market">produto</string>
+
+    <string name="chat_export_poll_voted">Votou</string>
+    <string name="chat_export_users_name">usuário(s)</string>
+
+    <string name="chat_export_video_nolinks">sem links</string>
+
+    <string name="delete_video_history_confirm">Tem certeza de que deseja limpar seu histórico de vídeos?</string>
+    <string name="delete_video_history_error">Erro ao limpar o histórico de vídeos. Detalhes nos logs</string>
+
+    <string name="wallpaper_size_limit">O tamanho do arquivo excede o limite de 6 MB</string>
+
+    <string name="contact_sync_error">Erro ao sincronizar contatos</string>
+    <string name="contact_permission_toast">Para que esta função funcione, você deve conceder permissão para ler contatos</string>
+    <string name="contact_info_loading">Carregando dados do contato...</string>
+    <string name="contact_sync_title">Sincronizar contatos</string>
+    <string name="contact_sync_state">Status da sincronização</string>
+    <string name="contact_sync_enabled">Ativado</string>
+    <string name="contact_sync_disabled">Desativado</string>
+
+    <string name="force_disable_psm_title">Ocultar informações da bateria</string>
+    <string name="force_disable_psm_summ">Habilitar este recurso ocultará informações sobre o estado do seu dispositivo no modo de economia de bateria e o VK enviará conteúdo de mídia sem compressão forte e desfoque</string>
+
+    <string name="track_bd_insert_err">Erro ao gravar faixa no banco de dados!</string>
+    <string name="cached_tracks_deleted">Faixas em cache excluídas</string>
+    <string name="cached_track">Faixa em cache</string>
+    <string name="cached_tracks_title">Faixas em cache</string>
+    <string name="saved_tracks_title">Faixas salvas</string>
+    <string name="cached_tracks_desc">Esta playlist não é exibida no seu perfil e não é sincronizada com os servidores VK.\n\nAlguns recursos podem não funcionar corretamente. Se não houver conexão com a Internet, esta playlist se transformará em uma lista de reprodução regular.</string>
+    <string name="cached_album_warning">Este é um álbum em cache!</string>
+    <string name="cached_playlist_loading">Carregando playlist</string>
+
+    <string name="cached_content_title">Conteúdo em cache</string>
+    <string name="cached_content_empty">Parece que está vazio</string>
+    <string name="cached_content_empty_desc">Você não tem conteúdo em cache</string>
+    <string name="cached_tracks_remove_confirm">Tem certeza de que deseja excluir todas as faixas em cache?</string>
+
+    <string name="vkx_integration_title">Habilitar integração VK X!</string>
+    <string name="vkx_integration_desc">Obtenha acesso ao armazenamento de faixas e a capacidade de incluir/armazenar em cache faixas do VTLite para o VK X. \n\nPara obter detalhes, vá para Configurações > Conteúdo de mídia > VK X</string>
+
+    <string name="music_downloading">Baixando música</string>
+    <string name="music_downloading_progress">Progresso do download de música</string>
+
+    <string name="playlist_downloading">Baixando playlist</string>
+    <string name="playlist_downloading_progress">Progresso do download da playlist</string>
+
+    <string name="caching_track_or_pic">Armazenando em cache faixa / arte da capa</string>
+
+    <string name="cached_tracks_counter">Total de %1$d músicas(s) em cache</string>
+
+    <string name="autocache_title">Cache automático de faixas</string>
+    <string name="autocache_summ">Armazena automaticamente em cache todas as músicas que você reproduziu</string>
+
+    <string name="playlist_download_notf">Baixadas %1$d de %2$d faixas</string>
+
+    <string name="all_audio">Todo áudio</string>
+    <string name="notf_audio_dl_user">Baixar todo o áudio do usuário</string>
+    <string name="no_cache_error">Você não possui músicas em cache</string>
+
+    <string name="download_method">Método de download</string>
+    <string name="download_method_desc">Selecione como deseja baixar todos os seus áudios (sem playlists)</string>
+    <string name="download_method_cache">Para cache</string>
+    <string name="download_method_mp3">Como .mp3</string>
+
+    <string name="audio_download_title">Baixar todos os seus áudios</string>
+
+    <string name="app_activities_error">Ocorreu um erro no aplicativo. Reinicie o aplicativo</string>
+
+    <string name="vkx_integration_enabled_info">A integração VK X está habilitada. O cache global está disponível dentro do VK X</string>
+
+    <string name="current_theme">Tema atual</string>
+
+    <string name="writebar_ios_title">Barra de escrita iOS</string>
+    <string name="newsfeed_notif_title">Notificações do Feed de notícias</string>
+    <string name="newsfeed_notif_summ">Mostrar contador de notificações na barra de tarefas no ícone de notícias</string>
+
+    <string name="invalid_pack_link">Link do pacote inválido</string>
+
+    <string name="blockminiapps_title">Publicações com MiniApps</string>
+    <string name="blockminiapps_summ">Bloquear publicações com MiniApps</string>
+
+    <string name="maxquality_title">Qualidade máxima</string>
+    <string name="maxquality_summ">Abrir vídeo com qualidade máxima através de um player de vídeo externo</string>
+
+    <string name="promotedstickers_title">Não receber adesivos promovidos</string>
+
+    <string name="useOldAppVer_title">Usar catálogo de músicas antigo</string>
+    <string name="useOldAppVer_summ">Funciona "como está". Pode haver erros</string>
+
+    <string name="invertFilters">Inverter exceções</string>
+    <string name="invertFilters_summ">Os grupos adicionados às exceções serão filtrados</string>
+
+    <string name="downloading_update">Baixando atualização</string>
+    <string name="sources">Fontes</string>
+    <string name="businessDisabler_title">Desativar notificações comerciais</string>
+    <string name="accent_color_title">Cor de destaque</string>
+    <string name="accent_color_summ">Cor de destaque no aplicativo</string>
+    <string name="change_accent_color">Alterar cor de destaque</string>
+    <string name="select_palette">Selecionar paleta</string>
+    <string name="select_color">Selecionar cor</string>
+
+    <string name="copyownlink_title">Link para o seu perfil</string>
+    <string name="copyownlink_summ">Copiar link para o seu perfil para recursos de doação</string>
+    <string name="amoledtheme_title">Tema AMOLED</string>
+    <string name="amoledtheme_summ">Tema preto para economia de energia em telas AMOLED</string>
+    <string name="monettheme_title">Tema Monet</string>
+    <string name="monettheme_summ">Tema dinâmico com base no papel de parede do telefone</string>
+    <string name="accents">Destaques</string>
+    <string name="cannot_write">Sem permissão para gravar ou ler arquivos</string>
+    <string name="open_bot">Abrir bot</string>
+    <string name="crash_service_name">Notificações de erro</string>
+    <string name="custom_links_warning">Os desenvolvedores não se responsabilizam por links do usuário. Tenha cuidado!</string>
+    <string name="by_choice">Por escolha</string>
+    <string name="data_updated">Dados atualizados</string>
+    <string name="updateverifdata_title">Atualizar dados</string>
+    <string name="updateverifdata_summ">Carregar os dados mais recentes sobre verificações e funções do servidor</string>
+    <string name="device_info">Informações do dispositivo</string>
+    <string name="calls_not_available">Instale o VK Messenger ou o cliente VK oficial</string>
+    <string name="copydebuginfo_title">Copiar informações do dispositivo</string>
+    <string name="copydebuginfo_summ">Para enviar informações de bug para o GitHub Issues</string>
+    <string name="device_info_copied">Informações do dispositivo copiadas</string>
+    <string name="app_open_by_default_settings">Você precisa permitir que o aplicativo abra links por padrão para que ele funcione corretamente</string>
+
+    <string name="failed_to_get_text">Falha ao obter texto</string>
+    <string name="error_no_text">Erro ao receber texto, possivelmente nenhum texto encontrado</string>
+    <string name="applying_accent">Aplicando destaque</string>
+    <string name="error_applying_accent">Erro ao aplicar destaque</string>
+    <string name="logColors_title">Registro de cores de destaque</string>
+
+    <string name="remove_encryption_key">Remover chave</string>
+    <string name="restore_accounts">Restaurar contas</string>
+    <string name="save_accounts">Salvar contas</string>
+    <string name="reset_accounts">Redefinir todas as contas</string>
+    <string name="accounts_saved_by_path">Contas salvas por caminho</string>
+    <string name="error_saving_file">Erro ao salvar arquivo</string>
+
+    <string name="save_online_data">Salvar dados online</string>
+
+    <string name="restore_settings">Restaurar configurações</string>
+    <string name="reset_all_settings">Redefinir todas as configurações</string>
+
+    <string name="disable_analytics">Desativar coleta de dados</string>
+    <string name="disable_analytics_summ">Coletar dados de travamento nos ajuda a melhorar o aplicativo\n\nSe não coletarmos logs de travamento, isso deixará os desenvolvedores ruins tristes</string>
+
+    <string name="systemtheme_enabled">Tema do sistema ativado</string>
+    <string name="systemtheme">Tema do sistema</string>
+    <string name="systemtheme_summ">Usar o tema instalado no dispositivo</string>
+
+    <string name="useGenius_summ">Serviço Genius</string>
+    <string name="useGenius_title">Letras do Genius</string>
+
+    <string name="datasettings_title">Dados e armazenamento</string>
+    <string name="invalidate_theme_cache_title">Invalidar cache de temas</string>
+    <string name="invalidate_theme_cache_each_update_title">Limpar cache de tema após atualização para evitar problemas com cores de destaque</string>
+
+    <string name="useCustomPrefsStyle_title">Usar novos interruptores</string>
+    <string name="useCustomPrefsStyle_summ">Botões de alternância mais modernos e elegantes nas configurações</string>
+    <string name="useNewColorEngine_title">Usar novo mecanismo de cores de destaque</string>
+    <string name="useNewColorEngine_summ">Pode ser instável</string>
+
+    <string name="data">Dados</string>
+
+    <string name="currentLanguage">Idioma atual:</string>
+    <string name="appLanguage">Idioma do aplicativo</string>
+
+    <string name="microgsett">Configurações MicroG</string>
+
+    <string name="compression_types">Método de compressão de fotos</string>
+    <string name="compression_types_selection">Escolha o método de compressão</string>
+
+    <string name="clear_all_cache">Limpar todo o cache?</string>
+    <string name="cache_size">Tamanho do aplicativo</string>
+    <string name="cache_size_summ">Tamanho do cache</string>
+
+    <string name="invertcached_title">Inverter lista</string>
+    <string name="invertcached_summ">Inverter lista de faixas em cache</string>
+
+    <string name="sett_recommendations">Recomendações</string>
+    <string name="sett_nogms_summ">A falta desses serviços faz com que notificações em segundo plano sejam interrompidas e componentes do aplicativo tenham problemas para funcionar</string>
+    <string name="sett_missing_links">Não há links selecionados para serem abertos pelo aplicativo</string>
+    <string name="sett_missing_links_summ">Isso impedirá que links externos sejam abertos por este aplicativo para abri-los\n\nEm alguns casos, é necessário desativar a abertura de links para aplicativos VKontakte oficiais</string>
+    <string name="sett_battery">Desativar economia de bateria</string>
+    <string name="sett_battery_summ1">A economia de bateria impede que mensagens em segundo plano, notificações e música funcionem corretamente</string>
+    <string name="sett_battery_summ2">\n\nPara dispositivos Xiaomi, você precisa habilitar manualmente a inicialização automática para este aplicativo nas configurações do sistema</string>
+    <string name="sett_notifs">Ativar notificações</string>
+    <string name="sett_notifs_summ">Sem as notificações ativadas, você não poderá receber mensagens e muitas outras coisas</string>
+    <string name="sett_chats">Nossos chats</string>
+    <string name="sett_chats_summ">Chats ao vivo para discutir modificações e muito mais</string>
+    <string name="sett_community">Nossas comunidades</string>
+    <string name="sett_community_summ">Últimas informações sobre atualizações e muito mais</string>
+    <string name="sett_autoupdates">Atualização automática</string>
+    <string name="sett_autoupdates_summ">Receber notificação quando uma nova versão do aplicativo for lançada</string>
+    <string name="update_latest">Você possui a versão mais recente do aplicativo instalada</string>
+    <string name="update_err">Erro ao verificar atualizações</string>
+    <string name="serverFeaturesDisable">Desativar todas as conexões externas</string>
+    <string name="serverFeaturesDisable_summ">Desativa verificações e todas as funções adicionais relacionadas ao recebimento de dados do servidor VTosters</string>
+
+    <string name="tgs_token_missing">Token ausente</string>
+    <string name="tgs_token_reset_dialog">Redefinir o token do bot?</string>
+    <string name="tgs_token_reset">O token do bot foi redefinido</string>
+    <string name="tgs_token_reset_menu">Redefinir token do bot</string>
+
+    <string name="microg_dialog1">MicroG reduzido (ReVanced)</string>
+    <string name="microg_dialog2">MicroG alternativo (ReVanced)</string>
+    <string name="microg_dialog3">MicroG completo (substituto do GMS)</string>
+
+    <string name="disable_roaming_state">Desativar economia de tráfego forçada</string>
+    <string name="disable_roaming_state_submit">Desativar recurso de economia de tráfego forçada</string>
 </resources>
