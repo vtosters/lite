@@ -63,6 +63,11 @@ public interface Constants {
             + "REFERENCES " + TABLE_MUSICS + "(" + TRACK_ID + ") "
             + "ON DELETE CASCADE"
             + ")";
+    String DELETE_DEAD = "DELETE FROM " + TABLE_MUSICS +
+            " WHERE "+TRACK_ID+" NOT IN (" +
+            "    SELECT " + TABLE_PLAYLIST_TRACKS + "." + TRACK_ID +
+            "    FROM " + TABLE_PLAYLIST_TRACKS +
+            ");";
 
     String DROP_MUSICS = "DROP TABLE IF EXISTS " + TABLE_MUSICS;
     String DROP_PLAYLIST = "DROP TABLE IF EXISTS " + TABLE_PLAYLIST;

@@ -1,22 +1,22 @@
-package ru.vtosters.lite.music.cache.db;
+package ru.vtosters.lite.music.cache.playlists;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.util.Log;
 import com.vk.dto.music.Playlist;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import ru.vtosters.lite.music.cache.DatabaseAccess;
+import ru.vtosters.lite.music.cache.db.DatabaseAccess;
+import ru.vtosters.lite.music.cache.db.Constants;
 import ru.vtosters.lite.music.interfaces.IPlaylist;
 import ru.vtosters.lite.music.interfaces.IPlaylists;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.PlaylistUtils;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public final class SqlPlaylists implements IPlaylists {
 
@@ -107,7 +107,7 @@ public final class SqlPlaylists implements IPlaylists {
     }
 
     @Override
-    public List<IPlaylist> playlists() {
+    public Stream<IPlaylist> playlists() {
         try (Cursor cur = database.getReadableDatabase()
                 .query(Constants.TABLE_PLAYLIST,
                         new String[]{Constants.OWNER_ID, Constants.PLAYLIST_ID},
@@ -123,13 +123,12 @@ public final class SqlPlaylists implements IPlaylists {
 
                 list.add(new SqlPlaylist(ownerId, id, database));
             }
-            return Collections.unmodifiableList(list);
+            return list.stream();
         }
     }
 
     @Override
     public void addPlaylist(Playlist playlist) {
-        System.out.println("CREATE PLAYLIST!!!! " + playlist.b + " " + playlist.a);
         ContentValues values = new ContentValues();
         values.put(Constants.OWNER_ID, playlist.b);
         values.put(Constants.PLAYLIST_ID, playlist.a);

@@ -5,6 +5,7 @@ import com.vk.music.model.IpcPlayerModelImpl;
 import com.vk.music.model.PlayerModelImpl;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -18,7 +19,9 @@ public class ShuffleInjector {
     }
 
     private static List<MusicTrack> getShuffledList() {
-        List<MusicTrack> shuffled = TracklistHelper.getMyCachedMusicTracks();
+        List<MusicTrack> shuffled = new ArrayList<>(
+                TracklistHelper.getTracks()
+        );
         Collections.shuffle(shuffled);
         return shuffled;
     }

@@ -1,4 +1,4 @@
-package ru.vtosters.lite.music.cache;
+package ru.vtosters.lite.music.cache.db;
 
 import android.database.sqlite.SQLiteDatabase;
 

@@ -3,7 +3,9 @@ package ru.vtosters.hooks.music.injectors;
 import android.util.Log;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.catalog2.core.CatalogParser;
+import com.vk.catalog2.core.api.dto.CatalogCatalog;
 import com.vk.catalog2.core.api.dto.CatalogResponse;
+import com.vk.core.concurrent.VkExecutors;
 import com.vk.dto.music.MusicTrack;
 import com.vtosters.lite.R;
 import io.reactivex.Observable;
@@ -11,7 +13,9 @@ import io.reactivex.ObservableOnSubscribe;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
+
+import io.reactivex.schedulers.AndroidSchedulers;
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
@@ -19,9 +23,9 @@ import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import static ru.vtosters.lite.music.cache.helpers.PlaylistHelper.*;
 
@@ -31,41 +35,32 @@ public class TracklistInjector {
         return !NetworkUtils.isNetworkConnected();
     }
 
-    public static Observable<CatalogResponse> createOfflineRx(CatalogParser parser) {
+    public static Observable<CatalogResponse<CatalogCatalog>>
+    createOfflineRx(CatalogParser parser) {
         Log.d("TracklistInjector", "createOfflineRx");
 
-        return Observable.a((ObservableOnSubscribe<CatalogResponse>) observableEmitter -> {
+        return Observable.a((ObservableOnSubscribe) observer -> {
             if (LibVKXClient.isIntegrationEnabled()) {
-                LibVKXClient.getInstance().runOnService((service) -> {
+                LibVKXClient.getInstance().runOnService(service -> {
                     try {
-                        try {
-                            Log.d("TracklistInjector", "Using vkx cache catalog");
-                            observableEmitter.b(parser.c(new JSONObject(service.getCacheCatalog())));
-                        } catch (Exception e) {
-                            e.fillInStackTrace();
-                            List<MusicTrack> tracks = new ArrayList<>();
-                            List<String> cache = service.getCache();
-
-                            for (String json : cache) {
-                                Log.d("TracklistInjector", "added " + json);
-                                tracks.add(new MusicTrack(new JSONObject(json)));
-                            }
-
-                            Log.d("TracklistInjector", "Using own cache catalog from vkx");
-                            observableEmitter.b(parser.c(createVirtualCatalog(tracks)));
-                        }
+                        Log.d("TracklistInjector", "Using vkx cache catalog");
+                        observer.b(parser.c(new JSONObject(service.getCacheCatalog())));
                     } catch (Exception e) {
                         e.fillInStackTrace();
                     }
                 });
-            } else {
-                if (MusicCacheImpl.isEmpty()) {
-                    observableEmitter.b(parser.c(getEmptyCatalog()));
-                } else {
-                    observableEmitter.b(parser.c(createVirtualCatalog(TracklistHelper.getMyCachedMusicTracks())));
-                }
             }
-        });
+            observer.b(parser.c(
+                    createVirtualCatalog(
+                            MusicCacheImpl.getPlaylistSongs(
+                                    AccountManagerUtils.getUserId(),
+                                    -1,
+                                    // todo:
+                                    0, Integer.MAX_VALUE
+                            )
+                    ))
+            );
+        }).b(VkExecutors.x.m()).a(AndroidSchedulers.a());
     }
 
     private static JSONObject getEmptyCatalog() throws JSONException {
@@ -151,6 +146,7 @@ public class TracklistInjector {
 
     public static void injectIntoExistingCatalog(JSONObject catalogNode) {
         try {
+            System.out.println("kasdkakdakdk ak "+catalogNode.toString());
             JSONObject catalog = catalogNode.getJSONObject("catalog");
             JSONArray sectionsNode = catalog.getJSONArray("sections");
             JSONObject firstSection = sectionsNode.getJSONObject(0);
@@ -231,7 +227,12 @@ public class TracklistInjector {
                 .put("id", getRandomId())
                 .put("data_type", "music_audios")
                 .put("url", "synth:cache:list")
-                .put("audios_ids", TracklistHelper.tracksToIds(tracks));
+                .put("audio_count", "4")
+                .put("audios_ids", new JSONArray(
+                        tracks.stream()
+                                .map(MusicTrack::y1)
+                                .collect(Collectors.toList()))
+                );
 
         var layout = new JSONObject()
                 .put("name", "list")
@@ -243,7 +244,7 @@ public class TracklistInjector {
 
         if (MusicCacheImpl.hasPlaylist()) {
             blocks.put(getCatalogHeader("Кешированные плейлисты"))
-                    .put(getCatalogPlaylist());
+                    .put(getCatalogPlaylist0());
         }
 
         if (!PlaylistCacheDbDelegate.isPlaylistEmpty(
@@ -262,8 +263,7 @@ public class TracklistInjector {
                 .put("url", "synth:cache")
                 .put("blocks", blocks);
 
-        var sections = new JSONArray()
-                .put(section);
+        var sections = new JSONArray().put(section);
 
         var catalog = new JSONObject()
                 .put("sections", sections)

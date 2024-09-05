@@ -13,9 +13,8 @@ import io.reactivex.schedulers.AndroidSchedulers;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.downloaders.AudioDownloader;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
-import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 
 import java.util.ArrayList;
@@ -37,7 +36,8 @@ public class PlaylistInjector {
     }
 
     private static boolean isVirtualPlaylist(String accessKey) {
-        return accessKey != null && (accessKey.equals("cache") || accessKey.equals("cacheAlbum"));
+        return accessKey != null && (accessKey.equals("cache") ||
+                accessKey.equals("cacheAlbum"));
     }
 
     private static boolean isAlbumVirtualPlaylist(String accessKey) {
@@ -101,10 +101,6 @@ public class PlaylistInjector {
 
     // Main method to inject the playlist
     public static Observable<AudioGetPlaylist.c> injectGetPlaylist(AudioGetPlaylist audioGetPlaylist) {
-        if (isCacheEmpty()) {
-            return null;
-        }
-
         Map<String, String> requestArgs = audioGetPlaylist.b();
         String id = requestArgs.get("id");
         String ownerId = requestArgs.get("owner_id");

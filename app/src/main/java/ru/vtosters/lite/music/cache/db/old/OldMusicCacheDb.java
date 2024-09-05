@@ -8,8 +8,7 @@ import com.vk.dto.music.AlbumLink;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Thumb;
 import org.json.JSONObject;
-import ru.vtosters.lite.music.cache.db.Database;
-import ru.vtosters.lite.music.cache.db.MusicCacheDb;
+
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
@@ -19,7 +18,6 @@ import java.lang.annotation.RetentionPolicy;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * <p class="note"><strong>Note:</strong> the {@link AutoCloseable} interface was

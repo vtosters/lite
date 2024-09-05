@@ -17,7 +17,7 @@ import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.LastFMScrobbler;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -68,12 +68,14 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        if (MusicCacheImpl.hasPlaylist()) {
+        List<Playlist> playlists = PlaylistCacheDbDelegate.getAllPlaylists();
+        int n = playlists.size();
+        if (n > 0) {
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "cached_playlists",
                     "Кешированные плейлисты",
-                    String.format("Скачано плейлистов: %d", MusicCacheImpl.getPlaylists().size()),
+                    String.format("Скачано плейлистов: %d", n),
                     null,
                     preference -> {
                         cachedPlaylistsDialog(requireContext());
@@ -434,19 +436,23 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
     @SuppressLint("DefaultLocale")
     private void cachedPlaylistsDialog(Context ctx) {
         List<Playlist> playlists = PlaylistCacheDbDelegate.getAllPlaylists();
-        String[] playlistNames = new String[playlists.size()];
-
-        for (int i = 0; i < playlists.size(); i++) {
-            playlistNames[i] = playlists.get(i).g; // Assuming Playlist class has a getTitle() method
-        }
-
+        CharSequence[] playlistNames = playlists
+                .stream()
+                .map(x -> x.g)
+                .toArray(String[]::new);
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx);
         builder.setTitle("Скачанные плейлисты");
         builder.setItems(playlistNames, (dialog, which) -> {
             Playlist playlist = playlists.get(which);
             PlaylistCacheDbDelegate.deletePlaylist(playlist.a, playlist.b);
             AndroidUtils.sendToast("Плейлист удален");
-            findPreference("cached_playlists").setSummary(String.format("Скачано плейлистов: %d", MusicCacheImpl.getPlaylists().size()));
+            findPreference("cached_playlists")
+                    .setSummary(
+                            String.format(
+                                    "Скачано плейлистов: %d",
+                                    playlistNames.length
+                            )
+                    );
         });
 
         builder.show();

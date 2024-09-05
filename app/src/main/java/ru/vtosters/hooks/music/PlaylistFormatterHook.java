@@ -12,7 +12,7 @@ public class PlaylistFormatterHook {
     // basically we replace the author name with subtitle
     // because for some reason VK decided to merge title and subtitle into one field in 5.56
     public static String getOwnerText(Context context, Playlist playlist) {
-        if (playlist.h != null && playlist.h.length() > 0) {
+        if (playlist.h != null && !playlist.h.isEmpty()) {
             return playlist.h;
         }
         String string = context.getString(com.vk.music.m.i.music_my_playlist);

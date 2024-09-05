@@ -9,16 +9,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.io.File;
 import java.net.MalformedURLException;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 public class TracklistHelper {
     public static List<MusicTrack> getTracks() {
@@ -34,27 +32,6 @@ public class TracklistHelper {
             Log.d("TracklistHelper", "Playlist with music is null");
             return Collections.emptyList();
         }
-    }
-
-    public static List<MusicTrack> getMyCachedMusicTracks() {
-        return getTracks();
-    }
-
-    public static List<MusicTrack> getTracksWithThumbnails(List<MusicTrack> tracks) {
-        List<MusicTrack> tracksWithThumbnails = new ArrayList<>();
-
-        for (MusicTrack track : tracks) {
-            try {
-                JSONObject json = track.J();
-                File folder = MusicCacheStorageUtils.getThumbDirById(LibVKXClient.asId(track));
-                addCachedThumbnails(json, folder);
-                tracksWithThumbnails.add(new MusicTrack(json));
-            } catch (JSONException | MalformedURLException e) {
-                Log.d("TracklistHelper", e.getMessage());
-            }
-        }
-
-        return tracksWithThumbnails;
     }
 
     private static void addCachedThumbnails(JSONObject target, File thumbnailsDir) throws JSONException, MalformedURLException {
@@ -76,19 +53,6 @@ public class TracklistHelper {
         }
     }
 
-    public static Optional<MusicTrack> getTrack(String id) {
-        return MusicCacheImpl.getTrackById(id);
-    }
-
-    public static JSONArray tracksToIds(List<MusicTrack> tracks) {
-        JSONArray arr = new JSONArray();
-
-        for (MusicTrack track : tracks) {
-            arr.put(track.y1());
-        }
-
-        return arr;
-    }
 
     public static JSONArray tracksToJsons(List<MusicTrack> tracks) {
         JSONArray arr = new JSONArray();

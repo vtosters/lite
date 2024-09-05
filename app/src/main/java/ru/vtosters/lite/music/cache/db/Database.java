@@ -7,10 +7,11 @@ import androidx.annotation.Nullable;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 
-import ru.vtosters.lite.music.cache.DatabaseAccess;
 import ru.vtosters.lite.music.cache.db.old.OldMusicCacheDb;
 import ru.vtosters.lite.music.cache.db.old.OldPlaylistCacheDb;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
+import ru.vtosters.lite.music.cache.playlists.MusicCacheDb;
+import ru.vtosters.lite.music.cache.playlists.SqlPlaylists;
 import ru.vtosters.lite.music.interfaces.IPlaylist;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -34,7 +35,6 @@ public final class Database extends SQLiteOpenHelper implements DatabaseAccess {
         db.execSQL(Constants.CREATE_TABLE_MUSICS);
         db.execSQL(Constants.CREATE_TABLE_PLAYLISTS);
         db.execSQL(Constants.CREATE_TABLE_PLAYLIST_TRACKS);
-
     }
 
     @Override

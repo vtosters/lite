@@ -6,11 +6,10 @@ import com.vtosters.lite.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
+
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.NetworkUtils;
 import ru.vtosters.lite.utils.music.PlaylistUtils;
 
 public class PlaylistHelper {
@@ -29,15 +28,13 @@ public class PlaylistHelper {
                 jsonArray.put(getCachedSongsPlaylist()); // TODO remove or do something
             }
 
-            if (MusicCacheImpl.hasPlaylist()) {
-                for (Playlist playlist : MusicCacheImpl.getPlaylists()) {
-                    jsonArray.put(generatePlaylist(playlist.a,
-                            playlist.b, playlist.C, playlist.g, playlist.B,
-                            playlist.O,
-                            PlaylistUtils.getThumb(playlist)));
+            for (Playlist playlist : PlaylistCacheDbDelegate.getAllPlaylists()) {
+                jsonArray.put(generatePlaylist(playlist.a,
+                        playlist.b, playlist.C, playlist.g, playlist.B,
+                        playlist.O,
+                        PlaylistUtils.getThumb(playlist)));
 
-                    Log.d("PlaylistHelper", "Playlist cache added: " + playlist.a + " " + playlist.b + " " + playlist.C + " " + playlist.g + " " + playlist.B);
-                }
+                Log.d("PlaylistHelper", "Playlist cache added: " + playlist.a + " " + playlist.b + " " + playlist.C + " " + playlist.g + " " + playlist.B);
             }
         } catch (JSONException e) {
             e.fillInStackTrace();
@@ -116,6 +113,18 @@ public class PlaylistHelper {
 
         return arr;
     }
+    public static JSONArray getCachedPlaylistsIds0() {
+        JSONArray arr = new JSONArray();
+
+        for (String playlist : PlaylistCacheDbDelegate.getAllPlaylistIds()) {
+            if (playlist.equals(AccountManagerUtils.getUserId()+"_-1")) {
+                continue;
+            }
+            arr.put(playlist);
+        }
+
+        return arr;
+    }
 
     public static JSONObject getCatalogPlaylist() throws JSONException {
         return new JSONObject()
@@ -126,6 +135,16 @@ public class PlaylistHelper {
                         .put("is_editable", 0)
                         .put("owner_id", AccountManagerUtils.getUserId()))
                 .put("playlists_ids", getCachedPlaylistsIds());
+    }
+    public static JSONObject getCatalogPlaylist0() throws JSONException {
+        return new JSONObject()
+                .put("id", "cache")
+                .put("data_type", "music_playlists")
+                .put("layout", new JSONObject()
+                        .put("name", "large_slider")
+                        .put("is_editable", 0)
+                        .put("owner_id", AccountManagerUtils.getUserId()))
+                .put("playlists_ids", getCachedPlaylistsIds0());
     }
 
     public static JSONObject getCatalogHeader(String text) throws JSONException {

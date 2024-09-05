@@ -3,9 +3,8 @@ package ru.vtosters.lite.music.downloader;
 import android.util.Log;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.dto.music.MusicTrack;
-import com.vk.dto.music.Playlist;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.music.cache.db.Database;
+
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.interfaces.IPlaylist;
 import ru.vtosters.lite.utils.IOUtils;

@@ -1,7 +1,6 @@
-package ru.vtosters.lite.music.cache;
+package ru.vtosters.lite.music.cache.delegate;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.RemoteException;
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
@@ -10,9 +9,10 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import ru.vtosters.lite.music.cache.db.Constants;
 import ru.vtosters.lite.music.cache.db.Database;
-import ru.vtosters.lite.music.cache.db.MusicCacheDb;
-import ru.vtosters.lite.music.cache.db.SqlPlaylists;
-import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
+import ru.vtosters.lite.music.cache.db.DatabaseAccess;
+import ru.vtosters.lite.music.cache.db.LazyDatabase;
+import ru.vtosters.lite.music.cache.playlists.MusicCacheDb;
+import ru.vtosters.lite.music.cache.playlists.SqlPlaylists;
 import ru.vtosters.lite.music.interfaces.IPlaylist;
 import ru.vtosters.lite.music.interfaces.IPlaylists;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -25,11 +25,25 @@ import java.util.Optional;
 @SuppressWarnings("forRemoval")
 public class MusicCacheImpl {
 
-    private static final Database connection =
-            new Database();
+    static final DatabaseAccess connection =
+            new LazyDatabase(
+                    new Database()
+            );
+    static final MusicCacheDb musics = new MusicCacheDb(connection);
+    static final IPlaylists playlists = new SqlPlaylists(connection);
 
-    private static final MusicCacheDb musics = new MusicCacheDb(connection);
-    private static final IPlaylists playlists = new SqlPlaylists(connection);
+
+    public static void removeTrack(int owner_id, int playlist_id,
+                                   String trackId) {
+        playlists.playlist(owner_id, playlist_id)
+                .ifPresent(iPlaylist -> {
+                    iPlaylist.removeTrack(trackId);
+
+                    if (!musics.getTrackById(trackId).isPresent()) {
+                        MusicCacheStorageUtils.removeTrackDirById(trackId);
+                    }
+                });
+    }
 
 
     public static void removeTrack(String trackId) {
@@ -57,11 +71,6 @@ public class MusicCacheImpl {
 
     public static Optional<MusicTrack> getTrackById(String trackId) {
         return musics.getTrackById(trackId);
-    }
-
-
-    public static List<Playlist> getPlaylists() {
-        return PlaylistCacheDbDelegate.getAllPlaylists();
     }
 
 

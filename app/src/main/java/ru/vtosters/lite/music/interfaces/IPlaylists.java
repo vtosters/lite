@@ -5,6 +5,7 @@ import com.vk.dto.music.Playlist;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 public interface IPlaylists {
 
@@ -18,7 +19,7 @@ public interface IPlaylists {
     Map<Integer, IPlaylist> playlists(int ownerId);
 
 
-    List<IPlaylist> playlists();
+    Stream<IPlaylist> playlists();
 
 
     default void deleteAll() {
@@ -26,7 +27,7 @@ public interface IPlaylists {
     }
 
     default boolean isEmpty() {
-        return playlists().isEmpty();
+        return !playlists().findAny().isPresent();
     }
 
 

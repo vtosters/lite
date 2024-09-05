@@ -1,18 +1,12 @@
 package ru.vtosters.lite.music.downloader;
 
-import android.database.sqlite.SQLiteDatabase;
-
 import com.vk.dto.music.MusicTrack;
-import com.vk.dto.music.Playlist;
 
-import ru.vtosters.lite.music.cache.DatabaseAccess;
 import ru.vtosters.lite.music.cache.db.Database;
-import ru.vtosters.lite.music.cache.db.MusicCacheDb;
-import ru.vtosters.lite.music.cache.db.SqlPlaylists;
+import ru.vtosters.lite.music.cache.playlists.MusicCacheDb;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.interfaces.IDownloader;
 import ru.vtosters.lite.music.interfaces.IPlaylist;
-import ru.vtosters.lite.music.interfaces.IPlaylists;
 
 import java.io.File;
 import java.io.IOException;

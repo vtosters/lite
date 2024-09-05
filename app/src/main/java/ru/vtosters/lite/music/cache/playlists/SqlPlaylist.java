@@ -1,18 +1,18 @@
-package ru.vtosters.lite.music.cache.db;
+package ru.vtosters.lite.music.cache.playlists;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import org.json.JSONObject;
 
-import ru.vtosters.lite.music.cache.DatabaseAccess;
+import ru.vtosters.lite.music.cache.db.DatabaseAccess;
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.db.Constants;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
-import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.music.interfaces.IPlaylist;
 
 import java.util.ArrayList;
@@ -44,7 +44,6 @@ public final class SqlPlaylist implements IPlaylist {
     public void addTrack(String trackId) {
         ContentValues values = new ContentValues();
 
-        System.clearProperty(ownerId + " " + id);
         values.put(Constants.OWNER_ID, ownerId);
         values.put(Constants.PLAYLIST_ID, id);
         values.put(Constants.TRACK_ID, trackId);
@@ -57,13 +56,24 @@ public final class SqlPlaylist implements IPlaylist {
 
     @Override
     public void removeTrack(String trackId) {
-        sqlite.getReadableDatabase().delete(Constants.TABLE_PLAYLIST_TRACKS,
-                selection() + " AND " + Constants.TRACK_ID + " = ?",
-                new String[]{
-                        Integer.toString(id),
-                        Integer.toString(ownerId),
-                        trackId,
-                });
+
+        SQLiteDatabase writable = sqlite.getWritableDatabase();
+
+    //    writable.beginTransaction();
+        try {
+            writable.delete(Constants.TABLE_PLAYLIST_TRACKS,
+                    selection() + " AND " + Constants.TRACK_ID + " = ?",
+                    new String[]{
+                            Integer.toString(ownerId),
+                            Integer.toString(id),
+                            trackId,
+                    });
+            // skip dead
+            // todo: check
+            writable.execSQL(Constants.DELETE_DEAD);
+        } finally {
+            // writable.endTransaction();
+        }
     }
 
     @Override
@@ -78,7 +88,7 @@ public final class SqlPlaylist implements IPlaylist {
             while (cursor.moveToNext()) {
                 @SuppressLint("Range")
                 String trackId = cursor.getString(0);
-                TracklistHelper.getTrack(trackId).ifPresent(track -> {
+                MusicCacheImpl.getTrackById(trackId).ifPresent(track -> {
                     tracks.add(track);
                     Log.d("Playlist", "add " + trackId + " to playlist " + ownerId + "_" + id);
 

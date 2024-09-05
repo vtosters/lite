@@ -1,4 +1,4 @@
-package ru.vtosters.lite.music.cache.db;
+package ru.vtosters.lite.music.cache.playlists;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -11,7 +11,8 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Thumb;
 import org.json.JSONObject;
 
-import ru.vtosters.lite.music.cache.DatabaseAccess;
+import ru.vtosters.lite.music.cache.db.DatabaseAccess;
+import ru.vtosters.lite.music.cache.db.Constants;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.MusicTrackUtils;

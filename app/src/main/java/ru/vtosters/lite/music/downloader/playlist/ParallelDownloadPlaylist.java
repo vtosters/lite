@@ -1,7 +1,5 @@
 package ru.vtosters.lite.music.downloader.playlist;
 
-import android.database.sqlite.SQLiteDatabase;
-
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 
@@ -12,11 +10,10 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
-import java8.util.concurrent.CompletableFuture;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.music.cache.db.Database;
-import ru.vtosters.lite.music.cache.db.MusicCacheDb;
-import ru.vtosters.lite.music.cache.db.SqlPlaylists;
+import ru.vtosters.lite.music.cache.playlists.MusicCacheDb;
+import ru.vtosters.lite.music.cache.playlists.SqlPlaylists;
 import ru.vtosters.lite.music.downloader.Mp3Downloader;
 import ru.vtosters.lite.music.downloader.ThumbnailTrackDownloader;
 import ru.vtosters.lite.music.interfaces.Callback;
@@ -77,16 +74,19 @@ public final class ParallelDownloadPlaylist implements IDownloader<List<MusicTra
 
         // fork
         content.forEach(track -> {
-            futures.add(CompletableFuture.supplyAsync(() -> {
-                try {
-                    origin.download(track);
-                    thumbnail.download(track);
-                    callback.onProgress(indicator.incrementAndGet());
-                    return track;
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
-            }, VTExecutors.getMusicDownloadExecutor()));
+            Future<MusicTrack> f = VTExecutors
+                    .getMusicDownloadExecutor()
+                    .submit(() -> {
+                        try {
+                            origin.download(track);
+                            thumbnail.download(track);
+                            callback.onProgress(indicator.incrementAndGet());
+                            return track;
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
+            futures.add(f);
         });
         // join
         try (Database database = new Database()) {

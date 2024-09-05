@@ -12,7 +12,7 @@ import org.json.JSONObject;
 import ru.vtosters.hooks.music.MusicCacheFilesHook;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.concurrent.VTExecutors;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
