@@ -9,18 +9,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.List;
 import ru.vtosters.lite.music.cache.db.PlaylistCacheDb;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.PlaylistUtils;
 
 public class PlaylistCacheDbDelegate {
-    private static PlaylistCacheDb connectToDb(Context context) {
-        return new PlaylistCacheDb(context);
-    }
 
-    public static void addPlaylist(Context context, Playlist playlist) {
-        try (var db = connectToDb(context)) {
-            db.addPlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, generatePhotoJSON(playlist));
-        }
+    private static final PlaylistCacheDb db = new PlaylistCacheDb(AndroidUtils.getGlobalContext());
+
+
+    public static void addPlaylist(Playlist playlist) {
+        db.addPlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, generatePhotoJSON(playlist));
     }
 
     public static JSONObject generatePhotoJSON(Playlist playlist) {
@@ -53,91 +52,60 @@ public class PlaylistCacheDbDelegate {
         Log.d("Playlist", "thumb link " + Uri.fromFile(MusicCacheStorageUtils.getPlaylistThumb(playlistId, size)).toString());
     }
 
-    public static void deletePlaylist(Context context, String playlistId) {
-        try (var db = connectToDb(context)) {
-            db.deletePlaylistWithTracks(playlistId);
-        }
+    public static void deletePlaylist(String playlistId) {
+        db.deletePlaylistWithTracks(playlistId);
     }
 
-    public static long getTracksCountInPlaylist(Context context, String playlistId) {
-        try (var db = connectToDb(context)) {
-            return db.getTracksCountInPlaylist(playlistId);
-        }
+    public static long getTracksCountInPlaylist(String playlistId) {
+        return db.getTracksCountInPlaylist(playlistId);
     }
 
-    public static boolean isPlaylistsDbEmpty(Context context) {
-        try (var db = connectToDb(context)) {
-            return db.isPlaylistsDbEmpty();
-        }
+    public static boolean isPlaylistsDbEmpty() {
+        return db.isPlaylistsDbEmpty();
     }
 
-    public static void removeAllPlaylists(Context context) {
-        List<String> playlistIds = getAllPlaylistIds(context);
+    public static void removeAllPlaylists() {
+        List<String> playlistIds = getAllPlaylistIds();
         for (String playlistId : playlistIds) {
-            deletePlaylist(context, playlistId);
+            deletePlaylist(playlistId);
         }
     }
 
-    public static List<String> getAllPlaylistIds(Context context) {
-        try (var db = connectToDb(context)) {
-            return db.getAllPlaylistIds();
-        }
+    public static List<String> getAllPlaylistIds() {
+        return db.getAllPlaylistIds();
     }
 
-    public static boolean isCachedPlaylist(Context context, String id) {
-        try (var db = connectToDb(context)) {
-            String[] parts = id.split("_");
-            int playlistId = Integer.parseInt(parts[1]);
-            int ownerId = Integer.parseInt(parts[0]);
+    public static boolean isCachedPlaylist(String id) {
+        String[] parts = id.split("_");
+        int playlistId = Integer.parseInt(parts[1]);
+        int ownerId = Integer.parseInt(parts[0]);
 
-            return db.isCachedPlaylist(playlistId, ownerId);
-        }
+        return db.isCachedPlaylist(playlistId, ownerId);
     }
 
-    public static long getPlaylistsCount(Context context) {
-        try (var db = connectToDb(context)) {
-            return db.getPlaylistsCount();
-        }
+    public static List<Playlist> getAllPlaylists() {
+        return db.getAllPlaylists();
     }
 
-    public static List<Playlist> getAllPlaylists(Context context) {
-        try (var db = connectToDb(context)) {
-            return db.getAllPlaylists();
-        }
+    public static Playlist getPlaylistById(String playlistId) {
+        String[] parts = playlistId.split("_");
+        int id = Integer.parseInt(parts[1]);
+        int ownerId = Integer.parseInt(parts[0]);
+
+        return db.getPlaylistById(id, ownerId);
     }
 
-    public static Playlist getPlaylistById(Context context, String playlistId) {
-        try (var db = connectToDb(context)) {
-            String[] parts = playlistId.split("_");
-            int id = Integer.parseInt(parts[1]);
-            int ownerId = Integer.parseInt(parts[0]);
-
-            return db.getPlaylistById(id, ownerId);
-        }
+    public static void addTrackToPlaylist(String playlistId, String trackId) {
+        db.addTrackToPlaylist(playlistId, trackId);
     }
 
-    public static void addTrackToPlaylist(Context context, String playlistId, String trackId) {
-        try (var db = connectToDb(context)) {
-            db.addTrackToPlaylist(playlistId, trackId);
-        }
+
+    public static List<MusicTrack> getTracksInPlaylist(String playlistId, int offset, int count) {
+        return db.getTracksInPlaylist(playlistId, offset, count);
     }
 
-    public static void removeTrackFromPlaylist(Context context, String playlistId, String trackId) {
-        try (var db = connectToDb(context)) {
-            db.removeTrackFromPlaylist(playlistId, trackId);
-        }
-    }
-
-    public static List<MusicTrack> getTracksInPlaylist(Context context, String playlistId) {
-        try (var db = connectToDb(context)) {
-            return db.getTracksInPlaylist(playlistId);
-        }
-    }
-
-    public static boolean isPlaylistEmpty(Context context, String playlistId) {
-        try (var db = connectToDb(context)) {
-            return db.isPlaylistEmpty(playlistId);
-        }
+    public static boolean isPlaylistEmpty(String playlistId) {
+        return db.isPlaylistEmpty(playlistId);
     }
 
     public static void drop(Context context) {

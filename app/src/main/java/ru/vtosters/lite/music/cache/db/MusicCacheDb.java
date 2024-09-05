@@ -34,7 +34,7 @@ import ru.vtosters.lite.utils.music.MusicTrackUtils;
  * <p class="note"><strong>Note:</strong> the {@link AutoCloseable} interface was
  * first added in the {@link android.os.Build.VERSION_CODES#Q} release for the {@link SQLiteOpenHelper} </p>
  */
-public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //for pre-Q
+public class MusicCacheDb extends LazySqliteOpenHelper { //for pre-Q
     public MusicCacheDb(Context context) {
         super(context, Constants.DB_NAME, null, Constants.DV_VERSION);
     }
@@ -130,7 +130,7 @@ public class MusicCacheDb extends SQLiteOpenHelper implements AutoCloseable { //
                 vals.put(Constants.COLUMN_HAS_ARTWORK, track.I != null && track.I.u1() != null);
                 db.insert(Constants.TABLE_NAME, null, vals);
 
-                PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1", track.y1());
+                PlaylistCacheDbDelegate.addTrackToPlaylist(AccountManagerUtils.getUserId() + "_-1", track.y1());
             }
         }
     }

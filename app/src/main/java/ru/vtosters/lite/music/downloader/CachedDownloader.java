@@ -10,7 +10,6 @@ import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.music.interfaces.Callback;
 import ru.vtosters.lite.music.interfaces.IDownloader;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public final class CachedDownloader implements IDownloader<MusicTrack> {
     private final File to;
@@ -37,7 +36,7 @@ public final class CachedDownloader implements IDownloader<MusicTrack> {
             public void onSuccess() {
                 try {
                     new ThumbnailTrackDownloader().download(track);
-                    PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), playlist.v1(), track.y1());
+                    PlaylistCacheDbDelegate.addTrackToPlaylist(playlist.v1(), track.y1());
                     MusicCacheImpl.addTrack(track);
                     callback.onSuccess();
                 } catch (IOException e) {
