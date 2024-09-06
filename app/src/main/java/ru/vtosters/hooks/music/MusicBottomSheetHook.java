@@ -85,7 +85,7 @@ public class MusicBottomSheetHook {
                 actions.add(addToCacheTrackVkxAction());
             }
         } else {
-            if (PlaylistCacheDbDelegate.isCachedPlaylist(AndroidUtils.getGlobalContext(), playlist.v1())) {
+            if (PlaylistCacheDbDelegate.isCachedPlaylist(playlist.v1())) {
                 actions.add(getRemoveCacheTrackAction());
             } else if (isNetworkConnected()) {
                 actions.add(addToCacheTrackAction());
@@ -155,7 +155,7 @@ public class MusicBottomSheetHook {
         }
         
         if (actionId == R.id.remove_from_cache) {
-            PlaylistCacheDbDelegate.deletePlaylist(AndroidUtils.getGlobalContext(), playlist.v1());
+            PlaylistCacheDbDelegate.deletePlaylist(playlist.v1());
             return true;
         } else if (actionId == R.id.add_to_cache) {
             AudioDownloader.cachePlaylist(playlist);

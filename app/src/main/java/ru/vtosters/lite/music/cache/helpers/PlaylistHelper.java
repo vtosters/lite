@@ -25,13 +25,16 @@ public class PlaylistHelper {
 
     public static JSONArray addCachedPlaylists(JSONArray jsonArray) {
         try {
-            if (!PlaylistCacheDbDelegate.isPlaylistEmpty(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1")) {
+            if (!PlaylistCacheDbDelegate.isPlaylistEmpty(AccountManagerUtils.getUserId() + "_-1")) {
                 jsonArray.put(getCachedSongsPlaylist());
             }
 
             if (MusicCacheImpl.hasPlaylist()) {
                 for (Playlist playlist : MusicCacheImpl.getPlaylists()) {
-                    jsonArray.put(generatePlaylist(playlist.a, playlist.b, playlist.C, playlist.g, playlist.B, PlaylistUtils.getThumb(playlist)));
+                    jsonArray.put(generatePlaylist(playlist.a,
+                            playlist.b, playlist.C, playlist.g, playlist.B,
+                            playlist.O,
+                            PlaylistUtils.getThumb(playlist)));
 
                     Log.d("PlaylistHelper", "Playlist cache added: " + playlist.a + " " + playlist.b + " " + playlist.C + " " + playlist.g + " " + playlist.B);
                 }
@@ -42,7 +45,11 @@ public class PlaylistHelper {
         return jsonArray;
     }
 
-    public static JSONObject generatePlaylist(int id, int owner_id, boolean is_explicit, String title, String description, JSONObject photo) throws JSONException {
+    public static JSONObject generatePlaylist(int id, int owner_id,
+                                              boolean is_explicit,
+                                              String title, String description,
+                                              int count,
+                                              JSONObject photo) throws JSONException {
         JSONObject playlist = new JSONObject()
                 .put("id", id)
                 .put("owner_id", owner_id)
@@ -61,7 +68,7 @@ public class PlaylistHelper {
                 .put("subtitle", "")
                 .put("meta", new JSONObject()
                         .put("view", "compact"))
-                .put("count", 0);
+                .put("count", count);
 
         if (photo != null) {
             playlist.put("photo", photo);
@@ -104,11 +111,11 @@ public class PlaylistHelper {
     public static JSONArray getCachedPlaylistsIds() {
         JSONArray arr = new JSONArray();
 
-        if (NetworkUtils.isNetworkConnected() && !PlaylistCacheDbDelegate.isPlaylistEmpty(AndroidUtils.getGlobalContext(), AccountManagerUtils.getUserId() + "_-1")) {
+        if (NetworkUtils.isNetworkConnected() && !PlaylistCacheDbDelegate.isPlaylistEmpty(AccountManagerUtils.getUserId() + "_-1")) {
             arr.put(AccountManagerUtils.getUserId() + "_-1");
         }
 
-        for (String playlist : PlaylistCacheDbDelegate.getAllPlaylistIds(AndroidUtils.getGlobalContext())) {
+        for (String playlist : PlaylistCacheDbDelegate.getAllPlaylistIds()) {
             arr.put(playlist);
         }
 

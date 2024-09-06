@@ -24,7 +24,7 @@ import java.util.List;
 
 import static ru.vtosters.lite.utils.music.MusicCacheStorageUtils.*;
 
-public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
+public class PlaylistCacheDb extends LazySqliteOpenHelper {
     public PlaylistCacheDb(Context context) {
         super(context, Constants.DB_NAME, null, Constants.DV_VERSION);
     }
@@ -34,9 +34,8 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         db.execSQL(Constants.CREATE_QUERY);
         db.execSQL(Constants.CREATE_PLAYLIST_TRACKS_QUERY);
     }
-
-    private static Playlist fromCursor(Cursor cur) throws JSONException {
-        @SuppressLint("Range")
+    @SuppressLint("Range")
+    private Playlist fromCursor(Cursor cur) throws JSONException {
         String photoString = cur.getString(cur.getColumnIndex(Constants.COLUMN_PHOTO));
         JSONObject photo = null;
 
@@ -46,13 +45,17 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
             // ok and
         }
 
-        @SuppressLint("Range")
+
+        int id = cur.getInt(cur.getColumnIndex(Constants.COLUMN_ID));
+        int ownerId = cur.getInt(cur.getColumnIndex(Constants.COLUMN_OWNER_ID));
+
         JSONObject playlist = PlaylistHelper.generatePlaylist(
-                cur.getInt(cur.getColumnIndex(Constants.COLUMN_ID)),
-                cur.getInt(cur.getColumnIndex(Constants.COLUMN_OWNER_ID)),
+                id,
+                ownerId,
                 Boolean.parseBoolean(cur.getString(cur.getColumnIndex(Constants.COLUMN_IS_EXPLICIT))),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_TITLE)),
                 cur.getString(cur.getColumnIndex(Constants.COLUMN_DESCRIPTION)),
+                getTracksCountInPlaylist(ownerId+"_"+id),
                 photo);
 
         Log.d("Playlist", "generated " + Playlist.U.a(playlist).v1());
@@ -100,7 +103,7 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         int ownerId = Integer.parseInt(parts[0]);
 
         // Get all tracks in the playlist
-        List<MusicTrack> tracks = getTracksInPlaylist(playlistId);
+        List<MusicTrack> tracks = getTracksInPlaylist(playlistId, 0, Integer.MAX_VALUE);
 
         // Delete the playlist
         deletePlaylist(id, ownerId);
@@ -136,10 +139,13 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
     }
 
     public List<Playlist> getAllPlaylists() {
-        Cursor cursor = getReadableDatabase().query(Constants.TABLE_NAME, null, null, null, null, null, null);
-        List<Playlist> playlists = getPlaylistsWithCursor(cursor);
-        cursor.close();
-        return playlists;
+        try (Cursor cursor = getReadableDatabase()
+                .query(Constants.TABLE_NAME,
+                        null,
+                        null,
+                        null, null, null, null)) {
+            return getPlaylistsWithCursor(cursor);
+        }
     }
 
     public Playlist getPlaylistById(int id, int ownerId) {
@@ -169,19 +175,16 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         return playlists;
     }
 
-    public long getTracksCountInPlaylist(String playlistId) {
+    public int getTracksCountInPlaylist(String playlistId) {
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.query(
+        try (Cursor cursor = db.query(
                 Constants.TABLE_PLAYLIST_TRACKS,
                 new String[]{Constants.COLUMN_TRACK_ID},
                 Constants.COLUMN_PLAYLIST_ID + " = ?",
                 new String[]{playlistId},
-                null, null, null
-        );
-
-        long count = cursor.getCount();
-        cursor.close();
-        return count;
+                null, null, null)) {
+            return cursor.getCount();
+        }
     }
 
     public List<String> getAllPlaylistIds() {
@@ -233,31 +236,29 @@ public class PlaylistCacheDb extends SQLiteOpenHelper implements AutoCloseable {
         return isEmpty;
     }
 
-    public List<MusicTrack> getTracksInPlaylist(String playlistId) {
+    public List<MusicTrack> getTracksInPlaylist(String playlistId, int offset, int count) {
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.query(
+        try (Cursor cursor = db.query(
                 Constants.TABLE_PLAYLIST_TRACKS,
                 new String[]{Constants.COLUMN_TRACK_ID},
                 Constants.COLUMN_PLAYLIST_ID + " = ?",
                 new String[]{playlistId},
-                null, null, null
-        );
+                null, null, null,
+                offset + "," + count)) {
+            List<MusicTrack> tracks = new ArrayList<>(cursor.getCount());
+            while (cursor.moveToNext()) {
+                @SuppressLint("Range")
+                String trackId = cursor.getString(cursor.getColumnIndex(Constants.COLUMN_TRACK_ID));
+                MusicTrack track = TracklistHelper.getTrack(trackId);
 
-        List<MusicTrack> tracks = new ArrayList<>();
-        while (cursor.moveToNext()) {
-            @SuppressLint("Range")
-            String trackId = cursor.getString(cursor.getColumnIndex(Constants.COLUMN_TRACK_ID));
-            MusicTrack track = TracklistHelper.getTrack(trackId);
+                Log.d("Playlist", "add " + trackId + " to playlist " + playlistId);
 
-            Log.d("Playlist", "add " + trackId + " to playlist " + playlistId);
-
-            if (track != null) {
-                tracks.add(track);
+                if (track != null) {
+                    tracks.add(track);
+                }
             }
+            return tracks;
         }
-
-        cursor.close();
-        return tracks;
     }
 
     @Override

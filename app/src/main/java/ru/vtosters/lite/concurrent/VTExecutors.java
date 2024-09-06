@@ -36,7 +36,7 @@ public class VTExecutors {
             private static final int MIN_PARALLELISM = 1;
             private static final int MAX_PARALLELISM = 7;
             private static final int PARALLELISM = clamp(
-                    (Runtime.getRuntime().availableProcessors() >> 1) - 1
+                    Runtime.getRuntime().availableProcessors() - 1
             );
 
             private static final ExecutorService INSTANCE =

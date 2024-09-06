@@ -9,7 +9,6 @@ import org.json.JSONObject;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.music.cache.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.MusicCacheDbDelegate;
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.io.File;
@@ -36,7 +35,7 @@ public class TracklistHelper {
     }
 
     public static MusicTrack getTrack(String id) {
-        return MusicCacheDbDelegate.getTrackById(AndroidUtils.getGlobalContext(), id);
+        return MusicCacheDbDelegate.getTrackById(id);
     }
 
     public static JSONArray tracksToIds(List<MusicTrack> tracks) {
