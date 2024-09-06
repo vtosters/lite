@@ -28,7 +28,7 @@ jobs:
         uses: nttld/setup-ndk@v1
         with:
           ndk-version: r25c
-          add-to-path: false
+          add-to-path: true
 
       - name: Set up JDK
         uses: actions/setup-java@v3
