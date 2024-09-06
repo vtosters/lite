@@ -2,24 +2,32 @@ package ru.vtosters.lite.music.downloader;
 
 import com.vk.dto.music.MusicTrack;
 
-import com.vk.dto.music.Playlist;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
-import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
+import ru.vtosters.lite.music.cache.db.Database;
+import ru.vtosters.lite.music.cache.playlists.MusicCacheDb;
 import ru.vtosters.lite.music.interfaces.Callback;
-import ru.vtosters.lite.music.interfaces.ITrackDownloader;
-import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.music.interfaces.IDownloader;
+import ru.vtosters.lite.music.interfaces.IPlaylist;
 
-public final class CachedDownloader implements ITrackDownloader {
+import java.io.File;
+import java.io.IOException;
 
-    private final ITrackDownloader origin;
+public final class CachedDownloader implements IDownloader<MusicTrack> {
 
-    public CachedDownloader(ITrackDownloader origin) {
-        this.origin = origin;
+    private final File to;
+    private final IPlaylist playlist;
+    private final Callback callback;
+
+    public CachedDownloader(File to,
+                            IPlaylist playlist,
+                            Callback callback) {
+        this.to = to;
+        this.playlist = playlist;
+        this.callback = callback;
     }
 
     @Override
-    public void download(MusicTrack track, Callback callback, Playlist playlist) {
-        origin.download(track, new Callback() {
+    public void download(MusicTrack track) {
+        new Mp3Downloader(to, new Callback() {
             @Override
             public void onProgress(int progress) {
                 callback.onProgress(progress);
@@ -27,39 +35,22 @@ public final class CachedDownloader implements ITrackDownloader {
 
             @Override
             public void onSuccess() {
-                new ThumbnailTrackDownloader().download(track, new Callback() {
-                    @Override public void onProgress(int progress) {
+                try (Database database = new Database()) {
+                    new ThumbnailTrackDownloader().download(track);
+                    new MusicCacheDb(database).addTrack(track);
+                    playlist.addTrack(track.y1());
 
-                    }
-
-                    @Override public void onSuccess() {
-                        
-                    }
-
-                    @Override
-                    public void onFailure(Throwable e) {
-                        callback.onFailure(e);
-                    }
-
-                    @Override public void onSizeReceived(long size, long header) {
-
-                    }
-                }, null);
-
-                PlaylistCacheDbDelegate.addTrackToPlaylist(AndroidUtils.getGlobalContext(), playlist.v1(), track.y1());
-                MusicCacheImpl.addTrack(track);
-                callback.onSuccess();
+                    callback.onSuccess();
+                } catch (IOException e) {
+                    callback.onFailure(e);
+                    throw new RuntimeException(e);
+                }
             }
 
             @Override
             public void onFailure(Throwable e) {
                 callback.onFailure(e);
             }
-
-            @Override
-            public void onSizeReceived(long size, long header) {
-                callback.onSizeReceived(size, header);
-            }
-        }, playlist);
+        }).download(track);
     }
 }

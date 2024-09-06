@@ -4,7 +4,6 @@ import android.content.Context;
 import android.net.NetworkInfo;
 import android.os.PowerManager;
 import android.telephony.TelephonyManager;
-import android.util.Log;
 import androidx.recyclerview.widget.RecyclerView;
 import com.vk.core.preference.Preference;
 import com.vk.discover.DiscoverItemDecorator;
@@ -31,7 +30,8 @@ public class NewsfeedHook {
         return switch (getString("newsupdate")) {
             case "no_update" -> MAX_VALUE;
             case "imd_update" -> 10000L;
-            default -> Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
+            default ->
+                    Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
         };
     }
 

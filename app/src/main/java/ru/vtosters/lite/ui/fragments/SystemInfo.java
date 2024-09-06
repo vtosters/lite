@@ -13,8 +13,6 @@ import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.VersionReader;
 
-import static ru.vtosters.hooks.GmsHook.isSpoofPackageInstalled;
-
 public class SystemInfo extends TrackedMaterialPreferenceToolbarFragment {
 
     @Override

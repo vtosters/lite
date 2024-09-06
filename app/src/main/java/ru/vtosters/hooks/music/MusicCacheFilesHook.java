@@ -1,6 +1,6 @@
 package ru.vtosters.hooks.music;
 
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 
 import java.io.File;

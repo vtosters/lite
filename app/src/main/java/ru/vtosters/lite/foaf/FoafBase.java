@@ -14,7 +14,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import ru.vtosters.lite.di.singleton.VtOkHttpClient;
 import ru.vtosters.lite.proxy.ProxyUtils;
-import ru.vtosters.lite.proxy.api.VikaMobile;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 import ru.vtosters.sponsorpost.utils.GzipDecompressor;

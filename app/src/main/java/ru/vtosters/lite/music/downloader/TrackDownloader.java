@@ -1,23 +1,22 @@
 package ru.vtosters.lite.music.downloader;
 
 import android.util.Log;
-
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import com.vk.dto.music.MusicTrack;
 
-import java.io.File;
-
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
-import com.vk.dto.music.Playlist;
-import ru.vtosters.lite.concurrent.VTExecutors;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
 import ru.vtosters.lite.music.interfaces.Callback;
+import ru.vtosters.lite.music.interfaces.IPlaylist;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.music.MusicCacheStorageUtils;
 import ru.vtosters.lite.utils.music.MusicTrackUtils;
 
+import java.io.File;
+
 public final class TrackDownloader {
 
-    private TrackDownloader() { }
+    private TrackDownloader() {
+    }
 
     public static void downloadTrack(MusicTrack track, String path, Callback callback) {
         File outDir = new File(path);
@@ -30,16 +29,23 @@ public final class TrackDownloader {
         }
         File outputFile = new File(outDir, IOUtils.getValidFileName(MusicTrackUtils.getArtists(track) + " - " + Mp3Downloader.getTitle(track)) + ".mp3");
 
-        VTExecutors.getMusicDownloadExecutor().submit(() -> new Mp3Downloader(outputFile).download(track, callback, null));
+        new Mp3Downloader(
+                outputFile,
+                callback
+        ).download(track);
     }
 
-    public static void cacheTrack(MusicTrack track, Callback callback, Playlist playlist) {
+    public static void cacheTrack(MusicTrack track, Callback callback, IPlaylist playlist) {
         if (MusicCacheImpl.isCachedTrack(LibVKXClient.asId(track))) {
             return;
         }
 
         File outputFile = MusicCacheStorageUtils.getTrackFile(LibVKXClient.asId(track));
 
-        VTExecutors.getMusicDownloadExecutor().submit(() -> new CachedDownloader(new Mp3Downloader(outputFile)).download(track, callback, playlist));
+        new CachedDownloader(
+                outputFile,
+                playlist,
+                callback
+        ).download(track);
     }
 }

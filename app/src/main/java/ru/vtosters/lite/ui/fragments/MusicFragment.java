@@ -17,7 +17,7 @@ import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.hooks.other.ThemesUtils;
 import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.LastFMScrobbler;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -26,14 +26,20 @@ import ru.vtosters.lite.utils.LifecycleUtils;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.hooks.other.ThemesUtils.getTextAttr;
 
 public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
-    private static final ExecutorService executor = Executors.newCachedThreadPool();
+
+    private static String getAutocacheSumm() {
+        int autocache = Preferences.autocache();
+        return switch (autocache) {
+            case 1 -> "Только для своих";
+            case 2 -> "Кешировать всё";
+            default -> "Отключено";
+        };
+    }
 
     @SuppressLint("DefaultLocale")
     @Override
@@ -62,12 +68,14 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        if (MusicCacheImpl.hasPlaylist()) {
+        List<Playlist> playlists = PlaylistCacheDbDelegate.getAllPlaylists();
+        int n = playlists.size();
+        if (n > 0) {
             PreferenceFragmentUtils.addPreference(
                     getPreferenceScreen(),
                     "cached_playlists",
                     "Кешированные плейлисты",
-                    String.format("Скачано плейлистов: %d", MusicCacheImpl.getPlaylists().size()),
+                    String.format("Скачано плейлистов: %d", n),
                     null,
                     preference -> {
                         cachedPlaylistsDialog(requireContext());
@@ -404,15 +412,6 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .show();
     }
 
-    private static String getAutocacheSumm() {
-        int autocache = Preferences.autocache();
-        return switch (autocache) {
-            case 1 -> "Только для своих";
-            case 2 -> "Кешировать всё";
-            default -> "Отключено";
-        };
-    }
-
     public void updateLastFmPref() {
         if (LastFMScrobbler.isLoggedIn()) {
             findPreference("lastfm_auth").setSummary(getString(com.vtosters.lite.R.string.lastfm_authorized_as) + " " + LastFMScrobbler.getUserName());
@@ -436,21 +435,24 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
 
     @SuppressLint("DefaultLocale")
     private void cachedPlaylistsDialog(Context ctx) {
-        List<Playlist> playlists = PlaylistCacheDbDelegate.getAllPlaylists(ctx);
-        String[] playlistNames = new String[playlists.size()];
-
-        for (int i = 0; i < playlists.size(); i++) {
-            playlistNames[i] = playlists.get(i).g; // Assuming Playlist class has a getTitle() method
-        }
-
+        List<Playlist> playlists = PlaylistCacheDbDelegate.getAllPlaylists();
+        CharSequence[] playlistNames = playlists
+                .stream()
+                .map(x -> x.g)
+                .toArray(String[]::new);
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx);
         builder.setTitle("Скачанные плейлисты");
         builder.setItems(playlistNames, (dialog, which) -> {
-            Playlist selectedPlaylist = playlists.get(which);
-            String playlistId = selectedPlaylist.v1();
-            PlaylistCacheDbDelegate.deletePlaylist(ctx, playlistId);
+            Playlist playlist = playlists.get(which);
+            PlaylistCacheDbDelegate.deletePlaylist(playlist.a, playlist.b);
             AndroidUtils.sendToast("Плейлист удален");
-            findPreference("cached_playlists").setSummary(String.format("Скачано плейлистов: %d", MusicCacheImpl.getPlaylists().size()));
+            findPreference("cached_playlists")
+                    .setSummary(
+                            String.format(
+                                    "Скачано плейлистов: %d",
+                                    playlistNames.length
+                            )
+                    );
         });
 
         builder.show();
@@ -461,13 +463,13 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setTitle(com.vtosters.lite.R.string.warning)
                 .setMessage(com.vtosters.lite.R.string.cached_tracks_remove_confirm)
                 .setPositiveButton(com.vtosters.lite.R.string.yes, (dialog, which) -> {
-                    executor.submit(() -> {
-                        if (isPlaylists) {
-                            PlaylistCacheDbDelegate.removeAllPlaylists(ctx);
-                        } else {
-                            PlaylistCacheDbDelegate.deletePlaylist(ctx, AccountManagerUtils.getUserId() + "_-1");
-                        }
-                    });
+                    if (isPlaylists) {
+                        PlaylistCacheDbDelegate.removeAllPlaylists();
+                    } else {
+                        PlaylistCacheDbDelegate.deletePlaylist(
+                                AccountManagerUtils.getUserId(),
+                                -1);
+                    }
                     findPreference("cached_tracks").setSummary(String.format(requireContext().getString(com.vtosters.lite.R.string.cached_tracks_counter), MusicCacheImpl.getTracksCount()));
                 })
                 .setNeutralButton(com.vtosters.lite.R.string.no, (dialog, which) -> dialog.cancel())
@@ -484,10 +486,10 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 .setTitle(com.vtosters.lite.R.string.download_method)
                 .setMessage(com.vtosters.lite.R.string.download_method_desc)
                 .setPositiveButton(com.vtosters.lite.R.string.download_method_cache, (dialog, which) -> {
-                    executor.submit(AudioDownloader::cacheAllAudios);
+                    AudioDownloader.cacheAllAudios();
                 })
                 .setNegativeButton(com.vtosters.lite.R.string.download_method_mp3, (dialog, which) -> {
-                    executor.submit(AudioDownloader::downloadAllAudios);
+                    AudioDownloader.downloadAllAudios();
                 })
                 .show();
     }

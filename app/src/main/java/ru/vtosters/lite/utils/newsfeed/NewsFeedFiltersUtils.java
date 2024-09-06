@@ -298,7 +298,8 @@ public class NewsFeedFiltersUtils {
     private static void logRemovedPost(JSONObject json, String source, String reason, boolean needToShowToast) {
         Log.d("NewsfeedAdBlockV2", "Removed post " + getPostId(json) + ", owner: " + getOwnerId(json) + " from " + source + ", Reason: " + reason);
 
-        if (needToShowToast) sendToast("Пост " + getOwnerId(json) + "_" + getPostId(json) + " заблокирован по причине: " + reason);
+        if (needToShowToast)
+            sendToast("Пост " + getOwnerId(json) + "_" + getPostId(json) + " заблокирован по причине: " + reason);
     }
 
     public static boolean sponsorFilters(String text) {

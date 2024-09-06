@@ -19,7 +19,6 @@ import java.io.IOException;
 
 import static com.vk.core.network.Network.ClientType.CLIENT_API;
 import static ru.vtosters.hooks.other.Preferences.*;
-import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;

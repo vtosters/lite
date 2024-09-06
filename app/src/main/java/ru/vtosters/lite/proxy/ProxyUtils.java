@@ -126,7 +126,8 @@ public class ProxyUtils {
     }
 
     public static void setProxy() {
-        if (!isAnyProxyEnabled() || Preferences.getString("proxy").equals("vika") || Preferences.getString("proxy").equals("apiproxy")) return;
+        if (!isAnyProxyEnabled() || Preferences.getString("proxy").equals("vika") || Preferences.getString("proxy").equals("apiproxy"))
+            return;
         switch (Preferences.getString("proxy")) {
             case "zaborona" -> Zaborona.loadProxy();
             case "socks" -> CustomSocks.loadProxy();

@@ -8,7 +8,7 @@ import com.vk.music.bottomsheets.a.MusicAction;
 import com.vk.music.common.MusicPlaybackLaunchContext;
 import com.vtosters.lite.R;
 import ru.vtosters.lite.downloaders.AudioDownloader;
-import ru.vtosters.lite.music.cache.MusicCacheImpl;
+import ru.vtosters.lite.music.cache.delegate.MusicCacheImpl;
 import ru.vtosters.lite.music.cache.delegate.PlaylistCacheDbDelegate;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.music.VKXUtils;
@@ -85,7 +85,7 @@ public class MusicBottomSheetHook {
                 actions.add(addToCacheTrackVkxAction());
             }
         } else {
-            if (PlaylistCacheDbDelegate.isCachedPlaylist(AndroidUtils.getGlobalContext(), playlist.v1())) {
+            if (PlaylistCacheDbDelegate.isCachedPlaylist(playlist.b, playlist.a)) {
                 actions.add(getRemoveCacheTrackAction());
             } else if (isNetworkConnected()) {
                 actions.add(addToCacheTrackAction());
@@ -97,7 +97,10 @@ public class MusicBottomSheetHook {
         return actions;
     }
 
-    public static boolean injectOnClick(int actionId, MusicTrack track, MusicPlaybackLaunchContext context, Playlist playlist) { // musictrack inj
+    public static boolean injectOnClick(int actionId, MusicTrack track,
+                                        MusicPlaybackLaunchContext context,
+
+                                        Playlist playlist) { // musictrack inj
         if (actionId == R.id.play_in_vkx)
             return tryPlayInVKX(track, context, playlist);
 
@@ -122,7 +125,7 @@ public class MusicBottomSheetHook {
         }
 
         if (actionId == R.id.remove_from_cache) {
-            MusicCacheImpl.removeTrack(asId(track));
+            MusicCacheImpl.removeTrack(playlist.b, playlist.a, asId(track));
             AndroidUtils.sendToast(AndroidUtils.getString("audio_deleted_from_cache"));
             return true;
         } else if (actionId == R.id.add_to_cache) {
@@ -153,15 +156,15 @@ public class MusicBottomSheetHook {
         if (actionId == R.id.play_in_vkx) {
             return tryPlayInVKX(null, null, playlist);
         }
-        
+
         if (actionId == R.id.remove_from_cache) {
-            PlaylistCacheDbDelegate.deletePlaylist(AndroidUtils.getGlobalContext(), playlist.v1());
+            PlaylistCacheDbDelegate.deletePlaylist(playlist.a, playlist.b);
             return true;
         } else if (actionId == R.id.add_to_cache) {
             AudioDownloader.cachePlaylist(playlist);
             return true;
         }
-        
+
         if (actionId == R.id.remove_from_cache_vkx) {
             getInstance().runOnService(service -> {
                 try {

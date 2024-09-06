@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils.music;
 
-import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Artist;
+import com.vk.dto.music.MusicTrack;
 
 import java.util.stream.Collectors;
 
