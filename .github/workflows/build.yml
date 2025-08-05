@@ -22,10 +22,11 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        
+        uses: actions/checkout@v4
+
       - name: Set up NDK
         uses: nttld/setup-ndk@v1
+        id: setup-ndk
         with:
           ndk-version: r25c
           add-to-path: true
@@ -35,18 +36,20 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-              
+
       - name: Download tools
         run: |
           sudo apt update
-          sudo apt install default-jre
           sudo apt install python3
           sudo apt install zipalign
           chmod +x scripts/apktool.jar
           chmod +x scripts/apksigner.jar
           rustup target add armv7-linux-androideabi
           rustup target add aarch64-linux-android 
-          
+
+      - name: Create local.properties
+        run: echo "ndk.dir=${{ steps.setup-ndk.outputs.ndk-path }}" > local.properties
+
       - name: Build VTLite
         run: |
           gradle generateBuildTasks
@@ -54,16 +57,14 @@ jobs:
           java -jar scripts/apktool.jar b smali -o smali/VTLite.apk --use-aapt2 -p scripts/framework/
           zipalign -p -f 4 smali/VTLite.apk smali/VTLite.apk_aligned
           mv smali/VTLite.apk_aligned smali/VTLite.apk
-        env:
-          ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
       - name: Sign and verify the apk
         run: |
           java -jar scripts/apksigner.jar sign --ks scripts/debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android smali/VTLite.apk
           java -jar scripts/apksigner.jar verify smali/VTLite.apk
-                      
+
       - name: Upload apk to artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: VTLite.apk
           path: smali/VTLite.apk
