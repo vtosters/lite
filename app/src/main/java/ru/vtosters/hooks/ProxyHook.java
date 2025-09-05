@@ -26,9 +26,9 @@ import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 
 public class ProxyHook {
     public static String linkReplacer(String link) {
-        String vkapi = "api.vk.com";
-        String oauth = "oauth.vk.com";
-        String vkstatic = "static.vk.com";
+        String vkapi = "api.vk.ru";
+        String oauth = "oauth.vk.ru";
+        String vkstatic = "static.vk.ru";
 
         String proxyapi = getProxyHost("proxyapi");
         String proxyoauth = getProxyHost("proxyoauth");
@@ -84,7 +84,7 @@ public class ProxyHook {
         }
 
         if (isAnyProxyEnabled() && !string.isEmpty()) {
-            return str.replaceAll(string, "static.vk.com");
+            return str.replaceAll(string, "static.vk.ru");
         }
 
         return str;
@@ -101,7 +101,7 @@ public class ProxyHook {
             return proxyapi;
         }
 
-        return "m.vk.com";
+        return "m.vk.ru";
     }
 
     public static void hookAuth(View v) {

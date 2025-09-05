@@ -50,7 +50,7 @@ public class CallsHook {
             return;
         }
 
-        var link = "https://vk.com/call?id=" + id;
+        var link = "https://vk.ru/call?id=" + id;
         var startCall = new Intent(Intent.ACTION_VIEW, Uri.parse(link)).setPackage(vk ? "com.vkontakte.android" : "com.vk.im");
         startCall.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         ctx.startActivity(startCall);

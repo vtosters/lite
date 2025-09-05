@@ -454,7 +454,7 @@ resultados"</string>
     <string name="collection_add_selection">Anexar a transmissão</string>
     <string name="collection_add_to_stream">Adicionar a transmissão</string>
     <string name="collection_add_wall_to_list_hint">Escolha o recado de sua página que deseja compartilhar com seus espectadores</string>
-    <string name="collection_link_add_link_input_hint">https://vk.com</string>
+    <string name="collection_link_add_link_input_hint">https://vk.ru</string>
     <string name="collection_link_limit">Você atingiu o número máximo de links</string>
     <string name="collection_link_not_valid">Link não suportado</string>
     <string name="collection_links_list">Lista de links</string>
@@ -1058,7 +1058,7 @@ e utilize as etiquetas para o sortear"</string>
     <string name="friends_recommendations_gmail">Gmail</string>
     <string name="friends_recommendations_invete_by_link">Convidar por link</string>
     <string name="friends_recommendations_invite">Convidar</string>
-    <string name="friends_recommendations_invite_message">Vamos ser amigos no VK! http://vk.com/join</string>
+    <string name="friends_recommendations_invite_message">Vamos ser amigos no VK! http://vk.ru/join</string>
     <string name="friends_recommendations_locator_text">Para ver as pessoas que estão perto, peça-lhes para abrir a mesma tela no dispositivo deles</string>
     <string name="friends_recommendations_ok">OK</string>
     <string name="friends_recommendations_request_done">Vocês são amigos</string>
@@ -1338,7 +1338,7 @@ menos frequência"</string>
     <string name="identity_address">Endereço</string>
     <string name="identity_address_dat">endereço</string>
     <string name="identity_custom_label">Minha categoria</string>
-    <string name="identity_desc">Adicione suas informações para o preenchimento automático pelos mini apps do [https://vk.com/services|catálogo] em caso da entrega de produtos ou para contatar você</string>
+    <string name="identity_desc">Adicione suas informações para o preenchimento automático pelos mini apps do [https://vk.ru/services|catálogo] em caso da entrega de produtos ou para contatar você</string>
     <string name="identity_email">Email</string>
     <string name="identity_email_dat">email</string>
     <string name="identity_label">Categoria</string>
@@ -1368,7 +1368,7 @@ menos frequência"</string>
     <string name="include_community">Conectar comunidade</string>
     <string name="installed_games_title">Meus jogos</string>
     <string name="invalid_date">Data de publicação invalida</string>
-    <string name="invitation">Vamos conectar ao VK! Participe aqui: http://vk.com/join</string>
+    <string name="invitation">Vamos conectar ao VK! Participe aqui: http://vk.ru/join</string>
     <string name="invitation_declined">Convite recusado.</string>
     <string name="invitation_sent">Convite enviado.</string>
     <string name="invite">Convidar</string>
@@ -3236,7 +3236,7 @@ com a câmera do VK"</string>
     <string name="serv_user_returned_m">%1$s voltou a este bate-papo</string>
     <string name="service_account_admin_100_info">"O perfil é usado somente para as notificações pessoais.
 
-Para ajuda ou informações, contate nossa [https://vk.com/support|equipe de Supporte.]"</string>
+Para ajuda ou informações, contate nossa [https://vk.ru/support|equipe de Supporte.]"</string>
     <string name="service_account_admin_101_info">Esta página é utilizada para fornecer a compatibilidade para os comentários deixados em nome da comunidade.</string>
     <string name="service_account_mobile_info">Este é o perfil oficial do Suporte móvel do VK.</string>
     <string name="sett_accept_calls">Habilitar</string>
@@ -5219,7 +5219,7 @@ com vídeo"</string>
     <string name="votes_your_balance">Seu saldo</string>
     <string name="wall">Mural</string>
     <string name="wall_all_posts">Todos os recados</string>
-    <string name="wall_comment_repost">&lt;font color=\"#aaaaaa\">Comentar para &lt;/font>&lt;a href=\"vklink://view/?http://vk.com/wall%1$d_%2$d\">post&lt;/a></string>
+    <string name="wall_comment_repost">&lt;font color=\"#aaaaaa\">Comentar para &lt;/font>&lt;a href=\"vklink://view/?http://vk.ru/wall%1$d_%2$d\">post&lt;/a></string>
     <string name="wall_disabled">Mural desabilitado</string>
     <string name="wall_empty">Ainda não há publicações aqui</string>
     <string name="wall_empty_my">Ainda não tem recados</string>

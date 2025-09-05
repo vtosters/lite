@@ -224,7 +224,7 @@
     :cond_0
     new-instance p1, Lcom/vtosters/lite/LinkSpan;
 
-    const-string v0, "https://vk.com/terms/market_contract"
+    const-string v0, "https://vk.ru/terms/market_contract"
 
     invoke-direct {p1, v0}, Lcom/vtosters/lite/LinkSpan;-><init>(Ljava/lang/String;)V
 
@@ -234,7 +234,7 @@
     :cond_1
     new-instance p1, Lcom/vtosters/lite/LinkSpan;
 
-    const-string v0, "https://vk.com/terms/market_agreement"
+    const-string v0, "https://vk.ru/terms/market_agreement"
 
     invoke-direct {p1, v0}, Lcom/vtosters/lite/LinkSpan;-><init>(Ljava/lang/String;)V
 

@@ -12,13 +12,13 @@
         </trust-anchors>
     </base-config>
     <domain-config>
-        <domain includeSubdomains="true">vk.com</domain>
+        <domain includeSubdomains="true">vk.ru</domain>
         <trust-anchors>
             <certificates src="system"/>
         </trust-anchors>
     </domain-config>
     <domain-config>
-        <domain includeSubdomains="true">api.vk.com</domain>
+        <domain includeSubdomains="true">api.vk.ru</domain>
         <trust-anchors>
             <certificates src="system"/>
         </trust-anchors>

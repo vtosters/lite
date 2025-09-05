@@ -546,7 +546,7 @@
 
     move-result-object v2
 
-    const-string v3, "https://oauth.vk.com/blank.html"
+    const-string v3, "https://oauth.vk.ru/blank.html"
 
     invoke-static {v3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1523,7 +1523,7 @@
 
     const-string p1, "redirect_uri"
 
-    const-string p3, "https://oauth.vk.com/blank.html"
+    const-string p3, "https://oauth.vk.ru/blank.html"
 
     .line 35
     invoke-static {p1, p3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
@@ -1635,7 +1635,7 @@
 
     move-result-object p1
 
-    const-string p3, "https://oauth.vk.com/authorize"
+    const-string p3, "https://oauth.vk.ru/authorize"
 
     invoke-static {p3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2191,7 +2191,7 @@
 
     const-string v2, "redirect_url"
 
-    const-string v3, "https://oauth.vk.com/blank.html"
+    const-string v3, "https://oauth.vk.ru/blank.html"
 
     invoke-static {v3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

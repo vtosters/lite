@@ -1,7 +1,7 @@
 package ru.vtosters.lite.downloaders.messages;
 
 public class Constants {
-    public static final String VK_DOMAIN = "vk.com";
+    public static final String VK_DOMAIN = "vk.ru";
     public static final String HTML_DOC_STYLE = ".vtex-milk-msg {\n" +
             "    border-radius: 8px;\n" +
             "    padding: 24px;\n" +

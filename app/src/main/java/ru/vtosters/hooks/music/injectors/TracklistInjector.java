@@ -184,7 +184,7 @@ public class TracklistInjector {
     }
 
     private static boolean isFirstSectionUrlValid(JSONObject firstSection) throws JSONException {
-        return firstSection.getString("url").equals("https://vk.com/audios" + AccountManagerUtils.getUserId() + "?section=all");
+        return firstSection.getString("url").equals("https://vk.ru/audios" + AccountManagerUtils.getUserId() + "?section=all");
     }
 
     private static boolean hasNoPlaylists(JSONArray blocks) {

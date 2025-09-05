@@ -32,7 +32,7 @@ public class CatalogJsonInjector {
         var catalog = json.optJSONObject("catalog");
         var oldItems = catalog != null ? catalog.optJSONArray("sections") : null;
         var useOldAppVer = getBoolValue("useOldAppVer", false);
-        var isUsersCatalog = oldItems.optJSONObject(0).optString("url").equals("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
+        var isUsersCatalog = oldItems.optJSONObject(0).optString("url").equals("https://vk.ru/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
         var blocks = oldItems.optJSONObject(0).optJSONArray("blocks");
 
         if (isUsersCatalog && blocks != null) {
@@ -42,13 +42,13 @@ public class CatalogJsonInjector {
                 removeUnsupportedLayouts(blocks);
 
                 if (Preferences.getBoolValue("playlistsCatalogs", true)) {
-                    fetchCatalogId("https://vk.com/audio?section=my_playlists", oldItems);
+                    fetchCatalogId("https://vk.ru/audio?section=my_playlists", oldItems);
 
-                    fetchCatalogId("https://vk.com/audio?section=albums", oldItems);
+                    fetchCatalogId("https://vk.ru/audio?section=albums", oldItems);
                 }
 
                 if (Preferences.sendMusicMetrics() && Preferences.getBoolValue("playStatCatalog", false)) {
-                    fetchCatalogId("https://vk.com/audio?section=recent", oldItems);
+                    fetchCatalogId("https://vk.ru/audio?section=recent", oldItems);
                 }
 
                 setDefaultAudioPage(oldItems, catalog);
@@ -90,7 +90,7 @@ public class CatalogJsonInjector {
             var section = json.optJSONObject("section");
             if (section == null) return; // early return if section is null
             var useOldAppVer = getBoolValue("useOldAppVer", false);
-            var isUsersCatalog = section.optString("url").equals("https://vk.com/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
+            var isUsersCatalog = section.optString("url").equals("https://vk.ru/audios" + getUserId() + "?section=" + (useOldAppVer ? "all" : "general"));
             var blocks = section.getJSONArray("blocks");
 
             fixDailyMix(blocks);

@@ -109,7 +109,7 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
         });
 
         findPreference("copyownlink").setOnPreferenceClickListener(preference -> {
-            copyText("https://vk.com/id" + AccountManagerUtils.getUserId());
+            copyText("https://vk.ru/id" + AccountManagerUtils.getUserId());
             ToastUtils.a(requireContext().getString(R.string.link_copied));
             return true;
         });

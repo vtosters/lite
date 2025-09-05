@@ -667,7 +667,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                     var args = new Bundle();
                     var dialog = new AboutInformation();
 
-                    args.putString("vk_link", "https://vk.com/vtosters_official");
+                    args.putString("vk_link", "https://vk.ru/vtosters_official");
                     args.putString("tg_link", "https://t.me/vtosters");
 
                     dialog.setArguments(args);

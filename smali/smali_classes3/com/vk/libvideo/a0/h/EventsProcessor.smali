@@ -213,7 +213,7 @@
 
     aput-object p1, v0, v1
 
-    const-string p1, "https://vk.com/images/stickers/%s/256b.png#stick"
+    const-string p1, "https://vk.ru/images/stickers/%s/256b.png#stick"
 
     invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 

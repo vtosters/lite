@@ -648,7 +648,7 @@
 
     move-result-object v0
 
-    const-string v1, "oauth.vk.com"
+    const-string v1, "oauth.vk.ru"
 
     const-string v2, "oauthHost"
 

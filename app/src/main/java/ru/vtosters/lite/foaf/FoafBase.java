@@ -74,7 +74,7 @@ public class FoafBase {
 
     @SuppressLint("DefaultLocale")
     private static String getLink(int i) {
-        return ProxyUtils.isAnyProxyEnabled() ? String.format("https://%s/_/vk.com/foaf.php?id=%d", ProxyUtils.getApi(), i) : String.format("https://vk.com/foaf.php?id=%d", i);
+        return ProxyUtils.isAnyProxyEnabled() ? String.format("https://%s/_/vk.ru/foaf.php?id=%d", ProxyUtils.getApi(), i) : String.format("https://vk.ru/foaf.php?id=%d", i);
     }
 
     public static void loadAndShow(Context context, int i) {

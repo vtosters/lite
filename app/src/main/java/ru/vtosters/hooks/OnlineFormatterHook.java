@@ -76,7 +76,7 @@ public class OnlineFormatterHook {
             case 5955265 -> "VK Mobile";
             case 6614620 -> "Laney";
             case 5632485 -> "SpaceVK";
-            case 6287487 -> "vk.com";
+            case 6287487 -> "vk.ru";
             case 8202606 -> "VK Me Web";
             case 4542624 -> "Black VK";
             case 3917910 -> "Miranda NG (bridge)";

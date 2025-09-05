@@ -974,7 +974,7 @@
 
     if-nez v1, :cond_0
 
-    const-string v1, "https://vk.com/story"
+    const-string v1, "https://vk.ru/story"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 

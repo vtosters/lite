@@ -13,6 +13,6 @@ public class WebAppHook {
                 .put("app", "vkclient")
                 .put("app_id", ApiConfig.a)
                 .put("appearance", VKThemeHelper.l().a() ? "light" : "dark")
-                .put("api_host", ProxyHook.linkReplacer(Preference.a().getString("apiHost", "api.vk.com")));
+                .put("api_host", ProxyHook.linkReplacer(Preference.a().getString("apiHost", "api.vk.ru")));
     }
 }

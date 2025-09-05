@@ -504,7 +504,7 @@
     <string name="collection_add_wall_to_list_hint">Абярыце запіс са сваёй старонкі, якой Вы хочаце падзяліцца з
         гледачамі
     </string>
-    <string name="collection_link_add_link_input_hint">https://vk.com</string>
+    <string name="collection_link_add_link_input_hint">https://vk.ru</string>
     <string name="collection_link_limit">Дададзена максімальна магчымая колькасць спасылак</string>
     <string name="collection_link_not_valid">Спасылка не падтрымліваецца</string>
     <string name="collection_links_list">Спіс спасылак</string>
@@ -1245,7 +1245,7 @@
     <string name="friends_recommendations_gmail">Gmail</string>
     <string name="friends_recommendations_invete_by_link">Запрасіць па спасылцы</string>
     <string name="friends_recommendations_invite">Запрасіць</string>
-    <string name="friends_recommendations_invite_message">Запрашаю сябраваць УКантакце! http://vk.com/join</string>
+    <string name="friends_recommendations_invite_message">Запрашаю сябраваць УКантакце! http://vk.ru/join</string>
     <string name="friends_recommendations_locator_text">Каб убачыць людзей побач, папытаеце іх зайсці на гэты экран са
         сваіх прылад
     </string>
@@ -1548,7 +1548,7 @@
     <string name="identity_address_dat">адрас</string>
     <string name="identity_custom_label">Свая катэгорыя</string>
     <string name="identity_desc">Вы можаце пазначыць дадзеныя адзін раз і хутка прадастаўляць міні-дадаткам з
-        [https://vk.com/services|каталога] - для дастаўкі тавараў або сувязі з Вамі
+        [https://vk.ru/services|каталога] - для дастаўкі тавараў або сувязі з Вамі
     </string>
     <string name="identity_email">Электронная пошта</string>
     <string name="identity_email_dat">Адрас электроннай пошты</string>
@@ -1581,7 +1581,7 @@
     <string name="include_community">Падключыць суполку</string>
     <string name="installed_games_title">Мае гульні</string>
     <string name="invalid_date">Няслушная дата публікацыі</string>
-    <string name="invitation">Запрашаю сябраваць УКантакце! http://vk.com/join</string>
+    <string name="invitation">Запрашаю сябраваць УКантакце! http://vk.ru/join</string>
     <string name="invitation_declined">Запрашэнне адхілена.</string>
     <string name="invitation_sent">Запрашэнне адпраўлена.</string>
     <string name="invite">Запрасіць</string>
@@ -3691,7 +3691,7 @@
     <string name="serv_user_returned_m">%1$s вярнуўся ў гутарку</string>
     <string name="service_account_admin_100_info">"Профіль выкарыстоўваецца толькі для персанальных абвестак.
 
-        Па любых пытаннях пішыце ў [https://vk.com/support|Падтрымку.]"
+        Па любых пытаннях пішыце ў [https://vk.ru/support|Падтрымку.]"
     </string>
     <string name="service_account_admin_101_info">Старонка выкарыстоўваецца для зваротнай сумяшчальнасці сэрвісу
         каментароў ад імя суполкі.
@@ -5931,7 +5931,7 @@
     <string name="wall">Сцяна</string>
     <string name="wall_all_posts">Усе запісы</string>
     <string name="wall_comment_repost">&lt;font color=#aaaaaa>Каментар да &lt;/font>&lt;a
-        href=vklink://view/?http://vk.com/wall%1$d_%2$d>запису&lt;/a>
+        href=vklink://view/?http://vk.ru/wall%1$d_%2$d>запису&lt;/a>
     </string>
     <string name="wall_disabled">Сцяна выключана</string>
     <string name="wall_empty">Тут пакуль няма запісаў</string>

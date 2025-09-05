@@ -1268,7 +1268,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="vk.com"
+                    android:host="vk.ru"
                     android:pathPattern="/.*"
                     android:scheme="http" />
             </intent-filter>
@@ -1279,7 +1279,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="vk.com"
+                    android:host="vk.ru"
                     android:pathPattern="/.*"
                     android:scheme="https" />
             </intent-filter>
@@ -1451,7 +1451,7 @@
 
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <data
-                    android:host="m.vk.com"
+                    android:host="m.vk.ru"
                     android:pathPattern="/.*"
                     android:scheme="http" />
             </intent-filter>
@@ -1463,7 +1463,7 @@
 
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <data
-                    android:host="m.vk.com"
+                    android:host="m.vk.ru"
                     android:pathPattern="/.*"
                     android:scheme="https" />
             </intent-filter>

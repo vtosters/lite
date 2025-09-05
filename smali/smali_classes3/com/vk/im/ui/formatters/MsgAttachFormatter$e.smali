@@ -95,7 +95,7 @@
 
     move-result-object v6
 
-    const-string v7, "vk.com"
+    const-string v7, "vk.ru"
 
     invoke-static {v6, v7, v4}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 

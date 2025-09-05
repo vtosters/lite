@@ -204,10 +204,10 @@ public class VideoDownloader {
     public static void parseVideoLink(String url, Context ctx) {
         if (url.startsWith("http://")) {
             url.replace("http://", "https://");
-        } else if (url.startsWith("vk.com"))
+        } else if (url.startsWith("vk.ru"))
             url = "https://" + url;
 
-        if (url.contains("vk.com/story")) {
+        if (url.contains("vk.ru/story")) {
             String storyId = url.substring(url.startsWith("https") ? 20 : 19) + "_story";
 
             ProgressDialog progressDialog = new ProgressDialog(ctx);
@@ -246,7 +246,7 @@ public class VideoDownloader {
             return;
         }
 
-        if (!url.contains("vk.com/video")) {
+        if (!url.contains("vk.ru/video")) {
             ToastUtils.a(ctx.getString(R.string.video_dl_wrong_link));
             return;
         }

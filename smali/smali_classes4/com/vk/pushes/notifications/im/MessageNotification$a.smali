@@ -65,7 +65,7 @@
 
     move-result-object p1
 
-    const-string p2, "https://vk.com/im?sel=%d&msgid=%d"
+    const-string p2, "https://vk.ru/im?sel=%d&msgid=%d"
 
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 

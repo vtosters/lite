@@ -69,7 +69,7 @@
 .method public final invoke()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "api.vk.com"
+    const-string v0, "api.vk.ru"
 
     invoke-static {v0}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

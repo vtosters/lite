@@ -1059,7 +1059,7 @@
     :goto_b
     iget-object v9, v15, Lcom/vtosters/lite/api/ExtendedUserProfile$Link;->a:Ljava/lang/String;
 
-    const-string v14, "//vk.com/"
+    const-string v14, "//vk.ru/"
 
     invoke-virtual {v9, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -1071,7 +1071,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v14, "https://vk.com/images/lnkinner"
+    const-string v14, "https://vk.ru/images/lnkinner"
 
     goto :goto_c
 
@@ -1080,7 +1080,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v14, "https://vk.com/images/lnkouter"
+    const-string v14, "https://vk.ru/images/lnkouter"
 
     :goto_c
     invoke-virtual {v9, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

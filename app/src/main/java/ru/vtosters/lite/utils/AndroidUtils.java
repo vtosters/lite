@@ -134,8 +134,8 @@ public class AndroidUtils {
 
         Map<String, Integer> hostToStateMap = userState.getHostToStateMap();
 
-        if (hostToStateMap.containsKey("vk.com")) {
-            Integer stateValue = hostToStateMap.get("vk.com");
+        if (hostToStateMap.containsKey("vk.ru")) {
+            Integer stateValue = hostToStateMap.get("vk.ru");
             hasUnverified = stateValue != null && stateValue != DomainVerificationUserState.DOMAIN_STATE_VERIFIED && stateValue != DomainVerificationUserState.DOMAIN_STATE_SELECTED;
         }
 

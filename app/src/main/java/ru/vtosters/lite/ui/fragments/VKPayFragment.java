@@ -12,7 +12,7 @@ public class VKPayFragment extends FragmentImpl {
     }
 
     public void start() {
-        VKUIwrapper.setLink("https://vk.com/vkpay");
+        VKUIwrapper.setLink("https://vk.ru/vkpay");
         NavigatorUtils.switchFragment(requireContext(), VKUIwrapper.class);
     }
 }

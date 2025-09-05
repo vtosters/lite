@@ -22,8 +22,8 @@ public class VKIDProtection {
                     Preferences.getPreferences().edit().putBoolean("showAlertVkId", false).apply();
                     VKUIwrapper.setLink(
                             ProxyUtils.isAnyProxyEnabled()
-                                    ? "https://id.vk.com/account"
-                                    : "https://" + ProxyUtils.getApi() + "/_/id.vk.com/account");
+                                    ? "https://id.vk.ru/account"
+                                    : "https://" + ProxyUtils.getApi() + "/_/id.vk.ru/account");
                     NavigatorUtils.switchFragment(activity, VKUIwrapper.class);
                 })
                 .show();

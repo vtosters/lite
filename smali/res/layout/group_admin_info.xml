@@ -85,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:padding="0.0dip"
-                    android:text="https://vk.com/"
+                    android:text="https://vk.ru/"
                     android:textColor="#ffb8b8b8" />
 
                 <EditText

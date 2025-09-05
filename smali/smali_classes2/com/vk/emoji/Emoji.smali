@@ -373,7 +373,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "https://vk.com/images/all_emoji/images_"
+    const-string v1, "https://vk.ru/images/all_emoji/images_"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

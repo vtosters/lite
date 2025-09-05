@@ -695,7 +695,7 @@
 
     const/4 v2, 0x2
 
-    const-string v3, "vk.com/"
+    const-string v3, "vk.ru/"
 
     .line 2
     invoke-static {p1, v3, v0, v2, v1}, Lkotlin/text/l;->c(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z

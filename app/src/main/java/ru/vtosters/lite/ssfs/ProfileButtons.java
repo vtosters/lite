@@ -33,7 +33,7 @@ public class ProfileButtons {
 //
 //                newItem.put(generateJsonObject(
 //                        AndroidUtils.getString(com.vtosters.lite.R.string.donate_to_vtl),
-//                        "https://vk.com/vtosters_official",
+//                        "https://vk.ru/vtosters_official",
 //                        "2D81E0",
 //                        "open_url",
 //                        map

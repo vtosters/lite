@@ -53,7 +53,7 @@
     .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v0, "https://vk.com/taxi#screen=route&"
+    const-string v0, "https://vk.ru/taxi#screen=route&"
 
     invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
